@@ -22,7 +22,7 @@ exports[`ExchangeTransactionsTable > should render 1`] = `
               role="row"
             >
               <th
-                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800  no-border first:rounded-tl-xl last:rounded-tr-xl"
+                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 no-border first:rounded-tl-xl last:rounded-tr-xl"
                 colspan="1"
                 data-testid="table__th--0"
                 role="columnheader"
@@ -38,7 +38,7 @@ exports[`ExchangeTransactionsTable > should render 1`] = `
                 </div>
               </th>
               <th
-                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800  hidden xl:table-cell no-border first:rounded-tl-xl last:rounded-tr-xl"
+                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 hidden xl:table-cell no-border first:rounded-tl-xl last:rounded-tr-xl"
                 colspan="1"
                 data-testid="table__th--1"
                 role="columnheader"
@@ -84,7 +84,7 @@ exports[`ExchangeTransactionsTable > should render 1`] = `
                 </div>
               </th>
               <th
-                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800  no-border first:rounded-tl-xl last:rounded-tr-xl"
+                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 no-border first:rounded-tl-xl last:rounded-tr-xl"
                 colspan="1"
                 data-testid="table__th--2"
                 role="columnheader"
@@ -130,7 +130,7 @@ exports[`ExchangeTransactionsTable > should render 1`] = `
                 </div>
               </th>
               <th
-                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800  no-border lg:hidden first:rounded-tl-xl last:rounded-tr-xl"
+                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 no-border lg:hidden first:rounded-tl-xl last:rounded-tr-xl"
                 colspan="1"
                 data-testid="table__th--3"
                 role="columnheader"
@@ -176,7 +176,7 @@ exports[`ExchangeTransactionsTable > should render 1`] = `
                 </div>
               </th>
               <th
-                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800  no-border hidden lg:table-cell first:rounded-tl-xl last:rounded-tr-xl"
+                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 no-border hidden lg:table-cell first:rounded-tl-xl last:rounded-tr-xl"
                 colspan="1"
                 data-testid="table__th--4"
                 role="columnheader"
@@ -222,7 +222,7 @@ exports[`ExchangeTransactionsTable > should render 1`] = `
                 </div>
               </th>
               <th
-                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800  no-border hidden lg:table-cell first:rounded-tl-xl last:rounded-tr-xl"
+                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 no-border hidden lg:table-cell first:rounded-tl-xl last:rounded-tr-xl"
                 colspan="1"
                 data-testid="table__th--5"
                 role="columnheader"
@@ -268,7 +268,7 @@ exports[`ExchangeTransactionsTable > should render 1`] = `
                 </div>
               </th>
               <th
-                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800  no-border first:rounded-tl-xl last:rounded-tr-xl w-24 min-w-24"
+                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 no-border first:rounded-tl-xl last:rounded-tr-xl w-24 min-w-24"
                 colspan="1"
                 data-testid="table__th--6"
                 role="columnheader"
@@ -284,7 +284,7 @@ exports[`ExchangeTransactionsTable > should render 1`] = `
                 </div>
               </th>
               <th
-                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800  no-border w-1 first:rounded-tl-xl last:rounded-tr-xl"
+                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 no-border w-1 first:rounded-tl-xl last:rounded-tr-xl"
                 colspan="1"
                 data-testid="table__th--7"
                 role="columnheader"
@@ -370,12 +370,12 @@ exports[`ExchangeTransactionsTable > should render 1`] = `
                   class="px-3 transition-colors duration-100 min-h-11 items-end flex flex-col gap-1.5 my-3 xl:my-0"
                 >
                   <div
-                    class="rounded px-1.5 css-1pbju28"
+                    class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
                     color="danger-bg"
                     data-testid="AmountLabel__wrapper"
                   >
                     <div
-                      class="flex space-x-1 items-stretch"
+                      class="flex items-center space-x-1"
                     >
                       <span
                         class="whitespace-nowrap text-sm"
@@ -386,12 +386,12 @@ exports[`ExchangeTransactionsTable > should render 1`] = `
                     </div>
                   </div>
                   <div
-                    class="rounded pr-1.5 css-givenh"
+                    class="flex h-full items-center justify-center rounded pr-1.5 css-1jspzfx"
                     color="success-bg"
                     data-testid="AmountLabel__wrapper"
                   >
                     <div
-                      class="flex space-x-1 items-stretch"
+                      class="flex items-center space-x-1"
                     >
                       <div
                         class="flex items-center justify-center bg-theme-success-200 dark:bg-theme-success-700 text-theme-success-700 dark:text-white/70 dark:bg-theme-success-700 -ml-1.5 px-2"
@@ -444,12 +444,12 @@ exports[`ExchangeTransactionsTable > should render 1`] = `
                   class="flex px-3 transition-colors duration-100 min-h-11 gap-3 justify-end items-start xl:items-center my-3 xl:my-0"
                 >
                   <div
-                    class="rounded px-1.5 css-1pbju28"
+                    class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
                     color="danger-bg"
                     data-testid="AmountLabel__wrapper"
                   >
                     <div
-                      class="flex space-x-1 items-stretch"
+                      class="flex items-center space-x-1"
                     >
                       <span
                         class="whitespace-nowrap text-sm"
@@ -468,12 +468,12 @@ exports[`ExchangeTransactionsTable > should render 1`] = `
                   class="flex px-3 transition-colors duration-100 min-h-11 gap-3 justify-end items-start xl:items-center my-3 xl:my-0"
                 >
                   <div
-                    class="rounded pr-1.5 css-givenh"
+                    class="flex h-full items-center justify-center rounded pr-1.5 css-1jspzfx"
                     color="success-bg"
                     data-testid="AmountLabel__wrapper"
                   >
                     <div
-                      class="flex space-x-1 items-stretch"
+                      class="flex items-center space-x-1"
                     >
                       <div
                         class="flex items-center justify-center bg-theme-success-200 dark:bg-theme-success-700 text-theme-success-700 dark:text-white/70 dark:bg-theme-success-700 -ml-1.5 px-2"
@@ -669,12 +669,12 @@ exports[`ExchangeTransactionsTable > should render 1`] = `
                   class="px-3 transition-colors duration-100 min-h-11 items-end flex flex-col gap-1.5 my-3 xl:my-0"
                 >
                   <div
-                    class="rounded px-1.5 css-1pbju28"
+                    class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
                     color="danger-bg"
                     data-testid="AmountLabel__wrapper"
                   >
                     <div
-                      class="flex space-x-1 items-stretch"
+                      class="flex items-center space-x-1"
                     >
                       <span
                         class="whitespace-nowrap text-sm"
@@ -685,12 +685,12 @@ exports[`ExchangeTransactionsTable > should render 1`] = `
                     </div>
                   </div>
                   <div
-                    class="rounded pr-1.5 css-givenh"
+                    class="flex h-full items-center justify-center rounded pr-1.5 css-1jspzfx"
                     color="success-bg"
                     data-testid="AmountLabel__wrapper"
                   >
                     <div
-                      class="flex space-x-1 items-stretch"
+                      class="flex items-center space-x-1"
                     >
                       <div
                         class="flex items-center justify-center bg-theme-success-200 dark:bg-theme-success-700 text-theme-success-700 dark:text-white/70 dark:bg-theme-success-700 -ml-1.5 px-2"
@@ -743,12 +743,12 @@ exports[`ExchangeTransactionsTable > should render 1`] = `
                   class="flex px-3 transition-colors duration-100 min-h-11 gap-3 justify-end items-start xl:items-center my-3 xl:my-0"
                 >
                   <div
-                    class="rounded px-1.5 css-1pbju28"
+                    class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
                     color="danger-bg"
                     data-testid="AmountLabel__wrapper"
                   >
                     <div
-                      class="flex space-x-1 items-stretch"
+                      class="flex items-center space-x-1"
                     >
                       <span
                         class="whitespace-nowrap text-sm"
@@ -767,12 +767,12 @@ exports[`ExchangeTransactionsTable > should render 1`] = `
                   class="flex px-3 transition-colors duration-100 min-h-11 gap-3 justify-end items-start xl:items-center my-3 xl:my-0"
                 >
                   <div
-                    class="rounded pr-1.5 css-givenh"
+                    class="flex h-full items-center justify-center rounded pr-1.5 css-1jspzfx"
                     color="success-bg"
                     data-testid="AmountLabel__wrapper"
                   >
                     <div
-                      class="flex space-x-1 items-stretch"
+                      class="flex items-center space-x-1"
                     >
                       <div
                         class="flex items-center justify-center bg-theme-success-200 dark:bg-theme-success-700 text-theme-success-700 dark:text-white/70 dark:bg-theme-success-700 -ml-1.5 px-2"
@@ -968,12 +968,12 @@ exports[`ExchangeTransactionsTable > should render 1`] = `
                   class="px-3 transition-colors duration-100 min-h-11 items-end flex flex-col gap-1.5 my-3 xl:my-0"
                 >
                   <div
-                    class="rounded px-1.5 css-1pbju28"
+                    class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
                     color="danger-bg"
                     data-testid="AmountLabel__wrapper"
                   >
                     <div
-                      class="flex space-x-1 items-stretch"
+                      class="flex items-center space-x-1"
                     >
                       <span
                         class="whitespace-nowrap text-sm"
@@ -984,12 +984,12 @@ exports[`ExchangeTransactionsTable > should render 1`] = `
                     </div>
                   </div>
                   <div
-                    class="rounded pr-1.5 css-givenh"
+                    class="flex h-full items-center justify-center rounded pr-1.5 css-1jspzfx"
                     color="success-bg"
                     data-testid="AmountLabel__wrapper"
                   >
                     <div
-                      class="flex space-x-1 items-stretch"
+                      class="flex items-center space-x-1"
                     >
                       <div
                         class="flex items-center justify-center bg-theme-success-200 dark:bg-theme-success-700 text-theme-success-700 dark:text-white/70 dark:bg-theme-success-700 -ml-1.5 px-2"
@@ -1042,12 +1042,12 @@ exports[`ExchangeTransactionsTable > should render 1`] = `
                   class="flex px-3 transition-colors duration-100 min-h-11 gap-3 justify-end items-start xl:items-center my-3 xl:my-0"
                 >
                   <div
-                    class="rounded px-1.5 css-1pbju28"
+                    class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
                     color="danger-bg"
                     data-testid="AmountLabel__wrapper"
                   >
                     <div
-                      class="flex space-x-1 items-stretch"
+                      class="flex items-center space-x-1"
                     >
                       <span
                         class="whitespace-nowrap text-sm"
@@ -1066,12 +1066,12 @@ exports[`ExchangeTransactionsTable > should render 1`] = `
                   class="flex px-3 transition-colors duration-100 min-h-11 gap-3 justify-end items-start xl:items-center my-3 xl:my-0"
                 >
                   <div
-                    class="rounded pr-1.5 css-givenh"
+                    class="flex h-full items-center justify-center rounded pr-1.5 css-1jspzfx"
                     color="success-bg"
                     data-testid="AmountLabel__wrapper"
                   >
                     <div
-                      class="flex space-x-1 items-stretch"
+                      class="flex items-center space-x-1"
                     >
                       <div
                         class="flex items-center justify-center bg-theme-success-200 dark:bg-theme-success-700 text-theme-success-700 dark:text-white/70 dark:bg-theme-success-700 -ml-1.5 px-2"
@@ -1231,7 +1231,7 @@ exports[`ExchangeTransactionsTable > should render compact 1`] = `
               role="row"
             >
               <th
-                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800  no-border first:rounded-tl-xl last:rounded-tr-xl"
+                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 no-border first:rounded-tl-xl last:rounded-tr-xl"
                 colspan="1"
                 data-testid="table__th--0"
                 role="columnheader"
@@ -1247,7 +1247,7 @@ exports[`ExchangeTransactionsTable > should render compact 1`] = `
                 </div>
               </th>
               <th
-                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800  hidden xl:table-cell no-border first:rounded-tl-xl last:rounded-tr-xl"
+                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 hidden xl:table-cell no-border first:rounded-tl-xl last:rounded-tr-xl"
                 colspan="1"
                 data-testid="table__th--1"
                 role="columnheader"
@@ -1293,7 +1293,7 @@ exports[`ExchangeTransactionsTable > should render compact 1`] = `
                 </div>
               </th>
               <th
-                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800  no-border first:rounded-tl-xl last:rounded-tr-xl"
+                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 no-border first:rounded-tl-xl last:rounded-tr-xl"
                 colspan="1"
                 data-testid="table__th--2"
                 role="columnheader"
@@ -1339,7 +1339,7 @@ exports[`ExchangeTransactionsTable > should render compact 1`] = `
                 </div>
               </th>
               <th
-                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800  no-border lg:hidden first:rounded-tl-xl last:rounded-tr-xl"
+                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 no-border lg:hidden first:rounded-tl-xl last:rounded-tr-xl"
                 colspan="1"
                 data-testid="table__th--3"
                 role="columnheader"
@@ -1385,7 +1385,7 @@ exports[`ExchangeTransactionsTable > should render compact 1`] = `
                 </div>
               </th>
               <th
-                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800  no-border hidden lg:table-cell first:rounded-tl-xl last:rounded-tr-xl"
+                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 no-border hidden lg:table-cell first:rounded-tl-xl last:rounded-tr-xl"
                 colspan="1"
                 data-testid="table__th--4"
                 role="columnheader"
@@ -1431,7 +1431,7 @@ exports[`ExchangeTransactionsTable > should render compact 1`] = `
                 </div>
               </th>
               <th
-                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800  no-border hidden lg:table-cell first:rounded-tl-xl last:rounded-tr-xl"
+                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 no-border hidden lg:table-cell first:rounded-tl-xl last:rounded-tr-xl"
                 colspan="1"
                 data-testid="table__th--5"
                 role="columnheader"
@@ -1477,7 +1477,7 @@ exports[`ExchangeTransactionsTable > should render compact 1`] = `
                 </div>
               </th>
               <th
-                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800  no-border first:rounded-tl-xl last:rounded-tr-xl w-24 min-w-24"
+                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 no-border first:rounded-tl-xl last:rounded-tr-xl w-24 min-w-24"
                 colspan="1"
                 data-testid="table__th--6"
                 role="columnheader"
@@ -1493,7 +1493,7 @@ exports[`ExchangeTransactionsTable > should render compact 1`] = `
                 </div>
               </th>
               <th
-                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800  no-border w-1 first:rounded-tl-xl last:rounded-tr-xl"
+                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 no-border w-1 first:rounded-tl-xl last:rounded-tr-xl"
                 colspan="1"
                 data-testid="table__th--7"
                 role="columnheader"
@@ -1579,12 +1579,12 @@ exports[`ExchangeTransactionsTable > should render compact 1`] = `
                   class="px-3 transition-colors duration-100 min-h-11 items-end flex flex-col gap-1.5 my-3 xl:my-0"
                 >
                   <div
-                    class="rounded px-1.5 css-1pbju28"
+                    class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
                     color="danger-bg"
                     data-testid="AmountLabel__wrapper"
                   >
                     <div
-                      class="flex space-x-1 items-stretch"
+                      class="flex items-center space-x-1"
                     >
                       <span
                         class="whitespace-nowrap text-sm"
@@ -1595,12 +1595,12 @@ exports[`ExchangeTransactionsTable > should render compact 1`] = `
                     </div>
                   </div>
                   <div
-                    class="rounded pr-1.5 css-givenh"
+                    class="flex h-full items-center justify-center rounded pr-1.5 css-1jspzfx"
                     color="success-bg"
                     data-testid="AmountLabel__wrapper"
                   >
                     <div
-                      class="flex space-x-1 items-stretch"
+                      class="flex items-center space-x-1"
                     >
                       <div
                         class="flex items-center justify-center bg-theme-success-200 dark:bg-theme-success-700 text-theme-success-700 dark:text-white/70 dark:bg-theme-success-700 -ml-1.5 px-2"
@@ -1653,12 +1653,12 @@ exports[`ExchangeTransactionsTable > should render compact 1`] = `
                   class="flex px-3 transition-colors duration-100 min-h-11 gap-3 justify-end items-start xl:items-center my-3 xl:my-0"
                 >
                   <div
-                    class="rounded px-1.5 css-1pbju28"
+                    class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
                     color="danger-bg"
                     data-testid="AmountLabel__wrapper"
                   >
                     <div
-                      class="flex space-x-1 items-stretch"
+                      class="flex items-center space-x-1"
                     >
                       <span
                         class="whitespace-nowrap text-sm"
@@ -1677,12 +1677,12 @@ exports[`ExchangeTransactionsTable > should render compact 1`] = `
                   class="flex px-3 transition-colors duration-100 min-h-11 gap-3 justify-end items-start xl:items-center my-3 xl:my-0"
                 >
                   <div
-                    class="rounded pr-1.5 css-givenh"
+                    class="flex h-full items-center justify-center rounded pr-1.5 css-1jspzfx"
                     color="success-bg"
                     data-testid="AmountLabel__wrapper"
                   >
                     <div
-                      class="flex space-x-1 items-stretch"
+                      class="flex items-center space-x-1"
                     >
                       <div
                         class="flex items-center justify-center bg-theme-success-200 dark:bg-theme-success-700 text-theme-success-700 dark:text-white/70 dark:bg-theme-success-700 -ml-1.5 px-2"
@@ -1878,12 +1878,12 @@ exports[`ExchangeTransactionsTable > should render compact 1`] = `
                   class="px-3 transition-colors duration-100 min-h-11 items-end flex flex-col gap-1.5 my-3 xl:my-0"
                 >
                   <div
-                    class="rounded px-1.5 css-1pbju28"
+                    class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
                     color="danger-bg"
                     data-testid="AmountLabel__wrapper"
                   >
                     <div
-                      class="flex space-x-1 items-stretch"
+                      class="flex items-center space-x-1"
                     >
                       <span
                         class="whitespace-nowrap text-sm"
@@ -1894,12 +1894,12 @@ exports[`ExchangeTransactionsTable > should render compact 1`] = `
                     </div>
                   </div>
                   <div
-                    class="rounded pr-1.5 css-givenh"
+                    class="flex h-full items-center justify-center rounded pr-1.5 css-1jspzfx"
                     color="success-bg"
                     data-testid="AmountLabel__wrapper"
                   >
                     <div
-                      class="flex space-x-1 items-stretch"
+                      class="flex items-center space-x-1"
                     >
                       <div
                         class="flex items-center justify-center bg-theme-success-200 dark:bg-theme-success-700 text-theme-success-700 dark:text-white/70 dark:bg-theme-success-700 -ml-1.5 px-2"
@@ -1952,12 +1952,12 @@ exports[`ExchangeTransactionsTable > should render compact 1`] = `
                   class="flex px-3 transition-colors duration-100 min-h-11 gap-3 justify-end items-start xl:items-center my-3 xl:my-0"
                 >
                   <div
-                    class="rounded px-1.5 css-1pbju28"
+                    class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
                     color="danger-bg"
                     data-testid="AmountLabel__wrapper"
                   >
                     <div
-                      class="flex space-x-1 items-stretch"
+                      class="flex items-center space-x-1"
                     >
                       <span
                         class="whitespace-nowrap text-sm"
@@ -1976,12 +1976,12 @@ exports[`ExchangeTransactionsTable > should render compact 1`] = `
                   class="flex px-3 transition-colors duration-100 min-h-11 gap-3 justify-end items-start xl:items-center my-3 xl:my-0"
                 >
                   <div
-                    class="rounded pr-1.5 css-givenh"
+                    class="flex h-full items-center justify-center rounded pr-1.5 css-1jspzfx"
                     color="success-bg"
                     data-testid="AmountLabel__wrapper"
                   >
                     <div
-                      class="flex space-x-1 items-stretch"
+                      class="flex items-center space-x-1"
                     >
                       <div
                         class="flex items-center justify-center bg-theme-success-200 dark:bg-theme-success-700 text-theme-success-700 dark:text-white/70 dark:bg-theme-success-700 -ml-1.5 px-2"
@@ -2177,12 +2177,12 @@ exports[`ExchangeTransactionsTable > should render compact 1`] = `
                   class="px-3 transition-colors duration-100 min-h-11 items-end flex flex-col gap-1.5 my-3 xl:my-0"
                 >
                   <div
-                    class="rounded px-1.5 css-1pbju28"
+                    class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
                     color="danger-bg"
                     data-testid="AmountLabel__wrapper"
                   >
                     <div
-                      class="flex space-x-1 items-stretch"
+                      class="flex items-center space-x-1"
                     >
                       <span
                         class="whitespace-nowrap text-sm"
@@ -2193,12 +2193,12 @@ exports[`ExchangeTransactionsTable > should render compact 1`] = `
                     </div>
                   </div>
                   <div
-                    class="rounded pr-1.5 css-givenh"
+                    class="flex h-full items-center justify-center rounded pr-1.5 css-1jspzfx"
                     color="success-bg"
                     data-testid="AmountLabel__wrapper"
                   >
                     <div
-                      class="flex space-x-1 items-stretch"
+                      class="flex items-center space-x-1"
                     >
                       <div
                         class="flex items-center justify-center bg-theme-success-200 dark:bg-theme-success-700 text-theme-success-700 dark:text-white/70 dark:bg-theme-success-700 -ml-1.5 px-2"
@@ -2251,12 +2251,12 @@ exports[`ExchangeTransactionsTable > should render compact 1`] = `
                   class="flex px-3 transition-colors duration-100 min-h-11 gap-3 justify-end items-start xl:items-center my-3 xl:my-0"
                 >
                   <div
-                    class="rounded px-1.5 css-1pbju28"
+                    class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
                     color="danger-bg"
                     data-testid="AmountLabel__wrapper"
                   >
                     <div
-                      class="flex space-x-1 items-stretch"
+                      class="flex items-center space-x-1"
                     >
                       <span
                         class="whitespace-nowrap text-sm"
@@ -2275,12 +2275,12 @@ exports[`ExchangeTransactionsTable > should render compact 1`] = `
                   class="flex px-3 transition-colors duration-100 min-h-11 gap-3 justify-end items-start xl:items-center my-3 xl:my-0"
                 >
                   <div
-                    class="rounded pr-1.5 css-givenh"
+                    class="flex h-full items-center justify-center rounded pr-1.5 css-1jspzfx"
                     color="success-bg"
                     data-testid="AmountLabel__wrapper"
                   >
                     <div
-                      class="flex space-x-1 items-stretch"
+                      class="flex items-center space-x-1"
                     >
                       <div
                         class="flex items-center justify-center bg-theme-success-200 dark:bg-theme-success-700 text-theme-success-700 dark:text-white/70 dark:bg-theme-success-700 -ml-1.5 px-2"
@@ -2440,7 +2440,7 @@ exports[`ExchangeTransactionsTable > should render desktop 1`] = `
               role="row"
             >
               <th
-                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800  no-border first:rounded-tl-xl last:rounded-tr-xl"
+                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 no-border first:rounded-tl-xl last:rounded-tr-xl"
                 colspan="1"
                 data-testid="table__th--0"
                 role="columnheader"
@@ -2456,7 +2456,7 @@ exports[`ExchangeTransactionsTable > should render desktop 1`] = `
                 </div>
               </th>
               <th
-                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800  hidden xl:table-cell no-border first:rounded-tl-xl last:rounded-tr-xl"
+                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 hidden xl:table-cell no-border first:rounded-tl-xl last:rounded-tr-xl"
                 colspan="1"
                 data-testid="table__th--1"
                 role="columnheader"
@@ -2502,7 +2502,7 @@ exports[`ExchangeTransactionsTable > should render desktop 1`] = `
                 </div>
               </th>
               <th
-                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800  no-border first:rounded-tl-xl last:rounded-tr-xl"
+                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 no-border first:rounded-tl-xl last:rounded-tr-xl"
                 colspan="1"
                 data-testid="table__th--2"
                 role="columnheader"
@@ -2548,7 +2548,7 @@ exports[`ExchangeTransactionsTable > should render desktop 1`] = `
                 </div>
               </th>
               <th
-                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800  no-border lg:hidden first:rounded-tl-xl last:rounded-tr-xl"
+                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 no-border lg:hidden first:rounded-tl-xl last:rounded-tr-xl"
                 colspan="1"
                 data-testid="table__th--3"
                 role="columnheader"
@@ -2594,7 +2594,7 @@ exports[`ExchangeTransactionsTable > should render desktop 1`] = `
                 </div>
               </th>
               <th
-                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800  no-border hidden lg:table-cell first:rounded-tl-xl last:rounded-tr-xl"
+                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 no-border hidden lg:table-cell first:rounded-tl-xl last:rounded-tr-xl"
                 colspan="1"
                 data-testid="table__th--4"
                 role="columnheader"
@@ -2640,7 +2640,7 @@ exports[`ExchangeTransactionsTable > should render desktop 1`] = `
                 </div>
               </th>
               <th
-                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800  no-border hidden lg:table-cell first:rounded-tl-xl last:rounded-tr-xl"
+                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 no-border hidden lg:table-cell first:rounded-tl-xl last:rounded-tr-xl"
                 colspan="1"
                 data-testid="table__th--5"
                 role="columnheader"
@@ -2686,7 +2686,7 @@ exports[`ExchangeTransactionsTable > should render desktop 1`] = `
                 </div>
               </th>
               <th
-                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800  no-border first:rounded-tl-xl last:rounded-tr-xl w-24 min-w-24"
+                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 no-border first:rounded-tl-xl last:rounded-tr-xl w-24 min-w-24"
                 colspan="1"
                 data-testid="table__th--6"
                 role="columnheader"
@@ -2702,7 +2702,7 @@ exports[`ExchangeTransactionsTable > should render desktop 1`] = `
                 </div>
               </th>
               <th
-                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800  no-border w-1 first:rounded-tl-xl last:rounded-tr-xl"
+                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 no-border w-1 first:rounded-tl-xl last:rounded-tr-xl"
                 colspan="1"
                 data-testid="table__th--7"
                 role="columnheader"
@@ -2788,12 +2788,12 @@ exports[`ExchangeTransactionsTable > should render desktop 1`] = `
                   class="px-3 transition-colors duration-100 min-h-11 items-end flex flex-col gap-1.5 my-3 xl:my-0"
                 >
                   <div
-                    class="rounded px-1.5 css-1pbju28"
+                    class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
                     color="danger-bg"
                     data-testid="AmountLabel__wrapper"
                   >
                     <div
-                      class="flex space-x-1 items-stretch"
+                      class="flex items-center space-x-1"
                     >
                       <span
                         class="whitespace-nowrap text-sm"
@@ -2804,12 +2804,12 @@ exports[`ExchangeTransactionsTable > should render desktop 1`] = `
                     </div>
                   </div>
                   <div
-                    class="rounded pr-1.5 css-givenh"
+                    class="flex h-full items-center justify-center rounded pr-1.5 css-1jspzfx"
                     color="success-bg"
                     data-testid="AmountLabel__wrapper"
                   >
                     <div
-                      class="flex space-x-1 items-stretch"
+                      class="flex items-center space-x-1"
                     >
                       <div
                         class="flex items-center justify-center bg-theme-success-200 dark:bg-theme-success-700 text-theme-success-700 dark:text-white/70 dark:bg-theme-success-700 -ml-1.5 px-2"
@@ -2862,12 +2862,12 @@ exports[`ExchangeTransactionsTable > should render desktop 1`] = `
                   class="flex px-3 transition-colors duration-100 min-h-11 gap-3 justify-end items-start xl:items-center my-3 xl:my-0"
                 >
                   <div
-                    class="rounded px-1.5 css-1pbju28"
+                    class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
                     color="danger-bg"
                     data-testid="AmountLabel__wrapper"
                   >
                     <div
-                      class="flex space-x-1 items-stretch"
+                      class="flex items-center space-x-1"
                     >
                       <span
                         class="whitespace-nowrap text-sm"
@@ -2886,12 +2886,12 @@ exports[`ExchangeTransactionsTable > should render desktop 1`] = `
                   class="flex px-3 transition-colors duration-100 min-h-11 gap-3 justify-end items-start xl:items-center my-3 xl:my-0"
                 >
                   <div
-                    class="rounded pr-1.5 css-givenh"
+                    class="flex h-full items-center justify-center rounded pr-1.5 css-1jspzfx"
                     color="success-bg"
                     data-testid="AmountLabel__wrapper"
                   >
                     <div
-                      class="flex space-x-1 items-stretch"
+                      class="flex items-center space-x-1"
                     >
                       <div
                         class="flex items-center justify-center bg-theme-success-200 dark:bg-theme-success-700 text-theme-success-700 dark:text-white/70 dark:bg-theme-success-700 -ml-1.5 px-2"
@@ -3087,12 +3087,12 @@ exports[`ExchangeTransactionsTable > should render desktop 1`] = `
                   class="px-3 transition-colors duration-100 min-h-11 items-end flex flex-col gap-1.5 my-3 xl:my-0"
                 >
                   <div
-                    class="rounded px-1.5 css-1pbju28"
+                    class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
                     color="danger-bg"
                     data-testid="AmountLabel__wrapper"
                   >
                     <div
-                      class="flex space-x-1 items-stretch"
+                      class="flex items-center space-x-1"
                     >
                       <span
                         class="whitespace-nowrap text-sm"
@@ -3103,12 +3103,12 @@ exports[`ExchangeTransactionsTable > should render desktop 1`] = `
                     </div>
                   </div>
                   <div
-                    class="rounded pr-1.5 css-givenh"
+                    class="flex h-full items-center justify-center rounded pr-1.5 css-1jspzfx"
                     color="success-bg"
                     data-testid="AmountLabel__wrapper"
                   >
                     <div
-                      class="flex space-x-1 items-stretch"
+                      class="flex items-center space-x-1"
                     >
                       <div
                         class="flex items-center justify-center bg-theme-success-200 dark:bg-theme-success-700 text-theme-success-700 dark:text-white/70 dark:bg-theme-success-700 -ml-1.5 px-2"
@@ -3161,12 +3161,12 @@ exports[`ExchangeTransactionsTable > should render desktop 1`] = `
                   class="flex px-3 transition-colors duration-100 min-h-11 gap-3 justify-end items-start xl:items-center my-3 xl:my-0"
                 >
                   <div
-                    class="rounded px-1.5 css-1pbju28"
+                    class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
                     color="danger-bg"
                     data-testid="AmountLabel__wrapper"
                   >
                     <div
-                      class="flex space-x-1 items-stretch"
+                      class="flex items-center space-x-1"
                     >
                       <span
                         class="whitespace-nowrap text-sm"
@@ -3185,12 +3185,12 @@ exports[`ExchangeTransactionsTable > should render desktop 1`] = `
                   class="flex px-3 transition-colors duration-100 min-h-11 gap-3 justify-end items-start xl:items-center my-3 xl:my-0"
                 >
                   <div
-                    class="rounded pr-1.5 css-givenh"
+                    class="flex h-full items-center justify-center rounded pr-1.5 css-1jspzfx"
                     color="success-bg"
                     data-testid="AmountLabel__wrapper"
                   >
                     <div
-                      class="flex space-x-1 items-stretch"
+                      class="flex items-center space-x-1"
                     >
                       <div
                         class="flex items-center justify-center bg-theme-success-200 dark:bg-theme-success-700 text-theme-success-700 dark:text-white/70 dark:bg-theme-success-700 -ml-1.5 px-2"
@@ -3386,12 +3386,12 @@ exports[`ExchangeTransactionsTable > should render desktop 1`] = `
                   class="px-3 transition-colors duration-100 min-h-11 items-end flex flex-col gap-1.5 my-3 xl:my-0"
                 >
                   <div
-                    class="rounded px-1.5 css-1pbju28"
+                    class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
                     color="danger-bg"
                     data-testid="AmountLabel__wrapper"
                   >
                     <div
-                      class="flex space-x-1 items-stretch"
+                      class="flex items-center space-x-1"
                     >
                       <span
                         class="whitespace-nowrap text-sm"
@@ -3402,12 +3402,12 @@ exports[`ExchangeTransactionsTable > should render desktop 1`] = `
                     </div>
                   </div>
                   <div
-                    class="rounded pr-1.5 css-givenh"
+                    class="flex h-full items-center justify-center rounded pr-1.5 css-1jspzfx"
                     color="success-bg"
                     data-testid="AmountLabel__wrapper"
                   >
                     <div
-                      class="flex space-x-1 items-stretch"
+                      class="flex items-center space-x-1"
                     >
                       <div
                         class="flex items-center justify-center bg-theme-success-200 dark:bg-theme-success-700 text-theme-success-700 dark:text-white/70 dark:bg-theme-success-700 -ml-1.5 px-2"
@@ -3460,12 +3460,12 @@ exports[`ExchangeTransactionsTable > should render desktop 1`] = `
                   class="flex px-3 transition-colors duration-100 min-h-11 gap-3 justify-end items-start xl:items-center my-3 xl:my-0"
                 >
                   <div
-                    class="rounded px-1.5 css-1pbju28"
+                    class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
                     color="danger-bg"
                     data-testid="AmountLabel__wrapper"
                   >
                     <div
-                      class="flex space-x-1 items-stretch"
+                      class="flex items-center space-x-1"
                     >
                       <span
                         class="whitespace-nowrap text-sm"
@@ -3484,12 +3484,12 @@ exports[`ExchangeTransactionsTable > should render desktop 1`] = `
                   class="flex px-3 transition-colors duration-100 min-h-11 gap-3 justify-end items-start xl:items-center my-3 xl:my-0"
                 >
                   <div
-                    class="rounded pr-1.5 css-givenh"
+                    class="flex h-full items-center justify-center rounded pr-1.5 css-1jspzfx"
                     color="success-bg"
                     data-testid="AmountLabel__wrapper"
                   >
                     <div
-                      class="flex space-x-1 items-stretch"
+                      class="flex items-center space-x-1"
                     >
                       <div
                         class="flex items-center justify-center bg-theme-success-200 dark:bg-theme-success-700 text-theme-success-700 dark:text-white/70 dark:bg-theme-success-700 -ml-1.5 px-2"
@@ -3649,7 +3649,7 @@ exports[`ExchangeTransactionsTable > should render desktop 2`] = `
               role="row"
             >
               <th
-                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800  no-border first:rounded-tl-xl last:rounded-tr-xl"
+                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 no-border first:rounded-tl-xl last:rounded-tr-xl"
                 colspan="1"
                 data-testid="table__th--0"
                 role="columnheader"
@@ -3665,7 +3665,7 @@ exports[`ExchangeTransactionsTable > should render desktop 2`] = `
                 </div>
               </th>
               <th
-                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800  hidden xl:table-cell no-border first:rounded-tl-xl last:rounded-tr-xl"
+                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 hidden xl:table-cell no-border first:rounded-tl-xl last:rounded-tr-xl"
                 colspan="1"
                 data-testid="table__th--1"
                 role="columnheader"
@@ -3711,7 +3711,7 @@ exports[`ExchangeTransactionsTable > should render desktop 2`] = `
                 </div>
               </th>
               <th
-                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800  no-border first:rounded-tl-xl last:rounded-tr-xl"
+                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 no-border first:rounded-tl-xl last:rounded-tr-xl"
                 colspan="1"
                 data-testid="table__th--2"
                 role="columnheader"
@@ -3757,7 +3757,7 @@ exports[`ExchangeTransactionsTable > should render desktop 2`] = `
                 </div>
               </th>
               <th
-                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800  no-border lg:hidden first:rounded-tl-xl last:rounded-tr-xl"
+                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 no-border lg:hidden first:rounded-tl-xl last:rounded-tr-xl"
                 colspan="1"
                 data-testid="table__th--3"
                 role="columnheader"
@@ -3803,7 +3803,7 @@ exports[`ExchangeTransactionsTable > should render desktop 2`] = `
                 </div>
               </th>
               <th
-                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800  no-border hidden lg:table-cell first:rounded-tl-xl last:rounded-tr-xl"
+                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 no-border hidden lg:table-cell first:rounded-tl-xl last:rounded-tr-xl"
                 colspan="1"
                 data-testid="table__th--4"
                 role="columnheader"
@@ -3849,7 +3849,7 @@ exports[`ExchangeTransactionsTable > should render desktop 2`] = `
                 </div>
               </th>
               <th
-                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800  no-border hidden lg:table-cell first:rounded-tl-xl last:rounded-tr-xl"
+                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 no-border hidden lg:table-cell first:rounded-tl-xl last:rounded-tr-xl"
                 colspan="1"
                 data-testid="table__th--5"
                 role="columnheader"
@@ -3895,7 +3895,7 @@ exports[`ExchangeTransactionsTable > should render desktop 2`] = `
                 </div>
               </th>
               <th
-                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800  no-border first:rounded-tl-xl last:rounded-tr-xl w-24 min-w-24"
+                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 no-border first:rounded-tl-xl last:rounded-tr-xl w-24 min-w-24"
                 colspan="1"
                 data-testid="table__th--6"
                 role="columnheader"
@@ -3911,7 +3911,7 @@ exports[`ExchangeTransactionsTable > should render desktop 2`] = `
                 </div>
               </th>
               <th
-                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800  no-border w-1 first:rounded-tl-xl last:rounded-tr-xl"
+                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 no-border w-1 first:rounded-tl-xl last:rounded-tr-xl"
                 colspan="1"
                 data-testid="table__th--7"
                 role="columnheader"
@@ -3997,12 +3997,12 @@ exports[`ExchangeTransactionsTable > should render desktop 2`] = `
                   class="px-3 transition-colors duration-100 min-h-11 items-end flex flex-col gap-1.5 my-3 xl:my-0"
                 >
                   <div
-                    class="rounded px-1.5 css-1pbju28"
+                    class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
                     color="danger-bg"
                     data-testid="AmountLabel__wrapper"
                   >
                     <div
-                      class="flex space-x-1 items-stretch"
+                      class="flex items-center space-x-1"
                     >
                       <span
                         class="whitespace-nowrap text-sm"
@@ -4013,12 +4013,12 @@ exports[`ExchangeTransactionsTable > should render desktop 2`] = `
                     </div>
                   </div>
                   <div
-                    class="rounded pr-1.5 css-givenh"
+                    class="flex h-full items-center justify-center rounded pr-1.5 css-1jspzfx"
                     color="success-bg"
                     data-testid="AmountLabel__wrapper"
                   >
                     <div
-                      class="flex space-x-1 items-stretch"
+                      class="flex items-center space-x-1"
                     >
                       <div
                         class="flex items-center justify-center bg-theme-success-200 dark:bg-theme-success-700 text-theme-success-700 dark:text-white/70 dark:bg-theme-success-700 -ml-1.5 px-2"
@@ -4071,12 +4071,12 @@ exports[`ExchangeTransactionsTable > should render desktop 2`] = `
                   class="flex px-3 transition-colors duration-100 min-h-11 gap-3 justify-end items-start xl:items-center my-3 xl:my-0"
                 >
                   <div
-                    class="rounded px-1.5 css-1pbju28"
+                    class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
                     color="danger-bg"
                     data-testid="AmountLabel__wrapper"
                   >
                     <div
-                      class="flex space-x-1 items-stretch"
+                      class="flex items-center space-x-1"
                     >
                       <span
                         class="whitespace-nowrap text-sm"
@@ -4095,12 +4095,12 @@ exports[`ExchangeTransactionsTable > should render desktop 2`] = `
                   class="flex px-3 transition-colors duration-100 min-h-11 gap-3 justify-end items-start xl:items-center my-3 xl:my-0"
                 >
                   <div
-                    class="rounded pr-1.5 css-givenh"
+                    class="flex h-full items-center justify-center rounded pr-1.5 css-1jspzfx"
                     color="success-bg"
                     data-testid="AmountLabel__wrapper"
                   >
                     <div
-                      class="flex space-x-1 items-stretch"
+                      class="flex items-center space-x-1"
                     >
                       <div
                         class="flex items-center justify-center bg-theme-success-200 dark:bg-theme-success-700 text-theme-success-700 dark:text-white/70 dark:bg-theme-success-700 -ml-1.5 px-2"
@@ -4296,12 +4296,12 @@ exports[`ExchangeTransactionsTable > should render desktop 2`] = `
                   class="px-3 transition-colors duration-100 min-h-11 items-end flex flex-col gap-1.5 my-3 xl:my-0"
                 >
                   <div
-                    class="rounded px-1.5 css-1pbju28"
+                    class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
                     color="danger-bg"
                     data-testid="AmountLabel__wrapper"
                   >
                     <div
-                      class="flex space-x-1 items-stretch"
+                      class="flex items-center space-x-1"
                     >
                       <span
                         class="whitespace-nowrap text-sm"
@@ -4312,12 +4312,12 @@ exports[`ExchangeTransactionsTable > should render desktop 2`] = `
                     </div>
                   </div>
                   <div
-                    class="rounded pr-1.5 css-givenh"
+                    class="flex h-full items-center justify-center rounded pr-1.5 css-1jspzfx"
                     color="success-bg"
                     data-testid="AmountLabel__wrapper"
                   >
                     <div
-                      class="flex space-x-1 items-stretch"
+                      class="flex items-center space-x-1"
                     >
                       <div
                         class="flex items-center justify-center bg-theme-success-200 dark:bg-theme-success-700 text-theme-success-700 dark:text-white/70 dark:bg-theme-success-700 -ml-1.5 px-2"
@@ -4370,12 +4370,12 @@ exports[`ExchangeTransactionsTable > should render desktop 2`] = `
                   class="flex px-3 transition-colors duration-100 min-h-11 gap-3 justify-end items-start xl:items-center my-3 xl:my-0"
                 >
                   <div
-                    class="rounded px-1.5 css-1pbju28"
+                    class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
                     color="danger-bg"
                     data-testid="AmountLabel__wrapper"
                   >
                     <div
-                      class="flex space-x-1 items-stretch"
+                      class="flex items-center space-x-1"
                     >
                       <span
                         class="whitespace-nowrap text-sm"
@@ -4394,12 +4394,12 @@ exports[`ExchangeTransactionsTable > should render desktop 2`] = `
                   class="flex px-3 transition-colors duration-100 min-h-11 gap-3 justify-end items-start xl:items-center my-3 xl:my-0"
                 >
                   <div
-                    class="rounded pr-1.5 css-givenh"
+                    class="flex h-full items-center justify-center rounded pr-1.5 css-1jspzfx"
                     color="success-bg"
                     data-testid="AmountLabel__wrapper"
                   >
                     <div
-                      class="flex space-x-1 items-stretch"
+                      class="flex items-center space-x-1"
                     >
                       <div
                         class="flex items-center justify-center bg-theme-success-200 dark:bg-theme-success-700 text-theme-success-700 dark:text-white/70 dark:bg-theme-success-700 -ml-1.5 px-2"
@@ -4595,12 +4595,12 @@ exports[`ExchangeTransactionsTable > should render desktop 2`] = `
                   class="px-3 transition-colors duration-100 min-h-11 items-end flex flex-col gap-1.5 my-3 xl:my-0"
                 >
                   <div
-                    class="rounded px-1.5 css-1pbju28"
+                    class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
                     color="danger-bg"
                     data-testid="AmountLabel__wrapper"
                   >
                     <div
-                      class="flex space-x-1 items-stretch"
+                      class="flex items-center space-x-1"
                     >
                       <span
                         class="whitespace-nowrap text-sm"
@@ -4611,12 +4611,12 @@ exports[`ExchangeTransactionsTable > should render desktop 2`] = `
                     </div>
                   </div>
                   <div
-                    class="rounded pr-1.5 css-givenh"
+                    class="flex h-full items-center justify-center rounded pr-1.5 css-1jspzfx"
                     color="success-bg"
                     data-testid="AmountLabel__wrapper"
                   >
                     <div
-                      class="flex space-x-1 items-stretch"
+                      class="flex items-center space-x-1"
                     >
                       <div
                         class="flex items-center justify-center bg-theme-success-200 dark:bg-theme-success-700 text-theme-success-700 dark:text-white/70 dark:bg-theme-success-700 -ml-1.5 px-2"
@@ -4669,12 +4669,12 @@ exports[`ExchangeTransactionsTable > should render desktop 2`] = `
                   class="flex px-3 transition-colors duration-100 min-h-11 gap-3 justify-end items-start xl:items-center my-3 xl:my-0"
                 >
                   <div
-                    class="rounded px-1.5 css-1pbju28"
+                    class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
                     color="danger-bg"
                     data-testid="AmountLabel__wrapper"
                   >
                     <div
-                      class="flex space-x-1 items-stretch"
+                      class="flex items-center space-x-1"
                     >
                       <span
                         class="whitespace-nowrap text-sm"
@@ -4693,12 +4693,12 @@ exports[`ExchangeTransactionsTable > should render desktop 2`] = `
                   class="flex px-3 transition-colors duration-100 min-h-11 gap-3 justify-end items-start xl:items-center my-3 xl:my-0"
                 >
                   <div
-                    class="rounded pr-1.5 css-givenh"
+                    class="flex h-full items-center justify-center rounded pr-1.5 css-1jspzfx"
                     color="success-bg"
                     data-testid="AmountLabel__wrapper"
                   >
                     <div
-                      class="flex space-x-1 items-stretch"
+                      class="flex items-center space-x-1"
                     >
                       <div
                         class="flex items-center justify-center bg-theme-success-200 dark:bg-theme-success-700 text-theme-success-700 dark:text-white/70 dark:bg-theme-success-700 -ml-1.5 px-2"
@@ -4858,7 +4858,7 @@ exports[`ExchangeTransactionsTable > should render desktop 3`] = `
               role="row"
             >
               <th
-                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800  no-border first:rounded-tl-xl last:rounded-tr-xl"
+                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 no-border first:rounded-tl-xl last:rounded-tr-xl"
                 colspan="1"
                 data-testid="table__th--0"
                 role="columnheader"
@@ -4874,7 +4874,7 @@ exports[`ExchangeTransactionsTable > should render desktop 3`] = `
                 </div>
               </th>
               <th
-                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800  hidden xl:table-cell no-border first:rounded-tl-xl last:rounded-tr-xl"
+                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 hidden xl:table-cell no-border first:rounded-tl-xl last:rounded-tr-xl"
                 colspan="1"
                 data-testid="table__th--1"
                 role="columnheader"
@@ -4920,7 +4920,7 @@ exports[`ExchangeTransactionsTable > should render desktop 3`] = `
                 </div>
               </th>
               <th
-                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800  no-border first:rounded-tl-xl last:rounded-tr-xl"
+                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 no-border first:rounded-tl-xl last:rounded-tr-xl"
                 colspan="1"
                 data-testid="table__th--2"
                 role="columnheader"
@@ -4966,7 +4966,7 @@ exports[`ExchangeTransactionsTable > should render desktop 3`] = `
                 </div>
               </th>
               <th
-                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800  no-border lg:hidden first:rounded-tl-xl last:rounded-tr-xl"
+                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 no-border lg:hidden first:rounded-tl-xl last:rounded-tr-xl"
                 colspan="1"
                 data-testid="table__th--3"
                 role="columnheader"
@@ -5012,7 +5012,7 @@ exports[`ExchangeTransactionsTable > should render desktop 3`] = `
                 </div>
               </th>
               <th
-                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800  no-border hidden lg:table-cell first:rounded-tl-xl last:rounded-tr-xl"
+                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 no-border hidden lg:table-cell first:rounded-tl-xl last:rounded-tr-xl"
                 colspan="1"
                 data-testid="table__th--4"
                 role="columnheader"
@@ -5058,7 +5058,7 @@ exports[`ExchangeTransactionsTable > should render desktop 3`] = `
                 </div>
               </th>
               <th
-                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800  no-border hidden lg:table-cell first:rounded-tl-xl last:rounded-tr-xl"
+                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 no-border hidden lg:table-cell first:rounded-tl-xl last:rounded-tr-xl"
                 colspan="1"
                 data-testid="table__th--5"
                 role="columnheader"
@@ -5104,7 +5104,7 @@ exports[`ExchangeTransactionsTable > should render desktop 3`] = `
                 </div>
               </th>
               <th
-                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800  no-border first:rounded-tl-xl last:rounded-tr-xl w-24 min-w-24"
+                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 no-border first:rounded-tl-xl last:rounded-tr-xl w-24 min-w-24"
                 colspan="1"
                 data-testid="table__th--6"
                 role="columnheader"
@@ -5120,7 +5120,7 @@ exports[`ExchangeTransactionsTable > should render desktop 3`] = `
                 </div>
               </th>
               <th
-                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800  no-border w-1 first:rounded-tl-xl last:rounded-tr-xl"
+                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 no-border w-1 first:rounded-tl-xl last:rounded-tr-xl"
                 colspan="1"
                 data-testid="table__th--7"
                 role="columnheader"
@@ -5206,12 +5206,12 @@ exports[`ExchangeTransactionsTable > should render desktop 3`] = `
                   class="px-3 transition-colors duration-100 min-h-11 items-end flex flex-col gap-1.5 my-3 xl:my-0"
                 >
                   <div
-                    class="rounded px-1.5 css-1pbju28"
+                    class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
                     color="danger-bg"
                     data-testid="AmountLabel__wrapper"
                   >
                     <div
-                      class="flex space-x-1 items-stretch"
+                      class="flex items-center space-x-1"
                     >
                       <span
                         class="whitespace-nowrap text-sm"
@@ -5222,12 +5222,12 @@ exports[`ExchangeTransactionsTable > should render desktop 3`] = `
                     </div>
                   </div>
                   <div
-                    class="rounded pr-1.5 css-givenh"
+                    class="flex h-full items-center justify-center rounded pr-1.5 css-1jspzfx"
                     color="success-bg"
                     data-testid="AmountLabel__wrapper"
                   >
                     <div
-                      class="flex space-x-1 items-stretch"
+                      class="flex items-center space-x-1"
                     >
                       <div
                         class="flex items-center justify-center bg-theme-success-200 dark:bg-theme-success-700 text-theme-success-700 dark:text-white/70 dark:bg-theme-success-700 -ml-1.5 px-2"
@@ -5280,12 +5280,12 @@ exports[`ExchangeTransactionsTable > should render desktop 3`] = `
                   class="flex px-3 transition-colors duration-100 min-h-11 gap-3 justify-end items-start xl:items-center my-3 xl:my-0"
                 >
                   <div
-                    class="rounded px-1.5 css-1pbju28"
+                    class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
                     color="danger-bg"
                     data-testid="AmountLabel__wrapper"
                   >
                     <div
-                      class="flex space-x-1 items-stretch"
+                      class="flex items-center space-x-1"
                     >
                       <span
                         class="whitespace-nowrap text-sm"
@@ -5304,12 +5304,12 @@ exports[`ExchangeTransactionsTable > should render desktop 3`] = `
                   class="flex px-3 transition-colors duration-100 min-h-11 gap-3 justify-end items-start xl:items-center my-3 xl:my-0"
                 >
                   <div
-                    class="rounded pr-1.5 css-givenh"
+                    class="flex h-full items-center justify-center rounded pr-1.5 css-1jspzfx"
                     color="success-bg"
                     data-testid="AmountLabel__wrapper"
                   >
                     <div
-                      class="flex space-x-1 items-stretch"
+                      class="flex items-center space-x-1"
                     >
                       <div
                         class="flex items-center justify-center bg-theme-success-200 dark:bg-theme-success-700 text-theme-success-700 dark:text-white/70 dark:bg-theme-success-700 -ml-1.5 px-2"
@@ -5505,12 +5505,12 @@ exports[`ExchangeTransactionsTable > should render desktop 3`] = `
                   class="px-3 transition-colors duration-100 min-h-11 items-end flex flex-col gap-1.5 my-3 xl:my-0"
                 >
                   <div
-                    class="rounded px-1.5 css-1pbju28"
+                    class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
                     color="danger-bg"
                     data-testid="AmountLabel__wrapper"
                   >
                     <div
-                      class="flex space-x-1 items-stretch"
+                      class="flex items-center space-x-1"
                     >
                       <span
                         class="whitespace-nowrap text-sm"
@@ -5521,12 +5521,12 @@ exports[`ExchangeTransactionsTable > should render desktop 3`] = `
                     </div>
                   </div>
                   <div
-                    class="rounded pr-1.5 css-givenh"
+                    class="flex h-full items-center justify-center rounded pr-1.5 css-1jspzfx"
                     color="success-bg"
                     data-testid="AmountLabel__wrapper"
                   >
                     <div
-                      class="flex space-x-1 items-stretch"
+                      class="flex items-center space-x-1"
                     >
                       <div
                         class="flex items-center justify-center bg-theme-success-200 dark:bg-theme-success-700 text-theme-success-700 dark:text-white/70 dark:bg-theme-success-700 -ml-1.5 px-2"
@@ -5579,12 +5579,12 @@ exports[`ExchangeTransactionsTable > should render desktop 3`] = `
                   class="flex px-3 transition-colors duration-100 min-h-11 gap-3 justify-end items-start xl:items-center my-3 xl:my-0"
                 >
                   <div
-                    class="rounded px-1.5 css-1pbju28"
+                    class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
                     color="danger-bg"
                     data-testid="AmountLabel__wrapper"
                   >
                     <div
-                      class="flex space-x-1 items-stretch"
+                      class="flex items-center space-x-1"
                     >
                       <span
                         class="whitespace-nowrap text-sm"
@@ -5603,12 +5603,12 @@ exports[`ExchangeTransactionsTable > should render desktop 3`] = `
                   class="flex px-3 transition-colors duration-100 min-h-11 gap-3 justify-end items-start xl:items-center my-3 xl:my-0"
                 >
                   <div
-                    class="rounded pr-1.5 css-givenh"
+                    class="flex h-full items-center justify-center rounded pr-1.5 css-1jspzfx"
                     color="success-bg"
                     data-testid="AmountLabel__wrapper"
                   >
                     <div
-                      class="flex space-x-1 items-stretch"
+                      class="flex items-center space-x-1"
                     >
                       <div
                         class="flex items-center justify-center bg-theme-success-200 dark:bg-theme-success-700 text-theme-success-700 dark:text-white/70 dark:bg-theme-success-700 -ml-1.5 px-2"
@@ -5804,12 +5804,12 @@ exports[`ExchangeTransactionsTable > should render desktop 3`] = `
                   class="px-3 transition-colors duration-100 min-h-11 items-end flex flex-col gap-1.5 my-3 xl:my-0"
                 >
                   <div
-                    class="rounded px-1.5 css-1pbju28"
+                    class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
                     color="danger-bg"
                     data-testid="AmountLabel__wrapper"
                   >
                     <div
-                      class="flex space-x-1 items-stretch"
+                      class="flex items-center space-x-1"
                     >
                       <span
                         class="whitespace-nowrap text-sm"
@@ -5820,12 +5820,12 @@ exports[`ExchangeTransactionsTable > should render desktop 3`] = `
                     </div>
                   </div>
                   <div
-                    class="rounded pr-1.5 css-givenh"
+                    class="flex h-full items-center justify-center rounded pr-1.5 css-1jspzfx"
                     color="success-bg"
                     data-testid="AmountLabel__wrapper"
                   >
                     <div
-                      class="flex space-x-1 items-stretch"
+                      class="flex items-center space-x-1"
                     >
                       <div
                         class="flex items-center justify-center bg-theme-success-200 dark:bg-theme-success-700 text-theme-success-700 dark:text-white/70 dark:bg-theme-success-700 -ml-1.5 px-2"
@@ -5878,12 +5878,12 @@ exports[`ExchangeTransactionsTable > should render desktop 3`] = `
                   class="flex px-3 transition-colors duration-100 min-h-11 gap-3 justify-end items-start xl:items-center my-3 xl:my-0"
                 >
                   <div
-                    class="rounded px-1.5 css-1pbju28"
+                    class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
                     color="danger-bg"
                     data-testid="AmountLabel__wrapper"
                   >
                     <div
-                      class="flex space-x-1 items-stretch"
+                      class="flex items-center space-x-1"
                     >
                       <span
                         class="whitespace-nowrap text-sm"
@@ -5902,12 +5902,12 @@ exports[`ExchangeTransactionsTable > should render desktop 3`] = `
                   class="flex px-3 transition-colors duration-100 min-h-11 gap-3 justify-end items-start xl:items-center my-3 xl:my-0"
                 >
                   <div
-                    class="rounded pr-1.5 css-givenh"
+                    class="flex h-full items-center justify-center rounded pr-1.5 css-1jspzfx"
                     color="success-bg"
                     data-testid="AmountLabel__wrapper"
                   >
                     <div
-                      class="flex space-x-1 items-stretch"
+                      class="flex items-center space-x-1"
                     >
                       <div
                         class="flex items-center justify-center bg-theme-success-200 dark:bg-theme-success-700 text-theme-success-700 dark:text-white/70 dark:bg-theme-success-700 -ml-1.5 px-2"
@@ -6231,12 +6231,12 @@ exports[`ExchangeTransactionsTable > should render mobile 1`] = `
                         class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                       >
                         <div
-                          class="rounded px-1.5 css-is8euj"
+                          class="flex h-full items-center justify-center rounded px-1.5 css-is8euj"
                           color="danger-bg"
                           data-testid="AmountLabel__wrapper"
                         >
                           <div
-                            class="flex space-x-1 items-center"
+                            class="flex items-center space-x-1"
                           >
                             <span
                               class="whitespace-nowrap text-sm"
@@ -6260,12 +6260,12 @@ exports[`ExchangeTransactionsTable > should render mobile 1`] = `
                         class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                       >
                         <div
-                          class="rounded pr-1.5 css-1xi6cb5"
+                          class="flex h-full items-center justify-center rounded pr-1.5 css-1xi6cb5"
                           color="success-bg"
                           data-testid="AmountLabel__wrapper"
                         >
                           <div
-                            class="flex space-x-1 items-center"
+                            class="flex items-center space-x-1"
                           >
                             <div
                               class="flex items-center justify-center bg-theme-success-200 dark:bg-theme-success-700 text-theme-success-700 dark:text-white/70 dark:bg-theme-success-700 h-5 w-5"
@@ -6481,12 +6481,12 @@ exports[`ExchangeTransactionsTable > should render mobile 1`] = `
                         class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                       >
                         <div
-                          class="rounded px-1.5 css-is8euj"
+                          class="flex h-full items-center justify-center rounded px-1.5 css-is8euj"
                           color="danger-bg"
                           data-testid="AmountLabel__wrapper"
                         >
                           <div
-                            class="flex space-x-1 items-center"
+                            class="flex items-center space-x-1"
                           >
                             <span
                               class="whitespace-nowrap text-sm"
@@ -6510,12 +6510,12 @@ exports[`ExchangeTransactionsTable > should render mobile 1`] = `
                         class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                       >
                         <div
-                          class="rounded pr-1.5 css-1xi6cb5"
+                          class="flex h-full items-center justify-center rounded pr-1.5 css-1xi6cb5"
                           color="success-bg"
                           data-testid="AmountLabel__wrapper"
                         >
                           <div
-                            class="flex space-x-1 items-center"
+                            class="flex items-center space-x-1"
                           >
                             <div
                               class="flex items-center justify-center bg-theme-success-200 dark:bg-theme-success-700 text-theme-success-700 dark:text-white/70 dark:bg-theme-success-700 h-5 w-5"
@@ -6731,12 +6731,12 @@ exports[`ExchangeTransactionsTable > should render mobile 1`] = `
                         class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                       >
                         <div
-                          class="rounded px-1.5 css-is8euj"
+                          class="flex h-full items-center justify-center rounded px-1.5 css-is8euj"
                           color="danger-bg"
                           data-testid="AmountLabel__wrapper"
                         >
                           <div
-                            class="flex space-x-1 items-center"
+                            class="flex items-center space-x-1"
                           >
                             <span
                               class="whitespace-nowrap text-sm"
@@ -6760,12 +6760,12 @@ exports[`ExchangeTransactionsTable > should render mobile 1`] = `
                         class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                       >
                         <div
-                          class="rounded pr-1.5 css-1xi6cb5"
+                          class="flex h-full items-center justify-center rounded pr-1.5 css-1xi6cb5"
                           color="success-bg"
                           data-testid="AmountLabel__wrapper"
                         >
                           <div
-                            class="flex space-x-1 items-center"
+                            class="flex items-center space-x-1"
                           >
                             <div
                               class="flex items-center justify-center bg-theme-success-200 dark:bg-theme-success-700 text-theme-success-700 dark:text-white/70 dark:bg-theme-success-700 h-5 w-5"
@@ -7009,12 +7009,12 @@ exports[`ExchangeTransactionsTable > should render mobile 2`] = `
                         class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                       >
                         <div
-                          class="rounded px-1.5 css-is8euj"
+                          class="flex h-full items-center justify-center rounded px-1.5 css-is8euj"
                           color="danger-bg"
                           data-testid="AmountLabel__wrapper"
                         >
                           <div
-                            class="flex space-x-1 items-center"
+                            class="flex items-center space-x-1"
                           >
                             <span
                               class="whitespace-nowrap text-sm"
@@ -7038,12 +7038,12 @@ exports[`ExchangeTransactionsTable > should render mobile 2`] = `
                         class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                       >
                         <div
-                          class="rounded pr-1.5 css-1xi6cb5"
+                          class="flex h-full items-center justify-center rounded pr-1.5 css-1xi6cb5"
                           color="success-bg"
                           data-testid="AmountLabel__wrapper"
                         >
                           <div
-                            class="flex space-x-1 items-center"
+                            class="flex items-center space-x-1"
                           >
                             <div
                               class="flex items-center justify-center bg-theme-success-200 dark:bg-theme-success-700 text-theme-success-700 dark:text-white/70 dark:bg-theme-success-700 h-5 w-5"
@@ -7259,12 +7259,12 @@ exports[`ExchangeTransactionsTable > should render mobile 2`] = `
                         class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                       >
                         <div
-                          class="rounded px-1.5 css-is8euj"
+                          class="flex h-full items-center justify-center rounded px-1.5 css-is8euj"
                           color="danger-bg"
                           data-testid="AmountLabel__wrapper"
                         >
                           <div
-                            class="flex space-x-1 items-center"
+                            class="flex items-center space-x-1"
                           >
                             <span
                               class="whitespace-nowrap text-sm"
@@ -7288,12 +7288,12 @@ exports[`ExchangeTransactionsTable > should render mobile 2`] = `
                         class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                       >
                         <div
-                          class="rounded pr-1.5 css-1xi6cb5"
+                          class="flex h-full items-center justify-center rounded pr-1.5 css-1xi6cb5"
                           color="success-bg"
                           data-testid="AmountLabel__wrapper"
                         >
                           <div
-                            class="flex space-x-1 items-center"
+                            class="flex items-center space-x-1"
                           >
                             <div
                               class="flex items-center justify-center bg-theme-success-200 dark:bg-theme-success-700 text-theme-success-700 dark:text-white/70 dark:bg-theme-success-700 h-5 w-5"
@@ -7509,12 +7509,12 @@ exports[`ExchangeTransactionsTable > should render mobile 2`] = `
                         class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                       >
                         <div
-                          class="rounded px-1.5 css-is8euj"
+                          class="flex h-full items-center justify-center rounded px-1.5 css-is8euj"
                           color="danger-bg"
                           data-testid="AmountLabel__wrapper"
                         >
                           <div
-                            class="flex space-x-1 items-center"
+                            class="flex items-center space-x-1"
                           >
                             <span
                               class="whitespace-nowrap text-sm"
@@ -7538,12 +7538,12 @@ exports[`ExchangeTransactionsTable > should render mobile 2`] = `
                         class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                       >
                         <div
-                          class="rounded pr-1.5 css-1xi6cb5"
+                          class="flex h-full items-center justify-center rounded pr-1.5 css-1xi6cb5"
                           color="success-bg"
                           data-testid="AmountLabel__wrapper"
                         >
                           <div
-                            class="flex space-x-1 items-center"
+                            class="flex items-center space-x-1"
                           >
                             <div
                               class="flex items-center justify-center bg-theme-success-200 dark:bg-theme-success-700 text-theme-success-700 dark:text-white/70 dark:bg-theme-success-700 h-5 w-5"

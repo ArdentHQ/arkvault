@@ -9,17 +9,17 @@ exports[`WalletListItem > should disable the send button when wallet has no bala
   <table>
     <tbody>
       <tr
-        class="group css-1kskd5s"
+        class="group relative css-1kskd5s"
         data-testid="TableRow"
       >
         <td
           data-testid="TableCell_Starred"
         >
           <div
-            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-2 -ml-2 rounded-l space-x-3"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 rounded-l space-x-3 pl-6 ml-0"
           >
             <div
-              class="flex h-5 items-center border-r border-theme-secondary-300 pr-3 dark:border-theme-secondary-800"
+              class="flex h-5 items-center pr-3 dark:border-theme-secondary-800"
             >
               <div
                 class="flex shrink-0 items-center justify-center"
@@ -53,37 +53,46 @@ exports[`WalletListItem > should disable the send button when wallet has no bala
           </div>
         </td>
         <td
+          class="hidden lg:table-cell"
+        >
+          <div
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 -ml-3 space-x-3"
+          >
+            <div
+              class="w-24 flex-1 overflow-hidden"
+            >
+              <div
+                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+              >
+                <span
+                  class="font-semibold text-base text-sm leading-[17px]"
+                  data-testid="Address__alias"
+                >
+                  <span
+                    class="no-ligatures css-9nx3be"
+                    data-testid="TruncateEnd"
+                  >
+                    ARK Wallet 1
+                  </span>
+                </span>
+              </div>
+            </div>
+          </div>
+        </td>
+        <td
           data-testid="TableCell_Wallet"
         >
           <div
             class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 -ml-3 space-x-3"
           >
             <div
-              class="flex shrink-0 items-center"
+              class="w-full max-w-64 flex-1 overflow-hidden lg:max-w-48 xl:max-w-full"
             >
               <div
-                class="ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-1ixj94m"
-                data-testid="Avatar"
-              >
-                <div
-                  class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
-                >
-                  <img
-                    alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                    src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
-                    title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                  />
-                </div>
-              </div>
-            </div>
-            <div
-              class="w-20 flex-1 overflow-hidden"
-            >
-              <div
-                class="flex overflow-hidden whitespace-nowrap flex-col items-start w-full"
+                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
                 <span
-                  class="font-semibold text-base text-sm text-theme-text group-hover:text-theme-primary-700 w-full truncate"
+                  class="font-semibold text-base lg:hidden text-sm text-theme-text group-hover:text-theme-primary-700"
                   data-testid="Address__alias"
                 >
                   <span
@@ -94,11 +103,47 @@ exports[`WalletListItem > should disable the send button when wallet has no bala
                   </span>
                 </span>
                 <span
-                  class="no-ligatures min-w-0 overflow-hidden text-xs text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                  class="no-ligatures min-w-0 overflow-hidden text-sm text-theme-secondary-700 dark:text-theme-secondary-500 lg:!ml-0 font-semibold text-base"
                   data-testid="Address__address"
                 >
                   D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
                 </span>
+                <button
+                  class="ring-focus relative focus:outline-none"
+                  data-ring-focus-margin="-m-1"
+                  data-testid="clipboard-icon__wrapper"
+                  type="button"
+                >
+                  <div
+                    class="text-theme-primary-400 dark:text-theme-secondary-700 dark:hover:text-theme-secondary-500 css-v0ob3f"
+                    height="16"
+                    width="16"
+                  >
+                    <svg
+                      id="copy"
+                      viewBox="0 0 20 20"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <g
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      >
+                        <path
+                          d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                        />
+                        <path
+                          d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                        />
+                      </g>
+                    </svg>
+                  </div>
+                </button>
               </div>
             </div>
           </div>
@@ -131,7 +176,7 @@ exports[`WalletListItem > should disable the send button when wallet has no bala
             class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 font-semibold justify-end"
           >
             <span
-              class="whitespace-nowrap"
+              class="whitespace-nowrap dark:text-theme-white text-theme-secondary-700 dark:md:text-theme-secondary-500"
               data-testid="Amount"
             >
               0 DARK
@@ -146,7 +191,7 @@ exports[`WalletListItem > should disable the send button when wallet has no bala
             class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 justify-end"
           >
             <span
-              class="text-xs font-semibold text-theme-secondary-900 md:text-base md:text-theme-secondary-500 dark:md:text-theme-secondary-700"
+              class="text-xs font-semibold text-theme-navy-200 md:text-base md:text-theme-secondary-500 dark:md:text-theme-secondary-700"
             >
               N/A
             </span>
@@ -154,11 +199,11 @@ exports[`WalletListItem > should disable the send button when wallet has no bala
         </td>
         <td>
           <div
-            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-2 -mr-2 rounded-r justify-end text-theme-secondary-text"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 -mr-2 rounded-r justify-end text-theme-secondary-text pr-6"
           >
             <div>
               <button
-                class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 text-theme-primary-600 hover:text-theme-primary-700"
+                class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 pr-0 text-sm text-theme-primary-600 hover:text-theme-primary-700"
                 data-testid="WalletListItem__send-button"
                 disabled=""
                 type="button"
@@ -166,7 +211,11 @@ exports[`WalletListItem > should disable the send button when wallet has no bala
                 <div
                   class="flex items-center space-x-2"
                 >
-                  Send
+                  <div
+                    class="border-r border-theme-secondary-300 pr-3 dark:border-theme-secondary-800"
+                  >
+                    Send
+                  </div>
                 </div>
               </button>
             </div>
@@ -180,7 +229,7 @@ exports[`WalletListItem > should disable the send button when wallet has no bala
                   data-testid="dropdown__toggle"
                 >
                   <button
-                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none -mr-1.5 text-theme-primary-300 hover:text-theme-primary-600"
+                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-theme-gray-700 -mr-1.5 hover:text-theme-primary-600"
                     type="button"
                   >
                     <div
@@ -192,36 +241,31 @@ exports[`WalletListItem > should disable the send button when wallet has no bala
                         width="20"
                       >
                         <svg
-                          id="ellipsis-vertical"
+                          fill="none"
                           viewBox="0 0 20 20"
-                          x="0"
-                          xml:space="preserve"
                           xmlns="http://www.w3.org/2000/svg"
-                          y="0"
                         >
-                          <g
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                          >
-                            <circle
-                              cx="10"
-                              cy="16.994"
-                              r="2.006"
-                            />
-                            <circle
-                              cx="10"
-                              cy="3"
-                              r="2"
-                            />
-                            <circle
-                              cx="10"
-                              cy="10"
-                              r="2"
-                            />
-                          </g>
+                          <circle
+                            cx="10.002"
+                            cy="2.99609"
+                            fill="currentColor"
+                            r="2"
+                            transform="rotate(90 10.002 2.99609)"
+                          />
+                          <circle
+                            cx="10.002"
+                            cy="9.99805"
+                            fill="currentColor"
+                            r="2"
+                            transform="rotate(90 10.002 9.99805)"
+                          />
+                          <circle
+                            cx="10.002"
+                            cy="17"
+                            fill="currentColor"
+                            r="2"
+                            transform="rotate(90 10.002 17)"
+                          />
                         </svg>
                       </div>
                     </div>
@@ -389,31 +433,13 @@ exports[`WalletListItem > should disable the send button when wallet has no bala
       class="flex items-center space-x-4 p-2 pl-4"
     >
       <div
-        class="flex shrink-0 items-center"
+        class="flex min-w-0 flex-1 flex-shrink flex-col"
       >
         <div
-          class="ring-theme-primary-100 dark:ring-transparent shrink-0 css-19i3ei6"
-          data-testid="Avatar"
-        >
-          <div
-            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
-          >
-            <img
-              alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-              src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
-              title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-            />
-          </div>
-        </div>
-      </div>
-      <div
-        class="flex w-20 flex-1 flex-col font-semibold"
-      >
-        <div
-          class="flex overflow-hidden whitespace-nowrap flex-col items-start w-full space-y-1"
+          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
         >
           <span
-            class="font-semibold text-base text-sm text-theme-text w-full truncate"
+            class="font-semibold text-base text-sm text-theme-text leading-[17px]"
             data-testid="Address__alias"
           >
             <span
@@ -424,18 +450,54 @@ exports[`WalletListItem > should disable the send button when wallet has no bala
             </span>
           </span>
           <span
-            class="no-ligatures min-w-0 overflow-hidden text-xs text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+            class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold text-base"
             data-testid="Address__address"
           >
             D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
           </span>
+          <button
+            class="ring-focus relative focus:outline-none"
+            data-ring-focus-margin="-m-1"
+            data-testid="clipboard-icon__wrapper"
+            type="button"
+          >
+            <div
+              class="text-theme-primary-400 dark:text-theme-secondary-700 dark:hover:text-theme-secondary-500 css-v0ob3f"
+              height="16"
+              width="16"
+            >
+              <svg
+                id="copy"
+                viewBox="0 0 20 20"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <g
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                  />
+                  <path
+                    d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                  />
+                </g>
+              </svg>
+            </div>
+          </button>
         </div>
       </div>
       <div
-        class="flex items-center space-x-2 self-start"
+        class="flex items-center space-x-3 self-start"
       >
         <div
-          class="inline-flex items-center space-x-1 border-r border-theme-secondary-300 pr-1 empty:border-r-0 dark:border-theme-secondary-800"
+          class="inline-flex items-center space-x-1 border-r border-theme-secondary-300 pr-3 empty:border-r-0 dark:border-theme-secondary-800"
         >
           <span
             aria-busy="true"
@@ -488,13 +550,13 @@ exports[`WalletListItem > should disable the send button when wallet has no bala
         class="flex flex-1 flex-col justify-between space-y-1 bg-theme-primary-500 px-4 py-3 font-semibold"
       >
         <span
-          class="whitespace-nowrap text-sm text-white"
+          class="whitespace-nowrap dark:text-theme-white text-theme-secondary-700 dark:md:text-theme-secondary-500 text-sm text-white"
           data-testid="Amount"
         >
           0 DARK
         </span>
         <span
-          class="text-xs font-semibold text-theme-secondary-900 md:text-base md:text-theme-secondary-500 dark:md:text-theme-secondary-700"
+          class="text-xs font-semibold text-theme-navy-200 md:text-base md:text-theme-secondary-500 dark:md:text-theme-secondary-700"
         >
           N/A
         </span>
@@ -545,17 +607,17 @@ exports[`WalletListItem > should render when isCompact = false 1`] = `
   <table>
     <tbody>
       <tr
-        class="group css-1kskd5s"
+        class="group relative css-1kskd5s"
         data-testid="TableRow"
       >
         <td
           data-testid="TableCell_Starred"
         >
           <div
-            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-2 -ml-2 rounded-l space-x-3"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 rounded-l space-x-3 pl-6 ml-0"
           >
             <div
-              class="flex h-5 items-center border-r border-theme-secondary-300 pr-3 dark:border-theme-secondary-800"
+              class="flex h-5 items-center pr-3 dark:border-theme-secondary-800"
             >
               <div
                 class="flex shrink-0 items-center justify-center"
@@ -589,37 +651,46 @@ exports[`WalletListItem > should render when isCompact = false 1`] = `
           </div>
         </td>
         <td
+          class="hidden lg:table-cell"
+        >
+          <div
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 -ml-3 space-x-3"
+          >
+            <div
+              class="w-24 flex-1 overflow-hidden"
+            >
+              <div
+                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+              >
+                <span
+                  class="font-semibold text-base text-sm leading-[17px]"
+                  data-testid="Address__alias"
+                >
+                  <span
+                    class="no-ligatures css-9nx3be"
+                    data-testid="TruncateEnd"
+                  >
+                    ARK Wallet 1
+                  </span>
+                </span>
+              </div>
+            </div>
+          </div>
+        </td>
+        <td
           data-testid="TableCell_Wallet"
         >
           <div
             class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 -ml-3 space-x-3"
           >
             <div
-              class="flex shrink-0 items-center"
+              class="w-full max-w-64 flex-1 overflow-hidden lg:max-w-48 xl:max-w-full"
             >
               <div
-                class="ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-1ixj94m"
-                data-testid="Avatar"
-              >
-                <div
-                  class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
-                >
-                  <img
-                    alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                    src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
-                    title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                  />
-                </div>
-              </div>
-            </div>
-            <div
-              class="w-20 flex-1 overflow-hidden"
-            >
-              <div
-                class="flex overflow-hidden whitespace-nowrap flex-col items-start w-full"
+                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
                 <span
-                  class="font-semibold text-base text-sm text-theme-text group-hover:text-theme-primary-700 w-full truncate"
+                  class="font-semibold text-base lg:hidden text-sm text-theme-text group-hover:text-theme-primary-700"
                   data-testid="Address__alias"
                 >
                   <span
@@ -630,11 +701,47 @@ exports[`WalletListItem > should render when isCompact = false 1`] = `
                   </span>
                 </span>
                 <span
-                  class="no-ligatures min-w-0 overflow-hidden text-xs text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                  class="no-ligatures min-w-0 overflow-hidden text-sm text-theme-secondary-700 dark:text-theme-secondary-500 lg:!ml-0 font-semibold text-base"
                   data-testid="Address__address"
                 >
                   D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
                 </span>
+                <button
+                  class="ring-focus relative focus:outline-none"
+                  data-ring-focus-margin="-m-1"
+                  data-testid="clipboard-icon__wrapper"
+                  type="button"
+                >
+                  <div
+                    class="text-theme-primary-400 dark:text-theme-secondary-700 dark:hover:text-theme-secondary-500 css-v0ob3f"
+                    height="16"
+                    width="16"
+                  >
+                    <svg
+                      id="copy"
+                      viewBox="0 0 20 20"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <g
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      >
+                        <path
+                          d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                        />
+                        <path
+                          d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                        />
+                      </g>
+                    </svg>
+                  </div>
+                </button>
               </div>
             </div>
           </div>
@@ -667,7 +774,7 @@ exports[`WalletListItem > should render when isCompact = false 1`] = `
             class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 font-semibold justify-end"
           >
             <span
-              class="whitespace-nowrap"
+              class="whitespace-nowrap dark:text-theme-white text-theme-secondary-700 dark:md:text-theme-secondary-500"
               data-testid="Amount"
             >
               33.75089801 DARK
@@ -682,7 +789,7 @@ exports[`WalletListItem > should render when isCompact = false 1`] = `
             class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 justify-end"
           >
             <span
-              class="text-xs font-semibold text-theme-secondary-900 md:text-base md:text-theme-secondary-500 dark:md:text-theme-secondary-700"
+              class="text-xs font-semibold text-theme-navy-200 md:text-base md:text-theme-secondary-500 dark:md:text-theme-secondary-700"
             >
               N/A
             </span>
@@ -690,18 +797,22 @@ exports[`WalletListItem > should render when isCompact = false 1`] = `
         </td>
         <td>
           <div
-            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-2 -mr-2 rounded-r justify-end text-theme-secondary-text"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 -mr-2 rounded-r justify-end text-theme-secondary-text pr-6"
           >
             <div>
               <button
-                class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-theme-primary-600 hover:text-theme-primary-700"
+                class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none pr-0 text-sm text-theme-primary-600 hover:text-theme-primary-700"
                 data-testid="WalletListItem__send-button"
                 type="button"
               >
                 <div
                   class="flex items-center space-x-2"
                 >
-                  Send
+                  <div
+                    class="border-r border-theme-secondary-300 pr-3 dark:border-theme-secondary-800"
+                  >
+                    Send
+                  </div>
                 </div>
               </button>
             </div>
@@ -715,7 +826,7 @@ exports[`WalletListItem > should render when isCompact = false 1`] = `
                   data-testid="dropdown__toggle"
                 >
                   <button
-                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none -mr-1.5 text-theme-primary-300 hover:text-theme-primary-600"
+                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-theme-gray-700 -mr-1.5 hover:text-theme-primary-600"
                     type="button"
                   >
                     <div
@@ -727,36 +838,31 @@ exports[`WalletListItem > should render when isCompact = false 1`] = `
                         width="20"
                       >
                         <svg
-                          id="ellipsis-vertical"
+                          fill="none"
                           viewBox="0 0 20 20"
-                          x="0"
-                          xml:space="preserve"
                           xmlns="http://www.w3.org/2000/svg"
-                          y="0"
                         >
-                          <g
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                          >
-                            <circle
-                              cx="10"
-                              cy="16.994"
-                              r="2.006"
-                            />
-                            <circle
-                              cx="10"
-                              cy="3"
-                              r="2"
-                            />
-                            <circle
-                              cx="10"
-                              cy="10"
-                              r="2"
-                            />
-                          </g>
+                          <circle
+                            cx="10.002"
+                            cy="2.99609"
+                            fill="currentColor"
+                            r="2"
+                            transform="rotate(90 10.002 2.99609)"
+                          />
+                          <circle
+                            cx="10.002"
+                            cy="9.99805"
+                            fill="currentColor"
+                            r="2"
+                            transform="rotate(90 10.002 9.99805)"
+                          />
+                          <circle
+                            cx="10.002"
+                            cy="17"
+                            fill="currentColor"
+                            r="2"
+                            transform="rotate(90 10.002 17)"
+                          />
                         </svg>
                       </div>
                     </div>
@@ -918,17 +1024,17 @@ exports[`WalletListItem > should render when isCompact = true 1`] = `
   <table>
     <tbody>
       <tr
-        class="group css-1kskd5s"
+        class="group relative css-1kskd5s"
         data-testid="TableRow"
       >
         <td
           data-testid="TableCell_Starred"
         >
           <div
-            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-2 -ml-2 rounded-l space-x-3"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 rounded-l space-x-3 pl-6 ml-0"
           >
             <div
-              class="flex h-5 items-center border-r border-theme-secondary-300 pr-3 dark:border-theme-secondary-800"
+              class="flex h-5 items-center pr-3 dark:border-theme-secondary-800"
             >
               <div
                 class="flex shrink-0 items-center justify-center"
@@ -962,37 +1068,46 @@ exports[`WalletListItem > should render when isCompact = true 1`] = `
           </div>
         </td>
         <td
+          class="hidden lg:table-cell"
+        >
+          <div
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 -ml-3 space-x-3"
+          >
+            <div
+              class="w-24 flex-1 overflow-hidden"
+            >
+              <div
+                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+              >
+                <span
+                  class="font-semibold text-base text-sm leading-[17px]"
+                  data-testid="Address__alias"
+                >
+                  <span
+                    class="no-ligatures css-9nx3be"
+                    data-testid="TruncateEnd"
+                  >
+                    ARK Wallet 1
+                  </span>
+                </span>
+              </div>
+            </div>
+          </div>
+        </td>
+        <td
           data-testid="TableCell_Wallet"
         >
           <div
             class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 -ml-3 space-x-3"
           >
             <div
-              class="flex shrink-0 items-center"
+              class="w-full max-w-64 flex-1 overflow-hidden lg:max-w-48 xl:max-w-full"
             >
               <div
-                class="ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-1ixj94m"
-                data-testid="Avatar"
-              >
-                <div
-                  class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
-                >
-                  <img
-                    alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                    src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
-                    title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                  />
-                </div>
-              </div>
-            </div>
-            <div
-              class="w-20 flex-1 overflow-hidden"
-            >
-              <div
-                class="flex overflow-hidden whitespace-nowrap flex-col items-start w-full"
+                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
                 <span
-                  class="font-semibold text-base text-sm text-theme-text group-hover:text-theme-primary-700 w-full truncate"
+                  class="font-semibold text-base lg:hidden text-sm text-theme-text group-hover:text-theme-primary-700"
                   data-testid="Address__alias"
                 >
                   <span
@@ -1003,11 +1118,47 @@ exports[`WalletListItem > should render when isCompact = true 1`] = `
                   </span>
                 </span>
                 <span
-                  class="no-ligatures min-w-0 overflow-hidden text-xs text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                  class="no-ligatures min-w-0 overflow-hidden text-sm text-theme-secondary-700 dark:text-theme-secondary-500 lg:!ml-0 font-semibold text-base"
                   data-testid="Address__address"
                 >
                   D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
                 </span>
+                <button
+                  class="ring-focus relative focus:outline-none"
+                  data-ring-focus-margin="-m-1"
+                  data-testid="clipboard-icon__wrapper"
+                  type="button"
+                >
+                  <div
+                    class="text-theme-primary-400 dark:text-theme-secondary-700 dark:hover:text-theme-secondary-500 css-v0ob3f"
+                    height="16"
+                    width="16"
+                  >
+                    <svg
+                      id="copy"
+                      viewBox="0 0 20 20"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <g
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      >
+                        <path
+                          d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                        />
+                        <path
+                          d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                        />
+                      </g>
+                    </svg>
+                  </div>
+                </button>
               </div>
             </div>
           </div>
@@ -1040,7 +1191,7 @@ exports[`WalletListItem > should render when isCompact = true 1`] = `
             class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 font-semibold justify-end"
           >
             <span
-              class="whitespace-nowrap"
+              class="whitespace-nowrap dark:text-theme-white text-theme-secondary-700 dark:md:text-theme-secondary-500"
               data-testid="Amount"
             >
               33.75089801 DARK
@@ -1055,7 +1206,7 @@ exports[`WalletListItem > should render when isCompact = true 1`] = `
             class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 justify-end"
           >
             <span
-              class="text-xs font-semibold text-theme-secondary-900 md:text-base md:text-theme-secondary-500 dark:md:text-theme-secondary-700"
+              class="text-xs font-semibold text-theme-navy-200 md:text-base md:text-theme-secondary-500 dark:md:text-theme-secondary-700"
             >
               N/A
             </span>
@@ -1063,18 +1214,22 @@ exports[`WalletListItem > should render when isCompact = true 1`] = `
         </td>
         <td>
           <div
-            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-2 -mr-2 rounded-r justify-end text-theme-secondary-text"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 -mr-2 rounded-r justify-end text-theme-secondary-text pr-6"
           >
             <div>
               <button
-                class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-theme-primary-600 hover:text-theme-primary-700"
+                class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none pr-0 text-sm text-theme-primary-600 hover:text-theme-primary-700"
                 data-testid="WalletListItem__send-button"
                 type="button"
               >
                 <div
                   class="flex items-center space-x-2"
                 >
-                  Send
+                  <div
+                    class="border-r border-theme-secondary-300 pr-3 dark:border-theme-secondary-800"
+                  >
+                    Send
+                  </div>
                 </div>
               </button>
             </div>
@@ -1088,7 +1243,7 @@ exports[`WalletListItem > should render when isCompact = true 1`] = `
                   data-testid="dropdown__toggle"
                 >
                   <button
-                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none -mr-1.5 text-theme-primary-300 hover:text-theme-primary-600"
+                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-theme-gray-700 -mr-1.5 hover:text-theme-primary-600"
                     type="button"
                   >
                     <div
@@ -1100,36 +1255,31 @@ exports[`WalletListItem > should render when isCompact = true 1`] = `
                         width="20"
                       >
                         <svg
-                          id="ellipsis-vertical"
+                          fill="none"
                           viewBox="0 0 20 20"
-                          x="0"
-                          xml:space="preserve"
                           xmlns="http://www.w3.org/2000/svg"
-                          y="0"
                         >
-                          <g
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                          >
-                            <circle
-                              cx="10"
-                              cy="16.994"
-                              r="2.006"
-                            />
-                            <circle
-                              cx="10"
-                              cy="3"
-                              r="2"
-                            />
-                            <circle
-                              cx="10"
-                              cy="10"
-                              r="2"
-                            />
-                          </g>
+                          <circle
+                            cx="10.002"
+                            cy="2.99609"
+                            fill="currentColor"
+                            r="2"
+                            transform="rotate(90 10.002 2.99609)"
+                          />
+                          <circle
+                            cx="10.002"
+                            cy="9.99805"
+                            fill="currentColor"
+                            r="2"
+                            transform="rotate(90 10.002 9.99805)"
+                          />
+                          <circle
+                            cx="10.002"
+                            cy="17"
+                            fill="currentColor"
+                            r="2"
+                            transform="rotate(90 10.002 17)"
+                          />
                         </svg>
                       </div>
                     </div>
@@ -1297,31 +1447,13 @@ exports[`WalletListItem > should render when isLargeScreen = false 1`] = `
       class="flex items-center space-x-4 p-2 pl-4"
     >
       <div
-        class="flex shrink-0 items-center"
+        class="flex min-w-0 flex-1 flex-shrink flex-col"
       >
         <div
-          class="ring-theme-primary-100 dark:ring-transparent shrink-0 css-19i3ei6"
-          data-testid="Avatar"
-        >
-          <div
-            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
-          >
-            <img
-              alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-              src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
-              title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-            />
-          </div>
-        </div>
-      </div>
-      <div
-        class="flex w-20 flex-1 flex-col font-semibold"
-      >
-        <div
-          class="flex overflow-hidden whitespace-nowrap flex-col items-start w-full space-y-1"
+          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
         >
           <span
-            class="font-semibold text-base text-sm text-theme-text w-full truncate"
+            class="font-semibold text-base text-sm text-theme-text leading-[17px]"
             data-testid="Address__alias"
           >
             <span
@@ -1332,18 +1464,54 @@ exports[`WalletListItem > should render when isLargeScreen = false 1`] = `
             </span>
           </span>
           <span
-            class="no-ligatures min-w-0 overflow-hidden text-xs text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+            class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold text-base"
             data-testid="Address__address"
           >
             D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
           </span>
+          <button
+            class="ring-focus relative focus:outline-none"
+            data-ring-focus-margin="-m-1"
+            data-testid="clipboard-icon__wrapper"
+            type="button"
+          >
+            <div
+              class="text-theme-primary-400 dark:text-theme-secondary-700 dark:hover:text-theme-secondary-500 css-v0ob3f"
+              height="16"
+              width="16"
+            >
+              <svg
+                id="copy"
+                viewBox="0 0 20 20"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <g
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                  />
+                  <path
+                    d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                  />
+                </g>
+              </svg>
+            </div>
+          </button>
         </div>
       </div>
       <div
-        class="flex items-center space-x-2 self-start"
+        class="flex items-center space-x-3 self-start"
       >
         <div
-          class="inline-flex items-center space-x-1 border-r border-theme-secondary-300 pr-1 empty:border-r-0 dark:border-theme-secondary-800"
+          class="inline-flex items-center space-x-1 border-r border-theme-secondary-300 pr-3 empty:border-r-0 dark:border-theme-secondary-800"
         >
           <div
             class="inline-block p-1 text-theme-secondary-700"
@@ -1435,13 +1603,13 @@ exports[`WalletListItem > should render when isLargeScreen = false 1`] = `
         class="flex flex-1 flex-col justify-between space-y-1 bg-theme-primary-500 px-4 py-3 font-semibold"
       >
         <span
-          class="whitespace-nowrap text-sm text-white"
+          class="whitespace-nowrap dark:text-theme-white text-theme-secondary-700 dark:md:text-theme-secondary-500 text-sm text-white"
           data-testid="Amount"
         >
           33.75089801 DARK
         </span>
         <span
-          class="text-xs font-semibold text-theme-secondary-900 md:text-base md:text-theme-secondary-500 dark:md:text-theme-secondary-700"
+          class="text-xs font-semibold text-theme-navy-200 md:text-base md:text-theme-secondary-500 dark:md:text-theme-secondary-700"
         >
           N/A
         </span>
@@ -1495,31 +1663,13 @@ exports[`WalletListItem > should render when isLargeScreen = false and wallet is
       class="flex items-center space-x-4 p-2 pl-4"
     >
       <div
-        class="flex shrink-0 items-center"
+        class="flex min-w-0 flex-1 flex-shrink flex-col"
       >
         <div
-          class="ring-theme-primary-100 dark:ring-transparent shrink-0 css-19i3ei6"
-          data-testid="Avatar"
-        >
-          <div
-            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
-          >
-            <img
-              alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-              src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
-              title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-            />
-          </div>
-        </div>
-      </div>
-      <div
-        class="flex w-20 flex-1 flex-col font-semibold"
-      >
-        <div
-          class="flex overflow-hidden whitespace-nowrap flex-col items-start w-full space-y-1"
+          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
         >
           <span
-            class="font-semibold text-base text-sm text-theme-text w-full truncate"
+            class="font-semibold text-base text-sm text-theme-text leading-[17px]"
             data-testid="Address__alias"
           >
             <span
@@ -1530,18 +1680,54 @@ exports[`WalletListItem > should render when isLargeScreen = false and wallet is
             </span>
           </span>
           <span
-            class="no-ligatures min-w-0 overflow-hidden text-xs text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+            class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold text-base"
             data-testid="Address__address"
           >
             D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
           </span>
+          <button
+            class="ring-focus relative focus:outline-none"
+            data-ring-focus-margin="-m-1"
+            data-testid="clipboard-icon__wrapper"
+            type="button"
+          >
+            <div
+              class="text-theme-primary-400 dark:text-theme-secondary-700 dark:hover:text-theme-secondary-500 css-v0ob3f"
+              height="16"
+              width="16"
+            >
+              <svg
+                id="copy"
+                viewBox="0 0 20 20"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <g
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                  />
+                  <path
+                    d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                  />
+                </g>
+              </svg>
+            </div>
+          </button>
         </div>
       </div>
       <div
-        class="flex items-center space-x-2 self-start"
+        class="flex items-center space-x-3 self-start"
       >
         <div
-          class="inline-flex items-center space-x-1 border-r border-theme-secondary-300 pr-1 empty:border-r-0 dark:border-theme-secondary-800"
+          class="inline-flex items-center space-x-1 border-r border-theme-secondary-300 pr-3 empty:border-r-0 dark:border-theme-secondary-800"
         >
           <div
             class="inline-block p-1 text-theme-secondary-700"
@@ -1646,7 +1832,7 @@ exports[`WalletListItem > should render when isLargeScreen = false and wallet is
           <br />
         </span>
         <span
-          class="text-xs font-semibold text-theme-secondary-900 md:text-base md:text-theme-secondary-500 dark:md:text-theme-secondary-700"
+          class="text-xs font-semibold text-theme-navy-200 md:text-base md:text-theme-secondary-500 dark:md:text-theme-secondary-700"
         >
           N/A
         </span>
@@ -1695,17 +1881,17 @@ exports[`WalletListItem > should render when isLargeScreen = true 1`] = `
   <table>
     <tbody>
       <tr
-        class="group css-1kskd5s"
+        class="group relative css-1kskd5s"
         data-testid="TableRow"
       >
         <td
           data-testid="TableCell_Starred"
         >
           <div
-            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-2 -ml-2 rounded-l space-x-3"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 rounded-l space-x-3 pl-6 ml-0"
           >
             <div
-              class="flex h-5 items-center border-r border-theme-secondary-300 pr-3 dark:border-theme-secondary-800"
+              class="flex h-5 items-center pr-3 dark:border-theme-secondary-800"
             >
               <div
                 class="flex shrink-0 items-center justify-center"
@@ -1739,37 +1925,46 @@ exports[`WalletListItem > should render when isLargeScreen = true 1`] = `
           </div>
         </td>
         <td
+          class="hidden lg:table-cell"
+        >
+          <div
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 -ml-3 space-x-3"
+          >
+            <div
+              class="w-24 flex-1 overflow-hidden"
+            >
+              <div
+                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+              >
+                <span
+                  class="font-semibold text-base text-sm leading-[17px]"
+                  data-testid="Address__alias"
+                >
+                  <span
+                    class="no-ligatures css-9nx3be"
+                    data-testid="TruncateEnd"
+                  >
+                    ARK Wallet 1
+                  </span>
+                </span>
+              </div>
+            </div>
+          </div>
+        </td>
+        <td
           data-testid="TableCell_Wallet"
         >
           <div
             class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 -ml-3 space-x-3"
           >
             <div
-              class="flex shrink-0 items-center"
+              class="w-full max-w-64 flex-1 overflow-hidden lg:max-w-48 xl:max-w-full"
             >
               <div
-                class="ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-1ixj94m"
-                data-testid="Avatar"
-              >
-                <div
-                  class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
-                >
-                  <img
-                    alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                    src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
-                    title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                  />
-                </div>
-              </div>
-            </div>
-            <div
-              class="w-20 flex-1 overflow-hidden"
-            >
-              <div
-                class="flex overflow-hidden whitespace-nowrap flex-col items-start w-full"
+                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
                 <span
-                  class="font-semibold text-base text-sm text-theme-text group-hover:text-theme-primary-700 w-full truncate"
+                  class="font-semibold text-base lg:hidden text-sm text-theme-text group-hover:text-theme-primary-700"
                   data-testid="Address__alias"
                 >
                   <span
@@ -1780,11 +1975,47 @@ exports[`WalletListItem > should render when isLargeScreen = true 1`] = `
                   </span>
                 </span>
                 <span
-                  class="no-ligatures min-w-0 overflow-hidden text-xs text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                  class="no-ligatures min-w-0 overflow-hidden text-sm text-theme-secondary-700 dark:text-theme-secondary-500 lg:!ml-0 font-semibold text-base"
                   data-testid="Address__address"
                 >
                   D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
                 </span>
+                <button
+                  class="ring-focus relative focus:outline-none"
+                  data-ring-focus-margin="-m-1"
+                  data-testid="clipboard-icon__wrapper"
+                  type="button"
+                >
+                  <div
+                    class="text-theme-primary-400 dark:text-theme-secondary-700 dark:hover:text-theme-secondary-500 css-v0ob3f"
+                    height="16"
+                    width="16"
+                  >
+                    <svg
+                      id="copy"
+                      viewBox="0 0 20 20"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <g
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      >
+                        <path
+                          d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                        />
+                        <path
+                          d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                        />
+                      </g>
+                    </svg>
+                  </div>
+                </button>
               </div>
             </div>
           </div>
@@ -1817,7 +2048,7 @@ exports[`WalletListItem > should render when isLargeScreen = true 1`] = `
             class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 font-semibold justify-end"
           >
             <span
-              class="whitespace-nowrap"
+              class="whitespace-nowrap dark:text-theme-white text-theme-secondary-700 dark:md:text-theme-secondary-500"
               data-testid="Amount"
             >
               33.75089801 DARK
@@ -1832,7 +2063,7 @@ exports[`WalletListItem > should render when isLargeScreen = true 1`] = `
             class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 justify-end"
           >
             <span
-              class="text-xs font-semibold text-theme-secondary-900 md:text-base md:text-theme-secondary-500 dark:md:text-theme-secondary-700"
+              class="text-xs font-semibold text-theme-navy-200 md:text-base md:text-theme-secondary-500 dark:md:text-theme-secondary-700"
             >
               N/A
             </span>
@@ -1840,18 +2071,22 @@ exports[`WalletListItem > should render when isLargeScreen = true 1`] = `
         </td>
         <td>
           <div
-            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-2 -mr-2 rounded-r justify-end text-theme-secondary-text"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 -mr-2 rounded-r justify-end text-theme-secondary-text pr-6"
           >
             <div>
               <button
-                class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-theme-primary-600 hover:text-theme-primary-700"
+                class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none pr-0 text-sm text-theme-primary-600 hover:text-theme-primary-700"
                 data-testid="WalletListItem__send-button"
                 type="button"
               >
                 <div
                   class="flex items-center space-x-2"
                 >
-                  Send
+                  <div
+                    class="border-r border-theme-secondary-300 pr-3 dark:border-theme-secondary-800"
+                  >
+                    Send
+                  </div>
                 </div>
               </button>
             </div>
@@ -1865,7 +2100,7 @@ exports[`WalletListItem > should render when isLargeScreen = true 1`] = `
                   data-testid="dropdown__toggle"
                 >
                   <button
-                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none -mr-1.5 text-theme-primary-300 hover:text-theme-primary-600"
+                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-theme-gray-700 -mr-1.5 hover:text-theme-primary-600"
                     type="button"
                   >
                     <div
@@ -1877,36 +2112,31 @@ exports[`WalletListItem > should render when isLargeScreen = true 1`] = `
                         width="20"
                       >
                         <svg
-                          id="ellipsis-vertical"
+                          fill="none"
                           viewBox="0 0 20 20"
-                          x="0"
-                          xml:space="preserve"
                           xmlns="http://www.w3.org/2000/svg"
-                          y="0"
                         >
-                          <g
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                          >
-                            <circle
-                              cx="10"
-                              cy="16.994"
-                              r="2.006"
-                            />
-                            <circle
-                              cx="10"
-                              cy="3"
-                              r="2"
-                            />
-                            <circle
-                              cx="10"
-                              cy="10"
-                              r="2"
-                            />
-                          </g>
+                          <circle
+                            cx="10.002"
+                            cy="2.99609"
+                            fill="currentColor"
+                            r="2"
+                            transform="rotate(90 10.002 2.99609)"
+                          />
+                          <circle
+                            cx="10.002"
+                            cy="9.99805"
+                            fill="currentColor"
+                            r="2"
+                            transform="rotate(90 10.002 9.99805)"
+                          />
+                          <circle
+                            cx="10.002"
+                            cy="17"
+                            fill="currentColor"
+                            r="2"
+                            transform="rotate(90 10.002 17)"
+                          />
                         </svg>
                       </div>
                     </div>
@@ -2068,17 +2298,17 @@ exports[`WalletListItem > should render when isLargeScreen = true and wallet is 
   <table>
     <tbody>
       <tr
-        class=" css-16ynu5g"
+        class="relative css-16ynu5g"
         data-testid="TableRow"
       >
         <td
           data-testid="TableCell_Starred"
         >
           <div
-            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-2 -ml-2 rounded-l space-x-3"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 rounded-l space-x-3 pl-6 ml-0"
           >
             <div
-              class="flex h-5 items-center border-r border-theme-secondary-300 pr-3 dark:border-theme-secondary-800"
+              class="flex h-5 items-center pr-3 dark:border-theme-secondary-800"
             >
               <div
                 class="flex shrink-0 items-center justify-center"
@@ -2112,37 +2342,46 @@ exports[`WalletListItem > should render when isLargeScreen = true and wallet is 
           </div>
         </td>
         <td
+          class="hidden lg:table-cell"
+        >
+          <div
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 -ml-3 space-x-3"
+          >
+            <div
+              class="w-24 flex-1 overflow-hidden"
+            >
+              <div
+                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+              >
+                <span
+                  class="font-semibold text-base text-sm leading-[17px]"
+                  data-testid="Address__alias"
+                >
+                  <span
+                    class="no-ligatures css-9nx3be"
+                    data-testid="TruncateEnd"
+                  >
+                    ARK Wallet 1
+                  </span>
+                </span>
+              </div>
+            </div>
+          </div>
+        </td>
+        <td
           data-testid="TableCell_Wallet"
         >
           <div
             class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 -ml-3 space-x-3"
           >
             <div
-              class="flex shrink-0 items-center"
+              class="w-full max-w-64 flex-1 overflow-hidden lg:max-w-48 xl:max-w-full"
             >
               <div
-                class="ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-1ixj94m"
-                data-testid="Avatar"
-              >
-                <div
-                  class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
-                >
-                  <img
-                    alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                    src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
-                    title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                  />
-                </div>
-              </div>
-            </div>
-            <div
-              class="w-20 flex-1 overflow-hidden"
-            >
-              <div
-                class="flex overflow-hidden whitespace-nowrap flex-col items-start w-full"
+                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
                 <span
-                  class="font-semibold text-base text-sm text-theme-text group-hover:text-theme-primary-700 w-full truncate"
+                  class="font-semibold text-base lg:hidden text-sm text-theme-text group-hover:text-theme-primary-700"
                   data-testid="Address__alias"
                 >
                   <span
@@ -2153,11 +2392,47 @@ exports[`WalletListItem > should render when isLargeScreen = true and wallet is 
                   </span>
                 </span>
                 <span
-                  class="no-ligatures min-w-0 overflow-hidden text-xs text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                  class="no-ligatures min-w-0 overflow-hidden text-sm text-theme-secondary-700 dark:text-theme-secondary-500 lg:!ml-0 font-semibold text-base"
                   data-testid="Address__address"
                 >
                   D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
                 </span>
+                <button
+                  class="ring-focus relative focus:outline-none"
+                  data-ring-focus-margin="-m-1"
+                  data-testid="clipboard-icon__wrapper"
+                  type="button"
+                >
+                  <div
+                    class="text-theme-primary-400 dark:text-theme-secondary-700 dark:hover:text-theme-secondary-500 css-v0ob3f"
+                    height="16"
+                    width="16"
+                  >
+                    <svg
+                      id="copy"
+                      viewBox="0 0 20 20"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <g
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      >
+                        <path
+                          d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                        />
+                        <path
+                          d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                        />
+                      </g>
+                    </svg>
+                  </div>
+                </button>
               </div>
             </div>
           </div>
@@ -2251,7 +2526,7 @@ exports[`WalletListItem > should render when isLargeScreen = true and wallet is 
             class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 justify-end"
           >
             <span
-              class="text-xs font-semibold text-theme-secondary-900 md:text-base md:text-theme-secondary-500 dark:md:text-theme-secondary-700"
+              class="text-xs font-semibold text-theme-navy-200 md:text-base md:text-theme-secondary-500 dark:md:text-theme-secondary-700"
             >
               N/A
             </span>
@@ -2259,11 +2534,11 @@ exports[`WalletListItem > should render when isLargeScreen = true and wallet is 
         </td>
         <td>
           <div
-            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-2 -mr-2 rounded-r justify-end text-theme-secondary-text"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 -mr-2 rounded-r justify-end text-theme-secondary-text pr-6"
           >
             <div>
               <button
-                class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 text-theme-primary-600 hover:text-theme-primary-700"
+                class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 pr-0 text-sm text-theme-primary-600 hover:text-theme-primary-700"
                 data-testid="WalletListItem__send-button"
                 disabled=""
                 type="button"
@@ -2271,7 +2546,11 @@ exports[`WalletListItem > should render when isLargeScreen = true and wallet is 
                 <div
                   class="flex items-center space-x-2"
                 >
-                  Send
+                  <div
+                    class="border-r border-theme-secondary-300 pr-3 dark:border-theme-secondary-800"
+                  >
+                    Send
+                  </div>
                 </div>
               </button>
             </div>
@@ -2285,7 +2564,7 @@ exports[`WalletListItem > should render when isLargeScreen = true and wallet is 
                   data-testid="dropdown__toggle"
                 >
                   <button
-                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 -mr-1.5 text-theme-primary-300 hover:text-theme-primary-600"
+                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 text-theme-gray-700 -mr-1.5 hover:text-theme-primary-600"
                     disabled=""
                     type="button"
                   >
@@ -2298,36 +2577,31 @@ exports[`WalletListItem > should render when isLargeScreen = true and wallet is 
                         width="20"
                       >
                         <svg
-                          id="ellipsis-vertical"
+                          fill="none"
                           viewBox="0 0 20 20"
-                          x="0"
-                          xml:space="preserve"
                           xmlns="http://www.w3.org/2000/svg"
-                          y="0"
                         >
-                          <g
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                          >
-                            <circle
-                              cx="10"
-                              cy="16.994"
-                              r="2.006"
-                            />
-                            <circle
-                              cx="10"
-                              cy="3"
-                              r="2"
-                            />
-                            <circle
-                              cx="10"
-                              cy="10"
-                              r="2"
-                            />
-                          </g>
+                          <circle
+                            cx="10.002"
+                            cy="2.99609"
+                            fill="currentColor"
+                            r="2"
+                            transform="rotate(90 10.002 2.99609)"
+                          />
+                          <circle
+                            cx="10.002"
+                            cy="9.99805"
+                            fill="currentColor"
+                            r="2"
+                            transform="rotate(90 10.002 9.99805)"
+                          />
+                          <circle
+                            cx="10.002"
+                            cy="17"
+                            fill="currentColor"
+                            r="2"
+                            transform="rotate(90 10.002 17)"
+                          />
                         </svg>
                       </div>
                     </div>
@@ -2489,17 +2763,17 @@ exports[`WalletListItem > should render with a N/A for fiat 1`] = `
   <table>
     <tbody>
       <tr
-        class="group css-1kskd5s"
+        class="group relative css-1kskd5s"
         data-testid="TableRow"
       >
         <td
           data-testid="TableCell_Starred"
         >
           <div
-            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-2 -ml-2 rounded-l space-x-3"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 rounded-l space-x-3 pl-6 ml-0"
           >
             <div
-              class="flex h-5 items-center border-r border-theme-secondary-300 pr-3 dark:border-theme-secondary-800"
+              class="flex h-5 items-center pr-3 dark:border-theme-secondary-800"
             >
               <div
                 class="flex shrink-0 items-center justify-center"
@@ -2533,37 +2807,46 @@ exports[`WalletListItem > should render with a N/A for fiat 1`] = `
           </div>
         </td>
         <td
+          class="hidden lg:table-cell"
+        >
+          <div
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 -ml-3 space-x-3"
+          >
+            <div
+              class="w-24 flex-1 overflow-hidden"
+            >
+              <div
+                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+              >
+                <span
+                  class="font-semibold text-base text-sm leading-[17px]"
+                  data-testid="Address__alias"
+                >
+                  <span
+                    class="no-ligatures css-9nx3be"
+                    data-testid="TruncateEnd"
+                  >
+                    ARK Wallet 1
+                  </span>
+                </span>
+              </div>
+            </div>
+          </div>
+        </td>
+        <td
           data-testid="TableCell_Wallet"
         >
           <div
             class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 -ml-3 space-x-3"
           >
             <div
-              class="flex shrink-0 items-center"
+              class="w-full max-w-64 flex-1 overflow-hidden lg:max-w-48 xl:max-w-full"
             >
               <div
-                class="ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-1ixj94m"
-                data-testid="Avatar"
-              >
-                <div
-                  class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
-                >
-                  <img
-                    alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                    src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
-                    title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                  />
-                </div>
-              </div>
-            </div>
-            <div
-              class="w-20 flex-1 overflow-hidden"
-            >
-              <div
-                class="flex overflow-hidden whitespace-nowrap flex-col items-start w-full"
+                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
                 <span
-                  class="font-semibold text-base text-sm text-theme-text group-hover:text-theme-primary-700 w-full truncate"
+                  class="font-semibold text-base lg:hidden text-sm text-theme-text group-hover:text-theme-primary-700"
                   data-testid="Address__alias"
                 >
                   <span
@@ -2574,11 +2857,47 @@ exports[`WalletListItem > should render with a N/A for fiat 1`] = `
                   </span>
                 </span>
                 <span
-                  class="no-ligatures min-w-0 overflow-hidden text-xs text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                  class="no-ligatures min-w-0 overflow-hidden text-sm text-theme-secondary-700 dark:text-theme-secondary-500 lg:!ml-0 font-semibold text-base"
                   data-testid="Address__address"
                 >
                   D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
                 </span>
+                <button
+                  class="ring-focus relative focus:outline-none"
+                  data-ring-focus-margin="-m-1"
+                  data-testid="clipboard-icon__wrapper"
+                  type="button"
+                >
+                  <div
+                    class="text-theme-primary-400 dark:text-theme-secondary-700 dark:hover:text-theme-secondary-500 css-v0ob3f"
+                    height="16"
+                    width="16"
+                  >
+                    <svg
+                      id="copy"
+                      viewBox="0 0 20 20"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <g
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      >
+                        <path
+                          d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                        />
+                        <path
+                          d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                        />
+                      </g>
+                    </svg>
+                  </div>
+                </button>
               </div>
             </div>
           </div>
@@ -2611,7 +2930,7 @@ exports[`WalletListItem > should render with a N/A for fiat 1`] = `
             class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 font-semibold justify-end"
           >
             <span
-              class="whitespace-nowrap"
+              class="whitespace-nowrap dark:text-theme-white text-theme-secondary-700 dark:md:text-theme-secondary-500"
               data-testid="Amount"
             >
               33.75089801 DARK
@@ -2626,7 +2945,7 @@ exports[`WalletListItem > should render with a N/A for fiat 1`] = `
             class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 justify-end"
           >
             <span
-              class="text-xs font-semibold text-theme-secondary-900 md:text-base md:text-theme-secondary-500 dark:md:text-theme-secondary-700"
+              class="text-xs font-semibold text-theme-navy-200 md:text-base md:text-theme-secondary-500 dark:md:text-theme-secondary-700"
             >
               N/A
             </span>
@@ -2634,18 +2953,22 @@ exports[`WalletListItem > should render with a N/A for fiat 1`] = `
         </td>
         <td>
           <div
-            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-2 -mr-2 rounded-r justify-end text-theme-secondary-text"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 -mr-2 rounded-r justify-end text-theme-secondary-text pr-6"
           >
             <div>
               <button
-                class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-theme-primary-600 hover:text-theme-primary-700"
+                class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none pr-0 text-sm text-theme-primary-600 hover:text-theme-primary-700"
                 data-testid="WalletListItem__send-button"
                 type="button"
               >
                 <div
                   class="flex items-center space-x-2"
                 >
-                  Send
+                  <div
+                    class="border-r border-theme-secondary-300 pr-3 dark:border-theme-secondary-800"
+                  >
+                    Send
+                  </div>
                 </div>
               </button>
             </div>
@@ -2659,7 +2982,7 @@ exports[`WalletListItem > should render with a N/A for fiat 1`] = `
                   data-testid="dropdown__toggle"
                 >
                   <button
-                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none -mr-1.5 text-theme-primary-300 hover:text-theme-primary-600"
+                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-theme-gray-700 -mr-1.5 hover:text-theme-primary-600"
                     type="button"
                   >
                     <div
@@ -2671,36 +2994,31 @@ exports[`WalletListItem > should render with a N/A for fiat 1`] = `
                         width="20"
                       >
                         <svg
-                          id="ellipsis-vertical"
+                          fill="none"
                           viewBox="0 0 20 20"
-                          x="0"
-                          xml:space="preserve"
                           xmlns="http://www.w3.org/2000/svg"
-                          y="0"
                         >
-                          <g
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                          >
-                            <circle
-                              cx="10"
-                              cy="16.994"
-                              r="2.006"
-                            />
-                            <circle
-                              cx="10"
-                              cy="3"
-                              r="2"
-                            />
-                            <circle
-                              cx="10"
-                              cy="10"
-                              r="2"
-                            />
-                          </g>
+                          <circle
+                            cx="10.002"
+                            cy="2.99609"
+                            fill="currentColor"
+                            r="2"
+                            transform="rotate(90 10.002 2.99609)"
+                          />
+                          <circle
+                            cx="10.002"
+                            cy="9.99805"
+                            fill="currentColor"
+                            r="2"
+                            transform="rotate(90 10.002 9.99805)"
+                          />
+                          <circle
+                            cx="10.002"
+                            cy="17"
+                            fill="currentColor"
+                            r="2"
+                            transform="rotate(90 10.002 17)"
+                          />
                         </svg>
                       </div>
                     </div>
@@ -2862,17 +3180,17 @@ exports[`WalletListItem > should render with default BTC as default exchangeCurr
   <table>
     <tbody>
       <tr
-        class="group css-1kskd5s"
+        class="group relative css-1kskd5s"
         data-testid="TableRow"
       >
         <td
           data-testid="TableCell_Starred"
         >
           <div
-            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-2 -ml-2 rounded-l space-x-3"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 rounded-l space-x-3 pl-6 ml-0"
           >
             <div
-              class="flex h-5 items-center border-r border-theme-secondary-300 pr-3 dark:border-theme-secondary-800"
+              class="flex h-5 items-center pr-3 dark:border-theme-secondary-800"
             >
               <div
                 class="flex shrink-0 items-center justify-center"
@@ -2906,37 +3224,46 @@ exports[`WalletListItem > should render with default BTC as default exchangeCurr
           </div>
         </td>
         <td
+          class="hidden lg:table-cell"
+        >
+          <div
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 -ml-3 space-x-3"
+          >
+            <div
+              class="w-24 flex-1 overflow-hidden"
+            >
+              <div
+                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+              >
+                <span
+                  class="font-semibold text-base text-sm leading-[17px]"
+                  data-testid="Address__alias"
+                >
+                  <span
+                    class="no-ligatures css-9nx3be"
+                    data-testid="TruncateEnd"
+                  >
+                    ARK Wallet 1
+                  </span>
+                </span>
+              </div>
+            </div>
+          </div>
+        </td>
+        <td
           data-testid="TableCell_Wallet"
         >
           <div
             class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 -ml-3 space-x-3"
           >
             <div
-              class="flex shrink-0 items-center"
+              class="w-full max-w-64 flex-1 overflow-hidden lg:max-w-48 xl:max-w-full"
             >
               <div
-                class="ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-1ixj94m"
-                data-testid="Avatar"
-              >
-                <div
-                  class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
-                >
-                  <img
-                    alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                    src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
-                    title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                  />
-                </div>
-              </div>
-            </div>
-            <div
-              class="w-20 flex-1 overflow-hidden"
-            >
-              <div
-                class="flex overflow-hidden whitespace-nowrap flex-col items-start w-full"
+                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
                 <span
-                  class="font-semibold text-base text-sm text-theme-text group-hover:text-theme-primary-700 w-full truncate"
+                  class="font-semibold text-base lg:hidden text-sm text-theme-text group-hover:text-theme-primary-700"
                   data-testid="Address__alias"
                 >
                   <span
@@ -2947,11 +3274,47 @@ exports[`WalletListItem > should render with default BTC as default exchangeCurr
                   </span>
                 </span>
                 <span
-                  class="no-ligatures min-w-0 overflow-hidden text-xs text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                  class="no-ligatures min-w-0 overflow-hidden text-sm text-theme-secondary-700 dark:text-theme-secondary-500 lg:!ml-0 font-semibold text-base"
                   data-testid="Address__address"
                 >
                   D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
                 </span>
+                <button
+                  class="ring-focus relative focus:outline-none"
+                  data-ring-focus-margin="-m-1"
+                  data-testid="clipboard-icon__wrapper"
+                  type="button"
+                >
+                  <div
+                    class="text-theme-primary-400 dark:text-theme-secondary-700 dark:hover:text-theme-secondary-500 css-v0ob3f"
+                    height="16"
+                    width="16"
+                  >
+                    <svg
+                      id="copy"
+                      viewBox="0 0 20 20"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <g
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      >
+                        <path
+                          d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                        />
+                        <path
+                          d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                        />
+                      </g>
+                    </svg>
+                  </div>
+                </button>
               </div>
             </div>
           </div>
@@ -2984,7 +3347,7 @@ exports[`WalletListItem > should render with default BTC as default exchangeCurr
             class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 font-semibold justify-end"
           >
             <span
-              class="whitespace-nowrap"
+              class="whitespace-nowrap dark:text-theme-white text-theme-secondary-700 dark:md:text-theme-secondary-500"
               data-testid="Amount"
             >
               33.75089801 DARK
@@ -2999,7 +3362,7 @@ exports[`WalletListItem > should render with default BTC as default exchangeCurr
             class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 justify-end"
           >
             <span
-              class="text-xs font-semibold text-theme-secondary-900 md:text-base md:text-theme-secondary-500 dark:md:text-theme-secondary-700"
+              class="text-xs font-semibold text-theme-navy-200 md:text-base md:text-theme-secondary-500 dark:md:text-theme-secondary-700"
             >
               N/A
             </span>
@@ -3007,18 +3370,22 @@ exports[`WalletListItem > should render with default BTC as default exchangeCurr
         </td>
         <td>
           <div
-            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-2 -mr-2 rounded-r justify-end text-theme-secondary-text"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 -mr-2 rounded-r justify-end text-theme-secondary-text pr-6"
           >
             <div>
               <button
-                class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-theme-primary-600 hover:text-theme-primary-700"
+                class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none pr-0 text-sm text-theme-primary-600 hover:text-theme-primary-700"
                 data-testid="WalletListItem__send-button"
                 type="button"
               >
                 <div
                   class="flex items-center space-x-2"
                 >
-                  Send
+                  <div
+                    class="border-r border-theme-secondary-300 pr-3 dark:border-theme-secondary-800"
+                  >
+                    Send
+                  </div>
                 </div>
               </button>
             </div>
@@ -3032,7 +3399,7 @@ exports[`WalletListItem > should render with default BTC as default exchangeCurr
                   data-testid="dropdown__toggle"
                 >
                   <button
-                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none -mr-1.5 text-theme-primary-300 hover:text-theme-primary-600"
+                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-theme-gray-700 -mr-1.5 hover:text-theme-primary-600"
                     type="button"
                   >
                     <div
@@ -3044,36 +3411,31 @@ exports[`WalletListItem > should render with default BTC as default exchangeCurr
                         width="20"
                       >
                         <svg
-                          id="ellipsis-vertical"
+                          fill="none"
                           viewBox="0 0 20 20"
-                          x="0"
-                          xml:space="preserve"
                           xmlns="http://www.w3.org/2000/svg"
-                          y="0"
                         >
-                          <g
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                          >
-                            <circle
-                              cx="10"
-                              cy="16.994"
-                              r="2.006"
-                            />
-                            <circle
-                              cx="10"
-                              cy="3"
-                              r="2"
-                            />
-                            <circle
-                              cx="10"
-                              cy="10"
-                              r="2"
-                            />
-                          </g>
+                          <circle
+                            cx="10.002"
+                            cy="2.99609"
+                            fill="currentColor"
+                            r="2"
+                            transform="rotate(90 10.002 2.99609)"
+                          />
+                          <circle
+                            cx="10.002"
+                            cy="9.99805"
+                            fill="currentColor"
+                            r="2"
+                            transform="rotate(90 10.002 9.99805)"
+                          />
+                          <circle
+                            cx="10.002"
+                            cy="17"
+                            fill="currentColor"
+                            r="2"
+                            transform="rotate(90 10.002 17)"
+                          />
                         </svg>
                       </div>
                     </div>
