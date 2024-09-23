@@ -7,7 +7,7 @@ import { TransactionTableProperties } from "./TransactionTable.contracts";
 import { Table } from "@/app/components/Table";
 import { useTransactionTableColumns } from "@/domains/transaction/components/TransactionTable/TransactionTable.helpers";
 import { useBreakpoint } from "@/app/hooks";
-import cn from 'classnames';
+import cn from "classnames";
 
 export const TransactionTable: FC<TransactionTableProperties> = ({
 	transactions,
@@ -63,7 +63,7 @@ export const TransactionTable: FC<TransactionTableProperties> = ({
 				columns={columns}
 				data={data}
 				initialState={initialState}
-				className={cn({"with-x-padding": isMdAndAbove})}
+				className={cn({ "with-x-padding": isMdAndAbove })}
 			>
 				{renderTableRow}
 			</Table>
