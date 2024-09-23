@@ -35,7 +35,7 @@ exports[`TransactionType > should render delegate registration 1`] = `
             class="css-1chzvd4"
             color="neutral"
           >
-            Delegate Registration
+            Registration
           </div>
         </div>
         <div
@@ -102,7 +102,7 @@ exports[`TransactionType > should render delegate resignation 1`] = `
             class="css-1chzvd4"
             color="neutral"
           >
-            Delegate Resignation
+            Resignation
           </div>
         </div>
         <div
@@ -389,7 +389,7 @@ exports[`TransactionType > should render ipfs 1`] = `
             class="css-1chzvd4"
             color="neutral"
           >
-            Delegate Resignation
+            Resignation
           </div>
         </div>
         <div>
