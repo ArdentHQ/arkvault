@@ -357,48 +357,48 @@ describe("Add Participant", () => {
 		await waitFor(() => expect(screen.getByTestId("SelectDropdown__input")).not.toHaveValue());
 	});
 
-	it.each([
-		"AddParticipantItem--deleteButton",
-		"AddParticipantItem--mobile-deleteButton"
-	])("should remove participant", async (selector) => {
-		const onChange = vi.fn();
+	it.each(["AddParticipantItem--deleteButton", "AddParticipantItem--mobile-deleteButton"])(
+		"should remove participant",
+		async (selector) => {
+			const onChange = vi.fn();
 
-		render(
-			<Route path="/profiles/:profileId">
-				<AddParticipant
-					profile={profile}
-					wallet={wallet}
-					onChange={onChange}
-					defaultParticipants={[
-						{
-							address: wallet.address(),
-							publicKey: wallet.publicKey()!,
-						},
-						{
-							address: wallet2.address(),
-							publicKey: wallet2.publicKey()!,
-						},
-					]}
-				/>
-			</Route>,
-			{
-				route: `/profiles/${profile.id()}`,
-			},
-		);
+			render(
+				<Route path="/profiles/:profileId">
+					<AddParticipant
+						profile={profile}
+						wallet={wallet}
+						onChange={onChange}
+						defaultParticipants={[
+							{
+								address: wallet.address(),
+								publicKey: wallet.publicKey()!,
+							},
+							{
+								address: wallet2.address(),
+								publicKey: wallet2.publicKey()!,
+							},
+						]}
+					/>
+				</Route>,
+				{
+					route: `/profiles/${profile.id()}`,
+				},
+			);
 
-		await waitFor(() => expect(screen.getAllByTestId("AddParticipantItem")).toHaveLength(2));
+			await waitFor(() => expect(screen.getAllByTestId("AddParticipantItem")).toHaveLength(2));
 
-		expect(screen.getAllByTestId(selector)[1]).not.toBeDisabled();
+			expect(screen.getAllByTestId(selector)[1]).not.toBeDisabled();
 
-		await userEvent.click(screen.getAllByTestId(selector)[1]);
+			await userEvent.click(screen.getAllByTestId(selector)[1]);
 
-		expect(onChange).toHaveBeenCalledWith([
-			{
-				address: wallet.address(),
-				publicKey: wallet.publicKey()!,
-			},
-		]);
-	});
+			expect(onChange).toHaveBeenCalledWith([
+				{
+					address: wallet.address(),
+					publicKey: wallet.publicKey()!,
+				},
+			]);
+		},
+	);
 
 	it("should not remove own address", async () => {
 		render(
