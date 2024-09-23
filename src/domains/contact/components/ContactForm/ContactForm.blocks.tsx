@@ -52,7 +52,7 @@ const AddressListItem: React.VFC<AddressListItemProperties> = ({ address, onRemo
 					<span className="flex-1 truncate font-semibold">
 						<Address
 							address={address.address}
-							addressClass="text-sm leading-[17px] sm:text-base sm:leading-[20px]"
+							addressClass="text-sm leading-[17px] sm:text-base sm:leading-5"
 						/>
 					</span>
 				</div>
@@ -61,7 +61,7 @@ const AddressListItem: React.VFC<AddressListItemProperties> = ({ address, onRemo
 			<Button
 				data-testid="contact-form__remove-address-btn"
 				size="icon"
-				className="!hidden items-center !p-3.5 sm:!flex"
+				className="hidden items-center p-3.5 sm:flex"
 				variant="danger"
 				onClick={() => onRemove()}
 			>

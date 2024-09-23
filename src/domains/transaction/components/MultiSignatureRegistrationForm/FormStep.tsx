@@ -65,7 +65,7 @@ export const FormStep = ({ profile, wallet }: FormStepProperties) => {
 
 			<div className="space-y-4 pt-5">
 				<FormField name="senderAddress">
-					<TransactionAddresses senderWallet={wallet} recipients={[]} profile={profile} />
+					<TransactionAddresses senderAddress={wallet.address()} network={wallet.network()} recipients={[]} profile={profile} />
 				</FormField>
 
 				<div>
