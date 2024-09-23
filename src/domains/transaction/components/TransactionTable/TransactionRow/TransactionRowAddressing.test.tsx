@@ -33,20 +33,22 @@ describe("TransactionRowAddressing", () => {
 	});
 
 	it("should render registration variant if transaction is delegate registration", () => {
-		const registrationFixture = { ...fixture, isDelegateRegistration: () => true, username: () => 'test' };
+		const registrationFixture = { ...fixture, isDelegateRegistration: () => true, username: () => "test" };
 		render(<TransactionRowAddressing transaction={registrationFixture as any} profile={profile} />);
 
 		expect(screen.getByTestId("TransactionRowAddressing__delegate_registration")).toBeInTheDocument();
-	})
+	});
 
 	it("should render resignation variant if transaction is delegate resignation", () => {
-		const resignationFixture = { ...fixture, isDelegateResignation: () => true, wallet:
-			() => ({ ...TransactionFixture.wallet(), username: () => 'test'})
+		const resignationFixture = {
+			...fixture,
+			isDelegateResignation: () => true,
+			wallet: () => ({ ...TransactionFixture.wallet(), username: () => "test" }),
 		};
 		render(<TransactionRowAddressing transaction={resignationFixture as any} profile={profile} />);
 
 		expect(screen.getByTestId("TransactionRowAddressing__delegate_resignation")).toBeInTheDocument();
-	})
+	});
 
 	it("should render multipayment variant", () => {
 		const multiPaymentFixture = { ...fixture, isMultiPayment: () => true };

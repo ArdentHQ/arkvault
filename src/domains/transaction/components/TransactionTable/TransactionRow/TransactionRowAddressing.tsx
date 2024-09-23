@@ -100,13 +100,11 @@ export const TransactionRowAddressing = ({
 				<span className="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200">
 					{t("COMMON.CONTRACT")}{" "}
 					<span className="text-theme-secondary-700 dark:text-theme-secondary-500">
-						(
-						{transaction.username()}
-						)
+						({transaction.username()})
 					</span>
 				</span>
 			</div>
-		)
+		);
 	}
 
 	if (transaction?.isDelegateResignation()) {
@@ -116,13 +114,11 @@ export const TransactionRowAddressing = ({
 				<span className="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200">
 					{t("COMMON.CONTRACT")}{" "}
 					<span className="text-theme-secondary-700 dark:text-theme-secondary-500">
-						(
-						{transaction.wallet().username()}
-						)
+						({transaction.wallet().username()})
 					</span>
 				</span>
 			</div>
-		)
+		);
 	}
 
 	return (
