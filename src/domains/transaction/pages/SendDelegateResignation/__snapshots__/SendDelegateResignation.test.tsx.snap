@@ -2697,7 +2697,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should render 2nd step
                             <span
                               class="text-[12px] font-semibold leading-[15px] text-theme-secondary-700 dark:text-theme-secondary-500"
                             >
-                              Delegate Resignation
+                              Resignation
                             </span>
                           </div>
                         </div>

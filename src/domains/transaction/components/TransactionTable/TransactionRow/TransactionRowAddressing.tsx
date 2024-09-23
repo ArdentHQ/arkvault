@@ -93,6 +93,34 @@ export const TransactionRowAddressing = ({
 		);
 	}
 
+	if (transaction?.isDelegateRegistration()) {
+		return (
+			<div className="flex flex-row gap-2" data-testid="TransactionRowAddressing__delegate_registration">
+				<RowLabel isNegative={isNegative} />
+				<span className="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200">
+					{t("COMMON.CONTRACT")}{" "}
+					<span className="text-theme-secondary-700 dark:text-theme-secondary-500">
+						({transaction.username()})
+					</span>
+				</span>
+			</div>
+		);
+	}
+
+	if (transaction?.isDelegateResignation()) {
+		return (
+			<div className="flex flex-row gap-2" data-testid="TransactionRowAddressing__delegate_resignation">
+				<RowLabel isNegative={isNegative} />
+				<span className="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200">
+					{t("COMMON.CONTRACT")}{" "}
+					<span className="text-theme-secondary-700 dark:text-theme-secondary-500">
+						({transaction.wallet().username()})
+					</span>
+				</span>
+			</div>
+		);
+	}
+
 	return (
 		<div className="flex flex-row gap-2" data-testid="TransactionRowAddressing__container">
 			<RowLabel isNegative={isNegative} />
