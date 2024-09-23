@@ -41,9 +41,10 @@ export const ReviewStep = ({
 
 			<TransactionAddresses
 				labelClassName="w-auto sm:min-w-28"
-				senderWallet={wallet}
+				senderAddress={wallet.address()}
 				recipients={[]}
 				profile={profile}
+				network={wallet.network()}
 			/>
 
 			<DetailWrapper label={t("TRANSACTION.TRANSACTION_TYPE")}>

@@ -38,6 +38,17 @@ const getVariant = (variant?: ButtonVariant, theme?: Theme, disabled?: boolean, 
 	// used in the project (@see `const responsive` definition inside `danger`
 	// method as an example). We should add more breakpoints + tw classes as needed.
 	const variants = {
+		border: () => `
+			text-theme-primary-600
+			dark:text-theme-secondary-700
+			dark:ring-theme-secondary-800
+			ring-1
+			ring-inset
+			ring-theme-secondary-300
+			hover:bg-theme-primary-700
+			hover:ring-0
+			hover:text-white
+		`,
 		danger: () => `
 			bg-theme-danger-100 text-theme-danger-400
 			dark:bg-theme-danger-400 dark:text-white

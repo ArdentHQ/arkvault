@@ -234,6 +234,10 @@ describe("UnlockTokensModal", () => {
 			await waitFor(() => {
 				expect(screen.getByTestId("ErrorStep__errorMessage")).toBeInTheDocument();
 			});
+
+			await userEvent.click(screen.getByTestId("ErrorStep__back-button"));
+
+			await expect(screen.findByTestId("ErrorStep__errorMessage")).rejects.toThrow();
 		}
 
 		expect(signMock).toHaveBeenCalledWith({

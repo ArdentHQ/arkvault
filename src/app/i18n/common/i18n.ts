@@ -38,6 +38,7 @@ export const translations = {
 	BALANCE: "Balance",
 	BEST: "Best",
 	BIP39_LANGUAGE: "Passphrase Language (BIP39)",
+	BLOCK: "Block",
 	BRIDGECHAIN: "Bridgechain",
 	BUSINESS: "Business",
 	CANCEL: "Cancel",
@@ -68,6 +69,7 @@ export const translations = {
 	COPY_ADDRESS: "Copy Address",
 	COPY_ERROR: "Copy Error",
 	COPY_ID: "Copy Transaction ID",
+	COPY_IPFS: "Copy IPFS Hash",
 	CREATE: "Create",
 	CRYPTOASSET: "Cryptoasset",
 	CRYPTOCURRENCY: "Cryptocurrency",
@@ -235,6 +237,7 @@ export const translations = {
 	NEW_DELEGATE: "New Delegate",
 	NEXT: "Next",
 	NO: "No",
+	NONCE: "Nonce",
 	NOT: "not",
 	NOTICE_NO_WALLETS: "Create or import a wallet first",
 	NOTIFICATIONS: {
