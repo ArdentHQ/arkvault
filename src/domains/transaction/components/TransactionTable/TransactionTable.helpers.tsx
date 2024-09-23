@@ -19,7 +19,7 @@ export const useTransactionTableColumns = ({ coin }: { coin?: string }) => {
 				Header: t("COMMON.AGE"),
 				// eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
 				accessor: (transaction) => transaction.timestamp?.()?.toUNIX(),
-				headerClassName: "hidden xl:table-cell no-border",
+				headerClassName: "hidden lg:table-cell no-border",
 				id: "date",
 				sortDescFirst: true,
 			},

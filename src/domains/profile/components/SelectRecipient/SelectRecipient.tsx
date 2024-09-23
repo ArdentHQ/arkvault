@@ -120,7 +120,7 @@ export const SelectRecipient = React.forwardRef<HTMLInputElement, SelectRecipien
 				}
 
 				const alias = getWalletAlias({
-					address: addressValue,
+					address: addressValue ?? "",
 					network,
 					profile,
 				});

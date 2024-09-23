@@ -1342,7 +1342,7 @@ exports[`Dashboard > should render 1`] = `
             data-testid="TransactionTable"
           >
             <div
-              class="md:with-x-padding css-1m6rt2i"
+              class="with-x-padding css-1m6rt2i"
               role="table"
             >
               <table
@@ -1370,7 +1370,7 @@ exports[`Dashboard > should render 1`] = `
                       </div>
                     </th>
                     <th
-                      class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 hidden xl:table-cell no-border first:rounded-tl-xl last:rounded-tr-xl"
+                      class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 hidden lg:table-cell no-border first:rounded-tl-xl last:rounded-tr-xl"
                       colspan="1"
                       data-testid="table__th--1"
                       role="columnheader"
@@ -1563,7 +1563,7 @@ exports[`Dashboard > should render 1`] = `
                             rel="noopener noreferrer"
                           >
                             <span
-                              class="css-170792"
+                              class="css-1dlnsgk"
                             >
                               <span
                                 class="text-sm"
@@ -1727,7 +1727,7 @@ exports[`Dashboard > should render 1`] = `
                             rel="noopener noreferrer"
                           >
                             <span
-                              class="css-170792"
+                              class="css-1dlnsgk"
                             >
                               <span
                                 class="text-sm"
@@ -1891,7 +1891,7 @@ exports[`Dashboard > should render 1`] = `
                             rel="noopener noreferrer"
                           >
                             <span
-                              class="css-170792"
+                              class="css-1dlnsgk"
                             >
                               <span
                                 class="text-sm"
@@ -2055,7 +2055,7 @@ exports[`Dashboard > should render 1`] = `
                             rel="noopener noreferrer"
                           >
                             <span
-                              class="css-170792"
+                              class="css-1dlnsgk"
                             >
                               <span
                                 class="text-sm"

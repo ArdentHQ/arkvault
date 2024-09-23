@@ -7,6 +7,7 @@ import { TransactionTableProperties } from "./TransactionTable.contracts";
 import { Table } from "@/app/components/Table";
 import { useTransactionTableColumns } from "@/domains/transaction/components/TransactionTable/TransactionTable.helpers";
 import { useBreakpoint } from "@/app/hooks";
+import cn from "classnames";
 
 export const TransactionTable: FC<TransactionTableProperties> = ({
 	transactions,
@@ -18,7 +19,7 @@ export const TransactionTable: FC<TransactionTableProperties> = ({
 	profile,
 	coinName,
 }) => {
-	const { isXs, isSm } = useBreakpoint();
+	const { isXs, isSm, isMdAndAbove } = useBreakpoint();
 	const columns = useTransactionTableColumns({ coin: coinName });
 	const initialState = useMemo<Partial<TableState<DTO.ExtendedConfirmedTransactionData>>>(
 		() => ({
@@ -62,7 +63,7 @@ export const TransactionTable: FC<TransactionTableProperties> = ({
 				columns={columns}
 				data={data}
 				initialState={initialState}
-				className="md:with-x-padding"
+				className={cn({ "with-x-padding": isMdAndAbove })}
 			>
 				{renderTableRow}
 			</Table>

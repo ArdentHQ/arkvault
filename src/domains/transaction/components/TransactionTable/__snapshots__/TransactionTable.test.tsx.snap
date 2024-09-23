@@ -7,7 +7,7 @@ exports[`TransactionTable > loading state > should render 1`] = `
     data-testid="TransactionTable"
   >
     <div
-      class="md:with-x-padding css-1m6rt2i"
+      class="with-x-padding css-1m6rt2i"
       role="table"
     >
       <table
@@ -35,7 +35,7 @@ exports[`TransactionTable > loading state > should render 1`] = `
               </div>
             </th>
             <th
-              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 hidden xl:table-cell no-border first:rounded-tl-xl last:rounded-tr-xl"
+              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 hidden lg:table-cell no-border first:rounded-tl-xl last:rounded-tr-xl"
               colspan="1"
               data-testid="table__th--1"
               role="columnheader"
@@ -943,7 +943,7 @@ exports[`TransactionTable > loading state > should render compact 1`] = `
     data-testid="TransactionTable"
   >
     <div
-      class="md:with-x-padding css-1m6rt2i"
+      class="with-x-padding css-1m6rt2i"
       role="table"
     >
       <table
@@ -971,7 +971,7 @@ exports[`TransactionTable > loading state > should render compact 1`] = `
               </div>
             </th>
             <th
-              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 hidden xl:table-cell no-border first:rounded-tl-xl last:rounded-tr-xl"
+              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 hidden lg:table-cell no-border first:rounded-tl-xl last:rounded-tr-xl"
               colspan="1"
               data-testid="table__th--1"
               role="columnheader"
@@ -1879,7 +1879,7 @@ exports[`TransactionTable > loading state > should render with currency column 1
     data-testid="TransactionTable"
   >
     <div
-      class="md:with-x-padding css-1m6rt2i"
+      class="with-x-padding css-1m6rt2i"
       role="table"
     >
       <table
@@ -1907,7 +1907,7 @@ exports[`TransactionTable > loading state > should render with currency column 1
               </div>
             </th>
             <th
-              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 hidden xl:table-cell no-border first:rounded-tl-xl last:rounded-tr-xl"
+              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 hidden lg:table-cell no-border first:rounded-tl-xl last:rounded-tr-xl"
               colspan="1"
               data-testid="table__th--1"
               role="columnheader"
@@ -2815,7 +2815,7 @@ exports[`TransactionTable > should render compact 1`] = `
     data-testid="TransactionTable"
   >
     <div
-      class="md:with-x-padding css-1m6rt2i"
+      class="with-x-padding css-1m6rt2i"
       role="table"
     >
       <table
@@ -2843,7 +2843,7 @@ exports[`TransactionTable > should render compact 1`] = `
               </div>
             </th>
             <th
-              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 hidden xl:table-cell no-border first:rounded-tl-xl last:rounded-tr-xl"
+              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 hidden lg:table-cell no-border first:rounded-tl-xl last:rounded-tr-xl"
               colspan="1"
               data-testid="table__th--1"
               role="columnheader"
@@ -3036,7 +3036,7 @@ exports[`TransactionTable > should render compact 1`] = `
                     rel="noopener noreferrer"
                   >
                     <span
-                      class="css-170792"
+                      class="css-1dlnsgk"
                     >
                       <span
                         class="text-sm"
@@ -3200,7 +3200,7 @@ exports[`TransactionTable > should render compact 1`] = `
                     rel="noopener noreferrer"
                   >
                     <span
-                      class="css-170792"
+                      class="css-1dlnsgk"
                     >
                       <span
                         class="text-sm"
@@ -3269,7 +3269,7 @@ exports[`TransactionTable > should render compact 1`] = `
                     To
                   </div>
                   <div
-                    class="w-40 md:w-50"
+                    class="w-40 lg:w-50"
                     data-testid="TransactionRowAddressing__address-container"
                   >
                     <div
@@ -3375,7 +3375,7 @@ exports[`TransactionTable > should render compact 1`] = `
                     rel="noopener noreferrer"
                   >
                     <span
-                      class="css-170792"
+                      class="css-1dlnsgk"
                     >
                       <span
                         class="text-sm"
@@ -3539,7 +3539,7 @@ exports[`TransactionTable > should render compact 1`] = `
                     rel="noopener noreferrer"
                   >
                     <span
-                      class="css-170792"
+                      class="css-1dlnsgk"
                     >
                       <span
                         class="text-sm"
@@ -3703,7 +3703,7 @@ exports[`TransactionTable > should render compact 1`] = `
                     rel="noopener noreferrer"
                   >
                     <span
-                      class="css-170792"
+                      class="css-1dlnsgk"
                     >
                       <span
                         class="text-sm"
@@ -3867,7 +3867,7 @@ exports[`TransactionTable > should render compact 1`] = `
                     rel="noopener noreferrer"
                   >
                     <span
-                      class="css-170792"
+                      class="css-1dlnsgk"
                     >
                       <span
                         class="text-sm"
@@ -4031,7 +4031,7 @@ exports[`TransactionTable > should render compact 1`] = `
                     rel="noopener noreferrer"
                   >
                     <span
-                      class="css-170792"
+                      class="css-1dlnsgk"
                     >
                       <span
                         class="text-sm"
@@ -4195,7 +4195,7 @@ exports[`TransactionTable > should render compact 1`] = `
                     rel="noopener noreferrer"
                   >
                     <span
-                      class="css-170792"
+                      class="css-1dlnsgk"
                     >
                       <span
                         class="text-sm"
@@ -4359,7 +4359,7 @@ exports[`TransactionTable > should render compact 1`] = `
                     rel="noopener noreferrer"
                   >
                     <span
-                      class="css-170792"
+                      class="css-1dlnsgk"
                     >
                       <span
                         class="text-sm"
@@ -4523,7 +4523,7 @@ exports[`TransactionTable > should render compact 1`] = `
                     rel="noopener noreferrer"
                   >
                     <span
-                      class="css-170792"
+                      class="css-1dlnsgk"
                     >
                       <span
                         class="text-sm"
@@ -4592,7 +4592,7 @@ exports[`TransactionTable > should render compact 1`] = `
                     To
                   </div>
                   <div
-                    class="w-40 md:w-50"
+                    class="w-40 lg:w-50"
                     data-testid="TransactionRowAddressing__address-container"
                   >
                     <div
@@ -4693,7 +4693,7 @@ exports[`TransactionTable > should render responsive 1`] = `
     data-testid="TransactionTable"
   >
     <div
-      class="md:with-x-padding css-1m6rt2i"
+      class="css-1m6rt2i"
       role="table"
     >
       <table
@@ -4724,7 +4724,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                     rel="noopener noreferrer"
                   >
                     <span
-                      class="css-170792"
+                      class="css-1dlnsgk"
                     >
                       <span
                         class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
@@ -4873,7 +4873,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                     rel="noopener noreferrer"
                   >
                     <span
-                      class="css-170792"
+                      class="css-1dlnsgk"
                     >
                       <span
                         class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
@@ -4925,7 +4925,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                           To
                         </div>
                         <div
-                          class="w-40 md:w-50"
+                          class="w-40 lg:w-50"
                           data-testid="TransactionRowAddressing__address-container"
                         >
                           <div
@@ -5033,7 +5033,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                     rel="noopener noreferrer"
                   >
                     <span
-                      class="css-170792"
+                      class="css-1dlnsgk"
                     >
                       <span
                         class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
@@ -5182,7 +5182,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                     rel="noopener noreferrer"
                   >
                     <span
-                      class="css-170792"
+                      class="css-1dlnsgk"
                     >
                       <span
                         class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
@@ -5331,7 +5331,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                     rel="noopener noreferrer"
                   >
                     <span
-                      class="css-170792"
+                      class="css-1dlnsgk"
                     >
                       <span
                         class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
@@ -5480,7 +5480,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                     rel="noopener noreferrer"
                   >
                     <span
-                      class="css-170792"
+                      class="css-1dlnsgk"
                     >
                       <span
                         class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
@@ -5629,7 +5629,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                     rel="noopener noreferrer"
                   >
                     <span
-                      class="css-170792"
+                      class="css-1dlnsgk"
                     >
                       <span
                         class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
@@ -5778,7 +5778,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                     rel="noopener noreferrer"
                   >
                     <span
-                      class="css-170792"
+                      class="css-1dlnsgk"
                     >
                       <span
                         class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
@@ -5927,7 +5927,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                     rel="noopener noreferrer"
                   >
                     <span
-                      class="css-170792"
+                      class="css-1dlnsgk"
                     >
                       <span
                         class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
@@ -6076,7 +6076,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                     rel="noopener noreferrer"
                   >
                     <span
-                      class="css-170792"
+                      class="css-1dlnsgk"
                     >
                       <span
                         class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
@@ -6128,7 +6128,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                           To
                         </div>
                         <div
-                          class="w-40 md:w-50"
+                          class="w-40 lg:w-50"
                           data-testid="TransactionRowAddressing__address-container"
                         >
                           <div
@@ -6229,7 +6229,7 @@ exports[`TransactionTable > should render responsive 2`] = `
     data-testid="TransactionTable"
   >
     <div
-      class="md:with-x-padding css-1m6rt2i"
+      class="css-1m6rt2i"
       role="table"
     >
       <table
@@ -6260,7 +6260,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                     rel="noopener noreferrer"
                   >
                     <span
-                      class="css-170792"
+                      class="css-1dlnsgk"
                     >
                       <span
                         class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
@@ -6409,7 +6409,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                     rel="noopener noreferrer"
                   >
                     <span
-                      class="css-170792"
+                      class="css-1dlnsgk"
                     >
                       <span
                         class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
@@ -6461,7 +6461,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                           To
                         </div>
                         <div
-                          class="w-40 md:w-50"
+                          class="w-40 lg:w-50"
                           data-testid="TransactionRowAddressing__address-container"
                         >
                           <div
@@ -6569,7 +6569,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                     rel="noopener noreferrer"
                   >
                     <span
-                      class="css-170792"
+                      class="css-1dlnsgk"
                     >
                       <span
                         class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
@@ -6718,7 +6718,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                     rel="noopener noreferrer"
                   >
                     <span
-                      class="css-170792"
+                      class="css-1dlnsgk"
                     >
                       <span
                         class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
@@ -6867,7 +6867,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                     rel="noopener noreferrer"
                   >
                     <span
-                      class="css-170792"
+                      class="css-1dlnsgk"
                     >
                       <span
                         class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
@@ -7016,7 +7016,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                     rel="noopener noreferrer"
                   >
                     <span
-                      class="css-170792"
+                      class="css-1dlnsgk"
                     >
                       <span
                         class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
@@ -7165,7 +7165,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                     rel="noopener noreferrer"
                   >
                     <span
-                      class="css-170792"
+                      class="css-1dlnsgk"
                     >
                       <span
                         class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
@@ -7314,7 +7314,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                     rel="noopener noreferrer"
                   >
                     <span
-                      class="css-170792"
+                      class="css-1dlnsgk"
                     >
                       <span
                         class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
@@ -7463,7 +7463,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                     rel="noopener noreferrer"
                   >
                     <span
-                      class="css-170792"
+                      class="css-1dlnsgk"
                     >
                       <span
                         class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
@@ -7612,7 +7612,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                     rel="noopener noreferrer"
                   >
                     <span
-                      class="css-170792"
+                      class="css-1dlnsgk"
                     >
                       <span
                         class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
@@ -7664,7 +7664,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                           To
                         </div>
                         <div
-                          class="w-40 md:w-50"
+                          class="w-40 lg:w-50"
                           data-testid="TransactionRowAddressing__address-container"
                         >
                           <div
@@ -7765,7 +7765,7 @@ exports[`TransactionTable > should render responsive 3`] = `
     data-testid="TransactionTable"
   >
     <div
-      class="md:with-x-padding css-1m6rt2i"
+      class="with-x-padding css-1m6rt2i"
       role="table"
     >
       <table
@@ -7793,7 +7793,7 @@ exports[`TransactionTable > should render responsive 3`] = `
               </div>
             </th>
             <th
-              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 hidden xl:table-cell no-border first:rounded-tl-xl last:rounded-tr-xl"
+              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 hidden lg:table-cell no-border first:rounded-tl-xl last:rounded-tr-xl"
               colspan="1"
               data-testid="table__th--1"
               role="columnheader"
@@ -7986,7 +7986,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                     rel="noopener noreferrer"
                   >
                     <span
-                      class="css-170792"
+                      class="css-1dlnsgk"
                     >
                       <span
                         class="text-sm"
@@ -8150,7 +8150,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                     rel="noopener noreferrer"
                   >
                     <span
-                      class="css-170792"
+                      class="css-1dlnsgk"
                     >
                       <span
                         class="text-sm"
@@ -8219,7 +8219,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                     To
                   </div>
                   <div
-                    class="w-40 md:w-50"
+                    class="w-40 lg:w-50"
                     data-testid="TransactionRowAddressing__address-container"
                   >
                     <div
@@ -8325,7 +8325,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                     rel="noopener noreferrer"
                   >
                     <span
-                      class="css-170792"
+                      class="css-1dlnsgk"
                     >
                       <span
                         class="text-sm"
@@ -8489,7 +8489,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                     rel="noopener noreferrer"
                   >
                     <span
-                      class="css-170792"
+                      class="css-1dlnsgk"
                     >
                       <span
                         class="text-sm"
@@ -8653,7 +8653,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                     rel="noopener noreferrer"
                   >
                     <span
-                      class="css-170792"
+                      class="css-1dlnsgk"
                     >
                       <span
                         class="text-sm"
@@ -8817,7 +8817,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                     rel="noopener noreferrer"
                   >
                     <span
-                      class="css-170792"
+                      class="css-1dlnsgk"
                     >
                       <span
                         class="text-sm"
@@ -8981,7 +8981,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                     rel="noopener noreferrer"
                   >
                     <span
-                      class="css-170792"
+                      class="css-1dlnsgk"
                     >
                       <span
                         class="text-sm"
@@ -9145,7 +9145,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                     rel="noopener noreferrer"
                   >
                     <span
-                      class="css-170792"
+                      class="css-1dlnsgk"
                     >
                       <span
                         class="text-sm"
@@ -9309,7 +9309,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                     rel="noopener noreferrer"
                   >
                     <span
-                      class="css-170792"
+                      class="css-1dlnsgk"
                     >
                       <span
                         class="text-sm"
@@ -9473,7 +9473,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                     rel="noopener noreferrer"
                   >
                     <span
-                      class="css-170792"
+                      class="css-1dlnsgk"
                     >
                       <span
                         class="text-sm"
@@ -9542,7 +9542,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                     To
                   </div>
                   <div
-                    class="w-40 md:w-50"
+                    class="w-40 lg:w-50"
                     data-testid="TransactionRowAddressing__address-container"
                   >
                     <div
@@ -9643,7 +9643,7 @@ exports[`TransactionTable > should render responsive 4`] = `
     data-testid="TransactionTable"
   >
     <div
-      class="md:with-x-padding css-1m6rt2i"
+      class="with-x-padding css-1m6rt2i"
       role="table"
     >
       <table
@@ -9671,7 +9671,7 @@ exports[`TransactionTable > should render responsive 4`] = `
               </div>
             </th>
             <th
-              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 hidden xl:table-cell no-border first:rounded-tl-xl last:rounded-tr-xl"
+              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 hidden lg:table-cell no-border first:rounded-tl-xl last:rounded-tr-xl"
               colspan="1"
               data-testid="table__th--1"
               role="columnheader"
@@ -9864,7 +9864,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                     rel="noopener noreferrer"
                   >
                     <span
-                      class="css-170792"
+                      class="css-1dlnsgk"
                     >
                       <span
                         class="text-sm"
@@ -10028,7 +10028,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                     rel="noopener noreferrer"
                   >
                     <span
-                      class="css-170792"
+                      class="css-1dlnsgk"
                     >
                       <span
                         class="text-sm"
@@ -10097,7 +10097,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                     To
                   </div>
                   <div
-                    class="w-40 md:w-50"
+                    class="w-40 lg:w-50"
                     data-testid="TransactionRowAddressing__address-container"
                   >
                     <div
@@ -10203,7 +10203,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                     rel="noopener noreferrer"
                   >
                     <span
-                      class="css-170792"
+                      class="css-1dlnsgk"
                     >
                       <span
                         class="text-sm"
@@ -10367,7 +10367,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                     rel="noopener noreferrer"
                   >
                     <span
-                      class="css-170792"
+                      class="css-1dlnsgk"
                     >
                       <span
                         class="text-sm"
@@ -10531,7 +10531,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                     rel="noopener noreferrer"
                   >
                     <span
-                      class="css-170792"
+                      class="css-1dlnsgk"
                     >
                       <span
                         class="text-sm"
@@ -10695,7 +10695,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                     rel="noopener noreferrer"
                   >
                     <span
-                      class="css-170792"
+                      class="css-1dlnsgk"
                     >
                       <span
                         class="text-sm"
@@ -10859,7 +10859,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                     rel="noopener noreferrer"
                   >
                     <span
-                      class="css-170792"
+                      class="css-1dlnsgk"
                     >
                       <span
                         class="text-sm"
@@ -11023,7 +11023,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                     rel="noopener noreferrer"
                   >
                     <span
-                      class="css-170792"
+                      class="css-1dlnsgk"
                     >
                       <span
                         class="text-sm"
@@ -11187,7 +11187,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                     rel="noopener noreferrer"
                   >
                     <span
-                      class="css-170792"
+                      class="css-1dlnsgk"
                     >
                       <span
                         class="text-sm"
@@ -11351,7 +11351,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                     rel="noopener noreferrer"
                   >
                     <span
-                      class="css-170792"
+                      class="css-1dlnsgk"
                     >
                       <span
                         class="text-sm"
@@ -11420,7 +11420,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                     To
                   </div>
                   <div
-                    class="w-40 md:w-50"
+                    class="w-40 lg:w-50"
                     data-testid="TransactionRowAddressing__address-container"
                   >
                     <div
@@ -11521,7 +11521,7 @@ exports[`TransactionTable > should render responsive 5`] = `
     data-testid="TransactionTable"
   >
     <div
-      class="md:with-x-padding css-1m6rt2i"
+      class="with-x-padding css-1m6rt2i"
       role="table"
     >
       <table
@@ -11549,7 +11549,7 @@ exports[`TransactionTable > should render responsive 5`] = `
               </div>
             </th>
             <th
-              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 hidden xl:table-cell no-border first:rounded-tl-xl last:rounded-tr-xl"
+              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 hidden lg:table-cell no-border first:rounded-tl-xl last:rounded-tr-xl"
               colspan="1"
               data-testid="table__th--1"
               role="columnheader"
@@ -11742,7 +11742,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                     rel="noopener noreferrer"
                   >
                     <span
-                      class="css-170792"
+                      class="css-1dlnsgk"
                     >
                       <span
                         class="text-sm"
@@ -11906,7 +11906,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                     rel="noopener noreferrer"
                   >
                     <span
-                      class="css-170792"
+                      class="css-1dlnsgk"
                     >
                       <span
                         class="text-sm"
@@ -11975,7 +11975,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                     To
                   </div>
                   <div
-                    class="w-40 md:w-50"
+                    class="w-40 lg:w-50"
                     data-testid="TransactionRowAddressing__address-container"
                   >
                     <div
@@ -12081,7 +12081,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                     rel="noopener noreferrer"
                   >
                     <span
-                      class="css-170792"
+                      class="css-1dlnsgk"
                     >
                       <span
                         class="text-sm"
@@ -12245,7 +12245,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                     rel="noopener noreferrer"
                   >
                     <span
-                      class="css-170792"
+                      class="css-1dlnsgk"
                     >
                       <span
                         class="text-sm"
@@ -12409,7 +12409,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                     rel="noopener noreferrer"
                   >
                     <span
-                      class="css-170792"
+                      class="css-1dlnsgk"
                     >
                       <span
                         class="text-sm"
@@ -12573,7 +12573,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                     rel="noopener noreferrer"
                   >
                     <span
-                      class="css-170792"
+                      class="css-1dlnsgk"
                     >
                       <span
                         class="text-sm"
@@ -12737,7 +12737,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                     rel="noopener noreferrer"
                   >
                     <span
-                      class="css-170792"
+                      class="css-1dlnsgk"
                     >
                       <span
                         class="text-sm"
@@ -12901,7 +12901,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                     rel="noopener noreferrer"
                   >
                     <span
-                      class="css-170792"
+                      class="css-1dlnsgk"
                     >
                       <span
                         class="text-sm"
@@ -13065,7 +13065,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                     rel="noopener noreferrer"
                   >
                     <span
-                      class="css-170792"
+                      class="css-1dlnsgk"
                     >
                       <span
                         class="text-sm"
@@ -13229,7 +13229,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                     rel="noopener noreferrer"
                   >
                     <span
-                      class="css-170792"
+                      class="css-1dlnsgk"
                     >
                       <span
                         class="text-sm"
@@ -13298,7 +13298,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                     To
                   </div>
                   <div
-                    class="w-40 md:w-50"
+                    class="w-40 lg:w-50"
                     data-testid="TransactionRowAddressing__address-container"
                   >
                     <div

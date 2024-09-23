@@ -20,10 +20,10 @@ exports[`TransferLedgerReview > should render 1`] = `
         </div>
       </div>
       <div
-        class="w-full break-words rounded-lg border-theme-secondary-300 p-3 dark:border-theme-secondary-800 sm:border sm:px-6 sm:py-5 mt-0 sm:mt-2"
+        class="w-full break-words rounded-lg border-theme-secondary-300 p-3 dark:border-theme-secondary-800 sm:border sm:px-6 sm:py-5 [.condensed_&]:sm:py-4 mt-0 sm:mt-2"
       >
         <div
-          class="flex w-full items-center justify-between gap-4 space-x-2 sm:justify-start sm:space-x-0"
+          class="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0"
         >
           <div
             class="no-ligatures w-20 flex-shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:text-base sm:leading-5"
@@ -31,7 +31,7 @@ exports[`TransferLedgerReview > should render 1`] = `
             From
           </div>
           <div
-            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end sm:justify-start sm:max-w-[350px]"
+            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end sm:justify-start"
           >
             <span
               class="font-semibold text-base text-theme-text text-sm leading-[17px] sm:leading-5 sm:text-base"
@@ -44,12 +44,19 @@ exports[`TransferLedgerReview > should render 1`] = `
                 ARK Wallet 1
               </span>
             </span>
-            <span
-              class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 text-sm leading-[17px] sm:leading-5 sm:text-base font-semibold text-base"
-              data-testid="Address__address"
+            <div
+              class="relative grow text-left"
             >
-              D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-            </span>
+              <span
+                class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 text-sm leading-[17px] sm:leading-5 sm:text-base w-full w-3/4 font-semibold text-base absolute w-full"
+                data-testid="Address__address"
+              >
+                D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+              </span>
+              <span>
+                 
+              </span>
+            </div>
             <button
               class="ring-focus relative focus:outline-none"
               data-ring-focus-margin="-m-1"
@@ -142,7 +149,7 @@ exports[`TransferLedgerReview > should render 1`] = `
         </div>
       </div>
       <div
-        class="w-full break-words rounded-lg border-theme-secondary-300 p-3 dark:border-theme-secondary-800 sm:border sm:px-6 sm:py-5 mt-0 sm:mt-2"
+        class="w-full break-words rounded-lg border-theme-secondary-300 p-3 dark:border-theme-secondary-800 sm:border sm:px-6 sm:py-5 [.condensed_&]:sm:py-4 mt-0 sm:mt-2"
       >
         123
       </div>
@@ -266,10 +273,10 @@ exports[`TransferLedgerReview > should render skeleton while loading expiration 
         </div>
       </div>
       <div
-        class="w-full break-words rounded-lg border-theme-secondary-300 p-3 dark:border-theme-secondary-800 sm:border sm:px-6 sm:py-5 mt-0 sm:mt-2"
+        class="w-full break-words rounded-lg border-theme-secondary-300 p-3 dark:border-theme-secondary-800 sm:border sm:px-6 sm:py-5 [.condensed_&]:sm:py-4 mt-0 sm:mt-2"
       >
         <div
-          class="flex w-full items-center justify-between gap-4 space-x-2 sm:justify-start sm:space-x-0"
+          class="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0"
         >
           <div
             class="no-ligatures w-20 flex-shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:text-base sm:leading-5"
@@ -277,7 +284,7 @@ exports[`TransferLedgerReview > should render skeleton while loading expiration 
             From
           </div>
           <div
-            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end sm:justify-start sm:max-w-[350px]"
+            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end sm:justify-start"
           >
             <span
               class="font-semibold text-base text-theme-text text-sm leading-[17px] sm:leading-5 sm:text-base"
@@ -290,12 +297,19 @@ exports[`TransferLedgerReview > should render skeleton while loading expiration 
                 ARK Wallet 1
               </span>
             </span>
-            <span
-              class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 text-sm leading-[17px] sm:leading-5 sm:text-base font-semibold text-base"
-              data-testid="Address__address"
+            <div
+              class="relative grow text-left"
             >
-              D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-            </span>
+              <span
+                class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 text-sm leading-[17px] sm:leading-5 sm:text-base w-full w-3/4 font-semibold text-base absolute w-full"
+                data-testid="Address__address"
+              >
+                D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+              </span>
+              <span>
+                 
+              </span>
+            </div>
             <button
               class="ring-focus relative focus:outline-none"
               data-ring-focus-margin="-m-1"
@@ -388,7 +402,7 @@ exports[`TransferLedgerReview > should render skeleton while loading expiration 
         </div>
       </div>
       <div
-        class="w-full break-words rounded-lg border-theme-secondary-300 p-3 dark:border-theme-secondary-800 sm:border sm:px-6 sm:py-5 mt-0 sm:mt-2"
+        class="w-full break-words rounded-lg border-theme-secondary-300 p-3 dark:border-theme-secondary-800 sm:border sm:px-6 sm:py-5 [.condensed_&]:sm:py-4 mt-0 sm:mt-2"
       >
         <span
           class="my-0.5 flex"
@@ -529,10 +543,10 @@ exports[`TransferLedgerReview > should render with memo 1`] = `
         </div>
       </div>
       <div
-        class="w-full break-words rounded-lg border-theme-secondary-300 p-3 dark:border-theme-secondary-800 sm:border sm:px-6 sm:py-5 mt-0 sm:mt-2"
+        class="w-full break-words rounded-lg border-theme-secondary-300 p-3 dark:border-theme-secondary-800 sm:border sm:px-6 sm:py-5 [.condensed_&]:sm:py-4 mt-0 sm:mt-2"
       >
         <div
-          class="flex w-full items-center justify-between gap-4 space-x-2 sm:justify-start sm:space-x-0"
+          class="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0"
         >
           <div
             class="no-ligatures w-20 flex-shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:text-base sm:leading-5"
@@ -540,7 +554,7 @@ exports[`TransferLedgerReview > should render with memo 1`] = `
             From
           </div>
           <div
-            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end sm:justify-start sm:max-w-[350px]"
+            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end sm:justify-start"
           >
             <span
               class="font-semibold text-base text-theme-text text-sm leading-[17px] sm:leading-5 sm:text-base"
@@ -553,12 +567,19 @@ exports[`TransferLedgerReview > should render with memo 1`] = `
                 ARK Wallet 1
               </span>
             </span>
-            <span
-              class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 text-sm leading-[17px] sm:leading-5 sm:text-base font-semibold text-base"
-              data-testid="Address__address"
+            <div
+              class="relative grow text-left"
             >
-              D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-            </span>
+              <span
+                class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 text-sm leading-[17px] sm:leading-5 sm:text-base w-full w-3/4 font-semibold text-base absolute w-full"
+                data-testid="Address__address"
+              >
+                D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+              </span>
+              <span>
+                 
+              </span>
+            </div>
             <button
               class="ring-focus relative focus:outline-none"
               data-ring-focus-margin="-m-1"
@@ -614,7 +635,7 @@ exports[`TransferLedgerReview > should render with memo 1`] = `
         </div>
       </div>
       <div
-        class="w-full break-words rounded-lg border-theme-secondary-300 p-3 dark:border-theme-secondary-800 sm:border sm:px-6 sm:py-5 mt-0 sm:mt-2"
+        class="w-full break-words rounded-lg border-theme-secondary-300 p-3 dark:border-theme-secondary-800 sm:border sm:px-6 sm:py-5 [.condensed_&]:sm:py-4 mt-0 sm:mt-2"
       >
         <p
           data-testid="TransactionMemo"
@@ -675,7 +696,7 @@ exports[`TransferLedgerReview > should render with memo 1`] = `
         </div>
       </div>
       <div
-        class="w-full break-words rounded-lg border-theme-secondary-300 p-3 dark:border-theme-secondary-800 sm:border sm:px-6 sm:py-5 mt-0 sm:mt-2"
+        class="w-full break-words rounded-lg border-theme-secondary-300 p-3 dark:border-theme-secondary-800 sm:border sm:px-6 sm:py-5 [.condensed_&]:sm:py-4 mt-0 sm:mt-2"
       >
         123
       </div>
