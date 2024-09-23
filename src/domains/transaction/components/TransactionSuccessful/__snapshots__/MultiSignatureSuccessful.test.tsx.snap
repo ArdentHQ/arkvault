@@ -481,7 +481,7 @@ exports[`MultiSignatureSuccessful > should render in lg 1`] = `
             </div>
           </div>
           <div
-            class="w-full break-words rounded-lg border-theme-secondary-300 p-3 dark:border-theme-secondary-800 sm:border sm:px-6 sm:py-5 mt-0 sm:mt-2"
+            class="w-full break-words rounded-lg border-theme-secondary-300 p-3 dark:border-theme-secondary-800 sm:border sm:px-6 sm:py-5 [.condensed_&]:sm:py-4 mt-0 sm:mt-2"
           >
             <div
               class="flex w-full justify-between sm:justify-start"
@@ -1342,7 +1342,7 @@ exports[`MultiSignatureSuccessful > should render in md 1`] = `
             </div>
           </div>
           <div
-            class="w-full break-words rounded-lg border-theme-secondary-300 p-3 dark:border-theme-secondary-800 sm:border sm:px-6 sm:py-5 mt-0 sm:mt-2"
+            class="w-full break-words rounded-lg border-theme-secondary-300 p-3 dark:border-theme-secondary-800 sm:border sm:px-6 sm:py-5 [.condensed_&]:sm:py-4 mt-0 sm:mt-2"
           >
             <div
               class="flex w-full justify-between sm:justify-start"
@@ -2207,7 +2207,7 @@ exports[`MultiSignatureSuccessful > should render in sm 1`] = `
             </div>
           </div>
           <div
-            class="w-full break-words rounded-lg border-theme-secondary-300 p-3 dark:border-theme-secondary-800 sm:border sm:px-6 sm:py-5 mt-0 sm:mt-2"
+            class="w-full break-words rounded-lg border-theme-secondary-300 p-3 dark:border-theme-secondary-800 sm:border sm:px-6 sm:py-5 [.condensed_&]:sm:py-4 mt-0 sm:mt-2"
           >
             <div
               class="flex w-full justify-between sm:justify-start"
@@ -2991,7 +2991,7 @@ exports[`MultiSignatureSuccessful > should render in xl 1`] = `
             </div>
           </div>
           <div
-            class="w-full break-words rounded-lg border-theme-secondary-300 p-3 dark:border-theme-secondary-800 sm:border sm:px-6 sm:py-5 mt-0 sm:mt-2"
+            class="w-full break-words rounded-lg border-theme-secondary-300 p-3 dark:border-theme-secondary-800 sm:border sm:px-6 sm:py-5 [.condensed_&]:sm:py-4 mt-0 sm:mt-2"
           >
             <div
               class="flex w-full justify-between sm:justify-start"
@@ -3856,7 +3856,7 @@ exports[`MultiSignatureSuccessful > should render in xs 1`] = `
             </div>
           </div>
           <div
-            class="w-full break-words rounded-lg border-theme-secondary-300 p-3 dark:border-theme-secondary-800 sm:border sm:px-6 sm:py-5 mt-0 sm:mt-2"
+            class="w-full break-words rounded-lg border-theme-secondary-300 p-3 dark:border-theme-secondary-800 sm:border sm:px-6 sm:py-5 [.condensed_&]:sm:py-4 mt-0 sm:mt-2"
           >
             <div
               class="flex w-full justify-between sm:justify-start"
@@ -4640,7 +4640,7 @@ exports[`MultiSignatureSuccessful > should render with delegate sender wallet 1`
             </div>
           </div>
           <div
-            class="w-full break-words rounded-lg border-theme-secondary-300 p-3 dark:border-theme-secondary-800 sm:border sm:px-6 sm:py-5 mt-0 sm:mt-2"
+            class="w-full break-words rounded-lg border-theme-secondary-300 p-3 dark:border-theme-secondary-800 sm:border sm:px-6 sm:py-5 [.condensed_&]:sm:py-4 mt-0 sm:mt-2"
           >
             <div
               class="flex w-full justify-between sm:justify-start"
@@ -5501,7 +5501,7 @@ exports[`MultiSignatureSuccessful > should render with ledger sender wallet 1`] 
             </div>
           </div>
           <div
-            class="w-full break-words rounded-lg border-theme-secondary-300 p-3 dark:border-theme-secondary-800 sm:border sm:px-6 sm:py-5 mt-0 sm:mt-2"
+            class="w-full break-words rounded-lg border-theme-secondary-300 p-3 dark:border-theme-secondary-800 sm:border sm:px-6 sm:py-5 [.condensed_&]:sm:py-4 mt-0 sm:mt-2"
           >
             <div
               class="flex w-full justify-between sm:justify-start"
@@ -6182,7 +6182,7 @@ exports[`MultiSignatureSuccessful > should render without generated address 1`] 
             </div>
           </div>
           <div
-            class="w-full break-words rounded-lg border-theme-secondary-300 p-3 dark:border-theme-secondary-800 sm:border sm:px-6 sm:py-5 mt-0 sm:mt-2"
+            class="w-full break-words rounded-lg border-theme-secondary-300 p-3 dark:border-theme-secondary-800 sm:border sm:px-6 sm:py-5 [.condensed_&]:sm:py-4 mt-0 sm:mt-2"
           >
             <div
               class="flex w-full justify-between sm:justify-start"

@@ -19,4 +19,5 @@ export interface TransactionDetailProperties {
 	transaction: DTO.ExtendedConfirmedTransactionData;
 	aliases?: TransactionAliases;
 	onClose?: any;
+	profile: Contracts.IProfile;
 }

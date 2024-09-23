@@ -82,14 +82,16 @@ export const SelectAddress = React.forwardRef<HTMLInputElement, SelectAddressPro
 
 		const { getWalletAlias } = useWalletAlias();
 
-		const { alias } = useMemo(
-			() =>
-				getWalletAlias({
-					...selectedWallet,
-					profile,
-				}),
-			[getWalletAlias, profile, selectedWallet],
-		);
+		const alias = useMemo(() => {
+			if (!selectedWallet) {
+				return;
+			}
+
+			return getWalletAlias({
+				...selectedWallet,
+				profile,
+			}).alias;
+		}, [getWalletAlias, profile, selectedWallet]);
 
 		const inputAddons = () => {
 			const addons = {} as Record<string, any>;

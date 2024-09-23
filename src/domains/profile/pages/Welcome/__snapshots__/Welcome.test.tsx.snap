@@ -626,7 +626,7 @@ exports[`Welcome > should change route to create profile 1`] = `
                       href="#/profiles/import"
                     >
                       <span
-                        class="css-170792"
+                        class="css-1dlnsgk"
                       >
                         Import it here.
                       </span>
@@ -1363,7 +1363,7 @@ exports[`Welcome > should navigate to previous page with correct password 1`] = 
                       href="#/profiles/import"
                     >
                       <span
-                        class="css-170792"
+                        class="css-1dlnsgk"
                       >
                         Import it here.
                       </span>
@@ -2100,7 +2100,7 @@ exports[`Welcome > should navigate to profile dashboard 1`] = `
                       href="#/profiles/import"
                     >
                       <span
-                        class="css-170792"
+                        class="css-1dlnsgk"
                       >
                         Import it here.
                       </span>
@@ -2837,7 +2837,7 @@ exports[`Welcome > should navigate to profile dashboard with correct password 1`
                       href="#/profiles/import"
                     >
                       <span
-                        class="css-170792"
+                        class="css-1dlnsgk"
                       >
                         Import it here.
                       </span>
@@ -3574,7 +3574,7 @@ exports[`Welcome > should navigate to profile settings from profile card menu 1`
                       href="#/profiles/import"
                     >
                       <span
-                        class="css-170792"
+                        class="css-1dlnsgk"
                       >
                         Import it here.
                       </span>
@@ -4311,7 +4311,7 @@ exports[`Welcome > should navigate to profile settings with correct password 1`]
                       href="#/profiles/import"
                     >
                       <span
-                        class="css-170792"
+                        class="css-1dlnsgk"
                       >
                         Import it here.
                       </span>
@@ -4954,7 +4954,7 @@ exports[`Welcome > should not select profile on wrong last location 1`] = `
                       href="#/profiles/import"
                     >
                       <span
-                        class="css-170792"
+                        class="css-1dlnsgk"
                       >
                         Import it here.
                       </span>
@@ -5691,7 +5691,7 @@ exports[`Welcome > should render with profiles 1`] = `
                       href="#/profiles/import"
                     >
                       <span
-                        class="css-170792"
+                        class="css-1dlnsgk"
                       >
                         Import it here.
                       </span>
@@ -6212,7 +6212,7 @@ exports[`Welcome > should render without profiles 1`] = `
                       href="#/profiles/import"
                     >
                       <span
-                        class="css-170792"
+                        class="css-1dlnsgk"
                       >
                         Import it here.
                       </span>
