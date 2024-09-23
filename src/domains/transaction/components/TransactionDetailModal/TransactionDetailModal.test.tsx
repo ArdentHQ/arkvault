@@ -39,6 +39,7 @@ describe("TransactionDetailModal", () => {
 						...TransactionFixture,
 						blockId: () => "as32d1as65d1as3d1as32d1asd51as3d21as3d2as165das",
 						type: () => "transfer",
+						wallet: () => wallet,
 					}}
 				/>
 			</Route>,
@@ -60,7 +61,10 @@ describe("TransactionDetailModal", () => {
 					transactionItem={{
 						...TransactionFixture,
 						blockId: () => "as32d1as65d1as3d1as32d1asd51as3d21as3d2as165das",
+						isTransfer: () => true,
+						memo: () => {},
 						type: () => "transfer",
+						wallet: () => wallet,
 					}}
 				/>
 			</Route>,
@@ -74,9 +78,7 @@ describe("TransactionDetailModal", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it("should render a multi signature modal", async () => {
-		await profile.wallets().restore();
-
+	it("should render a transfer modal with memo", () => {
 		const { asFragment } = render(
 			<Route path="/profiles/:profileId/dashboard">
 				<TransactionDetailModal
@@ -84,6 +86,36 @@ describe("TransactionDetailModal", () => {
 					transactionItem={{
 						...TransactionFixture,
 						blockId: () => "as32d1as65d1as3d1as32d1asd51as3d21as3d2as165das",
+						isTransfer: () => true,
+						memo: () => "memo",
+						type: () => "transfer",
+						wallet: () => wallet,
+					}}
+				/>
+			</Route>,
+			{
+				history,
+				route: dashboardURL,
+			},
+		);
+
+		expect(screen.getByTestId("Modal__inner")).toHaveTextContent(translations.MODAL_TRANSFER_DETAIL.TITLE);
+		expect(screen.getByText("memo")).toBeInTheDocument();
+		expect(asFragment()).toMatchSnapshot();
+	});
+
+	it("should render a multi signature modal", async () => {
+		await profile.wallets().restore();
+
+		const { asFragment } = render(
+			<Route path="/profiles/:profileId/dashboard">
+				<TransactionDetailModal
+					profile={profile}
+					isOpen={true}
+					transactionItem={{
+						...TransactionFixture,
+						blockId: () => "as32d1as65d1as3d1as32d1asd51as3d21as3d2as165das",
+						isMultiSignatureRegistration: () => true,
 						min: () => 2,
 						publicKeys: () => [wallet.publicKey(), profile.wallets().last().publicKey()],
 						type: () => "multiSignature",
@@ -131,7 +163,7 @@ describe("TransactionDetailModal", () => {
 			},
 		);
 
-		expect(screen.getByTestId("Modal__inner")).toHaveTextContent(translations.MODAL_TRANSFER_DETAIL.TITLE);
+		expect(screen.getByTestId("Modal__inner")).toHaveTextContent(translations.MODAL_TRANSACTION_DETAILS.TITLE);
 		expect(asFragment()).toMatchSnapshot();
 	});
 
@@ -142,11 +174,14 @@ describe("TransactionDetailModal", () => {
 					isOpen={true}
 					transactionItem={{
 						...TransactionFixture,
-						data: {
-							asset: { ipfs: "as32d1as65d1as3d1as32d1asd51as3d21as3d2as165das" },
-							blockId: "as32d1as65d1as3d1as32d1asd51as3d21as3d2as165das",
-						},
+						data: () => ({
+							data: {
+								asset: { ipfs: "as32d1as65d1as3d1as32d1asd51as3d21as3d2as165das" },
+								blockId: "as32d1as65d1as3d1as32d1asd51as3d21as3d2as165das",
+							},
+						}),
 						type: () => "ipfs",
+						wallet: () => wallet,
 					}}
 				/>
 			</Route>,
@@ -156,11 +191,11 @@ describe("TransactionDetailModal", () => {
 			},
 		);
 
-		expect(screen.getByTestId("Modal__inner")).toHaveTextContent(translations.MODAL_IPFS_DETAIL.TITLE);
+		expect(screen.getByTestId("Modal__inner")).toHaveTextContent("IPFS");
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it.each(["unvote", "vote", "voteCombination"])("should render a %s modal", (transactionType) => {
+	it.each(["vote", "unvote", "voteCombination"])("should render a %s modal", (transactionType) => {
 		vi.spyOn(env.delegates(), "map").mockImplementation((wallet, votes) =>
 			votes.map(
 				(vote: string, index: number) =>
@@ -179,7 +214,30 @@ describe("TransactionDetailModal", () => {
 					transactionItem={{
 						...TransactionFixture,
 						blockId: () => "as32d1as65d1as3d1as32d1asd51as3d21as3d2as165das",
+						data: () => {},
+						data: () => ({
+							data: {
+								asset: {},
+								blockId: "as32d1as65d1as3d1as32d1asd51as3d21as3d2as165das",
+							},
+						}),
+						isUnvote: () => transactionType === "unvote",
+						isVote: () => transactionType === "vote",
+						isVoteCombination: () => transactionType === "voteCombination",
 						type: () => transactionType,
+						unvotes: () => {
+							if (transactionType !== "vote") {
+								return TransactionFixture.unvotes();
+							}
+							return [];
+						},
+						votes: () => {
+							if (transactionType !== "unvote") {
+								return TransactionFixture.votes();
+							}
+							return [];
+						},
+						wallet: () => wallet,
 					}}
 				/>
 			</Route>,
@@ -189,7 +247,13 @@ describe("TransactionDetailModal", () => {
 			},
 		);
 
-		expect(screen.getByTestId("Modal__inner")).toHaveTextContent(translations.MODAL_VOTE_DETAIL.TITLE);
+		const labels = {
+			unvote: "Unvote",
+			vote: "Vote",
+			voteCombination: "Vote Swap",
+		};
+
+		expect(screen.getByTestId("Modal__inner")).toHaveTextContent(labels[transactionType]);
 		expect(asFragment()).toMatchSnapshot();
 	});
 
@@ -203,6 +267,7 @@ describe("TransactionDetailModal", () => {
 						blockId: () => "as32d1as65d1as3d1as32d1asd51as3d21as3d2as165das",
 						type: () => "delegateRegistration",
 						username: () => "ARK Wallet",
+						wallet: () => wallet,
 					}}
 				/>
 			</Route>,
@@ -212,9 +277,7 @@ describe("TransactionDetailModal", () => {
 			},
 		);
 
-		expect(screen.getByTestId("Modal__inner")).toHaveTextContent(
-			translations.MODAL_DELEGATE_REGISTRATION_DETAIL.TITLE,
-		);
+		expect(screen.getByTestId("Modal__inner")).toHaveTextContent("Registration");
 		expect(asFragment()).toMatchSnapshot();
 	});
 
@@ -229,6 +292,7 @@ describe("TransactionDetailModal", () => {
 						type: () => "delegateResignation",
 						wallet: () => ({
 							...TransactionFixture.wallet(),
+							network: () => wallet.network(),
 							username: () => "ARK Wallet",
 						}),
 					}}
@@ -240,9 +304,7 @@ describe("TransactionDetailModal", () => {
 			},
 		);
 
-		expect(screen.getByTestId("Modal__inner")).toHaveTextContent(
-			translations.MODAL_DELEGATE_RESIGNATION_DETAIL.TITLE,
-		);
+		expect(screen.getByTestId("Modal__inner")).toHaveTextContent("Resignation");
 		expect(asFragment()).toMatchSnapshot();
 	});
 
@@ -255,6 +317,7 @@ describe("TransactionDetailModal", () => {
 						...TransactionFixture,
 						blockId: () => "as32d1as65d1as3d1as32d1asd51as3d21as3d2as165das",
 						type: () => "secondSignature",
+						wallet: () => wallet,
 					}}
 				/>
 			</Route>,
@@ -279,6 +342,7 @@ describe("TransactionDetailModal", () => {
 						isMagistrate: () => true,
 						isTransfer: () => false,
 						type: () => "magistrate",
+						wallet: () => wallet,
 					}}
 				/>
 			</Route>,
@@ -301,6 +365,7 @@ describe("TransactionDetailModal", () => {
 						isTransfer: () => false,
 						isUnlockToken: () => true,
 						type: () => "unlockToken",
+						wallet: () => wallet,
 					}}
 				/>
 			</Route>,
@@ -311,29 +376,5 @@ describe("TransactionDetailModal", () => {
 		);
 
 		expect(asFragment()).toMatchSnapshot();
-	});
-
-	it("should throw an error for unknown types", () => {
-		// disable console to throw to avoid break the CI (this is added because we don't have error boundaries)
-		vi.spyOn(console, "error").mockImplementation(vi.fn());
-
-		expect(() =>
-			render(
-				<Route path="/profiles/:profileId/dashboard">
-					<TransactionDetailModal
-						isOpen={true}
-						transactionItem={{
-							...TransactionFixture,
-							blockId: () => "as32d1as65d1as3d1as32d1asd51as3d21as3d2as165das",
-							type: () => "unknown",
-						}}
-					/>
-				</Route>,
-				{
-					history,
-					route: dashboardURL,
-				},
-			),
-		).toThrow("Transaction type [unknown] is not supported.");
 	});
 });

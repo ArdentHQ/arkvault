@@ -202,6 +202,9 @@ export const translations = {
 	MODAL_SECOND_SIGNATURE_DETAIL: {
 		TITLE: "Second Signature",
 	},
+	MODAL_TRANSACTION_DETAILS: {
+		TITLE: "Transaction Details",
+	},
 	MODAL_TRANSFER_DETAIL: {
 		TITLE: "Transfer",
 	},
@@ -209,6 +212,7 @@ export const translations = {
 		TITLE: "Delegate Vote",
 	},
 	MULTIPLE: "Multiple",
+	MULTIPLE_COUNT: "Multiple ({{count}})",
 	MULTISIGNATURE: {
 		ADD_PARTICIPANT: "Add Participant",
 		AWAITING_BY: "by",
@@ -316,6 +320,7 @@ export const translations = {
 			TITLE: "Vote Transaction",
 		},
 	},
+	PARTICIPANTS: "Participants",
 	PENDING: {
 		DESCRIPTION:
 			"Your transaction was successfully sent. Please monitor the blockchain to ensure your transaction is confirmed and processed. The following  is the relevant information for your transaction:",
@@ -379,8 +384,8 @@ export const translations = {
 	TRANSACTION_SIGNED: "Transaction Signed",
 	TRANSACTION_TYPE: "Transaction Type",
 	TRANSACTION_TYPES: {
-		DELEGATE_REGISTRATION: "Delegate Registration",
-		DELEGATE_RESIGNATION: "Delegate Resignation",
+		DELEGATE_REGISTRATION: "Registration",
+		DELEGATE_RESIGNATION: "Resignation",
 		HTLC_CLAIM: "Timelock Claim",
 		HTLC_LOCK: "Timelock",
 		HTLC_REFUND: "Timelock Refund",

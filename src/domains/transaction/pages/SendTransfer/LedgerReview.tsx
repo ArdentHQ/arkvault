@@ -50,7 +50,12 @@ export const TransferLedgerReview = ({
 
 	return (
 		<div className="space-y-3 sm:space-y-4">
-			<TransactionAddresses senderWallet={wallet} recipients={recipients} profile={profile} />
+			<TransactionAddresses
+				senderAddress={wallet.address()}
+				recipients={recipients}
+				profile={profile}
+				network={wallet.network()}
+			/>
 
 			{memo && (
 				<DetailWrapper label={t("COMMON.MEMO_SMARTBRIDGE")}>

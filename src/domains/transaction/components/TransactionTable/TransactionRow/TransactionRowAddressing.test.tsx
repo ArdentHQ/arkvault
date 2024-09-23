@@ -32,6 +32,24 @@ describe("TransactionRowAddressing", () => {
 		expect(screen.queryAllByTestId("TransactionRowAddressing__vote")).toHaveLength(2);
 	});
 
+	it("should render registration variant if transaction is delegate registration", () => {
+		const registrationFixture = { ...fixture, isDelegateRegistration: () => true, username: () => "test" };
+		render(<TransactionRowAddressing transaction={registrationFixture as any} profile={profile} />);
+
+		expect(screen.getByTestId("TransactionRowAddressing__delegate_registration")).toBeInTheDocument();
+	});
+
+	it("should render resignation variant if transaction is delegate resignation", () => {
+		const resignationFixture = {
+			...fixture,
+			isDelegateResignation: () => true,
+			wallet: () => ({ ...TransactionFixture.wallet(), username: () => "test" }),
+		};
+		render(<TransactionRowAddressing transaction={resignationFixture as any} profile={profile} />);
+
+		expect(screen.getByTestId("TransactionRowAddressing__delegate_resignation")).toBeInTheDocument();
+	});
+
 	it("should render multipayment variant", () => {
 		const multiPaymentFixture = { ...fixture, isMultiPayment: () => true };
 		render(<TransactionRowAddressing transaction={multiPaymentFixture as any} profile={profile} />);
@@ -58,7 +76,7 @@ describe("TransactionRowAddressing", () => {
 
 		render(<TransactionRowAddressing transaction={aliasFixture as any} profile={profile} />);
 
-		expect(screen.getByTestId("TransactionRowAddressing__address-container")).toHaveClass("w-40 md:w-50");
+		expect(screen.getByTestId("TransactionRowAddressing__address-container")).toHaveClass("w-40 lg:w-50");
 	});
 
 	it("should not expand width of address container if the wallet has no alias", () => {

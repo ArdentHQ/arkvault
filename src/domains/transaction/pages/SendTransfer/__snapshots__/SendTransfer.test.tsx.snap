@@ -621,9 +621,8 @@ exports[`SendTransfer > should display unconfirmed transactions modal when submi
                           </button>
                         </button>
                         <button
-                          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700"
+                          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded text-theme-primary-600 dark:text-theme-secondary-700 dark:ring-theme-secondary-800 ring-1 ring-inset ring-theme-secondary-300 hover:bg-theme-primary-700 hover:ring-0 hover:text-white"
                           data-testid="explorer-link"
-                          disabled=""
                           type="button"
                         >
                           <div
@@ -673,7 +672,7 @@ exports[`SendTransfer > should display unconfirmed transactions modal when submi
                             class="-mt-2 h-6 w-full rounded-bl-xl border-b-2 border-l-2 border-theme-secondary-300 dark:border-theme-secondary-800"
                           />
                           <div
-                            class="h-[110%] w-full border-l-2 border-theme-secondary-300 group-last:hidden dark:border-theme-secondary-800"
+                            class="h-[105%] w-full border-l-2 border-theme-secondary-300 group-last:hidden dark:border-theme-secondary-800"
                           />
                         </div>
                       </div>
@@ -695,10 +694,10 @@ exports[`SendTransfer > should display unconfirmed transactions modal when submi
                             </div>
                           </div>
                           <div
-                            class="w-full break-words rounded-lg border-theme-secondary-300 p-3 dark:border-theme-secondary-800 sm:border sm:px-6 sm:py-5 mt-0 sm:mt-2"
+                            class="w-full break-words rounded-lg border-theme-secondary-300 p-3 dark:border-theme-secondary-800 sm:border sm:px-6 sm:py-5 [.condensed_&]:sm:py-4 mt-0 sm:mt-2"
                           >
                             <div
-                              class="flex w-full items-center justify-between gap-4 space-x-2 sm:justify-start sm:space-x-0"
+                              class="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0"
                             >
                               <div
                                 class="no-ligatures w-20 flex-shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:text-base sm:leading-5"
@@ -706,7 +705,7 @@ exports[`SendTransfer > should display unconfirmed transactions modal when submi
                                 From
                               </div>
                               <div
-                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end sm:justify-start sm:max-w-[350px]"
+                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end sm:justify-start"
                               >
                                 <span
                                   class="font-semibold text-base text-theme-text text-sm leading-[17px] sm:leading-5 sm:text-base"
@@ -719,12 +718,19 @@ exports[`SendTransfer > should display unconfirmed transactions modal when submi
                                     ARK Wallet 1
                                   </span>
                                 </span>
-                                <span
-                                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 text-sm leading-[17px] sm:leading-5 sm:text-base font-semibold text-base"
-                                  data-testid="Address__address"
+                                <div
+                                  class="relative grow text-left"
                                 >
-                                  D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                                </span>
+                                  <span
+                                    class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 text-sm leading-[17px] sm:leading-5 sm:text-base w-full w-3/4 font-semibold text-base absolute w-full"
+                                    data-testid="Address__address"
+                                  >
+                                    D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                                  </span>
+                                  <span>
+                                     
+                                  </span>
+                                </div>
                                 <button
                                   class="ring-focus relative focus:outline-none"
                                   data-ring-focus-margin="-m-1"
@@ -764,15 +770,19 @@ exports[`SendTransfer > should display unconfirmed transactions modal when submi
                               </div>
                             </div>
                             <div
-                              class="hidden h-8 w-full items-center sm:flex"
+                              class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3"
                             >
                               <div
-                                class="border-theme-secondary-300 dark:border-theme-secondary-800 css-ppmbkz"
-                                type="horizontal"
-                              />
+                                class="w-full [.condensed_&]:hidden"
+                              >
+                                <div
+                                  class="border-theme-secondary-300 dark:border-theme-secondary-800 css-ppmbkz"
+                                  type="horizontal"
+                                />
+                              </div>
                             </div>
                             <div
-                              class="mt-3 flex w-full items-center justify-between gap-4 space-x-2 sm:mt-0 sm:justify-start sm:space-x-0"
+                              class="mt-3 flex w-full items-center justify-between space-x-2 sm:mt-0 sm:justify-start sm:space-x-0"
                             >
                               <div
                                 class="no-ligatures w-20 flex-shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:text-base sm:leading-5"
@@ -780,7 +790,7 @@ exports[`SendTransfer > should display unconfirmed transactions modal when submi
                                 To
                               </div>
                               <div
-                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end sm:justify-start sm:max-w-[350px]"
+                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end sm:justify-start"
                               >
                                 <span
                                   class="font-semibold text-base text-theme-text text-sm leading-[17px] sm:leading-5 sm:text-base"
@@ -793,12 +803,19 @@ exports[`SendTransfer > should display unconfirmed transactions modal when submi
                                     ARK Wallet 1
                                   </span>
                                 </span>
-                                <span
-                                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 text-sm leading-[17px] sm:leading-5 sm:text-base font-semibold text-base"
-                                  data-testid="Address__address"
+                                <div
+                                  class="relative grow text-left"
                                 >
-                                  D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                                </span>
+                                  <span
+                                    class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 text-sm leading-[17px] sm:leading-5 sm:text-base font-semibold text-base absolute w-full"
+                                    data-testid="Address__address"
+                                  >
+                                    D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                                  </span>
+                                  <span>
+                                     
+                                  </span>
+                                </div>
                                 <button
                                   class="ring-focus relative focus:outline-none"
                                   data-ring-focus-margin="-m-1"
@@ -854,7 +871,7 @@ exports[`SendTransfer > should display unconfirmed transactions modal when submi
                             class="-mt-2 h-6 w-full rounded-bl-xl border-b-2 border-l-2 border-theme-secondary-300 dark:border-theme-secondary-800"
                           />
                           <div
-                            class="h-[110%] w-full border-l-2 border-theme-secondary-300 group-last:hidden dark:border-theme-secondary-800"
+                            class="h-[105%] w-full border-l-2 border-theme-secondary-300 group-last:hidden dark:border-theme-secondary-800"
                           />
                         </div>
                       </div>
@@ -879,7 +896,7 @@ exports[`SendTransfer > should display unconfirmed transactions modal when submi
                               </div>
                             </div>
                             <div
-                              class="w-full break-words rounded-lg border-theme-secondary-300 p-3 dark:border-theme-secondary-800 sm:border sm:px-6 sm:py-5 mt-0 sm:mt-2"
+                              class="w-full break-words rounded-lg border-theme-secondary-300 p-3 dark:border-theme-secondary-800 sm:border sm:px-6 sm:py-5 [.condensed_&]:sm:py-4 mt-0 sm:mt-2"
                             >
                               <div
                                 class="flex w-full justify-between sm:justify-start"
@@ -915,7 +932,7 @@ exports[`SendTransfer > should display unconfirmed transactions modal when submi
                             class="-mt-2 h-6 w-full rounded-bl-xl border-b-2 border-l-2 border-theme-secondary-300 dark:border-theme-secondary-800"
                           />
                           <div
-                            class="h-[110%] w-full border-l-2 border-theme-secondary-300 group-last:hidden dark:border-theme-secondary-800"
+                            class="h-[105%] w-full border-l-2 border-theme-secondary-300 group-last:hidden dark:border-theme-secondary-800"
                           />
                         </div>
                       </div>
@@ -937,7 +954,7 @@ exports[`SendTransfer > should display unconfirmed transactions modal when submi
                             </div>
                           </div>
                           <div
-                            class="w-full break-words rounded-lg border-theme-secondary-300 p-3 dark:border-theme-secondary-800 sm:border sm:px-6 sm:py-5 mt-0 sm:mt-2"
+                            class="w-full break-words rounded-lg border-theme-secondary-300 p-3 dark:border-theme-secondary-800 sm:border sm:px-6 sm:py-5 [.condensed_&]:sm:py-4 mt-0 sm:mt-2"
                           >
                             <div
                               class="space-y-3 sm:space-y-0"
@@ -969,12 +986,16 @@ exports[`SendTransfer > should display unconfirmed transactions modal when submi
                                 </div>
                               </div>
                               <div
-                                class="hidden h-8 w-full items-center sm:flex"
+                                class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3"
                               >
                                 <div
-                                  class="border-theme-secondary-300 dark:border-theme-secondary-800 css-ppmbkz"
-                                  type="horizontal"
-                                />
+                                  class="w-full [.condensed_&]:hidden"
+                                >
+                                  <div
+                                    class="border-theme-secondary-300 dark:border-theme-secondary-800 css-ppmbkz"
+                                    type="horizontal"
+                                  />
+                                </div>
                               </div>
                               <div
                                 class="flex w-full justify-between sm:justify-start"
@@ -986,19 +1007,23 @@ exports[`SendTransfer > should display unconfirmed transactions modal when submi
                                   Fee
                                 </div>
                                 <span
-                                  class="whitespace-nowrap"
+                                  class="whitespace-nowrap font-semibold"
                                   data-testid="Amount"
                                 >
                                   0.1 DARK
                                 </span>
                               </div>
                               <div
-                                class="hidden h-8 w-full items-center sm:flex"
+                                class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3"
                               >
                                 <div
-                                  class="border-theme-secondary-300 dark:border-theme-secondary-800 css-ppmbkz"
-                                  type="horizontal"
-                                />
+                                  class="w-full [.condensed_&]:hidden"
+                                >
+                                  <div
+                                    class="border-theme-secondary-300 dark:border-theme-secondary-800 css-ppmbkz"
+                                    type="horizontal"
+                                  />
+                                </div>
                               </div>
                               <div
                                 class="flex w-full justify-between sm:justify-start"
@@ -1010,7 +1035,7 @@ exports[`SendTransfer > should display unconfirmed transactions modal when submi
                                   Value
                                 </div>
                                 <span
-                                  class="whitespace-nowrap"
+                                  class="whitespace-nowrap font-semibold"
                                   data-testid="Amount"
                                 >
                                   400,000 BTC
@@ -1034,7 +1059,7 @@ exports[`SendTransfer > should display unconfirmed transactions modal when submi
                             class="-mt-2 h-6 w-full rounded-bl-xl border-b-2 border-l-2 border-theme-secondary-300 dark:border-theme-secondary-800"
                           />
                           <div
-                            class="h-[110%] w-full border-l-2 border-theme-secondary-300 group-last:hidden dark:border-theme-secondary-800"
+                            class="h-[105%] w-full border-l-2 border-theme-secondary-300 group-last:hidden dark:border-theme-secondary-800"
                           />
                         </div>
                       </div>
@@ -1056,61 +1081,67 @@ exports[`SendTransfer > should display unconfirmed transactions modal when submi
                           class="mt-2"
                         >
                           <div
-                            class="flex items-center space-x-3 rounded-xl border border-theme-success-200 bg-theme-success-50 px-6 py-5 dark:border-theme-success-600 dark:bg-transparent"
-                            data-testid="TransactionSuccessAlert"
+                            class="mt-2"
                           >
                             <div
-                              class="flex items-center space-x-2 text-theme-success-600"
+                              class="flex items-center space-x-3 rounded-xl border border-theme-success-200 bg-theme-success-50 px-6 py-5 dark:border-theme-success-600 dark:bg-transparent"
+                              data-testid="TransactionSuccessAlert"
                             >
                               <div
-                                class="css-v0ob3f"
-                                height="16"
-                                width="16"
+                                class="flex items-center space-x-2 text-theme-success-700"
                               >
-                                <svg
-                                  fill="none"
-                                  viewBox="0 0 20 20"
-                                  xmlns="http://www.w3.org/2000/svg"
+                                <div
+                                  class="css-1i4b0eq"
+                                  height="20"
+                                  width="20"
                                 >
-                                  <path
-                                    d="M17.9984 4.69922L10.3984 14.8992C10.1984 15.0992 9.99844 15.2992 9.69844 15.2992C9.39844 15.2992 9.09844 15.1992 8.89844 14.9992L6.89844 12.9992"
-                                    stroke="currentColor"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-width="2"
-                                  />
-                                  <path
-                                    d="M2 13.0996L4 15.0996C4.2 15.2996 4.4 15.3996 4.7 15.3996C4.8 15.3996 5 15.3996 5.1 15.2996"
-                                    stroke="currentColor"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-width="2"
-                                  />
-                                  <path
-                                    d="M12.9969 4.69922L8.79688 10.2992"
-                                    stroke="currentColor"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-width="2"
-                                  />
-                                </svg>
+                                  <svg
+                                    fill="none"
+                                    viewBox="0 0 20 20"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                  >
+                                    <path
+                                      d="M17.9984 4.69922L10.3984 14.8992C10.1984 15.0992 9.99844 15.2992 9.69844 15.2992C9.39844 15.2992 9.09844 15.1992 8.89844 14.9992L6.89844 12.9992"
+                                      stroke="currentColor"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      stroke-width="2"
+                                    />
+                                    <path
+                                      d="M2 13.0996L4 15.0996C4.2 15.2996 4.4 15.3996 4.7 15.3996C4.8 15.3996 5 15.3996 5.1 15.2996"
+                                      stroke="currentColor"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      stroke-width="2"
+                                    />
+                                    <path
+                                      d="M12.9969 4.69922L8.79688 10.2992"
+                                      stroke="currentColor"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      stroke-width="2"
+                                    />
+                                  </svg>
+                                </div>
+                                <p
+                                  class="font-semibold"
+                                >
+                                  Success
+                                </p>
                               </div>
-                              <p>
-                                Success
+                              <div
+                                class="text-theme-success-200 dark:text-theme-secondary-800 css-1aie31u"
+                                type="vertical"
+                              />
+                              <p
+                                class="font-semibold text-theme-secondary-700 dark:text-theme-success-600"
+                              >
+                                <span>
+                                  10 Confirmations
+                                   
+                                </span>
                               </p>
                             </div>
-                            <div
-                              class="text-theme-success-200 dark:text-theme-secondary-800 css-1aie31u"
-                              type="vertical"
-                            />
-                            <p
-                              class="font-semibold text-theme-secondary-700 dark:text-theme-success-600"
-                            >
-                              <span>
-                                10 Confirmations
-                                 
-                              </span>
-                            </p>
                           </div>
                         </div>
                       </div>
@@ -4896,10 +4927,10 @@ exports[`SendTransfer > should render review step 1`] = `
           </div>
         </div>
         <div
-          class="w-full break-words rounded-lg border-theme-secondary-300 p-3 dark:border-theme-secondary-800 sm:border sm:px-6 sm:py-5 mt-0 sm:mt-2"
+          class="w-full break-words rounded-lg border-theme-secondary-300 p-3 dark:border-theme-secondary-800 sm:border sm:px-6 sm:py-5 [.condensed_&]:sm:py-4 mt-0 sm:mt-2"
         >
           <div
-            class="flex w-full items-center justify-between gap-4 space-x-2 sm:justify-start sm:space-x-0"
+            class="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0"
           >
             <div
               class="no-ligatures w-20 flex-shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:text-base sm:leading-5"
@@ -4907,7 +4938,7 @@ exports[`SendTransfer > should render review step 1`] = `
               From
             </div>
             <div
-              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end sm:justify-start sm:max-w-[350px]"
+              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end sm:justify-start"
             >
               <span
                 class="font-semibold text-base text-theme-text text-sm leading-[17px] sm:leading-5 sm:text-base"
@@ -4920,12 +4951,19 @@ exports[`SendTransfer > should render review step 1`] = `
                   ARK Wallet 1
                 </span>
               </span>
-              <span
-                class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 text-sm leading-[17px] sm:leading-5 sm:text-base font-semibold text-base"
-                data-testid="Address__address"
+              <div
+                class="relative grow text-left"
               >
-                D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-              </span>
+                <span
+                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 text-sm leading-[17px] sm:leading-5 sm:text-base w-full w-3/4 font-semibold text-base absolute w-full"
+                  data-testid="Address__address"
+                >
+                  D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                </span>
+                <span>
+                   
+                </span>
+              </div>
               <button
                 class="ring-focus relative focus:outline-none"
                 data-ring-focus-margin="-m-1"
@@ -4965,15 +5003,19 @@ exports[`SendTransfer > should render review step 1`] = `
             </div>
           </div>
           <div
-            class="hidden h-8 w-full items-center sm:flex"
+            class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3"
           >
             <div
-              class="border-theme-secondary-300 dark:border-theme-secondary-800 css-ppmbkz"
-              type="horizontal"
-            />
+              class="w-full [.condensed_&]:hidden"
+            >
+              <div
+                class="border-theme-secondary-300 dark:border-theme-secondary-800 css-ppmbkz"
+                type="horizontal"
+              />
+            </div>
           </div>
           <div
-            class="mt-3 flex w-full items-center justify-between gap-4 space-x-2 sm:mt-0 sm:justify-start sm:space-x-0"
+            class="mt-3 flex w-full items-center justify-between space-x-2 sm:mt-0 sm:justify-start sm:space-x-0"
           >
             <div
               class="no-ligatures w-20 flex-shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:text-base sm:leading-5"
@@ -4981,7 +5023,7 @@ exports[`SendTransfer > should render review step 1`] = `
               To
             </div>
             <div
-              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end sm:justify-start sm:max-w-[350px]"
+              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end sm:justify-start"
             >
               <span
                 class="font-semibold text-base text-theme-text text-sm leading-[17px] sm:leading-5 sm:text-base"
@@ -4994,12 +5036,19 @@ exports[`SendTransfer > should render review step 1`] = `
                   ARK Wallet 1
                 </span>
               </span>
-              <span
-                class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 text-sm leading-[17px] sm:leading-5 sm:text-base font-semibold text-base"
-                data-testid="Address__address"
+              <div
+                class="relative grow text-left"
               >
-                D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-              </span>
+                <span
+                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 text-sm leading-[17px] sm:leading-5 sm:text-base font-semibold text-base absolute w-full"
+                  data-testid="Address__address"
+                >
+                  D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                </span>
+                <span>
+                   
+                </span>
+              </div>
               <button
                 class="ring-focus relative focus:outline-none"
                 data-ring-focus-margin="-m-1"
@@ -5055,7 +5104,7 @@ exports[`SendTransfer > should render review step 1`] = `
           </div>
         </div>
         <div
-          class="w-full break-words rounded-lg border-theme-secondary-300 p-3 dark:border-theme-secondary-800 sm:border sm:px-6 sm:py-5 mt-0 sm:mt-2"
+          class="w-full break-words rounded-lg border-theme-secondary-300 p-3 dark:border-theme-secondary-800 sm:border sm:px-6 sm:py-5 [.condensed_&]:sm:py-4 mt-0 sm:mt-2"
         >
           <p>
             test memo
@@ -5322,10 +5371,10 @@ exports[`SendTransfer > should render review step with multiple recipients (with
           </div>
         </div>
         <div
-          class="w-full break-words rounded-lg border-theme-secondary-300 p-3 dark:border-theme-secondary-800 sm:border sm:px-6 sm:py-5 mt-0 sm:mt-2"
+          class="w-full break-words rounded-lg border-theme-secondary-300 p-3 dark:border-theme-secondary-800 sm:border sm:px-6 sm:py-5 [.condensed_&]:sm:py-4 mt-0 sm:mt-2"
         >
           <div
-            class="flex w-full items-center justify-between gap-4 space-x-2 sm:justify-start sm:space-x-0"
+            class="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0"
           >
             <div
               class="no-ligatures w-20 flex-shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:text-base sm:leading-5"
@@ -5333,7 +5382,7 @@ exports[`SendTransfer > should render review step with multiple recipients (with
               From
             </div>
             <div
-              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end sm:justify-start sm:max-w-[350px]"
+              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end sm:justify-start"
             >
               <span
                 class="font-semibold text-base text-theme-text text-sm leading-[17px] sm:leading-5 sm:text-base"
@@ -5346,12 +5395,19 @@ exports[`SendTransfer > should render review step with multiple recipients (with
                   ARK Wallet 1
                 </span>
               </span>
-              <span
-                class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 text-sm leading-[17px] sm:leading-5 sm:text-base font-semibold text-base"
-                data-testid="Address__address"
+              <div
+                class="relative grow text-left"
               >
-                D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-              </span>
+                <span
+                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 text-sm leading-[17px] sm:leading-5 sm:text-base w-full w-3/4 font-semibold text-base absolute w-full"
+                  data-testid="Address__address"
+                >
+                  D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                </span>
+                <span>
+                   
+                </span>
+              </div>
               <button
                 class="ring-focus relative focus:outline-none"
                 data-ring-focus-margin="-m-1"
@@ -5391,15 +5447,19 @@ exports[`SendTransfer > should render review step with multiple recipients (with
             </div>
           </div>
           <div
-            class="hidden h-8 w-full items-center sm:flex"
+            class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3"
           >
             <div
-              class="border-theme-secondary-300 dark:border-theme-secondary-800 css-ppmbkz"
-              type="horizontal"
-            />
+              class="w-full [.condensed_&]:hidden"
+            >
+              <div
+                class="border-theme-secondary-300 dark:border-theme-secondary-800 css-ppmbkz"
+                type="horizontal"
+              />
+            </div>
           </div>
           <div
-            class="mt-3 flex w-full items-center justify-between gap-4 space-x-2 sm:mt-0 sm:justify-start sm:space-x-0"
+            class="mt-3 flex w-full items-center justify-between space-x-2 sm:mt-0 sm:justify-start sm:space-x-0"
           >
             <div
               class="no-ligatures w-20 flex-shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:text-base sm:leading-5"
@@ -5407,14 +5467,21 @@ exports[`SendTransfer > should render review step with multiple recipients (with
               To
             </div>
             <div
-              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end sm:justify-start sm:max-w-[350px]"
+              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end sm:justify-start"
             >
-              <span
-                class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 text-sm leading-[17px] sm:leading-5 sm:text-base font-semibold text-base"
-                data-testid="Address__address"
+              <div
+                class="relative grow text-left"
               >
-                D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-              </span>
+                <span
+                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 text-sm leading-[17px] sm:leading-5 sm:text-base font-semibold text-base absolute w-full"
+                  data-testid="Address__address"
+                >
+                  D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                </span>
+                <span>
+                   
+                </span>
+              </div>
               <button
                 class="ring-focus relative focus:outline-none"
                 data-ring-focus-margin="-m-1"
@@ -5454,22 +5521,41 @@ exports[`SendTransfer > should render review step with multiple recipients (with
             </div>
           </div>
           <div
-            class="mt-3 flex w-full items-center justify-between gap-4 space-x-2 sm:mt-0 sm:justify-start sm:space-x-0"
+            class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3"
           >
             <div
-              class="no-ligatures w-20 flex-shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:text-base sm:leading-5"
+              class="w-full [.condensed_&]:hidden"
+            >
+              <div
+                class="border-theme-secondary-300 dark:border-theme-secondary-800 css-ppmbkz"
+                type="horizontal"
+              />
+            </div>
+          </div>
+          <div
+            class="mt-3 flex w-full items-center justify-between space-x-2 sm:mt-0 sm:justify-start sm:space-x-0"
+          >
+            <div
+              class="no-ligatures w-20 flex-shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:text-base sm:leading-5 invisible"
             >
               To
             </div>
             <div
-              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end sm:justify-start sm:max-w-[350px]"
+              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end sm:justify-start"
             >
-              <span
-                class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 text-sm leading-[17px] sm:leading-5 sm:text-base font-semibold text-base"
-                data-testid="Address__address"
+              <div
+                class="relative grow text-left"
               >
-                D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
-              </span>
+                <span
+                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 text-sm leading-[17px] sm:leading-5 sm:text-base font-semibold text-base absolute w-full"
+                  data-testid="Address__address"
+                >
+                  D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
+                </span>
+                <span>
+                   
+                </span>
+              </div>
               <button
                 class="ring-focus relative focus:outline-none"
                 data-ring-focus-margin="-m-1"
@@ -5525,7 +5611,7 @@ exports[`SendTransfer > should render review step with multiple recipients (with
           </div>
         </div>
         <div
-          class="w-full break-words rounded-lg border-theme-secondary-300 p-3 dark:border-theme-secondary-800 sm:border sm:px-6 sm:py-5 mt-0 sm:mt-2"
+          class="w-full break-words rounded-lg border-theme-secondary-300 p-3 dark:border-theme-secondary-800 sm:border sm:px-6 sm:py-5 [.condensed_&]:sm:py-4 mt-0 sm:mt-2"
         >
           <p>
             memo
@@ -5792,10 +5878,10 @@ exports[`SendTransfer > should render review step with multiple recipients (with
           </div>
         </div>
         <div
-          class="w-full break-words rounded-lg border-theme-secondary-300 p-3 dark:border-theme-secondary-800 sm:border sm:px-6 sm:py-5 mt-0 sm:mt-2"
+          class="w-full break-words rounded-lg border-theme-secondary-300 p-3 dark:border-theme-secondary-800 sm:border sm:px-6 sm:py-5 [.condensed_&]:sm:py-4 mt-0 sm:mt-2"
         >
           <div
-            class="flex w-full items-center justify-between gap-4 space-x-2 sm:justify-start sm:space-x-0"
+            class="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0"
           >
             <div
               class="no-ligatures w-20 flex-shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:text-base sm:leading-5"
@@ -5803,7 +5889,7 @@ exports[`SendTransfer > should render review step with multiple recipients (with
               From
             </div>
             <div
-              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end sm:justify-start sm:max-w-[350px]"
+              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end sm:justify-start"
             >
               <span
                 class="font-semibold text-base text-theme-text text-sm leading-[17px] sm:leading-5 sm:text-base"
@@ -5816,12 +5902,19 @@ exports[`SendTransfer > should render review step with multiple recipients (with
                   ARK Wallet 1
                 </span>
               </span>
-              <span
-                class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 text-sm leading-[17px] sm:leading-5 sm:text-base font-semibold text-base"
-                data-testid="Address__address"
+              <div
+                class="relative grow text-left"
               >
-                D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-              </span>
+                <span
+                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 text-sm leading-[17px] sm:leading-5 sm:text-base w-full w-3/4 font-semibold text-base absolute w-full"
+                  data-testid="Address__address"
+                >
+                  D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                </span>
+                <span>
+                   
+                </span>
+              </div>
               <button
                 class="ring-focus relative focus:outline-none"
                 data-ring-focus-margin="-m-1"
@@ -5861,15 +5954,19 @@ exports[`SendTransfer > should render review step with multiple recipients (with
             </div>
           </div>
           <div
-            class="hidden h-8 w-full items-center sm:flex"
+            class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3"
           >
             <div
-              class="border-theme-secondary-300 dark:border-theme-secondary-800 css-ppmbkz"
-              type="horizontal"
-            />
+              class="w-full [.condensed_&]:hidden"
+            >
+              <div
+                class="border-theme-secondary-300 dark:border-theme-secondary-800 css-ppmbkz"
+                type="horizontal"
+              />
+            </div>
           </div>
           <div
-            class="mt-3 flex w-full items-center justify-between gap-4 space-x-2 sm:mt-0 sm:justify-start sm:space-x-0"
+            class="mt-3 flex w-full items-center justify-between space-x-2 sm:mt-0 sm:justify-start sm:space-x-0"
           >
             <div
               class="no-ligatures w-20 flex-shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:text-base sm:leading-5"
@@ -5877,14 +5974,21 @@ exports[`SendTransfer > should render review step with multiple recipients (with
               To
             </div>
             <div
-              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end sm:justify-start sm:max-w-[350px]"
+              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end sm:justify-start"
             >
-              <span
-                class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 text-sm leading-[17px] sm:leading-5 sm:text-base font-semibold text-base"
-                data-testid="Address__address"
+              <div
+                class="relative grow text-left"
               >
-                D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-              </span>
+                <span
+                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 text-sm leading-[17px] sm:leading-5 sm:text-base font-semibold text-base absolute w-full"
+                  data-testid="Address__address"
+                >
+                  D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                </span>
+                <span>
+                   
+                </span>
+              </div>
               <button
                 class="ring-focus relative focus:outline-none"
                 data-ring-focus-margin="-m-1"
@@ -5924,22 +6028,41 @@ exports[`SendTransfer > should render review step with multiple recipients (with
             </div>
           </div>
           <div
-            class="mt-3 flex w-full items-center justify-between gap-4 space-x-2 sm:mt-0 sm:justify-start sm:space-x-0"
+            class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3"
           >
             <div
-              class="no-ligatures w-20 flex-shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:text-base sm:leading-5"
+              class="w-full [.condensed_&]:hidden"
+            >
+              <div
+                class="border-theme-secondary-300 dark:border-theme-secondary-800 css-ppmbkz"
+                type="horizontal"
+              />
+            </div>
+          </div>
+          <div
+            class="mt-3 flex w-full items-center justify-between space-x-2 sm:mt-0 sm:justify-start sm:space-x-0"
+          >
+            <div
+              class="no-ligatures w-20 flex-shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:text-base sm:leading-5 invisible"
             >
               To
             </div>
             <div
-              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end sm:justify-start sm:max-w-[350px]"
+              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end sm:justify-start"
             >
-              <span
-                class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 text-sm leading-[17px] sm:leading-5 sm:text-base font-semibold text-base"
-                data-testid="Address__address"
+              <div
+                class="relative grow text-left"
               >
-                D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
-              </span>
+                <span
+                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 text-sm leading-[17px] sm:leading-5 sm:text-base font-semibold text-base absolute w-full"
+                  data-testid="Address__address"
+                >
+                  D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
+                </span>
+                <span>
+                   
+                </span>
+              </div>
               <button
                 class="ring-focus relative focus:outline-none"
                 data-ring-focus-margin="-m-1"
@@ -6836,9 +6959,8 @@ exports[`SendTransfer > should send a single transfer and handle undefined expir
                           </button>
                         </button>
                         <button
-                          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700"
+                          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded text-theme-primary-600 dark:text-theme-secondary-700 dark:ring-theme-secondary-800 ring-1 ring-inset ring-theme-secondary-300 hover:bg-theme-primary-700 hover:ring-0 hover:text-white"
                           data-testid="explorer-link"
-                          disabled=""
                           type="button"
                         >
                           <div
@@ -6888,7 +7010,7 @@ exports[`SendTransfer > should send a single transfer and handle undefined expir
                             class="-mt-2 h-6 w-full rounded-bl-xl border-b-2 border-l-2 border-theme-secondary-300 dark:border-theme-secondary-800"
                           />
                           <div
-                            class="h-[110%] w-full border-l-2 border-theme-secondary-300 group-last:hidden dark:border-theme-secondary-800"
+                            class="h-[105%] w-full border-l-2 border-theme-secondary-300 group-last:hidden dark:border-theme-secondary-800"
                           />
                         </div>
                       </div>
@@ -6910,10 +7032,10 @@ exports[`SendTransfer > should send a single transfer and handle undefined expir
                             </div>
                           </div>
                           <div
-                            class="w-full break-words rounded-lg border-theme-secondary-300 p-3 dark:border-theme-secondary-800 sm:border sm:px-6 sm:py-5 mt-0 sm:mt-2"
+                            class="w-full break-words rounded-lg border-theme-secondary-300 p-3 dark:border-theme-secondary-800 sm:border sm:px-6 sm:py-5 [.condensed_&]:sm:py-4 mt-0 sm:mt-2"
                           >
                             <div
-                              class="flex w-full items-center justify-between gap-4 space-x-2 sm:justify-start sm:space-x-0"
+                              class="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0"
                             >
                               <div
                                 class="no-ligatures w-20 flex-shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:text-base sm:leading-5"
@@ -6921,7 +7043,7 @@ exports[`SendTransfer > should send a single transfer and handle undefined expir
                                 From
                               </div>
                               <div
-                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end sm:justify-start sm:max-w-[350px]"
+                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end sm:justify-start"
                               >
                                 <span
                                   class="font-semibold text-base text-theme-text text-sm leading-[17px] sm:leading-5 sm:text-base"
@@ -6934,12 +7056,19 @@ exports[`SendTransfer > should send a single transfer and handle undefined expir
                                     ARK Wallet 1
                                   </span>
                                 </span>
-                                <span
-                                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 text-sm leading-[17px] sm:leading-5 sm:text-base font-semibold text-base"
-                                  data-testid="Address__address"
+                                <div
+                                  class="relative grow text-left"
                                 >
-                                  D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                                </span>
+                                  <span
+                                    class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 text-sm leading-[17px] sm:leading-5 sm:text-base w-full w-3/4 font-semibold text-base absolute w-full"
+                                    data-testid="Address__address"
+                                  >
+                                    D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                                  </span>
+                                  <span>
+                                     
+                                  </span>
+                                </div>
                                 <button
                                   class="ring-focus relative focus:outline-none"
                                   data-ring-focus-margin="-m-1"
@@ -6979,15 +7108,19 @@ exports[`SendTransfer > should send a single transfer and handle undefined expir
                               </div>
                             </div>
                             <div
-                              class="hidden h-8 w-full items-center sm:flex"
+                              class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3"
                             >
                               <div
-                                class="border-theme-secondary-300 dark:border-theme-secondary-800 css-ppmbkz"
-                                type="horizontal"
-                              />
+                                class="w-full [.condensed_&]:hidden"
+                              >
+                                <div
+                                  class="border-theme-secondary-300 dark:border-theme-secondary-800 css-ppmbkz"
+                                  type="horizontal"
+                                />
+                              </div>
                             </div>
                             <div
-                              class="mt-3 flex w-full items-center justify-between gap-4 space-x-2 sm:mt-0 sm:justify-start sm:space-x-0"
+                              class="mt-3 flex w-full items-center justify-between space-x-2 sm:mt-0 sm:justify-start sm:space-x-0"
                             >
                               <div
                                 class="no-ligatures w-20 flex-shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:text-base sm:leading-5"
@@ -6995,7 +7128,7 @@ exports[`SendTransfer > should send a single transfer and handle undefined expir
                                 To
                               </div>
                               <div
-                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end sm:justify-start sm:max-w-[350px]"
+                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end sm:justify-start"
                               >
                                 <span
                                   class="font-semibold text-base text-theme-text text-sm leading-[17px] sm:leading-5 sm:text-base"
@@ -7008,12 +7141,19 @@ exports[`SendTransfer > should send a single transfer and handle undefined expir
                                     ARK Wallet 1
                                   </span>
                                 </span>
-                                <span
-                                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 text-sm leading-[17px] sm:leading-5 sm:text-base font-semibold text-base"
-                                  data-testid="Address__address"
+                                <div
+                                  class="relative grow text-left"
                                 >
-                                  D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                                </span>
+                                  <span
+                                    class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 text-sm leading-[17px] sm:leading-5 sm:text-base font-semibold text-base absolute w-full"
+                                    data-testid="Address__address"
+                                  >
+                                    D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                                  </span>
+                                  <span>
+                                     
+                                  </span>
+                                </div>
                                 <button
                                   class="ring-focus relative focus:outline-none"
                                   data-ring-focus-margin="-m-1"
@@ -7069,7 +7209,7 @@ exports[`SendTransfer > should send a single transfer and handle undefined expir
                             class="-mt-2 h-6 w-full rounded-bl-xl border-b-2 border-l-2 border-theme-secondary-300 dark:border-theme-secondary-800"
                           />
                           <div
-                            class="h-[110%] w-full border-l-2 border-theme-secondary-300 group-last:hidden dark:border-theme-secondary-800"
+                            class="h-[105%] w-full border-l-2 border-theme-secondary-300 group-last:hidden dark:border-theme-secondary-800"
                           />
                         </div>
                       </div>
@@ -7094,7 +7234,7 @@ exports[`SendTransfer > should send a single transfer and handle undefined expir
                               </div>
                             </div>
                             <div
-                              class="w-full break-words rounded-lg border-theme-secondary-300 p-3 dark:border-theme-secondary-800 sm:border sm:px-6 sm:py-5 mt-0 sm:mt-2"
+                              class="w-full break-words rounded-lg border-theme-secondary-300 p-3 dark:border-theme-secondary-800 sm:border sm:px-6 sm:py-5 [.condensed_&]:sm:py-4 mt-0 sm:mt-2"
                             >
                               <div
                                 class="flex w-full justify-between sm:justify-start"
@@ -7130,7 +7270,7 @@ exports[`SendTransfer > should send a single transfer and handle undefined expir
                             class="-mt-2 h-6 w-full rounded-bl-xl border-b-2 border-l-2 border-theme-secondary-300 dark:border-theme-secondary-800"
                           />
                           <div
-                            class="h-[110%] w-full border-l-2 border-theme-secondary-300 group-last:hidden dark:border-theme-secondary-800"
+                            class="h-[105%] w-full border-l-2 border-theme-secondary-300 group-last:hidden dark:border-theme-secondary-800"
                           />
                         </div>
                       </div>
@@ -7152,7 +7292,7 @@ exports[`SendTransfer > should send a single transfer and handle undefined expir
                             </div>
                           </div>
                           <div
-                            class="w-full break-words rounded-lg border-theme-secondary-300 p-3 dark:border-theme-secondary-800 sm:border sm:px-6 sm:py-5 mt-0 sm:mt-2"
+                            class="w-full break-words rounded-lg border-theme-secondary-300 p-3 dark:border-theme-secondary-800 sm:border sm:px-6 sm:py-5 [.condensed_&]:sm:py-4 mt-0 sm:mt-2"
                           >
                             <div
                               class="space-y-3 sm:space-y-0"
@@ -7184,12 +7324,16 @@ exports[`SendTransfer > should send a single transfer and handle undefined expir
                                 </div>
                               </div>
                               <div
-                                class="hidden h-8 w-full items-center sm:flex"
+                                class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3"
                               >
                                 <div
-                                  class="border-theme-secondary-300 dark:border-theme-secondary-800 css-ppmbkz"
-                                  type="horizontal"
-                                />
+                                  class="w-full [.condensed_&]:hidden"
+                                >
+                                  <div
+                                    class="border-theme-secondary-300 dark:border-theme-secondary-800 css-ppmbkz"
+                                    type="horizontal"
+                                  />
+                                </div>
                               </div>
                               <div
                                 class="flex w-full justify-between sm:justify-start"
@@ -7201,19 +7345,23 @@ exports[`SendTransfer > should send a single transfer and handle undefined expir
                                   Fee
                                 </div>
                                 <span
-                                  class="whitespace-nowrap"
+                                  class="whitespace-nowrap font-semibold"
                                   data-testid="Amount"
                                 >
                                   0.1 DARK
                                 </span>
                               </div>
                               <div
-                                class="hidden h-8 w-full items-center sm:flex"
+                                class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3"
                               >
                                 <div
-                                  class="border-theme-secondary-300 dark:border-theme-secondary-800 css-ppmbkz"
-                                  type="horizontal"
-                                />
+                                  class="w-full [.condensed_&]:hidden"
+                                >
+                                  <div
+                                    class="border-theme-secondary-300 dark:border-theme-secondary-800 css-ppmbkz"
+                                    type="horizontal"
+                                  />
+                                </div>
                               </div>
                               <div
                                 class="flex w-full justify-between sm:justify-start"
@@ -7225,7 +7373,7 @@ exports[`SendTransfer > should send a single transfer and handle undefined expir
                                   Value
                                 </div>
                                 <span
-                                  class="whitespace-nowrap"
+                                  class="whitespace-nowrap font-semibold"
                                   data-testid="Amount"
                                 >
                                   400,000 BTC
@@ -7249,7 +7397,7 @@ exports[`SendTransfer > should send a single transfer and handle undefined expir
                             class="-mt-2 h-6 w-full rounded-bl-xl border-b-2 border-l-2 border-theme-secondary-300 dark:border-theme-secondary-800"
                           />
                           <div
-                            class="h-[110%] w-full border-l-2 border-theme-secondary-300 group-last:hidden dark:border-theme-secondary-800"
+                            class="h-[105%] w-full border-l-2 border-theme-secondary-300 group-last:hidden dark:border-theme-secondary-800"
                           />
                         </div>
                       </div>
@@ -7271,61 +7419,67 @@ exports[`SendTransfer > should send a single transfer and handle undefined expir
                           class="mt-2"
                         >
                           <div
-                            class="flex items-center space-x-3 rounded-xl border border-theme-success-200 bg-theme-success-50 px-6 py-5 dark:border-theme-success-600 dark:bg-transparent"
-                            data-testid="TransactionSuccessAlert"
+                            class="mt-2"
                           >
                             <div
-                              class="flex items-center space-x-2 text-theme-success-600"
+                              class="flex items-center space-x-3 rounded-xl border border-theme-success-200 bg-theme-success-50 px-6 py-5 dark:border-theme-success-600 dark:bg-transparent"
+                              data-testid="TransactionSuccessAlert"
                             >
                               <div
-                                class="css-v0ob3f"
-                                height="16"
-                                width="16"
+                                class="flex items-center space-x-2 text-theme-success-700"
                               >
-                                <svg
-                                  fill="none"
-                                  viewBox="0 0 20 20"
-                                  xmlns="http://www.w3.org/2000/svg"
+                                <div
+                                  class="css-1i4b0eq"
+                                  height="20"
+                                  width="20"
                                 >
-                                  <path
-                                    d="M17.9984 4.69922L10.3984 14.8992C10.1984 15.0992 9.99844 15.2992 9.69844 15.2992C9.39844 15.2992 9.09844 15.1992 8.89844 14.9992L6.89844 12.9992"
-                                    stroke="currentColor"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-width="2"
-                                  />
-                                  <path
-                                    d="M2 13.0996L4 15.0996C4.2 15.2996 4.4 15.3996 4.7 15.3996C4.8 15.3996 5 15.3996 5.1 15.2996"
-                                    stroke="currentColor"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-width="2"
-                                  />
-                                  <path
-                                    d="M12.9969 4.69922L8.79688 10.2992"
-                                    stroke="currentColor"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-width="2"
-                                  />
-                                </svg>
+                                  <svg
+                                    fill="none"
+                                    viewBox="0 0 20 20"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                  >
+                                    <path
+                                      d="M17.9984 4.69922L10.3984 14.8992C10.1984 15.0992 9.99844 15.2992 9.69844 15.2992C9.39844 15.2992 9.09844 15.1992 8.89844 14.9992L6.89844 12.9992"
+                                      stroke="currentColor"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      stroke-width="2"
+                                    />
+                                    <path
+                                      d="M2 13.0996L4 15.0996C4.2 15.2996 4.4 15.3996 4.7 15.3996C4.8 15.3996 5 15.3996 5.1 15.2996"
+                                      stroke="currentColor"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      stroke-width="2"
+                                    />
+                                    <path
+                                      d="M12.9969 4.69922L8.79688 10.2992"
+                                      stroke="currentColor"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      stroke-width="2"
+                                    />
+                                  </svg>
+                                </div>
+                                <p
+                                  class="font-semibold"
+                                >
+                                  Success
+                                </p>
                               </div>
-                              <p>
-                                Success
+                              <div
+                                class="text-theme-success-200 dark:text-theme-secondary-800 css-1aie31u"
+                                type="vertical"
+                              />
+                              <p
+                                class="font-semibold text-theme-secondary-700 dark:text-theme-success-600"
+                              >
+                                <span>
+                                  10 Confirmations
+                                   
+                                </span>
                               </p>
                             </div>
-                            <div
-                              class="text-theme-success-200 dark:text-theme-secondary-800 css-1aie31u"
-                              type="vertical"
-                            />
-                            <p
-                              class="font-semibold text-theme-secondary-700 dark:text-theme-success-600"
-                            >
-                              <span>
-                                10 Confirmations
-                                 
-                              </span>
-                            </p>
                           </div>
                         </div>
                       </div>
@@ -7978,9 +8132,8 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
                           </button>
                         </button>
                         <button
-                          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700"
+                          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded text-theme-primary-600 dark:text-theme-secondary-700 dark:ring-theme-secondary-800 ring-1 ring-inset ring-theme-secondary-300 hover:bg-theme-primary-700 hover:ring-0 hover:text-white"
                           data-testid="explorer-link"
-                          disabled=""
                           type="button"
                         >
                           <div
@@ -8030,7 +8183,7 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
                             class="-mt-2 h-6 w-full rounded-bl-xl border-b-2 border-l-2 border-theme-secondary-300 dark:border-theme-secondary-800"
                           />
                           <div
-                            class="h-[110%] w-full border-l-2 border-theme-secondary-300 group-last:hidden dark:border-theme-secondary-800"
+                            class="h-[105%] w-full border-l-2 border-theme-secondary-300 group-last:hidden dark:border-theme-secondary-800"
                           />
                         </div>
                       </div>
@@ -8052,10 +8205,10 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
                             </div>
                           </div>
                           <div
-                            class="w-full break-words rounded-lg border-theme-secondary-300 p-3 dark:border-theme-secondary-800 sm:border sm:px-6 sm:py-5 mt-0 sm:mt-2"
+                            class="w-full break-words rounded-lg border-theme-secondary-300 p-3 dark:border-theme-secondary-800 sm:border sm:px-6 sm:py-5 [.condensed_&]:sm:py-4 mt-0 sm:mt-2"
                           >
                             <div
-                              class="flex w-full items-center justify-between gap-4 space-x-2 sm:justify-start sm:space-x-0"
+                              class="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0"
                             >
                               <div
                                 class="no-ligatures w-20 flex-shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:text-base sm:leading-5"
@@ -8063,7 +8216,7 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
                                 From
                               </div>
                               <div
-                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end sm:justify-start sm:max-w-[350px]"
+                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end sm:justify-start"
                               >
                                 <span
                                   class="font-semibold text-base text-theme-text text-sm leading-[17px] sm:leading-5 sm:text-base"
@@ -8076,12 +8229,19 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
                                     ARK Wallet 1
                                   </span>
                                 </span>
-                                <span
-                                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 text-sm leading-[17px] sm:leading-5 sm:text-base font-semibold text-base"
-                                  data-testid="Address__address"
+                                <div
+                                  class="relative grow text-left"
                                 >
-                                  D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                                </span>
+                                  <span
+                                    class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 text-sm leading-[17px] sm:leading-5 sm:text-base w-full w-3/4 font-semibold text-base absolute w-full"
+                                    data-testid="Address__address"
+                                  >
+                                    D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                                  </span>
+                                  <span>
+                                     
+                                  </span>
+                                </div>
                                 <button
                                   class="ring-focus relative focus:outline-none"
                                   data-ring-focus-margin="-m-1"
@@ -8121,15 +8281,19 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
                               </div>
                             </div>
                             <div
-                              class="hidden h-8 w-full items-center sm:flex"
+                              class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3"
                             >
                               <div
-                                class="border-theme-secondary-300 dark:border-theme-secondary-800 css-ppmbkz"
-                                type="horizontal"
-                              />
+                                class="w-full [.condensed_&]:hidden"
+                              >
+                                <div
+                                  class="border-theme-secondary-300 dark:border-theme-secondary-800 css-ppmbkz"
+                                  type="horizontal"
+                                />
+                              </div>
                             </div>
                             <div
-                              class="mt-3 flex w-full items-center justify-between gap-4 space-x-2 sm:mt-0 sm:justify-start sm:space-x-0"
+                              class="mt-3 flex w-full items-center justify-between space-x-2 sm:mt-0 sm:justify-start sm:space-x-0"
                             >
                               <div
                                 class="no-ligatures w-20 flex-shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:text-base sm:leading-5"
@@ -8137,7 +8301,7 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
                                 To
                               </div>
                               <div
-                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end sm:justify-start sm:max-w-[350px]"
+                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end sm:justify-start"
                               >
                                 <span
                                   class="font-semibold text-base text-theme-text text-sm leading-[17px] sm:leading-5 sm:text-base"
@@ -8150,12 +8314,19 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
                                     ARK Wallet 1
                                   </span>
                                 </span>
-                                <span
-                                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 text-sm leading-[17px] sm:leading-5 sm:text-base font-semibold text-base"
-                                  data-testid="Address__address"
+                                <div
+                                  class="relative grow text-left"
                                 >
-                                  D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                                </span>
+                                  <span
+                                    class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 text-sm leading-[17px] sm:leading-5 sm:text-base font-semibold text-base absolute w-full"
+                                    data-testid="Address__address"
+                                  >
+                                    D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                                  </span>
+                                  <span>
+                                     
+                                  </span>
+                                </div>
                                 <button
                                   class="ring-focus relative focus:outline-none"
                                   data-ring-focus-margin="-m-1"
@@ -8211,7 +8382,7 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
                             class="-mt-2 h-6 w-full rounded-bl-xl border-b-2 border-l-2 border-theme-secondary-300 dark:border-theme-secondary-800"
                           />
                           <div
-                            class="h-[110%] w-full border-l-2 border-theme-secondary-300 group-last:hidden dark:border-theme-secondary-800"
+                            class="h-[105%] w-full border-l-2 border-theme-secondary-300 group-last:hidden dark:border-theme-secondary-800"
                           />
                         </div>
                       </div>
@@ -8236,7 +8407,7 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
                               </div>
                             </div>
                             <div
-                              class="w-full break-words rounded-lg border-theme-secondary-300 p-3 dark:border-theme-secondary-800 sm:border sm:px-6 sm:py-5 mt-0 sm:mt-2"
+                              class="w-full break-words rounded-lg border-theme-secondary-300 p-3 dark:border-theme-secondary-800 sm:border sm:px-6 sm:py-5 [.condensed_&]:sm:py-4 mt-0 sm:mt-2"
                             >
                               <div
                                 class="flex w-full justify-between sm:justify-start"
@@ -8272,7 +8443,7 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
                             class="-mt-2 h-6 w-full rounded-bl-xl border-b-2 border-l-2 border-theme-secondary-300 dark:border-theme-secondary-800"
                           />
                           <div
-                            class="h-[110%] w-full border-l-2 border-theme-secondary-300 group-last:hidden dark:border-theme-secondary-800"
+                            class="h-[105%] w-full border-l-2 border-theme-secondary-300 group-last:hidden dark:border-theme-secondary-800"
                           />
                         </div>
                       </div>
@@ -8294,7 +8465,7 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
                             </div>
                           </div>
                           <div
-                            class="w-full break-words rounded-lg border-theme-secondary-300 p-3 dark:border-theme-secondary-800 sm:border sm:px-6 sm:py-5 mt-0 sm:mt-2"
+                            class="w-full break-words rounded-lg border-theme-secondary-300 p-3 dark:border-theme-secondary-800 sm:border sm:px-6 sm:py-5 [.condensed_&]:sm:py-4 mt-0 sm:mt-2"
                           >
                             <div
                               class="space-y-3 sm:space-y-0"
@@ -8326,12 +8497,16 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
                                 </div>
                               </div>
                               <div
-                                class="hidden h-8 w-full items-center sm:flex"
+                                class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3"
                               >
                                 <div
-                                  class="border-theme-secondary-300 dark:border-theme-secondary-800 css-ppmbkz"
-                                  type="horizontal"
-                                />
+                                  class="w-full [.condensed_&]:hidden"
+                                >
+                                  <div
+                                    class="border-theme-secondary-300 dark:border-theme-secondary-800 css-ppmbkz"
+                                    type="horizontal"
+                                  />
+                                </div>
                               </div>
                               <div
                                 class="flex w-full justify-between sm:justify-start"
@@ -8343,19 +8518,23 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
                                   Fee
                                 </div>
                                 <span
-                                  class="whitespace-nowrap"
+                                  class="whitespace-nowrap font-semibold"
                                   data-testid="Amount"
                                 >
                                   0.1 DARK
                                 </span>
                               </div>
                               <div
-                                class="hidden h-8 w-full items-center sm:flex"
+                                class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3"
                               >
                                 <div
-                                  class="border-theme-secondary-300 dark:border-theme-secondary-800 css-ppmbkz"
-                                  type="horizontal"
-                                />
+                                  class="w-full [.condensed_&]:hidden"
+                                >
+                                  <div
+                                    class="border-theme-secondary-300 dark:border-theme-secondary-800 css-ppmbkz"
+                                    type="horizontal"
+                                  />
+                                </div>
                               </div>
                               <div
                                 class="flex w-full justify-between sm:justify-start"
@@ -8367,7 +8546,7 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
                                   Value
                                 </div>
                                 <span
-                                  class="whitespace-nowrap"
+                                  class="whitespace-nowrap font-semibold"
                                   data-testid="Amount"
                                 >
                                   400,000 BTC
@@ -8391,7 +8570,7 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
                             class="-mt-2 h-6 w-full rounded-bl-xl border-b-2 border-l-2 border-theme-secondary-300 dark:border-theme-secondary-800"
                           />
                           <div
-                            class="h-[110%] w-full border-l-2 border-theme-secondary-300 group-last:hidden dark:border-theme-secondary-800"
+                            class="h-[105%] w-full border-l-2 border-theme-secondary-300 group-last:hidden dark:border-theme-secondary-800"
                           />
                         </div>
                       </div>
@@ -8413,61 +8592,67 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
                           class="mt-2"
                         >
                           <div
-                            class="flex items-center space-x-3 rounded-xl border border-theme-success-200 bg-theme-success-50 px-6 py-5 dark:border-theme-success-600 dark:bg-transparent"
-                            data-testid="TransactionSuccessAlert"
+                            class="mt-2"
                           >
                             <div
-                              class="flex items-center space-x-2 text-theme-success-600"
+                              class="flex items-center space-x-3 rounded-xl border border-theme-success-200 bg-theme-success-50 px-6 py-5 dark:border-theme-success-600 dark:bg-transparent"
+                              data-testid="TransactionSuccessAlert"
                             >
                               <div
-                                class="css-v0ob3f"
-                                height="16"
-                                width="16"
+                                class="flex items-center space-x-2 text-theme-success-700"
                               >
-                                <svg
-                                  fill="none"
-                                  viewBox="0 0 20 20"
-                                  xmlns="http://www.w3.org/2000/svg"
+                                <div
+                                  class="css-1i4b0eq"
+                                  height="20"
+                                  width="20"
                                 >
-                                  <path
-                                    d="M17.9984 4.69922L10.3984 14.8992C10.1984 15.0992 9.99844 15.2992 9.69844 15.2992C9.39844 15.2992 9.09844 15.1992 8.89844 14.9992L6.89844 12.9992"
-                                    stroke="currentColor"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-width="2"
-                                  />
-                                  <path
-                                    d="M2 13.0996L4 15.0996C4.2 15.2996 4.4 15.3996 4.7 15.3996C4.8 15.3996 5 15.3996 5.1 15.2996"
-                                    stroke="currentColor"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-width="2"
-                                  />
-                                  <path
-                                    d="M12.9969 4.69922L8.79688 10.2992"
-                                    stroke="currentColor"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-width="2"
-                                  />
-                                </svg>
+                                  <svg
+                                    fill="none"
+                                    viewBox="0 0 20 20"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                  >
+                                    <path
+                                      d="M17.9984 4.69922L10.3984 14.8992C10.1984 15.0992 9.99844 15.2992 9.69844 15.2992C9.39844 15.2992 9.09844 15.1992 8.89844 14.9992L6.89844 12.9992"
+                                      stroke="currentColor"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      stroke-width="2"
+                                    />
+                                    <path
+                                      d="M2 13.0996L4 15.0996C4.2 15.2996 4.4 15.3996 4.7 15.3996C4.8 15.3996 5 15.3996 5.1 15.2996"
+                                      stroke="currentColor"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      stroke-width="2"
+                                    />
+                                    <path
+                                      d="M12.9969 4.69922L8.79688 10.2992"
+                                      stroke="currentColor"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      stroke-width="2"
+                                    />
+                                  </svg>
+                                </div>
+                                <p
+                                  class="font-semibold"
+                                >
+                                  Success
+                                </p>
                               </div>
-                              <p>
-                                Success
+                              <div
+                                class="text-theme-success-200 dark:text-theme-secondary-800 css-1aie31u"
+                                type="vertical"
+                              />
+                              <p
+                                class="font-semibold text-theme-secondary-700 dark:text-theme-success-600"
+                              >
+                                <span>
+                                  10 Confirmations
+                                   
+                                </span>
                               </p>
                             </div>
-                            <div
-                              class="text-theme-success-200 dark:text-theme-secondary-800 css-1aie31u"
-                              type="vertical"
-                            />
-                            <p
-                              class="font-semibold text-theme-secondary-700 dark:text-theme-success-600"
-                            >
-                              <span>
-                                10 Confirmations
-                                 
-                              </span>
-                            </p>
                           </div>
                         </div>
                       </div>
@@ -9674,9 +9859,8 @@ exports[`SendTransfer > should send a single transfer using wallet with encrypti
                           </button>
                         </button>
                         <button
-                          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700"
+                          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded text-theme-primary-600 dark:text-theme-secondary-700 dark:ring-theme-secondary-800 ring-1 ring-inset ring-theme-secondary-300 hover:bg-theme-primary-700 hover:ring-0 hover:text-white"
                           data-testid="explorer-link"
-                          disabled=""
                           type="button"
                         >
                           <div
@@ -9726,7 +9910,7 @@ exports[`SendTransfer > should send a single transfer using wallet with encrypti
                             class="-mt-2 h-6 w-full rounded-bl-xl border-b-2 border-l-2 border-theme-secondary-300 dark:border-theme-secondary-800"
                           />
                           <div
-                            class="h-[110%] w-full border-l-2 border-theme-secondary-300 group-last:hidden dark:border-theme-secondary-800"
+                            class="h-[105%] w-full border-l-2 border-theme-secondary-300 group-last:hidden dark:border-theme-secondary-800"
                           />
                         </div>
                       </div>
@@ -9748,10 +9932,10 @@ exports[`SendTransfer > should send a single transfer using wallet with encrypti
                             </div>
                           </div>
                           <div
-                            class="w-full break-words rounded-lg border-theme-secondary-300 p-3 dark:border-theme-secondary-800 sm:border sm:px-6 sm:py-5 mt-0 sm:mt-2"
+                            class="w-full break-words rounded-lg border-theme-secondary-300 p-3 dark:border-theme-secondary-800 sm:border sm:px-6 sm:py-5 [.condensed_&]:sm:py-4 mt-0 sm:mt-2"
                           >
                             <div
-                              class="flex w-full items-center justify-between gap-4 space-x-2 sm:justify-start sm:space-x-0"
+                              class="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0"
                             >
                               <div
                                 class="no-ligatures w-20 flex-shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:text-base sm:leading-5"
@@ -9759,7 +9943,7 @@ exports[`SendTransfer > should send a single transfer using wallet with encrypti
                                 From
                               </div>
                               <div
-                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end sm:justify-start sm:max-w-[350px]"
+                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end sm:justify-start"
                               >
                                 <span
                                   class="font-semibold text-base text-theme-text text-sm leading-[17px] sm:leading-5 sm:text-base"
@@ -9772,12 +9956,19 @@ exports[`SendTransfer > should send a single transfer using wallet with encrypti
                                     ARK Wallet 1
                                   </span>
                                 </span>
-                                <span
-                                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 text-sm leading-[17px] sm:leading-5 sm:text-base font-semibold text-base"
-                                  data-testid="Address__address"
+                                <div
+                                  class="relative grow text-left"
                                 >
-                                  D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                                </span>
+                                  <span
+                                    class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 text-sm leading-[17px] sm:leading-5 sm:text-base w-full w-3/4 font-semibold text-base absolute w-full"
+                                    data-testid="Address__address"
+                                  >
+                                    D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                                  </span>
+                                  <span>
+                                     
+                                  </span>
+                                </div>
                                 <button
                                   class="ring-focus relative focus:outline-none"
                                   data-ring-focus-margin="-m-1"
@@ -9817,15 +10008,19 @@ exports[`SendTransfer > should send a single transfer using wallet with encrypti
                               </div>
                             </div>
                             <div
-                              class="hidden h-8 w-full items-center sm:flex"
+                              class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3"
                             >
                               <div
-                                class="border-theme-secondary-300 dark:border-theme-secondary-800 css-ppmbkz"
-                                type="horizontal"
-                              />
+                                class="w-full [.condensed_&]:hidden"
+                              >
+                                <div
+                                  class="border-theme-secondary-300 dark:border-theme-secondary-800 css-ppmbkz"
+                                  type="horizontal"
+                                />
+                              </div>
                             </div>
                             <div
-                              class="mt-3 flex w-full items-center justify-between gap-4 space-x-2 sm:mt-0 sm:justify-start sm:space-x-0"
+                              class="mt-3 flex w-full items-center justify-between space-x-2 sm:mt-0 sm:justify-start sm:space-x-0"
                             >
                               <div
                                 class="no-ligatures w-20 flex-shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:text-base sm:leading-5"
@@ -9833,7 +10028,7 @@ exports[`SendTransfer > should send a single transfer using wallet with encrypti
                                 To
                               </div>
                               <div
-                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end sm:justify-start sm:max-w-[350px]"
+                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end sm:justify-start"
                               >
                                 <span
                                   class="font-semibold text-base text-theme-text text-sm leading-[17px] sm:leading-5 sm:text-base"
@@ -9846,12 +10041,19 @@ exports[`SendTransfer > should send a single transfer using wallet with encrypti
                                     ARK Wallet 1
                                   </span>
                                 </span>
-                                <span
-                                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 text-sm leading-[17px] sm:leading-5 sm:text-base font-semibold text-base"
-                                  data-testid="Address__address"
+                                <div
+                                  class="relative grow text-left"
                                 >
-                                  D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                                </span>
+                                  <span
+                                    class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 text-sm leading-[17px] sm:leading-5 sm:text-base font-semibold text-base absolute w-full"
+                                    data-testid="Address__address"
+                                  >
+                                    D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                                  </span>
+                                  <span>
+                                     
+                                  </span>
+                                </div>
                                 <button
                                   class="ring-focus relative focus:outline-none"
                                   data-ring-focus-margin="-m-1"
@@ -9907,7 +10109,7 @@ exports[`SendTransfer > should send a single transfer using wallet with encrypti
                             class="-mt-2 h-6 w-full rounded-bl-xl border-b-2 border-l-2 border-theme-secondary-300 dark:border-theme-secondary-800"
                           />
                           <div
-                            class="h-[110%] w-full border-l-2 border-theme-secondary-300 group-last:hidden dark:border-theme-secondary-800"
+                            class="h-[105%] w-full border-l-2 border-theme-secondary-300 group-last:hidden dark:border-theme-secondary-800"
                           />
                         </div>
                       </div>
@@ -9932,7 +10134,7 @@ exports[`SendTransfer > should send a single transfer using wallet with encrypti
                               </div>
                             </div>
                             <div
-                              class="w-full break-words rounded-lg border-theme-secondary-300 p-3 dark:border-theme-secondary-800 sm:border sm:px-6 sm:py-5 mt-0 sm:mt-2"
+                              class="w-full break-words rounded-lg border-theme-secondary-300 p-3 dark:border-theme-secondary-800 sm:border sm:px-6 sm:py-5 [.condensed_&]:sm:py-4 mt-0 sm:mt-2"
                             >
                               <div
                                 class="flex w-full justify-between sm:justify-start"
@@ -9968,7 +10170,7 @@ exports[`SendTransfer > should send a single transfer using wallet with encrypti
                             class="-mt-2 h-6 w-full rounded-bl-xl border-b-2 border-l-2 border-theme-secondary-300 dark:border-theme-secondary-800"
                           />
                           <div
-                            class="h-[110%] w-full border-l-2 border-theme-secondary-300 group-last:hidden dark:border-theme-secondary-800"
+                            class="h-[105%] w-full border-l-2 border-theme-secondary-300 group-last:hidden dark:border-theme-secondary-800"
                           />
                         </div>
                       </div>
@@ -9990,7 +10192,7 @@ exports[`SendTransfer > should send a single transfer using wallet with encrypti
                             </div>
                           </div>
                           <div
-                            class="w-full break-words rounded-lg border-theme-secondary-300 p-3 dark:border-theme-secondary-800 sm:border sm:px-6 sm:py-5 mt-0 sm:mt-2"
+                            class="w-full break-words rounded-lg border-theme-secondary-300 p-3 dark:border-theme-secondary-800 sm:border sm:px-6 sm:py-5 [.condensed_&]:sm:py-4 mt-0 sm:mt-2"
                           >
                             <div
                               class="space-y-3 sm:space-y-0"
@@ -10022,12 +10224,16 @@ exports[`SendTransfer > should send a single transfer using wallet with encrypti
                                 </div>
                               </div>
                               <div
-                                class="hidden h-8 w-full items-center sm:flex"
+                                class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3"
                               >
                                 <div
-                                  class="border-theme-secondary-300 dark:border-theme-secondary-800 css-ppmbkz"
-                                  type="horizontal"
-                                />
+                                  class="w-full [.condensed_&]:hidden"
+                                >
+                                  <div
+                                    class="border-theme-secondary-300 dark:border-theme-secondary-800 css-ppmbkz"
+                                    type="horizontal"
+                                  />
+                                </div>
                               </div>
                               <div
                                 class="flex w-full justify-between sm:justify-start"
@@ -10039,19 +10245,23 @@ exports[`SendTransfer > should send a single transfer using wallet with encrypti
                                   Fee
                                 </div>
                                 <span
-                                  class="whitespace-nowrap"
+                                  class="whitespace-nowrap font-semibold"
                                   data-testid="Amount"
                                 >
                                   0.1 DARK
                                 </span>
                               </div>
                               <div
-                                class="hidden h-8 w-full items-center sm:flex"
+                                class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3"
                               >
                                 <div
-                                  class="border-theme-secondary-300 dark:border-theme-secondary-800 css-ppmbkz"
-                                  type="horizontal"
-                                />
+                                  class="w-full [.condensed_&]:hidden"
+                                >
+                                  <div
+                                    class="border-theme-secondary-300 dark:border-theme-secondary-800 css-ppmbkz"
+                                    type="horizontal"
+                                  />
+                                </div>
                               </div>
                               <div
                                 class="flex w-full justify-between sm:justify-start"
@@ -10063,7 +10273,7 @@ exports[`SendTransfer > should send a single transfer using wallet with encrypti
                                   Value
                                 </div>
                                 <span
-                                  class="whitespace-nowrap"
+                                  class="whitespace-nowrap font-semibold"
                                   data-testid="Amount"
                                 >
                                   400,000 BTC
@@ -10087,7 +10297,7 @@ exports[`SendTransfer > should send a single transfer using wallet with encrypti
                             class="-mt-2 h-6 w-full rounded-bl-xl border-b-2 border-l-2 border-theme-secondary-300 dark:border-theme-secondary-800"
                           />
                           <div
-                            class="h-[110%] w-full border-l-2 border-theme-secondary-300 group-last:hidden dark:border-theme-secondary-800"
+                            class="h-[105%] w-full border-l-2 border-theme-secondary-300 group-last:hidden dark:border-theme-secondary-800"
                           />
                         </div>
                       </div>
@@ -10109,61 +10319,67 @@ exports[`SendTransfer > should send a single transfer using wallet with encrypti
                           class="mt-2"
                         >
                           <div
-                            class="flex items-center space-x-3 rounded-xl border border-theme-success-200 bg-theme-success-50 px-6 py-5 dark:border-theme-success-600 dark:bg-transparent"
-                            data-testid="TransactionSuccessAlert"
+                            class="mt-2"
                           >
                             <div
-                              class="flex items-center space-x-2 text-theme-success-600"
+                              class="flex items-center space-x-3 rounded-xl border border-theme-success-200 bg-theme-success-50 px-6 py-5 dark:border-theme-success-600 dark:bg-transparent"
+                              data-testid="TransactionSuccessAlert"
                             >
                               <div
-                                class="css-v0ob3f"
-                                height="16"
-                                width="16"
+                                class="flex items-center space-x-2 text-theme-success-700"
                               >
-                                <svg
-                                  fill="none"
-                                  viewBox="0 0 20 20"
-                                  xmlns="http://www.w3.org/2000/svg"
+                                <div
+                                  class="css-1i4b0eq"
+                                  height="20"
+                                  width="20"
                                 >
-                                  <path
-                                    d="M17.9984 4.69922L10.3984 14.8992C10.1984 15.0992 9.99844 15.2992 9.69844 15.2992C9.39844 15.2992 9.09844 15.1992 8.89844 14.9992L6.89844 12.9992"
-                                    stroke="currentColor"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-width="2"
-                                  />
-                                  <path
-                                    d="M2 13.0996L4 15.0996C4.2 15.2996 4.4 15.3996 4.7 15.3996C4.8 15.3996 5 15.3996 5.1 15.2996"
-                                    stroke="currentColor"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-width="2"
-                                  />
-                                  <path
-                                    d="M12.9969 4.69922L8.79688 10.2992"
-                                    stroke="currentColor"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-width="2"
-                                  />
-                                </svg>
+                                  <svg
+                                    fill="none"
+                                    viewBox="0 0 20 20"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                  >
+                                    <path
+                                      d="M17.9984 4.69922L10.3984 14.8992C10.1984 15.0992 9.99844 15.2992 9.69844 15.2992C9.39844 15.2992 9.09844 15.1992 8.89844 14.9992L6.89844 12.9992"
+                                      stroke="currentColor"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      stroke-width="2"
+                                    />
+                                    <path
+                                      d="M2 13.0996L4 15.0996C4.2 15.2996 4.4 15.3996 4.7 15.3996C4.8 15.3996 5 15.3996 5.1 15.2996"
+                                      stroke="currentColor"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      stroke-width="2"
+                                    />
+                                    <path
+                                      d="M12.9969 4.69922L8.79688 10.2992"
+                                      stroke="currentColor"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      stroke-width="2"
+                                    />
+                                  </svg>
+                                </div>
+                                <p
+                                  class="font-semibold"
+                                >
+                                  Success
+                                </p>
                               </div>
-                              <p>
-                                Success
+                              <div
+                                class="text-theme-success-200 dark:text-theme-secondary-800 css-1aie31u"
+                                type="vertical"
+                              />
+                              <p
+                                class="font-semibold text-theme-secondary-700 dark:text-theme-success-600"
+                              >
+                                <span>
+                                  10 Confirmations
+                                   
+                                </span>
                               </p>
                             </div>
-                            <div
-                              class="text-theme-success-200 dark:text-theme-secondary-800 css-1aie31u"
-                              type="vertical"
-                            />
-                            <p
-                              class="font-semibold text-theme-secondary-700 dark:text-theme-success-600"
-                            >
-                              <span>
-                                10 Confirmations
-                                 
-                              </span>
-                            </p>
                           </div>
                         </div>
                       </div>
@@ -10816,9 +11032,8 @@ exports[`SendTransfer > should send a single transfer with keyboard 1`] = `
                           </button>
                         </button>
                         <button
-                          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700"
+                          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded text-theme-primary-600 dark:text-theme-secondary-700 dark:ring-theme-secondary-800 ring-1 ring-inset ring-theme-secondary-300 hover:bg-theme-primary-700 hover:ring-0 hover:text-white"
                           data-testid="explorer-link"
-                          disabled=""
                           type="button"
                         >
                           <div
@@ -10868,7 +11083,7 @@ exports[`SendTransfer > should send a single transfer with keyboard 1`] = `
                             class="-mt-2 h-6 w-full rounded-bl-xl border-b-2 border-l-2 border-theme-secondary-300 dark:border-theme-secondary-800"
                           />
                           <div
-                            class="h-[110%] w-full border-l-2 border-theme-secondary-300 group-last:hidden dark:border-theme-secondary-800"
+                            class="h-[105%] w-full border-l-2 border-theme-secondary-300 group-last:hidden dark:border-theme-secondary-800"
                           />
                         </div>
                       </div>
@@ -10890,10 +11105,10 @@ exports[`SendTransfer > should send a single transfer with keyboard 1`] = `
                             </div>
                           </div>
                           <div
-                            class="w-full break-words rounded-lg border-theme-secondary-300 p-3 dark:border-theme-secondary-800 sm:border sm:px-6 sm:py-5 mt-0 sm:mt-2"
+                            class="w-full break-words rounded-lg border-theme-secondary-300 p-3 dark:border-theme-secondary-800 sm:border sm:px-6 sm:py-5 [.condensed_&]:sm:py-4 mt-0 sm:mt-2"
                           >
                             <div
-                              class="flex w-full items-center justify-between gap-4 space-x-2 sm:justify-start sm:space-x-0"
+                              class="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0"
                             >
                               <div
                                 class="no-ligatures w-20 flex-shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:text-base sm:leading-5"
@@ -10901,7 +11116,7 @@ exports[`SendTransfer > should send a single transfer with keyboard 1`] = `
                                 From
                               </div>
                               <div
-                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end sm:justify-start sm:max-w-[350px]"
+                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end sm:justify-start"
                               >
                                 <span
                                   class="font-semibold text-base text-theme-text text-sm leading-[17px] sm:leading-5 sm:text-base"
@@ -10914,12 +11129,19 @@ exports[`SendTransfer > should send a single transfer with keyboard 1`] = `
                                     ARK Wallet 1
                                   </span>
                                 </span>
-                                <span
-                                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 text-sm leading-[17px] sm:leading-5 sm:text-base font-semibold text-base"
-                                  data-testid="Address__address"
+                                <div
+                                  class="relative grow text-left"
                                 >
-                                  D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                                </span>
+                                  <span
+                                    class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 text-sm leading-[17px] sm:leading-5 sm:text-base w-full w-3/4 font-semibold text-base absolute w-full"
+                                    data-testid="Address__address"
+                                  >
+                                    D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                                  </span>
+                                  <span>
+                                     
+                                  </span>
+                                </div>
                                 <button
                                   class="ring-focus relative focus:outline-none"
                                   data-ring-focus-margin="-m-1"
@@ -10959,15 +11181,19 @@ exports[`SendTransfer > should send a single transfer with keyboard 1`] = `
                               </div>
                             </div>
                             <div
-                              class="hidden h-8 w-full items-center sm:flex"
+                              class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3"
                             >
                               <div
-                                class="border-theme-secondary-300 dark:border-theme-secondary-800 css-ppmbkz"
-                                type="horizontal"
-                              />
+                                class="w-full [.condensed_&]:hidden"
+                              >
+                                <div
+                                  class="border-theme-secondary-300 dark:border-theme-secondary-800 css-ppmbkz"
+                                  type="horizontal"
+                                />
+                              </div>
                             </div>
                             <div
-                              class="mt-3 flex w-full items-center justify-between gap-4 space-x-2 sm:mt-0 sm:justify-start sm:space-x-0"
+                              class="mt-3 flex w-full items-center justify-between space-x-2 sm:mt-0 sm:justify-start sm:space-x-0"
                             >
                               <div
                                 class="no-ligatures w-20 flex-shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:text-base sm:leading-5"
@@ -10975,7 +11201,7 @@ exports[`SendTransfer > should send a single transfer with keyboard 1`] = `
                                 To
                               </div>
                               <div
-                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end sm:justify-start sm:max-w-[350px]"
+                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end sm:justify-start"
                               >
                                 <span
                                   class="font-semibold text-base text-theme-text text-sm leading-[17px] sm:leading-5 sm:text-base"
@@ -10988,12 +11214,19 @@ exports[`SendTransfer > should send a single transfer with keyboard 1`] = `
                                     ARK Wallet 1
                                   </span>
                                 </span>
-                                <span
-                                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 text-sm leading-[17px] sm:leading-5 sm:text-base font-semibold text-base"
-                                  data-testid="Address__address"
+                                <div
+                                  class="relative grow text-left"
                                 >
-                                  D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                                </span>
+                                  <span
+                                    class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 text-sm leading-[17px] sm:leading-5 sm:text-base font-semibold text-base absolute w-full"
+                                    data-testid="Address__address"
+                                  >
+                                    D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                                  </span>
+                                  <span>
+                                     
+                                  </span>
+                                </div>
                                 <button
                                   class="ring-focus relative focus:outline-none"
                                   data-ring-focus-margin="-m-1"
@@ -11049,7 +11282,7 @@ exports[`SendTransfer > should send a single transfer with keyboard 1`] = `
                             class="-mt-2 h-6 w-full rounded-bl-xl border-b-2 border-l-2 border-theme-secondary-300 dark:border-theme-secondary-800"
                           />
                           <div
-                            class="h-[110%] w-full border-l-2 border-theme-secondary-300 group-last:hidden dark:border-theme-secondary-800"
+                            class="h-[105%] w-full border-l-2 border-theme-secondary-300 group-last:hidden dark:border-theme-secondary-800"
                           />
                         </div>
                       </div>
@@ -11074,7 +11307,7 @@ exports[`SendTransfer > should send a single transfer with keyboard 1`] = `
                               </div>
                             </div>
                             <div
-                              class="w-full break-words rounded-lg border-theme-secondary-300 p-3 dark:border-theme-secondary-800 sm:border sm:px-6 sm:py-5 mt-0 sm:mt-2"
+                              class="w-full break-words rounded-lg border-theme-secondary-300 p-3 dark:border-theme-secondary-800 sm:border sm:px-6 sm:py-5 [.condensed_&]:sm:py-4 mt-0 sm:mt-2"
                             >
                               <div
                                 class="flex w-full justify-between sm:justify-start"
@@ -11110,7 +11343,7 @@ exports[`SendTransfer > should send a single transfer with keyboard 1`] = `
                             class="-mt-2 h-6 w-full rounded-bl-xl border-b-2 border-l-2 border-theme-secondary-300 dark:border-theme-secondary-800"
                           />
                           <div
-                            class="h-[110%] w-full border-l-2 border-theme-secondary-300 group-last:hidden dark:border-theme-secondary-800"
+                            class="h-[105%] w-full border-l-2 border-theme-secondary-300 group-last:hidden dark:border-theme-secondary-800"
                           />
                         </div>
                       </div>
@@ -11132,7 +11365,7 @@ exports[`SendTransfer > should send a single transfer with keyboard 1`] = `
                             </div>
                           </div>
                           <div
-                            class="w-full break-words rounded-lg border-theme-secondary-300 p-3 dark:border-theme-secondary-800 sm:border sm:px-6 sm:py-5 mt-0 sm:mt-2"
+                            class="w-full break-words rounded-lg border-theme-secondary-300 p-3 dark:border-theme-secondary-800 sm:border sm:px-6 sm:py-5 [.condensed_&]:sm:py-4 mt-0 sm:mt-2"
                           >
                             <div
                               class="space-y-3 sm:space-y-0"
@@ -11164,12 +11397,16 @@ exports[`SendTransfer > should send a single transfer with keyboard 1`] = `
                                 </div>
                               </div>
                               <div
-                                class="hidden h-8 w-full items-center sm:flex"
+                                class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3"
                               >
                                 <div
-                                  class="border-theme-secondary-300 dark:border-theme-secondary-800 css-ppmbkz"
-                                  type="horizontal"
-                                />
+                                  class="w-full [.condensed_&]:hidden"
+                                >
+                                  <div
+                                    class="border-theme-secondary-300 dark:border-theme-secondary-800 css-ppmbkz"
+                                    type="horizontal"
+                                  />
+                                </div>
                               </div>
                               <div
                                 class="flex w-full justify-between sm:justify-start"
@@ -11181,19 +11418,23 @@ exports[`SendTransfer > should send a single transfer with keyboard 1`] = `
                                   Fee
                                 </div>
                                 <span
-                                  class="whitespace-nowrap"
+                                  class="whitespace-nowrap font-semibold"
                                   data-testid="Amount"
                                 >
                                   0.1 DARK
                                 </span>
                               </div>
                               <div
-                                class="hidden h-8 w-full items-center sm:flex"
+                                class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3"
                               >
                                 <div
-                                  class="border-theme-secondary-300 dark:border-theme-secondary-800 css-ppmbkz"
-                                  type="horizontal"
-                                />
+                                  class="w-full [.condensed_&]:hidden"
+                                >
+                                  <div
+                                    class="border-theme-secondary-300 dark:border-theme-secondary-800 css-ppmbkz"
+                                    type="horizontal"
+                                  />
+                                </div>
                               </div>
                               <div
                                 class="flex w-full justify-between sm:justify-start"
@@ -11205,7 +11446,7 @@ exports[`SendTransfer > should send a single transfer with keyboard 1`] = `
                                   Value
                                 </div>
                                 <span
-                                  class="whitespace-nowrap"
+                                  class="whitespace-nowrap font-semibold"
                                   data-testid="Amount"
                                 >
                                   400,000 BTC
@@ -11229,7 +11470,7 @@ exports[`SendTransfer > should send a single transfer with keyboard 1`] = `
                             class="-mt-2 h-6 w-full rounded-bl-xl border-b-2 border-l-2 border-theme-secondary-300 dark:border-theme-secondary-800"
                           />
                           <div
-                            class="h-[110%] w-full border-l-2 border-theme-secondary-300 group-last:hidden dark:border-theme-secondary-800"
+                            class="h-[105%] w-full border-l-2 border-theme-secondary-300 group-last:hidden dark:border-theme-secondary-800"
                           />
                         </div>
                       </div>
@@ -11251,61 +11492,67 @@ exports[`SendTransfer > should send a single transfer with keyboard 1`] = `
                           class="mt-2"
                         >
                           <div
-                            class="flex items-center space-x-3 rounded-xl border border-theme-success-200 bg-theme-success-50 px-6 py-5 dark:border-theme-success-600 dark:bg-transparent"
-                            data-testid="TransactionSuccessAlert"
+                            class="mt-2"
                           >
                             <div
-                              class="flex items-center space-x-2 text-theme-success-600"
+                              class="flex items-center space-x-3 rounded-xl border border-theme-success-200 bg-theme-success-50 px-6 py-5 dark:border-theme-success-600 dark:bg-transparent"
+                              data-testid="TransactionSuccessAlert"
                             >
                               <div
-                                class="css-v0ob3f"
-                                height="16"
-                                width="16"
+                                class="flex items-center space-x-2 text-theme-success-700"
                               >
-                                <svg
-                                  fill="none"
-                                  viewBox="0 0 20 20"
-                                  xmlns="http://www.w3.org/2000/svg"
+                                <div
+                                  class="css-1i4b0eq"
+                                  height="20"
+                                  width="20"
                                 >
-                                  <path
-                                    d="M17.9984 4.69922L10.3984 14.8992C10.1984 15.0992 9.99844 15.2992 9.69844 15.2992C9.39844 15.2992 9.09844 15.1992 8.89844 14.9992L6.89844 12.9992"
-                                    stroke="currentColor"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-width="2"
-                                  />
-                                  <path
-                                    d="M2 13.0996L4 15.0996C4.2 15.2996 4.4 15.3996 4.7 15.3996C4.8 15.3996 5 15.3996 5.1 15.2996"
-                                    stroke="currentColor"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-width="2"
-                                  />
-                                  <path
-                                    d="M12.9969 4.69922L8.79688 10.2992"
-                                    stroke="currentColor"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-width="2"
-                                  />
-                                </svg>
+                                  <svg
+                                    fill="none"
+                                    viewBox="0 0 20 20"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                  >
+                                    <path
+                                      d="M17.9984 4.69922L10.3984 14.8992C10.1984 15.0992 9.99844 15.2992 9.69844 15.2992C9.39844 15.2992 9.09844 15.1992 8.89844 14.9992L6.89844 12.9992"
+                                      stroke="currentColor"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      stroke-width="2"
+                                    />
+                                    <path
+                                      d="M2 13.0996L4 15.0996C4.2 15.2996 4.4 15.3996 4.7 15.3996C4.8 15.3996 5 15.3996 5.1 15.2996"
+                                      stroke="currentColor"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      stroke-width="2"
+                                    />
+                                    <path
+                                      d="M12.9969 4.69922L8.79688 10.2992"
+                                      stroke="currentColor"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      stroke-width="2"
+                                    />
+                                  </svg>
+                                </div>
+                                <p
+                                  class="font-semibold"
+                                >
+                                  Success
+                                </p>
                               </div>
-                              <p>
-                                Success
+                              <div
+                                class="text-theme-success-200 dark:text-theme-secondary-800 css-1aie31u"
+                                type="vertical"
+                              />
+                              <p
+                                class="font-semibold text-theme-secondary-700 dark:text-theme-success-600"
+                              >
+                                <span>
+                                  10 Confirmations
+                                   
+                                </span>
                               </p>
                             </div>
-                            <div
-                              class="text-theme-success-200 dark:text-theme-secondary-800 css-1aie31u"
-                              type="vertical"
-                            />
-                            <p
-                              class="font-semibold text-theme-secondary-700 dark:text-theme-success-600"
-                            >
-                              <span>
-                                10 Confirmations
-                                 
-                              </span>
-                            </p>
                           </div>
                         </div>
                       </div>
@@ -11958,9 +12205,8 @@ exports[`SendTransfer > should send a single transfer without keyboard 1`] = `
                           </button>
                         </button>
                         <button
-                          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700"
+                          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded text-theme-primary-600 dark:text-theme-secondary-700 dark:ring-theme-secondary-800 ring-1 ring-inset ring-theme-secondary-300 hover:bg-theme-primary-700 hover:ring-0 hover:text-white"
                           data-testid="explorer-link"
-                          disabled=""
                           type="button"
                         >
                           <div
@@ -12010,7 +12256,7 @@ exports[`SendTransfer > should send a single transfer without keyboard 1`] = `
                             class="-mt-2 h-6 w-full rounded-bl-xl border-b-2 border-l-2 border-theme-secondary-300 dark:border-theme-secondary-800"
                           />
                           <div
-                            class="h-[110%] w-full border-l-2 border-theme-secondary-300 group-last:hidden dark:border-theme-secondary-800"
+                            class="h-[105%] w-full border-l-2 border-theme-secondary-300 group-last:hidden dark:border-theme-secondary-800"
                           />
                         </div>
                       </div>
@@ -12032,10 +12278,10 @@ exports[`SendTransfer > should send a single transfer without keyboard 1`] = `
                             </div>
                           </div>
                           <div
-                            class="w-full break-words rounded-lg border-theme-secondary-300 p-3 dark:border-theme-secondary-800 sm:border sm:px-6 sm:py-5 mt-0 sm:mt-2"
+                            class="w-full break-words rounded-lg border-theme-secondary-300 p-3 dark:border-theme-secondary-800 sm:border sm:px-6 sm:py-5 [.condensed_&]:sm:py-4 mt-0 sm:mt-2"
                           >
                             <div
-                              class="flex w-full items-center justify-between gap-4 space-x-2 sm:justify-start sm:space-x-0"
+                              class="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0"
                             >
                               <div
                                 class="no-ligatures w-20 flex-shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:text-base sm:leading-5"
@@ -12043,7 +12289,7 @@ exports[`SendTransfer > should send a single transfer without keyboard 1`] = `
                                 From
                               </div>
                               <div
-                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end sm:justify-start sm:max-w-[350px]"
+                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end sm:justify-start"
                               >
                                 <span
                                   class="font-semibold text-base text-theme-text text-sm leading-[17px] sm:leading-5 sm:text-base"
@@ -12056,12 +12302,19 @@ exports[`SendTransfer > should send a single transfer without keyboard 1`] = `
                                     ARK Wallet 1
                                   </span>
                                 </span>
-                                <span
-                                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 text-sm leading-[17px] sm:leading-5 sm:text-base font-semibold text-base"
-                                  data-testid="Address__address"
+                                <div
+                                  class="relative grow text-left"
                                 >
-                                  D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                                </span>
+                                  <span
+                                    class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 text-sm leading-[17px] sm:leading-5 sm:text-base w-full w-3/4 font-semibold text-base absolute w-full"
+                                    data-testid="Address__address"
+                                  >
+                                    D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                                  </span>
+                                  <span>
+                                     
+                                  </span>
+                                </div>
                                 <button
                                   class="ring-focus relative focus:outline-none"
                                   data-ring-focus-margin="-m-1"
@@ -12101,15 +12354,19 @@ exports[`SendTransfer > should send a single transfer without keyboard 1`] = `
                               </div>
                             </div>
                             <div
-                              class="hidden h-8 w-full items-center sm:flex"
+                              class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3"
                             >
                               <div
-                                class="border-theme-secondary-300 dark:border-theme-secondary-800 css-ppmbkz"
-                                type="horizontal"
-                              />
+                                class="w-full [.condensed_&]:hidden"
+                              >
+                                <div
+                                  class="border-theme-secondary-300 dark:border-theme-secondary-800 css-ppmbkz"
+                                  type="horizontal"
+                                />
+                              </div>
                             </div>
                             <div
-                              class="mt-3 flex w-full items-center justify-between gap-4 space-x-2 sm:mt-0 sm:justify-start sm:space-x-0"
+                              class="mt-3 flex w-full items-center justify-between space-x-2 sm:mt-0 sm:justify-start sm:space-x-0"
                             >
                               <div
                                 class="no-ligatures w-20 flex-shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:text-base sm:leading-5"
@@ -12117,7 +12374,7 @@ exports[`SendTransfer > should send a single transfer without keyboard 1`] = `
                                 To
                               </div>
                               <div
-                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end sm:justify-start sm:max-w-[350px]"
+                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end sm:justify-start"
                               >
                                 <span
                                   class="font-semibold text-base text-theme-text text-sm leading-[17px] sm:leading-5 sm:text-base"
@@ -12130,12 +12387,19 @@ exports[`SendTransfer > should send a single transfer without keyboard 1`] = `
                                     ARK Wallet 1
                                   </span>
                                 </span>
-                                <span
-                                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 text-sm leading-[17px] sm:leading-5 sm:text-base font-semibold text-base"
-                                  data-testid="Address__address"
+                                <div
+                                  class="relative grow text-left"
                                 >
-                                  D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                                </span>
+                                  <span
+                                    class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 text-sm leading-[17px] sm:leading-5 sm:text-base font-semibold text-base absolute w-full"
+                                    data-testid="Address__address"
+                                  >
+                                    D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                                  </span>
+                                  <span>
+                                     
+                                  </span>
+                                </div>
                                 <button
                                   class="ring-focus relative focus:outline-none"
                                   data-ring-focus-margin="-m-1"
@@ -12191,7 +12455,7 @@ exports[`SendTransfer > should send a single transfer without keyboard 1`] = `
                             class="-mt-2 h-6 w-full rounded-bl-xl border-b-2 border-l-2 border-theme-secondary-300 dark:border-theme-secondary-800"
                           />
                           <div
-                            class="h-[110%] w-full border-l-2 border-theme-secondary-300 group-last:hidden dark:border-theme-secondary-800"
+                            class="h-[105%] w-full border-l-2 border-theme-secondary-300 group-last:hidden dark:border-theme-secondary-800"
                           />
                         </div>
                       </div>
@@ -12216,7 +12480,7 @@ exports[`SendTransfer > should send a single transfer without keyboard 1`] = `
                               </div>
                             </div>
                             <div
-                              class="w-full break-words rounded-lg border-theme-secondary-300 p-3 dark:border-theme-secondary-800 sm:border sm:px-6 sm:py-5 mt-0 sm:mt-2"
+                              class="w-full break-words rounded-lg border-theme-secondary-300 p-3 dark:border-theme-secondary-800 sm:border sm:px-6 sm:py-5 [.condensed_&]:sm:py-4 mt-0 sm:mt-2"
                             >
                               <div
                                 class="flex w-full justify-between sm:justify-start"
@@ -12252,7 +12516,7 @@ exports[`SendTransfer > should send a single transfer without keyboard 1`] = `
                             class="-mt-2 h-6 w-full rounded-bl-xl border-b-2 border-l-2 border-theme-secondary-300 dark:border-theme-secondary-800"
                           />
                           <div
-                            class="h-[110%] w-full border-l-2 border-theme-secondary-300 group-last:hidden dark:border-theme-secondary-800"
+                            class="h-[105%] w-full border-l-2 border-theme-secondary-300 group-last:hidden dark:border-theme-secondary-800"
                           />
                         </div>
                       </div>
@@ -12274,7 +12538,7 @@ exports[`SendTransfer > should send a single transfer without keyboard 1`] = `
                             </div>
                           </div>
                           <div
-                            class="w-full break-words rounded-lg border-theme-secondary-300 p-3 dark:border-theme-secondary-800 sm:border sm:px-6 sm:py-5 mt-0 sm:mt-2"
+                            class="w-full break-words rounded-lg border-theme-secondary-300 p-3 dark:border-theme-secondary-800 sm:border sm:px-6 sm:py-5 [.condensed_&]:sm:py-4 mt-0 sm:mt-2"
                           >
                             <div
                               class="space-y-3 sm:space-y-0"
@@ -12306,12 +12570,16 @@ exports[`SendTransfer > should send a single transfer without keyboard 1`] = `
                                 </div>
                               </div>
                               <div
-                                class="hidden h-8 w-full items-center sm:flex"
+                                class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3"
                               >
                                 <div
-                                  class="border-theme-secondary-300 dark:border-theme-secondary-800 css-ppmbkz"
-                                  type="horizontal"
-                                />
+                                  class="w-full [.condensed_&]:hidden"
+                                >
+                                  <div
+                                    class="border-theme-secondary-300 dark:border-theme-secondary-800 css-ppmbkz"
+                                    type="horizontal"
+                                  />
+                                </div>
                               </div>
                               <div
                                 class="flex w-full justify-between sm:justify-start"
@@ -12323,19 +12591,23 @@ exports[`SendTransfer > should send a single transfer without keyboard 1`] = `
                                   Fee
                                 </div>
                                 <span
-                                  class="whitespace-nowrap"
+                                  class="whitespace-nowrap font-semibold"
                                   data-testid="Amount"
                                 >
                                   0.1 DARK
                                 </span>
                               </div>
                               <div
-                                class="hidden h-8 w-full items-center sm:flex"
+                                class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3"
                               >
                                 <div
-                                  class="border-theme-secondary-300 dark:border-theme-secondary-800 css-ppmbkz"
-                                  type="horizontal"
-                                />
+                                  class="w-full [.condensed_&]:hidden"
+                                >
+                                  <div
+                                    class="border-theme-secondary-300 dark:border-theme-secondary-800 css-ppmbkz"
+                                    type="horizontal"
+                                  />
+                                </div>
                               </div>
                               <div
                                 class="flex w-full justify-between sm:justify-start"
@@ -12347,7 +12619,7 @@ exports[`SendTransfer > should send a single transfer without keyboard 1`] = `
                                   Value
                                 </div>
                                 <span
-                                  class="whitespace-nowrap"
+                                  class="whitespace-nowrap font-semibold"
                                   data-testid="Amount"
                                 >
                                   400,000 BTC
@@ -12371,7 +12643,7 @@ exports[`SendTransfer > should send a single transfer without keyboard 1`] = `
                             class="-mt-2 h-6 w-full rounded-bl-xl border-b-2 border-l-2 border-theme-secondary-300 dark:border-theme-secondary-800"
                           />
                           <div
-                            class="h-[110%] w-full border-l-2 border-theme-secondary-300 group-last:hidden dark:border-theme-secondary-800"
+                            class="h-[105%] w-full border-l-2 border-theme-secondary-300 group-last:hidden dark:border-theme-secondary-800"
                           />
                         </div>
                       </div>
@@ -12393,61 +12665,67 @@ exports[`SendTransfer > should send a single transfer without keyboard 1`] = `
                           class="mt-2"
                         >
                           <div
-                            class="flex items-center space-x-3 rounded-xl border border-theme-success-200 bg-theme-success-50 px-6 py-5 dark:border-theme-success-600 dark:bg-transparent"
-                            data-testid="TransactionSuccessAlert"
+                            class="mt-2"
                           >
                             <div
-                              class="flex items-center space-x-2 text-theme-success-600"
+                              class="flex items-center space-x-3 rounded-xl border border-theme-success-200 bg-theme-success-50 px-6 py-5 dark:border-theme-success-600 dark:bg-transparent"
+                              data-testid="TransactionSuccessAlert"
                             >
                               <div
-                                class="css-v0ob3f"
-                                height="16"
-                                width="16"
+                                class="flex items-center space-x-2 text-theme-success-700"
                               >
-                                <svg
-                                  fill="none"
-                                  viewBox="0 0 20 20"
-                                  xmlns="http://www.w3.org/2000/svg"
+                                <div
+                                  class="css-1i4b0eq"
+                                  height="20"
+                                  width="20"
                                 >
-                                  <path
-                                    d="M17.9984 4.69922L10.3984 14.8992C10.1984 15.0992 9.99844 15.2992 9.69844 15.2992C9.39844 15.2992 9.09844 15.1992 8.89844 14.9992L6.89844 12.9992"
-                                    stroke="currentColor"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-width="2"
-                                  />
-                                  <path
-                                    d="M2 13.0996L4 15.0996C4.2 15.2996 4.4 15.3996 4.7 15.3996C4.8 15.3996 5 15.3996 5.1 15.2996"
-                                    stroke="currentColor"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-width="2"
-                                  />
-                                  <path
-                                    d="M12.9969 4.69922L8.79688 10.2992"
-                                    stroke="currentColor"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-width="2"
-                                  />
-                                </svg>
+                                  <svg
+                                    fill="none"
+                                    viewBox="0 0 20 20"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                  >
+                                    <path
+                                      d="M17.9984 4.69922L10.3984 14.8992C10.1984 15.0992 9.99844 15.2992 9.69844 15.2992C9.39844 15.2992 9.09844 15.1992 8.89844 14.9992L6.89844 12.9992"
+                                      stroke="currentColor"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      stroke-width="2"
+                                    />
+                                    <path
+                                      d="M2 13.0996L4 15.0996C4.2 15.2996 4.4 15.3996 4.7 15.3996C4.8 15.3996 5 15.3996 5.1 15.2996"
+                                      stroke="currentColor"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      stroke-width="2"
+                                    />
+                                    <path
+                                      d="M12.9969 4.69922L8.79688 10.2992"
+                                      stroke="currentColor"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      stroke-width="2"
+                                    />
+                                  </svg>
+                                </div>
+                                <p
+                                  class="font-semibold"
+                                >
+                                  Success
+                                </p>
                               </div>
-                              <p>
-                                Success
+                              <div
+                                class="text-theme-success-200 dark:text-theme-secondary-800 css-1aie31u"
+                                type="vertical"
+                              />
+                              <p
+                                class="font-semibold text-theme-secondary-700 dark:text-theme-success-600"
+                              >
+                                <span>
+                                  10 Confirmations
+                                   
+                                </span>
                               </p>
                             </div>
-                            <div
-                              class="text-theme-success-200 dark:text-theme-secondary-800 css-1aie31u"
-                              type="vertical"
-                            />
-                            <p
-                              class="font-semibold text-theme-secondary-700 dark:text-theme-success-600"
-                            >
-                              <span>
-                                10 Confirmations
-                                 
-                              </span>
-                            </p>
                           </div>
                         </div>
                       </div>

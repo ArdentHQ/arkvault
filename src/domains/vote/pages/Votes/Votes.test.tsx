@@ -292,7 +292,7 @@ describe("Votes", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it("should navigate to create create page", async () => {
+	it("should navigate to create page", async () => {
 		const route = `/profiles/${emptyProfile.id()}/votes`;
 		const { asFragment } = renderPage(route, routePath);
 

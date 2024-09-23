@@ -27,20 +27,26 @@ const AnchorStyled = styled.a<{ isDisabled?: boolean }>(({ isDisabled }) => {
 	return styles;
 });
 
-const Content = styled.span<{ isDisabled?: boolean }>(({ isDisabled }) => {
-	const styles = [
-		tw`break-all border-b border-transparent`,
-		tw`[transition-property:color,_border-color]`,
-		tw`[transition-duration:200ms,_350ms]`,
-		tw`[transition-delay:0s, _100ms]`,
-	];
+const Content = styled.span<{ isDisabled?: boolean; showExternalIcon?: boolean }>(
+	({ isDisabled, showExternalIcon }) => {
+		const styles = [
+			tw`break-all border-b border-transparent`,
+			tw`[transition-property:color,_border-color]`,
+			tw`[transition-duration:200ms,_350ms]`,
+			tw`[transition-delay:0s, _100ms]`,
+		];
 
-	if (!isDisabled) {
-		styles.push(tw`group-hover:border-current`);
-	}
+		if (!isDisabled && showExternalIcon) {
+			styles.push(tw`group-hover:border-current`);
+		}
 
-	return styles;
-});
+		if (!isDisabled && !showExternalIcon) {
+			styles.push(tw`hover:border-current`);
+		}
+
+		return styles;
+	},
+);
 
 type AnchorProperties = {
 	isDisabled?: boolean;
@@ -63,7 +69,9 @@ const Anchor = React.forwardRef<HTMLAnchorElement, AnchorProperties>(
 			data-ring-focus-margin="-m-1"
 			isDisabled={isDisabled}
 		>
-			<Content isDisabled={isDisabled}>{children}</Content>
+			<Content isDisabled={isDisabled} showExternalIcon={showExternalIcon}>
+				{children}
+			</Content>
 			{isExternal && showExternalIcon && (
 				<Icon
 					data-testid="Link__external"
