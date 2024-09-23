@@ -76,7 +76,7 @@ describe("TransactionRowAddressing", () => {
 
 		render(<TransactionRowAddressing transaction={aliasFixture as any} profile={profile} />);
 
-		expect(screen.getByTestId("TransactionRowAddressing__address-container")).toHaveClass("w-40 md:w-50");
+		expect(screen.getByTestId("TransactionRowAddressing__address-container")).toHaveClass("w-40 lg:w-50");
 	});
 
 	it("should not expand width of address container if the wallet has no alias", () => {

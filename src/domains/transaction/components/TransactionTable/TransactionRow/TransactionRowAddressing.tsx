@@ -127,7 +127,7 @@ export const TransactionRowAddressing = ({
 			<div
 				className={cn({
 					"w-30": !alias,
-					"w-40 md:w-50": alias,
+					"w-40 lg:w-50": alias,
 				})}
 				data-testid="TransactionRowAddressing__address-container"
 			>
