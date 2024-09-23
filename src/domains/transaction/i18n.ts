@@ -379,8 +379,8 @@ export const translations = {
 	TRANSACTION_SIGNED: "Transaction Signed",
 	TRANSACTION_TYPE: "Transaction Type",
 	TRANSACTION_TYPES: {
-		DELEGATE_REGISTRATION: "Delegate Registration",
-		DELEGATE_RESIGNATION: "Delegate Resignation",
+		DELEGATE_REGISTRATION: "Registration",
+		DELEGATE_RESIGNATION: "Resignation",
 		HTLC_CLAIM: "Timelock Claim",
 		HTLC_LOCK: "Timelock",
 		HTLC_REFUND: "Timelock Refund",
