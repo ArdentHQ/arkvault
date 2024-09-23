@@ -916,7 +916,7 @@ exports[`DelegateRegistrationForm > should render review step 1`] = `
                   <span
                     class="text-[12px] font-semibold leading-[15px] text-theme-secondary-700 dark:text-theme-secondary-500"
                   >
-                    Delegate Registration
+                    Registration
                   </span>
                 </div>
               </div>
