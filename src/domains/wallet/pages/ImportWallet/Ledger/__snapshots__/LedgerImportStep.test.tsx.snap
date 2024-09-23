@@ -590,7 +590,7 @@ exports[`LedgerImportStep > should render with multiple import 2`] = `
                           </span>
                         </span>
                         <div
-                          class="relative grow text-left"
+                          class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
                             class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base absolute w-full"
@@ -716,7 +716,7 @@ exports[`LedgerImportStep > should render with multiple import 2`] = `
                           </span>
                         </span>
                         <div
-                          class="relative grow text-left"
+                          class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
                             class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base absolute w-full"
