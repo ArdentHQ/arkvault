@@ -10,8 +10,8 @@ import { useValidation } from "@/app/hooks";
 import { FeeField } from "@/domains/transaction/components/FeeField";
 import { FormStepProperties } from "@/domains/transaction/pages/SendRegistration/SendRegistration.contracts";
 import { StepHeader } from "@/app/components/StepHeader";
-import {ThemeIcon} from "@/app/components/Icon";
-import {TransactionAddresses} from "@/domains/transaction/components/TransactionDetail";
+import { ThemeIcon } from "@/app/components/Icon";
+import { TransactionAddresses } from "@/domains/transaction/components/TransactionDetail";
 
 const MINIMUM_PARTICIPANTS = 2;
 
@@ -65,7 +65,12 @@ export const FormStep = ({ profile, wallet }: FormStepProperties) => {
 
 			<div className="space-y-4 pt-5">
 				<FormField name="senderAddress">
-					<TransactionAddresses senderAddress={wallet.address()} network={wallet.network()} recipients={[]} profile={profile} />
+					<TransactionAddresses
+						senderAddress={wallet.address()}
+						network={wallet.network()}
+						recipients={[]}
+						profile={profile}
+					/>
 				</FormField>
 
 				<div>
