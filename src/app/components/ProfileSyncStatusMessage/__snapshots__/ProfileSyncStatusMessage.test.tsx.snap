@@ -36,7 +36,7 @@ exports[`SyncErrorMessage > should handle retry 1`] = `
       href="#/"
     >
       <span
-        class="css-170792"
+        class="css-1dlnsgk"
       >
         here
       </span>
@@ -82,7 +82,7 @@ exports[`SyncErrorMessage > should render multiple failed networks 1`] = `
       href="#/"
     >
       <span
-        class="css-170792"
+        class="css-1dlnsgk"
       >
         here
       </span>
@@ -111,7 +111,7 @@ exports[`SyncErrorMessage > should render one failed network 1`] = `
       href="#/"
     >
       <span
-        class="css-170792"
+        class="css-1dlnsgk"
       >
         here
       </span>
@@ -151,7 +151,7 @@ exports[`SyncErrorMessage > should render two failed networks 1`] = `
       href="#/"
     >
       <span
-        class="css-170792"
+        class="css-1dlnsgk"
       >
         here
       </span>

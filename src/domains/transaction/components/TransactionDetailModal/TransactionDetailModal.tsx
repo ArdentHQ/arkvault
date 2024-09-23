@@ -1,86 +1,118 @@
-import React, { useMemo } from "react";
+import React from "react";
+import { TransactionDetailModalProperties } from "./TransactionDetailModal.contracts";
+import { useTranslation } from "react-i18next";
 
-import { TransactionAliases, TransactionDetailModalProperties } from "./TransactionDetailModal.contracts";
-import { useWalletAlias, WalletAliasResult } from "@/app/hooks/use-wallet-alias";
-import { DelegateRegistrationDetail } from "@/domains/transaction/components/DelegateRegistrationDetail";
-import { DelegateResignationDetail } from "@/domains/transaction/components/DelegateResignationDetail";
-import { IpfsDetail } from "@/domains/transaction/components/IpfsDetail";
-import { LegacyMagistrateDetail } from "@/domains/transaction/components/LegacyMagistrateDetail";
-import { MultiPaymentDetail } from "@/domains/transaction/components/MultiPaymentDetail";
-import { MultiSignatureRegistrationDetail } from "@/domains/transaction/components/MultiSignatureDetail";
-import { SecondSignatureDetail } from "@/domains/transaction/components/SecondSignatureDetail";
-import { TransferDetail } from "@/domains/transaction/components/TransferDetail";
-import { UnlockTokenDetail } from "@/domains/transaction/components/UnlockTokenDetail";
-import { VoteDetail } from "@/domains/transaction/components/VoteDetail";
+import { Modal } from "@/app/components/Modal";
+import {
+	TransactionAddresses,
+	TransactionType,
+	TransactionSummary,
+	TransactionDetails,
+	TransactionConfirmations,
+} from "@/domains/transaction/components/TransactionDetail";
+import { TransactionId } from "@/domains/transaction/components/TransactionDetail/TransactionId";
+
+import { DetailLabel, DetailPadded, DetailsCondensed, DetailWrapper } from "@/app/components/DetailWrapper";
+import { useTransactionVotingWallets } from "@/domains/transaction/hooks/use-transaction-voting-wallets";
+import { VoteTransactionType } from "@/domains/transaction/components/VoteTransactionType";
+import { TransactionMusigParticipants } from "@/domains/transaction/components/TransactionDetail/TransactionMusigParticipants";
+import { useTransactionRecipients } from "@/domains/transaction/hooks/use-transaction-recipients";
+import cn from "classnames";
 
 export const TransactionDetailModal = ({
 	isOpen,
-	transactionItem,
+	transactionItem: transaction,
 	profile,
 	onClose,
 }: TransactionDetailModalProperties) => {
-	const { getWalletAlias } = useWalletAlias();
+	const { t } = useTranslation();
 
-	const aliases: TransactionAliases | undefined = useMemo(() => {
-		const sender = getWalletAlias({
-			address: transactionItem.sender(),
-			network: transactionItem.wallet().network(),
-			profile,
-		});
+	const isVoteTransaction = [transaction.isVote(), transaction.isVoteCombination(), transaction.isUnvote()].some(
+		Boolean,
+	);
+	const { votes, unvotes } = useTransactionVotingWallets({
+		network: transaction.wallet().network(),
+		profile,
+		transaction,
+	});
+	const { recipients } = useTransactionRecipients({ profile, transaction });
 
-		const recipients: WalletAliasResult[] = [];
+	const labelClassName = cn({
+		"min-w-24": !transaction.isVoteCombination(),
+		"min-w-32": transaction.isVoteCombination(),
+	});
 
-		if (transactionItem.isTransfer()) {
-			recipients.push(
-				getWalletAlias({
-					address: transactionItem.recipient(),
-					network: transactionItem.wallet().network(),
-					profile,
-				}),
-			);
-		}
+	return (
+		<Modal title={t("TRANSACTION.MODAL_TRANSACTION_DETAILS.TITLE")} isOpen={isOpen} onClose={onClose} noButtons>
+			<DetailsCondensed>
+				<div className="mt-4">
+					<TransactionId transaction={transaction} />
+				</div>
 
-		if (transactionItem.isMultiPayment()) {
-			for (const recipient of transactionItem.recipients()) {
-				recipients.push(
-					getWalletAlias({
-						address: recipient.address,
-						network: transactionItem.wallet().network(),
-						profile,
-					}),
-				);
-			}
-		}
+				<div className="mt-6 space-y-4">
+					<DetailPadded>
+						<TransactionAddresses
+							explorerLink={transaction.explorerLink()}
+							profile={profile}
+							senderAddress={transaction.sender()}
+							network={transaction.wallet().network()}
+							recipients={recipients.map(({ address, alias, isDelegate }) => ({
+								address,
+								alias,
+								isDelegate,
+							}))}
+							labelClassName={labelClassName}
+						/>
+					</DetailPadded>
 
-		return { recipients, sender };
-	}, [getWalletAlias, profile, transactionItem]);
+					<DetailPadded>
+						{!isVoteTransaction && <TransactionType transaction={transaction} />}
+						{isVoteTransaction && <VoteTransactionType votes={votes} unvotes={unvotes} />}
+					</DetailPadded>
 
-	const transactionsDetail = {
-		default: () => void 0,
-		delegateRegistration: () => DelegateRegistrationDetail,
-		delegateResignation: () => DelegateResignationDetail,
-		ipfs: () => IpfsDetail,
-		magistrate: () => LegacyMagistrateDetail,
-		multiPayment: () => MultiPaymentDetail,
-		multiSignature: () => MultiSignatureRegistrationDetail,
-		secondSignature: () => SecondSignatureDetail,
-		transfer: () => TransferDetail,
-		unlockToken: () => UnlockTokenDetail,
-		unvote: () => VoteDetail,
-		vote: () => VoteDetail,
-		voteCombination: () => VoteDetail,
-	};
+					<DetailPadded>
+						<TransactionSummary
+							labelClassName={labelClassName}
+							transaction={transaction}
+							senderWallet={transaction.wallet()}
+						/>
+					</DetailPadded>
 
-	const transactionType = transactionItem.type();
+					<DetailPadded>
+						<TransactionDetails transaction={transaction} labelClassName={labelClassName} />
+					</DetailPadded>
 
-	// eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
-	const TransactionModal = (
-		transactionsDetail[transactionType as keyof typeof transactionsDetail] || transactionsDetail.default
-	)();
+					{[!!transaction.memo(), transaction.isMultiPayment(), transaction.isTransfer()].some(Boolean) && (
+						<DetailPadded>
+							<DetailWrapper label={t("COMMON.MEMO_SMARTBRIDGE")}>
+								{transaction.memo() && <p>{transaction.memo()}</p>}
+								{!transaction.memo() && (
+									<p className="text-theme-secondary-500">{t("COMMON.NOT_AVAILABLE")}</p>
+								)}
+							</DetailWrapper>
+						</DetailPadded>
+					)}
 
-	if (!TransactionModal) {
-		throw new Error(`Transaction type [${transactionType}] is not supported.`);
-	}
+					<DetailPadded>
+						<DetailLabel>{t("TRANSACTION.CONFIRMATIONS")}</DetailLabel>
+						<div className="mt-2">
+							<TransactionConfirmations
+								isConfirmed={transaction.isConfirmed()}
+								confirmations={transaction.confirmations().toNumber()}
+							/>
+						</div>
+					</DetailPadded>
 
-	return <TransactionModal isOpen={isOpen} transaction={transactionItem} aliases={aliases} onClose={onClose} />;
+					{transaction.isMultiSignatureRegistration() && (
+						<DetailPadded>
+							<DetailLabel>{t("TRANSACTION.PARTICIPANTS")}</DetailLabel>
+							<div className="mt-2">
+								<TransactionMusigParticipants transaction={transaction} profile={profile} />
+							</div>
+						</DetailPadded>
+					)}
+				</div>
+			</DetailsCondensed>
+		</Modal>
+	);
 };
