@@ -243,7 +243,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
       data-testid="TransactionTable"
     >
       <div
-        class="md:with-x-padding css-1m6rt2i"
+        class="with-x-padding css-1m6rt2i"
         role="table"
       >
         <table
@@ -271,7 +271,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                 </div>
               </th>
               <th
-                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800  hidden xl:table-cell no-border first:rounded-tl-xl last:rounded-tr-xl"
+                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800  hidden lg:table-cell no-border first:rounded-tl-xl last:rounded-tr-xl"
                 colspan="1"
                 data-testid="table__th--1"
                 role="columnheader"
@@ -1749,7 +1749,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       To
                     </div>
                     <div
-                      class="w-40 md:w-50"
+                      class="w-40 lg:w-50"
                       data-testid="TransactionRowAddressing__address-container"
                     >
                       <div
@@ -1924,7 +1924,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       From
                     </div>
                     <div
-                      class="w-40 md:w-50"
+                      class="w-40 lg:w-50"
                       data-testid="TransactionRowAddressing__address-container"
                     >
                       <div
@@ -2099,7 +2099,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       To
                     </div>
                     <div
-                      class="w-40 md:w-50"
+                      class="w-40 lg:w-50"
                       data-testid="TransactionRowAddressing__address-container"
                     >
                       <div
@@ -2274,7 +2274,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       From
                     </div>
                     <div
-                      class="w-40 md:w-50"
+                      class="w-40 lg:w-50"
                       data-testid="TransactionRowAddressing__address-container"
                     >
                       <div
@@ -10447,7 +10447,7 @@ exports[`Transactions > should hide view more button when there are no next page
       data-testid="TransactionTable"
     >
       <div
-        class="md:with-x-padding css-1m6rt2i"
+        class="with-x-padding css-1m6rt2i"
         role="table"
       >
         <table
@@ -10475,7 +10475,7 @@ exports[`Transactions > should hide view more button when there are no next page
                 </div>
               </th>
               <th
-                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800  hidden xl:table-cell no-border first:rounded-tl-xl last:rounded-tr-xl"
+                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800  hidden lg:table-cell no-border first:rounded-tl-xl last:rounded-tr-xl"
                 colspan="1"
                 data-testid="table__th--1"
                 role="columnheader"
@@ -11345,7 +11345,7 @@ exports[`Transactions > should hide view more button when there are no next page
                       To
                     </div>
                     <div
-                      class="w-40 md:w-50"
+                      class="w-40 lg:w-50"
                       data-testid="TransactionRowAddressing__address-container"
                     >
                       <div
@@ -11520,7 +11520,7 @@ exports[`Transactions > should hide view more button when there are no next page
                       From
                     </div>
                     <div
-                      class="w-40 md:w-50"
+                      class="w-40 lg:w-50"
                       data-testid="TransactionRowAddressing__address-container"
                     >
                       <div
@@ -15781,7 +15781,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
       data-testid="TransactionTable"
     >
       <div
-        class="md:with-x-padding css-1m6rt2i"
+        class="with-x-padding css-1m6rt2i"
         role="table"
       >
         <table
@@ -15809,7 +15809,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                 </div>
               </th>
               <th
-                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800  hidden xl:table-cell no-border first:rounded-tl-xl last:rounded-tr-xl"
+                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800  hidden lg:table-cell no-border first:rounded-tl-xl last:rounded-tr-xl"
                 colspan="1"
                 data-testid="table__th--1"
                 role="columnheader"
@@ -16679,7 +16679,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                       To
                     </div>
                     <div
-                      class="w-40 md:w-50"
+                      class="w-40 lg:w-50"
                       data-testid="TransactionRowAddressing__address-container"
                     >
                       <div
@@ -16854,7 +16854,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                       From
                     </div>
                     <div
-                      class="w-40 md:w-50"
+                      class="w-40 lg:w-50"
                       data-testid="TransactionRowAddressing__address-container"
                     >
                       <div
