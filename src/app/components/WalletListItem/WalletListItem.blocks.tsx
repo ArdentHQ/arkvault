@@ -98,6 +98,7 @@ export const WalletCell: React.VFC<WalletCellProperties> = ({ wallet }) => {
 					walletName={alias}
 					walletNameClass="lg:hidden text-sm text-theme-text group-hover:text-theme-primary-700"
 					showCopyButton
+					wrapperClass="justify-between"
 				/>
 			</div>
 		</TableCell>
