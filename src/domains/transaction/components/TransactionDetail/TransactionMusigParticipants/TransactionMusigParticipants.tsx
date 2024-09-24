@@ -11,6 +11,28 @@ import { useTheme } from "@/app/hooks/use-theme";
 import { Clipboard } from "@/app/components/Clipboard";
 import { Icon } from "@/app/components/Icon";
 
+import { assertString } from "@/utils/assertions";
+import { RecipientItem } from "../../RecipientList/RecipientList.contracts";
+import { getMultiSignatureInfo } from "../../MultiSignatureDetail/MultiSignatureDetail.helpers";
+
+const addressFromPublicKey = async (wallet: Contracts.IReadWriteWallet, publicKey?: string) => {
+	if (publicKey === wallet.publicKey() && wallet.isLedger()) {
+		const derivationPath = wallet.data().get(Contracts.WalletData.DerivationPath);
+		assertString(derivationPath);
+
+		const ledgerWalletPublicKey = await wallet.ledger().getPublicKey(derivationPath);
+		const { address } = await wallet.coin().address().fromPublicKey(ledgerWalletPublicKey);
+
+		return address;
+	}
+
+	assertString(publicKey);
+
+	const { address } = await wallet.coin().address().fromPublicKey(publicKey);
+
+	return address;
+};
+
 export const TransactionMusigParticipants = ({
 	transaction,
 	profile,
@@ -24,21 +46,61 @@ export const TransactionMusigParticipants = ({
 	const { isDarkMode } = useTheme();
 
 	useEffect(() => {
+		// const fetchData = async () => {
+		// 	const wallets: Contracts.IReadWriteWallet[] = [];
+		//
+		// 	const { min, publicKeys } = getMultiSignatureInfo(transaction);
+		// 	// for (const publicKey of transaction.publicKeys()) {
+		// 	// 	try {
+		// 	// 		const network = transaction.wallet().network();
+		// 	// 		console.log({ network })
+		// 	// 	} catch (error) {
+		// 	// 		console.log({ error })
+		// 	// 	}
+		// 	// 	// const wallet = await profile.walletFactory().fromPublicKey({
+		// 	// 	// 	coin: network.coin(),
+		// 	// 	// 	network: network.id(),
+		// 	// 	// 	publicKey,
+		// 	// 	// });
+		// 	// 	//
+		// 	// 	// wallets.push(wallet);
+		// 	// }
+		//
+		// 	setParticipantWallets(wallets);
+		// };
+
 		const fetchData = async () => {
-			const wallets: Contracts.IReadWriteWallet[] = [];
-
-			for (const publicKey of transaction.publicKeys()) {
-				const network = transaction.wallet().network();
-				const wallet = await profile.walletFactory().fromPublicKey({
-					coin: network.coin(),
-					network: network.id(),
-					publicKey,
-				});
-
-				wallets.push(wallet);
+			if (!transaction) {
+				return;
 			}
 
-			setParticipantWallets(wallets);
+			const { min, publicKeys } = getMultiSignatureInfo(transaction);
+
+			try {
+				const { address } = await senderWallet
+					.coin()
+					.address()
+					.fromMultiSignature({ min, publicKeys, senderPublicKey: senderWallet.publicKey() });
+
+				// setGeneratedAddress(address);
+				/* istanbul ignore next -- @preserve */
+			} catch {
+				// We are using a coin that doesn't support multi-signature address derivation.
+				// TODO: AddressService#fromMultiSignature is not implemented for Lisk.
+			}
+
+			const addresses: RecipientItem[] = [];
+			for (const publicKey of publicKeys) {
+				const address = await addressFromPublicKey(senderWallet, publicKey);
+				assertString(address);
+				addresses.push({ address });
+			}
+
+			console.log({ addresses })
+
+			// setParticipantAddresses(addresses);
+			// setMinParticipants(min);
+			// setPublicKeys(publicKeys);
 		};
 
 		fetchData();

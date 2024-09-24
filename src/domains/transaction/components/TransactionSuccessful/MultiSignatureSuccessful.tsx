@@ -18,15 +18,24 @@ import {
 	TransactionType,
 	TransactionRecipients,
 	TransactionAmount,
+	TransactionAddresses,
+	TransactionSummary,
+	TransactionDetails,
+	TransactionMusigParticipants,
 } from "@/domains/transaction/components/TransactionDetail";
 import { ExtendedSignedTransactionData } from "@/domains/transaction/pages/SendRegistration/SendRegistration.contracts";
 import { assertString } from "@/utils/assertions";
 import { StepHeader } from "@/app/components/StepHeader";
 import { useBreakpoint } from "@/app/hooks";
+import { TransactionId } from "../TransactionDetail/TransactionId";
+import { DetailLabel, DetailPadded, DetailWrapper } from "@/app/components/DetailWrapper";
+import { useTransactionRecipients } from "../../hooks/use-transaction-recipients";
+import cn from "classnames";
+import { VoteTransactionType } from "../VoteTransactionType";
 
 interface TransactionSuccessfulProperties {
 	children?: React.ReactNode;
-	transaction?: ExtendedSignedTransactionData;
+	transaction: ExtendedSignedTransactionData;
 	senderWallet: Contracts.IReadWriteWallet;
 	title?: string;
 	description?: string;
@@ -105,114 +114,90 @@ export const MultiSignatureSuccessful = ({
 		fetchData();
 	}, [transaction, senderWallet]);
 
+	const isVoteTransaction = [transaction.isVote(), transaction.isVoteCombination(), transaction.isUnvote()].some(
+		Boolean,
+	);
+	// const { votes, unvotes } = useTransactionRecipients({
+	// 	network: transaction.wallet().network(),
+	// 	profile: senderWallet.profile(),
+	// 	transaction,
+	// });
+	const votes = []
+	const unvotes = []
+	// const { recipients } = useTransactionRecipients({ profile: senderWallet.profile(), transaction });
+
+	const labelClassName = cn({
+		"min-w-24": !transaction.isVoteCombination(),
+		"min-w-32": transaction.isVoteCombination(),
+	});
+
+
 	return (
 		<section data-testid="TransactionSuccessful" className="space-y-8">
-			<StepHeader title={title || t("TRANSACTION.SUCCESS.CREATED")} />
+			<StepHeader
+				title={t("TRANSACTION.SUCCESS.CREATED")}
+				titleIcon={
+					<Icon
+						dimensions={[24, 24]}
+						name="PendingTransaction"
+						data-testid="icon-PendingTransaction"
+						className="text-theme-primary-600"
+					/>
+				}
+			/>
 
-			<Image name={banner || "TransactionSignedBanner"} domain="transaction" className="hidden w-full md:block" />
+			<div className="mt-4">
+				<TransactionId transaction={transaction} />
+			</div>
 
-			<p className="hidden text-theme-secondary-text md:block">
-				{description || t("TRANSACTION.SUCCESS.MUSIG_DESCRIPTION")}
-			</p>
+			<div className="mt-6 space-y-4">
+				<DetailPadded>
+					<TransactionAddresses
+						explorerLink={transaction.explorerLink()}
+						profile={senderWallet.profile()}
+						senderAddress={transaction.sender()}
+						network={transaction.wallet().network()}
+						recipients={[]}
+						labelClassName={labelClassName}
+					/>
+				</DetailPadded>
 
-			<Alert variant="success" className="md:hidden">
-				{t("TRANSACTION.SUCCESS.MUSIG_DESCRIPTION")}
-			</Alert>
+				<DetailPadded>
+					{!isVoteTransaction && <TransactionType transaction={transaction} />}
+					{isVoteTransaction && <VoteTransactionType votes={votes} unvotes={unvotes} />}
+				</DetailPadded>
 
-			<div>
-				{senderWallet && transaction && (
-					<>
-						<TransactionExplorerLink
-							transaction={transaction}
-							border={false}
-							paddingPosition="bottom"
-							isDisabled
-						/>
+				<DetailPadded>
+					<TransactionSummary
+						labelClassName={labelClassName}
+						transaction={transaction}
+						senderWallet={transaction.wallet()}
+					/>
+				</DetailPadded>
 
-						<TransactionType transaction={transaction} />
+				<DetailPadded>
+					<TransactionDetails transaction={transaction} labelClassName={labelClassName} />
+				</DetailPadded>
 
-						<TransactionNetwork network={senderWallet.network()} />
-
-						{generatedAddress && (
-							<TransactionDetail
-								data-testid="TransactionSuccessful__musig-address"
-								label={
-									<div className="flex items-center space-x-2">
-										<span>{t("TRANSACTION.MULTISIGNATURE.GENERATED_ADDRESS")}</span>{" "}
-										<Icon name="Multisignature" />
-									</div>
-								}
-								extra={
-									<div className="flex items-center">
-										<Avatar address={generatedAddress} size={isXs || isSm ? "xs" : "lg"} />
-									</div>
-								}
-							>
-								<div className="flex grow items-center space-x-2 text-theme-primary-300 dark:text-theme-secondary-600">
-									<div className="w-0 flex-1 text-right md:text-left">
-										<Address address={generatedAddress} />
-									</div>
-									<Clipboard variant="icon" data={generatedAddress}>
-										<Icon name="Copy" />
-									</Clipboard>
-								</div>
-							</TransactionDetail>
-						)}
-
-						{transaction.isMultiSignatureRegistration() && (
-							<TransactionSender address={senderWallet.address()} network={senderWallet.network()} />
-						)}
-
-						{generatedAddress && !transaction.isMultiSignatureRegistration() && (
-							<TransactionSender address={generatedAddress} network={senderWallet.network()} />
-						)}
-
-						{!transaction.isMultiSignatureRegistration() && (
-							<TransactionRecipients
-								label={t("TRANSACTION.RECIPIENTS_COUNT", {
-									count: transaction.recipients().length,
-								})}
-								recipients={transaction.recipients()}
-								currency={senderWallet.currency()}
-							/>
-						)}
-
-						<TransactionRecipients
-							label={t("TRANSACTION.MULTISIGNATURE.PARTICIPANTS_COUNT", {
-								count: participantAddresses.length,
-							})}
-							recipients={participantAddresses}
-							currency={senderWallet.currency()}
-						/>
-
-						{publicKeys?.length && (
-							<TransactionDetail label={t("TRANSACTION.MULTISIGNATURE.MIN_SIGNATURES")}>
-								<div className="whitespace-nowrap">
-									<span>{minParticipants} </span>
-									<span
-										data-testid="MultiSignatureSuccessful__publicKeys"
-										className="whitespace text-theme-secondary-700"
-									>
-										{t("TRANSACTION.MULTISIGNATURE.OUT_OF_LENGTH", {
-											length: publicKeys.length,
-										})}
-									</span>
-								</div>
-							</TransactionDetail>
-						)}
-
-						{transaction.amount() > 0 && (
-							<TransactionAmount
-								amount={transaction.amount()}
-								currency={senderWallet.currency()}
-								isTotalAmount={transaction.recipients().length > 1}
-								isSent={true}
-							/>
-						)}
-					</>
+				{[!!transaction.memo(), transaction.isMultiPayment(), transaction.isTransfer()].some(Boolean) && (
+					<DetailPadded>
+						<DetailWrapper label={t("COMMON.MEMO_SMARTBRIDGE")}>
+							{transaction.memo() && <p>{transaction.memo()}</p>}
+							{!transaction.memo() && (
+								<p className="text-theme-secondary-500">{t("COMMON.NOT_AVAILABLE")}</p>
+							)}
+						</DetailWrapper>
+					</DetailPadded>
 				)}
 
-				{children}
+				{transaction.isMultiSignatureRegistration() && (
+					<DetailPadded>
+						<DetailLabel>{t("TRANSACTION.PARTICIPANTS")}</DetailLabel>
+						<div className="mt-2">
+							<TransactionMusigParticipants transaction={transaction} profile={senderWallet.profile()} />
+						</div>
+					</DetailPadded>
+				)}
 			</div>
 		</section>
 	);
