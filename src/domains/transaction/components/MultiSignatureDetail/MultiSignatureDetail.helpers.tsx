@@ -1,4 +1,5 @@
-import { DTO } from "@ardenthq/sdk-profiles";
+import { DTO as DTOProfiles, Contracts } from "@ardenthq/sdk-profiles";
+import { DTO } from "@ardenthq/sdk";
 import React from "react";
 import { useTranslation } from "react-i18next";
 
@@ -102,7 +103,7 @@ export const Paginator = ({
 	return <></>;
 };
 
-export const getMultiSignatureInfo = (transaction: DTO.ExtendedSignedTransactionData) => {
+export const getMultiSignatureInfo = (transaction: DTOProfiles.ExtendedSignedTransactionData) => {
 	const { min, publicKeys, mandatoryKeys, numberOfSignatures } = transaction.get<{
 		mandatoryKeys: string[];
 		publicKeys: string[];
@@ -115,3 +116,35 @@ export const getMultiSignatureInfo = (transaction: DTO.ExtendedSignedTransaction
 		publicKeys: publicKeys || mandatoryKeys,
 	};
 };
+
+export const getMusigParticipantWallets = async (profile: Contracts.IProfile, transaction: DTO.RawTransactionData) => {
+	let publicKeys: string[] = []
+
+	if (!transaction) {
+		return []
+	}
+
+	if (transaction.publicKeys()) {
+		publicKeys = transaction.publicKeys()
+	}
+
+	publicKeys = getMultiSignatureInfo(transaction).publicKeys
+
+	const wallets: Contracts.IReadWriteWallet[] = [];
+
+	for (const publicKey of publicKeys) {
+		const network = transaction.wallet().network();
+
+		const wallet = await profile.walletFactory().fromPublicKey({
+			coin: network.coin(),
+			network: network.id(),
+			publicKey,
+		});
+
+		wallets.push(wallet);
+	}
+
+	return wallets;
+
+}
+

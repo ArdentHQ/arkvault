@@ -12,8 +12,7 @@ import { Clipboard } from "@/app/components/Clipboard";
 import { Icon } from "@/app/components/Icon";
 
 import { assertString } from "@/utils/assertions";
-import { RecipientItem } from "../../RecipientList/RecipientList.contracts";
-import { getMultiSignatureInfo } from "../../MultiSignatureDetail/MultiSignatureDetail.helpers";
+import { getMusigParticipantWallets, getMusigPublicKeys } from "@/domains/transaction/components/MultiSignatureDetail/MultiSignatureDetail.helpers";
 
 const addressFromPublicKey = async (wallet: Contracts.IReadWriteWallet, publicKey?: string) => {
 	if (publicKey === wallet.publicKey() && wallet.isLedger()) {
@@ -41,66 +40,16 @@ export const TransactionMusigParticipants = ({
 	transaction: DTO.RawTransactionData;
 }) => {
 	const { t } = useTranslation();
+
 	const [participantWallets, setParticipantWallets] = useState<Contracts.IReadWriteWallet[]>([]);
+
 	const { width } = useResizeDetector<HTMLElement>({ handleHeight: false });
 	const { isDarkMode } = useTheme();
 
 	useEffect(() => {
-		// const fetchData = async () => {
-		// 	const wallets: Contracts.IReadWriteWallet[] = [];
-		//
-		// 	const { min, publicKeys } = getMultiSignatureInfo(transaction);
-		// 	// for (const publicKey of transaction.publicKeys()) {
-		// 	// 	try {
-		// 	// 		const network = transaction.wallet().network();
-		// 	// 		console.log({ network })
-		// 	// 	} catch (error) {
-		// 	// 		console.log({ error })
-		// 	// 	}
-		// 	// 	// const wallet = await profile.walletFactory().fromPublicKey({
-		// 	// 	// 	coin: network.coin(),
-		// 	// 	// 	network: network.id(),
-		// 	// 	// 	publicKey,
-		// 	// 	// });
-		// 	// 	//
-		// 	// 	// wallets.push(wallet);
-		// 	// }
-		//
-		// 	setParticipantWallets(wallets);
-		// };
-
-		const fetchData = async () => {
-			if (!transaction) {
-				return;
-			}
-
-			const { min, publicKeys } = getMultiSignatureInfo(transaction);
-
-			try {
-				const { address } = await senderWallet
-					.coin()
-					.address()
-					.fromMultiSignature({ min, publicKeys, senderPublicKey: senderWallet.publicKey() });
-
-				// setGeneratedAddress(address);
-				/* istanbul ignore next -- @preserve */
-			} catch {
-				// We are using a coin that doesn't support multi-signature address derivation.
-				// TODO: AddressService#fromMultiSignature is not implemented for Lisk.
-			}
-
-			const addresses: RecipientItem[] = [];
-			for (const publicKey of publicKeys) {
-				const address = await addressFromPublicKey(senderWallet, publicKey);
-				assertString(address);
-				addresses.push({ address });
-			}
-
-			console.log({ addresses })
-
-			// setParticipantAddresses(addresses);
-			// setMinParticipants(min);
-			// setPublicKeys(publicKeys);
+		const constructParticipantWallets = async () => {
+			const wallets = await getMusigParticipantWallets(profile, transaction);
+			setParticipantWallets(wallets);
 		};
 
 		fetchData();
