@@ -68,12 +68,14 @@ const OptionLabel = ({
 
 	return (
 		<div className="flex items-center space-x-2 whitespace-nowrap">
-			<Address
-				address={address}
-				walletName={alias}
-				addressClass={cn({ "text-theme-primary-600": !alias && option.isSelected })}
-				walletNameClass={cn({ "text-theme-primary-600": option.isSelected })}
-			/>
+			<div>
+				<Address
+					address={address}
+					walletName={alias}
+					addressClass={cn({ "text-theme-primary-600": !alias && option.isSelected })}
+					walletNameClass={cn({ "text-theme-primary-600": option.isSelected })}
+				/>
+			</div>
 		</div>
 	);
 };
