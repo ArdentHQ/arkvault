@@ -99,7 +99,7 @@ exports[`TransactionRow > should omit the currency for transactions from test ne
                   class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                 >
                   <div
-                    class="relative grow text-left"
+                    class="relative grow leading-[17px] sm:leading-5 text-left"
                   >
                     <span
                       class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
@@ -283,7 +283,7 @@ exports[`TransactionRow > should render 1`] = `
                     </span>
                   </span>
                   <div
-                    class="relative grow text-left"
+                    class="relative grow leading-[17px] sm:leading-5 text-left"
                   >
                     <span
                       class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold text-sm absolute w-full"
@@ -452,7 +452,7 @@ exports[`TransactionRow > should render responsive 1`] = `
                           </span>
                         </span>
                         <div
-                          class="relative grow text-left"
+                          class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
                             class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold text-sm absolute w-full"
@@ -621,7 +621,7 @@ exports[`TransactionRow > should render responsive 2`] = `
                           </span>
                         </span>
                         <div
-                          class="relative grow text-left"
+                          class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
                             class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold text-sm absolute w-full"
@@ -947,7 +947,7 @@ exports[`TransactionRow > should render with currency 1`] = `
                   class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                 >
                   <div
-                    class="relative grow text-left"
+                    class="relative grow leading-[17px] sm:leading-5 text-left"
                   >
                     <span
                       class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"

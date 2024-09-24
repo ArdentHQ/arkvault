@@ -3112,7 +3112,7 @@ exports[`TransactionTable > should render compact 1`] = `
                       class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                     >
                       <div
-                        class="relative grow text-left"
+                        class="relative grow leading-[17px] sm:leading-5 text-left"
                       >
                         <span
                           class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
@@ -3287,7 +3287,7 @@ exports[`TransactionTable > should render compact 1`] = `
                         </span>
                       </span>
                       <div
-                        class="relative grow text-left"
+                        class="relative grow leading-[17px] sm:leading-5 text-left"
                       >
                         <span
                           class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold text-sm absolute w-full"
@@ -3451,7 +3451,7 @@ exports[`TransactionTable > should render compact 1`] = `
                       class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                     >
                       <div
-                        class="relative grow text-left"
+                        class="relative grow leading-[17px] sm:leading-5 text-left"
                       >
                         <span
                           class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
@@ -3615,7 +3615,7 @@ exports[`TransactionTable > should render compact 1`] = `
                       class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                     >
                       <div
-                        class="relative grow text-left"
+                        class="relative grow leading-[17px] sm:leading-5 text-left"
                       >
                         <span
                           class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
@@ -3779,7 +3779,7 @@ exports[`TransactionTable > should render compact 1`] = `
                       class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                     >
                       <div
-                        class="relative grow text-left"
+                        class="relative grow leading-[17px] sm:leading-5 text-left"
                       >
                         <span
                           class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
@@ -3943,7 +3943,7 @@ exports[`TransactionTable > should render compact 1`] = `
                       class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                     >
                       <div
-                        class="relative grow text-left"
+                        class="relative grow leading-[17px] sm:leading-5 text-left"
                       >
                         <span
                           class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
@@ -4107,7 +4107,7 @@ exports[`TransactionTable > should render compact 1`] = `
                       class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                     >
                       <div
-                        class="relative grow text-left"
+                        class="relative grow leading-[17px] sm:leading-5 text-left"
                       >
                         <span
                           class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
@@ -4271,7 +4271,7 @@ exports[`TransactionTable > should render compact 1`] = `
                       class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                     >
                       <div
-                        class="relative grow text-left"
+                        class="relative grow leading-[17px] sm:leading-5 text-left"
                       >
                         <span
                           class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
@@ -4435,7 +4435,7 @@ exports[`TransactionTable > should render compact 1`] = `
                       class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                     >
                       <div
-                        class="relative grow text-left"
+                        class="relative grow leading-[17px] sm:leading-5 text-left"
                       >
                         <span
                           class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
@@ -4610,7 +4610,7 @@ exports[`TransactionTable > should render compact 1`] = `
                         </span>
                       </span>
                       <div
-                        class="relative grow text-left"
+                        class="relative grow leading-[17px] sm:leading-5 text-left"
                       >
                         <span
                           class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold text-sm absolute w-full"
@@ -4783,7 +4783,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                             class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
                             <div
-                              class="relative grow text-left"
+                              class="relative grow leading-[17px] sm:leading-5 text-left"
                             >
                               <span
                                 class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
@@ -4943,7 +4943,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                               </span>
                             </span>
                             <div
-                              class="relative grow text-left"
+                              class="relative grow leading-[17px] sm:leading-5 text-left"
                             >
                               <span
                                 class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold text-sm absolute w-full"
@@ -5092,7 +5092,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                             class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
                             <div
-                              class="relative grow text-left"
+                              class="relative grow leading-[17px] sm:leading-5 text-left"
                             >
                               <span
                                 class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
@@ -5241,7 +5241,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                             class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
                             <div
-                              class="relative grow text-left"
+                              class="relative grow leading-[17px] sm:leading-5 text-left"
                             >
                               <span
                                 class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
@@ -5390,7 +5390,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                             class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
                             <div
-                              class="relative grow text-left"
+                              class="relative grow leading-[17px] sm:leading-5 text-left"
                             >
                               <span
                                 class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
@@ -5539,7 +5539,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                             class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
                             <div
-                              class="relative grow text-left"
+                              class="relative grow leading-[17px] sm:leading-5 text-left"
                             >
                               <span
                                 class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
@@ -5688,7 +5688,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                             class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
                             <div
-                              class="relative grow text-left"
+                              class="relative grow leading-[17px] sm:leading-5 text-left"
                             >
                               <span
                                 class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
@@ -5837,7 +5837,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                             class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
                             <div
-                              class="relative grow text-left"
+                              class="relative grow leading-[17px] sm:leading-5 text-left"
                             >
                               <span
                                 class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
@@ -5986,7 +5986,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                             class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
                             <div
-                              class="relative grow text-left"
+                              class="relative grow leading-[17px] sm:leading-5 text-left"
                             >
                               <span
                                 class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
@@ -6146,7 +6146,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                               </span>
                             </span>
                             <div
-                              class="relative grow text-left"
+                              class="relative grow leading-[17px] sm:leading-5 text-left"
                             >
                               <span
                                 class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold text-sm absolute w-full"
@@ -6319,7 +6319,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                             class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
                             <div
-                              class="relative grow text-left"
+                              class="relative grow leading-[17px] sm:leading-5 text-left"
                             >
                               <span
                                 class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
@@ -6479,7 +6479,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                               </span>
                             </span>
                             <div
-                              class="relative grow text-left"
+                              class="relative grow leading-[17px] sm:leading-5 text-left"
                             >
                               <span
                                 class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold text-sm absolute w-full"
@@ -6628,7 +6628,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                             class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
                             <div
-                              class="relative grow text-left"
+                              class="relative grow leading-[17px] sm:leading-5 text-left"
                             >
                               <span
                                 class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
@@ -6777,7 +6777,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                             class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
                             <div
-                              class="relative grow text-left"
+                              class="relative grow leading-[17px] sm:leading-5 text-left"
                             >
                               <span
                                 class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
@@ -6926,7 +6926,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                             class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
                             <div
-                              class="relative grow text-left"
+                              class="relative grow leading-[17px] sm:leading-5 text-left"
                             >
                               <span
                                 class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
@@ -7075,7 +7075,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                             class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
                             <div
-                              class="relative grow text-left"
+                              class="relative grow leading-[17px] sm:leading-5 text-left"
                             >
                               <span
                                 class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
@@ -7224,7 +7224,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                             class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
                             <div
-                              class="relative grow text-left"
+                              class="relative grow leading-[17px] sm:leading-5 text-left"
                             >
                               <span
                                 class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
@@ -7373,7 +7373,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                             class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
                             <div
-                              class="relative grow text-left"
+                              class="relative grow leading-[17px] sm:leading-5 text-left"
                             >
                               <span
                                 class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
@@ -7522,7 +7522,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                             class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
                             <div
-                              class="relative grow text-left"
+                              class="relative grow leading-[17px] sm:leading-5 text-left"
                             >
                               <span
                                 class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
@@ -7682,7 +7682,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                               </span>
                             </span>
                             <div
-                              class="relative grow text-left"
+                              class="relative grow leading-[17px] sm:leading-5 text-left"
                             >
                               <span
                                 class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold text-sm absolute w-full"
@@ -8062,7 +8062,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                       class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                     >
                       <div
-                        class="relative grow text-left"
+                        class="relative grow leading-[17px] sm:leading-5 text-left"
                       >
                         <span
                           class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
@@ -8237,7 +8237,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                         </span>
                       </span>
                       <div
-                        class="relative grow text-left"
+                        class="relative grow leading-[17px] sm:leading-5 text-left"
                       >
                         <span
                           class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold text-sm absolute w-full"
@@ -8401,7 +8401,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                       class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                     >
                       <div
-                        class="relative grow text-left"
+                        class="relative grow leading-[17px] sm:leading-5 text-left"
                       >
                         <span
                           class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
@@ -8565,7 +8565,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                       class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                     >
                       <div
-                        class="relative grow text-left"
+                        class="relative grow leading-[17px] sm:leading-5 text-left"
                       >
                         <span
                           class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
@@ -8729,7 +8729,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                       class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                     >
                       <div
-                        class="relative grow text-left"
+                        class="relative grow leading-[17px] sm:leading-5 text-left"
                       >
                         <span
                           class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
@@ -8893,7 +8893,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                       class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                     >
                       <div
-                        class="relative grow text-left"
+                        class="relative grow leading-[17px] sm:leading-5 text-left"
                       >
                         <span
                           class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
@@ -9057,7 +9057,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                       class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                     >
                       <div
-                        class="relative grow text-left"
+                        class="relative grow leading-[17px] sm:leading-5 text-left"
                       >
                         <span
                           class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
@@ -9221,7 +9221,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                       class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                     >
                       <div
-                        class="relative grow text-left"
+                        class="relative grow leading-[17px] sm:leading-5 text-left"
                       >
                         <span
                           class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
@@ -9385,7 +9385,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                       class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                     >
                       <div
-                        class="relative grow text-left"
+                        class="relative grow leading-[17px] sm:leading-5 text-left"
                       >
                         <span
                           class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
@@ -9560,7 +9560,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                         </span>
                       </span>
                       <div
-                        class="relative grow text-left"
+                        class="relative grow leading-[17px] sm:leading-5 text-left"
                       >
                         <span
                           class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold text-sm absolute w-full"
@@ -9940,7 +9940,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                       class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                     >
                       <div
-                        class="relative grow text-left"
+                        class="relative grow leading-[17px] sm:leading-5 text-left"
                       >
                         <span
                           class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
@@ -10115,7 +10115,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                         </span>
                       </span>
                       <div
-                        class="relative grow text-left"
+                        class="relative grow leading-[17px] sm:leading-5 text-left"
                       >
                         <span
                           class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold text-sm absolute w-full"
@@ -10279,7 +10279,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                       class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                     >
                       <div
-                        class="relative grow text-left"
+                        class="relative grow leading-[17px] sm:leading-5 text-left"
                       >
                         <span
                           class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
@@ -10443,7 +10443,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                       class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                     >
                       <div
-                        class="relative grow text-left"
+                        class="relative grow leading-[17px] sm:leading-5 text-left"
                       >
                         <span
                           class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
@@ -10607,7 +10607,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                       class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                     >
                       <div
-                        class="relative grow text-left"
+                        class="relative grow leading-[17px] sm:leading-5 text-left"
                       >
                         <span
                           class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
@@ -10771,7 +10771,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                       class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                     >
                       <div
-                        class="relative grow text-left"
+                        class="relative grow leading-[17px] sm:leading-5 text-left"
                       >
                         <span
                           class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
@@ -10935,7 +10935,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                       class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                     >
                       <div
-                        class="relative grow text-left"
+                        class="relative grow leading-[17px] sm:leading-5 text-left"
                       >
                         <span
                           class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
@@ -11099,7 +11099,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                       class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                     >
                       <div
-                        class="relative grow text-left"
+                        class="relative grow leading-[17px] sm:leading-5 text-left"
                       >
                         <span
                           class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
@@ -11263,7 +11263,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                       class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                     >
                       <div
-                        class="relative grow text-left"
+                        class="relative grow leading-[17px] sm:leading-5 text-left"
                       >
                         <span
                           class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
@@ -11438,7 +11438,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                         </span>
                       </span>
                       <div
-                        class="relative grow text-left"
+                        class="relative grow leading-[17px] sm:leading-5 text-left"
                       >
                         <span
                           class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold text-sm absolute w-full"
@@ -11818,7 +11818,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                       class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                     >
                       <div
-                        class="relative grow text-left"
+                        class="relative grow leading-[17px] sm:leading-5 text-left"
                       >
                         <span
                           class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
@@ -11993,7 +11993,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                         </span>
                       </span>
                       <div
-                        class="relative grow text-left"
+                        class="relative grow leading-[17px] sm:leading-5 text-left"
                       >
                         <span
                           class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold text-sm absolute w-full"
@@ -12157,7 +12157,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                       class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                     >
                       <div
-                        class="relative grow text-left"
+                        class="relative grow leading-[17px] sm:leading-5 text-left"
                       >
                         <span
                           class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
@@ -12321,7 +12321,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                       class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                     >
                       <div
-                        class="relative grow text-left"
+                        class="relative grow leading-[17px] sm:leading-5 text-left"
                       >
                         <span
                           class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
@@ -12485,7 +12485,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                       class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                     >
                       <div
-                        class="relative grow text-left"
+                        class="relative grow leading-[17px] sm:leading-5 text-left"
                       >
                         <span
                           class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
@@ -12649,7 +12649,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                       class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                     >
                       <div
-                        class="relative grow text-left"
+                        class="relative grow leading-[17px] sm:leading-5 text-left"
                       >
                         <span
                           class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
@@ -12813,7 +12813,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                       class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                     >
                       <div
-                        class="relative grow text-left"
+                        class="relative grow leading-[17px] sm:leading-5 text-left"
                       >
                         <span
                           class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
@@ -12977,7 +12977,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                       class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                     >
                       <div
-                        class="relative grow text-left"
+                        class="relative grow leading-[17px] sm:leading-5 text-left"
                       >
                         <span
                           class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
@@ -13141,7 +13141,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                       class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                     >
                       <div
-                        class="relative grow text-left"
+                        class="relative grow leading-[17px] sm:leading-5 text-left"
                       >
                         <span
                           class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
@@ -13316,7 +13316,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                         </span>
                       </span>
                       <div
-                        class="relative grow text-left"
+                        class="relative grow leading-[17px] sm:leading-5 text-left"
                       >
                         <span
                           class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold text-sm absolute w-full"

@@ -100,7 +100,7 @@ exports[`UpdateContact > should render responsive 1`] = `
                   </div>
                 </fieldset>
                 <div
-                  class="!-mx-4 !mt-4 !p-4 css-1t71j9b"
+                  class="!-mx-4 !mt-4 !p-4 css-1mwq138"
                 >
                   <fieldset
                     class="flex min-w-0 flex-col css-1bcidjh"
@@ -336,7 +336,7 @@ exports[`UpdateContact > should render responsive 1`] = `
                                 class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                               >
                                 <span
-                                  class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] sm:text-base sm:leading-[20px] font-semibold text-base"
+                                  class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] sm:text-base sm:leading-5 font-semibold text-base"
                                   data-testid="Address__address"
                                 >
                                   D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib
@@ -346,7 +346,7 @@ exports[`UpdateContact > should render responsive 1`] = `
                           </div>
                         </div>
                         <button
-                          class="p-3 relative inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 disabled:cursor-not-allowed rounded bg-theme-danger-100 text-theme-danger-400 dark:bg-theme-danger-400 dark:text-white hover:bg-theme-danger-400 hover:text-white dark:hover:bg-theme-danger-500 focus:ring-theme-danger-300 !hidden items-center !p-3.5 sm:!flex"
+                          class="relative justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 disabled:cursor-not-allowed rounded bg-theme-danger-100 text-theme-danger-400 dark:bg-theme-danger-400 dark:text-white hover:bg-theme-danger-400 hover:text-white dark:hover:bg-theme-danger-500 focus:ring-theme-danger-300 hidden items-center p-3.5 sm:flex"
                           data-testid="contact-form__remove-address-btn"
                           type="button"
                         >
@@ -525,7 +525,7 @@ exports[`UpdateContact > should render responsive 2`] = `
                   </div>
                 </fieldset>
                 <div
-                  class="!-mx-4 !mt-4 !p-4 css-1t71j9b"
+                  class="!-mx-4 !mt-4 !p-4 css-1mwq138"
                 >
                   <fieldset
                     class="flex min-w-0 flex-col css-1bcidjh"
@@ -761,7 +761,7 @@ exports[`UpdateContact > should render responsive 2`] = `
                                 class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                               >
                                 <span
-                                  class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] sm:text-base sm:leading-[20px] font-semibold text-base"
+                                  class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] sm:text-base sm:leading-5 font-semibold text-base"
                                   data-testid="Address__address"
                                 >
                                   D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib
@@ -771,7 +771,7 @@ exports[`UpdateContact > should render responsive 2`] = `
                           </div>
                         </div>
                         <button
-                          class="p-3 relative inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 disabled:cursor-not-allowed rounded bg-theme-danger-100 text-theme-danger-400 dark:bg-theme-danger-400 dark:text-white hover:bg-theme-danger-400 hover:text-white dark:hover:bg-theme-danger-500 focus:ring-theme-danger-300 !hidden items-center !p-3.5 sm:!flex"
+                          class="relative justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 disabled:cursor-not-allowed rounded bg-theme-danger-100 text-theme-danger-400 dark:bg-theme-danger-400 dark:text-white hover:bg-theme-danger-400 hover:text-white dark:hover:bg-theme-danger-500 focus:ring-theme-danger-300 hidden items-center p-3.5 sm:flex"
                           data-testid="contact-form__remove-address-btn"
                           type="button"
                         >
@@ -994,7 +994,7 @@ exports[`UpdateContact > should render responsive 3`] = `
                   </div>
                 </fieldset>
                 <div
-                  class="!-mx-4 !mt-4 !p-4 css-1t71j9b"
+                  class="!-mx-4 !mt-4 !p-4 css-1mwq138"
                 >
                   <fieldset
                     class="flex min-w-0 flex-col css-1bcidjh"
@@ -1230,7 +1230,7 @@ exports[`UpdateContact > should render responsive 3`] = `
                                 class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                               >
                                 <span
-                                  class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] sm:text-base sm:leading-[20px] font-semibold text-base"
+                                  class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] sm:text-base sm:leading-5 font-semibold text-base"
                                   data-testid="Address__address"
                                 >
                                   D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib
@@ -1240,7 +1240,7 @@ exports[`UpdateContact > should render responsive 3`] = `
                           </div>
                         </div>
                         <button
-                          class="p-3 relative inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 disabled:cursor-not-allowed rounded bg-theme-danger-100 text-theme-danger-400 dark:bg-theme-danger-400 dark:text-white hover:bg-theme-danger-400 hover:text-white dark:hover:bg-theme-danger-500 focus:ring-theme-danger-300 !hidden items-center !p-3.5 sm:!flex"
+                          class="relative justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 disabled:cursor-not-allowed rounded bg-theme-danger-100 text-theme-danger-400 dark:bg-theme-danger-400 dark:text-white hover:bg-theme-danger-400 hover:text-white dark:hover:bg-theme-danger-500 focus:ring-theme-danger-300 hidden items-center p-3.5 sm:flex"
                           data-testid="contact-form__remove-address-btn"
                           type="button"
                         >

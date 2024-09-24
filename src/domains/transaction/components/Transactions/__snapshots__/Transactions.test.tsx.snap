@@ -1767,7 +1767,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           </span>
                         </span>
                         <div
-                          class="relative grow text-left"
+                          class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
                             class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold text-sm absolute w-full"
@@ -1942,7 +1942,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           </span>
                         </span>
                         <div
-                          class="relative grow text-left"
+                          class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
                             class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold text-sm absolute w-full"
@@ -2117,7 +2117,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           </span>
                         </span>
                         <div
-                          class="relative grow text-left"
+                          class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
                             class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold text-sm absolute w-full"
@@ -2292,7 +2292,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           </span>
                         </span>
                         <div
-                          class="relative grow text-left"
+                          class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
                             class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold text-sm absolute w-full"
@@ -2456,7 +2456,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <div
-                          class="relative grow text-left"
+                          class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
                             class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
@@ -2620,7 +2620,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <div
-                          class="relative grow text-left"
+                          class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
                             class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
@@ -2784,7 +2784,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <div
-                          class="relative grow text-left"
+                          class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
                             class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
@@ -2948,7 +2948,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <div
-                          class="relative grow text-left"
+                          class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
                             class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
@@ -3112,7 +3112,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <div
-                          class="relative grow text-left"
+                          class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
                             class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
@@ -3276,7 +3276,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <div
-                          class="relative grow text-left"
+                          class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
                             class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
@@ -3440,7 +3440,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <div
-                          class="relative grow text-left"
+                          class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
                             class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
@@ -3604,7 +3604,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <div
-                          class="relative grow text-left"
+                          class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
                             class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
@@ -3768,7 +3768,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <div
-                          class="relative grow text-left"
+                          class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
                             class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
@@ -3932,7 +3932,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <div
-                          class="relative grow text-left"
+                          class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
                             class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
@@ -4096,7 +4096,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <div
-                          class="relative grow text-left"
+                          class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
                             class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
@@ -4260,7 +4260,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <div
-                          class="relative grow text-left"
+                          class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
                             class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
@@ -4424,7 +4424,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <div
-                          class="relative grow text-left"
+                          class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
                             class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
@@ -4588,7 +4588,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <div
-                          class="relative grow text-left"
+                          class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
                             class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
@@ -4752,7 +4752,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <div
-                          class="relative grow text-left"
+                          class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
                             class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
@@ -4916,7 +4916,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <div
-                          class="relative grow text-left"
+                          class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
                             class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
@@ -5080,7 +5080,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <div
-                          class="relative grow text-left"
+                          class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
                             class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
@@ -5244,7 +5244,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <div
-                          class="relative grow text-left"
+                          class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
                             class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
@@ -5408,7 +5408,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <div
-                          class="relative grow text-left"
+                          class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
                             class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
@@ -5572,7 +5572,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <div
-                          class="relative grow text-left"
+                          class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
                             class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
@@ -5736,7 +5736,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <div
-                          class="relative grow text-left"
+                          class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
                             class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
@@ -5900,7 +5900,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <div
-                          class="relative grow text-left"
+                          class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
                             class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
@@ -6064,7 +6064,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <div
-                          class="relative grow text-left"
+                          class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
                             class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
@@ -6228,7 +6228,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <div
-                          class="relative grow text-left"
+                          class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
                             class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
@@ -6392,7 +6392,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <div
-                          class="relative grow text-left"
+                          class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
                             class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
@@ -6556,7 +6556,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <div
-                          class="relative grow text-left"
+                          class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
                             class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
@@ -6720,7 +6720,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <div
-                          class="relative grow text-left"
+                          class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
                             class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
@@ -6884,7 +6884,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <div
-                          class="relative grow text-left"
+                          class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
                             class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
@@ -7048,7 +7048,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <div
-                          class="relative grow text-left"
+                          class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
                             class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
@@ -7212,7 +7212,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <div
-                          class="relative grow text-left"
+                          class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
                             class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
@@ -7376,7 +7376,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <div
-                          class="relative grow text-left"
+                          class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
                             class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
@@ -7540,7 +7540,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <div
-                          class="relative grow text-left"
+                          class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
                             class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
@@ -7704,7 +7704,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <div
-                          class="relative grow text-left"
+                          class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
                             class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
@@ -7868,7 +7868,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <div
-                          class="relative grow text-left"
+                          class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
                             class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
@@ -8032,7 +8032,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <div
-                          class="relative grow text-left"
+                          class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
                             class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
@@ -8196,7 +8196,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <div
-                          class="relative grow text-left"
+                          class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
                             class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
@@ -8360,7 +8360,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <div
-                          class="relative grow text-left"
+                          class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
                             class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
@@ -8524,7 +8524,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <div
-                          class="relative grow text-left"
+                          class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
                             class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
@@ -8688,7 +8688,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <div
-                          class="relative grow text-left"
+                          class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
                             class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
@@ -8852,7 +8852,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <div
-                          class="relative grow text-left"
+                          class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
                             class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
@@ -9624,7 +9624,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <div
-                          class="relative grow text-left"
+                          class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
                             class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
@@ -9788,7 +9788,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <div
-                          class="relative grow text-left"
+                          class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
                             class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
@@ -9952,7 +9952,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <div
-                          class="relative grow text-left"
+                          class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
                             class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
@@ -10116,7 +10116,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <div
-                          class="relative grow text-left"
+                          class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
                             class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
@@ -11363,7 +11363,7 @@ exports[`Transactions > should hide view more button when there are no next page
                           </span>
                         </span>
                         <div
-                          class="relative grow text-left"
+                          class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
                             class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold text-sm absolute w-full"
@@ -11538,7 +11538,7 @@ exports[`Transactions > should hide view more button when there are no next page
                           </span>
                         </span>
                         <div
-                          class="relative grow text-left"
+                          class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
                             class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold text-sm absolute w-full"
@@ -11702,7 +11702,7 @@ exports[`Transactions > should hide view more button when there are no next page
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <div
-                          class="relative grow text-left"
+                          class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
                             class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
@@ -11866,7 +11866,7 @@ exports[`Transactions > should hide view more button when there are no next page
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <div
-                          class="relative grow text-left"
+                          class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
                             class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
@@ -12030,7 +12030,7 @@ exports[`Transactions > should hide view more button when there are no next page
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <div
-                          class="relative grow text-left"
+                          class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
                             class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
@@ -12194,7 +12194,7 @@ exports[`Transactions > should hide view more button when there are no next page
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <div
-                          class="relative grow text-left"
+                          class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
                             class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
@@ -12358,7 +12358,7 @@ exports[`Transactions > should hide view more button when there are no next page
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <div
-                          class="relative grow text-left"
+                          class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
                             class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
@@ -12522,7 +12522,7 @@ exports[`Transactions > should hide view more button when there are no next page
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <div
-                          class="relative grow text-left"
+                          class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
                             class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
@@ -12686,7 +12686,7 @@ exports[`Transactions > should hide view more button when there are no next page
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <div
-                          class="relative grow text-left"
+                          class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
                             class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
@@ -12850,7 +12850,7 @@ exports[`Transactions > should hide view more button when there are no next page
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <div
-                          class="relative grow text-left"
+                          class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
                             class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
@@ -13014,7 +13014,7 @@ exports[`Transactions > should hide view more button when there are no next page
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <div
-                          class="relative grow text-left"
+                          class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
                             class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
@@ -13178,7 +13178,7 @@ exports[`Transactions > should hide view more button when there are no next page
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <div
-                          class="relative grow text-left"
+                          class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
                             class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
@@ -13342,7 +13342,7 @@ exports[`Transactions > should hide view more button when there are no next page
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <div
-                          class="relative grow text-left"
+                          class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
                             class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
@@ -13506,7 +13506,7 @@ exports[`Transactions > should hide view more button when there are no next page
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <div
-                          class="relative grow text-left"
+                          class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
                             class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
@@ -13670,7 +13670,7 @@ exports[`Transactions > should hide view more button when there are no next page
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <div
-                          class="relative grow text-left"
+                          class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
                             class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
@@ -13834,7 +13834,7 @@ exports[`Transactions > should hide view more button when there are no next page
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <div
-                          class="relative grow text-left"
+                          class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
                             class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
@@ -13998,7 +13998,7 @@ exports[`Transactions > should hide view more button when there are no next page
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <div
-                          class="relative grow text-left"
+                          class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
                             class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
@@ -14162,7 +14162,7 @@ exports[`Transactions > should hide view more button when there are no next page
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <div
-                          class="relative grow text-left"
+                          class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
                             class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
@@ -14326,7 +14326,7 @@ exports[`Transactions > should hide view more button when there are no next page
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <div
-                          class="relative grow text-left"
+                          class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
                             class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
@@ -14490,7 +14490,7 @@ exports[`Transactions > should hide view more button when there are no next page
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <div
-                          class="relative grow text-left"
+                          class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
                             class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
@@ -14654,7 +14654,7 @@ exports[`Transactions > should hide view more button when there are no next page
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <div
-                          class="relative grow text-left"
+                          class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
                             class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
@@ -14818,7 +14818,7 @@ exports[`Transactions > should hide view more button when there are no next page
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <div
-                          class="relative grow text-left"
+                          class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
                             class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
@@ -15286,7 +15286,7 @@ exports[`Transactions > should hide view more button when there are no next page
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <div
-                          class="relative grow text-left"
+                          class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
                             class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
@@ -15450,7 +15450,7 @@ exports[`Transactions > should hide view more button when there are no next page
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <div
-                          class="relative grow text-left"
+                          class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
                             class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
@@ -16697,7 +16697,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                           </span>
                         </span>
                         <div
-                          class="relative grow text-left"
+                          class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
                             class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold text-sm absolute w-full"
@@ -16872,7 +16872,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                           </span>
                         </span>
                         <div
-                          class="relative grow text-left"
+                          class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
                             class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold text-sm absolute w-full"
@@ -17036,7 +17036,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <div
-                          class="relative grow text-left"
+                          class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
                             class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
@@ -17200,7 +17200,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <div
-                          class="relative grow text-left"
+                          class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
                             class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
@@ -17364,7 +17364,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <div
-                          class="relative grow text-left"
+                          class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
                             class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
@@ -17528,7 +17528,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <div
-                          class="relative grow text-left"
+                          class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
                             class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
@@ -17692,7 +17692,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <div
-                          class="relative grow text-left"
+                          class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
                             class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
@@ -17856,7 +17856,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <div
-                          class="relative grow text-left"
+                          class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
                             class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
@@ -18020,7 +18020,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <div
-                          class="relative grow text-left"
+                          class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
                             class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
@@ -18184,7 +18184,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <div
-                          class="relative grow text-left"
+                          class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
                             class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
@@ -18348,7 +18348,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <div
-                          class="relative grow text-left"
+                          class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
                             class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
@@ -18512,7 +18512,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <div
-                          class="relative grow text-left"
+                          class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
                             class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
@@ -18676,7 +18676,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <div
-                          class="relative grow text-left"
+                          class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
                             class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
@@ -18840,7 +18840,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <div
-                          class="relative grow text-left"
+                          class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
                             class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
@@ -19004,7 +19004,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <div
-                          class="relative grow text-left"
+                          class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
                             class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
@@ -19168,7 +19168,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <div
-                          class="relative grow text-left"
+                          class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
                             class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
@@ -19332,7 +19332,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <div
-                          class="relative grow text-left"
+                          class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
                             class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
@@ -19496,7 +19496,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <div
-                          class="relative grow text-left"
+                          class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
                             class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
@@ -19660,7 +19660,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <div
-                          class="relative grow text-left"
+                          class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
                             class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
@@ -19824,7 +19824,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <div
-                          class="relative grow text-left"
+                          class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
                             class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
@@ -19988,7 +19988,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <div
-                          class="relative grow text-left"
+                          class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
                             class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
@@ -20152,7 +20152,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <div
-                          class="relative grow text-left"
+                          class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
                             class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
@@ -20620,7 +20620,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <div
-                          class="relative grow text-left"
+                          class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
                             class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
@@ -20784,7 +20784,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <div
-                          class="relative grow text-left"
+                          class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
                             class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"

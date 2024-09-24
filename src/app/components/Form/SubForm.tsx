@@ -2,8 +2,8 @@ import React from "react";
 import tw, { css, styled } from "twin.macro";
 
 const SubFormWrapper = styled.div<{ noBackground?: boolean; noPadding?: boolean }>`
-	${tw`space-y-5 rounded-lg`};
-	${({ noPadding }) => !noPadding && tw`p-5 -mx-5`};
+	${tw`space-y-4 rounded-lg`};
+	${({ noPadding }) => !noPadding && tw`p-4 -mx-4`};
 	${({ noBackground }) =>
 		!noBackground &&
 		css`

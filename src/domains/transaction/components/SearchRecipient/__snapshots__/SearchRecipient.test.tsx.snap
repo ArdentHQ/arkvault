@@ -295,7 +295,7 @@ exports[`SearchRecipient > should call onAction when no address is selected 1`] 
                                 </span>
                               </span>
                               <div
-                                class="relative grow text-left"
+                                class="relative grow leading-[17px] sm:leading-5 text-left"
                               >
                                 <span
                                   class="no-ligatures min-w-0 overflow-hidden text-sm text-theme-secondary-700 mt-0.5 dark:text-theme-secondary-500 font-semibold text-base absolute w-full"
@@ -363,7 +363,7 @@ exports[`SearchRecipient > should call onAction when no address is selected 1`] 
                                 </span>
                               </span>
                               <div
-                                class="relative grow text-left"
+                                class="relative grow leading-[17px] sm:leading-5 text-left"
                               >
                                 <span
                                   class="no-ligatures min-w-0 overflow-hidden text-sm text-theme-secondary-700 mt-0.5 dark:text-theme-secondary-500 font-semibold text-base absolute w-full"
@@ -718,7 +718,7 @@ exports[`SearchRecipient > should render a modal 1`] = `
                                 </span>
                               </span>
                               <div
-                                class="relative grow text-left"
+                                class="relative grow leading-[17px] sm:leading-5 text-left"
                               >
                                 <span
                                   class="no-ligatures min-w-0 overflow-hidden text-sm text-theme-secondary-700 mt-0.5 dark:text-theme-secondary-500 font-semibold text-base absolute w-full"
@@ -786,7 +786,7 @@ exports[`SearchRecipient > should render a modal 1`] = `
                                 </span>
                               </span>
                               <div
-                                class="relative grow text-left"
+                                class="relative grow leading-[17px] sm:leading-5 text-left"
                               >
                                 <span
                                   class="no-ligatures min-w-0 overflow-hidden text-sm text-theme-secondary-700 mt-0.5 dark:text-theme-secondary-500 font-semibold text-base absolute w-full"
@@ -1139,7 +1139,7 @@ exports[`SearchRecipient > should render a modal with custom title and descripti
                                 </span>
                               </span>
                               <div
-                                class="relative grow text-left"
+                                class="relative grow leading-[17px] sm:leading-5 text-left"
                               >
                                 <span
                                   class="no-ligatures min-w-0 overflow-hidden text-sm text-theme-secondary-700 mt-0.5 dark:text-theme-secondary-500 font-semibold text-base absolute w-full"
@@ -1207,7 +1207,7 @@ exports[`SearchRecipient > should render a modal with custom title and descripti
                                 </span>
                               </span>
                               <div
-                                class="relative grow text-left"
+                                class="relative grow leading-[17px] sm:leading-5 text-left"
                               >
                                 <span
                                   class="no-ligatures min-w-0 overflow-hidden text-sm text-theme-secondary-700 mt-0.5 dark:text-theme-secondary-500 font-semibold text-base absolute w-full"
@@ -1560,7 +1560,7 @@ exports[`SearchRecipient > should render with contact on desktop 1`] = `
                                 </span>
                               </span>
                               <div
-                                class="relative grow text-left"
+                                class="relative grow leading-[17px] sm:leading-5 text-left"
                               >
                                 <span
                                   class="no-ligatures min-w-0 overflow-hidden text-sm text-theme-secondary-700 mt-0.5 dark:text-theme-secondary-500 font-semibold text-base absolute w-full"
@@ -2203,7 +2203,7 @@ exports[`SearchRecipient > should render with my wallet on desktop 1`] = `
                                 </span>
                               </span>
                               <div
-                                class="relative grow text-left"
+                                class="relative grow leading-[17px] sm:leading-5 text-left"
                               >
                                 <span
                                   class="no-ligatures min-w-0 overflow-hidden text-sm text-theme-secondary-700 mt-0.5 dark:text-theme-secondary-500 font-semibold text-base absolute w-full"
@@ -2835,7 +2835,7 @@ exports[`SearchRecipient > should render with no alias if the recipient address 
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
                               <div
-                                class="relative grow text-left"
+                                class="relative grow leading-[17px] sm:leading-5 text-left"
                               >
                                 <span
                                   class="no-ligatures min-w-0 overflow-hidden text-sm text-theme-secondary-700 mt-0.5 dark:text-theme-secondary-500 font-semibold text-base absolute w-full"
@@ -3188,7 +3188,7 @@ exports[`SearchRecipient > should render with selected address 1`] = `
                                 </span>
                               </span>
                               <div
-                                class="relative grow text-left"
+                                class="relative grow leading-[17px] sm:leading-5 text-left"
                               >
                                 <span
                                   class="no-ligatures min-w-0 overflow-hidden text-sm text-theme-secondary-700 mt-0.5 dark:text-theme-secondary-500 font-semibold text-base absolute w-full"
@@ -3256,7 +3256,7 @@ exports[`SearchRecipient > should render with selected address 1`] = `
                                 </span>
                               </span>
                               <div
-                                class="relative grow text-left"
+                                class="relative grow leading-[17px] sm:leading-5 text-left"
                               >
                                 <span
                                   class="no-ligatures min-w-0 overflow-hidden text-sm text-theme-secondary-700 mt-0.5 dark:text-theme-secondary-500 font-semibold text-base absolute w-full"
@@ -3609,7 +3609,7 @@ exports[`SearchRecipient > should render with selected address on md screen 1`] 
                                 </span>
                               </span>
                               <div
-                                class="relative grow text-left"
+                                class="relative grow leading-[17px] sm:leading-5 text-left"
                               >
                                 <span
                                   class="no-ligatures min-w-0 overflow-hidden text-sm text-theme-secondary-700 mt-0.5 dark:text-theme-secondary-500 font-semibold text-base absolute w-full"
@@ -3677,7 +3677,7 @@ exports[`SearchRecipient > should render with selected address on md screen 1`] 
                                 </span>
                               </span>
                               <div
-                                class="relative grow text-left"
+                                class="relative grow leading-[17px] sm:leading-5 text-left"
                               >
                                 <span
                                   class="no-ligatures min-w-0 overflow-hidden text-sm text-theme-secondary-700 mt-0.5 dark:text-theme-secondary-500 font-semibold text-base absolute w-full"

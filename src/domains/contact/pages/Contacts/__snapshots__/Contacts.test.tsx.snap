@@ -877,7 +877,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
                             class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
                             <div
-                              class="relative grow text-left"
+                              class="relative grow leading-[17px] sm:leading-5 text-left"
                             >
                               <span
                                 class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] font-semibold text-base absolute w-full"
@@ -1075,7 +1075,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
                             class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
                             <div
-                              class="relative grow text-left"
+                              class="relative grow leading-[17px] sm:leading-5 text-left"
                             >
                               <span
                                 class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] font-semibold text-base absolute w-full"
@@ -1261,7 +1261,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
                             class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
                             <div
-                              class="relative grow text-left"
+                              class="relative grow leading-[17px] sm:leading-5 text-left"
                             >
                               <span
                                 class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] font-semibold text-base absolute w-full"
@@ -1443,7 +1443,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
                             class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
                             <div
-                              class="relative grow text-left"
+                              class="relative grow leading-[17px] sm:leading-5 text-left"
                             >
                               <span
                                 class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] font-semibold text-base absolute w-full"
@@ -3390,7 +3390,7 @@ exports[`Contacts > should render with contacts 1`] = `
                             class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
                             <div
-                              class="relative grow text-left"
+                              class="relative grow leading-[17px] sm:leading-5 text-left"
                             >
                               <span
                                 class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] font-semibold text-base absolute w-full"
@@ -3588,7 +3588,7 @@ exports[`Contacts > should render with contacts 1`] = `
                             class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
                             <div
-                              class="relative grow text-left"
+                              class="relative grow leading-[17px] sm:leading-5 text-left"
                             >
                               <span
                                 class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] font-semibold text-base absolute w-full"
@@ -3774,7 +3774,7 @@ exports[`Contacts > should render with contacts 1`] = `
                             class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
                             <div
-                              class="relative grow text-left"
+                              class="relative grow leading-[17px] sm:leading-5 text-left"
                             >
                               <span
                                 class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] font-semibold text-base absolute w-full"
@@ -3956,7 +3956,7 @@ exports[`Contacts > should render with contacts 1`] = `
                             class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
                             <div
-                              class="relative grow text-left"
+                              class="relative grow leading-[17px] sm:leading-5 text-left"
                             >
                               <span
                                 class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] font-semibold text-base absolute w-full"

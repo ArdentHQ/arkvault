@@ -1639,7 +1639,7 @@ exports[`Dashboard > should render 1`] = `
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
                               <div
-                                class="relative grow text-left"
+                                class="relative grow leading-[17px] sm:leading-5 text-left"
                               >
                                 <span
                                   class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
@@ -1803,7 +1803,7 @@ exports[`Dashboard > should render 1`] = `
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
                               <div
-                                class="relative grow text-left"
+                                class="relative grow leading-[17px] sm:leading-5 text-left"
                               >
                                 <span
                                   class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
@@ -1967,7 +1967,7 @@ exports[`Dashboard > should render 1`] = `
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
                               <div
-                                class="relative grow text-left"
+                                class="relative grow leading-[17px] sm:leading-5 text-left"
                               >
                                 <span
                                   class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
@@ -2131,7 +2131,7 @@ exports[`Dashboard > should render 1`] = `
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
                               <div
-                                class="relative grow text-left"
+                                class="relative grow leading-[17px] sm:leading-5 text-left"
                               >
                                 <span
                                   class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
