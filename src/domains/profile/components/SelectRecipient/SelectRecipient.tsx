@@ -67,16 +67,13 @@ const OptionLabel = ({
 	);
 
 	return (
-		<div className="flex items-center space-x-2 whitespace-nowrap">
-			<div>
-				<Address
-					address={address}
-					walletName={alias}
-					addressClass={cn({ "text-theme-primary-600": !alias && option.isSelected })}
-					walletNameClass={cn({ "text-theme-primary-600": option.isSelected })}
-				/>
-			</div>
-		</div>
+		<Address
+			address={address}
+			walletName={alias}
+			addressClass={cn({ "text-theme-primary-600": !alias && option.isSelected })}
+			walletNameClass={cn({ "text-theme-primary-600": option.isSelected })}
+			truncateOnTable
+		/>
 	);
 };
 
@@ -201,32 +198,32 @@ export const SelectRecipient = React.forwardRef<HTMLInputElement, SelectRecipien
 						addons={{
 							end: showOptions
 								? {
-										content: (
-											<div
-												data-testid="SelectRecipient__select-recipient"
-												className={cn("flex items-center", { "cursor-pointer": !disabled })}
-												onClick={openRecipients}
-											>
-												<Icon name="User" size="lg" />
-											</div>
-										),
-									}
+									content: (
+										<div
+											data-testid="SelectRecipient__select-recipient"
+											className={cn("flex items-center", { "cursor-pointer": !disabled })}
+											onClick={openRecipients}
+										>
+											<Icon name="User" size="lg" />
+										</div>
+									),
+								}
 								: undefined,
 							start: showWalletAvatar
 								? {
-										content: (
-											<div className="flex items-center">
-												<ProfileAvatar address={selectedAddress} />
-												{!!selectedAddressAlias?.alias && (
-													<TruncateEnd
-														className="ml-2 font-semibold"
-														text={selectedAddressAlias.alias}
-														showTooltip
-													/>
-												)}
-											</div>
-										),
-									}
+									content: (
+										<div className="flex items-center">
+											<ProfileAvatar address={selectedAddress} />
+											{!!selectedAddressAlias?.alias && (
+												<TruncateEnd
+													className="ml-2 font-semibold"
+													text={selectedAddressAlias.alias}
+													showTooltip
+												/>
+											)}
+										</div>
+									),
+								}
 								: undefined,
 						}}
 						renderLabel={(option) => <OptionLabel option={option} network={network} profile={profile} />}

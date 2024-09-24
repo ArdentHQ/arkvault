@@ -35,7 +35,7 @@ const AddressWrapper = ({
 	truncateOnTable?: boolean;
 }) =>
 	truncateOnTable ? (
-		<div className={cn("relative grow leading-[17px] sm:leading-5", { "text-left": alignment !== "right" })}>
+		<div className={cn("relative grow items-center", { "text-left": alignment !== "right" })}>
 			{children}
 			{/* The workaround used to make the truncating work on tables means
 			wrapping the address on a DIV with an absolute position that doesn't
@@ -135,9 +135,9 @@ export const Address = ({
 							availableWidth={availableWidth}
 							className={cn(
 								addressClass ||
-									(walletName
-										? "text-theme-secondary-500 dark:text-theme-secondary-700"
-										: "text-theme-text"),
+								(walletName
+									? "text-theme-secondary-500 dark:text-theme-secondary-700"
+									: "text-theme-text"),
 								getFontWeight(fontWeight),
 								getFontSize(size),
 								{ "absolute w-full": truncateOnTable },
