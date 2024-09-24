@@ -124,11 +124,11 @@ export const getMusigParticipantWallets = async (profile: Contracts.IProfile, tr
 		return []
 	}
 
-	if (transaction.publicKeys()) {
+	if (transaction?.publicKeys?.()) {
 		publicKeys = transaction.publicKeys()
+	} else {
+		publicKeys = getMultiSignatureInfo(transaction).publicKeys
 	}
-
-	publicKeys = getMultiSignatureInfo(transaction).publicKeys
 
 	const wallets: Contracts.IReadWriteWallet[] = [];
 
@@ -145,6 +145,4 @@ export const getMusigParticipantWallets = async (profile: Contracts.IProfile, tr
 	}
 
 	return wallets;
-
 }
-

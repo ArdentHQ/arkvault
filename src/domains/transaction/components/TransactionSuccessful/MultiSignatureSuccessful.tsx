@@ -73,7 +73,6 @@ export const MultiSignatureSuccessful = ({
 	const { isXs, isSm } = useBreakpoint();
 
 	const [generatedAddress, setGeneratedAddress] = useState<string>();
-	const [participantAddresses, setParticipantAddresses] = useState<RecipientItem[]>([]);
 
 	const [minParticipants, setMinParticipants] = useState<number>();
 	const [publicKeys, setPublicKeys] = useState<string[]>();
@@ -84,32 +83,20 @@ export const MultiSignatureSuccessful = ({
 				return;
 			}
 
-			const { min, publicKeys } = getMultiSignatureInfo(transaction);
-
-			try {
-				const { address } = await senderWallet
-					.coin()
-					.address()
-					.fromMultiSignature({ min, publicKeys, senderPublicKey: senderWallet.publicKey() });
-
-				setGeneratedAddress(address);
-				/* istanbul ignore next -- @preserve */
-			} catch {
-				// We are using a coin that doesn't support multi-signature address derivation.
-				// TODO: AddressService#fromMultiSignature is not implemented for Lisk.
-			}
-
-			const addresses: RecipientItem[] = [];
-			for (const publicKey of publicKeys) {
-				const address = await addressFromPublicKey(senderWallet, publicKey);
-				assertString(address);
-				addresses.push({ address });
-			}
-
-			setParticipantAddresses(addresses);
-			setMinParticipants(min);
-			setPublicKeys(publicKeys);
+			// try {
+			// 	const { address } = await senderWallet
+			// 		.coin()
+			// 		.address()
+			// 		.fromMultiSignature({ min, publicKeys, senderPublicKey: senderWallet.publicKey() });
+			//
+			// 	setGeneratedAddress(address);
+			// 	/* istanbul ignore next -- @preserve */
+			// } catch {
+			// 	// We are using a coin that doesn't support multi-signature address derivation.
+			// 	// TODO: AddressService#fromMultiSignature is not implemented for Lisk.
+			// }
 		};
+
 
 		fetchData();
 	}, [transaction, senderWallet]);
@@ -173,10 +160,6 @@ export const MultiSignatureSuccessful = ({
 						transaction={transaction}
 						senderWallet={transaction.wallet()}
 					/>
-				</DetailPadded>
-
-				<DetailPadded>
-					<TransactionDetails transaction={transaction} labelClassName={labelClassName} />
 				</DetailPadded>
 
 				{[!!transaction.memo(), transaction.isMultiPayment(), transaction.isTransfer()].some(Boolean) && (
