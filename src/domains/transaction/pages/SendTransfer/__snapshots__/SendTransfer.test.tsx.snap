@@ -719,7 +719,7 @@ exports[`SendTransfer > should display unconfirmed transactions modal when submi
                                   </span>
                                 </span>
                                 <div
-                                  class="relative grow text-left"
+                                  class="relative grow leading-[17px] sm:leading-5 text-left"
                                 >
                                   <span
                                     class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 text-sm leading-[17px] sm:leading-5 sm:text-base w-full w-3/4 font-semibold text-base absolute w-full"
@@ -804,7 +804,7 @@ exports[`SendTransfer > should display unconfirmed transactions modal when submi
                                   </span>
                                 </span>
                                 <div
-                                  class="relative grow text-left"
+                                  class="relative grow leading-[17px] sm:leading-5 text-left"
                                 >
                                   <span
                                     class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 text-sm leading-[17px] sm:leading-5 sm:text-base font-semibold text-base absolute w-full"
@@ -2519,7 +2519,7 @@ exports[`SendTransfer > should render form step (lg) 1`] = `
             </div>
           </div>
           <div
-            class="css-19wsyy"
+            class="css-10qz30z"
           >
             <div
               class="space-y-4"
@@ -3225,7 +3225,7 @@ exports[`SendTransfer > should render form step (xs) 1`] = `
             </div>
           </div>
           <div
-            class="css-19wsyy"
+            class="css-10qz30z"
           >
             <div
               class="space-y-4"
@@ -4952,7 +4952,7 @@ exports[`SendTransfer > should render review step 1`] = `
                 </span>
               </span>
               <div
-                class="relative grow text-left"
+                class="relative grow leading-[17px] sm:leading-5 text-left"
               >
                 <span
                   class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 text-sm leading-[17px] sm:leading-5 sm:text-base w-full w-3/4 font-semibold text-base absolute w-full"
@@ -5037,7 +5037,7 @@ exports[`SendTransfer > should render review step 1`] = `
                 </span>
               </span>
               <div
-                class="relative grow text-left"
+                class="relative grow leading-[17px] sm:leading-5 text-left"
               >
                 <span
                   class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 text-sm leading-[17px] sm:leading-5 sm:text-base font-semibold text-base absolute w-full"
@@ -5396,7 +5396,7 @@ exports[`SendTransfer > should render review step with multiple recipients (with
                 </span>
               </span>
               <div
-                class="relative grow text-left"
+                class="relative grow leading-[17px] sm:leading-5 text-left"
               >
                 <span
                   class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 text-sm leading-[17px] sm:leading-5 sm:text-base w-full w-3/4 font-semibold text-base absolute w-full"
@@ -5470,7 +5470,7 @@ exports[`SendTransfer > should render review step with multiple recipients (with
               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end sm:justify-start"
             >
               <div
-                class="relative grow text-left"
+                class="relative grow leading-[17px] sm:leading-5 text-left"
               >
                 <span
                   class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 text-sm leading-[17px] sm:leading-5 sm:text-base font-semibold text-base absolute w-full"
@@ -5544,7 +5544,7 @@ exports[`SendTransfer > should render review step with multiple recipients (with
               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end sm:justify-start"
             >
               <div
-                class="relative grow text-left"
+                class="relative grow leading-[17px] sm:leading-5 text-left"
               >
                 <span
                   class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 text-sm leading-[17px] sm:leading-5 sm:text-base font-semibold text-base absolute w-full"
@@ -5903,7 +5903,7 @@ exports[`SendTransfer > should render review step with multiple recipients (with
                 </span>
               </span>
               <div
-                class="relative grow text-left"
+                class="relative grow leading-[17px] sm:leading-5 text-left"
               >
                 <span
                   class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 text-sm leading-[17px] sm:leading-5 sm:text-base w-full w-3/4 font-semibold text-base absolute w-full"
@@ -5977,7 +5977,7 @@ exports[`SendTransfer > should render review step with multiple recipients (with
               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end sm:justify-start"
             >
               <div
-                class="relative grow text-left"
+                class="relative grow leading-[17px] sm:leading-5 text-left"
               >
                 <span
                   class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 text-sm leading-[17px] sm:leading-5 sm:text-base font-semibold text-base absolute w-full"
@@ -6051,7 +6051,7 @@ exports[`SendTransfer > should render review step with multiple recipients (with
               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end sm:justify-start"
             >
               <div
-                class="relative grow text-left"
+                class="relative grow leading-[17px] sm:leading-5 text-left"
               >
                 <span
                   class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 text-sm leading-[17px] sm:leading-5 sm:text-base font-semibold text-base absolute w-full"
@@ -7057,7 +7057,7 @@ exports[`SendTransfer > should send a single transfer and handle undefined expir
                                   </span>
                                 </span>
                                 <div
-                                  class="relative grow text-left"
+                                  class="relative grow leading-[17px] sm:leading-5 text-left"
                                 >
                                   <span
                                     class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 text-sm leading-[17px] sm:leading-5 sm:text-base w-full w-3/4 font-semibold text-base absolute w-full"
@@ -7142,7 +7142,7 @@ exports[`SendTransfer > should send a single transfer and handle undefined expir
                                   </span>
                                 </span>
                                 <div
-                                  class="relative grow text-left"
+                                  class="relative grow leading-[17px] sm:leading-5 text-left"
                                 >
                                   <span
                                     class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 text-sm leading-[17px] sm:leading-5 sm:text-base font-semibold text-base absolute w-full"
@@ -8230,7 +8230,7 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
                                   </span>
                                 </span>
                                 <div
-                                  class="relative grow text-left"
+                                  class="relative grow leading-[17px] sm:leading-5 text-left"
                                 >
                                   <span
                                     class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 text-sm leading-[17px] sm:leading-5 sm:text-base w-full w-3/4 font-semibold text-base absolute w-full"
@@ -8315,7 +8315,7 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
                                   </span>
                                 </span>
                                 <div
-                                  class="relative grow text-left"
+                                  class="relative grow leading-[17px] sm:leading-5 text-left"
                                 >
                                   <span
                                     class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 text-sm leading-[17px] sm:leading-5 sm:text-base font-semibold text-base absolute w-full"
@@ -9957,7 +9957,7 @@ exports[`SendTransfer > should send a single transfer using wallet with encrypti
                                   </span>
                                 </span>
                                 <div
-                                  class="relative grow text-left"
+                                  class="relative grow leading-[17px] sm:leading-5 text-left"
                                 >
                                   <span
                                     class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 text-sm leading-[17px] sm:leading-5 sm:text-base w-full w-3/4 font-semibold text-base absolute w-full"
@@ -10042,7 +10042,7 @@ exports[`SendTransfer > should send a single transfer using wallet with encrypti
                                   </span>
                                 </span>
                                 <div
-                                  class="relative grow text-left"
+                                  class="relative grow leading-[17px] sm:leading-5 text-left"
                                 >
                                   <span
                                     class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 text-sm leading-[17px] sm:leading-5 sm:text-base font-semibold text-base absolute w-full"
@@ -11130,7 +11130,7 @@ exports[`SendTransfer > should send a single transfer with keyboard 1`] = `
                                   </span>
                                 </span>
                                 <div
-                                  class="relative grow text-left"
+                                  class="relative grow leading-[17px] sm:leading-5 text-left"
                                 >
                                   <span
                                     class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 text-sm leading-[17px] sm:leading-5 sm:text-base w-full w-3/4 font-semibold text-base absolute w-full"
@@ -11215,7 +11215,7 @@ exports[`SendTransfer > should send a single transfer with keyboard 1`] = `
                                   </span>
                                 </span>
                                 <div
-                                  class="relative grow text-left"
+                                  class="relative grow leading-[17px] sm:leading-5 text-left"
                                 >
                                   <span
                                     class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 text-sm leading-[17px] sm:leading-5 sm:text-base font-semibold text-base absolute w-full"
@@ -12303,7 +12303,7 @@ exports[`SendTransfer > should send a single transfer without keyboard 1`] = `
                                   </span>
                                 </span>
                                 <div
-                                  class="relative grow text-left"
+                                  class="relative grow leading-[17px] sm:leading-5 text-left"
                                 >
                                   <span
                                     class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 text-sm leading-[17px] sm:leading-5 sm:text-base w-full w-3/4 font-semibold text-base absolute w-full"
@@ -12388,7 +12388,7 @@ exports[`SendTransfer > should send a single transfer without keyboard 1`] = `
                                   </span>
                                 </span>
                                 <div
-                                  class="relative grow text-left"
+                                  class="relative grow leading-[17px] sm:leading-5 text-left"
                                 >
                                   <span
                                     class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 text-sm leading-[17px] sm:leading-5 sm:text-base font-semibold text-base absolute w-full"

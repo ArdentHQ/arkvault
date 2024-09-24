@@ -82,7 +82,7 @@ exports[`AddRecipient > should hide available balance if fee > balance 1`] = `
       </div>
     </div>
     <div
-      class="css-19wsyy"
+      class="css-10qz30z"
     >
       <div
         class="space-y-4"
@@ -382,7 +382,7 @@ exports[`AddRecipient > should render 1`] = `
       </div>
     </div>
     <div
-      class="css-19wsyy"
+      class="css-10qz30z"
     >
       <div
         class="space-y-4"
@@ -667,7 +667,7 @@ exports[`AddRecipient > should render with empty array of recipients as default 
       </div>
     </div>
     <div
-      class="css-19wsyy"
+      class="css-10qz30z"
     >
       <div
         class="space-y-4"
@@ -952,7 +952,7 @@ exports[`AddRecipient > should render with multiple recipients switch 1`] = `
       </div>
     </div>
     <div
-      class="css-19wsyy"
+      class="css-10qz30z"
     >
       <div
         class="space-y-4"
@@ -1237,7 +1237,7 @@ exports[`AddRecipient > should render with single recipient data 1`] = `
       </div>
     </div>
     <div
-      class="css-19wsyy"
+      class="css-10qz30z"
     >
       <div
         class="space-y-4"
@@ -1455,7 +1455,7 @@ exports[`AddRecipient > should render without the single & multiple switch 1`] =
       </div>
     </div>
     <div
-      class="css-19wsyy"
+      class="css-10qz30z"
     >
       <div
         class="space-y-4"
@@ -1740,7 +1740,7 @@ exports[`AddRecipient > should set available amount 1`] = `
       </div>
     </div>
     <div
-      class="css-19wsyy"
+      class="css-10qz30z"
     >
       <div
         class="space-y-4"
@@ -2025,7 +2025,7 @@ exports[`AddRecipient > should show available balance after fee 1`] = `
       </div>
     </div>
     <div
-      class="css-19wsyy"
+      class="css-10qz30z"
     >
       <div
         class="space-y-4"
@@ -2325,7 +2325,7 @@ exports[`AddRecipient > should show zero amount if wallet has zero or insufficie
       </div>
     </div>
     <div
-      class="css-19wsyy"
+      class="css-10qz30z"
     >
       <div
         class="space-y-4"

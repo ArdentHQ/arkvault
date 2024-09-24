@@ -158,7 +158,7 @@ describe("MultiSignature Registration Form", () => {
 	it("should show name of wallets in form step", async () => {
 		const { form } = renderComponent();
 
-		await waitFor(() => expect(screen.getAllByTestId("Address__alias")).toHaveLength(1));
+		await waitFor(() => expect(screen.getAllByTestId("Address__alias")).toHaveLength(2));
 
 		await userEvent.clear(screen.getByTestId("SelectDropdown__input"));
 		await userEvent.type(screen.getByTestId("SelectDropdown__input"), wallet2.address());

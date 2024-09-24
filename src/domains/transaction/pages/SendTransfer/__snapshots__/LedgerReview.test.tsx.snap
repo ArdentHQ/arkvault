@@ -45,7 +45,7 @@ exports[`TransferLedgerReview > should render 1`] = `
               </span>
             </span>
             <div
-              class="relative grow text-left"
+              class="relative grow leading-[17px] sm:leading-5 text-left"
             >
               <span
                 class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 text-sm leading-[17px] sm:leading-5 sm:text-base w-full w-3/4 font-semibold text-base absolute w-full"
@@ -298,7 +298,7 @@ exports[`TransferLedgerReview > should render skeleton while loading expiration 
               </span>
             </span>
             <div
-              class="relative grow text-left"
+              class="relative grow leading-[17px] sm:leading-5 text-left"
             >
               <span
                 class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 text-sm leading-[17px] sm:leading-5 sm:text-base w-full w-3/4 font-semibold text-base absolute w-full"
@@ -568,7 +568,7 @@ exports[`TransferLedgerReview > should render with memo 1`] = `
               </span>
             </span>
             <div
-              class="relative grow text-left"
+              class="relative grow leading-[17px] sm:leading-5 text-left"
             >
               <span
                 class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 text-sm leading-[17px] sm:leading-5 sm:text-base w-full w-3/4 font-semibold text-base absolute w-full"
