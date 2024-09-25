@@ -1,5 +1,5 @@
 import { DTO as DTOProfiles, Contracts } from "@ardenthq/sdk-profiles";
-import { DTO } from "@ardenthq/sdk";
+import { DTO, Networks } from "@ardenthq/sdk";
 import React from "react";
 import { useTranslation } from "react-i18next";
 
@@ -117,7 +117,23 @@ export const getMultiSignatureInfo = (transaction: DTOProfiles.ExtendedSignedTra
 	};
 };
 
-export const getMusigParticipantWallets = async (profile: Contracts.IProfile, transaction: DTO.RawTransactionData) => {
+export const constructWalletsFromPublicKeys = async ({ profile, publicKeys, network }: { publicKeys: string[], network: Networks.Network, profile: Contracts.IProfile }) => {
+	const wallets: Contracts.IReadWriteWallet[] = [];
+
+	for (const publicKey of publicKeys) {
+		const wallet = await profile.walletFactory().fromPublicKey({
+			coin: network.coin(),
+			network: network.id(),
+			publicKey,
+		});
+
+		wallets.push(wallet);
+	}
+
+	return wallets;
+}
+
+export const transactionPublicKeys = (transaction?: DTO.RawTransactionData): string[] => {
 	let publicKeys: string[] = []
 
 	if (!transaction) {
@@ -130,19 +146,5 @@ export const getMusigParticipantWallets = async (profile: Contracts.IProfile, tr
 		publicKeys = getMultiSignatureInfo(transaction).publicKeys
 	}
 
-	const wallets: Contracts.IReadWriteWallet[] = [];
-
-	for (const publicKey of publicKeys) {
-		const network = transaction.wallet().network();
-
-		const wallet = await profile.walletFactory().fromPublicKey({
-			coin: network.coin(),
-			network: network.id(),
-			publicKey,
-		});
-
-		wallets.push(wallet);
-	}
-
-	return wallets;
+	return publicKeys
 }

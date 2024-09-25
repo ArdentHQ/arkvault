@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { TransactionDetailModalProperties } from "./TransactionDetailModal.contracts";
 import { useTranslation } from "react-i18next";
+import { getMusigParticipantWallets, transactionPublicKeys } from "@/domains/transaction/components/MultiSignatureDetail/MultiSignatureDetail.helpers";
 
 import { Modal } from "@/app/components/Modal";
 import {
@@ -17,6 +18,7 @@ import { useTransactionVotingWallets } from "@/domains/transaction/hooks/use-tra
 import { VoteTransactionType } from "@/domains/transaction/components/VoteTransactionType";
 import { TransactionMusigParticipants } from "@/domains/transaction/components/TransactionDetail/TransactionMusigParticipants";
 import { useTransactionRecipients } from "@/domains/transaction/hooks/use-transaction-recipients";
+import { Contracts, DTO } from "@ardenthq/sdk-profiles";
 import cn from "classnames";
 
 export const TransactionDetailModal = ({
@@ -41,6 +43,7 @@ export const TransactionDetailModal = ({
 		"min-w-24": !transaction.isVoteCombination(),
 		"min-w-32": transaction.isVoteCombination(),
 	});
+
 
 	return (
 		<Modal title={t("TRANSACTION.MODAL_TRANSACTION_DETAILS.TITLE")} isOpen={isOpen} onClose={onClose} noButtons>
@@ -107,7 +110,7 @@ export const TransactionDetailModal = ({
 						<DetailPadded>
 							<DetailLabel>{t("TRANSACTION.PARTICIPANTS")}</DetailLabel>
 							<div className="mt-2">
-								<TransactionMusigParticipants transaction={transaction} profile={profile} />
+								<TransactionMusigParticipants publicKeys={transactionPublicKeys(transaction)} useExplorerLinks profile={profile} network={transaction.wallet().network()} />
 							</div>
 						</DetailPadded>
 					)}
