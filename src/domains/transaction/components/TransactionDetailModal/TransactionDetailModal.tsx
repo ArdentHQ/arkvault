@@ -1,7 +1,7 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { TransactionDetailModalProperties } from "./TransactionDetailModal.contracts";
 import { useTranslation } from "react-i18next";
-import { getMusigParticipantWallets, transactionPublicKeys } from "@/domains/transaction/components/MultiSignatureDetail/MultiSignatureDetail.helpers";
+import { transactionPublicKeys } from "@/domains/transaction/components/MultiSignatureDetail/MultiSignatureDetail.helpers";
 
 import { Modal } from "@/app/components/Modal";
 import {
@@ -18,7 +18,6 @@ import { useTransactionVotingWallets } from "@/domains/transaction/hooks/use-tra
 import { VoteTransactionType } from "@/domains/transaction/components/VoteTransactionType";
 import { TransactionMusigParticipants } from "@/domains/transaction/components/TransactionDetail/TransactionMusigParticipants";
 import { useTransactionRecipients } from "@/domains/transaction/hooks/use-transaction-recipients";
-import { Contracts, DTO } from "@ardenthq/sdk-profiles";
 import cn from "classnames";
 
 export const TransactionDetailModal = ({
