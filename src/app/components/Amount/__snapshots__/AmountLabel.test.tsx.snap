@@ -8,7 +8,7 @@ exports[`AmountLabel > should render 1`] = `
     data-testid="AmountLabel__wrapper"
   >
     <div
-      class="flex items-center space-x-1"
+      class="flex items-center space-x-1 h-full"
     >
       <span
         class="whitespace-nowrap text-sm"
@@ -29,7 +29,7 @@ exports[`AmountLabel > should render compact 1`] = `
     data-testid="AmountLabel__wrapper"
   >
     <div
-      class="flex items-center space-x-1"
+      class="flex items-center space-x-1 h-full"
     >
       <span
         class="whitespace-nowrap text-sm"
@@ -50,7 +50,7 @@ exports[`AmountLabel > should render compact with hint 1`] = `
     data-testid="AmountLabel__wrapper"
   >
     <div
-      class="flex items-center space-x-1"
+      class="flex items-center space-x-1 h-full"
     >
       <div
         aria-describedby="tippy-2"
@@ -106,7 +106,7 @@ exports[`AmountLabel > should render negative 1`] = `
     data-testid="AmountLabel__wrapper"
   >
     <div
-      class="flex items-center space-x-1"
+      class="flex items-center space-x-1 h-full"
     >
       <span
         class="whitespace-nowrap text-sm"
@@ -127,7 +127,7 @@ exports[`AmountLabel > should render with hint 1`] = `
     data-testid="AmountLabel__wrapper"
   >
     <div
-      class="flex items-center space-x-1"
+      class="flex items-center space-x-1 h-full"
     >
       <div
         aria-describedby="tippy-1"
@@ -183,7 +183,7 @@ exports[`AmountLabel > should render zero 1`] = `
     data-testid="AmountLabel__wrapper"
   >
     <div
-      class="flex items-center space-x-1"
+      class="flex items-center space-x-1 h-full"
     >
       <span
         class="whitespace-nowrap text-sm"
