@@ -9,7 +9,7 @@ import { Input } from "@/app/components/Input";
 import { useDebounce } from "@/app/hooks";
 
 const SearchBarInputWrapper = styled.div`
-	${tw`[min-width:300px] sm:[min-width:448px] dark:border dark:border-theme-secondary-800`}
+	${tw`xs:[min-width:300px] sm:[min-width:448px] dark:border dark:border-theme-secondary-800`}
 `;
 
 export const HeaderSearchInput: FC<HeaderSearchInputProperties> = ({
