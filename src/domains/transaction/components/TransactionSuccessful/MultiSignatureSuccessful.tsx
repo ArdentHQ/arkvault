@@ -8,7 +8,7 @@ import { Avatar } from "@/app/components/Avatar";
 import { Clipboard } from "@/app/components/Clipboard";
 import { Icon } from "@/app/components/Icon";
 import { Image } from "@/app/components/Image";
-import { getMultiSignatureInfo } from "@/domains/transaction/components/MultiSignatureDetail/MultiSignatureDetail.helpers";
+import { getMultiSignatureInfo, transactionPublicKeys } from "@/domains/transaction/components/MultiSignatureDetail/MultiSignatureDetail.helpers";
 import { RecipientItem } from "@/domains/transaction/components/RecipientList/RecipientList.contracts";
 import {
 	TransactionDetail,
@@ -177,7 +177,7 @@ export const MultiSignatureSuccessful = ({
 					<DetailPadded>
 						<DetailLabel>{t("TRANSACTION.PARTICIPANTS")}</DetailLabel>
 						<div className="mt-2">
-							<TransactionMusigParticipants transaction={transaction} profile={senderWallet.profile()} />
+							<TransactionMusigParticipants publicKeys={transactionPublicKeys(transaction)} profile={senderWallet.profile()} network={senderWallet.network()} />
 						</div>
 					</DetailPadded>
 				)}
