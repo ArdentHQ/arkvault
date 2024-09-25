@@ -810,7 +810,7 @@ exports[`WalletGroupPage > should render empty list if no wallets 1`] = `
               </div>
             </div>
             <div
-              class="border-t border-t-theme-secondary-300 dark:border-t-theme-secondary-800 px-6 pb-4 md:p-0"
+              class="pb-4 md:p-0 px-0 md:border-t md:border-t-theme-secondary-300 md:px-0 md:dark:border-t-theme-secondary-800"
               data-testid="WalletsList"
             >
               <div
@@ -1175,7 +1175,7 @@ exports[`WalletGroupPage > should render empty list if no wallets 1`] = `
                             class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 -ml-3 space-x-3"
                           >
                             <div
-                              class="w-full max-w-64 flex-1 overflow-hidden lg:max-w-48 xl:max-w-full"
+                              class="w-full max-w-64 flex-1 overflow-hidden md:max-w-40 lg:max-w-48 xl:max-w-full"
                             >
                               <div
                                 class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-between"
@@ -1442,7 +1442,7 @@ exports[`WalletGroupPage > should render empty list if no wallets 1`] = `
                             class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 -ml-3 space-x-3"
                           >
                             <div
-                              class="w-full max-w-64 flex-1 overflow-hidden lg:max-w-48 xl:max-w-full"
+                              class="w-full max-w-64 flex-1 overflow-hidden md:max-w-40 lg:max-w-48 xl:max-w-full"
                             >
                               <div
                                 class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-between"
@@ -1709,7 +1709,7 @@ exports[`WalletGroupPage > should render empty list if no wallets 1`] = `
                             class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 -ml-3 space-x-3"
                           >
                             <div
-                              class="w-full max-w-64 flex-1 overflow-hidden lg:max-w-48 xl:max-w-full"
+                              class="w-full max-w-64 flex-1 overflow-hidden md:max-w-40 lg:max-w-48 xl:max-w-full"
                             >
                               <div
                                 class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-between"
@@ -1976,7 +1976,7 @@ exports[`WalletGroupPage > should render empty list if no wallets 1`] = `
                             class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 -ml-3 space-x-3"
                           >
                             <div
-                              class="w-full max-w-64 flex-1 overflow-hidden lg:max-w-48 xl:max-w-full"
+                              class="w-full max-w-64 flex-1 overflow-hidden md:max-w-40 lg:max-w-48 xl:max-w-full"
                             >
                               <div
                                 class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-between"
@@ -2243,7 +2243,7 @@ exports[`WalletGroupPage > should render empty list if no wallets 1`] = `
                             class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 -ml-3 space-x-3"
                           >
                             <div
-                              class="w-full max-w-64 flex-1 overflow-hidden lg:max-w-48 xl:max-w-full"
+                              class="w-full max-w-64 flex-1 overflow-hidden md:max-w-40 lg:max-w-48 xl:max-w-full"
                             >
                               <div
                                 class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-between"
@@ -2510,7 +2510,7 @@ exports[`WalletGroupPage > should render empty list if no wallets 1`] = `
                             class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 -ml-3 space-x-3"
                           >
                             <div
-                              class="w-full max-w-64 flex-1 overflow-hidden lg:max-w-48 xl:max-w-full"
+                              class="w-full max-w-64 flex-1 overflow-hidden md:max-w-40 lg:max-w-48 xl:max-w-full"
                             >
                               <div
                                 class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-between"
@@ -2777,7 +2777,7 @@ exports[`WalletGroupPage > should render empty list if no wallets 1`] = `
                             class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 -ml-3 space-x-3"
                           >
                             <div
-                              class="w-full max-w-64 flex-1 overflow-hidden lg:max-w-48 xl:max-w-full"
+                              class="w-full max-w-64 flex-1 overflow-hidden md:max-w-40 lg:max-w-48 xl:max-w-full"
                             >
                               <div
                                 class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-between"
@@ -3044,7 +3044,7 @@ exports[`WalletGroupPage > should render empty list if no wallets 1`] = `
                             class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 -ml-3 space-x-3"
                           >
                             <div
-                              class="w-full max-w-64 flex-1 overflow-hidden lg:max-w-48 xl:max-w-full"
+                              class="w-full max-w-64 flex-1 overflow-hidden md:max-w-40 lg:max-w-48 xl:max-w-full"
                             >
                               <div
                                 class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-between"
@@ -3311,7 +3311,7 @@ exports[`WalletGroupPage > should render empty list if no wallets 1`] = `
                             class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 -ml-3 space-x-3"
                           >
                             <div
-                              class="w-full max-w-64 flex-1 overflow-hidden lg:max-w-48 xl:max-w-full"
+                              class="w-full max-w-64 flex-1 overflow-hidden md:max-w-40 lg:max-w-48 xl:max-w-full"
                             >
                               <div
                                 class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-between"
@@ -3578,7 +3578,7 @@ exports[`WalletGroupPage > should render empty list if no wallets 1`] = `
                             class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 -ml-3 space-x-3"
                           >
                             <div
-                              class="w-full max-w-64 flex-1 overflow-hidden lg:max-w-48 xl:max-w-full"
+                              class="w-full max-w-64 flex-1 overflow-hidden md:max-w-40 lg:max-w-48 xl:max-w-full"
                             >
                               <div
                                 class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-between"
@@ -3845,7 +3845,7 @@ exports[`WalletGroupPage > should render empty list if no wallets 1`] = `
                             class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 -ml-3 space-x-3"
                           >
                             <div
-                              class="w-full max-w-64 flex-1 overflow-hidden lg:max-w-48 xl:max-w-full"
+                              class="w-full max-w-64 flex-1 overflow-hidden md:max-w-40 lg:max-w-48 xl:max-w-full"
                             >
                               <div
                                 class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-between"
@@ -4112,7 +4112,7 @@ exports[`WalletGroupPage > should render empty list if no wallets 1`] = `
                             class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 -ml-3 space-x-3"
                           >
                             <div
-                              class="w-full max-w-64 flex-1 overflow-hidden lg:max-w-48 xl:max-w-full"
+                              class="w-full max-w-64 flex-1 overflow-hidden md:max-w-40 lg:max-w-48 xl:max-w-full"
                             >
                               <div
                                 class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-between"
@@ -4379,7 +4379,7 @@ exports[`WalletGroupPage > should render empty list if no wallets 1`] = `
                             class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 -ml-3 space-x-3"
                           >
                             <div
-                              class="w-full max-w-64 flex-1 overflow-hidden lg:max-w-48 xl:max-w-full"
+                              class="w-full max-w-64 flex-1 overflow-hidden md:max-w-40 lg:max-w-48 xl:max-w-full"
                             >
                               <div
                                 class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-between"
@@ -4646,7 +4646,7 @@ exports[`WalletGroupPage > should render empty list if no wallets 1`] = `
                             class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 -ml-3 space-x-3"
                           >
                             <div
-                              class="w-full max-w-64 flex-1 overflow-hidden lg:max-w-48 xl:max-w-full"
+                              class="w-full max-w-64 flex-1 overflow-hidden md:max-w-40 lg:max-w-48 xl:max-w-full"
                             >
                               <div
                                 class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-between"
@@ -4913,7 +4913,7 @@ exports[`WalletGroupPage > should render empty list if no wallets 1`] = `
                             class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 -ml-3 space-x-3"
                           >
                             <div
-                              class="w-full max-w-64 flex-1 overflow-hidden lg:max-w-48 xl:max-w-full"
+                              class="w-full max-w-64 flex-1 overflow-hidden md:max-w-40 lg:max-w-48 xl:max-w-full"
                             >
                               <div
                                 class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-between"
