@@ -123,7 +123,7 @@ exports[`Notifications > should emit transactionClick event 1`] = `
               >
                 <div>
                   <tr
-                    class="group css-1kskd5s"
+                    class="group css-1d424e8"
                     data-testid="TableRow"
                   >
                     <td
@@ -237,7 +237,7 @@ exports[`Notifications > should emit transactionClick event 1`] = `
                 </div>
                 <div>
                   <tr
-                    class="group css-1kskd5s"
+                    class="group css-1d424e8"
                     data-testid="TableRow"
                   >
                     <td
@@ -348,7 +348,7 @@ exports[`Notifications > should emit transactionClick event 1`] = `
                 </div>
                 <div>
                   <tr
-                    class="group css-1kskd5s"
+                    class="group css-1d424e8"
                     data-testid="TableRow"
                   >
                     <td
@@ -678,7 +678,7 @@ exports[`Notifications > should render with plugins 1`] = `
               >
                 <div>
                   <tr
-                    class="group css-1kskd5s"
+                    class="group css-1d424e8"
                     data-testid="TableRow"
                   >
                     <td
@@ -792,7 +792,7 @@ exports[`Notifications > should render with plugins 1`] = `
                 </div>
                 <div>
                   <tr
-                    class="group css-1kskd5s"
+                    class="group css-1d424e8"
                     data-testid="TableRow"
                   >
                     <td
@@ -903,7 +903,7 @@ exports[`Notifications > should render with plugins 1`] = `
                 </div>
                 <div>
                   <tr
-                    class="group css-1kskd5s"
+                    class="group css-1d424e8"
                     data-testid="TableRow"
                   >
                     <td
@@ -1145,7 +1145,7 @@ exports[`Notifications > should render with transactions and plugins 1`] = `
               >
                 <div>
                   <tr
-                    class="group css-1kskd5s"
+                    class="group css-1d424e8"
                     data-testid="TableRow"
                   >
                     <td
@@ -1259,7 +1259,7 @@ exports[`Notifications > should render with transactions and plugins 1`] = `
                 </div>
                 <div>
                   <tr
-                    class="group css-1kskd5s"
+                    class="group css-1d424e8"
                     data-testid="TableRow"
                   >
                     <td
@@ -1370,7 +1370,7 @@ exports[`Notifications > should render with transactions and plugins 1`] = `
                 </div>
                 <div>
                   <tr
-                    class="group css-1kskd5s"
+                    class="group css-1d424e8"
                     data-testid="TableRow"
                   >
                     <td

@@ -4802,7 +4802,7 @@ exports[`TransactionDetailModal > should render a multi signature modal 1`] = `
                               role="rowgroup"
                             >
                               <tr
-                                class="group relative css-16ynu5g"
+                                class="group relative css-1x4z4cy"
                                 data-testid="TableRow"
                               >
                                 <td>
@@ -4870,7 +4870,7 @@ exports[`TransactionDetailModal > should render a multi signature modal 1`] = `
                                 </td>
                               </tr>
                               <tr
-                                class="group relative css-16ynu5g"
+                                class="group relative css-1x4z4cy"
                                 data-testid="TableRow"
                               >
                                 <td>

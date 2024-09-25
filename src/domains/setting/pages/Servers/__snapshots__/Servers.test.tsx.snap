@@ -2733,7 +2733,7 @@ exports[`Servers Settings > with servers > should ping the servers in an interva
                                 role="rowgroup"
                               >
                                 <tr
-                                  class=" css-16ynu5g"
+                                  class=" css-1x4z4cy"
                                   data-testid="CustomPeers-network-item"
                                 >
                                   <td>
@@ -2983,7 +2983,7 @@ exports[`Servers Settings > with servers > should ping the servers in an interva
                                   </td>
                                 </tr>
                                 <tr
-                                  class=" css-16ynu5g"
+                                  class=" css-1x4z4cy"
                                   data-testid="CustomPeers-network-item"
                                 >
                                   <td>
@@ -3280,7 +3280,7 @@ exports[`Servers Settings > with servers > should ping the servers in an interva
                                   </td>
                                 </tr>
                                 <tr
-                                  class=" css-16ynu5g"
+                                  class=" css-1x4z4cy"
                                   data-testid="CustomPeers-network-item"
                                 >
                                   <td>
@@ -4971,7 +4971,7 @@ exports[`Servers Settings > with servers > should render custom servers 1`] = `
                                 role="rowgroup"
                               >
                                 <tr
-                                  class=" css-16ynu5g"
+                                  class=" css-1x4z4cy"
                                   data-testid="CustomPeers-network-item"
                                 >
                                   <td>
@@ -5193,7 +5193,7 @@ exports[`Servers Settings > with servers > should render custom servers 1`] = `
                                   </td>
                                 </tr>
                                 <tr
-                                  class=" css-16ynu5g"
+                                  class=" css-1x4z4cy"
                                   data-testid="CustomPeers-network-item"
                                 >
                                   <td>
@@ -5462,7 +5462,7 @@ exports[`Servers Settings > with servers > should render custom servers 1`] = `
                                   </td>
                                 </tr>
                                 <tr
-                                  class=" css-16ynu5g"
+                                  class=" css-1x4z4cy"
                                   data-testid="CustomPeers-network-item"
                                 >
                                   <td>
@@ -8925,7 +8925,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                                 role="rowgroup"
                               >
                                 <tr
-                                  class=" css-16ynu5g"
+                                  class=" css-1x4z4cy"
                                   data-testid="CustomPeers-network-item"
                                 >
                                   <td>
@@ -9175,7 +9175,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                                   </td>
                                 </tr>
                                 <tr
-                                  class=" css-16ynu5g"
+                                  class=" css-1x4z4cy"
                                   data-testid="CustomPeers-network-item"
                                 >
                                   <td>
@@ -9472,7 +9472,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                                   </td>
                                 </tr>
                                 <tr
-                                  class=" css-16ynu5g"
+                                  class=" css-1x4z4cy"
                                   data-testid="CustomPeers-network-item"
                                 >
                                   <td>
@@ -15232,7 +15232,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                                 role="rowgroup"
                               >
                                 <tr
-                                  class=" css-16ynu5g"
+                                  class=" css-1x4z4cy"
                                   data-testid="CustomPeers-network-item"
                                 >
                                   <td>
@@ -15479,7 +15479,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                                   </td>
                                 </tr>
                                 <tr
-                                  class=" css-16ynu5g"
+                                  class=" css-1x4z4cy"
                                   data-testid="CustomPeers-network-item"
                                 >
                                   <td>
@@ -15773,7 +15773,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                                   </td>
                                 </tr>
                                 <tr
-                                  class=" css-16ynu5g"
+                                  class=" css-1x4z4cy"
                                   data-testid="CustomPeers-network-item"
                                 >
                                   <td>

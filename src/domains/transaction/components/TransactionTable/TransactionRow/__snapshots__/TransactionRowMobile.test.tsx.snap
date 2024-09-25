@@ -5,7 +5,7 @@ exports[`TransactionRowMobile > should render 1`] = `
   <table>
     <tbody>
       <tr
-        class="group !border-b-0 css-16ynu5g"
+        class="group !border-b-0 css-1x4z4cy"
         data-testid="TableRow"
       >
         <td
@@ -174,7 +174,7 @@ exports[`TransactionRowMobile > should render 2`] = `
   <table>
     <tbody>
       <tr
-        class="group !border-b-0 css-16ynu5g"
+        class="group !border-b-0 css-1x4z4cy"
         data-testid="TableRow"
       >
         <td
@@ -343,7 +343,7 @@ exports[`TransactionRowMobile > should render skeleton responsive 1`] = `
   <table>
     <tbody>
       <tr
-        class="group !border-b-0 css-16ynu5g"
+        class="group !border-b-0 css-1x4z4cy"
         data-testid="TableRow"
       >
         <td
@@ -489,7 +489,7 @@ exports[`TransactionRowMobile > should render skeleton responsive 2`] = `
   <table>
     <tbody>
       <tr
-        class="group !border-b-0 css-16ynu5g"
+        class="group !border-b-0 css-1x4z4cy"
         data-testid="TableRow"
       >
         <td
@@ -635,7 +635,7 @@ exports[`TransactionRowMobile > should render with currency 1`] = `
   <table>
     <tbody>
       <tr
-        class="group !border-b-0 css-16ynu5g"
+        class="group !border-b-0 css-1x4z4cy"
         data-testid="TableRow"
       >
         <td
@@ -793,7 +793,7 @@ exports[`TransactionRowMobile > should render with currency 2`] = `
   <table>
     <tbody>
       <tr
-        class="group !border-b-0 css-16ynu5g"
+        class="group !border-b-0 css-1x4z4cy"
         data-testid="TableRow"
       >
         <td
