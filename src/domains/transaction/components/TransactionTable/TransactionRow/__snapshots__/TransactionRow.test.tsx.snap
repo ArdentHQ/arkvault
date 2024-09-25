@@ -68,7 +68,7 @@ exports[`TransactionRow > should omit the currency for transactions from test ne
             class="flex px-3 transition-colors duration-100 min-h-11 items-start xl:min-h-0 my-0 py-3"
           >
             <div
-              class="rounded p-1 css-1dx994f"
+              class="rounded px-1 dark:border css-1dx994f"
               color="secondary"
               data-testid="TransactionRow__type"
             >
@@ -241,7 +241,7 @@ exports[`TransactionRow > should render 1`] = `
             class="flex px-3 transition-colors duration-100 min-h-11 items-start xl:min-h-0 my-0 py-3"
           >
             <div
-              class="rounded p-1 css-1dx994f"
+              class="rounded px-1 dark:border css-1dx994f"
               color="secondary"
               data-testid="TransactionRow__type"
             >
@@ -916,7 +916,7 @@ exports[`TransactionRow > should render with currency 1`] = `
             class="flex px-3 transition-colors duration-100 min-h-11 items-start xl:min-h-0 my-0 py-3"
           >
             <div
-              class="rounded p-1 css-1dx994f"
+              class="rounded px-1 dark:border css-1dx994f"
               color="secondary"
               data-testid="TransactionRow__type"
             >
