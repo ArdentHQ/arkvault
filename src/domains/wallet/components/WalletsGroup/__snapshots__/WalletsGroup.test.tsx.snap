@@ -3241,10 +3241,10 @@ exports[`WalletsGroup > should show skeleton when syncing exchange rates 1`] = `
                       class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 -ml-3 space-x-3"
                     >
                       <div
-                        class="w-full max-w-64 flex-1 overflow-hidden lg:max-w-48 xl:max-w-full"
+                        class="w-full max-w-64 flex-1 overflow-hidden md:max-w-40 lg:max-w-48 xl:max-w-full"
                       >
                         <div
-                          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-between"
                         >
                           <span
                             class="font-semibold text-base lg:hidden text-sm text-theme-text group-hover:text-theme-primary-700"
