@@ -111,6 +111,7 @@ export const TransactionRow = memo(
 							isNegative={true}
 							ticker={transaction.wallet().currency()}
 							isCompact
+							className="h-[21px]"
 						/>
 						<span
 							className="text-xs font-semibold text-theme-secondary-700 lg:hidden"
