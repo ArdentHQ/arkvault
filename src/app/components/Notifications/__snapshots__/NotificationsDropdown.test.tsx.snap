@@ -278,7 +278,7 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                                     data-testid="AmountLabel__wrapper"
                                   >
                                     <div
-                                      class="flex items-center space-x-1"
+                                      class="flex h-full items-center space-x-1"
                                     >
                                       <span
                                         class="whitespace-nowrap text-sm"
@@ -389,7 +389,7 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                                     data-testid="AmountLabel__wrapper"
                                   >
                                     <div
-                                      class="flex items-center space-x-1"
+                                      class="flex h-full items-center space-x-1"
                                     >
                                       <span
                                         class="whitespace-nowrap text-sm"
@@ -500,7 +500,7 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                                     data-testid="AmountLabel__wrapper"
                                   >
                                     <div
-                                      class="flex items-center space-x-1"
+                                      class="flex h-full items-center space-x-1"
                                     >
                                       <span
                                         class="whitespace-nowrap text-sm"
@@ -1014,7 +1014,7 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                                 data-testid="AmountLabel__wrapper"
                               >
                                 <div
-                                  class="flex items-center space-x-1"
+                                  class="flex h-full items-center space-x-1"
                                 >
                                   <span
                                     class="whitespace-nowrap text-sm"
@@ -1663,7 +1663,7 @@ exports[`Notifications > should render with transactions in lg 1`] = `
                                     data-testid="AmountLabel__wrapper"
                                   >
                                     <div
-                                      class="flex items-center space-x-1"
+                                      class="flex h-full items-center space-x-1"
                                     >
                                       <span
                                         class="whitespace-nowrap text-sm"
@@ -1774,7 +1774,7 @@ exports[`Notifications > should render with transactions in lg 1`] = `
                                     data-testid="AmountLabel__wrapper"
                                   >
                                     <div
-                                      class="flex items-center space-x-1"
+                                      class="flex h-full items-center space-x-1"
                                     >
                                       <span
                                         class="whitespace-nowrap text-sm"
@@ -1885,7 +1885,7 @@ exports[`Notifications > should render with transactions in lg 1`] = `
                                     data-testid="AmountLabel__wrapper"
                                   >
                                     <div
-                                      class="flex items-center space-x-1"
+                                      class="flex h-full items-center space-x-1"
                                     >
                                       <span
                                         class="whitespace-nowrap text-sm"
@@ -2192,7 +2192,7 @@ exports[`Notifications > should render with transactions in md 1`] = `
                                     data-testid="AmountLabel__wrapper"
                                   >
                                     <div
-                                      class="flex items-center space-x-1"
+                                      class="flex h-full items-center space-x-1"
                                     >
                                       <span
                                         class="whitespace-nowrap text-sm"
@@ -2303,7 +2303,7 @@ exports[`Notifications > should render with transactions in md 1`] = `
                                     data-testid="AmountLabel__wrapper"
                                   >
                                     <div
-                                      class="flex items-center space-x-1"
+                                      class="flex h-full items-center space-x-1"
                                     >
                                       <span
                                         class="whitespace-nowrap text-sm"
@@ -2414,7 +2414,7 @@ exports[`Notifications > should render with transactions in md 1`] = `
                                     data-testid="AmountLabel__wrapper"
                                   >
                                     <div
-                                      class="flex items-center space-x-1"
+                                      class="flex h-full items-center space-x-1"
                                     >
                                       <span
                                         class="whitespace-nowrap text-sm"
@@ -2695,7 +2695,7 @@ exports[`Notifications > should render with transactions in sm 1`] = `
                                     data-testid="AmountLabel__wrapper"
                                   >
                                     <div
-                                      class="flex items-center space-x-1"
+                                      class="flex h-full items-center space-x-1"
                                     >
                                       <span
                                         class="whitespace-nowrap text-sm"
@@ -2772,7 +2772,7 @@ exports[`Notifications > should render with transactions in sm 1`] = `
                                     data-testid="AmountLabel__wrapper"
                                   >
                                     <div
-                                      class="flex items-center space-x-1"
+                                      class="flex h-full items-center space-x-1"
                                     >
                                       <span
                                         class="whitespace-nowrap text-sm"
@@ -2849,7 +2849,7 @@ exports[`Notifications > should render with transactions in sm 1`] = `
                                     data-testid="AmountLabel__wrapper"
                                   >
                                     <div
-                                      class="flex items-center space-x-1"
+                                      class="flex h-full items-center space-x-1"
                                     >
                                       <span
                                         class="whitespace-nowrap text-sm"
@@ -3156,7 +3156,7 @@ exports[`Notifications > should render with transactions in xl 1`] = `
                                     data-testid="AmountLabel__wrapper"
                                   >
                                     <div
-                                      class="flex items-center space-x-1"
+                                      class="flex h-full items-center space-x-1"
                                     >
                                       <span
                                         class="whitespace-nowrap text-sm"
@@ -3267,7 +3267,7 @@ exports[`Notifications > should render with transactions in xl 1`] = `
                                     data-testid="AmountLabel__wrapper"
                                   >
                                     <div
-                                      class="flex items-center space-x-1"
+                                      class="flex h-full items-center space-x-1"
                                     >
                                       <span
                                         class="whitespace-nowrap text-sm"
@@ -3378,7 +3378,7 @@ exports[`Notifications > should render with transactions in xl 1`] = `
                                     data-testid="AmountLabel__wrapper"
                                   >
                                     <div
-                                      class="flex items-center space-x-1"
+                                      class="flex h-full items-center space-x-1"
                                     >
                                       <span
                                         class="whitespace-nowrap text-sm"
@@ -3666,7 +3666,7 @@ exports[`Notifications > should render with transactions in xs 1`] = `
                                     data-testid="AmountLabel__wrapper"
                                   >
                                     <div
-                                      class="flex items-center space-x-1"
+                                      class="flex h-full items-center space-x-1"
                                     >
                                       <span
                                         class="whitespace-nowrap text-sm"
@@ -3743,7 +3743,7 @@ exports[`Notifications > should render with transactions in xs 1`] = `
                                     data-testid="AmountLabel__wrapper"
                                   >
                                     <div
-                                      class="flex items-center space-x-1"
+                                      class="flex h-full items-center space-x-1"
                                     >
                                       <span
                                         class="whitespace-nowrap text-sm"
@@ -3820,7 +3820,7 @@ exports[`Notifications > should render with transactions in xs 1`] = `
                                     data-testid="AmountLabel__wrapper"
                                   >
                                     <div
-                                      class="flex items-center space-x-1"
+                                      class="flex h-full items-center space-x-1"
                                     >
                                       <span
                                         class="whitespace-nowrap text-sm"
