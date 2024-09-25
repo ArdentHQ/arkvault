@@ -320,7 +320,7 @@ exports[`ExchangeTransactionsTable > should render 1`] = `
                       class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                     >
                       <div
-                        class="relative grow text-left"
+                        class="relative grow leading-[17px] sm:leading-5 text-left"
                       >
                         <span
                           class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 text-sm font-semibold text-base absolute w-full"
@@ -619,7 +619,7 @@ exports[`ExchangeTransactionsTable > should render 1`] = `
                       class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                     >
                       <div
-                        class="relative grow text-left"
+                        class="relative grow leading-[17px] sm:leading-5 text-left"
                       >
                         <span
                           class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 text-sm font-semibold text-base absolute w-full"
@@ -918,7 +918,7 @@ exports[`ExchangeTransactionsTable > should render 1`] = `
                       class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                     >
                       <div
-                        class="relative grow text-left"
+                        class="relative grow leading-[17px] sm:leading-5 text-left"
                       >
                         <span
                           class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 text-sm font-semibold text-base absolute w-full"
@@ -1529,7 +1529,7 @@ exports[`ExchangeTransactionsTable > should render compact 1`] = `
                       class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                     >
                       <div
-                        class="relative grow text-left"
+                        class="relative grow leading-[17px] sm:leading-5 text-left"
                       >
                         <span
                           class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 text-sm font-semibold text-base absolute w-full"
@@ -1828,7 +1828,7 @@ exports[`ExchangeTransactionsTable > should render compact 1`] = `
                       class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                     >
                       <div
-                        class="relative grow text-left"
+                        class="relative grow leading-[17px] sm:leading-5 text-left"
                       >
                         <span
                           class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 text-sm font-semibold text-base absolute w-full"
@@ -2127,7 +2127,7 @@ exports[`ExchangeTransactionsTable > should render compact 1`] = `
                       class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                     >
                       <div
-                        class="relative grow text-left"
+                        class="relative grow leading-[17px] sm:leading-5 text-left"
                       >
                         <span
                           class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 text-sm font-semibold text-base absolute w-full"
@@ -2738,7 +2738,7 @@ exports[`ExchangeTransactionsTable > should render desktop 1`] = `
                       class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                     >
                       <div
-                        class="relative grow text-left"
+                        class="relative grow leading-[17px] sm:leading-5 text-left"
                       >
                         <span
                           class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 text-sm font-semibold text-base absolute w-full"
@@ -3037,7 +3037,7 @@ exports[`ExchangeTransactionsTable > should render desktop 1`] = `
                       class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                     >
                       <div
-                        class="relative grow text-left"
+                        class="relative grow leading-[17px] sm:leading-5 text-left"
                       >
                         <span
                           class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 text-sm font-semibold text-base absolute w-full"
@@ -3336,7 +3336,7 @@ exports[`ExchangeTransactionsTable > should render desktop 1`] = `
                       class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                     >
                       <div
-                        class="relative grow text-left"
+                        class="relative grow leading-[17px] sm:leading-5 text-left"
                       >
                         <span
                           class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 text-sm font-semibold text-base absolute w-full"
@@ -3947,7 +3947,7 @@ exports[`ExchangeTransactionsTable > should render desktop 2`] = `
                       class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                     >
                       <div
-                        class="relative grow text-left"
+                        class="relative grow leading-[17px] sm:leading-5 text-left"
                       >
                         <span
                           class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 text-sm font-semibold text-base absolute w-full"
@@ -4246,7 +4246,7 @@ exports[`ExchangeTransactionsTable > should render desktop 2`] = `
                       class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                     >
                       <div
-                        class="relative grow text-left"
+                        class="relative grow leading-[17px] sm:leading-5 text-left"
                       >
                         <span
                           class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 text-sm font-semibold text-base absolute w-full"
@@ -4545,7 +4545,7 @@ exports[`ExchangeTransactionsTable > should render desktop 2`] = `
                       class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                     >
                       <div
-                        class="relative grow text-left"
+                        class="relative grow leading-[17px] sm:leading-5 text-left"
                       >
                         <span
                           class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 text-sm font-semibold text-base absolute w-full"
@@ -5156,7 +5156,7 @@ exports[`ExchangeTransactionsTable > should render desktop 3`] = `
                       class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                     >
                       <div
-                        class="relative grow text-left"
+                        class="relative grow leading-[17px] sm:leading-5 text-left"
                       >
                         <span
                           class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 text-sm font-semibold text-base absolute w-full"
@@ -5455,7 +5455,7 @@ exports[`ExchangeTransactionsTable > should render desktop 3`] = `
                       class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                     >
                       <div
-                        class="relative grow text-left"
+                        class="relative grow leading-[17px] sm:leading-5 text-left"
                       >
                         <span
                           class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 text-sm font-semibold text-base absolute w-full"
@@ -5754,7 +5754,7 @@ exports[`ExchangeTransactionsTable > should render desktop 3`] = `
                       class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                     >
                       <div
-                        class="relative grow text-left"
+                        class="relative grow leading-[17px] sm:leading-5 text-left"
                       >
                         <span
                           class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 text-sm font-semibold text-base absolute w-full"
