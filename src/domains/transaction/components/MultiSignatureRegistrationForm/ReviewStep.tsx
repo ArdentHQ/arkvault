@@ -55,7 +55,7 @@ export const ReviewStep = ({ wallet, profile }: { wallet: Contracts.IReadWriteWa
 								className="flex items-center rounded bg-theme-secondary-200 px-1 py-[3px] dark:border dark:border-theme-secondary-800 dark:bg-transparent">
 								<span
 									className="text-[12px] font-semibold leading-[15px] text-theme-secondary-700 dark:text-theme-secondary-500">
-									test
+									{t("TRANSACTION.TRANSACTION_TYPES.MULTI_SIGNATURE")}
 								</span>
 							</div>
 						</div>
