@@ -89,7 +89,7 @@ describe("Signatures", () => {
 			throw new Error("Failed");
 		});
 
-		const { container } = render(<Signatures transaction={multisignatureTransactionMock} wallet={wallet} />);
+		render(<Signatures transaction={multisignatureTransactionMock} wallet={wallet} />);
 
 		await waitFor(() => expect(screen.getAllByTestId(SignaturesParticipantStatus)).toHaveLength(2));
 
