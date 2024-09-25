@@ -19,6 +19,7 @@ import { Tooltip } from "@/app/components/Tooltip";
 import { isLedgerWalletCompatible } from "@/utils/wallet-utils";
 import { TruncateMiddleDynamic } from "@/app/components/TruncateMiddleDynamic";
 import { TableWrapper } from "@/app/components/Table/TableWrapper";
+import cn from 'classnames';
 
 const SearchWalletListItem = ({
 	index,
@@ -146,7 +147,7 @@ export const SearchWallet: FC<SearchWalletProperties> = ({
 
 	const { t } = useTranslation();
 
-	const { isXs, isSm } = useBreakpoint();
+	const { isXs, isSm, isMdAndAbove } = useBreakpoint();
 
 	const useResponsive = useMemo<boolean>(() => isXs || isSm, [isXs, isSm]);
 
@@ -284,7 +285,7 @@ export const SearchWallet: FC<SearchWalletProperties> = ({
 						columns={columns}
 						data={filteredWallets as Contracts.IReadWriteWallet[]}
 						hideHeader={useResponsive}
-						className="with-x-padding"
+						className={cn({"with-x-padding": isMdAndAbove })}
 					>
 						{renderTableRow}
 					</Table>
