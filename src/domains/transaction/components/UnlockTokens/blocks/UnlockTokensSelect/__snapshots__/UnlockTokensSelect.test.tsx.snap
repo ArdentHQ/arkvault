@@ -167,7 +167,7 @@ exports[`UnlockTokensSelect > should render 1`] = `
             role="rowgroup"
           >
             <tr
-              class=" css-16ynu5g"
+              class=" css-1x4z4cy"
               data-testid="TableRow"
             >
               <td>
@@ -251,7 +251,7 @@ exports[`UnlockTokensSelect > should render 1`] = `
               </td>
             </tr>
             <tr
-              class=" css-16ynu5g"
+              class=" css-1x4z4cy"
               data-testid="TableRow"
             >
               <td>
@@ -335,7 +335,7 @@ exports[`UnlockTokensSelect > should render 1`] = `
               </td>
             </tr>
             <tr
-              class=" css-16ynu5g"
+              class=" css-1x4z4cy"
               data-testid="TableRow"
             >
               <td>
@@ -416,7 +416,7 @@ exports[`UnlockTokensSelect > should render 1`] = `
               </td>
             </tr>
             <tr
-              class=" css-16ynu5g"
+              class=" css-1x4z4cy"
               data-testid="TableRow"
             >
               <td>
@@ -518,7 +518,7 @@ exports[`UnlockTokensSelect > should render 1`] = `
           data-testid="AmountLabel__wrapper"
         >
           <div
-            class="flex items-center space-x-1"
+            class="flex h-full items-center space-x-1"
           >
             <span
               class="whitespace-nowrap text-sm"
@@ -544,7 +544,7 @@ exports[`UnlockTokensSelect > should render 1`] = `
           data-testid="AmountLabel__wrapper"
         >
           <div
-            class="flex items-center space-x-1"
+            class="flex h-full items-center space-x-1"
           >
             <span
               class="whitespace-nowrap text-sm"

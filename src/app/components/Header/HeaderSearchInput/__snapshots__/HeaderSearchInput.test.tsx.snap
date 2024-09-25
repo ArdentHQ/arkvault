@@ -7,7 +7,7 @@ exports[`HeaderSearchInput > should render 1`] = `
     data-testid="HeaderSearchInput"
   >
     <div
-      class="flex items-center overflow-hidden rounded-lg border border-theme-secondary-400 bg-theme-background px-4 text-base dark:border-theme-secondary-700 css-e93eg4"
+      class="flex items-center overflow-hidden rounded-lg border border-theme-secondary-400 bg-theme-background px-4 text-base dark:border-theme-secondary-700 css-1ltrfa0"
       data-testid="HeaderSearchInput__input"
     >
       <button

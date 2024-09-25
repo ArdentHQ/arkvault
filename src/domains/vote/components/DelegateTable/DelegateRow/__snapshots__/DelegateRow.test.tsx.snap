@@ -5,7 +5,7 @@ exports[`DelegateRow > should emit action on select button 1`] = `
   <table>
     <tbody>
       <tr
-        class="relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+        class="relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-1x4z4cy"
         data-testid="TableRow"
       >
         <td>
@@ -155,7 +155,7 @@ exports[`DelegateRow > should render 1`] = `
   <table>
     <tbody>
       <tr
-        class="relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+        class="relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-1x4z4cy"
         data-testid="TableRow"
       >
         <td>
@@ -305,7 +305,7 @@ exports[`DelegateRow > should render changed style when network requires vote am
   <table>
     <tbody>
       <tr
-        class="relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+        class="relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-1x4z4cy"
         data-testid="TableRow"
       >
         <td>
@@ -500,7 +500,7 @@ exports[`DelegateRow > should render the selected delegate 1`] = `
   <table>
     <tbody>
       <tr
-        class="relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+        class="relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-1x4z4cy"
         data-testid="TableRow"
       >
         <td>
@@ -650,7 +650,7 @@ exports[`DelegateRow > should render the selected vote 1`] = `
   <table>
     <tbody>
       <tr
-        class="relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+        class="relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-1x4z4cy"
         data-testid="TableRow"
       >
         <td>
@@ -791,7 +791,7 @@ exports[`DelegateRow > should render the selected vote 1`] = `
         </td>
       </tr>
       <tr
-        class="relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+        class="relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-1x4z4cy"
         data-testid="TableRow"
       >
         <td>
@@ -932,7 +932,7 @@ exports[`DelegateRow > should render the selected vote 1`] = `
         </td>
       </tr>
       <tr
-        class="relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+        class="relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-1x4z4cy"
         data-testid="TableRow"
       >
         <td>
@@ -1087,7 +1087,7 @@ exports[`DelegateRow > should render the selected vote 2`] = `
   <table>
     <tbody>
       <tr
-        class="relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+        class="relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-1x4z4cy"
         data-testid="TableRow"
       >
         <td>
@@ -1228,7 +1228,7 @@ exports[`DelegateRow > should render the selected vote 2`] = `
         </td>
       </tr>
       <tr
-        class="relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+        class="relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-1x4z4cy"
         data-testid="TableRow"
       >
         <td>
@@ -1369,7 +1369,7 @@ exports[`DelegateRow > should render the selected vote 2`] = `
         </td>
       </tr>
       <tr
-        class="relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+        class="relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-1x4z4cy"
         data-testid="TableRow"
       >
         <td>
@@ -1524,7 +1524,7 @@ exports[`DelegateRow > should render the unselected vote 1`] = `
   <table>
     <tbody>
       <tr
-        class="relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+        class="relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-1x4z4cy"
         data-testid="TableRow"
       >
         <td>
@@ -1674,7 +1674,7 @@ exports[`DelegateRow > should render when network requires vote amount 1`] = `
   <table>
     <tbody>
       <tr
-        class="relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+        class="relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-1x4z4cy"
         data-testid="TableRow"
       >
         <td>

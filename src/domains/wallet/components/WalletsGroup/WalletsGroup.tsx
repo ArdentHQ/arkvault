@@ -21,7 +21,7 @@ export const WalletsGroup: React.VFC<WalletsGroupProperties> = ({ network, walle
 	}, [history, network, profile]);
 
 	return (
-		<AccordionWrapper data-testid="WalletsGroup" isCollapsed={!isExpanded} className="overflow-hidden md:!mb-3">
+		<AccordionWrapper data-testid="WalletsGroup" isCollapsed={!isExpanded} className="md:!mb-3">
 			<WalletsGroupHeader
 				network={network}
 				wallets={wallets}
