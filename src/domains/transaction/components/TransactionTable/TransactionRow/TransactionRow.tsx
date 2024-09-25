@@ -93,7 +93,7 @@ export const TransactionRow = memo(
 						color="secondary"
 						size="xs"
 						noBorder
-						className="rounded p-1"
+						className="rounded px-1 dark:border"
 						data-testid="TransactionRow__type"
 					>
 						{getLabel(transaction.type())}
@@ -111,6 +111,7 @@ export const TransactionRow = memo(
 							isNegative={true}
 							ticker={transaction.wallet().currency()}
 							isCompact
+							className="h-[21px]"
 						/>
 						<span
 							className="text-xs font-semibold text-theme-secondary-700 lg:hidden"

@@ -104,7 +104,7 @@ exports[`UnlockTokensReview > should render 1`] = `
           data-testid="AmountLabel__wrapper"
         >
           <div
-            class="flex items-center space-x-1"
+            class="flex h-full items-center space-x-1"
           >
             <span
               class="whitespace-nowrap text-sm"

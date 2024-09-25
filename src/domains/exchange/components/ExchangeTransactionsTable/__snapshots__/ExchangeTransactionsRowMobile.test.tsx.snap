@@ -5,7 +5,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Expired) 1`] = `
   <table>
     <tbody>
       <tr
-        class="group css-9fdtr0"
+        class="group css-pafq7q"
         data-testid="TableRow"
       >
         <td>
@@ -183,7 +183,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Expired) 1`] = `
                     data-testid="AmountLabel__wrapper"
                   >
                     <div
-                      class="flex items-center space-x-1"
+                      class="flex h-full items-center space-x-1"
                     >
                       <span
                         class="whitespace-nowrap text-sm"
@@ -212,7 +212,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Expired) 1`] = `
                     data-testid="AmountLabel__wrapper"
                   >
                     <div
-                      class="flex items-center space-x-1"
+                      class="flex h-full items-center space-x-1"
                     >
                       <span
                         class="whitespace-nowrap text-sm"
@@ -238,7 +238,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Failed) 1`] = `
   <table>
     <tbody>
       <tr
-        class="group css-9fdtr0"
+        class="group css-pafq7q"
         data-testid="TableRow"
       >
         <td>
@@ -407,7 +407,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Failed) 1`] = `
                     data-testid="AmountLabel__wrapper"
                   >
                     <div
-                      class="flex items-center space-x-1"
+                      class="flex h-full items-center space-x-1"
                     >
                       <span
                         class="whitespace-nowrap text-sm"
@@ -436,7 +436,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Failed) 1`] = `
                     data-testid="AmountLabel__wrapper"
                   >
                     <div
-                      class="flex items-center space-x-1"
+                      class="flex h-full items-center space-x-1"
                     >
                       <span
                         class="whitespace-nowrap text-sm"
@@ -462,7 +462,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Finished) 1`] = `
   <table>
     <tbody>
       <tr
-        class="group css-9fdtr0"
+        class="group css-pafq7q"
         data-testid="TableRow"
       >
         <td>
@@ -631,7 +631,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Finished) 1`] = `
                     data-testid="AmountLabel__wrapper"
                   >
                     <div
-                      class="flex items-center space-x-1"
+                      class="flex h-full items-center space-x-1"
                     >
                       <span
                         class="whitespace-nowrap text-sm"
@@ -660,7 +660,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Finished) 1`] = `
                     data-testid="AmountLabel__wrapper"
                   >
                     <div
-                      class="flex items-center space-x-1"
+                      class="flex h-full items-center space-x-1"
                     >
                       <span
                         class="whitespace-nowrap text-sm"
@@ -686,7 +686,7 @@ exports[`ExchangeTransactionsRowMobile > should render (New) 1`] = `
   <table>
     <tbody>
       <tr
-        class="group css-9fdtr0"
+        class="group css-pafq7q"
         data-testid="TableRow"
       >
         <td>
@@ -856,7 +856,7 @@ exports[`ExchangeTransactionsRowMobile > should render (New) 1`] = `
                     data-testid="AmountLabel__wrapper"
                   >
                     <div
-                      class="flex items-center space-x-1"
+                      class="flex h-full items-center space-x-1"
                     >
                       <span
                         class="whitespace-nowrap text-sm"
@@ -885,7 +885,7 @@ exports[`ExchangeTransactionsRowMobile > should render (New) 1`] = `
                     data-testid="AmountLabel__wrapper"
                   >
                     <div
-                      class="flex items-center space-x-1"
+                      class="flex h-full items-center space-x-1"
                     >
                       <div
                         class="flex items-center justify-center bg-theme-success-200 dark:bg-theme-success-700 text-theme-success-700 dark:text-white/70 dark:bg-theme-success-700 h-5 w-5"
@@ -945,7 +945,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Refunded) 1`] = `
   <table>
     <tbody>
       <tr
-        class="group css-9fdtr0"
+        class="group css-pafq7q"
         data-testid="TableRow"
       >
         <td>
@@ -1119,7 +1119,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Refunded) 1`] = `
                     data-testid="AmountLabel__wrapper"
                   >
                     <div
-                      class="flex items-center space-x-1"
+                      class="flex h-full items-center space-x-1"
                     >
                       <span
                         class="whitespace-nowrap text-sm"
@@ -1148,7 +1148,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Refunded) 1`] = `
                     data-testid="AmountLabel__wrapper"
                   >
                     <div
-                      class="flex items-center space-x-1"
+                      class="flex h-full items-center space-x-1"
                     >
                       <span
                         class="whitespace-nowrap text-sm"
@@ -1174,7 +1174,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Verifying) 1`] = `
   <table>
     <tbody>
       <tr
-        class="group css-9fdtr0"
+        class="group css-pafq7q"
         data-testid="TableRow"
       >
         <td>
@@ -1348,7 +1348,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Verifying) 1`] = `
                     data-testid="AmountLabel__wrapper"
                   >
                     <div
-                      class="flex items-center space-x-1"
+                      class="flex h-full items-center space-x-1"
                     >
                       <span
                         class="whitespace-nowrap text-sm"
@@ -1377,7 +1377,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Verifying) 1`] = `
                     data-testid="AmountLabel__wrapper"
                   >
                     <div
-                      class="flex items-center space-x-1"
+                      class="flex h-full items-center space-x-1"
                     >
                       <span
                         class="whitespace-nowrap text-sm"
@@ -1401,7 +1401,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Verifying) 1`] = `
 exports[`ExchangeTransactionsRowMobile > should render N/A if no orderId 1`] = `
 <div>
   <tr
-    class="group css-9fdtr0"
+    class="group css-pafq7q"
     data-testid="TableRow"
   >
     <td>
@@ -1569,7 +1569,7 @@ exports[`ExchangeTransactionsRowMobile > should render N/A if no orderId 1`] = `
                 data-testid="AmountLabel__wrapper"
               >
                 <div
-                  class="flex items-center space-x-1"
+                  class="flex h-full items-center space-x-1"
                 >
                   <span
                     class="whitespace-nowrap text-sm"
@@ -1598,7 +1598,7 @@ exports[`ExchangeTransactionsRowMobile > should render N/A if no orderId 1`] = `
                 data-testid="AmountLabel__wrapper"
               >
                 <div
-                  class="flex items-center space-x-1"
+                  class="flex h-full items-center space-x-1"
                 >
                   <span
                     class="whitespace-nowrap text-sm"
@@ -1620,7 +1620,7 @@ exports[`ExchangeTransactionsRowMobile > should render N/A if no orderId 1`] = `
 exports[`ExchangeTransactionsRowMobile > should render transaction provider 1`] = `
 <div>
   <tr
-    class="group css-9fdtr0"
+    class="group css-pafq7q"
     data-testid="TableRow"
   >
     <td>
@@ -1791,7 +1791,7 @@ exports[`ExchangeTransactionsRowMobile > should render transaction provider 1`] 
                 data-testid="AmountLabel__wrapper"
               >
                 <div
-                  class="flex items-center space-x-1"
+                  class="flex h-full items-center space-x-1"
                 >
                   <span
                     class="whitespace-nowrap text-sm"
@@ -1820,7 +1820,7 @@ exports[`ExchangeTransactionsRowMobile > should render transaction provider 1`] 
                 data-testid="AmountLabel__wrapper"
               >
                 <div
-                  class="flex items-center space-x-1"
+                  class="flex h-full items-center space-x-1"
                 >
                   <span
                     class="whitespace-nowrap text-sm"

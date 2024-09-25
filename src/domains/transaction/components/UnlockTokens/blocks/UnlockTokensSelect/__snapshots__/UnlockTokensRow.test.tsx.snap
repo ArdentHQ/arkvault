@@ -5,7 +5,7 @@ exports[`UnlockTokensRow > should render with isReady = false 1`] = `
   <table>
     <tbody>
       <tr
-        class=" css-16ynu5g"
+        class=" css-1x4z4cy"
         data-testid="TableRow"
       >
         <td>
@@ -95,7 +95,7 @@ exports[`UnlockTokensRow > should render with isReady = true 1`] = `
   <table>
     <tbody>
       <tr
-        class=" css-16ynu5g"
+        class=" css-1x4z4cy"
         data-testid="TableRow"
       >
         <td>

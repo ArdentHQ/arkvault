@@ -24,7 +24,7 @@ exports[`TransactionAmount > should render currency amount 1`] = `
           data-testid="AmountLabel__wrapper"
         >
           <div
-            class="flex items-center space-x-1"
+            class="flex h-full items-center space-x-1"
           >
             <span
               class="whitespace-nowrap text-sm"
@@ -94,7 +94,7 @@ exports[`TransactionAmount > should render in lg 1`] = `
           data-testid="AmountLabel__wrapper"
         >
           <div
-            class="flex items-center space-x-1"
+            class="flex h-full items-center space-x-1"
           >
             <span
               class="whitespace-nowrap text-sm"
@@ -164,7 +164,7 @@ exports[`TransactionAmount > should render in md 1`] = `
           data-testid="AmountLabel__wrapper"
         >
           <div
-            class="flex items-center space-x-1"
+            class="flex h-full items-center space-x-1"
           >
             <span
               class="whitespace-nowrap text-sm"
@@ -237,7 +237,7 @@ exports[`TransactionAmount > should render in sm 1`] = `
             data-testid="AmountLabel__wrapper"
           >
             <div
-              class="flex items-center space-x-1"
+              class="flex h-full items-center space-x-1"
             >
               <span
                 class="whitespace-nowrap text-sm"
@@ -278,7 +278,7 @@ exports[`TransactionAmount > should render in xl 1`] = `
           data-testid="AmountLabel__wrapper"
         >
           <div
-            class="flex items-center space-x-1"
+            class="flex h-full items-center space-x-1"
           >
             <span
               class="whitespace-nowrap text-sm"
@@ -351,7 +351,7 @@ exports[`TransactionAmount > should render in xs 1`] = `
             data-testid="AmountLabel__wrapper"
           >
             <div
-              class="flex items-center space-x-1"
+              class="flex h-full items-center space-x-1"
             >
               <span
                 class="whitespace-nowrap text-sm"
@@ -392,7 +392,7 @@ exports[`TransactionAmount > should render label for multiple recipients 1`] = `
           data-testid="AmountLabel__wrapper"
         >
           <div
-            class="flex items-center space-x-1"
+            class="flex h-full items-center space-x-1"
           >
             <span
               class="whitespace-nowrap text-sm"
@@ -462,7 +462,7 @@ exports[`TransactionAmount > should render label for multiple recipients 2`] = `
           data-testid="AmountLabel__wrapper"
         >
           <div
-            class="flex items-center space-x-1"
+            class="flex h-full items-center space-x-1"
           >
             <span
               class="whitespace-nowrap text-sm"

@@ -251,7 +251,7 @@ exports[`Signed Transaction Table > should handle the onRowClick function when t
             role="rowgroup"
           >
             <tr
-              class="relative css-16ynu5g"
+              class="relative css-1x4z4cy"
               data-testid="TableRow"
             >
               <td>
@@ -301,7 +301,7 @@ exports[`Signed Transaction Table > should handle the onRowClick function when t
                   class="flex px-3 my-1 transition-colors duration-100 min-h-11 items-start xl:min-h-0"
                 >
                   <div
-                    class="rounded p-1 css-1dx994f"
+                    class="rounded px-1 dark:border css-1dx994f"
                     color="secondary"
                     data-testid="TransactionRowRecipientLabel"
                   >
@@ -378,7 +378,7 @@ exports[`Signed Transaction Table > should handle the onRowClick function when t
                       data-testid="AmountLabel__wrapper"
                     >
                       <div
-                        class="flex items-center space-x-1"
+                        class="flex h-full items-center space-x-1"
                       >
                         <span
                           class="whitespace-nowrap text-sm"
@@ -516,7 +516,7 @@ exports[`Signed Transaction Table > should render different status > should show
             role="rowgroup"
           >
             <tr
-              class="group css-9fdtr0"
+              class="group css-pafq7q"
               data-testid="TableRow__mobile"
             >
               <td>
@@ -652,7 +652,7 @@ exports[`Signed Transaction Table > should render different status > should show
                           data-testid="AmountLabel__wrapper"
                         >
                           <div
-                            class="flex items-center space-x-1"
+                            class="flex h-full items-center space-x-1"
                           >
                             <span
                               class="whitespace-nowrap text-sm"
@@ -964,7 +964,7 @@ exports[`Signed Transaction Table > should render different status > should show
             role="rowgroup"
           >
             <tr
-              class="relative css-16ynu5g"
+              class="relative css-1x4z4cy"
               data-testid="TableRow"
             >
               <td>
@@ -1014,7 +1014,7 @@ exports[`Signed Transaction Table > should render different status > should show
                   class="flex px-3 my-1 transition-colors duration-100 min-h-11 items-start xl:min-h-0"
                 >
                   <div
-                    class="rounded p-1 css-1dx994f"
+                    class="rounded px-1 dark:border css-1dx994f"
                     color="secondary"
                     data-testid="TransactionRowRecipientLabel"
                   >
@@ -1103,7 +1103,7 @@ exports[`Signed Transaction Table > should render different status > should show
                       data-testid="AmountLabel__wrapper"
                     >
                       <div
-                        class="flex items-center space-x-1"
+                        class="flex h-full items-center space-x-1"
                       >
                         <span
                           class="whitespace-nowrap text-sm"
@@ -1233,7 +1233,7 @@ exports[`Signed Transaction Table > should render different status > should show
             role="rowgroup"
           >
             <tr
-              class="group css-9fdtr0"
+              class="group css-pafq7q"
               data-testid="TableRow__mobile"
             >
               <td>
@@ -1377,7 +1377,7 @@ exports[`Signed Transaction Table > should render different status > should show
                           data-testid="AmountLabel__wrapper"
                         >
                           <div
-                            class="flex items-center space-x-1"
+                            class="flex h-full items-center space-x-1"
                           >
                             <span
                               class="whitespace-nowrap text-sm"
@@ -1689,7 +1689,7 @@ exports[`Signed Transaction Table > should render different status > should show
             role="rowgroup"
           >
             <tr
-              class="relative css-16ynu5g"
+              class="relative css-1x4z4cy"
               data-testid="TableRow"
             >
               <td>
@@ -1739,7 +1739,7 @@ exports[`Signed Transaction Table > should render different status > should show
                   class="flex px-3 my-1 transition-colors duration-100 min-h-11 items-start xl:min-h-0"
                 >
                   <div
-                    class="rounded p-1 css-1dx994f"
+                    class="rounded px-1 dark:border css-1dx994f"
                     color="secondary"
                     data-testid="TransactionRowRecipientLabel"
                   >
@@ -1816,7 +1816,7 @@ exports[`Signed Transaction Table > should render different status > should show
                       data-testid="AmountLabel__wrapper"
                     >
                       <div
-                        class="flex items-center space-x-1"
+                        class="flex h-full items-center space-x-1"
                       >
                         <span
                           class="whitespace-nowrap text-sm"
@@ -1954,7 +1954,7 @@ exports[`Signed Transaction Table > should render different status > should show
             role="rowgroup"
           >
             <tr
-              class="group css-9fdtr0"
+              class="group css-pafq7q"
               data-testid="TableRow__mobile"
             >
               <td>
@@ -2098,7 +2098,7 @@ exports[`Signed Transaction Table > should render different status > should show
                           data-testid="AmountLabel__wrapper"
                         >
                           <div
-                            class="flex items-center space-x-1"
+                            class="flex h-full items-center space-x-1"
                           >
                             <span
                               class="whitespace-nowrap text-sm"
@@ -2410,7 +2410,7 @@ exports[`Signed Transaction Table > should render different status > should show
             role="rowgroup"
           >
             <tr
-              class="relative css-16ynu5g"
+              class="relative css-1x4z4cy"
               data-testid="TableRow"
             >
               <td>
@@ -2460,7 +2460,7 @@ exports[`Signed Transaction Table > should render different status > should show
                   class="flex px-3 my-1 transition-colors duration-100 min-h-11 items-start xl:min-h-0"
                 >
                   <div
-                    class="rounded p-1 css-1dx994f"
+                    class="rounded px-1 dark:border css-1dx994f"
                     color="secondary"
                     data-testid="TransactionRowRecipientLabel"
                   >
@@ -2548,7 +2548,7 @@ exports[`Signed Transaction Table > should render different status > should show
                       data-testid="AmountLabel__wrapper"
                     >
                       <div
-                        class="flex items-center space-x-1"
+                        class="flex h-full items-center space-x-1"
                       >
                         <span
                           class="whitespace-nowrap text-sm"
@@ -2686,7 +2686,7 @@ exports[`Signed Transaction Table > should render different status > should show
             role="rowgroup"
           >
             <tr
-              class="group css-9fdtr0"
+              class="group css-pafq7q"
               data-testid="TableRow__mobile"
             >
               <td>
@@ -2830,7 +2830,7 @@ exports[`Signed Transaction Table > should render different status > should show
                           data-testid="AmountLabel__wrapper"
                         >
                           <div
-                            class="flex items-center space-x-1"
+                            class="flex h-full items-center space-x-1"
                           >
                             <span
                               class="whitespace-nowrap text-sm"
@@ -3142,7 +3142,7 @@ exports[`Signed Transaction Table > should render different status > should show
             role="rowgroup"
           >
             <tr
-              class="relative css-16ynu5g"
+              class="relative css-1x4z4cy"
               data-testid="TableRow"
             >
               <td>
@@ -3192,7 +3192,7 @@ exports[`Signed Transaction Table > should render different status > should show
                   class="flex px-3 my-1 transition-colors duration-100 min-h-11 items-start xl:min-h-0"
                 >
                   <div
-                    class="rounded p-1 css-1dx994f"
+                    class="rounded px-1 dark:border css-1dx994f"
                     color="secondary"
                     data-testid="TransactionRowRecipientLabel"
                   >
@@ -3280,7 +3280,7 @@ exports[`Signed Transaction Table > should render different status > should show
                       data-testid="AmountLabel__wrapper"
                     >
                       <div
-                        class="flex items-center space-x-1"
+                        class="flex h-full items-center space-x-1"
                       >
                         <span
                           class="whitespace-nowrap text-sm"
@@ -3418,7 +3418,7 @@ exports[`Signed Transaction Table > should render different status > should show
             role="rowgroup"
           >
             <tr
-              class="group css-9fdtr0"
+              class="group css-pafq7q"
               data-testid="TableRow__mobile"
             >
               <td>
@@ -3512,7 +3512,7 @@ exports[`Signed Transaction Table > should render different status > should show
                           data-testid="AmountLabel__wrapper"
                         >
                           <div
-                            class="flex items-center space-x-1"
+                            class="flex h-full items-center space-x-1"
                           >
                             <span
                               class="whitespace-nowrap text-sm"
@@ -3824,7 +3824,7 @@ exports[`Signed Transaction Table > should render different status > should show
             role="rowgroup"
           >
             <tr
-              class="group relative css-1kskd5s"
+              class="group relative css-1d424e8"
               data-testid="TableRow"
             >
               <td>
@@ -3874,7 +3874,7 @@ exports[`Signed Transaction Table > should render different status > should show
                   class="flex px-3 transition-colors duration-100 min-h-11 items-start xl:min-h-0 my-0 py-3"
                 >
                   <div
-                    class="rounded p-1 css-1dx994f"
+                    class="rounded px-1 dark:border css-1dx994f"
                     color="secondary"
                   >
                     Unvote
@@ -3959,7 +3959,7 @@ exports[`Signed Transaction Table > should render different status > should show
                       data-testid="AmountLabel__wrapper"
                     >
                       <div
-                        class="flex items-center space-x-1"
+                        class="flex h-full items-center space-x-1"
                       >
                         <span
                           class="whitespace-nowrap text-sm"
@@ -4045,7 +4045,7 @@ exports[`Signed Transaction Table > should render different status > should show
             role="rowgroup"
           >
             <tr
-              class="group css-9fdtr0"
+              class="group css-pafq7q"
               data-testid="TableRow__mobile"
             >
               <td>
@@ -4139,7 +4139,7 @@ exports[`Signed Transaction Table > should render different status > should show
                           data-testid="AmountLabel__wrapper"
                         >
                           <div
-                            class="flex items-center space-x-1"
+                            class="flex h-full items-center space-x-1"
                           >
                             <span
                               class="whitespace-nowrap text-sm"
@@ -4451,7 +4451,7 @@ exports[`Signed Transaction Table > should render different status > should show
             role="rowgroup"
           >
             <tr
-              class="group relative css-1kskd5s"
+              class="group relative css-1d424e8"
               data-testid="TableRow"
             >
               <td>
@@ -4501,7 +4501,7 @@ exports[`Signed Transaction Table > should render different status > should show
                   class="flex px-3 transition-colors duration-100 min-h-11 items-start xl:min-h-0 my-0 py-3"
                 >
                   <div
-                    class="rounded p-1 css-1dx994f"
+                    class="rounded px-1 dark:border css-1dx994f"
                     color="secondary"
                   >
                     Vote
@@ -4586,7 +4586,7 @@ exports[`Signed Transaction Table > should render different status > should show
                       data-testid="AmountLabel__wrapper"
                     >
                       <div
-                        class="flex items-center space-x-1"
+                        class="flex h-full items-center space-x-1"
                       >
                         <span
                           class="whitespace-nowrap text-sm"
@@ -4672,7 +4672,7 @@ exports[`Signed Transaction Table > should render different status > should show
             role="rowgroup"
           >
             <tr
-              class="group css-9fdtr0"
+              class="group css-pafq7q"
               data-testid="TableRow__mobile"
             >
               <td>
@@ -4816,7 +4816,7 @@ exports[`Signed Transaction Table > should render different status > should show
                           data-testid="AmountLabel__wrapper"
                         >
                           <div
-                            class="flex items-center space-x-1"
+                            class="flex h-full items-center space-x-1"
                           >
                             <span
                               class="whitespace-nowrap text-sm"
@@ -5128,7 +5128,7 @@ exports[`Signed Transaction Table > should render different status > should show
             role="rowgroup"
           >
             <tr
-              class="relative css-16ynu5g"
+              class="relative css-1x4z4cy"
               data-testid="TableRow"
             >
               <td>
@@ -5178,7 +5178,7 @@ exports[`Signed Transaction Table > should render different status > should show
                   class="flex px-3 my-1 transition-colors duration-100 min-h-11 items-start xl:min-h-0"
                 >
                   <div
-                    class="rounded p-1 css-1dx994f"
+                    class="rounded px-1 dark:border css-1dx994f"
                     color="secondary"
                     data-testid="TransactionRowRecipientLabel"
                   >
@@ -5265,7 +5265,7 @@ exports[`Signed Transaction Table > should render different status > should show
                       data-testid="AmountLabel__wrapper"
                     >
                       <div
-                        class="flex items-center space-x-1"
+                        class="flex h-full items-center space-x-1"
                       >
                         <span
                           class="whitespace-nowrap text-sm"
@@ -5403,7 +5403,7 @@ exports[`Signed Transaction Table > should render pending transfers on mobile 1`
             role="rowgroup"
           >
             <tr
-              class="group css-9fdtr0"
+              class="group css-pafq7q"
               data-testid="TableRow__mobile"
             >
               <td>
@@ -5499,7 +5499,7 @@ exports[`Signed Transaction Table > should render pending transfers on mobile 1`
                           data-testid="AmountLabel__wrapper"
                         >
                           <div
-                            class="flex items-center space-x-1"
+                            class="flex h-full items-center space-x-1"
                           >
                             <span
                               class="whitespace-nowrap text-sm"
@@ -5811,7 +5811,7 @@ exports[`Signed Transaction Table > should render pending transfers when isCompa
             role="rowgroup"
           >
             <tr
-              class="group relative css-1kskd5s"
+              class="group relative css-1d424e8"
               data-testid="TableRow"
             >
               <td>
@@ -5861,7 +5861,7 @@ exports[`Signed Transaction Table > should render pending transfers when isCompa
                   class="flex px-3 transition-colors duration-100 min-h-11 items-start xl:min-h-0 my-0 py-3"
                 >
                   <div
-                    class="rounded p-1 css-1dx994f"
+                    class="rounded px-1 dark:border css-1dx994f"
                     color="secondary"
                   >
                     Transfer
@@ -5948,7 +5948,7 @@ exports[`Signed Transaction Table > should render pending transfers when isCompa
                       data-testid="AmountLabel__wrapper"
                     >
                       <div
-                        class="flex items-center space-x-1"
+                        class="flex h-full items-center space-x-1"
                       >
                         <span
                           class="whitespace-nowrap text-sm"
@@ -6258,7 +6258,7 @@ exports[`Signed Transaction Table > should render pending transfers when isCompa
             role="rowgroup"
           >
             <tr
-              class="group relative css-1kskd5s"
+              class="group relative css-1d424e8"
               data-testid="TableRow"
             >
               <td>
@@ -6308,7 +6308,7 @@ exports[`Signed Transaction Table > should render pending transfers when isCompa
                   class="flex px-3 transition-colors duration-100 min-h-11 items-start xl:min-h-0 my-0 py-3"
                 >
                   <div
-                    class="rounded p-1 css-1dx994f"
+                    class="rounded px-1 dark:border css-1dx994f"
                     color="secondary"
                   >
                     Transfer
@@ -6395,7 +6395,7 @@ exports[`Signed Transaction Table > should render pending transfers when isCompa
                       data-testid="AmountLabel__wrapper"
                     >
                       <div
-                        class="flex items-center space-x-1"
+                        class="flex h-full items-center space-x-1"
                       >
                         <span
                           class="whitespace-nowrap text-sm"
@@ -6705,7 +6705,7 @@ exports[`Signed Transaction Table > should render ready to broadcast transaction
             role="rowgroup"
           >
             <tr
-              class="relative css-16ynu5g"
+              class="relative css-1x4z4cy"
               data-testid="TableRow"
             >
               <td>
@@ -6755,7 +6755,7 @@ exports[`Signed Transaction Table > should render ready to broadcast transaction
                   class="flex px-3 my-1 transition-colors duration-100 min-h-11 items-start xl:min-h-0"
                 >
                   <div
-                    class="rounded p-1 css-1dx994f"
+                    class="rounded px-1 dark:border css-1dx994f"
                     color="secondary"
                     data-testid="TransactionRowRecipientLabel"
                   >
@@ -6832,7 +6832,7 @@ exports[`Signed Transaction Table > should render ready to broadcast transaction
                       data-testid="AmountLabel__wrapper"
                     >
                       <div
-                        class="flex items-center space-x-1"
+                        class="flex h-full items-center space-x-1"
                       >
                         <span
                           class="whitespace-nowrap text-sm"
@@ -7194,7 +7194,7 @@ exports[`Signed Transaction Table > should render signed transactions and handle
             role="rowgroup"
           >
             <tr
-              class="relative css-16ynu5g"
+              class="relative css-1x4z4cy"
               data-testid="TableRow"
             >
               <td>
@@ -7244,7 +7244,7 @@ exports[`Signed Transaction Table > should render signed transactions and handle
                   class="flex px-3 my-1 transition-colors duration-100 min-h-11 items-start xl:min-h-0"
                 >
                   <div
-                    class="rounded p-1 css-1dx994f"
+                    class="rounded px-1 dark:border css-1dx994f"
                     color="secondary"
                     data-testid="TransactionRowRecipientLabel"
                   >
@@ -7321,7 +7321,7 @@ exports[`Signed Transaction Table > should render signed transactions and handle
                       data-testid="AmountLabel__wrapper"
                     >
                       <div
-                        class="flex items-center space-x-1"
+                        class="flex h-full items-center space-x-1"
                       >
                         <span
                           class="whitespace-nowrap text-sm"
@@ -7675,7 +7675,7 @@ exports[`Signed Transaction Table > should show as awaiting confirmations 1`] = 
             role="rowgroup"
           >
             <tr
-              class="group relative css-1kskd5s"
+              class="group relative css-1d424e8"
               data-testid="TableRow"
             >
               <td>
@@ -7725,7 +7725,7 @@ exports[`Signed Transaction Table > should show as awaiting confirmations 1`] = 
                   class="flex px-3 transition-colors duration-100 min-h-11 items-start xl:min-h-0 my-0 py-3"
                 >
                   <div
-                    class="rounded p-1 css-1dx994f"
+                    class="rounded px-1 dark:border css-1dx994f"
                     color="secondary"
                   >
                     Transfer
@@ -7812,7 +7812,7 @@ exports[`Signed Transaction Table > should show as awaiting confirmations 1`] = 
                       data-testid="AmountLabel__wrapper"
                     >
                       <div
-                        class="flex items-center space-x-1"
+                        class="flex h-full items-center space-x-1"
                       >
                         <span
                           class="whitespace-nowrap text-sm"
@@ -7898,7 +7898,7 @@ exports[`Signed Transaction Table > should show as awaiting confirmations on mob
             role="rowgroup"
           >
             <tr
-              class="group css-9fdtr0"
+              class="group css-pafq7q"
               data-testid="TableRow__mobile"
             >
               <td>
@@ -7994,7 +7994,7 @@ exports[`Signed Transaction Table > should show as awaiting confirmations on mob
                           data-testid="AmountLabel__wrapper"
                         >
                           <div
-                            class="flex items-center space-x-1"
+                            class="flex h-full items-center space-x-1"
                           >
                             <span
                               class="whitespace-nowrap text-sm"
@@ -8306,7 +8306,7 @@ exports[`Signed Transaction Table > should show the sign button with isCompact =
             role="rowgroup"
           >
             <tr
-              class="relative css-16ynu5g"
+              class="relative css-1x4z4cy"
               data-testid="TableRow"
             >
               <td>
@@ -8356,7 +8356,7 @@ exports[`Signed Transaction Table > should show the sign button with isCompact =
                   class="flex px-3 my-1 transition-colors duration-100 min-h-11 items-start xl:min-h-0"
                 >
                   <div
-                    class="rounded p-1 css-1dx994f"
+                    class="rounded px-1 dark:border css-1dx994f"
                     color="secondary"
                     data-testid="TransactionRowRecipientLabel"
                   >
@@ -8433,7 +8433,7 @@ exports[`Signed Transaction Table > should show the sign button with isCompact =
                       data-testid="AmountLabel__wrapper"
                     >
                       <div
-                        class="flex items-center space-x-1"
+                        class="flex h-full items-center space-x-1"
                       >
                         <span
                           class="whitespace-nowrap text-sm"
@@ -8795,7 +8795,7 @@ exports[`Signed Transaction Table > should show the sign button with isCompact =
             role="rowgroup"
           >
             <tr
-              class="relative css-16ynu5g"
+              class="relative css-1x4z4cy"
               data-testid="TableRow"
             >
               <td>
@@ -8845,7 +8845,7 @@ exports[`Signed Transaction Table > should show the sign button with isCompact =
                   class="flex px-3 my-1 transition-colors duration-100 min-h-11 items-start xl:min-h-0"
                 >
                   <div
-                    class="rounded p-1 css-1dx994f"
+                    class="rounded px-1 dark:border css-1dx994f"
                     color="secondary"
                     data-testid="TransactionRowRecipientLabel"
                   >
@@ -8922,7 +8922,7 @@ exports[`Signed Transaction Table > should show the sign button with isCompact =
                       data-testid="AmountLabel__wrapper"
                     >
                       <div
-                        class="flex items-center space-x-1"
+                        class="flex h-full items-center space-x-1"
                       >
                         <span
                           class="whitespace-nowrap text-sm"
