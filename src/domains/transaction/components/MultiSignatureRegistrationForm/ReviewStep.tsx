@@ -83,10 +83,10 @@ export const ReviewStep = ({ wallet, profile }: { wallet: Contracts.IReadWriteWa
 						<div className="px-3 sm:px-6 mt-3 mb-2">
 							{participants.map(participiant => (
 								<div
-									key={participant.address}
+									key={participiant.address}
 									className="px-4 sm:px-0 py-3 mb-3 last:mb-0 sm:mb-0 bg-theme-secondary-100 sm:bg-transparent overflow-hidden sm:last:border-none border sm:border-t-0 sm:border-x-0 rounded sm:rounded-none sm:border-dashed border-theme-secondary-300">
 									<Address address={participiant.address}
-											 addressClass="text-theme-navy-600 text-sm leading-[17px]"
+											 addressClass="text-theme-secondary-900 text-sm leading-[17px]"
 											 showCopyButton/>
 								</div>
 							))}
