@@ -40,12 +40,12 @@ export const WalletGroupPage: React.VFC = () => {
 						className="px-0 md:px-8"
 					/>
 
-				<WalletsList
-					wallets={wallets}
-					itemsPerPage={MAX_WALLETS_ON_SINGLE_PAGE_LIST}
-					showPagination={isMdAndAbove}
-					className="px-0 md:px-0 border-t border-t-theme-secondary-300 dark:border-t-theme-secondary-800"
-				/>
+					<WalletsList
+						wallets={wallets}
+						itemsPerPage={MAX_WALLETS_ON_SINGLE_PAGE_LIST}
+						showPagination={isMdAndAbove}
+						className="px-0 md:border-t md:border-t-theme-secondary-300 md:px-0 md:dark:border-t-theme-secondary-800"
+					/>
 				</div>
 			</Section>
 		</Page>
