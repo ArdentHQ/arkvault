@@ -1097,7 +1097,7 @@ exports[`SendTransfer Fee Handling > should send a single transfer with a high f
                                   data-testid="AmountLabel__wrapper"
                                 >
                                   <div
-                                    class="flex items-center space-x-1"
+                                    class="flex h-full items-center space-x-1"
                                   >
                                     <span
                                       class="whitespace-nowrap text-sm"
@@ -2393,7 +2393,7 @@ exports[`SendTransfer Fee Handling > should send a single transfer with a low fe
                                   data-testid="AmountLabel__wrapper"
                                 >
                                   <div
-                                    class="flex items-center space-x-1"
+                                    class="flex h-full items-center space-x-1"
                                   >
                                     <span
                                       class="whitespace-nowrap text-sm"

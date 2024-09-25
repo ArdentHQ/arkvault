@@ -75,7 +75,7 @@ exports[`ExchangeTransactionsRow > should render (Expired) 1`] = `
               data-testid="AmountLabel__wrapper"
             >
               <div
-                class="flex items-center space-x-1"
+                class="flex h-full items-center space-x-1"
               >
                 <span
                   class="whitespace-nowrap text-sm"
@@ -91,7 +91,7 @@ exports[`ExchangeTransactionsRow > should render (Expired) 1`] = `
               data-testid="AmountLabel__wrapper"
             >
               <div
-                class="flex items-center space-x-1"
+                class="flex h-full items-center space-x-1"
               >
                 <span
                   class="whitespace-nowrap text-sm"
@@ -115,7 +115,7 @@ exports[`ExchangeTransactionsRow > should render (Expired) 1`] = `
               data-testid="AmountLabel__wrapper"
             >
               <div
-                class="flex items-center space-x-1"
+                class="flex h-full items-center space-x-1"
               >
                 <span
                   class="whitespace-nowrap text-sm"
@@ -139,7 +139,7 @@ exports[`ExchangeTransactionsRow > should render (Expired) 1`] = `
               data-testid="AmountLabel__wrapper"
             >
               <div
-                class="flex items-center space-x-1"
+                class="flex h-full items-center space-x-1"
               >
                 <span
                   class="whitespace-nowrap text-sm"
@@ -323,7 +323,7 @@ exports[`ExchangeTransactionsRow > should render (Failed) 1`] = `
               data-testid="AmountLabel__wrapper"
             >
               <div
-                class="flex items-center space-x-1"
+                class="flex h-full items-center space-x-1"
               >
                 <span
                   class="whitespace-nowrap text-sm"
@@ -339,7 +339,7 @@ exports[`ExchangeTransactionsRow > should render (Failed) 1`] = `
               data-testid="AmountLabel__wrapper"
             >
               <div
-                class="flex items-center space-x-1"
+                class="flex h-full items-center space-x-1"
               >
                 <span
                   class="whitespace-nowrap text-sm"
@@ -363,7 +363,7 @@ exports[`ExchangeTransactionsRow > should render (Failed) 1`] = `
               data-testid="AmountLabel__wrapper"
             >
               <div
-                class="flex items-center space-x-1"
+                class="flex h-full items-center space-x-1"
               >
                 <span
                   class="whitespace-nowrap text-sm"
@@ -387,7 +387,7 @@ exports[`ExchangeTransactionsRow > should render (Failed) 1`] = `
               data-testid="AmountLabel__wrapper"
             >
               <div
-                class="flex items-center space-x-1"
+                class="flex h-full items-center space-x-1"
               >
                 <span
                   class="whitespace-nowrap text-sm"
@@ -562,7 +562,7 @@ exports[`ExchangeTransactionsRow > should render (Finished) 1`] = `
               data-testid="AmountLabel__wrapper"
             >
               <div
-                class="flex items-center space-x-1"
+                class="flex h-full items-center space-x-1"
               >
                 <span
                   class="whitespace-nowrap text-sm"
@@ -578,7 +578,7 @@ exports[`ExchangeTransactionsRow > should render (Finished) 1`] = `
               data-testid="AmountLabel__wrapper"
             >
               <div
-                class="flex items-center space-x-1"
+                class="flex h-full items-center space-x-1"
               >
                 <span
                   class="whitespace-nowrap text-sm"
@@ -602,7 +602,7 @@ exports[`ExchangeTransactionsRow > should render (Finished) 1`] = `
               data-testid="AmountLabel__wrapper"
             >
               <div
-                class="flex items-center space-x-1"
+                class="flex h-full items-center space-x-1"
               >
                 <span
                   class="whitespace-nowrap text-sm"
@@ -626,7 +626,7 @@ exports[`ExchangeTransactionsRow > should render (Finished) 1`] = `
               data-testid="AmountLabel__wrapper"
             >
               <div
-                class="flex items-center space-x-1"
+                class="flex h-full items-center space-x-1"
               >
                 <span
                   class="whitespace-nowrap text-sm"
@@ -801,7 +801,7 @@ exports[`ExchangeTransactionsRow > should render (New) 1`] = `
               data-testid="AmountLabel__wrapper"
             >
               <div
-                class="flex items-center space-x-1"
+                class="flex h-full items-center space-x-1"
               >
                 <span
                   class="whitespace-nowrap text-sm"
@@ -817,7 +817,7 @@ exports[`ExchangeTransactionsRow > should render (New) 1`] = `
               data-testid="AmountLabel__wrapper"
             >
               <div
-                class="flex items-center space-x-1"
+                class="flex h-full items-center space-x-1"
               >
                 <div
                   class="flex items-center justify-center bg-theme-success-200 dark:bg-theme-success-700 text-theme-success-700 dark:text-white/70 dark:bg-theme-success-700 -ml-1.5 px-2"
@@ -875,7 +875,7 @@ exports[`ExchangeTransactionsRow > should render (New) 1`] = `
               data-testid="AmountLabel__wrapper"
             >
               <div
-                class="flex items-center space-x-1"
+                class="flex h-full items-center space-x-1"
               >
                 <span
                   class="whitespace-nowrap text-sm"
@@ -899,7 +899,7 @@ exports[`ExchangeTransactionsRow > should render (New) 1`] = `
               data-testid="AmountLabel__wrapper"
             >
               <div
-                class="flex items-center space-x-1"
+                class="flex h-full items-center space-x-1"
               >
                 <div
                   class="flex items-center justify-center bg-theme-success-200 dark:bg-theme-success-700 text-theme-success-700 dark:text-white/70 dark:bg-theme-success-700 -ml-1.5 px-2"
@@ -1109,7 +1109,7 @@ exports[`ExchangeTransactionsRow > should render (Refunded) 1`] = `
               data-testid="AmountLabel__wrapper"
             >
               <div
-                class="flex items-center space-x-1"
+                class="flex h-full items-center space-x-1"
               >
                 <span
                   class="whitespace-nowrap text-sm"
@@ -1125,7 +1125,7 @@ exports[`ExchangeTransactionsRow > should render (Refunded) 1`] = `
               data-testid="AmountLabel__wrapper"
             >
               <div
-                class="flex items-center space-x-1"
+                class="flex h-full items-center space-x-1"
               >
                 <span
                   class="whitespace-nowrap text-sm"
@@ -1149,7 +1149,7 @@ exports[`ExchangeTransactionsRow > should render (Refunded) 1`] = `
               data-testid="AmountLabel__wrapper"
             >
               <div
-                class="flex items-center space-x-1"
+                class="flex h-full items-center space-x-1"
               >
                 <span
                   class="whitespace-nowrap text-sm"
@@ -1173,7 +1173,7 @@ exports[`ExchangeTransactionsRow > should render (Refunded) 1`] = `
               data-testid="AmountLabel__wrapper"
             >
               <div
-                class="flex items-center space-x-1"
+                class="flex h-full items-center space-x-1"
               >
                 <span
                   class="whitespace-nowrap text-sm"
@@ -1353,7 +1353,7 @@ exports[`ExchangeTransactionsRow > should render (Verifying) 1`] = `
               data-testid="AmountLabel__wrapper"
             >
               <div
-                class="flex items-center space-x-1"
+                class="flex h-full items-center space-x-1"
               >
                 <span
                   class="whitespace-nowrap text-sm"
@@ -1369,7 +1369,7 @@ exports[`ExchangeTransactionsRow > should render (Verifying) 1`] = `
               data-testid="AmountLabel__wrapper"
             >
               <div
-                class="flex items-center space-x-1"
+                class="flex h-full items-center space-x-1"
               >
                 <span
                   class="whitespace-nowrap text-sm"
@@ -1393,7 +1393,7 @@ exports[`ExchangeTransactionsRow > should render (Verifying) 1`] = `
               data-testid="AmountLabel__wrapper"
             >
               <div
-                class="flex items-center space-x-1"
+                class="flex h-full items-center space-x-1"
               >
                 <span
                   class="whitespace-nowrap text-sm"
@@ -1417,7 +1417,7 @@ exports[`ExchangeTransactionsRow > should render (Verifying) 1`] = `
               data-testid="AmountLabel__wrapper"
             >
               <div
-                class="flex items-center space-x-1"
+                class="flex h-full items-center space-x-1"
               >
                 <span
                   class="whitespace-nowrap text-sm"
@@ -1597,7 +1597,7 @@ exports[`ExchangeTransactionsRow > should render compact 1`] = `
               data-testid="AmountLabel__wrapper"
             >
               <div
-                class="flex items-center space-x-1"
+                class="flex h-full items-center space-x-1"
               >
                 <span
                   class="whitespace-nowrap text-sm"
@@ -1613,7 +1613,7 @@ exports[`ExchangeTransactionsRow > should render compact 1`] = `
               data-testid="AmountLabel__wrapper"
             >
               <div
-                class="flex items-center space-x-1"
+                class="flex h-full items-center space-x-1"
               >
                 <span
                   class="whitespace-nowrap text-sm"
@@ -1637,7 +1637,7 @@ exports[`ExchangeTransactionsRow > should render compact 1`] = `
               data-testid="AmountLabel__wrapper"
             >
               <div
-                class="flex items-center space-x-1"
+                class="flex h-full items-center space-x-1"
               >
                 <span
                   class="whitespace-nowrap text-sm"
@@ -1661,7 +1661,7 @@ exports[`ExchangeTransactionsRow > should render compact 1`] = `
               data-testid="AmountLabel__wrapper"
             >
               <div
-                class="flex items-center space-x-1"
+                class="flex h-full items-center space-x-1"
               >
                 <span
                   class="whitespace-nowrap text-sm"
