@@ -572,7 +572,7 @@ exports[`WalletGroupPage > should render empty list if no wallets 1`] = `
           class="mx-auto px-6 lg:container md:px-10"
         >
           <div
-            class="flex flex-col rounded-xl border-theme-navy-100 dark:border-theme-secondary-800 dark:bg-theme-background md:border-2"
+            class="flex flex-col rounded-xl border-transparent outline outline-1 outline-transparent dark:bg-theme-background md:border-2 md:border-b-[5px] md:border-b-theme-secondary-200 md:outline-theme-navy-100 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800"
           >
             <div
               class="select-none md:h-20 py-6 md:p-4 flex flex-row items-center border-theme-secondary-300 dark:border-theme-secondary-800 px-0 md:px-8"

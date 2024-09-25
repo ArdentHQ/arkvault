@@ -32,7 +32,7 @@ export const WalletGroupPage: React.VFC = () => {
 	return (
 		<Page pageTitle={network.coin()}>
 			<Section>
-				<div className="flex flex-col rounded-xl border-theme-navy-100 dark:border-theme-secondary-800 dark:bg-theme-background md:border-2">
+				<div className="flex flex-col rounded-xl border-transparent outline outline-1 outline-transparent dark:bg-theme-background md:border-2 md:border-b-[5px] md:border-b-theme-secondary-200 md:outline-theme-navy-100 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800">
 					<WalletsGroupHeader
 						network={network}
 						wallets={wallets}
