@@ -1363,7 +1363,7 @@ exports[`SearchWallet uses fiat value = false > should render responsive item 1`
                 data-testid="HeaderSearchInput"
               >
                 <div
-                  class="flex items-center overflow-hidden rounded-lg border border-theme-secondary-400 bg-theme-background px-4 text-base dark:border-theme-secondary-700 css-e93eg4"
+                  class="flex items-center overflow-hidden rounded-lg border border-theme-secondary-400 bg-theme-background px-4 text-base dark:border-theme-secondary-700 css-1ltrfa0"
                   data-testid="HeaderSearchInput__input"
                 >
                   <button
@@ -1473,7 +1473,7 @@ exports[`SearchWallet uses fiat value = false > should render responsive item 1`
                 data-testid="TableWrapper"
               >
                 <div
-                  class="with-x-padding css-1m6rt2i"
+                  class="css-1m6rt2i"
                   role="table"
                 >
                   <table
@@ -1678,7 +1678,7 @@ exports[`SearchWallet uses fiat value = false > should render responsive item 2`
                 data-testid="HeaderSearchInput"
               >
                 <div
-                  class="flex items-center overflow-hidden rounded-lg border border-theme-secondary-400 bg-theme-background px-4 text-base dark:border-theme-secondary-700 css-e93eg4"
+                  class="flex items-center overflow-hidden rounded-lg border border-theme-secondary-400 bg-theme-background px-4 text-base dark:border-theme-secondary-700 css-1ltrfa0"
                   data-testid="HeaderSearchInput__input"
                 >
                   <button
@@ -1788,7 +1788,7 @@ exports[`SearchWallet uses fiat value = false > should render responsive item 2`
                 data-testid="TableWrapper"
               >
                 <div
-                  class="with-x-padding css-1m6rt2i"
+                  class="css-1m6rt2i"
                   role="table"
                 >
                   <table
@@ -1993,7 +1993,7 @@ exports[`SearchWallet uses fiat value = false > should render responsive with se
                 data-testid="HeaderSearchInput"
               >
                 <div
-                  class="flex items-center overflow-hidden rounded-lg border border-theme-secondary-400 bg-theme-background px-4 text-base dark:border-theme-secondary-700 css-e93eg4"
+                  class="flex items-center overflow-hidden rounded-lg border border-theme-secondary-400 bg-theme-background px-4 text-base dark:border-theme-secondary-700 css-1ltrfa0"
                   data-testid="HeaderSearchInput__input"
                 >
                   <button
@@ -2103,7 +2103,7 @@ exports[`SearchWallet uses fiat value = false > should render responsive with se
                 data-testid="TableWrapper"
               >
                 <div
-                  class="with-x-padding css-1m6rt2i"
+                  class="css-1m6rt2i"
                   role="table"
                 >
                   <table
@@ -5018,7 +5018,7 @@ exports[`SearchWallet uses fiat value = true > should render responsive item 1`]
                 data-testid="HeaderSearchInput"
               >
                 <div
-                  class="flex items-center overflow-hidden rounded-lg border border-theme-secondary-400 bg-theme-background px-4 text-base dark:border-theme-secondary-700 css-e93eg4"
+                  class="flex items-center overflow-hidden rounded-lg border border-theme-secondary-400 bg-theme-background px-4 text-base dark:border-theme-secondary-700 css-1ltrfa0"
                   data-testid="HeaderSearchInput__input"
                 >
                   <button
@@ -5128,7 +5128,7 @@ exports[`SearchWallet uses fiat value = true > should render responsive item 1`]
                 data-testid="TableWrapper"
               >
                 <div
-                  class="with-x-padding css-1m6rt2i"
+                  class="css-1m6rt2i"
                   role="table"
                 >
                   <table
@@ -5333,7 +5333,7 @@ exports[`SearchWallet uses fiat value = true > should render responsive item 2`]
                 data-testid="HeaderSearchInput"
               >
                 <div
-                  class="flex items-center overflow-hidden rounded-lg border border-theme-secondary-400 bg-theme-background px-4 text-base dark:border-theme-secondary-700 css-e93eg4"
+                  class="flex items-center overflow-hidden rounded-lg border border-theme-secondary-400 bg-theme-background px-4 text-base dark:border-theme-secondary-700 css-1ltrfa0"
                   data-testid="HeaderSearchInput__input"
                 >
                   <button
@@ -5443,7 +5443,7 @@ exports[`SearchWallet uses fiat value = true > should render responsive item 2`]
                 data-testid="TableWrapper"
               >
                 <div
-                  class="with-x-padding css-1m6rt2i"
+                  class="css-1m6rt2i"
                   role="table"
                 >
                   <table
@@ -5648,7 +5648,7 @@ exports[`SearchWallet uses fiat value = true > should render responsive with sel
                 data-testid="HeaderSearchInput"
               >
                 <div
-                  class="flex items-center overflow-hidden rounded-lg border border-theme-secondary-400 bg-theme-background px-4 text-base dark:border-theme-secondary-700 css-e93eg4"
+                  class="flex items-center overflow-hidden rounded-lg border border-theme-secondary-400 bg-theme-background px-4 text-base dark:border-theme-secondary-700 css-1ltrfa0"
                   data-testid="HeaderSearchInput__input"
                 >
                   <button
@@ -5758,7 +5758,7 @@ exports[`SearchWallet uses fiat value = true > should render responsive with sel
                 data-testid="TableWrapper"
               >
                 <div
-                  class="with-x-padding css-1m6rt2i"
+                  class="css-1m6rt2i"
                   role="table"
                 >
                   <table
