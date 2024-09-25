@@ -233,7 +233,7 @@ export const translations = {
 		},
 		GENERATED_ADDRESS: "Multisignature Address",
 		MIN_SIGNATURES: "Minimum Required Signatures",
-		OUT_OF_LENGTH: "out of {{ length }}",
+		OUT_OF_LENGTH: "of {{ length }}",
 		PARTICIPANT: "Multisignature Participant",
 		PARTICIPANTS: "Multisignature Participants",
 		PARTICIPANTS_CAN_REMOVE_PENDING_MUSIG: "Only participants can remove pending transactions.",
