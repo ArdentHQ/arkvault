@@ -995,7 +995,7 @@ exports[`MultiSignatureSuccessful > should render in lg 1`] = `
               data-testid="AmountLabel__wrapper"
             >
               <div
-                class="flex items-center space-x-1"
+                class="flex h-full items-center space-x-1"
               >
                 <span
                   class="whitespace-nowrap text-sm"
@@ -1856,7 +1856,7 @@ exports[`MultiSignatureSuccessful > should render in md 1`] = `
               data-testid="AmountLabel__wrapper"
             >
               <div
-                class="flex items-center space-x-1"
+                class="flex h-full items-center space-x-1"
               >
                 <span
                   class="whitespace-nowrap text-sm"
@@ -2670,7 +2670,7 @@ exports[`MultiSignatureSuccessful > should render in sm 1`] = `
                 data-testid="AmountLabel__wrapper"
               >
                 <div
-                  class="flex items-center space-x-1"
+                  class="flex h-full items-center space-x-1"
                 >
                   <span
                     class="whitespace-nowrap text-sm"
@@ -3505,7 +3505,7 @@ exports[`MultiSignatureSuccessful > should render in xl 1`] = `
               data-testid="AmountLabel__wrapper"
             >
               <div
-                class="flex items-center space-x-1"
+                class="flex h-full items-center space-x-1"
               >
                 <span
                   class="whitespace-nowrap text-sm"
@@ -4319,7 +4319,7 @@ exports[`MultiSignatureSuccessful > should render in xs 1`] = `
                 data-testid="AmountLabel__wrapper"
               >
                 <div
-                  class="flex items-center space-x-1"
+                  class="flex h-full items-center space-x-1"
                 >
                   <span
                     class="whitespace-nowrap text-sm"
@@ -5154,7 +5154,7 @@ exports[`MultiSignatureSuccessful > should render with delegate sender wallet 1`
               data-testid="AmountLabel__wrapper"
             >
               <div
-                class="flex items-center space-x-1"
+                class="flex h-full items-center space-x-1"
               >
                 <span
                   class="whitespace-nowrap text-sm"
@@ -5835,7 +5835,7 @@ exports[`MultiSignatureSuccessful > should render with ledger sender wallet 1`] 
               data-testid="AmountLabel__wrapper"
             >
               <div
-                class="flex items-center space-x-1"
+                class="flex h-full items-center space-x-1"
               >
                 <span
                   class="whitespace-nowrap text-sm"
@@ -6516,7 +6516,7 @@ exports[`MultiSignatureSuccessful > should render without generated address 1`] 
               data-testid="AmountLabel__wrapper"
             >
               <div
-                class="flex items-center space-x-1"
+                class="flex h-full items-center space-x-1"
               >
                 <span
                   class="whitespace-nowrap text-sm"

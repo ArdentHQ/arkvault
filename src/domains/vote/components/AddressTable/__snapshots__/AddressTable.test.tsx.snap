@@ -260,7 +260,7 @@ exports[`AddressTable > should render 1`] = `
               role="rowgroup"
             >
               <tr
-                class="relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+                class="relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-1x4z4cy"
                 data-testid="TableRow"
               >
                 <td
@@ -729,7 +729,7 @@ exports[`AddressTable > should render when the maximum votes is greater than 1 1
               role="rowgroup"
             >
               <tr
-                class="relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+                class="relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-1x4z4cy"
                 data-testid="TableRow"
               >
                 <td
@@ -1187,7 +1187,7 @@ exports[`AddressTable > should render with voting delegates and handle exception
               role="rowgroup"
             >
               <tr
-                class="relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+                class="relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-1x4z4cy"
                 data-testid="TableRow"
               >
                 <td

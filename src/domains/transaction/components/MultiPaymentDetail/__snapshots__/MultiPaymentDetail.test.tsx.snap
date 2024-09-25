@@ -277,7 +277,7 @@ exports[`MultiPaymentDetail > should render a modal 1`] = `
                     data-testid="AmountLabel__wrapper"
                   >
                     <div
-                      class="flex items-center space-x-1"
+                      class="flex h-full items-center space-x-1"
                     >
                       <span
                         class="whitespace-nowrap text-sm"
@@ -880,7 +880,7 @@ exports[`MultiPaymentDetail > should render hint icon with tooltip when it's a r
                     data-testid="AmountLabel__wrapper"
                   >
                     <div
-                      class="flex items-center space-x-1"
+                      class="flex h-full items-center space-x-1"
                     >
                       <div
                         aria-describedby="tippy-16"
@@ -1517,7 +1517,7 @@ exports[`MultiPaymentDetail > should render with recipients 1`] = `
                     data-testid="AmountLabel__wrapper"
                   >
                     <div
-                      class="flex items-center space-x-1"
+                      class="flex h-full items-center space-x-1"
                     >
                       <span
                         class="whitespace-nowrap text-sm"
