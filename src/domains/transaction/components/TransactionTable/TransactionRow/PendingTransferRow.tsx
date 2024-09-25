@@ -59,7 +59,7 @@ export const PendingTransferRow = ({
 			</TableCell>
 
 			<TableCell innerClassName="items-start xl:min-h-0 my-0 py-3">
-				<Label color="secondary" size="xs" noBorder className="rounded p-1">
+				<Label color="secondary" size="xs" noBorder className="rounded px-1 dark:border">
 					{getLabel(transaction.type())}
 				</Label>
 			</TableCell>
