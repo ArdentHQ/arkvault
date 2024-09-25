@@ -378,7 +378,7 @@ exports[`Signed Transaction Table > should handle the onRowClick function when t
                       data-testid="AmountLabel__wrapper"
                     >
                       <div
-                        class="flex items-center space-x-1"
+                        class="flex h-full items-center space-x-1"
                       >
                         <span
                           class="whitespace-nowrap text-sm"
@@ -652,7 +652,7 @@ exports[`Signed Transaction Table > should render different status > should show
                           data-testid="AmountLabel__wrapper"
                         >
                           <div
-                            class="flex items-center space-x-1"
+                            class="flex h-full items-center space-x-1"
                           >
                             <span
                               class="whitespace-nowrap text-sm"
@@ -1103,7 +1103,7 @@ exports[`Signed Transaction Table > should render different status > should show
                       data-testid="AmountLabel__wrapper"
                     >
                       <div
-                        class="flex items-center space-x-1"
+                        class="flex h-full items-center space-x-1"
                       >
                         <span
                           class="whitespace-nowrap text-sm"
@@ -1377,7 +1377,7 @@ exports[`Signed Transaction Table > should render different status > should show
                           data-testid="AmountLabel__wrapper"
                         >
                           <div
-                            class="flex items-center space-x-1"
+                            class="flex h-full items-center space-x-1"
                           >
                             <span
                               class="whitespace-nowrap text-sm"
@@ -1816,7 +1816,7 @@ exports[`Signed Transaction Table > should render different status > should show
                       data-testid="AmountLabel__wrapper"
                     >
                       <div
-                        class="flex items-center space-x-1"
+                        class="flex h-full items-center space-x-1"
                       >
                         <span
                           class="whitespace-nowrap text-sm"
@@ -2098,7 +2098,7 @@ exports[`Signed Transaction Table > should render different status > should show
                           data-testid="AmountLabel__wrapper"
                         >
                           <div
-                            class="flex items-center space-x-1"
+                            class="flex h-full items-center space-x-1"
                           >
                             <span
                               class="whitespace-nowrap text-sm"
@@ -2548,7 +2548,7 @@ exports[`Signed Transaction Table > should render different status > should show
                       data-testid="AmountLabel__wrapper"
                     >
                       <div
-                        class="flex items-center space-x-1"
+                        class="flex h-full items-center space-x-1"
                       >
                         <span
                           class="whitespace-nowrap text-sm"
@@ -2830,7 +2830,7 @@ exports[`Signed Transaction Table > should render different status > should show
                           data-testid="AmountLabel__wrapper"
                         >
                           <div
-                            class="flex items-center space-x-1"
+                            class="flex h-full items-center space-x-1"
                           >
                             <span
                               class="whitespace-nowrap text-sm"
@@ -3280,7 +3280,7 @@ exports[`Signed Transaction Table > should render different status > should show
                       data-testid="AmountLabel__wrapper"
                     >
                       <div
-                        class="flex items-center space-x-1"
+                        class="flex h-full items-center space-x-1"
                       >
                         <span
                           class="whitespace-nowrap text-sm"
@@ -3512,7 +3512,7 @@ exports[`Signed Transaction Table > should render different status > should show
                           data-testid="AmountLabel__wrapper"
                         >
                           <div
-                            class="flex items-center space-x-1"
+                            class="flex h-full items-center space-x-1"
                           >
                             <span
                               class="whitespace-nowrap text-sm"
@@ -3959,7 +3959,7 @@ exports[`Signed Transaction Table > should render different status > should show
                       data-testid="AmountLabel__wrapper"
                     >
                       <div
-                        class="flex items-center space-x-1"
+                        class="flex h-full items-center space-x-1"
                       >
                         <span
                           class="whitespace-nowrap text-sm"
@@ -4139,7 +4139,7 @@ exports[`Signed Transaction Table > should render different status > should show
                           data-testid="AmountLabel__wrapper"
                         >
                           <div
-                            class="flex items-center space-x-1"
+                            class="flex h-full items-center space-x-1"
                           >
                             <span
                               class="whitespace-nowrap text-sm"
@@ -4586,7 +4586,7 @@ exports[`Signed Transaction Table > should render different status > should show
                       data-testid="AmountLabel__wrapper"
                     >
                       <div
-                        class="flex items-center space-x-1"
+                        class="flex h-full items-center space-x-1"
                       >
                         <span
                           class="whitespace-nowrap text-sm"
@@ -4816,7 +4816,7 @@ exports[`Signed Transaction Table > should render different status > should show
                           data-testid="AmountLabel__wrapper"
                         >
                           <div
-                            class="flex items-center space-x-1"
+                            class="flex h-full items-center space-x-1"
                           >
                             <span
                               class="whitespace-nowrap text-sm"
@@ -5265,7 +5265,7 @@ exports[`Signed Transaction Table > should render different status > should show
                       data-testid="AmountLabel__wrapper"
                     >
                       <div
-                        class="flex items-center space-x-1"
+                        class="flex h-full items-center space-x-1"
                       >
                         <span
                           class="whitespace-nowrap text-sm"
@@ -5499,7 +5499,7 @@ exports[`Signed Transaction Table > should render pending transfers on mobile 1`
                           data-testid="AmountLabel__wrapper"
                         >
                           <div
-                            class="flex items-center space-x-1"
+                            class="flex h-full items-center space-x-1"
                           >
                             <span
                               class="whitespace-nowrap text-sm"
@@ -5948,7 +5948,7 @@ exports[`Signed Transaction Table > should render pending transfers when isCompa
                       data-testid="AmountLabel__wrapper"
                     >
                       <div
-                        class="flex items-center space-x-1"
+                        class="flex h-full items-center space-x-1"
                       >
                         <span
                           class="whitespace-nowrap text-sm"
@@ -6395,7 +6395,7 @@ exports[`Signed Transaction Table > should render pending transfers when isCompa
                       data-testid="AmountLabel__wrapper"
                     >
                       <div
-                        class="flex items-center space-x-1"
+                        class="flex h-full items-center space-x-1"
                       >
                         <span
                           class="whitespace-nowrap text-sm"
@@ -6832,7 +6832,7 @@ exports[`Signed Transaction Table > should render ready to broadcast transaction
                       data-testid="AmountLabel__wrapper"
                     >
                       <div
-                        class="flex items-center space-x-1"
+                        class="flex h-full items-center space-x-1"
                       >
                         <span
                           class="whitespace-nowrap text-sm"
@@ -7321,7 +7321,7 @@ exports[`Signed Transaction Table > should render signed transactions and handle
                       data-testid="AmountLabel__wrapper"
                     >
                       <div
-                        class="flex items-center space-x-1"
+                        class="flex h-full items-center space-x-1"
                       >
                         <span
                           class="whitespace-nowrap text-sm"
@@ -7812,7 +7812,7 @@ exports[`Signed Transaction Table > should show as awaiting confirmations 1`] = 
                       data-testid="AmountLabel__wrapper"
                     >
                       <div
-                        class="flex items-center space-x-1"
+                        class="flex h-full items-center space-x-1"
                       >
                         <span
                           class="whitespace-nowrap text-sm"
@@ -7994,7 +7994,7 @@ exports[`Signed Transaction Table > should show as awaiting confirmations on mob
                           data-testid="AmountLabel__wrapper"
                         >
                           <div
-                            class="flex items-center space-x-1"
+                            class="flex h-full items-center space-x-1"
                           >
                             <span
                               class="whitespace-nowrap text-sm"
@@ -8433,7 +8433,7 @@ exports[`Signed Transaction Table > should show the sign button with isCompact =
                       data-testid="AmountLabel__wrapper"
                     >
                       <div
-                        class="flex items-center space-x-1"
+                        class="flex h-full items-center space-x-1"
                       >
                         <span
                           class="whitespace-nowrap text-sm"
@@ -8922,7 +8922,7 @@ exports[`Signed Transaction Table > should show the sign button with isCompact =
                       data-testid="AmountLabel__wrapper"
                     >
                       <div
-                        class="flex items-center space-x-1"
+                        class="flex h-full items-center space-x-1"
                       >
                         <span
                           class="whitespace-nowrap text-sm"

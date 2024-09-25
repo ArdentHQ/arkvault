@@ -129,7 +129,7 @@ exports[`TransactionRowMobile > should render 1`] = `
                     data-testid="AmountLabel__wrapper"
                   >
                     <div
-                      class="flex items-center space-x-1 h-full"
+                      class="flex h-full items-center space-x-1"
                     >
                       <span
                         class="whitespace-nowrap text-sm"
@@ -298,7 +298,7 @@ exports[`TransactionRowMobile > should render 2`] = `
                     data-testid="AmountLabel__wrapper"
                   >
                     <div
-                      class="flex items-center space-x-1 h-full"
+                      class="flex h-full items-center space-x-1"
                     >
                       <span
                         class="whitespace-nowrap text-sm"
@@ -748,7 +748,7 @@ exports[`TransactionRowMobile > should render with currency 1`] = `
                     data-testid="AmountLabel__wrapper"
                   >
                     <div
-                      class="flex items-center space-x-1 h-full"
+                      class="flex h-full items-center space-x-1"
                     >
                       <span
                         class="whitespace-nowrap text-sm"
@@ -906,7 +906,7 @@ exports[`TransactionRowMobile > should render with currency 2`] = `
                     data-testid="AmountLabel__wrapper"
                   >
                     <div
-                      class="flex items-center space-x-1 h-full"
+                      class="flex h-full items-center space-x-1"
                     >
                       <span
                         class="whitespace-nowrap text-sm"

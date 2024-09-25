@@ -129,7 +129,7 @@ exports[`TransactionRow > should omit the currency for transactions from test ne
                 data-testid="AmountLabel__wrapper"
               >
                 <div
-                  class="flex items-center space-x-1 h-full"
+                  class="flex h-full items-center space-x-1"
                 >
                   <span
                     class="whitespace-nowrap text-sm"
@@ -313,7 +313,7 @@ exports[`TransactionRow > should render 1`] = `
                 data-testid="AmountLabel__wrapper"
               >
                 <div
-                  class="flex items-center space-x-1 h-full"
+                  class="flex h-full items-center space-x-1"
                 >
                   <span
                     class="whitespace-nowrap text-sm"
@@ -486,7 +486,7 @@ exports[`TransactionRow > should render responsive 1`] = `
                     data-testid="AmountLabel__wrapper"
                   >
                     <div
-                      class="flex items-center space-x-1 h-full"
+                      class="flex h-full items-center space-x-1"
                     >
                       <span
                         class="whitespace-nowrap text-sm"
@@ -655,7 +655,7 @@ exports[`TransactionRow > should render responsive 2`] = `
                     data-testid="AmountLabel__wrapper"
                   >
                     <div
-                      class="flex items-center space-x-1 h-full"
+                      class="flex h-full items-center space-x-1"
                     >
                       <span
                         class="whitespace-nowrap text-sm"
@@ -977,7 +977,7 @@ exports[`TransactionRow > should render with currency 1`] = `
                 data-testid="AmountLabel__wrapper"
               >
                 <div
-                  class="flex items-center space-x-1 h-full"
+                  class="flex h-full items-center space-x-1"
                 >
                   <span
                     class="whitespace-nowrap text-sm"

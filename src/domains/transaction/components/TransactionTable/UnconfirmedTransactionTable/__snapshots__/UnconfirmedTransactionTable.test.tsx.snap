@@ -201,7 +201,7 @@ exports[`Unconfirmed transaction table > should not render in lg 1`] = `
                   data-testid="AmountLabel__wrapper"
                 >
                   <div
-                    class="flex items-center space-x-1"
+                    class="flex h-full items-center space-x-1"
                   >
                     <span
                       class="whitespace-nowrap text-sm"
@@ -317,7 +317,7 @@ exports[`Unconfirmed transaction table > should not render in lg 1`] = `
                   data-testid="AmountLabel__wrapper"
                 >
                   <div
-                    class="flex items-center space-x-1"
+                    class="flex h-full items-center space-x-1"
                   >
                     <span
                       class="whitespace-nowrap text-sm"
@@ -538,7 +538,7 @@ exports[`Unconfirmed transaction table > should not render in md 1`] = `
                   data-testid="AmountLabel__wrapper"
                 >
                   <div
-                    class="flex items-center space-x-1"
+                    class="flex h-full items-center space-x-1"
                   >
                     <span
                       class="whitespace-nowrap text-sm"
@@ -654,7 +654,7 @@ exports[`Unconfirmed transaction table > should not render in md 1`] = `
                   data-testid="AmountLabel__wrapper"
                 >
                   <div
-                    class="flex items-center space-x-1"
+                    class="flex h-full items-center space-x-1"
                   >
                     <span
                       class="whitespace-nowrap text-sm"
@@ -783,7 +783,7 @@ exports[`Unconfirmed transaction table > should not render in sm 1`] = `
                   data-testid="AmountLabel__wrapper"
                 >
                   <div
-                    class="flex items-center space-x-1"
+                    class="flex h-full items-center space-x-1"
                   >
                     <span
                       class="whitespace-nowrap text-sm"
@@ -921,7 +921,7 @@ exports[`Unconfirmed transaction table > should not render in sm 1`] = `
                   data-testid="AmountLabel__wrapper"
                 >
                   <div
-                    class="flex items-center space-x-1"
+                    class="flex h-full items-center space-x-1"
                   >
                     <span
                       class="whitespace-nowrap text-sm"
@@ -1142,7 +1142,7 @@ exports[`Unconfirmed transaction table > should not render in xl 1`] = `
                   data-testid="AmountLabel__wrapper"
                 >
                   <div
-                    class="flex items-center space-x-1"
+                    class="flex h-full items-center space-x-1"
                   >
                     <span
                       class="whitespace-nowrap text-sm"
@@ -1258,7 +1258,7 @@ exports[`Unconfirmed transaction table > should not render in xl 1`] = `
                   data-testid="AmountLabel__wrapper"
                 >
                   <div
-                    class="flex items-center space-x-1"
+                    class="flex h-full items-center space-x-1"
                   >
                     <span
                       class="whitespace-nowrap text-sm"
@@ -1387,7 +1387,7 @@ exports[`Unconfirmed transaction table > should not render in xs 1`] = `
                   data-testid="AmountLabel__wrapper"
                 >
                   <div
-                    class="flex items-center space-x-1"
+                    class="flex h-full items-center space-x-1"
                   >
                     <span
                       class="whitespace-nowrap text-sm"
@@ -1525,7 +1525,7 @@ exports[`Unconfirmed transaction table > should not render in xs 1`] = `
                   data-testid="AmountLabel__wrapper"
                 >
                   <div
-                    class="flex items-center space-x-1"
+                    class="flex h-full items-center space-x-1"
                   >
                     <span
                       class="whitespace-nowrap text-sm"
