@@ -5,7 +5,6 @@ import { Contracts } from "@ardenthq/sdk-profiles";
 import { Networks } from "@ardenthq/sdk";
 import { useTranslation } from "react-i18next";
 
-import { constructWalletsFromPublicKeys, getMusigParticipantWallets } from "@/domains/transaction/components/MultiSignatureDetail/MultiSignatureDetail.helpers";
 import { AddressCopy, AddressLabel, AddressLink } from "@/app/components/Address";
 import { useMusigParticipants } from "@/domains/transaction/hooks/use-musig-participants";
 
