@@ -210,7 +210,7 @@ exports[`TransactionTable > loading state > should render 1`] = `
           role="rowgroup"
         >
           <tr
-            class=" css-16ynu5g"
+            class=" css-1x4z4cy"
             data-testid="TableRow"
           >
             <td>
@@ -354,7 +354,7 @@ exports[`TransactionTable > loading state > should render 1`] = `
             </td>
           </tr>
           <tr
-            class=" css-16ynu5g"
+            class=" css-1x4z4cy"
             data-testid="TableRow"
           >
             <td>
@@ -498,7 +498,7 @@ exports[`TransactionTable > loading state > should render 1`] = `
             </td>
           </tr>
           <tr
-            class=" css-16ynu5g"
+            class=" css-1x4z4cy"
             data-testid="TableRow"
           >
             <td>
@@ -642,7 +642,7 @@ exports[`TransactionTable > loading state > should render 1`] = `
             </td>
           </tr>
           <tr
-            class=" css-16ynu5g"
+            class=" css-1x4z4cy"
             data-testid="TableRow"
           >
             <td>
@@ -786,7 +786,7 @@ exports[`TransactionTable > loading state > should render 1`] = `
             </td>
           </tr>
           <tr
-            class=" css-16ynu5g"
+            class=" css-1x4z4cy"
             data-testid="TableRow"
           >
             <td>
@@ -1146,7 +1146,7 @@ exports[`TransactionTable > loading state > should render compact 1`] = `
           role="rowgroup"
         >
           <tr
-            class=" css-16ynu5g"
+            class=" css-1x4z4cy"
             data-testid="TableRow"
           >
             <td>
@@ -1290,7 +1290,7 @@ exports[`TransactionTable > loading state > should render compact 1`] = `
             </td>
           </tr>
           <tr
-            class=" css-16ynu5g"
+            class=" css-1x4z4cy"
             data-testid="TableRow"
           >
             <td>
@@ -1434,7 +1434,7 @@ exports[`TransactionTable > loading state > should render compact 1`] = `
             </td>
           </tr>
           <tr
-            class=" css-16ynu5g"
+            class=" css-1x4z4cy"
             data-testid="TableRow"
           >
             <td>
@@ -1578,7 +1578,7 @@ exports[`TransactionTable > loading state > should render compact 1`] = `
             </td>
           </tr>
           <tr
-            class=" css-16ynu5g"
+            class=" css-1x4z4cy"
             data-testid="TableRow"
           >
             <td>
@@ -1722,7 +1722,7 @@ exports[`TransactionTable > loading state > should render compact 1`] = `
             </td>
           </tr>
           <tr
-            class=" css-16ynu5g"
+            class=" css-1x4z4cy"
             data-testid="TableRow"
           >
             <td>
@@ -2082,7 +2082,7 @@ exports[`TransactionTable > loading state > should render with currency column 1
           role="rowgroup"
         >
           <tr
-            class=" css-16ynu5g"
+            class=" css-1x4z4cy"
             data-testid="TableRow"
           >
             <td>
@@ -2226,7 +2226,7 @@ exports[`TransactionTable > loading state > should render with currency column 1
             </td>
           </tr>
           <tr
-            class=" css-16ynu5g"
+            class=" css-1x4z4cy"
             data-testid="TableRow"
           >
             <td>
@@ -2370,7 +2370,7 @@ exports[`TransactionTable > loading state > should render with currency column 1
             </td>
           </tr>
           <tr
-            class=" css-16ynu5g"
+            class=" css-1x4z4cy"
             data-testid="TableRow"
           >
             <td>
@@ -2514,7 +2514,7 @@ exports[`TransactionTable > loading state > should render with currency column 1
             </td>
           </tr>
           <tr
-            class=" css-16ynu5g"
+            class=" css-1x4z4cy"
             data-testid="TableRow"
           >
             <td>
@@ -2658,7 +2658,7 @@ exports[`TransactionTable > loading state > should render with currency column 1
             </td>
           </tr>
           <tr
-            class=" css-16ynu5g"
+            class=" css-1x4z4cy"
             data-testid="TableRow"
           >
             <td>
@@ -3018,7 +3018,7 @@ exports[`TransactionTable > should render compact 1`] = `
           role="rowgroup"
         >
           <tr
-            class="group relative css-1kskd5s"
+            class="group relative css-1d424e8"
             data-testid="TableRow"
           >
             <td>
@@ -3081,7 +3081,7 @@ exports[`TransactionTable > should render compact 1`] = `
                 class="flex px-3 transition-colors duration-100 min-h-11 items-start xl:min-h-0 my-0 py-3"
               >
                 <div
-                  class="rounded p-1 css-1dx994f"
+                  class="rounded px-1 dark:border css-1dx994f"
                   color="secondary"
                   data-testid="TransactionRow__type"
                 >
@@ -3137,12 +3137,12 @@ exports[`TransactionTable > should render compact 1`] = `
                   class="flex flex-col items-end gap-1"
                 >
                   <div
-                    class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
+                    class="flex items-center justify-center rounded px-1.5 h-[21px] css-xqt0aw"
                     color="danger-bg"
                     data-testid="AmountLabel__wrapper"
                   >
                     <div
-                      class="flex items-center space-x-1"
+                      class="flex h-full items-center space-x-1"
                     >
                       <span
                         class="whitespace-nowrap text-sm"
@@ -3182,7 +3182,7 @@ exports[`TransactionTable > should render compact 1`] = `
             </td>
           </tr>
           <tr
-            class="group relative css-1kskd5s"
+            class="group relative css-1d424e8"
             data-testid="TableRow"
           >
             <td>
@@ -3245,7 +3245,7 @@ exports[`TransactionTable > should render compact 1`] = `
                 class="flex px-3 transition-colors duration-100 min-h-11 items-start xl:min-h-0 my-0 py-3"
               >
                 <div
-                  class="rounded p-1 css-1dx994f"
+                  class="rounded px-1 dark:border css-1dx994f"
                   color="secondary"
                   data-testid="TransactionRow__type"
                 >
@@ -3312,12 +3312,12 @@ exports[`TransactionTable > should render compact 1`] = `
                   class="flex flex-col items-end gap-1"
                 >
                   <div
-                    class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
+                    class="flex items-center justify-center rounded px-1.5 h-[21px] css-xqt0aw"
                     color="danger-bg"
                     data-testid="AmountLabel__wrapper"
                   >
                     <div
-                      class="flex items-center space-x-1"
+                      class="flex h-full items-center space-x-1"
                     >
                       <span
                         class="whitespace-nowrap text-sm"
@@ -3357,7 +3357,7 @@ exports[`TransactionTable > should render compact 1`] = `
             </td>
           </tr>
           <tr
-            class="group relative css-1kskd5s"
+            class="group relative css-1d424e8"
             data-testid="TableRow"
           >
             <td>
@@ -3420,7 +3420,7 @@ exports[`TransactionTable > should render compact 1`] = `
                 class="flex px-3 transition-colors duration-100 min-h-11 items-start xl:min-h-0 my-0 py-3"
               >
                 <div
-                  class="rounded p-1 css-1dx994f"
+                  class="rounded px-1 dark:border css-1dx994f"
                   color="secondary"
                   data-testid="TransactionRow__type"
                 >
@@ -3476,12 +3476,12 @@ exports[`TransactionTable > should render compact 1`] = `
                   class="flex flex-col items-end gap-1"
                 >
                   <div
-                    class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
+                    class="flex items-center justify-center rounded px-1.5 h-[21px] css-xqt0aw"
                     color="danger-bg"
                     data-testid="AmountLabel__wrapper"
                   >
                     <div
-                      class="flex items-center space-x-1"
+                      class="flex h-full items-center space-x-1"
                     >
                       <span
                         class="whitespace-nowrap text-sm"
@@ -3521,7 +3521,7 @@ exports[`TransactionTable > should render compact 1`] = `
             </td>
           </tr>
           <tr
-            class="group relative css-1kskd5s"
+            class="group relative css-1d424e8"
             data-testid="TableRow"
           >
             <td>
@@ -3584,7 +3584,7 @@ exports[`TransactionTable > should render compact 1`] = `
                 class="flex px-3 transition-colors duration-100 min-h-11 items-start xl:min-h-0 my-0 py-3"
               >
                 <div
-                  class="rounded p-1 css-1dx994f"
+                  class="rounded px-1 dark:border css-1dx994f"
                   color="secondary"
                   data-testid="TransactionRow__type"
                 >
@@ -3640,12 +3640,12 @@ exports[`TransactionTable > should render compact 1`] = `
                   class="flex flex-col items-end gap-1"
                 >
                   <div
-                    class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
+                    class="flex items-center justify-center rounded px-1.5 h-[21px] css-xqt0aw"
                     color="danger-bg"
                     data-testid="AmountLabel__wrapper"
                   >
                     <div
-                      class="flex items-center space-x-1"
+                      class="flex h-full items-center space-x-1"
                     >
                       <span
                         class="whitespace-nowrap text-sm"
@@ -3685,7 +3685,7 @@ exports[`TransactionTable > should render compact 1`] = `
             </td>
           </tr>
           <tr
-            class="group relative css-1kskd5s"
+            class="group relative css-1d424e8"
             data-testid="TableRow"
           >
             <td>
@@ -3748,7 +3748,7 @@ exports[`TransactionTable > should render compact 1`] = `
                 class="flex px-3 transition-colors duration-100 min-h-11 items-start xl:min-h-0 my-0 py-3"
               >
                 <div
-                  class="rounded p-1 css-1dx994f"
+                  class="rounded px-1 dark:border css-1dx994f"
                   color="secondary"
                   data-testid="TransactionRow__type"
                 >
@@ -3804,12 +3804,12 @@ exports[`TransactionTable > should render compact 1`] = `
                   class="flex flex-col items-end gap-1"
                 >
                   <div
-                    class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
+                    class="flex items-center justify-center rounded px-1.5 h-[21px] css-xqt0aw"
                     color="danger-bg"
                     data-testid="AmountLabel__wrapper"
                   >
                     <div
-                      class="flex items-center space-x-1"
+                      class="flex h-full items-center space-x-1"
                     >
                       <span
                         class="whitespace-nowrap text-sm"
@@ -3849,7 +3849,7 @@ exports[`TransactionTable > should render compact 1`] = `
             </td>
           </tr>
           <tr
-            class="group relative css-1kskd5s"
+            class="group relative css-1d424e8"
             data-testid="TableRow"
           >
             <td>
@@ -3912,7 +3912,7 @@ exports[`TransactionTable > should render compact 1`] = `
                 class="flex px-3 transition-colors duration-100 min-h-11 items-start xl:min-h-0 my-0 py-3"
               >
                 <div
-                  class="rounded p-1 css-1dx994f"
+                  class="rounded px-1 dark:border css-1dx994f"
                   color="secondary"
                   data-testid="TransactionRow__type"
                 >
@@ -3968,12 +3968,12 @@ exports[`TransactionTable > should render compact 1`] = `
                   class="flex flex-col items-end gap-1"
                 >
                   <div
-                    class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
+                    class="flex items-center justify-center rounded px-1.5 h-[21px] css-xqt0aw"
                     color="danger-bg"
                     data-testid="AmountLabel__wrapper"
                   >
                     <div
-                      class="flex items-center space-x-1"
+                      class="flex h-full items-center space-x-1"
                     >
                       <span
                         class="whitespace-nowrap text-sm"
@@ -4013,7 +4013,7 @@ exports[`TransactionTable > should render compact 1`] = `
             </td>
           </tr>
           <tr
-            class="group relative css-1kskd5s"
+            class="group relative css-1d424e8"
             data-testid="TableRow"
           >
             <td>
@@ -4076,7 +4076,7 @@ exports[`TransactionTable > should render compact 1`] = `
                 class="flex px-3 transition-colors duration-100 min-h-11 items-start xl:min-h-0 my-0 py-3"
               >
                 <div
-                  class="rounded p-1 css-1dx994f"
+                  class="rounded px-1 dark:border css-1dx994f"
                   color="secondary"
                   data-testid="TransactionRow__type"
                 >
@@ -4132,12 +4132,12 @@ exports[`TransactionTable > should render compact 1`] = `
                   class="flex flex-col items-end gap-1"
                 >
                   <div
-                    class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
+                    class="flex items-center justify-center rounded px-1.5 h-[21px] css-xqt0aw"
                     color="danger-bg"
                     data-testid="AmountLabel__wrapper"
                   >
                     <div
-                      class="flex items-center space-x-1"
+                      class="flex h-full items-center space-x-1"
                     >
                       <span
                         class="whitespace-nowrap text-sm"
@@ -4177,7 +4177,7 @@ exports[`TransactionTable > should render compact 1`] = `
             </td>
           </tr>
           <tr
-            class="group relative css-1kskd5s"
+            class="group relative css-1d424e8"
             data-testid="TableRow"
           >
             <td>
@@ -4240,7 +4240,7 @@ exports[`TransactionTable > should render compact 1`] = `
                 class="flex px-3 transition-colors duration-100 min-h-11 items-start xl:min-h-0 my-0 py-3"
               >
                 <div
-                  class="rounded p-1 css-1dx994f"
+                  class="rounded px-1 dark:border css-1dx994f"
                   color="secondary"
                   data-testid="TransactionRow__type"
                 >
@@ -4296,12 +4296,12 @@ exports[`TransactionTable > should render compact 1`] = `
                   class="flex flex-col items-end gap-1"
                 >
                   <div
-                    class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
+                    class="flex items-center justify-center rounded px-1.5 h-[21px] css-xqt0aw"
                     color="danger-bg"
                     data-testid="AmountLabel__wrapper"
                   >
                     <div
-                      class="flex items-center space-x-1"
+                      class="flex h-full items-center space-x-1"
                     >
                       <span
                         class="whitespace-nowrap text-sm"
@@ -4341,7 +4341,7 @@ exports[`TransactionTable > should render compact 1`] = `
             </td>
           </tr>
           <tr
-            class="group relative css-1kskd5s"
+            class="group relative css-1d424e8"
             data-testid="TableRow"
           >
             <td>
@@ -4404,7 +4404,7 @@ exports[`TransactionTable > should render compact 1`] = `
                 class="flex px-3 transition-colors duration-100 min-h-11 items-start xl:min-h-0 my-0 py-3"
               >
                 <div
-                  class="rounded p-1 css-1dx994f"
+                  class="rounded px-1 dark:border css-1dx994f"
                   color="secondary"
                   data-testid="TransactionRow__type"
                 >
@@ -4460,12 +4460,12 @@ exports[`TransactionTable > should render compact 1`] = `
                   class="flex flex-col items-end gap-1"
                 >
                   <div
-                    class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
+                    class="flex items-center justify-center rounded px-1.5 h-[21px] css-xqt0aw"
                     color="danger-bg"
                     data-testid="AmountLabel__wrapper"
                   >
                     <div
-                      class="flex items-center space-x-1"
+                      class="flex h-full items-center space-x-1"
                     >
                       <span
                         class="whitespace-nowrap text-sm"
@@ -4505,7 +4505,7 @@ exports[`TransactionTable > should render compact 1`] = `
             </td>
           </tr>
           <tr
-            class="group relative css-1kskd5s"
+            class="group relative css-1d424e8"
             data-testid="TableRow"
           >
             <td>
@@ -4568,7 +4568,7 @@ exports[`TransactionTable > should render compact 1`] = `
                 class="flex px-3 transition-colors duration-100 min-h-11 items-start xl:min-h-0 my-0 py-3"
               >
                 <div
-                  class="rounded p-1 css-1dx994f"
+                  class="rounded px-1 dark:border css-1dx994f"
                   color="secondary"
                   data-testid="TransactionRow__type"
                 >
@@ -4635,12 +4635,12 @@ exports[`TransactionTable > should render compact 1`] = `
                   class="flex flex-col items-end gap-1"
                 >
                   <div
-                    class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
+                    class="flex items-center justify-center rounded px-1.5 h-[21px] css-xqt0aw"
                     color="danger-bg"
                     data-testid="AmountLabel__wrapper"
                   >
                     <div
-                      class="flex items-center space-x-1"
+                      class="flex h-full items-center space-x-1"
                     >
                       <span
                         class="whitespace-nowrap text-sm"
@@ -4704,7 +4704,7 @@ exports[`TransactionTable > should render responsive 1`] = `
           role="rowgroup"
         >
           <tr
-            class="group group !border-b-0 css-1kskd5s"
+            class="group group !border-b-0 css-1d424e8"
             data-testid="TableRow"
           >
             <td
@@ -4812,12 +4812,12 @@ exports[`TransactionTable > should render responsive 1`] = `
                       class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                     >
                       <div
-                        class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
+                        class="flex items-center justify-center rounded px-1.5 h-[21px] css-xqt0aw"
                         color="danger-bg"
                         data-testid="AmountLabel__wrapper"
                       >
                         <div
-                          class="flex items-center space-x-1"
+                          class="flex h-full items-center space-x-1"
                         >
                           <span
                             class="whitespace-nowrap text-sm"
@@ -4853,7 +4853,7 @@ exports[`TransactionTable > should render responsive 1`] = `
             </td>
           </tr>
           <tr
-            class="group group !border-b-0 css-1kskd5s"
+            class="group group !border-b-0 css-1d424e8"
             data-testid="TableRow"
           >
             <td
@@ -4972,12 +4972,12 @@ exports[`TransactionTable > should render responsive 1`] = `
                       class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                     >
                       <div
-                        class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
+                        class="flex items-center justify-center rounded px-1.5 h-[21px] css-xqt0aw"
                         color="danger-bg"
                         data-testid="AmountLabel__wrapper"
                       >
                         <div
-                          class="flex items-center space-x-1"
+                          class="flex h-full items-center space-x-1"
                         >
                           <span
                             class="whitespace-nowrap text-sm"
@@ -5013,7 +5013,7 @@ exports[`TransactionTable > should render responsive 1`] = `
             </td>
           </tr>
           <tr
-            class="group group !border-b-0 css-1kskd5s"
+            class="group group !border-b-0 css-1d424e8"
             data-testid="TableRow"
           >
             <td
@@ -5121,12 +5121,12 @@ exports[`TransactionTable > should render responsive 1`] = `
                       class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                     >
                       <div
-                        class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
+                        class="flex items-center justify-center rounded px-1.5 h-[21px] css-xqt0aw"
                         color="danger-bg"
                         data-testid="AmountLabel__wrapper"
                       >
                         <div
-                          class="flex items-center space-x-1"
+                          class="flex h-full items-center space-x-1"
                         >
                           <span
                             class="whitespace-nowrap text-sm"
@@ -5162,7 +5162,7 @@ exports[`TransactionTable > should render responsive 1`] = `
             </td>
           </tr>
           <tr
-            class="group group !border-b-0 css-1kskd5s"
+            class="group group !border-b-0 css-1d424e8"
             data-testid="TableRow"
           >
             <td
@@ -5270,12 +5270,12 @@ exports[`TransactionTable > should render responsive 1`] = `
                       class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                     >
                       <div
-                        class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
+                        class="flex items-center justify-center rounded px-1.5 h-[21px] css-xqt0aw"
                         color="danger-bg"
                         data-testid="AmountLabel__wrapper"
                       >
                         <div
-                          class="flex items-center space-x-1"
+                          class="flex h-full items-center space-x-1"
                         >
                           <span
                             class="whitespace-nowrap text-sm"
@@ -5311,7 +5311,7 @@ exports[`TransactionTable > should render responsive 1`] = `
             </td>
           </tr>
           <tr
-            class="group group !border-b-0 css-1kskd5s"
+            class="group group !border-b-0 css-1d424e8"
             data-testid="TableRow"
           >
             <td
@@ -5419,12 +5419,12 @@ exports[`TransactionTable > should render responsive 1`] = `
                       class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                     >
                       <div
-                        class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
+                        class="flex items-center justify-center rounded px-1.5 h-[21px] css-xqt0aw"
                         color="danger-bg"
                         data-testid="AmountLabel__wrapper"
                       >
                         <div
-                          class="flex items-center space-x-1"
+                          class="flex h-full items-center space-x-1"
                         >
                           <span
                             class="whitespace-nowrap text-sm"
@@ -5460,7 +5460,7 @@ exports[`TransactionTable > should render responsive 1`] = `
             </td>
           </tr>
           <tr
-            class="group group !border-b-0 css-1kskd5s"
+            class="group group !border-b-0 css-1d424e8"
             data-testid="TableRow"
           >
             <td
@@ -5568,12 +5568,12 @@ exports[`TransactionTable > should render responsive 1`] = `
                       class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                     >
                       <div
-                        class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
+                        class="flex items-center justify-center rounded px-1.5 h-[21px] css-xqt0aw"
                         color="danger-bg"
                         data-testid="AmountLabel__wrapper"
                       >
                         <div
-                          class="flex items-center space-x-1"
+                          class="flex h-full items-center space-x-1"
                         >
                           <span
                             class="whitespace-nowrap text-sm"
@@ -5609,7 +5609,7 @@ exports[`TransactionTable > should render responsive 1`] = `
             </td>
           </tr>
           <tr
-            class="group group !border-b-0 css-1kskd5s"
+            class="group group !border-b-0 css-1d424e8"
             data-testid="TableRow"
           >
             <td
@@ -5717,12 +5717,12 @@ exports[`TransactionTable > should render responsive 1`] = `
                       class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                     >
                       <div
-                        class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
+                        class="flex items-center justify-center rounded px-1.5 h-[21px] css-xqt0aw"
                         color="danger-bg"
                         data-testid="AmountLabel__wrapper"
                       >
                         <div
-                          class="flex items-center space-x-1"
+                          class="flex h-full items-center space-x-1"
                         >
                           <span
                             class="whitespace-nowrap text-sm"
@@ -5758,7 +5758,7 @@ exports[`TransactionTable > should render responsive 1`] = `
             </td>
           </tr>
           <tr
-            class="group group !border-b-0 css-1kskd5s"
+            class="group group !border-b-0 css-1d424e8"
             data-testid="TableRow"
           >
             <td
@@ -5866,12 +5866,12 @@ exports[`TransactionTable > should render responsive 1`] = `
                       class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                     >
                       <div
-                        class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
+                        class="flex items-center justify-center rounded px-1.5 h-[21px] css-xqt0aw"
                         color="danger-bg"
                         data-testid="AmountLabel__wrapper"
                       >
                         <div
-                          class="flex items-center space-x-1"
+                          class="flex h-full items-center space-x-1"
                         >
                           <span
                             class="whitespace-nowrap text-sm"
@@ -5907,7 +5907,7 @@ exports[`TransactionTable > should render responsive 1`] = `
             </td>
           </tr>
           <tr
-            class="group group !border-b-0 css-1kskd5s"
+            class="group group !border-b-0 css-1d424e8"
             data-testid="TableRow"
           >
             <td
@@ -6015,12 +6015,12 @@ exports[`TransactionTable > should render responsive 1`] = `
                       class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                     >
                       <div
-                        class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
+                        class="flex items-center justify-center rounded px-1.5 h-[21px] css-xqt0aw"
                         color="danger-bg"
                         data-testid="AmountLabel__wrapper"
                       >
                         <div
-                          class="flex items-center space-x-1"
+                          class="flex h-full items-center space-x-1"
                         >
                           <span
                             class="whitespace-nowrap text-sm"
@@ -6056,7 +6056,7 @@ exports[`TransactionTable > should render responsive 1`] = `
             </td>
           </tr>
           <tr
-            class="group group !border-b-0 css-1kskd5s"
+            class="group group !border-b-0 css-1d424e8"
             data-testid="TableRow"
           >
             <td
@@ -6175,12 +6175,12 @@ exports[`TransactionTable > should render responsive 1`] = `
                       class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                     >
                       <div
-                        class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
+                        class="flex items-center justify-center rounded px-1.5 h-[21px] css-xqt0aw"
                         color="danger-bg"
                         data-testid="AmountLabel__wrapper"
                       >
                         <div
-                          class="flex items-center space-x-1"
+                          class="flex h-full items-center space-x-1"
                         >
                           <span
                             class="whitespace-nowrap text-sm"
@@ -6240,7 +6240,7 @@ exports[`TransactionTable > should render responsive 2`] = `
           role="rowgroup"
         >
           <tr
-            class="group group !border-b-0 css-1kskd5s"
+            class="group group !border-b-0 css-1d424e8"
             data-testid="TableRow"
           >
             <td
@@ -6348,12 +6348,12 @@ exports[`TransactionTable > should render responsive 2`] = `
                       class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                     >
                       <div
-                        class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
+                        class="flex items-center justify-center rounded px-1.5 h-[21px] css-xqt0aw"
                         color="danger-bg"
                         data-testid="AmountLabel__wrapper"
                       >
                         <div
-                          class="flex items-center space-x-1"
+                          class="flex h-full items-center space-x-1"
                         >
                           <span
                             class="whitespace-nowrap text-sm"
@@ -6389,7 +6389,7 @@ exports[`TransactionTable > should render responsive 2`] = `
             </td>
           </tr>
           <tr
-            class="group group !border-b-0 css-1kskd5s"
+            class="group group !border-b-0 css-1d424e8"
             data-testid="TableRow"
           >
             <td
@@ -6508,12 +6508,12 @@ exports[`TransactionTable > should render responsive 2`] = `
                       class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                     >
                       <div
-                        class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
+                        class="flex items-center justify-center rounded px-1.5 h-[21px] css-xqt0aw"
                         color="danger-bg"
                         data-testid="AmountLabel__wrapper"
                       >
                         <div
-                          class="flex items-center space-x-1"
+                          class="flex h-full items-center space-x-1"
                         >
                           <span
                             class="whitespace-nowrap text-sm"
@@ -6549,7 +6549,7 @@ exports[`TransactionTable > should render responsive 2`] = `
             </td>
           </tr>
           <tr
-            class="group group !border-b-0 css-1kskd5s"
+            class="group group !border-b-0 css-1d424e8"
             data-testid="TableRow"
           >
             <td
@@ -6657,12 +6657,12 @@ exports[`TransactionTable > should render responsive 2`] = `
                       class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                     >
                       <div
-                        class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
+                        class="flex items-center justify-center rounded px-1.5 h-[21px] css-xqt0aw"
                         color="danger-bg"
                         data-testid="AmountLabel__wrapper"
                       >
                         <div
-                          class="flex items-center space-x-1"
+                          class="flex h-full items-center space-x-1"
                         >
                           <span
                             class="whitespace-nowrap text-sm"
@@ -6698,7 +6698,7 @@ exports[`TransactionTable > should render responsive 2`] = `
             </td>
           </tr>
           <tr
-            class="group group !border-b-0 css-1kskd5s"
+            class="group group !border-b-0 css-1d424e8"
             data-testid="TableRow"
           >
             <td
@@ -6806,12 +6806,12 @@ exports[`TransactionTable > should render responsive 2`] = `
                       class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                     >
                       <div
-                        class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
+                        class="flex items-center justify-center rounded px-1.5 h-[21px] css-xqt0aw"
                         color="danger-bg"
                         data-testid="AmountLabel__wrapper"
                       >
                         <div
-                          class="flex items-center space-x-1"
+                          class="flex h-full items-center space-x-1"
                         >
                           <span
                             class="whitespace-nowrap text-sm"
@@ -6847,7 +6847,7 @@ exports[`TransactionTable > should render responsive 2`] = `
             </td>
           </tr>
           <tr
-            class="group group !border-b-0 css-1kskd5s"
+            class="group group !border-b-0 css-1d424e8"
             data-testid="TableRow"
           >
             <td
@@ -6955,12 +6955,12 @@ exports[`TransactionTable > should render responsive 2`] = `
                       class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                     >
                       <div
-                        class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
+                        class="flex items-center justify-center rounded px-1.5 h-[21px] css-xqt0aw"
                         color="danger-bg"
                         data-testid="AmountLabel__wrapper"
                       >
                         <div
-                          class="flex items-center space-x-1"
+                          class="flex h-full items-center space-x-1"
                         >
                           <span
                             class="whitespace-nowrap text-sm"
@@ -6996,7 +6996,7 @@ exports[`TransactionTable > should render responsive 2`] = `
             </td>
           </tr>
           <tr
-            class="group group !border-b-0 css-1kskd5s"
+            class="group group !border-b-0 css-1d424e8"
             data-testid="TableRow"
           >
             <td
@@ -7104,12 +7104,12 @@ exports[`TransactionTable > should render responsive 2`] = `
                       class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                     >
                       <div
-                        class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
+                        class="flex items-center justify-center rounded px-1.5 h-[21px] css-xqt0aw"
                         color="danger-bg"
                         data-testid="AmountLabel__wrapper"
                       >
                         <div
-                          class="flex items-center space-x-1"
+                          class="flex h-full items-center space-x-1"
                         >
                           <span
                             class="whitespace-nowrap text-sm"
@@ -7145,7 +7145,7 @@ exports[`TransactionTable > should render responsive 2`] = `
             </td>
           </tr>
           <tr
-            class="group group !border-b-0 css-1kskd5s"
+            class="group group !border-b-0 css-1d424e8"
             data-testid="TableRow"
           >
             <td
@@ -7253,12 +7253,12 @@ exports[`TransactionTable > should render responsive 2`] = `
                       class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                     >
                       <div
-                        class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
+                        class="flex items-center justify-center rounded px-1.5 h-[21px] css-xqt0aw"
                         color="danger-bg"
                         data-testid="AmountLabel__wrapper"
                       >
                         <div
-                          class="flex items-center space-x-1"
+                          class="flex h-full items-center space-x-1"
                         >
                           <span
                             class="whitespace-nowrap text-sm"
@@ -7294,7 +7294,7 @@ exports[`TransactionTable > should render responsive 2`] = `
             </td>
           </tr>
           <tr
-            class="group group !border-b-0 css-1kskd5s"
+            class="group group !border-b-0 css-1d424e8"
             data-testid="TableRow"
           >
             <td
@@ -7402,12 +7402,12 @@ exports[`TransactionTable > should render responsive 2`] = `
                       class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                     >
                       <div
-                        class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
+                        class="flex items-center justify-center rounded px-1.5 h-[21px] css-xqt0aw"
                         color="danger-bg"
                         data-testid="AmountLabel__wrapper"
                       >
                         <div
-                          class="flex items-center space-x-1"
+                          class="flex h-full items-center space-x-1"
                         >
                           <span
                             class="whitespace-nowrap text-sm"
@@ -7443,7 +7443,7 @@ exports[`TransactionTable > should render responsive 2`] = `
             </td>
           </tr>
           <tr
-            class="group group !border-b-0 css-1kskd5s"
+            class="group group !border-b-0 css-1d424e8"
             data-testid="TableRow"
           >
             <td
@@ -7551,12 +7551,12 @@ exports[`TransactionTable > should render responsive 2`] = `
                       class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                     >
                       <div
-                        class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
+                        class="flex items-center justify-center rounded px-1.5 h-[21px] css-xqt0aw"
                         color="danger-bg"
                         data-testid="AmountLabel__wrapper"
                       >
                         <div
-                          class="flex items-center space-x-1"
+                          class="flex h-full items-center space-x-1"
                         >
                           <span
                             class="whitespace-nowrap text-sm"
@@ -7592,7 +7592,7 @@ exports[`TransactionTable > should render responsive 2`] = `
             </td>
           </tr>
           <tr
-            class="group group !border-b-0 css-1kskd5s"
+            class="group group !border-b-0 css-1d424e8"
             data-testid="TableRow"
           >
             <td
@@ -7711,12 +7711,12 @@ exports[`TransactionTable > should render responsive 2`] = `
                       class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                     >
                       <div
-                        class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
+                        class="flex items-center justify-center rounded px-1.5 h-[21px] css-xqt0aw"
                         color="danger-bg"
                         data-testid="AmountLabel__wrapper"
                       >
                         <div
-                          class="flex items-center space-x-1"
+                          class="flex h-full items-center space-x-1"
                         >
                           <span
                             class="whitespace-nowrap text-sm"
@@ -7968,7 +7968,7 @@ exports[`TransactionTable > should render responsive 3`] = `
           role="rowgroup"
         >
           <tr
-            class="group relative css-1kskd5s"
+            class="group relative css-1d424e8"
             data-testid="TableRow"
           >
             <td>
@@ -8031,7 +8031,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                 class="flex px-3 transition-colors duration-100 min-h-11 items-start xl:min-h-0 my-0 py-3"
               >
                 <div
-                  class="rounded p-1 css-1dx994f"
+                  class="rounded px-1 dark:border css-1dx994f"
                   color="secondary"
                   data-testid="TransactionRow__type"
                 >
@@ -8087,12 +8087,12 @@ exports[`TransactionTable > should render responsive 3`] = `
                   class="flex flex-col items-end gap-1"
                 >
                   <div
-                    class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
+                    class="flex items-center justify-center rounded px-1.5 h-[21px] css-xqt0aw"
                     color="danger-bg"
                     data-testid="AmountLabel__wrapper"
                   >
                     <div
-                      class="flex items-center space-x-1"
+                      class="flex h-full items-center space-x-1"
                     >
                       <span
                         class="whitespace-nowrap text-sm"
@@ -8132,7 +8132,7 @@ exports[`TransactionTable > should render responsive 3`] = `
             </td>
           </tr>
           <tr
-            class="group relative css-1kskd5s"
+            class="group relative css-1d424e8"
             data-testid="TableRow"
           >
             <td>
@@ -8195,7 +8195,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                 class="flex px-3 transition-colors duration-100 min-h-11 items-start xl:min-h-0 my-0 py-3"
               >
                 <div
-                  class="rounded p-1 css-1dx994f"
+                  class="rounded px-1 dark:border css-1dx994f"
                   color="secondary"
                   data-testid="TransactionRow__type"
                 >
@@ -8262,12 +8262,12 @@ exports[`TransactionTable > should render responsive 3`] = `
                   class="flex flex-col items-end gap-1"
                 >
                   <div
-                    class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
+                    class="flex items-center justify-center rounded px-1.5 h-[21px] css-xqt0aw"
                     color="danger-bg"
                     data-testid="AmountLabel__wrapper"
                   >
                     <div
-                      class="flex items-center space-x-1"
+                      class="flex h-full items-center space-x-1"
                     >
                       <span
                         class="whitespace-nowrap text-sm"
@@ -8307,7 +8307,7 @@ exports[`TransactionTable > should render responsive 3`] = `
             </td>
           </tr>
           <tr
-            class="group relative css-1kskd5s"
+            class="group relative css-1d424e8"
             data-testid="TableRow"
           >
             <td>
@@ -8370,7 +8370,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                 class="flex px-3 transition-colors duration-100 min-h-11 items-start xl:min-h-0 my-0 py-3"
               >
                 <div
-                  class="rounded p-1 css-1dx994f"
+                  class="rounded px-1 dark:border css-1dx994f"
                   color="secondary"
                   data-testid="TransactionRow__type"
                 >
@@ -8426,12 +8426,12 @@ exports[`TransactionTable > should render responsive 3`] = `
                   class="flex flex-col items-end gap-1"
                 >
                   <div
-                    class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
+                    class="flex items-center justify-center rounded px-1.5 h-[21px] css-xqt0aw"
                     color="danger-bg"
                     data-testid="AmountLabel__wrapper"
                   >
                     <div
-                      class="flex items-center space-x-1"
+                      class="flex h-full items-center space-x-1"
                     >
                       <span
                         class="whitespace-nowrap text-sm"
@@ -8471,7 +8471,7 @@ exports[`TransactionTable > should render responsive 3`] = `
             </td>
           </tr>
           <tr
-            class="group relative css-1kskd5s"
+            class="group relative css-1d424e8"
             data-testid="TableRow"
           >
             <td>
@@ -8534,7 +8534,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                 class="flex px-3 transition-colors duration-100 min-h-11 items-start xl:min-h-0 my-0 py-3"
               >
                 <div
-                  class="rounded p-1 css-1dx994f"
+                  class="rounded px-1 dark:border css-1dx994f"
                   color="secondary"
                   data-testid="TransactionRow__type"
                 >
@@ -8590,12 +8590,12 @@ exports[`TransactionTable > should render responsive 3`] = `
                   class="flex flex-col items-end gap-1"
                 >
                   <div
-                    class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
+                    class="flex items-center justify-center rounded px-1.5 h-[21px] css-xqt0aw"
                     color="danger-bg"
                     data-testid="AmountLabel__wrapper"
                   >
                     <div
-                      class="flex items-center space-x-1"
+                      class="flex h-full items-center space-x-1"
                     >
                       <span
                         class="whitespace-nowrap text-sm"
@@ -8635,7 +8635,7 @@ exports[`TransactionTable > should render responsive 3`] = `
             </td>
           </tr>
           <tr
-            class="group relative css-1kskd5s"
+            class="group relative css-1d424e8"
             data-testid="TableRow"
           >
             <td>
@@ -8698,7 +8698,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                 class="flex px-3 transition-colors duration-100 min-h-11 items-start xl:min-h-0 my-0 py-3"
               >
                 <div
-                  class="rounded p-1 css-1dx994f"
+                  class="rounded px-1 dark:border css-1dx994f"
                   color="secondary"
                   data-testid="TransactionRow__type"
                 >
@@ -8754,12 +8754,12 @@ exports[`TransactionTable > should render responsive 3`] = `
                   class="flex flex-col items-end gap-1"
                 >
                   <div
-                    class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
+                    class="flex items-center justify-center rounded px-1.5 h-[21px] css-xqt0aw"
                     color="danger-bg"
                     data-testid="AmountLabel__wrapper"
                   >
                     <div
-                      class="flex items-center space-x-1"
+                      class="flex h-full items-center space-x-1"
                     >
                       <span
                         class="whitespace-nowrap text-sm"
@@ -8799,7 +8799,7 @@ exports[`TransactionTable > should render responsive 3`] = `
             </td>
           </tr>
           <tr
-            class="group relative css-1kskd5s"
+            class="group relative css-1d424e8"
             data-testid="TableRow"
           >
             <td>
@@ -8862,7 +8862,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                 class="flex px-3 transition-colors duration-100 min-h-11 items-start xl:min-h-0 my-0 py-3"
               >
                 <div
-                  class="rounded p-1 css-1dx994f"
+                  class="rounded px-1 dark:border css-1dx994f"
                   color="secondary"
                   data-testid="TransactionRow__type"
                 >
@@ -8918,12 +8918,12 @@ exports[`TransactionTable > should render responsive 3`] = `
                   class="flex flex-col items-end gap-1"
                 >
                   <div
-                    class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
+                    class="flex items-center justify-center rounded px-1.5 h-[21px] css-xqt0aw"
                     color="danger-bg"
                     data-testid="AmountLabel__wrapper"
                   >
                     <div
-                      class="flex items-center space-x-1"
+                      class="flex h-full items-center space-x-1"
                     >
                       <span
                         class="whitespace-nowrap text-sm"
@@ -8963,7 +8963,7 @@ exports[`TransactionTable > should render responsive 3`] = `
             </td>
           </tr>
           <tr
-            class="group relative css-1kskd5s"
+            class="group relative css-1d424e8"
             data-testid="TableRow"
           >
             <td>
@@ -9026,7 +9026,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                 class="flex px-3 transition-colors duration-100 min-h-11 items-start xl:min-h-0 my-0 py-3"
               >
                 <div
-                  class="rounded p-1 css-1dx994f"
+                  class="rounded px-1 dark:border css-1dx994f"
                   color="secondary"
                   data-testid="TransactionRow__type"
                 >
@@ -9082,12 +9082,12 @@ exports[`TransactionTable > should render responsive 3`] = `
                   class="flex flex-col items-end gap-1"
                 >
                   <div
-                    class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
+                    class="flex items-center justify-center rounded px-1.5 h-[21px] css-xqt0aw"
                     color="danger-bg"
                     data-testid="AmountLabel__wrapper"
                   >
                     <div
-                      class="flex items-center space-x-1"
+                      class="flex h-full items-center space-x-1"
                     >
                       <span
                         class="whitespace-nowrap text-sm"
@@ -9127,7 +9127,7 @@ exports[`TransactionTable > should render responsive 3`] = `
             </td>
           </tr>
           <tr
-            class="group relative css-1kskd5s"
+            class="group relative css-1d424e8"
             data-testid="TableRow"
           >
             <td>
@@ -9190,7 +9190,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                 class="flex px-3 transition-colors duration-100 min-h-11 items-start xl:min-h-0 my-0 py-3"
               >
                 <div
-                  class="rounded p-1 css-1dx994f"
+                  class="rounded px-1 dark:border css-1dx994f"
                   color="secondary"
                   data-testid="TransactionRow__type"
                 >
@@ -9246,12 +9246,12 @@ exports[`TransactionTable > should render responsive 3`] = `
                   class="flex flex-col items-end gap-1"
                 >
                   <div
-                    class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
+                    class="flex items-center justify-center rounded px-1.5 h-[21px] css-xqt0aw"
                     color="danger-bg"
                     data-testid="AmountLabel__wrapper"
                   >
                     <div
-                      class="flex items-center space-x-1"
+                      class="flex h-full items-center space-x-1"
                     >
                       <span
                         class="whitespace-nowrap text-sm"
@@ -9291,7 +9291,7 @@ exports[`TransactionTable > should render responsive 3`] = `
             </td>
           </tr>
           <tr
-            class="group relative css-1kskd5s"
+            class="group relative css-1d424e8"
             data-testid="TableRow"
           >
             <td>
@@ -9354,7 +9354,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                 class="flex px-3 transition-colors duration-100 min-h-11 items-start xl:min-h-0 my-0 py-3"
               >
                 <div
-                  class="rounded p-1 css-1dx994f"
+                  class="rounded px-1 dark:border css-1dx994f"
                   color="secondary"
                   data-testid="TransactionRow__type"
                 >
@@ -9410,12 +9410,12 @@ exports[`TransactionTable > should render responsive 3`] = `
                   class="flex flex-col items-end gap-1"
                 >
                   <div
-                    class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
+                    class="flex items-center justify-center rounded px-1.5 h-[21px] css-xqt0aw"
                     color="danger-bg"
                     data-testid="AmountLabel__wrapper"
                   >
                     <div
-                      class="flex items-center space-x-1"
+                      class="flex h-full items-center space-x-1"
                     >
                       <span
                         class="whitespace-nowrap text-sm"
@@ -9455,7 +9455,7 @@ exports[`TransactionTable > should render responsive 3`] = `
             </td>
           </tr>
           <tr
-            class="group relative css-1kskd5s"
+            class="group relative css-1d424e8"
             data-testid="TableRow"
           >
             <td>
@@ -9518,7 +9518,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                 class="flex px-3 transition-colors duration-100 min-h-11 items-start xl:min-h-0 my-0 py-3"
               >
                 <div
-                  class="rounded p-1 css-1dx994f"
+                  class="rounded px-1 dark:border css-1dx994f"
                   color="secondary"
                   data-testid="TransactionRow__type"
                 >
@@ -9585,12 +9585,12 @@ exports[`TransactionTable > should render responsive 3`] = `
                   class="flex flex-col items-end gap-1"
                 >
                   <div
-                    class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
+                    class="flex items-center justify-center rounded px-1.5 h-[21px] css-xqt0aw"
                     color="danger-bg"
                     data-testid="AmountLabel__wrapper"
                   >
                     <div
-                      class="flex items-center space-x-1"
+                      class="flex h-full items-center space-x-1"
                     >
                       <span
                         class="whitespace-nowrap text-sm"
@@ -9846,7 +9846,7 @@ exports[`TransactionTable > should render responsive 4`] = `
           role="rowgroup"
         >
           <tr
-            class="group relative css-1kskd5s"
+            class="group relative css-1d424e8"
             data-testid="TableRow"
           >
             <td>
@@ -9909,7 +9909,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                 class="flex px-3 transition-colors duration-100 min-h-11 items-start xl:min-h-0 my-0 py-3"
               >
                 <div
-                  class="rounded p-1 css-1dx994f"
+                  class="rounded px-1 dark:border css-1dx994f"
                   color="secondary"
                   data-testid="TransactionRow__type"
                 >
@@ -9965,12 +9965,12 @@ exports[`TransactionTable > should render responsive 4`] = `
                   class="flex flex-col items-end gap-1"
                 >
                   <div
-                    class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
+                    class="flex items-center justify-center rounded px-1.5 h-[21px] css-xqt0aw"
                     color="danger-bg"
                     data-testid="AmountLabel__wrapper"
                   >
                     <div
-                      class="flex items-center space-x-1"
+                      class="flex h-full items-center space-x-1"
                     >
                       <span
                         class="whitespace-nowrap text-sm"
@@ -10010,7 +10010,7 @@ exports[`TransactionTable > should render responsive 4`] = `
             </td>
           </tr>
           <tr
-            class="group relative css-1kskd5s"
+            class="group relative css-1d424e8"
             data-testid="TableRow"
           >
             <td>
@@ -10073,7 +10073,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                 class="flex px-3 transition-colors duration-100 min-h-11 items-start xl:min-h-0 my-0 py-3"
               >
                 <div
-                  class="rounded p-1 css-1dx994f"
+                  class="rounded px-1 dark:border css-1dx994f"
                   color="secondary"
                   data-testid="TransactionRow__type"
                 >
@@ -10140,12 +10140,12 @@ exports[`TransactionTable > should render responsive 4`] = `
                   class="flex flex-col items-end gap-1"
                 >
                   <div
-                    class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
+                    class="flex items-center justify-center rounded px-1.5 h-[21px] css-xqt0aw"
                     color="danger-bg"
                     data-testid="AmountLabel__wrapper"
                   >
                     <div
-                      class="flex items-center space-x-1"
+                      class="flex h-full items-center space-x-1"
                     >
                       <span
                         class="whitespace-nowrap text-sm"
@@ -10185,7 +10185,7 @@ exports[`TransactionTable > should render responsive 4`] = `
             </td>
           </tr>
           <tr
-            class="group relative css-1kskd5s"
+            class="group relative css-1d424e8"
             data-testid="TableRow"
           >
             <td>
@@ -10248,7 +10248,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                 class="flex px-3 transition-colors duration-100 min-h-11 items-start xl:min-h-0 my-0 py-3"
               >
                 <div
-                  class="rounded p-1 css-1dx994f"
+                  class="rounded px-1 dark:border css-1dx994f"
                   color="secondary"
                   data-testid="TransactionRow__type"
                 >
@@ -10304,12 +10304,12 @@ exports[`TransactionTable > should render responsive 4`] = `
                   class="flex flex-col items-end gap-1"
                 >
                   <div
-                    class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
+                    class="flex items-center justify-center rounded px-1.5 h-[21px] css-xqt0aw"
                     color="danger-bg"
                     data-testid="AmountLabel__wrapper"
                   >
                     <div
-                      class="flex items-center space-x-1"
+                      class="flex h-full items-center space-x-1"
                     >
                       <span
                         class="whitespace-nowrap text-sm"
@@ -10349,7 +10349,7 @@ exports[`TransactionTable > should render responsive 4`] = `
             </td>
           </tr>
           <tr
-            class="group relative css-1kskd5s"
+            class="group relative css-1d424e8"
             data-testid="TableRow"
           >
             <td>
@@ -10412,7 +10412,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                 class="flex px-3 transition-colors duration-100 min-h-11 items-start xl:min-h-0 my-0 py-3"
               >
                 <div
-                  class="rounded p-1 css-1dx994f"
+                  class="rounded px-1 dark:border css-1dx994f"
                   color="secondary"
                   data-testid="TransactionRow__type"
                 >
@@ -10468,12 +10468,12 @@ exports[`TransactionTable > should render responsive 4`] = `
                   class="flex flex-col items-end gap-1"
                 >
                   <div
-                    class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
+                    class="flex items-center justify-center rounded px-1.5 h-[21px] css-xqt0aw"
                     color="danger-bg"
                     data-testid="AmountLabel__wrapper"
                   >
                     <div
-                      class="flex items-center space-x-1"
+                      class="flex h-full items-center space-x-1"
                     >
                       <span
                         class="whitespace-nowrap text-sm"
@@ -10513,7 +10513,7 @@ exports[`TransactionTable > should render responsive 4`] = `
             </td>
           </tr>
           <tr
-            class="group relative css-1kskd5s"
+            class="group relative css-1d424e8"
             data-testid="TableRow"
           >
             <td>
@@ -10576,7 +10576,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                 class="flex px-3 transition-colors duration-100 min-h-11 items-start xl:min-h-0 my-0 py-3"
               >
                 <div
-                  class="rounded p-1 css-1dx994f"
+                  class="rounded px-1 dark:border css-1dx994f"
                   color="secondary"
                   data-testid="TransactionRow__type"
                 >
@@ -10632,12 +10632,12 @@ exports[`TransactionTable > should render responsive 4`] = `
                   class="flex flex-col items-end gap-1"
                 >
                   <div
-                    class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
+                    class="flex items-center justify-center rounded px-1.5 h-[21px] css-xqt0aw"
                     color="danger-bg"
                     data-testid="AmountLabel__wrapper"
                   >
                     <div
-                      class="flex items-center space-x-1"
+                      class="flex h-full items-center space-x-1"
                     >
                       <span
                         class="whitespace-nowrap text-sm"
@@ -10677,7 +10677,7 @@ exports[`TransactionTable > should render responsive 4`] = `
             </td>
           </tr>
           <tr
-            class="group relative css-1kskd5s"
+            class="group relative css-1d424e8"
             data-testid="TableRow"
           >
             <td>
@@ -10740,7 +10740,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                 class="flex px-3 transition-colors duration-100 min-h-11 items-start xl:min-h-0 my-0 py-3"
               >
                 <div
-                  class="rounded p-1 css-1dx994f"
+                  class="rounded px-1 dark:border css-1dx994f"
                   color="secondary"
                   data-testid="TransactionRow__type"
                 >
@@ -10796,12 +10796,12 @@ exports[`TransactionTable > should render responsive 4`] = `
                   class="flex flex-col items-end gap-1"
                 >
                   <div
-                    class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
+                    class="flex items-center justify-center rounded px-1.5 h-[21px] css-xqt0aw"
                     color="danger-bg"
                     data-testid="AmountLabel__wrapper"
                   >
                     <div
-                      class="flex items-center space-x-1"
+                      class="flex h-full items-center space-x-1"
                     >
                       <span
                         class="whitespace-nowrap text-sm"
@@ -10841,7 +10841,7 @@ exports[`TransactionTable > should render responsive 4`] = `
             </td>
           </tr>
           <tr
-            class="group relative css-1kskd5s"
+            class="group relative css-1d424e8"
             data-testid="TableRow"
           >
             <td>
@@ -10904,7 +10904,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                 class="flex px-3 transition-colors duration-100 min-h-11 items-start xl:min-h-0 my-0 py-3"
               >
                 <div
-                  class="rounded p-1 css-1dx994f"
+                  class="rounded px-1 dark:border css-1dx994f"
                   color="secondary"
                   data-testid="TransactionRow__type"
                 >
@@ -10960,12 +10960,12 @@ exports[`TransactionTable > should render responsive 4`] = `
                   class="flex flex-col items-end gap-1"
                 >
                   <div
-                    class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
+                    class="flex items-center justify-center rounded px-1.5 h-[21px] css-xqt0aw"
                     color="danger-bg"
                     data-testid="AmountLabel__wrapper"
                   >
                     <div
-                      class="flex items-center space-x-1"
+                      class="flex h-full items-center space-x-1"
                     >
                       <span
                         class="whitespace-nowrap text-sm"
@@ -11005,7 +11005,7 @@ exports[`TransactionTable > should render responsive 4`] = `
             </td>
           </tr>
           <tr
-            class="group relative css-1kskd5s"
+            class="group relative css-1d424e8"
             data-testid="TableRow"
           >
             <td>
@@ -11068,7 +11068,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                 class="flex px-3 transition-colors duration-100 min-h-11 items-start xl:min-h-0 my-0 py-3"
               >
                 <div
-                  class="rounded p-1 css-1dx994f"
+                  class="rounded px-1 dark:border css-1dx994f"
                   color="secondary"
                   data-testid="TransactionRow__type"
                 >
@@ -11124,12 +11124,12 @@ exports[`TransactionTable > should render responsive 4`] = `
                   class="flex flex-col items-end gap-1"
                 >
                   <div
-                    class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
+                    class="flex items-center justify-center rounded px-1.5 h-[21px] css-xqt0aw"
                     color="danger-bg"
                     data-testid="AmountLabel__wrapper"
                   >
                     <div
-                      class="flex items-center space-x-1"
+                      class="flex h-full items-center space-x-1"
                     >
                       <span
                         class="whitespace-nowrap text-sm"
@@ -11169,7 +11169,7 @@ exports[`TransactionTable > should render responsive 4`] = `
             </td>
           </tr>
           <tr
-            class="group relative css-1kskd5s"
+            class="group relative css-1d424e8"
             data-testid="TableRow"
           >
             <td>
@@ -11232,7 +11232,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                 class="flex px-3 transition-colors duration-100 min-h-11 items-start xl:min-h-0 my-0 py-3"
               >
                 <div
-                  class="rounded p-1 css-1dx994f"
+                  class="rounded px-1 dark:border css-1dx994f"
                   color="secondary"
                   data-testid="TransactionRow__type"
                 >
@@ -11288,12 +11288,12 @@ exports[`TransactionTable > should render responsive 4`] = `
                   class="flex flex-col items-end gap-1"
                 >
                   <div
-                    class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
+                    class="flex items-center justify-center rounded px-1.5 h-[21px] css-xqt0aw"
                     color="danger-bg"
                     data-testid="AmountLabel__wrapper"
                   >
                     <div
-                      class="flex items-center space-x-1"
+                      class="flex h-full items-center space-x-1"
                     >
                       <span
                         class="whitespace-nowrap text-sm"
@@ -11333,7 +11333,7 @@ exports[`TransactionTable > should render responsive 4`] = `
             </td>
           </tr>
           <tr
-            class="group relative css-1kskd5s"
+            class="group relative css-1d424e8"
             data-testid="TableRow"
           >
             <td>
@@ -11396,7 +11396,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                 class="flex px-3 transition-colors duration-100 min-h-11 items-start xl:min-h-0 my-0 py-3"
               >
                 <div
-                  class="rounded p-1 css-1dx994f"
+                  class="rounded px-1 dark:border css-1dx994f"
                   color="secondary"
                   data-testid="TransactionRow__type"
                 >
@@ -11463,12 +11463,12 @@ exports[`TransactionTable > should render responsive 4`] = `
                   class="flex flex-col items-end gap-1"
                 >
                   <div
-                    class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
+                    class="flex items-center justify-center rounded px-1.5 h-[21px] css-xqt0aw"
                     color="danger-bg"
                     data-testid="AmountLabel__wrapper"
                   >
                     <div
-                      class="flex items-center space-x-1"
+                      class="flex h-full items-center space-x-1"
                     >
                       <span
                         class="whitespace-nowrap text-sm"
@@ -11724,7 +11724,7 @@ exports[`TransactionTable > should render responsive 5`] = `
           role="rowgroup"
         >
           <tr
-            class="group relative css-1kskd5s"
+            class="group relative css-1d424e8"
             data-testid="TableRow"
           >
             <td>
@@ -11787,7 +11787,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                 class="flex px-3 transition-colors duration-100 min-h-11 items-start xl:min-h-0 my-0 py-3"
               >
                 <div
-                  class="rounded p-1 css-1dx994f"
+                  class="rounded px-1 dark:border css-1dx994f"
                   color="secondary"
                   data-testid="TransactionRow__type"
                 >
@@ -11843,12 +11843,12 @@ exports[`TransactionTable > should render responsive 5`] = `
                   class="flex flex-col items-end gap-1"
                 >
                   <div
-                    class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
+                    class="flex items-center justify-center rounded px-1.5 h-[21px] css-xqt0aw"
                     color="danger-bg"
                     data-testid="AmountLabel__wrapper"
                   >
                     <div
-                      class="flex items-center space-x-1"
+                      class="flex h-full items-center space-x-1"
                     >
                       <span
                         class="whitespace-nowrap text-sm"
@@ -11888,7 +11888,7 @@ exports[`TransactionTable > should render responsive 5`] = `
             </td>
           </tr>
           <tr
-            class="group relative css-1kskd5s"
+            class="group relative css-1d424e8"
             data-testid="TableRow"
           >
             <td>
@@ -11951,7 +11951,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                 class="flex px-3 transition-colors duration-100 min-h-11 items-start xl:min-h-0 my-0 py-3"
               >
                 <div
-                  class="rounded p-1 css-1dx994f"
+                  class="rounded px-1 dark:border css-1dx994f"
                   color="secondary"
                   data-testid="TransactionRow__type"
                 >
@@ -12018,12 +12018,12 @@ exports[`TransactionTable > should render responsive 5`] = `
                   class="flex flex-col items-end gap-1"
                 >
                   <div
-                    class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
+                    class="flex items-center justify-center rounded px-1.5 h-[21px] css-xqt0aw"
                     color="danger-bg"
                     data-testid="AmountLabel__wrapper"
                   >
                     <div
-                      class="flex items-center space-x-1"
+                      class="flex h-full items-center space-x-1"
                     >
                       <span
                         class="whitespace-nowrap text-sm"
@@ -12063,7 +12063,7 @@ exports[`TransactionTable > should render responsive 5`] = `
             </td>
           </tr>
           <tr
-            class="group relative css-1kskd5s"
+            class="group relative css-1d424e8"
             data-testid="TableRow"
           >
             <td>
@@ -12126,7 +12126,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                 class="flex px-3 transition-colors duration-100 min-h-11 items-start xl:min-h-0 my-0 py-3"
               >
                 <div
-                  class="rounded p-1 css-1dx994f"
+                  class="rounded px-1 dark:border css-1dx994f"
                   color="secondary"
                   data-testid="TransactionRow__type"
                 >
@@ -12182,12 +12182,12 @@ exports[`TransactionTable > should render responsive 5`] = `
                   class="flex flex-col items-end gap-1"
                 >
                   <div
-                    class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
+                    class="flex items-center justify-center rounded px-1.5 h-[21px] css-xqt0aw"
                     color="danger-bg"
                     data-testid="AmountLabel__wrapper"
                   >
                     <div
-                      class="flex items-center space-x-1"
+                      class="flex h-full items-center space-x-1"
                     >
                       <span
                         class="whitespace-nowrap text-sm"
@@ -12227,7 +12227,7 @@ exports[`TransactionTable > should render responsive 5`] = `
             </td>
           </tr>
           <tr
-            class="group relative css-1kskd5s"
+            class="group relative css-1d424e8"
             data-testid="TableRow"
           >
             <td>
@@ -12290,7 +12290,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                 class="flex px-3 transition-colors duration-100 min-h-11 items-start xl:min-h-0 my-0 py-3"
               >
                 <div
-                  class="rounded p-1 css-1dx994f"
+                  class="rounded px-1 dark:border css-1dx994f"
                   color="secondary"
                   data-testid="TransactionRow__type"
                 >
@@ -12346,12 +12346,12 @@ exports[`TransactionTable > should render responsive 5`] = `
                   class="flex flex-col items-end gap-1"
                 >
                   <div
-                    class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
+                    class="flex items-center justify-center rounded px-1.5 h-[21px] css-xqt0aw"
                     color="danger-bg"
                     data-testid="AmountLabel__wrapper"
                   >
                     <div
-                      class="flex items-center space-x-1"
+                      class="flex h-full items-center space-x-1"
                     >
                       <span
                         class="whitespace-nowrap text-sm"
@@ -12391,7 +12391,7 @@ exports[`TransactionTable > should render responsive 5`] = `
             </td>
           </tr>
           <tr
-            class="group relative css-1kskd5s"
+            class="group relative css-1d424e8"
             data-testid="TableRow"
           >
             <td>
@@ -12454,7 +12454,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                 class="flex px-3 transition-colors duration-100 min-h-11 items-start xl:min-h-0 my-0 py-3"
               >
                 <div
-                  class="rounded p-1 css-1dx994f"
+                  class="rounded px-1 dark:border css-1dx994f"
                   color="secondary"
                   data-testid="TransactionRow__type"
                 >
@@ -12510,12 +12510,12 @@ exports[`TransactionTable > should render responsive 5`] = `
                   class="flex flex-col items-end gap-1"
                 >
                   <div
-                    class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
+                    class="flex items-center justify-center rounded px-1.5 h-[21px] css-xqt0aw"
                     color="danger-bg"
                     data-testid="AmountLabel__wrapper"
                   >
                     <div
-                      class="flex items-center space-x-1"
+                      class="flex h-full items-center space-x-1"
                     >
                       <span
                         class="whitespace-nowrap text-sm"
@@ -12555,7 +12555,7 @@ exports[`TransactionTable > should render responsive 5`] = `
             </td>
           </tr>
           <tr
-            class="group relative css-1kskd5s"
+            class="group relative css-1d424e8"
             data-testid="TableRow"
           >
             <td>
@@ -12618,7 +12618,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                 class="flex px-3 transition-colors duration-100 min-h-11 items-start xl:min-h-0 my-0 py-3"
               >
                 <div
-                  class="rounded p-1 css-1dx994f"
+                  class="rounded px-1 dark:border css-1dx994f"
                   color="secondary"
                   data-testid="TransactionRow__type"
                 >
@@ -12674,12 +12674,12 @@ exports[`TransactionTable > should render responsive 5`] = `
                   class="flex flex-col items-end gap-1"
                 >
                   <div
-                    class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
+                    class="flex items-center justify-center rounded px-1.5 h-[21px] css-xqt0aw"
                     color="danger-bg"
                     data-testid="AmountLabel__wrapper"
                   >
                     <div
-                      class="flex items-center space-x-1"
+                      class="flex h-full items-center space-x-1"
                     >
                       <span
                         class="whitespace-nowrap text-sm"
@@ -12719,7 +12719,7 @@ exports[`TransactionTable > should render responsive 5`] = `
             </td>
           </tr>
           <tr
-            class="group relative css-1kskd5s"
+            class="group relative css-1d424e8"
             data-testid="TableRow"
           >
             <td>
@@ -12782,7 +12782,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                 class="flex px-3 transition-colors duration-100 min-h-11 items-start xl:min-h-0 my-0 py-3"
               >
                 <div
-                  class="rounded p-1 css-1dx994f"
+                  class="rounded px-1 dark:border css-1dx994f"
                   color="secondary"
                   data-testid="TransactionRow__type"
                 >
@@ -12838,12 +12838,12 @@ exports[`TransactionTable > should render responsive 5`] = `
                   class="flex flex-col items-end gap-1"
                 >
                   <div
-                    class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
+                    class="flex items-center justify-center rounded px-1.5 h-[21px] css-xqt0aw"
                     color="danger-bg"
                     data-testid="AmountLabel__wrapper"
                   >
                     <div
-                      class="flex items-center space-x-1"
+                      class="flex h-full items-center space-x-1"
                     >
                       <span
                         class="whitespace-nowrap text-sm"
@@ -12883,7 +12883,7 @@ exports[`TransactionTable > should render responsive 5`] = `
             </td>
           </tr>
           <tr
-            class="group relative css-1kskd5s"
+            class="group relative css-1d424e8"
             data-testid="TableRow"
           >
             <td>
@@ -12946,7 +12946,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                 class="flex px-3 transition-colors duration-100 min-h-11 items-start xl:min-h-0 my-0 py-3"
               >
                 <div
-                  class="rounded p-1 css-1dx994f"
+                  class="rounded px-1 dark:border css-1dx994f"
                   color="secondary"
                   data-testid="TransactionRow__type"
                 >
@@ -13002,12 +13002,12 @@ exports[`TransactionTable > should render responsive 5`] = `
                   class="flex flex-col items-end gap-1"
                 >
                   <div
-                    class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
+                    class="flex items-center justify-center rounded px-1.5 h-[21px] css-xqt0aw"
                     color="danger-bg"
                     data-testid="AmountLabel__wrapper"
                   >
                     <div
-                      class="flex items-center space-x-1"
+                      class="flex h-full items-center space-x-1"
                     >
                       <span
                         class="whitespace-nowrap text-sm"
@@ -13047,7 +13047,7 @@ exports[`TransactionTable > should render responsive 5`] = `
             </td>
           </tr>
           <tr
-            class="group relative css-1kskd5s"
+            class="group relative css-1d424e8"
             data-testid="TableRow"
           >
             <td>
@@ -13110,7 +13110,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                 class="flex px-3 transition-colors duration-100 min-h-11 items-start xl:min-h-0 my-0 py-3"
               >
                 <div
-                  class="rounded p-1 css-1dx994f"
+                  class="rounded px-1 dark:border css-1dx994f"
                   color="secondary"
                   data-testid="TransactionRow__type"
                 >
@@ -13166,12 +13166,12 @@ exports[`TransactionTable > should render responsive 5`] = `
                   class="flex flex-col items-end gap-1"
                 >
                   <div
-                    class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
+                    class="flex items-center justify-center rounded px-1.5 h-[21px] css-xqt0aw"
                     color="danger-bg"
                     data-testid="AmountLabel__wrapper"
                   >
                     <div
-                      class="flex items-center space-x-1"
+                      class="flex h-full items-center space-x-1"
                     >
                       <span
                         class="whitespace-nowrap text-sm"
@@ -13211,7 +13211,7 @@ exports[`TransactionTable > should render responsive 5`] = `
             </td>
           </tr>
           <tr
-            class="group relative css-1kskd5s"
+            class="group relative css-1d424e8"
             data-testid="TableRow"
           >
             <td>
@@ -13274,7 +13274,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                 class="flex px-3 transition-colors duration-100 min-h-11 items-start xl:min-h-0 my-0 py-3"
               >
                 <div
-                  class="rounded p-1 css-1dx994f"
+                  class="rounded px-1 dark:border css-1dx994f"
                   color="secondary"
                   data-testid="TransactionRow__type"
                 >
@@ -13341,12 +13341,12 @@ exports[`TransactionTable > should render responsive 5`] = `
                   class="flex flex-col items-end gap-1"
                 >
                   <div
-                    class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
+                    class="flex items-center justify-center rounded px-1.5 h-[21px] css-xqt0aw"
                     color="danger-bg"
                     data-testid="AmountLabel__wrapper"
                   >
                     <div
-                      class="flex items-center space-x-1"
+                      class="flex h-full items-center space-x-1"
                     >
                       <span
                         class="whitespace-nowrap text-sm"

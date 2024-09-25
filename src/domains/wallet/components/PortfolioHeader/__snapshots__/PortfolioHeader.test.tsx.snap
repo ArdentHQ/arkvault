@@ -260,7 +260,7 @@ exports[`Portfolio grouped networks > should apply ledger import 1`] = `
     data-testid="NetworkWalletsGroupList"
   >
     <div
-      class="overflow-hidden md:!mb-3 css-13o3tsw"
+      class="md:!mb-3 css-13o3tsw"
       data-testid="WalletsGroup"
     >
       <div
@@ -492,7 +492,7 @@ exports[`Portfolio grouped networks > should apply ledger import 1`] = `
       </div>
     </div>
     <div
-      class="overflow-hidden md:!mb-3 css-13o3tsw"
+      class="md:!mb-3 css-13o3tsw"
       data-testid="WalletsGroup"
     >
       <div
@@ -1027,7 +1027,7 @@ exports[`Portfolio grouped networks > should render list 1`] = `
     data-testid="NetworkWalletsGroupList"
   >
     <div
-      class="overflow-hidden md:!mb-3 css-13o3tsw"
+      class="md:!mb-3 css-13o3tsw"
       data-testid="WalletsGroup"
     >
       <div
@@ -1259,7 +1259,7 @@ exports[`Portfolio grouped networks > should render list 1`] = `
       </div>
     </div>
     <div
-      class="overflow-hidden md:!mb-3 css-13o3tsw"
+      class="md:!mb-3 css-13o3tsw"
       data-testid="WalletsGroup"
     >
       <div
@@ -1794,7 +1794,7 @@ exports[`Portfolio grouped networks > should render without testnet wallets 1`] 
     data-testid="NetworkWalletsGroupList"
   >
     <div
-      class="overflow-hidden md:!mb-3 css-13o3tsw"
+      class="md:!mb-3 css-13o3tsw"
       data-testid="WalletsGroup"
     >
       <div

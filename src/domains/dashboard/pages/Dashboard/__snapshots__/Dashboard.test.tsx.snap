@@ -919,7 +919,7 @@ exports[`Dashboard > should render 1`] = `
           data-testid="NetworkWalletsGroupList"
         >
           <div
-            class="overflow-hidden md:!mb-3 css-13o3tsw"
+            class="md:!mb-3 css-13o3tsw"
             data-testid="WalletsGroup"
           >
             <div
@@ -1091,7 +1091,7 @@ exports[`Dashboard > should render 1`] = `
             </div>
           </div>
           <div
-            class="overflow-hidden md:!mb-3 css-13o3tsw"
+            class="md:!mb-3 css-13o3tsw"
             data-testid="WalletsGroup"
           >
             <div
@@ -1545,7 +1545,7 @@ exports[`Dashboard > should render 1`] = `
                   role="rowgroup"
                 >
                   <tr
-                    class="group relative css-1kskd5s"
+                    class="group relative css-1d424e8"
                     data-testid="TableRow"
                   >
                     <td>
@@ -1608,7 +1608,7 @@ exports[`Dashboard > should render 1`] = `
                         class="flex px-3 transition-colors duration-100 min-h-11 items-start xl:min-h-0 my-0 py-3"
                       >
                         <div
-                          class="rounded p-1 css-1dx994f"
+                          class="rounded px-1 dark:border css-1dx994f"
                           color="secondary"
                           data-testid="TransactionRow__type"
                         >
@@ -1664,12 +1664,12 @@ exports[`Dashboard > should render 1`] = `
                           class="flex flex-col items-end gap-1"
                         >
                           <div
-                            class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
+                            class="flex items-center justify-center rounded px-1.5 h-[21px] css-xqt0aw"
                             color="danger-bg"
                             data-testid="AmountLabel__wrapper"
                           >
                             <div
-                              class="flex items-center space-x-1"
+                              class="flex h-full items-center space-x-1"
                             >
                               <span
                                 class="whitespace-nowrap text-sm"
@@ -1709,7 +1709,7 @@ exports[`Dashboard > should render 1`] = `
                     </td>
                   </tr>
                   <tr
-                    class="group relative css-1kskd5s"
+                    class="group relative css-1d424e8"
                     data-testid="TableRow"
                   >
                     <td>
@@ -1772,7 +1772,7 @@ exports[`Dashboard > should render 1`] = `
                         class="flex px-3 transition-colors duration-100 min-h-11 items-start xl:min-h-0 my-0 py-3"
                       >
                         <div
-                          class="rounded p-1 css-1dx994f"
+                          class="rounded px-1 dark:border css-1dx994f"
                           color="secondary"
                           data-testid="TransactionRow__type"
                         >
@@ -1828,12 +1828,12 @@ exports[`Dashboard > should render 1`] = `
                           class="flex flex-col items-end gap-1"
                         >
                           <div
-                            class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
+                            class="flex items-center justify-center rounded px-1.5 h-[21px] css-xqt0aw"
                             color="danger-bg"
                             data-testid="AmountLabel__wrapper"
                           >
                             <div
-                              class="flex items-center space-x-1"
+                              class="flex h-full items-center space-x-1"
                             >
                               <span
                                 class="whitespace-nowrap text-sm"
@@ -1873,7 +1873,7 @@ exports[`Dashboard > should render 1`] = `
                     </td>
                   </tr>
                   <tr
-                    class="group relative css-1kskd5s"
+                    class="group relative css-1d424e8"
                     data-testid="TableRow"
                   >
                     <td>
@@ -1936,7 +1936,7 @@ exports[`Dashboard > should render 1`] = `
                         class="flex px-3 transition-colors duration-100 min-h-11 items-start xl:min-h-0 my-0 py-3"
                       >
                         <div
-                          class="rounded p-1 css-1dx994f"
+                          class="rounded px-1 dark:border css-1dx994f"
                           color="secondary"
                           data-testid="TransactionRow__type"
                         >
@@ -1992,12 +1992,12 @@ exports[`Dashboard > should render 1`] = `
                           class="flex flex-col items-end gap-1"
                         >
                           <div
-                            class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
+                            class="flex items-center justify-center rounded px-1.5 h-[21px] css-xqt0aw"
                             color="danger-bg"
                             data-testid="AmountLabel__wrapper"
                           >
                             <div
-                              class="flex items-center space-x-1"
+                              class="flex h-full items-center space-x-1"
                             >
                               <span
                                 class="whitespace-nowrap text-sm"
@@ -2037,7 +2037,7 @@ exports[`Dashboard > should render 1`] = `
                     </td>
                   </tr>
                   <tr
-                    class="group relative css-1kskd5s"
+                    class="group relative css-1d424e8"
                     data-testid="TableRow"
                   >
                     <td>
@@ -2100,7 +2100,7 @@ exports[`Dashboard > should render 1`] = `
                         class="flex px-3 transition-colors duration-100 min-h-11 items-start xl:min-h-0 my-0 py-3"
                       >
                         <div
-                          class="rounded p-1 css-1dx994f"
+                          class="rounded px-1 dark:border css-1dx994f"
                           color="secondary"
                           data-testid="TransactionRow__type"
                         >
@@ -2156,12 +2156,12 @@ exports[`Dashboard > should render 1`] = `
                           class="flex flex-col items-end gap-1"
                         >
                           <div
-                            class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
+                            class="flex items-center justify-center rounded px-1.5 h-[21px] css-xqt0aw"
                             color="danger-bg"
                             data-testid="AmountLabel__wrapper"
                           >
                             <div
-                              class="flex items-center space-x-1"
+                              class="flex h-full items-center space-x-1"
                             >
                               <span
                                 class="whitespace-nowrap text-sm"

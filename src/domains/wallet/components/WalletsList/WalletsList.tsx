@@ -13,6 +13,7 @@ import { Tooltip } from "@/app/components/Tooltip";
 import { Icon } from "@/app/components/Icon";
 import { AccordionContent } from "@/app/components/Accordion";
 import { twMerge } from "tailwind-merge";
+import cn from "classnames";
 
 const StarredHeader = ({ active, onClick }: { active: boolean; onClick: () => void }) => {
 	const { t } = useTranslation();
@@ -174,7 +175,10 @@ export const WalletsList: React.VFC<WalletsListProperties> = ({
 								rowsPerPage={itemsPerPage}
 								currentPage={currentPage}
 								initialState={initialState}
-								className="with-x-padding"
+								className={cn("with-x-padding", {
+									"after:mx-[0.15rem] after:block after:h-[5px] after:rounded-b-lg after:bg-theme-primary-100 after:content-[''] after:dark:bg-theme-secondary-800":
+										wallets.length <= itemsPerPage,
+								})}
 							>
 								{renderTableRow}
 							</Table>
