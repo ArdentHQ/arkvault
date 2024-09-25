@@ -9,7 +9,7 @@ exports[`WalletListItem > should disable the send button when wallet has no bala
   <table>
     <tbody>
       <tr
-        class="group relative css-1kskd5s"
+        class="group relative css-1d424e8"
         data-testid="TableRow"
       >
         <td
@@ -607,7 +607,7 @@ exports[`WalletListItem > should render when isCompact = false 1`] = `
   <table>
     <tbody>
       <tr
-        class="group relative css-1kskd5s"
+        class="group relative css-1d424e8"
         data-testid="TableRow"
       >
         <td
@@ -1024,7 +1024,7 @@ exports[`WalletListItem > should render when isCompact = true 1`] = `
   <table>
     <tbody>
       <tr
-        class="group relative css-1kskd5s"
+        class="group relative css-1d424e8"
         data-testid="TableRow"
       >
         <td
@@ -1881,7 +1881,7 @@ exports[`WalletListItem > should render when isLargeScreen = true 1`] = `
   <table>
     <tbody>
       <tr
-        class="group relative css-1kskd5s"
+        class="group relative css-1d424e8"
         data-testid="TableRow"
       >
         <td
@@ -2298,7 +2298,7 @@ exports[`WalletListItem > should render when isLargeScreen = true and wallet is 
   <table>
     <tbody>
       <tr
-        class="relative css-16ynu5g"
+        class="relative css-1x4z4cy"
         data-testid="TableRow"
       >
         <td
@@ -2763,7 +2763,7 @@ exports[`WalletListItem > should render with a N/A for fiat 1`] = `
   <table>
     <tbody>
       <tr
-        class="group relative css-1kskd5s"
+        class="group relative css-1d424e8"
         data-testid="TableRow"
       >
         <td
@@ -3180,7 +3180,7 @@ exports[`WalletListItem > should render with default BTC as default exchangeCurr
   <table>
     <tbody>
       <tr
-        class="group relative css-1kskd5s"
+        class="group relative css-1d424e8"
         data-testid="TableRow"
       >
         <td

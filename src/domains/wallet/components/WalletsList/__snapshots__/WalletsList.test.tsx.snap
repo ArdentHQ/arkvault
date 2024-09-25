@@ -291,7 +291,7 @@ exports[`WalletsList > should group starred wallets at the top 1`] = `
             role="rowgroup"
           >
             <tr
-              class="group relative css-1kskd5s"
+              class="group relative css-1d424e8"
               data-testid="TableRow"
             >
               <td
@@ -609,7 +609,7 @@ exports[`WalletsList > should group starred wallets at the top 1`] = `
               </td>
             </tr>
             <tr
-              class="group relative css-1kskd5s"
+              class="group relative css-1d424e8"
               data-testid="TableRow"
             >
               <td
@@ -1192,7 +1192,7 @@ exports[`WalletsList > should render 1`] = `
             role="rowgroup"
           >
             <tr
-              class="group relative css-1kskd5s"
+              class="group relative css-1d424e8"
               data-testid="TableRow"
             >
               <td
@@ -1459,7 +1459,7 @@ exports[`WalletsList > should render 1`] = `
               </td>
             </tr>
             <tr
-              class="group relative css-1kskd5s"
+              class="group relative css-1d424e8"
               data-testid="TableRow"
             >
               <td
@@ -2027,7 +2027,7 @@ exports[`WalletsList > should render empty skeleton block 1`] = `
             role="rowgroup"
           >
             <tr
-              class=" css-16ynu5g"
+              class=" css-1x4z4cy"
               data-testid="TableRow"
             >
               <td>
@@ -2215,7 +2215,7 @@ exports[`WalletsList > should render empty skeleton block 1`] = `
               </td>
             </tr>
             <tr
-              class=" css-16ynu5g"
+              class=" css-1x4z4cy"
               data-testid="TableRow"
             >
               <td>
@@ -2403,7 +2403,7 @@ exports[`WalletsList > should render empty skeleton block 1`] = `
               </td>
             </tr>
             <tr
-              class=" css-16ynu5g"
+              class=" css-1x4z4cy"
               data-testid="TableRow"
             >
               <td>

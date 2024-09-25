@@ -273,7 +273,7 @@ exports[`SearchRecipient > should call onAction when no address is selected 1`] 
                       role="rowgroup"
                     >
                       <tr
-                        class="relative css-16ynu5g"
+                        class="relative css-1x4z4cy"
                         data-testid="TableRow"
                       >
                         <td>
@@ -341,7 +341,7 @@ exports[`SearchRecipient > should call onAction when no address is selected 1`] 
                         </td>
                       </tr>
                       <tr
-                        class="relative css-16ynu5g"
+                        class="relative css-1x4z4cy"
                         data-testid="TableRow"
                       >
                         <td>
@@ -696,7 +696,7 @@ exports[`SearchRecipient > should render a modal 1`] = `
                       role="rowgroup"
                     >
                       <tr
-                        class="relative css-16ynu5g"
+                        class="relative css-1x4z4cy"
                         data-testid="TableRow"
                       >
                         <td>
@@ -764,7 +764,7 @@ exports[`SearchRecipient > should render a modal 1`] = `
                         </td>
                       </tr>
                       <tr
-                        class="relative css-16ynu5g"
+                        class="relative css-1x4z4cy"
                         data-testid="TableRow"
                       >
                         <td>
@@ -1117,7 +1117,7 @@ exports[`SearchRecipient > should render a modal with custom title and descripti
                       role="rowgroup"
                     >
                       <tr
-                        class="relative css-16ynu5g"
+                        class="relative css-1x4z4cy"
                         data-testid="TableRow"
                       >
                         <td>
@@ -1185,7 +1185,7 @@ exports[`SearchRecipient > should render a modal with custom title and descripti
                         </td>
                       </tr>
                       <tr
-                        class="relative css-16ynu5g"
+                        class="relative css-1x4z4cy"
                         data-testid="TableRow"
                       >
                         <td>
@@ -1538,7 +1538,7 @@ exports[`SearchRecipient > should render with contact on desktop 1`] = `
                       role="rowgroup"
                     >
                       <tr
-                        class="relative css-16ynu5g"
+                        class="relative css-1x4z4cy"
                         data-testid="TableRow"
                       >
                         <td>
@@ -2181,7 +2181,7 @@ exports[`SearchRecipient > should render with my wallet on desktop 1`] = `
                       role="rowgroup"
                     >
                       <tr
-                        class="relative css-16ynu5g"
+                        class="relative css-1x4z4cy"
                         data-testid="TableRow"
                       >
                         <td>
@@ -2824,7 +2824,7 @@ exports[`SearchRecipient > should render with no alias if the recipient address 
                       role="rowgroup"
                     >
                       <tr
-                        class="relative css-16ynu5g"
+                        class="relative css-1x4z4cy"
                         data-testid="TableRow"
                       >
                         <td>
@@ -3166,7 +3166,7 @@ exports[`SearchRecipient > should render with selected address 1`] = `
                       role="rowgroup"
                     >
                       <tr
-                        class="relative css-16ynu5g"
+                        class="relative css-1x4z4cy"
                         data-testid="TableRow"
                       >
                         <td>
@@ -3234,7 +3234,7 @@ exports[`SearchRecipient > should render with selected address 1`] = `
                         </td>
                       </tr>
                       <tr
-                        class="relative css-16ynu5g"
+                        class="relative css-1x4z4cy"
                         data-testid="TableRow"
                       >
                         <td>
@@ -3587,7 +3587,7 @@ exports[`SearchRecipient > should render with selected address on md screen 1`] 
                       role="rowgroup"
                     >
                       <tr
-                        class="relative css-16ynu5g"
+                        class="relative css-1x4z4cy"
                         data-testid="TableRow"
                       >
                         <td>
@@ -3655,7 +3655,7 @@ exports[`SearchRecipient > should render with selected address on md screen 1`] 
                         </td>
                       </tr>
                       <tr
-                        class="relative css-16ynu5g"
+                        class="relative css-1x4z4cy"
                         data-testid="TableRow"
                       >
                         <td>

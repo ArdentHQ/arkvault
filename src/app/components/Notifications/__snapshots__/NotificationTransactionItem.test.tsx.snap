@@ -6,7 +6,7 @@ exports[`Notifications > should render in xs 1`] = `
     <tbody>
       <div>
         <tr
-          class="group css-1kskd5s"
+          class="group css-1d424e8"
           data-testid="TableRow"
         >
           <td
@@ -67,7 +67,7 @@ exports[`Notifications > should render in xs 1`] = `
                 data-testid="AmountLabel__wrapper"
               >
                 <div
-                  class="flex items-center space-x-1"
+                  class="flex h-full items-center space-x-1"
                 >
                   <span
                     class="whitespace-nowrap text-sm"
@@ -92,7 +92,7 @@ exports[`Notifications > should render in xs 2`] = `
     <tbody>
       <div>
         <tr
-          class="group css-1kskd5s"
+          class="group css-1d424e8"
           data-testid="TableRow"
         >
           <td
@@ -153,7 +153,7 @@ exports[`Notifications > should render in xs 2`] = `
                 data-testid="AmountLabel__wrapper"
               >
                 <div
-                  class="flex items-center space-x-1"
+                  class="flex h-full items-center space-x-1"
                 >
                   <span
                     class="whitespace-nowrap text-sm"
@@ -178,7 +178,7 @@ exports[`Notifications > should render in xs 3`] = `
     <tbody>
       <div>
         <tr
-          class="group css-1kskd5s"
+          class="group css-1d424e8"
           data-testid="TableRow"
         >
           <td
@@ -273,7 +273,7 @@ exports[`Notifications > should render in xs 3`] = `
                 data-testid="AmountLabel__wrapper"
               >
                 <div
-                  class="flex items-center space-x-1"
+                  class="flex h-full items-center space-x-1"
                 >
                   <span
                     class="whitespace-nowrap text-sm"
@@ -298,7 +298,7 @@ exports[`Notifications > should render in xs 4`] = `
     <tbody>
       <div>
         <tr
-          class="group css-1kskd5s"
+          class="group css-1d424e8"
           data-testid="TableRow"
         >
           <td
@@ -393,7 +393,7 @@ exports[`Notifications > should render in xs 4`] = `
                 data-testid="AmountLabel__wrapper"
               >
                 <div
-                  class="flex items-center space-x-1"
+                  class="flex h-full items-center space-x-1"
                 >
                   <span
                     class="whitespace-nowrap text-sm"
@@ -418,7 +418,7 @@ exports[`Notifications > should render in xs 5`] = `
     <tbody>
       <div>
         <tr
-          class="group css-1kskd5s"
+          class="group css-1d424e8"
           data-testid="TableRow"
         >
           <td
@@ -513,7 +513,7 @@ exports[`Notifications > should render in xs 5`] = `
                 data-testid="AmountLabel__wrapper"
               >
                 <div
-                  class="flex items-center space-x-1"
+                  class="flex h-full items-center space-x-1"
                 >
                   <span
                     class="whitespace-nowrap text-sm"
@@ -538,7 +538,7 @@ exports[`Notifications > should render notification item 1`] = `
     <tbody>
       <div>
         <tr
-          class="group css-1kskd5s"
+          class="group css-1d424e8"
           data-testid="TableRow"
         >
           <td
@@ -633,7 +633,7 @@ exports[`Notifications > should render notification item 1`] = `
                 data-testid="AmountLabel__wrapper"
               >
                 <div
-                  class="flex items-center space-x-1"
+                  class="flex h-full items-center space-x-1"
                 >
                   <span
                     class="whitespace-nowrap text-sm"

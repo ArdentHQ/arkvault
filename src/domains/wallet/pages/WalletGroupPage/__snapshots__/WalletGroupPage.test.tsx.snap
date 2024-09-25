@@ -1098,7 +1098,7 @@ exports[`WalletGroupPage > should render empty list if no wallets 1`] = `
                       role="rowgroup"
                     >
                       <tr
-                        class="group relative css-1kskd5s"
+                        class="group relative css-1d424e8"
                         data-testid="TableRow"
                       >
                         <td
@@ -1365,7 +1365,7 @@ exports[`WalletGroupPage > should render empty list if no wallets 1`] = `
                         </td>
                       </tr>
                       <tr
-                        class="group relative css-1kskd5s"
+                        class="group relative css-1d424e8"
                         data-testid="TableRow"
                       >
                         <td
@@ -1632,7 +1632,7 @@ exports[`WalletGroupPage > should render empty list if no wallets 1`] = `
                         </td>
                       </tr>
                       <tr
-                        class="group relative css-1kskd5s"
+                        class="group relative css-1d424e8"
                         data-testid="TableRow"
                       >
                         <td
@@ -1899,7 +1899,7 @@ exports[`WalletGroupPage > should render empty list if no wallets 1`] = `
                         </td>
                       </tr>
                       <tr
-                        class="group relative css-1kskd5s"
+                        class="group relative css-1d424e8"
                         data-testid="TableRow"
                       >
                         <td
@@ -2166,7 +2166,7 @@ exports[`WalletGroupPage > should render empty list if no wallets 1`] = `
                         </td>
                       </tr>
                       <tr
-                        class="group relative css-1kskd5s"
+                        class="group relative css-1d424e8"
                         data-testid="TableRow"
                       >
                         <td
@@ -2433,7 +2433,7 @@ exports[`WalletGroupPage > should render empty list if no wallets 1`] = `
                         </td>
                       </tr>
                       <tr
-                        class="group relative css-1kskd5s"
+                        class="group relative css-1d424e8"
                         data-testid="TableRow"
                       >
                         <td
@@ -2700,7 +2700,7 @@ exports[`WalletGroupPage > should render empty list if no wallets 1`] = `
                         </td>
                       </tr>
                       <tr
-                        class="group relative css-1kskd5s"
+                        class="group relative css-1d424e8"
                         data-testid="TableRow"
                       >
                         <td
@@ -2967,7 +2967,7 @@ exports[`WalletGroupPage > should render empty list if no wallets 1`] = `
                         </td>
                       </tr>
                       <tr
-                        class="group relative css-1kskd5s"
+                        class="group relative css-1d424e8"
                         data-testid="TableRow"
                       >
                         <td
@@ -3234,7 +3234,7 @@ exports[`WalletGroupPage > should render empty list if no wallets 1`] = `
                         </td>
                       </tr>
                       <tr
-                        class="group relative css-1kskd5s"
+                        class="group relative css-1d424e8"
                         data-testid="TableRow"
                       >
                         <td
@@ -3501,7 +3501,7 @@ exports[`WalletGroupPage > should render empty list if no wallets 1`] = `
                         </td>
                       </tr>
                       <tr
-                        class="group relative css-1kskd5s"
+                        class="group relative css-1d424e8"
                         data-testid="TableRow"
                       >
                         <td
@@ -3768,7 +3768,7 @@ exports[`WalletGroupPage > should render empty list if no wallets 1`] = `
                         </td>
                       </tr>
                       <tr
-                        class="group relative css-1kskd5s"
+                        class="group relative css-1d424e8"
                         data-testid="TableRow"
                       >
                         <td
@@ -4035,7 +4035,7 @@ exports[`WalletGroupPage > should render empty list if no wallets 1`] = `
                         </td>
                       </tr>
                       <tr
-                        class="group relative css-1kskd5s"
+                        class="group relative css-1d424e8"
                         data-testid="TableRow"
                       >
                         <td
@@ -4302,7 +4302,7 @@ exports[`WalletGroupPage > should render empty list if no wallets 1`] = `
                         </td>
                       </tr>
                       <tr
-                        class="group relative css-1kskd5s"
+                        class="group relative css-1d424e8"
                         data-testid="TableRow"
                       >
                         <td
@@ -4569,7 +4569,7 @@ exports[`WalletGroupPage > should render empty list if no wallets 1`] = `
                         </td>
                       </tr>
                       <tr
-                        class="group relative css-1kskd5s"
+                        class="group relative css-1d424e8"
                         data-testid="TableRow"
                       >
                         <td
@@ -4836,7 +4836,7 @@ exports[`WalletGroupPage > should render empty list if no wallets 1`] = `
                         </td>
                       </tr>
                       <tr
-                        class="group relative css-1kskd5s"
+                        class="group relative css-1d424e8"
                         data-testid="TableRow"
                       >
                         <td

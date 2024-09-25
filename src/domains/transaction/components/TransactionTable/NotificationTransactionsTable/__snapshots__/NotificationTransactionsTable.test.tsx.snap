@@ -23,7 +23,7 @@ exports[`NotificationsTransactionTable > should render skeleton for small screen
             role="rowgroup"
           >
             <tr
-              class="group css-16ynu5g"
+              class="group css-1x4z4cy"
               data-testid="TableRow"
             >
               <td
@@ -124,7 +124,7 @@ exports[`NotificationsTransactionTable > should render skeleton for small screen
               </td>
             </tr>
             <tr
-              class="group css-16ynu5g"
+              class="group css-1x4z4cy"
               data-testid="TableRow"
             >
               <td
@@ -225,7 +225,7 @@ exports[`NotificationsTransactionTable > should render skeleton for small screen
               </td>
             </tr>
             <tr
-              class="group css-16ynu5g"
+              class="group css-1x4z4cy"
               data-testid="TableRow"
             >
               <td
@@ -326,7 +326,7 @@ exports[`NotificationsTransactionTable > should render skeleton for small screen
               </td>
             </tr>
             <tr
-              class="group css-16ynu5g"
+              class="group css-1x4z4cy"
               data-testid="TableRow"
             >
               <td
@@ -427,7 +427,7 @@ exports[`NotificationsTransactionTable > should render skeleton for small screen
               </td>
             </tr>
             <tr
-              class="group css-16ynu5g"
+              class="group css-1x4z4cy"
               data-testid="TableRow"
             >
               <td
@@ -528,7 +528,7 @@ exports[`NotificationsTransactionTable > should render skeleton for small screen
               </td>
             </tr>
             <tr
-              class="group css-16ynu5g"
+              class="group css-1x4z4cy"
               data-testid="TableRow"
             >
               <td
@@ -629,7 +629,7 @@ exports[`NotificationsTransactionTable > should render skeleton for small screen
               </td>
             </tr>
             <tr
-              class="group css-16ynu5g"
+              class="group css-1x4z4cy"
               data-testid="TableRow"
             >
               <td
@@ -730,7 +730,7 @@ exports[`NotificationsTransactionTable > should render skeleton for small screen
               </td>
             </tr>
             <tr
-              class="group css-16ynu5g"
+              class="group css-1x4z4cy"
               data-testid="TableRow"
             >
               <td
@@ -831,7 +831,7 @@ exports[`NotificationsTransactionTable > should render skeleton for small screen
               </td>
             </tr>
             <tr
-              class="group css-16ynu5g"
+              class="group css-1x4z4cy"
               data-testid="TableRow"
             >
               <td
@@ -932,7 +932,7 @@ exports[`NotificationsTransactionTable > should render skeleton for small screen
               </td>
             </tr>
             <tr
-              class="group css-16ynu5g"
+              class="group css-1x4z4cy"
               data-testid="TableRow"
             >
               <td

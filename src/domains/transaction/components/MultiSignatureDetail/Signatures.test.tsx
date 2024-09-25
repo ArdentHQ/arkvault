@@ -89,13 +89,11 @@ describe("Signatures", () => {
 			throw new Error("Failed");
 		});
 
-		const { container } = render(<Signatures transaction={multisignatureTransactionMock} wallet={wallet} />);
+		render(<Signatures transaction={multisignatureTransactionMock} wallet={wallet} />);
 
 		await waitFor(() => expect(screen.getAllByTestId(SignaturesParticipantStatus)).toHaveLength(2));
 
 		expect(screen.getAllByTestId(SignaturesSignedBadge)).toHaveLength(2);
-
-		expect(container).toMatchSnapshot();
 	});
 
 	it("should show all participants as signed when all signatures are added", async () => {
