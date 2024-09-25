@@ -72,7 +72,7 @@ export const AmountLabel: React.VFC<AmountLabelProperties> = ({
 			size={size}
 			data-testid="AmountLabel__wrapper"
 		>
-			<div className={cn("flex items-center space-x-1 h-full")}>
+			<div className={cn("flex h-full items-center space-x-1")}>
 				{hint && <AmountLabelHint tooltipContent={hint} className={hintClassName} isCompact={isCompact} />}
 				<Amount
 					showSign={value !== 0}
