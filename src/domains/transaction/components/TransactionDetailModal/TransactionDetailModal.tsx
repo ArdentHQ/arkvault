@@ -109,7 +109,7 @@ export const TransactionDetailModal = ({
 						<DetailPadded>
 							<DetailLabel>{t("TRANSACTION.PARTICIPANTS")}</DetailLabel>
 							<div className="mt-2">
-								<TransactionMusigParticipants publicKeys={transactionPublicKeys(transaction)} useExplorerLinks profile={profile} network={transaction.wallet().network()} />
+								<TransactionMusigParticipants publicKeys={transactionPublicKeys(transaction).publicKeys} useExplorerLinks profile={profile} network={transaction.wallet().network()} />
 							</div>
 						</DetailPadded>
 					)}

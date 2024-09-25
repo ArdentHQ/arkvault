@@ -177,7 +177,7 @@ export const MultiSignatureSuccessful = ({
 					<DetailPadded>
 						<DetailLabel>{t("TRANSACTION.PARTICIPANTS")}</DetailLabel>
 						<div className="mt-2">
-							<TransactionMusigParticipants publicKeys={transactionPublicKeys(transaction)} profile={senderWallet.profile()} network={senderWallet.network()} />
+							<TransactionMusigParticipants publicKeys={transactionPublicKeys(transaction).publicKeys} profile={senderWallet.profile()} network={senderWallet.network()} />
 						</div>
 					</DetailPadded>
 				)}

@@ -133,18 +133,17 @@ export const constructWalletsFromPublicKeys = async ({ profile, publicKeys, netw
 	return wallets;
 }
 
-export const transactionPublicKeys = (transaction?: DTO.RawTransactionData): string[] => {
-	let publicKeys: string[] = []
-
+export const transactionPublicKeys = (transaction?: DTO.RawTransactionData): { min?: number, publicKeys: string[] } => {
 	if (!transaction) {
-		return []
+		return { min: undefined, publicKeys: [] }
 	}
 
 	if (transaction?.publicKeys?.()) {
-		publicKeys = transaction.publicKeys()
-	} else {
-		publicKeys = getMultiSignatureInfo(transaction).publicKeys
+		return {
+			min: transaction.min(),
+			publicKeys: transaction.publicKeys()
+		}
 	}
 
-	return publicKeys
+	return getMultiSignatureInfo(transaction)
 }
