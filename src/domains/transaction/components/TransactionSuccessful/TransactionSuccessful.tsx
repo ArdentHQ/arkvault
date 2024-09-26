@@ -3,12 +3,10 @@ import { Contracts, DTO } from "@ardenthq/sdk-profiles";
 import React from "react";
 import { useTranslation } from "react-i18next";
 
-import { MultiSignatureSuccessful } from "./MultiSignatureSuccessful";
 import { useConfirmedTransaction } from "./hooks/useConfirmedTransaction";
 import {
 	TransactionAddresses,
 	TransactionConfirmations,
-	TransactionFee,
 	TransactionMusigParticipants,
 	TransactionType,
 } from "@/domains/transaction/components/TransactionDetail";
