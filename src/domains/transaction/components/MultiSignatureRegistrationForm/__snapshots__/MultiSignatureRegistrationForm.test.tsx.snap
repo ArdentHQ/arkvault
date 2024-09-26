@@ -798,7 +798,7 @@ exports[`MultiSignature Registration Form > should render review step 1`] = `
               class="mt-0 overflow-hidden rounded-lg border-theme-secondary-300 dark:border-theme-secondary-800 sm:mt-2 sm:border"
             >
               <div
-                class="hidden bg-theme-secondary-100 dark:bg-theme-secondary-800 px-6 py-3 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:block"
+                class="hidden bg-theme-secondary-100 px-6 py-3 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:bg-theme-secondary-800 dark:text-theme-secondary-500 sm:block"
               >
                 Address
               </div>
@@ -806,7 +806,7 @@ exports[`MultiSignature Registration Form > should render review step 1`] = `
                 class="mb-2 mt-3 px-3 sm:px-6"
               >
                 <div
-                  class="mb-3 overflow-hidden rounded border border-theme-secondary-300 dark:border-theme-secondary-800 bg-theme-secondary-100 px-4 py-3 last:mb-0 sm:mb-0 sm:rounded-none sm:border-x-0 sm:border-t-0 sm:border-dashed dark:bg-black dark:sm:bg-transparent sm:bg-transparent sm:px-0 sm:last:border-none"
+                  class="mb-3 overflow-hidden rounded border border-theme-secondary-300 bg-theme-secondary-100 px-4 py-3 last:mb-0 dark:border-theme-secondary-800 dark:bg-black sm:mb-0 sm:rounded-none sm:border-x-0 sm:border-t-0 sm:border-dashed sm:bg-transparent sm:px-0 sm:last:border-none dark:sm:bg-transparent"
                 >
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -856,7 +856,7 @@ exports[`MultiSignature Registration Form > should render review step 1`] = `
                   </div>
                 </div>
                 <div
-                  class="mb-3 overflow-hidden rounded border border-theme-secondary-300 dark:border-theme-secondary-800 bg-theme-secondary-100 px-4 py-3 last:mb-0 sm:mb-0 sm:rounded-none sm:border-x-0 sm:border-t-0 sm:border-dashed dark:bg-black dark:sm:bg-transparent sm:bg-transparent sm:px-0 sm:last:border-none"
+                  class="mb-3 overflow-hidden rounded border border-theme-secondary-300 bg-theme-secondary-100 px-4 py-3 last:mb-0 dark:border-theme-secondary-800 dark:bg-black sm:mb-0 sm:rounded-none sm:border-x-0 sm:border-t-0 sm:border-dashed sm:bg-transparent sm:px-0 sm:last:border-none dark:sm:bg-transparent"
                 >
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
