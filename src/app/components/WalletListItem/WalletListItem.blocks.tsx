@@ -91,13 +91,14 @@ export const WalletCell: React.VFC<WalletCellProperties> = ({ wallet }) => {
 
 	return (
 		<TableCell size="sm" innerClassName="-ml-3 space-x-3" data-testid="TableCell_Wallet">
-			<div className="w-full max-w-64 flex-1 overflow-hidden lg:max-w-48 xl:max-w-full">
+			<div className="w-full max-w-64 flex-1 overflow-hidden md:max-w-40 lg:max-w-48 xl:max-w-full">
 				<Address
 					address={wallet.address()}
 					addressClass="text-sm text-theme-secondary-700 dark:text-theme-secondary-500 lg:!ml-0"
 					walletName={alias}
 					walletNameClass="lg:hidden text-sm text-theme-text group-hover:text-theme-primary-700"
 					showCopyButton
+					wrapperClass="justify-between"
 				/>
 			</div>
 		</TableCell>
