@@ -11,7 +11,7 @@ import { FeeField } from "@/domains/transaction/components/FeeField";
 import { TransactionAddresses } from "@/domains/transaction/components/TransactionDetail";
 import { FormStepProperties } from "@/domains/transaction/pages/SendRegistration/SendRegistration.contracts";
 import { StepHeader } from "@/app/components/StepHeader";
-import {ThemeIcon} from "@/app/components/Icon";
+import { ThemeIcon } from "@/app/components/Icon";
 
 export const GenerationStep = ({ wallet, profile }: FormStepProperties) => {
 	const { t } = useTranslation();
@@ -44,12 +44,15 @@ export const GenerationStep = ({ wallet, profile }: FormStepProperties) => {
 	}, [profile, setValue, wallet, secondMnemonic]);
 
 	return (
-		<section data-testid="SecondSignatureRegistrationForm__generation-step" className="pt-6 space-y-6 sm:pt-4 sm:space-y-4">
+		<section
+			data-testid="SecondSignatureRegistrationForm__generation-step"
+			className="space-y-6 pt-6 sm:space-y-4 sm:pt-4"
+		>
 			<StepHeader
 				title={t("TRANSACTION.PAGE_SECOND_SIGNATURE.GENERATION_STEP.TITLE")}
 				subtitle={t("TRANSACTION.PAGE_SECOND_SIGNATURE.GENERATION_STEP.DESCRIPTION")}
 				titleIcon={
-					<ThemeIcon dimensions={[24, 24]} lightIcon="SendTransactionLight" darkIcon="SendTransactionDark"/>
+					<ThemeIcon dimensions={[24, 24]} lightIcon="SendTransactionLight" darkIcon="SendTransactionDark" />
 				}
 			/>
 
@@ -66,8 +69,8 @@ export const GenerationStep = ({ wallet, profile }: FormStepProperties) => {
 
 			<div>
 				<FormField name="fee" className="-mt-3 sm:mt-0">
-					<FormLabel label={t("TRANSACTION.TRANSACTION_FEE")}/>
-					<FeeField type="secondSignature" data={feeTransactionData} network={network} profile={profile}/>
+					<FormLabel label={t("TRANSACTION.TRANSACTION_FEE")} />
+					<FeeField type="secondSignature" data={feeTransactionData} network={network} profile={profile} />
 				</FormField>
 			</div>
 		</section>
