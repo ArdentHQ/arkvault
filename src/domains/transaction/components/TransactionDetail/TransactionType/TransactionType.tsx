@@ -2,7 +2,7 @@ import React from "react";
 import { useTranslation } from "react-i18next";
 
 import { useTransactionTypes } from "@/domains/transaction/hooks/use-transaction-types";
-import { DetailDivider, DetailLabelText, DetailTitle, DetailWrapper } from "@/app/components/DetailWrapper";
+import { DetailDivider, DetailLabelText, DetailWrapper } from "@/app/components/DetailWrapper";
 import { Label } from "@/app/components/Label";
 import { useResizeDetector } from "react-resize-detector";
 import { TruncateMiddleDynamic } from "@/app/components/TruncateMiddleDynamic";
