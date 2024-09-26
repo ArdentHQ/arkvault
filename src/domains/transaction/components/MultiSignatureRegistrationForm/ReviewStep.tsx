@@ -73,14 +73,14 @@ export const ReviewStep = ({
 				<div data-testid="DetailWrapper">
 					<DetailLabel>{t("TRANSACTION.PARTICIPANTS")}</DetailLabel>
 					<div className="mt-0 overflow-hidden rounded-lg border-theme-secondary-300 dark:border-theme-secondary-800 sm:mt-2 sm:border">
-						<div className="hidden bg-theme-secondary-100 dark:bg-theme-secondary-800 px-6 py-3 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:block">
+						<div className="hidden bg-theme-secondary-100 px-6 py-3 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:bg-theme-secondary-800 dark:text-theme-secondary-500 sm:block">
 							{t("TRANSACTION.ADDRESS")}
 						</div>
 						<div className="mb-2 mt-3 px-3 sm:px-6">
 							{participants.map((participiant) => (
 								<div
 									key={participiant.address}
-									className="mb-3 overflow-hidden rounded border border-theme-secondary-300 dark:border-theme-secondary-800 bg-theme-secondary-100 px-4 py-3 last:mb-0 sm:mb-0 sm:rounded-none sm:border-x-0 sm:border-t-0 sm:border-dashed dark:bg-black dark:sm:bg-transparent sm:bg-transparent sm:px-0 sm:last:border-none"
+									className="mb-3 overflow-hidden rounded border border-theme-secondary-300 bg-theme-secondary-100 px-4 py-3 last:mb-0 dark:border-theme-secondary-800 dark:bg-black sm:mb-0 sm:rounded-none sm:border-x-0 sm:border-t-0 sm:border-dashed sm:bg-transparent sm:px-0 sm:last:border-none dark:sm:bg-transparent"
 								>
 									<Address
 										address={participiant.address}
