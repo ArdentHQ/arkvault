@@ -29,9 +29,7 @@ export const SentStep = ({
 				transaction={transaction}
 				senderWallet={wallet}
 				description={t("TRANSACTION.SUCCESS.DESCRIPTION")}
-			>
-				<TransactionFee currency={wallet.currency()} value={transaction.fee()} paddingPosition="top" />
-			</MultiSignatureSuccessful>
+			/>
 		);
 	}
 
