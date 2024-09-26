@@ -7,7 +7,6 @@ import { useMultiSignatureStatus } from "@/domains/transaction/hooks";
 import { Icon } from "@/app/components/Icon";
 import { Table, TableCell, TableRow } from "@/app/components/Table";
 import { TableWrapper } from "@/app/components/Table/TableWrapper";
-import { Networks } from "@ardenthq/sdk";
 import { AddressCopy, AddressLabel } from "@/app/components/Address";
 import { useMusigParticipants } from "@/domains/transaction/hooks/use-musig-participants";
 
@@ -68,7 +67,6 @@ const ParticipantRow = ({
 	<TableRow className="group relative max-md:!border-transparent" key={wallet.address()}>
 		<TableCell
 			variant="start"
-			key={wallet.address()}
 			innerClassName="text-sm font-semibold justify-between sm:justify-start max-sm:bg-theme-secondary-100 max-sm:dark:bg-black max-sm:m-3 max-sm:mb-0 max-sm:px-4 max-sm:py-3 max-sm:border max-sm:rounded-md max-sm:border-theme-secondary-300 max-sm:dark:border-theme-secondary-800"
 		>
 			<div className="flex space-x-2 w-full">
@@ -84,7 +82,6 @@ const ParticipantRow = ({
 
 		<TableCell
 			variant="end"
-			key={wallet.address()}
 			innerClassName="flex justify-end max-sm:hidden"
 		>
 			<ParticipantStatus transaction={transaction} wallet={transaction.wallet()} publicKey={wallet.publicKey()!} />
@@ -122,7 +119,7 @@ export const Signatures = ({
 				]}
 				data={participants}
 			>
-				{(wallet) => <ParticipantRow key={wallet.address()} wallet={wallet} transaction={transaction} />}
+				{(participantWallet) => <ParticipantRow key={participantWallet.address()} wallet={participantWallet} transaction={transaction} />}
 			</Table>
 		</TableWrapper>
 	);
