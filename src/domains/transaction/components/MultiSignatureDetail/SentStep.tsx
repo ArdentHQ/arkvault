@@ -5,8 +5,7 @@ import { useTranslation } from "react-i18next";
 import { Signatures } from "./Signatures";
 import { Header } from "@/app/components/Header";
 import { Image } from "@/app/components/Image";
-import { MultiSignatureSuccessful } from "@/domains/transaction/components/TransactionSuccessful";
-import { TransactionFee } from "@/domains/transaction/components/TransactionDetail";
+import { TransactionSuccessful } from "@/domains/transaction/components/TransactionSuccessful";
 
 export const SentStep = ({
 	transaction,
@@ -23,12 +22,9 @@ export const SentStep = ({
 
 	if (wallet.transaction().isAwaitingConfirmation(transaction.id())) {
 		return (
-			<MultiSignatureSuccessful
-				title={t("TRANSACTION.SUCCESS.TITLE")}
-				banner={"TransactionSuccessBanner"}
+			<TransactionSuccessful
 				transaction={transaction}
 				senderWallet={wallet}
-				description={t("TRANSACTION.SUCCESS.DESCRIPTION")}
 			/>
 		);
 	}

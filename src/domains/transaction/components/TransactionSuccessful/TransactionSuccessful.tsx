@@ -9,6 +9,7 @@ import {
 	TransactionAddresses,
 	TransactionConfirmations,
 	TransactionFee,
+	TransactionMusigParticipants,
 	TransactionType,
 } from "@/domains/transaction/components/TransactionDetail";
 import { StepHeader } from "@/app/components/StepHeader";
@@ -16,6 +17,7 @@ import { Icon } from "@/app/components/Icon";
 import { DetailLabel, DetailPadded } from "@/app/components/DetailWrapper";
 import { TransactionId } from "@/domains/transaction/components/TransactionDetail/TransactionId";
 import { RecipientItem } from "@/domains/transaction/components/RecipientList/RecipientList.contracts";
+import { transactionPublicKeys } from "../MultiSignatureDetail/MultiSignatureDetail.helpers";
 
 interface TransactionSuccessfulProperties {
 	transaction: DTO.ExtendedSignedTransactionData;
@@ -39,14 +41,6 @@ export const TransactionSuccessful = ({
 		transactionId: transaction.id(),
 		wallet: senderWallet,
 	});
-
-	if (transaction.isMultiSignatureRegistration() || transaction.usesMultiSignature()) {
-		return (
-			<MultiSignatureSuccessful transaction={transaction} senderWallet={senderWallet}>
-				<TransactionFee currency={senderWallet.currency()} value={transaction.fee()} paddingPosition="top" />
-			</MultiSignatureSuccessful>
-		);
-	}
 
 	const titleText = title ?? (isConfirmed ? t("TRANSACTION.SUCCESS.CONFIRMED") : t("TRANSACTION.PENDING.TITLE"));
 
@@ -89,12 +83,23 @@ export const TransactionSuccessful = ({
 
 				{children}
 
-				<DetailPadded>
-					<DetailLabel>{t("TRANSACTION.CONFIRMATIONS")}</DetailLabel>
-					<div className="mt-2">
-						<TransactionConfirmations isConfirmed={isConfirmed} confirmations={confirmations} />
-					</div>
-				</DetailPadded>
+				{senderWallet.transaction().isAwaitingConfirmation(transaction.id()) && (
+					<DetailPadded>
+						<DetailLabel>{t("TRANSACTION.CONFIRMATIONS")}</DetailLabel>
+						<div className="mt-2">
+							<TransactionConfirmations isConfirmed={isConfirmed} confirmations={confirmations} />
+						</div>
+					</DetailPadded>
+				)}
+
+				{transaction.isMultiSignatureRegistration() && (
+					<DetailPadded>
+						<DetailLabel>{t("TRANSACTION.PARTICIPANTS")}</DetailLabel>
+						<div className="mt-2">
+							<TransactionMusigParticipants publicKeys={transactionPublicKeys(transaction).publicKeys} profile={senderWallet.profile()} network={senderWallet.network()} useExplorerLinks />
+						</div>
+					</DetailPadded>
+				)}
 			</div>
 		</section>
 	);
