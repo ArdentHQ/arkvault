@@ -15,7 +15,7 @@ import { Icon } from "@/app/components/Icon";
 import { DetailLabel, DetailPadded } from "@/app/components/DetailWrapper";
 import { TransactionId } from "@/domains/transaction/components/TransactionDetail/TransactionId";
 import { RecipientItem } from "@/domains/transaction/components/RecipientList/RecipientList.contracts";
-import { transactionPublicKeys } from "../MultiSignatureDetail/MultiSignatureDetail.helpers";
+import { transactionPublicKeys } from "@/domains/transaction/components/MultiSignatureDetail/MultiSignatureDetail.helpers";
 
 interface TransactionSuccessfulProperties {
 	transaction: DTO.ExtendedSignedTransactionData;
