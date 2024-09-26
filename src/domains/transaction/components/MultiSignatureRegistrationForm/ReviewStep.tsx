@@ -64,7 +64,7 @@ export const ReviewStep = ({
 							<DetailTitle className="w-auto sm:min-w-24">{t("TRANSACTION.SIGNATURES")}</DetailTitle>
 							<div className="no-ligatures truncate text-sm font-semibold leading-[17px] text-theme-secondary-900 dark:text-theme-secondary-200 sm:text-base sm:leading-5">
 								{minParticipants}{" "}
-								{t("TRANSACTION.MULTISIGNATURE.OUT_OF_LENGTH", { length: participants.length })}
+								{t("TRANSACTION.MULTISIGNATURE.OF_LENGTH", { length: participants.length })}
 							</div>
 						</div>
 					</div>
