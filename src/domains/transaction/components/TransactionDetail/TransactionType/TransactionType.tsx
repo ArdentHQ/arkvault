@@ -24,7 +24,7 @@ export const TransactionType = ({
 
 	const { getLabel } = useTransactionTypes();
 
-	const { min, publicKeys } = transactionPublicKeys(transaction)
+	const { min, publicKeys } = transactionPublicKeys(transaction);
 
 	return (
 		<div data-testid="TransactionType">
@@ -94,11 +94,14 @@ export const TransactionType = ({
 						<>
 							<DetailDivider />
 
-
 							<div className="flex w-full justify-between sm:justify-start">
 								<DetailLabelText>{t("COMMON.ADDRESS")}</DetailLabelText>
 								<div className="font-semibold">
-									<MusigGeneratedAddress publicKeys={publicKeys} min={min} wallet={transaction.wallet()} />
+									<MusigGeneratedAddress
+										publicKeys={publicKeys}
+										min={min}
+										wallet={transaction.wallet()}
+									/>
 								</div>
 							</div>
 
@@ -107,8 +110,7 @@ export const TransactionType = ({
 							<div className="flex w-full items-center justify-between sm:justify-start">
 								<DetailLabelText>{t("TRANSACTION.SIGNATURES")}</DetailLabelText>
 								<div className="no-ligatures truncate text-sm font-semibold leading-[17px] text-theme-secondary-900 dark:text-theme-secondary-200 sm:text-base sm:leading-5">
-									{min}{" "}
-									{t("TRANSACTION.MULTISIGNATURE.OUT_OF_LENGTH", { length: publicKeys.length })}
+									{min} {t("TRANSACTION.MULTISIGNATURE.OUT_OF_LENGTH", { length: publicKeys.length })}
 								</div>
 							</div>
 						</>

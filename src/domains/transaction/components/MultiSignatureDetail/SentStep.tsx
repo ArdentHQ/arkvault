@@ -21,12 +21,7 @@ export const SentStep = ({
 	const bannerName = isBroadcast ? "TransactionSuccessBanner" : "TransactionSignedBanner";
 
 	if (wallet.transaction().isAwaitingConfirmation(transaction.id())) {
-		return (
-			<TransactionSuccessful
-				transaction={transaction}
-				senderWallet={wallet}
-			/>
-		);
+		return <TransactionSuccessful transaction={transaction} senderWallet={wallet} />;
 	}
 
 	return (

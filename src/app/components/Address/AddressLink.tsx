@@ -4,16 +4,18 @@ import { Clipboard } from "@/app/components/Clipboard";
 import { Icon } from "@/app/components/Icon";
 import { useTranslation } from "react-i18next";
 import { useTheme } from "@/app/hooks/use-theme";
-import Truncate from '@konforti/react-truncate';
+import Truncate from "@konforti/react-truncate";
 
-export const AddressLink = ({ children, explorerLink }: { explorerLink: string, children: React.ReactNode }) => (
+export const AddressLink = ({ children, explorerLink }: { explorerLink: string; children: React.ReactNode }) => (
 	<Link to={explorerLink} showExternalIcon={false} isExternal>
 		<Truncate truncFrom="middle">{children}</Truncate>
 	</Link>
 );
 
 export const AddressLabel = ({ children }: { children: React.ReactNode }) => (
-	<div className="text-theme-secondary-900 dark:text-theme-text"><Truncate truncFrom="middle">{children}</Truncate></div>
+	<div className="text-theme-secondary-900 dark:text-theme-text">
+		<Truncate truncFrom="middle">{children}</Truncate>
+	</div>
 );
 
 export const AddressCopy = ({ address }: { address: string }) => {
@@ -21,16 +23,11 @@ export const AddressCopy = ({ address }: { address: string }) => {
 	const { isDarkMode } = useTheme();
 
 	return (
-		<Clipboard
-			variant="icon"
-			data={address}
-			tooltip={t("COMMON.COPY_ID")}
-			tooltipDarkTheme={isDarkMode}
-		>
+		<Clipboard variant="icon" data={address} tooltip={t("COMMON.COPY_ID")} tooltipDarkTheme={isDarkMode}>
 			<Icon
 				name="Copy"
 				className="text-theme-primary-400 dark:text-theme-secondary-700 dark:hover:text-theme-secondary-500"
 			/>
 		</Clipboard>
-	)
+	);
 };

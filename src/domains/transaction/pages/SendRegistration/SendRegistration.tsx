@@ -236,7 +236,7 @@ export const SendRegistration = () => {
 			secondSignature: t("TRANSACTION.TRANSACTION_TYPES.SECOND_SIGNATURE"),
 		})[registrationType];
 
-	const successTitle = registrationType === "multiSignature" ? t("TRANSACTION.SUCCESS.CREATED") : undefined
+	const successTitle = registrationType === "multiSignature" ? t("TRANSACTION.SUCCESS.CREATED") : undefined;
 
 	return (
 		<Page pageTitle={getPageTitle()}>
@@ -281,7 +281,11 @@ export const SendRegistration = () => {
 									</TabPanel>
 
 									<TabPanel tabId={stepCount}>
-										<TransactionSuccessful transaction={transaction} senderWallet={activeWallet} title={successTitle} />
+										<TransactionSuccessful
+											transaction={transaction}
+											senderWallet={activeWallet}
+											title={successTitle}
+										/>
 									</TabPanel>
 								</>
 							)}

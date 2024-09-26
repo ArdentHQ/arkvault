@@ -10,21 +10,23 @@ export const MusigGeneratedAddress = ({
 	min,
 	useExploreLink,
 }: {
-	publicKeys: string[],
-	min?: number,
-	wallet: Contracts.IReadWriteWallet
-	useExploreLink?: boolean,
+	publicKeys: string[];
+	min?: number;
+	wallet: Contracts.IReadWriteWallet;
+	useExploreLink?: boolean;
 }) => {
-	const { generatedWallet } = useMusigGeneratedWallet({ min, publicKeys, wallet })
+	const { generatedWallet } = useMusigGeneratedWallet({ min, publicKeys, wallet });
 
 	if (!generatedWallet) {
-		return <></>
+		return <></>;
 	}
 
 	return (
 		<div className="flex space-x-2">
 			{!useExploreLink && <AddressLabel>{generatedWallet.address()}</AddressLabel>}
-			{useExploreLink && <AddressLink explorerLink={generatedWallet.explorerLink()}>{generatedWallet.address()}</AddressLink>}
+			{useExploreLink && (
+				<AddressLink explorerLink={generatedWallet.explorerLink()}>{generatedWallet.address()}</AddressLink>
+			)}
 			<AddressCopy address={generatedWallet.address()} />
 		</div>
 	);

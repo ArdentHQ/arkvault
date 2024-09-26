@@ -94,7 +94,12 @@ export const TransactionSuccessful = ({
 					<DetailPadded>
 						<DetailLabel>{t("TRANSACTION.PARTICIPANTS")}</DetailLabel>
 						<div className="mt-2">
-							<TransactionMusigParticipants publicKeys={transactionPublicKeys(transaction).publicKeys} profile={senderWallet.profile()} network={senderWallet.network()} useExplorerLinks />
+							<TransactionMusigParticipants
+								publicKeys={transactionPublicKeys(transaction).publicKeys}
+								profile={senderWallet.profile()}
+								network={senderWallet.network()}
+								useExplorerLinks
+							/>
 						</div>
 					</DetailPadded>
 				)}

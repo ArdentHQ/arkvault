@@ -117,7 +117,15 @@ export const getMultiSignatureInfo = (transaction: DTOProfiles.ExtendedSignedTra
 	};
 };
 
-export const constructWalletsFromPublicKeys = async ({ profile, publicKeys, network }: { publicKeys: string[], network: Networks.Network, profile: Contracts.IProfile }) => {
+export const constructWalletsFromPublicKeys = async ({
+	profile,
+	publicKeys,
+	network,
+}: {
+	publicKeys: string[];
+	network: Networks.Network;
+	profile: Contracts.IProfile;
+}) => {
 	const wallets: Contracts.IReadWriteWallet[] = [];
 
 	for (const publicKey of publicKeys) {
@@ -131,23 +139,23 @@ export const constructWalletsFromPublicKeys = async ({ profile, publicKeys, netw
 	}
 
 	return wallets;
-}
+};
 
-export const transactionPublicKeys = (transaction?: DTO.RawTransactionData): { min?: number, publicKeys: string[] } => {
+export const transactionPublicKeys = (transaction?: DTO.RawTransactionData): { min?: number; publicKeys: string[] } => {
 	if (!transaction) {
-		return { min: undefined, publicKeys: [] }
+		return { min: undefined, publicKeys: [] };
 	}
 
 	if (!transaction.isMultiSignatureRegistration()) {
-		return { min: undefined, publicKeys: [] }
+		return { min: undefined, publicKeys: [] };
 	}
 
 	if (transaction?.publicKeys?.()) {
 		return {
 			min: transaction.min(),
-			publicKeys: transaction.publicKeys()
-		}
+			publicKeys: transaction.publicKeys(),
+		};
 	}
 
-	return getMultiSignatureInfo(transaction)
-}
+	return getMultiSignatureInfo(transaction);
+};
