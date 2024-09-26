@@ -28,13 +28,14 @@ interface TransactionSuccessfulProperties {
 export const MultiSignatureSuccessful = ({
 	transaction,
 	senderWallet,
+	title,
 }: TransactionSuccessfulProperties) => {
 	const { t } = useTranslation();
 
 	return (
 		<section data-testid="TransactionSuccessful" className="space-y-8">
 			<StepHeader
-				title={t("TRANSACTION.SUCCESS.CREATED")}
+				title={title ?? t("TRANSACTION.SUCCESS.CREATED")}
 				titleIcon={
 					<Icon
 						dimensions={[24, 24]}
