@@ -208,18 +208,24 @@ export const SendRegistration = () => {
 	};
 
 	const handleNext = (suppressWarning?: boolean) => {
-		abortReference.current = new AbortController();
-
+		// abortReference.current = new AbortController();
+		//
 		const nextStep = activeTab + 1;
-		const isNextStepAuthentication = nextStep === authenticationStep;
-
-		if (isNextStepAuthentication && requireFeeConfirmation && !suppressWarning) {
-			return setShowFeeWarning(true);
-		}
-
-		// Skip authentication step
-		if (isNextStepAuthentication && activeWallet.isLedger() && isLedgerModelSupported) {
-			handleSubmit();
+		// const isNextStepAuthentication = nextStep === authenticationStep;
+		//
+		// if (isNextStepAuthentication && requireFeeConfirmation && !suppressWarning) {
+		// 	return setShowFeeWarning(true);
+		// }
+		//
+		// // Skip authentication step
+		// if (isNextStepAuthentication && activeWallet.isLedger() && isLedgerModelSupported) {
+		// 	handleSubmit();
+		// }
+		console.log("next step", activeTab)
+		if (activeTab === 3) {
+			handleSubmit()
+			setActiveTab(4);
+			return
 		}
 
 		setActiveTab(nextStep);
@@ -227,7 +233,7 @@ export const SendRegistration = () => {
 
 	const hideStepNavigation = activeTab === 10 || (isAuthenticationStep && activeWallet.isLedger());
 
-	const isNextDisabled = isDirty ? !isValid || !!isLoading : true;
+	const isNextDisabled = false
 
 	const getPageTitle = () =>
 		({
