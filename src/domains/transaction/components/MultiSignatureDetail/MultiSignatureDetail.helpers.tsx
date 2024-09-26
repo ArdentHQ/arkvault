@@ -138,6 +138,10 @@ export const transactionPublicKeys = (transaction?: DTO.RawTransactionData): { m
 		return { min: undefined, publicKeys: [] }
 	}
 
+	if (!transaction.isMultiSignatureRegistration()) {
+		return { min: undefined, publicKeys: [] }
+	}
+
 	if (transaction?.publicKeys?.()) {
 		return {
 			min: transaction.min(),

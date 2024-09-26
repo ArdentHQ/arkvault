@@ -43,7 +43,6 @@ export const TransactionDetailModal = ({
 		"min-w-32": transaction.isVoteCombination(),
 	});
 
-
 	return (
 		<Modal title={t("TRANSACTION.MODAL_TRANSACTION_DETAILS.TITLE")} isOpen={isOpen} onClose={onClose} noButtons>
 			<DetailsCondensed>

@@ -1,37 +1,19 @@
 import { Contracts } from "@ardenthq/sdk-profiles";
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { useTranslation } from "react-i18next";
 
-import { Address } from "@/app/components/Address";
-import { Alert } from "@/app/components/Alert";
-import { Avatar } from "@/app/components/Avatar";
-import { Clipboard } from "@/app/components/Clipboard";
 import { Icon } from "@/app/components/Icon";
-import { Image } from "@/app/components/Image";
 import { getMultiSignatureInfo, transactionPublicKeys } from "@/domains/transaction/components/MultiSignatureDetail/MultiSignatureDetail.helpers";
-import { RecipientItem } from "@/domains/transaction/components/RecipientList/RecipientList.contracts";
 import {
-	TransactionDetail,
-	TransactionExplorerLink,
-	TransactionNetwork,
-	TransactionSender,
 	TransactionType,
-	TransactionRecipients,
-	TransactionAmount,
 	TransactionAddresses,
 	TransactionSummary,
-	TransactionDetails,
 	TransactionMusigParticipants,
+	TransactionId,
 } from "@/domains/transaction/components/TransactionDetail";
 import { ExtendedSignedTransactionData } from "@/domains/transaction/pages/SendRegistration/SendRegistration.contracts";
-import { assertString } from "@/utils/assertions";
 import { StepHeader } from "@/app/components/StepHeader";
-import { useBreakpoint } from "@/app/hooks";
-import { TransactionId } from "../TransactionDetail/TransactionId";
 import { DetailLabel, DetailPadded, DetailWrapper } from "@/app/components/DetailWrapper";
-import { useTransactionRecipients } from "../../hooks/use-transaction-recipients";
-import cn from "classnames";
-import { VoteTransactionType } from "../VoteTransactionType";
 
 interface TransactionSuccessfulProperties {
 	children?: React.ReactNode;
@@ -43,81 +25,11 @@ interface TransactionSuccessfulProperties {
 	showExplorerLink?: boolean;
 }
 
-const addressFromPublicKey = async (wallet: Contracts.IReadWriteWallet, publicKey?: string) => {
-	if (publicKey === wallet.publicKey() && wallet.isLedger()) {
-		const derivationPath = wallet.data().get(Contracts.WalletData.DerivationPath);
-		assertString(derivationPath);
-
-		const ledgerWalletPublicKey = await wallet.ledger().getPublicKey(derivationPath);
-		const { address } = await wallet.coin().address().fromPublicKey(ledgerWalletPublicKey);
-
-		return address;
-	}
-
-	assertString(publicKey);
-
-	const { address } = await wallet.coin().address().fromPublicKey(publicKey);
-
-	return address;
-};
-
 export const MultiSignatureSuccessful = ({
-	children,
 	transaction,
 	senderWallet,
-	title,
-	description,
-	banner,
 }: TransactionSuccessfulProperties) => {
 	const { t } = useTranslation();
-	const { isXs, isSm } = useBreakpoint();
-
-	const [generatedAddress, setGeneratedAddress] = useState<string>();
-
-	const [minParticipants, setMinParticipants] = useState<number>();
-	const [publicKeys, setPublicKeys] = useState<string[]>();
-
-	useEffect(() => {
-		const fetchData = async () => {
-			if (!transaction) {
-				return;
-			}
-
-			// try {
-			// 	const { address } = await senderWallet
-			// 		.coin()
-			// 		.address()
-			// 		.fromMultiSignature({ min, publicKeys, senderPublicKey: senderWallet.publicKey() });
-			//
-			// 	setGeneratedAddress(address);
-			// 	/* istanbul ignore next -- @preserve */
-			// } catch {
-			// 	// We are using a coin that doesn't support multi-signature address derivation.
-			// 	// TODO: AddressService#fromMultiSignature is not implemented for Lisk.
-			// }
-		};
-
-
-		fetchData();
-	}, [transaction, senderWallet]);
-
-	const isVoteTransaction = [transaction.isVote(), transaction.isVoteCombination(), transaction.isUnvote()].some(
-		Boolean,
-	);
-	// const { votes, unvotes } = useTransactionRecipients({
-	// 	network: transaction.wallet().network(),
-	// 	profile: senderWallet.profile(),
-	// 	transaction,
-	// });
-	const votes = []
-	const unvotes = []
-	// const { recipients } = useTransactionRecipients({ profile: senderWallet.profile(), transaction });
-
-	const labelClassName = cn({
-		"min-w-24": !transaction.isVoteCombination(),
-		"min-w-32": transaction.isVoteCombination(),
-	});
-
 
 	return (
 		<section data-testid="TransactionSuccessful" className="space-y-8">
@@ -145,18 +57,15 @@ export const MultiSignatureSuccessful = ({
 						senderAddress={transaction.sender()}
 						network={transaction.wallet().network()}
 						recipients={[]}
-						labelClassName={labelClassName}
 					/>
 				</DetailPadded>
 
 				<DetailPadded>
-					{!isVoteTransaction && <TransactionType transaction={transaction} />}
-					{isVoteTransaction && <VoteTransactionType votes={votes} unvotes={unvotes} />}
+					<TransactionType transaction={transaction} />
 				</DetailPadded>
 
 				<DetailPadded>
 					<TransactionSummary
-						labelClassName={labelClassName}
 						transaction={transaction}
 						senderWallet={transaction.wallet()}
 					/>
