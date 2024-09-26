@@ -4,15 +4,30 @@ import { useTranslation } from "react-i18next";
 import { Spinner } from "@/app/components/Spinner";
 import { Icon } from "@/app/components/Icon";
 import { Divider } from "@/app/components/Divider";
+import { DTO } from "@ardenthq/sdk-profiles";
+import { useMultiSignatureStatus } from "@/domains/transaction/hooks";
+
+const isAwaitingSignatures = (transaction: DTO.ExtendedConfirmedTransactionData | DTO.ExtendedSignedTransactionData) => {
+	if (transaction.isConfirmed() ?? !transaction.confirmations().isZero()) {
+		return false
+	}
+
+	return !transaction.wallet().transaction().hasBeenBroadcasted(transaction.id())
+}
 
 export const TransactionConfirmations = ({
 	isConfirmed,
-	confirmations,
+	confirmations = 0,
+	transaction
 }: {
 	isConfirmed: boolean;
 	confirmations?: number;
+	transaction: DTO.ExtendedConfirmedTransactionData | DTO.ExtendedSignedTransactionData;
 }) => {
 	const { t } = useTranslation();
+
+
+	const pendingStatusLabel = isAwaitingSignatures(transaction) ? t("TRANSACTION.MULTISIGNATURE.AWAITING_SUFFICIENT_SIGNATURES") : t("TRANSACTION.PENDING.STATUS_TEXT")
 
 	return (
 		<div className="mt-2">
@@ -24,7 +39,7 @@ export const TransactionConfirmations = ({
 					<Spinner color="warning-alt" size="sm" width={3} />
 					<Divider type="vertical" className="text-theme-warning-200 dark:text-theme-secondary-800" />
 					<p className="font-semibold text-theme-secondary-700 dark:text-theme-warning-600">
-						{t("TRANSACTION.PENDING.STATUS_TEXT")}
+						{pendingStatusLabel}
 					</p>
 				</div>
 			)}

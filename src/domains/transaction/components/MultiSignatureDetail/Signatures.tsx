@@ -7,34 +7,12 @@ import { Avatar } from "@/app/components/Avatar";
 import { Badge } from "@/app/components/Badge";
 import { Tooltip } from "@/app/components/Tooltip";
 import { useMultiSignatureStatus } from "@/domains/transaction/hooks";
-
-const WaitingBadge = () => {
-	const { t } = useTranslation();
-
-	return (
-		<Tooltip content={t("COMMON.AWAITING_SIGNATURE")}>
-			<Badge
-				data-testid="Signatures__waiting-badge"
-				className="border-transparent bg-theme-danger-100 text-theme-danger-400 dark:bg-theme-danger-400 dark:text-white"
-				icon="ClockSmall"
-			/>
-		</Tooltip>
-	);
-};
-
-const SignedBadge = () => {
-	const { t } = useTranslation();
-
-	return (
-		<Tooltip content={t("COMMON.SIGNED")}>
-			<Badge
-				data-testid="Signatures__signed-badge"
-				className="border-transparent bg-theme-success-200 text-theme-success-500 dark:bg-theme-success-600 dark:text-white"
-				icon="CheckmarkSmall"
-			/>
-		</Tooltip>
-	);
-};
+import { Icon } from "@/app/components/Icon";
+import { Table, TableCell, TableRow } from "@/app/components/Table";
+import { TableWrapper } from "@/app/components/Table/TableWrapper";
+import { Networks } from "@ardenthq/sdk";
+import { AddressCopy, AddressLabel, AddressLink } from "@/app/components/Address";
+import { useMusigParticipants } from "@/domains/transaction/hooks/use-musig-participants";
 
 const ParticipantStatus = ({
 	transaction,
@@ -45,6 +23,7 @@ const ParticipantStatus = ({
 	publicKey: string;
 	wallet: Contracts.IReadWriteWallet;
 }) => {
+	const { t } = useTranslation();
 	const { isAwaitingOurFinalSignature } = useMultiSignatureStatus({ transaction, wallet });
 
 	const isAwaitingSignature = useMemo(() => {
@@ -67,68 +46,93 @@ const ParticipantStatus = ({
 		}
 	}, [wallet, transaction, publicKey]);
 
-	const [address, setAddress] = useState("");
-
-	useEffect(() => {
-		const fetchData = async () => {
-			const { address } = await wallet.coin().address().fromPublicKey(publicKey);
-			setAddress(address);
-		};
-		fetchData();
-	}, [wallet, publicKey]);
+	const status = isAwaitingSignature ? t("COMMON.AWAITING_SIGNATURE") : t("COMMON.SIGNED")
 
 	return (
 		<div data-testid="Signatures__participant-status" className="relative">
-			<Tooltip content={address}>
+			<Tooltip content={status}>
 				<div>
-					<Avatar address={address} size="lg" />
+					{isAwaitingSignature && <Icon size="lg" name="Clock" className="text-theme-secondary-500 dark:text-theme-secondary-700" />}
+					{!isAwaitingSignature && <Icon name="CircleCheckMark" size="lg" className="text-theme-primary-500" />}
 				</div>
 			</Tooltip>
-
-			{isAwaitingSignature ? <WaitingBadge /> : <SignedBadge />}
 		</div>
 	);
 };
 
-export const Signatures = ({
-	transaction,
+
+const ParticipantRow = ({
 	wallet,
+	transaction,
 }: {
-	transaction: DTO.ExtendedSignedTransactionData;
-	wallet: Contracts.IReadWriteWallet;
+	wallet: Contracts.IReadWriteWallet,
+	useExplorerLink?: boolean,
+	transaction: DTO.ExtendedSignedTransactionData
+}) => (
+	<TableRow className="group relative max-md:!border-transparent" key={wallet.address()}>
+		<TableCell
+			variant="start"
+			key={wallet.address()}
+			innerClassName="text-sm font-semibold justify-between sm:justify-start max-sm:bg-theme-secondary-100 max-sm:dark:bg-black max-sm:m-3 max-sm:mb-0 max-sm:px-4 max-sm:py-3 max-sm:border max-sm:rounded-md max-sm:border-theme-secondary-300 max-sm:dark:border-theme-secondary-800"
+		>
+			<div className="flex space-x-2 w-full">
+				<div className="w-full sm:w-auto">
+					<AddressLabel>{wallet.address()}</AddressLabel>
+				</div>
+
+				<AddressCopy address={wallet.address()} />
+			</div>
+
+			<div className="sm:hidden pl-2 border-l ml-2 border-theme-secondary-300 dark:border-theme-secondary-800 "><ParticipantStatus transaction={transaction} wallet={transaction.wallet()} publicKey={wallet.publicKey()!} /></div>
+		</TableCell>
+
+		<TableCell
+			variant="end"
+			key={wallet.address()}
+			innerClassName="flex justify-end max-sm:hidden"
+		>
+			<ParticipantStatus transaction={transaction} wallet={transaction.wallet()} publicKey={wallet.publicKey()!} />
+		</TableCell>
+
+	</TableRow>
+);
+
+export const Signatures = ({
+	useExplorerLinks,
+	profile,
+	publicKeys,
+	network,
+	transaction,
+}: {
+	useExplorerLinks?: boolean;
+	profile: Contracts.IProfile;
+	network: Networks.Network;
+	publicKeys: string[];
+	transaction?: DTO.ExtendedSignedTransactionData
 }) => {
 	const { t } = useTranslation();
 
-	const { publicKeys: participantPublicKeys } = getMultiSignatureInfo(transaction);
-	const publicKeys = participantPublicKeys.filter((pubKey) => pubKey !== wallet.publicKey());
+	const { participants } = useMusigParticipants({ network, profile, publicKeys });
+	const columns = [
+		{
+			Header: t("COMMON.ADDRESS"),
+			headerClassName: "max-sm:hidden",
+		},
+		{
+
+			Header: t("COMMON.STATUS"),
+			headerClassName: "max-sm:hidden text-right",
+		}
+	]
 
 	return (
-		<div data-testid="Signatures">
-			<h3>{t("TRANSACTION.SIGNATURES")}</h3>
-
-			<div className="flex">
-				<div>
-					<div className="mb-2 text-sm font-semibold text-theme-secondary-500">{t("COMMON.YOU")}</div>
-
-					<div className="mr-2 border-r border-theme-secondary-300 pr-6 dark:border-theme-secondary-800">
-						<ParticipantStatus transaction={transaction} publicKey={wallet.publicKey()!} wallet={wallet} />
-					</div>
-				</div>
-
-				<div>
-					<div className="mb-2 ml-2 text-sm font-semibold text-theme-secondary-500">{t("COMMON.OTHER")}</div>
-					<div className="ml-2 flex space-x-4">
-						{publicKeys.map((publicKey) => (
-							<ParticipantStatus
-								key={publicKey}
-								transaction={transaction}
-								publicKey={publicKey}
-								wallet={wallet}
-							/>
-						))}
-					</div>
-				</div>
-			</div>
-		</div>
+		<TableWrapper>
+			<Table
+				columns={columns}
+				data={participants}
+			>
+				{(wallet) => <ParticipantRow key={wallet.address()} useExplorerLink={useExplorerLinks} wallet={wallet} transaction={transaction} />}
+			</Table>
+		</TableWrapper>
 	);
 };

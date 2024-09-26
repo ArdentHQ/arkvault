@@ -85,12 +85,12 @@ export const TransactionSuccessful = ({
 					<DetailPadded>
 						<DetailLabel>{t("TRANSACTION.CONFIRMATIONS")}</DetailLabel>
 						<div className="mt-2">
-							<TransactionConfirmations isConfirmed={isConfirmed} confirmations={confirmations} />
+							<TransactionConfirmations isConfirmed={isConfirmed} confirmations={confirmations} transaction={transaction} />
 						</div>
 					</DetailPadded>
 				)}
 
-				{transaction.isMultiSignatureRegistration() && (
+				{transaction.usesMultiSignature() && (
 					<DetailPadded>
 						<DetailLabel>{t("TRANSACTION.PARTICIPANTS")}</DetailLabel>
 						<div className="mt-2">
