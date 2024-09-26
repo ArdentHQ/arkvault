@@ -68,7 +68,6 @@ export const StepNavigation: React.VFC<StepNavigationProperties> = ({
 				<Button
 					type="submit"
 					data-testid="StepNavigation__send-button"
-					disabled={isNextDisabled || isLoading}
 					isLoading={isLoading}
 					icon="DoubleArrowRight"
 					iconPosition="right"
