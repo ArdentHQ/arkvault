@@ -457,7 +457,7 @@ exports[`MultiSignature Registration Form > should render form step 1`] = `
                   <span
                     class="pointer-events-none text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
                   >
-                    of 2
+                    out of 2
                   </span>
                 </div>
               </div>
