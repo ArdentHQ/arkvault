@@ -7,27 +7,19 @@ import { Divider } from "@/app/components/Divider";
 import { DTO } from "@ardenthq/sdk-profiles";
 import { useMultiSignatureStatus } from "@/domains/transaction/hooks";
 
-const isAwaitingSignatures = (transaction: DTO.ExtendedConfirmedTransactionData | DTO.ExtendedSignedTransactionData) => {
-	if (transaction.isConfirmed() ?? !transaction.confirmations().isZero()) {
-		return false
-	}
-
-	return !transaction.wallet().transaction().hasBeenBroadcasted(transaction.id())
-}
-
 export const TransactionConfirmations = ({
 	isConfirmed,
 	confirmations = 0,
-	transaction
+	isAwaitingSignatures
 }: {
 	isConfirmed: boolean;
 	confirmations?: number;
-	transaction: DTO.ExtendedConfirmedTransactionData | DTO.ExtendedSignedTransactionData;
+	isAwaitingSignatures?: boolean
 }) => {
 	const { t } = useTranslation();
 
 
-	const pendingStatusLabel = isAwaitingSignatures(transaction) ? t("TRANSACTION.MULTISIGNATURE.AWAITING_SUFFICIENT_SIGNATURES") : t("TRANSACTION.PENDING.STATUS_TEXT")
+	const pendingStatusLabel = isAwaitingSignatures ? t("TRANSACTION.MULTISIGNATURE.AWAITING_SUFFICIENT_SIGNATURES") : t("TRANSACTION.PENDING.STATUS_TEXT")
 
 	return (
 		<div className="mt-2">

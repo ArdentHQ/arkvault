@@ -21,7 +21,15 @@ import { useTransactionRecipients } from "@/domains/transaction/hooks/use-transa
 import cn from "classnames";
 import { Contracts, } from "@ardenthq/sdk-profiles";
 import { DTO } from "@ardenthq/sdk";
+import { Signatures } from "../MultiSignatureDetail/Signatures";
 
+const isAwaitingMusigSignatures = (transaction: DTO.ExtendedConfirmedTransactionData | DTO.ExtendedSignedTransactionData) => {
+	if (transaction.isConfirmed() ?? !transaction.confirmations().isZero()) {
+		return false
+	}
+
+	return !transaction.wallet().transaction().hasBeenBroadcasted(transaction.id())
+}
 
 export const TransactionDetailContent = ({
 	transactionItem: transaction,
@@ -46,6 +54,8 @@ export const TransactionDetailContent = ({
 		"min-w-24": !transaction.isVoteCombination(),
 		"min-w-32": transaction.isVoteCombination(),
 	});
+
+	const isAwaitingSignatures = isAwaitingMusigSignatures(transaction)
 
 	return (
 		<DetailsCondensed>
@@ -101,14 +111,14 @@ export const TransactionDetailContent = ({
 					<DetailLabel>{t("TRANSACTION.CONFIRMATIONS")}</DetailLabel>
 					<div className="mt-2">
 						<TransactionConfirmations
+							isAwaitingSignatures={isAwaitingSignatures}
 							isConfirmed={transaction.isConfirmed()}
 							confirmations={transaction.confirmations().toNumber()}
-							transaction={transaction}
 						/>
 					</div>
 				</DetailPadded>
 
-				{transaction.isMultiSignatureRegistration() && (
+				{[!isAwaitingSignatures, transaction.isMultiSignatureRegistration()].every(Boolean) && (
 					<DetailPadded>
 						<DetailLabel>{t("TRANSACTION.PARTICIPANTS")}</DetailLabel>
 						<div className="mt-2">
@@ -117,6 +127,19 @@ export const TransactionDetailContent = ({
 								useExplorerLinks
 								profile={profile}
 								network={transaction.wallet().network()}
+							/>
+						</div>
+					</DetailPadded>
+				)}
+
+				{[isAwaitingSignatures].every(Boolean) && (
+					<DetailPadded>
+						<DetailLabel>{t("TRANSACTION.SIGNATURES")}</DetailLabel>
+						<div className="mt-2">
+							<Signatures
+								publicKeys={transactionPublicKeys(transaction).publicKeys}
+								profile={profile}
+								transaction={transaction}
 							/>
 						</div>
 					</DetailPadded>

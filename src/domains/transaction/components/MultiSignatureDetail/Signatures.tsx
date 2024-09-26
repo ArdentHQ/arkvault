@@ -1,17 +1,14 @@
 import { Contracts, DTO } from "@ardenthq/sdk-profiles";
-import React, { useEffect, useMemo, useState } from "react";
+import React, { useMemo } from "react";
 import { useTranslation } from "react-i18next";
 
-import { getMultiSignatureInfo } from "./MultiSignatureDetail.helpers";
-import { Avatar } from "@/app/components/Avatar";
-import { Badge } from "@/app/components/Badge";
 import { Tooltip } from "@/app/components/Tooltip";
 import { useMultiSignatureStatus } from "@/domains/transaction/hooks";
 import { Icon } from "@/app/components/Icon";
 import { Table, TableCell, TableRow } from "@/app/components/Table";
 import { TableWrapper } from "@/app/components/Table/TableWrapper";
 import { Networks } from "@ardenthq/sdk";
-import { AddressCopy, AddressLabel, AddressLink } from "@/app/components/Address";
+import { AddressCopy, AddressLabel } from "@/app/components/Address";
 import { useMusigParticipants } from "@/domains/transaction/hooks/use-musig-participants";
 
 const ParticipantStatus = ({
@@ -66,7 +63,6 @@ const ParticipantRow = ({
 	transaction,
 }: {
 	wallet: Contracts.IReadWriteWallet,
-	useExplorerLink?: boolean,
 	transaction: DTO.ExtendedSignedTransactionData
 }) => (
 	<TableRow className="group relative max-md:!border-transparent" key={wallet.address()}>
@@ -98,40 +94,35 @@ const ParticipantRow = ({
 );
 
 export const Signatures = ({
-	useExplorerLinks,
 	profile,
 	publicKeys,
-	network,
 	transaction,
 }: {
-	useExplorerLinks?: boolean;
 	profile: Contracts.IProfile;
-	network: Networks.Network;
 	publicKeys: string[];
-	transaction?: DTO.ExtendedSignedTransactionData
+	transaction: DTO.ExtendedSignedTransactionData
 }) => {
 	const { t } = useTranslation();
 
-	const { participants } = useMusigParticipants({ network, profile, publicKeys });
-	const columns = [
-		{
-			Header: t("COMMON.ADDRESS"),
-			headerClassName: "max-sm:hidden",
-		},
-		{
-
-			Header: t("COMMON.STATUS"),
-			headerClassName: "max-sm:hidden text-right",
-		}
-	]
+	const { participants } = useMusigParticipants({ network: transaction.wallet().network(), profile, publicKeys });
 
 	return (
 		<TableWrapper>
 			<Table
-				columns={columns}
+				columns={[
+					{
+						Header: t("COMMON.ADDRESS"),
+						headerClassName: "max-sm:hidden",
+					},
+					{
+
+						Header: t("COMMON.STATUS"),
+						headerClassName: "max-sm:hidden text-right",
+					}
+				]}
 				data={participants}
 			>
-				{(wallet) => <ParticipantRow key={wallet.address()} useExplorerLink={useExplorerLinks} wallet={wallet} transaction={transaction} />}
+				{(wallet) => <ParticipantRow key={wallet.address()} wallet={wallet} transaction={transaction} />}
 			</Table>
 		</TableWrapper>
 	);
