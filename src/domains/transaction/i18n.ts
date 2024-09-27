@@ -171,7 +171,7 @@ export const translations = {
 			TITLE: "Multisignature Passphrase",
 		},
 		STEP_3: {
-			DESCRIPTION: "Your signature has been confirmed and sent successfully.",
+			DESCRIPTION: "Your signature was successfully confirmed and sent.",
 			TITLE: "Transaction Sent",
 		},
 		WAITING_FOR_SIGNATURES: "Waiting for Signatures",
