@@ -208,24 +208,18 @@ export const SendRegistration = () => {
 	};
 
 	const handleNext = (suppressWarning?: boolean) => {
-		// abortReference.current = new AbortController();
-		//
+		abortReference.current = new AbortController();
+
 		const nextStep = activeTab + 1;
-		// const isNextStepAuthentication = nextStep === authenticationStep;
-		//
-		// if (isNextStepAuthentication && requireFeeConfirmation && !suppressWarning) {
-		// 	return setShowFeeWarning(true);
-		// }
-		//
-		// // Skip authentication step
-		// if (isNextStepAuthentication && activeWallet.isLedger() && isLedgerModelSupported) {
-		// 	handleSubmit();
-		// }
-		console.log("next step", activeTab)
-		if (activeTab === 3) {
-			handleSubmit()
-			setActiveTab(4);
-			return
+		const isNextStepAuthentication = nextStep === authenticationStep;
+
+		if (isNextStepAuthentication && requireFeeConfirmation && !suppressWarning) {
+			return setShowFeeWarning(true);
+		}
+
+		// Skip authentication step
+		if (isNextStepAuthentication && activeWallet.isLedger() && isLedgerModelSupported) {
+			handleSubmit();
 		}
 
 		setActiveTab(nextStep);
@@ -233,7 +227,7 @@ export const SendRegistration = () => {
 
 	const hideStepNavigation = activeTab === 10 || (isAuthenticationStep && activeWallet.isLedger());
 
-	const isNextDisabled = false
+	const isNextDisabled = isDirty ? !isValid || !!isLoading : true;
 
 	const getPageTitle = () =>
 		({
@@ -241,8 +235,6 @@ export const SendRegistration = () => {
 			multiSignature: t("TRANSACTION.TRANSACTION_TYPES.MULTI_SIGNATURE"),
 			secondSignature: t("TRANSACTION.TRANSACTION_TYPES.SECOND_SIGNATURE"),
 		})[registrationType];
-
-	const successTitle = registrationType === "multiSignature" ? t("TRANSACTION.SUCCESS.CREATED") : undefined;
 
 	return (
 		<Page pageTitle={getPageTitle()}>
@@ -287,11 +279,7 @@ export const SendRegistration = () => {
 									</TabPanel>
 
 									<TabPanel tabId={stepCount}>
-										<TransactionSuccessful
-											transaction={transaction}
-											senderWallet={activeWallet}
-											title={successTitle}
-										/>
+										<TransactionSuccessful transaction={transaction} senderWallet={activeWallet} />
 									</TabPanel>
 								</>
 							)}
