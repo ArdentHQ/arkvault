@@ -57,7 +57,7 @@ export const VerificationStep = () => {
 
 				<label className="inline-flex cursor-pointer items-center space-x-3 text-theme-secondary-text">
 					<Checkbox
-						data-testid="CreateWallet__ConfirmPassphraseStep__passphraseDisclaimer"
+						data-testid="SecondSignature__passphraseDisclaimer"
 						checked={passphraseDisclaimer}
 						onChange={(event) => setPassphraseDisclaimer(event.target.checked)}
 					/>
