@@ -35,15 +35,13 @@ export const VerificationStep = () => {
 		register("verification", { required: true });
 	}, [register]);
 
-
 	useEffect(() => {
 		const m = mnemonic.split(" ");
 
-		m.forEach((element, i) => {
-			console.log(i+1, element)	
-		});
-
-	}, [mnemonic])
+		for (const [index, element] of m.entries()) {
+			console.log(index + 1, element);
+		}
+	}, [mnemonic]);
 	return (
 		<section data-testid="SecondSignatureRegistrationForm__verification-step">
 			<StepHeader
