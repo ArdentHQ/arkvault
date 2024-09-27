@@ -19,7 +19,7 @@ export const DetailLabel = ({ children }: { children: ReactNode }) => (
 	<div
 		data-testid="DetailLabel"
 		className={cn(
-			"border-l-2 border-x-theme-primary-400 bg-theme-secondary-100 px-3 py-2 dark:bg-theme-secondary-800 sm:border-none sm:bg-transparent sm:p-0 dark:sm:bg-transparent",
+			"border-l-2 border-x-theme-primary-400 bg-theme-secondary-100 px-3 py-2 dark:bg-black sm:border-none sm:bg-transparent sm:p-0 dark:sm:bg-transparent",
 		)}
 	>
 		<DetailLabelText>{children}</DetailLabelText>

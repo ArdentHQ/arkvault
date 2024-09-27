@@ -43,7 +43,7 @@ exports[`MultiSignature Registration Form > should render form step 1`] = `
               data-testid="DetailWrapper"
             >
               <div
-                class="border-l-2 border-x-theme-primary-400 bg-theme-secondary-100 px-3 py-2 dark:bg-theme-secondary-800 sm:border-none sm:bg-transparent sm:p-0 dark:sm:bg-transparent"
+                class="border-l-2 border-x-theme-primary-400 bg-theme-secondary-100 px-3 py-2 dark:bg-black sm:border-none sm:bg-transparent sm:p-0 dark:sm:bg-transparent"
                 data-testid="DetailLabel"
               >
                 <div
@@ -614,449 +614,408 @@ exports[`MultiSignature Registration Form > should render review step 1`] = `
           </div>
         </div>
         <div
-          class="no-ligatures css-1iw2tte"
-          data-testid="TransactionNetwork"
+          class="space-y-4 pt-5"
         >
-          <div
-            class="w-40 flex-1 space-y-2 whitespace-nowrap"
-            data-testid="TransactionDetail--desktop"
+          <fieldset
+            class="flex min-w-0 flex-col css-1bcidjh"
           >
             <div
-              class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
-            >
-              Cryptoasset
-            </div>
-            <div
-              class="flex items-center font-semibold"
-            >
-              ARK Devnet
-            </div>
-          </div>
-          <div
-            aria-label="ARK Devnet"
-            class="text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background duration-100 css-1nqcsx"
-            data-testid="NetworkIcon-ARK-ark.devnet"
-          >
-            <div
-              class="css-1i4b0eq"
-              data-testid="NetworkIcon__icon"
-              height="20"
-              width="20"
-            >
-              <svg
-                id="ark"
-                viewBox="0 0 36.3 30.6"
-                x="0"
-                xml:space="preserve"
-                xmlns="http://www.w3.org/2000/svg"
-                y="0"
-              >
-                <path
-                  d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
-                  fill="currentColor"
-                />
-              </svg>
-            </div>
-          </div>
-        </div>
-        <div
-          class="no-ligatures css-qu17s6"
-          data-testid="TransactionSender"
-        >
-          <div
-            class="w-40 flex-1 space-y-2 whitespace-nowrap"
-            data-testid="TransactionDetail--desktop"
-          >
-            <div
-              class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
-            >
-              Sender
-            </div>
-            <div
-              class="flex items-center font-semibold"
+              data-testid="DetailWrapper"
             >
               <div
-                class="w-0 flex-1 overflow-auto text-right md:text-left"
+                class="border-l-2 border-x-theme-primary-400 bg-theme-secondary-100 px-3 py-2 dark:bg-black sm:border-none sm:bg-transparent sm:p-0 dark:sm:bg-transparent"
+                data-testid="DetailLabel"
               >
                 <div
-                  class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                  class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                  data-testid="DetailLabelText"
                 >
-                  <span
-                    class="font-semibold text-base text-theme-text"
-                    data-testid="Address__alias"
+                  Addressing
+                </div>
+              </div>
+              <div
+                class="w-full break-words rounded-lg border-theme-secondary-300 p-3 dark:border-theme-secondary-800 sm:border sm:px-6 sm:py-5 [.condensed_&]:sm:py-4 mt-0 sm:mt-2"
+              >
+                <div
+                  class="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0"
+                >
+                  <div
+                    class="no-ligatures w-20 flex-shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:text-base sm:leading-5 min-w-24"
+                  >
+                    From
+                  </div>
+                  <div
+                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end sm:justify-start"
                   >
                     <span
-                      class="no-ligatures css-9nx3be"
-                      data-testid="TruncateEnd"
+                      class="font-semibold text-base text-theme-text text-sm leading-[17px] sm:leading-5 sm:text-base"
+                      data-testid="Address__alias"
                     >
-                      ARK Wallet 1
+                      <span
+                        class="no-ligatures css-9nx3be"
+                        data-testid="TruncateEnd"
+                      >
+                        ARK Wallet 1
+                      </span>
                     </span>
-                  </span>
-                  <span
-                    class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                    data-testid="Address__address"
-                  >
-                    D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                  </span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div
-            class="flex items-center -space-x-1"
-          >
-            <div
-              class="shrink-0 css-1n9jllj"
-              data-testid="Avatar"
-            >
-              <div
-                class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
-              >
-                <img
-                  alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                  src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
-                  title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-        <div
-          class="no-ligatures css-qu17s6"
-          data-testid="TransactionRecipients"
-        >
-          <div
-            class="w-40 flex-1 space-y-2 whitespace-nowrap"
-            data-testid="TransactionDetail--desktop"
-          >
-            <div
-              class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
-            >
-              Multisignature Participants (2)
-            </div>
-            <div
-              class="flex items-center font-semibold"
-            >
-              <div
-                class="css-1sfei0c"
-              >
-                <div
-                  class="css-1m6rt2i"
-                  role="table"
-                >
-                  <table
-                    cellpadding="0"
-                    class="w-full table-auto"
-                  >
-                    <thead>
-                      <tr
-                        role="row"
-                      >
-                        <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
-                          colspan="1"
-                          data-testid="table__th--0"
-                          role="columnheader"
-                        >
-                          <div
-                            class="flex flex-inline align-top hidden"
-                          >
-                            <div
-                              class=""
-                            >
-                              Avatar
-                            </div>
-                          </div>
-                        </th>
-                        <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
-                          colspan="1"
-                          data-testid="table__th--1"
-                          role="columnheader"
-                        >
-                          <div
-                            class="flex flex-inline align-top hidden"
-                          >
-                            <div
-                              class=""
-                            >
-                              Address
-                            </div>
-                          </div>
-                        </th>
-                        <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
-                          colspan="1"
-                          data-testid="table__th--2"
-                          role="columnheader"
-                        >
-                          <div
-                            class="flex flex-inline align-top hidden"
-                          >
-                            <div
-                              class=""
-                            >
-                              Amount
-                            </div>
-                          </div>
-                        </th>
-                      </tr>
-                    </thead>
-                    <tbody
-                      role="rowgroup"
+                    <div
+                      class="relative grow leading-[17px] sm:leading-5 text-left"
                     >
-                      <tr
-                        class="flex items-center border-b border-dashed border-theme-secondary-300 py-4 last:border-b-0 dark:border-theme-secondary-800"
-                        data-testid="recipient-list__recipient-list-item"
+                      <span
+                        class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 text-sm leading-[17px] sm:leading-5 sm:text-base w-full w-3/4 font-semibold text-base absolute w-full"
+                        data-testid="Address__address"
                       >
-                        <td
-                          class="mr-3 table-cell md:hidden"
-                        />
-                        <td
-                          class="hidden md:table-cell"
-                        >
-                          <div
-                            class="shrink-0 css-h8w6w0"
-                            data-testid="Avatar"
-                          >
-                            <div
-                              class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
-                            >
-                              <img
-                                alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                                src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
-                                title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                              />
-                            </div>
-                          </div>
-                        </td>
-                        <td
-                          class="w-28 flex-1 justify-end md:ml-4"
-                        >
-                          <div
-                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
-                          >
-                            <span
-                              class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-                              data-testid="Address__address"
-                            >
-                              D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                            </span>
-                          </div>
-                        </td>
-                        <td
-                          class="ml-2 table-cell md:hidden"
-                        >
-                          <div
-                            class="shrink-0 css-1yk316i"
-                            data-testid="Avatar"
-                          >
-                            <div
-                              class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
-                            >
-                              <img
-                                alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                                src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
-                                title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                              />
-                            </div>
-                          </div>
-                        </td>
-                        <td
-                          class="hidden md:table-cell"
-                        />
-                      </tr>
-                      <tr
-                        class="flex items-center border-b border-dashed border-theme-secondary-300 py-4 last:border-b-0 dark:border-theme-secondary-800"
-                        data-testid="recipient-list__recipient-list-item"
+                        D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                      </span>
+                      <span>
+                         
+                      </span>
+                    </div>
+                    <button
+                      class="ring-focus relative focus:outline-none"
+                      data-ring-focus-margin="-m-1"
+                      data-testid="clipboard-icon__wrapper"
+                      type="button"
+                    >
+                      <div
+                        class="text-theme-primary-400 dark:text-theme-secondary-700 dark:hover:text-theme-secondary-500 css-v0ob3f"
+                        height="16"
+                        width="16"
                       >
-                        <td
-                          class="mr-3 table-cell md:hidden"
-                        />
-                        <td
-                          class="hidden md:table-cell"
+                        <svg
+                          id="copy"
+                          viewBox="0 0 20 20"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
                         >
-                          <div
-                            class="shrink-0 css-h8w6w0"
-                            data-testid="Avatar"
+                          <g
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
                           >
-                            <div
-                              class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
-                            >
-                              <img
-                                alt="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
-                                src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(244, 67, 54)" width="100" height="100"/><circle r="50" cx="20" cy="50" fill="rgb(205, 220, 57)"/><circle r="60" cx="0" cy="70" fill="rgb(0, 188, 212)"/><circle r="55" cx="80" cy="30" fill="rgb(76, 175, 80)"/></svg>"
-                                title="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
-                              />
-                            </div>
-                          </div>
-                        </td>
-                        <td
-                          class="w-28 flex-1 justify-end md:ml-4"
-                        >
-                          <div
-                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
-                          >
-                            <span
-                              class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-                              data-testid="Address__address"
-                            >
-                              D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
-                            </span>
-                          </div>
-                        </td>
-                        <td
-                          class="ml-2 table-cell md:hidden"
-                        >
-                          <div
-                            class="shrink-0 css-1yk316i"
-                            data-testid="Avatar"
-                          >
-                            <div
-                              class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
-                            >
-                              <img
-                                alt="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
-                                src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(244, 67, 54)" width="100" height="100"/><circle r="50" cx="20" cy="50" fill="rgb(205, 220, 57)"/><circle r="60" cx="0" cy="70" fill="rgb(0, 188, 212)"/><circle r="55" cx="80" cy="30" fill="rgb(76, 175, 80)"/></svg>"
-                                title="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
-                              />
-                            </div>
-                          </div>
-                        </td>
-                        <td
-                          class="hidden md:table-cell"
-                        />
-                      </tr>
-                    </tbody>
-                  </table>
+                            <path
+                              d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                            />
+                            <path
+                              d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                            />
+                          </g>
+                        </svg>
+                      </div>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </fieldset>
+          <div
+            data-testid="DetailWrapper"
+          >
+            <div
+              class="border-l-2 border-x-theme-primary-400 bg-theme-secondary-100 px-3 py-2 dark:bg-black sm:border-none sm:bg-transparent sm:p-0 dark:sm:bg-transparent"
+              data-testid="DetailLabel"
+            >
+              <div
+                class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                data-testid="DetailLabelText"
+              >
+                Transaction Type
+              </div>
+            </div>
+            <div
+              class="w-full break-words rounded-lg border-theme-secondary-300 p-3 dark:border-theme-secondary-800 sm:border sm:px-6 sm:py-5 [.condensed_&]:sm:py-4 mt-0 sm:mt-2"
+            >
+              <div
+                class="space-y-3 sm:space-y-0"
+                data-testid="MultisignatureDetail"
+              >
+                <div
+                  class="flex w-full items-center justify-between sm:justify-start"
+                >
+                  <div
+                    class="no-ligatures flex-shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:text-base sm:leading-5 w-auto sm:min-w-24"
+                  >
+                    Category
+                  </div>
+                  <div
+                    class="flex items-center rounded bg-theme-secondary-200 px-1 py-[3px] dark:border dark:border-theme-secondary-800 dark:bg-transparent"
+                  >
+                    <span
+                      class="text-[12px] font-semibold leading-[15px] text-theme-secondary-700 dark:text-theme-secondary-500"
+                    >
+                      Multisignature
+                    </span>
+                  </div>
+                </div>
+                <div
+                  class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3"
+                >
+                  <div
+                    class="w-full [.condensed_&]:hidden"
+                  >
+                    <div
+                      class="border-theme-secondary-300 dark:border-theme-secondary-800 css-ppmbkz"
+                      type="horizontal"
+                    />
+                  </div>
+                </div>
+                <div
+                  class="flex w-full items-center justify-between sm:justify-start"
+                >
+                  <div
+                    class="no-ligatures flex-shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:text-base sm:leading-5 w-auto sm:min-w-24"
+                  >
+                    Signatures
+                  </div>
+                  <div
+                    class="no-ligatures truncate text-sm font-semibold leading-[17px] text-theme-secondary-900 dark:text-theme-secondary-200 sm:text-base sm:leading-5"
+                  >
+                    2 of 2
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-        <div
-          class="no-ligatures css-qu17s6"
-          data-testid="TransactionDetail"
-        >
           <div
-            class="w-40 flex-1 space-y-2 whitespace-nowrap"
-            data-testid="TransactionDetail--desktop"
+            data-testid="DetailWrapper"
           >
             <div
-              class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
-            >
-              Minimum Required Signatures
-            </div>
-            <div
-              class="flex items-center font-semibold"
+              class="border-l-2 border-x-theme-primary-400 bg-theme-secondary-100 px-3 py-2 dark:bg-black sm:border-none sm:bg-transparent sm:p-0 dark:sm:bg-transparent"
+              data-testid="DetailLabel"
             >
               <div
-                class="flex items-center space-x-1 font-semibold"
+                class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                data-testid="DetailLabelText"
               >
-                <span>
-                  2
-                </span>
-                <span
-                  class="whitespace-nowrap text-theme-secondary-500"
+                Participants
+              </div>
+            </div>
+            <div
+              class="mt-0 overflow-hidden rounded-lg border-theme-secondary-300 dark:border-theme-secondary-800 sm:mt-2 sm:border"
+            >
+              <div
+                class="hidden bg-theme-secondary-100 px-6 py-3 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:bg-theme-secondary-800 dark:text-theme-secondary-500 sm:block"
+              >
+                Address
+              </div>
+              <div
+                class="mb-2 mt-3 px-3 sm:px-6"
+              >
+                <div
+                  class="mb-3 overflow-hidden rounded border border-theme-secondary-300 bg-theme-secondary-100 px-4 py-3 last:mb-0 dark:border-theme-secondary-800 dark:bg-black sm:mb-0 sm:rounded-none sm:border-x-0 sm:border-t-0 sm:border-dashed sm:bg-transparent sm:px-0 sm:last:border-none dark:sm:bg-transparent"
                 >
-                  out of 2
-                </span>
+                  <div
+                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                  >
+                    <span
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-900 dark:text-theme-secondary-200 text-sm leading-[17px] font-semibold text-base"
+                      data-testid="Address__address"
+                    >
+                      D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                    </span>
+                    <button
+                      class="ring-focus relative focus:outline-none"
+                      data-ring-focus-margin="-m-1"
+                      data-testid="clipboard-icon__wrapper"
+                      type="button"
+                    >
+                      <div
+                        class="text-theme-primary-400 dark:text-theme-secondary-700 dark:hover:text-theme-secondary-500 css-v0ob3f"
+                        height="16"
+                        width="16"
+                      >
+                        <svg
+                          id="copy"
+                          viewBox="0 0 20 20"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
+                        >
+                          <g
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          >
+                            <path
+                              d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                            />
+                            <path
+                              d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                            />
+                          </g>
+                        </svg>
+                      </div>
+                    </button>
+                  </div>
+                </div>
+                <div
+                  class="mb-3 overflow-hidden rounded border border-theme-secondary-300 bg-theme-secondary-100 px-4 py-3 last:mb-0 dark:border-theme-secondary-800 dark:bg-black sm:mb-0 sm:rounded-none sm:border-x-0 sm:border-t-0 sm:border-dashed sm:bg-transparent sm:px-0 sm:last:border-none dark:sm:bg-transparent"
+                >
+                  <div
+                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                  >
+                    <span
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-900 dark:text-theme-secondary-200 text-sm leading-[17px] font-semibold text-base"
+                      data-testid="Address__address"
+                    >
+                      D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
+                    </span>
+                    <button
+                      class="ring-focus relative focus:outline-none"
+                      data-ring-focus-margin="-m-1"
+                      data-testid="clipboard-icon__wrapper"
+                      type="button"
+                    >
+                      <div
+                        class="text-theme-primary-400 dark:text-theme-secondary-700 dark:hover:text-theme-secondary-500 css-v0ob3f"
+                        height="16"
+                        width="16"
+                      >
+                        <svg
+                          id="copy"
+                          viewBox="0 0 20 20"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
+                        >
+                          <g
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          >
+                            <path
+                              d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                            />
+                            <path
+                              d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                            />
+                          </g>
+                        </svg>
+                      </div>
+                    </button>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div
-          class="mt-2"
-        >
           <div
-            class="rounded-lg border border-theme-secondary-300 dark:border-theme-secondary-800"
+            data-testid="DetailWrapper"
           >
             <div
-              class="relative px-6 py-4 sm:py-5"
+              class="border-l-2 border-x-theme-primary-400 bg-theme-secondary-100 px-3 py-2 dark:bg-black sm:border-none sm:bg-transparent sm:p-0 dark:sm:bg-transparent"
+              data-testid="DetailLabel"
             >
               <div
-                class="flex flex-col divide-y divide-theme-secondary-300 dark:divide-theme-secondary-800 sm:flex-row sm:divide-x sm:divide-y-0"
+                class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                data-testid="DetailLabelText"
+              >
+                Transaction Summary
+              </div>
+            </div>
+            <div
+              class="mt-0 p-3 sm:mt-2 sm:p-0"
+            >
+              <div
+                class="rounded-lg border border-theme-secondary-300 dark:border-theme-secondary-800"
               >
                 <div
-                  class="mb-4 flex flex-col justify-center px-4 text-center sm:mb-0 sm:w-1/2 sm:p-0 sm:text-left"
+                  class="relative px-6 py-4 sm:py-5"
                 >
-                  <span
-                    class="css-1rmjubp"
+                  <div
+                    class="flex flex-col divide-y divide-theme-secondary-300 dark:divide-theme-secondary-800 sm:flex-row sm:divide-x sm:divide-y-0"
                   >
-                    Transaction(s) Amount
-                  </span>
-                  <span
-                    class="whitespace-nowrap text-md mt-1 font-semibold"
-                    data-testid="Amount"
+                    <div
+                      class="mb-4 flex flex-col justify-center px-4 text-center sm:mb-0 sm:w-1/2 sm:p-0 sm:text-left"
+                    >
+                      <span
+                        class="css-1rmjubp"
+                      >
+                        Transaction(s) Amount
+                      </span>
+                      <span
+                        class="whitespace-nowrap text-md mt-1 font-semibold"
+                        data-testid="Amount"
+                      >
+                        0 DARK
+                      </span>
+                    </div>
+                    <div
+                      class="flex flex-col justify-center p-2 px-4 pt-6 text-center sm:w-1/2 sm:p-0 sm:text-right"
+                    >
+                      <span
+                        class="css-1rmjubp"
+                      >
+                        Transaction Fee
+                      </span>
+                      <span
+                        class="whitespace-nowrap text-md mt-1 font-semibold"
+                        data-testid="Amount"
+                      >
+                        5 DARK
+                      </span>
+                    </div>
+                  </div>
+                  <div
+                    class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transform"
                   >
-                    0 DARK
-                  </span>
+                    <div
+                      class="ml-px bg-theme-background p-2 text-theme-secondary-900 dark:text-theme-secondary-600"
+                    >
+                      <div
+                        class="css-v0ob3f"
+                        height="16"
+                        width="16"
+                      >
+                        <svg
+                          id="plus"
+                          viewBox="0 0 20 20"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
+                        >
+                          <g
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          >
+                            <path
+                              d="M1 10h18M10 1v18"
+                            />
+                          </g>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
                 </div>
                 <div
-                  class="flex flex-col justify-center p-2 px-4 pt-6 text-center sm:w-1/2 sm:p-0 sm:text-right"
+                  class="justfiy-center flex flex-col items-center rounded-b-lg border-t border-theme-secondary-300 bg-theme-secondary-100 py-4 dark:border-theme-secondary-800 dark:bg-theme-secondary-800 sm:py-5"
                 >
                   <span
                     class="css-1rmjubp"
                   >
-                    Transaction Fee
+                    Total Amount
                   </span>
                   <span
-                    class="whitespace-nowrap text-md mt-1 font-semibold"
+                    class="whitespace-nowrap text-md font-bold sm:text-lg"
                     data-testid="Amount"
                   >
                     5 DARK
                   </span>
                 </div>
               </div>
-              <div
-                class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transform"
-              >
-                <div
-                  class="ml-px bg-theme-background p-2 text-theme-secondary-900 dark:text-theme-secondary-600"
-                >
-                  <div
-                    class="css-v0ob3f"
-                    height="16"
-                    width="16"
-                  >
-                    <svg
-                      id="plus"
-                      viewBox="0 0 20 20"
-                      x="0"
-                      xml:space="preserve"
-                      xmlns="http://www.w3.org/2000/svg"
-                      y="0"
-                    >
-                      <g
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                      >
-                        <path
-                          d="M1 10h18M10 1v18"
-                        />
-                      </g>
-                    </svg>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div
-              class="justfiy-center flex flex-col items-center rounded-b-lg border-t border-theme-secondary-300 bg-theme-secondary-100 py-4 dark:border-theme-secondary-800 dark:bg-theme-secondary-800 sm:py-5"
-            >
-              <span
-                class="css-1rmjubp"
-              >
-                Total Amount
-              </span>
-              <span
-                class="whitespace-nowrap text-md font-bold sm:text-lg"
-                data-testid="Amount"
-              >
-                5 DARK
-              </span>
             </div>
           </div>
         </div>

@@ -233,6 +233,7 @@ export const translations = {
 		},
 		GENERATED_ADDRESS: "Multisignature Address",
 		MIN_SIGNATURES: "Minimum Required Signatures",
+		OF_LENGTH: "of {{ length }}",
 		OUT_OF_LENGTH: "out of {{ length }}",
 		PARTICIPANT: "Multisignature Participant",
 		PARTICIPANTS: "Multisignature Participants",
