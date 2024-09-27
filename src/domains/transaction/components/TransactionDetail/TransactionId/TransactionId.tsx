@@ -9,6 +9,7 @@ import { Clipboard } from "@/app/components/Clipboard";
 import { useTheme } from "@/app/hooks/use-theme";
 import { Icon } from "@/app/components/Icon";
 import { useLink } from "@/app/hooks/use-link";
+import { AddressLabel } from "@/app/components/Address";
 
 interface Properties {
 	transaction: DTO.ExtendedSignedTransactionData | DTO.ExtendedConfirmedTransactionData;
@@ -31,7 +32,7 @@ export const TransactionId = ({ transaction }: Properties): ReactElement => {
 			</div>
 
 			<div ref={ref} className="w-full font-semibold sm:px-4">
-				<TruncateMiddleDynamic value={transaction.id()} availableWidth={width} />
+				<AddressLabel>{transaction.id()}</AddressLabel>
 			</div>
 
 			<div className="mt-4 flex space-x-2 sm:mr-4 sm:mt-0">
