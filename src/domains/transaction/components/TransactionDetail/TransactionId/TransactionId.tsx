@@ -28,7 +28,7 @@ export const TransactionId = ({ transaction }: Properties): ReactElement => {
 				{t("TRANSACTION.TRANSACTION_ID")}
 			</div>
 
-			<div className="w-full font-semibold sm:px-4">
+			<div className="font-semibold sm:px-4 grow">
 				<AddressLabel>{transaction.id()}</AddressLabel>
 			</div>
 
@@ -43,10 +43,10 @@ export const TransactionId = ({ transaction }: Properties): ReactElement => {
 					buttonVariant="secondary"
 				>
 					{!isSmAndAbove && (
-						<>
+						<Button variant="secondary" className="w-full">
 							<Icon name="Copy" />
 							<div>{t("COMMON.COPY")}</div>
-						</>
+						</Button>
 					)}
 
 					{isSmAndAbove && <Button icon="Copy" variant="secondary" size="icon" />}

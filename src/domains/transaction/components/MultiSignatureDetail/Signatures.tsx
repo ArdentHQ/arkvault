@@ -151,7 +151,7 @@ export const Signatures = ({
 	const data = isLoading ? skeletonRows : participants;
 
 	return (
-		<TableWrapper>
+		<TableWrapper className="sm:border-b-[5px] sm:border-b-theme-secondary-200 sm:outline-theme-secondary-300 dark:sm:border-theme-secondary-800 dark:sm:outline-theme-secondary-800">
 			<Table
 				columns={[
 					{
