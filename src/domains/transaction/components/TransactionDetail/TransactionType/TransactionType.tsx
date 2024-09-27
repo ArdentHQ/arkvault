@@ -96,7 +96,7 @@ export const TransactionType = ({
 
 							<div className="flex w-full justify-between sm:justify-start">
 								<DetailLabelText>{t("COMMON.ADDRESS")}</DetailLabelText>
-								<div className="font-semibold">
+								<div className="font-semibold max-sm:text-sm">
 									<MusigGeneratedAddress
 										publicKeys={publicKeys}
 										min={min}
