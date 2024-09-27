@@ -3,8 +3,6 @@ import { useTranslation } from "react-i18next";
 import { DTO } from "@ardenthq/sdk-profiles";
 import { useBreakpoint } from "@/app/hooks";
 import { Button } from "@/app/components/Button";
-import { TruncateMiddleDynamic } from "@/app/components/TruncateMiddleDynamic";
-import { useResizeDetector } from "react-resize-detector";
 import { Clipboard } from "@/app/components/Clipboard";
 import { useTheme } from "@/app/hooks/use-theme";
 import { Icon } from "@/app/components/Icon";
@@ -17,7 +15,6 @@ interface Properties {
 
 export const TransactionId = ({ transaction }: Properties): ReactElement => {
 	const { t } = useTranslation();
-	const { ref, width } = useResizeDetector<HTMLElement>({ handleHeight: false });
 	const { isDarkMode } = useTheme();
 	const { isSmAndAbove } = useBreakpoint();
 	const { openExternal } = useLink();
@@ -31,7 +28,7 @@ export const TransactionId = ({ transaction }: Properties): ReactElement => {
 				{t("TRANSACTION.TRANSACTION_ID")}
 			</div>
 
-			<div ref={ref} className="w-full font-semibold sm:px-4">
+			<div className="w-full font-semibold sm:px-4">
 				<AddressLabel>{transaction.id()}</AddressLabel>
 			</div>
 
