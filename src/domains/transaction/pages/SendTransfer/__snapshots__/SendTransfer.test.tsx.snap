@@ -1986,6 +1986,79 @@ exports[`SendTransfer > should error if wrong mnemonic 1`] = `
                           <div
                             class="flex items-center gap-3"
                           >
+                            <div
+                              class="text-theme-primary-600 css-h1kfx5"
+                              data-testid="icon-mnemonic"
+                              height="24"
+                              width="24"
+                            >
+                              <svg
+                                fill="none"
+                                viewBox="0 0 25 25"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <g
+                                  clip-path="url(#clip0_13420_137872)"
+                                >
+                                  <path
+                                    d="M18.0078 14.9033H20.9411"
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                  />
+                                  <path
+                                    clip-rule="evenodd"
+                                    d="M1.875 6.57031C1.875 6.01803 2.32272 5.57031 2.875 5.57031H22.875C23.4273 5.57031 23.875 6.01803 23.875 6.57031V18.837C23.875 19.3893 23.4273 19.837 22.875 19.837H2.875C2.32272 19.837 1.875 19.3893 1.875 18.837V6.57031Z"
+                                    fill-rule="evenodd"
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                  />
+                                  <path
+                                    d="M8.47526 11.2373L4.80859 14.904"
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                  />
+                                  <path
+                                    d="M8.47526 14.904L4.80859 11.2373"
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                  />
+                                  <path
+                                    d="M15.0729 11.2373L11.4062 14.904"
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                  />
+                                  <path
+                                    d="M15.0729 14.904L11.4062 11.2373"
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                  />
+                                </g>
+                                <defs>
+                                  <clippath
+                                    id="clip0_13420_137872"
+                                  >
+                                    <rect
+                                      fill="white"
+                                      height="24"
+                                      transform="translate(24.875 24.5) rotate(-180)"
+                                      width="24"
+                                    />
+                                  </clippath>
+                                </defs>
+                              </svg>
+                            </div>
                             <h1
                               class="mb-0 text-2xl leading-[29px]"
                               data-testid="header__title"
