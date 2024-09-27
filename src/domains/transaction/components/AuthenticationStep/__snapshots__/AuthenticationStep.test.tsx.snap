@@ -1107,7 +1107,7 @@ exports[`AuthenticationStep (message) > should show only ledger confirmation 1`]
 exports[`AuthenticationStep (message) > should specify ledger supported model 1`] = `
 <DocumentFragment>
   <div
-    class="space-y-4"
+    class="space-y-6"
     data-testid="AuthenticationStep"
   >
     <div
@@ -2816,7 +2816,7 @@ exports[`AuthenticationStep (transaction) > should show only ledger confirmation
 exports[`AuthenticationStep (transaction) > should specify ledger supported model 1`] = `
 <DocumentFragment>
   <div
-    class="space-y-4"
+    class="space-y-6"
     data-testid="AuthenticationStep"
   >
     <div
