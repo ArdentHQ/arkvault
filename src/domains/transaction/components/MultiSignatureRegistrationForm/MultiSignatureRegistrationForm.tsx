@@ -16,7 +16,7 @@ const StepsComponent = ({ activeTab, wallet, profile }: SendRegistrationComponen
 			<FormStep wallet={wallet} profile={profile} />
 		</TabPanel>
 		<TabPanel tabId={2}>
-			<ReviewStep wallet={wallet} />
+			<ReviewStep wallet={wallet} profile={profile} />
 		</TabPanel>
 	</Tabs>
 );

@@ -218,8 +218,8 @@ describe("MultiSignature Registration Form", () => {
 			},
 		});
 
-		expect(screen.getAllByTestId("recipient-list__recipient-list-item")[0]).toHaveTextContent("ARK Wallet 1");
-		expect(screen.getAllByTestId("recipient-list__recipient-list-item")[1]).toHaveTextContent("ARK Wallet 2");
+		expect(screen.getAllByTestId("Address__address")[1]).toHaveTextContent(wallet.address());
+		expect(screen.getAllByTestId("Address__address")[2]).toHaveTextContent(wallet2.address());
 	});
 
 	it("should render transaction details", async () => {

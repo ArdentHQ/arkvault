@@ -683,7 +683,7 @@ exports[`SendTransfer > should display unconfirmed transactions modal when submi
                           data-testid="DetailWrapper"
                         >
                           <div
-                            class="border-l-2 border-x-theme-primary-400 bg-theme-secondary-100 px-3 py-2 dark:bg-theme-secondary-800 sm:border-none sm:bg-transparent sm:p-0 dark:sm:bg-transparent"
+                            class="border-l-2 border-x-theme-primary-400 bg-theme-secondary-100 px-3 py-2 dark:bg-black sm:border-none sm:bg-transparent sm:p-0 dark:sm:bg-transparent"
                             data-testid="DetailLabel"
                           >
                             <div
@@ -885,7 +885,7 @@ exports[`SendTransfer > should display unconfirmed transactions modal when submi
                             data-testid="DetailWrapper"
                           >
                             <div
-                              class="border-l-2 border-x-theme-primary-400 bg-theme-secondary-100 px-3 py-2 dark:bg-theme-secondary-800 sm:border-none sm:bg-transparent sm:p-0 dark:sm:bg-transparent"
+                              class="border-l-2 border-x-theme-primary-400 bg-theme-secondary-100 px-3 py-2 dark:bg-black sm:border-none sm:bg-transparent sm:p-0 dark:sm:bg-transparent"
                               data-testid="DetailLabel"
                             >
                               <div
@@ -943,7 +943,7 @@ exports[`SendTransfer > should display unconfirmed transactions modal when submi
                           data-testid="DetailWrapper"
                         >
                           <div
-                            class="border-l-2 border-x-theme-primary-400 bg-theme-secondary-100 px-3 py-2 dark:bg-theme-secondary-800 sm:border-none sm:bg-transparent sm:p-0 dark:sm:bg-transparent"
+                            class="border-l-2 border-x-theme-primary-400 bg-theme-secondary-100 px-3 py-2 dark:bg-black sm:border-none sm:bg-transparent sm:p-0 dark:sm:bg-transparent"
                             data-testid="DetailLabel"
                           >
                             <div
@@ -1067,7 +1067,7 @@ exports[`SendTransfer > should display unconfirmed transactions modal when submi
                         class="w-full sm:flex-row"
                       >
                         <div
-                          class="border-l-2 border-x-theme-primary-400 bg-theme-secondary-100 px-3 py-2 dark:bg-theme-secondary-800 sm:border-none sm:bg-transparent sm:p-0 dark:sm:bg-transparent"
+                          class="border-l-2 border-x-theme-primary-400 bg-theme-secondary-100 px-3 py-2 dark:bg-black sm:border-none sm:bg-transparent sm:p-0 dark:sm:bg-transparent"
                           data-testid="DetailLabel"
                         >
                           <div
@@ -4916,7 +4916,7 @@ exports[`SendTransfer > should render review step 1`] = `
         data-testid="DetailWrapper"
       >
         <div
-          class="border-l-2 border-x-theme-primary-400 bg-theme-secondary-100 px-3 py-2 dark:bg-theme-secondary-800 sm:border-none sm:bg-transparent sm:p-0 dark:sm:bg-transparent"
+          class="border-l-2 border-x-theme-primary-400 bg-theme-secondary-100 px-3 py-2 dark:bg-black sm:border-none sm:bg-transparent sm:p-0 dark:sm:bg-transparent"
           data-testid="DetailLabel"
         >
           <div
@@ -5093,7 +5093,7 @@ exports[`SendTransfer > should render review step 1`] = `
         data-testid="DetailWrapper"
       >
         <div
-          class="border-l-2 border-x-theme-primary-400 bg-theme-secondary-100 px-3 py-2 dark:bg-theme-secondary-800 sm:border-none sm:bg-transparent sm:p-0 dark:sm:bg-transparent"
+          class="border-l-2 border-x-theme-primary-400 bg-theme-secondary-100 px-3 py-2 dark:bg-black sm:border-none sm:bg-transparent sm:p-0 dark:sm:bg-transparent"
           data-testid="DetailLabel"
         >
           <div
@@ -5115,7 +5115,7 @@ exports[`SendTransfer > should render review step 1`] = `
         class="space-y-3 sm:space-y-2"
       >
         <div
-          class="border-l-2 border-x-theme-primary-400 bg-theme-secondary-100 px-3 py-2 dark:bg-theme-secondary-800 sm:border-none sm:bg-transparent sm:p-0 dark:sm:bg-transparent"
+          class="border-l-2 border-x-theme-primary-400 bg-theme-secondary-100 px-3 py-2 dark:bg-black sm:border-none sm:bg-transparent sm:p-0 dark:sm:bg-transparent"
           data-testid="DetailLabel"
         >
           <div
@@ -5360,7 +5360,7 @@ exports[`SendTransfer > should render review step with multiple recipients (with
         data-testid="DetailWrapper"
       >
         <div
-          class="border-l-2 border-x-theme-primary-400 bg-theme-secondary-100 px-3 py-2 dark:bg-theme-secondary-800 sm:border-none sm:bg-transparent sm:p-0 dark:sm:bg-transparent"
+          class="border-l-2 border-x-theme-primary-400 bg-theme-secondary-100 px-3 py-2 dark:bg-black sm:border-none sm:bg-transparent sm:p-0 dark:sm:bg-transparent"
           data-testid="DetailLabel"
         >
           <div
@@ -5600,7 +5600,7 @@ exports[`SendTransfer > should render review step with multiple recipients (with
         data-testid="DetailWrapper"
       >
         <div
-          class="border-l-2 border-x-theme-primary-400 bg-theme-secondary-100 px-3 py-2 dark:bg-theme-secondary-800 sm:border-none sm:bg-transparent sm:p-0 dark:sm:bg-transparent"
+          class="border-l-2 border-x-theme-primary-400 bg-theme-secondary-100 px-3 py-2 dark:bg-black sm:border-none sm:bg-transparent sm:p-0 dark:sm:bg-transparent"
           data-testid="DetailLabel"
         >
           <div
@@ -5622,7 +5622,7 @@ exports[`SendTransfer > should render review step with multiple recipients (with
         class="space-y-3 sm:space-y-2"
       >
         <div
-          class="border-l-2 border-x-theme-primary-400 bg-theme-secondary-100 px-3 py-2 dark:bg-theme-secondary-800 sm:border-none sm:bg-transparent sm:p-0 dark:sm:bg-transparent"
+          class="border-l-2 border-x-theme-primary-400 bg-theme-secondary-100 px-3 py-2 dark:bg-black sm:border-none sm:bg-transparent sm:p-0 dark:sm:bg-transparent"
           data-testid="DetailLabel"
         >
           <div
@@ -5867,7 +5867,7 @@ exports[`SendTransfer > should render review step with multiple recipients (with
         data-testid="DetailWrapper"
       >
         <div
-          class="border-l-2 border-x-theme-primary-400 bg-theme-secondary-100 px-3 py-2 dark:bg-theme-secondary-800 sm:border-none sm:bg-transparent sm:p-0 dark:sm:bg-transparent"
+          class="border-l-2 border-x-theme-primary-400 bg-theme-secondary-100 px-3 py-2 dark:bg-black sm:border-none sm:bg-transparent sm:p-0 dark:sm:bg-transparent"
           data-testid="DetailLabel"
         >
           <div
@@ -6107,7 +6107,7 @@ exports[`SendTransfer > should render review step with multiple recipients (with
         class="space-y-3 sm:space-y-2"
       >
         <div
-          class="border-l-2 border-x-theme-primary-400 bg-theme-secondary-100 px-3 py-2 dark:bg-theme-secondary-800 sm:border-none sm:bg-transparent sm:p-0 dark:sm:bg-transparent"
+          class="border-l-2 border-x-theme-primary-400 bg-theme-secondary-100 px-3 py-2 dark:bg-black sm:border-none sm:bg-transparent sm:p-0 dark:sm:bg-transparent"
           data-testid="DetailLabel"
         >
           <div
@@ -7021,7 +7021,7 @@ exports[`SendTransfer > should send a single transfer and handle undefined expir
                           data-testid="DetailWrapper"
                         >
                           <div
-                            class="border-l-2 border-x-theme-primary-400 bg-theme-secondary-100 px-3 py-2 dark:bg-theme-secondary-800 sm:border-none sm:bg-transparent sm:p-0 dark:sm:bg-transparent"
+                            class="border-l-2 border-x-theme-primary-400 bg-theme-secondary-100 px-3 py-2 dark:bg-black sm:border-none sm:bg-transparent sm:p-0 dark:sm:bg-transparent"
                             data-testid="DetailLabel"
                           >
                             <div
@@ -7223,7 +7223,7 @@ exports[`SendTransfer > should send a single transfer and handle undefined expir
                             data-testid="DetailWrapper"
                           >
                             <div
-                              class="border-l-2 border-x-theme-primary-400 bg-theme-secondary-100 px-3 py-2 dark:bg-theme-secondary-800 sm:border-none sm:bg-transparent sm:p-0 dark:sm:bg-transparent"
+                              class="border-l-2 border-x-theme-primary-400 bg-theme-secondary-100 px-3 py-2 dark:bg-black sm:border-none sm:bg-transparent sm:p-0 dark:sm:bg-transparent"
                               data-testid="DetailLabel"
                             >
                               <div
@@ -7281,7 +7281,7 @@ exports[`SendTransfer > should send a single transfer and handle undefined expir
                           data-testid="DetailWrapper"
                         >
                           <div
-                            class="border-l-2 border-x-theme-primary-400 bg-theme-secondary-100 px-3 py-2 dark:bg-theme-secondary-800 sm:border-none sm:bg-transparent sm:p-0 dark:sm:bg-transparent"
+                            class="border-l-2 border-x-theme-primary-400 bg-theme-secondary-100 px-3 py-2 dark:bg-black sm:border-none sm:bg-transparent sm:p-0 dark:sm:bg-transparent"
                             data-testid="DetailLabel"
                           >
                             <div
@@ -7405,7 +7405,7 @@ exports[`SendTransfer > should send a single transfer and handle undefined expir
                         class="w-full sm:flex-row"
                       >
                         <div
-                          class="border-l-2 border-x-theme-primary-400 bg-theme-secondary-100 px-3 py-2 dark:bg-theme-secondary-800 sm:border-none sm:bg-transparent sm:p-0 dark:sm:bg-transparent"
+                          class="border-l-2 border-x-theme-primary-400 bg-theme-secondary-100 px-3 py-2 dark:bg-black sm:border-none sm:bg-transparent sm:p-0 dark:sm:bg-transparent"
                           data-testid="DetailLabel"
                         >
                           <div
@@ -8194,7 +8194,7 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
                           data-testid="DetailWrapper"
                         >
                           <div
-                            class="border-l-2 border-x-theme-primary-400 bg-theme-secondary-100 px-3 py-2 dark:bg-theme-secondary-800 sm:border-none sm:bg-transparent sm:p-0 dark:sm:bg-transparent"
+                            class="border-l-2 border-x-theme-primary-400 bg-theme-secondary-100 px-3 py-2 dark:bg-black sm:border-none sm:bg-transparent sm:p-0 dark:sm:bg-transparent"
                             data-testid="DetailLabel"
                           >
                             <div
@@ -8396,7 +8396,7 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
                             data-testid="DetailWrapper"
                           >
                             <div
-                              class="border-l-2 border-x-theme-primary-400 bg-theme-secondary-100 px-3 py-2 dark:bg-theme-secondary-800 sm:border-none sm:bg-transparent sm:p-0 dark:sm:bg-transparent"
+                              class="border-l-2 border-x-theme-primary-400 bg-theme-secondary-100 px-3 py-2 dark:bg-black sm:border-none sm:bg-transparent sm:p-0 dark:sm:bg-transparent"
                               data-testid="DetailLabel"
                             >
                               <div
@@ -8454,7 +8454,7 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
                           data-testid="DetailWrapper"
                         >
                           <div
-                            class="border-l-2 border-x-theme-primary-400 bg-theme-secondary-100 px-3 py-2 dark:bg-theme-secondary-800 sm:border-none sm:bg-transparent sm:p-0 dark:sm:bg-transparent"
+                            class="border-l-2 border-x-theme-primary-400 bg-theme-secondary-100 px-3 py-2 dark:bg-black sm:border-none sm:bg-transparent sm:p-0 dark:sm:bg-transparent"
                             data-testid="DetailLabel"
                           >
                             <div
@@ -8578,7 +8578,7 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
                         class="w-full sm:flex-row"
                       >
                         <div
-                          class="border-l-2 border-x-theme-primary-400 bg-theme-secondary-100 px-3 py-2 dark:bg-theme-secondary-800 sm:border-none sm:bg-transparent sm:p-0 dark:sm:bg-transparent"
+                          class="border-l-2 border-x-theme-primary-400 bg-theme-secondary-100 px-3 py-2 dark:bg-black sm:border-none sm:bg-transparent sm:p-0 dark:sm:bg-transparent"
                           data-testid="DetailLabel"
                         >
                           <div
@@ -9921,7 +9921,7 @@ exports[`SendTransfer > should send a single transfer using wallet with encrypti
                           data-testid="DetailWrapper"
                         >
                           <div
-                            class="border-l-2 border-x-theme-primary-400 bg-theme-secondary-100 px-3 py-2 dark:bg-theme-secondary-800 sm:border-none sm:bg-transparent sm:p-0 dark:sm:bg-transparent"
+                            class="border-l-2 border-x-theme-primary-400 bg-theme-secondary-100 px-3 py-2 dark:bg-black sm:border-none sm:bg-transparent sm:p-0 dark:sm:bg-transparent"
                             data-testid="DetailLabel"
                           >
                             <div
@@ -10123,7 +10123,7 @@ exports[`SendTransfer > should send a single transfer using wallet with encrypti
                             data-testid="DetailWrapper"
                           >
                             <div
-                              class="border-l-2 border-x-theme-primary-400 bg-theme-secondary-100 px-3 py-2 dark:bg-theme-secondary-800 sm:border-none sm:bg-transparent sm:p-0 dark:sm:bg-transparent"
+                              class="border-l-2 border-x-theme-primary-400 bg-theme-secondary-100 px-3 py-2 dark:bg-black sm:border-none sm:bg-transparent sm:p-0 dark:sm:bg-transparent"
                               data-testid="DetailLabel"
                             >
                               <div
@@ -10181,7 +10181,7 @@ exports[`SendTransfer > should send a single transfer using wallet with encrypti
                           data-testid="DetailWrapper"
                         >
                           <div
-                            class="border-l-2 border-x-theme-primary-400 bg-theme-secondary-100 px-3 py-2 dark:bg-theme-secondary-800 sm:border-none sm:bg-transparent sm:p-0 dark:sm:bg-transparent"
+                            class="border-l-2 border-x-theme-primary-400 bg-theme-secondary-100 px-3 py-2 dark:bg-black sm:border-none sm:bg-transparent sm:p-0 dark:sm:bg-transparent"
                             data-testid="DetailLabel"
                           >
                             <div
@@ -10305,7 +10305,7 @@ exports[`SendTransfer > should send a single transfer using wallet with encrypti
                         class="w-full sm:flex-row"
                       >
                         <div
-                          class="border-l-2 border-x-theme-primary-400 bg-theme-secondary-100 px-3 py-2 dark:bg-theme-secondary-800 sm:border-none sm:bg-transparent sm:p-0 dark:sm:bg-transparent"
+                          class="border-l-2 border-x-theme-primary-400 bg-theme-secondary-100 px-3 py-2 dark:bg-black sm:border-none sm:bg-transparent sm:p-0 dark:sm:bg-transparent"
                           data-testid="DetailLabel"
                         >
                           <div
@@ -11094,7 +11094,7 @@ exports[`SendTransfer > should send a single transfer with keyboard 1`] = `
                           data-testid="DetailWrapper"
                         >
                           <div
-                            class="border-l-2 border-x-theme-primary-400 bg-theme-secondary-100 px-3 py-2 dark:bg-theme-secondary-800 sm:border-none sm:bg-transparent sm:p-0 dark:sm:bg-transparent"
+                            class="border-l-2 border-x-theme-primary-400 bg-theme-secondary-100 px-3 py-2 dark:bg-black sm:border-none sm:bg-transparent sm:p-0 dark:sm:bg-transparent"
                             data-testid="DetailLabel"
                           >
                             <div
@@ -11296,7 +11296,7 @@ exports[`SendTransfer > should send a single transfer with keyboard 1`] = `
                             data-testid="DetailWrapper"
                           >
                             <div
-                              class="border-l-2 border-x-theme-primary-400 bg-theme-secondary-100 px-3 py-2 dark:bg-theme-secondary-800 sm:border-none sm:bg-transparent sm:p-0 dark:sm:bg-transparent"
+                              class="border-l-2 border-x-theme-primary-400 bg-theme-secondary-100 px-3 py-2 dark:bg-black sm:border-none sm:bg-transparent sm:p-0 dark:sm:bg-transparent"
                               data-testid="DetailLabel"
                             >
                               <div
@@ -11354,7 +11354,7 @@ exports[`SendTransfer > should send a single transfer with keyboard 1`] = `
                           data-testid="DetailWrapper"
                         >
                           <div
-                            class="border-l-2 border-x-theme-primary-400 bg-theme-secondary-100 px-3 py-2 dark:bg-theme-secondary-800 sm:border-none sm:bg-transparent sm:p-0 dark:sm:bg-transparent"
+                            class="border-l-2 border-x-theme-primary-400 bg-theme-secondary-100 px-3 py-2 dark:bg-black sm:border-none sm:bg-transparent sm:p-0 dark:sm:bg-transparent"
                             data-testid="DetailLabel"
                           >
                             <div
@@ -11478,7 +11478,7 @@ exports[`SendTransfer > should send a single transfer with keyboard 1`] = `
                         class="w-full sm:flex-row"
                       >
                         <div
-                          class="border-l-2 border-x-theme-primary-400 bg-theme-secondary-100 px-3 py-2 dark:bg-theme-secondary-800 sm:border-none sm:bg-transparent sm:p-0 dark:sm:bg-transparent"
+                          class="border-l-2 border-x-theme-primary-400 bg-theme-secondary-100 px-3 py-2 dark:bg-black sm:border-none sm:bg-transparent sm:p-0 dark:sm:bg-transparent"
                           data-testid="DetailLabel"
                         >
                           <div
@@ -12267,7 +12267,7 @@ exports[`SendTransfer > should send a single transfer without keyboard 1`] = `
                           data-testid="DetailWrapper"
                         >
                           <div
-                            class="border-l-2 border-x-theme-primary-400 bg-theme-secondary-100 px-3 py-2 dark:bg-theme-secondary-800 sm:border-none sm:bg-transparent sm:p-0 dark:sm:bg-transparent"
+                            class="border-l-2 border-x-theme-primary-400 bg-theme-secondary-100 px-3 py-2 dark:bg-black sm:border-none sm:bg-transparent sm:p-0 dark:sm:bg-transparent"
                             data-testid="DetailLabel"
                           >
                             <div
@@ -12469,7 +12469,7 @@ exports[`SendTransfer > should send a single transfer without keyboard 1`] = `
                             data-testid="DetailWrapper"
                           >
                             <div
-                              class="border-l-2 border-x-theme-primary-400 bg-theme-secondary-100 px-3 py-2 dark:bg-theme-secondary-800 sm:border-none sm:bg-transparent sm:p-0 dark:sm:bg-transparent"
+                              class="border-l-2 border-x-theme-primary-400 bg-theme-secondary-100 px-3 py-2 dark:bg-black sm:border-none sm:bg-transparent sm:p-0 dark:sm:bg-transparent"
                               data-testid="DetailLabel"
                             >
                               <div
@@ -12527,7 +12527,7 @@ exports[`SendTransfer > should send a single transfer without keyboard 1`] = `
                           data-testid="DetailWrapper"
                         >
                           <div
-                            class="border-l-2 border-x-theme-primary-400 bg-theme-secondary-100 px-3 py-2 dark:bg-theme-secondary-800 sm:border-none sm:bg-transparent sm:p-0 dark:sm:bg-transparent"
+                            class="border-l-2 border-x-theme-primary-400 bg-theme-secondary-100 px-3 py-2 dark:bg-black sm:border-none sm:bg-transparent sm:p-0 dark:sm:bg-transparent"
                             data-testid="DetailLabel"
                           >
                             <div
@@ -12651,7 +12651,7 @@ exports[`SendTransfer > should send a single transfer without keyboard 1`] = `
                         class="w-full sm:flex-row"
                       >
                         <div
-                          class="border-l-2 border-x-theme-primary-400 bg-theme-secondary-100 px-3 py-2 dark:bg-theme-secondary-800 sm:border-none sm:bg-transparent sm:p-0 dark:sm:bg-transparent"
+                          class="border-l-2 border-x-theme-primary-400 bg-theme-secondary-100 px-3 py-2 dark:bg-black sm:border-none sm:bg-transparent sm:p-0 dark:sm:bg-transparent"
                           data-testid="DetailLabel"
                         >
                           <div
