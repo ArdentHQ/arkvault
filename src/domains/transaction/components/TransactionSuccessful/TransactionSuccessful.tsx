@@ -6,7 +6,7 @@ import { useTranslation } from "react-i18next";
 import { useConfirmedTransaction } from "./hooks/useConfirmedTransaction";
 import { StepHeader } from "@/app/components/StepHeader";
 import { Icon } from "@/app/components/Icon";
-import { TransactionDetailContent } from "../TransactionDetailModal";
+import { TransactionDetailContent } from "@/domains/transaction/components/TransactionDetailModal";
 
 interface TransactionSuccessfulProperties {
 	transaction: DTO.ExtendedSignedTransactionData;
@@ -23,7 +23,7 @@ export const TransactionSuccessful = ({
 }: TransactionSuccessfulProperties) => {
 	const { t } = useTranslation();
 
-	const { isConfirmed } = useConfirmedTransaction({
+	const { isConfirmed, confirmations } = useConfirmedTransaction({
 		transactionId: transaction.id(),
 		wallet: senderWallet,
 	});
@@ -47,7 +47,7 @@ export const TransactionSuccessful = ({
 				}
 			/>
 
-			<TransactionDetailContent transactionItem={transaction} profile={senderWallet.profile()} />
+			<TransactionDetailContent transactionItem={transaction} profile={senderWallet.profile()} isConfirmed={isConfirmed} confirmations={confirmations} />
 		</section>
 	);
 };

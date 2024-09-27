@@ -34,9 +34,13 @@ const isAwaitingMusigSignatures = (transaction: DTO.ExtendedConfirmedTransaction
 export const TransactionDetailContent = ({
 	transactionItem: transaction,
 	profile,
+	isConfirmed,
+	confirmations,
 }: {
 	transactionItem: DTO.RawTransactionData;
 	profile: Contracts.IProfile;
+	isConfirmed?: boolean
+	confirmations,
 }) => {
 	const { t } = useTranslation();
 
@@ -111,9 +115,9 @@ export const TransactionDetailContent = ({
 					<DetailLabel>{t("TRANSACTION.CONFIRMATIONS")}</DetailLabel>
 					<div className="mt-2">
 						<TransactionConfirmations
-							isAwaitingSignatures={isAwaitingSignatures}
-							isConfirmed={transaction.isConfirmed()}
-							confirmations={transaction.confirmations().toNumber()}
+							isConfirmed={isConfirmed ?? transaction.isConfirmed()}
+							confirmations={confirmations ?? transaction.confirmations().toNumber()}
+							transaction={transaction}
 						/>
 					</div>
 				</DetailPadded>

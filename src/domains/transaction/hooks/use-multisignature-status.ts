@@ -9,26 +9,35 @@ interface Properties {
 
 export interface MultiSignatureStatus {
 	value:
-		| "isAwaitingOurSignature"
-		| "isAwaitingOtherSignatures"
-		| "isAwaitingConfirmation"
-		| "isMultiSignatureReady"
-		| "isAwaitingFinalSignature"
-		| "isAwaitingOurFinalSignature";
+	| "isAwaitingOurSignature"
+	| "isAwaitingOtherSignatures"
+	| "isAwaitingConfirmation"
+	| "isMultiSignatureReady"
+	| "isAwaitingFinalSignature"
+	| "isAwaitingOurFinalSignature";
 	label: string;
 	icon: string;
 	className: string;
 }
 
+const canBeBroadcasted = (wallet: Contracts.IReadWriteWallet, transaction: DTO.ExtendedSignedTransactionData) => {
+	try {
+		return wallet.transaction().canBeBroadcasted(transaction.id()) && !wallet.transaction().isAwaitingConfirmation(transaction.id())
+	} catch {
+		return false
+	}
+}
+
+const transactionExists = (wallet: Contracts.IReadWriteWallet, transaction: DTO.ExtendedSignedTransactionData) => {
+	try {
+		return !!wallet.transaction().transaction(transaction.id())
+	} catch {
+		return false
+	}
+}
+
 export const useMultiSignatureStatus = ({ wallet, transaction }: Properties) => {
 	const { t } = useTranslation();
-
-	const canBeBroadcasted = useMemo(
-		() =>
-			wallet.transaction().canBeBroadcasted(transaction.id()) &&
-			!wallet.transaction().isAwaitingConfirmation(transaction.id()),
-		[wallet, transaction],
-	);
 
 	const canBeSigned = useMemo(() => {
 		try {
@@ -39,16 +48,10 @@ export const useMultiSignatureStatus = ({ wallet, transaction }: Properties) => 
 	}, [wallet, transaction]);
 
 	const status: MultiSignatureStatus = useMemo(() => {
-		if (
-			wallet.transaction().isAwaitingOurSignature(transaction.id()) &&
-			wallet.transaction().isAwaitingOtherSignatures(transaction.id())
-		) {
+		if (!transactionExists(wallet, transaction) ?? transaction.confirmations.isZero() ?? transaction.isConfirmed()) {
 			return {
-				className: "text-theme-secondary-700",
-				icon: "Pencil",
-				label: t("TRANSACTION.MULTISIGNATURE.AWAITING_OUR_SIGNATURE"),
-				value: "isAwaitingOurSignature",
-			};
+				value: "isBroadcasted",
+			}
 		}
 
 		if (wallet.transaction().isAwaitingConfirmation(transaction.id())) {
@@ -59,6 +62,18 @@ export const useMultiSignatureStatus = ({ wallet, transaction }: Properties) => 
 				value: "isAwaitingConfirmation",
 			};
 		}
+
+		if (
+			wallet.transaction().isAwaitingOurSignature(transaction.id()) && wallet.transaction().isAwaitingOtherSignatures(transaction.id())
+		) {
+			return {
+				className: "text-theme-secondary-700",
+				icon: "Pencil",
+				label: t("TRANSACTION.MULTISIGNATURE.AWAITING_OUR_SIGNATURE"),
+				value: "isAwaitingOurSignature",
+			};
+		}
+
 
 		if (
 			wallet.transaction().isAwaitingOurSignature(transaction.id()) &&
@@ -119,7 +134,7 @@ export const useMultiSignatureStatus = ({ wallet, transaction }: Properties) => 
 	}, [wallet, transaction, t]);
 
 	return {
-		canBeBroadcasted,
+		canBeBroadcasted: canBeBroadcasted(wallet, transaction),
 		canBeSigned,
 		isAwaitingFinalSignature: status.value === "isAwaitingFinalSignature",
 		isAwaitingOurFinalSignature: status.value === "isAwaitingOurFinalSignature",

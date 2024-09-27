@@ -9,17 +9,15 @@ import { useMultiSignatureStatus } from "@/domains/transaction/hooks";
 
 export const TransactionConfirmations = ({
 	isConfirmed,
-	confirmations = 0,
-	isAwaitingSignatures
+	confirmations,
+	transaction
 }: {
 	isConfirmed: boolean;
 	confirmations?: number;
-	isAwaitingSignatures?: boolean
+	transaction: DTO.ExtendedSignedTransactionData;
 }) => {
 	const { t } = useTranslation();
-
-
-	const pendingStatusLabel = isAwaitingSignatures ? t("TRANSACTION.MULTISIGNATURE.AWAITING_SUFFICIENT_SIGNATURES") : t("TRANSACTION.PENDING.STATUS_TEXT")
+	const { status } = useMultiSignatureStatus({ transaction, wallet: transaction.wallet() });
 
 	return (
 		<div className="mt-2">
@@ -31,7 +29,7 @@ export const TransactionConfirmations = ({
 					<Spinner color="warning-alt" size="sm" width={3} />
 					<Divider type="vertical" className="text-theme-warning-200 dark:text-theme-secondary-800" />
 					<p className="font-semibold text-theme-secondary-700 dark:text-theme-warning-600">
-						{pendingStatusLabel}
+						{status.isBroadcasted ? t("TRANSACTION.PENDING.STATUS_TEXT") : status.label}
 					</p>
 				</div>
 			)}
