@@ -5,13 +5,11 @@ import { useTranslation } from "react-i18next";
 import { Alert } from "@/app/components/Alert";
 import { FormField, FormLabel } from "@/app/components/Form";
 import { FeeField } from "@/domains/transaction/components/FeeField";
-import {
-	TransactionAddresses,
-} from "@/domains/transaction/components/TransactionDetail";
+import { TransactionAddresses } from "@/domains/transaction/components/TransactionDetail";
 import { StepHeader } from "@/app/components/StepHeader";
-import {DetailTitle, DetailWrapper} from "@/app/components/DetailWrapper";
-import {Divider} from "@/app/components/Divider";
-import {ThemeIcon} from "@/app/components/Icon";
+import { DetailTitle, DetailWrapper } from "@/app/components/DetailWrapper";
+import { Divider } from "@/app/components/Divider";
+import { ThemeIcon } from "@/app/components/Icon";
 
 interface FormStepProperties {
 	senderWallet: ProfilesContracts.IReadWriteWallet;
@@ -49,9 +47,9 @@ export const FormStep = ({ senderWallet, profile }: FormStepProperties) => {
 						<div className="flex w-full items-center justify-between gap-4 sm:justify-start">
 							<DetailTitle className="w-auto sm:min-w-28">{t("COMMON.CATEGORY")}</DetailTitle>
 							<div className="flex items-center rounded bg-theme-secondary-200 px-1 py-[3px] dark:border dark:border-theme-secondary-800 dark:bg-transparent">
-							<span className="text-[12px] font-semibold leading-[15px] text-theme-secondary-700 dark:text-theme-secondary-500">
-								{t("TRANSACTION.TRANSACTION_TYPES.DELEGATE_RESIGNATION")}
-							</span>
+								<span className="text-[12px] font-semibold leading-[15px] text-theme-secondary-700 dark:text-theme-secondary-500">
+									{t("TRANSACTION.TRANSACTION_TYPES.DELEGATE_RESIGNATION")}
+								</span>
 							</div>
 						</div>
 
