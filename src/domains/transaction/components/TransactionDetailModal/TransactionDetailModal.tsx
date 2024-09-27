@@ -40,7 +40,7 @@ export const TransactionDetailContent = ({
 	transactionItem: DTO.RawTransactionData;
 	profile: Contracts.IProfile;
 	isConfirmed?: boolean;
-	confirmations;
+	confirmations?: number;
 }) => {
 	const { t } = useTranslation();
 

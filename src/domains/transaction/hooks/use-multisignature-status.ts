@@ -9,12 +9,13 @@ interface Properties {
 
 export interface MultiSignatureStatus {
 	value:
-		| "isAwaitingOurSignature"
-		| "isAwaitingOtherSignatures"
-		| "isAwaitingConfirmation"
-		| "isMultiSignatureReady"
-		| "isAwaitingFinalSignature"
-		| "isAwaitingOurFinalSignature";
+	| "isAwaitingOurSignature"
+	| "isAwaitingOtherSignatures"
+	| "isAwaitingConfirmation"
+	| "isMultiSignatureReady"
+	| "isAwaitingFinalSignature"
+	| "isAwaitingOurFinalSignature"
+	| "isBroadcasted";
 	label: string;
 	icon: string;
 	className: string;
@@ -53,6 +54,9 @@ export const useMultiSignatureStatus = ({ wallet, transaction }: Properties) => 
 	const status: MultiSignatureStatus = useMemo(() => {
 		if ([transaction.isConfirmed(), !transactionExists(wallet, transaction)].some(Boolean)) {
 			return {
+				className: "",
+				icon: "",
+				label: "",
 				value: "isBroadcasted",
 			};
 		}

@@ -29,7 +29,7 @@ export const TransactionConfirmations = ({
 					<Spinner color="warning-alt" size="sm" width={3} />
 					<Divider type="vertical" className="text-theme-warning-200 dark:text-theme-secondary-800" />
 					<p className="font-semibold text-theme-secondary-700 dark:text-theme-warning-600">
-						{status.isBroadcasted ? t("TRANSACTION.PENDING.STATUS_TEXT") : status.label}
+						{status.value === "isBroadcasted" ? t("TRANSACTION.PENDING.STATUS_TEXT") : status.label}
 					</p>
 				</div>
 			)}
