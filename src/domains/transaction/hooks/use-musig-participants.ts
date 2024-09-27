@@ -20,7 +20,7 @@ export const useMusigParticipants = ({
 		const constructWallets = async () => {
 			const wallets = await constructWalletsFromPublicKeys({ network, profile, publicKeys });
 			setParticipants(wallets);
-			setIsLoading(false)
+			setIsLoading(false);
 		};
 
 		constructWallets();

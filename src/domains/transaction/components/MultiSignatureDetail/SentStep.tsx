@@ -35,7 +35,11 @@ export const SentStep = ({
 			<div className="mt-4">
 				<DetailLabel>{t("TRANSACTION.PARTICIPANTS")}</DetailLabel>
 				<div className="mt-2">
-					<Signatures transaction={transaction} profile={wallet.profile()} publicKeys={transactionPublicKeys(transaction).publicKeys} />
+					<Signatures
+						transaction={transaction}
+						profile={wallet.profile()}
+						publicKeys={transactionPublicKeys(transaction).publicKeys}
+					/>
 				</div>
 			</div>
 		</section>

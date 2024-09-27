@@ -19,17 +19,17 @@ import { VoteTransactionType } from "@/domains/transaction/components/VoteTransa
 import { TransactionMusigParticipants } from "@/domains/transaction/components/TransactionDetail/TransactionMusigParticipants";
 import { useTransactionRecipients } from "@/domains/transaction/hooks/use-transaction-recipients";
 import cn from "classnames";
-import { Contracts, } from "@ardenthq/sdk-profiles";
+import { Contracts } from "@ardenthq/sdk-profiles";
 import { DTO } from "@ardenthq/sdk";
-import { Signatures } from "../MultiSignatureDetail/Signatures";
+import { Signatures } from "@/domains/transaction/components/MultiSignatureDetail/Signatures";
 
-const isAwaitingMusigSignatures = (transaction: DTO.ExtendedConfirmedTransactionData | DTO.ExtendedSignedTransactionData) => {
+const isAwaitingMusigSignatures = (transaction: DTO.RawTransactionData) => {
 	if (transaction.isConfirmed() ?? !transaction.confirmations().isZero()) {
-		return false
+		return false;
 	}
 
-	return !transaction.wallet().transaction().hasBeenBroadcasted(transaction.id())
-}
+	return !transaction.wallet().transaction().hasBeenBroadcasted(transaction.id());
+};
 
 export const TransactionDetailContent = ({
 	transactionItem: transaction,
@@ -39,8 +39,8 @@ export const TransactionDetailContent = ({
 }: {
 	transactionItem: DTO.RawTransactionData;
 	profile: Contracts.IProfile;
-	isConfirmed?: boolean
-	confirmations,
+	isConfirmed?: boolean;
+	confirmations;
 }) => {
 	const { t } = useTranslation();
 
@@ -59,7 +59,7 @@ export const TransactionDetailContent = ({
 		"min-w-32": transaction.isVoteCombination(),
 	});
 
-	const isAwaitingSignatures = isAwaitingMusigSignatures(transaction)
+	const isAwaitingSignatures = isAwaitingMusigSignatures(transaction);
 
 	return (
 		<DetailsCondensed>
@@ -160,7 +160,9 @@ export const TransactionDetailModal = ({
 	onClose,
 }: TransactionDetailModalProperties) => {
 	const { t } = useTranslation();
-	return <Modal title={t("TRANSACTION.MODAL_TRANSACTION_DETAILS.TITLE")} isOpen={isOpen} onClose={onClose} noButtons>
-		<TransactionDetailContent transactionItem={transactionItem} profile={profile} />
-	</Modal>
+	return (
+		<Modal title={t("TRANSACTION.MODAL_TRANSACTION_DETAILS.TITLE")} isOpen={isOpen} onClose={onClose} noButtons>
+			<TransactionDetailContent transactionItem={transactionItem} profile={profile} />
+		</Modal>
+	);
 };

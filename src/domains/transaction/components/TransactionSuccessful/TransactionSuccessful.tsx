@@ -16,11 +16,7 @@ interface TransactionSuccessfulProperties {
 	children?: React.ReactNode;
 }
 
-export const TransactionSuccessful = ({
-	transaction,
-	senderWallet,
-	title,
-}: TransactionSuccessfulProperties) => {
+export const TransactionSuccessful = ({ transaction, senderWallet, title }: TransactionSuccessfulProperties) => {
 	const { t } = useTranslation();
 
 	const { isConfirmed, confirmations } = useConfirmedTransaction({
@@ -47,7 +43,12 @@ export const TransactionSuccessful = ({
 				}
 			/>
 
-			<TransactionDetailContent transactionItem={transaction} profile={senderWallet.profile()} isConfirmed={isConfirmed} confirmations={confirmations} />
+			<TransactionDetailContent
+				transactionItem={transaction}
+				profile={senderWallet.profile()}
+				isConfirmed={isConfirmed}
+				confirmations={confirmations}
+			/>
 		</section>
 	);
 };

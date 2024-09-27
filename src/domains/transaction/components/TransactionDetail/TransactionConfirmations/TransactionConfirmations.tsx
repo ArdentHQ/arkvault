@@ -10,7 +10,7 @@ import { useMultiSignatureStatus } from "@/domains/transaction/hooks";
 export const TransactionConfirmations = ({
 	isConfirmed,
 	confirmations,
-	transaction
+	transaction,
 }: {
 	isConfirmed: boolean;
 	confirmations?: number;

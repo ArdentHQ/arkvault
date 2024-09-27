@@ -9,12 +9,12 @@ interface Properties {
 
 export interface MultiSignatureStatus {
 	value:
-	| "isAwaitingOurSignature"
-	| "isAwaitingOtherSignatures"
-	| "isAwaitingConfirmation"
-	| "isMultiSignatureReady"
-	| "isAwaitingFinalSignature"
-	| "isAwaitingOurFinalSignature";
+		| "isAwaitingOurSignature"
+		| "isAwaitingOtherSignatures"
+		| "isAwaitingConfirmation"
+		| "isMultiSignatureReady"
+		| "isAwaitingFinalSignature"
+		| "isAwaitingOurFinalSignature";
 	label: string;
 	icon: string;
 	className: string;
@@ -22,19 +22,22 @@ export interface MultiSignatureStatus {
 
 const canBeBroadcasted = (wallet: Contracts.IReadWriteWallet, transaction: DTO.ExtendedSignedTransactionData) => {
 	try {
-		return wallet.transaction().canBeBroadcasted(transaction.id()) && !wallet.transaction().isAwaitingConfirmation(transaction.id())
+		return (
+			wallet.transaction().canBeBroadcasted(transaction.id()) &&
+			!wallet.transaction().isAwaitingConfirmation(transaction.id())
+		);
 	} catch {
-		return false
+		return false;
 	}
-}
+};
 
 const transactionExists = (wallet: Contracts.IReadWriteWallet, transaction: DTO.ExtendedSignedTransactionData) => {
 	try {
-		return !!wallet.transaction().transaction(transaction.id())
+		return !!wallet.transaction().transaction(transaction.id());
 	} catch {
-		return false
+		return false;
 	}
-}
+};
 
 export const useMultiSignatureStatus = ({ wallet, transaction }: Properties) => {
 	const { t } = useTranslation();
@@ -48,10 +51,10 @@ export const useMultiSignatureStatus = ({ wallet, transaction }: Properties) => 
 	}, [wallet, transaction]);
 
 	const status: MultiSignatureStatus = useMemo(() => {
-		if (!transactionExists(wallet, transaction) ?? transaction.confirmations.isZero() ?? transaction.isConfirmed()) {
+		if ([transaction.isConfirmed(), !transactionExists(wallet, transaction)].some(Boolean)) {
 			return {
 				value: "isBroadcasted",
-			}
+			};
 		}
 
 		if (wallet.transaction().isAwaitingConfirmation(transaction.id())) {
@@ -64,7 +67,8 @@ export const useMultiSignatureStatus = ({ wallet, transaction }: Properties) => 
 		}
 
 		if (
-			wallet.transaction().isAwaitingOurSignature(transaction.id()) && wallet.transaction().isAwaitingOtherSignatures(transaction.id())
+			wallet.transaction().isAwaitingOurSignature(transaction.id()) &&
+			wallet.transaction().isAwaitingOtherSignatures(transaction.id())
 		) {
 			return {
 				className: "text-theme-secondary-700",
@@ -73,7 +77,6 @@ export const useMultiSignatureStatus = ({ wallet, transaction }: Properties) => 
 				value: "isAwaitingOurSignature",
 			};
 		}
-
 
 		if (
 			wallet.transaction().isAwaitingOurSignature(transaction.id()) &&

@@ -42,20 +42,15 @@ export const TransactionDetails = ({
 						</Link>
 					)}
 
-					{!transaction.blockId() && (
-						<p className="text-theme-secondary-500">{t("COMMON.NOT_AVAILABLE")}</p>
-					)}
+					{!transaction.blockId() && <p className="text-theme-secondary-500">{t("COMMON.NOT_AVAILABLE")}</p>}
 				</div>
-
 
 				<DetailDivider />
 
 				<div className="flex w-full justify-between sm:justify-start">
 					<DetailLabelText className={labelClassName}>{t("COMMON.NONCE")}</DetailLabelText>
 					{data.nonce && <div className="font-semibold">{data.nonce}</div>}
-					{!data.nonce && (
-						<p className="text-theme-secondary-500">{t("COMMON.NOT_AVAILABLE")}</p>
-					)}
+					{!data.nonce && <p className="text-theme-secondary-500">{t("COMMON.NOT_AVAILABLE")}</p>}
 				</div>
 			</div>
 		</DetailWrapper>
