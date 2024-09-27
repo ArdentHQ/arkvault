@@ -6,6 +6,7 @@ import { Signatures } from "./Signatures";
 import { Header } from "@/app/components/Header";
 import { TransactionSuccessful } from "@/domains/transaction/components/TransactionSuccessful";
 import { transactionPublicKeys } from "./MultiSignatureDetail.helpers";
+import { DetailLabel } from "@/app/components/DetailWrapper";
 
 export const SentStep = ({
 	transaction,
@@ -32,7 +33,10 @@ export const SentStep = ({
 			</p>
 
 			<div className="mt-4">
-				<Signatures transaction={transaction} profile={wallet.profile()} publicKeys={transactionPublicKeys(transaction).publicKeys} />
+				<DetailLabel>{t("TRANSACTION.PARTICIPANTS")}</DetailLabel>
+				<div className="mt-2">
+					<Signatures transaction={transaction} profile={wallet.profile()} publicKeys={transactionPublicKeys(transaction).publicKeys} />
+				</div>
 			</div>
 		</section>
 	);
