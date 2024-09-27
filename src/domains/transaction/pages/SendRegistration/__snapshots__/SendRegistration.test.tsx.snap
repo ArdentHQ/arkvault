@@ -1314,7 +1314,7 @@ exports[`Registration > should show mnemonic error 1`] = `
                 data-testid="tab-pabel__active-panel"
               >
                 <div
-                  class="space-y-6"
+                  class="space-y-4"
                   data-testid="AuthenticationStep"
                 >
                   <div
