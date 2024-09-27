@@ -28,7 +28,7 @@ export const TransactionId = ({ transaction }: Properties): ReactElement => {
 				{t("TRANSACTION.TRANSACTION_ID")}
 			</div>
 
-			<div className="font-semibold sm:px-4 grow">
+			<div className="grow font-semibold sm:px-4">
 				<AddressLabel>{transaction.id()}</AddressLabel>
 			</div>
 
