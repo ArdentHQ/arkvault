@@ -9,6 +9,7 @@ import { Table, TableCell, TableRow } from "@/app/components/Table";
 import { TableWrapper } from "@/app/components/Table/TableWrapper";
 import { AddressCopy, AddressLabel } from "@/app/components/Address";
 import { useMusigParticipants } from "@/domains/transaction/hooks/use-musig-participants";
+import { Skeleton } from "@/app/components/Skeleton";
 
 const ParticipantStatus = ({
 	transaction,
@@ -90,6 +91,36 @@ const ParticipantRow = ({
 	</TableRow>
 );
 
+const ParticipantRowSkeleton = () => (
+	<TableRow className="group relative max-md:!border-transparent">
+		<TableCell
+			variant="start"
+			innerClassName="text-sm font-semibold justify-between sm:justify-start max-sm:bg-theme-secondary-100 max-sm:dark:bg-black max-sm:m-3 max-sm:mb-0 max-sm:px-4 max-sm:py-3 max-sm:border max-sm:rounded-md max-sm:border-theme-secondary-300 max-sm:dark:border-theme-secondary-800"
+		>
+			<div className="flex space-x-2 w-full">
+				<div className="w-full sm:w-2/3">
+					<Skeleton className="w-full" height={20} />
+				</div>
+
+				<Skeleton width={20} height={20} />
+			</div>
+
+			<div className="sm:hidden pl-2 border-l ml-2 border-theme-secondary-300 dark:border-theme-secondary-800 ">
+				<Skeleton width={20} height={20} />
+			</div>
+		</TableCell>
+
+		<TableCell
+			variant="end"
+			innerClassName="flex justify-end max-sm:hidden"
+		>
+			<Skeleton width={20} height={20} />
+		</TableCell>
+
+	</TableRow>
+);
+
+
 export const Signatures = ({
 	profile,
 	publicKeys,
@@ -101,7 +132,14 @@ export const Signatures = ({
 }) => {
 	const { t } = useTranslation();
 
-	const { participants } = useMusigParticipants({ network: transaction.wallet().network(), profile, publicKeys });
+	const { participants, isLoading } = useMusigParticipants({ network: transaction.wallet().network(), profile, publicKeys });
+
+	const skeletonRows = Array.from(
+		{ length: publicKeys.length },
+		() => ({}) as Contracts.IReadWriteWallet,
+	);
+
+	const data = isLoading ? skeletonRows : participants
 
 	return (
 		<TableWrapper>
@@ -114,12 +152,18 @@ export const Signatures = ({
 					{
 
 						Header: t("COMMON.STATUS"),
-						headerClassName: "max-sm:hidden text-right",
+						headerClassName: "max-sm:hidden text-right w-8 border-theme-secondary-100",
 					}
 				]}
-				data={participants}
+				data={data}
 			>
-				{(participantWallet) => <ParticipantRow key={participantWallet.address()} wallet={participantWallet} transaction={transaction} />}
+				{(participantWallet) => {
+					if (isLoading) {
+						return <ParticipantRowSkeleton />
+					}
+
+					return <ParticipantRow key={participantWallet.address()} wallet={participantWallet} transaction={transaction} />
+				}}
 			</Table>
 		</TableWrapper>
 	);

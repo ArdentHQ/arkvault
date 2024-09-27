@@ -14,17 +14,20 @@ export const useMusigParticipants = ({
 	profile: Contracts.IProfile;
 }) => {
 	const [participants, setParticipants] = useState<Contracts.IReadWriteWallet[]>([]);
+	const [isLoading, setIsLoading] = useState(true);
 
 	useEffect(() => {
 		const constructWallets = async () => {
 			const wallets = await constructWalletsFromPublicKeys({ network, profile, publicKeys });
 			setParticipants(wallets);
+			setIsLoading(false)
 		};
 
 		constructWallets();
 	}, [profile, publicKeys, network]);
 
 	return {
+		isLoading,
 		participants,
 	};
 };
