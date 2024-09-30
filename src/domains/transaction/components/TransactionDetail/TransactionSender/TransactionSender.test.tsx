@@ -3,7 +3,13 @@ import React from "react";
 import { Route } from "react-router-dom";
 
 import { TransactionSender } from "./TransactionSender";
-import { env, getDefaultProfileId, queryElementForSvg, render, renderResponsiveWithRoute } from "@/utils/testing-library";
+import {
+	env,
+	getDefaultProfileId,
+	queryElementForSvg,
+	render,
+	renderResponsiveWithRoute,
+} from "@/utils/testing-library";
 
 let profile: Contracts.IProfile;
 let wallet: Contracts.IReadWriteWallet;

@@ -40,8 +40,11 @@ const createVoteTransactionMock = (wallet: Contracts.IReadWriteWallet) =>
 	// @ts-ignore
 	vi.spyOn(wallet.transaction(), "transaction").mockReturnValue({
 		amount: () => voteFixture.data.amount / 1e8,
+		blockId: () => "1",
+		convertedAmount: () => BigNumber.make(10),
 		data: () => ({ data: () => voteFixture.data }),
 		explorerLink: () => `https://test.arkscan.io/transaction/${voteFixture.data.id}`,
+		explorerLinkForBlock: () => `https://test.arkscan.io/block/${voteFixture.data.id}`,
 		fee: () => voteFixture.data.fee / 1e8,
 		id: () => voteFixture.data.id,
 		isConfirmed: () => true,
@@ -57,21 +60,21 @@ const createVoteTransactionMock = (wallet: Contracts.IReadWriteWallet) =>
 		memo: () => null,
 		recipient: () => voteFixture.data.recipient,
 		sender: () => voteFixture.data.sender,
+		timestamp: () => DateTime.make(),
 		type: () => "vote",
 		usesMultiSignature: () => false,
 		wallet: () => wallet,
-		convertedAmount: () => BigNumber.make(10),
-		timestamp: () => DateTime.make(),
-		blockId: () => "1",
-		explorerLinkForBlock: () => `https://test.arkscan.io/block/${voteFixture.data.id}`,
 	});
 
 const createUnvoteTransactionMock = (wallet: Contracts.IReadWriteWallet) =>
 	// @ts-ignore
 	vi.spyOn(wallet.transaction(), "transaction").mockReturnValue({
 		amount: () => unvoteFixture.data.amount / 1e8,
+		blockId: () => "1",
+		convertedAmount: () => BigNumber.make(10),
 		data: () => ({ data: () => voteFixture.data }),
 		explorerLink: () => `https://test.arkscan.io/transaction/${unvoteFixture.data.id}`,
+		explorerLinkForBlock: () => `https://test.arkscan.io/block/${voteFixture.data.id}`,
 		fee: () => unvoteFixture.data.fee / 1e8,
 		id: () => unvoteFixture.data.id,
 		isConfirmed: () => true,
@@ -87,13 +90,10 @@ const createUnvoteTransactionMock = (wallet: Contracts.IReadWriteWallet) =>
 		memo: () => null,
 		recipient: () => unvoteFixture.data.recipient,
 		sender: () => unvoteFixture.data.sender,
+		timestamp: () => DateTime.make(),
 		type: () => "unvote",
 		usesMultiSignature: () => false,
 		wallet: () => wallet,
-		convertedAmount: () => BigNumber.make(10),
-		timestamp: () => DateTime.make(),
-		blockId: () => "1",
-		explorerLinkForBlock: () => `https://test.arkscan.io/block/${voteFixture.data.id}`,
 	});
 
 const passphrase = getDefaultWalletMnemonic();
