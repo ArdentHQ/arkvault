@@ -31,6 +31,8 @@ import {
 	mockNanoXTransport,
 } from "@/utils/testing-library";
 import { server, requestMock } from "@/tests/mocks/server";
+import { BigNumber } from "@ardenthq/sdk-helpers";
+import { DateTime } from "@ardenthq/sdk-intl";
 
 const fixtureProfileId = getDefaultProfileId();
 
@@ -46,12 +48,22 @@ const createVoteTransactionMock = (wallet: Contracts.IReadWriteWallet) =>
 		isDelegateRegistration: () => false,
 		isDelegateResignation: () => false,
 		isIpfs: () => false,
+		isMultiPayment: () => false,
 		isMultiSignatureRegistration: () => false,
+		isTransfer: () => false,
+		isUnvote: () => false,
 		isVote: () => true,
+		isVoteCombination: () => false,
+		memo: () => null,
 		recipient: () => voteFixture.data.recipient,
 		sender: () => voteFixture.data.sender,
 		type: () => "vote",
 		usesMultiSignature: () => false,
+		wallet: () => wallet,
+		convertedAmount: () => BigNumber.make(10),
+		timestamp: () => DateTime.make(),
+		blockId: () => "1",
+		explorerLinkForBlock: () => `https://test.arkscan.io/block/${voteFixture.data.id}`,
 	});
 
 const createUnvoteTransactionMock = (wallet: Contracts.IReadWriteWallet) =>
@@ -66,13 +78,22 @@ const createUnvoteTransactionMock = (wallet: Contracts.IReadWriteWallet) =>
 		isDelegateRegistration: () => false,
 		isDelegateResignation: () => false,
 		isIpfs: () => false,
+		isMultiPayment: () => false,
 		isMultiSignatureRegistration: () => false,
+		isTransfer: () => false,
 		isUnvote: () => true,
 		isVote: () => false,
+		isVoteCombination: () => false,
+		memo: () => null,
 		recipient: () => unvoteFixture.data.recipient,
 		sender: () => unvoteFixture.data.sender,
 		type: () => "unvote",
 		usesMultiSignature: () => false,
+		wallet: () => wallet,
+		convertedAmount: () => BigNumber.make(10),
+		timestamp: () => DateTime.make(),
+		blockId: () => "1",
+		explorerLinkForBlock: () => `https://test.arkscan.io/block/${voteFixture.data.id}`,
 	});
 
 const passphrase = getDefaultWalletMnemonic();
