@@ -604,13 +604,13 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                       Transaction ID
                     </div>
                     <div
-                      class="w-full font-semibold sm:px-4"
+                      class="grow font-semibold sm:px-4"
                     >
-                      <span
-                        class="no-ligatures min-w-0 overflow-hidden"
+                      <div
+                        class="text-theme-secondary-900 dark:text-theme-text"
                       >
-                        127d323ff3c3a40cb7abec8aa3b045e8c45c72c8feb7dc667d2f85978f8b10cd
-                      </span>
+                        127d3...b10cd
+                      </div>
                     </div>
                     <div
                       class="mt-4 flex space-x-2 sm:mr-4 sm:mt-0"
@@ -939,19 +939,23 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                             class="w-full break-words rounded-lg border-theme-secondary-300 p-3 dark:border-theme-secondary-800 sm:border sm:px-6 sm:py-5 [.condensed_&]:sm:py-4 mt-0 sm:mt-2"
                           >
                             <div
-                              class="flex w-full justify-between sm:justify-start"
+                              class="space-y-3 sm:space-y-0"
                             >
                               <div
-                                class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
-                                data-testid="DetailLabelText"
+                                class="flex w-full justify-between sm:justify-start"
                               >
-                                Category
-                              </div>
-                              <div
-                                class="css-1chzvd4"
-                                color="neutral"
-                              >
-                                Transfer
+                                <div
+                                  class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                                  data-testid="DetailLabelText"
+                                >
+                                  Category
+                                </div>
+                                <div
+                                  class="css-1chzvd4"
+                                  color="neutral"
+                                >
+                                  Transfer
+                                </div>
                               </div>
                             </div>
                           </div>
@@ -1309,10 +1313,10 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                         class="mt-2"
                       >
                         <div
-                          class="mt-2"
+                          class="mt-3 sm:mt-2"
                         >
                           <div
-                            class="flex items-center space-x-3 rounded-xl border border-theme-success-200 bg-theme-success-50 px-6 py-5 dark:border-theme-success-600 dark:bg-transparent"
+                            class="flex items-center space-x-3 rounded-xl border border-theme-success-200 bg-theme-success-50 px-3 py-2 dark:border-theme-success-600 dark:bg-transparent max-sm:text-sm sm:px-6 sm:py-5"
                             data-testid="TransactionSuccessAlert"
                           >
                             <div
