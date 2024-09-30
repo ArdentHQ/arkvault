@@ -3,7 +3,7 @@
 exports[`CopyOrDownload > should render 1`] = `
 <DocumentFragment>
   <div
-    class="-mx-8 space-y-2 bg-theme-secondary-100 p-6 text-center dark:bg-black sm:mx-0 sm:rounded-xl sm:text-left"
+    class="-mx-4 space-y-2 bg-theme-secondary-100 p-6 text-center dark:bg-black sm:mx-0 sm:rounded-xl sm:text-left"
   >
     <span
       class="text-lg font-semibold text-theme-secondary-text"

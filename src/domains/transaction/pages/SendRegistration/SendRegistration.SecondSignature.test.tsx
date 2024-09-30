@@ -177,6 +177,8 @@ describe("Second Signature Registration", () => {
 		await userEvent.type(secondInput, "dizzy");
 		await userEvent.type(thirdInput, "era");
 
+		await userEvent.click(screen.getByTestId("SecondSignature__passphraseDisclaimer"));
+
 		await waitFor(() => expect(continueButton()).not.toBeDisabled());
 
 		await userEvent.click(continueButton());

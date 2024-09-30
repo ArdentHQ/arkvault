@@ -363,6 +363,8 @@ describe("SecondSignatureRegistrationForm", () => {
 		await userEvent.clear(thirdInput);
 		await userEvent.type(thirdInput, "attend");
 
+		await userEvent.click(screen.getByTestId("SecondSignature__passphraseDisclaimer"));
+
 		await waitFor(() => expect(form()?.getValues("verification")).toBe(true));
 	});
 
