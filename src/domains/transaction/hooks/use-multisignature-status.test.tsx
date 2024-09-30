@@ -8,6 +8,8 @@ describe("Use MultiSignature Status Hook", () => {
 	let profile: Contracts.IProfile;
 	let wallet: Contracts.IReadWriteWallet;
 	let transaction: DTO.ExtendedSignedTransactionData;
+	let isConfirmedMock = vi.SpyInstance
+	let transactionExistsMock = vi.SpyInstance
 
 	beforeAll(async () => {
 		profile = env.profiles().findById(getDefaultProfileId());
@@ -35,6 +37,9 @@ describe("Use MultiSignature Status Hook", () => {
 				}),
 			wallet,
 		);
+
+		isConfirmedMock = vi.spyOn(transaction, "isConfirmed").mockReturnValue(false)
+		transactionExistsMock = vi.spyOn(wallet.transaction(), "transaction").mockReturnValue(transaction)
 	});
 
 	it("should await our signature", () => {
@@ -132,6 +137,17 @@ describe("Use MultiSignature Status Hook", () => {
 		const { result } = renderHook(() => useMultiSignatureStatus({ transaction, wallet }));
 
 		expect(result.current.status.value).toBe("isMultiSignatureReady");
+
+		vi.clearAllMocks();
+	});
+
+	it("should return broadcasted status if transaction is confirmed", () => {
+		isConfirmedMock.mockRestore();
+		transactionExistsMock.mockRestore();
+
+		const { result } = renderHook(() => useMultiSignatureStatus({ transaction, wallet }));
+
+		expect(result.current.status.value).toBe("isBroadcasted");
 
 		vi.clearAllMocks();
 	});
