@@ -38,4 +38,14 @@ describe("TransactionAddresses", () => {
 		expect(screen.getByText(translations.TO)).toBeInTheDocument();
 		expect(screen.getByText(recipients[1].address)).toBeInTheDocument();
 	});
+
+	it("should default to empty array if recipients is undefined", (breakpoint: string) => {
+		renderResponsive(
+			<TransactionAddresses senderWallet={profile.wallets().first()} profile={profile} />,
+			breakpoint,
+		);
+
+		expect(screen.getByTestId("DetailWrapper")).toBeInTheDocument();
+		expect(screen.queryByTestId(recipients[0].address)).not.toBeInTheDocument();
+	});
 });
