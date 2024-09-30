@@ -1,5 +1,367 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
+exports[`Signatures > should have all marked as signed if awaiting broadcast on registration 1`] = `
+<div>
+  <div
+    class="rounded-xl border-transparent pb-2 outline outline-1 outline-transparent md:border-b-[5px] md:border-b-theme-secondary-200 md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800 sm:border-b-[5px] sm:border-b-theme-secondary-200 sm:outline-theme-secondary-300 dark:sm:border-theme-secondary-800 dark:sm:outline-theme-secondary-800"
+    data-testid="TableWrapper"
+  >
+    <div
+      class="css-1m6rt2i"
+      role="table"
+    >
+      <table
+        cellpadding="0"
+        class="w-full table-auto"
+      >
+        <thead>
+          <tr
+            role="row"
+          >
+            <th
+              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 max-sm:hidden first:rounded-tl-xl last:rounded-tr-xl"
+              colspan="1"
+              data-testid="table__th--0"
+              role="columnheader"
+            >
+              <div
+                class="flex flex-inline align-top"
+              >
+                <div
+                  class=""
+                >
+                  Address
+                </div>
+              </div>
+            </th>
+            <th
+              class="group relative text-sm select-none text-theme-secondary-700 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 max-sm:hidden text-right w-8 border-theme-secondary-100 first:rounded-tl-xl last:rounded-tr-xl"
+              colspan="1"
+              data-testid="table__th--1"
+              role="columnheader"
+            >
+              <div
+                class="flex flex-inline align-top"
+              >
+                <div
+                  class=""
+                >
+                  Status
+                </div>
+              </div>
+            </th>
+          </tr>
+        </thead>
+        <tbody
+          role="rowgroup"
+        >
+          <tr
+            class="group relative max-md:!border-transparent css-1x4z4cy"
+            data-testid="TableRow"
+          >
+            <td>
+              <div
+                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l text-sm font-semibold justify-between sm:justify-start max-sm:bg-theme-secondary-100 max-sm:dark:bg-black max-sm:m-3 max-sm:mb-0 max-sm:px-4 max-sm:py-3 max-sm:border max-sm:rounded-md max-sm:border-theme-secondary-300 max-sm:dark:border-theme-secondary-800"
+              >
+                <div
+                  class="flex w-full space-x-2"
+                >
+                  <div
+                    class="w-full sm:w-auto"
+                  >
+                    <div
+                      class="text-theme-secondary-900 dark:text-theme-text"
+                    >
+                      D8rr7...6YUYD
+                    </div>
+                  </div>
+                  <button
+                    class="ring-focus relative focus:outline-none"
+                    data-ring-focus-margin="-m-1"
+                    data-testid="clipboard-icon__wrapper"
+                    type="button"
+                  >
+                    <div
+                      class="text-theme-primary-400 dark:text-theme-secondary-700 dark:hover:text-theme-secondary-500 css-v0ob3f"
+                      height="16"
+                      width="16"
+                    >
+                      <svg
+                        id="copy"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                          />
+                          <path
+                            d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                          />
+                        </g>
+                      </svg>
+                    </div>
+                  </button>
+                </div>
+                <div
+                  class="ml-2 border-l border-theme-secondary-300 pl-2 dark:border-theme-secondary-800 sm:hidden"
+                >
+                  <div
+                    class="relative"
+                    data-testid="Signatures__participant-status"
+                  >
+                    <div>
+                      <div
+                        class="text-theme-primary-500 css-1i4b0eq"
+                        data-testid="ParticipantStatus__signed"
+                        height="20"
+                        width="20"
+                      >
+                        <svg
+                          id="circle-check-mark"
+                          viewBox="0 0 20 20"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
+                        >
+                          <g
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                          >
+                            <circle
+                              cx="10"
+                              cy="10"
+                              r="9"
+                              stroke-miterlimit="10"
+                            />
+                            <path
+                              d="M13.6 6.5l-5 6.8c-.2.3-.6.4-.9.2l-.1-.1L6.4 12"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </g>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </td>
+            <td>
+              <div
+                class="items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r flex justify-end max-sm:hidden"
+              >
+                <div
+                  class="relative"
+                  data-testid="Signatures__participant-status"
+                >
+                  <div>
+                    <div
+                      class="text-theme-primary-500 css-1i4b0eq"
+                      data-testid="ParticipantStatus__signed"
+                      height="20"
+                      width="20"
+                    >
+                      <svg
+                        id="circle-check-mark"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                        >
+                          <circle
+                            cx="10"
+                            cy="10"
+                            r="9"
+                            stroke-miterlimit="10"
+                          />
+                          <path
+                            d="M13.6 6.5l-5 6.8c-.2.3-.6.4-.9.2l-.1-.1L6.4 12"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </g>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr
+            class="group relative max-md:!border-transparent css-1x4z4cy"
+            data-testid="TableRow"
+          >
+            <td>
+              <div
+                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l text-sm font-semibold justify-between sm:justify-start max-sm:bg-theme-secondary-100 max-sm:dark:bg-black max-sm:m-3 max-sm:mb-0 max-sm:px-4 max-sm:py-3 max-sm:border max-sm:rounded-md max-sm:border-theme-secondary-300 max-sm:dark:border-theme-secondary-800"
+              >
+                <div
+                  class="flex w-full space-x-2"
+                >
+                  <div
+                    class="w-full sm:w-auto"
+                  >
+                    <div
+                      class="text-theme-secondary-900 dark:text-theme-text"
+                    >
+                      D5sRK...vJtwb
+                    </div>
+                  </div>
+                  <button
+                    class="ring-focus relative focus:outline-none"
+                    data-ring-focus-margin="-m-1"
+                    data-testid="clipboard-icon__wrapper"
+                    type="button"
+                  >
+                    <div
+                      class="text-theme-primary-400 dark:text-theme-secondary-700 dark:hover:text-theme-secondary-500 css-v0ob3f"
+                      height="16"
+                      width="16"
+                    >
+                      <svg
+                        id="copy"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                          />
+                          <path
+                            d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                          />
+                        </g>
+                      </svg>
+                    </div>
+                  </button>
+                </div>
+                <div
+                  class="ml-2 border-l border-theme-secondary-300 pl-2 dark:border-theme-secondary-800 sm:hidden"
+                >
+                  <div
+                    class="relative"
+                    data-testid="Signatures__participant-status"
+                  >
+                    <div>
+                      <div
+                        class="text-theme-primary-500 css-1i4b0eq"
+                        data-testid="ParticipantStatus__signed"
+                        height="20"
+                        width="20"
+                      >
+                        <svg
+                          id="circle-check-mark"
+                          viewBox="0 0 20 20"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
+                        >
+                          <g
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                          >
+                            <circle
+                              cx="10"
+                              cy="10"
+                              r="9"
+                              stroke-miterlimit="10"
+                            />
+                            <path
+                              d="M13.6 6.5l-5 6.8c-.2.3-.6.4-.9.2l-.1-.1L6.4 12"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </g>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </td>
+            <td>
+              <div
+                class="items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r flex justify-end max-sm:hidden"
+              >
+                <div
+                  class="relative"
+                  data-testid="Signatures__participant-status"
+                >
+                  <div>
+                    <div
+                      class="text-theme-primary-500 css-1i4b0eq"
+                      data-testid="ParticipantStatus__signed"
+                      height="20"
+                      width="20"
+                    >
+                      <svg
+                        id="circle-check-mark"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                        >
+                          <circle
+                            cx="10"
+                            cy="10"
+                            r="9"
+                            stroke-miterlimit="10"
+                          />
+                          <path
+                            d="M13.6 6.5l-5 6.8c-.2.3-.6.4-.9.2l-.1-.1L6.4 12"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </g>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Signatures > should not require signature if waiting for final signature in registration with isAwaitingOurSignature=false 1`] = `
 <div>
   <div

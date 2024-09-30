@@ -94,6 +94,27 @@ describe("Signatures", () => {
 		},
 	);
 
+	it("should have all marked as signed if awaiting broadcast on registration", async () => {
+		vi.spyOn(wallet.transaction(), "isAwaitingOurSignature").mockReturnValue(true);
+		vi.spyOn(wallet.transaction(), "isAwaitingOtherSignatures").mockReturnValue(false);
+		vi.spyOn(wallet.coin().multiSignature(), "remainingSignatureCount").mockReturnValue(0);
+		vi.spyOn(multisignatureTransactionMock, "isMultiSignatureRegistration").mockReturnValue(true);
+		vi.spyOn(wallet.transaction(), "isAwaitingSignatureByPublicKey").mockImplementation((_, publicKey) =>
+			[wallet.publicKey()].includes(publicKey),
+		);
+		vi.spyOn(wallet.transaction(), "transaction").mockReturnValue(multisignatureTransactionMock);
+
+		const { container } = render(
+			<Signatures transaction={multisignatureTransactionMock} profile={profile} publicKeys={publicKeys} />,
+		);
+
+		await waitFor(() => expect(screen.getAllByTestId("TableRow")).toHaveLength(2));
+		await waitFor(() => expect(screen.getAllByTestId(SignedIcon)).toHaveLength(4));
+
+		expect(container).toMatchSnapshot();
+	},
+	);
+
 	it("should handle exception when checking if participant is awaiting signature", async () => {
 		vi.spyOn(wallet.transaction(), "isAwaitingSignatureByPublicKey").mockImplementation(() => {
 			throw new Error("Failed");

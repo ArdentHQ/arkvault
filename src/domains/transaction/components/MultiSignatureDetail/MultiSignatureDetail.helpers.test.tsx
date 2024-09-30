@@ -1,7 +1,7 @@
 import { Contracts, DTO } from "@ardenthq/sdk-profiles";
 import React from "react";
 
-import { getMultiSignatureInfo, MultiSignatureDetailStep, Paginator } from "./MultiSignatureDetail.helpers";
+import { getMultiSignatureInfo, MultiSignatureDetailStep, Paginator, transactionPublicKeys } from "./MultiSignatureDetail.helpers";
 import {
 	env,
 	getDefaultProfileId,
@@ -90,5 +90,18 @@ describe("MultiSignatureDetail Helpers", () => {
 		);
 
 		expect(screen.getByTestId("MultiSignatureDetail__broadcast")).toBeInTheDocument();
+	});
+
+	it("should return min & zero length public keys if transaction is undefined", () => {
+		vi.spyOn(transaction, "get").mockReturnValue({
+			mandatoryKeys: [],
+			numberOfSignatures: 2,
+			optionalKeys: [],
+		});
+
+		const { min, publicKeys } = transactionPublicKeys();
+
+		expect(min).toBe(undefined);
+		expect(publicKeys).toHaveLength(0);
 	});
 });
