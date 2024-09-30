@@ -243,7 +243,7 @@ describe("MultiSignatureDetail", () => {
 			.spyOn(wallet.transaction(), "isAwaitingSignatureByPublicKey")
 			.mockReturnValue(false);
 
-		const { container } = render(
+		render(
 			<Route path="/profiles/:profileId">
 				<MultiSignatureDetail profile={profile} transaction={fixtures.transfer} wallet={wallet} isOpen />
 			</Route>,
@@ -269,7 +269,7 @@ describe("MultiSignatureDetail", () => {
 
 		vi.spyOn(wallet.transaction(), "isAwaitingSignatureByPublicKey").mockReturnValue(false);
 
-		const { container } = render(
+		render(
 			<Route path="/profiles/:profileId">
 				<MultiSignatureDetail profile={profile} transaction={fixtures.transfer} wallet={wallet} isOpen />
 			</Route>,
@@ -318,7 +318,7 @@ describe("MultiSignatureDetail", () => {
 			.spyOn(wallet.transaction(), "isAwaitingSignatureByPublicKey")
 			.mockReturnValue(false);
 
-		const { container } = render(
+		render(
 			<Route path="/profiles/:profileId">
 				<MultiSignatureDetail profile={profile} transaction={fixtures.multiSignature} wallet={wallet} isOpen />
 			</Route>,
@@ -387,7 +387,7 @@ describe("MultiSignatureDetail", () => {
 		vi.spyOn(fixtures.unvote, "confirmations").mockReturnValue(BigNumber.make(0));
 		vi.spyOn(fixtures.unvote, "blockId").mockReturnValue(undefined);
 
-		const { container } = render(
+		render(
 			<Route path="/profiles/:profileId">
 				<MultiSignatureDetail profile={profile} transaction={fixtures.unvote} wallet={wallet} isOpen />
 			</Route>,
@@ -412,7 +412,7 @@ describe("MultiSignatureDetail", () => {
 			.spyOn(wallet.transaction(), "isAwaitingSignatureByPublicKey")
 			.mockReturnValue(false);
 
-		const { container } = render(
+		render(
 			<Route path="/profiles/:profileId">
 				<MultiSignatureDetail profile={profile} transaction={fixtures.ipfs} wallet={wallet} isOpen />
 			</Route>,
@@ -480,7 +480,7 @@ describe("MultiSignatureDetail", () => {
 		const broadcastMock = vi.spyOn(wallet.transaction(), "broadcast");
 		const addSignatureMock = vi.spyOn(wallet.transaction(), "addSignature").mockResolvedValue(void 0);
 
-		const { container } = render(
+		render(
 			<Route path="/profiles/:profileId">
 				<MultiSignatureDetail profile={profile} transaction={fixtures.transfer} wallet={wallet} isOpen />
 			</Route>,
@@ -563,7 +563,7 @@ describe("MultiSignatureDetail", () => {
 			.spyOn(wallet.coin().multiSignature(), "isMultiSignatureReady")
 			.mockReturnValue(true);
 
-		const { container } = render(
+		render(
 			<Route path="/profiles/:profileId">
 				<MultiSignatureDetail profile={profile} transaction={fixtures.transfer} wallet={wallet} isOpen />
 			</Route>,
@@ -591,7 +591,7 @@ describe("MultiSignatureDetail", () => {
 
 		const broadcastMock = vi.spyOn(wallet.transaction(), "broadcast").mockRejectedValue(new Error("Failed"));
 
-		const { container } = render(
+		render(
 			<Route path="/profiles/:profileId">
 				<MultiSignatureDetail profile={profile} transaction={fixtures.transfer} wallet={wallet} isOpen />
 			</Route>,
@@ -624,7 +624,7 @@ describe("MultiSignatureDetail", () => {
 		const canBeBroadcastedMock = vi.spyOn(wallet.transaction(), "canBeBroadcasted").mockReturnValue(false);
 		const canBeSignedMock = vi.spyOn(wallet.transaction(), "canBeSigned").mockReturnValue(true);
 
-		const { container } = render(
+		render(
 			<Route path="/profiles/:profileId">
 				<MultiSignatureDetail profile={profile} transaction={fixtures.transfer} wallet={wallet} isOpen />
 			</Route>,

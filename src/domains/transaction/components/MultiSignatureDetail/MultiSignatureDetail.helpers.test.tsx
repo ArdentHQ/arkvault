@@ -1,7 +1,12 @@
 import { Contracts, DTO } from "@ardenthq/sdk-profiles";
 import React from "react";
 
-import { getMultiSignatureInfo, MultiSignatureDetailStep, Paginator, transactionPublicKeys } from "./MultiSignatureDetail.helpers";
+import {
+	getMultiSignatureInfo,
+	MultiSignatureDetailStep,
+	Paginator,
+	transactionPublicKeys,
+} from "./MultiSignatureDetail.helpers";
 import {
 	env,
 	getDefaultProfileId,

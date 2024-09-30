@@ -112,8 +112,7 @@ describe("Signatures", () => {
 		await waitFor(() => expect(screen.getAllByTestId(SignedIcon)).toHaveLength(4));
 
 		expect(container).toMatchSnapshot();
-	},
-	);
+	});
 
 	it("should handle exception when checking if participant is awaiting signature", async () => {
 		vi.spyOn(wallet.transaction(), "isAwaitingSignatureByPublicKey").mockImplementation(() => {
