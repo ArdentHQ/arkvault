@@ -311,7 +311,7 @@ describe("Signed Transaction Table", () => {
 	it.each([true, false])("should render pending transfers when isCompact = %s", (isCompact: boolean) => {
 		mockPendingTransfers(wallet);
 
-		const { asFragment } = render(
+		render(
 			<PendingTransactions wallet={wallet} pendingTransactions={pendingTransactions} isCompact={isCompact} />,
 		);
 
@@ -323,7 +323,7 @@ describe("Signed Transaction Table", () => {
 	it("should render pending transfers on mobile", () => {
 		mockPendingTransfers(wallet);
 
-		const { asFragment } = renderResponsive(
+		renderResponsive(
 			<PendingTransactions wallet={wallet} pendingTransactions={pendingTransactions} />,
 			"xs",
 		);
@@ -557,7 +557,7 @@ describe("Signed Transaction Table", () => {
 			const canBeSignedMock = vi.spyOn(wallet.transaction(), "canBeSigned").mockReturnValue(false);
 
 			vi.spyOn(wallet.transaction(), "isAwaitingOurSignature").mockReturnValue(false);
-			const { asFragment } = renderResponsive(
+			renderResponsive(
 				<PendingTransactions
 					isCompact={false}
 					wallet={wallet}
@@ -583,7 +583,7 @@ describe("Signed Transaction Table", () => {
 			vi.spyOn(wallet.transaction(), "transaction").mockReturnValue(fixtures.transfer);
 
 			const canBeSignedMock = vi.spyOn(wallet.transaction(), "canBeSigned").mockReturnValue(true);
-			const { asFragment } = renderResponsive(
+			renderResponsive(
 				<PendingTransactions
 					isCompact={false}
 					wallet={wallet}
