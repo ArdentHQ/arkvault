@@ -1,7 +1,7 @@
 import { Contracts, DTO } from "@ardenthq/sdk-profiles";
 import { renderHook } from "@testing-library/react";
 
-import { useMultiSignatureStatus } from "./use-multisignature-status";
+import { useMultiSignatureStatus, canBeBroadcasted } from "./use-multisignature-status";
 import { env, getDefaultProfileId } from "@/utils/testing-library";
 
 describe("Use MultiSignature Status Hook", () => {
@@ -141,6 +141,7 @@ describe("Use MultiSignature Status Hook", () => {
 		vi.clearAllMocks();
 	});
 
+
 	it("should return broadcasted status if transaction is confirmed", () => {
 		isConfirmedMock.mockRestore();
 		transactionExistsMock.mockRestore();
@@ -149,6 +150,17 @@ describe("Use MultiSignature Status Hook", () => {
 
 		expect(result.current.status.value).toBe("isBroadcasted");
 
+		vi.clearAllMocks();
+	});
+
+	it("should handle exception on canBeBroadcasted", () => {
+		vi.spyOn(wallet.transaction(), "canBeBroadcasted").mockImplementation(() => {
+			throw new Error("error")
+		});
+
+		const { result } = renderHook(() => useMultiSignatureStatus({ transaction, wallet }));
+
+		expect(result.current.status.value).toBe("isBroadcasted");
 		vi.clearAllMocks();
 	});
 });
