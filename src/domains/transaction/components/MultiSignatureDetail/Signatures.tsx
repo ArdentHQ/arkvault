@@ -147,8 +147,6 @@ export const Signatures = ({
 		publicKeys,
 	});
 
-	console.log({ participants })
-
 	const skeletonRows = Array.from({ length: publicKeys.length }, () => ({}) as Contracts.IReadWriteWallet);
 
 	const data = isLoading ? skeletonRows : participants;
