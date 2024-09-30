@@ -129,7 +129,7 @@ describe("Signed Transaction Table", () => {
 			wallet,
 		);
 
-		vi.spyOn(fixtures.transfer, "isConfirmed").mockReturnValue(false)
+		vi.spyOn(fixtures.transfer, "isConfirmed").mockReturnValue(false);
 
 		pendingTransactions = [
 			{
@@ -311,11 +311,9 @@ describe("Signed Transaction Table", () => {
 	it.each([true, false])("should render pending transfers when isCompact = %s", (isCompact: boolean) => {
 		mockPendingTransfers(wallet);
 
-		render(
-			<PendingTransactions wallet={wallet} pendingTransactions={pendingTransactions} isCompact={isCompact} />,
-		);
+		render(<PendingTransactions wallet={wallet} pendingTransactions={pendingTransactions} isCompact={isCompact} />);
 
-		expect(screen.getAllByTestId("TableRow")).toHaveLength(pendingTransactions.length)
+		expect(screen.getAllByTestId("TableRow")).toHaveLength(pendingTransactions.length);
 
 		vi.restoreAllMocks();
 	});
@@ -323,12 +321,9 @@ describe("Signed Transaction Table", () => {
 	it("should render pending transfers on mobile", () => {
 		mockPendingTransfers(wallet);
 
-		renderResponsive(
-			<PendingTransactions wallet={wallet} pendingTransactions={pendingTransactions} />,
-			"xs",
-		);
+		renderResponsive(<PendingTransactions wallet={wallet} pendingTransactions={pendingTransactions} />, "xs");
 
-		expect(screen.getAllByTestId("TableRow__mobile")).toHaveLength(pendingTransactions.length)
+		expect(screen.getAllByTestId("TableRow__mobile")).toHaveLength(pendingTransactions.length);
 
 		vi.restoreAllMocks();
 	});

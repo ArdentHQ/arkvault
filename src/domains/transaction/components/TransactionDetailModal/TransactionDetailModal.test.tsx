@@ -207,7 +207,7 @@ describe("TransactionDetailModal", () => {
 			),
 		);
 
-		const { asFragment } = render(
+		render(
 			<Route path="/profiles/:profileId/dashboard">
 				<TransactionDetailModal
 					isOpen={true}
@@ -257,7 +257,7 @@ describe("TransactionDetailModal", () => {
 	});
 
 	it("should render a delegate registration modal", () => {
-		const { asFragment } = render(
+		render(
 			<Route path="/profiles/:profileId/dashboard">
 				<TransactionDetailModal
 					isOpen={true}
@@ -280,7 +280,7 @@ describe("TransactionDetailModal", () => {
 	});
 
 	it("should render a delegate resignation modal", () => {
-		const { asFragment } = render(
+		render(
 			<Route path="/profiles/:profileId/dashboard">
 				<TransactionDetailModal
 					isOpen={true}
@@ -302,7 +302,7 @@ describe("TransactionDetailModal", () => {
 	});
 
 	it("should render a second signature modal", () => {
-		const { asFragment } = render(
+		render(
 			<Route path="/profiles/:profileId/dashboard">
 				<TransactionDetailModal
 					isOpen={true}

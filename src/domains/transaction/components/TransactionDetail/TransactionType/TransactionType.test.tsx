@@ -89,7 +89,7 @@ describe("TransactionType", () => {
 							publicKeys: [
 								"03af2feb4fc97301e16d6a877d5b135417e8f284d40fac0f84c09ca37f82886c51",
 								"03df6cd794a7d404db4f1b25816d8976d0e72c5177d17ac9b19a92703b62cdbbbc",
-							]
+							],
 						}),
 						hash: () => hash,
 						isDelegateRegistration: () => false,
@@ -99,7 +99,7 @@ describe("TransactionType", () => {
 						isVote: () => false,
 						type: () => "multiSignature",
 						username: () => "delegate",
-						wallet: () => env.profiles().first().wallets().first()
+						wallet: () => env.profiles().first().wallets().first(),
 					} as DTO.ExtendedSignedTransactionData
 				}
 			/>,
