@@ -128,17 +128,26 @@ describe("TransactionSuccessful", () => {
 		vi.restoreAllMocks();
 	});
 
-	it("should render successfull screen if it's a multisignature registration", () => {
+	it("should render successfull screen if it's a multisignature registration", async () => {
 		const transaction = {
 			...TransactionFixture,
+			get: () => ({
+				min: 2,
+				publicKeys: [
+					"03af2feb4fc97301e16d6a877d5b135417e8f284d40fac0f84c09ca37f82886c51",
+					"03df6cd794a7d404db4f1b25816d8976d0e72c5177d17ac9b19a92703b62cdbbbc",
+				]
+			}),
+			isConfirmed: () => true,
+			isMultiSignatureRegistration: () => true,
+			type: () => "multiSignature",
 			wallet: () => wallet,
+
 		};
 
 		vi.spyOn(transaction, "get").mockImplementation((attribute) =>
 			transactionMockImplementation(attribute, transaction),
 		);
-
-		vi.spyOn(transaction, "isMultiSignatureRegistration").mockReturnValue(true);
 
 		render(
 			<Route path="/profiles/:profileId">
@@ -149,14 +158,17 @@ describe("TransactionSuccessful", () => {
 			},
 		);
 
-		expect(screen.getByTestId("TransactionSuccessful")).toBeInTheDocument();
+		await expect(screen.findByText("Participants")).resolves.toBeVisible();
 
 		vi.restoreAllMocks();
 	});
 
-	it("should render successfull screen if it uses multisignature", () => {
+	it("should render successfull screen if it uses multisignature", async () => {
 		const transaction = {
 			...TransactionFixture,
+			isConfirmed: () => true,
+			isMultiSignatureRegistration: () => true,
+			type: () => "multiSignature",
 			wallet: () => wallet,
 		};
 
@@ -175,7 +187,7 @@ describe("TransactionSuccessful", () => {
 			},
 		);
 
-		expect(screen.getByTestId("TransactionSuccessful")).toBeInTheDocument();
+		await expect(screen.findByText("Participants")).resolves.toBeVisible();
 
 		vi.restoreAllMocks();
 	});
