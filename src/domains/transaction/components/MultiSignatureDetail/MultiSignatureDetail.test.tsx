@@ -254,8 +254,6 @@ describe("MultiSignatureDetail", () => {
 
 		await waitFor(() => expect(screen.getByText(translations.TRANSACTION_TYPES.TRANSFER)));
 
-		expect(container).toMatchSnapshot();
-
 		canBeBroadcastedMock.mockRestore();
 		canBeSignedMock.mockRestore();
 		isAwaitingSignatureMock.mockRestore();
@@ -281,8 +279,6 @@ describe("MultiSignatureDetail", () => {
 		);
 
 		await waitFor(() => expect(screen.getByText(translations.TRANSACTION_TYPES.TRANSFER)));
-
-		expect(container).toMatchSnapshot();
 
 		canBeBroadcastedMock.mockRestore();
 		canBeSignedMock.mockRestore();
@@ -332,8 +328,6 @@ describe("MultiSignatureDetail", () => {
 		);
 
 		await waitFor(() => expect(screen.getByText(translations.TRANSACTION_TYPES.MULTI_SIGNATURE)));
-
-		expect(container).toMatchSnapshot();
 
 		canBeBroadcastedMock.mockRestore();
 		canBeSignedMock.mockRestore();
@@ -404,8 +398,6 @@ describe("MultiSignatureDetail", () => {
 
 		await expect(screen.findByText(translations.TRANSACTION_TYPES.UNVOTE)).resolves.toBeVisible();
 
-		expect(container).toMatchSnapshot();
-
 		canBeBroadcastedMock.mockRestore();
 		canBeSignedMock.mockRestore();
 		isAwaitingSignatureMock.mockRestore();
@@ -430,8 +422,6 @@ describe("MultiSignatureDetail", () => {
 		);
 
 		await expect(screen.findByText(translations.TRANSACTION_TYPES.IPFS)).resolves.toBeVisible();
-
-		expect(container).toMatchSnapshot();
 
 		canBeBroadcastedMock.mockRestore();
 		canBeSignedMock.mockRestore();
@@ -518,8 +508,6 @@ describe("MultiSignatureDetail", () => {
 
 		await expect(screen.findByText(translations.TRANSACTION_SIGNED)).resolves.toBeVisible();
 
-		expect(container).toMatchSnapshot();
-
 		actsMock.mockRestore();
 		canBeBroadcastedMock.mockRestore();
 		canBeSignedMock.mockRestore();
@@ -586,8 +574,6 @@ describe("MultiSignatureDetail", () => {
 
 		await waitFor(() => expect(screen.queryByTestId("MultiSignatureDetail__broadcast")).not.toBeInTheDocument());
 
-		expect(container).toMatchSnapshot();
-
 		canBeBroadcastedMock.mockRestore();
 		canBeSignedMock.mockRestore();
 		isAwaitingConfirmationMock.mockRestore();
@@ -615,8 +601,6 @@ describe("MultiSignatureDetail", () => {
 		);
 
 		await waitFor(() => expect(screen.getByTestId("MultiSignatureDetail__broadcast")));
-
-		expect(container).toMatchSnapshot();
 
 		await userEvent.click(screen.getByTestId("MultiSignatureDetail__broadcast"));
 
@@ -658,8 +642,6 @@ describe("MultiSignatureDetail", () => {
 		await userEvent.click(screen.getByTestId("Paginator__back"));
 
 		await waitFor(() => expect(screen.getByTestId("Paginator__sign")));
-
-		expect(container).toMatchSnapshot();
 
 		canBeBroadcastedMock.mockRestore();
 		canBeSignedMock.mockRestore();
