@@ -141,7 +141,6 @@ describe("Use MultiSignature Status Hook", () => {
 		vi.clearAllMocks();
 	});
 
-
 	it("should return broadcasted status if transaction is confirmed", () => {
 		isConfirmedMock.mockRestore();
 		transactionExistsMock.mockRestore();
@@ -155,7 +154,7 @@ describe("Use MultiSignature Status Hook", () => {
 
 	it("should handle exception on canBeBroadcasted", () => {
 		vi.spyOn(wallet.transaction(), "canBeBroadcasted").mockImplementation(() => {
-			throw new Error("error")
+			throw new Error("error");
 		});
 
 		const { result } = renderHook(() => useMultiSignatureStatus({ transaction, wallet }));
