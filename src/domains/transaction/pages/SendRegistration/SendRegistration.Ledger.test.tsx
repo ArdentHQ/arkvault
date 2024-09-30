@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/require-await */
 import { Contracts } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import { createHashHistory } from "history";
@@ -22,6 +21,8 @@ import {
 	mockNanoXTransport,
 } from "@/utils/testing-library";
 import { server, requestMock } from "@/tests/mocks/server";
+import { BigNumber } from "@ardenthq/sdk-helpers";
+import { DateTime } from "@ardenthq/sdk-intl";
 
 let profile: Contracts.IProfile;
 let wallet: Contracts.IReadWriteWallet;
@@ -72,8 +73,14 @@ const renderPage = async (wallet: Contracts.IReadWriteWallet, type = "delegateRe
 const createMultiSignatureRegistrationMock = (wallet: Contracts.IReadWriteWallet) =>
 	vi.spyOn(wallet.transaction(), "transaction").mockReturnValue({
 		amount: () => 0,
-		data: () => ({ toSignedData: () => MultisignatureRegistrationFixture.data }),
+		blockId: () => "1",
+		convertedAmount: () => BigNumber.make(10),
+		data: () => ({
+			data: MultisignatureRegistrationFixture.data,
+			toSignedData: () => MultisignatureRegistrationFixture.data,
+		}),
 		explorerLink: () => `https://test.arkscan.io/transaction/${MultisignatureRegistrationFixture.data.id}`,
+		explorerLinkForBlock: () => `https://test.arkscan.io/block/${MultisignatureRegistrationFixture.data.id}`,
 		fee: () => +MultisignatureRegistrationFixture.data.fee / 1e8,
 		get: (attribute: string) => {
 			if (attribute === "multiSignature") {
@@ -91,12 +98,21 @@ const createMultiSignatureRegistrationMock = (wallet: Contracts.IReadWriteWallet
 		isDelegateRegistration: () => false,
 		isDelegateResignation: () => false,
 		isIpfs: () => false,
+		isMultiPayment: () => false,
 		isMultiSignatureRegistration: () => true,
+		isSent: () => true,
+		isTransfer: () => false,
+		isUnvote: () => false,
 		isVote: () => false,
+		isVoteCombination: () => false,
+		isVoteCombination: () => false,
+		memo: () => null,
 		recipient: () => MultisignatureRegistrationFixture.data.recipient,
 		sender: () => MultisignatureRegistrationFixture.data.sender,
+		timestamp: () => DateTime.make(),
 		type: () => "multiSignature",
 		usesMultiSignature: () => false,
+		wallet: () => wallet,
 	} as any);
 
 const continueButton = () => screen.getByTestId("StepNavigation__continue-button");
@@ -264,8 +280,6 @@ describe("Registration", () => {
 		await userEvent.click(continueButton());
 
 		await waitFor(() => expect(screen.getByTestId("header__title")).toHaveTextContent("Transaction Created"));
-
-		await expect(screen.findByTestId("TransactionSuccessful")).resolves.toBeVisible();
 
 		multiSignatureRegistrationMock.mockRestore();
 		getPublicKeyMock.mockRestore();

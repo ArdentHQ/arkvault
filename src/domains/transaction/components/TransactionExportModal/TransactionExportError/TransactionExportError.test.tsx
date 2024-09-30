@@ -54,9 +54,10 @@ describe("TransactionExportError", () => {
 
 		render(<TransactionExportError count={1} file={file} onDownload={onDownload} />);
 
-		await userEvent.click(downloadButton())
+		await userEvent.click(downloadButton());
 
 		expect(downloadButton()).toBeInTheDocument();
-		expect(onDownload).toHaveBeenCalled()
+		expect(onDownload).toHaveBeenCalled();
+		browserAccessMock.mockRestore();
 	});
 });

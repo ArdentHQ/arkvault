@@ -139,7 +139,9 @@ describe("TransactionRecipients", () => {
 	});
 
 	it("should render transaction recipient mobile with label", () => {
-		const { container } = render(<TransactionRecipientsMobile currency={currency} recipients={[{ address }]} label="test label"/>);
+		const { container } = render(
+			<TransactionRecipientsMobile currency={currency} recipients={[{ address }]} label="test label" />,
+		);
 
 		expect(container).toHaveTextContent("test label");
 	});
