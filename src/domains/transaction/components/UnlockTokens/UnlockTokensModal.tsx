@@ -116,7 +116,9 @@ export const UnlockTokensModal: React.VFC<UnlockTokensModalProperties> = ({ prof
 					/>
 				)}
 
-				{step === Step.SummaryStep && !!transaction && <TransactionSuccessful transaction={transaction} senderWallet={wallet} />}
+				{step === Step.SummaryStep && !!transaction && (
+					<TransactionSuccessful transaction={transaction} senderWallet={wallet} />
+				)}
 
 				{step === Step.ErrorStep && (
 					<ErrorStep

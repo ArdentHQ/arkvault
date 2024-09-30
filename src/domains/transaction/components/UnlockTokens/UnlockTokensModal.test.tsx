@@ -83,17 +83,17 @@ describe("UnlockTokensModal", () => {
 			isDelegateResignation: () => false,
 			isIpfs: () => false,
 			isMultiPayment: () => false,
+			isMultiPayment: () => false,
 			isMultiSignatureRegistration: () => false,
 			isSent: () => true,
 			isTransfer: () => true,
+			isTransfer: () => true,
 			isUnlockToken: () => true,
+			isUnvote: () => false,
 			isVote: () => true,
 			isVoteCombination: () => false,
+			memo: () => {},
 			recipient: () => wallet.address(),
-			isMultiPayment: () => false,
-			memo: () => undefined,
-			isUnvote: () => false,
-			isTransfer: () => true,
 			sender: () => transactionFixture.data.sender.address,
 			timestamp: () => DateTime.make(),
 			type: () => "unlockToken",
@@ -219,15 +219,15 @@ describe("UnlockTokensModal", () => {
 		const broadcastMock = vi.spyOn(wallet.transaction(), "broadcast").mockResolvedValue(
 			expectedOutcome === "success"
 				? {
-					accepted: [transactionFixture.data.id],
-					errors: {},
-					rejected: [],
-				}
+						accepted: [transactionFixture.data.id],
+						errors: {},
+						rejected: [],
+					}
 				: {
-					accepted: [],
-					errors: { error: "unable to unlock token" },
-					rejected: [transactionFixture.data.id],
-				},
+						accepted: [],
+						errors: { error: "unable to unlock token" },
+						rejected: [transactionFixture.data.id],
+					},
 		);
 
 		await waitFor(() => {
