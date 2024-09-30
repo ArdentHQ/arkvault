@@ -19,6 +19,7 @@ import {
 	mockNanoSTransport,
 	mockNanoXTransport,
 } from "@/utils/testing-library";
+import { BigNumber } from "@ardenthq/sdk-helpers";
 
 const passphrase = getDefaultWalletMnemonic();
 
@@ -141,7 +142,8 @@ describe("MultiSignatureDetail", () => {
 			wallet,
 		);
 
-		fixtures.vote = new DTO.ExtendedSignedTransactionData(
+		fixtures.vote = new DTO.ExtendedConfirmedTransactionData(
+			wallet,
 			await wallet
 				.coin()
 				.transaction()
@@ -165,10 +167,10 @@ describe("MultiSignatureDetail", () => {
 							publicKeys: [wallet.publicKey()!, profile.wallets().last().publicKey()!],
 						}),
 				}),
-			wallet,
 		);
 
-		fixtures.unvote = new DTO.ExtendedSignedTransactionData(
+		fixtures.unvote = new DTO.ExtendedConfirmedTransactionData(
+			wallet,
 			await wallet
 				.coin()
 				.transaction()
@@ -192,7 +194,6 @@ describe("MultiSignatureDetail", () => {
 							publicKeys: [wallet.publicKey()!, profile.wallets().last().publicKey()!],
 						}),
 				}),
-			wallet,
 		);
 
 		fixtures.ipfs = new DTO.ExtendedSignedTransactionData(
@@ -349,6 +350,12 @@ describe("MultiSignatureDetail", () => {
 			.mockReturnValue(false);
 
 		vi.spyOn(fixtures.vote, "type").mockReturnValueOnce("vote");
+		vi.spyOn(fixtures.vote, "votes").mockImplementation(() => ["034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192"])
+		vi.spyOn(fixtures.vote, "unvotes").mockImplementation(() => [])
+		vi.spyOn(fixtures.vote, "isConfirmed").mockReturnValue(false)
+		vi.spyOn(fixtures.vote, "confirmations").mockReturnValue(BigNumber.make(0))
+		vi.spyOn(fixtures.vote, "blockId").mockReturnValue(undefined)
+
 
 		render(
 			<Route path="/profiles/:profileId">
@@ -359,9 +366,7 @@ describe("MultiSignatureDetail", () => {
 			},
 		);
 
-		await waitFor(() =>
-			expect(screen.getByTestId("header__title")).toHaveTextContent(translations.TRANSACTION_TYPES.VOTE),
-		);
+		await expect(screen.findByText(translations.TRANSACTION_TYPES.VOTE)).resolves.toBeVisible();
 
 		canBeBroadcastedMock.mockRestore();
 		canBeSignedMock.mockRestore();
@@ -378,6 +383,12 @@ describe("MultiSignatureDetail", () => {
 			.mockReturnValue(false);
 
 		vi.spyOn(fixtures.unvote, "type").mockReturnValueOnce("unvote");
+		vi.spyOn(fixtures.unvote, "type").mockReturnValueOnce("unvote");
+		vi.spyOn(fixtures.unvote, "unvotes").mockImplementation(() => ["034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192"])
+		vi.spyOn(fixtures.unvote, "votes").mockImplementation(() => [])
+		vi.spyOn(fixtures.unvote, "isConfirmed").mockReturnValue(false)
+		vi.spyOn(fixtures.unvote, "confirmations").mockReturnValue(BigNumber.make(0))
+		vi.spyOn(fixtures.unvote, "blockId").mockReturnValue(undefined)
 
 		const { container } = render(
 			<Route path="/profiles/:profileId">
@@ -388,9 +399,7 @@ describe("MultiSignatureDetail", () => {
 			},
 		);
 
-		await waitFor(() =>
-			expect(screen.getByTestId("header__title")).toHaveTextContent(translations.TRANSACTION_TYPES.UNVOTE),
-		);
+		await expect(screen.findByText(translations.TRANSACTION_TYPES.UNVOTE)).resolves.toBeVisible();
 
 		expect(container).toMatchSnapshot();
 
@@ -416,9 +425,8 @@ describe("MultiSignatureDetail", () => {
 				route: `/profiles/${profile.id()}`,
 			},
 		);
-		await waitFor(() =>
-			expect(screen.getByTestId("header__title")).toHaveTextContent(translations.TRANSACTION_TYPES.IPFS),
-		);
+
+		await expect(screen.findByText(translations.TRANSACTION_TYPES.IPFS)).resolves.toBeVisible();
 
 		expect(container).toMatchSnapshot();
 
