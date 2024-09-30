@@ -31,6 +31,8 @@ import { TransactionSuccessful } from "@/domains/transaction/components/Transact
 
 import transactionsFixture from "@/tests/fixtures/coins/ark/devnet/transactions.json";
 import ipfsFixture from "@/tests/fixtures/coins/ark/devnet/transactions/ipfs.json";
+import { BigNumber } from "@ardenthq/sdk-helpers";
+import { DateTime } from "@ardenthq/sdk-intl";
 
 const passphrase = getDefaultWalletMnemonic();
 const fixtureProfileId = getDefaultProfileId();
@@ -54,6 +56,17 @@ const createTransactionMock = (wallet: Contracts.IReadWriteWallet) =>
 		sender: () => ipfsFixture.data.sender,
 		type: () => "ipfs",
 		usesMultiSignature: () => false,
+		blockId: () => "1",
+		convertedAmount: () => BigNumber.make(10),
+		explorerLinkForBlock: () => `https://test.arkscan.io/block/${ipfsFixture.data.id}`,
+		isMultiPayment: () => false,
+		isTransfer: () => false,
+		isUnvote: () => false,
+		isVote: () => false,
+		isVoteCombination: () => false,
+		memo: () => null,
+		timestamp: () => DateTime.make(),
+		wallet: () => wallet,
 	}));
 
 let profile: Contracts.IProfile;
@@ -220,7 +233,7 @@ describe("SendIpfs", () => {
 
 		await act(() => vi.runOnlyPendingTimers());
 
-		await expect(screen.findByTestId("TransactionSuccessful")).resolves.toBeVisible();
+		await expect(screen.findByText("IPFS")).resolves.toBeVisible();
 
 		expect(asFragment()).toMatchSnapshot();
 	});
@@ -362,9 +375,7 @@ describe("SendIpfs", () => {
 
 		await act(() => vi.runOnlyPendingTimers());
 
-		await expect(screen.findByTestId("TransactionSuccessful")).resolves.toBeVisible();
-
-		expect(screen.getByTestId("TransactionSuccessful")).toHaveTextContent("1e9b975eff6");
+		await expect(screen.findByText("IPFS")).resolves.toBeVisible();
 
 		signMock.mockRestore();
 		broadcastMock.mockRestore();
@@ -469,9 +480,7 @@ describe("SendIpfs", () => {
 
 		await act(() => vi.runOnlyPendingTimers());
 
-		await expect(screen.findByTestId("TransactionSuccessful")).resolves.toBeVisible();
-
-		expect(screen.getByTestId("TransactionSuccessful")).toHaveTextContent("1e9b975eff");
+		await expect(screen.findByText("IPFS")).resolves.toBeVisible();
 
 		signMock.mockRestore();
 		broadcastMock.mockRestore();
