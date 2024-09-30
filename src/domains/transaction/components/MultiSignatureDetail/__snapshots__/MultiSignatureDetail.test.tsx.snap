@@ -8783,6 +8783,7 @@ exports[`MultiSignatureDetail > should sign transaction with a ledger wallet 1`]
                                           <div>
                                             <div
                                               class="text-theme-primary-500 css-1i4b0eq"
+                                              data-testid="ParticipantStatus__signed"
                                               height="20"
                                               width="20"
                                             >
@@ -8829,6 +8830,7 @@ exports[`MultiSignatureDetail > should sign transaction with a ledger wallet 1`]
                                         <div>
                                           <div
                                             class="text-theme-primary-500 css-1i4b0eq"
+                                            data-testid="ParticipantStatus__signed"
                                             height="20"
                                             width="20"
                                           >
@@ -8931,6 +8933,7 @@ exports[`MultiSignatureDetail > should sign transaction with a ledger wallet 1`]
                                           <div>
                                             <div
                                               class="text-theme-primary-500 css-1i4b0eq"
+                                              data-testid="ParticipantStatus__signed"
                                               height="20"
                                               width="20"
                                             >
@@ -8977,6 +8980,7 @@ exports[`MultiSignatureDetail > should sign transaction with a ledger wallet 1`]
                                         <div>
                                           <div
                                             class="text-theme-primary-500 css-1i4b0eq"
+                                            data-testid="ParticipantStatus__signed"
                                             height="20"
                                             width="20"
                                           >

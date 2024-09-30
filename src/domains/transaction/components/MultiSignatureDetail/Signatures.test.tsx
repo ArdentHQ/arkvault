@@ -125,7 +125,7 @@ describe("Signatures", () => {
 			[wallet.publicKey()].includes(publicKey),
 		);
 
-		const { container } = render(<Signatures transaction={multisignatureTransactionMock} profile={profile} publicKeys={publicKeys} />);
+		render(<Signatures transaction={multisignatureTransactionMock} profile={profile} publicKeys={publicKeys} />);
 
 		await waitFor(() => expect(screen.getAllByTestId(SignedIcon)).toHaveLength(2));
 		await waitFor(() => expect(screen.getAllByTestId(WaitingSignatureIcon)).toHaveLength(2));
