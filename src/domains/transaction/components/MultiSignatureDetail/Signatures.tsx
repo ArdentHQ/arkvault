@@ -53,11 +53,12 @@ const ParticipantStatus = ({
 						<Icon
 							size="lg"
 							name="Clock"
+							data-testid="ParticipantStatus__waiting"
 							className="text-theme-secondary-500 dark:text-theme-secondary-700"
 						/>
 					)}
 					{!isAwaitingSignature && (
-						<Icon name="CircleCheckMark" size="lg" className="text-theme-primary-500" />
+						<Icon name="CircleCheckMark" size="lg" className="text-theme-primary-500" data-testid="ParticipantStatus__signed" />
 					)}
 				</div>
 			</Tooltip>
@@ -145,6 +146,8 @@ export const Signatures = ({
 		profile,
 		publicKeys,
 	});
+
+	console.log({ participants })
 
 	const skeletonRows = Array.from({ length: publicKeys.length }, () => ({}) as Contracts.IReadWriteWallet);
 
