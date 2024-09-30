@@ -215,7 +215,7 @@ export const AuthenticationStep = ({
 	const requireSecondSecret = isTransaction && wallet.isSecondSignature() && wallet.actsWithSecret();
 
 	return (
-		<div data-testid="AuthenticationStep" className="space-y-6">
+		<div data-testid="AuthenticationStep" className="space-y-4">
 			{wallet.actsWithWif() && (
 				<>
 					{!noHeading && (
@@ -302,6 +302,14 @@ export const AuthenticationStep = ({
 					{!noHeading && (
 						<StepHeader
 							title={title}
+							titleIcon={
+								<Icon
+									name="Mnemonic"
+									data-testid="icon-mnemonic"
+									className="text-theme-primary-600"
+									dimensions={[24, 24]}
+								/>
+							}
 							subtitle={
 								isTransaction
 									? t("TRANSACTION.AUTHENTICATION_STEP.DESCRIPTION_MNEMONIC")
