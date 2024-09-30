@@ -350,12 +350,13 @@ describe("MultiSignatureDetail", () => {
 			.mockReturnValue(false);
 
 		vi.spyOn(fixtures.vote, "type").mockReturnValueOnce("vote");
-		vi.spyOn(fixtures.vote, "votes").mockImplementation(() => ["034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192"])
-		vi.spyOn(fixtures.vote, "unvotes").mockImplementation(() => [])
-		vi.spyOn(fixtures.vote, "isConfirmed").mockReturnValue(false)
-		vi.spyOn(fixtures.vote, "confirmations").mockReturnValue(BigNumber.make(0))
-		vi.spyOn(fixtures.vote, "blockId").mockReturnValue(undefined)
-
+		vi.spyOn(fixtures.vote, "votes").mockImplementation(() => [
+			"034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192",
+		]);
+		vi.spyOn(fixtures.vote, "unvotes").mockImplementation(() => []);
+		vi.spyOn(fixtures.vote, "isConfirmed").mockReturnValue(false);
+		vi.spyOn(fixtures.vote, "confirmations").mockReturnValue(BigNumber.make(0));
+		vi.spyOn(fixtures.vote, "blockId").mockReturnValue(undefined);
 
 		render(
 			<Route path="/profiles/:profileId">
@@ -384,11 +385,13 @@ describe("MultiSignatureDetail", () => {
 
 		vi.spyOn(fixtures.unvote, "type").mockReturnValueOnce("unvote");
 		vi.spyOn(fixtures.unvote, "type").mockReturnValueOnce("unvote");
-		vi.spyOn(fixtures.unvote, "unvotes").mockImplementation(() => ["034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192"])
-		vi.spyOn(fixtures.unvote, "votes").mockImplementation(() => [])
-		vi.spyOn(fixtures.unvote, "isConfirmed").mockReturnValue(false)
-		vi.spyOn(fixtures.unvote, "confirmations").mockReturnValue(BigNumber.make(0))
-		vi.spyOn(fixtures.unvote, "blockId").mockReturnValue(undefined)
+		vi.spyOn(fixtures.unvote, "unvotes").mockImplementation(() => [
+			"034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192",
+		]);
+		vi.spyOn(fixtures.unvote, "votes").mockImplementation(() => []);
+		vi.spyOn(fixtures.unvote, "isConfirmed").mockReturnValue(false);
+		vi.spyOn(fixtures.unvote, "confirmations").mockReturnValue(BigNumber.make(0));
+		vi.spyOn(fixtures.unvote, "blockId").mockReturnValue(undefined);
 
 		const { container } = render(
 			<Route path="/profiles/:profileId">

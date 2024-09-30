@@ -58,7 +58,12 @@ const ParticipantStatus = ({
 						/>
 					)}
 					{!isAwaitingSignature && (
-						<Icon name="CircleCheckMark" size="lg" className="text-theme-primary-500" data-testid="ParticipantStatus__signed" />
+						<Icon
+							name="CircleCheckMark"
+							size="lg"
+							className="text-theme-primary-500"
+							data-testid="ParticipantStatus__signed"
+						/>
 					)}
 				</div>
 			</Tooltip>

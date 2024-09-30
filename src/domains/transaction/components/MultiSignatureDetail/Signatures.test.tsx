@@ -9,7 +9,7 @@ describe("Signatures", () => {
 	let wallet: Contracts.IReadWriteWallet;
 	let wallet2: Contracts.IReadWriteWallet;
 	let multisignatureTransactionMock: DTO.ExtendedSignedTransactionData;
-	let publicKeys: string[] = []
+	let publicKeys: string[] = [];
 
 	const SignedIcon = "ParticipantStatus__signed";
 	const WaitingSignatureIcon = "ParticipantStatus__waiting";
@@ -21,7 +21,7 @@ describe("Signatures", () => {
 
 		await profile.sync();
 
-		publicKeys = [wallet.publicKey()!, profile.wallets().last().publicKey()!]
+		publicKeys = [wallet.publicKey()!, profile.wallets().last().publicKey()!];
 
 		multisignatureTransactionMock = new DTO.ExtendedSignedTransactionData(
 			await wallet
@@ -56,7 +56,9 @@ describe("Signatures", () => {
 		});
 		vi.spyOn(wallet.transaction(), "isAwaitingOurSignature").mockReturnValue(true);
 
-		const { container } = render(<Signatures transaction={multisignatureTransactionMock} profile={profile} publicKeys={publicKeys} />);
+		const { container } = render(
+			<Signatures transaction={multisignatureTransactionMock} profile={profile} publicKeys={publicKeys} />,
+		);
 
 		await waitFor(() => expect(screen.getAllByTestId("TableRow")).toHaveLength(2));
 
@@ -74,7 +76,9 @@ describe("Signatures", () => {
 				[wallet.publicKey()].includes(publicKey),
 			);
 
-			const { container } = render(<Signatures transaction={multisignatureTransactionMock} profile={profile} publicKeys={publicKeys} />);
+			const { container } = render(
+				<Signatures transaction={multisignatureTransactionMock} profile={profile} publicKeys={publicKeys} />,
+			);
 
 			await waitFor(() => expect(screen.getAllByTestId("TableRow")).toHaveLength(2));
 
@@ -111,7 +115,9 @@ describe("Signatures", () => {
 			}
 		});
 
-		const { container } = render(<Signatures transaction={multisignatureTransactionMock} profile={profile} publicKeys={publicKeys} />);
+		const { container } = render(
+			<Signatures transaction={multisignatureTransactionMock} profile={profile} publicKeys={publicKeys} />,
+		);
 
 		await waitFor(() => expect(screen.getAllByTestId(SignedIcon)).toHaveLength(4));
 
