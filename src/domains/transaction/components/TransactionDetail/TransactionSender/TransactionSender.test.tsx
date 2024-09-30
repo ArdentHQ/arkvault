@@ -19,7 +19,7 @@ describe("TransactionSender", () => {
 			<Route path="/profiles/:profileId">
 				<TransactionSender address={wallet.address()} network={wallet.network()} />
 			</Route>,
-			"xs",
+			breakpoint,
 			{
 				route: `/profiles/${profile.id()}`,
 			},
