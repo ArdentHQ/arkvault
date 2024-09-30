@@ -33,6 +33,7 @@ describe("Multisignature Detail Sent Step", () => {
 						min: () => 2,
 						publicKeys: () => [wallet.publicKey()!, profile.wallets().last().publicKey()!],
 						wallet: () => wallet,
+						isMultiSignatureRegistration: () => true
 					}}
 				/>
 				,
@@ -42,7 +43,7 @@ describe("Multisignature Detail Sent Step", () => {
 			},
 		);
 
-		await expect(screen.findByTestId("TransactionSuccessful__musig-address")).resolves.toBeVisible();
+		await expect(screen.findByTestId("MusigGeneratedAddress")).resolves.toBeVisible();
 
 		expect(container).toMatchSnapshot();
 	});

@@ -22,7 +22,7 @@ export const MusigGeneratedAddress = ({
 	}
 
 	return (
-		<div className="flex space-x-2">
+		<div className="flex space-x-2" data-testid="MusigGeneratedAddress">
 			{!useExploreLink && <AddressLabel>{generatedWallet.address()}</AddressLabel>}
 			{useExploreLink && (
 				<AddressLink explorerLink={generatedWallet.explorerLink()}>{generatedWallet.address()}</AddressLink>
