@@ -26,6 +26,7 @@ import {
 	isInvalidRefundAddressError,
 } from "@/domains/exchange/utils";
 import { delay } from "@/utils/delay";
+import {SendExchangeTransfer} from "@/domains/exchange/components/SendExchangeTransfer";
 
 enum Step {
 	FormStep = 1,
@@ -38,6 +39,8 @@ const ExchangeForm = ({ orderId, onReady }: { orderId?: string; onReady: () => v
 	const { t } = useTranslation();
 
 	const [isFinished, setIsFinished] = useState(false);
+
+	const [showTransferModal, setShowTransferModal] = useState(false);
 
 	const activeProfile = useActiveProfile();
 	const { persist } = useEnvironmentContext();
@@ -176,6 +179,8 @@ const ExchangeForm = ({ orderId, onReady }: { orderId?: string; onReady: () => v
 		trigger,
 	]);
 
+	const withSignStep = fromCurrency?.coin === "ark"
+
 	const submitForm = useCallback(async () => {
 		const { fromCurrency, toCurrency, recipientWallet, refundWallet, payinAmount, externalId, refundExternalId } =
 			getValues();
@@ -230,13 +235,18 @@ const ExchangeForm = ({ orderId, onReady }: { orderId?: string; onReady: () => v
 		setActiveTab((previous) => previous - 1);
 	};
 
-	const handleNext = useCallback(async () => {
+	const handleNext = useCallback(async (bypassSignStep = false) => {
 		const newIndex = activeTab + 1;
 
 		if (newIndex === Step.StatusStep) {
 			try {
 				await handleSubmit(submitForm)();
-				setActiveTab(newIndex);
+
+				if (withSignStep && !bypassSignStep) {
+					setShowTransferModal(true)
+				} else {
+					setActiveTab(newIndex)
+				}
 			} catch (error) {
 				if (isInvalidAddressError(error)) {
 					return toasts.error(
@@ -285,6 +295,8 @@ const ExchangeForm = ({ orderId, onReady }: { orderId?: string; onReady: () => v
 		[activeTab],
 	);
 
+	const showSignButtons = activeTab === Step.ReviewStep && withSignStep;
+
 	const { setHasFixedFormButtons } = useNavigationContext();
 
 	useEffect(() => {
@@ -332,7 +344,7 @@ const ExchangeForm = ({ orderId, onReady }: { orderId?: string; onReady: () => v
 										isLoading={isSubmitting}
 										onClick={handleNext}
 									>
-										{t("COMMON.CONTINUE")}
+										{ showSignButtons ? t("COMMON.SIGN") : t("COMMON.CONTINUE")}
 									</Button>
 								</>
 							)}
@@ -349,6 +361,7 @@ const ExchangeForm = ({ orderId, onReady }: { orderId?: string; onReady: () => v
 					)}
 				</div>
 			</Tabs>
+			<SendExchangeTransfer isOpen={showTransferModal} onCancel={() => setShowTransferModal(false)}/>
 		</Form>
 	);
 };
