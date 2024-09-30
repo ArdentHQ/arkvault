@@ -1,7 +1,7 @@
 import { Contracts, DTO } from "@ardenthq/sdk-profiles";
 import { renderHook } from "@testing-library/react";
 
-import { useMultiSignatureStatus, canBeBroadcasted } from "./use-multisignature-status";
+import { useMultiSignatureStatus } from "./use-multisignature-status";
 import { env, getDefaultProfileId } from "@/utils/testing-library";
 
 describe("Use MultiSignature Status Hook", () => {
