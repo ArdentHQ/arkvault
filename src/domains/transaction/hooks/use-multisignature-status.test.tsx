@@ -8,8 +8,8 @@ describe("Use MultiSignature Status Hook", () => {
 	let profile: Contracts.IProfile;
 	let wallet: Contracts.IReadWriteWallet;
 	let transaction: DTO.ExtendedSignedTransactionData;
-	let isConfirmedMock = vi.SpyInstance
-	let transactionExistsMock = vi.SpyInstance
+	let isConfirmedMock = vi.SpyInstance;
+	let transactionExistsMock = vi.SpyInstance;
 
 	beforeAll(async () => {
 		profile = env.profiles().findById(getDefaultProfileId());
@@ -38,8 +38,8 @@ describe("Use MultiSignature Status Hook", () => {
 			wallet,
 		);
 
-		isConfirmedMock = vi.spyOn(transaction, "isConfirmed").mockReturnValue(false)
-		transactionExistsMock = vi.spyOn(wallet.transaction(), "transaction").mockReturnValue(transaction)
+		isConfirmedMock = vi.spyOn(transaction, "isConfirmed").mockReturnValue(false);
+		transactionExistsMock = vi.spyOn(wallet.transaction(), "transaction").mockReturnValue(transaction);
 	});
 
 	it("should await our signature", () => {
