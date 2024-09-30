@@ -1,8 +1,10 @@
 import { createHashHistory } from "history";
+import userEvent from "@testing-library/user-event";
 import React from "react";
 
 import { TransactionExportError } from "./TransactionExportError";
 import { getDefaultProfileId, screen, renderResponsive, render } from "@/utils/testing-library";
+import * as browserAccess from "browser-fs-access";
 
 const history = createHashHistory();
 
@@ -38,5 +40,23 @@ describe("TransactionExportError", () => {
 		render(<TransactionExportError count={1} file={file} onDownload={function_} onBack={function_} />);
 
 		expect(downloadButton()).toBeInTheDocument();
+	});
+
+	it("should handle download", async () => {
+		const browserAccessMock = vi.spyOn(browserAccess, "fileSave").mockResolvedValue({ name: "name" });
+		const onDownload = vi.fn();
+
+		const file = {
+			content: "",
+			extension: "csv",
+			name: "name",
+		};
+
+		render(<TransactionExportError count={1} file={file} onDownload={onDownload} />);
+
+		await userEvent.click(downloadButton())
+
+		expect(downloadButton()).toBeInTheDocument();
+		expect(onDownload).toHaveBeenCalled()
 	});
 });
