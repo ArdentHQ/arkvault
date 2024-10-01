@@ -7,16 +7,15 @@ import { useConfirmedTransaction } from "./hooks/useConfirmedTransaction";
 import { StepHeader } from "@/app/components/StepHeader";
 import { Icon } from "@/app/components/Icon";
 import { TransactionDetailContent } from "@/domains/transaction/components/TransactionDetailModal";
+import { isAwaitingMusigSignatures } from "@/domains/transaction/hooks";
 
 interface TransactionSuccessfulProperties {
 	transaction: DTO.ExtendedSignedTransactionData;
 	senderWallet: Contracts.IReadWriteWallet;
-	title?: string;
-	description?: string;
 	children?: React.ReactNode;
 }
 
-export const TransactionSuccessful = ({ transaction, senderWallet, title }: TransactionSuccessfulProperties) => {
+export const TransactionSuccessful = ({ transaction, senderWallet }: TransactionSuccessfulProperties) => {
 	const { t } = useTranslation();
 
 	const { isConfirmed, confirmations } = useConfirmedTransaction({
@@ -24,7 +23,10 @@ export const TransactionSuccessful = ({ transaction, senderWallet, title }: Tran
 		wallet: senderWallet,
 	});
 
-	const titleText = title ?? (isConfirmed ? t("TRANSACTION.SUCCESS.CONFIRMED") : t("TRANSACTION.PENDING.TITLE"));
+	const pending = isAwaitingMusigSignatures(transaction)
+		? t("TRANSACTION.SUCCESS.CREATED")
+		: t("TRANSACTION.PENDING.TITLE");
+	const titleText = isConfirmed ? t("TRANSACTION.SUCCESS.CONFIRMED") : pending;
 
 	return (
 		<section data-testid={isConfirmed ? "TransactionSuccessful" : "TransactionPending"}>

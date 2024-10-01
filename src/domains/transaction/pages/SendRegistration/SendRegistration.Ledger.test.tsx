@@ -70,7 +70,7 @@ const renderPage = async (wallet: Contracts.IReadWriteWallet, type = "delegateRe
 	};
 };
 
-const createMultiSignatureRegistrationMock = (wallet: Contracts.IReadWriteWallet) =>
+const createMultiSignatureRegistrationMock = (wallet: Contracts.IReadWriteWallet, isConfirmed = true) =>
 	vi.spyOn(wallet.transaction(), "transaction").mockReturnValue({
 		amount: () => 0,
 		blockId: () => "1",
@@ -94,7 +94,7 @@ const createMultiSignatureRegistrationMock = (wallet: Contracts.IReadWriteWallet
 			}
 		},
 		id: () => MultisignatureRegistrationFixture.data.id,
-		isConfirmed: () => true,
+		isConfirmed: () => isConfirmed,
 		isDelegateRegistration: () => false,
 		isDelegateResignation: () => false,
 		isIpfs: () => false,
@@ -113,6 +113,7 @@ const createMultiSignatureRegistrationMock = (wallet: Contracts.IReadWriteWallet
 		type: () => "multiSignature",
 		usesMultiSignature: () => false,
 		wallet: () => wallet,
+		confirmations: () => BigNumber.make(0)
 	} as any);
 
 const continueButton = () => screen.getByTestId("StepNavigation__continue-button");
@@ -253,7 +254,9 @@ describe("Registration", () => {
 			rejected: [],
 		});
 
-		const multiSignatureRegistrationMock = createMultiSignatureRegistrationMock(wallet);
+		const multiSignatureRegistrationMock = createMultiSignatureRegistrationMock(wallet, false);
+		vi.spyOn(wallet.transaction(), "isAwaitingOurSignature").mockReturnValue(true)
+		vi.spyOn(wallet.transaction(), "isAwaitingOtherSignatures").mockReturnValue(true)
 
 		const wallet2 = profile.wallets().last();
 

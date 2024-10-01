@@ -94,40 +94,6 @@ describe("TransactionSuccessful", () => {
 		vi.restoreAllMocks();
 	});
 
-	it("should render with custom title and description", async () => {
-		const transaction = {
-			...TransactionFixture,
-			wallet: () => wallet,
-		};
-
-		vi.spyOn(transaction, "get").mockImplementation((attribute) =>
-			transactionMockImplementation(attribute, transaction),
-		);
-
-		vi.spyOn(transaction, "isMultiSignatureRegistration").mockReturnValue(false);
-		vi.spyOn(transaction, "usesMultiSignature").mockReturnValue(false);
-
-		render(
-			<Route path="/profiles/:profileId">
-				<TransactionSuccessful
-					senderWallet={wallet}
-					transaction={transaction}
-					title="Title"
-					description="Description"
-				/>
-			</Route>,
-			{
-				route: `/profiles/${profile.id()}`,
-			},
-		);
-
-		await expect(screen.findByTestId("TransactionSuccessful")).resolves.toBeVisible();
-
-		await expect(screen.findByText("Title")).resolves.toBeInTheDocument();
-
-		vi.restoreAllMocks();
-	});
-
 	it("should render successfull screen if it's a multisignature registration", async () => {
 		const transaction = {
 			...TransactionFixture,

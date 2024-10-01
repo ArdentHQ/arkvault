@@ -22,14 +22,7 @@ import cn from "classnames";
 import { Contracts } from "@ardenthq/sdk-profiles";
 import { DTO } from "@ardenthq/sdk";
 import { Signatures } from "@/domains/transaction/components/MultiSignatureDetail/Signatures";
-
-const isAwaitingMusigSignatures = (transaction: DTO.RawTransactionData) => {
-	if (transaction.isConfirmed() ?? !transaction.confirmations().isZero()) {
-		return false;
-	}
-
-	return !transaction.wallet().transaction().hasBeenBroadcasted(transaction.id());
-};
+import { isAwaitingMusigSignatures } from "@/domains/transaction/hooks";
 
 export const TransactionDetailContent = ({
 	transactionItem: transaction,

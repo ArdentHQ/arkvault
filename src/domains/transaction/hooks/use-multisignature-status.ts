@@ -9,13 +9,13 @@ interface Properties {
 
 export interface MultiSignatureStatus {
 	value:
-		| "isAwaitingOurSignature"
-		| "isAwaitingOtherSignatures"
-		| "isAwaitingConfirmation"
-		| "isMultiSignatureReady"
-		| "isAwaitingFinalSignature"
-		| "isAwaitingOurFinalSignature"
-		| "isBroadcasted";
+	| "isAwaitingOurSignature"
+	| "isAwaitingOtherSignatures"
+	| "isAwaitingConfirmation"
+	| "isMultiSignatureReady"
+	| "isAwaitingFinalSignature"
+	| "isAwaitingOurFinalSignature"
+	| "isBroadcasted";
 	label: string;
 	icon: string;
 	className: string;
@@ -40,6 +40,21 @@ const transactionExists = (wallet: Contracts.IReadWriteWallet, transaction: DTO.
 	}
 };
 
+export const isAwaitingMusigSignatures = (
+	transaction: DTO.ExtendedSignedTransactionData | DTO.ExtendedConfirmedTransactionData,
+) => {
+	try {
+		if ([transaction.isConfirmed(), transaction.confirmations().isGreaterThan(0),].some(Boolean)) {
+			return false;
+		}
+
+		return !transaction.wallet().transaction().hasBeenBroadcasted(transaction.id());
+	} catch {
+		// Transaction isBroadcasted and it doesn't exist in the wallet's local repository.
+		return false;
+	}
+};
+
 export const useMultiSignatureStatus = ({ wallet, transaction }: Properties) => {
 	const { t } = useTranslation();
 
@@ -52,7 +67,13 @@ export const useMultiSignatureStatus = ({ wallet, transaction }: Properties) => 
 	}, [wallet, transaction]);
 
 	const status: MultiSignatureStatus = useMemo(() => {
-		if ([transaction.isConfirmed(), !transactionExists(wallet, transaction)].some(Boolean)) {
+		if (
+			[
+				!isAwaitingMusigSignatures(transaction),
+				!transactionExists(wallet, transaction),
+				!wallet.isMultiSignature() && !transaction.isMultiSignatureRegistration(),
+			].some(Boolean)
+		) {
 			return {
 				className: "",
 				icon: "",

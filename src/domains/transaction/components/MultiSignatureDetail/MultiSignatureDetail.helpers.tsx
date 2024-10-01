@@ -146,16 +146,16 @@ export const transactionPublicKeys = (transaction?: DTO.RawTransactionData): { m
 		return { min: undefined, publicKeys: [] };
 	}
 
-	if (!transaction.isMultiSignatureRegistration?.()) {
+	try {
+		if (transaction?.publicKeys?.()) {
+			return {
+				min: transaction.min(),
+				publicKeys: transaction.publicKeys(),
+			};
+		}
+
+		return getMultiSignatureInfo(transaction);
+	} catch {
 		return { min: undefined, publicKeys: [] };
 	}
-
-	if (transaction?.publicKeys?.()) {
-		return {
-			min: transaction.min(),
-			publicKeys: transaction.publicKeys(),
-		};
-	}
-
-	return getMultiSignatureInfo(transaction);
 };
