@@ -164,9 +164,8 @@ describe("Use MultiSignature Status Hook", () => {
 		vi.clearAllMocks();
 	});
 
-
 	it("should return isBroadcasted if transaction is confirmed", () => {
-		vi.spyOn(transaction, "isConfirmed").mockReturnValue(true)
+		vi.spyOn(transaction, "isConfirmed").mockReturnValue(true);
 
 		const { result } = renderHook(() => useMultiSignatureStatus({ transaction, wallet }));
 
@@ -175,8 +174,8 @@ describe("Use MultiSignature Status Hook", () => {
 	});
 
 	it("should handle exception on hasBeenBroadcasted", () => {
-		vi.spyOn(transaction, "isConfirmed").mockReturnValue(false)
-		vi.spyOn(transaction, "confirmations").mockReturnValue(BigNumber.ZERO)
+		vi.spyOn(transaction, "isConfirmed").mockReturnValue(false);
+		vi.spyOn(transaction, "confirmations").mockReturnValue(BigNumber.ZERO);
 		vi.spyOn(wallet.transaction(), "hasBeenBroadcasted").mockImplementation(() => {
 			throw new Error("error");
 		});

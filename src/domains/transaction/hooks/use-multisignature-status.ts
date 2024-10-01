@@ -9,13 +9,13 @@ interface Properties {
 
 export interface MultiSignatureStatus {
 	value:
-	| "isAwaitingOurSignature"
-	| "isAwaitingOtherSignatures"
-	| "isAwaitingConfirmation"
-	| "isMultiSignatureReady"
-	| "isAwaitingFinalSignature"
-	| "isAwaitingOurFinalSignature"
-	| "isBroadcasted";
+		| "isAwaitingOurSignature"
+		| "isAwaitingOtherSignatures"
+		| "isAwaitingConfirmation"
+		| "isMultiSignatureReady"
+		| "isAwaitingFinalSignature"
+		| "isAwaitingOurFinalSignature"
+		| "isBroadcasted";
 	label: string;
 	icon: string;
 	className: string;
@@ -44,7 +44,7 @@ export const isAwaitingMusigSignatures = (
 	transaction: DTO.ExtendedSignedTransactionData | DTO.ExtendedConfirmedTransactionData,
 ) => {
 	try {
-		if ([transaction.isConfirmed(), transaction.confirmations().isGreaterThan(0),].some(Boolean)) {
+		if ([transaction.isConfirmed(), transaction.confirmations().isGreaterThan(0)].some(Boolean)) {
 			return false;
 		}
 

@@ -74,6 +74,7 @@ const createMultiSignatureRegistrationMock = (wallet: Contracts.IReadWriteWallet
 	vi.spyOn(wallet.transaction(), "transaction").mockReturnValue({
 		amount: () => 0,
 		blockId: () => "1",
+		confirmations: () => BigNumber.make(0),
 		convertedAmount: () => BigNumber.make(10),
 		data: () => ({
 			data: MultisignatureRegistrationFixture.data,
@@ -105,7 +106,6 @@ const createMultiSignatureRegistrationMock = (wallet: Contracts.IReadWriteWallet
 		isUnvote: () => false,
 		isVote: () => false,
 		isVoteCombination: () => false,
-		isVoteCombination: () => false,
 		memo: () => null,
 		recipient: () => MultisignatureRegistrationFixture.data.recipient,
 		sender: () => MultisignatureRegistrationFixture.data.sender,
@@ -113,7 +113,6 @@ const createMultiSignatureRegistrationMock = (wallet: Contracts.IReadWriteWallet
 		type: () => "multiSignature",
 		usesMultiSignature: () => false,
 		wallet: () => wallet,
-		confirmations: () => BigNumber.make(0)
 	} as any);
 
 const continueButton = () => screen.getByTestId("StepNavigation__continue-button");
@@ -255,8 +254,8 @@ describe("Registration", () => {
 		});
 
 		const multiSignatureRegistrationMock = createMultiSignatureRegistrationMock(wallet, false);
-		vi.spyOn(wallet.transaction(), "isAwaitingOurSignature").mockReturnValue(true)
-		vi.spyOn(wallet.transaction(), "isAwaitingOtherSignatures").mockReturnValue(true)
+		vi.spyOn(wallet.transaction(), "isAwaitingOurSignature").mockReturnValue(true);
+		vi.spyOn(wallet.transaction(), "isAwaitingOtherSignatures").mockReturnValue(true);
 
 		const wallet2 = profile.wallets().last();
 
