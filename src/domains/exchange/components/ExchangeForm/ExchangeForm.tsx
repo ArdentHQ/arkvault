@@ -236,7 +236,7 @@ const ExchangeForm = ({ orderId, onReady }: { orderId?: string; onReady: () => v
 	};
 
 	const handleNext = useCallback(
-		async ({ bypassSignStep = false }: { bypassSignStep?: boolean }) => {
+		async ({ bypassSignStep = false }: { bypassSignStep?: boolean } = {}) => {
 			const newIndex = activeTab + 1;
 
 			if (newIndex === Step.StatusStep) {
