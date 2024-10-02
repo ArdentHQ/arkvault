@@ -33,7 +33,7 @@ const component = ({
 		</TabPanel>
 
 		<TabPanel tabId={4}>
-			<ReviewStep wallet={wallet} />
+			<ReviewStep wallet={wallet} profile={profile} />
 		</TabPanel>
 	</Tabs>
 );

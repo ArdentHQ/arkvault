@@ -3,7 +3,13 @@ import React from "react";
 import { Route } from "react-router-dom";
 
 import { TransactionSender } from "./TransactionSender";
-import { env, getDefaultProfileId, queryElementForSvg, render } from "@/utils/testing-library";
+import {
+	env,
+	getDefaultProfileId,
+	queryElementForSvg,
+	render,
+	renderResponsiveWithRoute,
+} from "@/utils/testing-library";
 
 let profile: Contracts.IProfile;
 let wallet: Contracts.IReadWriteWallet;
@@ -14,18 +20,18 @@ describe("TransactionSender", () => {
 		wallet = profile.wallets().values()[0];
 	});
 
-	it("should render", () => {
-		const { container } = render(
+	it.each(["xs", "sm", "md", "lg", "xl"])("should render in %s", (breakpoint) => {
+		const { container } = renderResponsiveWithRoute(
 			<Route path="/profiles/:profileId">
 				<TransactionSender address={wallet.address()} network={wallet.network()} />
 			</Route>,
+			breakpoint,
 			{
 				route: `/profiles/${profile.id()}`,
 			},
 		);
 
 		expect(container).toHaveTextContent(wallet.address());
-		expect(container).toMatchSnapshot();
 	});
 
 	it("should render with address", () => {

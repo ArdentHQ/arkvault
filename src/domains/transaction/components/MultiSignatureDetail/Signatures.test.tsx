@@ -9,9 +9,10 @@ describe("Signatures", () => {
 	let wallet: Contracts.IReadWriteWallet;
 	let wallet2: Contracts.IReadWriteWallet;
 	let multisignatureTransactionMock: DTO.ExtendedSignedTransactionData;
-	const SignaturesParticipantStatus = "Signatures__participant-status";
-	const SignaturesWaitingBadge = "Signatures__waiting-badge";
-	const SignaturesSignedBadge = "Signatures__signed-badge";
+	let publicKeys: string[] = [];
+
+	const SignedIcon = "ParticipantStatus__signed";
+	const WaitingSignatureIcon = "ParticipantStatus__waiting";
 
 	beforeEach(async () => {
 		profile = env.profiles().findById(getDefaultProfileId());
@@ -19,6 +20,8 @@ describe("Signatures", () => {
 		wallet2 = profile.wallets().last();
 
 		await profile.sync();
+
+		publicKeys = [wallet.publicKey()!, profile.wallets().last().publicKey()!];
 
 		multisignatureTransactionMock = new DTO.ExtendedSignedTransactionData(
 			await wallet
@@ -53,12 +56,11 @@ describe("Signatures", () => {
 		});
 		vi.spyOn(wallet.transaction(), "isAwaitingOurSignature").mockReturnValue(true);
 
-		const { container } = render(<Signatures transaction={multisignatureTransactionMock} wallet={wallet} />);
+		const { container } = render(
+			<Signatures transaction={multisignatureTransactionMock} profile={profile} publicKeys={publicKeys} />,
+		);
 
-		await waitFor(() => expect(screen.getAllByTestId(SignaturesParticipantStatus)).toHaveLength(2));
-
-		expect(screen.getAllByTestId(SignaturesWaitingBadge)).toHaveLength(1);
-		expect(screen.getAllByTestId(SignaturesSignedBadge)).toHaveLength(1);
+		await waitFor(() => expect(screen.getAllByTestId("TableRow")).toHaveLength(2));
 
 		expect(container).toMatchSnapshot();
 	});
@@ -74,26 +76,52 @@ describe("Signatures", () => {
 				[wallet.publicKey()].includes(publicKey),
 			);
 
-			const { container } = render(<Signatures transaction={multisignatureTransactionMock} wallet={wallet} />);
+			const { container } = render(
+				<Signatures transaction={multisignatureTransactionMock} profile={profile} publicKeys={publicKeys} />,
+			);
 
-			await waitFor(() => expect(screen.getAllByTestId(SignaturesParticipantStatus)).toHaveLength(2));
+			await waitFor(() => expect(screen.getAllByTestId("TableRow")).toHaveLength(2));
 
-			expect(screen.getAllByTestId(SignaturesSignedBadge)).toHaveLength(2);
+			if (isAwaitingOurSignature) {
+				await waitFor(() => expect(screen.getAllByTestId(WaitingSignatureIcon)).toHaveLength(2));
+			}
+
+			if (!isAwaitingOurSignature) {
+				await waitFor(() => expect(screen.getAllByTestId(SignedIcon)).toHaveLength(4));
+			}
 
 			expect(container).toMatchSnapshot();
 		},
 	);
+
+	it("should have all marked as signed if awaiting broadcast on registration", async () => {
+		vi.spyOn(wallet.transaction(), "isAwaitingOurSignature").mockReturnValue(true);
+		vi.spyOn(wallet.transaction(), "isAwaitingOtherSignatures").mockReturnValue(false);
+		vi.spyOn(wallet.coin().multiSignature(), "remainingSignatureCount").mockReturnValue(0);
+		vi.spyOn(multisignatureTransactionMock, "isMultiSignatureRegistration").mockReturnValue(true);
+		vi.spyOn(wallet.transaction(), "isAwaitingSignatureByPublicKey").mockImplementation((_, publicKey) =>
+			[wallet.publicKey()].includes(publicKey),
+		);
+		vi.spyOn(wallet.transaction(), "transaction").mockReturnValue(multisignatureTransactionMock);
+
+		const { container } = render(
+			<Signatures transaction={multisignatureTransactionMock} profile={profile} publicKeys={publicKeys} />,
+		);
+
+		await waitFor(() => expect(screen.getAllByTestId("TableRow")).toHaveLength(2));
+		await waitFor(() => expect(screen.getAllByTestId(SignedIcon)).toHaveLength(4));
+
+		expect(container).toMatchSnapshot();
+	});
 
 	it("should handle exception when checking if participant is awaiting signature", async () => {
 		vi.spyOn(wallet.transaction(), "isAwaitingSignatureByPublicKey").mockImplementation(() => {
 			throw new Error("Failed");
 		});
 
-		render(<Signatures transaction={multisignatureTransactionMock} wallet={wallet} />);
+		render(<Signatures transaction={multisignatureTransactionMock} profile={profile} publicKeys={publicKeys} />);
 
-		await waitFor(() => expect(screen.getAllByTestId(SignaturesParticipantStatus)).toHaveLength(2));
-
-		expect(screen.getAllByTestId(SignaturesSignedBadge)).toHaveLength(2);
+		await waitFor(() => expect(screen.getAllByTestId(SignedIcon)).toHaveLength(4));
 	});
 
 	it("should show all participants as signed when all signatures are added", async () => {
@@ -107,36 +135,25 @@ describe("Signatures", () => {
 			}
 		});
 
-		const { container } = render(<Signatures transaction={multisignatureTransactionMock} wallet={wallet} />);
+		const { container } = render(
+			<Signatures transaction={multisignatureTransactionMock} profile={profile} publicKeys={publicKeys} />,
+		);
 
-		await waitFor(() => expect(screen.getAllByTestId(SignaturesParticipantStatus)).toHaveLength(2));
-
-		expect(screen.getAllByTestId(SignaturesSignedBadge)).toHaveLength(2);
+		await waitFor(() => expect(screen.getAllByTestId(SignedIcon)).toHaveLength(4));
 
 		expect(container).toMatchSnapshot();
 	});
 
-	it("should render with waiting badge", async () => {
-		vi.spyOn(multisignatureTransactionMock, "get").mockImplementation((key) => {
-			if (key === "multiSignature") {
-				return { publicKeys: [wallet.publicKey(), wallet2.publicKey()] };
-			}
-
-			if (key === "signatures") {
-				return []; // Only checking lengths
-			}
-		});
+	it("should render with awaiting other signatures", async () => {
 		vi.spyOn(wallet.transaction(), "isAwaitingOurSignature").mockReturnValue(false);
-		vi.spyOn(wallet.transaction(), "isAwaitingOtherSignatures").mockReturnValue(false);
+		vi.spyOn(wallet.transaction(), "isAwaitingOtherSignatures").mockReturnValue(true);
+		vi.spyOn(wallet.transaction(), "isAwaitingSignatureByPublicKey").mockImplementation((_, publicKey) =>
+			[wallet.publicKey()].includes(publicKey),
+		);
 
-		const { container } = render(<Signatures transaction={multisignatureTransactionMock} wallet={wallet} />);
+		render(<Signatures transaction={multisignatureTransactionMock} profile={profile} publicKeys={publicKeys} />);
 
-		await waitFor(() => expect(screen.getAllByTestId(SignaturesParticipantStatus)).toHaveLength(2));
-
-		expect(screen.getAllByTestId(SignaturesSignedBadge)).toHaveLength(2);
-
-		expect(container).toMatchSnapshot();
-
-		vi.restoreAllMocks();
+		await waitFor(() => expect(screen.getAllByTestId(SignedIcon)).toHaveLength(2));
+		await waitFor(() => expect(screen.getAllByTestId(WaitingSignatureIcon)).toHaveLength(2));
 	});
 });

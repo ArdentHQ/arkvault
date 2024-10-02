@@ -8,6 +8,7 @@ import { MnemonicList } from "@/domains/wallet/components/MnemonicList";
 import { useFiles } from "@/app/hooks/use-files";
 import { CopyOrDownload } from "@/app/components/CopyOrDownload";
 import { StepHeader } from "@/app/components/StepHeader";
+import { ThemeIcon } from "@/app/components/Icon";
 
 export const BackupStep = () => {
 	const { getValues, unregister, watch } = useFormContext();
@@ -42,9 +43,14 @@ export const BackupStep = () => {
 
 	return (
 		<section data-testid="SecondSignatureRegistrationForm__backup-step">
-			<StepHeader title={t("TRANSACTION.PAGE_SECOND_SIGNATURE.PASSPHRASE_STEP.TITLE")} />
+			<StepHeader
+				title={t("TRANSACTION.PAGE_SECOND_SIGNATURE.PASSPHRASE_STEP.TITLE")}
+				titleIcon={
+					<ThemeIcon darkIcon="YourPassphraseDark" lightIcon="YourPassphraseLight" dimensions={[24, 24]} />
+				}
+			/>
 
-			<div className="space-y-6 pt-6">
+			<div className="space-y-4 pt-6 sm:pt-4">
 				<Alert>{t("TRANSACTION.PAGE_SECOND_SIGNATURE.PASSPHRASE_STEP.WARNING")}</Alert>
 				<MnemonicList mnemonic={mnemonic} />
 

@@ -8,7 +8,6 @@ import { FormStep } from "./FormStep";
 import { TransferLedgerReview } from "./LedgerReview";
 import { NetworkStep } from "./NetworkStep";
 import { ReviewStep } from "./ReviewStep";
-import { SummaryStep } from "./SummaryStep";
 import { SendTransferStep } from "@/domains/transaction/pages/SendTransfer/SendTransfer.contracts";
 import { useSendTransferForm } from "@/domains/transaction/hooks/use-send-transfer-form";
 import { Form } from "@/app/components/Form";
@@ -36,6 +35,7 @@ import {
 	TransferFormData,
 	TransferOverwriteModal,
 } from "@/domains/transaction/pages/SendTransfer/TransferOverwriteModal";
+import { TransactionSuccessful } from "@/domains/transaction/components/TransactionSuccessful";
 
 const MAX_TABS = 5;
 
@@ -86,8 +86,6 @@ export const SendTransfer = () => {
 		values: { fee, fees, network, senderAddress },
 		formState: { isDirty, isValid, isSubmitting },
 	} = useSendTransferForm(wallet);
-
-	const { recipients } = getValues();
 
 	useKeyup("Enter", () => {
 		const isButton = (document.activeElement as any)?.type === "button";
@@ -361,7 +359,7 @@ export const SendTransfer = () => {
 			</TabPanel>
 
 			<TabPanel tabId={SendTransferStep.SummaryStep}>
-				<SummaryStep transaction={transaction!} senderWallet={wallet!} recipients={recipients} />
+				<TransactionSuccessful transaction={transaction!} senderWallet={wallet!} />
 			</TabPanel>
 
 			<TabPanel tabId={SendTransferStep.ErrorStep}>

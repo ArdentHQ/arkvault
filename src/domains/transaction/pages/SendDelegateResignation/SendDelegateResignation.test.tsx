@@ -21,6 +21,8 @@ import {
 } from "@/utils/testing-library";
 import { server, requestMock } from "@/tests/mocks/server";
 import transactionsFixture from "@/tests/fixtures/coins/ark/devnet/transactions.json";
+import { BigNumber } from "@ardenthq/sdk-helpers";
+import { DateTime } from "@ardenthq/sdk-intl";
 
 let wallet: Contracts.IReadWriteWallet;
 let profile: Contracts.IProfile;
@@ -50,20 +52,31 @@ const renderPage = () => {
 
 const transactionResponse = {
 	amount: () => +transactionFixture.data.amount / 1e8,
+	blockId: () => "1",
+	convertedAmount: () => BigNumber.make(10),
 	data: () => ({ data: () => transactionFixture.data }),
 	explorerLink: () => `https://test.arkscan.io/transaction/${transactionFixture.data.id}`,
+	explorerLinkForBlock: () => `https://test.arkscan.io/block/${transactionFixture.data.id}`,
 	fee: () => +transactionFixture.data.fee / 1e8,
 	id: () => transactionFixture.data.id,
 	isConfirmed: () => true,
 	isDelegateRegistration: () => false,
 	isDelegateResignation: () => false,
 	isIpfs: () => false,
+	isMultiPayment: () => false,
 	isMultiSignatureRegistration: () => false,
+	isSent: () => true,
+	isTransfer: () => false,
+	isUnvote: () => false,
 	isVote: () => false,
+	isVoteCombination: () => false,
+	memo: () => null,
 	recipient: () => transactionFixture.data.recipient,
 	sender: () => transactionFixture.data.sender,
+	timestamp: () => DateTime.make(),
 	type: () => "delegateResignation",
 	usesMultiSignature: () => false,
+	wallet: () => wallet,
 };
 
 const createTransactionMock = (wallet: Contracts.IReadWriteWallet) =>

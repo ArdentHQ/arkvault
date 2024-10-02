@@ -20,6 +20,7 @@ import SendTransactionLight from "./send-transaction-light.svg?react";
 import SendTransactionDark from "./send-transaction-dark.svg?react";
 import ConfirmTransaction from "./confirm-transaction.svg?react";
 import PendingTransaction from "./compass.svg?react";
+import Mnemonic from "./mnemonic.svg?react";
 
 export const TransactionIcons: any = {
 	ConfirmTransaction,
@@ -27,6 +28,7 @@ export const TransactionIcons: any = {
 	DelegateResignation,
 	Ipfs,
 	Magistrate,
+	Mnemonic,
 	Multipayment,
 	Multisignature,
 	PendingTransaction,

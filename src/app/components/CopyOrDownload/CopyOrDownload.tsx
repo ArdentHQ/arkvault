@@ -17,7 +17,7 @@ export const CopyOrDownload: React.VFC<Properties> = ({ title, description, copy
 	const { t } = useTranslation();
 
 	return (
-		<div className="-mx-8 space-y-2 bg-theme-secondary-100 p-6 text-center dark:bg-black sm:mx-0 sm:rounded-xl sm:text-left">
+		<div className="-mx-4 space-y-2 bg-theme-secondary-100 p-6 text-center dark:bg-black sm:mx-0 sm:rounded-xl sm:text-left">
 			<span className="text-lg font-semibold text-theme-secondary-text">{title}</span>
 
 			<p className="text-sm text-theme-secondary-500">{description}</p>

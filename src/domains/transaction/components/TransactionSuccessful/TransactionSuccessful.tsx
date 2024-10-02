@@ -3,36 +3,19 @@ import { Contracts, DTO } from "@ardenthq/sdk-profiles";
 import React from "react";
 import { useTranslation } from "react-i18next";
 
-import { MultiSignatureSuccessful } from "./MultiSignatureSuccessful";
 import { useConfirmedTransaction } from "./hooks/useConfirmedTransaction";
-import {
-	TransactionAddresses,
-	TransactionConfirmations,
-	TransactionFee,
-	TransactionType,
-} from "@/domains/transaction/components/TransactionDetail";
 import { StepHeader } from "@/app/components/StepHeader";
 import { Icon } from "@/app/components/Icon";
-import { DetailLabel, DetailPadded } from "@/app/components/DetailWrapper";
-import { TransactionId } from "@/domains/transaction/components/TransactionDetail/TransactionId";
-import { RecipientItem } from "@/domains/transaction/components/RecipientList/RecipientList.contracts";
+import { TransactionDetailContent } from "@/domains/transaction/components/TransactionDetailModal";
+import { isAwaitingMusigSignatures } from "@/domains/transaction/hooks";
 
 interface TransactionSuccessfulProperties {
 	transaction: DTO.ExtendedSignedTransactionData;
 	senderWallet: Contracts.IReadWriteWallet;
-	title?: string;
-	description?: string;
 	children?: React.ReactNode;
-	recipients?: RecipientItem[];
 }
 
-export const TransactionSuccessful = ({
-	transaction,
-	senderWallet,
-	title,
-	children,
-	recipients = [],
-}: TransactionSuccessfulProperties) => {
+export const TransactionSuccessful = ({ transaction, senderWallet }: TransactionSuccessfulProperties) => {
 	const { t } = useTranslation();
 
 	const { isConfirmed, confirmations } = useConfirmedTransaction({
@@ -40,15 +23,10 @@ export const TransactionSuccessful = ({
 		wallet: senderWallet,
 	});
 
-	if (transaction.isMultiSignatureRegistration() || transaction.usesMultiSignature()) {
-		return (
-			<MultiSignatureSuccessful transaction={transaction} senderWallet={senderWallet}>
-				<TransactionFee currency={senderWallet.currency()} value={transaction.fee()} paddingPosition="top" />
-			</MultiSignatureSuccessful>
-		);
-	}
-
-	const titleText = title ?? (isConfirmed ? t("TRANSACTION.SUCCESS.CONFIRMED") : t("TRANSACTION.PENDING.TITLE"));
+	const pending = isAwaitingMusigSignatures(transaction)
+		? t("TRANSACTION.SUCCESS.CREATED")
+		: t("TRANSACTION.PENDING.TITLE");
+	const titleText = isConfirmed ? t("TRANSACTION.SUCCESS.CONFIRMED") : pending;
 
 	return (
 		<section data-testid={isConfirmed ? "TransactionSuccessful" : "TransactionPending"}>
@@ -67,35 +45,12 @@ export const TransactionSuccessful = ({
 				}
 			/>
 
-			<div className="mt-8">
-				<TransactionId transaction={transaction} />
-			</div>
-
-			<div className="mt-6 space-y-8">
-				<DetailPadded>
-					<TransactionAddresses
-						network={senderWallet.network()}
-						senderAddress={senderWallet.address()}
-						recipients={recipients}
-						profile={senderWallet.profile()}
-					/>
-				</DetailPadded>
-
-				{!transaction.isVote() && (
-					<DetailPadded>
-						<TransactionType transaction={transaction} />
-					</DetailPadded>
-				)}
-
-				{children}
-
-				<DetailPadded>
-					<DetailLabel>{t("TRANSACTION.CONFIRMATIONS")}</DetailLabel>
-					<div className="mt-2">
-						<TransactionConfirmations isConfirmed={isConfirmed} confirmations={confirmations} />
-					</div>
-				</DetailPadded>
-			</div>
+			<TransactionDetailContent
+				transactionItem={transaction}
+				profile={senderWallet.profile()}
+				isConfirmed={isConfirmed}
+				confirmations={confirmations}
+			/>
 		</section>
 	);
 };

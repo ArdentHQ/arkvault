@@ -3,7 +3,7 @@
 exports[`AuthenticationStep (message) > should request WIF if wallet was imported using WIF 1`] = `
 <DocumentFragment>
   <div
-    class="space-y-6"
+    class="space-y-4"
     data-testid="AuthenticationStep"
   >
     <div
@@ -109,7 +109,7 @@ exports[`AuthenticationStep (message) > should request WIF if wallet was importe
 exports[`AuthenticationStep (message) > should request mnemonic if wallet was imported using address 1`] = `
 <DocumentFragment>
   <div
-    class="space-y-6"
+    class="space-y-4"
     data-testid="AuthenticationStep"
   >
     <div
@@ -258,7 +258,7 @@ exports[`AuthenticationStep (message) > should request mnemonic if wallet was im
 exports[`AuthenticationStep (message) > should request mnemonic if wallet was imported using mnemonic 1`] = `
 <DocumentFragment>
   <div
-    class="space-y-6"
+    class="space-y-4"
     data-testid="AuthenticationStep"
   >
     <div
@@ -407,7 +407,7 @@ exports[`AuthenticationStep (message) > should request mnemonic if wallet was im
 exports[`AuthenticationStep (message) > should request private key if wallet was imported using private key 1`] = `
 <DocumentFragment>
   <div
-    class="space-y-6"
+    class="space-y-4"
     data-testid="AuthenticationStep"
   >
     <div
@@ -513,7 +513,7 @@ exports[`AuthenticationStep (message) > should request private key if wallet was
 exports[`AuthenticationStep (message) > should request secret if wallet was imported using secret 1`] = `
 <DocumentFragment>
   <div
-    class="space-y-6"
+    class="space-y-4"
     data-testid="AuthenticationStep"
   >
     <div
@@ -1313,7 +1313,7 @@ exports[`AuthenticationStep (message) > should specify ledger supported model 1`
 exports[`AuthenticationStep (transaction) > should request WIF if wallet was imported using WIF 1`] = `
 <DocumentFragment>
   <div
-    class="space-y-6"
+    class="space-y-4"
     data-testid="AuthenticationStep"
   >
     <div
@@ -1419,7 +1419,7 @@ exports[`AuthenticationStep (transaction) > should request WIF if wallet was imp
 exports[`AuthenticationStep (transaction) > should request mnemonic and second mnemonic 1`] = `
 <DocumentFragment>
   <div
-    class="space-y-6"
+    class="space-y-4"
     data-testid="AuthenticationStep"
   >
     <div
@@ -1640,7 +1640,7 @@ exports[`AuthenticationStep (transaction) > should request mnemonic and second m
 exports[`AuthenticationStep (transaction) > should request mnemonic if wallet was imported using address 1`] = `
 <DocumentFragment>
   <div
-    class="space-y-6"
+    class="space-y-4"
     data-testid="AuthenticationStep"
   >
     <div
@@ -1789,7 +1789,7 @@ exports[`AuthenticationStep (transaction) > should request mnemonic if wallet wa
 exports[`AuthenticationStep (transaction) > should request mnemonic if wallet was imported using mnemonic 1`] = `
 <DocumentFragment>
   <div
-    class="space-y-6"
+    class="space-y-4"
     data-testid="AuthenticationStep"
   >
     <div
@@ -1938,7 +1938,7 @@ exports[`AuthenticationStep (transaction) > should request mnemonic if wallet wa
 exports[`AuthenticationStep (transaction) > should request private key if wallet was imported using private key 1`] = `
 <DocumentFragment>
   <div
-    class="space-y-6"
+    class="space-y-4"
     data-testid="AuthenticationStep"
   >
     <div
@@ -2044,7 +2044,7 @@ exports[`AuthenticationStep (transaction) > should request private key if wallet
 exports[`AuthenticationStep (transaction) > should request secret and second secret 1`] = `
 <DocumentFragment>
   <div
-    class="space-y-6"
+    class="space-y-4"
     data-testid="AuthenticationStep"
   >
     <div
@@ -2222,7 +2222,7 @@ exports[`AuthenticationStep (transaction) > should request secret and second sec
 exports[`AuthenticationStep (transaction) > should request secret if wallet was imported using secret 1`] = `
 <DocumentFragment>
   <div
-    class="space-y-6"
+    class="space-y-4"
     data-testid="AuthenticationStep"
   >
     <div

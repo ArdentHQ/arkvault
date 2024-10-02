@@ -175,7 +175,7 @@ exports[`ConfirmRemovePendingTransaction > should render multisignature registra
                 class="mt-6"
               >
                 <div
-                  class="space-y-6"
+                  class="space-y-4"
                   data-testid="AuthenticationStep"
                 >
                   <fieldset
@@ -489,7 +489,7 @@ exports[`ConfirmRemovePendingTransaction > should render multisignature transact
                 class="mt-6"
               >
                 <div
-                  class="space-y-6"
+                  class="space-y-4"
                   data-testid="AuthenticationStep"
                 >
                   <fieldset

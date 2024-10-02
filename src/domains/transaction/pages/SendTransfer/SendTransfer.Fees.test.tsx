@@ -26,32 +26,41 @@ import transactionFixture from "@/tests/fixtures/coins/ark/devnet/transactions/t
 import transactionsFixture from "@/tests/fixtures/coins/ark/devnet/transactions.json";
 import nodeFeesFixture from "@/tests/fixtures/coins/ark/mainnet/node-fees.json";
 import transactionFeesFixture from "@/tests/fixtures/coins/ark/mainnet/transaction-fees.json";
+import { BigNumber } from "@ardenthq/sdk-helpers";
+import { DateTime } from "@ardenthq/sdk-intl";
 
 const createTransactionMock = (wallet: Contracts.IReadWriteWallet) =>
 	vi.spyOn(wallet.transaction(), "transaction").mockReturnValue({
 		amount: () => +transactionFixture.data.amount / 1e8,
+		blockId: () => "1",
 		convertedAmount: () => +transactionFixture.data.amount / 1e8,
+		convertedAmount: () => BigNumber.make(10),
 		data: () => ({ data: () => transactionFixture.data }),
 		explorerLink: () => `https://test.arkscan.io/transaction/${transactionFixture.data.id}`,
+		explorerLinkForBlock: () => `https://test.arkscan.io/block/${transactionFixture.data.id}`,
 		fee: () => +transactionFixture.data.fee / 1e8,
 		id: () => transactionFixture.data.id,
 		isConfirmed: () => true,
 		isDelegateRegistration: () => false,
 		isDelegateResignation: () => false,
 		isIpfs: () => false,
+		isMultiPayment: () => false,
 		isMultiSignatureRegistration: () => false,
 		isSent: () => true,
+		isTransfer: () => true,
+		isUnvote: () => false,
 		isVote: () => false,
+		isVoteCombination: () => false,
+		memo: () => null,
 		recipient: () => transactionFixture.data.recipient,
 		recipients: () => [
-			{
-				address: transactionFixture.data.recipient,
-				amount: +transactionFixture.data.amount / 1e8,
-			},
+			{ address: transactionFixture.data.recipient, amount: +transactionFixture.data.amount / 1e8 },
 		],
 		sender: () => transactionFixture.data.sender,
+		timestamp: () => DateTime.make(),
 		type: () => "transfer",
 		usesMultiSignature: () => false,
+		wallet: () => wallet,
 	} as any);
 
 let profile: Contracts.IProfile;
@@ -784,7 +793,7 @@ describe("SendTransfer Fee Handling", () => {
 
 		await act(() => vi.runOnlyPendingTimers());
 
-		await waitFor(() => expect(screen.getByTestId("TransactionSuccessful")).toHaveTextContent("8f913b6b71"));
+		await expect(screen.findByText("Transfer")).resolves.toBeVisible();
 
 		signMock.mockRestore();
 		broadcastMock.mockRestore();

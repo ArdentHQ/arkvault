@@ -50,7 +50,7 @@ cucumber(
 			{
 				data: {
 					accept: ["transaction-id"],
-					broadcast: ["transaction-id"],
+					broadcast: [],
 					excess: [],
 					invalid: [],
 				},

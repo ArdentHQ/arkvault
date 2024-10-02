@@ -457,6 +457,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should change fee 1`] 
                 data-testid="tab-pabel__active-panel"
               >
                 <section
+                  class="space-y-6 sm:space-y-4"
                   data-testid="SendDelegateResignation__form-step"
                 >
                   <div
@@ -499,6 +500,65 @@ exports[`SendDelegateResignation > Delegate Resignation > should change fee 1`] 
                           <div
                             class="flex items-center gap-3"
                           >
+                            <div
+                              class="css-h1kfx5"
+                              data-testid="icon-SendTransactionLight"
+                              height="24"
+                              width="24"
+                            >
+                              <svg
+                                fill="none"
+                                viewBox="0 0 24 25"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <g
+                                  clip-path="url(#clip0_13879_104416)"
+                                >
+                                  <path
+                                    clip-rule="evenodd"
+                                    d="M18.8821 8.94457H13.7264C13.0146 8.94457 12.4375 8.3675 12.4375 7.65565V2.5"
+                                    fill="#E6EFF9"
+                                    fill-rule="evenodd"
+                                  />
+                                  <path
+                                    d="M18.8821 8.94457H13.7264C13.0146 8.94457 12.4375 8.3675 12.4375 7.65565V2.5"
+                                    stroke="#235B95"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                  />
+                                  <path
+                                    d="M7.99174 21.8337H3.41391C2.70207 21.8337 2.125 21.2566 2.125 20.5448V3.78891C2.125 3.07707 2.70207 2.5 3.41391 2.5H12.5472C12.8891 2.49985 13.217 2.63554 13.4588 2.87722L18.5037 7.92289C18.7451 8.16452 18.8808 8.49212 18.8809 8.83372"
+                                    stroke="#235B95"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                  />
+                                  <path
+                                    clip-rule="evenodd"
+                                    d="M9.02802 17.1926C8.71518 17.1043 8.49639 16.8225 8.4885 16.4975C8.48061 16.1725 8.68545 15.8804 8.99364 15.7771L18.994 12.5155C19.1276 12.472 19.2743 12.5069 19.3739 12.606C19.4735 12.7051 19.5092 12.8516 19.4664 12.9854L16.2073 22.9907C16.1044 23.2995 15.812 23.5049 15.4867 23.4968C15.1613 23.4888 14.8793 23.2693 14.7918 22.9559L13.6727 18.3067L9.02802 17.1926Z"
+                                    fill="#E6EFF9"
+                                    fill-rule="evenodd"
+                                    stroke="#235B95"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                  />
+                                </g>
+                                <defs>
+                                  <clippath
+                                    id="clip0_13879_104416"
+                                  >
+                                    <rect
+                                      fill="white"
+                                      height="24"
+                                      transform="translate(24 24.5) rotate(-180)"
+                                      width="24"
+                                    />
+                                  </clippath>
+                                </defs>
+                              </svg>
+                            </div>
                             <h1
                               class="mb-0 text-2xl leading-[29px]"
                               data-testid="header__title"
@@ -517,7 +577,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should change fee 1`] 
                     </div>
                   </div>
                   <div
-                    class="flex flex-col overflow-hidden rounded-xl mt-6"
+                    class="flex flex-col overflow-hidden rounded-xl"
                   >
                     <div
                       class="css-rzhg83"
@@ -570,136 +630,167 @@ exports[`SendDelegateResignation > Delegate Resignation > should change fee 1`] 
                     </div>
                   </div>
                   <div
-                    class="no-ligatures css-1iw2tte"
-                    data-testid="TransactionNetwork"
+                    class="space-y-3 sm:space-y-4"
                   >
-                    <div
-                      class="w-40 flex-1 space-y-2 whitespace-nowrap"
-                      data-testid="TransactionDetail--desktop"
+                    <fieldset
+                      class="flex min-w-0 flex-col css-1bcidjh"
                     >
                       <div
-                        class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
-                      >
-                        Cryptoasset
-                      </div>
-                      <div
-                        class="flex items-center font-semibold"
-                      >
-                        ARK Devnet
-                      </div>
-                    </div>
-                    <div
-                      aria-label="ARK Devnet"
-                      class="text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background duration-100 css-1nqcsx"
-                      data-testid="NetworkIcon-ARK-ark.devnet"
-                    >
-                      <div
-                        class="css-1i4b0eq"
-                        data-testid="NetworkIcon__icon"
-                        height="20"
-                        width="20"
-                      >
-                        <svg
-                          id="ark"
-                          viewBox="0 0 36.3 30.6"
-                          x="0"
-                          xml:space="preserve"
-                          xmlns="http://www.w3.org/2000/svg"
-                          y="0"
-                        >
-                          <path
-                            d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
-                            fill="currentColor"
-                          />
-                        </svg>
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    class="no-ligatures css-qu17s6"
-                    data-testid="TransactionSender"
-                  >
-                    <div
-                      class="w-40 flex-1 space-y-2 whitespace-nowrap"
-                      data-testid="TransactionDetail--desktop"
-                    >
-                      <div
-                        class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
-                      >
-                        Sender
-                      </div>
-                      <div
-                        class="flex items-center font-semibold"
+                        data-testid="DetailWrapper"
                       >
                         <div
-                          class="w-0 flex-1 overflow-auto text-right md:text-left"
+                          class="border-l-2 border-x-theme-primary-400 bg-theme-secondary-100 px-3 py-2 dark:bg-black sm:border-none sm:bg-transparent sm:p-0 dark:sm:bg-transparent"
+                          data-testid="DetailLabel"
                         >
                           <div
-                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                            class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                            data-testid="DetailLabelText"
                           >
-                            <span
-                              class="font-semibold text-base text-theme-text"
-                              data-testid="Address__alias"
+                            Addressing
+                          </div>
+                        </div>
+                        <div
+                          class="w-full break-words rounded-lg border-theme-secondary-300 p-3 dark:border-theme-secondary-800 sm:border sm:px-6 sm:py-5 [.condensed_&]:sm:py-4 mt-0 sm:mt-2"
+                        >
+                          <div
+                            class="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0"
+                          >
+                            <div
+                              class="no-ligatures flex-shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:text-base sm:leading-5 w-auto sm:min-w-32"
+                            >
+                              From
+                            </div>
+                            <div
+                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end sm:justify-start"
                             >
                               <span
-                                class="no-ligatures css-9nx3be"
-                                data-testid="TruncateEnd"
+                                class="font-semibold text-base text-theme-text text-sm leading-[17px] sm:leading-5 sm:text-base"
+                                data-testid="Address__alias"
                               >
-                                testwallet2
+                                <span
+                                  class="no-ligatures css-9nx3be"
+                                  data-testid="TruncateEnd"
+                                >
+                                  testwallet2
+                                </span>
                               </span>
-                            </span>
-                            <span
-                              class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                              data-testid="Address__address"
+                              <div
+                                class="relative grow leading-[17px] sm:leading-5 text-left"
+                              >
+                                <span
+                                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 text-sm leading-[17px] sm:leading-5 sm:text-base w-full w-3/4 font-semibold text-base absolute w-full"
+                                  data-testid="Address__address"
+                                >
+                                  DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr
+                                </span>
+                                <span>
+                                   
+                                </span>
+                              </div>
+                              <button
+                                class="ring-focus relative focus:outline-none"
+                                data-ring-focus-margin="-m-1"
+                                data-testid="clipboard-icon__wrapper"
+                                type="button"
+                              >
+                                <div
+                                  class="text-theme-primary-400 dark:text-theme-secondary-700 dark:hover:text-theme-secondary-500 css-v0ob3f"
+                                  height="16"
+                                  width="16"
+                                >
+                                  <svg
+                                    id="copy"
+                                    viewBox="0 0 20 20"
+                                    x="0"
+                                    xml:space="preserve"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    y="0"
+                                  >
+                                    <g
+                                      fill="none"
+                                      stroke="currentColor"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      stroke-width="2"
+                                    >
+                                      <path
+                                        d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                                      />
+                                      <path
+                                        d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                                      />
+                                    </g>
+                                  </svg>
+                                </div>
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </fieldset>
+                    <div
+                      data-testid="DetailWrapper"
+                    >
+                      <div
+                        class="border-l-2 border-x-theme-primary-400 bg-theme-secondary-100 px-3 py-2 dark:bg-black sm:border-none sm:bg-transparent sm:p-0 dark:sm:bg-transparent"
+                        data-testid="DetailLabel"
+                      >
+                        <div
+                          class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                          data-testid="DetailLabelText"
+                        >
+                          Transaction Type
+                        </div>
+                      </div>
+                      <div
+                        class="w-full break-words rounded-lg border-theme-secondary-300 p-3 dark:border-theme-secondary-800 sm:border sm:px-6 sm:py-5 [.condensed_&]:sm:py-4 mt-0 sm:mt-2"
+                      >
+                        <div
+                          class="space-y-3 sm:space-y-0"
+                        >
+                          <div
+                            class="flex w-full items-center justify-between gap-4 sm:justify-start"
+                          >
+                            <div
+                              class="no-ligatures flex-shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:text-base sm:leading-5 w-auto sm:min-w-28"
                             >
-                              DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr
-                            </span>
+                              Category
+                            </div>
+                            <div
+                              class="flex items-center rounded bg-theme-secondary-200 px-1 py-[3px] dark:border dark:border-theme-secondary-800 dark:bg-transparent"
+                            >
+                              <span
+                                class="text-[12px] font-semibold leading-[15px] text-theme-secondary-700 dark:text-theme-secondary-500"
+                              >
+                                Resignation
+                              </span>
+                            </div>
+                          </div>
+                          <div
+                            class="hidden sm:block"
+                          >
+                            <div
+                              class="border-theme-secondary-300 dark:border-theme-secondary-800 css-ppmbkz"
+                              type="horizontal"
+                            />
+                          </div>
+                          <div
+                            class="flex w-full items-center justify-between gap-4 sm:justify-start"
+                          >
+                            <div
+                              class="no-ligatures flex-shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:text-base sm:leading-5 w-auto sm:min-w-28"
+                            >
+                              Delegate Name
+                            </div>
+                            <div
+                              class="no-ligatures truncate text-sm font-semibold leading-[17px] text-theme-secondary-900 dark:text-theme-secondary-200 sm:text-base sm:leading-5"
+                            >
+                              testwallet2
+                            </div>
                           </div>
                         </div>
                       </div>
                     </div>
-                    <div
-                      class="flex items-center -space-x-1"
-                    >
-                      <div
-                        class="shrink-0 css-1n9jllj"
-                        data-testid="Avatar"
-                      >
-                        <div
-                          class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
-                        >
-                          <img
-                            alt="DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr"
-                            src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(255, 87, 34)" width="100" height="100"/><circle r="55" cx="40" cy="30" fill="rgb(3, 169, 244)"/><circle r="35" cx="90" cy="70" fill="rgb(0, 188, 212)"/><circle r="60" cx="30" cy="40" fill="rgb(233, 30, 99)"/></svg>"
-                            title="DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr"
-                          />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    class="no-ligatures css-1uo4ck9"
-                    data-testid="TransactionDetail"
-                  >
-                    <div
-                      class="w-40 flex-1 space-y-2 whitespace-nowrap"
-                      data-testid="TransactionDetail--desktop"
-                    >
-                      <div
-                        class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
-                      >
-                        Delegate Name
-                      </div>
-                      <div
-                        class="flex items-center font-semibold"
-                      >
-                        testwallet2
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    class="pt-6"
-                  >
                     <fieldset
                       class="flex min-w-0 flex-col css-1bcidjh"
                     >
@@ -1466,6 +1557,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should render 1st step
                 data-testid="tab-pabel__active-panel"
               >
                 <section
+                  class="space-y-6 sm:space-y-4"
                   data-testid="SendDelegateResignation__form-step"
                 >
                   <div
@@ -1508,6 +1600,65 @@ exports[`SendDelegateResignation > Delegate Resignation > should render 1st step
                           <div
                             class="flex items-center gap-3"
                           >
+                            <div
+                              class="css-h1kfx5"
+                              data-testid="icon-SendTransactionLight"
+                              height="24"
+                              width="24"
+                            >
+                              <svg
+                                fill="none"
+                                viewBox="0 0 24 25"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <g
+                                  clip-path="url(#clip0_13879_104416)"
+                                >
+                                  <path
+                                    clip-rule="evenodd"
+                                    d="M18.8821 8.94457H13.7264C13.0146 8.94457 12.4375 8.3675 12.4375 7.65565V2.5"
+                                    fill="#E6EFF9"
+                                    fill-rule="evenodd"
+                                  />
+                                  <path
+                                    d="M18.8821 8.94457H13.7264C13.0146 8.94457 12.4375 8.3675 12.4375 7.65565V2.5"
+                                    stroke="#235B95"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                  />
+                                  <path
+                                    d="M7.99174 21.8337H3.41391C2.70207 21.8337 2.125 21.2566 2.125 20.5448V3.78891C2.125 3.07707 2.70207 2.5 3.41391 2.5H12.5472C12.8891 2.49985 13.217 2.63554 13.4588 2.87722L18.5037 7.92289C18.7451 8.16452 18.8808 8.49212 18.8809 8.83372"
+                                    stroke="#235B95"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                  />
+                                  <path
+                                    clip-rule="evenodd"
+                                    d="M9.02802 17.1926C8.71518 17.1043 8.49639 16.8225 8.4885 16.4975C8.48061 16.1725 8.68545 15.8804 8.99364 15.7771L18.994 12.5155C19.1276 12.472 19.2743 12.5069 19.3739 12.606C19.4735 12.7051 19.5092 12.8516 19.4664 12.9854L16.2073 22.9907C16.1044 23.2995 15.812 23.5049 15.4867 23.4968C15.1613 23.4888 14.8793 23.2693 14.7918 22.9559L13.6727 18.3067L9.02802 17.1926Z"
+                                    fill="#E6EFF9"
+                                    fill-rule="evenodd"
+                                    stroke="#235B95"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                  />
+                                </g>
+                                <defs>
+                                  <clippath
+                                    id="clip0_13879_104416"
+                                  >
+                                    <rect
+                                      fill="white"
+                                      height="24"
+                                      transform="translate(24 24.5) rotate(-180)"
+                                      width="24"
+                                    />
+                                  </clippath>
+                                </defs>
+                              </svg>
+                            </div>
                             <h1
                               class="mb-0 text-2xl leading-[29px]"
                               data-testid="header__title"
@@ -1526,7 +1677,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should render 1st step
                     </div>
                   </div>
                   <div
-                    class="flex flex-col overflow-hidden rounded-xl mt-6"
+                    class="flex flex-col overflow-hidden rounded-xl"
                   >
                     <div
                       class="css-rzhg83"
@@ -1579,136 +1730,167 @@ exports[`SendDelegateResignation > Delegate Resignation > should render 1st step
                     </div>
                   </div>
                   <div
-                    class="no-ligatures css-1iw2tte"
-                    data-testid="TransactionNetwork"
+                    class="space-y-3 sm:space-y-4"
                   >
-                    <div
-                      class="w-40 flex-1 space-y-2 whitespace-nowrap"
-                      data-testid="TransactionDetail--desktop"
+                    <fieldset
+                      class="flex min-w-0 flex-col css-1bcidjh"
                     >
                       <div
-                        class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
-                      >
-                        Cryptoasset
-                      </div>
-                      <div
-                        class="flex items-center font-semibold"
-                      >
-                        ARK Devnet
-                      </div>
-                    </div>
-                    <div
-                      aria-label="ARK Devnet"
-                      class="text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background duration-100 css-1nqcsx"
-                      data-testid="NetworkIcon-ARK-ark.devnet"
-                    >
-                      <div
-                        class="css-1i4b0eq"
-                        data-testid="NetworkIcon__icon"
-                        height="20"
-                        width="20"
-                      >
-                        <svg
-                          id="ark"
-                          viewBox="0 0 36.3 30.6"
-                          x="0"
-                          xml:space="preserve"
-                          xmlns="http://www.w3.org/2000/svg"
-                          y="0"
-                        >
-                          <path
-                            d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
-                            fill="currentColor"
-                          />
-                        </svg>
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    class="no-ligatures css-qu17s6"
-                    data-testid="TransactionSender"
-                  >
-                    <div
-                      class="w-40 flex-1 space-y-2 whitespace-nowrap"
-                      data-testid="TransactionDetail--desktop"
-                    >
-                      <div
-                        class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
-                      >
-                        Sender
-                      </div>
-                      <div
-                        class="flex items-center font-semibold"
+                        data-testid="DetailWrapper"
                       >
                         <div
-                          class="w-0 flex-1 overflow-auto text-right md:text-left"
+                          class="border-l-2 border-x-theme-primary-400 bg-theme-secondary-100 px-3 py-2 dark:bg-black sm:border-none sm:bg-transparent sm:p-0 dark:sm:bg-transparent"
+                          data-testid="DetailLabel"
                         >
                           <div
-                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                            class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                            data-testid="DetailLabelText"
                           >
-                            <span
-                              class="font-semibold text-base text-theme-text"
-                              data-testid="Address__alias"
+                            Addressing
+                          </div>
+                        </div>
+                        <div
+                          class="w-full break-words rounded-lg border-theme-secondary-300 p-3 dark:border-theme-secondary-800 sm:border sm:px-6 sm:py-5 [.condensed_&]:sm:py-4 mt-0 sm:mt-2"
+                        >
+                          <div
+                            class="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0"
+                          >
+                            <div
+                              class="no-ligatures flex-shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:text-base sm:leading-5 w-auto sm:min-w-32"
+                            >
+                              From
+                            </div>
+                            <div
+                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end sm:justify-start"
                             >
                               <span
-                                class="no-ligatures css-9nx3be"
-                                data-testid="TruncateEnd"
+                                class="font-semibold text-base text-theme-text text-sm leading-[17px] sm:leading-5 sm:text-base"
+                                data-testid="Address__alias"
                               >
-                                testwallet2
+                                <span
+                                  class="no-ligatures css-9nx3be"
+                                  data-testid="TruncateEnd"
+                                >
+                                  testwallet2
+                                </span>
                               </span>
-                            </span>
-                            <span
-                              class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                              data-testid="Address__address"
+                              <div
+                                class="relative grow leading-[17px] sm:leading-5 text-left"
+                              >
+                                <span
+                                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 text-sm leading-[17px] sm:leading-5 sm:text-base w-full w-3/4 font-semibold text-base absolute w-full"
+                                  data-testid="Address__address"
+                                >
+                                  DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr
+                                </span>
+                                <span>
+                                   
+                                </span>
+                              </div>
+                              <button
+                                class="ring-focus relative focus:outline-none"
+                                data-ring-focus-margin="-m-1"
+                                data-testid="clipboard-icon__wrapper"
+                                type="button"
+                              >
+                                <div
+                                  class="text-theme-primary-400 dark:text-theme-secondary-700 dark:hover:text-theme-secondary-500 css-v0ob3f"
+                                  height="16"
+                                  width="16"
+                                >
+                                  <svg
+                                    id="copy"
+                                    viewBox="0 0 20 20"
+                                    x="0"
+                                    xml:space="preserve"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    y="0"
+                                  >
+                                    <g
+                                      fill="none"
+                                      stroke="currentColor"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      stroke-width="2"
+                                    >
+                                      <path
+                                        d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                                      />
+                                      <path
+                                        d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                                      />
+                                    </g>
+                                  </svg>
+                                </div>
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </fieldset>
+                    <div
+                      data-testid="DetailWrapper"
+                    >
+                      <div
+                        class="border-l-2 border-x-theme-primary-400 bg-theme-secondary-100 px-3 py-2 dark:bg-black sm:border-none sm:bg-transparent sm:p-0 dark:sm:bg-transparent"
+                        data-testid="DetailLabel"
+                      >
+                        <div
+                          class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                          data-testid="DetailLabelText"
+                        >
+                          Transaction Type
+                        </div>
+                      </div>
+                      <div
+                        class="w-full break-words rounded-lg border-theme-secondary-300 p-3 dark:border-theme-secondary-800 sm:border sm:px-6 sm:py-5 [.condensed_&]:sm:py-4 mt-0 sm:mt-2"
+                      >
+                        <div
+                          class="space-y-3 sm:space-y-0"
+                        >
+                          <div
+                            class="flex w-full items-center justify-between gap-4 sm:justify-start"
+                          >
+                            <div
+                              class="no-ligatures flex-shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:text-base sm:leading-5 w-auto sm:min-w-28"
                             >
-                              DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr
-                            </span>
+                              Category
+                            </div>
+                            <div
+                              class="flex items-center rounded bg-theme-secondary-200 px-1 py-[3px] dark:border dark:border-theme-secondary-800 dark:bg-transparent"
+                            >
+                              <span
+                                class="text-[12px] font-semibold leading-[15px] text-theme-secondary-700 dark:text-theme-secondary-500"
+                              >
+                                Resignation
+                              </span>
+                            </div>
+                          </div>
+                          <div
+                            class="hidden sm:block"
+                          >
+                            <div
+                              class="border-theme-secondary-300 dark:border-theme-secondary-800 css-ppmbkz"
+                              type="horizontal"
+                            />
+                          </div>
+                          <div
+                            class="flex w-full items-center justify-between gap-4 sm:justify-start"
+                          >
+                            <div
+                              class="no-ligatures flex-shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:text-base sm:leading-5 w-auto sm:min-w-28"
+                            >
+                              Delegate Name
+                            </div>
+                            <div
+                              class="no-ligatures truncate text-sm font-semibold leading-[17px] text-theme-secondary-900 dark:text-theme-secondary-200 sm:text-base sm:leading-5"
+                            >
+                              testwallet2
+                            </div>
                           </div>
                         </div>
                       </div>
                     </div>
-                    <div
-                      class="flex items-center -space-x-1"
-                    >
-                      <div
-                        class="shrink-0 css-1n9jllj"
-                        data-testid="Avatar"
-                      >
-                        <div
-                          class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
-                        >
-                          <img
-                            alt="DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr"
-                            src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(255, 87, 34)" width="100" height="100"/><circle r="55" cx="40" cy="30" fill="rgb(3, 169, 244)"/><circle r="35" cx="90" cy="70" fill="rgb(0, 188, 212)"/><circle r="60" cx="30" cy="40" fill="rgb(233, 30, 99)"/></svg>"
-                            title="DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr"
-                          />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    class="no-ligatures css-1uo4ck9"
-                    data-testid="TransactionDetail"
-                  >
-                    <div
-                      class="w-40 flex-1 space-y-2 whitespace-nowrap"
-                      data-testid="TransactionDetail--desktop"
-                    >
-                      <div
-                        class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
-                      >
-                        Delegate Name
-                      </div>
-                      <div
-                        class="flex items-center font-semibold"
-                      >
-                        testwallet2
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    class="pt-6"
-                  >
                     <fieldset
                       class="flex min-w-0 flex-col css-1bcidjh"
                     >
@@ -3440,7 +3622,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should render 3rd step
                 data-testid="tab-pabel__active-panel"
               >
                 <div
-                  class="space-y-6"
+                  class="space-y-4"
                   data-testid="AuthenticationStep"
                 >
                   <div
@@ -3483,6 +3665,79 @@ exports[`SendDelegateResignation > Delegate Resignation > should render 3rd step
                           <div
                             class="flex items-center gap-3"
                           >
+                            <div
+                              class="text-theme-primary-600 css-h1kfx5"
+                              data-testid="icon-mnemonic"
+                              height="24"
+                              width="24"
+                            >
+                              <svg
+                                fill="none"
+                                viewBox="0 0 25 25"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <g
+                                  clip-path="url(#clip0_13420_137872)"
+                                >
+                                  <path
+                                    d="M18.0078 14.9033H20.9411"
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                  />
+                                  <path
+                                    clip-rule="evenodd"
+                                    d="M1.875 6.57031C1.875 6.01803 2.32272 5.57031 2.875 5.57031H22.875C23.4273 5.57031 23.875 6.01803 23.875 6.57031V18.837C23.875 19.3893 23.4273 19.837 22.875 19.837H2.875C2.32272 19.837 1.875 19.3893 1.875 18.837V6.57031Z"
+                                    fill-rule="evenodd"
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                  />
+                                  <path
+                                    d="M8.47526 11.2373L4.80859 14.904"
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                  />
+                                  <path
+                                    d="M8.47526 14.904L4.80859 11.2373"
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                  />
+                                  <path
+                                    d="M15.0729 11.2373L11.4062 14.904"
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                  />
+                                  <path
+                                    d="M15.0729 14.904L11.4062 11.2373"
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                  />
+                                </g>
+                                <defs>
+                                  <clippath
+                                    id="clip0_13420_137872"
+                                  >
+                                    <rect
+                                      fill="white"
+                                      height="24"
+                                      transform="translate(24.875 24.5) rotate(-180)"
+                                      width="24"
+                                    />
+                                  </clippath>
+                                </defs>
+                              </svg>
+                            </div>
                             <h1
                               class="mb-0 text-2xl leading-[29px]"
                               data-testid="header__title"
@@ -5017,7 +5272,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should show mnemonic a
                 data-testid="tab-pabel__active-panel"
               >
                 <div
-                  class="space-y-6"
+                  class="space-y-4"
                   data-testid="AuthenticationStep"
                 >
                   <div
@@ -5060,6 +5315,79 @@ exports[`SendDelegateResignation > Delegate Resignation > should show mnemonic a
                           <div
                             class="flex items-center gap-3"
                           >
+                            <div
+                              class="text-theme-primary-600 css-h1kfx5"
+                              data-testid="icon-mnemonic"
+                              height="24"
+                              width="24"
+                            >
+                              <svg
+                                fill="none"
+                                viewBox="0 0 25 25"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <g
+                                  clip-path="url(#clip0_13420_137872)"
+                                >
+                                  <path
+                                    d="M18.0078 14.9033H20.9411"
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                  />
+                                  <path
+                                    clip-rule="evenodd"
+                                    d="M1.875 6.57031C1.875 6.01803 2.32272 5.57031 2.875 5.57031H22.875C23.4273 5.57031 23.875 6.01803 23.875 6.57031V18.837C23.875 19.3893 23.4273 19.837 22.875 19.837H2.875C2.32272 19.837 1.875 19.3893 1.875 18.837V6.57031Z"
+                                    fill-rule="evenodd"
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                  />
+                                  <path
+                                    d="M8.47526 11.2373L4.80859 14.904"
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                  />
+                                  <path
+                                    d="M8.47526 14.904L4.80859 11.2373"
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                  />
+                                  <path
+                                    d="M15.0729 11.2373L11.4062 14.904"
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                  />
+                                  <path
+                                    d="M15.0729 14.904L11.4062 11.2373"
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                  />
+                                </g>
+                                <defs>
+                                  <clippath
+                                    id="clip0_13420_137872"
+                                  >
+                                    <rect
+                                      fill="white"
+                                      height="24"
+                                      transform="translate(24.875 24.5) rotate(-180)"
+                                      width="24"
+                                    />
+                                  </clippath>
+                                </defs>
+                              </svg>
+                            </div>
                             <h1
                               class="mb-0 text-2xl leading-[29px]"
                               data-testid="header__title"

@@ -3,7 +3,7 @@
 exports[`UnlockTokensAuthentication > should render 1`] = `
 <DocumentFragment>
   <div
-    class="space-y-6"
+    class="space-y-4"
     data-testid="AuthenticationStep"
   >
     <div

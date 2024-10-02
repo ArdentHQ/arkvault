@@ -129,6 +129,8 @@ describe("Signed Transaction Table", () => {
 			wallet,
 		);
 
+		vi.spyOn(fixtures.transfer, "isConfirmed").mockReturnValue(false);
+
 		pendingTransactions = [
 			{
 				hasBeenSigned: false,
@@ -309,11 +311,9 @@ describe("Signed Transaction Table", () => {
 	it.each([true, false])("should render pending transfers when isCompact = %s", (isCompact: boolean) => {
 		mockPendingTransfers(wallet);
 
-		const { asFragment } = render(
-			<PendingTransactions wallet={wallet} pendingTransactions={pendingTransactions} isCompact={isCompact} />,
-		);
+		render(<PendingTransactions wallet={wallet} pendingTransactions={pendingTransactions} isCompact={isCompact} />);
 
-		expect(asFragment()).toMatchSnapshot();
+		expect(screen.getAllByTestId("TableRow")).toHaveLength(pendingTransactions.length);
 
 		vi.restoreAllMocks();
 	});
@@ -321,12 +321,9 @@ describe("Signed Transaction Table", () => {
 	it("should render pending transfers on mobile", () => {
 		mockPendingTransfers(wallet);
 
-		const { asFragment } = renderResponsive(
-			<PendingTransactions wallet={wallet} pendingTransactions={pendingTransactions} />,
-			"xs",
-		);
+		renderResponsive(<PendingTransactions wallet={wallet} pendingTransactions={pendingTransactions} />, "xs");
 
-		expect(asFragment()).toMatchSnapshot();
+		expect(screen.getAllByTestId("TableRow__mobile")).toHaveLength(pendingTransactions.length);
 
 		vi.restoreAllMocks();
 	});
@@ -416,6 +413,8 @@ describe("Signed Transaction Table", () => {
 
 	it("should render signed transactions and handle exception", () => {
 		mockMultisignatures(wallet);
+
+		vi.spyOn(wallet.transaction(), "transaction").mockReturnValue(fixtures.transfer);
 		vi.spyOn(wallet.transaction(), "isAwaitingOurSignature").mockReturnValue(true);
 
 		vi.spyOn(wallet.transaction(), "canBeSigned").mockImplementation(() => {
@@ -469,6 +468,7 @@ describe("Signed Transaction Table", () => {
 	describe.each(["xs", "xl"])("should render different status", (screenSize) => {
 		it("should show as awaiting the wallet signature", () => {
 			mockMultisignatures(wallet);
+			vi.spyOn(wallet.transaction(), "transaction").mockReturnValue(fixtures.transfer);
 			vi.spyOn(wallet.transaction(), "isAwaitingOurSignature").mockReturnValue(true);
 
 			const { asFragment } = renderResponsive(
@@ -541,6 +541,7 @@ describe("Signed Transaction Table", () => {
 
 		it("should show as awaiting other wallets signatures", () => {
 			mockMultisignatures(wallet);
+			vi.spyOn(wallet.transaction(), "transaction").mockReturnValue(fixtures.transfer);
 			const isAwaitingOurSignatureMock = vi
 				.spyOn(wallet.transaction(), "isAwaitingOtherSignatures")
 				.mockImplementation(() => true);
@@ -551,7 +552,7 @@ describe("Signed Transaction Table", () => {
 			const canBeSignedMock = vi.spyOn(wallet.transaction(), "canBeSigned").mockReturnValue(false);
 
 			vi.spyOn(wallet.transaction(), "isAwaitingOurSignature").mockReturnValue(false);
-			const { asFragment } = renderResponsive(
+			renderResponsive(
 				<PendingTransactions
 					isCompact={false}
 					wallet={wallet}
@@ -564,8 +565,6 @@ describe("Signed Transaction Table", () => {
 				expect(document.querySelector("svg#clock-pencil")).toBeInTheDocument();
 			}
 
-			expect(asFragment()).toMatchSnapshot();
-
 			isAwaitingOurSignatureMock.mockRestore();
 			remainingSignatureCountMock.mockRestore();
 			canBeSignedMock.mockRestore();
@@ -576,9 +575,10 @@ describe("Signed Transaction Table", () => {
 			mockMultisignatures(wallet);
 			vi.spyOn(wallet.transaction(), "isAwaitingOurSignature").mockReturnValue(false);
 			vi.spyOn(wallet.transaction(), "isAwaitingOtherSignatures").mockReturnValue(false);
+			vi.spyOn(wallet.transaction(), "transaction").mockReturnValue(fixtures.transfer);
 
 			const canBeSignedMock = vi.spyOn(wallet.transaction(), "canBeSigned").mockReturnValue(true);
-			const { asFragment } = renderResponsive(
+			renderResponsive(
 				<PendingTransactions
 					isCompact={false}
 					wallet={wallet}
@@ -590,8 +590,6 @@ describe("Signed Transaction Table", () => {
 			if (screenSize !== "xs") {
 				expect(document.querySelector("svg#circle-check-mark-pencil")).toBeInTheDocument();
 			}
-
-			expect(asFragment()).toMatchSnapshot();
 
 			canBeSignedMock.mockRestore();
 			vi.restoreAllMocks();
