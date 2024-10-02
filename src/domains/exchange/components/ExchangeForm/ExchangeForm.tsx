@@ -26,7 +26,7 @@ import {
 	isInvalidRefundAddressError,
 } from "@/domains/exchange/utils";
 import { delay } from "@/utils/delay";
-import {SendExchangeTransfer} from "@/domains/exchange/components/SendExchangeTransfer";
+import { SendExchangeTransfer } from "@/domains/exchange/components/SendExchangeTransfer";
 
 enum Step {
 	FormStep = 1,
@@ -179,7 +179,7 @@ const ExchangeForm = ({ orderId, onReady }: { orderId?: string; onReady: () => v
 		trigger,
 	]);
 
-	const withSignStep = fromCurrency?.coin === "ark"
+	const withSignStep = fromCurrency?.coin === "ark";
 
 	const submitForm = useCallback(async () => {
 		const { fromCurrency, toCurrency, recipientWallet, refundWallet, payinAmount, externalId, refundExternalId } =
@@ -235,39 +235,42 @@ const ExchangeForm = ({ orderId, onReady }: { orderId?: string; onReady: () => v
 		setActiveTab((previous) => previous - 1);
 	};
 
-	const handleNext = useCallback(async (bypassSignStep = false) => {
-		const newIndex = activeTab + 1;
+	const handleNext = useCallback(
+		async ({ bypassSignStep = false }: { bypassSignStep?: boolean }) => {
+			const newIndex = activeTab + 1;
 
-		if (newIndex === Step.StatusStep) {
-			try {
-				await handleSubmit(submitForm)();
+			if (newIndex === Step.StatusStep) {
+				try {
+					await handleSubmit(submitForm)();
 
-				if (withSignStep && !bypassSignStep) {
-					setShowTransferModal(true)
-				} else {
-					setActiveTab(newIndex)
+					if (withSignStep && !bypassSignStep) {
+						setShowTransferModal(true);
+					} else {
+						setActiveTab(newIndex);
+					}
+				} catch (error) {
+					if (isInvalidAddressError(error)) {
+						return toasts.error(
+							t("EXCHANGE.ERROR.INVALID_ADDRESS", { ticker: toCurrency?.coin.toUpperCase() }),
+						);
+					}
+
+					if (isInvalidRefundAddressError(error)) {
+						return toasts.error(
+							t("EXCHANGE.ERROR.INVALID_REFUND_ADDRESS", { ticker: fromCurrency?.coin.toUpperCase() }),
+						);
+					}
+
+					toasts.error(t("EXCHANGE.ERROR.GENERIC"));
 				}
-			} catch (error) {
-				if (isInvalidAddressError(error)) {
-					return toasts.error(
-						t("EXCHANGE.ERROR.INVALID_ADDRESS", { ticker: toCurrency?.coin.toUpperCase() }),
-					);
-				}
 
-				if (isInvalidRefundAddressError(error)) {
-					return toasts.error(
-						t("EXCHANGE.ERROR.INVALID_REFUND_ADDRESS", { ticker: fromCurrency?.coin.toUpperCase() }),
-					);
-				}
-
-				toasts.error(t("EXCHANGE.ERROR.GENERIC"));
+				return;
 			}
 
-			return;
-		}
-
-		setActiveTab(newIndex);
-	}, [activeTab, fromCurrency, handleSubmit, submitForm, t, toCurrency]);
+			setActiveTab(newIndex);
+		},
+		[withSignStep, activeTab, fromCurrency, handleSubmit, submitForm, t, toCurrency],
+	);
 
 	const handleStatusUpdate = useCallback(
 		(id: string, parameters: any) => {
@@ -304,65 +307,73 @@ const ExchangeForm = ({ orderId, onReady }: { orderId?: string; onReady: () => v
 	}, [showFormButtons]);
 
 	return (
-		<Form data-testid="ExchangeForm" context={form as any} onSubmit={submitForm}>
-			<Tabs activeId={activeTab}>
-				<StepIndicator steps={Array.from({ length: 4 })} activeIndex={activeTab} />
+		<>
+			<Form data-testid="ExchangeForm" context={form as any} onSubmit={submitForm}>
+				<Tabs activeId={activeTab}>
+					<StepIndicator steps={Array.from({ length: 4 })} activeIndex={activeTab} />
 
-				<div className="mt-8">
-					<TabPanel tabId={1}>
-						<FormStep profile={activeProfile} />
-					</TabPanel>
+					<div className="mt-8">
+						<TabPanel tabId={1}>
+							<FormStep profile={activeProfile} />
+						</TabPanel>
 
-					<TabPanel tabId={2}>
-						<ReviewStep />
-					</TabPanel>
+						<TabPanel tabId={2}>
+							<ReviewStep />
+						</TabPanel>
 
-					<TabPanel tabId={3}>
-						<StatusStep exchangeTransaction={exchangeTransaction!} onUpdate={handleStatusUpdate} />
-					</TabPanel>
+						<TabPanel tabId={3}>
+							<StatusStep exchangeTransaction={exchangeTransaction!} onUpdate={handleStatusUpdate} />
+						</TabPanel>
 
-					<TabPanel tabId={4}>
-						<ConfirmationStep exchangeTransaction={exchangeTransaction} />
-					</TabPanel>
+						<TabPanel tabId={4}>
+							<ConfirmationStep exchangeTransaction={exchangeTransaction} />
+						</TabPanel>
 
-					{showFormButtons && (
-						<FormButtons>
-							{activeTab < Step.StatusStep && (
-								<>
+						{showFormButtons && (
+							<FormButtons>
+								{activeTab < Step.StatusStep && (
+									<>
+										<Button
+											data-testid="ExchangeForm__back-button"
+											disabled={isSubmitting}
+											variant="secondary"
+											onClick={handleBack}
+										>
+											{t("COMMON.BACK")}
+										</Button>
+
+										<Button
+											data-testid="ExchangeForm__continue-button"
+											disabled={isSubmitting || (isDirty ? !isValid : true)}
+											isLoading={isSubmitting}
+											onClick={handleNext}
+										>
+											{showSignButtons ? t("COMMON.SIGN") : t("COMMON.CONTINUE")}
+										</Button>
+									</>
+								)}
+
+								{activeTab === Step.ConfirmationStep && (
 									<Button
-										data-testid="ExchangeForm__back-button"
-										disabled={isSubmitting}
-										variant="secondary"
-										onClick={handleBack}
+										data-testid="ExchangeForm__finish-button"
+										onClick={() => history.push(`/profiles/${activeProfile.id()}/dashboard`)}
 									>
-										{t("COMMON.BACK")}
+										{t("COMMON.GO_TO_PORTFOLIO")}
 									</Button>
-
-									<Button
-										data-testid="ExchangeForm__continue-button"
-										disabled={isSubmitting || (isDirty ? !isValid : true)}
-										isLoading={isSubmitting}
-										onClick={handleNext}
-									>
-										{ showSignButtons ? t("COMMON.SIGN") : t("COMMON.CONTINUE")}
-									</Button>
-								</>
-							)}
-
-							{activeTab === Step.ConfirmationStep && (
-								<Button
-									data-testid="ExchangeForm__finish-button"
-									onClick={() => history.push(`/profiles/${activeProfile.id()}/dashboard`)}
-								>
-									{t("COMMON.GO_TO_PORTFOLIO")}
-								</Button>
-							)}
-						</FormButtons>
-					)}
-				</div>
-			</Tabs>
-			<SendExchangeTransfer isOpen={showTransferModal} onCancel={() => setShowTransferModal(false)}/>
-		</Form>
+								)}
+							</FormButtons>
+						)}
+					</div>
+				</Tabs>
+			</Form>
+			{showTransferModal && exchangeTransaction && (
+				<SendExchangeTransfer
+					exchangeTransaction={exchangeTransaction}
+					onSuccess={() => setActiveTab(activeTab + 1)}
+					onClose={() => setShowTransferModal(false)}
+				/>
+			)}
+		</>
 	);
 };
 

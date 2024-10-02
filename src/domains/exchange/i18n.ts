@@ -80,6 +80,7 @@ export const translations = {
 	TO_ADDRESS: "To Address",
 
 	TRANSACTION_ID: "Transaction ID",
+	TRANSACTION_SENT: "Your transaction was successfully confirmed and sent.",
 	TRANSACTION_STATUS: {
 		AWAITING_DEPOSIT: "Awaiting Deposit",
 		EXCHANGING: "Exchanging",
