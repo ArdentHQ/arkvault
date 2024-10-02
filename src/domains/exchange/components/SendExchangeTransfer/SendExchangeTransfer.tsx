@@ -1,5 +1,5 @@
-import {Contracts, DTO} from "@ardenthq/sdk-profiles";
-import React, {useCallback, useEffect, useMemo, useRef, useState} from "react";
+import { Contracts, DTO } from "@ardenthq/sdk-profiles";
+import React, { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 
 import { Modal } from "@/app/components/Modal";
@@ -17,7 +17,7 @@ import { TransferLedgerReview } from "@/domains/transaction/pages/SendTransfer/L
 import { useSendTransferForm } from "@/domains/transaction/hooks/use-send-transfer-form";
 import { useLedgerContext } from "@/app/contexts";
 import { Button } from "@/app/components/Button";
-import {Alert} from "@/app/components/Alert";
+import { Alert } from "@/app/components/Alert";
 
 interface TransferProperties {
 	onClose: () => void;
@@ -25,22 +25,20 @@ interface TransferProperties {
 	exchangeTransaction: Contracts.IExchangeTransaction;
 }
 
-export const SendExchangeTransfer: React.FC<TransferProperties> = ({
-	onClose,
-	onSuccess,
-	exchangeTransaction,
-}) => {
+export const SendExchangeTransfer: React.FC<TransferProperties> = ({ onClose, onSuccess, exchangeTransaction }) => {
 	const { t } = useTranslation();
 
 	const profile = useActiveProfile();
 
-	const network = useMemo(() => {
-		return profile.availableNetworks().find((network) => network.id() === "ark.devnet");
-	}, [profile]) as Networks.Network;
+	const network = useMemo(
+		() => profile.availableNetworks().find((network) => network.id() === "ark.devnet"),
+		[profile],
+	) as Networks.Network;
 
-	const wallets = useMemo(() => {
-		return profile.wallets().findByCoinWithNetwork(network.coin(), network.id());
-	}, [network, profile]);
+	const wallets = useMemo(
+		() => profile.wallets().findByCoinWithNetwork(network.coin(), network.id()),
+		[network, profile],
+	);
 
 	const [senderWallet, setSenderWallet] = useState<Contracts.IReadWriteWallet | undefined>(() =>
 		wallets.length === 1 ? wallets[0] : undefined,
@@ -66,12 +64,11 @@ export const SendExchangeTransfer: React.FC<TransferProperties> = ({
 		submitForm,
 		getValues,
 		lastEstimatedExpiration,
-		values: { fee},
+		values: { fee },
 		formState: { isValid, isSubmitting },
 	} = useSendTransferForm(senderWallet);
 
-
-	console.log({ isValid, isSubmitting, values: getValues(), errors: form.errors });
+	console.log({ errors: form.errors, isSubmitting, isValid, values: getValues() });
 
 	useEffect(() => {
 		form.setValue("recipients", recipients, { shouldDirty: true, shouldValidate: true });
@@ -104,7 +101,7 @@ export const SendExchangeTransfer: React.FC<TransferProperties> = ({
 
 	const handleSenderWallet = (address: string) => {
 		const wallet = profile.wallets().findByAddressWithNetwork(address, network.id());
-		console.log(wallet?.balance("available"))
+		console.log(wallet?.balance("available"));
 		setSenderWallet(wallet);
 	};
 
@@ -117,41 +114,37 @@ export const SendExchangeTransfer: React.FC<TransferProperties> = ({
 
 	const abortReference = useRef(new AbortController());
 
-	const submit = useCallback(
-		async () => {
-			setErrorMessage(undefined);
+	const submit = useCallback(async () => {
+		setErrorMessage(undefined);
 
-			try {
-				const transaction = await submitForm(abortReference);
+		try {
+			const transaction = await submitForm(abortReference);
 
-				setTransaction(transaction);
-				onSuccess();
-			} catch (error) {
-				setErrorMessage((error?.message ?? "") as string);
-			}
-		},
-		[onSuccess, submitForm],
-	);
+			setTransaction(transaction);
+			onSuccess();
+		} catch (error) {
+			setErrorMessage((error?.message ?? "") as string);
+		}
+	}, [onSuccess, submitForm]);
 
 	if (transaction) {
-		return (<Modal isOpen onClose={onClose} title={"Sign Exchange Transaction"}>
-			<div>
-				<Alert variant="success"> {t("EXCHANGE.TRANSACTION_SENT")} </Alert>
-				<FormButtons>
-					<Button
-						data-testid="ExchangeTransfer__continue"
-						onClick={onClose}
-					>
-						<span>{t("COMMON.CONTINUE")}</span>
-					</Button>
-				</FormButtons>
-			</div>
-		</Modal>)
+		return (
+			<Modal isOpen onClose={onClose} title={"Sign Exchange Transaction"}>
+				<div>
+					<Alert variant="success"> {t("EXCHANGE.TRANSACTION_SENT")} </Alert>
+					<FormButtons>
+						<Button data-testid="ExchangeTransfer__continue" onClick={onClose}>
+							<span>{t("COMMON.CONTINUE")}</span>
+						</Button>
+					</FormButtons>
+				</div>
+			</Modal>
+		);
 	}
 
 	return (
 		<Modal isOpen onClose={onClose} title={"Sign Exchange Transaction"}>
-			{errorMessage && <Alert variant="danger"> {errorMessage} </Alert> }
+			{errorMessage && <Alert variant="danger"> {errorMessage} </Alert>}
 			<Form context={form} onSubmit={() => submit()}>
 				<div className="mt-4 space-y-4">
 					<FormField name="senderAddress">
