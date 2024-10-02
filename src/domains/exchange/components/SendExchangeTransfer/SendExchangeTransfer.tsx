@@ -6,18 +6,17 @@ import { Modal } from "@/app/components/Modal";
 import { Form, FormButtons, FormField, FormLabel } from "@/app/components/Form";
 import { SelectAddress } from "@/domains/profile/components/SelectAddress";
 import { useActiveProfile, useFees } from "@/app/hooks";
-import { DetailDivider, DetailTitle, DetailWrapper } from "@/app/components/DetailWrapper";
+import {DetailLabel, DetailTitle, DetailWrapper} from "@/app/components/DetailWrapper";
 import { Address } from "@/app/components/Address";
-import { Amount, AmountLabel } from "@/app/components/Amount";
 import { Networks } from "@ardenthq/sdk";
 import { buildTransferData } from "@/domains/transaction/pages/SendTransfer/SendTransfer.helpers";
-import { useExchangeRate } from "@/app/hooks/use-exchange-rate";
 import { AuthenticationStep } from "@/domains/transaction/components/AuthenticationStep";
 import { TransferLedgerReview } from "@/domains/transaction/pages/SendTransfer/LedgerReview";
 import { useSendTransferForm } from "@/domains/transaction/hooks/use-send-transfer-form";
 import { useLedgerContext } from "@/app/contexts";
 import { Button } from "@/app/components/Button";
 import { Alert } from "@/app/components/Alert";
+import {TotalAmountBox} from "@/domains/transaction/components/TotalAmountBox";
 
 interface TransferProperties {
 	onClose: () => void;
@@ -64,7 +63,7 @@ export const SendExchangeTransfer: React.FC<TransferProperties> = ({ onClose, on
 		submitForm,
 		getValues,
 		lastEstimatedExpiration,
-		values: { fee },
+		values: { fee},
 		formState: { isValid, isSubmitting },
 	} = useSendTransferForm(senderWallet);
 
@@ -105,10 +104,6 @@ export const SendExchangeTransfer: React.FC<TransferProperties> = ({ onClose, on
 		setSenderWallet(wallet);
 	};
 
-	const ticker = network.ticker();
-	const exchangeTicker = profile.settings().get<string>(Contracts.ProfileSetting.ExchangeCurrency) as string;
-	const { convert } = useExchangeRate({ exchangeTicker, ticker });
-
 	const [transaction, setTransaction] = useState<DTO.ExtendedSignedTransactionData | undefined>(undefined);
 	const [errorMessage, setErrorMessage] = useState<string | undefined>();
 
@@ -143,12 +138,18 @@ export const SendExchangeTransfer: React.FC<TransferProperties> = ({ onClose, on
 	}
 
 	return (
-		<Modal isOpen onClose={onClose} title={"Sign Exchange Transaction"}>
+		<Modal
+			isOpen
+			onClose={onClose}
+			title={"Sign Exchange Transaction"}
+			contentClassName="p-6 sm:p-8 sm:[&>div.absolute]:!m-8 [&>div.absolute]:!m-6"
+			titleClass="!leading-[21px] sm!:leading-7"
+		>
 			{errorMessage && <Alert variant="danger"> {errorMessage} </Alert>}
 			<Form context={form} onSubmit={() => submit()}>
 				<div className="mt-4 space-y-4">
 					<FormField name="senderAddress">
-						<FormLabel label={t("TRANSACTION.SENDER")} />
+						<FormLabel label={t("TRANSACTION.SENDER")}/>
 
 						<div data-testid="sender-address">
 							<SelectAddress
@@ -156,9 +157,9 @@ export const SendExchangeTransfer: React.FC<TransferProperties> = ({ onClose, on
 								wallet={
 									senderWallet
 										? {
-												address: senderWallet.address(),
-												network: senderWallet.network(),
-											}
+											address: senderWallet.address(),
+											network: senderWallet.network(),
+										}
 										: undefined
 								}
 								wallets={wallets}
@@ -170,7 +171,8 @@ export const SendExchangeTransfer: React.FC<TransferProperties> = ({ onClose, on
 					</FormField>
 
 					<DetailWrapper label={t("TRANSACTION.ADDRESSING")}>
-						<div className="flex w-full items-center justify-between gap-4 space-x-2 sm:justify-start sm:space-x-0">
+						<div
+							className="flex w-full items-center justify-between gap-4 space-x-2 sm:justify-start sm:space-x-0">
 							<DetailTitle className="w-auto sm:min-w-16">{t("COMMON.TO")}</DetailTitle>
 							<Address
 								address={exchangeInput.address}
@@ -181,50 +183,30 @@ export const SendExchangeTransfer: React.FC<TransferProperties> = ({ onClose, on
 						</div>
 					</DetailWrapper>
 
-					<DetailWrapper label={t("TRANSACTION.TRANSACTION_TYPE")}>
-						<div className="space-y-3 sm:space-y-0" data-testid="VoteDetail">
-							<div className="flex w-full items-center justify-between sm:justify-start">
-								<DetailTitle className="w-auto sm:min-w-20">{t("COMMON.AMOUNT")}</DetailTitle>
-								<AmountLabel value={exchangeInput.amount} ticker={exchangeInput.ticker} isNegative />
-							</div>
-
-							<DetailDivider />
-
-							<div className="flex w-full items-center justify-between sm:justify-start">
-								<DetailTitle className="w-auto sm:min-w-20">{t("COMMON.FEE")}</DetailTitle>
-								<div className="text-sm font-semibold leading-[17px] text-theme-secondary-900 dark:text-theme-secondary-200 sm:text-base sm:leading-5">
-									{fee && <Amount ticker={ticker} value={fee} />}
-								</div>
-							</div>
-
-							<DetailDivider />
-
-							<div className="flex w-full items-center justify-between sm:justify-start">
-								<DetailTitle className="w-auto sm:min-w-20">{t("COMMON.VALUE")}</DetailTitle>
-								<div className="text-sm font-semibold leading-[17px] text-theme-secondary-900 dark:text-theme-secondary-200 sm:text-base sm:leading-5">
-									<Amount ticker={exchangeTicker} value={convert(exchangeInput.amount)} />
-								</div>
-							</div>
-						</div>
-					</DetailWrapper>
-
 					{senderWallet && (
-						<AuthenticationStep
-							noHeading
-							wallet={senderWallet}
-							ledgerDetails={
-								<TransferLedgerReview
-									wallet={senderWallet}
-									estimatedExpiration={lastEstimatedExpiration}
-									profile={profile}
-								/>
-							}
-							ledgerIsAwaitingDevice={!hasDeviceAvailable}
-							ledgerIsAwaitingApp={!isConnected}
-							onDeviceNotAvailable={() => {
-								// @TODO handle ledger
-							}}
-						/>
+						<>
+							<div className="space-y-3 sm:space-y-2">
+								<DetailLabel>{t("COMMON.TRANSACTION_SUMMARY")}</DetailLabel>
+								<TotalAmountBox amount={exchangeInput.amount} fee={fee}
+												ticker={senderWallet.currency()}/>
+							</div>
+							<AuthenticationStep
+								noHeading
+								wallet={senderWallet}
+								ledgerDetails={
+									<TransferLedgerReview
+										wallet={senderWallet}
+										estimatedExpiration={lastEstimatedExpiration}
+										profile={profile}
+									/>
+								}
+								ledgerIsAwaitingDevice={!hasDeviceAvailable}
+								ledgerIsAwaitingApp={!isConnected}
+								onDeviceNotAvailable={() => {
+									// @TODO handle ledger
+								}}
+							/>
+						</>
 					)}
 				</div>
 				<FormButtons>

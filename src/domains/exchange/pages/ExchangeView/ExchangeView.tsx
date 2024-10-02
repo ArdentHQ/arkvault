@@ -75,7 +75,7 @@ export const ExchangeView = () => {
 
 	return (
 		<Page pageTitle={exchangeProvider?.name}>
-			<div className="relative flex h-full w-full flex-1 flex-col items-center justify-center py-10 md:py-20">
+			<div className="relative flex h-full w-full flex-1 flex-col items-center justify-center md:py-20">
 				<div className="absolute inset-0 hidden items-center bg-[#3f4455] sm:flex sm:p-32">
 					<Image name="WorldMap" className="h-full w-full" />
 				</div>
@@ -84,7 +84,7 @@ export const ExchangeView = () => {
 
 				<div
 					className={cn(
-						"relative w-full grow flex-col bg-theme-background p-10 sm:max-w-xl sm:grow-0 sm:rounded-2.5xl sm:shadow-2xl lg:max-w-2xl",
+						"relative w-full grow flex-col bg-theme-background p-6 sm:p-10 sm:max-w-xl sm:grow-0 sm:rounded-2.5xl sm:shadow-2xl lg:max-w-2xl",
 						isReady ? "flex" : "hidden",
 					)}
 				>
