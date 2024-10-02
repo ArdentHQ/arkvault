@@ -31,6 +31,8 @@ import { TransactionSuccessful } from "@/domains/transaction/components/Transact
 
 import transactionsFixture from "@/tests/fixtures/coins/ark/devnet/transactions.json";
 import ipfsFixture from "@/tests/fixtures/coins/ark/devnet/transactions/ipfs.json";
+import { BigNumber } from "@ardenthq/sdk-helpers";
+import { DateTime } from "@ardenthq/sdk-intl";
 
 const passphrase = getDefaultWalletMnemonic();
 const fixtureProfileId = getDefaultProfileId();
@@ -39,8 +41,11 @@ const createTransactionMock = (wallet: Contracts.IReadWriteWallet) =>
 	// @ts-ignore
 	vi.spyOn(wallet.transaction(), "transaction").mockImplementation(() => ({
 		amount: () => +ipfsFixture.data.amount / 1e8,
+		blockId: () => "1",
+		convertedAmount: () => BigNumber.make(10),
 		data: () => ({ data: () => ipfsFixture.data }),
 		explorerLink: () => `https://test.arkscan.io/transaction/${ipfsFixture.data.id}`,
+		explorerLinkForBlock: () => `https://test.arkscan.io/block/${ipfsFixture.data.id}`,
 		fee: () => +ipfsFixture.data.fee / 1e8,
 		hash: () => ipfsFixture.data.asset.ipfs,
 		id: () => ipfsFixture.data.id,
@@ -48,12 +53,20 @@ const createTransactionMock = (wallet: Contracts.IReadWriteWallet) =>
 		isDelegateRegistration: () => false,
 		isDelegateResignation: () => false,
 		isIpfs: () => true,
+		isMultiPayment: () => false,
 		isMultiSignatureRegistration: () => false,
+		isTransfer: () => false,
+		isUnvote: () => false,
 		isVote: () => false,
+		isVote: () => false,
+		isVoteCombination: () => false,
+		memo: () => null,
 		recipient: () => ipfsFixture.data.recipient,
 		sender: () => ipfsFixture.data.sender,
+		timestamp: () => DateTime.make(),
 		type: () => "ipfs",
 		usesMultiSignature: () => false,
+		wallet: () => wallet,
 	}));
 
 let profile: Contracts.IProfile;
@@ -220,7 +233,7 @@ describe("SendIpfs", () => {
 
 		await act(() => vi.runOnlyPendingTimers());
 
-		await expect(screen.findByTestId("TransactionSuccessful")).resolves.toBeVisible();
+		await expect(screen.findByText("IPFS")).resolves.toBeVisible();
 
 		expect(asFragment()).toMatchSnapshot();
 	});
@@ -362,9 +375,7 @@ describe("SendIpfs", () => {
 
 		await act(() => vi.runOnlyPendingTimers());
 
-		await expect(screen.findByTestId("TransactionSuccessful")).resolves.toBeVisible();
-
-		expect(screen.getByTestId("TransactionSuccessful")).toHaveTextContent("1e9b975eff6");
+		await expect(screen.findByText("IPFS")).resolves.toBeVisible();
 
 		signMock.mockRestore();
 		broadcastMock.mockRestore();
@@ -469,9 +480,7 @@ describe("SendIpfs", () => {
 
 		await act(() => vi.runOnlyPendingTimers());
 
-		await expect(screen.findByTestId("TransactionSuccessful")).resolves.toBeVisible();
-
-		expect(screen.getByTestId("TransactionSuccessful")).toHaveTextContent("1e9b975eff");
+		await expect(screen.findByText("IPFS")).resolves.toBeVisible();
 
 		signMock.mockRestore();
 		broadcastMock.mockRestore();

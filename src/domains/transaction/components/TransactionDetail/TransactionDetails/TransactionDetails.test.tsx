@@ -1,41 +1,18 @@
 import React from "react";
-import { Contracts } from "@ardenthq/sdk-profiles";
-import { RecipientProperties } from "./SearchRecipient.contracts";
-import { env, getDefaultProfileId, screen, renderResponsive } from "@/utils/testing-library";
-import { translations } from "@/app/i18n/common/i18n";
-import { TransactionAddresses } from "@/domains/transaction/components/TransactionDetail";
+import { screen, renderResponsive, render } from "@/utils/testing-library";
+import { TransactionDetails } from "./TransactionDetails";
+import { TransactionFixture } from "@/tests/fixtures/transactions";
 
-describe("TransactionAddresses", () => {
-	let profile: Contracts.IProfile;
-	let recipients: RecipientProperties[];
+describe("TransactionDetails", () => {
+	it.each(["sm", "md", "lg"])("should render in %s", (breakpoint: string) => {
+		renderResponsive(<TransactionDetails transaction={{ ...TransactionFixture }} />, breakpoint);
 
-	beforeAll(() => {
-		profile = env.profiles().findById(getDefaultProfileId());
-		const wallets: Contracts.IReadWriteWallet[] = profile.wallets().values();
-
-		recipients = wallets.map((wallet) => ({
-			address: wallet.address(),
-			alias: wallet.alias(),
-			avatar: wallet.avatar(),
-			id: wallet.id(),
-			network: wallet.networkId(),
-			type: "wallet",
-		}));
+		expect(screen.getAllByTestId("DetailLabelText")).toHaveLength(4);
 	});
 
-	it.each(["sm", "md", "lg"])("should render in %s", (breakpoint: string) => {
-		renderResponsive(
-			<TransactionAddresses
-				senderWallet={profile.wallets().first()}
-				recipients={[recipients[1]]}
-				profile={profile}
-			/>,
-			breakpoint,
-		);
+	it("should render without block id", () => {
+		render(<TransactionDetails transaction={{ ...TransactionFixture, blockId: () => null }} />);
 
-		expect(screen.getByTestId("DetailWrapper")).toBeInTheDocument();
-		expect(screen.getByText(translations.FROM)).toBeInTheDocument();
-		expect(screen.getByText(translations.TO)).toBeInTheDocument();
-		expect(screen.getByText(recipients[1].address)).toBeInTheDocument();
+		expect(screen.queryByText(TransactionFixture.blockId())).not.toBeInTheDocument();
 	});
 });

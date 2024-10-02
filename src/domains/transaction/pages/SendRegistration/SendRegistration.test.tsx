@@ -27,6 +27,8 @@ import {
 } from "@/utils/testing-library";
 import { server, requestMock } from "@/tests/mocks/server";
 import transactionsFixture from "@/tests/fixtures/coins/ark/devnet/transactions.json";
+import { BigNumber } from "@ardenthq/sdk-helpers";
+import { DateTime } from "@ardenthq/sdk-intl";
 
 let profile: Contracts.IProfile;
 let wallet: Contracts.IReadWriteWallet;
@@ -68,24 +70,31 @@ const createDelegateRegistrationMock = (wallet: Contracts.IReadWriteWallet) =>
 	// @ts-ignore
 	vi.spyOn(wallet.transaction(), "transaction").mockReturnValue({
 		amount: () => +DelegateRegistrationFixture.data.amount / 1e8,
+		blockId: () => "1",
+		convertedAmount: () => BigNumber.make(10),
 		data: () => ({ data: () => DelegateRegistrationFixture.data }),
 		explorerLink: () => `https://test.arkscan.io/transaction/${DelegateRegistrationFixture.data.id}`,
+		explorerLinkForBlock: () => `https://test.arkscan.io/block/${DelegateRegistrationFixture.data.id}`,
 		fee: () => +DelegateRegistrationFixture.data.fee / 1e8,
 		id: () => DelegateRegistrationFixture.data.id,
 		isConfirmed: () => true,
 		isDelegateRegistration: () => true,
 		isDelegateResignation: () => false,
 		isIpfs: () => false,
+		isMultiPayment: () => false,
 		isMultiSignatureRegistration: () => false,
+		isTransfer: () => false,
+		isUnvote: () => false,
 		isVote: () => false,
+		isVoteCombination: () => false,
+		memo: () => null,
 		recipient: () => DelegateRegistrationFixture.data.recipient,
 		sender: () => DelegateRegistrationFixture.data.sender,
+		timestamp: () => DateTime.make(),
 		type: () => "delegateRegistration",
 		username: () => DelegateRegistrationFixture.data.asset.delegate.username,
 		usesMultiSignature: () => false,
-		wallet: () => ({
-			username: () => DelegateRegistrationFixture.data.asset.delegate.username,
-		}),
+		wallet: () => wallet,
 	});
 
 const createMultiSignatureRegistrationMock = (wallet: Contracts.IReadWriteWallet) =>
