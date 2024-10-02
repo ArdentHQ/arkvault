@@ -346,7 +346,7 @@ const ExchangeForm = ({ orderId, onReady }: { orderId?: string; onReady: () => v
 											data-testid="ExchangeForm__continue-button"
 											disabled={isSubmitting || (isDirty ? !isValid : true)}
 											isLoading={isSubmitting}
-											onClick={handleNext}
+											onClick={() => handleNext()}
 										>
 											{showSignButtons ? t("COMMON.SIGN") : t("COMMON.CONTINUE")}
 										</Button>
