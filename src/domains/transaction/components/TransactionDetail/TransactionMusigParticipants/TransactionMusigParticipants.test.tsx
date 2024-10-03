@@ -33,12 +33,17 @@ describe("TransactionMusigParticipants", () => {
 		render(
 			<Route path="/profiles/:profileId/dashboard">
 				<TransactionMusigParticipants
+					network={wallet.network()}
 					profile={profile}
+					publicKeys={[
+						"034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192",
+						"02e012f0a7cac12a74bdc17d844cbc9f637177b470019c32a53cef94c7a56e2ea9",
+					]}
 					transaction={{
 						...TransactionFixture,
 						publicKeys: () => [
 							"034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192",
-							"034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192",
+							"02e012f0a7cac12a74bdc17d844cbc9f637177b470019c32a53cef94c7a56e2ea9",
 						],
 						wallet: () => wallet,
 					}}
@@ -52,6 +57,42 @@ describe("TransactionMusigParticipants", () => {
 
 		await waitFor(() => {
 			expect(screen.getAllByTestId("TableRow")).toHaveLength(2);
+		});
+	});
+
+	it("should render with musig participants and use explorer links", async () => {
+		render(
+			<Route path="/profiles/:profileId/dashboard">
+				<TransactionMusigParticipants
+					network={wallet.network()}
+					profile={profile}
+					useExplorerLinks
+					publicKeys={[
+						"034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192",
+						"02e012f0a7cac12a74bdc17d844cbc9f637177b470019c32a53cef94c7a56e2ea9",
+					]}
+					transaction={{
+						...TransactionFixture,
+						publicKeys: () => [
+							"034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192",
+							"02e012f0a7cac12a74bdc17d844cbc9f637177b470019c32a53cef94c7a56e2ea9",
+						],
+						wallet: () => wallet,
+					}}
+				/>
+			</Route>,
+			{
+				history,
+				route: dashboardURL,
+			},
+		);
+
+		await waitFor(() => {
+			expect(screen.getAllByTestId("TableRow")).toHaveLength(2);
+		});
+
+		await waitFor(() => {
+			expect(screen.getAllByTestId("Link")).toHaveLength(2);
 		});
 	});
 });

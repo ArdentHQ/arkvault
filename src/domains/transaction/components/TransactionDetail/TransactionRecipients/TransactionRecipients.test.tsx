@@ -3,6 +3,7 @@ import React from "react";
 import { Route } from "react-router-dom";
 
 import { TransactionRecipients } from "./TransactionRecipients";
+import { TransactionRecipientsMobile } from "./TransactionRecipientsMobile";
 import { translations } from "@/domains/transaction/i18n";
 import {
 	env,
@@ -135,5 +136,13 @@ describe("TransactionRecipients", () => {
 		expect(screen.getAllByTestId("Amount")).toHaveLength(2);
 
 		expect(container).toMatchSnapshot();
+	});
+
+	it("should render transaction recipient mobile with label", () => {
+		const { container } = render(
+			<TransactionRecipientsMobile currency={currency} recipients={[{ address }]} label="test label" />,
+		);
+
+		expect(container).toHaveTextContent("test label");
 	});
 });

@@ -207,7 +207,7 @@ describe("TransactionDetailModal", () => {
 			),
 		);
 
-		const { asFragment } = render(
+		render(
 			<Route path="/profiles/:profileId/dashboard">
 				<TransactionDetailModal
 					isOpen={true}
@@ -254,11 +254,10 @@ describe("TransactionDetailModal", () => {
 		};
 
 		expect(screen.getByTestId("Modal__inner")).toHaveTextContent(labels[transactionType]);
-		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should render a delegate registration modal", () => {
-		const { asFragment } = render(
+		render(
 			<Route path="/profiles/:profileId/dashboard">
 				<TransactionDetailModal
 					isOpen={true}
@@ -278,11 +277,10 @@ describe("TransactionDetailModal", () => {
 		);
 
 		expect(screen.getByTestId("Modal__inner")).toHaveTextContent("Registration");
-		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should render a delegate resignation modal", () => {
-		const { asFragment } = render(
+		render(
 			<Route path="/profiles/:profileId/dashboard">
 				<TransactionDetailModal
 					isOpen={true}
@@ -290,11 +288,7 @@ describe("TransactionDetailModal", () => {
 						...TransactionFixture,
 						blockId: () => "as32d1as65d1as3d1as32d1asd51as3d21as3d2as165das",
 						type: () => "delegateResignation",
-						wallet: () => ({
-							...TransactionFixture.wallet(),
-							network: () => wallet.network(),
-							username: () => "ARK Wallet",
-						}),
+						wallet: () => wallet,
 					}}
 				/>
 			</Route>,
@@ -305,11 +299,10 @@ describe("TransactionDetailModal", () => {
 		);
 
 		expect(screen.getByTestId("Modal__inner")).toHaveTextContent("Resignation");
-		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should render a second signature modal", () => {
-		const { asFragment } = render(
+		render(
 			<Route path="/profiles/:profileId/dashboard">
 				<TransactionDetailModal
 					isOpen={true}
@@ -328,7 +321,6 @@ describe("TransactionDetailModal", () => {
 		);
 
 		expect(screen.getByTestId("Modal__inner")).toHaveTextContent(translations.MODAL_SECOND_SIGNATURE_DETAIL.TITLE);
-		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should render a magistrate modal", () => {

@@ -70,19 +70,31 @@ describe("UnlockTokensModal", () => {
 
 		vi.spyOn(wallet.transaction(), "transaction").mockReturnValue({
 			amount: () => 30,
+			blockId: () => "1",
 			convertedAmount: () => 0,
 			convertedFee: () => 0,
+			data: () => ({ data: { nonce: 1 } }),
 			explorerLink: () => `https://test.arkscan.io/transaction/${transactionFixture.data.id}`,
+			explorerLinkForBlock: () => `https://test.arkscan.io/block/${transactionFixture.data.blockId}`,
 			fee: () => +transactionFixture.data.fee / 1e8,
 			id: () => transactionFixture.data.id,
 			isConfirmed: () => true,
 			isDelegateRegistration: () => false,
 			isDelegateResignation: () => false,
 			isIpfs: () => false,
+			isMultiPayment: () => false,
+			isMultiPayment: () => false,
 			isMultiSignatureRegistration: () => false,
+			isSent: () => true,
+			isTransfer: () => true,
+			isTransfer: () => true,
 			isUnlockToken: () => true,
-			isVote: () => false,
-			sender: () => transactionFixture.data.sender,
+			isUnvote: () => false,
+			isVote: () => true,
+			isVoteCombination: () => false,
+			memo: () => {},
+			recipient: () => wallet.address(),
+			sender: () => transactionFixture.data.sender.address,
 			timestamp: () => DateTime.make(),
 			type: () => "unlockToken",
 			usesMultiSignature: () => false,
@@ -228,7 +240,7 @@ describe("UnlockTokensModal", () => {
 
 		if (expectedOutcome === "success") {
 			await waitFor(() => {
-				expect(screen.getByTestId("TransactionSuccessful")).toBeInTheDocument();
+				expect(screen.findByTestId("TransactionId")).resolves.toBeVisible();
 			});
 		} else {
 			await waitFor(() => {

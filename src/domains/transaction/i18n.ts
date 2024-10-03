@@ -171,7 +171,7 @@ export const translations = {
 			TITLE: "Multisignature Passphrase",
 		},
 		STEP_3: {
-			DESCRIPTION: "Your signature has been confirmed and sent successfully.",
+			DESCRIPTION: "Your signature was successfully confirmed and sent.",
 			TITLE: "Transaction Sent",
 		},
 		WAITING_FOR_SIGNATURES: "Waiting for Signatures",
@@ -224,6 +224,7 @@ export const translations = {
 		AWAITING_OUR_BROADCAST: "Awaiting our broadcast",
 		AWAITING_OUR_SIGNATURE: "Awaiting our signature",
 		AWAITING_SOME_SIGNATURES: "One or more transactions are awaiting our signature.",
+		AWAITING_SUFFICIENT_SIGNATURES: "Awaiting sufficient signatures",
 		ERROR: {
 			ADDRESS_ALREADY_ADDED: "The address is already in the list",
 			ADDRESS_NOT_FOUND: "The address could not be found",

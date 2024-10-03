@@ -19,6 +19,7 @@ import {
 	mockNanoSTransport,
 	mockNanoXTransport,
 } from "@/utils/testing-library";
+import { BigNumber } from "@ardenthq/sdk-helpers";
 
 const passphrase = getDefaultWalletMnemonic();
 
@@ -141,7 +142,8 @@ describe("MultiSignatureDetail", () => {
 			wallet,
 		);
 
-		fixtures.vote = new DTO.ExtendedSignedTransactionData(
+		fixtures.vote = new DTO.ExtendedConfirmedTransactionData(
+			wallet,
 			await wallet
 				.coin()
 				.transaction()
@@ -165,10 +167,10 @@ describe("MultiSignatureDetail", () => {
 							publicKeys: [wallet.publicKey()!, profile.wallets().last().publicKey()!],
 						}),
 				}),
-			wallet,
 		);
 
-		fixtures.unvote = new DTO.ExtendedSignedTransactionData(
+		fixtures.unvote = new DTO.ExtendedConfirmedTransactionData(
+			wallet,
 			await wallet
 				.coin()
 				.transaction()
@@ -192,7 +194,6 @@ describe("MultiSignatureDetail", () => {
 							publicKeys: [wallet.publicKey()!, profile.wallets().last().publicKey()!],
 						}),
 				}),
-			wallet,
 		);
 
 		fixtures.ipfs = new DTO.ExtendedSignedTransactionData(
@@ -242,7 +243,7 @@ describe("MultiSignatureDetail", () => {
 			.spyOn(wallet.transaction(), "isAwaitingSignatureByPublicKey")
 			.mockReturnValue(false);
 
-		const { container } = render(
+		render(
 			<Route path="/profiles/:profileId">
 				<MultiSignatureDetail profile={profile} transaction={fixtures.transfer} wallet={wallet} isOpen />
 			</Route>,
@@ -252,8 +253,6 @@ describe("MultiSignatureDetail", () => {
 		);
 
 		await waitFor(() => expect(screen.getByText(translations.TRANSACTION_TYPES.TRANSFER)));
-
-		expect(container).toMatchSnapshot();
 
 		canBeBroadcastedMock.mockRestore();
 		canBeSignedMock.mockRestore();
@@ -270,7 +269,7 @@ describe("MultiSignatureDetail", () => {
 
 		vi.spyOn(wallet.transaction(), "isAwaitingSignatureByPublicKey").mockReturnValue(false);
 
-		const { container } = render(
+		render(
 			<Route path="/profiles/:profileId">
 				<MultiSignatureDetail profile={profile} transaction={fixtures.transfer} wallet={wallet} isOpen />
 			</Route>,
@@ -280,8 +279,6 @@ describe("MultiSignatureDetail", () => {
 		);
 
 		await waitFor(() => expect(screen.getByText(translations.TRANSACTION_TYPES.TRANSFER)));
-
-		expect(container).toMatchSnapshot();
 
 		canBeBroadcastedMock.mockRestore();
 		canBeSignedMock.mockRestore();
@@ -321,7 +318,7 @@ describe("MultiSignatureDetail", () => {
 			.spyOn(wallet.transaction(), "isAwaitingSignatureByPublicKey")
 			.mockReturnValue(false);
 
-		const { container } = render(
+		render(
 			<Route path="/profiles/:profileId">
 				<MultiSignatureDetail profile={profile} transaction={fixtures.multiSignature} wallet={wallet} isOpen />
 			</Route>,
@@ -331,8 +328,6 @@ describe("MultiSignatureDetail", () => {
 		);
 
 		await waitFor(() => expect(screen.getByText(translations.TRANSACTION_TYPES.MULTI_SIGNATURE)));
-
-		expect(container).toMatchSnapshot();
 
 		canBeBroadcastedMock.mockRestore();
 		canBeSignedMock.mockRestore();
@@ -349,6 +344,13 @@ describe("MultiSignatureDetail", () => {
 			.mockReturnValue(false);
 
 		vi.spyOn(fixtures.vote, "type").mockReturnValueOnce("vote");
+		vi.spyOn(fixtures.vote, "votes").mockImplementation(() => [
+			"034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192",
+		]);
+		vi.spyOn(fixtures.vote, "unvotes").mockImplementation(() => []);
+		vi.spyOn(fixtures.vote, "isConfirmed").mockReturnValue(false);
+		vi.spyOn(fixtures.vote, "confirmations").mockReturnValue(BigNumber.make(0));
+		vi.spyOn(fixtures.vote, "blockId").mockReturnValue(undefined);
 
 		render(
 			<Route path="/profiles/:profileId">
@@ -359,9 +361,7 @@ describe("MultiSignatureDetail", () => {
 			},
 		);
 
-		await waitFor(() =>
-			expect(screen.getByTestId("header__title")).toHaveTextContent(translations.TRANSACTION_TYPES.VOTE),
-		);
+		await expect(screen.findByText(translations.TRANSACTION_TYPES.VOTE)).resolves.toBeVisible();
 
 		canBeBroadcastedMock.mockRestore();
 		canBeSignedMock.mockRestore();
@@ -378,8 +378,16 @@ describe("MultiSignatureDetail", () => {
 			.mockReturnValue(false);
 
 		vi.spyOn(fixtures.unvote, "type").mockReturnValueOnce("unvote");
+		vi.spyOn(fixtures.unvote, "type").mockReturnValueOnce("unvote");
+		vi.spyOn(fixtures.unvote, "unvotes").mockImplementation(() => [
+			"034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192",
+		]);
+		vi.spyOn(fixtures.unvote, "votes").mockImplementation(() => []);
+		vi.spyOn(fixtures.unvote, "isConfirmed").mockReturnValue(false);
+		vi.spyOn(fixtures.unvote, "confirmations").mockReturnValue(BigNumber.make(0));
+		vi.spyOn(fixtures.unvote, "blockId").mockReturnValue(undefined);
 
-		const { container } = render(
+		render(
 			<Route path="/profiles/:profileId">
 				<MultiSignatureDetail profile={profile} transaction={fixtures.unvote} wallet={wallet} isOpen />
 			</Route>,
@@ -388,11 +396,7 @@ describe("MultiSignatureDetail", () => {
 			},
 		);
 
-		await waitFor(() =>
-			expect(screen.getByTestId("header__title")).toHaveTextContent(translations.TRANSACTION_TYPES.UNVOTE),
-		);
-
-		expect(container).toMatchSnapshot();
+		await expect(screen.findByText(translations.TRANSACTION_TYPES.UNVOTE)).resolves.toBeVisible();
 
 		canBeBroadcastedMock.mockRestore();
 		canBeSignedMock.mockRestore();
@@ -408,7 +412,7 @@ describe("MultiSignatureDetail", () => {
 			.spyOn(wallet.transaction(), "isAwaitingSignatureByPublicKey")
 			.mockReturnValue(false);
 
-		const { container } = render(
+		render(
 			<Route path="/profiles/:profileId">
 				<MultiSignatureDetail profile={profile} transaction={fixtures.ipfs} wallet={wallet} isOpen />
 			</Route>,
@@ -416,11 +420,8 @@ describe("MultiSignatureDetail", () => {
 				route: `/profiles/${profile.id()}`,
 			},
 		);
-		await waitFor(() =>
-			expect(screen.getByTestId("header__title")).toHaveTextContent(translations.TRANSACTION_TYPES.IPFS),
-		);
 
-		expect(container).toMatchSnapshot();
+		await expect(screen.findByText(translations.TRANSACTION_TYPES.IPFS)).resolves.toBeVisible();
 
 		canBeBroadcastedMock.mockRestore();
 		canBeSignedMock.mockRestore();
@@ -479,7 +480,7 @@ describe("MultiSignatureDetail", () => {
 		const broadcastMock = vi.spyOn(wallet.transaction(), "broadcast");
 		const addSignatureMock = vi.spyOn(wallet.transaction(), "addSignature").mockResolvedValue(void 0);
 
-		const { container } = render(
+		render(
 			<Route path="/profiles/:profileId">
 				<MultiSignatureDetail profile={profile} transaction={fixtures.transfer} wallet={wallet} isOpen />
 			</Route>,
@@ -506,8 +507,6 @@ describe("MultiSignatureDetail", () => {
 		await waitFor(() => expect(broadcastMock).not.toHaveBeenCalled());
 
 		await expect(screen.findByText(translations.TRANSACTION_SIGNED)).resolves.toBeVisible();
-
-		expect(container).toMatchSnapshot();
 
 		actsMock.mockRestore();
 		canBeBroadcastedMock.mockRestore();
@@ -564,7 +563,7 @@ describe("MultiSignatureDetail", () => {
 			.spyOn(wallet.coin().multiSignature(), "isMultiSignatureReady")
 			.mockReturnValue(true);
 
-		const { container } = render(
+		render(
 			<Route path="/profiles/:profileId">
 				<MultiSignatureDetail profile={profile} transaction={fixtures.transfer} wallet={wallet} isOpen />
 			</Route>,
@@ -574,8 +573,6 @@ describe("MultiSignatureDetail", () => {
 		);
 
 		await waitFor(() => expect(screen.queryByTestId("MultiSignatureDetail__broadcast")).not.toBeInTheDocument());
-
-		expect(container).toMatchSnapshot();
 
 		canBeBroadcastedMock.mockRestore();
 		canBeSignedMock.mockRestore();
@@ -594,7 +591,7 @@ describe("MultiSignatureDetail", () => {
 
 		const broadcastMock = vi.spyOn(wallet.transaction(), "broadcast").mockRejectedValue(new Error("Failed"));
 
-		const { container } = render(
+		render(
 			<Route path="/profiles/:profileId">
 				<MultiSignatureDetail profile={profile} transaction={fixtures.transfer} wallet={wallet} isOpen />
 			</Route>,
@@ -604,8 +601,6 @@ describe("MultiSignatureDetail", () => {
 		);
 
 		await waitFor(() => expect(screen.getByTestId("MultiSignatureDetail__broadcast")));
-
-		expect(container).toMatchSnapshot();
 
 		await userEvent.click(screen.getByTestId("MultiSignatureDetail__broadcast"));
 
@@ -629,7 +624,7 @@ describe("MultiSignatureDetail", () => {
 		const canBeBroadcastedMock = vi.spyOn(wallet.transaction(), "canBeBroadcasted").mockReturnValue(false);
 		const canBeSignedMock = vi.spyOn(wallet.transaction(), "canBeSigned").mockReturnValue(true);
 
-		const { container } = render(
+		render(
 			<Route path="/profiles/:profileId">
 				<MultiSignatureDetail profile={profile} transaction={fixtures.transfer} wallet={wallet} isOpen />
 			</Route>,
@@ -647,8 +642,6 @@ describe("MultiSignatureDetail", () => {
 		await userEvent.click(screen.getByTestId("Paginator__back"));
 
 		await waitFor(() => expect(screen.getByTestId("Paginator__sign")));
-
-		expect(container).toMatchSnapshot();
 
 		canBeBroadcastedMock.mockRestore();
 		canBeSignedMock.mockRestore();

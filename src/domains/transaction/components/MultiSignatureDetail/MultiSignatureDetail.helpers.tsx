@@ -1,4 +1,5 @@
-import { DTO } from "@ardenthq/sdk-profiles";
+import { DTO as DTOProfiles, Contracts } from "@ardenthq/sdk-profiles";
+import { DTO, Networks } from "@ardenthq/sdk";
 import React from "react";
 import { useTranslation } from "react-i18next";
 
@@ -102,7 +103,7 @@ export const Paginator = ({
 	return <></>;
 };
 
-export const getMultiSignatureInfo = (transaction: DTO.ExtendedSignedTransactionData) => {
+export const getMultiSignatureInfo = (transaction: DTOProfiles.ExtendedSignedTransactionData) => {
 	const { min, publicKeys, mandatoryKeys, numberOfSignatures } = transaction.get<{
 		mandatoryKeys: string[];
 		publicKeys: string[];
@@ -114,4 +115,47 @@ export const getMultiSignatureInfo = (transaction: DTO.ExtendedSignedTransaction
 		min: min ?? numberOfSignatures,
 		publicKeys: publicKeys || mandatoryKeys,
 	};
+};
+
+export const constructWalletsFromPublicKeys = async ({
+	profile,
+	publicKeys,
+	network,
+}: {
+	publicKeys: string[];
+	network: Networks.Network;
+	profile: Contracts.IProfile;
+}) => {
+	const wallets: Contracts.IReadWriteWallet[] = [];
+
+	for (const publicKey of publicKeys) {
+		const wallet = await profile.walletFactory().fromPublicKey({
+			coin: network.coin(),
+			network: network.id(),
+			publicKey,
+		});
+
+		wallets.push(wallet);
+	}
+
+	return wallets;
+};
+
+export const transactionPublicKeys = (transaction?: DTO.RawTransactionData): { min?: number; publicKeys: string[] } => {
+	if (!transaction) {
+		return { min: undefined, publicKeys: [] };
+	}
+
+	try {
+		if (transaction?.publicKeys?.()) {
+			return {
+				min: transaction.min(),
+				publicKeys: transaction.publicKeys(),
+			};
+		}
+
+		return getMultiSignatureInfo(transaction);
+	} catch {
+		return { min: undefined, publicKeys: [] };
+	}
 };

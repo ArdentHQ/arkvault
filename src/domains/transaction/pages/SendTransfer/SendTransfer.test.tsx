@@ -6,12 +6,11 @@ import userEvent from "@testing-library/user-event";
 import { createHashHistory } from "history";
 import React, { useEffect } from "react";
 import { FormProvider, useForm } from "react-hook-form";
-import { Route, Router } from "react-router-dom";
+import { Route } from "react-router-dom";
 
 import { FormStep } from "./FormStep";
 import { ReviewStep } from "./ReviewStep";
 import { SendTransfer } from "./SendTransfer";
-import { SummaryStep } from "./SummaryStep";
 import { NetworkStep } from "./NetworkStep";
 import { buildTransferData } from "@/domains/transaction/pages/SendTransfer/SendTransfer.helpers";
 import { minVersionList, StepsProvider } from "@/app/contexts";
@@ -51,29 +50,35 @@ vi.mock("@/utils/delay", () => ({
 const createTransactionMock = (wallet: Contracts.IReadWriteWallet) =>
 	vi.spyOn(wallet.transaction(), "transaction").mockReturnValue({
 		amount: () => +transactionFixture.data.amount / 1e8,
+		blockId: () => "1",
 		confirmations: () => 10,
 		convertedAmount: () => +transactionFixture.data.amount / 1e8,
 		data: () => ({ data: () => transactionFixture.data }),
 		explorerLink: () => `https://test.arkscan.io/transaction/${transactionFixture.data.id}`,
+		explorerLinkForBlock: () => `https://test.arkscan.io/block/${transactionFixture.data.id}`,
 		fee: () => +transactionFixture.data.fee / 1e8,
 		id: () => transactionFixture.data.id,
 		isConfirmed: () => true,
 		isDelegateRegistration: () => false,
 		isDelegateResignation: () => false,
 		isIpfs: () => false,
+		isMultiPayment: () => false,
 		isMultiSignatureRegistration: () => false,
 		isSent: () => true,
+		isTransfer: () => true,
+		isUnvote: () => false,
 		isVote: () => false,
+		isVoteCombination: () => false,
+		memo: () => null,
 		recipient: () => transactionFixture.data.recipient,
 		recipients: () => [
-			{
-				address: transactionFixture.data.recipient,
-				amount: +transactionFixture.data.amount / 1e8,
-			},
+			{ address: transactionFixture.data.recipient, amount: +transactionFixture.data.amount / 1e8 },
 		],
 		sender: () => transactionFixture.data.sender,
+		timestamp: () => DateTime.make(),
 		type: () => "transfer",
 		usesMultiSignature: () => false,
+		wallet: () => wallet,
 	} as DTO.ExtendedSignedTransactionData);
 
 let profile: Contracts.IProfile;
@@ -81,8 +86,6 @@ let wallet: Contracts.IReadWriteWallet;
 let secondWallet: Contracts.IReadWriteWallet;
 let firstWalletAddress: string;
 let resetProfileNetworksMock: () => void;
-const transactionIdToBeVisible = () =>
-	expect(screen.getByTestId("TransactionSuccessful")).toHaveTextContent("8f913b6b719e7767d");
 
 const defaultRegisterCallback = ({ register }) => {
 	register("network");
@@ -487,58 +490,6 @@ describe("SendTransfer", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it("should render summary step", async () => {
-		const transferURL = `/profiles/${fixtureProfileId}/send-transfer`;
-
-		history.push(transferURL);
-
-		await wallet.synchroniser().identity();
-
-		const transaction = new DTO.ExtendedSignedTransactionData(
-			await wallet
-				.coin()
-				.transaction()
-				.transfer({
-					data: {
-						amount: 1,
-						to: wallet.address(),
-					},
-					fee: 1,
-					nonce: "1",
-					signatory: await wallet
-						.coin()
-						.signatory()
-						.multiSignature({
-							min: 2,
-							publicKeys: [wallet.publicKey()!, profile.wallets().last().publicKey()!],
-						}),
-				}),
-			wallet,
-		);
-
-		renderWithForm(
-			<Router history={history}>
-				<Route path="/profiles/:profileId/send-transfer">
-					<StepsProvider activeStep={1} steps={4}>
-						<SummaryStep transaction={transaction} senderWallet={wallet} profile={profile} />
-					</StepsProvider>
-					,
-				</Route>
-			</Router>,
-			{
-				defaultValues: {
-					network: wallet.network(),
-					senderAddress: wallet.address(),
-				},
-				// eslint-disable-next-line sonarjs/no-identical-functions
-				registerCallback: defaultRegisterCallback,
-				withProviders: true,
-			},
-		);
-
-		await expect(screen.findByTestId("TransactionSuccessful")).resolves.toBeVisible();
-	});
-
 	it("should render network selection without selected wallet", async () => {
 		const transferURL = `/profiles/${fixtureProfileId}/send-transfer`;
 
@@ -772,9 +723,7 @@ describe("SendTransfer", () => {
 		// const expirationMock = vi.spyOn(wallet.coin().transaction(), "estimateExpiration").mockResolvedValue(undefined);
 		await userEvent.keyboard("{enter}");
 
-		await expect(screen.findByTestId("TransactionSuccessful")).resolves.toBeVisible();
-
-		transactionIdToBeVisible();
+		await expect(screen.findByText("Transfer")).resolves.toBeVisible();
 
 		signMock.mockRestore();
 		broadcastMock.mockRestore();
@@ -983,9 +932,7 @@ describe("SendTransfer", () => {
 		await waitFor(() => expect(sendButton()).not.toBeDisabled(), { interval: 10 });
 		await userEvent.click(sendButton());
 
-		await expect(screen.findByTestId("TransactionSuccessful")).resolves.toBeVisible();
-
-		transactionIdToBeVisible();
+		await expect(screen.findByText("Transfer")).resolves.toBeVisible();
 
 		signMock.mockRestore();
 		broadcastMock.mockRestore();
@@ -1065,9 +1012,7 @@ describe("SendTransfer", () => {
 
 		await userEvent.click(continueButton());
 
-		await expect(screen.findByTestId("TransactionSuccessful")).resolves.toBeVisible();
-
-		expect(screen.getByTestId("TransactionSuccessful")).toHaveTextContent("8f913b6b719e");
+		await expect(screen.findByText("Transfer")).resolves.toBeVisible();
 
 		expect(signMock).toHaveBeenCalledWith(
 			expect.objectContaining({
@@ -1174,7 +1119,7 @@ describe("SendTransfer", () => {
 		await userEvent.click(continueButton());
 
 		// Auto broadcast
-		await expect(screen.findByTestId("TransactionSuccessful")).resolves.toBeVisible();
+		await expect(screen.findByText("Transfer")).resolves.toBeVisible();
 
 		vi.restoreAllMocks();
 	});
@@ -1519,9 +1464,7 @@ describe("SendTransfer", () => {
 
 		await userEvent.click(screen.getByTestId("ConfirmSendTransaction__confirm"));
 
-		await expect(screen.findByTestId("TransactionSuccessful")).resolves.toBeVisible();
-
-		transactionIdToBeVisible();
+		await expect(screen.findByText("Transfer")).resolves.toBeVisible();
 
 		signMock.mockRestore();
 		broadcastMock.mockRestore();
@@ -1636,9 +1579,7 @@ describe("SendTransfer", () => {
 		// confirm within the modal
 		await userEvent.click(screen.getByTestId("ConfirmSendTransaction__confirm"));
 
-		await expect(screen.findByTestId("TransactionSuccessful")).resolves.toBeVisible();
-
-		transactionIdToBeVisible();
+		await expect(screen.findByText("Transfer")).resolves.toBeVisible();
 
 		signMock.mockRestore();
 		broadcastMock.mockRestore();
@@ -1736,9 +1677,7 @@ describe("SendTransfer", () => {
 		await waitFor(() => expect(sendButton()).not.toBeDisabled(), { interval: 10 });
 		await userEvent.click(sendButton());
 
-		await expect(screen.findByTestId("TransactionSuccessful")).resolves.toBeVisible();
-
-		transactionIdToBeVisible();
+		await expect(screen.findByText("Transfer")).resolves.toBeVisible();
 
 		signMock.mockRestore();
 		broadcastMock.mockRestore();

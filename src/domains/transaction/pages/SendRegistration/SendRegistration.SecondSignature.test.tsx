@@ -25,6 +25,8 @@ import {
 	mockNanoXTransport,
 } from "@/utils/testing-library";
 import { server, requestMock } from "@/tests/mocks/server";
+import { BigNumber } from "@ardenthq/sdk-helpers";
+import { DateTime } from "@ardenthq/sdk-intl";
 
 let profile: Contracts.IProfile;
 let wallet: Contracts.IReadWriteWallet;
@@ -66,20 +68,30 @@ const renderPage = async (wallet: Contracts.IReadWriteWallet, type = "delegateRe
 const createSecondSignatureRegistrationMock = (wallet: Contracts.IReadWriteWallet) =>
 	vi.spyOn(wallet.transaction(), "transaction").mockReturnValue({
 		amount: () => 0,
+		blockId: () => "1",
+		convertedAmount: () => BigNumber.make(10),
 		data: () => ({ data: () => SecondSignatureRegistrationFixture.data }),
 		explorerLink: () => `https://test.arkscan.io/transaction/${SecondSignatureRegistrationFixture.data.id}`,
+		explorerLinkForBlock: () => `https://test.arkscan.io/block/${SecondSignatureRegistrationFixture.data.id}`,
 		fee: () => +SecondSignatureRegistrationFixture.data.fee / 1e8,
 		id: () => SecondSignatureRegistrationFixture.data.id,
 		isConfirmed: () => true,
 		isDelegateRegistration: () => false,
 		isDelegateResignation: () => false,
 		isIpfs: () => false,
+		isMultiPayment: () => false,
 		isMultiSignatureRegistration: () => false,
+		isTransfer: () => false,
+		isUnvote: () => false,
 		isVote: () => false,
+		isVoteCombination: () => false,
+		memo: () => null,
 		recipient: () => SecondSignatureRegistrationFixture.data.recipient,
 		sender: () => SecondSignatureRegistrationFixture.data.sender,
+		timestamp: () => DateTime.make(),
 		type: () => "secondSignature",
 		usesMultiSignature: () => false,
+		wallet: () => wallet,
 	} as any);
 
 const continueButton = () => screen.getByTestId("StepNavigation__continue-button");
@@ -176,6 +188,8 @@ describe("Second Signature Registration", () => {
 		await userEvent.type(firstInput, "master");
 		await userEvent.type(secondInput, "dizzy");
 		await userEvent.type(thirdInput, "era");
+
+		await userEvent.click(screen.getByTestId("SecondSignature__passphraseDisclaimer"));
 
 		await waitFor(() => expect(continueButton()).not.toBeDisabled());
 

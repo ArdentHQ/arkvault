@@ -113,7 +113,7 @@ export const useMultiSignatureRegistration = () => {
 		const prepareLedger = () =>
 			wallet.signatory().ledger(wallet.data().get<string>(ProfileContracts.WalletData.DerivationPath)!);
 
-		return withAbortPromise(abortReference.current?.signal, abortConnectionRetry)(prepareLedger());
+		return withAbortPromise(abortReference.current.signal, abortConnectionRetry)(prepareLedger());
 	};
 
 	const addSignature = async ({ transactionId, signatory, wallet }: AddSignatureProperties) => {

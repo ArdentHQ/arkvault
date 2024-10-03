@@ -14,21 +14,49 @@ export interface MultiSignatureStatus {
 		| "isAwaitingConfirmation"
 		| "isMultiSignatureReady"
 		| "isAwaitingFinalSignature"
-		| "isAwaitingOurFinalSignature";
+		| "isAwaitingOurFinalSignature"
+		| "isBroadcasted";
 	label: string;
 	icon: string;
 	className: string;
 }
 
+const canBeBroadcasted = (wallet: Contracts.IReadWriteWallet, transaction: DTO.ExtendedSignedTransactionData) => {
+	try {
+		return (
+			wallet.transaction().canBeBroadcasted(transaction.id()) &&
+			!wallet.transaction().isAwaitingConfirmation(transaction.id())
+		);
+	} catch {
+		return false;
+	}
+};
+
+const transactionExists = (wallet: Contracts.IReadWriteWallet, transaction: DTO.ExtendedSignedTransactionData) => {
+	try {
+		return !!wallet.transaction().transaction(transaction.id());
+	} catch {
+		return false;
+	}
+};
+
+export const isAwaitingMusigSignatures = (
+	transaction: DTO.ExtendedSignedTransactionData | DTO.ExtendedConfirmedTransactionData,
+) => {
+	try {
+		if ([transaction.isConfirmed(), transaction.confirmations().isGreaterThan(0)].some(Boolean)) {
+			return false;
+		}
+
+		return !transaction.wallet().transaction().hasBeenBroadcasted(transaction.id());
+	} catch {
+		// Transaction isBroadcasted and it doesn't exist in the wallet's local repository.
+		return false;
+	}
+};
+
 export const useMultiSignatureStatus = ({ wallet, transaction }: Properties) => {
 	const { t } = useTranslation();
-
-	const canBeBroadcasted = useMemo(
-		() =>
-			wallet.transaction().canBeBroadcasted(transaction.id()) &&
-			!wallet.transaction().isAwaitingConfirmation(transaction.id()),
-		[wallet, transaction],
-	);
 
 	const canBeSigned = useMemo(() => {
 		try {
@@ -40,14 +68,17 @@ export const useMultiSignatureStatus = ({ wallet, transaction }: Properties) => 
 
 	const status: MultiSignatureStatus = useMemo(() => {
 		if (
-			wallet.transaction().isAwaitingOurSignature(transaction.id()) &&
-			wallet.transaction().isAwaitingOtherSignatures(transaction.id())
+			[
+				!isAwaitingMusigSignatures(transaction),
+				!transactionExists(wallet, transaction),
+				!wallet.isMultiSignature() && !transaction.isMultiSignatureRegistration(),
+			].some(Boolean)
 		) {
 			return {
-				className: "text-theme-secondary-700",
-				icon: "Pencil",
-				label: t("TRANSACTION.MULTISIGNATURE.AWAITING_OUR_SIGNATURE"),
-				value: "isAwaitingOurSignature",
+				className: "",
+				icon: "",
+				label: "",
+				value: "isBroadcasted",
 			};
 		}
 
@@ -57,6 +88,18 @@ export const useMultiSignatureStatus = ({ wallet, transaction }: Properties) => 
 				icon: "Clock",
 				label: t("TRANSACTION.MULTISIGNATURE.AWAITING_CONFIRMATIONS"),
 				value: "isAwaitingConfirmation",
+			};
+		}
+
+		if (
+			wallet.transaction().isAwaitingOurSignature(transaction.id()) &&
+			wallet.transaction().isAwaitingOtherSignatures(transaction.id())
+		) {
+			return {
+				className: "text-theme-secondary-700",
+				icon: "Pencil",
+				label: t("TRANSACTION.MULTISIGNATURE.AWAITING_OUR_SIGNATURE"),
+				value: "isAwaitingOurSignature",
 			};
 		}
 
@@ -119,7 +162,7 @@ export const useMultiSignatureStatus = ({ wallet, transaction }: Properties) => 
 	}, [wallet, transaction, t]);
 
 	return {
-		canBeBroadcasted,
+		canBeBroadcasted: canBeBroadcasted(wallet, transaction),
 		canBeSigned,
 		isAwaitingFinalSignature: status.value === "isAwaitingFinalSignature",
 		isAwaitingOurFinalSignature: status.value === "isAwaitingOurFinalSignature",
