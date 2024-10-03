@@ -6,18 +6,18 @@ import {
 	getDefaultProfileId,
 	mockProfileWithPublicAndTestNetworks,
 	render,
-	screen
+	screen,
 } from "@/utils/testing-library";
-import {SendExchangeTransfer} from "./SendExchangeTransfer";
+import { SendExchangeTransfer } from "./SendExchangeTransfer";
 import userEvent from "@testing-library/user-event";
-import {afterAll, expect, MockInstance} from "vitest";
+import { afterAll, expect, MockInstance } from "vitest";
 import * as environmentHooks from "@/app/hooks/env";
 
 let profile: Contracts.IProfile;
 let exchangeTransaction: Contracts.IExchangeTransaction;
 
 let resetProfileNetworksMock: () => void;
-let useActiveProfileSpy: MockInstance
+let useActiveProfileSpy: MockInstance;
 
 describe("ExchangeStatus", () => {
 	beforeAll(() => {
@@ -46,21 +46,22 @@ describe("ExchangeStatus", () => {
 	afterAll(() => {
 		resetProfileNetworksMock();
 		useActiveProfileSpy.mockRestore();
-	})
+	});
 
 	it("should trigger `onClose`", async () => {
 		const onClose = vi.fn();
 
-		render(<SendExchangeTransfer
-			profile={profile}
-			network={profile.wallets().first().network()}
-			exchangeTransaction={exchangeTransaction}
-			onClose={onClose}
-			onSuccess={vi.fn()}
-		/>);
+		render(
+			<SendExchangeTransfer
+				profile={profile}
+				network={profile.wallets().first().network()}
+				exchangeTransaction={exchangeTransaction}
+				onClose={onClose}
+				onSuccess={vi.fn()}
+			/>,
+		);
 
 		await userEvent.click(screen.getByTestId("ExchangeTransfer__cancel-button"));
 		expect(onClose).toHaveBeenCalledOnce();
 	});
-
 });
