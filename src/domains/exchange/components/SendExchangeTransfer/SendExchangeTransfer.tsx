@@ -73,8 +73,9 @@ export const SendExchangeTransfer: React.FC<TransferProperties> = ({ onClose, on
 	console.log({ errors: form.errors, isSubmitting, isValid, values: getValues() });
 
 	useEffect(() => {
+		form.setValue("amount", exchangeInput.amount, { shouldDirty: true, shouldValidate: true });
 		form.setValue("recipients", recipients, { shouldDirty: true, shouldValidate: true });
-	}, [recipients]);
+	}, [exchangeInput.amount, recipients]);
 
 	useEffect(() => {
 		const netBalance = BigNumber.make(senderWallet?.balance() || 0).minus(fee || 0);
@@ -145,7 +146,13 @@ export const SendExchangeTransfer: React.FC<TransferProperties> = ({ onClose, on
 
 	if (transaction) {
 		return (
-			<Modal isOpen onClose={onClose} title={"Sign Exchange Transaction"}>
+			<Modal
+				isOpen
+				onClose={onClose}
+				title={t("EXCHANGE.MODAL_SIGN_EXCHANGE_TRANSACTION.SUCCESS_TITLE")}
+				contentClassName="p-6 sm:p-8 sm:[&>div.absolute]:!m-8 [&>div.absolute]:!m-6"
+				titleClass="!leading-[21px] sm!:leading-7"
+			>
 				<div>
 					<Alert variant="success"> {t("EXCHANGE.TRANSACTION_SENT")} </Alert>
 					<FormButtons>
@@ -162,7 +169,7 @@ export const SendExchangeTransfer: React.FC<TransferProperties> = ({ onClose, on
 		<Modal
 			isOpen
 			onClose={onClose}
-			title={"Sign Exchange Transaction"}
+			title={t("EXCHANGE.MODAL_SIGN_EXCHANGE_TRANSACTION.TITLE")}
 			contentClassName="p-6 sm:p-8 sm:[&>div.absolute]:!m-8 [&>div.absolute]:!m-6"
 			titleClass="!leading-[21px] sm!:leading-7"
 		>
