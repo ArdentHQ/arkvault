@@ -27,6 +27,7 @@ import {
 } from "@/domains/exchange/utils";
 import { delay } from "@/utils/delay";
 import { SendExchangeTransfer } from "@/domains/exchange/components/SendExchangeTransfer";
+import cn from "classnames";
 
 enum Step {
 	FormStep = 1,
@@ -314,11 +315,11 @@ const ExchangeForm = ({ orderId, onReady }: { orderId?: string; onReady: () => v
 
 					<div className="mt-8">
 						<TabPanel tabId={1}>
-							<FormStep profile={activeProfile} />
+							<FormStep profile={activeProfile}/>
 						</TabPanel>
 
 						<TabPanel tabId={2}>
-							<ReviewStep />
+							<ReviewStep/>
 						</TabPanel>
 
 						<TabPanel tabId={3}>
@@ -329,39 +330,56 @@ const ExchangeForm = ({ orderId, onReady }: { orderId?: string; onReady: () => v
 							<ConfirmationStep exchangeTransaction={exchangeTransaction} />
 						</TabPanel>
 
+
 						{showFormButtons && (
-							<FormButtons>
-								{activeTab < Step.StatusStep && (
-									<>
+							<div className={cn({"flex justify-between items-center": activeTab === Step.ReviewStep && withSignStep})}>
+								{activeTab === Step.ReviewStep && withSignStep && (
+									<div className="fixed bottom-[calc(env(safe-area-inset-bottom)_+_8.5rem)] left-1/2 -translate-x-1/2 sm:translate-x-0 sm:static sm:mt-5 manual-transfer-button">
 										<Button
-											data-testid="ExchangeForm__back-button"
-											disabled={isSubmitting}
-											variant="secondary"
-											onClick={handleBack}
-										>
-											{t("COMMON.BACK")}
-										</Button>
-
-										<Button
-											data-testid="ExchangeForm__continue-button"
+											variant="transparent"
+											onClick={() => handleNext({bypassSignStep: true})}
 											disabled={isSubmitting || (isDirty ? !isValid : true)}
-											isLoading={isSubmitting}
-											onClick={() => handleNext()}
+											className="sm:pl-0 text-sm leading-[17px] text-theme-primary-600"
 										>
-											{showSignButtons ? t("COMMON.SIGN") : t("COMMON.CONTINUE")}
+											Manual transfer
 										</Button>
-									</>
-								)}
+									</div>)
+								}
 
-								{activeTab === Step.ConfirmationStep && (
-									<Button
-										data-testid="ExchangeForm__finish-button"
-										onClick={() => history.push(`/profiles/${activeProfile.id()}/dashboard`)}
-									>
-										{t("COMMON.GO_TO_PORTFOLIO")}
-									</Button>
-								)}
-							</FormButtons>
+								<FormButtons>
+									{activeTab < Step.StatusStep && (
+										<>
+											<Button
+												data-testid="ExchangeForm__back-button"
+												disabled={isSubmitting}
+												variant="secondary"
+												onClick={handleBack}
+											>
+												{t("COMMON.BACK")}
+											</Button>
+
+											<Button
+												data-testid="ExchangeForm__continue-button"
+												disabled={isSubmitting || (isDirty ? !isValid : true)}
+												isLoading={isSubmitting}
+												onClick={() => handleNext()}
+											>
+												{showSignButtons ? t("COMMON.SIGN") : t("COMMON.CONTINUE")}
+											</Button>
+										</>
+									)}
+
+									{activeTab === Step.ConfirmationStep && (
+										<Button
+											data-testid="ExchangeForm__finish-button"
+											onClick={() => history.push(`/profiles/${activeProfile.id()}/dashboard`)}
+										>
+											{t("COMMON.GO_TO_PORTFOLIO")}
+										</Button>
+									)}
+								</FormButtons>
+							</div>
+
 						)}
 					</div>
 				</Tabs>
