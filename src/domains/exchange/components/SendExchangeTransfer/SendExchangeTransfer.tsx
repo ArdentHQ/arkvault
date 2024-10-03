@@ -107,7 +107,7 @@ export const SendExchangeTransfer: React.FC<TransferProperties> = ({ onClose, on
 				type: "transfer",
 			});
 
-			form.setValue("fee", transactionFees.min, { shouldDirty: true, shouldValidate: true });
+			form.setValue("fee", transactionFees.avg, { shouldDirty: true, shouldValidate: true });
 			form.setValue("fees", transactionFees, { shouldDirty: true, shouldValidate: true });
 		};
 
