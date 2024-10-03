@@ -5,4 +5,3 @@ export * from "./Notifications";
 export * from "./Notifications.contracts";
 export * from "./NotificationsDropdown";
 export * from "./NotificationTransactionItem";
-export * from "./styles";

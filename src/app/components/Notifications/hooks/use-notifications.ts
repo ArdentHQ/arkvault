@@ -1,8 +1,14 @@
-import { Contracts } from "@ardenthq/sdk-profiles";
+import { Contracts, DTO } from "@ardenthq/sdk-profiles";
 import { useMemo } from "react";
 
 export const useNotifications = ({ profile }: { profile: Contracts.IProfile }) => {
 	const isSyncing = profile.notifications().transactions().isSyncing();
+
+	const isNotificationUnread = (transaction: DTO.ExtendedConfirmedTransactionData) =>
+		Object.values(profile.notifications().all()).some(notification => {
+			const isUnread = notification.read_at === undefined
+			return notification.meta.transactionId === transaction.id() && isUnread
+		})
 
 	const { markAllTransactionsAsRead, markAsRead, releases, transactions } = useMemo(() => {
 		const markAllTransactionsAsRead = (isVisible: boolean) => {
@@ -35,6 +41,7 @@ export const useNotifications = ({ profile }: { profile: Contracts.IProfile }) =
 
 	return {
 		hasUnread: (releases.length > 0 || transactions.length > 0) && profile.notifications().hasUnread(),
+		isNotificationUnread,
 		markAllTransactionsAsRead,
 		markAsRead,
 		releases,
