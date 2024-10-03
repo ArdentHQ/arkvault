@@ -11,7 +11,7 @@ exports[`MultiSignatureDetail > should not broadcast if wallet is not ready to d
       tabindex="-1"
     >
       <div
-        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl px-10 pb-24 pt-10 sm:pb-10"
+        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl pb-24 pl-10 pr-10 pt-10 sm:pb-10"
         data-testid="Modal__inner"
       >
         <div
@@ -1244,7 +1244,7 @@ exports[`MultiSignatureDetail > should show error screen for unsupported Nano S 
       tabindex="-1"
     >
       <div
-        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl px-10 pb-24 pt-10 sm:pb-10"
+        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl pb-24 pl-10 pr-10 pt-10 sm:pb-10"
         data-testid="Modal__inner"
       >
         <div
@@ -1566,7 +1566,7 @@ exports[`MultiSignatureDetail > should sign transaction after authentication pag
       tabindex="-1"
     >
       <div
-        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl px-10 pb-24 pt-10 sm:pb-10"
+        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl pb-24 pl-10 pr-10 pt-10 sm:pb-10"
         data-testid="Modal__inner"
       >
         <div
@@ -2046,7 +2046,7 @@ exports[`MultiSignatureDetail > should sign transaction with a ledger wallet 1`]
       tabindex="-1"
     >
       <div
-        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl px-10 pb-24 pt-10 sm:pb-10"
+        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl pb-24 pl-10 pr-10 pt-10 sm:pb-10"
         data-testid="Modal__inner"
       >
         <div

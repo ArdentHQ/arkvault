@@ -79,19 +79,17 @@ export const SendExchangeTransfer: React.FC<TransferProperties> = ({ onClose, on
 					type: form.errors.amount.type,
 				});
 			}
-		}
+		};
 
 		if (senderWallet) {
 			void validate();
 		}
 	}, [fee, network, recipients, sendTransfer, senderWallet]);
 
-
 	useEffect(() => {
 		form.setValue("amount", exchangeInput.amount, { shouldDirty: true, shouldValidate: true });
 		form.setValue("recipients", recipients, { shouldDirty: true, shouldValidate: true });
 	}, [exchangeInput.amount, recipients]);
-
 
 	const { calculate } = useFees(profile);
 
