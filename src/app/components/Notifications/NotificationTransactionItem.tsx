@@ -63,7 +63,7 @@ export const NotificationTransactionItem = ({
 				</TableCell>
 
 				<TableCell innerClassName="justify-end pr-8 static">
-					<div>
+					<div className="h-5">
 						<AmountLabel
 							value={transaction.amount()}
 							isNegative={transaction.isSent()}
