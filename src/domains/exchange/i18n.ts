@@ -44,6 +44,11 @@ export const translations = {
 		TITLE: "Remove Transaction",
 	},
 
+	MODAL_SIGN_EXCHANGE_TRANSACTION: {
+		SUCCESS_TITLE: "Successfully Signed Transaction",
+		TITLE: "Sign Exchange Transaction",
+	},
+
 	NAVIGATION: {
 		EXCHANGES: "Exchanges",
 		TRANSACTIONS: "Transactions",
