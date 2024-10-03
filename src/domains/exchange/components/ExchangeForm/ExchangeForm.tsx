@@ -388,6 +388,8 @@ const ExchangeForm = ({ orderId, onReady }: { orderId?: string; onReady: () => v
 			</Form>
 			{showTransferModal && exchangeTransaction && (
 				<SendExchangeTransfer
+					profile={activeProfile}
+					network={activeProfile.availableNetworks().find((network) => network.id() === "ark.mainnet")!}
 					exchangeTransaction={exchangeTransaction}
 					onSuccess={() => setActiveTab(activeTab + 1)}
 					onClose={() => setShowTransferModal(false)}

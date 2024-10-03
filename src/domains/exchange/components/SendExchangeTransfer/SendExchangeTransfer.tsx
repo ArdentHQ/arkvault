@@ -5,7 +5,7 @@ import { useTranslation } from "react-i18next";
 import { Modal } from "@/app/components/Modal";
 import { Form, FormButtons, FormField, FormLabel } from "@/app/components/Form";
 import { SelectAddress } from "@/domains/profile/components/SelectAddress";
-import { useActiveProfile, useFees, useValidation } from "@/app/hooks";
+import { useFees, useValidation } from "@/app/hooks";
 import { DetailLabel, DetailTitle, DetailWrapper } from "@/app/components/DetailWrapper";
 import { Address } from "@/app/components/Address";
 import { Networks } from "@ardenthq/sdk";
@@ -22,20 +22,15 @@ import { BigNumber } from "@ardenthq/sdk-helpers";
 interface TransferProperties {
 	onClose: () => void;
 	onSuccess: () => void;
+	profile: Contracts.IProfile;
+	network: Networks.Network;
 	exchangeTransaction: Contracts.IExchangeTransaction;
 }
 
-export const SendExchangeTransfer: React.FC<TransferProperties> = ({ onClose, onSuccess, exchangeTransaction }) => {
+export const SendExchangeTransfer: React.FC<TransferProperties> = ({ onClose, onSuccess, network, exchangeTransaction, profile }) => {
 	const { t } = useTranslation();
 
-	const profile = useActiveProfile();
-
 	const { sendTransfer } = useValidation();
-
-	const network = useMemo(
-		() => profile.availableNetworks().find((network) => network.id() === "ark.mainnet"),
-		[profile],
-	) as Networks.Network;
 
 	const wallets = useMemo(
 		() => profile.wallets().findByCoinWithNetwork(network.coin(), network.id()),
@@ -64,13 +59,10 @@ export const SendExchangeTransfer: React.FC<TransferProperties> = ({ onClose, on
 	const {
 		form,
 		submitForm,
-		getValues,
 		lastEstimatedExpiration,
 		values: { fee },
 		formState: { isValid, isSubmitting },
 	} = useSendTransferForm(senderWallet);
-
-	console.log({ errors: form.errors, isSubmitting, isValid, values: getValues() });
 
 	useEffect(() => {
 		const netBalance = BigNumber.make(senderWallet?.balance() || 0).minus(fee || 0);
