@@ -3,112 +3,80 @@
 exports[`Notifications > should emit transactionClick event 1`] = `
 <div>
   <div
-    class="css-16d2qtb"
+    class="w-full sm:w-[35rem]"
     data-testid="NotificationsWrapper"
   >
     <div
-      class="space-y-2"
+      class="flex w-full items-center justify-between rounded-t-xl bg-theme-secondary-100 px-6 py-4 dark:bg-black sm:px-8"
     >
       <div
-        class="text-base font-semibold text-theme-secondary-500"
+        class="hidden text-lg font-semibold text-theme-secondary-900 dark:text-theme-secondary-200 sm:block"
       >
-        Plugins
+        Notification
       </div>
-      <div
-        class="css-1m6rt2i"
-        role="table"
-      >
-        <table
-          cellpadding="0"
-          class="w-full table-auto"
-        >
-          <tbody
-            role="rowgroup"
-          >
-            <tr
-              data-testid="NotificationItem"
-            >
-              <td
-                class="h-8 w-8"
-              >
-                <div
-                  class="bg-logo my-2 mr-4 flex h-8 w-8 items-center justify-center rounded-lg align-middle text-white"
-                />
-              </td>
-              <td>
-                <div>
-                  <div>
-                    <span
-                      class="text-md font-bold text-theme-secondary-600"
-                    >
-                      ARK Vault
-                    </span>
-                    <span
-                      class="text-md text-theme-secondary-600"
-                    >
-                       
-                      - update v2.5.6
-                    </span>
-                  </div>
-                </div>
-              </td>
-              <td>
-                <div
-                  class="text-md cursor-pointer text-right font-bold text-theme-primary-500"
-                  data-testid="NotificationItem__action"
-                >
-                  Update
-                </div>
-              </td>
-            </tr>
-            <tr
-              data-testid="NotificationItem"
-            >
-              <td
-                class="h-8 w-8"
-              >
-                <div
-                  class="bg-logo my-2 mr-4 flex h-8 w-8 items-center justify-center rounded-lg align-middle text-white"
-                />
-              </td>
-              <td>
-                <div>
-                  <div>
-                    <span
-                      class="text-md font-bold text-theme-secondary-600"
-                    >
-                      Wallet update
-                    </span>
-                    <span
-                      class="text-md text-theme-secondary-600"
-                    >
-                       
-                    </span>
-                  </div>
-                </div>
-              </td>
-              <td>
-                <div
-                  class="text-md cursor-pointer text-right font-bold text-theme-primary-500"
-                  data-testid="NotificationItem__action"
-                >
-                  Update
-                </div>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-    <div>
-      <div
-        class="space-y-2"
+      <button
+        class="space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded p-0 text-theme-secondary-800 disabled:text-theme-secondary-500 dark:text-theme-secondary-800 dark:disabled:text-theme-secondary-800"
+        disabled=""
+        type="button"
       >
         <div
-          class="text-base font-semibold text-theme-secondary-500"
+          class="flex items-center space-x-2"
         >
-          Transactions
+          <div
+            class="css-v0ob3f"
+            height="16"
+            width="16"
+          >
+            <svg
+              fill="none"
+              viewBox="0 0 24 25"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="12"
+                cy="12.5"
+                fill="transparent"
+                r="11"
+                stroke="currentColor"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
+              <path
+                d="M18.4015 8.76465L12.3215 16.9246C12.1615 17.0846 12.0015 17.2447 11.7615 17.2447C11.5215 17.2447 11.2815 17.1646 11.1215 17.0046L9.52148 15.4046"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
+              <path
+                d="M5.5957 15.4775L7.1957 17.0775C7.3557 17.2375 7.5157 17.3175 7.7557 17.3175C7.8357 17.3175 7.9957 17.3175 8.0757 17.2375"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
+              <path
+                d="M14.3932 8.76465L11.0332 13.2446"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
+            </svg>
+          </div>
+          <span>
+            Mark all as read
+          </span>
         </div>
+      </button>
+    </div>
+    <div
+      class="max-h-[36rem] w-full overflow-y-hidden overscroll-y-none"
+      data-testid="NotificationsWrapper"
+    >
+      <div
+        class="relative h-full"
+      >
         <div>
           <div
             class="css-1m6rt2i"
@@ -123,67 +91,18 @@ exports[`Notifications > should emit transactionClick event 1`] = `
               >
                 <div>
                   <tr
-                    class="group css-1d424e8"
+                    class="group relative css-1d424e8"
                     data-testid="TableRow"
                   >
                     <td
-                      class="w-3/5"
+                      class="w-2/5"
                     >
                       <div
-                        class="items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l flex space-x-3"
+                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 rounded-l pl-8 static"
                       >
                         <div
-                          class="flex items-center space-x-2"
-                          data-testid="TransactionRowMode"
-                        >
-                          <span
-                            class="flex h-5 w-5 items-center border-0 border-theme-success-200 text-theme-success-600 dark:border-theme-success-600"
-                          >
-                            <div
-                              class="css-1i4b0eq"
-                              height="20"
-                              width="20"
-                            >
-                              <svg
-                                id="return"
-                                viewBox="0 0 20 20"
-                                x="0"
-                                xml:space="preserve"
-                                xmlns="http://www.w3.org/2000/svg"
-                                y="0"
-                              >
-                                <g
-                                  fill="none"
-                                  stroke="currentColor"
-                                  stroke-linecap="round"
-                                  stroke-linejoin="round"
-                                  stroke-width="2"
-                                >
-                                  <path
-                                    d="M11.223 3.994c-1.8 0-3.39 1.548-3.39 3.406v.619"
-                                  />
-                                  <path
-                                    d="M7.834 11.115v2.168h2.436c.21 0 .317.103.106.31l-3.887 5.283a.302.302 0 0 1-.487 0l-3.887-5.283c-.211-.207-.105-.31.106-.31h2.436v-5.78C4.657 3.89 7.62 1 11.327 1S18 3.787 18 7.504v7.74"
-                                  />
-                                </g>
-                              </svg>
-                            </div>
-                          </span>
-                          <div
-                            class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-1i0wxh3"
-                            data-testid="Avatar"
-                          >
-                            <div
-                              class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
-                            >
-                              <img
-                                alt="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
-                                src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(244, 67, 54)" width="100" height="100"/><circle r="50" cx="20" cy="50" fill="rgb(205, 220, 57)"/><circle r="60" cx="0" cy="70" fill="rgb(0, 188, 212)"/><circle r="55" cx="80" cy="30" fill="rgb(76, 175, 80)"/></svg>"
-                                title="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
-                              />
-                            </div>
-                          </div>
-                        </div>
+                          class="absolute -bottom-px left-0 h-px w-8 bg-white dark:bg-theme-secondary-900"
+                        />
                         <div
                           class="w-20 flex-1"
                         >
@@ -213,23 +132,41 @@ exports[`Notifications > should emit transactionClick event 1`] = `
                     </td>
                     <td>
                       <div
-                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
+                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold justify-end whitespace-nowrap"
+                      >
+                        <span
+                          data-testid="TimeAgo"
+                        >
+                          A few seconds ago
+                        </span>
+                      </div>
+                    </td>
+                    <td>
+                      <div
+                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 justify-end pr-8 static"
                       >
                         <div
-                          class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
-                          color="danger-bg"
-                          data-testid="AmountLabel__wrapper"
+                          class="h-5"
                         >
                           <div
-                            class="flex h-full items-center space-x-1"
+                            class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
+                            color="danger-bg"
+                            data-testid="AmountLabel__wrapper"
                           >
-                            <span
-                              class="whitespace-nowrap text-sm"
-                              data-testid="Amount"
+                            <div
+                              class="flex h-full items-center space-x-1"
                             >
-                              - 1.28629325 DARK
-                            </span>
+                              <span
+                                class="whitespace-nowrap text-sm"
+                                data-testid="Amount"
+                              >
+                                - 1 DARK
+                              </span>
+                            </div>
                           </div>
+                          <div
+                            class="absolute -bottom-px right-0 h-px w-8 bg-white dark:bg-theme-secondary-900"
+                          />
                         </div>
                       </div>
                     </td>
@@ -237,64 +174,18 @@ exports[`Notifications > should emit transactionClick event 1`] = `
                 </div>
                 <div>
                   <tr
-                    class="group css-1d424e8"
+                    class="group relative css-1d424e8"
                     data-testid="TableRow"
                   >
                     <td
-                      class="w-3/5"
+                      class="w-2/5"
                     >
                       <div
-                        class="items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l flex space-x-3"
+                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 rounded-l pl-8 static"
                       >
                         <div
-                          class="flex items-center space-x-2"
-                          data-testid="TransactionRowMode"
-                        >
-                          <span
-                            class="flex h-5 w-5 items-center border-0 border-theme-success-200 text-theme-success-600 dark:border-theme-success-600"
-                          >
-                            <div
-                              class="css-1i4b0eq"
-                              height="20"
-                              width="20"
-                            >
-                              <svg
-                                id="received"
-                                viewBox="0 0 20 20"
-                                x="0"
-                                xml:space="preserve"
-                                xmlns="http://www.w3.org/2000/svg"
-                                y="0"
-                              >
-                                <g
-                                  fill="none"
-                                  stroke="currentColor"
-                                  stroke-linecap="round"
-                                  stroke-linejoin="round"
-                                  stroke-width="2"
-                                >
-                                  <path
-                                    d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
-                                  />
-                                </g>
-                              </svg>
-                            </div>
-                          </span>
-                          <div
-                            class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-1i0wxh3"
-                            data-testid="Avatar"
-                          >
-                            <div
-                              class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
-                            >
-                              <img
-                                alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                                src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
-                                title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                              />
-                            </div>
-                          </div>
-                        </div>
+                          class="absolute -bottom-px left-0 h-px w-8 bg-white dark:bg-theme-secondary-900"
+                        />
                         <div
                           class="w-20 flex-1"
                         >
@@ -324,23 +215,41 @@ exports[`Notifications > should emit transactionClick event 1`] = `
                     </td>
                     <td>
                       <div
-                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
+                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold justify-end whitespace-nowrap"
+                      >
+                        <span
+                          data-testid="TimeAgo"
+                        >
+                          2 months ago
+                        </span>
+                      </div>
+                    </td>
+                    <td>
+                      <div
+                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 justify-end pr-8 static"
                       >
                         <div
-                          class="flex h-full items-center justify-center rounded px-1.5 css-1jspzfx"
-                          color="success-bg"
-                          data-testid="AmountLabel__wrapper"
+                          class="h-5"
                         >
                           <div
-                            class="flex h-full items-center space-x-1"
+                            class="flex h-full items-center justify-center rounded px-1.5 css-1jspzfx"
+                            color="success-bg"
+                            data-testid="AmountLabel__wrapper"
                           >
-                            <span
-                              class="whitespace-nowrap text-sm"
-                              data-testid="Amount"
+                            <div
+                              class="flex h-full items-center space-x-1"
                             >
-                              + 20 DARK
-                            </span>
+                              <span
+                                class="whitespace-nowrap text-sm"
+                                data-testid="Amount"
+                              >
+                                + 20 DARK
+                              </span>
+                            </div>
                           </div>
+                          <div
+                            class="absolute -bottom-px right-0 h-px w-8 bg-white dark:bg-theme-secondary-900"
+                          />
                         </div>
                       </div>
                     </td>
@@ -348,64 +257,18 @@ exports[`Notifications > should emit transactionClick event 1`] = `
                 </div>
                 <div>
                   <tr
-                    class="group css-1d424e8"
+                    class="group relative css-1d424e8"
                     data-testid="TableRow"
                   >
                     <td
-                      class="w-3/5"
+                      class="w-2/5"
                     >
                       <div
-                        class="items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l flex space-x-3"
+                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 rounded-l pl-8 static"
                       >
                         <div
-                          class="flex items-center space-x-2"
-                          data-testid="TransactionRowMode"
-                        >
-                          <span
-                            class="flex h-5 w-5 items-center border-0 border-theme-success-200 text-theme-success-600 dark:border-theme-success-600"
-                          >
-                            <div
-                              class="css-1i4b0eq"
-                              height="20"
-                              width="20"
-                            >
-                              <svg
-                                id="received"
-                                viewBox="0 0 20 20"
-                                x="0"
-                                xml:space="preserve"
-                                xmlns="http://www.w3.org/2000/svg"
-                                y="0"
-                              >
-                                <g
-                                  fill="none"
-                                  stroke="currentColor"
-                                  stroke-linecap="round"
-                                  stroke-linejoin="round"
-                                  stroke-width="2"
-                                >
-                                  <path
-                                    d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
-                                  />
-                                </g>
-                              </svg>
-                            </div>
-                          </span>
-                          <div
-                            class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-1i0wxh3"
-                            data-testid="Avatar"
-                          >
-                            <div
-                              class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
-                            >
-                              <img
-                                alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                                src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
-                                title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                              />
-                            </div>
-                          </div>
-                        </div>
+                          class="absolute -bottom-px left-0 h-px w-8 bg-white dark:bg-theme-secondary-900"
+                        />
                         <div
                           class="w-20 flex-1"
                         >
@@ -435,23 +298,41 @@ exports[`Notifications > should emit transactionClick event 1`] = `
                     </td>
                     <td>
                       <div
-                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
+                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold justify-end whitespace-nowrap"
+                      >
+                        <span
+                          data-testid="TimeAgo"
+                        >
+                          3 months ago
+                        </span>
+                      </div>
+                    </td>
+                    <td>
+                      <div
+                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 justify-end pr-8 static"
                       >
                         <div
-                          class="flex h-full items-center justify-center rounded px-1.5 css-1jspzfx"
-                          color="success-bg"
-                          data-testid="AmountLabel__wrapper"
+                          class="h-5"
                         >
                           <div
-                            class="flex h-full items-center space-x-1"
+                            class="flex h-full items-center justify-center rounded px-1.5 css-1jspzfx"
+                            color="success-bg"
+                            data-testid="AmountLabel__wrapper"
                           >
-                            <span
-                              class="whitespace-nowrap text-sm"
-                              data-testid="Amount"
+                            <div
+                              class="flex h-full items-center space-x-1"
                             >
-                              + 0.0000001 DARK
-                            </span>
+                              <span
+                                class="whitespace-nowrap text-sm"
+                                data-testid="Amount"
+                              >
+                                + 0.0000001 DARK
+                              </span>
+                            </div>
                           </div>
+                          <div
+                            class="absolute -bottom-px right-0 h-px w-8 bg-white dark:bg-theme-secondary-900"
+                          />
                         </div>
                       </div>
                     </td>
@@ -470,553 +351,155 @@ exports[`Notifications > should emit transactionClick event 1`] = `
 exports[`Notifications > should render with empty notifications 1`] = `
 <div>
   <div
-    class="css-5fq6i9"
-  >
-    <div
-      class="rounded-lg border-solid border-theme-secondary-300 text-center leading-5 text-theme-secondary-text dark:border-theme-secondary-800 sm:border sm:p-6"
-      data-testid="EmptyBlock"
-    >
-      <div>
-        <span
-          class="whitespace-nowrap"
-        >
-          You have no notifications at this time.
-        </span>
-      </div>
-    </div>
-    <svg
-      class="mx-auto mb-2 mt-8 w-64"
-      height="111"
-      viewBox="0 0 279 111"
-      width="279"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <g
-        id="images"
-        transform="translate(-578 -684)"
-      >
-        <path
-          d="M814 795v-14h-38v14h-2v-14h-11v-2h11v-11h2v11h38v-38h-36v-2h36v-38h-38v10h-2v-10h-21v-2h21v-15h2v15h38v-15h2v15h41v2h-41v38h21v2h-21v38h11v2h-11v14zm-158 0v-14h-38v14h-2v-14h-8v-2h8v-37h-18v-2h18v-39h-38v-2h38v-15h2v15h38v-15h2v15h30v2h-30v10h-2v-10h-38v39h35v2h-35v37h38v-11h2v11h10v2h-10v14zm185-10v-4h-4v-2h4v-4h2v4h4v2h-4v4zm-185-23v-4h-4v-2h4v-4h2v4h4v2h-4v4zm-74-16v-4h-4v-2h4v-4h2v4h4v2h-4v4zm192-15v-4h-4v-2h4v-4h2v4h4v2h-4v4z"
-          fill="#dbdee5"
-          id="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A_538_\\u043A\\u043E\\u043F\\u0438\\u044F_4"
-        />
-        <g
-          id="\\u0421\\u0433\\u0440\\u0443\\u043F\\u043F\\u0438\\u0440\\u043E\\u0432\\u0430\\u0442\\u044C_739"
-          transform="translate(476.833 512.976)"
-        >
-          <path
-            d="M204 250.3s-4.1 1.7-6.7 3c-2.7 1.3-2.8 6.7 2.2 6.7h78.1c3.1 0 3.8-4.2.6-5.9s-4.3-2.2-5.9-3a12.939 12.939 0 0 0-6.7-1.5H210c-2 0-3-.7-3-3v-24.5a29.7 29.7 0 0 1 29.7-29.7h1.5a16.2 16.2 0 0 1 2.2.1m27.4 29.6v20.8c0 3-5.2 3.3-5.2 0v-18.5m-25-26.2a23.792 23.792 0 0 0-23.9 23.7v21"
-            fill="none"
-            id="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A_1_\\u043A\\u043E\\u043F\\u0438\\u044F"
-            stroke="#212225"
-            stroke-linecap="round"
-            stroke-width="2"
-          />
-          <path
-            d="M231.5 192.4v-3c0-1.5.1-7.4 6.1-7.4s5.8 6.2 5.8 7.4"
-            fill="none"
-            id="\\u0424\\u0438\\u0433\\u0443\\u0440\\u0430_1"
-            stroke="#212225"
-            stroke-linecap="round"
-            stroke-width="2"
-          />
-          <circle
-            cx="17"
-            cy="17"
-            fill="none"
-            id="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441_1"
-            r="17"
-            stroke="#dbdee5"
-            stroke-width="2"
-            transform="translate(242 186.4)"
-          />
-          <path
-            d="M259 211.6a4.719 4.719 0 0 1-3-1 5.428 5.428 0 0 1-1.9-2.8 13.266 13.266 0 0 1-.7-4.5 13.082 13.082 0 0 1 .7-4.4 6.1 6.1 0 0 1 1.9-2.8 5 5 0 0 1 6 0 5.428 5.428 0 0 1 1.9 2.8 13.082 13.082 0 0 1 .7 4.4 14.083 14.083 0 0 1-.7 4.5 5.428 5.428 0 0 1-1.9 2.8 4.064 4.064 0 0 1-3 1zm0-1.7a2.847 2.847 0 0 0 2.7-1.7 10.122 10.122 0 0 0 1-4.8 13.425 13.425 0 0 0-.4-3.5 4.963 4.963 0 0 0-1.3-2.2 2.792 2.792 0 0 0-2-.8 3.011 3.011 0 0 0-2.7 1.7 10.122 10.122 0 0 0-1 4.8 13.425 13.425 0 0 0 .4 3.5 4.962 4.962 0 0 0 1.3 2.2 2.709 2.709 0 0 0 2 .8z"
-            fill="#289548"
-            id="\\u041A\\u043E\\u043D\\u0442\\u0443\\u0440_665"
-          />
-          <path
-            d="M249.3 260.6a10.4 10.4 0 0 1-20.8 0c5.8.2 20.8 0 20.8 0z"
-            fill="#eef3f5"
-            id="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441_2"
-          />
-          <path
-            d="M249.3 260.6a10.4 10.4 0 0 1-20.8 0h0"
-            fill="none"
-            id="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441_2-2"
-            stroke="#212225"
-            stroke-linecap="round"
-            stroke-width="2"
-          />
-        </g>
-      </g>
-    </svg>
-  </div>
-</div>
-`;
-
-exports[`Notifications > should render with plugins 1`] = `
-<div>
-  <div
-    class="css-16d2qtb"
+    class="w-full sm:w-[35rem]"
     data-testid="NotificationsWrapper"
   >
     <div
-      class="space-y-2"
+      class="flex w-full items-center justify-between rounded-t-xl bg-theme-secondary-100 px-6 py-4 dark:bg-black sm:px-8"
     >
       <div
-        class="text-base font-semibold text-theme-secondary-500"
+        class="hidden text-lg font-semibold text-theme-secondary-900 dark:text-theme-secondary-200 sm:block"
       >
-        Plugins
+        Notification
       </div>
-      <div
-        class="css-1m6rt2i"
-        role="table"
-      >
-        <table
-          cellpadding="0"
-          class="w-full table-auto"
-        >
-          <tbody
-            role="rowgroup"
-          >
-            <tr
-              data-testid="NotificationItem"
-            >
-              <td
-                class="h-8 w-8"
-              >
-                <div
-                  class="bg-logo my-2 mr-4 flex h-8 w-8 items-center justify-center rounded-lg align-middle text-white"
-                />
-              </td>
-              <td>
-                <div>
-                  <div>
-                    <span
-                      class="text-md font-bold text-theme-secondary-600"
-                    >
-                      ARK Vault
-                    </span>
-                    <span
-                      class="text-md text-theme-secondary-600"
-                    >
-                       
-                      - update v2.5.6
-                    </span>
-                  </div>
-                </div>
-              </td>
-              <td>
-                <div
-                  class="text-md cursor-pointer text-right font-bold text-theme-primary-500"
-                  data-testid="NotificationItem__action"
-                >
-                  Update
-                </div>
-              </td>
-            </tr>
-            <tr
-              data-testid="NotificationItem"
-            >
-              <td
-                class="h-8 w-8"
-              >
-                <div
-                  class="bg-logo my-2 mr-4 flex h-8 w-8 items-center justify-center rounded-lg align-middle text-white"
-                />
-              </td>
-              <td>
-                <div>
-                  <div>
-                    <span
-                      class="text-md font-bold text-theme-secondary-600"
-                    >
-                      Wallet update
-                    </span>
-                    <span
-                      class="text-md text-theme-secondary-600"
-                    >
-                       
-                    </span>
-                  </div>
-                </div>
-              </td>
-              <td>
-                <div
-                  class="text-md cursor-pointer text-right font-bold text-theme-primary-500"
-                  data-testid="NotificationItem__action"
-                >
-                  Update
-                </div>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-    <div>
-      <div
-        class="space-y-2"
+      <button
+        class="space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded p-0 text-theme-secondary-800 disabled:text-theme-secondary-500 dark:text-theme-secondary-800 dark:disabled:text-theme-secondary-800"
+        disabled=""
+        type="button"
       >
         <div
-          class="text-base font-semibold text-theme-secondary-500"
+          class="flex items-center space-x-2"
         >
-          Transactions
-        </div>
-        <div>
           <div
-            class="css-1m6rt2i"
-            role="table"
+            class="css-v0ob3f"
+            height="16"
+            width="16"
           >
-            <table
-              cellpadding="0"
-              class="w-full table-auto"
+            <svg
+              fill="none"
+              viewBox="0 0 24 25"
+              xmlns="http://www.w3.org/2000/svg"
             >
-              <tbody
-                role="rowgroup"
-              >
-                <div>
-                  <tr
-                    class="group css-1d424e8"
-                    data-testid="TableRow"
-                  >
-                    <td
-                      class="w-3/5"
-                    >
-                      <div
-                        class="items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l flex space-x-3"
-                      >
-                        <div
-                          class="flex items-center space-x-2"
-                          data-testid="TransactionRowMode"
-                        >
-                          <span
-                            class="flex h-5 w-5 items-center border-0 border-theme-success-200 text-theme-success-600 dark:border-theme-success-600"
-                          >
-                            <div
-                              class="css-1i4b0eq"
-                              height="20"
-                              width="20"
-                            >
-                              <svg
-                                id="return"
-                                viewBox="0 0 20 20"
-                                x="0"
-                                xml:space="preserve"
-                                xmlns="http://www.w3.org/2000/svg"
-                                y="0"
-                              >
-                                <g
-                                  fill="none"
-                                  stroke="currentColor"
-                                  stroke-linecap="round"
-                                  stroke-linejoin="round"
-                                  stroke-width="2"
-                                >
-                                  <path
-                                    d="M11.223 3.994c-1.8 0-3.39 1.548-3.39 3.406v.619"
-                                  />
-                                  <path
-                                    d="M7.834 11.115v2.168h2.436c.21 0 .317.103.106.31l-3.887 5.283a.302.302 0 0 1-.487 0l-3.887-5.283c-.211-.207-.105-.31.106-.31h2.436v-5.78C4.657 3.89 7.62 1 11.327 1S18 3.787 18 7.504v7.74"
-                                  />
-                                </g>
-                              </svg>
-                            </div>
-                          </span>
-                          <div
-                            class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-1i0wxh3"
-                            data-testid="Avatar"
-                          >
-                            <div
-                              class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
-                            >
-                              <img
-                                alt="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
-                                src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(244, 67, 54)" width="100" height="100"/><circle r="50" cx="20" cy="50" fill="rgb(205, 220, 57)"/><circle r="60" cx="0" cy="70" fill="rgb(0, 188, 212)"/><circle r="55" cx="80" cy="30" fill="rgb(76, 175, 80)"/></svg>"
-                                title="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
-                              />
-                            </div>
-                          </div>
-                        </div>
-                        <div
-                          class="w-20 flex-1"
-                        >
-                          <div
-                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
-                          >
-                            <span
-                              class="font-semibold text-base text-theme-text"
-                              data-testid="Address__alias"
-                            >
-                              <span
-                                class="no-ligatures css-9nx3be"
-                                data-testid="TruncateEnd"
-                              >
-                                ARK Wallet 2
-                              </span>
-                            </span>
-                            <span
-                              class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                              data-testid="Address__address"
-                            >
-                              D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
-                            </span>
-                          </div>
-                        </div>
-                      </div>
-                    </td>
-                    <td>
-                      <div
-                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
-                      >
-                        <div
-                          class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
-                          color="danger-bg"
-                          data-testid="AmountLabel__wrapper"
-                        >
-                          <div
-                            class="flex h-full items-center space-x-1"
-                          >
-                            <span
-                              class="whitespace-nowrap text-sm"
-                              data-testid="Amount"
-                            >
-                              - 1.28629325 DARK
-                            </span>
-                          </div>
-                        </div>
-                      </div>
-                    </td>
-                  </tr>
-                </div>
-                <div>
-                  <tr
-                    class="group css-1d424e8"
-                    data-testid="TableRow"
-                  >
-                    <td
-                      class="w-3/5"
-                    >
-                      <div
-                        class="items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l flex space-x-3"
-                      >
-                        <div
-                          class="flex items-center space-x-2"
-                          data-testid="TransactionRowMode"
-                        >
-                          <span
-                            class="flex h-5 w-5 items-center border-0 border-theme-success-200 text-theme-success-600 dark:border-theme-success-600"
-                          >
-                            <div
-                              class="css-1i4b0eq"
-                              height="20"
-                              width="20"
-                            >
-                              <svg
-                                id="received"
-                                viewBox="0 0 20 20"
-                                x="0"
-                                xml:space="preserve"
-                                xmlns="http://www.w3.org/2000/svg"
-                                y="0"
-                              >
-                                <g
-                                  fill="none"
-                                  stroke="currentColor"
-                                  stroke-linecap="round"
-                                  stroke-linejoin="round"
-                                  stroke-width="2"
-                                >
-                                  <path
-                                    d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
-                                  />
-                                </g>
-                              </svg>
-                            </div>
-                          </span>
-                          <div
-                            class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-1i0wxh3"
-                            data-testid="Avatar"
-                          >
-                            <div
-                              class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
-                            >
-                              <img
-                                alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                                src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
-                                title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                              />
-                            </div>
-                          </div>
-                        </div>
-                        <div
-                          class="w-20 flex-1"
-                        >
-                          <div
-                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
-                          >
-                            <span
-                              class="font-semibold text-base text-theme-text"
-                              data-testid="Address__alias"
-                            >
-                              <span
-                                class="no-ligatures css-9nx3be"
-                                data-testid="TruncateEnd"
-                              >
-                                ARK Wallet 1
-                              </span>
-                            </span>
-                            <span
-                              class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                              data-testid="Address__address"
-                            >
-                              D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                            </span>
-                          </div>
-                        </div>
-                      </div>
-                    </td>
-                    <td>
-                      <div
-                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
-                      >
-                        <div
-                          class="flex h-full items-center justify-center rounded px-1.5 css-1jspzfx"
-                          color="success-bg"
-                          data-testid="AmountLabel__wrapper"
-                        >
-                          <div
-                            class="flex h-full items-center space-x-1"
-                          >
-                            <span
-                              class="whitespace-nowrap text-sm"
-                              data-testid="Amount"
-                            >
-                              + 20 DARK
-                            </span>
-                          </div>
-                        </div>
-                      </div>
-                    </td>
-                  </tr>
-                </div>
-                <div>
-                  <tr
-                    class="group css-1d424e8"
-                    data-testid="TableRow"
-                  >
-                    <td
-                      class="w-3/5"
-                    >
-                      <div
-                        class="items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l flex space-x-3"
-                      >
-                        <div
-                          class="flex items-center space-x-2"
-                          data-testid="TransactionRowMode"
-                        >
-                          <span
-                            class="flex h-5 w-5 items-center border-0 border-theme-success-200 text-theme-success-600 dark:border-theme-success-600"
-                          >
-                            <div
-                              class="css-1i4b0eq"
-                              height="20"
-                              width="20"
-                            >
-                              <svg
-                                id="received"
-                                viewBox="0 0 20 20"
-                                x="0"
-                                xml:space="preserve"
-                                xmlns="http://www.w3.org/2000/svg"
-                                y="0"
-                              >
-                                <g
-                                  fill="none"
-                                  stroke="currentColor"
-                                  stroke-linecap="round"
-                                  stroke-linejoin="round"
-                                  stroke-width="2"
-                                >
-                                  <path
-                                    d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
-                                  />
-                                </g>
-                              </svg>
-                            </div>
-                          </span>
-                          <div
-                            class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-1i0wxh3"
-                            data-testid="Avatar"
-                          >
-                            <div
-                              class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
-                            >
-                              <img
-                                alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                                src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
-                                title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                              />
-                            </div>
-                          </div>
-                        </div>
-                        <div
-                          class="w-20 flex-1"
-                        >
-                          <div
-                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
-                          >
-                            <span
-                              class="font-semibold text-base text-theme-text"
-                              data-testid="Address__alias"
-                            >
-                              <span
-                                class="no-ligatures css-9nx3be"
-                                data-testid="TruncateEnd"
-                              >
-                                ARK Wallet 1
-                              </span>
-                            </span>
-                            <span
-                              class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                              data-testid="Address__address"
-                            >
-                              D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                            </span>
-                          </div>
-                        </div>
-                      </div>
-                    </td>
-                    <td>
-                      <div
-                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
-                      >
-                        <div
-                          class="flex h-full items-center justify-center rounded px-1.5 css-1jspzfx"
-                          color="success-bg"
-                          data-testid="AmountLabel__wrapper"
-                        >
-                          <div
-                            class="flex h-full items-center space-x-1"
-                          >
-                            <span
-                              class="whitespace-nowrap text-sm"
-                              data-testid="Amount"
-                            >
-                              + 0.0000001 DARK
-                            </span>
-                          </div>
-                        </div>
-                      </div>
-                    </td>
-                  </tr>
-                </div>
-              </tbody>
-            </table>
+              <circle
+                cx="12"
+                cy="12.5"
+                fill="transparent"
+                r="11"
+                stroke="currentColor"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
+              <path
+                d="M18.4015 8.76465L12.3215 16.9246C12.1615 17.0846 12.0015 17.2447 11.7615 17.2447C11.5215 17.2447 11.2815 17.1646 11.1215 17.0046L9.52148 15.4046"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
+              <path
+                d="M5.5957 15.4775L7.1957 17.0775C7.3557 17.2375 7.5157 17.3175 7.7557 17.3175C7.8357 17.3175 7.9957 17.3175 8.0757 17.2375"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
+              <path
+                d="M14.3932 8.76465L11.0332 13.2446"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
+            </svg>
           </div>
+          <span>
+            Mark all as read
+          </span>
+        </div>
+      </button>
+    </div>
+    <div
+      class="px-6 pb-8 pt-4"
+    >
+      <div
+        class="rounded-lg border-solid border-theme-secondary-300 text-center leading-5 text-theme-secondary-text dark:border-theme-secondary-800 sm:border sm:p-6 py-4"
+        data-testid="EmptyBlock"
+      >
+        <div>
+          <span
+            class="whitespace-nowrap"
+          >
+            You have no notifications at this time.
+          </span>
         </div>
       </div>
+      <svg
+        class="mx-auto mb-2 mt-8 w-64"
+        height="111"
+        viewBox="0 0 279 111"
+        width="279"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <g
+          id="images"
+          transform="translate(-578 -684)"
+        >
+          <path
+            d="M814 795v-14h-38v14h-2v-14h-11v-2h11v-11h2v11h38v-38h-36v-2h36v-38h-38v10h-2v-10h-21v-2h21v-15h2v15h38v-15h2v15h41v2h-41v38h21v2h-21v38h11v2h-11v14zm-158 0v-14h-38v14h-2v-14h-8v-2h8v-37h-18v-2h18v-39h-38v-2h38v-15h2v15h38v-15h2v15h30v2h-30v10h-2v-10h-38v39h35v2h-35v37h38v-11h2v11h10v2h-10v14zm185-10v-4h-4v-2h4v-4h2v4h4v2h-4v4zm-185-23v-4h-4v-2h4v-4h2v4h4v2h-4v4zm-74-16v-4h-4v-2h4v-4h2v4h4v2h-4v4zm192-15v-4h-4v-2h4v-4h2v4h4v2h-4v4z"
+            fill="#dbdee5"
+            id="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A_538_\\u043A\\u043E\\u043F\\u0438\\u044F_4"
+          />
+          <g
+            id="\\u0421\\u0433\\u0440\\u0443\\u043F\\u043F\\u0438\\u0440\\u043E\\u0432\\u0430\\u0442\\u044C_739"
+            transform="translate(476.833 512.976)"
+          >
+            <path
+              d="M204 250.3s-4.1 1.7-6.7 3c-2.7 1.3-2.8 6.7 2.2 6.7h78.1c3.1 0 3.8-4.2.6-5.9s-4.3-2.2-5.9-3a12.939 12.939 0 0 0-6.7-1.5H210c-2 0-3-.7-3-3v-24.5a29.7 29.7 0 0 1 29.7-29.7h1.5a16.2 16.2 0 0 1 2.2.1m27.4 29.6v20.8c0 3-5.2 3.3-5.2 0v-18.5m-25-26.2a23.792 23.792 0 0 0-23.9 23.7v21"
+              fill="none"
+              id="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A_1_\\u043A\\u043E\\u043F\\u0438\\u044F"
+              stroke="#212225"
+              stroke-linecap="round"
+              stroke-width="2"
+            />
+            <path
+              d="M231.5 192.4v-3c0-1.5.1-7.4 6.1-7.4s5.8 6.2 5.8 7.4"
+              fill="none"
+              id="\\u0424\\u0438\\u0433\\u0443\\u0440\\u0430_1"
+              stroke="#212225"
+              stroke-linecap="round"
+              stroke-width="2"
+            />
+            <circle
+              cx="17"
+              cy="17"
+              fill="none"
+              id="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441_1"
+              r="17"
+              stroke="#dbdee5"
+              stroke-width="2"
+              transform="translate(242 186.4)"
+            />
+            <path
+              d="M259 211.6a4.719 4.719 0 0 1-3-1 5.428 5.428 0 0 1-1.9-2.8 13.266 13.266 0 0 1-.7-4.5 13.082 13.082 0 0 1 .7-4.4 6.1 6.1 0 0 1 1.9-2.8 5 5 0 0 1 6 0 5.428 5.428 0 0 1 1.9 2.8 13.082 13.082 0 0 1 .7 4.4 14.083 14.083 0 0 1-.7 4.5 5.428 5.428 0 0 1-1.9 2.8 4.064 4.064 0 0 1-3 1zm0-1.7a2.847 2.847 0 0 0 2.7-1.7 10.122 10.122 0 0 0 1-4.8 13.425 13.425 0 0 0-.4-3.5 4.963 4.963 0 0 0-1.3-2.2 2.792 2.792 0 0 0-2-.8 3.011 3.011 0 0 0-2.7 1.7 10.122 10.122 0 0 0-1 4.8 13.425 13.425 0 0 0 .4 3.5 4.962 4.962 0 0 0 1.3 2.2 2.709 2.709 0 0 0 2 .8z"
+              fill="#289548"
+              id="\\u041A\\u043E\\u043D\\u0442\\u0443\\u0440_665"
+            />
+            <path
+              d="M249.3 260.6a10.4 10.4 0 0 1-20.8 0c5.8.2 20.8 0 20.8 0z"
+              fill="#eef3f5"
+              id="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441_2"
+            />
+            <path
+              d="M249.3 260.6a10.4 10.4 0 0 1-20.8 0h0"
+              fill="none"
+              id="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441_2-2"
+              stroke="#212225"
+              stroke-linecap="round"
+              stroke-width="2"
+            />
+          </g>
+        </g>
+      </svg>
     </div>
   </div>
 </div>
@@ -1025,112 +508,80 @@ exports[`Notifications > should render with plugins 1`] = `
 exports[`Notifications > should render with transactions and plugins 1`] = `
 <div>
   <div
-    class="css-16d2qtb"
+    class="w-full sm:w-[35rem]"
     data-testid="NotificationsWrapper"
   >
     <div
-      class="space-y-2"
+      class="flex w-full items-center justify-between rounded-t-xl bg-theme-secondary-100 px-6 py-4 dark:bg-black sm:px-8"
     >
       <div
-        class="text-base font-semibold text-theme-secondary-500"
+        class="hidden text-lg font-semibold text-theme-secondary-900 dark:text-theme-secondary-200 sm:block"
       >
-        Plugins
+        Notification
       </div>
-      <div
-        class="css-1m6rt2i"
-        role="table"
-      >
-        <table
-          cellpadding="0"
-          class="w-full table-auto"
-        >
-          <tbody
-            role="rowgroup"
-          >
-            <tr
-              data-testid="NotificationItem"
-            >
-              <td
-                class="h-8 w-8"
-              >
-                <div
-                  class="bg-logo my-2 mr-4 flex h-8 w-8 items-center justify-center rounded-lg align-middle text-white"
-                />
-              </td>
-              <td>
-                <div>
-                  <div>
-                    <span
-                      class="text-md font-bold text-theme-secondary-600"
-                    >
-                      ARK Vault
-                    </span>
-                    <span
-                      class="text-md text-theme-secondary-600"
-                    >
-                       
-                      - update v2.5.6
-                    </span>
-                  </div>
-                </div>
-              </td>
-              <td>
-                <div
-                  class="text-md cursor-pointer text-right font-bold text-theme-primary-500"
-                  data-testid="NotificationItem__action"
-                >
-                  Update
-                </div>
-              </td>
-            </tr>
-            <tr
-              data-testid="NotificationItem"
-            >
-              <td
-                class="h-8 w-8"
-              >
-                <div
-                  class="bg-logo my-2 mr-4 flex h-8 w-8 items-center justify-center rounded-lg align-middle text-white"
-                />
-              </td>
-              <td>
-                <div>
-                  <div>
-                    <span
-                      class="text-md font-bold text-theme-secondary-600"
-                    >
-                      Wallet update
-                    </span>
-                    <span
-                      class="text-md text-theme-secondary-600"
-                    >
-                       
-                    </span>
-                  </div>
-                </div>
-              </td>
-              <td>
-                <div
-                  class="text-md cursor-pointer text-right font-bold text-theme-primary-500"
-                  data-testid="NotificationItem__action"
-                >
-                  Update
-                </div>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-    <div>
-      <div
-        class="space-y-2"
+      <button
+        class="space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded p-0 text-theme-secondary-800 disabled:text-theme-secondary-500 dark:text-theme-secondary-800 dark:disabled:text-theme-secondary-800"
+        disabled=""
+        type="button"
       >
         <div
-          class="text-base font-semibold text-theme-secondary-500"
+          class="flex items-center space-x-2"
         >
-          Transactions
+          <div
+            class="css-v0ob3f"
+            height="16"
+            width="16"
+          >
+            <svg
+              fill="none"
+              viewBox="0 0 24 25"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="12"
+                cy="12.5"
+                fill="transparent"
+                r="11"
+                stroke="currentColor"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
+              <path
+                d="M18.4015 8.76465L12.3215 16.9246C12.1615 17.0846 12.0015 17.2447 11.7615 17.2447C11.5215 17.2447 11.2815 17.1646 11.1215 17.0046L9.52148 15.4046"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
+              <path
+                d="M5.5957 15.4775L7.1957 17.0775C7.3557 17.2375 7.5157 17.3175 7.7557 17.3175C7.8357 17.3175 7.9957 17.3175 8.0757 17.2375"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
+              <path
+                d="M14.3932 8.76465L11.0332 13.2446"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
+            </svg>
+          </div>
+          <span>
+            Mark all as read
+          </span>
         </div>
+      </button>
+    </div>
+    <div
+      class="max-h-[36rem] w-full overflow-y-hidden overscroll-y-none"
+      data-testid="NotificationsWrapper"
+    >
+      <div
+        class="relative h-full"
+      >
         <div>
           <div
             class="css-1m6rt2i"
@@ -1145,67 +596,18 @@ exports[`Notifications > should render with transactions and plugins 1`] = `
               >
                 <div>
                   <tr
-                    class="group css-1d424e8"
+                    class="group relative css-1d424e8"
                     data-testid="TableRow"
                   >
                     <td
-                      class="w-3/5"
+                      class="w-2/5"
                     >
                       <div
-                        class="items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l flex space-x-3"
+                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 rounded-l pl-8 static"
                       >
                         <div
-                          class="flex items-center space-x-2"
-                          data-testid="TransactionRowMode"
-                        >
-                          <span
-                            class="flex h-5 w-5 items-center border-0 border-theme-success-200 text-theme-success-600 dark:border-theme-success-600"
-                          >
-                            <div
-                              class="css-1i4b0eq"
-                              height="20"
-                              width="20"
-                            >
-                              <svg
-                                id="return"
-                                viewBox="0 0 20 20"
-                                x="0"
-                                xml:space="preserve"
-                                xmlns="http://www.w3.org/2000/svg"
-                                y="0"
-                              >
-                                <g
-                                  fill="none"
-                                  stroke="currentColor"
-                                  stroke-linecap="round"
-                                  stroke-linejoin="round"
-                                  stroke-width="2"
-                                >
-                                  <path
-                                    d="M11.223 3.994c-1.8 0-3.39 1.548-3.39 3.406v.619"
-                                  />
-                                  <path
-                                    d="M7.834 11.115v2.168h2.436c.21 0 .317.103.106.31l-3.887 5.283a.302.302 0 0 1-.487 0l-3.887-5.283c-.211-.207-.105-.31.106-.31h2.436v-5.78C4.657 3.89 7.62 1 11.327 1S18 3.787 18 7.504v7.74"
-                                  />
-                                </g>
-                              </svg>
-                            </div>
-                          </span>
-                          <div
-                            class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-1i0wxh3"
-                            data-testid="Avatar"
-                          >
-                            <div
-                              class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
-                            >
-                              <img
-                                alt="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
-                                src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(244, 67, 54)" width="100" height="100"/><circle r="50" cx="20" cy="50" fill="rgb(205, 220, 57)"/><circle r="60" cx="0" cy="70" fill="rgb(0, 188, 212)"/><circle r="55" cx="80" cy="30" fill="rgb(76, 175, 80)"/></svg>"
-                                title="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
-                              />
-                            </div>
-                          </div>
-                        </div>
+                          class="absolute -bottom-px left-0 h-px w-8 bg-white dark:bg-theme-secondary-900"
+                        />
                         <div
                           class="w-20 flex-1"
                         >
@@ -1235,23 +637,41 @@ exports[`Notifications > should render with transactions and plugins 1`] = `
                     </td>
                     <td>
                       <div
-                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
+                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold justify-end whitespace-nowrap"
+                      >
+                        <span
+                          data-testid="TimeAgo"
+                        >
+                          A few seconds ago
+                        </span>
+                      </div>
+                    </td>
+                    <td>
+                      <div
+                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 justify-end pr-8 static"
                       >
                         <div
-                          class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
-                          color="danger-bg"
-                          data-testid="AmountLabel__wrapper"
+                          class="h-5"
                         >
                           <div
-                            class="flex h-full items-center space-x-1"
+                            class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
+                            color="danger-bg"
+                            data-testid="AmountLabel__wrapper"
                           >
-                            <span
-                              class="whitespace-nowrap text-sm"
-                              data-testid="Amount"
+                            <div
+                              class="flex h-full items-center space-x-1"
                             >
-                              - 1.28629325 DARK
-                            </span>
+                              <span
+                                class="whitespace-nowrap text-sm"
+                                data-testid="Amount"
+                              >
+                                - 1 DARK
+                              </span>
+                            </div>
                           </div>
+                          <div
+                            class="absolute -bottom-px right-0 h-px w-8 bg-white dark:bg-theme-secondary-900"
+                          />
                         </div>
                       </div>
                     </td>
@@ -1259,64 +679,18 @@ exports[`Notifications > should render with transactions and plugins 1`] = `
                 </div>
                 <div>
                   <tr
-                    class="group css-1d424e8"
+                    class="group relative css-1d424e8"
                     data-testid="TableRow"
                   >
                     <td
-                      class="w-3/5"
+                      class="w-2/5"
                     >
                       <div
-                        class="items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l flex space-x-3"
+                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 rounded-l pl-8 static"
                       >
                         <div
-                          class="flex items-center space-x-2"
-                          data-testid="TransactionRowMode"
-                        >
-                          <span
-                            class="flex h-5 w-5 items-center border-0 border-theme-success-200 text-theme-success-600 dark:border-theme-success-600"
-                          >
-                            <div
-                              class="css-1i4b0eq"
-                              height="20"
-                              width="20"
-                            >
-                              <svg
-                                id="received"
-                                viewBox="0 0 20 20"
-                                x="0"
-                                xml:space="preserve"
-                                xmlns="http://www.w3.org/2000/svg"
-                                y="0"
-                              >
-                                <g
-                                  fill="none"
-                                  stroke="currentColor"
-                                  stroke-linecap="round"
-                                  stroke-linejoin="round"
-                                  stroke-width="2"
-                                >
-                                  <path
-                                    d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
-                                  />
-                                </g>
-                              </svg>
-                            </div>
-                          </span>
-                          <div
-                            class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-1i0wxh3"
-                            data-testid="Avatar"
-                          >
-                            <div
-                              class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
-                            >
-                              <img
-                                alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                                src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
-                                title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                              />
-                            </div>
-                          </div>
-                        </div>
+                          class="absolute -bottom-px left-0 h-px w-8 bg-white dark:bg-theme-secondary-900"
+                        />
                         <div
                           class="w-20 flex-1"
                         >
@@ -1346,23 +720,41 @@ exports[`Notifications > should render with transactions and plugins 1`] = `
                     </td>
                     <td>
                       <div
-                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
+                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold justify-end whitespace-nowrap"
+                      >
+                        <span
+                          data-testid="TimeAgo"
+                        >
+                          2 months ago
+                        </span>
+                      </div>
+                    </td>
+                    <td>
+                      <div
+                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 justify-end pr-8 static"
                       >
                         <div
-                          class="flex h-full items-center justify-center rounded px-1.5 css-1jspzfx"
-                          color="success-bg"
-                          data-testid="AmountLabel__wrapper"
+                          class="h-5"
                         >
                           <div
-                            class="flex h-full items-center space-x-1"
+                            class="flex h-full items-center justify-center rounded px-1.5 css-1jspzfx"
+                            color="success-bg"
+                            data-testid="AmountLabel__wrapper"
                           >
-                            <span
-                              class="whitespace-nowrap text-sm"
-                              data-testid="Amount"
+                            <div
+                              class="flex h-full items-center space-x-1"
                             >
-                              + 20 DARK
-                            </span>
+                              <span
+                                class="whitespace-nowrap text-sm"
+                                data-testid="Amount"
+                              >
+                                + 20 DARK
+                              </span>
+                            </div>
                           </div>
+                          <div
+                            class="absolute -bottom-px right-0 h-px w-8 bg-white dark:bg-theme-secondary-900"
+                          />
                         </div>
                       </div>
                     </td>
@@ -1370,64 +762,18 @@ exports[`Notifications > should render with transactions and plugins 1`] = `
                 </div>
                 <div>
                   <tr
-                    class="group css-1d424e8"
+                    class="group relative css-1d424e8"
                     data-testid="TableRow"
                   >
                     <td
-                      class="w-3/5"
+                      class="w-2/5"
                     >
                       <div
-                        class="items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l flex space-x-3"
+                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 rounded-l pl-8 static"
                       >
                         <div
-                          class="flex items-center space-x-2"
-                          data-testid="TransactionRowMode"
-                        >
-                          <span
-                            class="flex h-5 w-5 items-center border-0 border-theme-success-200 text-theme-success-600 dark:border-theme-success-600"
-                          >
-                            <div
-                              class="css-1i4b0eq"
-                              height="20"
-                              width="20"
-                            >
-                              <svg
-                                id="received"
-                                viewBox="0 0 20 20"
-                                x="0"
-                                xml:space="preserve"
-                                xmlns="http://www.w3.org/2000/svg"
-                                y="0"
-                              >
-                                <g
-                                  fill="none"
-                                  stroke="currentColor"
-                                  stroke-linecap="round"
-                                  stroke-linejoin="round"
-                                  stroke-width="2"
-                                >
-                                  <path
-                                    d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
-                                  />
-                                </g>
-                              </svg>
-                            </div>
-                          </span>
-                          <div
-                            class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-1i0wxh3"
-                            data-testid="Avatar"
-                          >
-                            <div
-                              class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
-                            >
-                              <img
-                                alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                                src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
-                                title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                              />
-                            </div>
-                          </div>
-                        </div>
+                          class="absolute -bottom-px left-0 h-px w-8 bg-white dark:bg-theme-secondary-900"
+                        />
                         <div
                           class="w-20 flex-1"
                         >
@@ -1457,23 +803,41 @@ exports[`Notifications > should render with transactions and plugins 1`] = `
                     </td>
                     <td>
                       <div
-                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
+                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold justify-end whitespace-nowrap"
+                      >
+                        <span
+                          data-testid="TimeAgo"
+                        >
+                          3 months ago
+                        </span>
+                      </div>
+                    </td>
+                    <td>
+                      <div
+                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 justify-end pr-8 static"
                       >
                         <div
-                          class="flex h-full items-center justify-center rounded px-1.5 css-1jspzfx"
-                          color="success-bg"
-                          data-testid="AmountLabel__wrapper"
+                          class="h-5"
                         >
                           <div
-                            class="flex h-full items-center space-x-1"
+                            class="flex h-full items-center justify-center rounded px-1.5 css-1jspzfx"
+                            color="success-bg"
+                            data-testid="AmountLabel__wrapper"
                           >
-                            <span
-                              class="whitespace-nowrap text-sm"
-                              data-testid="Amount"
+                            <div
+                              class="flex h-full items-center space-x-1"
                             >
-                              + 0.0000001 DARK
-                            </span>
+                              <span
+                                class="whitespace-nowrap text-sm"
+                                data-testid="Amount"
+                              >
+                                + 0.0000001 DARK
+                              </span>
+                            </div>
                           </div>
+                          <div
+                            class="absolute -bottom-px right-0 h-px w-8 bg-white dark:bg-theme-secondary-900"
+                          />
                         </div>
                       </div>
                     </td>

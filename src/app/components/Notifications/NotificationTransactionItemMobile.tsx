@@ -31,7 +31,7 @@ export const NotificationTransactionItemMobile = ({
 	return (
 		<VisibilitySensor scrollCheck delayedCall containment={containmentRef?.current}>
 			<TableRow onClick={() => onTransactionClick?.(transaction)}>
-				<td className="flex-col space-y-4 px-6 py-4">
+				<td className="flex-col space-y-4 px-6 py-4" data-testid="NotificationTransactionItemMobile">
 					<RowWrapper>
 						<RowLabel>{t("COMMON.ADDRESS")}</RowLabel>
 						<div className="w-2/3">
