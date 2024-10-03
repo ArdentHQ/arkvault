@@ -62,7 +62,7 @@ export const NotificationTransactionItem = ({
 					}
 				</TableCell>
 
-				<TableCell innerClassName="justify-end my-0 py-3 pr-8 static">
+				<TableCell innerClassName="justify-end pr-8 static">
 					<div>
 						<AmountLabel
 							value={transaction.amount()}

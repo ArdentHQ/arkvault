@@ -21,9 +21,9 @@ export const Notifications = ({ profile, onNotificationAction, onTransactionClic
 	}, []);
 
 	return (
-		<div className="w-[35rem]">
-			<div className="flex items-center w-full justify-between dark:bg-black bg-theme-secondary-100 py-4 rounded-t-xl px-8">
-				<div className="font-semibold text-lg text-theme-secondary-900 dark:text-theme-secondary-200">Notification</div>
+		<div className="w-full sm:w-[35rem]">
+			<div className="flex items-center w-full justify-between dark:bg-black bg-theme-secondary-100 py-4 rounded-t-xl sm:px-8 px-6">
+				<div className="hidden sm:block font-semibold text-lg text-theme-secondary-900 dark:text-theme-secondary-200">Notification</div>
 				<Button variant="transparent" size="2xs" icon="CheckmarkDoubleCircle" disabled={!hasUnread} className="p-0 disabled:text-theme-secondary-500 dark:disabled:text-theme-secondary-800 text-theme-secondary-800 dark:text-theme-secondary-800" onClick={() => markAllTransactionsAsRead()}>
 					<span>{t("COMMON.NOTIFICATIONS.MARK_ALL_AS_READ")}</span>
 

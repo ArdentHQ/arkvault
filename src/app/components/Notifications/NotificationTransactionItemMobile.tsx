@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useMemo } from "react";
 import VisibilitySensor from "react-visibility-sensor";
 
 import { useTranslation } from "react-i18next";
@@ -8,6 +8,10 @@ import { TransactionRowAmount } from "@/domains/transaction/components/Transacti
 import { RowWrapper, RowLabel } from "@/app/components/Table/Mobile/Row";
 import { Avatar } from "@/app/components/Avatar";
 import { TransactionRowSender } from "@/domains/transaction/components/TransactionTable/TransactionRow/TransactionRowSender";
+import { AmountLabel } from "@/app/components/Amount";
+import { TransactionRowRecipientLabel } from "@/domains/transaction/components/TransactionTable/TransactionRow/TransactionRowRecipientLabel";
+import { useWalletAlias } from "@/app/hooks";
+import { Address } from "../Address";
 
 export const NotificationTransactionItemMobile = ({
 	transaction,
@@ -16,28 +20,36 @@ export const NotificationTransactionItemMobile = ({
 	onTransactionClick,
 }: NotificationTransactionItemProperties) => {
 	const { t } = useTranslation();
+	const { getWalletAlias } = useWalletAlias();
+
+	const { alias } = useMemo(
+		() =>
+			getWalletAlias({
+				address: transaction.recipient(),
+				network: transaction.wallet().network(),
+				profile,
+			}),
+		[profile, getWalletAlias, transaction],
+	);
 
 	return (
 		<VisibilitySensor scrollCheck delayedCall containment={containmentRef?.current}>
 			<TableRow onClick={() => onTransactionClick?.(transaction)}>
-				<td className="flex-col space-y-4 py-4">
+				<td className="flex-col space-y-4 py-4 px-6">
 					<RowWrapper>
-						<RowLabel>{t("COMMON.SENDER")}</RowLabel>
-						<div className="flex w-full items-center space-x-0 text-right">
-							<TransactionRowSender
-								transaction={transaction}
-								profile={profile}
-								labelClass="pr-2"
-								showTransactionMode={false}
-							/>
-
-							<Avatar size="xs" address={transaction.sender()} noShadow />
+						<RowLabel>{t("COMMON.ADDRESS")}</RowLabel>
+						<div className="w-2/3">
+							<Address address={transaction.sender()} walletName={alias} />
 						</div>
 					</RowWrapper>
 
 					<RowWrapper>
 						<RowLabel>{t("COMMON.AMOUNT")}</RowLabel>
-						<TransactionRowAmount transaction={transaction} exchangeTooltip isCompact={false} />
+						<AmountLabel
+							value={transaction.amount()}
+							isNegative={transaction.isSent()}
+							ticker={transaction.wallet().currency()}
+						/>
 					</RowWrapper>
 				</td>
 			</TableRow>

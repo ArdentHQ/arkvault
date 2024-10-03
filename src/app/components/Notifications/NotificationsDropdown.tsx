@@ -22,7 +22,7 @@ export const NotificationsDropdown = ({ profile }: { profile: Contracts.IProfile
 		<div>
 			<Dropdown
 				position={isSm || isMd ? "top-center" : "right"}
-				dropdownClass="mt-8 mx-4 sm:mx-0 border-none"
+				dropdownClass="mx-4 sm:mx-0 border-none pt-0"
 				toggleContent={
 					<NavigationButtonWrapper className="group">
 						<Button variant="transparent" size="icon" data-testid="NavigationBar__buttons--notifications">
