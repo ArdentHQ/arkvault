@@ -5,7 +5,7 @@ import { useTranslation } from "react-i18next";
 import { Modal } from "@/app/components/Modal";
 import { Form, FormButtons, FormField, FormLabel } from "@/app/components/Form";
 import { SelectAddress } from "@/domains/profile/components/SelectAddress";
-import { useActiveProfile, useFees } from "@/app/hooks";
+import {useActiveProfile, useFees, useValidation} from "@/app/hooks";
 import {DetailLabel, DetailTitle, DetailWrapper} from "@/app/components/DetailWrapper";
 import { Address } from "@/app/components/Address";
 import { Networks } from "@ardenthq/sdk";
@@ -17,6 +17,7 @@ import { useLedgerContext } from "@/app/contexts";
 import { Button } from "@/app/components/Button";
 import { Alert } from "@/app/components/Alert";
 import {TotalAmountBox} from "@/domains/transaction/components/TotalAmountBox";
+import {BigNumber} from "@ardenthq/sdk-helpers";
 
 interface TransferProperties {
 	onClose: () => void;
@@ -29,8 +30,10 @@ export const SendExchangeTransfer: React.FC<TransferProperties> = ({ onClose, on
 
 	const profile = useActiveProfile();
 
+	const { sendTransfer } = useValidation();
+
 	const network = useMemo(
-		() => profile.availableNetworks().find((network) => network.id() === "ark.devnet"),
+		() => profile.availableNetworks().find((network) => network.id() === "ark.mainnet"),
 		[profile],
 	) as Networks.Network;
 
@@ -48,10 +51,10 @@ export const SendExchangeTransfer: React.FC<TransferProperties> = ({ onClose, on
 	const recipients = useMemo(
 		() => [
 			{
-				// address: exchangeInput.address,
-				// amount: exchangeInput.amount,
-				address: "DMFzWa3nHt9T1ChXdMwFrBZRTfKMjDyNss",
-				amount: 0.001,
+				address: exchangeInput.address,
+				amount: exchangeInput.amount,
+				// address: "DMFzWa3nHt9T1ChXdMwFrBZRTfKMjDyNss",
+				// amount: 0.001,
 				// amount: 75
 			},
 		],
@@ -72,6 +75,18 @@ export const SendExchangeTransfer: React.FC<TransferProperties> = ({ onClose, on
 	useEffect(() => {
 		form.setValue("recipients", recipients, { shouldDirty: true, shouldValidate: true });
 	}, [recipients]);
+
+	useEffect(() => {
+		const netBalance = BigNumber.make(senderWallet?.balance() || 0).minus(fee || 0);
+		const remainingNetBalance = netBalance.isGreaterThan(0) ? netBalance.toFixed(10) : "0";
+
+		form.register("senderAddress", sendTransfer.amount(network, remainingNetBalance, recipients, true))
+
+		if (senderWallet) {
+			void form.trigger("senderAddress")
+		}
+	}, [fee, network, recipients, sendTransfer, senderWallet]);
+
 
 	const { calculate } = useFees(profile);
 
@@ -97,12 +112,6 @@ export const SendExchangeTransfer: React.FC<TransferProperties> = ({ onClose, on
 	}, [calculate, network, profile, recipients]);
 
 	const { hasDeviceAvailable, isConnected, connect: _c } = useLedgerContext();
-
-	const handleSenderWallet = (address: string) => {
-		const wallet = profile.wallets().findByAddressWithNetwork(address, network.id());
-		console.log(wallet?.balance("available"));
-		setSenderWallet(wallet);
-	};
 
 	const [transaction, setTransaction] = useState<DTO.ExtendedSignedTransactionData | undefined>(undefined);
 	const [errorMessage, setErrorMessage] = useState<string | undefined>();
@@ -165,7 +174,9 @@ export const SendExchangeTransfer: React.FC<TransferProperties> = ({ onClose, on
 								wallets={wallets}
 								profile={profile}
 								disabled={wallets.length === 1}
-								onChange={handleSenderWallet}
+								onChange={(address: string) => {
+									setSenderWallet(profile.wallets().findByAddressWithNetwork(address, network.id()));
+								}}
 							/>
 						</div>
 					</FormField>
@@ -187,7 +198,7 @@ export const SendExchangeTransfer: React.FC<TransferProperties> = ({ onClose, on
 						<>
 							<div className="space-y-3 sm:space-y-2">
 								<DetailLabel>{t("COMMON.TRANSACTION_SUMMARY")}</DetailLabel>
-								<TotalAmountBox amount={exchangeInput.amount} fee={fee}
+								<TotalAmountBox amount={exchangeInput.amount} fee={fee || 0}
 												ticker={senderWallet.currency()}/>
 							</div>
 							<AuthenticationStep
