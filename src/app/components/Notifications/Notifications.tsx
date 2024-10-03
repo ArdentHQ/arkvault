@@ -1,8 +1,8 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect } from "react";
 import { useTranslation } from "react-i18next";
 
 import { useNotifications } from "./hooks/use-notifications";
-import { NotificationItemProperties, NotificationsProperties } from "./Notifications.contracts";
+import { NotificationsProperties } from "./Notifications.contracts";
 import { EmptyBlock } from "@/app/components/EmptyBlock";
 import { Image } from "@/app/components/Image";
 import { useEnvironmentContext } from "@/app/contexts";
@@ -26,7 +26,6 @@ export const Notifications = ({ profile, onNotificationAction, onTransactionClic
 				<div className="hidden sm:block font-semibold text-lg text-theme-secondary-900 dark:text-theme-secondary-200">Notification</div>
 				<Button variant="transparent" size="2xs" icon="CheckmarkDoubleCircle" disabled={!hasUnread} className="p-0 disabled:text-theme-secondary-500 dark:disabled:text-theme-secondary-800 text-theme-secondary-800 dark:text-theme-secondary-800" onClick={() => markAllTransactionsAsRead()}>
 					<span>{t("COMMON.NOTIFICATIONS.MARK_ALL_AS_READ")}</span>
-
 				</Button>
 			</div>
 
