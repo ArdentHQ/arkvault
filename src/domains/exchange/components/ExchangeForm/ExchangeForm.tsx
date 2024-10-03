@@ -315,11 +315,11 @@ const ExchangeForm = ({ orderId, onReady }: { orderId?: string; onReady: () => v
 
 					<div className="mt-8">
 						<TabPanel tabId={1}>
-							<FormStep profile={activeProfile}/>
+							<FormStep profile={activeProfile} />
 						</TabPanel>
 
 						<TabPanel tabId={2}>
-							<ReviewStep/>
+							<ReviewStep />
 						</TabPanel>
 
 						<TabPanel tabId={3}>
@@ -330,21 +330,24 @@ const ExchangeForm = ({ orderId, onReady }: { orderId?: string; onReady: () => v
 							<ConfirmationStep exchangeTransaction={exchangeTransaction} />
 						</TabPanel>
 
-
 						{showFormButtons && (
-							<div className={cn({"flex justify-between items-center": activeTab === Step.ReviewStep && withSignStep})}>
+							<div
+								className={cn({
+									"flex items-center justify-between": activeTab === Step.ReviewStep && withSignStep,
+								})}
+							>
 								{activeTab === Step.ReviewStep && withSignStep && (
-									<div className="fixed bottom-[calc(env(safe-area-inset-bottom)_+_8.5rem)] left-1/2 -translate-x-1/2 sm:translate-x-0 sm:static sm:mt-5 manual-transfer-button">
+									<div className="manual-transfer-button fixed bottom-[calc(env(safe-area-inset-bottom)_+_8.5rem)] left-1/2 -translate-x-1/2 sm:static sm:mt-5 sm:translate-x-0">
 										<Button
 											variant="transparent"
-											onClick={() => handleNext({bypassSignStep: true})}
+											onClick={() => handleNext({ bypassSignStep: true })}
 											disabled={isSubmitting || (isDirty ? !isValid : true)}
-											className="sm:pl-0 text-sm leading-[17px] text-theme-primary-600"
+											className="text-sm leading-[17px] text-theme-primary-600 sm:pl-0"
 										>
 											Manual transfer
 										</Button>
-									</div>)
-								}
+									</div>
+								)}
 
 								<FormButtons>
 									{activeTab < Step.StatusStep && (
@@ -379,7 +382,6 @@ const ExchangeForm = ({ orderId, onReady }: { orderId?: string; onReady: () => v
 									)}
 								</FormButtons>
 							</div>
-
 						)}
 					</div>
 				</Tabs>

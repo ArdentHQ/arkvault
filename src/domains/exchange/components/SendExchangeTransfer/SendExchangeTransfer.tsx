@@ -5,8 +5,8 @@ import { useTranslation } from "react-i18next";
 import { Modal } from "@/app/components/Modal";
 import { Form, FormButtons, FormField, FormLabel } from "@/app/components/Form";
 import { SelectAddress } from "@/domains/profile/components/SelectAddress";
-import {useActiveProfile, useFees, useValidation} from "@/app/hooks";
-import {DetailLabel, DetailTitle, DetailWrapper} from "@/app/components/DetailWrapper";
+import { useActiveProfile, useFees, useValidation } from "@/app/hooks";
+import { DetailLabel, DetailTitle, DetailWrapper } from "@/app/components/DetailWrapper";
 import { Address } from "@/app/components/Address";
 import { Networks } from "@ardenthq/sdk";
 import { buildTransferData } from "@/domains/transaction/pages/SendTransfer/SendTransfer.helpers";
@@ -16,8 +16,8 @@ import { useSendTransferForm } from "@/domains/transaction/hooks/use-send-transf
 import { useLedgerContext } from "@/app/contexts";
 import { Button } from "@/app/components/Button";
 import { Alert } from "@/app/components/Alert";
-import {TotalAmountBox} from "@/domains/transaction/components/TotalAmountBox";
-import {BigNumber} from "@ardenthq/sdk-helpers";
+import { TotalAmountBox } from "@/domains/transaction/components/TotalAmountBox";
+import { BigNumber } from "@ardenthq/sdk-helpers";
 
 interface TransferProperties {
 	onClose: () => void;
@@ -66,7 +66,7 @@ export const SendExchangeTransfer: React.FC<TransferProperties> = ({ onClose, on
 		submitForm,
 		getValues,
 		lastEstimatedExpiration,
-		values: { fee},
+		values: { fee },
 		formState: { isValid, isSubmitting },
 	} = useSendTransferForm(senderWallet);
 
@@ -80,13 +80,12 @@ export const SendExchangeTransfer: React.FC<TransferProperties> = ({ onClose, on
 		const netBalance = BigNumber.make(senderWallet?.balance() || 0).minus(fee || 0);
 		const remainingNetBalance = netBalance.isGreaterThan(0) ? netBalance.toFixed(10) : "0";
 
-		form.register("senderAddress", sendTransfer.amount(network, remainingNetBalance, recipients, true))
+		form.register("senderAddress", sendTransfer.amount(network, remainingNetBalance, recipients, true));
 
 		if (senderWallet) {
-			void form.trigger("senderAddress")
+			void form.trigger("senderAddress");
 		}
 	}, [fee, network, recipients, sendTransfer, senderWallet]);
-
 
 	const { calculate } = useFees(profile);
 
@@ -158,7 +157,7 @@ export const SendExchangeTransfer: React.FC<TransferProperties> = ({ onClose, on
 			<Form context={form} onSubmit={() => submit()}>
 				<div className="mt-4 space-y-4">
 					<FormField name="senderAddress">
-						<FormLabel label={t("TRANSACTION.SENDER")}/>
+						<FormLabel label={t("TRANSACTION.SENDER")} />
 
 						<div data-testid="sender-address">
 							<SelectAddress
@@ -166,9 +165,9 @@ export const SendExchangeTransfer: React.FC<TransferProperties> = ({ onClose, on
 								wallet={
 									senderWallet
 										? {
-											address: senderWallet.address(),
-											network: senderWallet.network(),
-										}
+												address: senderWallet.address(),
+												network: senderWallet.network(),
+											}
 										: undefined
 								}
 								wallets={wallets}
@@ -182,8 +181,7 @@ export const SendExchangeTransfer: React.FC<TransferProperties> = ({ onClose, on
 					</FormField>
 
 					<DetailWrapper label={t("TRANSACTION.ADDRESSING")}>
-						<div
-							className="flex w-full items-center justify-between gap-4 space-x-2 sm:justify-start sm:space-x-0">
+						<div className="flex w-full items-center justify-between gap-4 space-x-2 sm:justify-start sm:space-x-0">
 							<DetailTitle className="w-auto sm:min-w-16">{t("COMMON.TO")}</DetailTitle>
 							<Address
 								address={exchangeInput.address}
@@ -198,8 +196,11 @@ export const SendExchangeTransfer: React.FC<TransferProperties> = ({ onClose, on
 						<>
 							<div className="space-y-3 sm:space-y-2">
 								<DetailLabel>{t("COMMON.TRANSACTION_SUMMARY")}</DetailLabel>
-								<TotalAmountBox amount={exchangeInput.amount} fee={fee || 0}
-												ticker={senderWallet.currency()}/>
+								<TotalAmountBox
+									amount={exchangeInput.amount}
+									fee={fee || 0}
+									ticker={senderWallet.currency()}
+								/>
 							</div>
 							<AuthenticationStep
 								noHeading
