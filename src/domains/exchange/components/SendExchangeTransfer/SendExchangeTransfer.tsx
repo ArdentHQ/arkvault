@@ -130,6 +130,19 @@ export const SendExchangeTransfer: React.FC<TransferProperties> = ({ onClose, on
 		}
 	}, [onSuccess, submitForm]);
 
+	const handleWalletSelect = (address: string) => {
+		const newSenderWallet = profile.wallets().findByAddressWithNetwork(address, network.id());
+
+		const isFullyRestoredAndSynced =
+			newSenderWallet?.hasBeenFullyRestored() && newSenderWallet.hasSyncedWithNetwork();
+
+		if (!isFullyRestoredAndSynced) {
+			newSenderWallet?.synchroniser().identity()
+		}
+
+		setSenderWallet(newSenderWallet);
+	}
+
 	if (transaction) {
 		return (
 			<Modal isOpen onClose={onClose} title={"Sign Exchange Transaction"}>
@@ -158,7 +171,6 @@ export const SendExchangeTransfer: React.FC<TransferProperties> = ({ onClose, on
 				<div className="mt-4 space-y-4">
 					<FormField name="senderAddress">
 						<FormLabel label={t("TRANSACTION.SENDER")} />
-
 						<div data-testid="sender-address">
 							<SelectAddress
 								showWalletAvatar={false}
@@ -173,9 +185,7 @@ export const SendExchangeTransfer: React.FC<TransferProperties> = ({ onClose, on
 								wallets={wallets}
 								profile={profile}
 								disabled={wallets.length === 1}
-								onChange={(address: string) => {
-									setSenderWallet(profile.wallets().findByAddressWithNetwork(address, network.id()));
-								}}
+								onChange={handleWalletSelect}
 							/>
 						</div>
 					</FormField>
@@ -185,7 +195,7 @@ export const SendExchangeTransfer: React.FC<TransferProperties> = ({ onClose, on
 							<DetailTitle className="w-auto sm:min-w-16">{t("COMMON.TO")}</DetailTitle>
 							<Address
 								address={exchangeInput.address}
-								addressClass="text-theme-secondary-900 dark:text-theme-secondary-700 text-sm leading-[17px] sm:leading-5 sm:text-base"
+								addressClass="text-theme-secondary-900 dark:text-theme-secondary-200 text-sm leading-[17px] sm:leading-5 sm:text-base"
 								wrapperClass="justify-end sm:justify-start"
 								showCopyButton
 							/>
