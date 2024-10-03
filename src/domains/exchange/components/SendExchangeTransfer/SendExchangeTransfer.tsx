@@ -27,7 +27,13 @@ interface TransferProperties {
 	exchangeTransaction: Contracts.IExchangeTransaction;
 }
 
-export const SendExchangeTransfer: React.FC<TransferProperties> = ({ onClose, onSuccess, network, exchangeTransaction, profile }) => {
+export const SendExchangeTransfer: React.FC<TransferProperties> = ({
+	onClose,
+	onSuccess,
+	network,
+	exchangeTransaction,
+	profile,
+}) => {
 	const { t } = useTranslation();
 
 	const { sendTransfer } = useValidation();
