@@ -73,20 +73,33 @@ export const SendExchangeTransfer: React.FC<TransferProperties> = ({ onClose, on
 	console.log({ errors: form.errors, isSubmitting, isValid, values: getValues() });
 
 	useEffect(() => {
+		const netBalance = BigNumber.make(senderWallet?.balance() || 0).minus(fee || 0);
+		const remainingNetBalance = netBalance.isGreaterThan(0) ? netBalance.toFixed(10) : "0";
+
+		form.register("amount", sendTransfer.amount(network, remainingNetBalance, recipients, true));
+
+		const validate = async () => {
+			await form.trigger("amount");
+
+			if (form.errors.amount) {
+				form.setError("senderAddress", {
+					message: form.errors.amount.message,
+					type: form.errors.amount.type,
+				});
+			}
+		}
+
+		if (senderWallet) {
+			void validate();
+		}
+	}, [fee, network, recipients, sendTransfer, senderWallet]);
+
+
+	useEffect(() => {
 		form.setValue("amount", exchangeInput.amount, { shouldDirty: true, shouldValidate: true });
 		form.setValue("recipients", recipients, { shouldDirty: true, shouldValidate: true });
 	}, [exchangeInput.amount, recipients]);
 
-	useEffect(() => {
-		const netBalance = BigNumber.make(senderWallet?.balance() || 0).minus(fee || 0);
-		const remainingNetBalance = netBalance.isGreaterThan(0) ? netBalance.toFixed(10) : "0";
-
-		form.register("senderAddress", sendTransfer.amount(network, remainingNetBalance, recipients, true));
-
-		if (senderWallet) {
-			void form.trigger("senderAddress");
-		}
-	}, [fee, network, recipients, sendTransfer, senderWallet]);
 
 	const { calculate } = useFees(profile);
 
