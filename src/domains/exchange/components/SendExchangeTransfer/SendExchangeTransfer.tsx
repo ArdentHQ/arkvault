@@ -138,11 +138,11 @@ export const SendExchangeTransfer: React.FC<TransferProperties> = ({ onClose, on
 			newSenderWallet?.hasBeenFullyRestored() && newSenderWallet.hasSyncedWithNetwork();
 
 		if (!isFullyRestoredAndSynced) {
-			newSenderWallet?.synchroniser().identity()
+			newSenderWallet?.synchroniser().identity();
 		}
 
 		setSenderWallet(newSenderWallet);
-	}
+	};
 
 	if (transaction) {
 		return (
