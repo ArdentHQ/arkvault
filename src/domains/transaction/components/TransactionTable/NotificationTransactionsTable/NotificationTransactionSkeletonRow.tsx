@@ -30,7 +30,6 @@ export const NotificationTransactionSkeletonRow = () => {
 					<Skeleton height={16} width={35} />
 				</span>
 			</TableCell>
-
 		</TableRow>
 	);
 };

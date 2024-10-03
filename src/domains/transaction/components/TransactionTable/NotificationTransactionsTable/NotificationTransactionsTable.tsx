@@ -1,9 +1,8 @@
 import { DTO } from "@ardenthq/sdk-profiles";
 import React from "react";
-import { useTranslation } from "react-i18next";
 import VisibilitySensor from "react-visibility-sensor";
 
-import { NotificationTransactionItem, useNotifications } from "@/app/components/Notifications";
+import { NotificationTransactionItem } from "@/app/components/Notifications";
 import { Table } from "@/app/components/Table";
 import {
 	NotificationTransactionsProperties,
@@ -18,7 +17,6 @@ export const NotificationTransactionsTable = ({
 	isLoading = true,
 	onVisibilityChange,
 }: NotificationTransactionsProperties) => {
-
 	if (isLoading) {
 		return <NotificationTransactionsSkeleton />;
 	}
@@ -31,11 +29,7 @@ export const NotificationTransactionsTable = ({
 				delayedCall
 				containment={containmentRef?.current}
 			>
-				<Table
-					hideHeader
-					columns={[{ Header: "-", className: "hidden" }]}
-					data={transactions}
-				>
+				<Table hideHeader columns={[{ Header: "-", className: "hidden" }]} data={transactions}>
 					{(transaction: DTO.ExtendedConfirmedTransactionData) => (
 						<NotificationTransactionItem
 							transaction={transaction}

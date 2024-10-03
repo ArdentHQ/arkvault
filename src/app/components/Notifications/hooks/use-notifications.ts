@@ -5,10 +5,10 @@ export const useNotifications = ({ profile }: { profile: Contracts.IProfile }) =
 	const isSyncing = profile.notifications().transactions().isSyncing();
 
 	const isNotificationUnread = (transaction: DTO.ExtendedConfirmedTransactionData) =>
-		Object.values(profile.notifications().all()).some(notification => {
-			const isUnread = notification.read_at === undefined
-			return notification.meta.transactionId === transaction.id() && isUnread
-		})
+		Object.values(profile.notifications().all()).some((notification) => {
+			const isUnread = notification.read_at === undefined;
+			return notification.meta.transactionId === transaction.id() && isUnread;
+		});
 
 	const { markAllTransactionsAsRead, markAsRead, releases, transactions } = useMemo(() => {
 		const markAllTransactionsAsRead = (isVisible: boolean) => {

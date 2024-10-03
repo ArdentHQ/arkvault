@@ -9,7 +9,7 @@ import { useEnvironmentContext } from "@/app/contexts";
 import { NotificationTransactionsTable } from "@/domains/transaction/components/TransactionTable/NotificationTransactionsTable";
 import { Button } from "@/app/components/Button";
 
-export const Notifications = ({ profile, onNotificationAction, onTransactionClick }: NotificationsProperties) => {
+export const Notifications = ({ profile, onTransactionClick }: NotificationsProperties) => {
 	const { t } = useTranslation();
 	const { persist } = useEnvironmentContext();
 
@@ -21,16 +21,25 @@ export const Notifications = ({ profile, onNotificationAction, onTransactionClic
 	}, []);
 
 	return (
-		<div className="w-full sm:w-[35rem]">
-			<div className="flex items-center w-full justify-between dark:bg-black bg-theme-secondary-100 py-4 rounded-t-xl sm:px-8 px-6">
-				<div className="hidden sm:block font-semibold text-lg text-theme-secondary-900 dark:text-theme-secondary-200">Notification</div>
-				<Button variant="transparent" size="2xs" icon="CheckmarkDoubleCircle" disabled={!hasUnread} className="p-0 disabled:text-theme-secondary-500 dark:disabled:text-theme-secondary-800 text-theme-secondary-800 dark:text-theme-secondary-800" onClick={() => markAllTransactionsAsRead()}>
+		<div className="w-full sm:w-[35rem]" data-testid="NotificationsWrapper">
+			<div className="flex w-full items-center justify-between rounded-t-xl bg-theme-secondary-100 px-6 py-4 dark:bg-black sm:px-8">
+				<div className="hidden text-lg font-semibold text-theme-secondary-900 dark:text-theme-secondary-200 sm:block">
+					Notification
+				</div>
+				<Button
+					variant="transparent"
+					size="2xs"
+					icon="CheckmarkDoubleCircle"
+					disabled={!hasUnread}
+					className="p-0 text-theme-secondary-800 disabled:text-theme-secondary-500 dark:text-theme-secondary-800 dark:disabled:text-theme-secondary-800"
+					onClick={() => markAllTransactionsAsRead(true)}
+				>
 					<span>{t("COMMON.NOTIFICATIONS.MARK_ALL_AS_READ")}</span>
 				</Button>
 			</div>
 
 			{transactions.length === 0 && (
-				<div className="pt-4 pb-8 px-6">
+				<div className="px-6 pb-8 pt-4">
 					<EmptyBlock className="py-4">
 						<span className="whitespace-nowrap">{t("COMMON.NOTIFICATIONS.EMPTY")}</span>
 					</EmptyBlock>
@@ -39,7 +48,10 @@ export const Notifications = ({ profile, onNotificationAction, onTransactionClic
 			)}
 
 			{transactions.length > 0 && (
-				<div className="max-h-[36rem] overflow-y-hidden overscroll-y-none w-full" data-testid="NotificationsWrapper">
+				<div
+					className="max-h-[36rem] w-full overflow-y-hidden overscroll-y-none"
+					data-testid="NotificationsWrapper"
+				>
 					{transactions.length > 0 && (
 						<NotificationTransactionsTable
 							profile={profile}

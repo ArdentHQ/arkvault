@@ -4,14 +4,10 @@ import VisibilitySensor from "react-visibility-sensor";
 import { useTranslation } from "react-i18next";
 import { NotificationTransactionItemProperties } from "./Notifications.contracts";
 import { TableRow } from "@/app/components/Table";
-import { TransactionRowAmount } from "@/domains/transaction/components/TransactionTable/TransactionRow/TransactionRowAmount";
 import { RowWrapper, RowLabel } from "@/app/components/Table/Mobile/Row";
-import { Avatar } from "@/app/components/Avatar";
-import { TransactionRowSender } from "@/domains/transaction/components/TransactionTable/TransactionRow/TransactionRowSender";
 import { AmountLabel } from "@/app/components/Amount";
-import { TransactionRowRecipientLabel } from "@/domains/transaction/components/TransactionTable/TransactionRow/TransactionRowRecipientLabel";
 import { useWalletAlias } from "@/app/hooks";
-import { Address } from "../Address";
+import { Address } from "@/app/components/Address";
 
 export const NotificationTransactionItemMobile = ({
 	transaction,
@@ -35,7 +31,7 @@ export const NotificationTransactionItemMobile = ({
 	return (
 		<VisibilitySensor scrollCheck delayedCall containment={containmentRef?.current}>
 			<TableRow onClick={() => onTransactionClick?.(transaction)}>
-				<td className="flex-col space-y-4 py-4 px-6">
+				<td className="flex-col space-y-4 px-6 py-4">
 					<RowWrapper>
 						<RowLabel>{t("COMMON.ADDRESS")}</RowLabel>
 						<div className="w-2/3">
