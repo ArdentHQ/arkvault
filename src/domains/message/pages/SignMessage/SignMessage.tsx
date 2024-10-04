@@ -14,16 +14,15 @@ import { Page, Section } from "@/app/components/Layout";
 import { Tabs, TabPanel } from "@/app/components/Tabs";
 import { StepsProvider, useLedgerContext } from "@/app/contexts";
 import { useActiveProfile, useActiveWalletWhenNeeded, useValidation } from "@/app/hooks";
-import { AuthenticationStep } from "@/domains/transaction/components/AuthenticationStep";
 import { useMessageSigner } from "@/domains/message/hooks/use-message-signer";
 import { ErrorStep } from "@/domains/transaction/components/ErrorStep";
 import { TransactionSender, TransactionDetail } from "@/domains/transaction/components/TransactionDetail";
 import { useNetworkFromQueryParameters, useQueryParameters } from "@/app/hooks/use-query-parameters";
 import { ProfilePaths } from "@/router/paths";
+import { AuthenticationStep } from "@/domains/transaction/components/AuthenticationStep";
 
 enum Step {
 	FormStep = 1,
-	AuthenticationStep,
 	SuccessStep,
 	ErrorStep,
 }
@@ -113,10 +112,6 @@ export const SignMessage: React.VFC = () => {
 		// Abort any existing listener
 		abortReference.current.abort();
 
-		if (activeTab === Step.AuthenticationStep) {
-			return setActiveTab(activeTab - 1);
-		}
-
 		if (selectedWallet) {
 			return history.push(`/profiles/${activeProfile.id()}/wallets/${selectedWallet.id()}`);
 		}
@@ -129,7 +124,7 @@ export const SignMessage: React.VFC = () => {
 
 		const newIndex = activeTab + 1;
 
-		if (newIndex === Step.AuthenticationStep && selectedWallet!.isLedger()) {
+		if (newIndex === Step.FormStep && selectedWallet!.isLedger()) {
 			connectLedger();
 		}
 
@@ -140,6 +135,10 @@ export const SignMessage: React.VFC = () => {
 		const abortSignal = abortReference.current.signal;
 
 		const { message, mnemonic, encryptionPassword, secret } = getValues();
+
+		setActiveTab(activeTab + 1);
+
+		console.log("submitForm", { message, secret })
 
 		try {
 			const signedMessageResult = await sign(selectedWallet!, message, mnemonic, encryptionPassword, secret, {
@@ -155,7 +154,7 @@ export const SignMessage: React.VFC = () => {
 		}
 	};
 
-	const hideStepNavigation = activeTab === Step.AuthenticationStep && selectedWallet && selectedWallet.isLedger();
+	const hideStepNavigation = activeTab === selectedWallet && selectedWallet.isLedger();
 
 	const handleSelectAddress: any = useCallback(
 		(address: string) => {
@@ -171,47 +170,48 @@ export const SignMessage: React.VFC = () => {
 					<Tabs activeId={activeTab}>
 						<StepsProvider steps={3} activeStep={activeTab}>
 							<TabPanel tabId={Step.FormStep}>
-								<FormStep
-									disabled={!isDeeplink}
-									profile={activeProfile}
-									wallets={wallets}
-									disableMessageInput={false}
-									maxLength={signMessage.message().maxLength?.value}
-									wallet={selectedWallet}
-									handleSelectAddress={handleSelectAddress}
-								/>
+								<div>
+									<FormStep
+										disabled={!isDeeplink}
+										profile={activeProfile}
+										wallets={wallets}
+										disableMessageInput={false}
+										maxLength={signMessage.message().maxLength.value}
+										wallet={selectedWallet}
+										handleSelectAddress={handleSelectAddress}
+									/>
+
+									{selectedWallet && (
+										<div className="mt-4">
+											<AuthenticationStep
+												noHeading
+												wallet={selectedWallet}
+												ledgerDetails={
+													<>
+														<TransactionSender
+															address={selectedWallet.address()}
+															network={selectedWallet.network()}
+															paddingPosition="bottom"
+															border={false}
+														/>
+
+														<TransactionDetail label={t("COMMON.MESSAGE")}>
+															{getValues("message")}
+														</TransactionDetail>
+													</>
+												}
+												ledgerIsAwaitingDevice={!hasDeviceAvailable}
+												ledgerIsAwaitingApp={hasDeviceAvailable && !isConnected}
+												subject="message"
+											/>
+										</div>
+									)}
+								</div>
 							</TabPanel>
 
-							{selectedWallet && (
-								<>
-									<TabPanel tabId={Step.AuthenticationStep}>
-										<AuthenticationStep
-											wallet={selectedWallet}
-											ledgerDetails={
-												<>
-													<TransactionSender
-														address={selectedWallet.address()}
-														network={selectedWallet.network()}
-														paddingPosition="bottom"
-														border={false}
-													/>
-
-													<TransactionDetail label={t("COMMON.MESSAGE")}>
-														{getValues("message")}
-													</TransactionDetail>
-												</>
-											}
-											ledgerIsAwaitingDevice={!hasDeviceAvailable}
-											ledgerIsAwaitingApp={hasDeviceAvailable && !isConnected}
-											subject="message"
-										/>
-									</TabPanel>
-
-									<TabPanel tabId={Step.SuccessStep}>
-										<SuccessStep signedMessage={signedMessage} wallet={selectedWallet} />
-									</TabPanel>
-								</>
-							)}
+							<TabPanel tabId={Step.SuccessStep}>
+								{selectedWallet && <SuccessStep signedMessage={signedMessage} wallet={selectedWallet} />}
+							</TabPanel>
 
 							<TabPanel tabId={Step.ErrorStep}>
 								<ErrorStep
@@ -236,30 +236,10 @@ export const SignMessage: React.VFC = () => {
 									</Button>
 
 									<Button
-										disabled={!isValid || !selectedWallet}
-										onClick={handleNext}
-										data-testid="SignMessage__continue-button"
-									>
-										{t("COMMON.CONTINUE")}
-									</Button>
-								</FormButtons>
-							)}
-
-							{activeTab === Step.AuthenticationStep && !hideStepNavigation && (
-								<FormButtons>
-									<Button
-										data-testid="SignMessage__back-button"
-										variant="secondary"
-										onClick={handleBack}
-									>
-										{t("COMMON.BACK")}
-									</Button>
-
-									<Button
-										data-testid="SignMessage__sign-button"
 										type="submit"
-										disabled={isSubmitting || !isValid}
-										isLoading={isSubmitting}
+										disabled={!isValid || !selectedWallet}
+										onClick={submitForm}
+										data-testid="SignMessage__continue-button"
 									>
 										{t("COMMON.SIGN")}
 									</Button>
@@ -292,6 +272,8 @@ export const SignMessage: React.VFC = () => {
 									</Button>
 								</FormButtons>
 							)}
+
+
 						</StepsProvider>
 					</Tabs>
 				</Form>

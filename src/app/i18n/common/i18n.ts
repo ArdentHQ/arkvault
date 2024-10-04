@@ -346,6 +346,7 @@ export const translations = {
 	SIGNATORY: "Signatory",
 	SIGNATURE: "Signature",
 	SIGNED: "Signed",
+	SIGNING_WALLET: "Signing Wallet",
 	SIGN_IN: "Sign In",
 	SIGN_OUT: "Sign Out",
 	SIZE: "Size",

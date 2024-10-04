@@ -53,13 +53,14 @@ export const FormStep = ({
 	};
 
 	return (
-		<section className="space-y-5">
+		<section className="space-y-4">
 			<StepHeader title={t("MESSAGE.PAGE_SIGN_MESSAGE.FORM_STEP.TITLE")} subtitle={getSubtitle()} />
 
 			<FormField name="signatory-address">
-				<FormLabel label={t("COMMON.SIGNATORY")} />
+				<FormLabel label={t("COMMON.SIGNING_WALLET")} />
 
 				<SelectAddress
+					showWalletAvatar={false}
 					title={t("MESSAGE.PAGE_SIGN_MESSAGE.FORM_STEP.SELECT_ADDRESS_TITLE")}
 					description={t("MESSAGE.PAGE_SIGN_MESSAGE.FORM_STEP.SELECT_ADDRESS_DESCRIPTION")}
 					showUserIcon={false}
