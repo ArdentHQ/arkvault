@@ -1362,10 +1362,7 @@ describe("ExchangeForm", () => {
 		exchangeTransactionUpdateMock.mockRestore();
 	});
 
-	it('should show `Sign` and `Manual Transfer` buttons if from currency is ARK', async () => {
-		const { result } = renderHook(() => useTranslation());
-		const { t } = result.current;
-
+	const goToReviewStep = async () => {
 		const resetProfileNetworksMock = mockProfileWithPublicAndTestNetworks(profile);
 
 		renderComponent(<ExchangeForm onReady={vi.fn()} />)
@@ -1407,6 +1404,15 @@ describe("ExchangeForm", () => {
 		await waitFor(() => {
 			expect(reviewStep()).toBeInTheDocument();
 		});
+
+		return resetProfileNetworksMock;
+	}
+
+	it('should show `Sign` and `Manual Transfer` buttons if from currency is ARK', async () => {
+		const { result } = renderHook(() => useTranslation());
+		const { t } = result.current;
+
+		const resetProfileNetworksMock = await goToReviewStep();
 
 		await expect(screen.findByText(t("EXCHANGE.MANUAL_TRANSFER"))).resolves.toBeVisible();
 		expect(screen.getByTestId("ExchangeForm__continue-button")).toHaveTextContent(t("COMMON.SIGN"));
@@ -1497,48 +1503,7 @@ describe("ExchangeForm", () => {
 		const { result } = renderHook(() => useTranslation());
 		const { t } = result.current;
 
-		const resetProfileNetworksMock = mockProfileWithPublicAndTestNetworks(profile);
-
-		renderComponent(<ExchangeForm onReady={vi.fn()} />)
-
-		await expect(screen.findByTestId("ExchangeForm")).resolves.toBeVisible();
-
-		await selectCurrencies({
-			from: { name: "Ark", ticker: "ARK" },
-			to: { name: "Bitcoin", ticker: "BTC" },
-		});
-
-		const payinInput: HTMLInputElement = screen.getAllByTestId("InputCurrency")[0] as HTMLInputElement;
-		const payoutInput: HTMLInputElement = screen.getAllByTestId("InputCurrency")[1] as HTMLInputElement;
-
-		// amount input
-		await userEvent.type(payinInput, "1");
-
-		await waitFor(() => {
-			expect(payinInput).toHaveValue("1");
-		});
-
-		await waitFor(() => {
-			expect(payoutInput).toHaveValue(payoutValue);
-		});
-
-		// select recipient
-		const recipientDropdown = screen.getAllByTestId("SelectDropdown__input")[2];
-
-		expect(recipientDropdown).not.toBeDisabled();
-
-		await userEvent.type(recipientDropdown, "payoutAddress");
-
-		await waitFor(() => {
-			expect(recipientDropdown).toHaveValue("payoutAddress");
-		});
-
-		// go to the review step
-		await userEvent.click(continueButton());
-
-		await waitFor(() => {
-			expect(reviewStep()).toBeInTheDocument();
-		});
+		const resetProfileNetworksMock = await goToReviewStep();
 
 		const exchangeTransaction = profile.exchangeTransactions().create(transactionStub);
 
@@ -1558,7 +1523,6 @@ describe("ExchangeForm", () => {
 			expect(continueButton()).not.toBeDisabled();
 		});
 
-
 		vi.mock('@/domains/exchange/components/SendExchangeTransfer', () => ({
 			SendExchangeTransfer: () => <div>SendExchangeTransfer component</div>
 		}));
@@ -1566,6 +1530,96 @@ describe("ExchangeForm", () => {
 		await userEvent.click(continueButton());
 
 		await expect(screen.findByText(/SendExchangeTransfer component/)).resolves.toBeVisible();
+
+		resetProfileNetworksMock();
+		findTransactionMock.mockRestore();
+	});
+
+	it('should trigger `onCancel`', async () => {
+		profile.exchangeTransactions().flush();
+
+		const { result } = renderHook(() => useTranslation());
+		const { t } = result.current;
+
+		const resetProfileNetworksMock = await goToReviewStep();
+
+		const exchangeTransaction = profile.exchangeTransactions().create(transactionStub);
+
+		const findTransactionMock = vi
+			.spyOn(profile.exchangeTransactions(), "findById")
+			.mockReturnValue(exchangeTransaction);
+
+		server.use(
+			requestMockOnce(`${exchangeBaseURL}/api/changenow/orders/182b657b2c259b`, { data: {}})
+		);
+
+		expect(continueButton()).toHaveTextContent(t("COMMON.SIGN"));
+
+		await userEvent.click(screen.getByRole("checkbox"));
+
+		await waitFor(() => {
+			expect(continueButton()).not.toBeDisabled();
+		});
+
+		vi.mock('@/domains/exchange/components/SendExchangeTransfer', () => ({
+			SendExchangeTransfer: ({onClose}) => <div>
+				<button onClick={onClose}>Close_SendExchangeTransfer</button>
+				SendExchangeTransfer component
+			</div>
+		}));
+
+		await userEvent.click(continueButton());
+
+		await expect(screen.findByText(/SendExchangeTransfer component/)).resolves.toBeVisible();
+		await userEvent.click(screen.getByText("Close_SendExchangeTransfer"));
+
+		await waitFor(() => {
+			expect(screen.queryByText(/SendExchangeTransfer component/)).not.toBeInTheDocument();
+		})
+
+		resetProfileNetworksMock();
+		findTransactionMock.mockRestore();
+	});
+
+	it('should trigger `onSuccess`', async () => {
+		profile.exchangeTransactions().flush();
+
+		const { result } = renderHook(() => useTranslation());
+		const { t } = result.current;
+
+		const resetProfileNetworksMock = await goToReviewStep();
+
+		const exchangeTransaction = profile.exchangeTransactions().create(transactionStub);
+
+		const findTransactionMock = vi
+			.spyOn(profile.exchangeTransactions(), "findById")
+			.mockReturnValue(exchangeTransaction);
+
+		server.use(
+			requestMockOnce(`${exchangeBaseURL}/api/changenow/orders/182b657b2c259b`, { data: {}})
+		);
+
+		expect(continueButton()).toHaveTextContent(t("COMMON.SIGN"));
+
+		await userEvent.click(screen.getByRole("checkbox"));
+
+		await waitFor(() => {
+			expect(continueButton()).not.toBeDisabled();
+		});
+
+		vi.mock('@/domains/exchange/components/SendExchangeTransfer', () => ({
+			SendExchangeTransfer: ({onSuccess}) => <div>
+				<button onClick={onSuccess}>Success_SendExchangeTransfer</button>
+				SendExchangeTransfer component
+			</div>
+		}));
+
+		await userEvent.click(continueButton());
+
+		await expect(screen.findByText(/SendExchangeTransfer component/)).resolves.toBeVisible();
+		await userEvent.click(screen.getByText("Success_SendExchangeTransfer"));
+
+		await expect(screen.findByTestId("ExchangeForm__status-step")).resolves.toBeVisible();
 
 		resetProfileNetworksMock();
 		findTransactionMock.mockRestore();
