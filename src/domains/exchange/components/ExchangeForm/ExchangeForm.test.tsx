@@ -1428,7 +1428,7 @@ describe("ExchangeForm", () => {
 		const { result } = renderHook(() => useTranslation());
 		const { t } = result.current;
 
-		const resetProfileNetworksMock = await goToReviewStep()
+		const resetProfileNetworksMock = await goToReviewStep();
 
 		const exchangeTransaction = profile.exchangeTransactions().create(transactionStub);
 
