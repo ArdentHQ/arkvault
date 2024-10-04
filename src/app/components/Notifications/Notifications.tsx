@@ -7,7 +7,6 @@ import { EmptyBlock } from "@/app/components/EmptyBlock";
 import { Image } from "@/app/components/Image";
 import { useEnvironmentContext } from "@/app/contexts";
 import { NotificationTransactionsTable } from "@/domains/transaction/components/TransactionTable/NotificationTransactionsTable";
-import { Button } from "@/app/components/Button";
 
 export const Notifications = ({ profile, onTransactionClick }: NotificationsProperties) => {
 	const { t } = useTranslation();
