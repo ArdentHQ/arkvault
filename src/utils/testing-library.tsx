@@ -18,8 +18,8 @@ import TestingPasswords from "@/tests/fixtures/env/testing-passwords.json";
 import DefaultManifest from "@/tests/fixtures/coins/ark/manifest/default.json";
 import { StubStorage } from "@/tests/mocks";
 import { connectedTransport as ledgerTransportFactory } from "@/app/contexts/Ledger/transport";
-import {BigNumber} from "@ardenthq/sdk-helpers";
-import {DateTime} from "@ardenthq/sdk-intl";
+import { BigNumber } from "@ardenthq/sdk-helpers";
+import { DateTime } from "@ardenthq/sdk-intl";
 export {
 	mockNanoSTransport,
 	mockLedgerTransportError,
@@ -356,7 +356,10 @@ export const triggerMessageSignOnce = async (wallet: Contracts.IReadWriteWallet)
 export const queryElementForSvg = (target: HTMLElement, svg: string) => target.querySelector(`svg#${svg}`);
 
 /* istanbul ignore next -- @preserve */
-export const createTransactionMock = (wallet: Contracts.IReadWriteWallet, overrides: Partial<DTO.ExtendedSignedTransactionData> = {}) =>
+export const createTransactionMock = (
+	wallet: Contracts.IReadWriteWallet,
+	overrides: Partial<DTO.ExtendedSignedTransactionData> = {},
+) =>
 	vi.spyOn(wallet.transaction(), "transaction").mockReturnValue({
 		amount: () => +transactionFixture.data.amount / 1e8,
 		blockId: () => "1",
@@ -387,5 +390,5 @@ export const createTransactionMock = (wallet: Contracts.IReadWriteWallet, overri
 		type: () => "transfer",
 		usesMultiSignature: () => false,
 		wallet: () => wallet,
-		...overrides
+		...overrides,
 	} as any);

@@ -120,7 +120,7 @@ export const SendExchangeTransfer: React.FC<TransferProperties> = ({
 		void calculateFee();
 	}, [calculate, network, profile, recipients]);
 
-	const { hasDeviceAvailable, isConnected} = useLedgerContext();
+	const { hasDeviceAvailable, isConnected } = useLedgerContext();
 
 	const [transaction, setTransaction] = useState<DTO.ExtendedSignedTransactionData | undefined>(undefined);
 	const [errorMessage, setErrorMessage] = useState<string | undefined>();
