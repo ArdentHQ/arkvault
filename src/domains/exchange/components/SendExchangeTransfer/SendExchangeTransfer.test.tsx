@@ -37,6 +37,16 @@ const selectSender = async () => {
 	await userEvent.click(firstAddress);
 }
 
+const fillMnemonic = async () => {
+	// AuthenticationStep should be visible
+	await expect(screen.findByTestId("AuthenticationStep")).resolves.toBeVisible();
+
+	await userEvent.type(screen.getByTestId("AuthenticationStep__mnemonic"), getDefaultWalletMnemonic());
+
+	await waitFor(() => expect(sendButton()).not.toBeDisabled());
+}
+
+
 describe("SendExchangeTransfer", () => {
 	beforeAll(async () => {
 		profile = env.profiles().findById(getDefaultProfileId());
@@ -87,15 +97,6 @@ describe("SendExchangeTransfer", () => {
 			onSuccess={vi.fn()}
 			{...properties}
 		/>);
-	}
-
-	const fillMnemonic = async () => {
-		// AuthenticationStep should be visible
-		await expect(screen.findByTestId("AuthenticationStep")).resolves.toBeVisible();
-
-		await userEvent.type(screen.getByTestId("AuthenticationStep__mnemonic"), getDefaultWalletMnemonic());
-
-		await waitFor(() => expect(sendButton()).not.toBeDisabled());
 	}
 
 	it("should render", async () => {

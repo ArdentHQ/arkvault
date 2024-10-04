@@ -341,6 +341,7 @@ const ExchangeForm = ({ orderId, onReady }: { orderId?: string; onReady: () => v
 									<div className="manual-transfer-button fixed bottom-[calc(env(safe-area-inset-bottom)_+_8.5rem)] left-1/2 -translate-x-1/2 sm:static sm:mt-5 sm:translate-x-0">
 										<Button
 											variant="transparent"
+											data-testid="ExchangeForm__manual_transfer"
 											onClick={() => handleNext({ bypassSignStep: true })}
 											disabled={isSubmitting || (isDirty ? !isValid : true)}
 											className="text-sm leading-[17px] text-theme-primary-600 sm:pl-0"

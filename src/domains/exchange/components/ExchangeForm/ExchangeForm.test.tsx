@@ -1482,7 +1482,7 @@ describe("ExchangeForm", () => {
 
 		await expect(screen.findByText(t("EXCHANGE.MANUAL_TRANSFER"))).resolves.toBeVisible();
 
-		expect(screen.getByText(t("EXCHANGE.MANUAL_TRANSFER"))).toBeDisabled();
+		expect(screen.getByTestId("ExchangeForm__manual_transfer")).toBeDisabled();
 
 		await userEvent.click(screen.getByRole("checkbox"));
 
