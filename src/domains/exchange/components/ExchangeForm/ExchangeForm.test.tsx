@@ -1533,6 +1533,8 @@ describe("ExchangeForm", () => {
 
 		await userEvent.click(continueButton());
 
+		expect(screen.getByTestId("ExchangeForm__manual_transfer")).toBeDisabled();
+		
 		await expect(screen.findByText(/SendExchangeTransfer component/)).resolves.toBeVisible();
 
 		resetProfileNetworksMock();
