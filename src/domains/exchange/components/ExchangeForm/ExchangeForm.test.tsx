@@ -1501,7 +1501,9 @@ describe("ExchangeForm", () => {
 			.spyOn(profile.exchangeTransactions(), "findById")
 			.mockReturnValue(exchangeTransaction);
 
-		server.use(mockOrderStatus(exchangeTransaction.orderId(), "new"));
+		server.use(
+			requestMockOnce(`${exchangeBaseURL}/api/changenow/orders/182b657b2c259b`, { data: {}})
+		);
 
 		await expect(screen.findByText(t("EXCHANGE.MANUAL_TRANSFER"))).resolves.toBeVisible();
 
