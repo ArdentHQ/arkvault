@@ -1362,38 +1362,6 @@ describe("ExchangeForm", () => {
 		exchangeTransactionUpdateMock.mockRestore();
 	});
 
-	it.each(["xs", "lg"])("should render with changelly in (%s)", async (breakpoint) => {
-		const onReady = vi.fn();
-		queryParametersMock.mockRestore();
-
-		vi.spyOn(useQueryParameters, "useQueryParameters").mockImplementation(() => ({
-			get: () => "changelly",
-		}));
-
-		renderResponsiveWithRoute(
-			<Route path="/profiles/:profileId/exchange/view">
-				<ExchangeProvider>
-					<Wrapper>
-						<ExchangeForm onReady={onReady} />
-					</Wrapper>
-				</ExchangeProvider>
-			</Route>,
-			breakpoint,
-			{
-				history,
-				route: exchangeURL,
-			},
-		);
-
-		await waitFor(() => {
-			expect(onReady).toHaveBeenCalledWith();
-		});
-
-		await waitFor(() => {
-			expect(screen.getByTestId("ExchangeForm")).toBeInTheDocument();
-		});
-	});
-
 	it('should show `Sign` and `Manual Transfer` buttons if from currency is ARK', async () => {
 		const { result } = renderHook(() => useTranslation());
 		const { t } = result.current;
@@ -1523,6 +1491,37 @@ describe("ExchangeForm", () => {
 		findTransactionMock.mockRestore();
 	});
 
+	it.each(["xs", "lg"])("should render with changelly in (%s)", async (breakpoint) => {
+		const onReady = vi.fn();
+		queryParametersMock.mockRestore();
+
+		vi.spyOn(useQueryParameters, "useQueryParameters").mockImplementation(() => ({
+			get: () => "changelly",
+		}));
+
+		renderResponsiveWithRoute(
+			<Route path="/profiles/:profileId/exchange/view">
+				<ExchangeProvider>
+					<Wrapper>
+						<ExchangeForm onReady={onReady} />
+					</Wrapper>
+				</ExchangeProvider>
+			</Route>,
+			breakpoint,
+			{
+				history,
+				route: exchangeURL,
+			},
+		);
+
+		await waitFor(() => {
+			expect(onReady).toHaveBeenCalledWith();
+		});
+
+		await waitFor(() => {
+			expect(screen.getByTestId("ExchangeForm")).toBeInTheDocument();
+		});
+	});
 });
 
 describe("FormStep", () => {
