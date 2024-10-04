@@ -1428,48 +1428,7 @@ describe("ExchangeForm", () => {
 		const { result } = renderHook(() => useTranslation());
 		const { t } = result.current;
 
-		const resetProfileNetworksMock = mockProfileWithPublicAndTestNetworks(profile);
-
-		renderComponent(<ExchangeForm onReady={vi.fn()} />);
-
-		await expect(screen.findByTestId("ExchangeForm")).resolves.toBeVisible();
-
-		await selectCurrencies({
-			from: { name: "Ark", ticker: "ARK" },
-			to: { name: "Bitcoin", ticker: "BTC" },
-		});
-
-		const payinInput: HTMLInputElement = screen.getAllByTestId("InputCurrency")[0] as HTMLInputElement;
-		const payoutInput: HTMLInputElement = screen.getAllByTestId("InputCurrency")[1] as HTMLInputElement;
-
-		// amount input
-		await userEvent.type(payinInput, "1");
-
-		await waitFor(() => {
-			expect(payinInput).toHaveValue("1");
-		});
-
-		await waitFor(() => {
-			expect(payoutInput).toHaveValue(payoutValue);
-		});
-
-		// select recipient
-		const recipientDropdown = screen.getAllByTestId("SelectDropdown__input")[2];
-
-		expect(recipientDropdown).not.toBeDisabled();
-
-		await userEvent.type(recipientDropdown, "payoutAddress");
-
-		await waitFor(() => {
-			expect(recipientDropdown).toHaveValue("payoutAddress");
-		});
-
-		// go to the review step
-		await userEvent.click(continueButton());
-
-		await waitFor(() => {
-			expect(reviewStep()).toBeInTheDocument();
-		});
+		const resetProfileNetworksMock = await goToReviewStep()
 
 		const exchangeTransaction = profile.exchangeTransactions().create(transactionStub);
 
