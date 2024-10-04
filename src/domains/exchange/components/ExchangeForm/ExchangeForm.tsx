@@ -343,8 +343,7 @@ const ExchangeForm = ({ orderId, onReady }: { orderId?: string; onReady: () => v
 											variant="transparent"
 											data-testid="ExchangeForm__manual_transfer"
 											onClick={() => handleNext({ bypassSignStep: true })}
-											/* istanbul ignore if -- @preserve */
-											disabled={isSubmitting || (isDirty ? !isValid : true)}
+											disabled={isSubmitting || !isValid}
 											className="text-sm leading-[17px] text-theme-primary-600 sm:pl-0"
 										>
 											{t("EXCHANGE.MANUAL_TRANSFER")}
