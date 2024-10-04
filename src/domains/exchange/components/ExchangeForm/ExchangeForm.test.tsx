@@ -5,7 +5,7 @@ import { HashHistory, createHashHistory } from "history";
 import React, { useEffect } from "react";
 import { Route } from "react-router-dom";
 
-import { vi } from "vitest";
+import {expect, vi} from "vitest";
 import { cloneDeep } from "@ardenthq/sdk-helpers";
 import { FormProvider, useForm } from "react-hook-form";
 import { useTranslation } from "react-i18next";
@@ -1414,7 +1414,7 @@ describe("ExchangeForm", () => {
 		resetProfileNetworksMock();
 	});
 
-	it('should proceed to the status step when `Manual Transfer` button is clicked', async () => {
+	it('should proceed to the status step when `Manual Transfer` is clicked', async () => {
 		profile.exchangeTransactions().flush();
 
 		const { result } = renderHook(() => useTranslation());
@@ -1486,6 +1486,81 @@ describe("ExchangeForm", () => {
 		await waitFor(() => {
 			expect(screen.getByTestId("ExchangeForm__status-step")).toBeInTheDocument();
 		});
+
+		resetProfileNetworksMock();
+		findTransactionMock.mockRestore();
+	});
+
+	it('should show Sign Transfer modal when `Sign` is clicked', async () => {
+		profile.exchangeTransactions().flush();
+
+		const { result } = renderHook(() => useTranslation());
+		const { t } = result.current;
+
+		const resetProfileNetworksMock = mockProfileWithPublicAndTestNetworks(profile);
+
+		renderComponent(<ExchangeForm onReady={vi.fn()} />)
+
+		await expect(screen.findByTestId("ExchangeForm")).resolves.toBeVisible();
+
+		await selectCurrencies({
+			from: { name: "Ark", ticker: "ARK" },
+			to: { name: "Bitcoin", ticker: "BTC" },
+		});
+
+		const payinInput: HTMLInputElement = screen.getAllByTestId("InputCurrency")[0] as HTMLInputElement;
+		const payoutInput: HTMLInputElement = screen.getAllByTestId("InputCurrency")[1] as HTMLInputElement;
+
+		// amount input
+		await userEvent.type(payinInput, "1");
+
+		await waitFor(() => {
+			expect(payinInput).toHaveValue("1");
+		});
+
+		await waitFor(() => {
+			expect(payoutInput).toHaveValue(payoutValue);
+		});
+
+		// select recipient
+		const recipientDropdown = screen.getAllByTestId("SelectDropdown__input")[2];
+
+		expect(recipientDropdown).not.toBeDisabled();
+
+		await userEvent.type(recipientDropdown, "payoutAddress");
+
+		await waitFor(() => {
+			expect(recipientDropdown).toHaveValue("payoutAddress");
+		});
+
+		// go to the review step
+		await userEvent.click(continueButton());
+
+		await waitFor(() => {
+			expect(reviewStep()).toBeInTheDocument();
+		});
+
+		const exchangeTransaction = profile.exchangeTransactions().create(transactionStub);
+
+		const findTransactionMock = vi
+			.spyOn(profile.exchangeTransactions(), "findById")
+			.mockReturnValue(exchangeTransaction);
+
+		server.use(
+			requestMockOnce(`${exchangeBaseURL}/api/changenow/orders/182b657b2c259b`, { data: {}})
+		);
+
+		expect(continueButton()).toHaveTextContent(t("COMMON.SIGN"));
+
+		await userEvent.click(screen.getByRole("checkbox"));
+
+		await waitFor(() => {
+			expect(continueButton()).not.toBeDisabled();
+		});
+
+		await userEvent.click(continueButton());
+
+		await expect(screen.findByText(t("EXCHANGE.MODAL_SIGN_EXCHANGE_TRANSACTION.TITLE"))).resolves.toBeVisible();
 
 		resetProfileNetworksMock();
 		findTransactionMock.mockRestore();
