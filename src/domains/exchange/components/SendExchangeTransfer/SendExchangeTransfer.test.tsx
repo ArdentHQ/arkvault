@@ -89,6 +89,15 @@ describe("SendExchangeTransfer", () => {
 		await userEvent.click(firstAddress);
 	}
 
+	const fillMnemonic = async () => {
+		// AuthenticationStep should be visible
+		await expect(screen.findByTestId("AuthenticationStep")).resolves.toBeVisible();
+
+		await userEvent.type(screen.getByTestId("AuthenticationStep__mnemonic"), getDefaultWalletMnemonic());
+
+		await waitFor(() => expect(sendButton()).not.toBeDisabled());
+	}
+
 	it("should trigger `onClose`", async () => {
 		const onClose = vi.fn();
 
@@ -129,12 +138,7 @@ describe("SendExchangeTransfer", () => {
 
 		await selectSender();
 
-		// AuthenticationStep should be visible
-		await expect(screen.findByTestId("AuthenticationStep")).resolves.toBeVisible();
-
-		await userEvent.type(screen.getByTestId("AuthenticationStep__mnemonic"), getDefaultWalletMnemonic());
-
-		await waitFor(() => expect(sendButton()).not.toBeDisabled());
+		await fillMnemonic();
 
 		const signMock = vi
 			.spyOn(wallet.transaction(), "signTransfer")
@@ -176,5 +180,23 @@ describe("SendExchangeTransfer", () => {
 		)
 
 		selectedWalletSpy.mockRestore();
+	});
+
+	it("should handle an error when sending a transaction", async () => {
+		renderComponent();
+
+		await selectSender();
+
+		await fillMnemonic();
+
+		const signMock = vi.spyOn(wallet.transaction(), "signTransfer").mockImplementation(() => {
+			throw new Error("broadcast error");
+		});
+
+		await userEvent.click(sendButton());
+
+		await expect(screen.findByText(/broadcast error/)).resolves.toBeVisible();
+
+		signMock.mockRestore();
 	});
 });
