@@ -98,6 +98,13 @@ describe("SendExchangeTransfer", () => {
 		await waitFor(() => expect(sendButton()).not.toBeDisabled());
 	}
 
+	it("should render", async () => {
+		renderComponent();
+
+		// exchangeTransaction->input->address
+		await expect(screen.findByText("inputAddress")).resolves.toBeVisible();
+	});
+
 	it("should trigger `onClose`", async () => {
 		const onClose = vi.fn();
 
