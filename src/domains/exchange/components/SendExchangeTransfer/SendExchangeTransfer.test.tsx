@@ -25,6 +25,18 @@ let exchangeTransaction: Contracts.IExchangeTransaction;
 
 let useActiveProfileSpy: MockInstance
 
+const sendButton = () => screen.getByTestId("ExchangeTransfer__send-button");
+
+const selectSender = async () => {
+	await userEvent.click(within(screen.getByTestId("sender-address")).getByTestId("SelectAddress__wrapper"));
+
+	await expect(screen.findByText(/Select Sender/)).resolves.toBeVisible();
+
+	const firstAddress = screen.getByTestId("SearchWalletListItem__select-0");
+
+	await userEvent.click(firstAddress);
+}
+
 describe("SendExchangeTransfer", () => {
 	beforeAll(async () => {
 		profile = env.profiles().findById(getDefaultProfileId());
@@ -56,7 +68,7 @@ describe("SendExchangeTransfer", () => {
 		await syncFees(profile);
 	});
 
-	beforeEach(async () => {
+	beforeEach(() => {
 		server.use(
 			requestMock("https://ark-test-musig.arkvault.io", { result: [] }, { method: "post" }),
 		);
@@ -75,18 +87,6 @@ describe("SendExchangeTransfer", () => {
 			onSuccess={vi.fn()}
 			{...properties}
 		/>);
-	}
-
-	const sendButton = () => screen.getByTestId("ExchangeTransfer__send-button");
-
-	const selectSender = async () => {
-		await userEvent.click(within(screen.getByTestId("sender-address")).getByTestId("SelectAddress__wrapper"));
-
-		await expect(screen.findByText(/Select Sender/)).resolves.toBeVisible();
-
-		const firstAddress = screen.getByTestId("SearchWalletListItem__select-0");
-
-		await userEvent.click(firstAddress);
 	}
 
 	const fillMnemonic = async () => {
