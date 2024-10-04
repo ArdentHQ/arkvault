@@ -2,21 +2,25 @@ import React from "react";
 import { Contracts } from "@ardenthq/sdk-profiles";
 
 import {
+	createTransactionMock,
 	env,
-	getDefaultProfileId,
+	getDefaultProfileId, getDefaultWalletMnemonic,
 	render,
-	screen, syncFees
+	screen, syncFees, waitFor
 } from "@/utils/testing-library";
 import {SendExchangeTransfer} from "./SendExchangeTransfer";
 import userEvent from "@testing-library/user-event";
-import {afterAll, expect, MockInstance} from "vitest";
+import {afterAll, beforeEach, expect, MockInstance} from "vitest";
 import * as environmentHooks from "@/app/hooks/env";
 import { server, requestMock } from "@/tests/mocks/server";
 import nodeFeesFixture from "@/tests/fixtures/coins/ark/mainnet/node-fees.json";
 import transactionFeesFixture from "@/tests/fixtures/coins/ark/mainnet/transaction-fees.json";
-import {within} from "@testing-library/react";
+import {renderHook, within} from "@testing-library/react";
+import transactionFixture from "@/tests/fixtures/coins/ark/devnet/transactions/transfer.json";
+import {useTranslation} from "react-i18next";
 
 let profile: Contracts.IProfile;
+let wallet: Contracts.IReadWriteWallet;
 let exchangeTransaction: Contracts.IExchangeTransaction;
 
 let useActiveProfileSpy: MockInstance
@@ -24,6 +28,8 @@ let useActiveProfileSpy: MockInstance
 describe("SendExchangeTransfer", () => {
 	beforeAll(async () => {
 		profile = env.profiles().findById(getDefaultProfileId());
+
+		wallet = profile.wallets().first()
 
 		exchangeTransaction = profile.exchangeTransactions().create({
 			input: {
@@ -50,6 +56,12 @@ describe("SendExchangeTransfer", () => {
 		await syncFees(profile);
 	});
 
+	beforeEach(async () => {
+		server.use(
+			requestMock("https://ark-test-musig.arkvault.io", { result: [] }, { method: "post" }),
+		);
+	})
+
 	afterAll(() => {
 		useActiveProfileSpy.mockRestore();
 	})
@@ -64,6 +76,8 @@ describe("SendExchangeTransfer", () => {
 			{...properties}
 		/>);
 	}
+
+	const sendButton = () => screen.getByTestId("ExchangeTransfer__send-button");
 
 	const selectSender = async () => {
 		await userEvent.click(within(screen.getByTestId("sender-address")).getByTestId("SelectAddress__wrapper"));
@@ -92,4 +106,55 @@ describe("SendExchangeTransfer", () => {
 		await expect(screen.findByText("0.049716 DARK")).resolves.toBeVisible();
 	});
 
+	it("should sync wallet if new sender wallet is not restored or synced", async () => {
+		const selectedWalletSpy = vi.spyOn(wallet, "hasBeenFullyRestored").mockReturnValue(false);
+
+		const walletSyncSpy = vi.spyOn(wallet.synchroniser(), "identity");
+
+		renderComponent();
+
+		await selectSender();
+
+		expect(walletSyncSpy).toHaveBeenCalledWith();
+
+		selectedWalletSpy.mockRestore();
+		walletSyncSpy.mockRestore();
+	});
+
+	it("should send a transaction and show a success message", async () => {
+		const { result } = renderHook(() => useTranslation());
+		const { t } = result.current;
+
+		renderComponent();
+
+		await selectSender();
+
+		// AuthenticationStep should be visible
+		await expect(screen.findByTestId("AuthenticationStep")).resolves.toBeVisible();
+
+		await userEvent.type(screen.getByTestId("AuthenticationStep__mnemonic"), getDefaultWalletMnemonic());
+
+		await waitFor(() => expect(sendButton()).not.toBeDisabled());
+
+		const signMock = vi
+			.spyOn(wallet.transaction(), "signTransfer")
+			.mockReturnValue(Promise.resolve(transactionFixture.data.id));
+
+		const broadcastMock = vi.spyOn(wallet.transaction(), "broadcast").mockResolvedValue({
+			accepted: [transactionFixture.data.id],
+			errors: {},
+			rejected: [],
+		});
+
+		const transactionMock = createTransactionMock(wallet);
+
+		// Send transaction
+		await userEvent.click(sendButton());
+
+		await expect(screen.findByText(t("EXCHANGE.MODAL_SIGN_EXCHANGE_TRANSACTION.SUCCESS_TITLE"))).resolves.toBeVisible();
+
+		signMock.mockRestore();
+		broadcastMock.mockRestore();
+		transactionMock.mockRestore();
+	});
 });
