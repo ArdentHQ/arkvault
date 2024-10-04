@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/require-await */
 import { Contracts } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import { createHashHistory } from "history";
@@ -7,7 +6,6 @@ import { Route } from "react-router-dom";
 
 import { SignMessage } from "./SignMessage";
 import { translations as messageTranslations } from "@/domains/message/i18n";
-import { translations as transactionTranslations } from "@/domains/transaction/i18n";
 import {
 	env,
 	getDefaultProfileId,
@@ -16,7 +14,6 @@ import {
 	renderResponsiveWithRoute,
 	screen,
 	waitFor,
-	mockNanoXTransport,
 	mockProfileWithPublicAndTestNetworks,
 	triggerMessageSignOnce,
 } from "@/utils/testing-library";
@@ -31,7 +28,6 @@ let wallet: Contracts.IReadWriteWallet;
 const mnemonic = MNEMONICS[0];
 
 const continueButton = () => screen.getByTestId("SignMessage__continue-button");
-const signButton = () => screen.getByTestId("SignMessage__sign-button");
 const messageInput = () => screen.getByTestId("SignMessage__message-input");
 
 const signMessage = "Hello World";
@@ -121,7 +117,7 @@ describe("SignMessage", () => {
 
 			await userEvent.click(continueButton());
 
-			await expectHeading(transactionTranslations.AUTHENTICATION_STEP.TITLE);
+			await expectHeading(messageTranslations.PAGE_SIGN_MESSAGE.FORM_STEP.TITLE);
 		});
 
 		it("should select address from deeplinking", async () => {
@@ -148,6 +144,9 @@ describe("SignMessage", () => {
 			).toBeInTheDocument();
 
 			expect(messageInput()).toHaveValue(signMessage);
+
+			const mnemonicInput = screen.getByTestId("AuthenticationStep__mnemonic");
+			await userEvent.type(mnemonicInput, mnemonic);
 
 			expect(continueButton()).toBeEnabled();
 		});
@@ -208,30 +207,6 @@ describe("SignMessage", () => {
 		it("should render for ledger wallets", async () => {
 			const isLedgerMock = vi.spyOn(wallet, "isLedger").mockReturnValue(true);
 
-			const { asFragment } = render(
-				<Route path="/profiles/:profileId/wallets/:walletId/sign-message">
-					<SignMessage />
-				</Route>,
-				{
-					history,
-					route: walletUrl(wallet.id()),
-				},
-			);
-
-			await expectHeading(messageTranslations.PAGE_SIGN_MESSAGE.FORM_STEP.TITLE);
-
-			expect(messageInput()).toBeInTheDocument();
-
-			expect(asFragment()).toMatchSnapshot();
-
-			isLedgerMock.mockRestore();
-		});
-
-		it("should show waiting state for ledger if device available but not connected", async () => {
-			const isLedgerMock = vi.spyOn(wallet, "isLedger").mockReturnValue(true);
-
-			mockNanoXTransport();
-
 			render(
 				<Route path="/profiles/:profileId/wallets/:walletId/sign-message">
 					<SignMessage />
@@ -243,15 +218,9 @@ describe("SignMessage", () => {
 			);
 
 			await expectHeading(messageTranslations.PAGE_SIGN_MESSAGE.FORM_STEP.TITLE);
+			await expect(screen.findByTestId("AuthenticationStep__mnemonic")).rejects.toThrow(/Unable to find/);
 
-			await userEvent.clear(messageInput());
-			await userEvent.type(messageInput(), signMessage);
-
-			await waitFor(() => expect(continueButton()).toBeEnabled());
-
-			await userEvent.click(continueButton());
-
-			await expect(screen.findByTestId("LedgerWaitingAppContent")).resolves.toBeVisible();
+			expect(messageInput()).toBeInTheDocument();
 
 			isLedgerMock.mockRestore();
 		});
@@ -282,32 +251,18 @@ describe("SignMessage", () => {
 
 			await userEvent.type(messageInput(), signMessage);
 
-			await waitFor(() => expect(continueButton()).toBeEnabled());
-
-			await userEvent.click(continueButton());
-
-			await expectHeading(transactionTranslations.AUTHENTICATION_STEP.TITLE);
-
-			await userEvent.click(screen.getByTestId("SignMessage__back-button"));
-
 			await expectHeading(messageTranslations.PAGE_SIGN_MESSAGE.FORM_STEP.TITLE);
 
-			await userEvent.click(continueButton());
-
 			const mnemonicInput = screen.getByTestId("AuthenticationStep__mnemonic");
-
 			await userEvent.type(mnemonicInput, "wrong");
 
-			await waitFor(() => expect(signButton()).toBeDisabled());
-
-			mnemonicInput.select();
+			await waitFor(() => expect(continueButton()).toBeDisabled());
 
 			await userEvent.clear(mnemonicInput);
 			await userEvent.type(mnemonicInput, mnemonic);
+			await waitFor(() => expect(continueButton()).toBeEnabled());
 
-			await waitFor(() => expect(signButton()).toBeEnabled());
-
-			await userEvent.click(signButton());
+			await userEvent.click(continueButton());
 
 			await expectHeading(messageTranslations.PAGE_SIGN_MESSAGE.SUCCESS_STEP.TITLE);
 
@@ -360,19 +315,14 @@ describe("SignMessage", () => {
 
 			await userEvent.type(messageInput(), signMessage);
 
-			await waitFor(() => expect(continueButton()).toBeEnabled());
-
-			await userEvent.click(continueButton());
-
 			await userEvent.type(screen.getByTestId("AuthenticationStep__secret"), "secret");
 
 			await waitFor(() => {
 				expect(screen.getByTestId("AuthenticationStep__secret")).toHaveValue("secret");
 			});
 
-			await waitFor(() => expect(signButton()).toBeEnabled());
-
-			await userEvent.click(signButton());
+			await waitFor(() => expect(continueButton()).toBeEnabled());
+			await userEvent.click(continueButton());
 
 			await expectHeading(messageTranslations.PAGE_SIGN_MESSAGE.SUCCESS_STEP.TITLE);
 
