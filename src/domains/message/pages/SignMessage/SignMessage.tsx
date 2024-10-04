@@ -179,11 +179,7 @@ export const SignMessage: React.VFC = () => {
 
 									{selectedWallet && !selectedWallet.isLedger() && (
 										<div className="mt-4">
-											<AuthenticationStep
-												noHeading
-												wallet={selectedWallet}
-												subject="message"
-											/>
+											<AuthenticationStep noHeading wallet={selectedWallet} subject="message" />
 										</div>
 									)}
 								</div>
