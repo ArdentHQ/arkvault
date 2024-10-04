@@ -10,65 +10,10 @@ exports[`Notifications > should emit transactionClick event 1`] = `
       class="flex w-full items-center justify-between rounded-t-xl bg-theme-secondary-100 px-6 py-4 dark:bg-black sm:px-8"
     >
       <div
-        class="hidden text-lg font-semibold text-theme-secondary-900 dark:text-theme-secondary-200 sm:block"
+        class="text-lg font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
       >
         Notification
       </div>
-      <button
-        class="space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded p-0 text-theme-secondary-800 disabled:text-theme-secondary-500 dark:text-theme-secondary-800 dark:disabled:text-theme-secondary-800"
-        disabled=""
-        type="button"
-      >
-        <div
-          class="flex items-center space-x-2"
-        >
-          <div
-            class="css-v0ob3f"
-            height="16"
-            width="16"
-          >
-            <svg
-              fill="none"
-              viewBox="0 0 24 25"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <circle
-                cx="12"
-                cy="12.5"
-                fill="transparent"
-                r="11"
-                stroke="currentColor"
-                stroke-linejoin="round"
-                stroke-width="2"
-              />
-              <path
-                d="M18.4015 8.76465L12.3215 16.9246C12.1615 17.0846 12.0015 17.2447 11.7615 17.2447C11.5215 17.2447 11.2815 17.1646 11.1215 17.0046L9.52148 15.4046"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-              />
-              <path
-                d="M5.5957 15.4775L7.1957 17.0775C7.3557 17.2375 7.5157 17.3175 7.7557 17.3175C7.8357 17.3175 7.9957 17.3175 8.0757 17.2375"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-              />
-              <path
-                d="M14.3932 8.76465L11.0332 13.2446"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-              />
-            </svg>
-          </div>
-          <span>
-            Mark all as read
-          </span>
-        </div>
-      </button>
     </div>
     <div
       class="max-h-[36rem] w-full overflow-y-hidden overscroll-y-none"
@@ -358,65 +303,10 @@ exports[`Notifications > should render with empty notifications 1`] = `
       class="flex w-full items-center justify-between rounded-t-xl bg-theme-secondary-100 px-6 py-4 dark:bg-black sm:px-8"
     >
       <div
-        class="hidden text-lg font-semibold text-theme-secondary-900 dark:text-theme-secondary-200 sm:block"
+        class="text-lg font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
       >
         Notification
       </div>
-      <button
-        class="space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded p-0 text-theme-secondary-800 disabled:text-theme-secondary-500 dark:text-theme-secondary-800 dark:disabled:text-theme-secondary-800"
-        disabled=""
-        type="button"
-      >
-        <div
-          class="flex items-center space-x-2"
-        >
-          <div
-            class="css-v0ob3f"
-            height="16"
-            width="16"
-          >
-            <svg
-              fill="none"
-              viewBox="0 0 24 25"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <circle
-                cx="12"
-                cy="12.5"
-                fill="transparent"
-                r="11"
-                stroke="currentColor"
-                stroke-linejoin="round"
-                stroke-width="2"
-              />
-              <path
-                d="M18.4015 8.76465L12.3215 16.9246C12.1615 17.0846 12.0015 17.2447 11.7615 17.2447C11.5215 17.2447 11.2815 17.1646 11.1215 17.0046L9.52148 15.4046"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-              />
-              <path
-                d="M5.5957 15.4775L7.1957 17.0775C7.3557 17.2375 7.5157 17.3175 7.7557 17.3175C7.8357 17.3175 7.9957 17.3175 8.0757 17.2375"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-              />
-              <path
-                d="M14.3932 8.76465L11.0332 13.2446"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-              />
-            </svg>
-          </div>
-          <span>
-            Mark all as read
-          </span>
-        </div>
-      </button>
     </div>
     <div
       class="px-6 pb-8 pt-4"
@@ -515,65 +405,10 @@ exports[`Notifications > should render with transactions and plugins 1`] = `
       class="flex w-full items-center justify-between rounded-t-xl bg-theme-secondary-100 px-6 py-4 dark:bg-black sm:px-8"
     >
       <div
-        class="hidden text-lg font-semibold text-theme-secondary-900 dark:text-theme-secondary-200 sm:block"
+        class="text-lg font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
       >
         Notification
       </div>
-      <button
-        class="space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded p-0 text-theme-secondary-800 disabled:text-theme-secondary-500 dark:text-theme-secondary-800 dark:disabled:text-theme-secondary-800"
-        disabled=""
-        type="button"
-      >
-        <div
-          class="flex items-center space-x-2"
-        >
-          <div
-            class="css-v0ob3f"
-            height="16"
-            width="16"
-          >
-            <svg
-              fill="none"
-              viewBox="0 0 24 25"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <circle
-                cx="12"
-                cy="12.5"
-                fill="transparent"
-                r="11"
-                stroke="currentColor"
-                stroke-linejoin="round"
-                stroke-width="2"
-              />
-              <path
-                d="M18.4015 8.76465L12.3215 16.9246C12.1615 17.0846 12.0015 17.2447 11.7615 17.2447C11.5215 17.2447 11.2815 17.1646 11.1215 17.0046L9.52148 15.4046"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-              />
-              <path
-                d="M5.5957 15.4775L7.1957 17.0775C7.3557 17.2375 7.5157 17.3175 7.7557 17.3175C7.8357 17.3175 7.9957 17.3175 8.0757 17.2375"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-              />
-              <path
-                d="M14.3932 8.76465L11.0332 13.2446"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-              />
-            </svg>
-          </div>
-          <span>
-            Mark all as read
-          </span>
-        </div>
-      </button>
     </div>
     <div
       class="max-h-[36rem] w-full overflow-y-hidden overscroll-y-none"
