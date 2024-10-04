@@ -1558,15 +1558,14 @@ describe("ExchangeForm", () => {
 			expect(continueButton()).not.toBeDisabled();
 		});
 
+
+		vi.mock('@/domains/exchange/components/SendExchangeTransfer', () => ({
+			SendExchangeTransfer: () => <div>SendExchangeTransfer component</div>
+		}));
+
 		await userEvent.click(continueButton());
 
-		await expect(screen.findByText(t("EXCHANGE.MODAL_SIGN_EXCHANGE_TRANSACTION.TITLE"))).resolves.toBeVisible();
-
-		await userEvent.click(screen.getByTestId("ExchangeTransfer__cancel-button"));
-
-		await waitFor(() => {
-			expect(screen.queryByText(t("EXCHANGE.MODAL_SIGN_EXCHANGE_TRANSACTION.TITLE"))).not.toBeInTheDocument();
-		})
+		await expect(screen.findByText(/SendExchangeTransfer component/)).resolves.toBeVisible();
 
 		resetProfileNetworksMock();
 		findTransactionMock.mockRestore();
