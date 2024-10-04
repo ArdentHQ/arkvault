@@ -49,11 +49,11 @@ describe("Use Message Signer Hook", () => {
 	it("should throw exception if no credentials are provided", async () => {
 		const { result } = renderHook(() => useMessageSigner());
 
-		let isErrored = false
+		let isErrored = false;
 		try {
 			await result.current.sign(wallet, "message");
 		} catch {
-			isErrored = true
+			isErrored = true;
 		}
 
 		expect(isErrored).toBe(true);
