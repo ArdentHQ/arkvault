@@ -374,8 +374,8 @@ describe("SignMessage", () => {
 			await waitFor(() => expect(continueButton()).toBeEnabled());
 
 			vi.spyOn(wallet.message(), "sign").mockImplementation(() => {
-				throw new Error("error")
-			})
+				throw new Error("error");
+			});
 
 			await userEvent.click(continueButton());
 
