@@ -7,6 +7,7 @@ import { FormField, FormLabel } from "@/app/components/Form";
 import { InputCounter } from "@/app/components/Input";
 import { StepHeader } from "@/app/components/StepHeader";
 import { SelectAddress } from "@/domains/profile/components/SelectAddress";
+import { Icon, ThemeIcon } from "@/app/components/Icon";
 
 export const FormStep = ({
 	disabled,
@@ -54,7 +55,13 @@ export const FormStep = ({
 
 	return (
 		<section className="space-y-4">
-			<StepHeader title={t("MESSAGE.PAGE_SIGN_MESSAGE.FORM_STEP.TITLE")} subtitle={getSubtitle()} />
+			<StepHeader
+				title={t("MESSAGE.PAGE_SIGN_MESSAGE.FORM_STEP.TITLE")}
+				subtitle={getSubtitle()}
+				titleIcon={
+					<ThemeIcon dimensions={[24, 24]} lightIcon="SendTransactionLight" darkIcon="SendTransactionDark" />
+				}
+			/>
 
 			<FormField name="signatory-address">
 				<FormLabel label={t("COMMON.SIGNING_WALLET")} />
@@ -68,9 +75,9 @@ export const FormStep = ({
 					wallet={
 						wallet
 							? {
-									address: wallet.address(),
-									network: wallet.network(),
-								}
+								address: wallet.address(),
+								network: wallet.network(),
+							}
 							: undefined
 					}
 					wallets={wallets}

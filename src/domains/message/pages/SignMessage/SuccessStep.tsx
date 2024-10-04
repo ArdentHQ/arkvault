@@ -10,6 +10,7 @@ import { StepHeader } from "@/app/components/StepHeader";
 import { TextArea } from "@/app/components/TextArea";
 import { TransactionDetail } from "@/domains/transaction/components/TransactionDetail";
 import { DetailTitle, DetailWrapper } from "@/app/components/DetailWrapper";
+import { Icon } from "@/app/components/Icon";
 
 export const SuccessStep = ({
 	signedMessage,
@@ -24,8 +25,19 @@ export const SuccessStep = ({
 
 	return (
 		<section>
-			<StepHeader title={t("MESSAGE.PAGE_SIGN_MESSAGE.SUCCESS_STEP.TITLE")} />
-			<div className="space-y-4">
+			<StepHeader
+				title={t("MESSAGE.PAGE_SIGN_MESSAGE.SUCCESS_STEP.TITLE")}
+				titleIcon={
+					<Icon
+						className="text-theme-success-100 dark:text-theme-success-900"
+						dimensions={[24, 24]}
+						name="Completed"
+						data-testid="icon-Completed"
+					/>
+				}
+			/>
+
+			<div className="space-y-4 mt-4">
 				<DetailWrapper label={t("COMMON.SIGNING_WALLET")}>
 					<div className="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0">
 						<DetailTitle>{t("COMMON.ADDRESS")}</DetailTitle>
@@ -47,7 +59,7 @@ export const SuccessStep = ({
 
 				<div>
 					<FormField name="json-signature">
-						<FormLabel label={t("MESSAGE.PAGE_SIGN_MESSAGE.FORM_STEP.JSON_STRING")} />
+						<FormLabel label={t("MESSAGE.PAGE_SIGN_MESSAGE.FORM_STEP.SIGNATURE_JSON")} />
 						<TextArea
 							className="py-4"
 							wrap="hard"

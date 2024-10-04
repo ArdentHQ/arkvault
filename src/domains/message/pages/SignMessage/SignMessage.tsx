@@ -154,8 +154,6 @@ export const SignMessage: React.VFC = () => {
 		}
 	};
 
-	const hideStepNavigation = activeTab === selectedWallet && selectedWallet.isLedger();
-
 	const handleSelectAddress: any = useCallback(
 		(address: string) => {
 			setSelectedWallet(activeProfile.wallets().findByAddressWithNetwork(address, activeNetwork!.id()));
@@ -248,28 +246,29 @@ export const SignMessage: React.VFC = () => {
 
 							{activeTab === Step.SuccessStep && (
 								<FormButtons>
-									<div className="mr-auto">
-										<Clipboard
-											variant="button"
-											data={JSON.stringify(signedMessage)}
-											data-testid="SignMessage__copy-button"
-											wrapperClassName="flex-1 md:flex-none"
-											className="w-full"
+									<Button
+										data-testid="SignMessage__back-button"
+										variant="secondary"
+										onClick={handleBack}
+									>
+										{t("COMMON.CLOSE")}
+									</Button>
+
+									<Clipboard
+										buttonVariant="primary"
+										variant="button"
+										data={JSON.stringify(signedMessage)}
+										data-testid="SignMessage__copy-button"
+										wrapperClassName="flex-1 md:flex-none"
+									>
+										<div
+											className="px-5 py-3 space-x-3 text-base relative items-center font-semibold inline-flex text-center text-white bg-theme-primary-600 hover:bg-theme-primary-700 rounded"
+											data-testid="SignMessage__back-to-wallet-button"
 										>
 											<Icon name="Copy" />
-											<span className="whitespace-nowrap">
-												{t("MESSAGE.PAGE_SIGN_MESSAGE.COPY_JSON")}
-											</span>
-										</Clipboard>
-									</div>
-
-									<Button
-										onClick={handleBack}
-										data-testid="SignMessage__back-to-wallet-button"
-										variant="secondary"
-									>
-										<div className="whitespace-nowrap">{t("COMMON.BACK_TO_WALLET")}</div>
-									</Button>
+											<div className="whitespace-nowrap">{t("COMMON.COPY_SIGNATURE")}</div>
+										</div>
+									</Clipboard>
 								</FormButtons>
 							)}
 
