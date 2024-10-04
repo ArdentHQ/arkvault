@@ -5,7 +5,7 @@ import { useTranslation } from "react-i18next";
 import { useHistory, useParams } from "react-router-dom";
 import { Contracts } from "@ardenthq/sdk-profiles";
 import { FormStep } from "./FormStep";
-import { SuccessStep } from "./SuccessStep";
+import { SigningMessageInfo, SuccessStep } from "./SuccessStep";
 import { Clipboard } from "@/app/components/Clipboard";
 import { Button } from "@/app/components/Button";
 import { Form, FormButtons } from "@/app/components/Form";
@@ -23,6 +23,7 @@ import { AuthenticationStep } from "@/domains/transaction/components/Authenticat
 
 enum Step {
 	FormStep = 1,
+	AuthenticationStep,
 	SuccessStep,
 	ErrorStep,
 }
@@ -122,13 +123,13 @@ export const SignMessage: React.VFC = () => {
 	const handleNext = () => {
 		abortReference.current = new AbortController();
 
-		const newIndex = activeTab + 1;
-
-		if (newIndex === Step.FormStep && selectedWallet!.isLedger()) {
+		if (selectedWallet?.isLedger()) {
+			setActiveTab(activeTab + 1);
 			connectLedger();
+			return
 		}
 
-		setActiveTab(newIndex);
+		handleSubmit(submitForm)();
 	};
 
 	const submitForm = async () => {
@@ -137,8 +138,6 @@ export const SignMessage: React.VFC = () => {
 		const { message, mnemonic, encryptionPassword, secret } = getValues();
 
 		setActiveTab(activeTab + 1);
-
-		console.log("submitForm", { message, secret })
 
 		try {
 			const signedMessageResult = await sign(selectedWallet!, message, mnemonic, encryptionPassword, secret, {
@@ -166,7 +165,7 @@ export const SignMessage: React.VFC = () => {
 			<Section className="flex-1">
 				<Form className="mx-auto max-w-xl" data-testid="SignMessage" context={form} onSubmit={submitForm}>
 					<Tabs activeId={activeTab}>
-						<StepsProvider steps={3} activeStep={activeTab}>
+						<StepsProvider steps={selectedWallet?.isLedger() ? 3 : 2} activeStep={activeTab}>
 							<TabPanel tabId={Step.FormStep}>
 								<div>
 									<FormStep
@@ -179,25 +178,11 @@ export const SignMessage: React.VFC = () => {
 										handleSelectAddress={handleSelectAddress}
 									/>
 
-									{selectedWallet && (
+									{selectedWallet && !selectedWallet.isLedger() && (
 										<div className="mt-4">
 											<AuthenticationStep
 												noHeading
 												wallet={selectedWallet}
-												ledgerDetails={
-													<>
-														<TransactionSender
-															address={selectedWallet.address()}
-															network={selectedWallet.network()}
-															paddingPosition="bottom"
-															border={false}
-														/>
-
-														<TransactionDetail label={t("COMMON.MESSAGE")}>
-															{getValues("message")}
-														</TransactionDetail>
-													</>
-												}
 												ledgerIsAwaitingDevice={!hasDeviceAvailable}
 												ledgerIsAwaitingApp={hasDeviceAvailable && !isConnected}
 												subject="message"
@@ -205,6 +190,20 @@ export const SignMessage: React.VFC = () => {
 										</div>
 									)}
 								</div>
+							</TabPanel>
+
+							<TabPanel tabId={Step.AuthenticationStep}>
+								{selectedWallet &&
+									<AuthenticationStep
+										wallet={selectedWallet}
+										ledgerDetails={
+											<SigningMessageInfo wallet={selectedWallet} message={getValues("message")} />
+										}
+										ledgerIsAwaitingDevice={!hasDeviceAvailable}
+										ledgerIsAwaitingApp={hasDeviceAvailable && !isConnected}
+										subject="message"
+									/>
+								}
 							</TabPanel>
 
 							<TabPanel tabId={Step.SuccessStep}>
@@ -236,7 +235,7 @@ export const SignMessage: React.VFC = () => {
 									<Button
 										type="submit"
 										disabled={!isValid || !selectedWallet}
-										onClick={submitForm}
+										onClick={handleNext}
 										data-testid="SignMessage__continue-button"
 									>
 										{t("COMMON.SIGN")}

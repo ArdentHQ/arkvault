@@ -4,13 +4,44 @@ import React, { useRef } from "react";
 import { useTranslation } from "react-i18next";
 
 import { Address } from "@/app/components/Address";
-import { Avatar } from "@/app/components/Avatar";
 import { FormField, FormLabel } from "@/app/components/Form";
 import { StepHeader } from "@/app/components/StepHeader";
 import { TextArea } from "@/app/components/TextArea";
-import { TransactionDetail } from "@/domains/transaction/components/TransactionDetail";
-import { DetailTitle, DetailWrapper } from "@/app/components/DetailWrapper";
+import { DetailLabel, DetailTitle, DetailWrapper } from "@/app/components/DetailWrapper";
 import { Icon } from "@/app/components/Icon";
+
+
+export const SigningMessageInfo = ({
+	message,
+	wallet,
+}: {
+	message?: string;
+	wallet: ProfileContracts.IReadWriteWallet;
+}) => {
+	const { t } = useTranslation();
+	return (
+		<div className="space-y-4">
+			<DetailWrapper label={t("COMMON.SIGNING_WALLET")}>
+				<div className="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0">
+					<DetailTitle>{t("COMMON.ADDRESS")}</DetailTitle>
+					<Address
+						truncateOnTable
+						address={wallet.address()}
+						walletName={wallet.alias()}
+						showCopyButton
+						walletNameClass="text-theme-text text-sm leading-[17px] sm:leading-5 sm:text-base"
+						addressClass="text-theme-secondary-500 dark:text-theme-secondary-700 text-sm leading-[17px] sm:leading-5 sm:text-base w-full w-3/4"
+						wrapperClass="justify-end sm:justify-start"
+					/>
+				</div>
+			</DetailWrapper>
+
+			<DetailWrapper label={t("COMMON.MESSAGE")}>
+				<p>{message}</p>
+			</DetailWrapper>
+		</div>
+	)
+}
 
 export const SuccessStep = ({
 	signedMessage,
@@ -38,30 +69,13 @@ export const SuccessStep = ({
 			/>
 
 			<div className="space-y-4 mt-4">
-				<DetailWrapper label={t("COMMON.SIGNING_WALLET")}>
-					<div className="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0">
-						<DetailTitle>{t("COMMON.ADDRESS")}</DetailTitle>
-						<Address
-							truncateOnTable
-							address={wallet.address()}
-							walletName={wallet.alias()}
-							showCopyButton
-							walletNameClass="text-theme-text text-sm leading-[17px] sm:leading-5 sm:text-base"
-							addressClass="text-theme-secondary-500 dark:text-theme-secondary-700 text-sm leading-[17px] sm:leading-5 sm:text-base w-full w-3/4"
-							wrapperClass="justify-end sm:justify-start"
-						/>
-					</div>
-				</DetailWrapper>
-
-				<DetailWrapper label={t("COMMON.MESSAGE")}>
-					<p>{signedMessage.message}</p>
-				</DetailWrapper>
+				<SigningMessageInfo message={signedMessage.message} wallet={wallet} />
 
 				<div>
 					<FormField name="json-signature">
-						<FormLabel label={t("MESSAGE.PAGE_SIGN_MESSAGE.FORM_STEP.SIGNATURE_JSON")} />
+						<DetailLabel>{t("MESSAGE.PAGE_SIGN_MESSAGE.FORM_STEP.SIGNATURE_JSON")}</DetailLabel>
 						<TextArea
-							className="py-4"
+							className="py-4 mt-2"
 							wrap="hard"
 							ref={messageReference}
 							defaultValue={JSON.stringify(signedMessage)}
