@@ -1501,6 +1501,8 @@ describe("ExchangeForm", () => {
 			.spyOn(profile.exchangeTransactions(), "findById")
 			.mockReturnValue(exchangeTransaction);
 
+		server.use(mockOrderStatus(exchangeTransaction.orderId(), "new"));
+
 		await expect(screen.findByText(t("EXCHANGE.MANUAL_TRANSFER"))).resolves.toBeVisible();
 
 		await userEvent.click(screen.getByRole("checkbox"));
