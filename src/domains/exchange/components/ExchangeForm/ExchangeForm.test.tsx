@@ -17,6 +17,7 @@ import { StatusStep } from "./StatusStep";
 import {
 	env,
 	getDefaultProfileId,
+	mockProfileWithPublicAndTestNetworks,
 	render,
 	renderResponsiveWithRoute,
 	screen,
@@ -1392,6 +1393,126 @@ describe("ExchangeForm", () => {
 			expect(screen.getByTestId("ExchangeForm")).toBeInTheDocument();
 		});
 	});
+
+	it('should show `Sign` and `Manual Transfer` buttons if from currency is ARK', async () => {
+		const { result } = renderHook(() => useTranslation());
+		const { t } = result.current;
+
+		const resetProfileNetworksMock = mockProfileWithPublicAndTestNetworks(profile);
+
+		renderComponent(<ExchangeForm onReady={vi.fn()} />)
+
+		await expect(screen.findByTestId("ExchangeForm")).resolves.toBeVisible();
+
+		await selectCurrencies({
+			from: { name: "Ark", ticker: "ARK" },
+			to: { name: "Bitcoin", ticker: "BTC" },
+		});
+
+		const payinInput: HTMLInputElement = screen.getAllByTestId("InputCurrency")[0] as HTMLInputElement;
+		const payoutInput: HTMLInputElement = screen.getAllByTestId("InputCurrency")[1] as HTMLInputElement;
+
+		// amount input
+		await userEvent.type(payinInput, "1");
+
+		await waitFor(() => {
+			expect(payinInput).toHaveValue("1");
+		});
+
+		await waitFor(() => {
+			expect(payoutInput).toHaveValue(payoutValue);
+		});
+
+		// select recipient
+		const recipientDropdown = screen.getAllByTestId("SelectDropdown__input")[2];
+
+		expect(recipientDropdown).not.toBeDisabled();
+
+		await userEvent.type(recipientDropdown, "payoutAddress");
+
+		await waitFor(() => {
+			expect(recipientDropdown).toHaveValue("payoutAddress");
+		});
+
+		// go to the review step
+		await userEvent.click(continueButton());
+		await waitFor(() => {
+			expect(reviewStep()).toBeInTheDocument();
+		});
+
+		await expect(screen.findByText(t("EXCHANGE.MANUAL_TRANSFER"))).resolves.toBeVisible();
+		expect(screen.getByTestId("ExchangeForm__continue-button")).toHaveTextContent(t("COMMON.SIGN"));
+
+		resetProfileNetworksMock();
+	});
+
+	it('should proceed to the status step when `Manual Transfer` button is clicked', async () => {
+		profile.exchangeTransactions().flush();
+
+		const { result } = renderHook(() => useTranslation());
+		const { t } = result.current;
+
+		const resetProfileNetworksMock = mockProfileWithPublicAndTestNetworks(profile);
+
+		renderComponent(<ExchangeForm onReady={vi.fn()} />)
+
+		await expect(screen.findByTestId("ExchangeForm")).resolves.toBeVisible();
+
+		await selectCurrencies({
+			from: { name: "Ark", ticker: "ARK" },
+			to: { name: "Bitcoin", ticker: "BTC" },
+		});
+
+		const payinInput: HTMLInputElement = screen.getAllByTestId("InputCurrency")[0] as HTMLInputElement;
+		const payoutInput: HTMLInputElement = screen.getAllByTestId("InputCurrency")[1] as HTMLInputElement;
+
+		// amount input
+		await userEvent.type(payinInput, "1");
+
+		await waitFor(() => {
+			expect(payinInput).toHaveValue("1");
+		});
+
+		await waitFor(() => {
+			expect(payoutInput).toHaveValue(payoutValue);
+		});
+
+		// select recipient
+		const recipientDropdown = screen.getAllByTestId("SelectDropdown__input")[2];
+
+		expect(recipientDropdown).not.toBeDisabled();
+
+		await userEvent.type(recipientDropdown, "payoutAddress");
+
+		await waitFor(() => {
+			expect(recipientDropdown).toHaveValue("payoutAddress");
+		});
+
+		// go to the review step
+		await userEvent.click(continueButton());
+
+		await waitFor(() => {
+			expect(reviewStep()).toBeInTheDocument();
+		});
+
+		const exchangeTransaction = profile.exchangeTransactions().create(transactionStub);
+
+		const findTransactionMock = vi
+			.spyOn(profile.exchangeTransactions(), "findById")
+			.mockReturnValue(exchangeTransaction);
+
+		await expect(screen.findByText(t("EXCHANGE.MANUAL_TRANSFER"))).resolves.toBeVisible();
+
+		await userEvent.click(screen.getByText(t("EXCHANGE.MANUAL_TRANSFER")));
+
+		await waitFor(() => {
+			expect(screen.getByTestId("ExchangeForm__status-step")).toBeInTheDocument();
+		});
+
+		resetProfileNetworksMock();
+		findTransactionMock.mockRestore();
+	});
+
 });
 
 describe("FormStep", () => {
@@ -1431,6 +1552,7 @@ describe("FormStep", () => {
 		expect(container).toMatchSnapshot();
 	});
 });
+
 describe("ReviewStep", () => {
 	beforeAll(() => {
 		profile = env.profiles().findById(getDefaultProfileId());
