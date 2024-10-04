@@ -4,26 +4,29 @@ import { Contracts } from "@ardenthq/sdk-profiles";
 import {
 	createTransactionMock,
 	env,
-	getDefaultProfileId, getDefaultWalletMnemonic,
+	getDefaultProfileId,
+	getDefaultWalletMnemonic,
 	render,
-	screen, syncFees, waitFor
+	screen,
+	syncFees,
+	waitFor,
 } from "@/utils/testing-library";
-import {SendExchangeTransfer} from "./SendExchangeTransfer";
+import { SendExchangeTransfer } from "./SendExchangeTransfer";
 import userEvent from "@testing-library/user-event";
-import {afterAll, beforeEach, expect, MockInstance} from "vitest";
+import { afterAll, beforeEach, expect, MockInstance } from "vitest";
 import * as environmentHooks from "@/app/hooks/env";
 import { server, requestMock } from "@/tests/mocks/server";
 import nodeFeesFixture from "@/tests/fixtures/coins/ark/mainnet/node-fees.json";
 import transactionFeesFixture from "@/tests/fixtures/coins/ark/mainnet/transaction-fees.json";
-import {renderHook, within} from "@testing-library/react";
+import { renderHook, within } from "@testing-library/react";
 import transactionFixture from "@/tests/fixtures/coins/ark/devnet/transactions/transfer.json";
-import {useTranslation} from "react-i18next";
+import { useTranslation } from "react-i18next";
 
 let profile: Contracts.IProfile;
 let wallet: Contracts.IReadWriteWallet;
 let exchangeTransaction: Contracts.IExchangeTransaction;
 
-let useActiveProfileSpy: MockInstance
+let useActiveProfileSpy: MockInstance;
 
 const sendButton = () => screen.getByTestId("ExchangeTransfer__send-button");
 
@@ -35,7 +38,7 @@ const selectSender = async () => {
 	const firstAddress = screen.getByTestId("SearchWalletListItem__select-0");
 
 	await userEvent.click(firstAddress);
-}
+};
 
 const fillMnemonic = async () => {
 	// AuthenticationStep should be visible
@@ -44,14 +47,13 @@ const fillMnemonic = async () => {
 	await userEvent.type(screen.getByTestId("AuthenticationStep__mnemonic"), getDefaultWalletMnemonic());
 
 	await waitFor(() => expect(sendButton()).not.toBeDisabled());
-}
-
+};
 
 describe("SendExchangeTransfer", () => {
 	beforeAll(async () => {
 		profile = env.profiles().findById(getDefaultProfileId());
 
-		wallet = profile.wallets().first()
+		wallet = profile.wallets().first();
 
 		exchangeTransaction = profile.exchangeTransactions().create({
 			input: {
@@ -79,25 +81,25 @@ describe("SendExchangeTransfer", () => {
 	});
 
 	beforeEach(() => {
-		server.use(
-			requestMock("https://ark-test-musig.arkvault.io", { result: [] }, { method: "post" }),
-		);
-	})
+		server.use(requestMock("https://ark-test-musig.arkvault.io", { result: [] }, { method: "post" }));
+	});
 
 	afterAll(() => {
 		useActiveProfileSpy.mockRestore();
-	})
+	});
 
 	const renderComponent = (properties: Record<string, any> = {}) => {
-		render(<SendExchangeTransfer
-			profile={profile}
-			network={profile.wallets().first().network()}
-			exchangeTransaction={exchangeTransaction}
-			onClose={vi.fn()}
-			onSuccess={vi.fn()}
-			{...properties}
-		/>);
-	}
+		render(
+			<SendExchangeTransfer
+				profile={profile}
+				network={profile.wallets().first().network()}
+				exchangeTransaction={exchangeTransaction}
+				onClose={vi.fn()}
+				onSuccess={vi.fn()}
+				{...properties}
+			/>,
+		);
+	};
 
 	it("should render", async () => {
 		renderComponent();
@@ -109,7 +111,7 @@ describe("SendExchangeTransfer", () => {
 	it("should trigger `onClose`", async () => {
 		const onClose = vi.fn();
 
-		renderComponent({onClose});
+		renderComponent({ onClose });
 
 		await userEvent.click(screen.getByTestId("ExchangeTransfer__cancel-button"));
 		expect(onClose).toHaveBeenCalledOnce();
@@ -163,14 +165,16 @@ describe("SendExchangeTransfer", () => {
 		// Send transaction
 		await userEvent.click(sendButton());
 
-		await expect(screen.findByText(t("EXCHANGE.MODAL_SIGN_EXCHANGE_TRANSACTION.SUCCESS_TITLE"))).resolves.toBeVisible();
+		await expect(
+			screen.findByText(t("EXCHANGE.MODAL_SIGN_EXCHANGE_TRANSACTION.SUCCESS_TITLE")),
+		).resolves.toBeVisible();
 
 		signMock.mockRestore();
 		broadcastMock.mockRestore();
 		transactionMock.mockRestore();
 	});
 
-	it('should show an error if wallet does not have enough funds', async () => {
+	it("should show an error if wallet does not have enough funds", async () => {
 		const { result } = renderHook(() => useTranslation());
 		const { t } = result.current;
 
@@ -185,7 +189,7 @@ describe("SendExchangeTransfer", () => {
 		expect(screen.getByTestId("Input__error")).toHaveAttribute(
 			"data-errortext",
 			t("TRANSACTION.VALIDATION.LOW_BALANCE"),
-		)
+		);
 
 		selectedWalletSpy.mockRestore();
 	});
@@ -208,16 +212,16 @@ describe("SendExchangeTransfer", () => {
 		signMock.mockRestore();
 	});
 
-	it('should prefill sender wallet if there is only one wallet in profile', async () => {
+	it("should prefill sender wallet if there is only one wallet in profile", async () => {
 		const secondWallet = profile.wallets().values()[1];
 
-		profile.wallets().forget(secondWallet.id())
+		profile.wallets().forget(secondWallet.id());
 
 		renderComponent();
 
 		await waitFor(() => {
 			expect(screen.getByTestId("SelectAddress__input")).toHaveValue(wallet.address());
-		})
+		});
 
 		profile.wallets().push(secondWallet);
 	});
@@ -228,7 +232,7 @@ describe("SendExchangeTransfer", () => {
 
 		const onSuccessMock = vi.fn();
 
-		renderComponent({onSuccess: onSuccessMock});
+		renderComponent({ onSuccess: onSuccessMock });
 
 		await selectSender();
 
@@ -249,7 +253,9 @@ describe("SendExchangeTransfer", () => {
 		// Send transaction
 		await userEvent.click(sendButton());
 
-		await expect(screen.findByText(t("EXCHANGE.MODAL_SIGN_EXCHANGE_TRANSACTION.SUCCESS_TITLE"))).resolves.toBeVisible();
+		await expect(
+			screen.findByText(t("EXCHANGE.MODAL_SIGN_EXCHANGE_TRANSACTION.SUCCESS_TITLE")),
+		).resolves.toBeVisible();
 
 		await userEvent.click(screen.getByTestId("ExchangeTransfer__continue"));
 
