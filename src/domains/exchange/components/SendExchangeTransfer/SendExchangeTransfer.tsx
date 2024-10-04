@@ -136,7 +136,7 @@ export const SendExchangeTransfer: React.FC<TransferProperties> = ({
 			setTransaction(transaction);
 			onSuccess();
 		} catch (error) {
-			setErrorMessage((error?.message ?? "") as string);
+			setErrorMessage(error?.message as string);
 		}
 	}, [onSuccess, submitForm]);
 
