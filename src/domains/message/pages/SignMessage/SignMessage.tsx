@@ -182,8 +182,6 @@ export const SignMessage: React.VFC = () => {
 											<AuthenticationStep
 												noHeading
 												wallet={selectedWallet}
-												ledgerIsAwaitingDevice={!hasDeviceAvailable}
-												ledgerIsAwaitingApp={hasDeviceAvailable && !isConnected}
 												subject="message"
 											/>
 										</div>
