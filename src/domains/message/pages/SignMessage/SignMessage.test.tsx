@@ -333,5 +333,63 @@ describe("SignMessage", () => {
 			walletActsWithWithEncryption.mockRestore();
 			fromSecret.mockRestore();
 		});
+
+		it("should error and go back", async () => {
+			const isLedgerMock = vi.spyOn(wallet, "isLedger").mockReturnValue(false);
+			const walletHasSigningKey = vi.spyOn(wallet.signingKey(), "exists").mockReturnValue(false);
+			const walletActsWithSecret = vi.spyOn(wallet, "actsWithSecret").mockReturnValue(true);
+			const walletActsWithMnemonic = vi.spyOn(wallet, "actsWithMnemonic").mockReturnValue(false);
+			const walletActsWithWithEncryption = vi
+				.spyOn(wallet, "actsWithMnemonicWithEncryption")
+				.mockReturnValue(false);
+			const fromSecret = vi.spyOn(wallet.coin().address(), "fromSecret").mockResolvedValue({
+				address: wallet.address(),
+				type: "bip39",
+			});
+
+			render(
+				<Route path="/profiles/:profileId/wallets/:walletId/sign-message">
+					<SignMessage />
+				</Route>,
+				{
+					history,
+					route: walletUrl(wallet.id()),
+				},
+			);
+
+			await expectHeading(messageTranslations.PAGE_SIGN_MESSAGE.FORM_STEP.TITLE);
+
+			expect(
+				screen.getByText(messageTranslations.PAGE_SIGN_MESSAGE.FORM_STEP.DESCRIPTION_SECRET),
+			).toBeInTheDocument();
+
+			await userEvent.type(messageInput(), signMessage);
+
+			await userEvent.type(screen.getByTestId("AuthenticationStep__secret"), "secret");
+
+			await waitFor(() => {
+				expect(screen.getByTestId("AuthenticationStep__secret")).toHaveValue("secret");
+			});
+
+			await waitFor(() => expect(continueButton()).toBeEnabled());
+
+			vi.spyOn(wallet.message(), "sign").mockImplementation(() => {
+				throw new Error("error")
+			})
+
+			await userEvent.click(continueButton());
+
+			await expectHeading(messageTranslations.PAGE_SIGN_MESSAGE.ERROR_STEP.TITLE);
+
+			await userEvent.click(screen.getByTestId("ErrorStep__back-button"));
+			await expectHeading(messageTranslations.PAGE_SIGN_MESSAGE.FORM_STEP.TITLE);
+
+			isLedgerMock.mockRestore();
+			walletHasSigningKey.mockRestore();
+			walletActsWithSecret.mockRestore();
+			walletActsWithMnemonic.mockRestore();
+			walletActsWithWithEncryption.mockRestore();
+			fromSecret.mockRestore();
+		});
 	});
 });
