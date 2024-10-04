@@ -180,7 +180,8 @@ const ExchangeForm = ({ orderId, onReady }: { orderId?: string; onReady: () => v
 		trigger,
 	]);
 
-	const withSignStep = fromCurrency?.coin === "ark";
+	const arkMainnetNetwork = activeProfile.availableNetworks().find((network) => network.id() === "ark.mainnet");
+	const withSignStep = arkMainnetNetwork && fromCurrency?.coin.toLowerCase() === "ark";
 
 	const submitForm = useCallback(async () => {
 		const { fromCurrency, toCurrency, recipientWallet, refundWallet, payinAmount, externalId, refundExternalId } =
@@ -344,7 +345,7 @@ const ExchangeForm = ({ orderId, onReady }: { orderId?: string; onReady: () => v
 											disabled={isSubmitting || (isDirty ? !isValid : true)}
 											className="text-sm leading-[17px] text-theme-primary-600 sm:pl-0"
 										>
-											Manual transfer
+											{t("EXCHANGE.MANUAL_TRANSFER")}
 										</Button>
 									</div>
 								)}
@@ -386,10 +387,10 @@ const ExchangeForm = ({ orderId, onReady }: { orderId?: string; onReady: () => v
 					</div>
 				</Tabs>
 			</Form>
-			{showTransferModal && exchangeTransaction && (
+			{showTransferModal && exchangeTransaction && arkMainnetNetwork && (
 				<SendExchangeTransfer
 					profile={activeProfile}
-					network={activeProfile.availableNetworks().find((network) => network.id() === "ark.mainnet")!}
+					network={arkMainnetNetwork}
 					exchangeTransaction={exchangeTransaction}
 					onSuccess={() => setActiveTab(activeTab + 1)}
 					onClose={() => setShowTransferModal(false)}
