@@ -133,6 +133,7 @@ const selectCurrencies = async ({ from, to }: { from?: Record<string, string>; t
 
 const continueButton = () => screen.getByTestId("ExchangeForm__continue-button");
 const reviewStep = () => screen.getByTestId("ExchangeForm__review-step");
+const statusStep = () => screen.getByTestId("ExchangeForm__status-step");
 
 const refundAddressID = "ExchangeForm__refund-address";
 const payoutValue = "37042.3588384";
@@ -279,7 +280,7 @@ describe("ExchangeForm", () => {
 		});
 
 		await waitFor(() => {
-			expect(screen.getByTestId("ExchangeForm__status-step")).toBeInTheDocument();
+			statusStep();
 		});
 
 		expect(container).toMatchSnapshot();
@@ -1285,7 +1286,7 @@ describe("ExchangeForm", () => {
 		await userEvent.click(continueButton());
 
 		await waitFor(() => {
-			expect(screen.getByTestId("ExchangeForm__status-step")).toBeInTheDocument();
+			statusStep();
 		});
 
 		// status: awaiting confirmation
@@ -1493,7 +1494,7 @@ describe("ExchangeForm", () => {
 		await userEvent.click(screen.getByText(t("EXCHANGE.MANUAL_TRANSFER")));
 
 		await waitFor(() => {
-			expect(screen.getByTestId("ExchangeForm__status-step")).toBeInTheDocument();
+			statusStep();
 		});
 
 		resetProfileNetworksMock();
@@ -1794,7 +1795,7 @@ describe("StatusStep", () => {
 		);
 
 		await waitFor(() => {
-			expect(screen.getByTestId("ExchangeForm__status-step")).toBeInTheDocument();
+			statusStep();
 		});
 
 		expect(container).toMatchSnapshot();
