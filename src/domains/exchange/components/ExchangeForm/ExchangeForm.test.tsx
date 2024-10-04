@@ -31,6 +31,7 @@ import * as useQueryParameters from "@/app/hooks/use-query-parameters";
 
 import currencyEth from "@/tests/fixtures/exchange/changenow/currency-eth.json";
 import order from "@/tests/fixtures/exchange/changenow/order.json";
+import * as SendExchangeTransfer from "@/domains/exchange/components/SendExchangeTransfer"
 
 let profile: Contracts.IProfile;
 
@@ -1523,9 +1524,9 @@ describe("ExchangeForm", () => {
 			expect(continueButton()).not.toBeDisabled();
 		});
 
-		vi.mock('@/domains/exchange/components/SendExchangeTransfer', () => ({
-			SendExchangeTransfer: () => <div>SendExchangeTransfer component</div>
-		}));
+		const sendExchangeTransferMock = vi.spyOn(SendExchangeTransfer, "SendExchangeTransfer").mockImplementation(() => {
+			return <div>SendExchangeTransfer component</div>
+		});
 
 		await userEvent.click(continueButton());
 
@@ -1533,6 +1534,7 @@ describe("ExchangeForm", () => {
 
 		resetProfileNetworksMock();
 		findTransactionMock.mockRestore();
+		sendExchangeTransferMock.mockRestore();
 	});
 
 	it('should trigger `onClose`', async () => {
@@ -1561,12 +1563,12 @@ describe("ExchangeForm", () => {
 			expect(continueButton()).not.toBeDisabled();
 		});
 
-		vi.mock('@/domains/exchange/components/SendExchangeTransfer', () => ({
-			SendExchangeTransfer: ({onClose}) => <div>
-				<button onClick={onClose} data-testid="Close_SendExchangeTransfer">Close</button>
-				SendExchangeTransfer component
-			</div>
-		}));
+		const sendExchangeTransferMock = vi.spyOn(SendExchangeTransfer, "SendExchangeTransfer").mockImplementation(({onClose}) => {
+			return <div>
+					<button onClick={onClose} data-testid="Close_SendExchangeTransfer">Close</button>
+					SendExchangeTransfer component
+				</div>
+		});
 
 		await userEvent.click(continueButton());
 
@@ -1579,6 +1581,7 @@ describe("ExchangeForm", () => {
 
 		resetProfileNetworksMock();
 		findTransactionMock.mockRestore();
+		sendExchangeTransferMock.mockRestore();
 	});
 
 	it('should trigger `onSuccess`', async () => {
@@ -1607,12 +1610,12 @@ describe("ExchangeForm", () => {
 			expect(continueButton()).not.toBeDisabled();
 		});
 
-		vi.mock('@/domains/exchange/components/SendExchangeTransfer', () => ({
-			SendExchangeTransfer: ({onSuccess}) => <div>
+		const sendExchangeTransferMock = vi.spyOn(SendExchangeTransfer, "SendExchangeTransfer").mockImplementation(({onSuccess}) => {
+			return <div>
 				<button onClick={onSuccess} data-testid="Success_SendExchangeTransfer">Success</button>
 				SendExchangeTransfer component
 			</div>
-		}));
+		});
 
 		await userEvent.click(continueButton());
 
@@ -1623,6 +1626,7 @@ describe("ExchangeForm", () => {
 
 		resetProfileNetworksMock();
 		findTransactionMock.mockRestore();
+		sendExchangeTransferMock.mockRestore();
 	});
 
 	it.each(["xs", "lg"])("should render with changelly in (%s)", async (breakpoint) => {

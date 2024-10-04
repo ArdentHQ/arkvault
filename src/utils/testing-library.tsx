@@ -28,7 +28,7 @@ export {
 	mockLedgerDevicesList,
 } from "./ledger-test-helpers";
 import transactionFixture from "@/tests/fixtures/coins/ark/devnet/transactions/transfer.json";
-import {ExtendedSignedTransactionData} from "../domains/transaction/pages/SendRegistration/SendRegistration.contracts";
+import { DTO } from "@ardenthq/sdk-profiles";
 
 const ProfileSynchronizer = ({ children, options }: { children?: React.ReactNode; options?: Record<string, any> }) => {
 	const { profile, profileIsSyncing } = useProfileSynchronizer(options);
@@ -356,7 +356,7 @@ export const triggerMessageSignOnce = async (wallet: Contracts.IReadWriteWallet)
 export const queryElementForSvg = (target: HTMLElement, svg: string) => target.querySelector(`svg#${svg}`);
 
 /* istanbul ignore next -- @preserve */
-export const createTransactionMock = (wallet: Contracts.IReadWriteWallet, overrides: Partial<ExtendedSignedTransactionData> = {}) =>
+export const createTransactionMock = (wallet: Contracts.IReadWriteWallet, overrides: Partial<DTO.ExtendedSignedTransactionData> = {}) =>
 	vi.spyOn(wallet.transaction(), "transaction").mockReturnValue({
 		amount: () => +transactionFixture.data.amount / 1e8,
 		blockId: () => "1",
