@@ -54,9 +54,6 @@ export const SendExchangeTransfer: React.FC<TransferProperties> = ({
 			{
 				address: exchangeInput.address,
 				amount: exchangeInput.amount,
-				// address: "DMFzWa3nHt9T1ChXdMwFrBZRTfKMjDyNss",
-				// amount: 0.001,
-				// amount: 75
 			},
 		],
 		[exchangeInput],
@@ -162,7 +159,7 @@ export const SendExchangeTransfer: React.FC<TransferProperties> = ({
 				contentClassName="p-6 sm:p-8 sm:[&>div.absolute]:!m-8 [&>div.absolute]:!m-6"
 				titleClass="!leading-[21px] sm!:leading-7"
 			>
-				<div>
+				<div className="mt-4 space-y-4">
 					<Alert variant="success"> {t("EXCHANGE.TRANSACTION_SENT")} </Alert>
 					<FormButtons>
 						<Button data-testid="ExchangeTransfer__continue" onClick={onClose}>
@@ -182,7 +179,8 @@ export const SendExchangeTransfer: React.FC<TransferProperties> = ({
 			contentClassName="p-6 sm:p-8 sm:[&>div.absolute]:!m-8 [&>div.absolute]:!m-6"
 			titleClass="!leading-[21px] sm!:leading-7"
 		>
-			{errorMessage && <Alert variant="danger"> {errorMessage} </Alert>}
+			{errorMessage && <div className="mt-4"><Alert variant="danger"> {errorMessage} </Alert></div>}
+
 			<Form context={form} onSubmit={() => submit()}>
 				<div className="mt-4 space-y-4">
 					<FormField name="senderAddress">
