@@ -38,6 +38,8 @@ export const translations = {
 	EXCHANGE_NAME: "Exchange Name",
 	EXPECTED_AMOUNT_HINT: "The final payout amount might be different",
 
+	MANUAL_TRANSFER: "Manual Transfer",
+
 	MODAL_DELETE_EXCHANGE_TRANSACTION: {
 		DESCRIPTION:
 			"Are you sure you want to remove this swap from the transaction history? This action cannot be undone.",
