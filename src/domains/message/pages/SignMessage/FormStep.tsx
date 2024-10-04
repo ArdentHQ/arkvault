@@ -7,7 +7,7 @@ import { FormField, FormLabel } from "@/app/components/Form";
 import { InputCounter } from "@/app/components/Input";
 import { StepHeader } from "@/app/components/StepHeader";
 import { SelectAddress } from "@/domains/profile/components/SelectAddress";
-import { Icon, ThemeIcon } from "@/app/components/Icon";
+import { ThemeIcon } from "@/app/components/Icon";
 
 export const FormStep = ({
 	disabled,
@@ -75,9 +75,9 @@ export const FormStep = ({
 					wallet={
 						wallet
 							? {
-								address: wallet.address(),
-								network: wallet.network(),
-							}
+									address: wallet.address(),
+									network: wallet.network(),
+								}
 							: undefined
 					}
 					wallets={wallets}

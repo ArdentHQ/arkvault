@@ -4,12 +4,11 @@ import React, { useRef } from "react";
 import { useTranslation } from "react-i18next";
 
 import { Address } from "@/app/components/Address";
-import { FormField, FormLabel } from "@/app/components/Form";
+import { FormField } from "@/app/components/Form";
 import { StepHeader } from "@/app/components/StepHeader";
 import { TextArea } from "@/app/components/TextArea";
 import { DetailLabel, DetailTitle, DetailWrapper } from "@/app/components/DetailWrapper";
 import { Icon } from "@/app/components/Icon";
-
 
 export const SigningMessageInfo = ({
 	message,
@@ -40,8 +39,8 @@ export const SigningMessageInfo = ({
 				<p>{message}</p>
 			</DetailWrapper>
 		</div>
-	)
-}
+	);
+};
 
 export const SuccessStep = ({
 	signedMessage,
@@ -68,14 +67,14 @@ export const SuccessStep = ({
 				}
 			/>
 
-			<div className="space-y-4 mt-4">
+			<div className="mt-4 space-y-4">
 				<SigningMessageInfo message={signedMessage.message} wallet={wallet} />
 
 				<div>
 					<FormField name="json-signature">
 						<DetailLabel>{t("MESSAGE.PAGE_SIGN_MESSAGE.FORM_STEP.SIGNATURE_JSON")}</DetailLabel>
 						<TextArea
-							className="py-4 mt-2"
+							className="mt-2 py-4"
 							wrap="hard"
 							ref={messageReference}
 							defaultValue={JSON.stringify(signedMessage)}

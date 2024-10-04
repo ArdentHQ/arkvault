@@ -16,7 +16,6 @@ import { StepsProvider, useLedgerContext } from "@/app/contexts";
 import { useActiveProfile, useActiveWalletWhenNeeded, useValidation } from "@/app/hooks";
 import { useMessageSigner } from "@/domains/message/hooks/use-message-signer";
 import { ErrorStep } from "@/domains/transaction/components/ErrorStep";
-import { TransactionSender, TransactionDetail } from "@/domains/transaction/components/TransactionDetail";
 import { useNetworkFromQueryParameters, useQueryParameters } from "@/app/hooks/use-query-parameters";
 import { ProfilePaths } from "@/router/paths";
 import { AuthenticationStep } from "@/domains/transaction/components/AuthenticationStep";
@@ -85,7 +84,7 @@ export const SignMessage: React.VFC = () => {
 	});
 
 	const { formState, getValues, handleSubmit, register, trigger } = form;
-	const { isSubmitting, isValid } = formState;
+	const { isValid } = formState;
 
 	const { signMessage } = useValidation();
 
@@ -126,7 +125,7 @@ export const SignMessage: React.VFC = () => {
 		if (selectedWallet?.isLedger()) {
 			setActiveTab(activeTab + 1);
 			connectLedger();
-			return
+			return;
 		}
 
 		handleSubmit(submitForm)();
@@ -193,21 +192,26 @@ export const SignMessage: React.VFC = () => {
 							</TabPanel>
 
 							<TabPanel tabId={Step.AuthenticationStep}>
-								{selectedWallet &&
+								{selectedWallet && (
 									<AuthenticationStep
 										wallet={selectedWallet}
 										ledgerDetails={
-											<SigningMessageInfo wallet={selectedWallet} message={getValues("message")} />
+											<SigningMessageInfo
+												wallet={selectedWallet}
+												message={getValues("message")}
+											/>
 										}
 										ledgerIsAwaitingDevice={!hasDeviceAvailable}
 										ledgerIsAwaitingApp={hasDeviceAvailable && !isConnected}
 										subject="message"
 									/>
-								}
+								)}
 							</TabPanel>
 
 							<TabPanel tabId={Step.SuccessStep}>
-								{selectedWallet && <SuccessStep signedMessage={signedMessage} wallet={selectedWallet} />}
+								{selectedWallet && (
+									<SuccessStep signedMessage={signedMessage} wallet={selectedWallet} />
+								)}
 							</TabPanel>
 
 							<TabPanel tabId={Step.ErrorStep}>
@@ -261,7 +265,7 @@ export const SignMessage: React.VFC = () => {
 										wrapperClassName="flex-1 md:flex-none"
 									>
 										<div
-											className="px-5 py-3 space-x-3 text-base relative items-center font-semibold inline-flex text-center text-white bg-theme-primary-600 hover:bg-theme-primary-700 rounded"
+											className="relative inline-flex items-center space-x-3 rounded bg-theme-primary-600 px-5 py-3 text-center text-base font-semibold text-white hover:bg-theme-primary-700"
 											data-testid="SignMessage__back-to-wallet-button"
 										>
 											<Icon name="Copy" />
@@ -270,8 +274,6 @@ export const SignMessage: React.VFC = () => {
 									</Clipboard>
 								</FormButtons>
 							)}
-
-
 						</StepsProvider>
 					</Tabs>
 				</Form>
