@@ -157,4 +157,24 @@ describe("SendExchangeTransfer", () => {
 		broadcastMock.mockRestore();
 		transactionMock.mockRestore();
 	});
+
+	it('should show an error if wallet does not have enough funds', async () => {
+		const { result } = renderHook(() => useTranslation());
+		const { t } = result.current;
+
+		const selectedWalletSpy = vi.spyOn(wallet, "balance").mockReturnValue(0.04);
+
+		renderComponent();
+
+		await selectSender();
+
+		await expect(screen.findByTestId("Input__error")).resolves.toBeVisible();
+
+		expect(screen.getByTestId("Input__error")).toHaveAttribute(
+			"data-errortext",
+			t("TRANSACTION.VALIDATION.LOW_BALANCE"),
+		)
+
+		selectedWalletSpy.mockRestore();
+	});
 });
