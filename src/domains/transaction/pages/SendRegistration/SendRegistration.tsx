@@ -122,16 +122,6 @@ export const SendRegistration = () => {
 		return handleNext();
 	});
 
-	// useEffect(() => {
-	// 	const id = setTimeout(() => {
-	// 		handleNext();
-	// 	}, 3000);
-	//
-	// 	return () => {
-	// 		clearTimeout(id);
-	// 	};
-	// }, []);
-
 	const handleSubmit = async () => {
 		try {
 			const {
