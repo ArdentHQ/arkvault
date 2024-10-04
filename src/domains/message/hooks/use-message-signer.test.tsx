@@ -46,6 +46,19 @@ describe("Use Message Signer Hook", () => {
 		});
 	});
 
+	it("should throw exception if no credentials are provided", async () => {
+		const { result } = renderHook(() => useMessageSigner());
+
+		let isErrored = false
+		try {
+			await result.current.sign(wallet, "message");
+		} catch {
+			isErrored = true
+		}
+
+		expect(isErrored).toBe(true);
+	});
+
 	it("should sign message with encrypted mnemonic", async () => {
 		const { result } = renderHook(() => useMessageSigner());
 
