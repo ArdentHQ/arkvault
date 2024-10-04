@@ -355,6 +355,7 @@ export const triggerMessageSignOnce = async (wallet: Contracts.IReadWriteWallet)
 
 export const queryElementForSvg = (target: HTMLElement, svg: string) => target.querySelector(`svg#${svg}`);
 
+/* istanbul ignore next -- @preserve */
 export const createTransactionMock = (wallet: Contracts.IReadWriteWallet, overrides: Partial<ExtendedSignedTransactionData> = {}) =>
 	vi.spyOn(wallet.transaction(), "transaction").mockReturnValue({
 		amount: () => +transactionFixture.data.amount / 1e8,

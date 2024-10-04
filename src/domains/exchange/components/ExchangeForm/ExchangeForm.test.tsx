@@ -1535,7 +1535,7 @@ describe("ExchangeForm", () => {
 		findTransactionMock.mockRestore();
 	});
 
-	it('should trigger `onCancel`', async () => {
+	it('should trigger `onClose`', async () => {
 		profile.exchangeTransactions().flush();
 
 		const { result } = renderHook(() => useTranslation());
@@ -1563,7 +1563,7 @@ describe("ExchangeForm", () => {
 
 		vi.mock('@/domains/exchange/components/SendExchangeTransfer', () => ({
 			SendExchangeTransfer: ({onClose}) => <div>
-				<button onClick={onClose}>Close_SendExchangeTransfer</button>
+				<button onClick={onClose} data-testid="Close_SendExchangeTransfer">Close</button>
 				SendExchangeTransfer component
 			</div>
 		}));
@@ -1571,7 +1571,7 @@ describe("ExchangeForm", () => {
 		await userEvent.click(continueButton());
 
 		await expect(screen.findByText(/SendExchangeTransfer component/)).resolves.toBeVisible();
-		await userEvent.click(screen.getByText("Close_SendExchangeTransfer"));
+		await userEvent.click(screen.getByTestId("Close_SendExchangeTransfer"));
 
 		await waitFor(() => {
 			expect(screen.queryByText(/SendExchangeTransfer component/)).not.toBeInTheDocument();
@@ -1609,7 +1609,7 @@ describe("ExchangeForm", () => {
 
 		vi.mock('@/domains/exchange/components/SendExchangeTransfer', () => ({
 			SendExchangeTransfer: ({onSuccess}) => <div>
-				<button onClick={onSuccess}>Success_SendExchangeTransfer</button>
+				<button onClick={onSuccess} data-testid="Success_SendExchangeTransfer">Success</button>
 				SendExchangeTransfer component
 			</div>
 		}));
@@ -1617,7 +1617,7 @@ describe("ExchangeForm", () => {
 		await userEvent.click(continueButton());
 
 		await expect(screen.findByText(/SendExchangeTransfer component/)).resolves.toBeVisible();
-		await userEvent.click(screen.getByText("Success_SendExchangeTransfer"));
+		await userEvent.click(screen.getByTestId("Success_SendExchangeTransfer"));
 
 		await expect(screen.findByTestId("ExchangeForm__status-step")).resolves.toBeVisible();
 
