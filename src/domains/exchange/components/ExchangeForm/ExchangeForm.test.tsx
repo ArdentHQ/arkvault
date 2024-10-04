@@ -1562,6 +1562,10 @@ describe("ExchangeForm", () => {
 
 		await expect(screen.findByText(t("EXCHANGE.MODAL_SIGN_EXCHANGE_TRANSACTION.TITLE"))).resolves.toBeVisible();
 
+		await userEvent.click(screen.getByTestId("ExchangeTransfer__cancel-button"));
+
+		await expect(screen.findByText(t("EXCHANGE.MODAL_SIGN_EXCHANGE_TRANSACTION.TITLE"))).resolves.not.toBeVisible();
+
 		resetProfileNetworksMock();
 		findTransactionMock.mockRestore();
 	});
