@@ -214,7 +214,41 @@ describe("SendExchangeTransfer", () => {
 		profile.wallets().push(secondWallet);
 	});
 
-	// it('should test', () => {
-	// 	console.log(profile.wallets().count())
-	// });
+	it("should trigger `onSuccess`", async () => {
+		const { result } = renderHook(() => useTranslation());
+		const { t } = result.current;
+
+		const onSuccessMock = vi.fn();
+
+		renderComponent({onSuccess: onSuccessMock});
+
+		await selectSender();
+
+		await fillMnemonic();
+
+		const signMock = vi
+			.spyOn(wallet.transaction(), "signTransfer")
+			.mockReturnValue(Promise.resolve(transactionFixture.data.id));
+
+		const broadcastMock = vi.spyOn(wallet.transaction(), "broadcast").mockResolvedValue({
+			accepted: [transactionFixture.data.id],
+			errors: {},
+			rejected: [],
+		});
+
+		const transactionMock = createTransactionMock(wallet);
+
+		// Send transaction
+		await userEvent.click(sendButton());
+
+		await expect(screen.findByText(t("EXCHANGE.MODAL_SIGN_EXCHANGE_TRANSACTION.SUCCESS_TITLE"))).resolves.toBeVisible();
+
+		await userEvent.click(screen.getByTestId("ExchangeTransfer__continue"));
+
+		expect(onSuccessMock).toHaveBeenCalledOnce();
+
+		signMock.mockRestore();
+		broadcastMock.mockRestore();
+		transactionMock.mockRestore();
+	});
 });
