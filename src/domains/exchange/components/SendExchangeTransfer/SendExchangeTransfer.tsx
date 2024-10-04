@@ -179,7 +179,11 @@ export const SendExchangeTransfer: React.FC<TransferProperties> = ({
 			contentClassName="p-6 sm:p-8 sm:[&>div.absolute]:!m-8 [&>div.absolute]:!m-6"
 			titleClass="!leading-[21px] sm!:leading-7"
 		>
-			{errorMessage && <div className="mt-4"><Alert variant="danger"> {errorMessage} </Alert></div>}
+			{errorMessage && (
+				<div className="mt-4">
+					<Alert variant="danger"> {errorMessage} </Alert>
+				</div>
+			)}
 
 			<Form context={form} onSubmit={() => submit()}>
 				<div className="mt-4 space-y-4">
