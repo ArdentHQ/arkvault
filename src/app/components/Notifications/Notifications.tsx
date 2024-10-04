@@ -13,7 +13,7 @@ export const Notifications = ({ profile, onTransactionClick }: NotificationsProp
 	const { t } = useTranslation();
 	const { persist } = useEnvironmentContext();
 
-	const { transactions, markAllTransactionsAsRead, hasUnread } = useNotifications({ profile });
+	const { transactions, markAllTransactionsAsRead } = useNotifications({ profile });
 
 	useEffect(() => {
 		markAllTransactionsAsRead(true);
@@ -23,19 +23,9 @@ export const Notifications = ({ profile, onTransactionClick }: NotificationsProp
 	return (
 		<div className="w-full sm:w-[35rem]" data-testid="NotificationsWrapper">
 			<div className="flex w-full items-center justify-between rounded-t-xl bg-theme-secondary-100 px-6 py-4 dark:bg-black sm:px-8">
-				<div className="hidden text-lg font-semibold text-theme-secondary-900 dark:text-theme-secondary-200 sm:block">
+				<div className="text-lg font-semibold text-theme-secondary-900 dark:text-theme-secondary-200">
 					Notification
 				</div>
-				<Button
-					variant="transparent"
-					size="2xs"
-					icon="CheckmarkDoubleCircle"
-					disabled={!hasUnread}
-					className="p-0 text-theme-secondary-800 disabled:text-theme-secondary-500 dark:text-theme-secondary-800 dark:disabled:text-theme-secondary-800"
-					onClick={() => markAllTransactionsAsRead(true)}
-				>
-					<span>{t("COMMON.NOTIFICATIONS.MARK_ALL_AS_READ")}</span>
-				</Button>
 			</div>
 
 			{transactions.length === 0 && (
