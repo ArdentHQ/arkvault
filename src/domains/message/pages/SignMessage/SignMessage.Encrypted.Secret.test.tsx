@@ -1,4 +1,3 @@
-
 import { Contracts } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import { createHashHistory } from "history";
@@ -92,11 +91,10 @@ describe("SignMessage with encrypted secret", () => {
 
 		await userEvent.type(screen.getByTestId("AuthenticationStep__encryption-password"), "password");
 
-		await waitFor(() =>
-			expect(screen.getByTestId("AuthenticationStep__encryption-password")).toHaveValue("password"),
-			{ timeout: 4000 }
+		await waitFor(
+			() => expect(screen.getByTestId("AuthenticationStep__encryption-password")).toHaveValue("password"),
+			{ timeout: 4000 },
 		);
-
 
 		await waitFor(() => expect(continueButton()).toBeEnabled());
 
