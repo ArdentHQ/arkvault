@@ -27,7 +27,6 @@ let wallet: Contracts.IReadWriteWallet;
 const mnemonic = MNEMONICS[0];
 
 const continueButton = () => screen.getByTestId("SignMessage__continue-button");
-const signButton = () => screen.getByTestId("SignMessage__sign-button");
 const messageInput = () => screen.getByTestId("SignMessage__message-input");
 
 const signMessage = "Hello World";
