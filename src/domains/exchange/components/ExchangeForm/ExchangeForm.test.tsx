@@ -1565,7 +1565,7 @@ describe("ExchangeForm", () => {
 		await userEvent.click(screen.getByTestId("ExchangeTransfer__cancel-button"));
 
 		await waitFor(() => {
-			expect(screen.getByText(t("EXCHANGE.MODAL_SIGN_EXCHANGE_TRANSACTION.TITLE"))).not.toBeInTheDocument();
+			expect(screen.queryByText(t("EXCHANGE.MODAL_SIGN_EXCHANGE_TRANSACTION.TITLE"))).not.toBeInTheDocument();
 		})
 
 		resetProfileNetworksMock();
