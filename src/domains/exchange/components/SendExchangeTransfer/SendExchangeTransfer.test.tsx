@@ -199,4 +199,22 @@ describe("SendExchangeTransfer", () => {
 
 		signMock.mockRestore();
 	});
+
+	it('should prefill sender wallet if there is only one wallet in profile', async () => {
+		const secondWallet = profile.wallets().values()[1];
+
+		profile.wallets().forget(secondWallet.id())
+
+		renderComponent();
+
+		await waitFor(() => {
+			expect(screen.getByTestId("SelectAddress__input")).toHaveValue(wallet.address());
+		})
+
+		profile.wallets().push(secondWallet);
+	});
+
+	// it('should test', () => {
+	// 	console.log(profile.wallets().count())
+	// });
 });
