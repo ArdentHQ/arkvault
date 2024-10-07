@@ -62,95 +62,488 @@ exports[`PageSkeleton > should render without profile 1`] = `
         class="flex flex-1 flex-col"
       >
         <div
-          class="w-full py-4 first:pt-8 last:pb-8 -mt-5 flex flex-1 flex-col text-center md:mt-0 md:justify-center css-9mualq"
+          class="w-full py-4 first:pt-8 last:pb-8 -mt-5 flex flex-1 md:mt-0 xl:px-10 css-9mualq"
         >
           <div
-            class="mx-auto px-6 lg:container md:px-10"
+            class="mx-auto px-6 lg:container md:px-10 w-full lg:max-w-screen-xl"
           >
             <div
-              class="mx-auto hidden w-96 md:block"
+              class="flex flex-col gap-3 lg:flex-row"
             >
-              <span
-                aria-busy="true"
-                aria-live="polite"
-                class="flex w-auto max-w-full items-center overflow-hidden leading-none"
-              >
-                <span
-                  class="react-loading-skeleton"
-                  style="height: 230px;"
-                >
-                  ‌
-                </span>
-                <br />
-              </span>
-            </div>
-            <div
-              class="flex flex-col items-center md:mt-8"
-            >
-              <h2>
-                <span
-                  aria-busy="true"
-                  aria-live="polite"
-                  class="flex w-auto max-w-full items-center overflow-hidden leading-none"
-                >
-                  <span
-                    class="react-loading-skeleton"
-                    style="width: 100px; height: 32px;"
-                  >
-                    ‌
-                  </span>
-                  <br />
-                </span>
-              </h2>
-              <p>
-                <span
-                  aria-busy="true"
-                  aria-live="polite"
-                  class="flex w-auto max-w-full items-center overflow-hidden leading-none"
-                >
-                  <span
-                    class="react-loading-skeleton"
-                    style="width: 240px; height: 24px;"
-                  >
-                    ‌
-                  </span>
-                  <br />
-                </span>
-              </p>
               <div
-                class="mt-6 w-full sm:w-40 md:mt-8"
+                class="min-w-0 basis-1/2 rounded-xl border border-theme-navy-100 bg-theme-navy-50 bg-[url('/welcome-bg-white.svg')] dark:border-theme-secondary-800 dark:bg-theme-secondary-800 dark:bg-[url('/welcome-bg-dark.svg')] hidden sm:block"
               >
-                <span
-                  aria-busy="true"
-                  aria-live="polite"
-                  class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                <div
+                  class="slick-slider slick-initialized"
+                  dir="ltr"
                 >
-                  <span
-                    class="react-loading-skeleton"
-                    style="height: 160px;"
+                  <div
+                    class="slick-list"
                   >
-                    ‌
-                  </span>
-                  <br />
-                </span>
+                    <div
+                      class="slick-track"
+                      style="opacity: 1; transform: translate3d(0px, 0px, 0px);"
+                    >
+                      <div
+                        aria-hidden="true"
+                        class="slick-slide slick-cloned"
+                        data-index="-1"
+                        style="width: 0px;"
+                        tabindex="-1"
+                      >
+                        <div>
+                          <div
+                            class="flex w-full flex-row md:w-auto lg:flex-col"
+                          >
+                            <div
+                              class="w-full p-4 sm:flex-shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[430px]"
+                            >
+                              <h3
+                                class="mb-2 mt-7 text-base leading-7 xs:leading-5 md:font-bold lg:text-2xl lg:leading-[29px]"
+                              >
+                                Fully Customizable
+                              </h3>
+                              <p
+                                class="mb-0 text-sm text-theme-secondary-700 dark:text-theme-secondary-500 md:mb-4 lg:text-base lg:leading-7"
+                              >
+                                Tailor your experience by setting your local currency, adjusting timezones, and easily customizing themes and colors to your liking.
+                              </p>
+                            </div>
+                            <div
+                              class="hidden flex-1 justify-end overflow-hidden rounded-ee-xl md:flex"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        aria-hidden="false"
+                        class="slick-slide slick-active slick-current"
+                        data-index="0"
+                        style="outline: none; width: 0px;"
+                        tabindex="-1"
+                      >
+                        <div>
+                          <div
+                            class="flex w-full flex-row md:w-auto lg:flex-col"
+                          >
+                            <div
+                              class="w-full p-4 sm:flex-shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[430px]"
+                            >
+                              <h3
+                                class="mb-2 mt-7 text-base leading-7 xs:leading-5 md:font-bold lg:text-2xl lg:leading-[29px]"
+                              >
+                                Easy Access to Your Digital Assets
+                              </h3>
+                              <p
+                                class="mb-0 text-sm text-theme-secondary-700 dark:text-theme-secondary-500 md:mb-4 lg:text-base lg:leading-7"
+                              >
+                                Access and manage your ARK assets with ease. Importing and viewing your addresses has never been simpler.
+                              </p>
+                            </div>
+                            <div
+                              class="hidden flex-1 justify-end overflow-hidden rounded-ee-xl md:flex"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        aria-hidden="true"
+                        class="slick-slide"
+                        data-index="1"
+                        style="outline: none; width: 0px;"
+                        tabindex="-1"
+                      >
+                        <div>
+                          <div
+                            class="flex w-full flex-row md:w-auto lg:flex-col"
+                          >
+                            <div
+                              class="w-full p-4 sm:flex-shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[430px]"
+                            >
+                              <h3
+                                class="mb-2 mt-7 text-base leading-7 xs:leading-5 md:font-bold lg:text-2xl lg:leading-[29px]"
+                              >
+                                Integrated Exchanges
+                              </h3>
+                              <p
+                                class="mb-0 text-sm text-theme-secondary-700 dark:text-theme-secondary-500 md:mb-4 lg:text-base lg:leading-7"
+                              >
+                                Effortlessly swap your assets to and from ARK right within the wallet, with native support for Changelly and ChangeNow services.
+                              </p>
+                            </div>
+                            <div
+                              class="hidden flex-1 justify-end overflow-hidden rounded-ee-xl md:flex"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        aria-hidden="true"
+                        class="slick-slide"
+                        data-index="2"
+                        style="outline: none; width: 0px;"
+                        tabindex="-1"
+                      >
+                        <div>
+                          <div
+                            class="flex w-full flex-row md:w-auto lg:flex-col"
+                          >
+                            <div
+                              class="w-full p-4 sm:flex-shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[430px]"
+                            >
+                              <h3
+                                class="mb-2 mt-7 text-base leading-7 xs:leading-5 md:font-bold lg:text-2xl lg:leading-[29px]"
+                              >
+                                Fully Customizable
+                              </h3>
+                              <p
+                                class="mb-0 text-sm text-theme-secondary-700 dark:text-theme-secondary-500 md:mb-4 lg:text-base lg:leading-7"
+                              >
+                                Tailor your experience by setting your local currency, adjusting timezones, and easily customizing themes and colors to your liking.
+                              </p>
+                            </div>
+                            <div
+                              class="hidden flex-1 justify-end overflow-hidden rounded-ee-xl md:flex"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        aria-hidden="true"
+                        class="slick-slide slick-cloned"
+                        data-index="3"
+                        style="width: 0px;"
+                        tabindex="-1"
+                      >
+                        <div>
+                          <div
+                            class="flex w-full flex-row md:w-auto lg:flex-col"
+                          >
+                            <div
+                              class="w-full p-4 sm:flex-shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[430px]"
+                            >
+                              <h3
+                                class="mb-2 mt-7 text-base leading-7 xs:leading-5 md:font-bold lg:text-2xl lg:leading-[29px]"
+                              >
+                                Easy Access to Your Digital Assets
+                              </h3>
+                              <p
+                                class="mb-0 text-sm text-theme-secondary-700 dark:text-theme-secondary-500 md:mb-4 lg:text-base lg:leading-7"
+                              >
+                                Access and manage your ARK assets with ease. Importing and viewing your addresses has never been simpler.
+                              </p>
+                            </div>
+                            <div
+                              class="hidden flex-1 justify-end overflow-hidden rounded-ee-xl md:flex"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        aria-hidden="true"
+                        class="slick-slide slick-cloned"
+                        data-index="4"
+                        style="width: 0px;"
+                        tabindex="-1"
+                      >
+                        <div>
+                          <div
+                            class="flex w-full flex-row md:w-auto lg:flex-col"
+                          >
+                            <div
+                              class="w-full p-4 sm:flex-shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[430px]"
+                            >
+                              <h3
+                                class="mb-2 mt-7 text-base leading-7 xs:leading-5 md:font-bold lg:text-2xl lg:leading-[29px]"
+                              >
+                                Integrated Exchanges
+                              </h3>
+                              <p
+                                class="mb-0 text-sm text-theme-secondary-700 dark:text-theme-secondary-500 md:mb-4 lg:text-base lg:leading-7"
+                              >
+                                Effortlessly swap your assets to and from ARK right within the wallet, with native support for Changelly and ChangeNow services.
+                              </p>
+                            </div>
+                            <div
+                              class="hidden flex-1 justify-end overflow-hidden rounded-ee-xl md:flex"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        aria-hidden="true"
+                        class="slick-slide slick-cloned"
+                        data-index="5"
+                        style="width: 0px;"
+                        tabindex="-1"
+                      >
+                        <div>
+                          <div
+                            class="flex w-full flex-row md:w-auto lg:flex-col"
+                          >
+                            <div
+                              class="w-full p-4 sm:flex-shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[430px]"
+                            >
+                              <h3
+                                class="mb-2 mt-7 text-base leading-7 xs:leading-5 md:font-bold lg:text-2xl lg:leading-[29px]"
+                              >
+                                Fully Customizable
+                              </h3>
+                              <p
+                                class="mb-0 text-sm text-theme-secondary-700 dark:text-theme-secondary-500 md:mb-4 lg:text-base lg:leading-7"
+                              >
+                                Tailor your experience by setting your local currency, adjusting timezones, and easily customizing themes and colors to your liking.
+                              </p>
+                            </div>
+                            <div
+                              class="hidden flex-1 justify-end overflow-hidden rounded-ee-xl md:flex"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="welcome-slider-dots absolute top-4 left-4 sm:top-6 sm:left-6"
+                  >
+                    <ul
+                      class="flex gap-3 leading-3"
+                    >
+                       
+                      <li
+                        class="slick-active"
+                      >
+                        <button
+                          class="h-3 w-3 rounded-full border-2 border-theme-navy-200 hover:border-transparent hover:bg-theme-navy-700 dark:border-theme-secondary-600 dark:hover:border-transparent dark:hover:bg-theme-secondary-600"
+                        />
+                      </li>
+                      <li
+                        class=""
+                      >
+                        <button
+                          class="h-3 w-3 rounded-full border-2 border-theme-navy-200 hover:border-transparent hover:bg-theme-navy-700 dark:border-theme-secondary-600 dark:hover:border-transparent dark:hover:bg-theme-secondary-600"
+                        />
+                      </li>
+                      <li
+                        class=""
+                      >
+                        <button
+                          class="h-3 w-3 rounded-full border-2 border-theme-navy-200 hover:border-transparent hover:bg-theme-navy-700 dark:border-theme-secondary-600 dark:hover:border-transparent dark:hover:bg-theme-secondary-600"
+                        />
+                      </li>
+                       
+                    </ul>
+                  </div>
+                </div>
               </div>
-              <p
-                class="mt-8 md:mt-16"
+              <div
+                class="min-w-0 basis-1/2 rounded-xl border-theme-navy-100 dark:border-theme-secondary-800 sm:border sm:p-6"
               >
-                <span
-                  aria-busy="true"
-                  aria-live="polite"
-                  class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                <div
+                  class="mx-auto flex h-full max-w-[400px] flex-col"
                 >
-                  <span
-                    class="react-loading-skeleton"
-                    style="width: 280px; height: 24px;"
+                  <div
+                    class="flex flex-1 flex-col items-center justify-center"
                   >
-                    ‌
-                  </span>
-                  <br />
-                </span>
-              </p>
+                    <div
+                      class="flex flex-col items-center space-y-2 text-center sm:px-4"
+                    >
+                      <div
+                        class="css-h1kfx5"
+                        data-testid="icon-PersonLight"
+                        height="24"
+                        width="24"
+                      >
+                        <svg
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <g
+                            id="Frame 9849"
+                          >
+                            <g
+                              id="Group"
+                            >
+                              <g
+                                id="Regular"
+                              >
+                                <path
+                                  clip-rule="evenodd"
+                                  d="M12.0005 14.9337C14.8356 14.9337 17.1339 12.6354 17.1339 9.80033C17.1339 6.96526 14.8356 4.66699 12.0005 4.66699C9.16546 4.66699 6.86719 6.96526 6.86719 9.80033C6.86719 12.6354 9.16546 14.9337 12.0005 14.9337Z"
+                                  fill="#E6EFF9"
+                                  fill-rule="evenodd"
+                                  id="Oval"
+                                  stroke="#235B95"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="2"
+                                />
+                                <path
+                                  d="M18.7609 20.6784C16.9721 18.8784 14.5393 17.8662 12.0016 17.8662C9.46387 17.8662 7.03099 18.8784 5.24219 20.6784"
+                                  id="Shape"
+                                  stroke="#235B95"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="2"
+                                />
+                                <path
+                                  clip-rule="evenodd"
+                                  d="M12 23C18.0751 23 23 18.0751 23 12C23 5.92487 18.0751 1 12 1C5.92487 1 1 5.92487 1 12C1 18.0751 5.92487 23 12 23Z"
+                                  fill-rule="evenodd"
+                                  id="Oval_2"
+                                  stroke="#235B95"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="2"
+                                />
+                              </g>
+                            </g>
+                          </g>
+                        </svg>
+                      </div>
+                      <h2
+                        class="mx-4 text-2xl font-bold"
+                      >
+                        Select Profile
+                      </h2>
+                      <p
+                        class="text-base leading-7 text-theme-secondary-text"
+                      >
+                        Choose from an existing Profile below or create a new Profile to get started.
+                      </p>
+                    </div>
+                    <div
+                      class="mt-4 flex w-full flex-col justify-center"
+                    >
+                      <div>
+                        <div
+                          class="space-y-3"
+                        >
+                          <div
+                            class="flex items-center justify-between rounded-lg border border-theme-secondary-200 p-1 dark:border-theme-secondary-800"
+                            data-testid="ProfileRowSkeleton"
+                          >
+                            <div
+                              class="h-10 w-10 bg-theme-secondary-100 dark:bg-theme-secondary-800"
+                            />
+                            <div
+                              class="mr-1.5 pr-1.5 text-theme-secondary-200 dark:text-theme-secondary-800 css-1i4b0eq"
+                              height="20"
+                              width="20"
+                            >
+                              <svg
+                                fill="none"
+                                viewBox="0 0 20 20"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <circle
+                                  cx="10.002"
+                                  cy="2.99609"
+                                  fill="currentColor"
+                                  r="2"
+                                  transform="rotate(90 10.002 2.99609)"
+                                />
+                                <circle
+                                  cx="10.002"
+                                  cy="9.99805"
+                                  fill="currentColor"
+                                  r="2"
+                                  transform="rotate(90 10.002 9.99805)"
+                                />
+                                <circle
+                                  cx="10.002"
+                                  cy="17"
+                                  fill="currentColor"
+                                  r="2"
+                                  transform="rotate(90 10.002 17)"
+                                />
+                              </svg>
+                            </div>
+                          </div>
+                          <div
+                            class="flex items-center justify-between rounded-lg border border-theme-secondary-200 p-1 dark:border-theme-secondary-800"
+                            data-testid="ProfileRowSkeleton"
+                          >
+                            <div
+                              class="h-10 w-10 bg-theme-secondary-100 dark:bg-theme-secondary-800"
+                            />
+                            <div
+                              class="mr-1.5 pr-1.5 text-theme-secondary-200 dark:text-theme-secondary-800 css-1i4b0eq"
+                              height="20"
+                              width="20"
+                            >
+                              <svg
+                                fill="none"
+                                viewBox="0 0 20 20"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <circle
+                                  cx="10.002"
+                                  cy="2.99609"
+                                  fill="currentColor"
+                                  r="2"
+                                  transform="rotate(90 10.002 2.99609)"
+                                />
+                                <circle
+                                  cx="10.002"
+                                  cy="9.99805"
+                                  fill="currentColor"
+                                  r="2"
+                                  transform="rotate(90 10.002 9.99805)"
+                                />
+                                <circle
+                                  cx="10.002"
+                                  cy="17"
+                                  fill="currentColor"
+                                  r="2"
+                                  transform="rotate(90 10.002 17)"
+                                />
+                              </svg>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        class="mt-3"
+                      >
+                        <span
+                          aria-busy="true"
+                          aria-live="polite"
+                          class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                        >
+                          <span
+                            class="react-loading-skeleton h-[2.75rem]"
+                          >
+                            ‌
+                          </span>
+                          <br />
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="fixed bottom-8 left-1/2 mt-8 w-full -translate-x-1/2 sm:static sm:bottom-0 sm:translate-x-0"
+                  >
+                    <div
+                      class="h-6"
+                    >
+                      <span
+                        aria-busy="true"
+                        aria-live="polite"
+                        class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                      >
+                        <span
+                          class="react-loading-skeleton h-3 w-3/5"
+                        >
+                          ‌
+                        </span>
+                        <br />
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
