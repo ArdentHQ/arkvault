@@ -5,6 +5,7 @@ import { DefaultTReturn, TOptions } from "i18next";
 import { Button } from "@/app/components/Button";
 import { Icon } from "@/app/components/Icon";
 import { Size } from "@/types";
+import { twMerge } from "tailwind-merge";
 
 interface ModalContentProperties {
 	children: React.ReactNode;
@@ -52,12 +53,9 @@ const ModalContent = ({
 	className,
 }: ModalContentProperties) => (
 	<div
-		className={cn(
+		className={twMerge(
 			"relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl",
-			{
-				"px-10 pb-24 pt-10 sm:pb-10": !noButtons,
-				"px-6 pb-6 pt-4 md:p-8": noButtons,
-			},
+			noButtons ? "pb-6 pl-6 pr-6 pt-4 md:p-8" : "pb-24 pl-10 pr-10 pt-10 sm:pb-10",
 			className,
 		)}
 		data-testid="Modal__inner"
