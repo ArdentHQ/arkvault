@@ -15,13 +15,13 @@ export const PageSkeleton = () => {
 	const hasProfiles = env.profiles().count() > 0;
 
 	if (!hasProfiles) {
-		return <div />;
+		return <div data-testid="PageSkeleton" />;
 	}
 
 	return (
-		<>
+		<div data-testid="PageSkeleton">
 			<Page navbarVariant="logo-only" pageTitle={t("COMMON.WELCOME")} title={<Trans i18nKey="COMMON.APP_NAME" />}>
-				<Section className="-mt-5 flex flex-1 md:mt-0 xl:px-10" innerClassName="w-full lg:max-w-screen-xl">
+				<Section className="-mt-5 flex flex-1 md:mt-0 xl:px-10" innerClassName="w-full lg:max-w-screen-xl" data-testid="PageSkeleton">
 					<div className="flex flex-col gap-3 lg:flex-row">
 						<div
 							className={cn(
@@ -76,6 +76,6 @@ export const PageSkeleton = () => {
 					</div>
 				</Section>
 			</Page>
-		</>
+		</div>
 	);
 };
