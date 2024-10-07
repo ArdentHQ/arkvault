@@ -1,4 +1,5 @@
 export const translations = {
+	ARK_TRANSACTION_ID: "ARK Transaction ID",
 	EMPTY_MESSAGE: "You haven't made any swaps yet. Once you initiate a transaction they will show up here.",
 
 	ERROR: {

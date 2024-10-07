@@ -52,6 +52,7 @@ const ExchangeForm = ({ orderId, onReady }: { orderId?: string; onReady: () => v
 	assertExchangeService(exchangeService);
 
 	const [exchangeTransaction, setExchangeTransaction] = useState<Contracts.IExchangeTransaction | undefined>();
+	const [transferTransactionId, setTransferTransactionId] = useState<string| undefined>();
 	const [activeTab, setActiveTab] = useState<Step>(Step.FormStep);
 
 	const form = useForm<ExchangeFormState>({ mode: "onChange" });
@@ -324,7 +325,11 @@ const ExchangeForm = ({ orderId, onReady }: { orderId?: string; onReady: () => v
 						</TabPanel>
 
 						<TabPanel tabId={3}>
-							<StatusStep exchangeTransaction={exchangeTransaction!} onUpdate={handleStatusUpdate} />
+							<StatusStep
+								exchangeTransaction={exchangeTransaction!}
+								onUpdate={handleStatusUpdate}
+								transferTransactionId={transferTransactionId}
+							/>
 						</TabPanel>
 
 						<TabPanel tabId={4}>
@@ -393,7 +398,10 @@ const ExchangeForm = ({ orderId, onReady }: { orderId?: string; onReady: () => v
 					profile={activeProfile}
 					network={arkMainnetNetwork}
 					exchangeTransaction={exchangeTransaction}
-					onSuccess={() => setActiveTab(activeTab + 1)}
+					onSuccess={(txId: string) => {
+						setTransferTransactionId(txId);
+						setActiveTab(activeTab + 1)
+					}}
 					onClose={() => setShowTransferModal(false)}
 				/>
 			)}

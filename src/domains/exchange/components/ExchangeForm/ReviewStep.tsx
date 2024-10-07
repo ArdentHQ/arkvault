@@ -20,29 +20,31 @@ export const ReviewStep = () => {
 		watch();
 
 	return (
-		<div data-testid="ExchangeForm__review-step" className="space-y-6">
+		<div data-testid="ExchangeForm__review-step" className="space-y-4">
 			<div className="flex flex-col rounded-xl border border-theme-secondary-300 dark:border-theme-secondary-800">
-				<div className="flex flex-col px-6 py-5">
+				<div className="flex flex-col px-6 py-5 gap-2">
 					<span className="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700">
 						{t("EXCHANGE.EXCHANGE_FORM.YOU_SEND")}
 					</span>
 					<Amount value={payinAmount} ticker={fromCurrency?.coin} className="text-lg font-semibold" />
-					<span className="text-xs font-semibold">
+					<span className="text-xs font-semibold pt-1">
 						1 {fromCurrency?.coin.toUpperCase()} ≈ <Amount value={exchangeRate} ticker={toCurrency?.coin} />
 					</span>
 				</div>
 
 				<div className="relative border-t border-theme-secondary-300 dark:border-theme-secondary-800">
 					<div className="absolute right-6 top-1/2 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border border-theme-secondary-300 bg-theme-background dark:border-theme-secondary-800">
-						<Icon name="MoneyCoinSwap" size="lg" />
+						<Icon name="DoubleArrowDashed" className="text-theme-secondary-900" size="lg" />
 					</div>
 				</div>
 
-				<div className="flex flex-col px-6 py-5">
+				<div className="flex flex-col px-6 py-5 gap-2">
 					<span className="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700">
 						{t("EXCHANGE.EXCHANGE_FORM.YOU_GET")}
 					</span>
-					<Amount value={payoutAmount} ticker={toCurrency?.coin} className="text-lg font-semibold" />
+					<span className="text-lg font-semibold pb-1">
+						≈  <Amount value={payoutAmount} ticker={toCurrency?.coin} className="text-lg font-semibold" />
+					</span>
 					<TruncateMiddleDynamic value={recipientWallet} className="no-ligatures text-xs font-semibold" />
 				</div>
 			</div>
@@ -58,10 +60,11 @@ export const ReviewStep = () => {
 				</div>
 			)}
 
-			<FormField name="hasAgreedToTerms">
-				<label className="flex cursor-pointer items-center space-x-3">
-					<Checkbox name="hasAgreedToTerms" ref={register({ required: true })} />
-					<span>
+			<div>
+				<FormField name="hasAgreedToTerms" className="sm:pt-2">
+					<label className="flex cursor-pointer items-center space-x-3">
+						<Checkbox name="hasAgreedToTerms" ref={register({ required: true })} />
+						<span className="text-sm leading-5">
 						<Trans
 							i18nKey="EXCHANGE.EXCHANGE_FORM.TERMS"
 							values={{
@@ -75,8 +78,9 @@ export const ReviewStep = () => {
 							}}
 						/>
 					</span>
-				</label>
-			</FormField>
+					</label>
+				</FormField>
+			</div>
 		</div>
 	);
 };

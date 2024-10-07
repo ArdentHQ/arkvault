@@ -13,11 +13,12 @@ import { useOrderStatus } from "@/domains/exchange/hooks/use-order-status";
 import { delay } from "@/utils/delay";
 
 interface StatusStepProperties {
+	transferTransactionId: string|undefined;
 	exchangeTransaction: Contracts.IExchangeTransaction;
 	onUpdate: (orderId: string, parameters: any) => void;
 }
 
-export const StatusStep = ({ exchangeTransaction, onUpdate }: StatusStepProperties) => {
+export const StatusStep = ({ exchangeTransaction, onUpdate, transferTransactionId }: StatusStepProperties) => {
 	const { t } = useTranslation();
 
 	const { provider: exchangeProvider } = useExchangeContext();
@@ -90,11 +91,28 @@ export const StatusStep = ({ exchangeTransaction, onUpdate }: StatusStepProperti
 						</span>
 					</div>
 				</div>
+
+				{transferTransactionId &&
+					<div
+						className="mt-4 flex flex-col space-y-2 border-t border-theme-secondary-300 pt-4 dark:border-theme-secondary-800">
+						<span className="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700">
+							{t("EXCHANGE.ARK_TRANSACTION_ID")}
+						</span>
+						<div className="flex items-center space-x-2 whitespace-nowrap text-lg font-semibold">
+							<TruncateMiddleDynamic value={transferTransactionId} className="no-ligatures"/>
+							<span className="flex text-theme-primary-300 dark:text-theme-secondary-600">
+								<Clipboard variant="icon" data={transferTransactionId}>
+									<Icon name="Copy"/>
+								</Clipboard>
+							</span>
+						</div>
+					</div>}
 			</div>
 
-			<ExchangeStatus exchangeTransaction={exchangeTransaction} />
+			<ExchangeStatus exchangeTransaction={exchangeTransaction}/>
 
-			<div className="-mx-10 border-t border-dashed border-theme-secondary-300 px-10 pt-6 dark:border-theme-secondary-800" />
+			<div
+				className="-mx-10 border-t border-dashed border-theme-secondary-300 px-10 pt-6 dark:border-theme-secondary-800"/>
 
 			<div className="flex flex-col space-y-4">
 				<div className="flex flex-col space-y-2">
@@ -126,7 +144,7 @@ export const StatusStep = ({ exchangeTransaction, onUpdate }: StatusStepProperti
 				</div>
 			</div>
 
-			<div className="mt-6 rounded-lg bg-theme-secondary-100 px-6 py-3 text-sm dark:bg-theme-secondary-800">
+			<div className="mt-6 rounded-lg bg-theme-secondary-100 px-6 py-3 text-xs dark:bg-theme-secondary-800">
 				<Trans
 					i18nKey="EXCHANGE.EXCHANGE_FORM.SUPPORT_INFO"
 					values={{
