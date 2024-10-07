@@ -83,7 +83,7 @@ export const FormStep = ({
 				}
 			/>
 
-			<span className="mb-1 hidden text-lg font-semibold sm:block mt-6">
+			<span className="mb-1 mt-6 hidden text-lg font-semibold sm:block">
 				{t("MESSAGE.PAGE_VERIFY_MESSAGE.FORM_STEP.VERIFICATION_METHOD.TITLE")}
 			</span>
 
