@@ -12,10 +12,10 @@ export const PageSkeleton = () => {
 	const { env } = useEnvironmentContext();
 	const { t } = useTranslation();
 
-	const hasProfiles = env.profiles().count() > 0
+	const hasProfiles = env.profiles().count() > 0;
 
 	if (!hasProfiles) {
-		return <div />
+		return <div />;
 	}
 
 	return (

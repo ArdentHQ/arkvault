@@ -86,17 +86,19 @@ export const ProfileRowSkeleton = () => (
 );
 
 export const ProfilesSliderSkeleton = ({ length = 5 }: { length?: number }) => {
-	const maxProfilesPerPage = 5
-	const profilesPerPage = Math.min(maxProfilesPerPage, length)
+	const maxProfilesPerPage = 5;
+	const profilesPerPage = Math.min(maxProfilesPerPage, length);
 	const skeletonRows = Array.from({ length: profilesPerPage }, () => 0);
 
 	return (
 		<div>
 			<div className="space-y-3">
-				{skeletonRows.map((_, index) => <ProfileRowSkeleton key={index} />)}
+				{skeletonRows.map((_, index) => (
+					<ProfileRowSkeleton key={index} />
+				))}
 			</div>
 			{maxProfilesPerPage < length && (
-				<div className="flex justify-center gap-3 leading-3 h-3 mt-3">
+				<div className="mt-3 flex h-3 justify-center gap-3 leading-3">
 					<Skeleton className="h-3 w-3 rounded-full" />
 					<Skeleton className="h-3 w-3 rounded-full" />
 				</div>
