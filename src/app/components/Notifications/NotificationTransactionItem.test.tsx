@@ -55,7 +55,7 @@ describe("Notifications", () => {
 				</tbody>
 			</table>,
 		);
-		await waitFor(() => expect(screen.getAllByTestId("TransactionRowMode")).toHaveLength(1));
+		await waitFor(() => expect(screen.getAllByTestId("TableRow")).toHaveLength(1));
 
 		expect(container).toMatchSnapshot();
 	});
@@ -81,7 +81,7 @@ describe("Notifications", () => {
 				</tbody>
 			</table>,
 		);
-		await waitFor(() => expect(screen.getAllByTestId("TransactionRowMode")).toHaveLength(1));
+		await waitFor(() => expect(screen.getAllByTestId("TableRow")).toHaveLength(1));
 
 		expect(screen.getByTestId("Address__alias")).toHaveTextContent("ARK Wallet 1");
 	});

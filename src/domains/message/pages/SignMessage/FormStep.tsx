@@ -7,6 +7,7 @@ import { FormField, FormLabel } from "@/app/components/Form";
 import { InputCounter } from "@/app/components/Input";
 import { StepHeader } from "@/app/components/StepHeader";
 import { SelectAddress } from "@/domains/profile/components/SelectAddress";
+import { ThemeIcon } from "@/app/components/Icon";
 
 export const FormStep = ({
 	disabled,
@@ -53,13 +54,20 @@ export const FormStep = ({
 	};
 
 	return (
-		<section className="space-y-5">
-			<StepHeader title={t("MESSAGE.PAGE_SIGN_MESSAGE.FORM_STEP.TITLE")} subtitle={getSubtitle()} />
+		<section className="space-y-4">
+			<StepHeader
+				title={t("MESSAGE.PAGE_SIGN_MESSAGE.FORM_STEP.TITLE")}
+				subtitle={getSubtitle()}
+				titleIcon={
+					<ThemeIcon dimensions={[24, 24]} lightIcon="SendTransactionLight" darkIcon="SendTransactionDark" />
+				}
+			/>
 
 			<FormField name="signatory-address">
-				<FormLabel label={t("COMMON.SIGNATORY")} />
+				<FormLabel label={t("COMMON.SIGNING_WALLET")} />
 
 				<SelectAddress
+					showWalletAvatar={false}
 					title={t("MESSAGE.PAGE_SIGN_MESSAGE.FORM_STEP.SELECT_ADDRESS_TITLE")}
 					description={t("MESSAGE.PAGE_SIGN_MESSAGE.FORM_STEP.SELECT_ADDRESS_DESCRIPTION")}
 					showUserIcon={false}
