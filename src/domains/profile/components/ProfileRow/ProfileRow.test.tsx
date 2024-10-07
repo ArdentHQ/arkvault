@@ -41,6 +41,12 @@ describe("ProfileSliderSkeleton", () => {
 	});
 
 	it("should render", () => {
+		const { asFragment } = render(<ProfilesSliderSkeleton />);
+
+		expect(asFragment()).toMatchSnapshot();
+	});
+
+	it("should render with length", () => {
 		const { asFragment } = render(<ProfilesSliderSkeleton length={2} />);
 
 		expect(asFragment()).toMatchSnapshot();
