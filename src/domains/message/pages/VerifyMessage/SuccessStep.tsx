@@ -48,7 +48,7 @@ export const SuccessStep = ({ verificationResult }: { verificationResult?: Verif
 					className="block h-[22px] w-[22px]"
 					useAccentColor={false}
 				/>
-			)
+			);
 		}
 
 		return (
@@ -58,15 +58,12 @@ export const SuccessStep = ({ verificationResult }: { verificationResult?: Verif
 				name="Completed"
 				data-testid="icon-Completed"
 			/>
-		)
-
-	}
+		);
+	};
 
 	return (
 		<section>
-			<StepHeader title={getTitle()}
-				titleIcon={titleIcon()}
-			/>
+			<StepHeader title={getTitle()} titleIcon={titleIcon()} />
 
 			<Alert className="mt-6 sm:mt-4" variant={isVerified ? "success" : "danger"}>
 				{getDescription()}
