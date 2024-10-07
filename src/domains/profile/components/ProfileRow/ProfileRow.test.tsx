@@ -41,13 +41,13 @@ describe("ProfileSliderSkeleton", () => {
 	});
 
 	it("should render", () => {
-		const { asFragment } = render(<ProfilesSliderSkeleton maxProfilesPerPage={5} length={3} />);
+		const { asFragment } = render(<ProfilesSliderSkeleton length={2} />);
 
 		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should render with dots", () => {
-		const { asFragment } = render(<ProfilesSliderSkeleton maxProfilesPerPage={3} />);
+		const { asFragment } = render(<ProfilesSliderSkeleton length={6} />);
 
 		expect(asFragment()).toMatchSnapshot();
 	});
