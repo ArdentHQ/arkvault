@@ -21,9 +21,6 @@ cucumber(
 		},
 		"Then the notification list is displayed": async (t: TestController) => {
 			await t.expect(Selector("[data-testid=NotificationsWrapper]").exists).ok();
-			await t.expect(Selector("[data-testid=NotificationItem]").count).eql(1);
-			await t.expect(Selector("[data-testid=TransactionTable]").exists).ok();
-			await t.hover(Selector("[data-testid=TransactionTable]"));
 			await t.expect(Selector("[data-testid=NotificationsWrapper] [data-testid=TableRow]").count).gt(0);
 		},
 	},
@@ -149,7 +146,7 @@ cucumber(
 			await t.expect(Selector("[data-testid=NotificationsWrapper] [data-testid=TableRow]").count).eql(3);
 		},
 		"And the red dot is hidden": async (t: TestController) => {
-			await t.hover(Selector("[data-testid=NotificationItem]"));
+			await t.hover(Selector("[data-testid=TableRow]"));
 			await t
 				.expect(Selector("[data-testid=NavigationBar__buttons--notifications] .rounded-full").exists)
 				.notOk();

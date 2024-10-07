@@ -61,7 +61,6 @@ describe("Notifications", () => {
 
 		userEvent.click(screen.getAllByRole("button")[0]);
 
-		await waitFor(() => expect(screen.getAllByTestId("NotificationItem")).toHaveLength(2));
 		await waitFor(() => expect(screen.queryAllByTestId("TableRow")).toHaveLength(3));
 
 		expect(container).toMatchSnapshot();
@@ -82,10 +81,9 @@ describe("Notifications", () => {
 
 		userEvent.click(screen.getAllByRole("button")[0]);
 
-		await waitFor(() => expect(screen.getAllByTestId("NotificationItem")).toHaveLength(2));
-		await waitFor(() => expect(screen.queryAllByTestId("TransactionRowMode")).toHaveLength(3));
+		await waitFor(() => expect(screen.queryAllByTestId("TableRow")).toHaveLength(3));
 
-		userEvent.click(screen.getAllByTestId("TransactionRowMode")[0]);
+		userEvent.click(screen.getAllByTestId("TableRow")[0]);
 
 		await expect(screen.findByTestId("Modal__inner")).resolves.toBeVisible();
 
