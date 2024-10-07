@@ -6,9 +6,9 @@ import { FormField, FormLabel } from "@/app/components/Form";
 import { StepHeader } from "@/app/components/StepHeader";
 import { TextArea } from "@/app/components/TextArea";
 import { Alert } from "@/app/components/Alert";
-import { SmAndAbove } from "@/app/components/Breakpoint";
-import { Image } from "@/app/components/Image";
 import { VerificationResult } from "@/domains/message/pages/VerifyMessage/VerifyMessage";
+import { Icon } from "@/app/components/Icon";
+import { Image } from "@/app/components/Image";
 
 export const SuccessStep = ({ verificationResult }: { verificationResult?: VerificationResult }) => {
 	const { t } = useTranslation();
@@ -39,23 +39,37 @@ export const SuccessStep = ({ verificationResult }: { verificationResult?: Verif
 		return t("MESSAGE.PAGE_VERIFY_MESSAGE.SUCCESS_STEP.NOT_VERIFIED.DESCRIPTION");
 	};
 
+	const titleIcon = () => {
+		if (!isVerified) {
+			return (
+				<Image
+					name="ErrorHeaderIcon"
+					domain="transaction"
+					className="block h-[22px] w-[22px]"
+					useAccentColor={false}
+				/>
+			);
+		}
+
+		return (
+			<Icon
+				className="text-theme-success-100 dark:text-theme-success-900"
+				dimensions={[24, 24]}
+				name="Completed"
+				data-testid="icon-Completed"
+			/>
+		);
+	};
+
 	return (
 		<section>
-			<StepHeader title={getTitle()} />
+			<StepHeader title={getTitle()} titleIcon={titleIcon()} />
 
-			<SmAndAbove>
-				<Image
-					name={isVerified ? "Success" : "Error"}
-					className="mx-auto mt-8 h-26"
-					useAccentColor={isVerified}
-				/>
-			</SmAndAbove>
-
-			<Alert className="mt-6 sm:mt-8" variant={isVerified ? "success" : "danger"}>
+			<Alert className="mt-6 sm:mt-4" variant={isVerified ? "success" : "danger"}>
 				{getDescription()}
 			</Alert>
 
-			<div className="pt-4 md:pt-6">
+			<div className="pt-6 sm:pt-4">
 				<FormField name="json-signature">
 					<FormLabel label={t("MESSAGE.PAGE_VERIFY_MESSAGE.FORM_STEP.JSON_STRING")} />
 					<TextArea
