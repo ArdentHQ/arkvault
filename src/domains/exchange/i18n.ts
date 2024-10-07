@@ -38,10 +38,17 @@ export const translations = {
 	EXCHANGE_NAME: "Exchange Name",
 	EXPECTED_AMOUNT_HINT: "The final payout amount might be different",
 
+	MANUAL_TRANSFER: "Manual Transfer",
+
 	MODAL_DELETE_EXCHANGE_TRANSACTION: {
 		DESCRIPTION:
 			"Are you sure you want to remove this swap from the transaction history? This action cannot be undone.",
 		TITLE: "Remove Transaction",
+	},
+
+	MODAL_SIGN_EXCHANGE_TRANSACTION: {
+		SUCCESS_TITLE: "Successfully Signed Transaction",
+		TITLE: "Sign Exchange Transaction",
 	},
 
 	NAVIGATION: {
@@ -80,6 +87,7 @@ export const translations = {
 	TO_ADDRESS: "To Address",
 
 	TRANSACTION_ID: "Transaction ID",
+	TRANSACTION_SENT: "Your transaction was successfully confirmed and sent.",
 	TRANSACTION_STATUS: {
 		AWAITING_DEPOSIT: "Awaiting Deposit",
 		EXCHANGING: "Exchanging",

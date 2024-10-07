@@ -18,6 +18,8 @@ import TestingPasswords from "@/tests/fixtures/env/testing-passwords.json";
 import DefaultManifest from "@/tests/fixtures/coins/ark/manifest/default.json";
 import { StubStorage } from "@/tests/mocks";
 import { connectedTransport as ledgerTransportFactory } from "@/app/contexts/Ledger/transport";
+import { BigNumber } from "@ardenthq/sdk-helpers";
+import { DateTime } from "@ardenthq/sdk-intl";
 export {
 	mockNanoSTransport,
 	mockLedgerTransportError,
@@ -25,6 +27,8 @@ export {
 	mockConnectedTransport,
 	mockLedgerDevicesList,
 } from "./ledger-test-helpers";
+import transactionFixture from "@/tests/fixtures/coins/ark/devnet/transactions/transfer.json";
+import { DTO } from "@ardenthq/sdk-profiles";
 
 const ProfileSynchronizer = ({ children, options }: { children?: React.ReactNode; options?: Record<string, any> }) => {
 	const { profile, profileIsSyncing } = useProfileSynchronizer(options);
@@ -350,3 +354,41 @@ export const triggerMessageSignOnce = async (wallet: Contracts.IReadWriteWallet)
 };
 
 export const queryElementForSvg = (target: HTMLElement, svg: string) => target.querySelector(`svg#${svg}`);
+
+/* istanbul ignore next -- @preserve */
+export const createTransactionMock = (
+	wallet: Contracts.IReadWriteWallet,
+	overrides: Partial<DTO.ExtendedSignedTransactionData> = {},
+) =>
+	vi.spyOn(wallet.transaction(), "transaction").mockReturnValue({
+		amount: () => +transactionFixture.data.amount / 1e8,
+		blockId: () => "1",
+		convertedAmount: () => BigNumber.make(10),
+		data: () => ({ data: () => transactionFixture.data }),
+		explorerLink: () => `https://test.arkscan.io/transaction/${transactionFixture.data.id}`,
+		explorerLinkForBlock: () => `https://test.arkscan.io/block/${transactionFixture.data.id}`,
+		fee: () => +transactionFixture.data.fee / 1e8,
+		id: () => transactionFixture.data.id,
+		isConfirmed: () => true,
+		isDelegateRegistration: () => false,
+		isDelegateResignation: () => false,
+		isIpfs: () => false,
+		isMultiPayment: () => false,
+		isMultiSignatureRegistration: () => false,
+		isSent: () => true,
+		isTransfer: () => true,
+		isUnvote: () => false,
+		isVote: () => false,
+		isVoteCombination: () => false,
+		memo: () => null,
+		recipient: () => transactionFixture.data.recipient,
+		recipients: () => [
+			{ address: transactionFixture.data.recipient, amount: +transactionFixture.data.amount / 1e8 },
+		],
+		sender: () => transactionFixture.data.sender,
+		timestamp: () => DateTime.make(),
+		type: () => "transfer",
+		usesMultiSignature: () => false,
+		wallet: () => wallet,
+		...overrides,
+	} as any);

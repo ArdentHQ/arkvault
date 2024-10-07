@@ -11,7 +11,7 @@ exports[`TransactionExportModal > should render 1`] = `
       tabindex="-1"
     >
       <div
-        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl px-10 pb-24 pt-10 sm:pb-10"
+        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl pb-24 pl-10 pr-10 pt-10 sm:pb-10"
         data-testid="Modal__inner"
       >
         <div
@@ -647,7 +647,7 @@ exports[`TransactionExportModal > should render error status 1`] = `
       tabindex="-1"
     >
       <div
-        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl px-10 pb-24 pt-10 sm:pb-10"
+        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl pb-24 pl-10 pr-10 pt-10 sm:pb-10"
         data-testid="Modal__inner"
       >
         <div
@@ -1283,7 +1283,7 @@ exports[`TransactionExportModal > should render progress status 1`] = `
       tabindex="-1"
     >
       <div
-        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl px-10 pb-24 pt-10 sm:pb-10"
+        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl pb-24 pl-10 pr-10 pt-10 sm:pb-10"
         data-testid="Modal__inner"
       >
         <div
@@ -1919,7 +1919,7 @@ exports[`TransactionExportModal > should render success and download file 1`] = 
       tabindex="-1"
     >
       <div
-        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl px-10 pb-24 pt-10 sm:pb-10"
+        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl pb-24 pl-10 pr-10 pt-10 sm:pb-10"
         data-testid="Modal__inner"
       >
         <div
@@ -2202,7 +2202,7 @@ exports[`TransactionExportModal > should render success and stay open if downloa
       tabindex="-1"
     >
       <div
-        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl px-10 pb-24 pt-10 sm:pb-10"
+        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl pb-24 pl-10 pr-10 pt-10 sm:pb-10"
         data-testid="Modal__inner"
       >
         <div
@@ -2485,7 +2485,7 @@ exports[`TransactionExportModal > should render success status 1`] = `
       tabindex="-1"
     >
       <div
-        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl px-10 pb-24 pt-10 sm:pb-10"
+        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl pb-24 pl-10 pr-10 pt-10 sm:pb-10"
         data-testid="Modal__inner"
       >
         <div
@@ -3121,7 +3121,7 @@ exports[`TransactionExportModal > should render with fiat column 1`] = `
       tabindex="-1"
     >
       <div
-        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl px-10 pb-24 pt-10 sm:pb-10"
+        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl pb-24 pl-10 pr-10 pt-10 sm:pb-10"
         data-testid="Modal__inner"
       >
         <div
