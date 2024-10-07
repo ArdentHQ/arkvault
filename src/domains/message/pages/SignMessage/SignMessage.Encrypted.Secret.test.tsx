@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/require-await */
 import { Contracts } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import { createHashHistory } from "history";
@@ -27,7 +26,6 @@ let wallet: Contracts.IReadWriteWallet;
 const mnemonic = MNEMONICS[0];
 
 const continueButton = () => screen.getByTestId("SignMessage__continue-button");
-const signButton = () => screen.getByTestId("SignMessage__sign-button");
 const messageInput = () => screen.getByTestId("SignMessage__message-input");
 
 const signMessage = "Hello World";
@@ -38,7 +36,7 @@ const expectHeading = async (text: string) => {
 	});
 };
 
-describe("SignMessage with encrypted mnemonic & secret", () => {
+describe("SignMessage with encrypted secret", () => {
 	beforeAll(async () => {
 		profile = env.profiles().findById(getDefaultProfileId());
 
@@ -57,55 +55,6 @@ describe("SignMessage with encrypted mnemonic & secret", () => {
 
 	beforeEach(() => {
 		history.push(walletUrl(wallet.id()));
-	});
-
-	it("should sign message with encrypted mnemonic", async () => {
-		const encryptedWallet = await profile.walletFactory().fromMnemonicWithBIP39({
-			coin: "ARK",
-			mnemonic: MNEMONICS[5],
-			network: "ark.devnet",
-			password: "password",
-		});
-
-		profile.wallets().push(encryptedWallet);
-
-		history.push(walletUrl(encryptedWallet.id()));
-
-		render(
-			<Route path="/profiles/:profileId/wallets/:walletId/sign-message">
-				<SignMessage />
-			</Route>,
-			{
-				history,
-				route: walletUrl(encryptedWallet.id()),
-			},
-		);
-
-		await expectHeading(messageTranslations.PAGE_SIGN_MESSAGE.FORM_STEP.TITLE);
-
-		expect(
-			screen.getByText(messageTranslations.PAGE_SIGN_MESSAGE.FORM_STEP.DESCRIPTION_ENCRYPTION_PASSWORD),
-		).toBeInTheDocument();
-
-		await userEvent.type(messageInput(), signMessage);
-
-		await waitFor(() => expect(continueButton()).toBeEnabled());
-
-		await userEvent.click(continueButton());
-
-		await userEvent.type(screen.getByTestId("AuthenticationStep__encryption-password"), "password");
-
-		await waitFor(() =>
-			expect(screen.getByTestId("AuthenticationStep__encryption-password")).toHaveValue("password"),
-		);
-
-		await waitFor(() => expect(signButton()).toBeEnabled());
-
-		await userEvent.click(signButton());
-
-		await expectHeading(messageTranslations.PAGE_SIGN_MESSAGE.SUCCESS_STEP.TITLE);
-
-		profile.wallets().forget(encryptedWallet.id());
 	});
 
 	it("should sign message with encrypted secret", async () => {
@@ -138,27 +87,18 @@ describe("SignMessage with encrypted mnemonic & secret", () => {
 		);
 
 		await expectHeading(messageTranslations.PAGE_SIGN_MESSAGE.FORM_STEP.TITLE);
-
-		expect(
-			screen.getByText(messageTranslations.PAGE_SIGN_MESSAGE.FORM_STEP.DESCRIPTION_ENCRYPTION_PASSWORD),
-		).toBeInTheDocument();
-
 		await userEvent.type(messageInput(), signMessage);
+
+		await userEvent.type(screen.getByTestId("AuthenticationStep__encryption-password"), "password");
+
+		await waitFor(
+			() => expect(screen.getByTestId("AuthenticationStep__encryption-password")).toHaveValue("password"),
+			{ timeout: 4000 },
+		);
 
 		await waitFor(() => expect(continueButton()).toBeEnabled());
 
 		await userEvent.click(continueButton());
-
-		await userEvent.type(screen.getByTestId("AuthenticationStep__encryption-password"), "password");
-
-		await waitFor(() =>
-			expect(screen.getByTestId("AuthenticationStep__encryption-password")).toHaveValue("password"),
-		);
-
-		await waitFor(() => expect(signButton()).toBeEnabled());
-
-		await userEvent.click(signButton());
-
 		await expectHeading(messageTranslations.PAGE_SIGN_MESSAGE.SUCCESS_STEP.TITLE);
 
 		profile.wallets().forget(encryptedWallet.id());

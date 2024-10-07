@@ -46,6 +46,19 @@ describe("Use Message Signer Hook", () => {
 		});
 	});
 
+	it("should throw exception if no credentials are provided", async () => {
+		const { result } = renderHook(() => useMessageSigner());
+
+		let isErrored = false;
+		try {
+			await result.current.sign(wallet, "message");
+		} catch {
+			isErrored = true;
+		}
+
+		expect(isErrored).toBe(true);
+	});
+
 	it("should sign message with encrypted mnemonic", async () => {
 		const { result } = renderHook(() => useMessageSigner());
 
@@ -65,6 +78,25 @@ describe("Use Message Signer Hook", () => {
 		});
 
 		walletActsWithMnemonicWithEncryption.mockRestore();
+		walletUsesWIFMock.mockRestore();
+		walletWifMock.mockRestore();
+	});
+
+	it("should sign message with secret", async () => {
+		const { result } = renderHook(() => useMessageSigner());
+
+		const walletUsesWIFMock = vi.spyOn(wallet.signingKey(), "exists").mockReturnValue(true);
+		const walletWifMock = vi.spyOn(wallet.signingKey(), "get").mockReturnValue("secret");
+
+		const signedMessage = await result.current.sign(wallet, "message", undefined, undefined, "secret");
+
+		expect(signedMessage).toStrictEqual({
+			message: "message",
+			signatory: "03a02b9d5fdd1307c2ee4652ba54d492d1fd11a7d1bb3f3a44c4a05e79f19de933",
+			signature:
+				"7f610893292f2c8b152c2c9fb8f84ea0a71a2fbc4abe4fbe3736011ae2ddef7f814f8b00549bcb41ef759fa8fc0fdf914b55d6bc5a207053887bf426ae19f08e",
+		});
+
 		walletUsesWIFMock.mockRestore();
 		walletWifMock.mockRestore();
 	});
