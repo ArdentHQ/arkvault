@@ -212,7 +212,7 @@ describe("App", () => {
 	});
 
 	it("should enter profile", async () => {
-		vi.restoreAllMocks()
+		vi.restoreAllMocks();
 		render(<App />, { history });
 
 		await expect(
@@ -242,7 +242,6 @@ describe("App", () => {
 
 		toastSpy.mockRestore();
 	});
-
 
 	it("should enter profile and fail to restore", async () => {
 		render(<App />, { history });
@@ -323,5 +322,4 @@ describe("App", () => {
 		memoryPasswordMock.mockRestore();
 		verifyPasswordMock.mockRestore();
 	});
-
 });
