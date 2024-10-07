@@ -1,72 +1,56 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect } from "react";
 import { useTranslation } from "react-i18next";
 
 import { useNotifications } from "./hooks/use-notifications";
-import { NotificationItem } from "./NotificationItem";
-import { NotificationItemProperties, NotificationsProperties } from "./Notifications.contracts";
-import { NotificationsWrapper } from "./styles";
+import { NotificationsProperties } from "./Notifications.contracts";
 import { EmptyBlock } from "@/app/components/EmptyBlock";
 import { Image } from "@/app/components/Image";
-import { Table } from "@/app/components/Table";
 import { useEnvironmentContext } from "@/app/contexts";
 import { NotificationTransactionsTable } from "@/domains/transaction/components/TransactionTable/NotificationTransactionsTable";
-import { useBreakpoint } from "@/app/hooks";
 
-export const Notifications = ({ profile, onNotificationAction, onTransactionClick }: NotificationsProperties) => {
+export const Notifications = ({ profile, onTransactionClick }: NotificationsProperties) => {
 	const { t } = useTranslation();
 	const { persist } = useEnvironmentContext();
-	const { isXs, isSm } = useBreakpoint();
 
-	const { releases, transactions, markAllTransactionsAsRead } = useNotifications({ profile });
-	const wrapperReference = useRef();
+	const { transactions, markAllTransactionsAsRead } = useNotifications({ profile });
 
 	useEffect(() => {
 		markAllTransactionsAsRead(true);
 		persist();
 	}, []);
 
-	if (transactions.length === 0 && releases.length === 0) {
-		return (
-			<NotificationsWrapper>
-				<EmptyBlock>
-					<span className="whitespace-nowrap">{t("COMMON.NOTIFICATIONS.EMPTY")}</span>
-				</EmptyBlock>
-				<Image name="EmptyNotifications" className="mx-auto mb-2 mt-8 w-64" />
-			</NotificationsWrapper>
-		);
-	}
-
 	return (
-		<NotificationsWrapper
-			wider={!(isXs || isSm)}
-			ref={wrapperReference as React.MutableRefObject<any>}
-			data-testid="NotificationsWrapper"
-		>
-			{releases.length > 0 && (
-				<div className="space-y-2">
-					<div className="text-base font-semibold text-theme-secondary-500">
-						{t("COMMON.NOTIFICATIONS.PLUGINS_TITLE")}
-					</div>
-					<Table hideHeader columns={[{ Header: "-", className: "hidden" }]} data={releases}>
-						{(notification: NotificationItemProperties) => (
-							<NotificationItem
-								{...notification}
-								onAction={onNotificationAction}
-								containmentRef={wrapperReference}
-							/>
-						)}
-					</Table>
+		<div className="w-full sm:w-[35rem]" data-testid="NotificationsWrapper">
+			<div className="flex w-full items-center justify-between rounded-t-xl bg-theme-secondary-100 px-6 py-4 dark:bg-black sm:px-8">
+				<div className="text-lg font-semibold text-theme-secondary-900 dark:text-theme-secondary-200">
+					Notification
+				</div>
+			</div>
+
+			{transactions.length === 0 && (
+				<div className="px-6 pb-8 pt-4">
+					<EmptyBlock className="py-4">
+						<span className="whitespace-nowrap">{t("COMMON.NOTIFICATIONS.EMPTY")}</span>
+					</EmptyBlock>
+					<Image name="EmptyNotifications" className="mx-auto mb-2 mt-8 w-64" />
 				</div>
 			)}
 
 			{transactions.length > 0 && (
-				<NotificationTransactionsTable
-					profile={profile}
-					isLoading={profile.notifications().transactions().isSyncing() || transactions.length === 0}
-					transactions={transactions}
-					onClick={onTransactionClick}
-				/>
+				<div
+					className="max-h-[36rem] w-full overflow-y-hidden overscroll-y-none"
+					data-testid="NotificationsWrapper"
+				>
+					{transactions.length > 0 && (
+						<NotificationTransactionsTable
+							profile={profile}
+							isLoading={profile.notifications().transactions().isSyncing() || transactions.length === 0}
+							transactions={transactions}
+							onClick={onTransactionClick}
+						/>
+					)}
+				</div>
 			)}
-		</NotificationsWrapper>
+		</div>
 	);
 };

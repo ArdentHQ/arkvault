@@ -13,22 +13,15 @@ export const NotificationTransactionItemMobileSkeleton = () => {
 
 	return (
 		<TableRow className="group">
-			<td data-testid="TransactionRow__skeleton__mobile" className="flex-col space-y-4 py-4">
+			<td className="flex-col space-y-4 px-6 py-4" data-testid="TransactionRow__skeleton__mobile">
 				<RowWrapper>
-					<RowLabel>{t("COMMON.SENDER")}</RowLabel>
-					<div className="mr-4 flex items-center space-x-2">
-						<Skeleton height={16} width={senderWidth} />
-						<Skeleton circle height={20} width={20} />
-						<Skeleton circle height={20} width={20} />
-					</div>
+					<RowLabel>{t("COMMON.ADDRESS")}</RowLabel>
+					<Skeleton height={16} width={senderWidth} />
 				</RowWrapper>
 
 				<RowWrapper>
 					<RowLabel>{t("COMMON.AMOUNT")}</RowLabel>
-					<div className="flex h-7 items-center space-x-1">
-						<Skeleton height={16} width={amountWidth} />
-						<Skeleton height={16} width={25} />
-					</div>
+					<Skeleton height={16} width={amountWidth} />
 				</RowWrapper>
 			</td>
 		</TableRow>
