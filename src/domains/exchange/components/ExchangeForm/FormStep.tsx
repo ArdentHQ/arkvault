@@ -344,7 +344,11 @@ export const FormStep = ({ profile }: FormStepProperties) => {
 							wrapperClassName="static sm:relative"
 							addons={{
 								start: {
-									content: <div className="hidden sm:block"><CurrencyIcon image={fromCurrency?.image} ticker={fromCurrency?.coin} /></div>,
+									content: (
+										<div className="hidden sm:block">
+											<CurrencyIcon image={fromCurrency?.image} ticker={fromCurrency?.coin} />
+										</div>
+									),
 								},
 							}}
 							options={
@@ -402,7 +406,11 @@ export const FormStep = ({ profile }: FormStepProperties) => {
 								wrapperClassName="static sm:relative"
 								addons={{
 									start: {
-										content: <div className="hidden sm:block"><CurrencyIcon image={toCurrency?.image} ticker={toCurrency?.coin} /></div>,
+										content: (
+											<div className="hidden sm:block">
+												<CurrencyIcon image={toCurrency?.image} ticker={toCurrency?.coin} />
+											</div>
+										),
 									},
 								}}
 								options={

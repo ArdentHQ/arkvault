@@ -52,7 +52,7 @@ const ExchangeForm = ({ orderId, onReady }: { orderId?: string; onReady: () => v
 	assertExchangeService(exchangeService);
 
 	const [exchangeTransaction, setExchangeTransaction] = useState<Contracts.IExchangeTransaction | undefined>();
-	const [transferTransactionId, setTransferTransactionId] = useState<string| undefined>();
+	const [transferTransactionId, setTransferTransactionId] = useState<string | undefined>();
 	const [activeTab, setActiveTab] = useState<Step>(Step.FormStep);
 
 	const form = useForm<ExchangeFormState>({ mode: "onChange" });
@@ -400,7 +400,7 @@ const ExchangeForm = ({ orderId, onReady }: { orderId?: string; onReady: () => v
 					exchangeTransaction={exchangeTransaction}
 					onSuccess={(txId: string) => {
 						setTransferTransactionId(txId);
-						setActiveTab(activeTab + 1)
+						setActiveTab(activeTab + 1);
 					}}
 					onClose={() => setShowTransferModal(false)}
 				/>
