@@ -14,10 +14,6 @@ export const PageSkeleton = () => {
 
 	const hasProfiles = env.profiles().count() > 0;
 
-	if (!hasProfiles) {
-		return <div />;
-	}
-
 	return (
 		<>
 			<Page navbarVariant="logo-only" pageTitle={t("COMMON.WELCOME")} title={<Trans i18nKey="COMMON.APP_NAME" />}>
