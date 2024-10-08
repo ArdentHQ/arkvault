@@ -30,7 +30,7 @@ export const translations = {
 			"If you have any question about your exchange, please contact {{exchange}} support team via email at <linkEmail>{{email}}</linkEmail>",
 		TERMS: "I've read and agree to the {{exchange}} <linkTerms>{{terms}}</linkTerms> and <linkPrivacyPolicy>{{privacy}}</linkPrivacyPolicy>",
 		TO_CURRENCY: "To Currency",
-		TRANSACTION_COMPLETE: "Transaction is Complete!",
+		EXCHANGE_COMPLETED: "Exchange Completed!",
 		YOUR_ADDRESS: "Your {{currency}} Address",
 		YOU_GET: "You Get",
 		YOU_SEND: "You Send",
@@ -95,7 +95,7 @@ export const translations = {
 		EXPIRED: "This transaction has expired.",
 		FAILED: "This transaction has failed.",
 		REFUNDED: "This transaction has been refunded.",
-		SENDING: "Sending",
+		SENDING: "Sending to you",
 		VERIFYING: "This transaction is being verified by the provider.",
 	},
 

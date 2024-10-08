@@ -57,7 +57,7 @@ export const StatusStep = ({ exchangeTransaction, onUpdate, transferTransactionI
 		<div data-testid="ExchangeForm__status-step" className="flex flex-col">
 			<div className="flex items-center space-x-1">
 				<span className="text-xs font-semibold text-theme-secondary-500 dark:text-theme-secondary-700">
-					{t("EXCHANGE.TRANSACTION_ID")}: {exchangeTransaction.orderId()}
+					{exchangeProvider?.name} {t("EXCHANGE.TRANSACTION_ID")}: {exchangeTransaction.orderId()}
 				</span>
 				<span className="flex text-theme-primary-300 dark:text-theme-secondary-600">
 					<Clipboard variant="icon" data={exchangeTransaction.orderId()}>
@@ -119,8 +119,8 @@ export const StatusStep = ({ exchangeTransaction, onUpdate, transferTransactionI
 					<span className="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700">
 						{t("EXCHANGE.EXCHANGE_FORM.YOU_GET")}
 					</span>
-					<span>
-						≈{" "}
+					<span className="font-semibold">
+						≈
 						<Amount
 							value={exchangeTransaction.output().amount}
 							ticker={exchangeTransaction.output().ticker}

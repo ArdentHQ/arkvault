@@ -17,6 +17,8 @@ import CircleCross from "./circle-cross.svg?react";
 import CircleExclamationMark from "./circle-exclamation-mark.svg?react";
 import CircleInfo from "./circle-info.svg?react";
 import CircleQuestionMark from "./circle-question-mark.svg?react";
+import CircleCompletedLight from "./circle-completed-light.svg?react";
+import CircleCompletedDark from "./circle-completed-dark.svg?react";
 import Clock from "./clock.svg?react";
 import ClockError from "./clock-error.svg?react";
 import ClockPencil from "./clock-pencil.svg?react";
@@ -118,7 +120,9 @@ export const SvgCollection: Record<string, FC<SVGProps<SVGSVGElement>>> = {
 	CircleCross,
 	CircleExclamationMark,
 	CircleInfo,
+	CircleCompletedDark,
 	CircleQuestionMark,
+	CircleCompletedLight,
 	Clock,
 	ClockError,
 	ClockPencil,
