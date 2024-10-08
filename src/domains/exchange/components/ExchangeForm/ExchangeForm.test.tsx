@@ -1364,6 +1364,47 @@ describe("ExchangeForm", () => {
 		exchangeTransactionUpdateMock.mockRestore();
 	});
 
+	it("should call resetForm when `New Exchange` button is cliced", async () => {
+		const onReady = vi.fn();
+
+		profile.exchangeTransactions().flush();
+		const exchangeTransaction = profile.exchangeTransactions().create(transactionStub);
+
+		profile
+			.exchangeTransactions()
+			.update(exchangeTransaction.id(), { status: Contracts.ExchangeTransactionStatus.Finished });
+
+		const exchangeTransactionUpdateMock = vi
+			.spyOn(profile.exchangeTransactions(), "update")
+			.mockReturnValue(undefined);
+
+		vi.spyOn(profile.exchangeTransactions(), "findById").mockReturnValue(exchangeTransaction);
+
+		const resetForm = vi.fn();
+
+		renderComponent(
+			<ExchangeForm orderId={exchangeTransaction.orderId()} onReady={onReady} resetForm={resetForm} />,
+		);
+
+		await waitFor(() => {
+			expect(screen.getByTestId("ExchangeForm")).toBeInTheDocument();
+		});
+
+		await waitFor(() => {
+			expect(onReady).toHaveBeenCalledWith();
+		});
+
+		await waitFor(() => {
+			expect(screen.getByTestId("ExchangeForm__confirmation-step")).toBeInTheDocument();
+		});
+
+		await userEvent.click(screen.getByTestId("ExchangeForm__new-exchange"));
+
+		expect(resetForm).toHaveBeenCalledOnce();
+
+		exchangeTransactionUpdateMock.mockRestore();
+	});
+
 	const goToReviewStep = async () => {
 		const resetProfileNetworksMock = mockProfileWithPublicAndTestNetworks(profile);
 
