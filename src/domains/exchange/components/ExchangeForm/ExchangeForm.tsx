@@ -36,7 +36,7 @@ enum Step {
 	ConfirmationStep,
 }
 
-const ExchangeForm = ({ orderId, onReady, resetForm }: { orderId?: string; onReady: () => void, resetForm: () => void }) => {
+const ExchangeForm = ({ orderId, onReady, resetForm }: { orderId?: string; onReady: () => void, resetForm?: () => void }) => {
 	const { t } = useTranslation();
 
 	const [isFinished, setIsFinished] = useState(false);
@@ -390,7 +390,7 @@ const ExchangeForm = ({ orderId, onReady, resetForm }: { orderId?: string; onRea
 											<Button
 												data-testid="ExchangeForm__new-exchange"
 												variant="secondary"
-												onClick={resetForm}
+												onClick={() => resetForm?.()}
 
 											>
 												{t("EXCHANGE.NEW_EXCHANGE")}
