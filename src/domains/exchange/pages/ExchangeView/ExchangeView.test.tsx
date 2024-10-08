@@ -141,7 +141,7 @@ describe("ExchangeView", () => {
 		});
 	});
 
-	it("should re-render exchange form reset clicked", async () => {
+	it("should re-render exchange form when `reset()` called ", async () => {
 		const exchangeURL = `/profiles/${getDefaultProfileId()}/exchange/view?exchangeId=changenow`;
 
 		history.push(exchangeURL);
