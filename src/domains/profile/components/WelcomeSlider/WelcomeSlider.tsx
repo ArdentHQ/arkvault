@@ -20,12 +20,9 @@ const Slide = ({ title, subtitle, imageName, imageNameSm }: SlideProperties) => 
 			</p>
 		</div>
 		<div className="hidden flex-1 justify-end overflow-hidden rounded-ee-xl md:flex">
-			<Image
-				name={imageName}
-				alt={title}
-				domain="profile"
-				className="hidden aspect-[1.097] h-full w-full lg:block"
-			/>
+			<div className="hidden aspect-[1.097] h-full w-full lg:block">
+				<Image name={imageName} alt={title} domain="profile" />
+			</div>
 			<Image
 				name={imageNameSm}
 				alt={title}
