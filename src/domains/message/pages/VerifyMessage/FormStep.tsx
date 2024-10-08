@@ -8,6 +8,7 @@ import { InputDefault } from "@/app/components/Input";
 import { TextArea } from "@/app/components/TextArea";
 import { useValidation } from "@/app/hooks";
 import { Switch } from "@/app/components/Switch";
+import { ThemeIcon } from "@/app/components/Icon";
 
 const JsonForm = () => {
 	const { t } = useTranslation();
@@ -45,14 +46,14 @@ const ManualForm = () => {
 
 	return (
 		<div data-testid="VerifyMessage__manual" className="mt-4 space-y-5">
-			<FormField name="message">
-				<FormLabel label={t("COMMON.MESSAGE")} />
-				<InputDefault data-testid="VerifyMessage__manual-message" ref={register(verifyMessage.message())} />
-			</FormField>
-
 			<FormField name="signatory">
 				<FormLabel label={t("COMMON.SIGNATORY")} />
 				<InputDefault data-testid="VerifyMessage__manual-signatory" ref={register(verifyMessage.signatory())} />
+			</FormField>
+
+			<FormField name="message">
+				<FormLabel label={t("COMMON.MESSAGE")} />
+				<InputDefault data-testid="VerifyMessage__manual-message" ref={register(verifyMessage.message())} />
 			</FormField>
 
 			<FormField name="signature">
@@ -73,13 +74,16 @@ export const FormStep = ({
 	const { t } = useTranslation();
 
 	return (
-		<section className="space-y-5">
+		<section>
 			<StepHeader
 				title={t("MESSAGE.PAGE_VERIFY_MESSAGE.FORM_STEP.TITLE")}
 				subtitle={t("MESSAGE.PAGE_VERIFY_MESSAGE.FORM_STEP.DESCRIPTION")}
+				titleIcon={
+					<ThemeIcon dimensions={[24, 24]} lightIcon="SendTransactionLight" darkIcon="SendTransactionDark" />
+				}
 			/>
 
-			<span className="mb-1 hidden text-lg font-semibold sm:block">
+			<span className="mb-1 mt-6 hidden text-lg font-semibold sm:block">
 				{t("MESSAGE.PAGE_VERIFY_MESSAGE.FORM_STEP.VERIFICATION_METHOD.TITLE")}
 			</span>
 
@@ -89,7 +93,7 @@ export const FormStep = ({
 
 			<Switch
 				size="lg"
-				className="sm:mt-6"
+				className="sm:mt-4"
 				value={method}
 				onChange={onMethodChange}
 				leftOption={{
