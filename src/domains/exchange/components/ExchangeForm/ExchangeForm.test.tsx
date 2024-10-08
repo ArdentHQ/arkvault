@@ -134,6 +134,7 @@ const selectCurrencies = async ({ from, to }: { from?: Record<string, string>; t
 const continueButton = () => screen.getByTestId("ExchangeForm__continue-button");
 const reviewStep = () => screen.getByTestId("ExchangeForm__review-step");
 const statusStep = () => screen.getByTestId("ExchangeForm__status-step");
+const confirmationStep = () => expect(screen.getByTestId("ExchangeForm__confirmation-step"));
 
 const refundAddressID = "ExchangeForm__refund-address";
 const payoutValue = "37042.3588384";
@@ -1309,7 +1310,7 @@ describe("ExchangeForm", () => {
 		expect(screen.queryByTestId("StatusIcon__empty")).not.toBeInTheDocument();
 
 		await waitFor(() => {
-			expect(screen.getByTestId("ExchangeForm__confirmation-step")).toBeInTheDocument();
+			expect(confirmationStep()).toBeInTheDocument();
 		});
 
 		const historySpy = vi.spyOn(history, "push").mockImplementation(vi.fn());
@@ -1356,7 +1357,7 @@ describe("ExchangeForm", () => {
 		});
 
 		await waitFor(() => {
-			expect(screen.getByTestId("ExchangeForm__confirmation-step")).toBeInTheDocument();
+			expect(confirmationStep()).toBeInTheDocument();
 		});
 
 		expect(container).toMatchSnapshot();
@@ -1395,7 +1396,7 @@ describe("ExchangeForm", () => {
 		});
 
 		await waitFor(() => {
-			expect(screen.getByTestId("ExchangeForm__confirmation-step")).toBeInTheDocument();
+			expect(confirmationStep()).toBeInTheDocument();
 		});
 
 		await userEvent.click(screen.getByTestId("ExchangeForm__new-exchange"));
@@ -1911,7 +1912,7 @@ describe("ConfirmationStep", () => {
 		);
 
 		await waitFor(() => {
-			expect(screen.getByTestId("ExchangeForm__confirmation-step")).toBeInTheDocument();
+			expect(confirmationStep()).toBeInTheDocument();
 		});
 
 		await waitFor(() => {
