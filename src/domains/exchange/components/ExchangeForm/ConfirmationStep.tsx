@@ -5,7 +5,7 @@ import { useTranslation } from "react-i18next";
 
 import { Amount } from "@/app/components/Amount";
 import { Clipboard } from "@/app/components/Clipboard";
-import {Icon, ThemeIcon} from "@/app/components/Icon";
+import { Icon, ThemeIcon } from "@/app/components/Icon";
 import { Image } from "@/app/components/Image";
 import { Label } from "@/app/components/Label";
 import { Link } from "@/app/components/Link";
@@ -80,10 +80,10 @@ export const ConfirmationStep = ({ exchangeTransaction }: ConfirmationStepProper
 
 	return (
 		<div data-testid="ExchangeForm__confirmation-step" className="flex flex-col">
-			<div className="hidden mx-auto sm:flex items-center space-x-3 mb-8">
+			<div className="mx-auto mb-8 hidden items-center space-x-3 sm:flex">
 				<ThemeIcon lightIcon="CircleCompletedLight" darkIcon="CircleCompletedDark" dimensions={[32, 32]} />
 
-				<h2 className="m-0 font-bold leading-[29px] text-2xl">
+				<h2 className="m-0 text-2xl font-bold leading-[29px]">
 					{t("EXCHANGE.EXCHANGE_FORM.EXCHANGE_COMPLETED")}
 				</h2>
 			</div>
@@ -91,7 +91,7 @@ export const ConfirmationStep = ({ exchangeTransaction }: ConfirmationStepProper
 			<div className="space-y-6 sm:space-y-8">
 				<div className="flex flex-col space-y-4 sm:space-y-5">
 					<div className="flex items-center space-x-3">
-						<span className="flex h-6 w-6 items-center justify-center rounded bg-theme-navy-100 dark:text-theme-secondary-200 text-sm leading-[17px] font-semibold dark:bg-theme-secondary-800">
+						<span className="flex h-6 w-6 items-center justify-center rounded bg-theme-navy-100 text-sm font-semibold leading-[17px] dark:bg-theme-secondary-800 dark:text-theme-secondary-200">
 							1
 						</span>
 						<h3 className="m-0 text-lg font-bold">
@@ -112,15 +112,15 @@ export const ConfirmationStep = ({ exchangeTransaction }: ConfirmationStepProper
 									{t("EXCHANGE.EXCHANGE_FORM.INPUT_TRANSACTION_ID")}
 								</span>
 
-								 {renderHash(exchangeTransaction.input().hash, fromCurrency?.transactionExplorerMask)}
+								{renderHash(exchangeTransaction.input().hash, fromCurrency?.transactionExplorerMask)}
 							</div>
 
-						<div className="flex flex-col space-y-2">
-							<span className="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700">
-								{t("EXCHANGE.EXCHANGE_FORM.EXCHANGE_ADDRESS", {
-									currency: toCurrency?.coin.toUpperCase(),
-								})}
-							</span>
+							<div className="flex flex-col space-y-2">
+								<span className="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700">
+									{t("EXCHANGE.EXCHANGE_FORM.EXCHANGE_ADDRESS", {
+										currency: toCurrency?.coin.toUpperCase(),
+									})}
+								</span>
 
 								{renderAddress(exchangeTransaction.input().address, fromCurrency?.addressExplorerMask)}
 							</div>
@@ -132,7 +132,7 @@ export const ConfirmationStep = ({ exchangeTransaction }: ConfirmationStepProper
 
 								<Label color="danger" className="mr-auto whitespace-nowrap">
 									<Amount
-										className="leading-5 font-semibold"
+										className="font-semibold leading-5"
 										value={exchangeTransaction.input().amount}
 										ticker={exchangeTransaction.input().ticker}
 										isNegative
@@ -148,7 +148,7 @@ export const ConfirmationStep = ({ exchangeTransaction }: ConfirmationStepProper
 
 				<div className="flex flex-col space-y-4 sm:space-y-5">
 					<div className="flex items-center space-x-3">
-					<span className="flex h-6 w-6 items-center justify-center rounded bg-theme-navy-100 dark:text-theme-secondary-200 text-sm leading-[17px] font-semibold dark:bg-theme-secondary-800">
+						<span className="flex h-6 w-6 items-center justify-center rounded bg-theme-navy-100 text-sm font-semibold leading-[17px] dark:bg-theme-secondary-800 dark:text-theme-secondary-200">
 							2
 						</span>
 						<h3 className="m-0 text-lg font-bold">
@@ -189,7 +189,7 @@ export const ConfirmationStep = ({ exchangeTransaction }: ConfirmationStepProper
 
 								<Label color="success" className="mr-auto whitespace-nowrap">
 									<Amount
-										className="leading-5 font-semibold"
+										className="font-semibold leading-5"
 										value={exchangeTransaction.output().amount}
 										ticker={exchangeTransaction.output().ticker}
 										showSign

@@ -29,7 +29,7 @@ const StatusIcon = ({ label, isDone, isLoading }: StatusIconProperties) => {
 		if (isLoading) {
 			return (
 				<span data-testid="StatusIcon__spinner">
-					<Spinner className="!w-6 !h-6 !border-[3px]" />
+					<Spinner className="!h-6 !w-6 !border-[3px]" />
 				</span>
 			);
 		}
