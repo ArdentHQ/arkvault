@@ -260,6 +260,7 @@ describe("SendExchangeTransfer", () => {
 		await userEvent.click(screen.getByTestId("ExchangeTransfer__continue"));
 
 		expect(onSuccessMock).toHaveBeenCalledOnce();
+		expect(onSuccessMock).toHaveBeenCalledWith("8f913b6b719e7767d49861c0aec79ced212767645cb793d75d2f1b89abb49877")
 
 		signMock.mockRestore();
 		broadcastMock.mockRestore();
