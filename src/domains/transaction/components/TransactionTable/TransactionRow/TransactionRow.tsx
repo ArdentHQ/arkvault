@@ -77,12 +77,12 @@ export const TransactionRow = memo(
 				</TableCell>
 
 				<TableCell
-					className="hidden lg:table-cell"
+					className="hidden xl:table-cell"
 					innerClassName="text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold items-start xl:min-h-0 my-0 py-3"
 					data-testid="TransactionRow__timestamp"
 				>
 					{timeStamp ? (
-						<TimeAgo date={DateTime.fromUnix(timeStamp.toUNIX()).toISOString()} />
+						<div> 23 seconds ago</div>
 					) : (
 						t("COMMON.NOT_AVAILABLE")
 					)}
