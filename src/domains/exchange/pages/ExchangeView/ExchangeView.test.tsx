@@ -148,18 +148,20 @@ describe("ExchangeView", () => {
 
 		let renderCount = 0;
 
-		const exchangeFormMock = vi
-			.spyOn(ExchangeForm, "ExchangeForm")
-			.mockImplementation(({resetForm}) => {
-				useEffect(() => {
-					renderCount++;
-				}, []);
+		const exchangeFormMock = vi.spyOn(ExchangeForm, "ExchangeForm").mockImplementation(({ resetForm }) => {
+			useEffect(() => {
+				renderCount++;
+			}, []);
 
-				return <div>
+			return (
+				<div>
 					Exchange Form rendered
-					<button data-testid="Reset" onClick={resetForm}>reset</button>
+					<button data-testid="Reset" onClick={resetForm}>
+						reset
+					</button>
 				</div>
-			});
+			);
+		});
 
 		render(
 			<Route path="/profiles/:profileId/exchange/view">
@@ -175,7 +177,7 @@ describe("ExchangeView", () => {
 		);
 
 		await expect(screen.findByTestId("Reset")).resolves.toBeVisible();
-		await userEvent.click(screen.getByTestId("Reset"))
+		await userEvent.click(screen.getByTestId("Reset"));
 
 		expect(renderCount).toBe(2);
 
@@ -187,15 +189,15 @@ describe("ExchangeView", () => {
 
 		history.push(exchangeURL);
 
-		const exchangeFormMock = vi
-			.spyOn(ExchangeForm, "ExchangeForm")
-			.mockImplementation(({resetForm, orderId}) => {
-				return <div>
-					Exchange Form rendered
-					<p>{orderId}</p>
-					<button data-testid="Reset" onClick={resetForm}>reset</button>
-				</div>
-			});
+		const exchangeFormMock = vi.spyOn(ExchangeForm, "ExchangeForm").mockImplementation(({ resetForm, orderId }) => (
+			<div>
+				Exchange Form rendered
+				<p>{orderId}</p>
+				<button data-testid="Reset" onClick={resetForm}>
+					reset
+				</button>
+			</div>
+		));
 
 		render(
 			<Route path="/profiles/:profileId/exchange/view">
@@ -210,13 +212,12 @@ describe("ExchangeView", () => {
 			},
 		);
 
-
 		await expect(screen.findByTestId("Reset")).resolves.toBeVisible();
 
 		// order ID should be used
 		await expect(screen.findByText("testOrderId")).resolves.toBeVisible();
 
-		await userEvent.click(screen.getByTestId("Reset"))
+		await userEvent.click(screen.getByTestId("Reset"));
 
 		// order ID should not be there
 		await waitFor(() => expect(screen.queryByText("testOrderId")).not.toBeInTheDocument());
