@@ -5,470 +5,415 @@ exports[`ConfirmationStep > should not render without exchange transaction 1`] =
 exports[`ConfirmationStep > should render 1`] = `
 <div>
   <div
-    class="flex flex-col space-y-8"
+    class="flex flex-col"
     data-testid="ExchangeForm__confirmation-step"
   >
     <div
-      class="sm:mx-auto sm:flex sm:items-center sm:space-x-3"
+      class="hidden mx-auto sm:flex items-center space-x-3 mb-8"
     >
       <div
-        class="hidden text-theme-success-600 sm:block css-1atxdzc"
-        height="40"
-        width="40"
+        class="css-bogjme"
+        data-testid="icon-CircleCompletedLight"
+        height="32"
+        width="32"
       >
         <svg
-          id="circle-check-mark"
-          viewBox="0 0 20 20"
-          x="0"
-          xml:space="preserve"
+          fill="none"
+          viewBox="0 0 32 32"
           xmlns="http://www.w3.org/2000/svg"
-          y="0"
         >
-          <g
-            fill="none"
-            stroke="currentColor"
+          <circle
+            cx="16"
+            cy="16"
+            r="15"
+            stroke="#235B95"
             stroke-width="2"
-          >
-            <circle
-              cx="10"
-              cy="10"
-              r="9"
-              stroke-miterlimit="10"
-            />
-            <path
-              d="M13.6 6.5l-5 6.8c-.2.3-.6.4-.9.2l-.1-.1L6.4 12"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
-          </g>
+          />
+          <path
+            d="M21.1387 11.8135L15.1388 17.7218L12.339 14.963L10.3389 16.933L15.1388 21.6601L23.1389 13.7844L21.1387 11.8135Z"
+            fill="#E6EFF9"
+            stroke="#235B95"
+            stroke-linejoin="round"
+            stroke-width="2"
+          />
         </svg>
       </div>
       <h2
-        class="m-0 text-xl font-bold sm:text-2xl"
+        class="m-0 font-bold leading-[29px] text-2xl"
       >
-        Transaction is Complete!
+        Exchange Completed!
       </h2>
     </div>
     <div
-      class="flex flex-col space-y-5"
+      class="space-y-6 sm:space-y-8"
     >
       <div
-        class="flex items-center space-x-3"
-      >
-        <span
-          class="flex h-6 w-6 items-center justify-center rounded bg-theme-primary-200 font-semibold dark:bg-theme-secondary-800"
-        >
-          1
-        </span>
-        <h3
-          class="m-0 text-lg font-bold"
-        >
-          BTC Input
-        </h3>
-      </div>
-      <div
-        class="flex sm:space-x-6"
+        class="flex flex-col space-y-4 sm:space-y-5"
       >
         <div
-          class="hidden h-24 w-24 shrink-0 items-center justify-center rounded-xl bg-theme-secondary-200 dark:bg-theme-secondary-700 sm:flex"
+          class="flex items-center space-x-3"
         >
-          <svg
-            class="w-12"
-            id="Layer_1"
-            viewBox="0 0 48 48"
-            x="0"
-            xml:space="preserve"
-            xmlns="http://www.w3.org/2000/svg"
-            y="0"
+          <span
+            class="flex h-6 w-6 items-center justify-center rounded bg-theme-navy-100 dark:text-theme-secondary-200 text-sm leading-[17px] font-semibold dark:bg-theme-secondary-800"
           >
-            <path
-              d="M43.714 29.346v6.377a5.624 5.624 0 0 1-1.65 3.979 5.635 5.635 0 0 1-3.982 1.648H6.632a5.635 5.635 0 0 1-3.982-1.648A5.624 5.624 0 0 1 1 35.722V17.436c0-1.493.593-2.924 1.65-3.98a5.635 5.635 0 0 1 3.983-1.648h31.449a5.635 5.635 0 0 1 5.633 5.628v4.933"
-              fill="none"
-              stroke="#212225"
-              stroke-width="2"
-            />
-            <path
-              d="M1 16.497v-4.22c0-1.492.593-2.924 1.65-3.979A5.635 5.635 0 0 1 6.633 6.65h25.816c1.494 0 2.927.593 3.983 1.648a5.624 5.624 0 0 1 1.65 3.979m-4.225 9.848h11.735A1.409 1.409 0 0 1 47 23.53v4.69a1.406 1.406 0 0 1-1.408 1.406H33.857a1.782 1.782 0 0 1-1.408-.468c-.404-.324-2.984-2.656-3.286-2.814-.302-.159-.254-.784 0-.938.255-.154 2.994-2.562 3.286-2.814a1.882 1.882 0 0 1 1.408-.468z"
-              fill="none"
-              stroke="#212225"
-              stroke-width="2"
-            />
-            <path
-              d="M16.02 35.254c4.666 0 8.449-3.779 8.449-8.44s-3.783-8.441-8.449-8.441-8.449 3.779-8.449 8.44 3.783 8.441 8.449 8.441z"
-              fill="#A5ADB9"
-            />
-            <path
-              d="M32.449 17.904h8.449m-8.449 16.882h8.449"
-              fill="none"
-              stroke="#A5ADB9"
-              stroke-width="2"
-            />
-          </svg>
+            1
+          </span>
+          <h3
+            class="m-0 text-lg font-bold"
+          >
+            BTC Input
+          </h3>
         </div>
         <div
-          class="flex flex-1 flex-col space-y-4 overflow-hidden"
+          class="flex sm:space-x-6"
         >
           <div
-            class="flex flex-col space-y-2"
+            class="hidden h-24 w-24 shrink-0 items-center justify-center rounded-xl bg-theme-secondary-200 dark:bg-black sm:flex"
+          />
+          <div
+            class="flex flex-1 flex-col space-y-4 overflow-hidden"
           >
-            <span
-              class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
-            >
-              Input Transaction ID
-            </span>
             <div
-              class="flex items-center space-x-2 whitespace-nowrap text-lg font-semibold"
+              class="flex flex-col space-y-2"
             >
               <span
-                class="overflow-hidden"
-                data-testid="ExplorerLink"
+                class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
               >
-                <a
-                  class="ring-focus group inline-block css-7nwwrh"
-                  data-ring-focus-margin="-m-1"
-                  data-testid="Link"
-                  href="https://blockchair.com/bitcoin/transaction/payinHash"
-                  rel="noopener noreferrer"
+                Input Transaction ID
+              </span>
+              <div
+                class="flex items-center space-x-2 whitespace-nowrap text-lg font-semibold"
+              >
+                <span
+                  class="overflow-hidden"
+                  data-testid="ExplorerLink"
                 >
-                  <span
-                    class="css-170792"
+                  <a
+                    class="ring-focus group inline-block css-7nwwrh"
+                    data-ring-focus-margin="-m-1"
+                    data-testid="Link"
+                    href="https://blockchair.com/bitcoin/transaction/payinHash"
+                    rel="noopener noreferrer"
                   >
                     <span
-                      class="no-ligatures min-w-0 overflow-hidden"
+                      class="css-170792"
                     >
-                      payinHash
+                      <span
+                        class="no-ligatures min-w-0 overflow-hidden"
+                      >
+                        payinHash
+                      </span>
                     </span>
-                  </span>
-                  <div
-                    class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-v0ob3f"
-                    data-testid="Link__external"
-                    height="16"
-                    width="16"
-                  >
-                    <svg
-                      id="arrow-external"
-                      viewBox="0 0 20 20"
-                      x="0"
-                      xml:space="preserve"
-                      xmlns="http://www.w3.org/2000/svg"
-                      y="0"
+                    <div
+                      class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-v0ob3f"
+                      data-testid="Link__external"
+                      height="16"
+                      width="16"
                     >
-                      <path
-                        d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                      />
-                    </svg>
-                  </div>
-                </a>
-              </span>
-              <span
-                class="flex text-theme-primary-300 dark:text-theme-secondary-600"
-              >
-                <button
-                  class="ring-focus relative focus:outline-none"
-                  data-ring-focus-margin="-m-1"
-                  data-testid="clipboard-icon__wrapper"
-                  type="button"
-                >
-                  <div
-                    class="css-v0ob3f"
-                    height="16"
-                    width="16"
-                  >
-                    <svg
-                      id="copy"
-                      viewBox="0 0 20 20"
-                      x="0"
-                      xml:space="preserve"
-                      xmlns="http://www.w3.org/2000/svg"
-                      y="0"
-                    >
-                      <g
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
+                      <svg
+                        id="arrow-external"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
                       >
                         <path
-                          d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                          d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
                         />
-                        <path
-                          d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                        />
-                      </g>
-                    </svg>
-                  </div>
-                </button>
-              </span>
+                      </svg>
+                    </div>
+                  </a>
+                </span>
+                <span
+                  class="flex text-theme-primary-300 dark:text-theme-secondary-600"
+                >
+                  <button
+                    class="ring-focus relative focus:outline-none"
+                    data-ring-focus-margin="-m-1"
+                    data-testid="clipboard-icon__wrapper"
+                    type="button"
+                  >
+                    <div
+                      class="css-v0ob3f"
+                      height="16"
+                      width="16"
+                    >
+                      <svg
+                        id="copy"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                          />
+                          <path
+                            d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                          />
+                        </g>
+                      </svg>
+                    </div>
+                  </button>
+                </span>
+              </div>
             </div>
-          </div>
-          <div
-            class="flex flex-col space-y-2"
-          >
-            <span
-              class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
-            >
-              Exchange  Address
-            </span>
             <div
-              class="flex items-center space-x-2 whitespace-nowrap text-lg font-semibold"
+              class="flex flex-col space-y-2"
             >
               <span
-                class="overflow-hidden"
-                data-testid="ExplorerLink"
+                class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
               >
-                <a
-                  class="ring-focus group inline-block css-7nwwrh"
-                  data-ring-focus-margin="-m-1"
-                  data-testid="Link"
-                  href="https://blockchair.com/bitcoin/address/payinAddress"
-                  rel="noopener noreferrer"
+                Exchange  Address
+              </span>
+              <div
+                class="flex items-center space-x-2 whitespace-nowrap text-lg font-semibold"
+              >
+                <span
+                  class="overflow-hidden"
+                  data-testid="ExplorerLink"
                 >
-                  <span
-                    class="css-170792"
+                  <a
+                    class="ring-focus group inline-block css-7nwwrh"
+                    data-ring-focus-margin="-m-1"
+                    data-testid="Link"
+                    href="https://blockchair.com/bitcoin/address/payinAddress"
+                    rel="noopener noreferrer"
                   >
                     <span
-                      class="no-ligatures min-w-0 overflow-hidden"
+                      class="css-170792"
                     >
-                      payinAddress
+                      <span
+                        class="no-ligatures min-w-0 overflow-hidden"
+                      >
+                        payinAddress
+                      </span>
                     </span>
-                  </span>
-                  <div
-                    class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-v0ob3f"
-                    data-testid="Link__external"
-                    height="16"
-                    width="16"
-                  >
-                    <svg
-                      id="arrow-external"
-                      viewBox="0 0 20 20"
-                      x="0"
-                      xml:space="preserve"
-                      xmlns="http://www.w3.org/2000/svg"
-                      y="0"
+                    <div
+                      class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-v0ob3f"
+                      data-testid="Link__external"
+                      height="16"
+                      width="16"
                     >
-                      <path
-                        d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                      />
-                    </svg>
-                  </div>
-                </a>
-              </span>
-              <span
-                class="flex text-theme-primary-300 dark:text-theme-secondary-600"
-              >
-                <button
-                  class="ring-focus relative focus:outline-none"
-                  data-ring-focus-margin="-m-1"
-                  data-testid="clipboard-icon__wrapper"
-                  type="button"
-                >
-                  <div
-                    class="css-v0ob3f"
-                    height="16"
-                    width="16"
-                  >
-                    <svg
-                      id="copy"
-                      viewBox="0 0 20 20"
-                      x="0"
-                      xml:space="preserve"
-                      xmlns="http://www.w3.org/2000/svg"
-                      y="0"
-                    >
-                      <g
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
+                      <svg
+                        id="arrow-external"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
                       >
                         <path
-                          d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                          d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
                         />
-                        <path
-                          d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                        />
-                      </g>
-                    </svg>
-                  </div>
-                </button>
-              </span>
+                      </svg>
+                    </div>
+                  </a>
+                </span>
+                <span
+                  class="flex text-theme-primary-300 dark:text-theme-secondary-600"
+                >
+                  <button
+                    class="ring-focus relative focus:outline-none"
+                    data-ring-focus-margin="-m-1"
+                    data-testid="clipboard-icon__wrapper"
+                    type="button"
+                  >
+                    <div
+                      class="css-v0ob3f"
+                      height="16"
+                      width="16"
+                    >
+                      <svg
+                        id="copy"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                          />
+                          <path
+                            d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                          />
+                        </g>
+                      </svg>
+                    </div>
+                  </button>
+                </span>
+              </div>
             </div>
-          </div>
-          <div
-            class="flex flex-col space-y-2"
-          >
-            <span
-              class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
-            >
-              Amount Sent
-            </span>
             <div
-              class="mr-auto whitespace-nowrap css-148b4hi"
-              color="danger"
+              class="flex flex-col space-y-2"
             >
               <span
-                class="whitespace-nowrap text-lg font-semibold"
-                data-testid="Amount"
+                class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
               >
-                - 1 BTC
+                Amount Sent
               </span>
+              <div
+                class="mr-auto whitespace-nowrap css-148b4hi"
+                color="danger"
+              >
+                <span
+                  class="whitespace-nowrap leading-5 font-semibold"
+                  data-testid="Amount"
+                >
+                  - 1 BTC
+                </span>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    <div
-      class="-mx-10 border-t border-dashed border-theme-secondary-300 px-10 dark:border-theme-secondary-800"
-    />
-    <div
-      class="flex flex-col space-y-5"
-    >
       <div
-        class="flex items-center space-x-3"
-      >
-        <span
-          class="flex h-6 w-6 items-center justify-center rounded bg-theme-primary-200 font-semibold dark:bg-theme-secondary-800"
-        >
-          2
-        </span>
-        <h3
-          class="m-0 text-lg font-bold"
-        >
-           Output
-        </h3>
-      </div>
+        class="-mx-10 border-t border-dashed border-theme-secondary-300 px-10 dark:border-theme-secondary-800"
+      />
       <div
-        class="flex sm:space-x-6"
+        class="flex flex-col space-y-4 sm:space-y-5"
       >
         <div
-          class="hidden h-24 w-24 shrink-0 items-center justify-center rounded-xl bg-theme-secondary-200 dark:bg-theme-secondary-700 sm:flex"
+          class="flex items-center space-x-3"
         >
-          <svg
-            class="w-12"
-            id="Layer_1"
-            viewBox="0 0 48 48"
-            x="0"
-            xml:space="preserve"
-            xmlns="http://www.w3.org/2000/svg"
-            y="0"
+          <span
+            class="flex h-6 w-6 items-center justify-center rounded bg-theme-navy-100 dark:text-theme-secondary-200 text-sm leading-[17px] font-semibold dark:bg-theme-secondary-800"
           >
-            <path
-              d="M16.898 46.172a23.422 23.422 0 0 1-15.33-15.005L1 39.877M31.642 1.829a23.43 23.43 0 0 1 14.165 14.256L47 8.075M17.43 31.13c7.795 0 14.115-6.32 14.115-14.115 0-7.796-6.32-14.116-14.116-14.116-7.796 0-14.116 6.32-14.116 14.116 0 7.796 6.32 14.115 14.116 14.115zm14.115-14.115A14.116 14.116 0 1 1 17.43 31.13"
-              fill="none"
-              stroke="#212225"
-              stroke-width="2"
-            />
-            <path
-              d="M17.43 25.776a8.762 8.762 0 1 0 0-17.523 8.762 8.762 0 0 0 0 17.523z"
-              fill="#A5ADB9"
-            />
-          </svg>
+            2
+          </span>
+          <h3
+            class="m-0 text-lg font-bold"
+          >
+             Output
+          </h3>
         </div>
         <div
-          class="flex flex-1 flex-col space-y-4 overflow-hidden"
+          class="flex sm:space-x-6"
         >
           <div
-            class="flex w-full flex-col space-y-2"
-          >
-            <span
-              class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
-            >
-              Output Transaction ID
-            </span>
-            <span
-              class="text-lg font-semibold"
-            >
-              N/A
-            </span>
-          </div>
+            class="hidden h-24 w-24 shrink-0 items-center justify-center rounded-xl bg-theme-secondary-200 dark:bg-black sm:flex"
+          />
           <div
-            class="flex flex-col space-y-2"
+            class="flex flex-1 flex-col space-y-4 overflow-hidden"
           >
-            <span
-              class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
-            >
-              Your  Address
-            </span>
             <div
-              class="flex items-center space-x-2 whitespace-nowrap text-lg font-semibold"
+              class="flex w-full flex-col space-y-2"
             >
               <span
-                class="no-ligatures min-w-0 overflow-hidden"
+                class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
               >
-                payoutAddress
+                Output Transaction ID
               </span>
               <span
-                class="flex text-theme-primary-300 dark:text-theme-secondary-600"
+                class="text-lg font-semibold"
               >
-                <button
-                  class="ring-focus relative focus:outline-none"
-                  data-ring-focus-margin="-m-1"
-                  data-testid="clipboard-icon__wrapper"
-                  type="button"
-                >
-                  <div
-                    class="css-v0ob3f"
-                    height="16"
-                    width="16"
-                  >
-                    <svg
-                      id="copy"
-                      viewBox="0 0 20 20"
-                      x="0"
-                      xml:space="preserve"
-                      xmlns="http://www.w3.org/2000/svg"
-                      y="0"
-                    >
-                      <g
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                      >
-                        <path
-                          d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
-                        />
-                        <path
-                          d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                        />
-                      </g>
-                    </svg>
-                  </div>
-                </button>
+                N/A
               </span>
             </div>
-          </div>
-          <div
-            class="flex flex-col space-y-2"
-          >
-            <span
-              class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
-            >
-              Amount Received
-            </span>
             <div
-              class="mr-auto whitespace-nowrap css-1v19423"
-              color="success"
+              class="flex flex-col space-y-2"
             >
               <span
-                class="whitespace-nowrap text-lg font-semibold"
-                data-testid="Amount"
+                class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
               >
-                + 100 ARK
+                Your  Address
               </span>
+              <div
+                class="flex items-center space-x-2 whitespace-nowrap text-lg font-semibold"
+              >
+                <span
+                  class="no-ligatures min-w-0 overflow-hidden"
+                >
+                  payoutAddress
+                </span>
+                <span
+                  class="flex text-theme-primary-300 dark:text-theme-secondary-600"
+                >
+                  <button
+                    class="ring-focus relative focus:outline-none"
+                    data-ring-focus-margin="-m-1"
+                    data-testid="clipboard-icon__wrapper"
+                    type="button"
+                  >
+                    <div
+                      class="css-v0ob3f"
+                      height="16"
+                      width="16"
+                    >
+                      <svg
+                        id="copy"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                          />
+                          <path
+                            d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                          />
+                        </g>
+                      </svg>
+                    </div>
+                  </button>
+                </span>
+              </div>
+            </div>
+            <div
+              class="flex flex-col space-y-2"
+            >
+              <span
+                class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+              >
+                Amount Received
+              </span>
+              <div
+                class="mr-auto whitespace-nowrap css-1v19423"
+                color="success"
+              >
+                <span
+                  class="whitespace-nowrap leading-5 font-semibold"
+                  data-testid="Amount"
+                >
+                  + 100 ARK
+                </span>
+              </div>
             </div>
           </div>
         </div>
@@ -509,7 +454,7 @@ exports[`ExchangeForm > should render exchange form 1`] = `
         </ul>
       </div>
       <div
-        class="mt-8"
+        class="mt-6 sm:mt-8 mb-24 sm:mb-0"
       >
         <div
           data-testid="tab-pabel__active-panel"
@@ -522,7 +467,7 @@ exports[`ExchangeForm > should render exchange form 1`] = `
               class="relative flex space-x-3"
             >
               <div
-                class="w-1/2 sm:w-2/5"
+                class="w-2/5"
               >
                 <fieldset
                   class="flex min-w-0 flex-col css-1bcidjh"
@@ -574,8 +519,12 @@ exports[`ExchangeForm > should render exchange form 1`] = `
                             class="css-n1b0kl"
                           >
                             <div
-                              class="border-theme-secondary-200 bg-theme-secondary-200 ring-theme-background dark:border-theme-secondary-700 dark:bg-theme-secondary-700 ring-theme-background duration-100 css-cm9d5u"
-                            />
+                              class="hidden sm:block"
+                            >
+                              <div
+                                class="border-theme-secondary-200 bg-theme-secondary-200 ring-theme-background dark:border-theme-secondary-700 dark:bg-theme-secondary-700 ring-theme-background duration-100 css-cm9d5u"
+                              />
+                            </div>
                             <div
                               class="relative flex h-full flex-1"
                             >
@@ -646,7 +595,7 @@ exports[`ExchangeForm > should render exchange form 1`] = `
                 </fieldset>
               </div>
               <div
-                class="w-1/2 sm:w-3/5"
+                class="w-3/5"
               >
                 <fieldset
                   class="flex min-w-0 flex-col css-1bcidjh"
@@ -751,7 +700,7 @@ exports[`ExchangeForm > should render exchange form 1`] = `
                 class="relative flex space-x-3"
               >
                 <div
-                  class="w-1/2 sm:w-2/5"
+                  class="w-2/5"
                 >
                   <fieldset
                     class="flex min-w-0 flex-col css-1bcidjh"
@@ -803,8 +752,12 @@ exports[`ExchangeForm > should render exchange form 1`] = `
                               class="css-n1b0kl"
                             >
                               <div
-                                class="border-theme-secondary-200 bg-theme-secondary-200 ring-theme-background dark:border-theme-secondary-700 dark:bg-theme-secondary-700 ring-theme-background duration-100 css-cm9d5u"
-                              />
+                                class="hidden sm:block"
+                              >
+                                <div
+                                  class="border-theme-secondary-200 bg-theme-secondary-200 ring-theme-background dark:border-theme-secondary-700 dark:bg-theme-secondary-700 ring-theme-background duration-100 css-cm9d5u"
+                                />
+                              </div>
                               <div
                                 class="relative flex h-full flex-1"
                               >
@@ -875,7 +828,7 @@ exports[`ExchangeForm > should render exchange form 1`] = `
                   </fieldset>
                 </div>
                 <div
-                  class="w-1/2 sm:w-3/5"
+                  class="w-3/5"
                 >
                   <fieldset
                     class="flex min-w-0 flex-col css-1bcidjh"
@@ -983,13 +936,6 @@ exports[`ExchangeForm > should render exchange form 1`] = `
                                 disabled=""
                               >
                                 <div
-                                  class="flex items-center"
-                                >
-                                  <div
-                                    class="border-theme-secondary-200 bg-theme-secondary-200 dark:border-theme-secondary-700 dark:bg-theme-secondary-700 ring-theme-background duration-100 css-cm9d5u"
-                                  />
-                                </div>
-                                <div
                                   class="relative flex h-full flex-1"
                                 >
                                   <input
@@ -1093,602 +1039,547 @@ exports[`ExchangeForm > should render exchange form with id of finished order 1`
         </ul>
       </div>
       <div
-        class="mt-8"
+        class="mt-6 sm:mt-8 mb-24 sm:mb-0"
       >
         <div
           data-testid="tab-pabel__active-panel"
         >
           <div
-            class="flex flex-col space-y-8"
+            class="flex flex-col"
             data-testid="ExchangeForm__confirmation-step"
           >
             <div
-              class="sm:mx-auto sm:flex sm:items-center sm:space-x-3"
+              class="hidden mx-auto sm:flex items-center space-x-3 mb-8"
             >
               <div
-                class="hidden text-theme-success-600 sm:block css-1atxdzc"
-                height="40"
-                width="40"
+                class="css-bogjme"
+                data-testid="icon-CircleCompletedLight"
+                height="32"
+                width="32"
               >
                 <svg
-                  id="circle-check-mark"
-                  viewBox="0 0 20 20"
-                  x="0"
-                  xml:space="preserve"
+                  fill="none"
+                  viewBox="0 0 32 32"
                   xmlns="http://www.w3.org/2000/svg"
-                  y="0"
                 >
-                  <g
-                    fill="none"
-                    stroke="currentColor"
+                  <circle
+                    cx="16"
+                    cy="16"
+                    r="15"
+                    stroke="#235B95"
                     stroke-width="2"
-                  >
-                    <circle
-                      cx="10"
-                      cy="10"
-                      r="9"
-                      stroke-miterlimit="10"
-                    />
-                    <path
-                      d="M13.6 6.5l-5 6.8c-.2.3-.6.4-.9.2l-.1-.1L6.4 12"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </g>
+                  />
+                  <path
+                    d="M21.1387 11.8135L15.1388 17.7218L12.339 14.963L10.3389 16.933L15.1388 21.6601L23.1389 13.7844L21.1387 11.8135Z"
+                    fill="#E6EFF9"
+                    stroke="#235B95"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  />
                 </svg>
               </div>
               <h2
-                class="m-0 text-xl font-bold sm:text-2xl"
+                class="m-0 font-bold leading-[29px] text-2xl"
               >
-                Transaction is Complete!
+                Exchange Completed!
               </h2>
             </div>
             <div
-              class="flex flex-col space-y-5"
+              class="space-y-6 sm:space-y-8"
             >
               <div
-                class="flex items-center space-x-3"
-              >
-                <span
-                  class="flex h-6 w-6 items-center justify-center rounded bg-theme-primary-200 font-semibold dark:bg-theme-secondary-800"
-                >
-                  1
-                </span>
-                <h3
-                  class="m-0 text-lg font-bold"
-                >
-                  BTC Input
-                </h3>
-              </div>
-              <div
-                class="flex sm:space-x-6"
+                class="flex flex-col space-y-4 sm:space-y-5"
               >
                 <div
-                  class="hidden h-24 w-24 shrink-0 items-center justify-center rounded-xl bg-theme-secondary-200 dark:bg-theme-secondary-700 sm:flex"
+                  class="flex items-center space-x-3"
                 >
-                  <svg
-                    class="w-12"
-                    id="Layer_1"
-                    viewBox="0 0 48 48"
-                    x="0"
-                    xml:space="preserve"
-                    xmlns="http://www.w3.org/2000/svg"
-                    y="0"
+                  <span
+                    class="flex h-6 w-6 items-center justify-center rounded bg-theme-navy-100 dark:text-theme-secondary-200 text-sm leading-[17px] font-semibold dark:bg-theme-secondary-800"
                   >
-                    <path
-                      d="M43.714 29.346v6.377a5.624 5.624 0 0 1-1.65 3.979 5.635 5.635 0 0 1-3.982 1.648H6.632a5.635 5.635 0 0 1-3.982-1.648A5.624 5.624 0 0 1 1 35.722V17.436c0-1.493.593-2.924 1.65-3.98a5.635 5.635 0 0 1 3.983-1.648h31.449a5.635 5.635 0 0 1 5.633 5.628v4.933"
-                      fill="none"
-                      stroke="#212225"
-                      stroke-width="2"
-                    />
-                    <path
-                      d="M1 16.497v-4.22c0-1.492.593-2.924 1.65-3.979A5.635 5.635 0 0 1 6.633 6.65h25.816c1.494 0 2.927.593 3.983 1.648a5.624 5.624 0 0 1 1.65 3.979m-4.225 9.848h11.735A1.409 1.409 0 0 1 47 23.53v4.69a1.406 1.406 0 0 1-1.408 1.406H33.857a1.782 1.782 0 0 1-1.408-.468c-.404-.324-2.984-2.656-3.286-2.814-.302-.159-.254-.784 0-.938.255-.154 2.994-2.562 3.286-2.814a1.882 1.882 0 0 1 1.408-.468z"
-                      fill="none"
-                      stroke="#212225"
-                      stroke-width="2"
-                    />
-                    <path
-                      d="M16.02 35.254c4.666 0 8.449-3.779 8.449-8.44s-3.783-8.441-8.449-8.441-8.449 3.779-8.449 8.44 3.783 8.441 8.449 8.441z"
-                      fill="#A5ADB9"
-                    />
-                    <path
-                      d="M32.449 17.904h8.449m-8.449 16.882h8.449"
-                      fill="none"
-                      stroke="#A5ADB9"
-                      stroke-width="2"
-                    />
-                  </svg>
+                    1
+                  </span>
+                  <h3
+                    class="m-0 text-lg font-bold"
+                  >
+                    BTC Input
+                  </h3>
                 </div>
                 <div
-                  class="flex flex-1 flex-col space-y-4 overflow-hidden"
+                  class="flex sm:space-x-6"
                 >
                   <div
-                    class="flex flex-col space-y-2"
+                    class="hidden h-24 w-24 shrink-0 items-center justify-center rounded-xl bg-theme-secondary-200 dark:bg-black sm:flex"
+                  />
+                  <div
+                    class="flex flex-1 flex-col space-y-4 overflow-hidden"
                   >
-                    <span
-                      class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
-                    >
-                      Input Transaction ID
-                    </span>
                     <div
-                      class="flex items-center space-x-2 whitespace-nowrap text-lg font-semibold"
+                      class="flex flex-col space-y-2"
                     >
                       <span
-                        class="overflow-hidden"
-                        data-testid="ExplorerLink"
+                        class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
                       >
-                        <a
-                          class="ring-focus group inline-block css-7nwwrh"
-                          data-ring-focus-margin="-m-1"
-                          data-testid="Link"
-                          href="https://blockchair.com/bitcoin/transaction/payinHash?from=changenow"
-                          rel="noopener noreferrer"
+                        Input Transaction ID
+                      </span>
+                      <div
+                        class="flex items-center space-x-2 whitespace-nowrap text-lg font-semibold"
+                      >
+                        <span
+                          class="overflow-hidden"
+                          data-testid="ExplorerLink"
                         >
-                          <span
-                            class="css-170792"
+                          <a
+                            class="ring-focus group inline-block css-7nwwrh"
+                            data-ring-focus-margin="-m-1"
+                            data-testid="Link"
+                            href="https://blockchair.com/bitcoin/transaction/payinHash?from=changenow"
+                            rel="noopener noreferrer"
                           >
                             <span
-                              class="no-ligatures min-w-0 overflow-hidden"
+                              class="css-170792"
                             >
-                              payinHash
+                              <span
+                                class="no-ligatures min-w-0 overflow-hidden"
+                              >
+                                payinHash
+                              </span>
                             </span>
-                          </span>
-                          <div
-                            class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-v0ob3f"
-                            data-testid="Link__external"
-                            height="16"
-                            width="16"
-                          >
-                            <svg
-                              id="arrow-external"
-                              viewBox="0 0 20 20"
-                              x="0"
-                              xml:space="preserve"
-                              xmlns="http://www.w3.org/2000/svg"
-                              y="0"
+                            <div
+                              class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-v0ob3f"
+                              data-testid="Link__external"
+                              height="16"
+                              width="16"
                             >
-                              <path
-                                d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
-                                fill="none"
-                                stroke="currentColor"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="2"
-                              />
-                            </svg>
-                          </div>
-                        </a>
-                      </span>
-                      <span
-                        class="flex text-theme-primary-300 dark:text-theme-secondary-600"
-                      >
-                        <button
-                          class="ring-focus relative focus:outline-none"
-                          data-ring-focus-margin="-m-1"
-                          data-testid="clipboard-icon__wrapper"
-                          type="button"
-                        >
-                          <div
-                            class="css-v0ob3f"
-                            height="16"
-                            width="16"
-                          >
-                            <svg
-                              id="copy"
-                              viewBox="0 0 20 20"
-                              x="0"
-                              xml:space="preserve"
-                              xmlns="http://www.w3.org/2000/svg"
-                              y="0"
-                            >
-                              <g
-                                fill="none"
-                                stroke="currentColor"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="2"
+                              <svg
+                                id="arrow-external"
+                                viewBox="0 0 20 20"
+                                x="0"
+                                xml:space="preserve"
+                                xmlns="http://www.w3.org/2000/svg"
+                                y="0"
                               >
                                 <path
-                                  d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                                  d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="2"
                                 />
-                                <path
-                                  d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                                />
-                              </g>
-                            </svg>
-                          </div>
-                        </button>
-                      </span>
+                              </svg>
+                            </div>
+                          </a>
+                        </span>
+                        <span
+                          class="flex text-theme-primary-300 dark:text-theme-secondary-600"
+                        >
+                          <button
+                            class="ring-focus relative focus:outline-none"
+                            data-ring-focus-margin="-m-1"
+                            data-testid="clipboard-icon__wrapper"
+                            type="button"
+                          >
+                            <div
+                              class="css-v0ob3f"
+                              height="16"
+                              width="16"
+                            >
+                              <svg
+                                id="copy"
+                                viewBox="0 0 20 20"
+                                x="0"
+                                xml:space="preserve"
+                                xmlns="http://www.w3.org/2000/svg"
+                                y="0"
+                              >
+                                <g
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="2"
+                                >
+                                  <path
+                                    d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                                  />
+                                  <path
+                                    d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                                  />
+                                </g>
+                              </svg>
+                            </div>
+                          </button>
+                        </span>
+                      </div>
                     </div>
-                  </div>
-                  <div
-                    class="flex flex-col space-y-2"
-                  >
-                    <span
-                      class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
-                    >
-                      Exchange ARK Address
-                    </span>
                     <div
-                      class="flex items-center space-x-2 whitespace-nowrap text-lg font-semibold"
+                      class="flex flex-col space-y-2"
                     >
                       <span
-                        class="overflow-hidden"
-                        data-testid="ExplorerLink"
+                        class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
                       >
-                        <a
-                          class="ring-focus group inline-block css-7nwwrh"
-                          data-ring-focus-margin="-m-1"
-                          data-testid="Link"
-                          href="https://blockchair.com/bitcoin/address/payinAddress?from=changenow"
-                          rel="noopener noreferrer"
+                        Exchange ARK Address
+                      </span>
+                      <div
+                        class="flex items-center space-x-2 whitespace-nowrap text-lg font-semibold"
+                      >
+                        <span
+                          class="overflow-hidden"
+                          data-testid="ExplorerLink"
                         >
-                          <span
-                            class="css-170792"
+                          <a
+                            class="ring-focus group inline-block css-7nwwrh"
+                            data-ring-focus-margin="-m-1"
+                            data-testid="Link"
+                            href="https://blockchair.com/bitcoin/address/payinAddress?from=changenow"
+                            rel="noopener noreferrer"
                           >
                             <span
-                              class="no-ligatures min-w-0 overflow-hidden"
+                              class="css-170792"
                             >
-                              payinAddress
+                              <span
+                                class="no-ligatures min-w-0 overflow-hidden"
+                              >
+                                payinAddress
+                              </span>
                             </span>
-                          </span>
-                          <div
-                            class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-v0ob3f"
-                            data-testid="Link__external"
-                            height="16"
-                            width="16"
-                          >
-                            <svg
-                              id="arrow-external"
-                              viewBox="0 0 20 20"
-                              x="0"
-                              xml:space="preserve"
-                              xmlns="http://www.w3.org/2000/svg"
-                              y="0"
+                            <div
+                              class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-v0ob3f"
+                              data-testid="Link__external"
+                              height="16"
+                              width="16"
                             >
-                              <path
-                                d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
-                                fill="none"
-                                stroke="currentColor"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="2"
-                              />
-                            </svg>
-                          </div>
-                        </a>
-                      </span>
-                      <span
-                        class="flex text-theme-primary-300 dark:text-theme-secondary-600"
-                      >
-                        <button
-                          class="ring-focus relative focus:outline-none"
-                          data-ring-focus-margin="-m-1"
-                          data-testid="clipboard-icon__wrapper"
-                          type="button"
-                        >
-                          <div
-                            class="css-v0ob3f"
-                            height="16"
-                            width="16"
-                          >
-                            <svg
-                              id="copy"
-                              viewBox="0 0 20 20"
-                              x="0"
-                              xml:space="preserve"
-                              xmlns="http://www.w3.org/2000/svg"
-                              y="0"
-                            >
-                              <g
-                                fill="none"
-                                stroke="currentColor"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="2"
+                              <svg
+                                id="arrow-external"
+                                viewBox="0 0 20 20"
+                                x="0"
+                                xml:space="preserve"
+                                xmlns="http://www.w3.org/2000/svg"
+                                y="0"
                               >
                                 <path
-                                  d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                                  d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="2"
                                 />
-                                <path
-                                  d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                                />
-                              </g>
-                            </svg>
-                          </div>
-                        </button>
-                      </span>
+                              </svg>
+                            </div>
+                          </a>
+                        </span>
+                        <span
+                          class="flex text-theme-primary-300 dark:text-theme-secondary-600"
+                        >
+                          <button
+                            class="ring-focus relative focus:outline-none"
+                            data-ring-focus-margin="-m-1"
+                            data-testid="clipboard-icon__wrapper"
+                            type="button"
+                          >
+                            <div
+                              class="css-v0ob3f"
+                              height="16"
+                              width="16"
+                            >
+                              <svg
+                                id="copy"
+                                viewBox="0 0 20 20"
+                                x="0"
+                                xml:space="preserve"
+                                xmlns="http://www.w3.org/2000/svg"
+                                y="0"
+                              >
+                                <g
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="2"
+                                >
+                                  <path
+                                    d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                                  />
+                                  <path
+                                    d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                                  />
+                                </g>
+                              </svg>
+                            </div>
+                          </button>
+                        </span>
+                      </div>
                     </div>
-                  </div>
-                  <div
-                    class="flex flex-col space-y-2"
-                  >
-                    <span
-                      class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
-                    >
-                      Amount Sent
-                    </span>
                     <div
-                      class="mr-auto whitespace-nowrap css-148b4hi"
-                      color="danger"
+                      class="flex flex-col space-y-2"
                     >
                       <span
-                        class="whitespace-nowrap text-lg font-semibold"
-                        data-testid="Amount"
+                        class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
                       >
-                        - 1 BTC
+                        Amount Sent
                       </span>
+                      <div
+                        class="mr-auto whitespace-nowrap css-148b4hi"
+                        color="danger"
+                      >
+                        <span
+                          class="whitespace-nowrap leading-5 font-semibold"
+                          data-testid="Amount"
+                        >
+                          - 1 BTC
+                        </span>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
-            <div
-              class="-mx-10 border-t border-dashed border-theme-secondary-300 px-10 dark:border-theme-secondary-800"
-            />
-            <div
-              class="flex flex-col space-y-5"
-            >
               <div
-                class="flex items-center space-x-3"
-              >
-                <span
-                  class="flex h-6 w-6 items-center justify-center rounded bg-theme-primary-200 font-semibold dark:bg-theme-secondary-800"
-                >
-                  2
-                </span>
-                <h3
-                  class="m-0 text-lg font-bold"
-                >
-                  ARK Output
-                </h3>
-              </div>
+                class="-mx-10 border-t border-dashed border-theme-secondary-300 px-10 dark:border-theme-secondary-800"
+              />
               <div
-                class="flex sm:space-x-6"
+                class="flex flex-col space-y-4 sm:space-y-5"
               >
                 <div
-                  class="hidden h-24 w-24 shrink-0 items-center justify-center rounded-xl bg-theme-secondary-200 dark:bg-theme-secondary-700 sm:flex"
+                  class="flex items-center space-x-3"
                 >
-                  <svg
-                    class="w-12"
-                    id="Layer_1"
-                    viewBox="0 0 48 48"
-                    x="0"
-                    xml:space="preserve"
-                    xmlns="http://www.w3.org/2000/svg"
-                    y="0"
+                  <span
+                    class="flex h-6 w-6 items-center justify-center rounded bg-theme-navy-100 dark:text-theme-secondary-200 text-sm leading-[17px] font-semibold dark:bg-theme-secondary-800"
                   >
-                    <path
-                      d="M16.898 46.172a23.422 23.422 0 0 1-15.33-15.005L1 39.877M31.642 1.829a23.43 23.43 0 0 1 14.165 14.256L47 8.075M17.43 31.13c7.795 0 14.115-6.32 14.115-14.115 0-7.796-6.32-14.116-14.116-14.116-7.796 0-14.116 6.32-14.116 14.116 0 7.796 6.32 14.115 14.116 14.115zm14.115-14.115A14.116 14.116 0 1 1 17.43 31.13"
-                      fill="none"
-                      stroke="#212225"
-                      stroke-width="2"
-                    />
-                    <path
-                      d="M17.43 25.776a8.762 8.762 0 1 0 0-17.523 8.762 8.762 0 0 0 0 17.523z"
-                      fill="#A5ADB9"
-                    />
-                  </svg>
+                    2
+                  </span>
+                  <h3
+                    class="m-0 text-lg font-bold"
+                  >
+                    ARK Output
+                  </h3>
                 </div>
                 <div
-                  class="flex flex-1 flex-col space-y-4 overflow-hidden"
+                  class="flex sm:space-x-6"
                 >
                   <div
-                    class="flex w-full flex-col space-y-2"
+                    class="hidden h-24 w-24 shrink-0 items-center justify-center rounded-xl bg-theme-secondary-200 dark:bg-black sm:flex"
+                  />
+                  <div
+                    class="flex flex-1 flex-col space-y-4 overflow-hidden"
                   >
-                    <span
-                      class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
-                    >
-                      Output Transaction ID
-                    </span>
                     <div
-                      class="flex items-center space-x-2 whitespace-nowrap text-lg font-semibold"
+                      class="flex w-full flex-col space-y-2"
                     >
                       <span
-                        class="overflow-hidden"
-                        data-testid="ExplorerLink"
+                        class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
                       >
-                        <a
-                          class="ring-focus group inline-block css-7nwwrh"
-                          data-ring-focus-margin="-m-1"
-                          data-testid="Link"
-                          href="https://live.arkscan.io/transaction/payoutHash"
-                          rel="noopener noreferrer"
+                        Output Transaction ID
+                      </span>
+                      <div
+                        class="flex items-center space-x-2 whitespace-nowrap text-lg font-semibold"
+                      >
+                        <span
+                          class="overflow-hidden"
+                          data-testid="ExplorerLink"
                         >
-                          <span
-                            class="css-170792"
+                          <a
+                            class="ring-focus group inline-block css-7nwwrh"
+                            data-ring-focus-margin="-m-1"
+                            data-testid="Link"
+                            href="https://live.arkscan.io/transaction/payoutHash"
+                            rel="noopener noreferrer"
                           >
                             <span
-                              class="no-ligatures min-w-0 overflow-hidden"
+                              class="css-170792"
                             >
-                              payoutHash
+                              <span
+                                class="no-ligatures min-w-0 overflow-hidden"
+                              >
+                                payoutHash
+                              </span>
                             </span>
-                          </span>
-                          <div
-                            class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-v0ob3f"
-                            data-testid="Link__external"
-                            height="16"
-                            width="16"
-                          >
-                            <svg
-                              id="arrow-external"
-                              viewBox="0 0 20 20"
-                              x="0"
-                              xml:space="preserve"
-                              xmlns="http://www.w3.org/2000/svg"
-                              y="0"
+                            <div
+                              class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-v0ob3f"
+                              data-testid="Link__external"
+                              height="16"
+                              width="16"
                             >
-                              <path
-                                d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
-                                fill="none"
-                                stroke="currentColor"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="2"
-                              />
-                            </svg>
-                          </div>
-                        </a>
-                      </span>
-                      <span
-                        class="flex text-theme-primary-300 dark:text-theme-secondary-600"
-                      >
-                        <button
-                          class="ring-focus relative focus:outline-none"
-                          data-ring-focus-margin="-m-1"
-                          data-testid="clipboard-icon__wrapper"
-                          type="button"
-                        >
-                          <div
-                            class="css-v0ob3f"
-                            height="16"
-                            width="16"
-                          >
-                            <svg
-                              id="copy"
-                              viewBox="0 0 20 20"
-                              x="0"
-                              xml:space="preserve"
-                              xmlns="http://www.w3.org/2000/svg"
-                              y="0"
-                            >
-                              <g
-                                fill="none"
-                                stroke="currentColor"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="2"
+                              <svg
+                                id="arrow-external"
+                                viewBox="0 0 20 20"
+                                x="0"
+                                xml:space="preserve"
+                                xmlns="http://www.w3.org/2000/svg"
+                                y="0"
                               >
                                 <path
-                                  d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                                  d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="2"
                                 />
-                                <path
-                                  d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                                />
-                              </g>
-                            </svg>
-                          </div>
-                        </button>
-                      </span>
+                              </svg>
+                            </div>
+                          </a>
+                        </span>
+                        <span
+                          class="flex text-theme-primary-300 dark:text-theme-secondary-600"
+                        >
+                          <button
+                            class="ring-focus relative focus:outline-none"
+                            data-ring-focus-margin="-m-1"
+                            data-testid="clipboard-icon__wrapper"
+                            type="button"
+                          >
+                            <div
+                              class="css-v0ob3f"
+                              height="16"
+                              width="16"
+                            >
+                              <svg
+                                id="copy"
+                                viewBox="0 0 20 20"
+                                x="0"
+                                xml:space="preserve"
+                                xmlns="http://www.w3.org/2000/svg"
+                                y="0"
+                              >
+                                <g
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="2"
+                                >
+                                  <path
+                                    d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                                  />
+                                  <path
+                                    d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                                  />
+                                </g>
+                              </svg>
+                            </div>
+                          </button>
+                        </span>
+                      </div>
                     </div>
-                  </div>
-                  <div
-                    class="flex flex-col space-y-2"
-                  >
-                    <span
-                      class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
-                    >
-                      Your ARK Address
-                    </span>
                     <div
-                      class="flex items-center space-x-2 whitespace-nowrap text-lg font-semibold"
+                      class="flex flex-col space-y-2"
                     >
                       <span
-                        class="overflow-hidden"
-                        data-testid="ExplorerLink"
+                        class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
                       >
-                        <a
-                          class="ring-focus group inline-block css-7nwwrh"
-                          data-ring-focus-margin="-m-1"
-                          data-testid="Link"
-                          href="https://live.arkscan.io/wallets/payoutAddress"
-                          rel="noopener noreferrer"
+                        Your ARK Address
+                      </span>
+                      <div
+                        class="flex items-center space-x-2 whitespace-nowrap text-lg font-semibold"
+                      >
+                        <span
+                          class="overflow-hidden"
+                          data-testid="ExplorerLink"
                         >
-                          <span
-                            class="css-170792"
+                          <a
+                            class="ring-focus group inline-block css-7nwwrh"
+                            data-ring-focus-margin="-m-1"
+                            data-testid="Link"
+                            href="https://live.arkscan.io/wallets/payoutAddress"
+                            rel="noopener noreferrer"
                           >
                             <span
-                              class="no-ligatures min-w-0 overflow-hidden"
+                              class="css-170792"
                             >
-                              payoutAddress
+                              <span
+                                class="no-ligatures min-w-0 overflow-hidden"
+                              >
+                                payoutAddress
+                              </span>
                             </span>
-                          </span>
-                          <div
-                            class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-v0ob3f"
-                            data-testid="Link__external"
-                            height="16"
-                            width="16"
-                          >
-                            <svg
-                              id="arrow-external"
-                              viewBox="0 0 20 20"
-                              x="0"
-                              xml:space="preserve"
-                              xmlns="http://www.w3.org/2000/svg"
-                              y="0"
+                            <div
+                              class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-v0ob3f"
+                              data-testid="Link__external"
+                              height="16"
+                              width="16"
                             >
-                              <path
-                                d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
-                                fill="none"
-                                stroke="currentColor"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="2"
-                              />
-                            </svg>
-                          </div>
-                        </a>
-                      </span>
-                      <span
-                        class="flex text-theme-primary-300 dark:text-theme-secondary-600"
-                      >
-                        <button
-                          class="ring-focus relative focus:outline-none"
-                          data-ring-focus-margin="-m-1"
-                          data-testid="clipboard-icon__wrapper"
-                          type="button"
-                        >
-                          <div
-                            class="css-v0ob3f"
-                            height="16"
-                            width="16"
-                          >
-                            <svg
-                              id="copy"
-                              viewBox="0 0 20 20"
-                              x="0"
-                              xml:space="preserve"
-                              xmlns="http://www.w3.org/2000/svg"
-                              y="0"
-                            >
-                              <g
-                                fill="none"
-                                stroke="currentColor"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="2"
+                              <svg
+                                id="arrow-external"
+                                viewBox="0 0 20 20"
+                                x="0"
+                                xml:space="preserve"
+                                xmlns="http://www.w3.org/2000/svg"
+                                y="0"
                               >
                                 <path
-                                  d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                                  d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="2"
                                 />
-                                <path
-                                  d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                                />
-                              </g>
-                            </svg>
-                          </div>
-                        </button>
-                      </span>
+                              </svg>
+                            </div>
+                          </a>
+                        </span>
+                        <span
+                          class="flex text-theme-primary-300 dark:text-theme-secondary-600"
+                        >
+                          <button
+                            class="ring-focus relative focus:outline-none"
+                            data-ring-focus-margin="-m-1"
+                            data-testid="clipboard-icon__wrapper"
+                            type="button"
+                          >
+                            <div
+                              class="css-v0ob3f"
+                              height="16"
+                              width="16"
+                            >
+                              <svg
+                                id="copy"
+                                viewBox="0 0 20 20"
+                                x="0"
+                                xml:space="preserve"
+                                xmlns="http://www.w3.org/2000/svg"
+                                y="0"
+                              >
+                                <g
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="2"
+                                >
+                                  <path
+                                    d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                                  />
+                                  <path
+                                    d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                                  />
+                                </g>
+                              </svg>
+                            </div>
+                          </button>
+                        </span>
+                      </div>
                     </div>
-                  </div>
-                  <div
-                    class="flex flex-col space-y-2"
-                  >
-                    <span
-                      class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
-                    >
-                      Amount Received
-                    </span>
                     <div
-                      class="mr-auto whitespace-nowrap css-1v19423"
-                      color="success"
+                      class="flex flex-col space-y-2"
                     >
                       <span
-                        class="whitespace-nowrap text-lg font-semibold"
-                        data-testid="Amount"
+                        class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
                       >
-                        + 100 ARK
+                        Amount Received
                       </span>
+                      <div
+                        class="mr-auto whitespace-nowrap css-1v19423"
+                        color="success"
+                      >
+                        <span
+                          class="whitespace-nowrap leading-5 font-semibold"
+                          data-testid="Amount"
+                        >
+                          + 100 ARK
+                        </span>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -1702,17 +1593,32 @@ exports[`ExchangeForm > should render exchange form with id of finished order 1`
           <div
             class="css-145pihz"
           >
-            <button
-              class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded text-white bg-theme-primary-600 hover:bg-theme-primary-700"
-              data-testid="ExchangeForm__finish-button"
-              type="button"
+            <div
+              class="flex flex-col w-full gap-3"
             >
-              <div
-                class="flex items-center space-x-2"
+              <button
+                class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded text-white bg-theme-primary-600 hover:bg-theme-primary-700"
+                data-testid="ExchangeForm__finish-button"
+                type="button"
               >
-                Go to Portfolio
-              </div>
-            </button>
+                <div
+                  class="flex items-center space-x-2"
+                >
+                  Go to Portfolio
+                </div>
+              </button>
+              <button
+                class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white"
+                data-testid="ExchangeForm__new-exchange"
+                type="button"
+              >
+                <div
+                  class="flex items-center space-x-2"
+                >
+                  New Exchange
+                </div>
+              </button>
+            </div>
           </div>
         </div>
       </div>
@@ -1752,7 +1658,7 @@ exports[`ExchangeForm > should render exchange form with id of pending order 1`]
         </ul>
       </div>
       <div
-        class="mt-8"
+        class="mt-6 sm:mt-8 mb-24 sm:mb-0"
       >
         <div
           data-testid="tab-pabel__active-panel"
@@ -1767,6 +1673,8 @@ exports[`ExchangeForm > should render exchange form with id of pending order 1`]
               <span
                 class="text-xs font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
               >
+                ChangeNOW
+                 
                 Transaction ID
                 : 
                 id
@@ -1893,13 +1801,13 @@ exports[`ExchangeForm > should render exchange form with id of pending order 1`]
               class="items-top my-6 flex justify-center px-10 sm:px-20"
             >
               <div
-                class="flex w-8 flex-col items-center space-y-2"
+                class="flex w-6 flex-col items-center space-y-2"
               >
                 <span
                   data-testid="StatusIcon__spinner"
                 >
                   <div
-                    class="css-1ppx3l2"
+                    class="!w-6 !h-6 !border-[3px] css-1ppx3l2"
                     color="info"
                   />
                 </span>
@@ -1910,17 +1818,17 @@ exports[`ExchangeForm > should render exchange form with id of pending order 1`]
                 </span>
               </div>
               <div
-                class="flex h-8 flex-1 items-center px-2"
+                class="flex h-6 flex-1 items-center px-2"
               >
                 <div
                   class="h-0.5 w-full rounded-l rounded-r bg-theme-secondary-300 dark:bg-theme-secondary-800"
                 />
               </div>
               <div
-                class="flex w-8 flex-col items-center space-y-2"
+                class="flex w-6 flex-col items-center space-y-2"
               >
                 <div
-                  class="h-8 w-8 rounded-full border-2 border-theme-secondary-300 dark:border-theme-secondary-800"
+                  class="h-6 w-6 rounded-full border-2 border-theme-secondary-300 dark:border-theme-secondary-800"
                   data-testid="StatusIcon__empty"
                 />
                 <span
@@ -1930,23 +1838,23 @@ exports[`ExchangeForm > should render exchange form with id of pending order 1`]
                 </span>
               </div>
               <div
-                class="flex h-8 flex-1 items-center px-2"
+                class="flex h-6 flex-1 items-center px-2"
               >
                 <div
                   class="h-0.5 w-full rounded-l rounded-r bg-theme-secondary-300 dark:bg-theme-secondary-800"
                 />
               </div>
               <div
-                class="flex w-8 flex-col items-center space-y-2"
+                class="flex w-6 flex-col items-center space-y-2"
               >
                 <div
-                  class="h-8 w-8 rounded-full border-2 border-theme-secondary-300 dark:border-theme-secondary-800"
+                  class="h-6 w-6 rounded-full border-2 border-theme-secondary-300 dark:border-theme-secondary-800"
                   data-testid="StatusIcon__empty"
                 />
                 <span
                   class="whitespace-nowrap text-xs font-semibold sm:text-sm text-theme-secondary-500 dark:text-theme-secondary-700"
                 >
-                  Sending
+                  Sending to you
                 </span>
               </div>
             </div>
@@ -1964,9 +1872,10 @@ exports[`ExchangeForm > should render exchange form with id of pending order 1`]
                 >
                   You Get
                 </span>
-                <span>
+                <span
+                  class="font-semibold"
+                >
                   ≈
-                   
                   <span
                     class="whitespace-nowrap font-semibold"
                     data-testid="Amount"
@@ -2035,7 +1944,7 @@ exports[`ExchangeForm > should render exchange form with id of pending order 1`]
               </div>
             </div>
             <div
-              class="mt-6 rounded-lg bg-theme-secondary-100 px-6 py-3 text-sm dark:bg-theme-secondary-800"
+              class="mt-6 rounded-lg bg-theme-secondary-100 px-6 py-3 text-xs dark:bg-theme-secondary-800"
             >
               If you have any question about your exchange, please contact ChangeNOW support team via email at 
               <a
@@ -2094,7 +2003,7 @@ exports[`FormStep > should render 1`] = `
       class="relative flex space-x-3"
     >
       <div
-        class="w-1/2 sm:w-2/5"
+        class="w-2/5"
       >
         <fieldset
           class="flex min-w-0 flex-col css-1bcidjh"
@@ -2147,8 +2056,12 @@ exports[`FormStep > should render 1`] = `
                     disabled=""
                   >
                     <div
-                      class="border-theme-secondary-200 bg-theme-secondary-200 ring-theme-background dark:border-theme-secondary-700 dark:bg-theme-secondary-700 ring-theme-background duration-100 css-cm9d5u"
-                    />
+                      class="hidden sm:block"
+                    >
+                      <div
+                        class="border-theme-secondary-200 bg-theme-secondary-200 ring-theme-background dark:border-theme-secondary-700 dark:bg-theme-secondary-700 ring-theme-background duration-100 css-cm9d5u"
+                      />
+                    </div>
                     <div
                       class="relative flex h-full flex-1"
                     >
@@ -2220,7 +2133,7 @@ exports[`FormStep > should render 1`] = `
         </fieldset>
       </div>
       <div
-        class="w-1/2 sm:w-3/5"
+        class="w-3/5"
       >
         <fieldset
           class="flex min-w-0 flex-col css-1bcidjh"
@@ -2325,7 +2238,7 @@ exports[`FormStep > should render 1`] = `
         class="relative flex space-x-3"
       >
         <div
-          class="w-1/2 sm:w-2/5"
+          class="w-2/5"
         >
           <fieldset
             class="flex min-w-0 flex-col css-1bcidjh"
@@ -2378,8 +2291,12 @@ exports[`FormStep > should render 1`] = `
                       disabled=""
                     >
                       <div
-                        class="border-theme-secondary-200 bg-theme-secondary-200 ring-theme-background dark:border-theme-secondary-700 dark:bg-theme-secondary-700 ring-theme-background duration-100 css-cm9d5u"
-                      />
+                        class="hidden sm:block"
+                      >
+                        <div
+                          class="border-theme-secondary-200 bg-theme-secondary-200 ring-theme-background dark:border-theme-secondary-700 dark:bg-theme-secondary-700 ring-theme-background duration-100 css-cm9d5u"
+                        />
+                      </div>
                       <div
                         class="relative flex h-full flex-1"
                       >
@@ -2451,7 +2368,7 @@ exports[`FormStep > should render 1`] = `
           </fieldset>
         </div>
         <div
-          class="w-1/2 sm:w-3/5"
+          class="w-3/5"
         >
           <fieldset
             class="flex min-w-0 flex-col css-1bcidjh"
@@ -2559,13 +2476,6 @@ exports[`FormStep > should render 1`] = `
                         disabled=""
                       >
                         <div
-                          class="flex items-center"
-                        >
-                          <div
-                            class="border-theme-secondary-200 bg-theme-secondary-200 dark:border-theme-secondary-700 dark:bg-theme-secondary-700 ring-theme-background duration-100 css-cm9d5u"
-                          />
-                        </div>
-                        <div
                           class="relative flex h-full flex-1"
                         >
                           <input
@@ -2606,14 +2516,14 @@ exports[`FormStep > should render 1`] = `
 exports[`ReviewStep > should render 1`] = `
 <div>
   <div
-    class="space-y-6"
+    class="space-y-4"
     data-testid="ExchangeForm__review-step"
   >
     <div
       class="flex flex-col rounded-xl border border-theme-secondary-300 dark:border-theme-secondary-800"
     >
       <div
-        class="flex flex-col px-6 py-5"
+        class="flex flex-col gap-2 px-6 py-5"
       >
         <span
           class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
@@ -2627,7 +2537,7 @@ exports[`ReviewStep > should render 1`] = `
           1 BTC
         </span>
         <span
-          class="text-xs font-semibold"
+          class="pt-1 text-xs font-semibold"
         >
           1 
           BTC
@@ -2647,32 +2557,51 @@ exports[`ReviewStep > should render 1`] = `
           class="absolute right-6 top-1/2 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border border-theme-secondary-300 bg-theme-background dark:border-theme-secondary-800"
         >
           <div
-            class="css-1i4b0eq"
+            class="text-theme-secondary-900 css-1i4b0eq"
             height="20"
             width="20"
           >
             <svg
-              id="money-coin-swap"
+              fill="none"
               viewBox="0 0 20 20"
-              x="0"
-              xml:space="preserve"
               xmlns="http://www.w3.org/2000/svg"
-              y="0"
             >
-              <path
-                d="M14.7 9.648c2.4 0 4.3-2.011 4.3-4.324S17 1 14.7 1c-2.4 0-4.3 2.011-4.3 4.324s1.8 4.324 4.3 4.324h0zM5.4 19c2.4 0 4.4-2.011 4.4-4.425s-2-4.424-4.4-4.424S1 12.162 1 14.575 2.9 19 5.4 19h0zM1 3.916l1.8 3.017 3-1.81M7 1c-2.2.804-4.4 3.52-4.2 5.933M19 16.084l-1.8-3.017-3 1.81M13 19c2.2-.804 4.4-3.52 4.2-5.933"
-                fill="none"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-              />
+              <g
+                clip-path="url(#clip0_12944_131082)"
+              >
+                <path
+                  d="M11.8999 3.09961L11.8999 0.999609"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                />
+                <path
+                  d="M8.09986 0.999608L8.09986 3.09961L8.09986 6.89961L8.09986 10.0996L4.29986 10.0996C3.99986 10.0996 3.89986 10.2996 4.09986 10.5996L9.79985 18.8996C9.89985 18.9996 10.0999 18.9996 10.1999 18.8996L15.8999 10.5996C16.0999 10.1996 15.9999 9.99961 15.6999 9.99961L11.8999 9.99961L11.8999 6.89961"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                />
+              </g>
+              <defs>
+                <clippath
+                  id="clip0_12944_131082"
+                >
+                  <rect
+                    fill="transparent"
+                    height="20"
+                    transform="translate(20 20) rotate(-180)"
+                    width="20"
+                  />
+                </clippath>
+              </defs>
             </svg>
           </div>
         </div>
       </div>
       <div
-        class="flex flex-col px-6 py-5"
+        class="flex flex-col gap-2 px-6 py-5"
       >
         <span
           class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
@@ -2680,10 +2609,15 @@ exports[`ReviewStep > should render 1`] = `
           You Get
         </span>
         <span
-          class="whitespace-nowrap text-lg font-semibold"
-          data-testid="Amount"
+          class="pb-1 text-lg font-semibold"
         >
-          1 ARK
+          ≈ 
+          <span
+            class="whitespace-nowrap text-lg font-semibold"
+            data-testid="Amount"
+          >
+            1 ARK
+          </span>
         </span>
         <span
           class="no-ligatures min-w-0 overflow-hidden no-ligatures text-xs font-semibold"
@@ -2692,98 +2626,102 @@ exports[`ReviewStep > should render 1`] = `
         </span>
       </div>
     </div>
-    <fieldset
-      class="flex min-w-0 flex-col css-1bcidjh"
-    >
-      <label
-        class="flex cursor-pointer items-center space-x-3"
+    <div>
+      <fieldset
+        class="sm:pt-2 css-1bcidjh"
       >
-        <input
-          class="css-kf7z38"
-          color="success"
-          name="hasAgreedToTerms"
-          type="checkbox"
-        />
-        <span>
-          I've read and agree to the ChangeNOW 
-          <a
-            class="ring-focus group inline-block css-7nwwrh"
-            data-ring-focus-margin="-m-1"
-            data-testid="Link"
-            href="https://changenow.io/terms-of-use"
-            rel="noopener noreferrer"
+        <label
+          class="flex cursor-pointer items-center space-x-3"
+        >
+          <input
+            class="css-kf7z38"
+            color="success"
+            name="hasAgreedToTerms"
+            type="checkbox"
+          />
+          <span
+            class="text-sm leading-5"
           >
-            <span
-              class="css-170792"
+            I've read and agree to the ChangeNOW 
+            <a
+              class="ring-focus group inline-block css-7nwwrh"
+              data-ring-focus-margin="-m-1"
+              data-testid="Link"
+              href="https://changenow.io/terms-of-use"
+              rel="noopener noreferrer"
             >
-              Terms of Use
-            </span>
-            <div
-              class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-v0ob3f"
-              data-testid="Link__external"
-              height="16"
-              width="16"
-            >
-              <svg
-                id="arrow-external"
-                viewBox="0 0 20 20"
-                x="0"
-                xml:space="preserve"
-                xmlns="http://www.w3.org/2000/svg"
-                y="0"
+              <span
+                class="css-170792"
               >
-                <path
-                  d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                />
-              </svg>
-            </div>
-          </a>
-           and 
-          <a
-            class="ring-focus group inline-block css-7nwwrh"
-            data-ring-focus-margin="-m-1"
-            data-testid="Link"
-            href="https://changenow.io/privacy-policy"
-            rel="noopener noreferrer"
-          >
-            <span
-              class="css-170792"
-            >
-              Privacy Policy
-            </span>
-            <div
-              class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-v0ob3f"
-              data-testid="Link__external"
-              height="16"
-              width="16"
-            >
-              <svg
-                id="arrow-external"
-                viewBox="0 0 20 20"
-                x="0"
-                xml:space="preserve"
-                xmlns="http://www.w3.org/2000/svg"
-                y="0"
+                Terms of Use
+              </span>
+              <div
+                class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-v0ob3f"
+                data-testid="Link__external"
+                height="16"
+                width="16"
               >
-                <path
-                  d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                />
-              </svg>
-            </div>
-          </a>
-        </span>
-      </label>
-    </fieldset>
+                <svg
+                  id="arrow-external"
+                  viewBox="0 0 20 20"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <path
+                    d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  />
+                </svg>
+              </div>
+            </a>
+             and 
+            <a
+              class="ring-focus group inline-block css-7nwwrh"
+              data-ring-focus-margin="-m-1"
+              data-testid="Link"
+              href="https://changenow.io/privacy-policy"
+              rel="noopener noreferrer"
+            >
+              <span
+                class="css-170792"
+              >
+                Privacy Policy
+              </span>
+              <div
+                class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-v0ob3f"
+                data-testid="Link__external"
+                height="16"
+                width="16"
+              >
+                <svg
+                  id="arrow-external"
+                  viewBox="0 0 20 20"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <path
+                    d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  />
+                </svg>
+              </div>
+            </a>
+          </span>
+        </label>
+      </fieldset>
+    </div>
   </div>
 </div>
 `;
@@ -2800,6 +2738,8 @@ exports[`StatusStep > should render 1`] = `
       <span
         class="text-xs font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
       >
+        ChangeNOW
+         
         Transaction ID
         : 
         id
@@ -2926,13 +2866,13 @@ exports[`StatusStep > should render 1`] = `
       class="items-top my-6 flex justify-center px-10 sm:px-20"
     >
       <div
-        class="flex w-8 flex-col items-center space-y-2"
+        class="flex w-6 flex-col items-center space-y-2"
       >
         <span
           data-testid="StatusIcon__spinner"
         >
           <div
-            class="css-1ppx3l2"
+            class="!w-6 !h-6 !border-[3px] css-1ppx3l2"
             color="info"
           />
         </span>
@@ -2943,17 +2883,17 @@ exports[`StatusStep > should render 1`] = `
         </span>
       </div>
       <div
-        class="flex h-8 flex-1 items-center px-2"
+        class="flex h-6 flex-1 items-center px-2"
       >
         <div
           class="h-0.5 w-full rounded-l rounded-r bg-theme-secondary-300 dark:bg-theme-secondary-800"
         />
       </div>
       <div
-        class="flex w-8 flex-col items-center space-y-2"
+        class="flex w-6 flex-col items-center space-y-2"
       >
         <div
-          class="h-8 w-8 rounded-full border-2 border-theme-secondary-300 dark:border-theme-secondary-800"
+          class="h-6 w-6 rounded-full border-2 border-theme-secondary-300 dark:border-theme-secondary-800"
           data-testid="StatusIcon__empty"
         />
         <span
@@ -2963,23 +2903,23 @@ exports[`StatusStep > should render 1`] = `
         </span>
       </div>
       <div
-        class="flex h-8 flex-1 items-center px-2"
+        class="flex h-6 flex-1 items-center px-2"
       >
         <div
           class="h-0.5 w-full rounded-l rounded-r bg-theme-secondary-300 dark:bg-theme-secondary-800"
         />
       </div>
       <div
-        class="flex w-8 flex-col items-center space-y-2"
+        class="flex w-6 flex-col items-center space-y-2"
       >
         <div
-          class="h-8 w-8 rounded-full border-2 border-theme-secondary-300 dark:border-theme-secondary-800"
+          class="h-6 w-6 rounded-full border-2 border-theme-secondary-300 dark:border-theme-secondary-800"
           data-testid="StatusIcon__empty"
         />
         <span
           class="whitespace-nowrap text-xs font-semibold sm:text-sm text-theme-secondary-500 dark:text-theme-secondary-700"
         >
-          Sending
+          Sending to you
         </span>
       </div>
     </div>
@@ -2997,9 +2937,10 @@ exports[`StatusStep > should render 1`] = `
         >
           You Get
         </span>
-        <span>
+        <span
+          class="font-semibold"
+        >
           ≈
-           
           <span
             class="whitespace-nowrap font-semibold"
             data-testid="Amount"
@@ -3068,7 +3009,7 @@ exports[`StatusStep > should render 1`] = `
       </div>
     </div>
     <div
-      class="mt-6 rounded-lg bg-theme-secondary-100 px-6 py-3 text-sm dark:bg-theme-secondary-800"
+      class="mt-6 rounded-lg bg-theme-secondary-100 px-6 py-3 text-xs dark:bg-theme-secondary-800"
     >
       If you have any question about your exchange, please contact ChangeNOW support team via email at 
       <a
