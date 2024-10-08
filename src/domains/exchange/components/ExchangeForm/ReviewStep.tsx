@@ -22,12 +22,12 @@ export const ReviewStep = () => {
 	return (
 		<div data-testid="ExchangeForm__review-step" className="space-y-4">
 			<div className="flex flex-col rounded-xl border border-theme-secondary-300 dark:border-theme-secondary-800">
-				<div className="flex flex-col px-6 py-5 gap-2">
+				<div className="flex flex-col gap-2 px-6 py-5">
 					<span className="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700">
 						{t("EXCHANGE.EXCHANGE_FORM.YOU_SEND")}
 					</span>
 					<Amount value={payinAmount} ticker={fromCurrency?.coin} className="text-lg font-semibold" />
-					<span className="text-xs font-semibold pt-1">
+					<span className="pt-1 text-xs font-semibold">
 						1 {fromCurrency?.coin.toUpperCase()} ≈ <Amount value={exchangeRate} ticker={toCurrency?.coin} />
 					</span>
 				</div>
@@ -38,12 +38,12 @@ export const ReviewStep = () => {
 					</div>
 				</div>
 
-				<div className="flex flex-col px-6 py-5 gap-2">
+				<div className="flex flex-col gap-2 px-6 py-5">
 					<span className="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700">
 						{t("EXCHANGE.EXCHANGE_FORM.YOU_GET")}
 					</span>
-					<span className="text-lg font-semibold pb-1">
-						≈  <Amount value={payoutAmount} ticker={toCurrency?.coin} className="text-lg font-semibold" />
+					<span className="pb-1 text-lg font-semibold">
+						≈ <Amount value={payoutAmount} ticker={toCurrency?.coin} className="text-lg font-semibold" />
 					</span>
 					<TruncateMiddleDynamic value={recipientWallet} className="no-ligatures text-xs font-semibold" />
 				</div>
@@ -65,19 +65,21 @@ export const ReviewStep = () => {
 					<label className="flex cursor-pointer items-center space-x-3">
 						<Checkbox name="hasAgreedToTerms" ref={register({ required: true })} />
 						<span className="text-sm leading-5">
-						<Trans
-							i18nKey="EXCHANGE.EXCHANGE_FORM.TERMS"
-							values={{
-								exchange: "ChangeNOW",
-								privacy: "Privacy Policy",
-								terms: "Terms of Use",
-							}}
-							components={{
-								linkPrivacyPolicy: <Link to={exchangeProvider?.privacyPolicy as string} isExternal />,
-								linkTerms: <Link to={exchangeProvider?.termsOfService as string} isExternal />,
-							}}
-						/>
-					</span>
+							<Trans
+								i18nKey="EXCHANGE.EXCHANGE_FORM.TERMS"
+								values={{
+									exchange: "ChangeNOW",
+									privacy: "Privacy Policy",
+									terms: "Terms of Use",
+								}}
+								components={{
+									linkPrivacyPolicy: (
+										<Link to={exchangeProvider?.privacyPolicy as string} isExternal />
+									),
+									linkTerms: <Link to={exchangeProvider?.termsOfService as string} isExternal />,
+								}}
+							/>
+						</span>
 					</label>
 				</FormField>
 			</div>
