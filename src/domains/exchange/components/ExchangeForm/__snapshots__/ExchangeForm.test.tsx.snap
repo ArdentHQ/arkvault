@@ -1594,7 +1594,7 @@ exports[`ExchangeForm > should render exchange form with id of finished order 1`
             class="css-145pihz"
           >
             <div
-              class="flex w-full flex-col gap-3"
+              class="flex w-full flex-col sm:flex-row-reverse gap-3"
             >
               <button
                 class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded text-white bg-theme-primary-600 hover:bg-theme-primary-700"
