@@ -388,7 +388,7 @@ const ExchangeForm = ({
 									)}
 
 									{activeTab === Step.ConfirmationStep && (
-										<div className="flex w-full flex-col sm:flex-row-reverse gap-3">
+										<div className="flex w-full flex-col gap-3 sm:flex-row-reverse">
 											<Button
 												data-testid="ExchangeForm__finish-button"
 												onClick={() =>
