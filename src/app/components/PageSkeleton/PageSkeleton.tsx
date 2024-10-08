@@ -3,11 +3,10 @@ import { Trans, useTranslation } from "react-i18next";
 import { ThemeIcon } from "@/app/components/Icon";
 import { Page, Section } from "@/app/components/Layout";
 import { WelcomeSlider } from "@/domains/profile/components/WelcomeSlider/WelcomeSlider";
-import { ProfileRowSkeleton, ProfilesSliderSkeleton } from "@/domains/profile/components/ProfileRow/ProfileRow";
+import { ProfileRowSkeleton } from "@/domains/profile/components/ProfileRow/ProfileRow";
 import { Skeleton } from "@/app/components/Skeleton";
 
 export const PageSkeleton = () => {
-
 	const { t } = useTranslation();
 	return (
 		<div data-testid="PageSkeleton">
@@ -18,8 +17,7 @@ export const PageSkeleton = () => {
 					data-testid="PageSkeleton"
 				>
 					<div className="flex flex-col gap-3 lg:flex-row">
-						<div
-							className="min-w-0 basis-1/2 rounded-xl border border-theme-navy-100 bg-theme-navy-50 bg-[url('/welcome-bg-white.svg')] dark:border-theme-secondary-800 dark:bg-theme-secondary-800 dark:bg-[url('/welcome-bg-dark.svg')] hidden sm:block" >
+						<div className="hidden min-w-0 basis-1/2 rounded-xl border border-theme-navy-100 bg-theme-navy-50 bg-[url('/welcome-bg-white.svg')] dark:border-theme-secondary-800 dark:bg-theme-secondary-800 dark:bg-[url('/welcome-bg-dark.svg')] sm:block">
 							<WelcomeSlider />
 						</div>
 						<div className="min-w-0 basis-1/2 rounded-xl border-theme-navy-100 dark:border-theme-secondary-800 sm:border sm:p-6">
@@ -33,10 +31,10 @@ export const PageSkeleton = () => {
 										/>
 									</div>
 
-									<div className="mt-4 space-y-4 w-full flex flex-col justify-center items-center">
+									<div className="mt-4 flex w-full flex-col items-center justify-center space-y-4">
 										<Skeleton className="h-8" width={140} />
-										<Skeleton className="h-4 block" width={240} />
-										<Skeleton className="h-4 block" width={160} />
+										<Skeleton className="block h-4" width={240} />
+										<Skeleton className="block h-4" width={160} />
 										<div className="w-full space-y-3">
 											<ProfileRowSkeleton />
 											<ProfileRowSkeleton />
@@ -55,5 +53,5 @@ export const PageSkeleton = () => {
 				</Section>
 			</Page>
 		</div>
-	)
+	);
 };

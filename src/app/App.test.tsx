@@ -73,58 +73,43 @@ describe("App", () => {
 		env.reset();
 	});
 
-	it("should render welcome screen after page skeleton", async () => {
-		render(<App />, { history });
+	it("should redirect to root if profile restoration error occurs", async () => {
+		process.env.REACT_APP_IS_UNIT = "1";
 
-		expect(screen.getByTestId("PageSkeleton")).toBeInTheDocument();
+		render(<App />, { history, withProviders: false });
 
-		await expect(screen.findByText(profileTranslations.PAGE_WELCOME.WITH_PROFILES.TITLE)).resolves.toBeVisible();
+		await expect(
+			screen.findByText(profileTranslations.PAGE_WELCOME.WITH_PROFILES.TITLE, undefined),
+		).resolves.toBeVisible();
+
+		expect(history.location.pathname).toBe("/");
+
+		await userEvent.click(screen.getAllByTestId("ProfileRow__Link")[1]);
+
+		await waitFor(() => {
+			expect(passwordInput()).toBeInTheDocument();
+		});
+
+		await userEvent.clear(passwordInput());
+		await userEvent.type(passwordInput(), "password");
+
+		await waitFor(() => {
+			expect(passwordInput()).toHaveValue("password");
+		});
+
+		const verifyPasswordMock = vi.spyOn(Bcrypt, "verify").mockReturnValue(true);
+		const memoryPasswordMock = vi.spyOn(env.profiles().last().password(), "get").mockImplementation(() => {
+			throw new Error("password not found");
+		});
+
+		await userEvent.click(screen.getByTestId("SignIn__submit-button"));
+
+		await waitFor(() => expect(memoryPasswordMock).toHaveBeenCalledTimes(1), { timeout: 4000 });
+		await waitFor(() => expect(history.location.pathname).toBe("/"));
+
+		memoryPasswordMock.mockRestore();
+		verifyPasswordMock.mockRestore();
 	});
-
-	it("should render mock", async () => {
-		render(<App />, { history });
-
-		expect(screen.getByTestId("PageSkeleton")).toBeInTheDocument();
-
-		await expect(screen.findByText(profileTranslations.PAGE_WELCOME.WITH_PROFILES.TITLE)).resolves.toBeVisible();
-		await expect(screen.findByText("John Doe")).resolves.toBeVisible();
-	});
-
-	it("should not migrate profiles", async () => {
-		render(<App />, { history });
-
-		expect(screen.getByTestId("PageSkeleton")).toBeInTheDocument();
-
-		await expect(screen.findByText(profileTranslations.PAGE_WELCOME.WITH_PROFILES.TITLE)).resolves.toBeVisible();
-	});
-
-	it.each([false, true])(
-		"should set the theme based on system preferences (dark = %s)",
-		async (shouldUseDarkColors) => {
-			Object.defineProperty(window, "matchMedia", {
-				value: vi.fn().mockImplementation(() => ({
-					matches: shouldUseDarkColors,
-				})),
-			});
-
-			process.env.REACT_APP_IS_UNIT = "1";
-
-			const toastSpy = vi.spyOn(toasts, "dismiss").mockResolvedValue(undefined);
-			const utilsSpy = vi.spyOn(themeUtils, "shouldUseDarkColors").mockReturnValue(shouldUseDarkColors);
-
-			render(<App />, { history, withProviders: false });
-
-			await expect(
-				screen.findByText(profileTranslations.PAGE_WELCOME.WITH_PROFILES.TITLE, undefined, { timeout: 2000 }),
-			).resolves.toBeVisible();
-
-			// eslint-disable-next-line testing-library/no-node-access
-			expect(document.querySelector("html")).toHaveClass(shouldUseDarkColors ? "dark" : "light");
-
-			toastSpy.mockRestore();
-			utilsSpy.mockRestore();
-		},
-	);
 
 	it("should render page skeleton", async () => {
 		const toastSuccessMock = vi.spyOn(toasts, "success").mockImplementation(vi.fn());
@@ -172,6 +157,16 @@ describe("App", () => {
 		expect(container).toBeInTheDocument();
 	});
 
+	it("should render welcome screen after page skeleton", async () => {
+		process.env.REACT_APP_IS_E2E = "1";
+
+		render(<App />, { history, withProviders: false });
+
+		expect(screen.getByTestId("PageSkeleton")).toBeInTheDocument();
+
+		await expect(screen.findByText(profileTranslations.PAGE_WELCOME.WITH_PROFILES.TITLE)).resolves.toBeVisible();
+	});
+
 	it("should render the offline screen if there is no internet connection", async () => {
 		process.env.REACT_APP_IS_UNIT = "1";
 
@@ -211,9 +206,59 @@ describe("App", () => {
 		environmentSpy.mockRestore();
 	});
 
+	it("should render mock", async () => {
+		process.env.REACT_APP_IS_E2E = "1";
+
+		render(<App />, { history, withProviders: false });
+
+		expect(screen.getByTestId("PageSkeleton")).toBeInTheDocument();
+
+		await expect(screen.findByText(profileTranslations.PAGE_WELCOME.WITH_PROFILES.TITLE)).resolves.toBeVisible();
+		await expect(screen.findByText("John Doe")).resolves.toBeVisible();
+	});
+
+	it("should not migrate profiles", async () => {
+		process.env.REACT_APP_IS_E2E = undefined;
+
+		render(<App />, { history, withProviders: false });
+
+		expect(screen.getByTestId("PageSkeleton")).toBeInTheDocument();
+
+		await expect(screen.findByText(profileTranslations.PAGE_WELCOME.WITH_PROFILES.TITLE)).resolves.toBeVisible();
+	});
+
+	it.each([false, true])(
+		"should set the theme based on system preferences (dark = %s)",
+		async (shouldUseDarkColors) => {
+			Object.defineProperty(window, "matchMedia", {
+				value: vi.fn().mockImplementation(() => ({
+					matches: shouldUseDarkColors,
+				})),
+			});
+
+			process.env.REACT_APP_IS_UNIT = "1";
+
+			const toastSpy = vi.spyOn(toasts, "dismiss").mockResolvedValue(undefined);
+			const utilsSpy = vi.spyOn(themeUtils, "shouldUseDarkColors").mockReturnValue(shouldUseDarkColors);
+
+			render(<App />, { history, withProviders: false });
+
+			await expect(
+				screen.findByText(profileTranslations.PAGE_WELCOME.WITH_PROFILES.TITLE, undefined, { timeout: 2000 }),
+			).resolves.toBeVisible();
+
+			// eslint-disable-next-line testing-library/no-node-access
+			expect(document.querySelector("html")).toHaveClass(shouldUseDarkColors ? "dark" : "light");
+
+			toastSpy.mockRestore();
+			utilsSpy.mockRestore();
+		},
+	);
+
 	it("should enter profile", async () => {
-		vi.restoreAllMocks();
-		render(<App />, { history });
+		process.env.REACT_APP_IS_UNIT = "1";
+
+		render(<App />, { history, withProviders: false });
 
 		await expect(
 			screen.findByText(profileTranslations.PAGE_WELCOME.WITH_PROFILES.TITLE, undefined),
@@ -244,7 +289,10 @@ describe("App", () => {
 	});
 
 	it("should enter profile and fail to restore", async () => {
-		render(<App />, { history });
+		process.env.REACT_APP_IS_UNIT = "1";
+		process.env.TEST_PROFILES_RESTORE_STATUS = undefined;
+
+		render(<App />, { history, withProviders: false });
 
 		await expect(
 			screen.findByText(profileTranslations.PAGE_WELCOME.WITH_PROFILES.TITLE, undefined, { timeout: 2000 }),
@@ -283,43 +331,5 @@ describe("App", () => {
 
 		toastSpy.mockRestore();
 		vi.restoreAllMocks();
-	});
-
-	it("should redirect to root if profile restoration error occurs", async () => {
-		process.env.REACT_APP_IS_UNIT = "1";
-
-		render(<App />, { history, withProviders: false });
-
-		await expect(
-			screen.findByText(profileTranslations.PAGE_WELCOME.WITH_PROFILES.TITLE, undefined),
-		).resolves.toBeVisible();
-
-		expect(history.location.pathname).toBe("/");
-
-		await userEvent.click(screen.getAllByTestId("ProfileRow__Link")[1]);
-
-		await waitFor(() => {
-			expect(passwordInput()).toBeInTheDocument();
-		});
-
-		await userEvent.clear(passwordInput());
-		await userEvent.type(passwordInput(), "password");
-
-		await waitFor(() => {
-			expect(passwordInput()).toHaveValue("password");
-		});
-
-		const verifyPasswordMock = vi.spyOn(Bcrypt, "verify").mockReturnValue(true);
-		const memoryPasswordMock = vi.spyOn(env.profiles().last().password(), "get").mockImplementation(() => {
-			throw new Error("password not found");
-		});
-
-		await userEvent.click(screen.getByTestId("SignIn__submit-button"));
-
-		await waitFor(() => expect(memoryPasswordMock).toHaveBeenCalledTimes(1), { timeout: 4000 });
-		await waitFor(() => expect(history.location.pathname).toBe("/"));
-
-		memoryPasswordMock.mockRestore();
-		verifyPasswordMock.mockRestore();
 	});
 });
