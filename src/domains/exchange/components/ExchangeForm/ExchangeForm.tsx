@@ -36,7 +36,15 @@ enum Step {
 	ConfirmationStep,
 }
 
-const ExchangeForm = ({ orderId, onReady, resetForm }: { orderId?: string; onReady: () => void, resetForm?: () => void }) => {
+const ExchangeForm = ({
+	orderId,
+	onReady,
+	resetForm,
+}: {
+	orderId?: string;
+	onReady: () => void;
+	resetForm?: () => void;
+}) => {
 	const { t } = useTranslation();
 
 	const [isFinished, setIsFinished] = useState(false);
@@ -315,7 +323,7 @@ const ExchangeForm = ({ orderId, onReady, resetForm }: { orderId?: string; onRea
 				<Tabs activeId={activeTab}>
 					<StepIndicator steps={Array.from({ length: 4 })} activeIndex={activeTab} />
 
-					<div className="mt-6 sm:mt-8 mb-24 sm:mb-0">
+					<div className="mb-24 mt-6 sm:mb-0 sm:mt-8">
 						<TabPanel tabId={1}>
 							<FormStep profile={activeProfile} />
 						</TabPanel>
@@ -380,10 +388,12 @@ const ExchangeForm = ({ orderId, onReady, resetForm }: { orderId?: string; onRea
 									)}
 
 									{activeTab === Step.ConfirmationStep && (
-										<div className="flex flex-col w-full gap-3">
+										<div className="flex w-full flex-col gap-3">
 											<Button
 												data-testid="ExchangeForm__finish-button"
-												onClick={() => history.push(`/profiles/${activeProfile.id()}/dashboard`)}
+												onClick={() =>
+													history.push(`/profiles/${activeProfile.id()}/dashboard`)
+												}
 											>
 												{t("COMMON.GO_TO_PORTFOLIO")}
 											</Button>
@@ -391,7 +401,6 @@ const ExchangeForm = ({ orderId, onReady, resetForm }: { orderId?: string; onRea
 												data-testid="ExchangeForm__new-exchange"
 												variant="secondary"
 												onClick={() => resetForm?.()}
-
 											>
 												{t("EXCHANGE.NEW_EXCHANGE")}
 											</Button>
