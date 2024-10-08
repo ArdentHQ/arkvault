@@ -1572,7 +1572,7 @@ describe("ExchangeForm", () => {
 			.spyOn(SendExchangeTransfer, "SendExchangeTransfer")
 			.mockImplementation(({ onSuccess }) => (
 				<div>
-					<button onClick={onSuccess} data-testid="Success_SendExchangeTransfer">
+					<button onClick={() => onSuccess("made-transaction-id")} data-testid="Success_SendExchangeTransfer">
 						Success
 					</button>
 					SendExchangeTransfer component
@@ -1585,6 +1585,7 @@ describe("ExchangeForm", () => {
 		await userEvent.click(screen.getByTestId("Success_SendExchangeTransfer"));
 
 		await expect(screen.findByTestId("ExchangeForm__status-step")).resolves.toBeVisible();
+		expect(screen.getByText("made-transaction-id")).toBeInTheDocument();
 
 		resetProfileNetworksMock();
 		findTransactionMock.mockRestore();

@@ -19,6 +19,7 @@ export const translations = {
 		EXCHANGE_ADDRESS: "Exchange {{currency}} Address",
 		FROM_CURRENCY: "From Currency",
 		INPUT_TRANSACTION_ID: "Input Transaction ID",
+		EXCHANGE_COMPLETED: "Exchange Completed!",
 		OUTPUT_TRANSACTION_ID: "Output Transaction ID",
 		PAYIN_AMOUNT: "Payin Amount",
 		PAYOUT_AMOUNT: "Payout Amount",
@@ -30,7 +31,6 @@ export const translations = {
 			"If you have any question about your exchange, please contact {{exchange}} support team via email at <linkEmail>{{email}}</linkEmail>",
 		TERMS: "I've read and agree to the {{exchange}} <linkTerms>{{terms}}</linkTerms> and <linkPrivacyPolicy>{{privacy}}</linkPrivacyPolicy>",
 		TO_CURRENCY: "To Currency",
-		EXCHANGE_COMPLETED: "Exchange Completed!",
 		YOUR_ADDRESS: "Your {{currency}} Address",
 		YOU_GET: "You Get",
 		YOU_SEND: "You Send",
@@ -40,8 +40,6 @@ export const translations = {
 	EXPECTED_AMOUNT_HINT: "The final payout amount might be different",
 
 	MANUAL_TRANSFER: "Manual Transfer",
-	NEW_EXCHANGE: "New Exchange",
-
 	MODAL_DELETE_EXCHANGE_TRANSACTION: {
 		DESCRIPTION:
 			"Are you sure you want to remove this swap from the transaction history? This action cannot be undone.",
@@ -57,6 +55,8 @@ export const translations = {
 		EXCHANGES: "Exchanges",
 		TRANSACTIONS: "Transactions",
 	},
+
+	NEW_EXCHANGE: "New Exchange",
 
 	PAGE_EXCHANGES: {
 		ADD_EXCHANGE: "Add Exchange",
