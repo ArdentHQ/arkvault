@@ -40,6 +40,7 @@ export const translations = {
 	EXPECTED_AMOUNT_HINT: "The final payout amount might be different",
 
 	MANUAL_TRANSFER: "Manual Transfer",
+	NEW_EXCHANGE: "New Exchange",
 
 	MODAL_DELETE_EXCHANGE_TRANSACTION: {
 		DESCRIPTION:

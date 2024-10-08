@@ -14,11 +14,20 @@ export const ExchangeView = () => {
 
 	const [logoUrl, setLogoUrl] = useState<string>();
 	const [isReady, setIsReady] = useState<boolean>(false);
+	const [resetKey, setResetKey] = useState<number>(0);
 
 	const { provider: exchangeProvider, exchangeProviders, setProvider, fetchProviders } = useExchangeContext();
 
 	const exchangeId = queryParameters.get("exchangeId");
-	const orderId = queryParameters.get("orderId") || undefined;
+
+	const queryOrderId = queryParameters.get("orderId")
+
+	// use `orderId` from query string on the very first render
+	const orderId = queryOrderId && resetKey === 0 ? queryOrderId : undefined;
+
+	const reset = () => {
+		setResetKey(resetKey + 1);
+	}
 
 	useEffect(() => {
 		if (!exchangeProviders) {
@@ -59,7 +68,7 @@ export const ExchangeView = () => {
 
 	const renderExchange = () => (
 		<>
-			<div className="mx-auto mb-8 w-24">
+			<div className="mx-auto mb-2 sm:mb-8 w-24">
 				{logoUrl && (
 					<img
 						src={logoUrl}
@@ -69,7 +78,7 @@ export const ExchangeView = () => {
 				)}
 			</div>
 
-			{!!exchangeProvider && <ExchangeForm orderId={orderId} onReady={() => setIsReady(true)} />}
+			{!!exchangeProvider && <ExchangeForm key={resetKey} resetForm={reset} orderId={orderId} onReady={() => setIsReady(true)} />}
 		</>
 	);
 
