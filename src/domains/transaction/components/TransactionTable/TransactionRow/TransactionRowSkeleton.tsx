@@ -12,11 +12,15 @@ export const TransactionRowSkeleton = () => {
 	return (
 		<TableRow className="max-xl:h-[4.25rem]">
 			<TableCell variant="start">
-				<div className="hidden xl:block"><Skeleton width={90} height={17} /></div>
+				<div className="hidden xl:block">
+					<Skeleton width={90} height={17} />
+				</div>
 
 				<div className="flex flex-col max-xl:pt-2 xl:hidden">
 					<Skeleton width={90} height={13} />
-					<div className="mt-1"><Skeleton width={68} height={10} /></div>
+					<div className="mt-1">
+						<Skeleton width={68} height={10} />
+					</div>
 				</div>
 			</TableCell>
 
@@ -46,13 +50,17 @@ export const TransactionRowSkeleton = () => {
 			</TableCell>
 
 			<TableCell variant="end" className="hidden md:table-cell" innerClassName="justify-end">
-				<div className="hidden lg:block"><Skeleton width={currencyWidth} height={17} /></div>
+				<div className="hidden lg:block">
+					<Skeleton width={currencyWidth} height={17} />
+				</div>
 
-				<div className="flex flex-col pt-px lg:hidden items-end -mr-3">
+				<div className="-mr-3 flex flex-col items-end pt-px lg:hidden">
 					<div className="rounded border border-theme-secondary-300 p-[2px] dark:border-theme-secondary-800">
 						<Skeleton height={15} width={amountWidth} />
 					</div>
-					<div className="mt-px"><Skeleton width={50} height={9} /></div>
+					<div className="mt-px">
+						<Skeleton width={50} height={9} />
+					</div>
 				</div>
 			</TableCell>
 		</TableRow>
