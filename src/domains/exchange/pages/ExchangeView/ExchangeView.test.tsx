@@ -148,18 +148,20 @@ describe("ExchangeView", () => {
 
 		let renderCount = 0;
 
-		const exchangeFormMock = vi
-			.spyOn(ExchangeForm, "ExchangeForm")
-			.mockImplementation(({resetForm}) => {
-				useEffect(() => {
-					renderCount++;
-				}, []);
+		const exchangeFormMock = vi.spyOn(ExchangeForm, "ExchangeForm").mockImplementation(({ resetForm }) => {
+			useEffect(() => {
+				renderCount++;
+			}, []);
 
-				return <div>
+			return (
+				<div>
 					Exchange Form rendered
-					<button data-testid="Reset" onClick={resetForm}>reset</button>
+					<button data-testid="Reset" onClick={resetForm}>
+						reset
+					</button>
 				</div>
-			});
+			);
+		});
 
 		render(
 			<Route path="/profiles/:profileId/exchange/view">
@@ -175,11 +177,10 @@ describe("ExchangeView", () => {
 		);
 
 		await expect(screen.findByTestId("Reset")).resolves.toBeVisible();
-		await userEvent.click(screen.getByTestId("Reset"))
+		await userEvent.click(screen.getByTestId("Reset"));
 
 		expect(renderCount).toBe(2);
 
 		exchangeFormMock.mockRestore();
-
 	});
 });
