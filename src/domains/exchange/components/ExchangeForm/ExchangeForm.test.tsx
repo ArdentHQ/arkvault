@@ -1364,7 +1364,7 @@ describe("ExchangeForm", () => {
 		exchangeTransactionUpdateMock.mockRestore();
 	});
 
-	it("should call resetForm when `New Exchange` button is cliced", async () => {
+	it("should call resetForm when `New Exchange` button is clicked", async () => {
 		const onReady = vi.fn();
 
 		profile.exchangeTransactions().flush();
