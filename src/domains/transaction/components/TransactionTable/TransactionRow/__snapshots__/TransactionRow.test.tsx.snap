@@ -50,7 +50,7 @@ exports[`TransactionRow > should omit the currency for transactions from test ne
           </div>
         </td>
         <td
-          class="hidden lg:table-cell"
+          class="hidden xl:table-cell"
           data-testid="TransactionRow__timestamp"
         >
           <div
@@ -223,7 +223,7 @@ exports[`TransactionRow > should render 1`] = `
           </div>
         </td>
         <td
-          class="hidden lg:table-cell"
+          class="hidden xl:table-cell"
           data-testid="TransactionRow__timestamp"
         >
           <div
@@ -695,159 +695,6 @@ exports[`TransactionRow > should render responsive 2`] = `
 </DocumentFragment>
 `;
 
-exports[`TransactionRow > should render skeleton 1`] = `
-<DocumentFragment>
-  <table>
-    <tbody>
-      <tr
-        class=" css-1x4z4cy"
-        data-testid="TableRow"
-      >
-        <td>
-          <div
-            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l"
-          >
-            <span
-              aria-busy="true"
-              aria-live="polite"
-              class="flex w-auto max-w-full items-center overflow-hidden leading-none"
-            >
-              <span
-                class="react-loading-skeleton"
-                style="width: 80px; height: 17px;"
-              >
-                ‌
-              </span>
-              <br />
-            </span>
-          </div>
-        </td>
-        <td
-          class="table-cell md:hidden lg:table-cell"
-        >
-          <div
-            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11"
-          >
-            <span
-              aria-busy="true"
-              aria-live="polite"
-              class="flex w-auto max-w-full items-center overflow-hidden leading-none"
-            >
-              <span
-                class="react-loading-skeleton"
-                style="width: 80px; height: 17px;"
-              >
-                ‌
-              </span>
-              <br />
-            </span>
-          </div>
-        </td>
-        <td>
-          <div
-            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11"
-          >
-            <div
-              class="flex items-center"
-            >
-              <span
-                aria-busy="true"
-                aria-live="polite"
-                class="flex w-auto max-w-full items-center overflow-hidden leading-none"
-              >
-                <span
-                  class="react-loading-skeleton"
-                  style="width: 80px; height: 17px;"
-                >
-                  ‌
-                </span>
-                <br />
-              </span>
-            </div>
-          </div>
-        </td>
-        <td>
-          <div
-            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11"
-          >
-            <div
-              class="mr-2"
-            >
-              <span
-                aria-busy="true"
-                aria-live="polite"
-                class="flex w-auto max-w-full items-center overflow-hidden leading-none"
-              >
-                <span
-                  class="react-loading-skeleton"
-                  style="width: 37px; height: 17px;"
-                >
-                  ‌
-                </span>
-                <br />
-              </span>
-            </div>
-            <span
-              aria-busy="true"
-              aria-live="polite"
-              class="flex w-auto max-w-full items-center overflow-hidden leading-none"
-            >
-              <span
-                class="react-loading-skeleton"
-                style="width: 1px; height: 17px;"
-              >
-                ‌
-              </span>
-              <br />
-            </span>
-          </div>
-        </td>
-        <td>
-          <div
-            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 justify-end"
-          >
-            <span
-              aria-busy="true"
-              aria-live="polite"
-              class="flex w-auto max-w-full items-center overflow-hidden leading-none"
-            >
-              <span
-                class="react-loading-skeleton"
-                style="width: 1px; height: 17px;"
-              >
-                ‌
-              </span>
-              <br />
-            </span>
-          </div>
-        </td>
-        <td
-          class="hidden xl:block"
-        >
-          <div
-            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
-          >
-            <span
-              aria-busy="true"
-              aria-live="polite"
-              class="flex w-auto max-w-full items-center overflow-hidden leading-none"
-            >
-              <span
-                class="react-loading-skeleton"
-                style="width: 0px; height: 17px;"
-              >
-                ‌
-              </span>
-              <br />
-            </span>
-          </div>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-</DocumentFragment>
-`;
-
 exports[`TransactionRow > should render with currency 1`] = `
 <DocumentFragment>
   <table>
@@ -898,7 +745,7 @@ exports[`TransactionRow > should render with currency 1`] = `
           </div>
         </td>
         <td
-          class="hidden lg:table-cell"
+          class="hidden xl:table-cell"
           data-testid="TransactionRow__timestamp"
         >
           <div

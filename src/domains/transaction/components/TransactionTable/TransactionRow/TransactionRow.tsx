@@ -29,7 +29,7 @@ export const TransactionRow = memo(
 		const { getLabel } = useTransactionTypes();
 		const { isXs, isSm } = useBreakpoint();
 		const { t } = useTranslation();
-		const timeStamp = transaction?.timestamp ? transaction.timestamp() : undefined;
+		const timeStamp = transaction.timestamp ? transaction.timestamp() : undefined;
 
 		if (isXs || isSm) {
 			return (
@@ -81,7 +81,11 @@ export const TransactionRow = memo(
 					innerClassName="text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold items-start xl:min-h-0 my-0 py-3"
 					data-testid="TransactionRow__timestamp"
 				>
-					{timeStamp ? <div> 23 seconds ago</div> : t("COMMON.NOT_AVAILABLE")}
+					{timeStamp ? (
+						<TimeAgo date={DateTime.fromUnix(timeStamp.toUNIX()).toISOString()} />
+					) : (
+						t("COMMON.NOT_AVAILABLE")
+					)}
 				</TableCell>
 
 				<TableCell innerClassName="items-start xl:min-h-0 my-0 py-3">
