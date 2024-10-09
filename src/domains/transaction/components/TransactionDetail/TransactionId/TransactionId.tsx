@@ -8,6 +8,8 @@ import { useTheme } from "@/app/hooks/use-theme";
 import { Icon } from "@/app/components/Icon";
 import { useLink } from "@/app/hooks/use-link";
 import { AddressLabel } from "@/app/components/Address";
+import {getStyles} from "@/app/components/Button/Button.styles";
+import cn from "classnames";
 
 interface Properties {
 	transaction: DTO.ExtendedSignedTransactionData | DTO.ExtendedConfirmedTransactionData;
@@ -38,7 +40,7 @@ export const TransactionId = ({ transaction }: Properties): ReactElement => {
 					data={transaction.id()}
 					tooltip={t("COMMON.COPY_ID")}
 					tooltipDarkTheme={isDarkMode}
-					iconButtonClassName="p-2 rounded bg-theme-navy-100 w-8 h-8 text-theme-navy-600"
+					iconButtonClassName={cn("p-2", getStyles({sizeClassName: "p-2", variant: "secondary"}))}
 					buttonClassName="h-8 grow"
 					wrapperClassName="flex w-full"
 				>
@@ -49,7 +51,7 @@ export const TransactionId = ({ transaction }: Properties): ReactElement => {
 				<Button
 					data-testid="explorer-link"
 					icon="ArrowExternal"
-					variant="border"
+					variant="secondary"
 					size="icon"
 					className="p-2"
 					disabled={!transaction.isConfirmed()}
