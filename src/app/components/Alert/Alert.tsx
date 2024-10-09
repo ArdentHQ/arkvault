@@ -63,7 +63,8 @@ export const Alert = ({
 						variant={variant}
 						data-testid="Alert__chevron"
 					>
-						<Icon name="ChevronDownSmall" size="sm" />
+						{!collapsed && <Icon name="ChevronDownSmall" size="sm" />}
+						{collapsed && <Icon name="ChevronUpSmall" size="sm" />}
 					</AlertChevron>
 				)}
 			</AlertHeader>
