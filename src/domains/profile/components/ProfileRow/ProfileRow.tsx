@@ -19,7 +19,7 @@ export const ProfileRow = ({ actions, className, profile, onClick, onSelect }: P
 	<div
 		data-testid="ProfileRow"
 		className={cn(
-			"flex cursor-pointer items-center rounded-lg border border-theme-navy-200 leading-tight hover:border-theme-navy-300 hover:bg-theme-navy-50 dark:border-theme-secondary-800 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800",
+			"flex cursor-pointer items-center rounded-lg border border-theme-navy-200 leading-tight hover:transition-all hover:border-theme-navy-300 hover:bg-theme-navy-50 dark:border-theme-secondary-800 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800",
 			className,
 		)}
 	>
