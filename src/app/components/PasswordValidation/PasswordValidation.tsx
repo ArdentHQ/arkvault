@@ -17,15 +17,15 @@ const Rules: React.VFC<RulesProperties> = ({ validationState }) => {
 		<div key={rule} className="flex items-center space-x-2">
 			<span
 				className={cn(
-					"flex h-5 w-5 shrink-0 items-center justify-center rounded-full text-theme-success-500",
-					isValid ? "bg-theme-success-200 dark:bg-theme-success-900" : "border-2 border-theme-secondary-600",
+					"flex h-5 w-5 shrink-0 items-center justify-center rounded-full text-theme-primary-500",
+					isValid ? "bg-theme-primary-200 dark:bg-theme-primary-900" : "border-2 border-theme-secondary-600",
 				)}
 			>
 				{isValid && <Icon name="CheckmarkSmall" size="xs" />}
 			</span>
 
 			<span
-				className={cn("text-sm font-semibold", isValid ? "text-theme-success-600" : "text-theme-secondary-600")}
+				className={cn("text-sm font-semibold", isValid ? "text-theme-primary-600" : "text-theme-secondary-600")}
 			>
 				<>{t(`COMMON.VALIDATION.PASSWORD_RULES.${rule}`)}</>
 			</span>
