@@ -29,7 +29,7 @@ export const TransactionRow = memo(
 		const { getLabel } = useTransactionTypes();
 		const { isXs, isSm } = useBreakpoint();
 		const { t } = useTranslation();
-		const timeStamp = transaction ? transaction.timestamp() : undefined;
+		const timeStamp = transaction.timestamp ? transaction.timestamp() : undefined;
 
 		if (isXs || isSm) {
 			return (
