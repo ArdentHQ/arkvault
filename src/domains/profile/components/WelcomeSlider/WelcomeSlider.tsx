@@ -42,6 +42,7 @@ export const WelcomeSlider = (): JSX.Element => {
 		),
 		arrows: false,
 		autoplay: true,
+		autoplaySpeed: 5000,
 		customPaging: () => (
 			<button className="h-3 w-3 rounded-full border-2 border-theme-navy-200 hover:border-transparent hover:bg-theme-navy-700 dark:border-theme-secondary-600 dark:hover:border-transparent dark:hover:bg-theme-secondary-600" />
 		),
