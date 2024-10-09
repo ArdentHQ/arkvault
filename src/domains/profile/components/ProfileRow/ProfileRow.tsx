@@ -4,6 +4,7 @@ import { Icon } from "@/app/components/Icon";
 import { Dropdown, DropdownOption } from "@/app/components/Dropdown";
 import React from "react";
 import { Contracts } from "@ardenthq/sdk-profiles";
+import { Skeleton } from "@/app/components/Skeleton";
 
 interface ProfileRowProperties {
 	actions?: DropdownOption[];
@@ -83,3 +84,25 @@ export const ProfileRowSkeleton = () => (
 		/>
 	</div>
 );
+
+export const ProfilesSliderSkeleton = ({ length = 5 }: { length?: number }) => {
+	const maxProfilesPerPage = 5;
+	const profilesPerPage = Math.min(maxProfilesPerPage, length);
+	const skeletonRows = Array.from({ length: profilesPerPage }, () => 0);
+
+	return (
+		<div>
+			<div className="space-y-3">
+				{skeletonRows.map((_, index) => (
+					<ProfileRowSkeleton key={index} />
+				))}
+			</div>
+			{maxProfilesPerPage < length && (
+				<div className="mt-3 flex h-3 justify-center gap-3 leading-3">
+					<Skeleton className="h-3 w-3 rounded-full" />
+					<Skeleton className="h-3 w-3 rounded-full" />
+				</div>
+			)}
+		</div>
+	);
+};
