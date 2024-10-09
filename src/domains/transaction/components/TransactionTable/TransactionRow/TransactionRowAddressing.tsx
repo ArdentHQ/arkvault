@@ -7,7 +7,7 @@ import React, { useEffect, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
 import cn from "classnames";
 
-const RowLabel = ({ isNegative }: { isNegative: boolean }) => {
+export const TransactionRowLabel = ({ isNegative }: { isNegative: boolean }) => {
 	const { t } = useTranslation();
 
 	return (
@@ -64,7 +64,7 @@ export const TransactionRowAddressing = ({
 	if (transaction?.isMultiPayment()) {
 		return (
 			<div className="flex flex-row gap-2" data-testid="TransactionRowAddressing__multipayment">
-				<RowLabel isNegative={isNegative} />
+				<TransactionRowLabel isNegative={isNegative} />
 				<span className="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200">
 					{t("COMMON.MULTIPLE")}{" "}
 					<span className="text-theme-secondary-700 dark:text-theme-secondary-500">
@@ -78,7 +78,7 @@ export const TransactionRowAddressing = ({
 	if (transaction?.isVoteCombination() || transaction?.isVote() || transaction?.isUnvote()) {
 		return (
 			<div className="flex flex-row gap-2" data-testid="TransactionRowAddressing__vote">
-				<RowLabel isNegative={isNegative} />
+				<TransactionRowLabel isNegative={isNegative} />
 				<span className="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200">
 					{t("COMMON.CONTRACT")}{" "}
 					<span className="text-theme-secondary-700 dark:text-theme-secondary-500">
@@ -96,7 +96,7 @@ export const TransactionRowAddressing = ({
 	if (transaction?.isDelegateRegistration()) {
 		return (
 			<div className="flex flex-row gap-2" data-testid="TransactionRowAddressing__delegate_registration">
-				<RowLabel isNegative={isNegative} />
+				<TransactionRowLabel isNegative={isNegative} />
 				<span className="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200">
 					{t("COMMON.CONTRACT")}{" "}
 					<span className="text-theme-secondary-700 dark:text-theme-secondary-500">
@@ -110,7 +110,7 @@ export const TransactionRowAddressing = ({
 	if (transaction?.isDelegateResignation()) {
 		return (
 			<div className="flex flex-row gap-2" data-testid="TransactionRowAddressing__delegate_resignation">
-				<RowLabel isNegative={isNegative} />
+				<TransactionRowLabel isNegative={isNegative} />
 				<span className="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200">
 					{t("COMMON.CONTRACT")}{" "}
 					<span className="text-theme-secondary-700 dark:text-theme-secondary-500">
@@ -123,7 +123,7 @@ export const TransactionRowAddressing = ({
 
 	return (
 		<div className="flex flex-row gap-2" data-testid="TransactionRowAddressing__container">
-			<RowLabel isNegative={isNegative} />
+			<TransactionRowLabel isNegative={isNegative} />
 			<div
 				className={cn({
 					"w-30": !alias,

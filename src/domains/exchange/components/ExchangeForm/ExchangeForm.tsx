@@ -36,7 +36,15 @@ enum Step {
 	ConfirmationStep,
 }
 
-const ExchangeForm = ({ orderId, onReady }: { orderId?: string; onReady: () => void }) => {
+const ExchangeForm = ({
+	orderId,
+	onReady,
+	resetForm,
+}: {
+	orderId?: string;
+	onReady: () => void;
+	resetForm?: () => void;
+}) => {
 	const { t } = useTranslation();
 
 	const [isFinished, setIsFinished] = useState(false);
@@ -52,6 +60,7 @@ const ExchangeForm = ({ orderId, onReady }: { orderId?: string; onReady: () => v
 	assertExchangeService(exchangeService);
 
 	const [exchangeTransaction, setExchangeTransaction] = useState<Contracts.IExchangeTransaction | undefined>();
+	const [transferTransactionId, setTransferTransactionId] = useState<string | undefined>();
 	const [activeTab, setActiveTab] = useState<Step>(Step.FormStep);
 
 	const form = useForm<ExchangeFormState>({ mode: "onChange" });
@@ -314,7 +323,7 @@ const ExchangeForm = ({ orderId, onReady }: { orderId?: string; onReady: () => v
 				<Tabs activeId={activeTab}>
 					<StepIndicator steps={Array.from({ length: 4 })} activeIndex={activeTab} />
 
-					<div className="mt-8">
+					<div className="mb-24 mt-6 sm:mb-0 sm:mt-8">
 						<TabPanel tabId={1}>
 							<FormStep profile={activeProfile} />
 						</TabPanel>
@@ -324,7 +333,11 @@ const ExchangeForm = ({ orderId, onReady }: { orderId?: string; onReady: () => v
 						</TabPanel>
 
 						<TabPanel tabId={3}>
-							<StatusStep exchangeTransaction={exchangeTransaction!} onUpdate={handleStatusUpdate} />
+							<StatusStep
+								exchangeTransaction={exchangeTransaction!}
+								onUpdate={handleStatusUpdate}
+								transferTransactionId={transferTransactionId}
+							/>
 						</TabPanel>
 
 						<TabPanel tabId={4}>
@@ -375,12 +388,23 @@ const ExchangeForm = ({ orderId, onReady }: { orderId?: string; onReady: () => v
 									)}
 
 									{activeTab === Step.ConfirmationStep && (
-										<Button
-											data-testid="ExchangeForm__finish-button"
-											onClick={() => history.push(`/profiles/${activeProfile.id()}/dashboard`)}
-										>
-											{t("COMMON.GO_TO_PORTFOLIO")}
-										</Button>
+										<div className="flex w-full flex-col gap-3 sm:flex-row-reverse">
+											<Button
+												data-testid="ExchangeForm__finish-button"
+												onClick={() =>
+													history.push(`/profiles/${activeProfile.id()}/dashboard`)
+												}
+											>
+												{t("COMMON.GO_TO_PORTFOLIO")}
+											</Button>
+											<Button
+												data-testid="ExchangeForm__new-exchange"
+												variant="secondary"
+												onClick={() => resetForm?.()}
+											>
+												{t("EXCHANGE.NEW_EXCHANGE")}
+											</Button>
+										</div>
 									)}
 								</FormButtons>
 							</div>
@@ -393,7 +417,10 @@ const ExchangeForm = ({ orderId, onReady }: { orderId?: string; onReady: () => v
 					profile={activeProfile}
 					network={arkMainnetNetwork}
 					exchangeTransaction={exchangeTransaction}
-					onSuccess={() => setActiveTab(activeTab + 1)}
+					onSuccess={(txId: string) => {
+						setTransferTransactionId(txId);
+						setActiveTab(activeTab + 1);
+					}}
 					onClose={() => setShowTransferModal(false)}
 				/>
 			)}
