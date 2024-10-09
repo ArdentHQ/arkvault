@@ -1590,7 +1590,7 @@ exports[`Dashboard > should render 1`] = `
                       </div>
                     </td>
                     <td
-                      class="hidden lg:table-cell"
+                      class="hidden xl:table-cell"
                       data-testid="TransactionRow__timestamp"
                     >
                       <div
@@ -1754,7 +1754,7 @@ exports[`Dashboard > should render 1`] = `
                       </div>
                     </td>
                     <td
-                      class="hidden lg:table-cell"
+                      class="hidden xl:table-cell"
                       data-testid="TransactionRow__timestamp"
                     >
                       <div
@@ -1918,7 +1918,7 @@ exports[`Dashboard > should render 1`] = `
                       </div>
                     </td>
                     <td
-                      class="hidden lg:table-cell"
+                      class="hidden xl:table-cell"
                       data-testid="TransactionRow__timestamp"
                     >
                       <div
@@ -2082,7 +2082,7 @@ exports[`Dashboard > should render 1`] = `
                       </div>
                     </td>
                     <td
-                      class="hidden lg:table-cell"
+                      class="hidden xl:table-cell"
                       data-testid="TransactionRow__timestamp"
                     >
                       <div

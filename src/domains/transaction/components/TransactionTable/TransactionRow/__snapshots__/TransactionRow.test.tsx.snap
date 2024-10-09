@@ -50,7 +50,7 @@ exports[`TransactionRow > should omit the currency for transactions from test ne
           </div>
         </td>
         <td
-          class="hidden lg:table-cell"
+          class="hidden xl:table-cell"
           data-testid="TransactionRow__timestamp"
         >
           <div
@@ -223,7 +223,7 @@ exports[`TransactionRow > should render 1`] = `
           </div>
         </td>
         <td
-          class="hidden lg:table-cell"
+          class="hidden xl:table-cell"
           data-testid="TransactionRow__timestamp"
         >
           <div
@@ -988,7 +988,7 @@ exports[`TransactionRow > should render with currency 1`] = `
           </div>
         </td>
         <td
-          class="hidden lg:table-cell"
+          class="hidden xl:table-cell"
           data-testid="TransactionRow__timestamp"
         >
           <div
