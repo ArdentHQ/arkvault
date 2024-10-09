@@ -1,9 +1,13 @@
 /// <reference types="vite-plugin-svgr/client" />
 
-import Exchange from "./exchange.svg?react";
-import Wallet from "./wallet.svg?react";
+import ExchangeLightNavy from "./exchange.svg?react";
+import ExchangeDarkNavy from "./exchange-dark.svg?react";
+import WalletLightNavy from "./wallet.svg?react";
+import WalletDarkNavy from "./wallet-dark.svg?react";
 
 export const exchange = {
-	Exchange,
-	Wallet,
+	ExchangeDarkNavy,
+	ExchangeLightNavy,
+	WalletDarkNavy,
+	WalletLightNavy,
 };

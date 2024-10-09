@@ -21,7 +21,7 @@ import { BigNumber } from "@ardenthq/sdk-helpers";
 
 interface TransferProperties {
 	onClose: () => void;
-	onSuccess: () => void;
+	onSuccess: (txId: string) => void;
 	profile: Contracts.IProfile;
 	network: Networks.Network;
 	exchangeTransaction: Contracts.IExchangeTransaction;
@@ -131,7 +131,7 @@ export const SendExchangeTransfer: React.FC<TransferProperties> = ({
 			const transaction = await submitForm(abortReference);
 
 			setTransaction(transaction);
-			onSuccess();
+			onSuccess(transaction.id());
 		} catch (error) {
 			setErrorMessage(error?.message as string);
 		}

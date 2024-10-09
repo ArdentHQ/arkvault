@@ -13,11 +13,12 @@ import { useOrderStatus } from "@/domains/exchange/hooks/use-order-status";
 import { delay } from "@/utils/delay";
 
 interface StatusStepProperties {
+	transferTransactionId: string | undefined;
 	exchangeTransaction: Contracts.IExchangeTransaction;
 	onUpdate: (orderId: string, parameters: any) => void;
 }
 
-export const StatusStep = ({ exchangeTransaction, onUpdate }: StatusStepProperties) => {
+export const StatusStep = ({ exchangeTransaction, onUpdate, transferTransactionId }: StatusStepProperties) => {
 	const { t } = useTranslation();
 
 	const { provider: exchangeProvider } = useExchangeContext();
@@ -56,7 +57,7 @@ export const StatusStep = ({ exchangeTransaction, onUpdate }: StatusStepProperti
 		<div data-testid="ExchangeForm__status-step" className="flex flex-col">
 			<div className="flex items-center space-x-1">
 				<span className="text-xs font-semibold text-theme-secondary-500 dark:text-theme-secondary-700">
-					{t("EXCHANGE.TRANSACTION_ID")}: {exchangeTransaction.orderId()}
+					{exchangeProvider?.name} {t("EXCHANGE.TRANSACTION_ID")}: {exchangeTransaction.orderId()}
 				</span>
 				<span className="flex text-theme-primary-300 dark:text-theme-secondary-600">
 					<Clipboard variant="icon" data={exchangeTransaction.orderId()}>
@@ -65,7 +66,7 @@ export const StatusStep = ({ exchangeTransaction, onUpdate }: StatusStepProperti
 				</span>
 			</div>
 
-			<div className="mt-3 flex flex-col rounded-xl border border-theme-secondary-300 px-6 py-5 dark:border-theme-secondary-800">
+			<div className="mt-3 flex flex-col rounded-xl border border-theme-secondary-300 p-4 dark:border-theme-secondary-800 sm:p-6">
 				<div className="flex flex-col space-y-2">
 					<span className="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700">
 						{t("EXCHANGE.EXCHANGE_FORM.YOU_SEND")}
@@ -73,7 +74,7 @@ export const StatusStep = ({ exchangeTransaction, onUpdate }: StatusStepProperti
 					<Amount
 						value={exchangeTransaction.input().amount}
 						ticker={exchangeTransaction.input().ticker}
-						className="text-lg font-semibold"
+						className="text-sm font-semibold sm:text-lg"
 					/>
 				</div>
 
@@ -81,7 +82,7 @@ export const StatusStep = ({ exchangeTransaction, onUpdate }: StatusStepProperti
 					<span className="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700">
 						{t("EXCHANGE.TO_ADDRESS")}
 					</span>
-					<div className="flex items-center space-x-2 whitespace-nowrap text-lg font-semibold">
+					<div className="flex items-center space-x-2 whitespace-nowrap text-sm font-semibold sm:text-lg">
 						<TruncateMiddleDynamic value={exchangeTransaction.input().address} className="no-ligatures" />
 						<span className="flex text-theme-primary-300 dark:text-theme-secondary-600">
 							<Clipboard variant="icon" data={exchangeTransaction.input().address}>
@@ -90,6 +91,22 @@ export const StatusStep = ({ exchangeTransaction, onUpdate }: StatusStepProperti
 						</span>
 					</div>
 				</div>
+
+				{transferTransactionId && (
+					<div className="mt-4 flex flex-col space-y-2 border-t border-theme-secondary-300 pt-4 dark:border-theme-secondary-800">
+						<span className="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700">
+							{t("EXCHANGE.ARK_TRANSACTION_ID")}
+						</span>
+						<div className="flex items-center space-x-2 whitespace-nowrap text-sm font-semibold sm:text-lg">
+							<TruncateMiddleDynamic value={transferTransactionId} className="no-ligatures" />
+							<span className="flex text-theme-primary-300 dark:text-theme-secondary-600">
+								<Clipboard variant="icon" data={transferTransactionId}>
+									<Icon name="Copy" />
+								</Clipboard>
+							</span>
+						</div>
+					</div>
+				)}
 			</div>
 
 			<ExchangeStatus exchangeTransaction={exchangeTransaction} />
@@ -101,12 +118,12 @@ export const StatusStep = ({ exchangeTransaction, onUpdate }: StatusStepProperti
 					<span className="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700">
 						{t("EXCHANGE.EXCHANGE_FORM.YOU_GET")}
 					</span>
-					<span>
-						≈{" "}
+					<span className="font-semibold">
+						≈
 						<Amount
 							value={exchangeTransaction.output().amount}
 							ticker={exchangeTransaction.output().ticker}
-							className="font-semibold"
+							className="text-sm font-semibold sm:text-base"
 						/>
 					</span>
 				</div>
@@ -116,7 +133,10 @@ export const StatusStep = ({ exchangeTransaction, onUpdate }: StatusStepProperti
 						{t("EXCHANGE.TO_ADDRESS")}
 					</span>
 					<div className="flex items-center space-x-2 whitespace-nowrap font-semibold">
-						<TruncateMiddleDynamic value={exchangeTransaction.output().address} className="no-ligatures" />
+						<TruncateMiddleDynamic
+							value={exchangeTransaction.output().address}
+							className="no-ligatures text-sm sm:text-base"
+						/>
 						<span className="flex text-theme-primary-300 dark:text-theme-secondary-600">
 							<Clipboard variant="icon" data={exchangeTransaction.output().address}>
 								<Icon name="Copy" />
@@ -126,7 +146,7 @@ export const StatusStep = ({ exchangeTransaction, onUpdate }: StatusStepProperti
 				</div>
 			</div>
 
-			<div className="mt-6 rounded-lg bg-theme-secondary-100 px-6 py-3 text-sm dark:bg-theme-secondary-800">
+			<div className="mt-6 rounded-lg bg-theme-secondary-100 px-6 py-3 text-xs dark:bg-theme-secondary-800">
 				<Trans
 					i18nKey="EXCHANGE.EXCHANGE_FORM.SUPPORT_INFO"
 					values={{
