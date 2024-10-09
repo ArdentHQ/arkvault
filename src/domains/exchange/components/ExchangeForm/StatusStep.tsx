@@ -66,7 +66,7 @@ export const StatusStep = ({ exchangeTransaction, onUpdate, transferTransactionI
 				</span>
 			</div>
 
-			<div className="mt-3 flex flex-col rounded-xl border border-theme-secondary-300 px-6 py-5 dark:border-theme-secondary-800">
+			<div className="mt-3 flex flex-col rounded-xl border border-theme-secondary-300 p-4 sm:p-6 dark:border-theme-secondary-800">
 				<div className="flex flex-col space-y-2">
 					<span className="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700">
 						{t("EXCHANGE.EXCHANGE_FORM.YOU_SEND")}
@@ -74,7 +74,7 @@ export const StatusStep = ({ exchangeTransaction, onUpdate, transferTransactionI
 					<Amount
 						value={exchangeTransaction.input().amount}
 						ticker={exchangeTransaction.input().ticker}
-						className="text-lg font-semibold"
+						className="text-sm sm:text-lg font-semibold"
 					/>
 				</div>
 
@@ -82,7 +82,7 @@ export const StatusStep = ({ exchangeTransaction, onUpdate, transferTransactionI
 					<span className="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700">
 						{t("EXCHANGE.TO_ADDRESS")}
 					</span>
-					<div className="flex items-center space-x-2 whitespace-nowrap text-lg font-semibold">
+					<div className="flex items-center space-x-2 whitespace-nowrap text-sm sm:text-lg font-semibold">
 						<TruncateMiddleDynamic value={exchangeTransaction.input().address} className="no-ligatures" />
 						<span className="flex text-theme-primary-300 dark:text-theme-secondary-600">
 							<Clipboard variant="icon" data={exchangeTransaction.input().address}>
@@ -97,7 +97,7 @@ export const StatusStep = ({ exchangeTransaction, onUpdate, transferTransactionI
 						<span className="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700">
 							{t("EXCHANGE.ARK_TRANSACTION_ID")}
 						</span>
-						<div className="flex items-center space-x-2 whitespace-nowrap text-lg font-semibold">
+						<div className="flex items-center space-x-2 whitespace-nowrap text-sm sm:text-lg font-semibold">
 							<TruncateMiddleDynamic value={transferTransactionId} className="no-ligatures" />
 							<span className="flex text-theme-primary-300 dark:text-theme-secondary-600">
 								<Clipboard variant="icon" data={transferTransactionId}>
@@ -123,7 +123,7 @@ export const StatusStep = ({ exchangeTransaction, onUpdate, transferTransactionI
 						<Amount
 							value={exchangeTransaction.output().amount}
 							ticker={exchangeTransaction.output().ticker}
-							className="font-semibold"
+							className="text-sm sm:text-base font-semibold"
 						/>
 					</span>
 				</div>
@@ -133,7 +133,7 @@ export const StatusStep = ({ exchangeTransaction, onUpdate, transferTransactionI
 						{t("EXCHANGE.TO_ADDRESS")}
 					</span>
 					<div className="flex items-center space-x-2 whitespace-nowrap font-semibold">
-						<TruncateMiddleDynamic value={exchangeTransaction.output().address} className="no-ligatures" />
+						<TruncateMiddleDynamic value={exchangeTransaction.output().address} className="text-sm sm:text-base no-ligatures" />
 						<span className="flex text-theme-primary-300 dark:text-theme-secondary-600">
 							<Clipboard variant="icon" data={exchangeTransaction.output().address}>
 								<Icon name="Copy" />

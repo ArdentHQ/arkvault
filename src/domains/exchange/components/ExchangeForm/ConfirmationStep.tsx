@@ -29,13 +29,13 @@ const ExplorerLink = ({ value, explorerMask }: ExplorerLinkProperties) => {
 		return (
 			<span data-testid="ExplorerLink" ref={reference} className="overflow-hidden">
 				<Link to={explorerUrl(value, explorerMask)} isExternal>
-					<TruncateMiddleDynamic value={value} offset={24} parentRef={reference} />
+					<TruncateMiddleDynamic value={value} offset={24} parentRef={reference} className="text-sm sm:text-base" />
 				</Link>
 			</span>
 		);
 	}
 
-	return <TruncateMiddleDynamic value={value} />;
+	return <TruncateMiddleDynamic value={value} className="text-sm sm:text-base"/>;
 };
 
 export const ConfirmationStep = ({ exchangeTransaction }: ConfirmationStepProperties) => {
@@ -62,7 +62,7 @@ export const ConfirmationStep = ({ exchangeTransaction }: ConfirmationStepProper
 
 	const renderHash = (hash?: string, explorerMask?: string) => {
 		if (!hash) {
-			return <span className="text-lg font-semibold">{t("COMMON.NOT_AVAILABLE")}</span>;
+			return <span className="text-sm sm:text-base font-semibold">{t("COMMON.NOT_AVAILABLE")}</span>;
 		}
 
 		return (
