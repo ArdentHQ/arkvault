@@ -63,8 +63,9 @@ export const Alert = ({
 						variant={variant}
 						data-testid="Alert__chevron"
 					>
-						{!collapsed && <Icon name="ChevronDownSmall" size="sm" />}
-						{collapsed && <Icon name="ChevronUpSmall" size="sm" />}
+						<Icon name="ChevronDownSmall" size="sm" className={cn("transition-transform duration-200", {
+							"rotate-180": collapsed
+						})} />
 					</AlertChevron>
 				)}
 			</AlertHeader>
