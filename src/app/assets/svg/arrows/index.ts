@@ -19,6 +19,7 @@ import ChevronRight from "./chevron-right.svg?react";
 import ChevronRightSmall from "./chevron-right-small.svg?react";
 import ChevronUpSmall from "./chevron-up-small.svg?react";
 import DoubleArrowRight from "./double-arrow-right.svg?react";
+import DoubleArrowDashed from "./double-arrow-dashed.svg?react";
 import DoubleChevronLeft from "./double-chevron-left.svg?react";
 import DoubleChevronLeftSmall from "./double-chevron-left-small.svg?react";
 import DoubleChevronRight from "./double-chevron-right.svg?react";
@@ -43,6 +44,7 @@ export const ArrowIcons: any = {
 	ChevronRight,
 	ChevronRightSmall,
 	ChevronUpSmall,
+	DoubleArrowDashed,
 	DoubleArrowRight,
 	DoubleChevronLeft,
 	DoubleChevronLeftSmall,

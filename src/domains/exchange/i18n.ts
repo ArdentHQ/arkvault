@@ -1,4 +1,5 @@
 export const translations = {
+	ARK_TRANSACTION_ID: "ARK Transaction ID",
 	EMPTY_MESSAGE: "You haven't made any swaps yet. Once you initiate a transaction they will show up here.",
 
 	ERROR: {
@@ -16,6 +17,7 @@ export const translations = {
 		ESTIMATED_RATE: "Estimated Rate",
 		ESTIMATED_TIME: "≈ {{estimatedTime}} minutes",
 		EXCHANGE_ADDRESS: "Exchange {{currency}} Address",
+		EXCHANGE_COMPLETED: "Exchange Completed!",
 		FROM_CURRENCY: "From Currency",
 		INPUT_TRANSACTION_ID: "Input Transaction ID",
 		OUTPUT_TRANSACTION_ID: "Output Transaction ID",
@@ -29,7 +31,6 @@ export const translations = {
 			"If you have any question about your exchange, please contact {{exchange}} support team via email at <linkEmail>{{email}}</linkEmail>",
 		TERMS: "I've read and agree to the {{exchange}} <linkTerms>{{terms}}</linkTerms> and <linkPrivacyPolicy>{{privacy}}</linkPrivacyPolicy>",
 		TO_CURRENCY: "To Currency",
-		TRANSACTION_COMPLETE: "Transaction is Complete!",
 		YOUR_ADDRESS: "Your {{currency}} Address",
 		YOU_GET: "You Get",
 		YOU_SEND: "You Send",
@@ -39,7 +40,6 @@ export const translations = {
 	EXPECTED_AMOUNT_HINT: "The final payout amount might be different",
 
 	MANUAL_TRANSFER: "Manual Transfer",
-
 	MODAL_DELETE_EXCHANGE_TRANSACTION: {
 		DESCRIPTION:
 			"Are you sure you want to remove this swap from the transaction history? This action cannot be undone.",
@@ -55,6 +55,8 @@ export const translations = {
 		EXCHANGES: "Exchanges",
 		TRANSACTIONS: "Transactions",
 	},
+
+	NEW_EXCHANGE: "New Exchange",
 
 	PAGE_EXCHANGES: {
 		ADD_EXCHANGE: "Add Exchange",
@@ -94,7 +96,7 @@ export const translations = {
 		EXPIRED: "This transaction has expired.",
 		FAILED: "This transaction has failed.",
 		REFUNDED: "This transaction has been refunded.",
-		SENDING: "Sending",
+		SENDING: "Sending to you",
 		VERIFYING: "This transaction is being verified by the provider.",
 	},
 

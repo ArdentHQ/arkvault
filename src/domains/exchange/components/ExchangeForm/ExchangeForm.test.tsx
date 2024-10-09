@@ -134,6 +134,7 @@ const selectCurrencies = async ({ from, to }: { from?: Record<string, string>; t
 const continueButton = () => screen.getByTestId("ExchangeForm__continue-button");
 const reviewStep = () => screen.getByTestId("ExchangeForm__review-step");
 const statusStep = () => screen.getByTestId("ExchangeForm__status-step");
+const confirmationStep = () => screen.getByTestId("ExchangeForm__confirmation-step");
 
 const refundAddressID = "ExchangeForm__refund-address";
 const payoutValue = "37042.3588384";
@@ -1309,7 +1310,7 @@ describe("ExchangeForm", () => {
 		expect(screen.queryByTestId("StatusIcon__empty")).not.toBeInTheDocument();
 
 		await waitFor(() => {
-			expect(screen.getByTestId("ExchangeForm__confirmation-step")).toBeInTheDocument();
+			expect(confirmationStep()).toBeInTheDocument();
 		});
 
 		const historySpy = vi.spyOn(history, "push").mockImplementation(vi.fn());
@@ -1356,10 +1357,51 @@ describe("ExchangeForm", () => {
 		});
 
 		await waitFor(() => {
-			expect(screen.getByTestId("ExchangeForm__confirmation-step")).toBeInTheDocument();
+			expect(confirmationStep()).toBeInTheDocument();
 		});
 
 		expect(container).toMatchSnapshot();
+
+		exchangeTransactionUpdateMock.mockRestore();
+	});
+
+	it("should call resetForm when `New Exchange` button is clicked", async () => {
+		const onReady = vi.fn();
+
+		profile.exchangeTransactions().flush();
+		const exchangeTransaction = profile.exchangeTransactions().create(transactionStub);
+
+		profile
+			.exchangeTransactions()
+			.update(exchangeTransaction.id(), { status: Contracts.ExchangeTransactionStatus.Finished });
+
+		const exchangeTransactionUpdateMock = vi
+			.spyOn(profile.exchangeTransactions(), "update")
+			.mockReturnValue(undefined);
+
+		vi.spyOn(profile.exchangeTransactions(), "findById").mockReturnValue(exchangeTransaction);
+
+		const resetForm = vi.fn();
+
+		renderComponent(
+			<ExchangeForm orderId={exchangeTransaction.orderId()} onReady={onReady} resetForm={resetForm} />,
+		);
+
+		await waitFor(() => {
+			expect(screen.getByTestId("ExchangeForm")).toBeInTheDocument();
+		});
+
+		await waitFor(() => {
+			expect(onReady).toHaveBeenCalledWith();
+		});
+
+		await waitFor(() => {
+			expect(confirmationStep()).toBeInTheDocument();
+		});
+
+		await userEvent.click(screen.getByTestId("ExchangeForm__new-exchange"));
+
+		expect(resetForm).toHaveBeenCalledOnce();
 
 		exchangeTransactionUpdateMock.mockRestore();
 	});
@@ -1572,7 +1614,7 @@ describe("ExchangeForm", () => {
 			.spyOn(SendExchangeTransfer, "SendExchangeTransfer")
 			.mockImplementation(({ onSuccess }) => (
 				<div>
-					<button onClick={onSuccess} data-testid="Success_SendExchangeTransfer">
+					<button onClick={() => onSuccess("made-transaction-id")} data-testid="Success_SendExchangeTransfer">
 						Success
 					</button>
 					SendExchangeTransfer component
@@ -1585,6 +1627,7 @@ describe("ExchangeForm", () => {
 		await userEvent.click(screen.getByTestId("Success_SendExchangeTransfer"));
 
 		await expect(screen.findByTestId("ExchangeForm__status-step")).resolves.toBeVisible();
+		expect(screen.getByText("made-transaction-id")).toBeInTheDocument();
 
 		resetProfileNetworksMock();
 		findTransactionMock.mockRestore();
@@ -1869,7 +1912,7 @@ describe("ConfirmationStep", () => {
 		);
 
 		await waitFor(() => {
-			expect(screen.getByTestId("ExchangeForm__confirmation-step")).toBeInTheDocument();
+			expect(confirmationStep()).toBeInTheDocument();
 		});
 
 		await waitFor(() => {
