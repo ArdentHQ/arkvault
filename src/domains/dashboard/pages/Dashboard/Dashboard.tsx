@@ -71,7 +71,6 @@ export const Dashboard: React.VFC = () => {
 
 						<TableWrapper className="overflow-hidden">
 							<>
-
 								<TransactionTable
 									transactions={latestTransactions}
 									exchangeCurrency={exchangeCurrency}
@@ -87,7 +86,6 @@ export const Dashboard: React.VFC = () => {
 									<EmptyBlock>{t("DASHBOARD.LATEST_TRANSACTIONS.EMPTY_MESSAGE")}</EmptyBlock>
 								)}
 							</>
-
 						</TableWrapper>
 					</Section>
 				)}
