@@ -295,7 +295,7 @@ exports[`ApplicationError > should render with error message and reload 1`] = `
                 class="relative"
               >
                 <button
-                  class="css-9z53t5"
+                  class="css-6nyfvq"
                   data-testid="clipboard-button__wrapper"
                   type="button"
                 >
