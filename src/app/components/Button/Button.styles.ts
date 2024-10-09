@@ -72,6 +72,7 @@ const getVariant = (variant?: ButtonVariant, theme?: Theme, disabled?: boolean, 
 		secondary: () => `dark:bg-theme-secondary-800 dark:text-theme-secondary-200
 					bg-theme-primary-100 text-theme-primary-600
 					hover:bg-theme-primary-700 hover:text-white
+					dark:hover:bg-theme-primary-700
 				`,
 		"secondary-icon": () => `text-theme-secondary-700 bg-transparent
 		dark:text-theme-secondary-600 dark:bg-transparent`,
