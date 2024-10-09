@@ -16,6 +16,7 @@ import { Label } from "@/app/components/Label";
 import { Amount, AmountLabel } from "@/app/components/Amount";
 import { Divider } from "@/app/components/Divider";
 import { Icon } from "@/app/components/Icon";
+import { TransactionRowLabel } from "./TransactionRowAddressing";
 
 interface SignedTransactionRowProperties {
 	transaction: DTO.ExtendedSignedTransactionData;
@@ -147,15 +148,7 @@ export const SignedTransactionRow = ({
 			</TableCell>
 
 			<TableCell innerClassName="space-x-2 items-start xl:min-h-0">
-				<Label
-					color="danger-bg"
-					size="xs"
-					noBorder
-					className="rounded px-[11px] py-1"
-					data-testid="TransactionRowToLabel"
-				>
-					{t("COMMON.TO")}
-				</Label>
+				<TransactionRowLabel isNegative />
 				<span className="text-sm">
 					<TruncateMiddle
 						className="cursor-pointer font-semibold text-theme-primary-600"
