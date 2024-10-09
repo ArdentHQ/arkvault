@@ -446,7 +446,7 @@ exports[`Welcome > should change route to create profile 1`] = `
                       data-testid="ProfileList"
                     >
                       <div
-                        class="flex cursor-pointer items-center rounded-lg border border-theme-navy-200 leading-tight hover:border-theme-navy-300 hover:bg-theme-navy-50 dark:border-theme-secondary-800 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800"
+                        class="flex cursor-pointer items-center rounded-lg border border-theme-navy-200 leading-tight transition-colors-shadow duration-100 ease-linear hover:border-theme-navy-300 hover:bg-theme-navy-50 dark:border-theme-secondary-800 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800"
                         data-testid="ProfileRow"
                       >
                         <a
@@ -1089,7 +1089,7 @@ exports[`Welcome > should navigate to previous page with correct password 1`] = 
                       data-testid="ProfileList"
                     >
                       <div
-                        class="flex cursor-pointer items-center rounded-lg border border-theme-navy-200 leading-tight hover:border-theme-navy-300 hover:bg-theme-navy-50 dark:border-theme-secondary-800 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800"
+                        class="flex cursor-pointer items-center rounded-lg border border-theme-navy-200 leading-tight transition-colors-shadow duration-100 ease-linear hover:border-theme-navy-300 hover:bg-theme-navy-50 dark:border-theme-secondary-800 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800"
                         data-testid="ProfileRow"
                       >
                         <a
@@ -1183,7 +1183,7 @@ exports[`Welcome > should navigate to previous page with correct password 1`] = 
                         </div>
                       </div>
                       <div
-                        class="flex cursor-pointer items-center rounded-lg border border-theme-navy-200 leading-tight hover:border-theme-navy-300 hover:bg-theme-navy-50 dark:border-theme-secondary-800 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800"
+                        class="flex cursor-pointer items-center rounded-lg border border-theme-navy-200 leading-tight transition-colors-shadow duration-100 ease-linear hover:border-theme-navy-300 hover:bg-theme-navy-50 dark:border-theme-secondary-800 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800"
                         data-testid="ProfileRow"
                       >
                         <a
@@ -1826,7 +1826,7 @@ exports[`Welcome > should navigate to profile dashboard 1`] = `
                       data-testid="ProfileList"
                     >
                       <div
-                        class="flex cursor-pointer items-center rounded-lg border border-theme-navy-200 leading-tight hover:border-theme-navy-300 hover:bg-theme-navy-50 dark:border-theme-secondary-800 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800"
+                        class="flex cursor-pointer items-center rounded-lg border border-theme-navy-200 leading-tight transition-colors-shadow duration-100 ease-linear hover:border-theme-navy-300 hover:bg-theme-navy-50 dark:border-theme-secondary-800 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800"
                         data-testid="ProfileRow"
                       >
                         <a
@@ -1920,7 +1920,7 @@ exports[`Welcome > should navigate to profile dashboard 1`] = `
                         </div>
                       </div>
                       <div
-                        class="flex cursor-pointer items-center rounded-lg border border-theme-navy-200 leading-tight hover:border-theme-navy-300 hover:bg-theme-navy-50 dark:border-theme-secondary-800 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800"
+                        class="flex cursor-pointer items-center rounded-lg border border-theme-navy-200 leading-tight transition-colors-shadow duration-100 ease-linear hover:border-theme-navy-300 hover:bg-theme-navy-50 dark:border-theme-secondary-800 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800"
                         data-testid="ProfileRow"
                       >
                         <a
@@ -2563,7 +2563,7 @@ exports[`Welcome > should navigate to profile dashboard with correct password 1`
                       data-testid="ProfileList"
                     >
                       <div
-                        class="flex cursor-pointer items-center rounded-lg border border-theme-navy-200 leading-tight hover:border-theme-navy-300 hover:bg-theme-navy-50 dark:border-theme-secondary-800 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800"
+                        class="flex cursor-pointer items-center rounded-lg border border-theme-navy-200 leading-tight transition-colors-shadow duration-100 ease-linear hover:border-theme-navy-300 hover:bg-theme-navy-50 dark:border-theme-secondary-800 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800"
                         data-testid="ProfileRow"
                       >
                         <a
@@ -2657,7 +2657,7 @@ exports[`Welcome > should navigate to profile dashboard with correct password 1`
                         </div>
                       </div>
                       <div
-                        class="flex cursor-pointer items-center rounded-lg border border-theme-navy-200 leading-tight hover:border-theme-navy-300 hover:bg-theme-navy-50 dark:border-theme-secondary-800 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800"
+                        class="flex cursor-pointer items-center rounded-lg border border-theme-navy-200 leading-tight transition-colors-shadow duration-100 ease-linear hover:border-theme-navy-300 hover:bg-theme-navy-50 dark:border-theme-secondary-800 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800"
                         data-testid="ProfileRow"
                       >
                         <a
@@ -3300,7 +3300,7 @@ exports[`Welcome > should navigate to profile settings from profile card menu 1`
                       data-testid="ProfileList"
                     >
                       <div
-                        class="flex cursor-pointer items-center rounded-lg border border-theme-navy-200 leading-tight hover:border-theme-navy-300 hover:bg-theme-navy-50 dark:border-theme-secondary-800 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800"
+                        class="flex cursor-pointer items-center rounded-lg border border-theme-navy-200 leading-tight transition-colors-shadow duration-100 ease-linear hover:border-theme-navy-300 hover:bg-theme-navy-50 dark:border-theme-secondary-800 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800"
                         data-testid="ProfileRow"
                       >
                         <a
@@ -3394,7 +3394,7 @@ exports[`Welcome > should navigate to profile settings from profile card menu 1`
                         </div>
                       </div>
                       <div
-                        class="flex cursor-pointer items-center rounded-lg border border-theme-navy-200 leading-tight hover:border-theme-navy-300 hover:bg-theme-navy-50 dark:border-theme-secondary-800 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800"
+                        class="flex cursor-pointer items-center rounded-lg border border-theme-navy-200 leading-tight transition-colors-shadow duration-100 ease-linear hover:border-theme-navy-300 hover:bg-theme-navy-50 dark:border-theme-secondary-800 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800"
                         data-testid="ProfileRow"
                       >
                         <a
@@ -4037,7 +4037,7 @@ exports[`Welcome > should navigate to profile settings with correct password 1`]
                       data-testid="ProfileList"
                     >
                       <div
-                        class="flex cursor-pointer items-center rounded-lg border border-theme-navy-200 leading-tight hover:border-theme-navy-300 hover:bg-theme-navy-50 dark:border-theme-secondary-800 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800"
+                        class="flex cursor-pointer items-center rounded-lg border border-theme-navy-200 leading-tight transition-colors-shadow duration-100 ease-linear hover:border-theme-navy-300 hover:bg-theme-navy-50 dark:border-theme-secondary-800 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800"
                         data-testid="ProfileRow"
                       >
                         <a
@@ -4131,7 +4131,7 @@ exports[`Welcome > should navigate to profile settings with correct password 1`]
                         </div>
                       </div>
                       <div
-                        class="flex cursor-pointer items-center rounded-lg border border-theme-navy-200 leading-tight hover:border-theme-navy-300 hover:bg-theme-navy-50 dark:border-theme-secondary-800 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800"
+                        class="flex cursor-pointer items-center rounded-lg border border-theme-navy-200 leading-tight transition-colors-shadow duration-100 ease-linear hover:border-theme-navy-300 hover:bg-theme-navy-50 dark:border-theme-secondary-800 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800"
                         data-testid="ProfileRow"
                       >
                         <a
@@ -4774,7 +4774,7 @@ exports[`Welcome > should not select profile on wrong last location 1`] = `
                       data-testid="ProfileList"
                     >
                       <div
-                        class="flex cursor-pointer items-center rounded-lg border border-theme-navy-200 leading-tight hover:border-theme-navy-300 hover:bg-theme-navy-50 dark:border-theme-secondary-800 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800"
+                        class="flex cursor-pointer items-center rounded-lg border border-theme-navy-200 leading-tight transition-colors-shadow duration-100 ease-linear hover:border-theme-navy-300 hover:bg-theme-navy-50 dark:border-theme-secondary-800 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800"
                         data-testid="ProfileRow"
                       >
                         <a
@@ -5417,7 +5417,7 @@ exports[`Welcome > should render with profiles 1`] = `
                       data-testid="ProfileList"
                     >
                       <div
-                        class="flex cursor-pointer items-center rounded-lg border border-theme-navy-200 leading-tight hover:border-theme-navy-300 hover:bg-theme-navy-50 dark:border-theme-secondary-800 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800"
+                        class="flex cursor-pointer items-center rounded-lg border border-theme-navy-200 leading-tight transition-colors-shadow duration-100 ease-linear hover:border-theme-navy-300 hover:bg-theme-navy-50 dark:border-theme-secondary-800 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800"
                         data-testid="ProfileRow"
                       >
                         <a
@@ -5511,7 +5511,7 @@ exports[`Welcome > should render with profiles 1`] = `
                         </div>
                       </div>
                       <div
-                        class="flex cursor-pointer items-center rounded-lg border border-theme-navy-200 leading-tight hover:border-theme-navy-300 hover:bg-theme-navy-50 dark:border-theme-secondary-800 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800"
+                        class="flex cursor-pointer items-center rounded-lg border border-theme-navy-200 leading-tight transition-colors-shadow duration-100 ease-linear hover:border-theme-navy-300 hover:bg-theme-navy-50 dark:border-theme-secondary-800 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800"
                         data-testid="ProfileRow"
                       >
                         <a
