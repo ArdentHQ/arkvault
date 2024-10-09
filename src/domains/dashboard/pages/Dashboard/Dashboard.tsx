@@ -9,6 +9,7 @@ import { PortfolioHeader } from "@/domains/wallet/components/PortfolioHeader";
 import { WalletsGroupsList } from "@/domains/wallet/components/WalletsGroup";
 import { useLatestTransactions } from "@/domains/dashboard/hooks/use-latest-transactions";
 import { TransactionTable } from "@/domains/transaction/components/TransactionTable";
+import { TableWrapper } from "@/app/components/Table/TableWrapper";
 
 import { Page, Section } from "@/app/components/Layout";
 import { useConfiguration, useEnvironmentContext } from "@/app/contexts";
@@ -68,20 +69,24 @@ export const Dashboard: React.VFC = () => {
 					<Section className="mt-4 md:mt-0" data-testid="dashboard__transactions-view">
 						<h2 className="mb-6 text-2xl font-bold">{t("DASHBOARD.LATEST_TRANSACTIONS.TITLE")}</h2>
 
-						<TransactionTable
-							transactions={latestTransactions}
-							exchangeCurrency={exchangeCurrency}
-							hideHeader={!isLoadingTransactions && latestTransactions.length === 0}
-							isLoading={isLoadingTransactions && latestTransactions.length === 0}
-							skeletonRowsLimit={8}
-							onRowClick={setTransactionModalItem}
-							profile={activeProfile}
-							coinName={wallet.currency()}
-						/>
+						<TableWrapper className="overflow-hidden">
+							<>
+								<TransactionTable
+									transactions={latestTransactions}
+									exchangeCurrency={exchangeCurrency}
+									hideHeader={!isLoadingTransactions && latestTransactions.length === 0}
+									isLoading={isLoadingTransactions && latestTransactions.length === 0}
+									skeletonRowsLimit={8}
+									onRowClick={setTransactionModalItem}
+									profile={activeProfile}
+									coinName={wallet.currency()}
+								/>
 
-						{latestTransactions.length === 0 && !isLoadingTransactions && (
-							<EmptyBlock>{t("DASHBOARD.LATEST_TRANSACTIONS.EMPTY_MESSAGE")}</EmptyBlock>
-						)}
+								{latestTransactions.length === 0 && !isLoadingTransactions && (
+									<EmptyBlock>{t("DASHBOARD.LATEST_TRANSACTIONS.EMPTY_MESSAGE")}</EmptyBlock>
+								)}
+							</>
+						</TableWrapper>
 					</Section>
 				)}
 			</Page>
