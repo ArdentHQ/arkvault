@@ -406,7 +406,7 @@ describe("Signed Transaction Table", () => {
 			/>,
 		);
 
-		expect(screen.getByTestId("TransactionRowToLabel")).toBeInTheDocument();
+		expect(screen.getByTestId("TransactionRowAddressing__label")).toBeInTheDocument();
 
 		expect(asFragment()).toMatchSnapshot();
 	});
