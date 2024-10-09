@@ -12,30 +12,31 @@ export const useTransactionTableColumns = ({ coin }: { coin?: string }) => {
 		const templateColumns: Column<DTO.ExtendedConfirmedTransactionData>[] = [
 			{
 				Header: t("COMMON.TX_ID"),
+				cellWidth: "w-36 xl:w-48",
 				headerClassName: "no-border",
 				noRoundedBorders: true,
 			},
 			{
 				Header: t("COMMON.AGE"),
-				// eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
+
 				accessor: (transaction) => transaction.timestamp?.()?.toUNIX(),
-				headerClassName: "hidden lg:table-cell no-border",
+				cellWidth: "w-48 xl:w-40",
+				headerClassName: "hidden xl:table-cell no-border",
 				id: "date",
 				sortDescFirst: true,
 			},
 			{
 				Header: t("COMMON.TYPE"),
-				cellWidth: "min-w-24",
+				cellWidth: "w-32",
 				headerClassName: "no-border",
 			},
 			{
 				Header: t("COMMON.ADDRESSING"),
-				cellWidth: "min-w-32",
 				headerClassName: "no-border",
 			},
 			{
 				Header: `${t("COMMON.VALUE")} (${coin})`,
-				// eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
+
 				accessor: (transaction) => transaction.total?.(),
 				className: "justify-end",
 				headerClassName: "no-border",
@@ -44,6 +45,7 @@ export const useTransactionTableColumns = ({ coin }: { coin?: string }) => {
 			{
 				Header: t("COMMON.FIAT_VALUE"),
 				accessor: () => "fiatValue",
+				cellWidth: "w-36",
 				className: "justify-end",
 				headerClassName: "no-border hidden lg:table-cell",
 				noRoundedBorders: true,
