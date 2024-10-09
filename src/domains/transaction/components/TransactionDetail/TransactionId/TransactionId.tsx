@@ -42,7 +42,7 @@ export const TransactionId = ({ transaction }: Properties): ReactElement => {
 					buttonClassName="h-8 grow"
 					wrapperClassName="flex w-full"
 				>
-					<Icon name="Copy"/>
+					<Icon name="Copy" />
 					<span className="sm:hidden">{t("COMMON.COPY")}</span>
 				</Clipboard>
 
