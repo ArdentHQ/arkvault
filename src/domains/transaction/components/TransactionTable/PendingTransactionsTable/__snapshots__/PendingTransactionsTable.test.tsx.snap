@@ -314,9 +314,9 @@ exports[`Signed Transaction Table > should handle the onRowClick function when t
                   class="flex px-3 my-1 transition-colors duration-100 min-h-11 space-x-2 items-start xl:min-h-0"
                 >
                   <div
-                    class="rounded px-[11px] py-1 css-r9b6qf"
+                    class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-r9b6qf"
                     color="danger-bg"
-                    data-testid="TransactionRowToLabel"
+                    data-testid="TransactionRowAddressing__label"
                   >
                     To
                   </div>
@@ -1045,9 +1045,9 @@ exports[`Signed Transaction Table > should render different status > should show
                   class="flex px-3 my-1 transition-colors duration-100 min-h-11 space-x-2 items-start xl:min-h-0"
                 >
                   <div
-                    class="rounded px-[11px] py-1 css-r9b6qf"
+                    class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-r9b6qf"
                     color="danger-bg"
-                    data-testid="TransactionRowToLabel"
+                    data-testid="TransactionRowAddressing__label"
                   >
                     To
                   </div>
@@ -1766,9 +1766,9 @@ exports[`Signed Transaction Table > should render different status > should show
                   class="flex px-3 my-1 transition-colors duration-100 min-h-11 space-x-2 items-start xl:min-h-0"
                 >
                   <div
-                    class="rounded px-[11px] py-1 css-r9b6qf"
+                    class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-r9b6qf"
                     color="danger-bg"
-                    data-testid="TransactionRowToLabel"
+                    data-testid="TransactionRowAddressing__label"
                   >
                     To
                   </div>
@@ -3723,9 +3723,9 @@ exports[`Signed Transaction Table > should render different status > should show
                   class="flex px-3 my-1 transition-colors duration-100 min-h-11 space-x-2 items-start xl:min-h-0"
                 >
                   <div
-                    class="rounded px-[11px] py-1 css-r9b6qf"
+                    class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-r9b6qf"
                     color="danger-bg"
-                    data-testid="TransactionRowToLabel"
+                    data-testid="TransactionRowAddressing__label"
                   >
                     To
                   </div>
@@ -4222,9 +4222,9 @@ exports[`Signed Transaction Table > should render ready to broadcast transaction
                   class="flex px-3 my-1 transition-colors duration-100 min-h-11 space-x-2 items-start xl:min-h-0"
                 >
                   <div
-                    class="rounded px-[11px] py-1 css-r9b6qf"
+                    class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-r9b6qf"
                     color="danger-bg"
-                    data-testid="TransactionRowToLabel"
+                    data-testid="TransactionRowAddressing__label"
                   >
                     To
                   </div>
@@ -4693,9 +4693,9 @@ exports[`Signed Transaction Table > should render signed transactions and handle
                   class="flex px-3 my-1 transition-colors duration-100 min-h-11 space-x-2 items-start xl:min-h-0"
                 >
                   <div
-                    class="rounded px-[11px] py-1 css-r9b6qf"
+                    class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-r9b6qf"
                     color="danger-bg"
-                    data-testid="TransactionRowToLabel"
+                    data-testid="TransactionRowAddressing__label"
                   >
                     To
                   </div>
@@ -5805,9 +5805,9 @@ exports[`Signed Transaction Table > should show the sign button with isCompact =
                   class="flex px-3 my-1 transition-colors duration-100 min-h-11 space-x-2 items-start xl:min-h-0"
                 >
                   <div
-                    class="rounded px-[11px] py-1 css-r9b6qf"
+                    class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-r9b6qf"
                     color="danger-bg"
-                    data-testid="TransactionRowToLabel"
+                    data-testid="TransactionRowAddressing__label"
                   >
                     To
                   </div>
@@ -6304,9 +6304,9 @@ exports[`Signed Transaction Table > should show the sign button with isCompact =
                   class="flex px-3 my-1 transition-colors duration-100 min-h-11 space-x-2 items-start xl:min-h-0"
                 >
                   <div
-                    class="rounded px-[11px] py-1 css-r9b6qf"
+                    class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-r9b6qf"
                     color="danger-bg"
-                    data-testid="TransactionRowToLabel"
+                    data-testid="TransactionRowAddressing__label"
                   >
                     To
                   </div>
