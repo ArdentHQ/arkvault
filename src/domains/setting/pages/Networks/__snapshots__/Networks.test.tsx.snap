@@ -938,7 +938,7 @@ exports[`Network Settings > should check the main network by default 1`] = `
                       class="flex items-center gap-3"
                     >
                       <h1
-                        class="mb-0 text-2xl leading-[29px]"
+                        class="mb-0 mb-2"
                         data-testid="header__title"
                       >
                         Manage Networks
@@ -998,7 +998,7 @@ exports[`Network Settings > should check the main network by default 1`] = `
                           data-testid="NetworksList--main"
                         >
                           <div
-                            class="mt-3 grid gap-3 xl:grid-cols-2"
+                            class="mt-4 grid gap-3 xl:grid-cols-2"
                             data-testid="NetworksList"
                           >
                             <label
@@ -2121,7 +2121,7 @@ exports[`Network Settings > should render networks settings section 1`] = `
                       class="flex items-center gap-3"
                     >
                       <h1
-                        class="mb-0 text-2xl leading-[29px]"
+                        class="mb-0 mb-2"
                         data-testid="header__title"
                       >
                         Manage Networks
@@ -2181,7 +2181,7 @@ exports[`Network Settings > should render networks settings section 1`] = `
                           data-testid="NetworksList--main"
                         >
                           <div
-                            class="mt-3 grid gap-3 xl:grid-cols-2"
+                            class="mt-4 grid gap-3 xl:grid-cols-2"
                             data-testid="NetworksList"
                           >
                             <label

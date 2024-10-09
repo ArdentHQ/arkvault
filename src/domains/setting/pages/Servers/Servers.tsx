@@ -148,7 +148,7 @@ export const ServersSettings = () => {
 						onToggle={toggleNetwork}
 					/>
 				),
-				contentClass: "sm:mt-4",
+				contentClass: "sm:mt-3",
 				label: t("SETTINGS.SERVERS.OPTIONS.CUSTOM_PEERS.TITLE"),
 				labelDescription: t("SETTINGS.SERVERS.OPTIONS.CUSTOM_PEERS.DESCRIPTION"),
 				wrapperClass: "pt-6 sm:pb-6",
@@ -178,9 +178,13 @@ export const ServersSettings = () => {
 
 	return (
 		<SettingsWrapper profile={profile} activeSettings="servers">
-			<Header title={t("SETTINGS.SERVERS.TITLE")} subtitle={t("SETTINGS.SERVERS.SUBTITLE")} />
+			<Header
+				title={t("SETTINGS.SERVERS.TITLE")}
+				subtitle={t("SETTINGS.SERVERS.SUBTITLE")}
+				titleClassName="mb-2"
+			/>
 
-			<Form id="servers__form" context={form} onSubmit={saveSettings} className="mt-4">
+			<Form id="servers__form" context={form} onSubmit={saveSettings} className="mt-2">
 				<ListDivided items={serverOptions} noBorder={isXs} />
 
 				<FormButtons>

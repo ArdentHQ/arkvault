@@ -942,7 +942,7 @@ exports[`General Settings > should disable submit button when profile is not res
                       class="flex items-center gap-3"
                     >
                       <h1
-                        class="mb-0 text-2xl leading-[29px]"
+                        class="mb-0 mb-2"
                         data-testid="header__title"
                       >
                         Profile Settings
@@ -964,7 +964,7 @@ exports[`General Settings > should disable submit button when profile is not res
                     class="relative mt-8"
                   >
                     <h2
-                      class="mb-3 text-lg"
+                      class="mb-4 text-lg"
                     >
                       Personal Details
                     </h2>
@@ -1034,7 +1034,7 @@ exports[`General Settings > should disable submit button when profile is not res
                       </div>
                     </div>
                     <div
-                      class="mt-8 flex w-full flex-col justify-between sm:flex-row"
+                      class="mt-5 flex w-full flex-col justify-between sm:flex-row"
                     >
                       <div
                         class="flex flex-col sm:w-2/4"
@@ -1067,7 +1067,7 @@ exports[`General Settings > should disable submit button when profile is not res
                           </div>
                         </fieldset>
                         <fieldset
-                          class="mt-8 css-1bcidjh"
+                          class="mt-5 css-1bcidjh"
                         >
                           <label
                             class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
@@ -1199,7 +1199,7 @@ exports[`General Settings > should disable submit button when profile is not res
                           </div>
                         </fieldset>
                         <fieldset
-                          class="mt-8 css-1bcidjh"
+                          class="mt-5 css-1bcidjh"
                         >
                           <label
                             class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
@@ -1332,7 +1332,7 @@ exports[`General Settings > should disable submit button when profile is not res
                         </fieldset>
                       </div>
                       <div
-                        class="mt-8 flex flex-col sm:ml-5 sm:mt-0 sm:w-2/4"
+                        class="mt-5 flex flex-col sm:ml-5 sm:mt-0 sm:w-2/4"
                       >
                         <fieldset
                           class="flex min-w-0 flex-col css-1bcidjh"
@@ -1467,7 +1467,7 @@ exports[`General Settings > should disable submit button when profile is not res
                           </div>
                         </fieldset>
                         <fieldset
-                          class="mt-8 css-1bcidjh"
+                          class="mt-5 css-1bcidjh"
                         >
                           <label
                             class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
@@ -1599,7 +1599,7 @@ exports[`General Settings > should disable submit button when profile is not res
                           </div>
                         </fieldset>
                         <fieldset
-                          class="mt-8 css-1bcidjh"
+                          class="mt-5 css-1bcidjh"
                         >
                           <label
                             class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
@@ -1737,7 +1737,7 @@ exports[`General Settings > should disable submit button when profile is not res
                     class="css-1elbhch"
                   >
                     <h2
-                      class="mb-3 text-lg"
+                      class="mb-4 text-lg"
                     >
                       Security
                     </h2>
@@ -1746,7 +1746,7 @@ exports[`General Settings > should disable submit button when profile is not res
                       data-testid="list-divided__items"
                     >
                       <li
-                        class="flex w-full flex-col "
+                        class="flex w-full flex-col"
                         data-testid="list-divided-item__wrapper"
                       >
                         <div
@@ -1894,7 +1894,7 @@ exports[`General Settings > should disable submit button when profile is not res
                     class="css-1elbhch"
                   >
                     <h2
-                      class="mb-3 text-lg"
+                      class="mb-4 text-lg"
                     >
                       Other
                     </h2>
@@ -1903,7 +1903,7 @@ exports[`General Settings > should disable submit button when profile is not res
                       data-testid="list-divided__items"
                     >
                       <li
-                        class="flex w-full flex-col pt-6 sm:pb-6"
+                        class="flex w-full flex-col sm:pb-6"
                         data-testid="list-divided-item__wrapper"
                       >
                         <div
@@ -2940,7 +2940,7 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                       class="flex items-center gap-3"
                     >
                       <h1
-                        class="mb-0 text-2xl leading-[29px]"
+                        class="mb-0 mb-2"
                         data-testid="header__title"
                       >
                         Profile Settings
@@ -2962,7 +2962,7 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                     class="relative mt-8"
                   >
                     <h2
-                      class="mb-3 text-lg"
+                      class="mb-4 text-lg"
                     >
                       Personal Details
                     </h2>
@@ -3067,7 +3067,7 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                       </div>
                     </div>
                     <div
-                      class="mt-8 flex w-full flex-col justify-between sm:flex-row"
+                      class="mt-5 flex w-full flex-col justify-between sm:flex-row"
                     >
                       <div
                         class="flex flex-col sm:w-2/4"
@@ -3100,7 +3100,7 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                           </div>
                         </fieldset>
                         <fieldset
-                          class="mt-8 css-1bcidjh"
+                          class="mt-5 css-1bcidjh"
                         >
                           <label
                             class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
@@ -3232,7 +3232,7 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                           </div>
                         </fieldset>
                         <fieldset
-                          class="mt-8 css-1bcidjh"
+                          class="mt-5 css-1bcidjh"
                         >
                           <label
                             class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
@@ -3365,7 +3365,7 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                         </fieldset>
                       </div>
                       <div
-                        class="mt-8 flex flex-col sm:ml-5 sm:mt-0 sm:w-2/4"
+                        class="mt-5 flex flex-col sm:ml-5 sm:mt-0 sm:w-2/4"
                       >
                         <fieldset
                           class="flex min-w-0 flex-col css-1bcidjh"
@@ -3500,7 +3500,7 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                           </div>
                         </fieldset>
                         <fieldset
-                          class="mt-8 css-1bcidjh"
+                          class="mt-5 css-1bcidjh"
                         >
                           <label
                             class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
@@ -3632,7 +3632,7 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                           </div>
                         </fieldset>
                         <fieldset
-                          class="mt-8 css-1bcidjh"
+                          class="mt-5 css-1bcidjh"
                         >
                           <label
                             class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
@@ -3770,7 +3770,7 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                     class="css-1elbhch"
                   >
                     <h2
-                      class="mb-3 text-lg"
+                      class="mb-4 text-lg"
                     >
                       Security
                     </h2>
@@ -3779,7 +3779,7 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                       data-testid="list-divided__items"
                     >
                       <li
-                        class="flex w-full flex-col "
+                        class="flex w-full flex-col"
                         data-testid="list-divided-item__wrapper"
                       >
                         <div
@@ -3927,7 +3927,7 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                     class="css-1elbhch"
                   >
                     <h2
-                      class="mb-3 text-lg"
+                      class="mb-4 text-lg"
                     >
                       Other
                     </h2>
@@ -3936,7 +3936,7 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                       data-testid="list-divided__items"
                     >
                       <li
-                        class="flex w-full flex-col pt-6 sm:pb-6"
+                        class="flex w-full flex-col sm:pb-6"
                         data-testid="list-divided-item__wrapper"
                       >
                         <div
@@ -4972,7 +4972,7 @@ exports[`General Settings > should render 1`] = `
                       class="flex items-center gap-3"
                     >
                       <h1
-                        class="mb-0 text-2xl leading-[29px]"
+                        class="mb-0 mb-2"
                         data-testid="header__title"
                       >
                         Profile Settings
@@ -4994,7 +4994,7 @@ exports[`General Settings > should render 1`] = `
                     class="relative mt-8"
                   >
                     <h2
-                      class="mb-3 text-lg"
+                      class="mb-4 text-lg"
                     >
                       Personal Details
                     </h2>
@@ -5064,7 +5064,7 @@ exports[`General Settings > should render 1`] = `
                       </div>
                     </div>
                     <div
-                      class="mt-8 flex w-full flex-col justify-between sm:flex-row"
+                      class="mt-5 flex w-full flex-col justify-between sm:flex-row"
                     >
                       <div
                         class="flex flex-col sm:w-2/4"
@@ -5097,7 +5097,7 @@ exports[`General Settings > should render 1`] = `
                           </div>
                         </fieldset>
                         <fieldset
-                          class="mt-8 css-1bcidjh"
+                          class="mt-5 css-1bcidjh"
                         >
                           <label
                             class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
@@ -5229,7 +5229,7 @@ exports[`General Settings > should render 1`] = `
                           </div>
                         </fieldset>
                         <fieldset
-                          class="mt-8 css-1bcidjh"
+                          class="mt-5 css-1bcidjh"
                         >
                           <label
                             class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
@@ -5362,7 +5362,7 @@ exports[`General Settings > should render 1`] = `
                         </fieldset>
                       </div>
                       <div
-                        class="mt-8 flex flex-col sm:ml-5 sm:mt-0 sm:w-2/4"
+                        class="mt-5 flex flex-col sm:ml-5 sm:mt-0 sm:w-2/4"
                       >
                         <fieldset
                           class="flex min-w-0 flex-col css-1bcidjh"
@@ -5497,7 +5497,7 @@ exports[`General Settings > should render 1`] = `
                           </div>
                         </fieldset>
                         <fieldset
-                          class="mt-8 css-1bcidjh"
+                          class="mt-5 css-1bcidjh"
                         >
                           <label
                             class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
@@ -5629,7 +5629,7 @@ exports[`General Settings > should render 1`] = `
                           </div>
                         </fieldset>
                         <fieldset
-                          class="mt-8 css-1bcidjh"
+                          class="mt-5 css-1bcidjh"
                         >
                           <label
                             class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
@@ -5767,7 +5767,7 @@ exports[`General Settings > should render 1`] = `
                     class="css-1elbhch"
                   >
                     <h2
-                      class="mb-3 text-lg"
+                      class="mb-4 text-lg"
                     >
                       Security
                     </h2>
@@ -5776,7 +5776,7 @@ exports[`General Settings > should render 1`] = `
                       data-testid="list-divided__items"
                     >
                       <li
-                        class="flex w-full flex-col "
+                        class="flex w-full flex-col"
                         data-testid="list-divided-item__wrapper"
                       >
                         <div
@@ -5924,7 +5924,7 @@ exports[`General Settings > should render 1`] = `
                     class="css-1elbhch"
                   >
                     <h2
-                      class="mb-3 text-lg"
+                      class="mb-4 text-lg"
                     >
                       Other
                     </h2>
@@ -5933,7 +5933,7 @@ exports[`General Settings > should render 1`] = `
                       data-testid="list-divided__items"
                     >
                       <li
-                        class="flex w-full flex-col pt-6 sm:pb-6"
+                        class="flex w-full flex-col sm:pb-6"
                         data-testid="list-divided-item__wrapper"
                       >
                         <div
@@ -6970,7 +6970,7 @@ exports[`General Settings > should show identicon when removing image if name is
                       class="flex items-center gap-3"
                     >
                       <h1
-                        class="mb-0 text-2xl leading-[29px]"
+                        class="mb-0 mb-2"
                         data-testid="header__title"
                       >
                         Profile Settings
@@ -6992,7 +6992,7 @@ exports[`General Settings > should show identicon when removing image if name is
                     class="relative mt-8"
                   >
                     <h2
-                      class="mb-3 text-lg"
+                      class="mb-4 text-lg"
                     >
                       Personal Details
                     </h2>
@@ -7062,7 +7062,7 @@ exports[`General Settings > should show identicon when removing image if name is
                       </div>
                     </div>
                     <div
-                      class="mt-8 flex w-full flex-col justify-between sm:flex-row"
+                      class="mt-5 flex w-full flex-col justify-between sm:flex-row"
                     >
                       <div
                         class="flex flex-col sm:w-2/4"
@@ -7095,7 +7095,7 @@ exports[`General Settings > should show identicon when removing image if name is
                           </div>
                         </fieldset>
                         <fieldset
-                          class="mt-8 css-1bcidjh"
+                          class="mt-5 css-1bcidjh"
                         >
                           <label
                             class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
@@ -7227,7 +7227,7 @@ exports[`General Settings > should show identicon when removing image if name is
                           </div>
                         </fieldset>
                         <fieldset
-                          class="mt-8 css-1bcidjh"
+                          class="mt-5 css-1bcidjh"
                         >
                           <label
                             class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
@@ -7360,7 +7360,7 @@ exports[`General Settings > should show identicon when removing image if name is
                         </fieldset>
                       </div>
                       <div
-                        class="mt-8 flex flex-col sm:ml-5 sm:mt-0 sm:w-2/4"
+                        class="mt-5 flex flex-col sm:ml-5 sm:mt-0 sm:w-2/4"
                       >
                         <fieldset
                           class="flex min-w-0 flex-col css-1bcidjh"
@@ -7495,7 +7495,7 @@ exports[`General Settings > should show identicon when removing image if name is
                           </div>
                         </fieldset>
                         <fieldset
-                          class="mt-8 css-1bcidjh"
+                          class="mt-5 css-1bcidjh"
                         >
                           <label
                             class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
@@ -7627,7 +7627,7 @@ exports[`General Settings > should show identicon when removing image if name is
                           </div>
                         </fieldset>
                         <fieldset
-                          class="mt-8 css-1bcidjh"
+                          class="mt-5 css-1bcidjh"
                         >
                           <label
                             class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
@@ -7765,7 +7765,7 @@ exports[`General Settings > should show identicon when removing image if name is
                     class="css-1elbhch"
                   >
                     <h2
-                      class="mb-3 text-lg"
+                      class="mb-4 text-lg"
                     >
                       Security
                     </h2>
@@ -7774,7 +7774,7 @@ exports[`General Settings > should show identicon when removing image if name is
                       data-testid="list-divided__items"
                     >
                       <li
-                        class="flex w-full flex-col "
+                        class="flex w-full flex-col"
                         data-testid="list-divided-item__wrapper"
                       >
                         <div
@@ -7922,7 +7922,7 @@ exports[`General Settings > should show identicon when removing image if name is
                     class="css-1elbhch"
                   >
                     <h2
-                      class="mb-3 text-lg"
+                      class="mb-4 text-lg"
                     >
                       Other
                     </h2>
@@ -7931,7 +7931,7 @@ exports[`General Settings > should show identicon when removing image if name is
                       data-testid="list-divided__items"
                     >
                       <li
-                        class="flex w-full flex-col pt-6 sm:pb-6"
+                        class="flex w-full flex-col sm:pb-6"
                         data-testid="list-divided-item__wrapper"
                       >
                         <div
@@ -8968,7 +8968,7 @@ exports[`General Settings > should update profile 1`] = `
                       class="flex items-center gap-3"
                     >
                       <h1
-                        class="mb-0 text-2xl leading-[29px]"
+                        class="mb-0 mb-2"
                         data-testid="header__title"
                       >
                         Profile Settings
@@ -8990,7 +8990,7 @@ exports[`General Settings > should update profile 1`] = `
                     class="relative mt-8"
                   >
                     <h2
-                      class="mb-3 text-lg"
+                      class="mb-4 text-lg"
                     >
                       Personal Details
                     </h2>
@@ -9060,7 +9060,7 @@ exports[`General Settings > should update profile 1`] = `
                       </div>
                     </div>
                     <div
-                      class="mt-8 flex w-full flex-col justify-between sm:flex-row"
+                      class="mt-5 flex w-full flex-col justify-between sm:flex-row"
                     >
                       <div
                         class="flex flex-col sm:w-2/4"
@@ -9093,7 +9093,7 @@ exports[`General Settings > should update profile 1`] = `
                           </div>
                         </fieldset>
                         <fieldset
-                          class="mt-8 css-1bcidjh"
+                          class="mt-5 css-1bcidjh"
                         >
                           <label
                             class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
@@ -9225,7 +9225,7 @@ exports[`General Settings > should update profile 1`] = `
                           </div>
                         </fieldset>
                         <fieldset
-                          class="mt-8 css-1bcidjh"
+                          class="mt-5 css-1bcidjh"
                         >
                           <label
                             class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
@@ -9358,7 +9358,7 @@ exports[`General Settings > should update profile 1`] = `
                         </fieldset>
                       </div>
                       <div
-                        class="mt-8 flex flex-col sm:ml-5 sm:mt-0 sm:w-2/4"
+                        class="mt-5 flex flex-col sm:ml-5 sm:mt-0 sm:w-2/4"
                       >
                         <fieldset
                           class="flex min-w-0 flex-col css-1bcidjh"
@@ -9493,7 +9493,7 @@ exports[`General Settings > should update profile 1`] = `
                           </div>
                         </fieldset>
                         <fieldset
-                          class="mt-8 css-1bcidjh"
+                          class="mt-5 css-1bcidjh"
                         >
                           <label
                             class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
@@ -9625,7 +9625,7 @@ exports[`General Settings > should update profile 1`] = `
                           </div>
                         </fieldset>
                         <fieldset
-                          class="mt-8 css-1bcidjh"
+                          class="mt-5 css-1bcidjh"
                         >
                           <label
                             class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
@@ -9763,7 +9763,7 @@ exports[`General Settings > should update profile 1`] = `
                     class="css-1elbhch"
                   >
                     <h2
-                      class="mb-3 text-lg"
+                      class="mb-4 text-lg"
                     >
                       Security
                     </h2>
@@ -9772,7 +9772,7 @@ exports[`General Settings > should update profile 1`] = `
                       data-testid="list-divided__items"
                     >
                       <li
-                        class="flex w-full flex-col "
+                        class="flex w-full flex-col"
                         data-testid="list-divided-item__wrapper"
                       >
                         <div
@@ -9920,7 +9920,7 @@ exports[`General Settings > should update profile 1`] = `
                     class="css-1elbhch"
                   >
                     <h2
-                      class="mb-3 text-lg"
+                      class="mb-4 text-lg"
                     >
                       Other
                     </h2>
@@ -9929,7 +9929,7 @@ exports[`General Settings > should update profile 1`] = `
                       data-testid="list-divided__items"
                     >
                       <li
-                        class="flex w-full flex-col pt-6 sm:pb-6"
+                        class="flex w-full flex-col sm:pb-6"
                         data-testid="list-divided-item__wrapper"
                       >
                         <div
@@ -10966,7 +10966,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                       class="flex items-center gap-3"
                     >
                       <h1
-                        class="mb-0 text-2xl leading-[29px]"
+                        class="mb-0 mb-2"
                         data-testid="header__title"
                       >
                         Profile Settings
@@ -10988,7 +10988,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                     class="relative mt-8"
                   >
                     <h2
-                      class="mb-3 text-lg"
+                      class="mb-4 text-lg"
                     >
                       Personal Details
                     </h2>
@@ -11058,7 +11058,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                       </div>
                     </div>
                     <div
-                      class="mt-8 flex w-full flex-col justify-between sm:flex-row"
+                      class="mt-5 flex w-full flex-col justify-between sm:flex-row"
                     >
                       <div
                         class="flex flex-col sm:w-2/4"
@@ -11091,7 +11091,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                           </div>
                         </fieldset>
                         <fieldset
-                          class="mt-8 css-1bcidjh"
+                          class="mt-5 css-1bcidjh"
                         >
                           <label
                             class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
@@ -11223,7 +11223,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                           </div>
                         </fieldset>
                         <fieldset
-                          class="mt-8 css-1bcidjh"
+                          class="mt-5 css-1bcidjh"
                         >
                           <label
                             class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
@@ -11356,7 +11356,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                         </fieldset>
                       </div>
                       <div
-                        class="mt-8 flex flex-col sm:ml-5 sm:mt-0 sm:w-2/4"
+                        class="mt-5 flex flex-col sm:ml-5 sm:mt-0 sm:w-2/4"
                       >
                         <fieldset
                           class="flex min-w-0 flex-col css-1bcidjh"
@@ -11491,7 +11491,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                           </div>
                         </fieldset>
                         <fieldset
-                          class="mt-8 css-1bcidjh"
+                          class="mt-5 css-1bcidjh"
                         >
                           <label
                             class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
@@ -11623,7 +11623,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                           </div>
                         </fieldset>
                         <fieldset
-                          class="mt-8 css-1bcidjh"
+                          class="mt-5 css-1bcidjh"
                         >
                           <label
                             class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
@@ -11761,7 +11761,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                     class="css-1elbhch"
                   >
                     <h2
-                      class="mb-3 text-lg"
+                      class="mb-4 text-lg"
                     >
                       Security
                     </h2>
@@ -11770,7 +11770,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                       data-testid="list-divided__items"
                     >
                       <li
-                        class="flex w-full flex-col "
+                        class="flex w-full flex-col"
                         data-testid="list-divided-item__wrapper"
                       >
                         <div
@@ -11918,7 +11918,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                     class="css-1elbhch"
                   >
                     <h2
-                      class="mb-3 text-lg"
+                      class="mb-4 text-lg"
                     >
                       Other
                     </h2>
@@ -11927,7 +11927,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                       data-testid="list-divided__items"
                     >
                       <li
-                        class="flex w-full flex-col pt-6 sm:pb-6"
+                        class="flex w-full flex-col sm:pb-6"
                         data-testid="list-divided-item__wrapper"
                       >
                         <div
@@ -12963,7 +12963,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                       class="flex items-center gap-3"
                     >
                       <h1
-                        class="mb-0 text-2xl leading-[29px]"
+                        class="mb-0 mb-2"
                         data-testid="header__title"
                       >
                         Profile Settings
@@ -12985,7 +12985,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                     class="relative mt-8"
                   >
                     <h2
-                      class="mb-3 text-lg"
+                      class="mb-4 text-lg"
                     >
                       Personal Details
                     </h2>
@@ -13048,7 +13048,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                       </div>
                     </div>
                     <div
-                      class="mt-8 flex w-full flex-col justify-between sm:flex-row"
+                      class="mt-5 flex w-full flex-col justify-between sm:flex-row"
                     >
                       <div
                         class="flex flex-col sm:w-2/4"
@@ -13129,7 +13129,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                           </div>
                         </fieldset>
                         <fieldset
-                          class="mt-8 css-1bcidjh"
+                          class="mt-5 css-1bcidjh"
                         >
                           <label
                             class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
@@ -13261,7 +13261,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                           </div>
                         </fieldset>
                         <fieldset
-                          class="mt-8 css-1bcidjh"
+                          class="mt-5 css-1bcidjh"
                         >
                           <label
                             class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
@@ -13394,7 +13394,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                         </fieldset>
                       </div>
                       <div
-                        class="mt-8 flex flex-col sm:ml-5 sm:mt-0 sm:w-2/4"
+                        class="mt-5 flex flex-col sm:ml-5 sm:mt-0 sm:w-2/4"
                       >
                         <fieldset
                           class="flex min-w-0 flex-col css-1bcidjh"
@@ -13529,7 +13529,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                           </div>
                         </fieldset>
                         <fieldset
-                          class="mt-8 css-1bcidjh"
+                          class="mt-5 css-1bcidjh"
                         >
                           <label
                             class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
@@ -13661,7 +13661,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                           </div>
                         </fieldset>
                         <fieldset
-                          class="mt-8 css-1bcidjh"
+                          class="mt-5 css-1bcidjh"
                         >
                           <label
                             class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
@@ -13799,7 +13799,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                     class="css-1elbhch"
                   >
                     <h2
-                      class="mb-3 text-lg"
+                      class="mb-4 text-lg"
                     >
                       Security
                     </h2>
@@ -13808,7 +13808,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                       data-testid="list-divided__items"
                     >
                       <li
-                        class="flex w-full flex-col "
+                        class="flex w-full flex-col"
                         data-testid="list-divided-item__wrapper"
                       >
                         <div
@@ -13956,7 +13956,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                     class="css-1elbhch"
                   >
                     <h2
-                      class="mb-3 text-lg"
+                      class="mb-4 text-lg"
                     >
                       Other
                     </h2>
@@ -13965,7 +13965,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                       data-testid="list-divided__items"
                     >
                       <li
-                        class="flex w-full flex-col pt-6 sm:pb-6"
+                        class="flex w-full flex-col sm:pb-6"
                         data-testid="list-divided-item__wrapper"
                       >
                         <div

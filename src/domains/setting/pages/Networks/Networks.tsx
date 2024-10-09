@@ -390,7 +390,11 @@ export const NetworksSettings = () => {
 
 	return (
 		<SettingsWrapper profile={profile} activeSettings="networks">
-			<Header title={t("SETTINGS.NETWORKS.TITLE")} subtitle={t("SETTINGS.NETWORKS.SUBTITLE")} />
+			<Header
+				title={t("SETTINGS.NETWORKS.TITLE")}
+				subtitle={t("SETTINGS.NETWORKS.SUBTITLE")}
+				titleClassName="mb-2"
+			/>
 
 			<Form id="Networks--form" context={form} onSubmit={handleSubmit} className="mt-6">
 				<ListDivided items={networksOptions} noBorder={isXs} />
