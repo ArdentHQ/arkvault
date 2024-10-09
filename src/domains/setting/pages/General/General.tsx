@@ -198,7 +198,11 @@ export const GeneralSettings: React.FC = () => {
 
 	return (
 		<SettingsWrapper profile={profile} activeSettings="general">
-			<Header title={t("SETTINGS.GENERAL.TITLE")} subtitle={t("SETTINGS.GENERAL.SUBTITLE")} titleClassName="mb-2" />
+			<Header
+				title={t("SETTINGS.GENERAL.TITLE")}
+				subtitle={t("SETTINGS.GENERAL.SUBTITLE")}
+				titleClassName="mb-2"
+			/>
 
 			<Form data-testid="General-settings__form" context={form} onSubmit={handleSubmit} className="mt-8">
 				<div className="relative mt-8">

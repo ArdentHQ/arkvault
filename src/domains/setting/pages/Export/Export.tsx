@@ -89,11 +89,7 @@ export const ExportSettings = () => {
 
 	return (
 		<SettingsWrapper profile={profile} activeSettings="export">
-			<Header
-				title={t("SETTINGS.EXPORT.TITLE")}
-				subtitle={t("SETTINGS.EXPORT.SUBTITLE")}
-				titleClassName="mb-2"
-			/>
+			<Header title={t("SETTINGS.EXPORT.TITLE")} subtitle={t("SETTINGS.EXPORT.SUBTITLE")} titleClassName="mb-2" />
 
 			<Form id="export-settings__form" context={form} onSubmit={handleSubmit} className="mt-8">
 				<h2 className="mb-0 text-lg">{t("COMMON.WALLETS")}</h2>
