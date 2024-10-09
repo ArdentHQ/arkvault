@@ -938,7 +938,7 @@ exports[`Appearance Settings > should render appearance settings 1`] = `
                       class="flex items-center gap-3"
                     >
                       <h1
-                        class="mb-0 mb-2"
+                        class="mb-0 mb-2 text-2xl"
                         data-testid="header__title"
                       >
                         Appearance
