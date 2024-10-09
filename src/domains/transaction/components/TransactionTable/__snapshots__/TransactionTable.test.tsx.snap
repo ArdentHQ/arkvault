@@ -4413,7 +4413,7 @@ exports[`TransactionTable > should render compact 1`] = `
               </div>
             </td>
             <td
-              class="hidden lg:table-cell"
+              class="hidden xl:table-cell"
               data-testid="TransactionRow__timestamp"
             >
               <div
@@ -4577,7 +4577,7 @@ exports[`TransactionTable > should render compact 1`] = `
               </div>
             </td>
             <td
-              class="hidden lg:table-cell"
+              class="hidden xl:table-cell"
               data-testid="TransactionRow__timestamp"
             >
               <div
@@ -4752,7 +4752,7 @@ exports[`TransactionTable > should render compact 1`] = `
               </div>
             </td>
             <td
-              class="hidden lg:table-cell"
+              class="hidden xl:table-cell"
               data-testid="TransactionRow__timestamp"
             >
               <div
@@ -4916,7 +4916,7 @@ exports[`TransactionTable > should render compact 1`] = `
               </div>
             </td>
             <td
-              class="hidden lg:table-cell"
+              class="hidden xl:table-cell"
               data-testid="TransactionRow__timestamp"
             >
               <div
@@ -5080,7 +5080,7 @@ exports[`TransactionTable > should render compact 1`] = `
               </div>
             </td>
             <td
-              class="hidden lg:table-cell"
+              class="hidden xl:table-cell"
               data-testid="TransactionRow__timestamp"
             >
               <div
@@ -5244,7 +5244,7 @@ exports[`TransactionTable > should render compact 1`] = `
               </div>
             </td>
             <td
-              class="hidden lg:table-cell"
+              class="hidden xl:table-cell"
               data-testid="TransactionRow__timestamp"
             >
               <div
@@ -5408,7 +5408,7 @@ exports[`TransactionTable > should render compact 1`] = `
               </div>
             </td>
             <td
-              class="hidden lg:table-cell"
+              class="hidden xl:table-cell"
               data-testid="TransactionRow__timestamp"
             >
               <div
@@ -5572,7 +5572,7 @@ exports[`TransactionTable > should render compact 1`] = `
               </div>
             </td>
             <td
-              class="hidden lg:table-cell"
+              class="hidden xl:table-cell"
               data-testid="TransactionRow__timestamp"
             >
               <div
@@ -5736,7 +5736,7 @@ exports[`TransactionTable > should render compact 1`] = `
               </div>
             </td>
             <td
-              class="hidden lg:table-cell"
+              class="hidden xl:table-cell"
               data-testid="TransactionRow__timestamp"
             >
               <div
@@ -5900,7 +5900,7 @@ exports[`TransactionTable > should render compact 1`] = `
               </div>
             </td>
             <td
-              class="hidden lg:table-cell"
+              class="hidden xl:table-cell"
               data-testid="TransactionRow__timestamp"
             >
               <div
@@ -9363,7 +9363,7 @@ exports[`TransactionTable > should render responsive 3`] = `
               </div>
             </td>
             <td
-              class="hidden lg:table-cell"
+              class="hidden xl:table-cell"
               data-testid="TransactionRow__timestamp"
             >
               <div
@@ -9527,7 +9527,7 @@ exports[`TransactionTable > should render responsive 3`] = `
               </div>
             </td>
             <td
-              class="hidden lg:table-cell"
+              class="hidden xl:table-cell"
               data-testid="TransactionRow__timestamp"
             >
               <div
@@ -9702,7 +9702,7 @@ exports[`TransactionTable > should render responsive 3`] = `
               </div>
             </td>
             <td
-              class="hidden lg:table-cell"
+              class="hidden xl:table-cell"
               data-testid="TransactionRow__timestamp"
             >
               <div
@@ -9866,7 +9866,7 @@ exports[`TransactionTable > should render responsive 3`] = `
               </div>
             </td>
             <td
-              class="hidden lg:table-cell"
+              class="hidden xl:table-cell"
               data-testid="TransactionRow__timestamp"
             >
               <div
@@ -10030,7 +10030,7 @@ exports[`TransactionTable > should render responsive 3`] = `
               </div>
             </td>
             <td
-              class="hidden lg:table-cell"
+              class="hidden xl:table-cell"
               data-testid="TransactionRow__timestamp"
             >
               <div
@@ -10194,7 +10194,7 @@ exports[`TransactionTable > should render responsive 3`] = `
               </div>
             </td>
             <td
-              class="hidden lg:table-cell"
+              class="hidden xl:table-cell"
               data-testid="TransactionRow__timestamp"
             >
               <div
@@ -10358,7 +10358,7 @@ exports[`TransactionTable > should render responsive 3`] = `
               </div>
             </td>
             <td
-              class="hidden lg:table-cell"
+              class="hidden xl:table-cell"
               data-testid="TransactionRow__timestamp"
             >
               <div
@@ -10522,7 +10522,7 @@ exports[`TransactionTable > should render responsive 3`] = `
               </div>
             </td>
             <td
-              class="hidden lg:table-cell"
+              class="hidden xl:table-cell"
               data-testid="TransactionRow__timestamp"
             >
               <div
@@ -10686,7 +10686,7 @@ exports[`TransactionTable > should render responsive 3`] = `
               </div>
             </td>
             <td
-              class="hidden lg:table-cell"
+              class="hidden xl:table-cell"
               data-testid="TransactionRow__timestamp"
             >
               <div
@@ -10850,7 +10850,7 @@ exports[`TransactionTable > should render responsive 3`] = `
               </div>
             </td>
             <td
-              class="hidden lg:table-cell"
+              class="hidden xl:table-cell"
               data-testid="TransactionRow__timestamp"
             >
               <div
@@ -11241,7 +11241,7 @@ exports[`TransactionTable > should render responsive 4`] = `
               </div>
             </td>
             <td
-              class="hidden lg:table-cell"
+              class="hidden xl:table-cell"
               data-testid="TransactionRow__timestamp"
             >
               <div
@@ -11405,7 +11405,7 @@ exports[`TransactionTable > should render responsive 4`] = `
               </div>
             </td>
             <td
-              class="hidden lg:table-cell"
+              class="hidden xl:table-cell"
               data-testid="TransactionRow__timestamp"
             >
               <div
@@ -11580,7 +11580,7 @@ exports[`TransactionTable > should render responsive 4`] = `
               </div>
             </td>
             <td
-              class="hidden lg:table-cell"
+              class="hidden xl:table-cell"
               data-testid="TransactionRow__timestamp"
             >
               <div
@@ -11744,7 +11744,7 @@ exports[`TransactionTable > should render responsive 4`] = `
               </div>
             </td>
             <td
-              class="hidden lg:table-cell"
+              class="hidden xl:table-cell"
               data-testid="TransactionRow__timestamp"
             >
               <div
@@ -11908,7 +11908,7 @@ exports[`TransactionTable > should render responsive 4`] = `
               </div>
             </td>
             <td
-              class="hidden lg:table-cell"
+              class="hidden xl:table-cell"
               data-testid="TransactionRow__timestamp"
             >
               <div
@@ -12072,7 +12072,7 @@ exports[`TransactionTable > should render responsive 4`] = `
               </div>
             </td>
             <td
-              class="hidden lg:table-cell"
+              class="hidden xl:table-cell"
               data-testid="TransactionRow__timestamp"
             >
               <div
@@ -12236,7 +12236,7 @@ exports[`TransactionTable > should render responsive 4`] = `
               </div>
             </td>
             <td
-              class="hidden lg:table-cell"
+              class="hidden xl:table-cell"
               data-testid="TransactionRow__timestamp"
             >
               <div
@@ -12400,7 +12400,7 @@ exports[`TransactionTable > should render responsive 4`] = `
               </div>
             </td>
             <td
-              class="hidden lg:table-cell"
+              class="hidden xl:table-cell"
               data-testid="TransactionRow__timestamp"
             >
               <div
@@ -12564,7 +12564,7 @@ exports[`TransactionTable > should render responsive 4`] = `
               </div>
             </td>
             <td
-              class="hidden lg:table-cell"
+              class="hidden xl:table-cell"
               data-testid="TransactionRow__timestamp"
             >
               <div
@@ -12728,7 +12728,7 @@ exports[`TransactionTable > should render responsive 4`] = `
               </div>
             </td>
             <td
-              class="hidden lg:table-cell"
+              class="hidden xl:table-cell"
               data-testid="TransactionRow__timestamp"
             >
               <div
@@ -13119,7 +13119,7 @@ exports[`TransactionTable > should render responsive 5`] = `
               </div>
             </td>
             <td
-              class="hidden lg:table-cell"
+              class="hidden xl:table-cell"
               data-testid="TransactionRow__timestamp"
             >
               <div
@@ -13283,7 +13283,7 @@ exports[`TransactionTable > should render responsive 5`] = `
               </div>
             </td>
             <td
-              class="hidden lg:table-cell"
+              class="hidden xl:table-cell"
               data-testid="TransactionRow__timestamp"
             >
               <div
@@ -13458,7 +13458,7 @@ exports[`TransactionTable > should render responsive 5`] = `
               </div>
             </td>
             <td
-              class="hidden lg:table-cell"
+              class="hidden xl:table-cell"
               data-testid="TransactionRow__timestamp"
             >
               <div
@@ -13622,7 +13622,7 @@ exports[`TransactionTable > should render responsive 5`] = `
               </div>
             </td>
             <td
-              class="hidden lg:table-cell"
+              class="hidden xl:table-cell"
               data-testid="TransactionRow__timestamp"
             >
               <div
@@ -13786,7 +13786,7 @@ exports[`TransactionTable > should render responsive 5`] = `
               </div>
             </td>
             <td
-              class="hidden lg:table-cell"
+              class="hidden xl:table-cell"
               data-testid="TransactionRow__timestamp"
             >
               <div
@@ -13950,7 +13950,7 @@ exports[`TransactionTable > should render responsive 5`] = `
               </div>
             </td>
             <td
-              class="hidden lg:table-cell"
+              class="hidden xl:table-cell"
               data-testid="TransactionRow__timestamp"
             >
               <div
@@ -14114,7 +14114,7 @@ exports[`TransactionTable > should render responsive 5`] = `
               </div>
             </td>
             <td
-              class="hidden lg:table-cell"
+              class="hidden xl:table-cell"
               data-testid="TransactionRow__timestamp"
             >
               <div
@@ -14278,7 +14278,7 @@ exports[`TransactionTable > should render responsive 5`] = `
               </div>
             </td>
             <td
-              class="hidden lg:table-cell"
+              class="hidden xl:table-cell"
               data-testid="TransactionRow__timestamp"
             >
               <div
@@ -14442,7 +14442,7 @@ exports[`TransactionTable > should render responsive 5`] = `
               </div>
             </td>
             <td
-              class="hidden lg:table-cell"
+              class="hidden xl:table-cell"
               data-testid="TransactionRow__timestamp"
             >
               <div
@@ -14606,7 +14606,7 @@ exports[`TransactionTable > should render responsive 5`] = `
               </div>
             </td>
             <td
-              class="hidden lg:table-cell"
+              class="hidden xl:table-cell"
               data-testid="TransactionRow__timestamp"
             >
               <div
