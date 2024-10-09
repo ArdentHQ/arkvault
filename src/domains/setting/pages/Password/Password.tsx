@@ -113,7 +113,7 @@ export const PasswordSettings = () => {
 				<Header
 					title={t("SETTINGS.PASSWORD.TITLE")}
 					subtitle={t(`SETTINGS.PASSWORD.SUBTITLE.${passwordStatus}`)}
-					titleClassName="mb-2"
+					titleClassName="mb-2 text-2xl"
 				/>
 
 				<Form id="password-settings__form" context={form} onSubmit={handleSubmit} className="mt-8">

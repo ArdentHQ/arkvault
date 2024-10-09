@@ -393,7 +393,7 @@ export const NetworksSettings = () => {
 			<Header
 				title={t("SETTINGS.NETWORKS.TITLE")}
 				subtitle={t("SETTINGS.NETWORKS.SUBTITLE")}
-				titleClassName="mb-2"
+				titleClassName="mb-2 text-2xl"
 			/>
 
 			<Form id="Networks--form" context={form} onSubmit={handleSubmit} className="mt-6">

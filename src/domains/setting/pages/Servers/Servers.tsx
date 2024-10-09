@@ -181,7 +181,7 @@ export const ServersSettings = () => {
 			<Header
 				title={t("SETTINGS.SERVERS.TITLE")}
 				subtitle={t("SETTINGS.SERVERS.SUBTITLE")}
-				titleClassName="mb-2"
+				titleClassName="mb-2 text-2xl"
 			/>
 
 			<Form id="servers__form" context={form} onSubmit={saveSettings} className="mt-2">

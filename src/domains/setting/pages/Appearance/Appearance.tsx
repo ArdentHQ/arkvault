@@ -16,7 +16,7 @@ export const AppearanceSettings: React.FC = () => {
 			<Header
 				title={t("SETTINGS.APPEARANCE.TITLE")}
 				subtitle={t("SETTINGS.APPEARANCE.SUBTITLE")}
-				titleClassName="mb-2"
+				titleClassName="mb-2 text-2xl"
 			/>
 
 			<AppearanceForm profile={profile} />
