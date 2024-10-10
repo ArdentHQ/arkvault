@@ -17,7 +17,7 @@ exports[`ListDivided > should render an list divided with lastBorder = false 1`]
     data-testid="list-divided__items"
   >
     <li
-      class="flex w-full flex-col "
+      class="flex w-full flex-col"
       data-testid="list-divided-item__wrapper"
     >
       <div
@@ -78,7 +78,7 @@ exports[`ListDivided > should render an list divided with lastBorder = true 1`] 
     data-testid="list-divided__items"
   >
     <li
-      class="flex w-full flex-col "
+      class="flex w-full flex-col"
       data-testid="list-divided-item__wrapper"
     >
       <div

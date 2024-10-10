@@ -8,6 +8,8 @@ import { useTheme } from "@/app/hooks/use-theme";
 import { Icon } from "@/app/components/Icon";
 import { useLink } from "@/app/hooks/use-link";
 import { AddressLabel } from "@/app/components/Address";
+import { getStyles } from "@/app/components/Button/Button.styles";
+import cn from "classnames";
 
 interface Properties {
 	transaction: DTO.ExtendedSignedTransactionData | DTO.ExtendedConfirmedTransactionData;
@@ -24,7 +26,7 @@ export const TransactionId = ({ transaction }: Properties): ReactElement => {
 			data-testid="TransactionId"
 			className="flex-row items-center sm:flex sm:rounded-lg sm:border sm:border-theme-secondary-300 sm:dark:border-theme-secondary-800"
 		>
-			<div className="mb-2 whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 sm:mb-0 sm:h-full sm:rounded-l-lg sm:bg-theme-secondary-200 sm:p-4 sm:dark:bg-black">
+			<div className="mb-2 whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 sm:mb-0 sm:h-full sm:rounded-l-lg sm:bg-theme-secondary-200 sm:px-4 sm:py-3 sm:dark:bg-black">
 				{t("TRANSACTION.TRANSACTION_ID")}
 			</div>
 
@@ -32,31 +34,26 @@ export const TransactionId = ({ transaction }: Properties): ReactElement => {
 				<AddressLabel>{transaction.id()}</AddressLabel>
 			</div>
 
-			<div className="mt-4 flex space-x-2 sm:mr-4 sm:mt-0">
+			<div className="mt-4 flex items-center space-x-2 sm:mr-4 sm:mt-0">
 				<Clipboard
 					variant={isSmAndAbove ? "icon" : "button"}
 					data={transaction.id()}
 					tooltip={t("COMMON.COPY_ID")}
 					tooltipDarkTheme={isDarkMode}
+					iconButtonClassName={cn("p-2", getStyles({ sizeClassName: "p-2", variant: "secondary" }))}
+					buttonClassName="h-8 grow"
 					wrapperClassName="flex w-full"
-					className="grow"
-					buttonVariant="secondary"
 				>
-					{!isSmAndAbove && (
-						<Button variant="secondary" className="w-full">
-							<Icon name="Copy" />
-							<div>{t("COMMON.COPY")}</div>
-						</Button>
-					)}
-
-					{isSmAndAbove && <Button icon="Copy" variant="secondary" size="icon" />}
+					<Icon name="Copy" />
+					<span className="sm:hidden">{t("COMMON.COPY")}</span>
 				</Clipboard>
 
 				<Button
 					data-testid="explorer-link"
 					icon="ArrowExternal"
-					variant="border"
+					variant="secondary"
 					size="icon"
+					className="p-2"
 					disabled={!transaction.isConfirmed()}
 					onClick={() => {
 						openExternal(transaction.explorerLink());

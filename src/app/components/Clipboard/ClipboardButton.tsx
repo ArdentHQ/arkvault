@@ -1,20 +1,12 @@
 import cn from "classnames";
 import { AnimatePresence, motion } from "framer-motion";
 import React from "react";
-import { styled } from "twin.macro";
 
 import { ClipboardButtonProperties } from "./Clipboard.contracts";
 import { getStyles } from "@/app/components/Button/Button.styles";
 import { Icon } from "@/app/components/Icon";
 import { useClipboard } from "@/app/hooks";
-import { ButtonVariant, Size, Theme } from "@/types";
-
-type ButtonProperties = {
-	variant?: ButtonVariant;
-	size?: Size;
-	theme?: Theme;
-} & React.ButtonHTMLAttributes<any>;
-const StyledButton = styled.button<ButtonProperties>(getStyles);
+import { twMerge } from "tailwind-merge";
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 export const ClipboardButton = ({
@@ -22,6 +14,7 @@ export const ClipboardButton = ({
 	data,
 	options,
 	wrapperClassName,
+	buttonClassName,
 	children,
 	...properties
 }: Omit<ClipboardButtonProperties, "variant">) => {
@@ -32,15 +25,15 @@ export const ClipboardButton = ({
 
 	return (
 		<div className={cn("relative", wrapperClassName)}>
-			<StyledButton
+			<button
 				type="button"
 				onClick={() => copy(data)}
 				data-testid="clipboard-button__wrapper"
-				variant={buttonVariant}
+				className={twMerge(getStyles({ variant: buttonVariant }), buttonClassName)}
 				{...properties}
 			>
 				<div className="flex items-center space-x-2">{children}</div>
-			</StyledButton>
+			</button>
 
 			<AnimatePresence>
 				{hasCopied && (

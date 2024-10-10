@@ -13,7 +13,11 @@ export const AppearanceSettings: React.FC = () => {
 
 	return (
 		<SettingsWrapper profile={profile} activeSettings="appearance">
-			<Header title={t("SETTINGS.APPEARANCE.TITLE")} subtitle={t("SETTINGS.APPEARANCE.SUBTITLE")} />
+			<Header
+				title={t("SETTINGS.APPEARANCE.TITLE")}
+				subtitle={t("SETTINGS.APPEARANCE.SUBTITLE")}
+				titleClassName="mb-2 text-2xl"
+			/>
 
 			<AppearanceForm profile={profile} />
 		</SettingsWrapper>
