@@ -7,7 +7,7 @@ export const DetailLabelText = ({ children, className }: { children: ReactNode; 
 	<div
 		data-testid="DetailLabelText"
 		className={twMerge(
-			"no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500",
+			"no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 leading-5",
 			className,
 		)}
 	>
