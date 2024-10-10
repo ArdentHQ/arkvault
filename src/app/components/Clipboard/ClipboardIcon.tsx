@@ -4,6 +4,7 @@ import { useTranslation } from "react-i18next";
 import { ClipboardIconProperties } from "./Clipboard.contracts";
 import { Tooltip } from "@/app/components/Tooltip";
 import { useClipboard } from "@/app/hooks";
+import cn from "classnames";
 
 export const ClipboardIcon = ({
 	data,
@@ -12,6 +13,7 @@ export const ClipboardIcon = ({
 	options,
 	children,
 	disabled,
+	iconButtonClassName,
 }: Omit<ClipboardIconProperties, "variant">) => {
 	const { t } = useTranslation();
 
@@ -30,7 +32,7 @@ export const ClipboardIcon = ({
 			<button
 				type="button"
 				data-testid="clipboard-icon__wrapper"
-				className="ring-focus relative focus:outline-none"
+				className={cn("ring-focus relative focus:outline-none", iconButtonClassName)}
 				onClick={(e) => {
 					e.stopPropagation();
 					copy(data);
