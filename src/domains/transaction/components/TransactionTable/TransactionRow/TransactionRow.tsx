@@ -53,7 +53,6 @@ export const TransactionRow = memo(
 					<div className="flex flex-col gap-1 font-semibold">
 						<Link
 							to={transaction.explorerLink()}
-							tooltip={transaction.id()}
 							showExternalIcon={false}
 							isExternal
 						>
