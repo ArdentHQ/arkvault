@@ -16,6 +16,7 @@ import { TableRemoveButton } from "@/app/components/TableRemoveButton";
 import { Amount, AmountLabel } from "@/app/components/Amount";
 import { TimeAgo } from "@/app/components/TimeAgo";
 import { DateTime } from "@ardenthq/sdk-intl";
+import { TransactionRowLabel } from "./TransactionRowAddressing";
 interface SignedTransactionRowMobileProperties {
 	transaction: DTO.ExtendedSignedTransactionData;
 	onRowClick?: (transaction: DTO.ExtendedSignedTransactionData) => void;
@@ -110,28 +111,16 @@ export const SignedTransactionRowMobile = ({
 
 					<div className="flex w-full flex-col gap-4 px-4 pb-4 pt-3 sm:grid sm:grid-cols-[auto_auto_80px] sm:pb-2">
 						<MobileSection title={t("COMMON.TRANSFER")}>
-							<div className="flex flex-row items-center gap-2">
-								<Label color="danger-bg" size="xs" noBorder className="rounded px-[11px] py-[3px]">
-									{t("COMMON.TO")}
-								</Label>
-								<span className="text-sm">
-									<TruncateMiddle
-										className="cursor-pointer font-semibold text-theme-primary-600"
-										text={transaction.recipient() || ""}
-										maxChars={14}
-										data-testid="TransactionRowRecipientLabel"
-									/>
-								</span>
-							</div>
+							<TransactionRowLabel isNegative />
 						</MobileSection>
 
 						<MobileSection title={`${t("COMMON.VALUE")} (${transaction.wallet().network().coinName()})`}>
 							<AmountLabel
 								value={transaction.amount() + transaction.fee()}
 								isNegative={true}
-								ticker={wallet.currency()}
+								ticker={transaction.wallet().currency()}
 								isCompact
-								className="py-[3px]"
+								className="h-[21px]"
 							/>
 						</MobileSection>
 
