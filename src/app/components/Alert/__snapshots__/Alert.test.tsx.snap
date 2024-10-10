@@ -113,7 +113,7 @@ exports[`Alert > should render as collapsible 1`] = `
         data-testid="Alert__chevron"
       >
         <div
-          class="css-15txs7d"
+          class="transition-transform duration-200 rotate-180 css-15txs7d"
           height="10"
           width="10"
         >
