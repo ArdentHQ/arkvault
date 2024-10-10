@@ -225,7 +225,6 @@ export const SearchRecipient: FC<SearchRecipientProperties> = ({
 						columns={columns}
 						data={filteredRecipients as RecipientProperties[]}
 						hideHeader={useResponsive}
-						className="with-x-padding"
 					>
 						{renderTableRow}
 					</Table>
