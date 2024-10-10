@@ -18,7 +18,11 @@ const AmountLabelHint: React.VFC<AmountLabelHintProperties> = ({ className, isCo
 	<Tooltip content={tooltipContent}>
 		<div
 			data-testid="AmountLabel__hint"
-			className={cn("flex items-center justify-center", className, isCompact ? "w-5 self-stretch" : "-ml-1.5 px-2")}
+			className={cn(
+				"flex items-center justify-center",
+				className,
+				isCompact ? "w-5 self-stretch" : "-ml-1.5 px-2",
+			)}
 		>
 			<Icon name="HintSmall" size="sm" className="dark:text-white" />
 		</div>
