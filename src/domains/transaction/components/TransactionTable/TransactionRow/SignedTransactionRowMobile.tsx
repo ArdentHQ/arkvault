@@ -7,7 +7,6 @@ import { TruncateMiddle } from "@/app/components/TruncateMiddle";
 import { useMultiSignatureStatus } from "@/domains/transaction/hooks";
 import { MobileCard } from "@/app/components/Table/Mobile/MobileCard";
 import { MobileSection } from "@/app/components/Table/Mobile/MobileSection";
-import { Label } from "@/app/components/Label";
 import { Divider } from "@/app/components/Divider";
 import { Tooltip } from "@/app/components/Tooltip";
 import { assertString } from "@/utils/assertions";
