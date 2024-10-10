@@ -115,7 +115,7 @@ export const PendingTransferRow = ({
 				className="text-sm text-theme-secondary-500"
 				variant="end"
 			>
-				<div className="flex flex-row items-start lg:items-center">{t("TRANSACTION.WAITING")}...</div>
+				<div className="flex flex-row items-center">{t("TRANSACTION.WAITING")}...</div>
 			</TableCell>
 		</TableRow>
 	);
