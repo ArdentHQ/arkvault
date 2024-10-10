@@ -634,22 +634,11 @@ exports[`Signed Transaction Table > should render different status > should show
                         class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                       >
                         <div
-                          class="flex flex-row items-center gap-2"
+                          class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-r9b6qf"
+                          color="danger-bg"
+                          data-testid="TransactionRowAddressing__label"
                         >
-                          <div
-                            class="rounded px-[11px] py-[3px] css-r9b6qf"
-                            color="danger-bg"
-                          >
-                            To
-                          </div>
-                          <span
-                            class="text-sm"
-                          >
-                            <span
-                              class="no-ligatures cursor-pointer font-semibold text-theme-primary-600 css-0"
-                              data-testid="TransactionRowRecipientLabel"
-                            />
-                          </span>
+                          To
                         </div>
                       </div>
                     </div>
@@ -665,7 +654,7 @@ exports[`Signed Transaction Table > should render different status > should show
                         class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                       >
                         <div
-                          class="flex h-full items-center justify-center rounded px-1.5 py-[3px] css-xqt0aw"
+                          class="flex items-center justify-center rounded px-1.5 h-[21px] css-xqt0aw"
                           color="danger-bg"
                           data-testid="AmountLabel__wrapper"
                         >
@@ -1355,22 +1344,11 @@ exports[`Signed Transaction Table > should render different status > should show
                         class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                       >
                         <div
-                          class="flex flex-row items-center gap-2"
+                          class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-r9b6qf"
+                          color="danger-bg"
+                          data-testid="TransactionRowAddressing__label"
                         >
-                          <div
-                            class="rounded px-[11px] py-[3px] css-r9b6qf"
-                            color="danger-bg"
-                          >
-                            To
-                          </div>
-                          <span
-                            class="text-sm"
-                          >
-                            <span
-                              class="no-ligatures cursor-pointer font-semibold text-theme-primary-600 css-0"
-                              data-testid="TransactionRowRecipientLabel"
-                            />
-                          </span>
+                          To
                         </div>
                       </div>
                     </div>
@@ -1386,7 +1364,7 @@ exports[`Signed Transaction Table > should render different status > should show
                         class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                       >
                         <div
-                          class="flex h-full items-center justify-center rounded px-1.5 py-[3px] css-xqt0aw"
+                          class="flex items-center justify-center rounded px-1.5 h-[21px] css-xqt0aw"
                           color="danger-bg"
                           data-testid="AmountLabel__wrapper"
                         >
@@ -3312,22 +3290,11 @@ exports[`Signed Transaction Table > should render different status > should show
                         class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                       >
                         <div
-                          class="flex flex-row items-center gap-2"
+                          class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-r9b6qf"
+                          color="danger-bg"
+                          data-testid="TransactionRowAddressing__label"
                         >
-                          <div
-                            class="rounded px-[11px] py-[3px] css-r9b6qf"
-                            color="danger-bg"
-                          >
-                            To
-                          </div>
-                          <span
-                            class="text-sm"
-                          >
-                            <span
-                              class="no-ligatures cursor-pointer font-semibold text-theme-primary-600 css-0"
-                              data-testid="TransactionRowRecipientLabel"
-                            />
-                          </span>
+                          To
                         </div>
                       </div>
                     </div>
@@ -3343,7 +3310,7 @@ exports[`Signed Transaction Table > should render different status > should show
                         class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                       >
                         <div
-                          class="flex h-full items-center justify-center rounded px-1.5 py-[3px] css-xqt0aw"
+                          class="flex items-center justify-center rounded px-1.5 h-[21px] css-xqt0aw"
                           color="danger-bg"
                           data-testid="AmountLabel__wrapper"
                         >
