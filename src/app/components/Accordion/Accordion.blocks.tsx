@@ -111,7 +111,7 @@ const AccordionToggleWrapper = styled.div`
 
 	${css`
 		@media not all and (hover: none) {
-			${tw`hover:ring-theme-primary-400 dark:hover:ring-theme-primary-500`}}
+			${tw`hover:ring-theme-primary-600 hover:bg-theme-primary-600 hover:text-white transition-colors duration-100 ease-linear`}}
 		}
 	`}
 `;
