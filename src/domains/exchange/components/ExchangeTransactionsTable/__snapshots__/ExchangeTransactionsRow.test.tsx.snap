@@ -820,7 +820,7 @@ exports[`ExchangeTransactionsRow > should render (New) 1`] = `
                 class="flex h-full items-center space-x-1"
               >
                 <div
-                  class="flex items-center justify-center bg-theme-success-200 dark:bg-theme-success-700 text-theme-success-700 dark:text-white/70 dark:bg-theme-success-700 -ml-1.5 px-2"
+                  class="flex items-center justify-center bg-theme-success-200 dark:bg-theme-success-700 text-theme-success-700 dark:text-white/70 dark:bg-theme-success-700 w-5 self-stretch"
                   data-testid="AmountLabel__hint"
                 >
                   <div
@@ -902,7 +902,7 @@ exports[`ExchangeTransactionsRow > should render (New) 1`] = `
                 class="flex h-full items-center space-x-1"
               >
                 <div
-                  class="flex items-center justify-center bg-theme-success-200 dark:bg-theme-success-700 text-theme-success-700 dark:text-white/70 dark:bg-theme-success-700 -ml-1.5 px-2"
+                  class="flex items-center justify-center bg-theme-success-200 dark:bg-theme-success-700 text-theme-success-700 dark:text-white/70 dark:bg-theme-success-700 w-5 self-stretch"
                   data-testid="AmountLabel__hint"
                 >
                   <div
