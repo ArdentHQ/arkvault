@@ -137,7 +137,7 @@ export const GeneralSettings: React.FC = () => {
 							value: `${count}`,
 						}))}
 						onChange={(signOutPeriod: SettingsOption) => {
-							setValue("automaticSignOutPeriod", signOutPeriod?.value, {
+							setValue("automaticSignOutPeriod", signOutPeriod.value, {
 								shouldDirty: true,
 								shouldValidate: true,
 							});
@@ -161,7 +161,7 @@ export const GeneralSettings: React.FC = () => {
 					<span className="whitespace-nowrap">{t("COMMON.RESET")}</span>
 				</Button>
 			),
-			wrapperClass: "pt-6 sm:pb-6",
+			wrapperClass: "sm:pb-6",
 		},
 	];
 
@@ -198,11 +198,15 @@ export const GeneralSettings: React.FC = () => {
 
 	return (
 		<SettingsWrapper profile={profile} activeSettings="general">
-			<Header title={t("SETTINGS.GENERAL.TITLE")} subtitle={t("SETTINGS.GENERAL.SUBTITLE")} />
+			<Header
+				title={t("SETTINGS.GENERAL.TITLE")}
+				subtitle={t("SETTINGS.GENERAL.SUBTITLE")}
+				titleClassName="mb-2 text-2xl"
+			/>
 
 			<Form data-testid="General-settings__form" context={form} onSubmit={handleSubmit} className="mt-8">
 				<div className="relative mt-8">
-					<h2 className="mb-3 text-lg">{t("SETTINGS.GENERAL.PERSONAL.TITLE")}</h2>
+					<h2 className="mb-4 text-lg">{t("SETTINGS.GENERAL.PERSONAL.TITLE")}</h2>
 
 					<SelectProfileImage
 						value={avatar}
@@ -223,7 +227,7 @@ export const GeneralSettings: React.FC = () => {
 						}}
 					/>
 
-					<div className="mt-8 flex w-full flex-col justify-between sm:flex-row">
+					<div className="mt-5 flex w-full flex-col justify-between sm:flex-row">
 						<div className="flex flex-col sm:w-2/4">
 							<FormField name="name">
 								<FormLabel label={t("SETTINGS.GENERAL.PERSONAL.NAME")} />
@@ -240,7 +244,7 @@ export const GeneralSettings: React.FC = () => {
 								/>
 							</FormField>
 
-							<FormField className="mt-8" name="bip39Locale">
+							<FormField className="mt-5" name="bip39Locale">
 								<FormLabel label={t("SETTINGS.GENERAL.PERSONAL.PASSPHRASE_LANGUAGE")} />
 								<Select
 									id="select-passphrase-language"
@@ -253,7 +257,7 @@ export const GeneralSettings: React.FC = () => {
 										}).toString(),
 									})}
 									onChange={(bip39Locale: SettingsOption) =>
-										setValue("bip39Locale", bip39Locale?.value, {
+										setValue("bip39Locale", bip39Locale.value, {
 											shouldDirty: true,
 											shouldValidate: true,
 										})
@@ -263,7 +267,7 @@ export const GeneralSettings: React.FC = () => {
 								/>
 							</FormField>
 
-							<FormField className="mt-8" name="exchangeCurrency">
+							<FormField className="mt-5" name="exchangeCurrency">
 								<FormLabel label={t("SETTINGS.GENERAL.PERSONAL.CURRENCY")} />
 								<Select
 									id="select-currency"
@@ -278,7 +282,7 @@ export const GeneralSettings: React.FC = () => {
 									options={currencyOptions}
 									defaultValue={exchangeCurrency}
 									onChange={(exchangeCurrency: SettingsOption) =>
-										setValue("exchangeCurrency", exchangeCurrency?.value, {
+										setValue("exchangeCurrency", exchangeCurrency.value, {
 											shouldDirty: true,
 											shouldValidate: true,
 										})
@@ -287,7 +291,7 @@ export const GeneralSettings: React.FC = () => {
 							</FormField>
 						</div>
 
-						<div className="mt-8 flex flex-col sm:ml-5 sm:mt-0 sm:w-2/4">
+						<div className="mt-5 flex flex-col sm:ml-5 sm:mt-0 sm:w-2/4">
 							<FormField name="locale">
 								<FormLabel label={t("SETTINGS.GENERAL.PERSONAL.LANGUAGE")} />
 								<Select
@@ -303,12 +307,12 @@ export const GeneralSettings: React.FC = () => {
 									options={PlatformSdkChoices.languages}
 									defaultValue={getDefaultValues().locale}
 									onChange={(locale: SettingsOption) =>
-										setValue("locale", locale?.value, { shouldDirty: true, shouldValidate: true })
+										setValue("locale", locale.value, { shouldDirty: true, shouldValidate: true })
 									}
 								/>
 							</FormField>
 
-							<FormField className="mt-8" name="marketProvider">
+							<FormField className="mt-5" name="marketProvider">
 								<FormLabel label={t("SETTINGS.GENERAL.PERSONAL.MARKET_PROVIDER")} />
 								<Select
 									id="select-market-provider"
@@ -323,7 +327,7 @@ export const GeneralSettings: React.FC = () => {
 									options={PlatformSdkChoices.marketProviders}
 									defaultValue={marketProvider}
 									onChange={(marketProvider: SettingsOption) => {
-										if (marketProvider?.unsupportedCurrencies?.includes(exchangeCurrency)) {
+										if (marketProvider.unsupportedCurrencies?.includes(exchangeCurrency)) {
 											toasts.warning(
 												t("SETTINGS.GENERAL.UNSUPPORTED_CURRENCY", {
 													currency: exchangeCurrency,
@@ -337,7 +341,7 @@ export const GeneralSettings: React.FC = () => {
 											});
 										}
 
-										setValue("marketProvider", marketProvider?.value, {
+										setValue("marketProvider", marketProvider.value, {
 											shouldDirty: true,
 											shouldValidate: true,
 										});
@@ -345,7 +349,7 @@ export const GeneralSettings: React.FC = () => {
 								/>
 							</FormField>
 
-							<FormField className="mt-8" name="timeFormat">
+							<FormField className="mt-5" name="timeFormat">
 								<FormLabel label={t("SETTINGS.GENERAL.PERSONAL.TIME_FORMAT")} />
 								<Select
 									id="select-time-format"
@@ -360,7 +364,7 @@ export const GeneralSettings: React.FC = () => {
 									options={PlatformSdkChoices.timeFormats}
 									defaultValue={getDefaultValues().timeFormat}
 									onChange={(timeFormat: SettingsOption) =>
-										setValue("timeFormat", timeFormat?.value, {
+										setValue("timeFormat", timeFormat.value, {
 											shouldDirty: true,
 											shouldValidate: true,
 										})
@@ -372,12 +376,12 @@ export const GeneralSettings: React.FC = () => {
 				</div>
 
 				<SettingsGroup>
-					<h2 className="mb-3 text-lg">{t("SETTINGS.GENERAL.SECURITY.TITLE")}</h2>
+					<h2 className="mb-4 text-lg">{t("SETTINGS.GENERAL.SECURITY.TITLE")}</h2>
 					<ListDivided items={securityItems} />
 				</SettingsGroup>
 
 				<SettingsGroup>
-					<h2 className="mb-3 text-lg">{t("SETTINGS.GENERAL.OTHER.TITLE")}</h2>
+					<h2 className="mb-4 text-lg">{t("SETTINGS.GENERAL.OTHER.TITLE")}</h2>
 					<ListDivided items={otherItems} noBorder={isXs} />
 				</SettingsGroup>
 

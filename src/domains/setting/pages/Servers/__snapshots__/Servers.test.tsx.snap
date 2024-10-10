@@ -934,7 +934,7 @@ exports[`Servers Settings > should render servers settings 1`] = `
                       class="flex items-center gap-3"
                     >
                       <h1
-                        class="mb-0 text-2xl leading-[29px]"
+                        class="mb-0 mb-2 text-2xl"
                         data-testid="header__title"
                       >
                         Peers & Multisig Servers
@@ -949,7 +949,7 @@ exports[`Servers Settings > should render servers settings 1`] = `
                   </div>
                 </div>
                 <form
-                  class="mt-4"
+                  class="mt-2"
                   data-testid="Form"
                   id="servers__form"
                 >
@@ -1245,7 +1245,7 @@ exports[`Servers Settings > should render servers settings 1`] = `
                         </div>
                       </div>
                       <div
-                        class="sm:mt-4"
+                        class="sm:mt-3"
                         data-testid="list-divided-item__content"
                       >
                         <div
@@ -2264,7 +2264,7 @@ exports[`Servers Settings > with servers > should ping the servers in an interva
                       class="flex items-center gap-3"
                     >
                       <h1
-                        class="mb-0 text-2xl leading-[29px]"
+                        class="mb-0 mb-2 text-2xl"
                         data-testid="header__title"
                       >
                         Peers & Multisig Servers
@@ -2279,7 +2279,7 @@ exports[`Servers Settings > with servers > should ping the servers in an interva
                   </div>
                 </div>
                 <form
-                  class="mt-4"
+                  class="mt-2"
                   data-testid="Form"
                   id="servers__form"
                 >
@@ -2628,7 +2628,7 @@ exports[`Servers Settings > with servers > should ping the servers in an interva
                         </div>
                       </div>
                       <div
-                        class="sm:mt-4"
+                        class="sm:mt-3"
                         data-testid="list-divided-item__content"
                       >
                         <div
@@ -4556,7 +4556,7 @@ exports[`Servers Settings > with servers > should render custom servers 1`] = `
                       class="flex items-center gap-3"
                     >
                       <h1
-                        class="mb-0 text-2xl leading-[29px]"
+                        class="mb-0 mb-2 text-2xl"
                         data-testid="header__title"
                       >
                         Peers & Multisig Servers
@@ -4571,7 +4571,7 @@ exports[`Servers Settings > with servers > should render custom servers 1`] = `
                   </div>
                 </div>
                 <form
-                  class="mt-4"
+                  class="mt-2"
                   data-testid="Form"
                   id="servers__form"
                 >
@@ -4866,7 +4866,7 @@ exports[`Servers Settings > with servers > should render custom servers 1`] = `
                         </div>
                       </div>
                       <div
-                        class="sm:mt-4"
+                        class="sm:mt-3"
                         data-testid="list-divided-item__content"
                       >
                         <div
@@ -6710,7 +6710,7 @@ exports[`Servers Settings > with servers > should render customs servers in xs 1
                       class="flex items-center gap-3"
                     >
                       <h1
-                        class="mb-0 text-2xl leading-[29px]"
+                        class="mb-0 mb-2 text-2xl"
                         data-testid="header__title"
                       >
                         Peers & Multisig Servers
@@ -6725,7 +6725,7 @@ exports[`Servers Settings > with servers > should render customs servers in xs 1
                   </div>
                 </div>
                 <form
-                  class="mt-4"
+                  class="mt-2"
                   data-testid="Form"
                   id="servers__form"
                 >
@@ -7020,7 +7020,7 @@ exports[`Servers Settings > with servers > should render customs servers in xs 1
                         </div>
                       </div>
                       <div
-                        class="sm:mt-4"
+                        class="sm:mt-3"
                         data-testid="list-divided-item__content"
                       >
                         <div
@@ -8456,7 +8456,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                       class="flex items-center gap-3"
                     >
                       <h1
-                        class="mb-0 text-2xl leading-[29px]"
+                        class="mb-0 mb-2 text-2xl"
                         data-testid="header__title"
                       >
                         Peers & Multisig Servers
@@ -8471,7 +8471,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                   </div>
                 </div>
                 <form
-                  class="mt-4"
+                  class="mt-2"
                   data-testid="Form"
                   id="servers__form"
                 >
@@ -8820,7 +8820,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                         </div>
                       </div>
                       <div
-                        class="sm:mt-4"
+                        class="sm:mt-3"
                         data-testid="list-divided-item__content"
                       >
                         <div
@@ -10748,7 +10748,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                       class="flex items-center gap-3"
                     >
                       <h1
-                        class="mb-0 text-2xl leading-[29px]"
+                        class="mb-0 mb-2 text-2xl"
                         data-testid="header__title"
                       >
                         Peers & Multisig Servers
@@ -10763,7 +10763,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                   </div>
                 </div>
                 <form
-                  class="mt-4"
+                  class="mt-2"
                   data-testid="Form"
                   id="servers__form"
                 >
@@ -11112,7 +11112,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                         </div>
                       </div>
                       <div
-                        class="sm:mt-4"
+                        class="sm:mt-3"
                         data-testid="list-divided-item__content"
                       >
                         <div
@@ -12632,7 +12632,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                       class="flex items-center gap-3"
                     >
                       <h1
-                        class="mb-0 text-2xl leading-[29px]"
+                        class="mb-0 mb-2 text-2xl"
                         data-testid="header__title"
                       >
                         Peers & Multisig Servers
@@ -12647,7 +12647,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                   </div>
                 </div>
                 <form
-                  class="mt-4"
+                  class="mt-2"
                   data-testid="Form"
                   id="servers__form"
                 >
@@ -12996,7 +12996,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                         </div>
                       </div>
                       <div
-                        class="sm:mt-4"
+                        class="sm:mt-3"
                         data-testid="list-divided-item__content"
                       >
                         <div
@@ -14769,7 +14769,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                       class="flex items-center gap-3"
                     >
                       <h1
-                        class="mb-0 text-2xl leading-[29px]"
+                        class="mb-0 mb-2 text-2xl"
                         data-testid="header__title"
                       >
                         Peers & Multisig Servers
@@ -14784,7 +14784,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                   </div>
                 </div>
                 <form
-                  class="mt-4"
+                  class="mt-2"
                   data-testid="Form"
                   id="servers__form"
                 >
@@ -15127,7 +15127,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                         </div>
                       </div>
                       <div
-                        class="sm:mt-4"
+                        class="sm:mt-3"
                         data-testid="list-divided-item__content"
                       >
                         <div
@@ -17046,7 +17046,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                       class="flex items-center gap-3"
                     >
                       <h1
-                        class="mb-0 text-2xl leading-[29px]"
+                        class="mb-0 mb-2 text-2xl"
                         data-testid="header__title"
                       >
                         Peers & Multisig Servers
@@ -17061,7 +17061,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                   </div>
                 </div>
                 <form
-                  class="mt-4"
+                  class="mt-2"
                   data-testid="Form"
                   id="servers__form"
                 >
@@ -17404,7 +17404,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                         </div>
                       </div>
                       <div
-                        class="sm:mt-4"
+                        class="sm:mt-3"
                         data-testid="list-divided-item__content"
                       >
                         <div
@@ -18915,7 +18915,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                       class="flex items-center gap-3"
                     >
                       <h1
-                        class="mb-0 text-2xl leading-[29px]"
+                        class="mb-0 mb-2 text-2xl"
                         data-testid="header__title"
                       >
                         Peers & Multisig Servers
@@ -18930,7 +18930,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                   </div>
                 </div>
                 <form
-                  class="mt-4"
+                  class="mt-2"
                   data-testid="Form"
                   id="servers__form"
                 >
@@ -19273,7 +19273,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                         </div>
                       </div>
                       <div
-                        class="sm:mt-4"
+                        class="sm:mt-3"
                         data-testid="list-divided-item__content"
                       >
                         <div

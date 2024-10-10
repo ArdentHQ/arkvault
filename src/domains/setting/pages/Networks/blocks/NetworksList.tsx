@@ -57,7 +57,7 @@ const NetworksList: React.VFC<{
 	selectedNetworks: string[];
 	onToggleNetwork: (event: React.ChangeEvent<HTMLInputElement>, network: string) => void;
 }> = ({ networks, onToggleNetwork, selectedNetworks }) => (
-	<div data-testid="NetworksList" className="mt-3 grid gap-3 xl:grid-cols-2">
+	<div data-testid="NetworksList" className="mt-4 grid gap-3 xl:grid-cols-2">
 		{networks.map((network) => (
 			<NetworksListNetwork
 				network={network}
