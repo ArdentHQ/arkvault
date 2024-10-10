@@ -461,7 +461,7 @@ exports[`WalletsGroup > should handle list wallet click 1`] = `
           class="ml-4 flex flex-shrink-0 items-center self-stretch transition-all duration-100 css-o6tyc"
         >
           <div
-            class="css-1j7gziz"
+            class="css-cp3doq"
             data-testid="Accordion__toggle"
           >
             <div
@@ -733,7 +733,7 @@ exports[`WalletsGroup > should handle list wallet click 1`] = `
           class="ml-4 flex flex-shrink-0 items-center self-stretch transition-all duration-100 css-o6tyc"
         >
           <div
-            class="css-1j7gziz"
+            class="css-cp3doq"
             data-testid="Accordion__toggle"
           >
             <div
@@ -1140,7 +1140,7 @@ exports[`WalletsGroup > should render group with different widths 1`] = `
         class="ml-4 flex flex-shrink-0 items-center self-stretch transition-all duration-100 css-o6tyc"
       >
         <div
-          class="css-1j7gziz"
+          class="css-cp3doq"
           data-testid="Accordion__toggle"
         >
           <div
@@ -1377,7 +1377,7 @@ exports[`WalletsGroup > should render group with different widths 2`] = `
         class="ml-4 flex flex-shrink-0 items-center self-stretch transition-all duration-100 css-o6tyc"
       >
         <div
-          class="css-1j7gziz"
+          class="css-cp3doq"
           data-testid="Accordion__toggle"
         >
           <div
@@ -1616,7 +1616,7 @@ exports[`WalletsGroup > should render group with different widths 3`] = `
         class="ml-4 flex flex-shrink-0 items-center self-stretch transition-all duration-100 css-o6tyc"
       >
         <div
-          class="css-1j7gziz"
+          class="css-cp3doq"
           data-testid="Accordion__toggle"
         >
           <div
@@ -1856,7 +1856,7 @@ exports[`WalletsGroup > should render with dark mode = false 1`] = `
           class="ml-4 flex flex-shrink-0 items-center self-stretch transition-all duration-100 css-o6tyc"
         >
           <div
-            class="css-1j7gziz"
+            class="css-cp3doq"
             data-testid="Accordion__toggle"
           >
             <div
@@ -2128,7 +2128,7 @@ exports[`WalletsGroup > should render with dark mode = false 1`] = `
           class="ml-4 flex flex-shrink-0 items-center self-stretch transition-all duration-100 css-o6tyc"
         >
           <div
-            class="css-1j7gziz"
+            class="css-cp3doq"
             data-testid="Accordion__toggle"
           >
             <div
@@ -2369,7 +2369,7 @@ exports[`WalletsGroup > should render with dark mode = true 1`] = `
           class="ml-4 flex flex-shrink-0 items-center self-stretch transition-all duration-100 css-o6tyc"
         >
           <div
-            class="css-1j7gziz"
+            class="css-cp3doq"
             data-testid="Accordion__toggle"
           >
             <div
@@ -2641,7 +2641,7 @@ exports[`WalletsGroup > should render with dark mode = true 1`] = `
           class="ml-4 flex flex-shrink-0 items-center self-stretch transition-all duration-100 css-o6tyc"
         >
           <div
-            class="css-1j7gziz"
+            class="css-cp3doq"
             data-testid="Accordion__toggle"
           >
             <div
@@ -2846,7 +2846,7 @@ exports[`WalletsGroup > should show skeleton when syncing exchange rates 1`] = `
           class="ml-4 flex flex-shrink-0 items-center self-stretch css-o6tyc"
         >
           <div
-            class="css-1j7gziz"
+            class="css-cp3doq"
             data-testid="Accordion__toggle"
           >
             <div
@@ -3671,7 +3671,7 @@ exports[`WalletsGroup > should show skeleton when syncing exchange rates 1`] = `
           class="ml-4 flex flex-shrink-0 items-center self-stretch transition-all duration-100 css-o6tyc"
         >
           <div
-            class="css-1j7gziz"
+            class="css-cp3doq"
             data-testid="Accordion__toggle"
           >
             <div
