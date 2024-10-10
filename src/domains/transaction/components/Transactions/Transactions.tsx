@@ -210,7 +210,7 @@ export const Transactions = memo(function Transactions({
 					)}
 				</>
 			) : (
-				<TableWrapper className={cn("border-none", {"!rounded-b-none": hasMore})}>
+				<TableWrapper className={cn("border-none", { "!rounded-b-none": hasMore })}>
 					<div className="flex w-full flex-col items-start justify-between gap-3 border-b-0 border-b-theme-secondary-300 pb-4 pt-3 dark:border-b-theme-secondary-800 sm:flex-row md:items-center md:border-b md:px-6 md:py-4">
 						<span className="text-base font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500">
 							{t("COMMON.SHOWING_RESULTS", { count: transactions.length })}
@@ -245,7 +245,7 @@ export const Transactions = memo(function Transactions({
 			)}
 
 			{hasMore && (
-				<div className="border-t md:border md:border-t-0 border-theme-secondary-300 dark:border-theme-secondary-800 rounded-b-xl px-6 py-4 md:-mx-px -mx-6 -mt-1 md:mt-0">
+				<div className="-mx-6 -mt-1 rounded-b-xl border-t border-theme-secondary-300 px-6 py-4 dark:border-theme-secondary-800 md:-mx-px md:mt-0 md:border md:border-t-0">
 					<Button
 						data-testid="transactions__fetch-more-button"
 						variant="secondary"
