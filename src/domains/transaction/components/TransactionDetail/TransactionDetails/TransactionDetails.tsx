@@ -37,7 +37,7 @@ export const TransactionDetails = ({
 				<div className="flex w-full justify-between sm:justify-start">
 					<DetailLabelText className={labelClassName}>{t("COMMON.BLOCK")}</DetailLabelText>
 					{transaction.blockId() && (
-						<Link isExternal to={transaction.explorerLinkForBlock() as string} className="leading-5 h-5">
+						<Link isExternal to={transaction.explorerLinkForBlock() as string} className="h-5 leading-5">
 							{blockHeight}
 						</Link>
 					)}
@@ -50,7 +50,7 @@ export const TransactionDetails = ({
 				<div className="flex w-full justify-between sm:justify-start">
 					<DetailLabelText className={labelClassName}>{t("COMMON.NONCE")}</DetailLabelText>
 					{data.nonce && <div className="font-semibold leading-5">{data.nonce}</div>}
-					{!data.nonce && <p className="text-theme-secondary-500 leading-5">{t("COMMON.NOT_AVAILABLE")}</p>}
+					{!data.nonce && <p className="leading-5 text-theme-secondary-500">{t("COMMON.NOT_AVAILABLE")}</p>}
 				</div>
 			</div>
 		</DetailWrapper>

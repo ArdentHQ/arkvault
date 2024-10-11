@@ -7,7 +7,7 @@ export const DetailLabelText = ({ children, className }: { children: ReactNode; 
 	<div
 		data-testid="DetailLabelText"
 		className={twMerge(
-			"no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 leading-5",
+			"no-ligatures text-md min-w-24 font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500",
 			className,
 		)}
 	>
@@ -70,7 +70,7 @@ export const DetailsCondensed = ({ children }: { children: ReactNode }): ReactNo
 );
 
 export const DetailDivider = (): ReactNode => (
-	<div className="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3 leading-3">
+	<div className="hidden h-8 w-full items-center leading-3 sm:flex [.condensed_&]:h-3">
 		<div className="w-full [.condensed_&]:hidden">
 			<Divider dashed />
 		</div>

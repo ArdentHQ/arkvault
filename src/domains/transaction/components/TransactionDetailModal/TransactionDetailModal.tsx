@@ -98,7 +98,7 @@ export const TransactionDetailContent = ({
 						<DetailWrapper label={t("COMMON.MEMO_SMARTBRIDGE")}>
 							{transaction.memo() && <p className="leading-5">{transaction.memo()}</p>}
 							{!transaction.memo() && (
-								<p className="text-theme-secondary-500 leading-5">{t("COMMON.NOT_AVAILABLE")}</p>
+								<p className="leading-5 text-theme-secondary-500">{t("COMMON.NOT_AVAILABLE")}</p>
 							)}
 						</DetailWrapper>
 					</DetailPadded>
