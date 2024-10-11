@@ -8,7 +8,7 @@ import { WalletsGroupHeader } from "@/domains/wallet/components/WalletsGroup/Wal
 import { WalletsList } from "@/domains/wallet/components/WalletsList";
 import { AccordionWrapper } from "@/app/components/Accordion";
 
-const MAX_WALLETS_ON_DASHBOARD_LIST = 2
+const MAX_WALLETS_ON_DASHBOARD_LIST = 1
 
 export const WalletsGroup: React.VFC<WalletsGroupProperties> = ({ network, wallets, maxWidthReferences }) => {
 	const { t } = useTranslation();
@@ -32,7 +32,7 @@ export const WalletsGroup: React.VFC<WalletsGroupProperties> = ({ network, walle
 			/>
 
 			{isExpanded && (
-				<WalletsList wallets={wallets} itemsPerPage={MAX_WALLETS_ON_DASHBOARD_LIST} showPagination={true} />
+				<WalletsList wallets={wallets} itemsPerPage={MAX_WALLETS_ON_DASHBOARD_LIST} showPagination={wallets.length > MAX_WALLETS_ON_DASHBOARD_LIST} />
 			)}
 
 			{/*{isExpanded && wallets.length > MAX_WALLETS_ON_DASHBOARD_LIST && (*/}

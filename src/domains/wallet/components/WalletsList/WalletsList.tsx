@@ -54,6 +54,8 @@ export const WalletsList: React.VFC<WalletsListProperties> = ({
 	const [currentPage, setCurrentPage] = useState(1);
 	const [starredFirst, setStarredFirst] = useState(true);
 
+	const [perPage, setPerPage] = useState(itemsPerPage)
+
 	const initialState = useMemo<Partial<TableState<WalletListItemProperties>>>(
 		() => ({
 			sortBy: [
@@ -173,7 +175,7 @@ export const WalletsList: React.VFC<WalletsListProperties> = ({
 							<Table
 								columns={columns}
 								data={tableRows}
-								rowsPerPage={itemsPerPage}
+								rowsPerPage={perPage}
 								currentPage={currentPage}
 								initialState={initialState}
 								className={cn("with-x-padding", {
@@ -196,14 +198,29 @@ export const WalletsList: React.VFC<WalletsListProperties> = ({
 
 					{showPagination && (
 						<div className="py-4 flex w-full justify-between border-t border-theme-secondary-300 px-6">
+
 							<div className="flex items-center gap-2 text-sm leading-[17px] font-semibold text-theme-secondary-700">
-								Show
-								<Select options={[{isSelected: true, label: "10", value:"10"}]} allowOverflow={true} renderLabel={(option) => <span className="text-sm leading-[17px] font-semibold"> {option.label} </span>} allowFreeInput={false} readOnly={true} defaultValue="10" className="!h-8 !px-3 !w-[68px]" innerClassName="!text-sm !leading-[17px]" />
-								Records
+								{t("COMMON.SHOW")}
+								<Select
+									options={[1, 2, 10, 25, 50, 100].map(v => ({label: v.toString(), value:v.toString()}))}
+									allowOverflow={true}
+									renderLabel={(option) => <span className="text-sm leading-[17px] font-semibold"> {option.label} </span>}
+									allowFreeInput={false}
+									readOnly={true}
+									defaultValue={perPage.toString()}
+									className="!h-8 !px-3 !w-[78px]"
+									innerClassName="!text-sm !leading-[17px]"
+									onChange={(selected) => {
+										setCurrentPage(1);
+										setPerPage(Number(selected.value))
+									}}
+								/>
+								{t("COMMON.RECORDS")}
 							</div>
+
 							<Pagination
 								totalCount={wallets.length}
-								itemsPerPage={itemsPerPage}
+								itemsPerPage={perPage}
 								onSelectPage={setCurrentPage}
 								currentPage={currentPage}
 							/>
