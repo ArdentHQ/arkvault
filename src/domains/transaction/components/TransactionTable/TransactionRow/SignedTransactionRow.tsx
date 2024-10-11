@@ -191,7 +191,7 @@ export const SignedTransactionRow = ({
 				<Amount value={wallet.convertedBalance()} ticker={wallet.exchangeCurrency()} />
 			</TableCell>
 
-			<TableCell innerClassName="items-start xl:min-h-0" variant="end">
+			<TableCell variant="end" innerClassName="justify-end items-start text-sm xl:min-h-0">
 				<div className="flex flex-row items-center">
 					<SignButton
 						canBeSigned={canBeSigned}
@@ -210,7 +210,7 @@ export const SignedTransactionRow = ({
 								: t("TRANSACTION.MULTISIGNATURE.PARTICIPANTS_CAN_REMOVE_PENDING_MUSIG")
 						}
 					>
-						<div>
+						<div className="flex items-center">
 							<TableRemoveButton isDisabled={!canBeDeleted} onClick={handleRemove} className="m-0 p-0" />
 						</div>
 					</Tooltip>
