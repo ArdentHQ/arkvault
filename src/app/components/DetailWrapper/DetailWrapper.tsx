@@ -70,7 +70,7 @@ export const DetailsCondensed = ({ children }: { children: ReactNode }): ReactNo
 );
 
 export const DetailDivider = (): ReactNode => (
-	<div className="hidden h-8 w-full items-center leading-3 sm:flex [.condensed_&]:h-3">
+	<div className="hidden h-8 w-full items-center [.condensed_&]:leading-3 sm:flex [.condensed_&]:h-3">
 		<div className="w-full [.condensed_&]:hidden">
 			<Divider dashed />
 		</div>
