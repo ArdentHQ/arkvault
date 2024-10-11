@@ -43,14 +43,14 @@ const Pagination = ({
 	};
 
 	return (
-		<Wrapper data-testid="Pagination" className={cn("w-full relative sm:w-auto",className)}>
+		<Wrapper data-testid="Pagination" className={cn("relative w-full sm:w-auto", className)}>
 			<SmAndAbove>
 				<Button
 					data-testid="Pagination__first"
 					variant="secondary"
 					onClick={() => onSelectPage((currentPage = 1))}
 					disabled={!showPrevious}
-					className="py-1.5 px-4"
+					className="px-4 py-1.5"
 				>
 					<span>{t("COMMON.FIRST")}</span>
 				</Button>
@@ -60,7 +60,7 @@ const Pagination = ({
 					variant="secondary"
 					onClick={() => onSelectPage((currentPage -= 1))}
 					disabled={!showPrevious}
-					className="p-2.5 w-8 h-8"
+					className="h-8 w-8 p-2.5"
 				>
 					<Icon name="ChevronLeftSmall" size="sm" />
 				</Button>
@@ -85,7 +85,7 @@ const Pagination = ({
 					variant="secondary"
 					onClick={() => onSelectPage((currentPage += 1))}
 					disabled={!showNext}
-					className="p-2.5 w-8 h-8"
+					className="h-8 w-8 p-2.5"
 				>
 					<Icon name="ChevronRightSmall" size="sm" />
 				</Button>
@@ -95,7 +95,7 @@ const Pagination = ({
 					variant="secondary"
 					onClick={() => onSelectPage((currentPage = totalPages))}
 					disabled={!showNext}
-					className="py-1.5 px-4"
+					className="px-4 py-1.5"
 				>
 					<span>{t("COMMON.LAST")}</span>
 				</Button>
