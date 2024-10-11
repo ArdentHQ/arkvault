@@ -14,7 +14,7 @@ import { Icon } from "@/app/components/Icon";
 import { AccordionContent } from "@/app/components/Accordion";
 import { twMerge } from "tailwind-merge";
 import cn from "classnames";
-import {Select} from "@/app/components/SelectDropdown";
+import { Select } from "@/app/components/SelectDropdown";
 
 const StarredHeader = ({ active, onClick }: { active: boolean; onClick: () => void }) => {
 	const { t } = useTranslation();
@@ -54,7 +54,7 @@ export const WalletsList: React.VFC<WalletsListProperties> = ({
 	const [currentPage, setCurrentPage] = useState(1);
 	const [starredFirst, setStarredFirst] = useState(true);
 
-	const [perPage, setPerPage] = useState(itemsPerPage)
+	const [perPage, setPerPage] = useState(itemsPerPage);
 
 	const initialState = useMemo<Partial<TableState<WalletListItemProperties>>>(
 		() => ({
@@ -197,22 +197,26 @@ export const WalletsList: React.VFC<WalletsListProperties> = ({
 					</div>
 
 					{showPagination && (
-						<div className="py-4 flex w-full justify-between border-t border-theme-secondary-300 px-6">
-
-							<div className="flex items-center gap-2 text-sm leading-[17px] font-semibold text-theme-secondary-700">
+						<div className="flex w-full justify-between border-t border-theme-secondary-300 px-6 py-4">
+							<div className="flex items-center gap-2 text-sm font-semibold leading-[17px] text-theme-secondary-700">
 								{t("COMMON.SHOW")}
 								<Select
-									options={[1, 2, 10, 25, 50, 100].map(v => ({label: v.toString(), value:v.toString()}))}
+									options={[1, 2, 10, 25, 50, 100].map((v) => ({
+										label: v.toString(),
+										value: v.toString(),
+									}))}
 									allowOverflow={true}
-									renderLabel={(option) => <span className="text-sm leading-[17px] font-semibold"> {option.label} </span>}
+									renderLabel={(option) => (
+										<span className="text-sm font-semibold leading-[17px]"> {option.label} </span>
+									)}
 									allowFreeInput={false}
 									readOnly={true}
 									defaultValue={perPage.toString()}
-									className="!h-8 !px-3 !w-[78px]"
+									className="!h-8 !w-[78px] !px-3"
 									innerClassName="!text-sm !leading-[17px]"
 									onChange={(selected) => {
 										setCurrentPage(1);
-										setPerPage(Number(selected.value))
+										setPerPage(Number(selected.value));
 									}}
 								/>
 								{t("COMMON.RECORDS")}
