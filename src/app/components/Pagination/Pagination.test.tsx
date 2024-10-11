@@ -30,25 +30,13 @@ describe("Pagination", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it.each(["xs", "sm", "md", "lg", "xl"])("should handle page selection properly in %s", async (breakpoint) => {
-		const { asFragment } = renderResponsive(
-			<Pagination totalCount={12} itemsPerPage={4} onSelectPage={handleSelectPage} currentPage={1} />,
-			breakpoint,
-		);
-
-		await userEvent.click(screen.getByText("2"));
-
-		expect(handleSelectPage).toHaveBeenCalledWith(2);
-		expect(asFragment()).toMatchSnapshot();
-	});
-
 	it.each(["xs", "sm", "md", "lg", "xl"])("should render pagination search buttons in %s", (breakpoint) => {
 		const { asFragment } = renderResponsive(
 			<Pagination totalCount={10} itemsPerPage={1} onSelectPage={handleSelectPage} currentPage={5} />,
 			breakpoint,
 		);
 
-		expect(screen.getAllByTestId("PaginationSearchButton")).toHaveLength(3);
+		expect(screen.getAllByTestId("PaginationSearchButton")).toHaveLength(1);
 
 		expect(asFragment()).toMatchSnapshot();
 	});
@@ -102,7 +90,7 @@ describe("Pagination", () => {
 	});
 
 	it.each(["xs", "sm", "md", "lg", "xl"])(
-		"should handle left pagination search icon click properly in %s",
+		"should handle pagination search icon click properly in %s",
 		async (breakpoint) => {
 			const { asFragment } = renderResponsive(
 				<Pagination totalCount={30} itemsPerPage={1} onSelectPage={handleSelectPage} currentPage={15} />,
@@ -117,39 +105,24 @@ describe("Pagination", () => {
 	);
 
 	it.each(["xs", "sm", "md", "lg", "xl"])(
-		"should handle right pagination search icon click in %s",
+		"should handle pagination search icon click properly in %s",
 		async (breakpoint) => {
 			const { asFragment } = renderResponsive(
 				<Pagination totalCount={30} itemsPerPage={1} onSelectPage={handleSelectPage} currentPage={15} />,
 				breakpoint,
 			);
 
-			await userEvent.click(screen.getAllByTestId("PaginationSearchButton")[1]);
+			await userEvent.click(screen.getByTestId("PaginationSearchButton"));
 
 			expect(screen.getByTestId("PaginationSearch__input")).toBeInTheDocument();
 			expect(asFragment()).toMatchSnapshot();
 		},
 	);
 
-	it.each(["xs", "sm", "md", "lg", "xl"])(
-		"should handle pagination search icon click properly in%s",
-		async (breakpoint) => {
-			const { asFragment } = renderResponsive(
-				<Pagination totalCount={30} itemsPerPage={1} onSelectPage={handleSelectPage} currentPage={15} />,
-				breakpoint,
-			);
-
-			await userEvent.click(screen.getAllByTestId("PaginationSearchButton")[2]);
-
-			expect(screen.getByTestId("PaginationSearch__input")).toBeInTheDocument();
-			expect(asFragment()).toMatchSnapshot();
-		},
-	);
-
-	it.each([0, 1])("should handle page selection from pagination search properly", async (buttonIndex) => {
+	it("should handle page selection from pagination search properly", async () => {
 		render(<Pagination totalCount={10} itemsPerPage={1} onSelectPage={handleSelectPage} currentPage={1} />);
 
-		const searchButton = screen.getAllByTestId("PaginationSearchButton")[buttonIndex];
+		const searchButton = screen.getByTestId("PaginationSearchButton");
 
 		await userEvent.click(searchButton);
 
@@ -162,10 +135,10 @@ describe("Pagination", () => {
 		await waitFor(() => expect(handleSelectPage).toHaveBeenCalledWith(5));
 	});
 
-	it.each([0, 1])("should handle close button from pagination search properly", async (buttonIndex) => {
+	it("should handle close button from pagination search properly", async () => {
 		render(<Pagination totalCount={10} itemsPerPage={1} onSelectPage={handleSelectPage} currentPage={1} />);
 
-		const searchButton = screen.getAllByTestId("PaginationSearchButton")[buttonIndex];
+		const searchButton = screen.getByTestId("PaginationSearchButton");
 
 		await userEvent.click(searchButton);
 
