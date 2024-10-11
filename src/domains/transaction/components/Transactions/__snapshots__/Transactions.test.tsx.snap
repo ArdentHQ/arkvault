@@ -164,7 +164,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
     </div>
   </div>
   <div
-    class="rounded-xl border-transparent pb-2 outline outline-1 outline-transparent md:border-b-[5px] md:border-b-theme-secondary-200 md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800 border-none"
+    class="rounded-xl border-transparent pb-2 outline outline-1 outline-transparent md:border-b-[5px] md:border-b-theme-secondary-200 md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800 border-none !rounded-b-none"
     data-testid="TableWrapper"
   >
     <div
@@ -10190,17 +10190,21 @@ exports[`Transactions > should fetch more transactions 1`] = `
       </div>
     </div>
   </div>
-  <button
-    class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-700 mb-5 mt-10 w-full"
-    data-testid="transactions__fetch-more-button"
-    type="button"
+  <div
+    class="-mx-6 -mt-1 rounded-b-xl border-t border-theme-secondary-300 px-6 py-4 dark:border-theme-secondary-800 md:-mx-px md:mt-0 md:border md:border-t-0"
   >
-    <div
-      class="flex items-center space-x-2"
+    <button
+      class="px-5 space-x-3 text-base relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-700 w-full py-1.5 leading-5"
+      data-testid="transactions__fetch-more-button"
+      type="button"
     >
-      View More
-    </div>
-  </button>
+      <div
+        class="flex items-center space-x-2"
+      >
+        Load More
+      </div>
+    </button>
+  </div>
 </DocumentFragment>
 `;
 
@@ -10368,7 +10372,7 @@ exports[`Transactions > should hide view more button when there are no next page
     </div>
   </div>
   <div
-    class="rounded-xl border-transparent pb-2 outline outline-1 outline-transparent md:border-b-[5px] md:border-b-theme-secondary-200 md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800 border-none"
+    class="rounded-xl border-transparent pb-2 outline outline-1 outline-transparent md:border-b-[5px] md:border-b-theme-secondary-200 md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800 border-none !rounded-b-none"
     data-testid="TableWrapper"
   >
     <div
@@ -15524,17 +15528,21 @@ exports[`Transactions > should hide view more button when there are no next page
       </div>
     </div>
   </div>
-  <button
-    class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-700 mb-5 mt-10 w-full"
-    data-testid="transactions__fetch-more-button"
-    type="button"
+  <div
+    class="-mx-6 -mt-1 rounded-b-xl border-t border-theme-secondary-300 px-6 py-4 dark:border-theme-secondary-800 md:-mx-px md:mt-0 md:border md:border-t-0"
   >
-    <div
-      class="flex items-center space-x-2"
+    <button
+      class="px-5 space-x-3 text-base relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-700 w-full py-1.5 leading-5"
+      data-testid="transactions__fetch-more-button"
+      type="button"
     >
-      View More
-    </div>
-  </button>
+      <div
+        class="flex items-center space-x-2"
+      >
+        Load More
+      </div>
+    </button>
+  </div>
 </DocumentFragment>
 `;
 
@@ -15702,7 +15710,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
     </div>
   </div>
   <div
-    class="rounded-xl border-transparent pb-2 outline outline-1 outline-transparent md:border-b-[5px] md:border-b-theme-secondary-200 md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800 border-none"
+    class="rounded-xl border-transparent pb-2 outline outline-1 outline-transparent md:border-b-[5px] md:border-b-theme-secondary-200 md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800 border-none !rounded-b-none"
     data-testid="TableWrapper"
   >
     <div
@@ -20858,17 +20866,21 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
       </div>
     </div>
   </div>
-  <button
-    class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-700 mb-5 mt-10 w-full"
-    data-testid="transactions__fetch-more-button"
-    type="button"
+  <div
+    class="-mx-6 -mt-1 rounded-b-xl border-t border-theme-secondary-300 px-6 py-4 dark:border-theme-secondary-800 md:-mx-px md:mt-0 md:border md:border-t-0"
   >
-    <div
-      class="flex items-center space-x-2"
+    <button
+      class="px-5 space-x-3 text-base relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-700 w-full py-1.5 leading-5"
+      data-testid="transactions__fetch-more-button"
+      type="button"
     >
-      View More
-    </div>
-  </button>
+      <div
+        class="flex items-center space-x-2"
+      >
+        Load More
+      </div>
+    </button>
+  </div>
 </DocumentFragment>
 `;
 
