@@ -4,7 +4,7 @@ import { useTranslation } from "react-i18next";
 import { styled } from "twin.macro";
 
 import { PaginationProperties } from "./Pagination.contracts";
-import { PaginationButton, PaginationWrapper } from "./Pagination.styles";
+import { PaginationWrapper } from "./Pagination.styles";
 import { PaginationSearch } from "./PaginationSearch";
 import { Icon } from "@/app/components/Icon";
 import { Button } from "@/app/components/Button";
@@ -12,10 +12,6 @@ import { SmAndAbove, Xs } from "@/app/components/Breakpoint";
 
 const Wrapper = styled.nav`
 	${PaginationWrapper}
-`;
-
-const PaginationButtonStyled = styled.button`
-	${PaginationButton}
 `;
 
 const Pagination = ({
@@ -30,25 +26,6 @@ const Pagination = ({
 	const { t } = useTranslation();
 
 	const totalPages = Math.ceil(totalCount / itemsPerPage);
-
-	const buttonCount = useMemo(() => (currentPage < 100 ? 7 : 5), [currentPage]);
-	const subRangeLength = useMemo(() => Math.floor(buttonCount / 2), [buttonCount]);
-
-	const paginationButtons = useMemo(() => {
-		let buttons: number[];
-
-		if (totalPages <= buttonCount) {
-			buttons = Array.from({ length: totalPages }).map((_, index) => index + 1);
-		} else if (currentPage <= subRangeLength + 1) {
-			buttons = Array.from({ length: buttonCount }).map((_, index) => index + 1);
-		} else if (currentPage >= totalPages - subRangeLength) {
-			buttons = Array.from({ length: buttonCount }).map((_, index) => totalPages - buttonCount + index + 1);
-		} else {
-			buttons = Array.from({ length: buttonCount }).map((_, index) => currentPage - subRangeLength + index);
-		}
-
-		return buttons;
-	}, [currentPage, totalPages, buttonCount, subRangeLength]);
 
 	const showPrevious = useMemo(() => currentPage > 1, [currentPage]);
 	const showNext = useMemo(() => currentPage < totalPages, [currentPage, totalPages]);
@@ -66,15 +43,16 @@ const Pagination = ({
 	};
 
 	return (
-		<Wrapper data-testid="Pagination" className={className}>
+		<Wrapper data-testid="Pagination" className={cn("w-full relative sm:w-auto",className)}>
 			<SmAndAbove>
 				<Button
 					data-testid="Pagination__first"
 					variant="secondary"
 					onClick={() => onSelectPage((currentPage = 1))}
 					disabled={!showPrevious}
+					className="py-1.5 px-4"
 				>
-					<Icon name="DoubleChevronLeftSmall" size="sm" />
+					<span>{t("COMMON.FIRST")}</span>
 				</Button>
 
 				<Button
@@ -82,54 +60,13 @@ const Pagination = ({
 					variant="secondary"
 					onClick={() => onSelectPage((currentPage -= 1))}
 					disabled={!showPrevious}
+					className="p-2.5 w-8 h-8"
 				>
-					<div>
-						<span className="hidden lg:inline">{t("COMMON.PREVIOUS")}</span>
-
-						<Icon name="ChevronLeftSmall" size="sm" className="lg:hidden" />
-					</div>
+					<Icon name="ChevronLeftSmall" size="sm" />
 				</Button>
 			</SmAndAbove>
 
-			<div className="relative flex hidden rounded bg-theme-primary-100 px-2 dark:bg-theme-secondary-800 md:flex">
-				{paginationButtons[0] !== 1 && (
-					<PaginationSearch
-						onClick={() => setButtonsDisabled(true)}
-						onSelectPage={handleSelectPage}
-						totalPages={totalPages}
-						isDisabled={buttonsDisabled}
-					>
-						<span>…</span>
-					</PaginationSearch>
-				)}
-
-				{paginationButtons.map((page) => (
-					<PaginationButtonStyled
-						key={page}
-						type="button"
-						aria-current={currentPage === page || undefined}
-						aria-label={t("COMMON.PAGE_#", { page })}
-						disabled={buttonsDisabled}
-						className={cn({ "current-page": currentPage === page })}
-						onClick={() => onSelectPage(page)}
-					>
-						{page}
-					</PaginationButtonStyled>
-				))}
-
-				{paginationButtons[paginationButtons.length - 1] !== totalPages && (
-					<PaginationSearch
-						onClick={() => setButtonsDisabled(true)}
-						onSelectPage={handleSelectPage}
-						totalPages={totalPages}
-						isDisabled={buttonsDisabled}
-					>
-						<span>…</span>
-					</PaginationSearch>
-				)}
-			</div>
-
-			<div className="relative flex rounded bg-theme-primary-100 px-2 dark:bg-theme-secondary-800 md:hidden">
+			<div className="flex rounded bg-theme-primary-100 dark:bg-theme-secondary-800">
 				<PaginationSearch
 					onClick={() => setButtonsDisabled(true)}
 					onSelectPage={handleSelectPage}
@@ -148,12 +85,9 @@ const Pagination = ({
 					variant="secondary"
 					onClick={() => onSelectPage((currentPage += 1))}
 					disabled={!showNext}
+					className="p-2.5 w-8 h-8"
 				>
-					<div>
-						<span className="hidden lg:inline">{t("COMMON.NEXT")}</span>
-
-						<Icon name="ChevronRightSmall" size="sm" className="lg:hidden" />
-					</div>
+					<Icon name="ChevronRightSmall" size="sm" />
 				</Button>
 
 				<Button
@@ -161,18 +95,20 @@ const Pagination = ({
 					variant="secondary"
 					onClick={() => onSelectPage((currentPage = totalPages))}
 					disabled={!showNext}
+					className="py-1.5 px-4"
 				>
-					<Icon name="DoubleChevronRightSmall" size="sm" />
+					<span>{t("COMMON.LAST")}</span>
 				</Button>
 			</SmAndAbove>
 
 			<Xs>
-				<div className="mt-3 flex space-x-3">
+				<div className="mt-2 flex space-x-2">
 					<Button
 						data-testid="Pagination__first"
 						variant="secondary"
 						onClick={() => onSelectPage((currentPage = 1))}
 						disabled={!showPrevious}
+						className="flex-1"
 					>
 						<Icon name="DoubleChevronLeftSmall" size="sm" />
 					</Button>
@@ -182,6 +118,7 @@ const Pagination = ({
 						variant="secondary"
 						onClick={() => onSelectPage((currentPage -= 1))}
 						disabled={!showPrevious}
+						className="flex-1"
 					>
 						<Icon name="ChevronLeftSmall" size="sm" />
 					</Button>
@@ -191,6 +128,7 @@ const Pagination = ({
 						variant="secondary"
 						onClick={() => onSelectPage((currentPage += 1))}
 						disabled={!showNext}
+						className="flex-1"
 					>
 						<Icon name="ChevronRightSmall" size="sm" />
 					</Button>
@@ -200,6 +138,7 @@ const Pagination = ({
 						variant="secondary"
 						onClick={() => onSelectPage((currentPage = totalPages))}
 						disabled={!showNext}
+						className="flex-1"
 					>
 						<Icon name="DoubleChevronRightSmall" size="sm" />
 					</Button>
