@@ -14,6 +14,7 @@ import { Icon } from "@/app/components/Icon";
 import { AccordionContent } from "@/app/components/Accordion";
 import { twMerge } from "tailwind-merge";
 import cn from "classnames";
+import {Select} from "@/app/components/SelectDropdown";
 
 const StarredHeader = ({ active, onClick }: { active: boolean; onClick: () => void }) => {
 	const { t } = useTranslation();
@@ -194,7 +195,12 @@ export const WalletsList: React.VFC<WalletsListProperties> = ({
 					</div>
 
 					{showPagination && (
-						<div className="py-4 flex w-full 1justify-between justify-end border-t border-theme-secondary-300 px-6">
+						<div className="py-4 flex w-full justify-between border-t border-theme-secondary-300 px-6">
+							<div className="flex items-center gap-2 text-sm leading-[17px] font-semibold text-theme-secondary-700">
+								Show
+								<Select options={[{isSelected: true, label: "10", value:"10"}]} allowOverflow={true} renderLabel={(option) => <span className="text-sm leading-[17px] font-semibold"> {option.label} </span>} allowFreeInput={false} readOnly={true} defaultValue="10" className="!h-8 !px-3 !w-[68px]" innerClassName="!text-sm !leading-[17px]" />
+								Records
+							</div>
 							<Pagination
 								totalCount={wallets.length}
 								itemsPerPage={itemsPerPage}
