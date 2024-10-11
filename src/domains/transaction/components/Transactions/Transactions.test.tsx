@@ -285,13 +285,13 @@ describe("Transactions", () => {
 		const fetchMoreButtonHasContent = (content) =>
 			expect(screen.getByTestId("transactions__fetch-more-button")).toHaveTextContent(content);
 
-		await waitFor(() => fetchMoreButtonHasContent(commonTranslations.VIEW_MORE));
+		await waitFor(() => fetchMoreButtonHasContent(commonTranslations.LOAD_MORE));
 
 		expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(30);
 
 		await userEvent.click(screen.getByTestId("transactions__fetch-more-button"));
 
-		await waitFor(() => fetchMoreButtonHasContent(commonTranslations.VIEW_MORE));
+		await waitFor(() => fetchMoreButtonHasContent(commonTranslations.LOAD_MORE));
 
 		expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(60);
 

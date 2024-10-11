@@ -209,6 +209,7 @@ export const translations = {
 	LOAD: "Load",
 	LOADING: "Loading ...",
 	LOADING_LEDGER: "Loading Ledger...",
+	LOAD_MORE: "Load More",
 	MANAGE_SERVERS: "Manage Servers",
 	MAX: "Max",
 	MEMO: "Memo",

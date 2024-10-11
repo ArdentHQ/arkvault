@@ -394,7 +394,7 @@ exports[`ExchangeTransactionsTable > should render 1`] = `
                       class="flex h-full items-center space-x-1"
                     >
                       <div
-                        class="flex items-center justify-center bg-theme-success-200 dark:bg-theme-success-700 text-theme-success-700 dark:text-white/70 dark:bg-theme-success-700 -ml-1.5 px-2"
+                        class="flex items-center justify-center bg-theme-success-200 dark:bg-theme-success-700 text-theme-success-700 dark:text-white/70 dark:bg-theme-success-700 w-5 self-stretch"
                         data-testid="AmountLabel__hint"
                       >
                         <div
@@ -476,7 +476,7 @@ exports[`ExchangeTransactionsTable > should render 1`] = `
                       class="flex h-full items-center space-x-1"
                     >
                       <div
-                        class="flex items-center justify-center bg-theme-success-200 dark:bg-theme-success-700 text-theme-success-700 dark:text-white/70 dark:bg-theme-success-700 -ml-1.5 px-2"
+                        class="flex items-center justify-center bg-theme-success-200 dark:bg-theme-success-700 text-theme-success-700 dark:text-white/70 dark:bg-theme-success-700 w-5 self-stretch"
                         data-testid="AmountLabel__hint"
                       >
                         <div
@@ -693,7 +693,7 @@ exports[`ExchangeTransactionsTable > should render 1`] = `
                       class="flex h-full items-center space-x-1"
                     >
                       <div
-                        class="flex items-center justify-center bg-theme-success-200 dark:bg-theme-success-700 text-theme-success-700 dark:text-white/70 dark:bg-theme-success-700 -ml-1.5 px-2"
+                        class="flex items-center justify-center bg-theme-success-200 dark:bg-theme-success-700 text-theme-success-700 dark:text-white/70 dark:bg-theme-success-700 w-5 self-stretch"
                         data-testid="AmountLabel__hint"
                       >
                         <div
@@ -775,7 +775,7 @@ exports[`ExchangeTransactionsTable > should render 1`] = `
                       class="flex h-full items-center space-x-1"
                     >
                       <div
-                        class="flex items-center justify-center bg-theme-success-200 dark:bg-theme-success-700 text-theme-success-700 dark:text-white/70 dark:bg-theme-success-700 -ml-1.5 px-2"
+                        class="flex items-center justify-center bg-theme-success-200 dark:bg-theme-success-700 text-theme-success-700 dark:text-white/70 dark:bg-theme-success-700 w-5 self-stretch"
                         data-testid="AmountLabel__hint"
                       >
                         <div
@@ -992,7 +992,7 @@ exports[`ExchangeTransactionsTable > should render 1`] = `
                       class="flex h-full items-center space-x-1"
                     >
                       <div
-                        class="flex items-center justify-center bg-theme-success-200 dark:bg-theme-success-700 text-theme-success-700 dark:text-white/70 dark:bg-theme-success-700 -ml-1.5 px-2"
+                        class="flex items-center justify-center bg-theme-success-200 dark:bg-theme-success-700 text-theme-success-700 dark:text-white/70 dark:bg-theme-success-700 w-5 self-stretch"
                         data-testid="AmountLabel__hint"
                       >
                         <div
@@ -1074,7 +1074,7 @@ exports[`ExchangeTransactionsTable > should render 1`] = `
                       class="flex h-full items-center space-x-1"
                     >
                       <div
-                        class="flex items-center justify-center bg-theme-success-200 dark:bg-theme-success-700 text-theme-success-700 dark:text-white/70 dark:bg-theme-success-700 -ml-1.5 px-2"
+                        class="flex items-center justify-center bg-theme-success-200 dark:bg-theme-success-700 text-theme-success-700 dark:text-white/70 dark:bg-theme-success-700 w-5 self-stretch"
                         data-testid="AmountLabel__hint"
                       >
                         <div
@@ -1603,7 +1603,7 @@ exports[`ExchangeTransactionsTable > should render compact 1`] = `
                       class="flex h-full items-center space-x-1"
                     >
                       <div
-                        class="flex items-center justify-center bg-theme-success-200 dark:bg-theme-success-700 text-theme-success-700 dark:text-white/70 dark:bg-theme-success-700 -ml-1.5 px-2"
+                        class="flex items-center justify-center bg-theme-success-200 dark:bg-theme-success-700 text-theme-success-700 dark:text-white/70 dark:bg-theme-success-700 w-5 self-stretch"
                         data-testid="AmountLabel__hint"
                       >
                         <div
@@ -1685,7 +1685,7 @@ exports[`ExchangeTransactionsTable > should render compact 1`] = `
                       class="flex h-full items-center space-x-1"
                     >
                       <div
-                        class="flex items-center justify-center bg-theme-success-200 dark:bg-theme-success-700 text-theme-success-700 dark:text-white/70 dark:bg-theme-success-700 -ml-1.5 px-2"
+                        class="flex items-center justify-center bg-theme-success-200 dark:bg-theme-success-700 text-theme-success-700 dark:text-white/70 dark:bg-theme-success-700 w-5 self-stretch"
                         data-testid="AmountLabel__hint"
                       >
                         <div
@@ -1902,7 +1902,7 @@ exports[`ExchangeTransactionsTable > should render compact 1`] = `
                       class="flex h-full items-center space-x-1"
                     >
                       <div
-                        class="flex items-center justify-center bg-theme-success-200 dark:bg-theme-success-700 text-theme-success-700 dark:text-white/70 dark:bg-theme-success-700 -ml-1.5 px-2"
+                        class="flex items-center justify-center bg-theme-success-200 dark:bg-theme-success-700 text-theme-success-700 dark:text-white/70 dark:bg-theme-success-700 w-5 self-stretch"
                         data-testid="AmountLabel__hint"
                       >
                         <div
@@ -1984,7 +1984,7 @@ exports[`ExchangeTransactionsTable > should render compact 1`] = `
                       class="flex h-full items-center space-x-1"
                     >
                       <div
-                        class="flex items-center justify-center bg-theme-success-200 dark:bg-theme-success-700 text-theme-success-700 dark:text-white/70 dark:bg-theme-success-700 -ml-1.5 px-2"
+                        class="flex items-center justify-center bg-theme-success-200 dark:bg-theme-success-700 text-theme-success-700 dark:text-white/70 dark:bg-theme-success-700 w-5 self-stretch"
                         data-testid="AmountLabel__hint"
                       >
                         <div
@@ -2201,7 +2201,7 @@ exports[`ExchangeTransactionsTable > should render compact 1`] = `
                       class="flex h-full items-center space-x-1"
                     >
                       <div
-                        class="flex items-center justify-center bg-theme-success-200 dark:bg-theme-success-700 text-theme-success-700 dark:text-white/70 dark:bg-theme-success-700 -ml-1.5 px-2"
+                        class="flex items-center justify-center bg-theme-success-200 dark:bg-theme-success-700 text-theme-success-700 dark:text-white/70 dark:bg-theme-success-700 w-5 self-stretch"
                         data-testid="AmountLabel__hint"
                       >
                         <div
@@ -2283,7 +2283,7 @@ exports[`ExchangeTransactionsTable > should render compact 1`] = `
                       class="flex h-full items-center space-x-1"
                     >
                       <div
-                        class="flex items-center justify-center bg-theme-success-200 dark:bg-theme-success-700 text-theme-success-700 dark:text-white/70 dark:bg-theme-success-700 -ml-1.5 px-2"
+                        class="flex items-center justify-center bg-theme-success-200 dark:bg-theme-success-700 text-theme-success-700 dark:text-white/70 dark:bg-theme-success-700 w-5 self-stretch"
                         data-testid="AmountLabel__hint"
                       >
                         <div
@@ -2812,7 +2812,7 @@ exports[`ExchangeTransactionsTable > should render desktop 1`] = `
                       class="flex h-full items-center space-x-1"
                     >
                       <div
-                        class="flex items-center justify-center bg-theme-success-200 dark:bg-theme-success-700 text-theme-success-700 dark:text-white/70 dark:bg-theme-success-700 -ml-1.5 px-2"
+                        class="flex items-center justify-center bg-theme-success-200 dark:bg-theme-success-700 text-theme-success-700 dark:text-white/70 dark:bg-theme-success-700 w-5 self-stretch"
                         data-testid="AmountLabel__hint"
                       >
                         <div
@@ -2894,7 +2894,7 @@ exports[`ExchangeTransactionsTable > should render desktop 1`] = `
                       class="flex h-full items-center space-x-1"
                     >
                       <div
-                        class="flex items-center justify-center bg-theme-success-200 dark:bg-theme-success-700 text-theme-success-700 dark:text-white/70 dark:bg-theme-success-700 -ml-1.5 px-2"
+                        class="flex items-center justify-center bg-theme-success-200 dark:bg-theme-success-700 text-theme-success-700 dark:text-white/70 dark:bg-theme-success-700 w-5 self-stretch"
                         data-testid="AmountLabel__hint"
                       >
                         <div
@@ -3111,7 +3111,7 @@ exports[`ExchangeTransactionsTable > should render desktop 1`] = `
                       class="flex h-full items-center space-x-1"
                     >
                       <div
-                        class="flex items-center justify-center bg-theme-success-200 dark:bg-theme-success-700 text-theme-success-700 dark:text-white/70 dark:bg-theme-success-700 -ml-1.5 px-2"
+                        class="flex items-center justify-center bg-theme-success-200 dark:bg-theme-success-700 text-theme-success-700 dark:text-white/70 dark:bg-theme-success-700 w-5 self-stretch"
                         data-testid="AmountLabel__hint"
                       >
                         <div
@@ -3193,7 +3193,7 @@ exports[`ExchangeTransactionsTable > should render desktop 1`] = `
                       class="flex h-full items-center space-x-1"
                     >
                       <div
-                        class="flex items-center justify-center bg-theme-success-200 dark:bg-theme-success-700 text-theme-success-700 dark:text-white/70 dark:bg-theme-success-700 -ml-1.5 px-2"
+                        class="flex items-center justify-center bg-theme-success-200 dark:bg-theme-success-700 text-theme-success-700 dark:text-white/70 dark:bg-theme-success-700 w-5 self-stretch"
                         data-testid="AmountLabel__hint"
                       >
                         <div
@@ -3410,7 +3410,7 @@ exports[`ExchangeTransactionsTable > should render desktop 1`] = `
                       class="flex h-full items-center space-x-1"
                     >
                       <div
-                        class="flex items-center justify-center bg-theme-success-200 dark:bg-theme-success-700 text-theme-success-700 dark:text-white/70 dark:bg-theme-success-700 -ml-1.5 px-2"
+                        class="flex items-center justify-center bg-theme-success-200 dark:bg-theme-success-700 text-theme-success-700 dark:text-white/70 dark:bg-theme-success-700 w-5 self-stretch"
                         data-testid="AmountLabel__hint"
                       >
                         <div
@@ -3492,7 +3492,7 @@ exports[`ExchangeTransactionsTable > should render desktop 1`] = `
                       class="flex h-full items-center space-x-1"
                     >
                       <div
-                        class="flex items-center justify-center bg-theme-success-200 dark:bg-theme-success-700 text-theme-success-700 dark:text-white/70 dark:bg-theme-success-700 -ml-1.5 px-2"
+                        class="flex items-center justify-center bg-theme-success-200 dark:bg-theme-success-700 text-theme-success-700 dark:text-white/70 dark:bg-theme-success-700 w-5 self-stretch"
                         data-testid="AmountLabel__hint"
                       >
                         <div
@@ -4021,7 +4021,7 @@ exports[`ExchangeTransactionsTable > should render desktop 2`] = `
                       class="flex h-full items-center space-x-1"
                     >
                       <div
-                        class="flex items-center justify-center bg-theme-success-200 dark:bg-theme-success-700 text-theme-success-700 dark:text-white/70 dark:bg-theme-success-700 -ml-1.5 px-2"
+                        class="flex items-center justify-center bg-theme-success-200 dark:bg-theme-success-700 text-theme-success-700 dark:text-white/70 dark:bg-theme-success-700 w-5 self-stretch"
                         data-testid="AmountLabel__hint"
                       >
                         <div
@@ -4103,7 +4103,7 @@ exports[`ExchangeTransactionsTable > should render desktop 2`] = `
                       class="flex h-full items-center space-x-1"
                     >
                       <div
-                        class="flex items-center justify-center bg-theme-success-200 dark:bg-theme-success-700 text-theme-success-700 dark:text-white/70 dark:bg-theme-success-700 -ml-1.5 px-2"
+                        class="flex items-center justify-center bg-theme-success-200 dark:bg-theme-success-700 text-theme-success-700 dark:text-white/70 dark:bg-theme-success-700 w-5 self-stretch"
                         data-testid="AmountLabel__hint"
                       >
                         <div
@@ -4320,7 +4320,7 @@ exports[`ExchangeTransactionsTable > should render desktop 2`] = `
                       class="flex h-full items-center space-x-1"
                     >
                       <div
-                        class="flex items-center justify-center bg-theme-success-200 dark:bg-theme-success-700 text-theme-success-700 dark:text-white/70 dark:bg-theme-success-700 -ml-1.5 px-2"
+                        class="flex items-center justify-center bg-theme-success-200 dark:bg-theme-success-700 text-theme-success-700 dark:text-white/70 dark:bg-theme-success-700 w-5 self-stretch"
                         data-testid="AmountLabel__hint"
                       >
                         <div
@@ -4402,7 +4402,7 @@ exports[`ExchangeTransactionsTable > should render desktop 2`] = `
                       class="flex h-full items-center space-x-1"
                     >
                       <div
-                        class="flex items-center justify-center bg-theme-success-200 dark:bg-theme-success-700 text-theme-success-700 dark:text-white/70 dark:bg-theme-success-700 -ml-1.5 px-2"
+                        class="flex items-center justify-center bg-theme-success-200 dark:bg-theme-success-700 text-theme-success-700 dark:text-white/70 dark:bg-theme-success-700 w-5 self-stretch"
                         data-testid="AmountLabel__hint"
                       >
                         <div
@@ -4619,7 +4619,7 @@ exports[`ExchangeTransactionsTable > should render desktop 2`] = `
                       class="flex h-full items-center space-x-1"
                     >
                       <div
-                        class="flex items-center justify-center bg-theme-success-200 dark:bg-theme-success-700 text-theme-success-700 dark:text-white/70 dark:bg-theme-success-700 -ml-1.5 px-2"
+                        class="flex items-center justify-center bg-theme-success-200 dark:bg-theme-success-700 text-theme-success-700 dark:text-white/70 dark:bg-theme-success-700 w-5 self-stretch"
                         data-testid="AmountLabel__hint"
                       >
                         <div
@@ -4701,7 +4701,7 @@ exports[`ExchangeTransactionsTable > should render desktop 2`] = `
                       class="flex h-full items-center space-x-1"
                     >
                       <div
-                        class="flex items-center justify-center bg-theme-success-200 dark:bg-theme-success-700 text-theme-success-700 dark:text-white/70 dark:bg-theme-success-700 -ml-1.5 px-2"
+                        class="flex items-center justify-center bg-theme-success-200 dark:bg-theme-success-700 text-theme-success-700 dark:text-white/70 dark:bg-theme-success-700 w-5 self-stretch"
                         data-testid="AmountLabel__hint"
                       >
                         <div
@@ -5230,7 +5230,7 @@ exports[`ExchangeTransactionsTable > should render desktop 3`] = `
                       class="flex h-full items-center space-x-1"
                     >
                       <div
-                        class="flex items-center justify-center bg-theme-success-200 dark:bg-theme-success-700 text-theme-success-700 dark:text-white/70 dark:bg-theme-success-700 -ml-1.5 px-2"
+                        class="flex items-center justify-center bg-theme-success-200 dark:bg-theme-success-700 text-theme-success-700 dark:text-white/70 dark:bg-theme-success-700 w-5 self-stretch"
                         data-testid="AmountLabel__hint"
                       >
                         <div
@@ -5312,7 +5312,7 @@ exports[`ExchangeTransactionsTable > should render desktop 3`] = `
                       class="flex h-full items-center space-x-1"
                     >
                       <div
-                        class="flex items-center justify-center bg-theme-success-200 dark:bg-theme-success-700 text-theme-success-700 dark:text-white/70 dark:bg-theme-success-700 -ml-1.5 px-2"
+                        class="flex items-center justify-center bg-theme-success-200 dark:bg-theme-success-700 text-theme-success-700 dark:text-white/70 dark:bg-theme-success-700 w-5 self-stretch"
                         data-testid="AmountLabel__hint"
                       >
                         <div
@@ -5529,7 +5529,7 @@ exports[`ExchangeTransactionsTable > should render desktop 3`] = `
                       class="flex h-full items-center space-x-1"
                     >
                       <div
-                        class="flex items-center justify-center bg-theme-success-200 dark:bg-theme-success-700 text-theme-success-700 dark:text-white/70 dark:bg-theme-success-700 -ml-1.5 px-2"
+                        class="flex items-center justify-center bg-theme-success-200 dark:bg-theme-success-700 text-theme-success-700 dark:text-white/70 dark:bg-theme-success-700 w-5 self-stretch"
                         data-testid="AmountLabel__hint"
                       >
                         <div
@@ -5611,7 +5611,7 @@ exports[`ExchangeTransactionsTable > should render desktop 3`] = `
                       class="flex h-full items-center space-x-1"
                     >
                       <div
-                        class="flex items-center justify-center bg-theme-success-200 dark:bg-theme-success-700 text-theme-success-700 dark:text-white/70 dark:bg-theme-success-700 -ml-1.5 px-2"
+                        class="flex items-center justify-center bg-theme-success-200 dark:bg-theme-success-700 text-theme-success-700 dark:text-white/70 dark:bg-theme-success-700 w-5 self-stretch"
                         data-testid="AmountLabel__hint"
                       >
                         <div
@@ -5828,7 +5828,7 @@ exports[`ExchangeTransactionsTable > should render desktop 3`] = `
                       class="flex h-full items-center space-x-1"
                     >
                       <div
-                        class="flex items-center justify-center bg-theme-success-200 dark:bg-theme-success-700 text-theme-success-700 dark:text-white/70 dark:bg-theme-success-700 -ml-1.5 px-2"
+                        class="flex items-center justify-center bg-theme-success-200 dark:bg-theme-success-700 text-theme-success-700 dark:text-white/70 dark:bg-theme-success-700 w-5 self-stretch"
                         data-testid="AmountLabel__hint"
                       >
                         <div
@@ -5910,7 +5910,7 @@ exports[`ExchangeTransactionsTable > should render desktop 3`] = `
                       class="flex h-full items-center space-x-1"
                     >
                       <div
-                        class="flex items-center justify-center bg-theme-success-200 dark:bg-theme-success-700 text-theme-success-700 dark:text-white/70 dark:bg-theme-success-700 -ml-1.5 px-2"
+                        class="flex items-center justify-center bg-theme-success-200 dark:bg-theme-success-700 text-theme-success-700 dark:text-white/70 dark:bg-theme-success-700 w-5 self-stretch"
                         data-testid="AmountLabel__hint"
                       >
                         <div
@@ -6268,7 +6268,7 @@ exports[`ExchangeTransactionsTable > should render mobile 1`] = `
                             class="flex h-full items-center space-x-1"
                           >
                             <div
-                              class="flex items-center justify-center bg-theme-success-200 dark:bg-theme-success-700 text-theme-success-700 dark:text-white/70 dark:bg-theme-success-700 h-5 w-5"
+                              class="flex items-center justify-center bg-theme-success-200 dark:bg-theme-success-700 text-theme-success-700 dark:text-white/70 dark:bg-theme-success-700 w-5 self-stretch"
                               data-testid="AmountLabel__hint"
                             >
                               <div
@@ -6518,7 +6518,7 @@ exports[`ExchangeTransactionsTable > should render mobile 1`] = `
                             class="flex h-full items-center space-x-1"
                           >
                             <div
-                              class="flex items-center justify-center bg-theme-success-200 dark:bg-theme-success-700 text-theme-success-700 dark:text-white/70 dark:bg-theme-success-700 h-5 w-5"
+                              class="flex items-center justify-center bg-theme-success-200 dark:bg-theme-success-700 text-theme-success-700 dark:text-white/70 dark:bg-theme-success-700 w-5 self-stretch"
                               data-testid="AmountLabel__hint"
                             >
                               <div
@@ -6768,7 +6768,7 @@ exports[`ExchangeTransactionsTable > should render mobile 1`] = `
                             class="flex h-full items-center space-x-1"
                           >
                             <div
-                              class="flex items-center justify-center bg-theme-success-200 dark:bg-theme-success-700 text-theme-success-700 dark:text-white/70 dark:bg-theme-success-700 h-5 w-5"
+                              class="flex items-center justify-center bg-theme-success-200 dark:bg-theme-success-700 text-theme-success-700 dark:text-white/70 dark:bg-theme-success-700 w-5 self-stretch"
                               data-testid="AmountLabel__hint"
                             >
                               <div
@@ -7046,7 +7046,7 @@ exports[`ExchangeTransactionsTable > should render mobile 2`] = `
                             class="flex h-full items-center space-x-1"
                           >
                             <div
-                              class="flex items-center justify-center bg-theme-success-200 dark:bg-theme-success-700 text-theme-success-700 dark:text-white/70 dark:bg-theme-success-700 h-5 w-5"
+                              class="flex items-center justify-center bg-theme-success-200 dark:bg-theme-success-700 text-theme-success-700 dark:text-white/70 dark:bg-theme-success-700 w-5 self-stretch"
                               data-testid="AmountLabel__hint"
                             >
                               <div
@@ -7296,7 +7296,7 @@ exports[`ExchangeTransactionsTable > should render mobile 2`] = `
                             class="flex h-full items-center space-x-1"
                           >
                             <div
-                              class="flex items-center justify-center bg-theme-success-200 dark:bg-theme-success-700 text-theme-success-700 dark:text-white/70 dark:bg-theme-success-700 h-5 w-5"
+                              class="flex items-center justify-center bg-theme-success-200 dark:bg-theme-success-700 text-theme-success-700 dark:text-white/70 dark:bg-theme-success-700 w-5 self-stretch"
                               data-testid="AmountLabel__hint"
                             >
                               <div
@@ -7546,7 +7546,7 @@ exports[`ExchangeTransactionsTable > should render mobile 2`] = `
                             class="flex h-full items-center space-x-1"
                           >
                             <div
-                              class="flex items-center justify-center bg-theme-success-200 dark:bg-theme-success-700 text-theme-success-700 dark:text-white/70 dark:bg-theme-success-700 h-5 w-5"
+                              class="flex items-center justify-center bg-theme-success-200 dark:bg-theme-success-700 text-theme-success-700 dark:text-white/70 dark:bg-theme-success-700 w-5 self-stretch"
                               data-testid="AmountLabel__hint"
                             >
                               <div
