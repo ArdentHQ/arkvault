@@ -51,12 +51,7 @@ export const TransactionRow = memo(
 			<TableRow onClick={onClick} className={twMerge("relative", className)} {...properties}>
 				<TableCell variant="start" innerClassName="items-start my-0 py-3 xl:min-h-0">
 					<div className="flex flex-col gap-1 font-semibold">
-						<Link
-							to={transaction.explorerLink()}
-							tooltip={transaction.id()}
-							showExternalIcon={false}
-							isExternal
-						>
+						<Link to={transaction.explorerLink()} showExternalIcon={false} isExternal>
 							<span className="text-sm">
 								<TruncateMiddle
 									className="cursor-pointer text-theme-primary-600"
