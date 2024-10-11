@@ -856,7 +856,7 @@ describe("Signed Transaction Table", () => {
 			"xs",
 		);
 
-		await waitFor(() => expect(screen.getAllByTestId("TransactionRowRecipientLabel")).toHaveLength(1));
+		await waitFor(() => expect(screen.getAllByTestId("TransactionRowAddressing__label")).toHaveLength(1));
 
 		await userEvent.click(screen.getByTestId("SignedTransactionRowMobile--remove"));
 
@@ -934,7 +934,7 @@ describe("Signed Transaction Table", () => {
 			"xs",
 		);
 
-		await waitFor(() => expect(screen.getAllByTestId("TransactionRowRecipientLabel")).toHaveLength(1));
+		await waitFor(() => expect(screen.getAllByTestId("TransactionRowAddressing__label")).toHaveLength(1));
 
 		const button = screen.getByTestId("TransactionRow__sign");
 

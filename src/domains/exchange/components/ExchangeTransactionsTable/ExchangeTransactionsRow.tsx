@@ -47,6 +47,7 @@ const ExchangeTransactionRowAmount = ({
 				value={data.amount}
 				ticker={data.ticker}
 				isNegative={type === "sent"}
+				isCompact={true}
 			/>
 		</>
 	);
