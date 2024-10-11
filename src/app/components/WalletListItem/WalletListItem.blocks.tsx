@@ -340,7 +340,7 @@ export const RecipientItemMobile: React.FC<RecipientItemMobileProperties> = ({
 		<div
 			data-testid={selected ? "WalletListItemMobile--selected" : "WalletListItemMobile"}
 			className={cn(
-				"flex w-full cursor-pointer flex-row rounded-xl bg-theme-primary-100 border-2 dark:bg-theme-background",
+				"flex w-full cursor-pointer flex-row rounded-xl border-2 bg-theme-primary-100 dark:bg-theme-background",
 				{
 					"border-theme-primary-100 dark:border-theme-secondary-800": !selected,
 					"border-theme-primary-600 dark:border-theme-primary-600": selected,
@@ -363,8 +363,8 @@ export const RecipientItemMobile: React.FC<RecipientItemMobileProperties> = ({
 			</div>
 			<div
 				className={cn("flex w-11 items-center justify-center", {
-					"bg-theme-primary-100 dark:bg-theme-background rounded-r-xl": !selected,
-					"bg-theme-primary-600 dark:bg-theme-primary-600 rounded-r-lg": selected,
+					"rounded-r-xl bg-theme-primary-100 dark:bg-theme-background": !selected,
+					"rounded-r-lg bg-theme-primary-600 dark:bg-theme-primary-600": selected,
 				})}
 			>
 				<div>
