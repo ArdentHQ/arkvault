@@ -427,7 +427,7 @@ exports[`Signed Transaction Table > should handle the onRowClick function when t
               </td>
               <td>
                 <div
-                  class="flex px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r items-start xl:min-h-0"
+                  class="flex px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end items-start text-sm xl:min-h-0"
                 >
                   <div
                     class="flex flex-row items-center"
@@ -449,7 +449,9 @@ exports[`Signed Transaction Table > should handle the onRowClick function when t
                       class="m-0 border-theme-secondary-300 dark:border-theme-secondary-800 css-1aie31u"
                       type="vertical"
                     />
-                    <div>
+                    <div
+                      class="flex items-center"
+                    >
                       <button
                         class="space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent m-0 p-0"
                         data-testid="TableRemoveButton--compact"
@@ -1137,7 +1139,7 @@ exports[`Signed Transaction Table > should render different status > should show
               </td>
               <td>
                 <div
-                  class="flex px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r items-start xl:min-h-0"
+                  class="flex px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end items-start text-sm xl:min-h-0"
                 >
                   <div
                     class="flex flex-row items-center"
@@ -1159,7 +1161,9 @@ exports[`Signed Transaction Table > should render different status > should show
                       class="m-0 border-theme-secondary-300 dark:border-theme-secondary-800 css-1aie31u"
                       type="vertical"
                     />
-                    <div>
+                    <div
+                      class="flex items-center"
+                    >
                       <button
                         class="space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent m-0 p-0"
                         data-testid="TableRemoveButton--compact"
@@ -1829,7 +1833,7 @@ exports[`Signed Transaction Table > should render different status > should show
               </td>
               <td>
                 <div
-                  class="flex px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r items-start xl:min-h-0"
+                  class="flex px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end items-start text-sm xl:min-h-0"
                 >
                   <div
                     class="flex flex-row items-center"
@@ -1851,7 +1855,9 @@ exports[`Signed Transaction Table > should render different status > should show
                       class="m-0 border-theme-secondary-300 dark:border-theme-secondary-800 css-1aie31u"
                       type="vertical"
                     />
-                    <div>
+                    <div
+                      class="flex items-center"
+                    >
                       <button
                         class="space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent m-0 p-0"
                         data-testid="TableRemoveButton--compact"
@@ -3803,7 +3809,7 @@ exports[`Signed Transaction Table > should render different status > should show
               </td>
               <td>
                 <div
-                  class="flex px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r items-start xl:min-h-0"
+                  class="flex px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end items-start text-sm xl:min-h-0"
                 >
                   <div
                     class="flex flex-row items-center"
@@ -3825,7 +3831,9 @@ exports[`Signed Transaction Table > should render different status > should show
                       class="m-0 border-theme-secondary-300 dark:border-theme-secondary-800 css-1aie31u"
                       type="vertical"
                     />
-                    <div>
+                    <div
+                      class="flex items-center"
+                    >
                       <button
                         class="space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent m-0 p-0"
                         data-testid="TableRemoveButton--compact"
@@ -4274,7 +4282,7 @@ exports[`Signed Transaction Table > should render ready to broadcast transaction
               </td>
               <td>
                 <div
-                  class="flex px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r items-start xl:min-h-0"
+                  class="flex px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end items-start text-sm xl:min-h-0"
                 >
                   <div
                     class="flex flex-row items-center"
@@ -4296,7 +4304,9 @@ exports[`Signed Transaction Table > should render ready to broadcast transaction
                       class="m-0 border-theme-secondary-300 dark:border-theme-secondary-800 css-1aie31u"
                       type="vertical"
                     />
-                    <div>
+                    <div
+                      class="flex items-center"
+                    >
                       <button
                         class="space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent m-0 p-0"
                         data-testid="TableRemoveButton--compact"
@@ -4763,7 +4773,7 @@ exports[`Signed Transaction Table > should render signed transactions and handle
               </td>
               <td>
                 <div
-                  class="flex px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r items-start xl:min-h-0"
+                  class="flex px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end items-start text-sm xl:min-h-0"
                 >
                   <div
                     class="flex flex-row items-center"
@@ -4777,7 +4787,9 @@ exports[`Signed Transaction Table > should render signed transactions and handle
                       class="m-0 border-theme-secondary-300 dark:border-theme-secondary-800 css-1aie31u"
                       type="vertical"
                     />
-                    <div>
+                    <div
+                      class="flex items-center"
+                    >
                       <button
                         class="space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent m-0 p-0"
                         data-testid="TableRemoveButton--compact"
@@ -5885,7 +5897,7 @@ exports[`Signed Transaction Table > should show the sign button with isCompact =
               </td>
               <td>
                 <div
-                  class="flex px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r items-start xl:min-h-0"
+                  class="flex px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end items-start text-sm xl:min-h-0"
                 >
                   <div
                     class="flex flex-row items-center"
@@ -5907,7 +5919,9 @@ exports[`Signed Transaction Table > should show the sign button with isCompact =
                       class="m-0 border-theme-secondary-300 dark:border-theme-secondary-800 css-1aie31u"
                       type="vertical"
                     />
-                    <div>
+                    <div
+                      class="flex items-center"
+                    >
                       <button
                         class="space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent m-0 p-0"
                         data-testid="TableRemoveButton--compact"
@@ -6384,7 +6398,7 @@ exports[`Signed Transaction Table > should show the sign button with isCompact =
               </td>
               <td>
                 <div
-                  class="flex px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r items-start xl:min-h-0"
+                  class="flex px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end items-start text-sm xl:min-h-0"
                 >
                   <div
                     class="flex flex-row items-center"
@@ -6406,7 +6420,9 @@ exports[`Signed Transaction Table > should show the sign button with isCompact =
                       class="m-0 border-theme-secondary-300 dark:border-theme-secondary-800 css-1aie31u"
                       type="vertical"
                     />
-                    <div>
+                    <div
+                      class="flex items-center"
+                    >
                       <button
                         class="space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent m-0 p-0"
                         data-testid="TableRemoveButton--compact"
