@@ -37,7 +37,7 @@ export const TransactionDetails = ({
 				<div className="flex w-full justify-between sm:justify-start">
 					<DetailLabelText className={labelClassName}>{t("COMMON.BLOCK")}</DetailLabelText>
 					{transaction.blockId() && (
-						<Link isExternal to={transaction.explorerLinkForBlock() as string} className="leading-5">
+						<Link isExternal to={transaction.explorerLinkForBlock() as string} className="leading-5 h-5">
 							{blockHeight}
 						</Link>
 					)}
