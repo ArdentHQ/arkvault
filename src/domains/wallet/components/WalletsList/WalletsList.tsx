@@ -194,7 +194,7 @@ export const WalletsList: React.VFC<WalletsListProperties> = ({
 					</div>
 
 					{showPagination && (
-						<div className="my-8 flex w-full justify-center">
+						<div className="py-4 flex w-full 1justify-between justify-end border-t border-theme-secondary-300 px-6">
 							<Pagination
 								totalCount={wallets.length}
 								itemsPerPage={itemsPerPage}

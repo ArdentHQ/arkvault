@@ -8,7 +8,7 @@ import { WalletsGroupHeader } from "@/domains/wallet/components/WalletsGroup/Wal
 import { WalletsList } from "@/domains/wallet/components/WalletsList";
 import { AccordionWrapper } from "@/app/components/Accordion";
 
-const MAX_WALLETS_ON_DASHBOARD_LIST = 10;
+const MAX_WALLETS_ON_DASHBOARD_LIST = 2
 
 export const WalletsGroup: React.VFC<WalletsGroupProperties> = ({ network, wallets, maxWidthReferences }) => {
 	const { t } = useTranslation();
@@ -32,19 +32,19 @@ export const WalletsGroup: React.VFC<WalletsGroupProperties> = ({ network, walle
 			/>
 
 			{isExpanded && (
-				<WalletsList wallets={wallets} itemsPerPage={MAX_WALLETS_ON_DASHBOARD_LIST} showPagination={false} />
+				<WalletsList wallets={wallets} itemsPerPage={MAX_WALLETS_ON_DASHBOARD_LIST} showPagination={true} />
 			)}
 
-			{isExpanded && wallets.length > MAX_WALLETS_ON_DASHBOARD_LIST && (
-				<Button
-					variant="secondary"
-					className="mx-4 mb-4 mt-1"
-					data-testid="WalletsList__ShowAll"
-					onClick={goToCoinWallets}
-				>
-					{`${t("COMMON.SHOW_ALL")} (${wallets.length})`}
-				</Button>
-			)}
+			{/*{isExpanded && wallets.length > MAX_WALLETS_ON_DASHBOARD_LIST && (*/}
+			{/*	<Button*/}
+			{/*		variant="secondary"*/}
+			{/*		className="mx-4 mb-4 mt-1"*/}
+			{/*		data-testid="WalletsList__ShowAll"*/}
+			{/*		onClick={goToCoinWallets}*/}
+			{/*	>*/}
+			{/*		{`${t("COMMON.SHOW_ALL")} (${wallets.length})`}*/}
+			{/*	</Button>*/}
+			{/*)}*/}
 		</AccordionWrapper>
 	);
 };
