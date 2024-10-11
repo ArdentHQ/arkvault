@@ -197,9 +197,9 @@ export const WalletsList: React.VFC<WalletsListProperties> = ({
 					</div>
 
 					{showPagination && (
-						<div className="flex w-full justify-between border-t border-theme-secondary-300 px-6 py-4">
-							<div className="flex items-center gap-2 text-sm font-semibold leading-[17px] text-theme-secondary-700">
-								{t("COMMON.SHOW")}
+						<div className="flex w-full flex-col sm:flex-row sm:justify-between sm:border-t gap-4 border-theme-secondary-300 sm:px-6 pt-4 sm:pb-4">
+							<div className="flex items-center gap-2 text-sm justify-center sm:justify-start font-semibold leading-[17px] text-theme-secondary-700">
+								<span>{t("COMMON.SHOW")}</span>
 								<Select
 									options={[1, 2, 10, 25, 50, 100].map((v) => ({
 										label: v.toString(),
@@ -212,6 +212,7 @@ export const WalletsList: React.VFC<WalletsListProperties> = ({
 									allowFreeInput={false}
 									readOnly={true}
 									defaultValue={perPage.toString()}
+									wrapperClassName="relative"
 									className="!h-8 !w-[78px] !px-3"
 									innerClassName="!text-sm !leading-[17px]"
 									onChange={(selected) => {
@@ -219,7 +220,7 @@ export const WalletsList: React.VFC<WalletsListProperties> = ({
 										setPerPage(Number(selected.value));
 									}}
 								/>
-								{t("COMMON.RECORDS")}
+								<span>{t("COMMON.RECORDS")}</span>
 							</div>
 
 							<Pagination

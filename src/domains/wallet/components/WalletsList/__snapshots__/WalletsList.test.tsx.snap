@@ -895,14 +895,14 @@ exports[`WalletsList > should group starred wallets at the top 1`] = `
       </div>
     </div>
     <div
-      class="flex w-full justify-between border-t border-theme-secondary-300 px-6 py-4"
+      class="flex w-full flex-col sm:flex-row sm:justify-between border-t border-theme-secondary-300 px-6 py-4"
     >
       <div
         class="flex items-center gap-2 text-sm font-semibold leading-[17px] text-theme-secondary-700"
       >
         Show
         <div
-          class="relative w-full"
+          class="relative"
           data-testid="SelectDropdown"
         >
           <div
@@ -1857,14 +1857,14 @@ exports[`WalletsList > should render 1`] = `
       </div>
     </div>
     <div
-      class="flex w-full justify-between border-t border-theme-secondary-300 px-6 py-4"
+      class="flex w-full flex-col sm:flex-row sm:justify-between border-t border-theme-secondary-300 px-6 py-4"
     >
       <div
         class="flex items-center gap-2 text-sm font-semibold leading-[17px] text-theme-secondary-700"
       >
         Show
         <div
-          class="relative w-full"
+          class="relative"
           data-testid="SelectDropdown"
         >
           <div
@@ -2849,14 +2849,14 @@ exports[`WalletsList > should render empty skeleton block 1`] = `
       </div>
     </div>
     <div
-      class="flex w-full justify-between border-t border-theme-secondary-300 px-6 py-4"
+      class="flex w-full flex-col sm:flex-row sm:justify-between border-t border-theme-secondary-300 px-6 py-4"
     >
       <div
         class="flex items-center gap-2 text-sm font-semibold leading-[17px] text-theme-secondary-700"
       >
         Show
         <div
-          class="relative w-full"
+          class="relative"
           data-testid="SelectDropdown"
         >
           <div
@@ -3341,14 +3341,14 @@ exports[`WalletsList > should render responsive 1`] = `
       </div>
     </div>
     <div
-      class="flex w-full justify-between border-t border-theme-secondary-300 px-6 py-4"
+      class="flex w-full flex-col sm:flex-row sm:justify-between border-t border-theme-secondary-300 px-6 py-4"
     >
       <div
         class="flex items-center gap-2 text-sm font-semibold leading-[17px] text-theme-secondary-700"
       >
         Show
         <div
-          class="relative w-full"
+          class="relative"
           data-testid="SelectDropdown"
         >
           <div
