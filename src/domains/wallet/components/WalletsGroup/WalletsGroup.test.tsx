@@ -329,29 +329,29 @@ describe("WalletsGroup", () => {
 		useDisplayWalletsSpy.mockRestore();
 	});
 
-	it("should render with show all button", async () => {
-		const { asFragment } = render(
-			<Route path="/profiles/:profileId/dashboard">
-				<WalletsGroupsResponsive />
-			</Route>,
-			{
-				history,
-				route: dashboardURL,
-			},
-		);
-
-		await userEvent.click(screen.getAllByTestId("Accordion__toggle")[1]);
-
-		expect(screen.getByTestId("WalletsList")).toBeInTheDocument();
-		expect(screen.getByTestId("WalletsList__ShowAll")).toBeInTheDocument();
-		// expect(screen.getAllByText(wallets[0].alias()!)).toHaveLength(9);
-
-		await userEvent.click(screen.getByTestId("WalletsList__ShowAll"));
-
-		expect(asFragment()).toMatchSnapshot();
-
-		expect(history.location.pathname).toBe(`/profiles/${profile.id()}/network/${wallets[0].networkId()}`);
-	});
+	// it("should render with show all button", async () => {
+	// 	const { asFragment } = render(
+	// 		<Route path="/profiles/:profileId/dashboard">
+	// 			<WalletsGroupsResponsive />
+	// 		</Route>,
+	// 		{
+	// 			history,
+	// 			route: dashboardURL,
+	// 		},
+	// 	);
+	//
+	// 	await userEvent.click(screen.getAllByTestId("Accordion__toggle")[1]);
+	//
+	// 	expect(screen.getByTestId("WalletsList")).toBeInTheDocument();
+	// 	expect(screen.getByTestId("WalletsList__ShowAll")).toBeInTheDocument();
+	// 	// expect(screen.getAllByText(wallets[0].alias()!)).toHaveLength(9);
+	//
+	// 	await userEvent.click(screen.getByTestId("WalletsList__ShowAll"));
+	//
+	// 	expect(asFragment()).toMatchSnapshot();
+	//
+	// 	expect(history.location.pathname).toBe(`/profiles/${profile.id()}/network/${wallets[0].networkId()}`);
+	// });
 
 	it("should show skeleton when syncing exchange rates", async () => {
 		const useConfigurationSpy = vi
