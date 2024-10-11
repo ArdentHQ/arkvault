@@ -78,7 +78,7 @@ exports[`SearchRecipient > should call onAction when no address is selected 1`] 
                 data-testid="TableWrapper"
               >
                 <div
-                  class="with-x-padding css-1m6rt2i"
+                  class="css-1m6rt2i"
                   role="table"
                 >
                   <table
@@ -501,7 +501,7 @@ exports[`SearchRecipient > should render a modal 1`] = `
                 data-testid="TableWrapper"
               >
                 <div
-                  class="with-x-padding css-1m6rt2i"
+                  class="css-1m6rt2i"
                   role="table"
                 >
                   <table
@@ -922,7 +922,7 @@ exports[`SearchRecipient > should render a modal with custom title and descripti
                 data-testid="TableWrapper"
               >
                 <div
-                  class="with-x-padding css-1m6rt2i"
+                  class="css-1m6rt2i"
                   role="table"
                 >
                   <table
@@ -1343,7 +1343,7 @@ exports[`SearchRecipient > should render with contact on desktop 1`] = `
                 data-testid="TableWrapper"
               >
                 <div
-                  class="with-x-padding css-1m6rt2i"
+                  class="css-1m6rt2i"
                   role="table"
                 >
                   <table
@@ -1806,7 +1806,7 @@ exports[`SearchRecipient > should render with contact on mobile 1`] = `
                 data-testid="TableWrapper"
               >
                 <div
-                  class="with-x-padding css-1m6rt2i"
+                  class="css-1m6rt2i"
                   role="table"
                 >
                   <table
@@ -1823,7 +1823,7 @@ exports[`SearchRecipient > should render with contact on mobile 1`] = `
                           class="pt-3"
                         >
                           <div
-                            class="flex h-18 w-full cursor-pointer flex-row overflow-hidden rounded-xl bg-theme-primary-100 ring-2 dark:bg-theme-background ring-theme-primary-600 dark:ring-theme-primary-600"
+                            class="flex w-full cursor-pointer flex-row rounded-xl border-2 bg-theme-primary-100 dark:bg-theme-background border-theme-primary-600 dark:border-theme-primary-600"
                             data-testid="WalletListItemMobile--selected"
                             tabindex="0"
                           >
@@ -1857,39 +1857,41 @@ exports[`SearchRecipient > should render with contact on mobile 1`] = `
                               </span>
                             </div>
                             <div
-                              class="flex h-full w-11 items-center justify-center bg-theme-primary-600 dark:bg-theme-primary-600"
+                              class="flex w-11 items-center justify-center rounded-r-lg bg-theme-primary-600 dark:bg-theme-primary-600"
                             >
-                              <div
-                                class="text-theme-primary-50 css-1i4b0eq"
-                                height="20"
-                                width="20"
-                              >
-                                <svg
-                                  id="circle-check-mark"
-                                  viewBox="0 0 20 20"
-                                  x="0"
-                                  xml:space="preserve"
-                                  xmlns="http://www.w3.org/2000/svg"
-                                  y="0"
+                              <div>
+                                <div
+                                  class="text-theme-primary-50 css-1i4b0eq"
+                                  height="20"
+                                  width="20"
                                 >
-                                  <g
-                                    fill="none"
-                                    stroke="currentColor"
-                                    stroke-width="2"
+                                  <svg
+                                    id="circle-check-mark"
+                                    viewBox="0 0 20 20"
+                                    x="0"
+                                    xml:space="preserve"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    y="0"
                                   >
-                                    <circle
-                                      cx="10"
-                                      cy="10"
-                                      r="9"
-                                      stroke-miterlimit="10"
-                                    />
-                                    <path
-                                      d="M13.6 6.5l-5 6.8c-.2.3-.6.4-.9.2l-.1-.1L6.4 12"
-                                      stroke-linecap="round"
-                                      stroke-linejoin="round"
-                                    />
-                                  </g>
-                                </svg>
+                                    <g
+                                      fill="none"
+                                      stroke="currentColor"
+                                      stroke-width="2"
+                                    >
+                                      <circle
+                                        cx="10"
+                                        cy="10"
+                                        r="9"
+                                        stroke-miterlimit="10"
+                                      />
+                                      <path
+                                        d="M13.6 6.5l-5 6.8c-.2.3-.6.4-.9.2l-.1-.1L6.4 12"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                      />
+                                    </g>
+                                  </svg>
+                                </div>
                               </div>
                             </div>
                           </div>
@@ -1986,7 +1988,7 @@ exports[`SearchRecipient > should render with my wallet on desktop 1`] = `
                 data-testid="TableWrapper"
               >
                 <div
-                  class="with-x-padding css-1m6rt2i"
+                  class="css-1m6rt2i"
                   role="table"
                 >
                   <table
@@ -2449,7 +2451,7 @@ exports[`SearchRecipient > should render with my wallet on mobile 1`] = `
                 data-testid="TableWrapper"
               >
                 <div
-                  class="with-x-padding css-1m6rt2i"
+                  class="css-1m6rt2i"
                   role="table"
                 >
                   <table
@@ -2466,7 +2468,7 @@ exports[`SearchRecipient > should render with my wallet on mobile 1`] = `
                           class="pt-3"
                         >
                           <div
-                            class="flex h-18 w-full cursor-pointer flex-row overflow-hidden rounded-xl bg-theme-primary-100 ring-2 dark:bg-theme-background ring-theme-primary-600 dark:ring-theme-primary-600"
+                            class="flex w-full cursor-pointer flex-row rounded-xl border-2 bg-theme-primary-100 dark:bg-theme-background border-theme-primary-600 dark:border-theme-primary-600"
                             data-testid="WalletListItemMobile--selected"
                             tabindex="0"
                           >
@@ -2500,39 +2502,41 @@ exports[`SearchRecipient > should render with my wallet on mobile 1`] = `
                               </span>
                             </div>
                             <div
-                              class="flex h-full w-11 items-center justify-center bg-theme-primary-600 dark:bg-theme-primary-600"
+                              class="flex w-11 items-center justify-center rounded-r-lg bg-theme-primary-600 dark:bg-theme-primary-600"
                             >
-                              <div
-                                class="text-theme-primary-50 css-1i4b0eq"
-                                height="20"
-                                width="20"
-                              >
-                                <svg
-                                  id="circle-check-mark"
-                                  viewBox="0 0 20 20"
-                                  x="0"
-                                  xml:space="preserve"
-                                  xmlns="http://www.w3.org/2000/svg"
-                                  y="0"
+                              <div>
+                                <div
+                                  class="text-theme-primary-50 css-1i4b0eq"
+                                  height="20"
+                                  width="20"
                                 >
-                                  <g
-                                    fill="none"
-                                    stroke="currentColor"
-                                    stroke-width="2"
+                                  <svg
+                                    id="circle-check-mark"
+                                    viewBox="0 0 20 20"
+                                    x="0"
+                                    xml:space="preserve"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    y="0"
                                   >
-                                    <circle
-                                      cx="10"
-                                      cy="10"
-                                      r="9"
-                                      stroke-miterlimit="10"
-                                    />
-                                    <path
-                                      d="M13.6 6.5l-5 6.8c-.2.3-.6.4-.9.2l-.1-.1L6.4 12"
-                                      stroke-linecap="round"
-                                      stroke-linejoin="round"
-                                    />
-                                  </g>
-                                </svg>
+                                    <g
+                                      fill="none"
+                                      stroke="currentColor"
+                                      stroke-width="2"
+                                    >
+                                      <circle
+                                        cx="10"
+                                        cy="10"
+                                        r="9"
+                                        stroke-miterlimit="10"
+                                      />
+                                      <path
+                                        d="M13.6 6.5l-5 6.8c-.2.3-.6.4-.9.2l-.1-.1L6.4 12"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                      />
+                                    </g>
+                                  </svg>
+                                </div>
                               </div>
                             </div>
                           </div>
@@ -2629,7 +2633,7 @@ exports[`SearchRecipient > should render with no alias if the recipient address 
                 data-testid="TableWrapper"
               >
                 <div
-                  class="with-x-padding css-1m6rt2i"
+                  class="css-1m6rt2i"
                   role="table"
                 >
                   <table
@@ -2971,7 +2975,7 @@ exports[`SearchRecipient > should render with selected address 1`] = `
                 data-testid="TableWrapper"
               >
                 <div
-                  class="with-x-padding css-1m6rt2i"
+                  class="css-1m6rt2i"
                   role="table"
                 >
                   <table
@@ -3392,7 +3396,7 @@ exports[`SearchRecipient > should render with selected address on md screen 1`] 
                 data-testid="TableWrapper"
               >
                 <div
-                  class="with-x-padding css-1m6rt2i"
+                  class="css-1m6rt2i"
                   role="table"
                 >
                   <table
@@ -3923,7 +3927,7 @@ exports[`SearchRecipient > should render with selected address on mobile 1`] = `
                 data-testid="TableWrapper"
               >
                 <div
-                  class="with-x-padding css-1m6rt2i"
+                  class="css-1m6rt2i"
                   role="table"
                 >
                   <table
@@ -3940,7 +3944,7 @@ exports[`SearchRecipient > should render with selected address on mobile 1`] = `
                           class="pt-3"
                         >
                           <div
-                            class="flex h-18 w-full cursor-pointer flex-row overflow-hidden rounded-xl bg-theme-primary-100 ring-2 dark:bg-theme-background ring-theme-primary-600 dark:ring-theme-primary-600"
+                            class="flex w-full cursor-pointer flex-row rounded-xl border-2 bg-theme-primary-100 dark:bg-theme-background border-theme-primary-600 dark:border-theme-primary-600"
                             data-testid="WalletListItemMobile--selected"
                             tabindex="0"
                           >
@@ -3974,39 +3978,41 @@ exports[`SearchRecipient > should render with selected address on mobile 1`] = `
                               </span>
                             </div>
                             <div
-                              class="flex h-full w-11 items-center justify-center bg-theme-primary-600 dark:bg-theme-primary-600"
+                              class="flex w-11 items-center justify-center rounded-r-lg bg-theme-primary-600 dark:bg-theme-primary-600"
                             >
-                              <div
-                                class="text-theme-primary-50 css-1i4b0eq"
-                                height="20"
-                                width="20"
-                              >
-                                <svg
-                                  id="circle-check-mark"
-                                  viewBox="0 0 20 20"
-                                  x="0"
-                                  xml:space="preserve"
-                                  xmlns="http://www.w3.org/2000/svg"
-                                  y="0"
+                              <div>
+                                <div
+                                  class="text-theme-primary-50 css-1i4b0eq"
+                                  height="20"
+                                  width="20"
                                 >
-                                  <g
-                                    fill="none"
-                                    stroke="currentColor"
-                                    stroke-width="2"
+                                  <svg
+                                    id="circle-check-mark"
+                                    viewBox="0 0 20 20"
+                                    x="0"
+                                    xml:space="preserve"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    y="0"
                                   >
-                                    <circle
-                                      cx="10"
-                                      cy="10"
-                                      r="9"
-                                      stroke-miterlimit="10"
-                                    />
-                                    <path
-                                      d="M13.6 6.5l-5 6.8c-.2.3-.6.4-.9.2l-.1-.1L6.4 12"
-                                      stroke-linecap="round"
-                                      stroke-linejoin="round"
-                                    />
-                                  </g>
-                                </svg>
+                                    <g
+                                      fill="none"
+                                      stroke="currentColor"
+                                      stroke-width="2"
+                                    >
+                                      <circle
+                                        cx="10"
+                                        cy="10"
+                                        r="9"
+                                        stroke-miterlimit="10"
+                                      />
+                                      <path
+                                        d="M13.6 6.5l-5 6.8c-.2.3-.6.4-.9.2l-.1-.1L6.4 12"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                      />
+                                    </g>
+                                  </svg>
+                                </div>
                               </div>
                             </div>
                           </div>
@@ -4019,7 +4025,7 @@ exports[`SearchRecipient > should render with selected address on mobile 1`] = `
                           class="pt-3"
                         >
                           <div
-                            class="flex h-18 w-full cursor-pointer flex-row overflow-hidden rounded-xl bg-theme-primary-100 ring-2 dark:bg-theme-background ring-theme-primary-100 dark:ring-theme-secondary-800"
+                            class="flex w-full cursor-pointer flex-row rounded-xl border-2 bg-theme-primary-100 dark:bg-theme-background border-theme-primary-100 dark:border-theme-secondary-800"
                             data-testid="WalletListItemMobile"
                             tabindex="0"
                           >
@@ -4053,39 +4059,41 @@ exports[`SearchRecipient > should render with selected address on mobile 1`] = `
                               </span>
                             </div>
                             <div
-                              class="flex h-full w-11 items-center justify-center bg-theme-primary-100 dark:bg-theme-background"
+                              class="flex w-11 items-center justify-center rounded-r-xl bg-theme-primary-100 dark:bg-theme-background"
                             >
-                              <div
-                                class="text-theme-primary-200 dark:text-theme-secondary-800 css-1i4b0eq"
-                                height="20"
-                                width="20"
-                              >
-                                <svg
-                                  id="circle-check-mark"
-                                  viewBox="0 0 20 20"
-                                  x="0"
-                                  xml:space="preserve"
-                                  xmlns="http://www.w3.org/2000/svg"
-                                  y="0"
+                              <div>
+                                <div
+                                  class="text-theme-primary-200 dark:text-theme-secondary-800 css-1i4b0eq"
+                                  height="20"
+                                  width="20"
                                 >
-                                  <g
-                                    fill="none"
-                                    stroke="currentColor"
-                                    stroke-width="2"
+                                  <svg
+                                    id="circle-check-mark"
+                                    viewBox="0 0 20 20"
+                                    x="0"
+                                    xml:space="preserve"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    y="0"
                                   >
-                                    <circle
-                                      cx="10"
-                                      cy="10"
-                                      r="9"
-                                      stroke-miterlimit="10"
-                                    />
-                                    <path
-                                      d="M13.6 6.5l-5 6.8c-.2.3-.6.4-.9.2l-.1-.1L6.4 12"
-                                      stroke-linecap="round"
-                                      stroke-linejoin="round"
-                                    />
-                                  </g>
-                                </svg>
+                                    <g
+                                      fill="none"
+                                      stroke="currentColor"
+                                      stroke-width="2"
+                                    >
+                                      <circle
+                                        cx="10"
+                                        cy="10"
+                                        r="9"
+                                        stroke-miterlimit="10"
+                                      />
+                                      <path
+                                        d="M13.6 6.5l-5 6.8c-.2.3-.6.4-.9.2l-.1-.1L6.4 12"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                      />
+                                    </g>
+                                  </svg>
+                                </div>
                               </div>
                             </div>
                           </div>
