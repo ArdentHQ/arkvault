@@ -29,7 +29,7 @@ export const TransactionDetails = ({
 			<div className="space-y-3 sm:space-y-0">
 				<div className="flex w-full justify-between sm:justify-start">
 					<DetailLabelText className={labelClassName}>{t("COMMON.TIMESTAMP")}</DetailLabelText>
-					<div className="font-semibold">{timestamp.format(format)}</div>
+					<div className="font-semibold leading-5">{timestamp.format(format)}</div>
 				</div>
 
 				<DetailDivider />
@@ -37,7 +37,7 @@ export const TransactionDetails = ({
 				<div className="flex w-full justify-between sm:justify-start">
 					<DetailLabelText className={labelClassName}>{t("COMMON.BLOCK")}</DetailLabelText>
 					{transaction.blockId() && (
-						<Link isExternal to={transaction.explorerLinkForBlock() as string}>
+						<Link isExternal to={transaction.explorerLinkForBlock() as string} className="leading-5">
 							{blockHeight}
 						</Link>
 					)}
@@ -49,8 +49,8 @@ export const TransactionDetails = ({
 
 				<div className="flex w-full justify-between sm:justify-start">
 					<DetailLabelText className={labelClassName}>{t("COMMON.NONCE")}</DetailLabelText>
-					{data.nonce && <div className="font-semibold">{data.nonce}</div>}
-					{!data.nonce && <p className="text-theme-secondary-500">{t("COMMON.NOT_AVAILABLE")}</p>}
+					{data.nonce && <div className="font-semibold leading-5">{data.nonce}</div>}
+					{!data.nonce && <p className="text-theme-secondary-500 leading-5">{t("COMMON.NOT_AVAILABLE")}</p>}
 				</div>
 			</div>
 		</DetailWrapper>
