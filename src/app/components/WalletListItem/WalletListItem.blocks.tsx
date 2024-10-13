@@ -340,10 +340,10 @@ export const RecipientItemMobile: React.FC<RecipientItemMobileProperties> = ({
 		<div
 			data-testid={selected ? "WalletListItemMobile--selected" : "WalletListItemMobile"}
 			className={cn(
-				"flex h-18 w-full cursor-pointer flex-row overflow-hidden rounded-xl bg-theme-primary-100 ring-2 dark:bg-theme-background",
+				"flex w-full cursor-pointer flex-row rounded-xl border-2 bg-theme-primary-100 dark:bg-theme-background",
 				{
-					"ring-theme-primary-100 dark:ring-theme-secondary-800": !selected,
-					"ring-theme-primary-600 dark:ring-theme-primary-600": selected,
+					"border-theme-primary-100 dark:border-theme-secondary-800": !selected,
+					"border-theme-primary-600 dark:border-theme-primary-600": selected,
 				},
 			)}
 			tabIndex={onClick ? 0 : -1}
@@ -362,19 +362,21 @@ export const RecipientItemMobile: React.FC<RecipientItemMobileProperties> = ({
 				{address}
 			</div>
 			<div
-				className={cn("flex h-full w-11 items-center justify-center", {
-					"bg-theme-primary-100 dark:bg-theme-background": !selected,
-					"bg-theme-primary-600 dark:bg-theme-primary-600": selected,
+				className={cn("flex w-11 items-center justify-center", {
+					"rounded-r-lg bg-theme-primary-600 dark:bg-theme-primary-600": selected,
+					"rounded-r-xl bg-theme-primary-100 dark:bg-theme-background": !selected,
 				})}
 			>
-				<Icon
-					className={cn({
-						"text-theme-primary-200 dark:text-theme-secondary-800": !selected,
-						"text-theme-primary-50": selected,
-					})}
-					name="CircleCheckMark"
-					size="lg"
-				/>
+				<div>
+					<Icon
+						className={cn({
+							"text-theme-primary-200 dark:text-theme-secondary-800": !selected,
+							"text-theme-primary-50": selected,
+						})}
+						name="CircleCheckMark"
+						size="lg"
+					/>
+				</div>
 			</div>
 		</div>
 	);
