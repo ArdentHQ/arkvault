@@ -24,10 +24,10 @@ export const TransactionConfirmations = ({
 			{!isConfirmed && (
 				<div
 					data-testid="PendingConfirmationAlert"
-					className="flex items-center space-x-3 rounded-xl border border-theme-warning-200 bg-theme-warning-50 px-3 py-2 dark:border-theme-warning-600 dark:bg-transparent max-sm:text-sm sm:px-6 sm:py-5"
+					className="flex items-center space-x-3 rounded-xl border border-theme-warning-200 bg-theme-warning-50 px-3 py-2 dark:border-theme-warning-600 dark:bg-transparent max-sm:text-sm sm:px-6 sm:py-4 sm:leading-5"
 				>
 					<Spinner color="warning-alt" size="sm" width={3} />
-					<Divider type="vertical" className="text-theme-warning-200 dark:text-theme-secondary-800" />
+					<Divider type="vertical" className="text-theme-warning-200 dark:text-theme-secondary-800 h-5" />
 					<p className="font-semibold text-theme-secondary-700 dark:text-theme-warning-600">
 						{status.value === "isBroadcasted" ? t("TRANSACTION.PENDING.STATUS_TEXT") : status.label}
 					</p>
@@ -37,14 +37,14 @@ export const TransactionConfirmations = ({
 			{isConfirmed && (
 				<div
 					data-testid="TransactionSuccessAlert"
-					className="flex items-center space-x-3 rounded-xl border border-theme-success-200 bg-theme-success-50 px-3 py-2 dark:border-theme-success-600 dark:bg-transparent max-sm:text-sm sm:px-6 sm:py-5"
+					className="flex items-center space-x-3 rounded-xl border border-theme-success-200 bg-theme-success-50 px-3 py-2 dark:border-theme-success-600 dark:bg-transparent max-sm:text-sm sm:px-6 sm:py-4 sm:leading-5"
 				>
 					<div className="flex items-center space-x-2 text-theme-success-700">
-						<Icon name="CheckmarkDouble" size="lg" />
+						<Icon name="CheckmarkDouble" size="lg" className="h-5"/>
 						<p className="font-semibold">{t("COMMON.ALERT.SUCCESS")}</p>
 					</div>
 
-					<Divider type="vertical" className="text-theme-success-200 dark:text-theme-secondary-800" />
+					<Divider type="vertical" className="text-theme-success-200 dark:text-theme-secondary-800 h-5" />
 
 					<p className="font-semibold text-theme-secondary-700 dark:text-theme-success-600">
 						<span>{t("TRANSACTION.CONFIRMATIONS_COUNT", { count: confirmations })} </span>
