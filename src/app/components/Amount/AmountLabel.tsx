@@ -37,7 +37,7 @@ interface AmountLabelProperties {
 	hint?: string;
 	size?: Size;
 	className?: string;
-	textClassName?: string
+	textClassName?: string;
 }
 
 export const AmountLabel: React.VFC<AmountLabelProperties> = ({
@@ -48,7 +48,7 @@ export const AmountLabel: React.VFC<AmountLabelProperties> = ({
 	hint,
 	size,
 	className,
-	textClassName
+	textClassName,
 }) => {
 	let labelColor = "success-bg";
 	let hintClassName =
