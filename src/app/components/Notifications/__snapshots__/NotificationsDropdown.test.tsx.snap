@@ -1186,7 +1186,7 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                               </p>
                             </div>
                             <div
-                              class="text-theme-success-200 dark:text-theme-secondary-800 h-5 css-1aie31u"
+                              class="h-5 text-theme-success-200 dark:text-theme-secondary-800 css-1aie31u"
                               type="vertical"
                             />
                             <p
