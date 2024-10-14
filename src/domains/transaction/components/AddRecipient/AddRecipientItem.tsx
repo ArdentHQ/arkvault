@@ -26,7 +26,7 @@ export const AddRecipientItem: VFC<{
 		>
 			<div className="flex flex-col items-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
 				<div className="flex w-full flex-1 flex-row items-center space-x-4 overflow-auto sm:flex-col sm:items-start sm:space-x-0 sm:space-y-1">
-					<div className="whitespace-nowrap font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 text-sm">
+					<div className="whitespace-nowrap text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700">
 						{t("COMMON.RECIPIENT_#", { count: index + 1 })}
 					</div>
 					<div className="max-w-full overflow-auto sm:w-full">
