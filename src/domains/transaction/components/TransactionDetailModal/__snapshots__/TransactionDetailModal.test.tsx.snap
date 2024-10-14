@@ -785,7 +785,7 @@ exports[`TransactionDetailModal > should render a ipfs modal 1`] = `
                             width="3"
                           />
                           <div
-                            class="text-theme-warning-200 dark:text-theme-secondary-800 h-5 css-1aie31u"
+                            class="h-5 text-theme-warning-200 dark:text-theme-secondary-800 css-1aie31u"
                             type="vertical"
                           />
                           <p
@@ -1517,7 +1517,7 @@ exports[`TransactionDetailModal > should render a magistrate modal 1`] = `
                             width="3"
                           />
                           <div
-                            class="text-theme-warning-200 dark:text-theme-secondary-800 h-5 css-1aie31u"
+                            class="h-5 text-theme-warning-200 dark:text-theme-secondary-800 css-1aie31u"
                             type="vertical"
                           />
                           <p
@@ -1852,7 +1852,7 @@ exports[`TransactionDetailModal > should render a multi payment modal 1`] = `
                               </span>
                             </span>
                             <div
-                              class="hidden sm:block h-5 leading-5"
+                              class="hidden h-5 leading-5 sm:block"
                             >
                               <div
                                 class="border-theme-secondary-300 dark:border-theme-secondary-800 css-3y8nng"
@@ -1860,7 +1860,7 @@ exports[`TransactionDetailModal > should render a multi payment modal 1`] = `
                               />
                             </div>
                             <a
-                              class="ring-focus group inline-block hidden sm:block leading-5 h-5 css-7nwwrh"
+                              class="ring-focus group inline-block hidden h-5 leading-5 sm:block css-7nwwrh"
                               data-ring-focus-margin="-m-1"
                               data-testid="Link"
                               href="https://live.arkscan.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
@@ -2331,7 +2331,7 @@ exports[`TransactionDetailModal > should render a multi payment modal 1`] = `
                             width="3"
                           />
                           <div
-                            class="text-theme-warning-200 dark:text-theme-secondary-800 h-5 css-1aie31u"
+                            class="h-5 text-theme-warning-200 dark:text-theme-secondary-800 css-1aie31u"
                             type="vertical"
                           />
                           <p
@@ -2811,7 +2811,7 @@ exports[`TransactionDetailModal > should render a multi signature modal 1`] = `
                                 Address
                               </div>
                               <div
-                                class="font-semibold max-sm:text-sm leading-5"
+                                class="font-semibold leading-5 max-sm:text-sm"
                               >
                                 <div
                                   class="flex space-x-2"
@@ -3258,7 +3258,7 @@ exports[`TransactionDetailModal > should render a multi signature modal 1`] = `
                             width="3"
                           />
                           <div
-                            class="text-theme-warning-200 dark:text-theme-secondary-800 h-5 css-1aie31u"
+                            class="h-5 text-theme-warning-200 dark:text-theme-secondary-800 css-1aie31u"
                             type="vertical"
                           />
                           <p
@@ -4270,7 +4270,7 @@ exports[`TransactionDetailModal > should render a transfer modal 1`] = `
                             width="3"
                           />
                           <div
-                            class="text-theme-warning-200 dark:text-theme-secondary-800 h-5 css-1aie31u"
+                            class="h-5 text-theme-warning-200 dark:text-theme-secondary-800 css-1aie31u"
                             type="vertical"
                           />
                           <p
@@ -5076,7 +5076,7 @@ exports[`TransactionDetailModal > should render a transfer modal with memo 1`] =
                             width="3"
                           />
                           <div
-                            class="text-theme-warning-200 dark:text-theme-secondary-800 h-5 css-1aie31u"
+                            class="h-5 text-theme-warning-200 dark:text-theme-secondary-800 css-1aie31u"
                             type="vertical"
                           />
                           <p
@@ -5808,7 +5808,7 @@ exports[`TransactionDetailModal > should render an unlock tokens modal 1`] = `
                             width="3"
                           />
                           <div
-                            class="text-theme-warning-200 dark:text-theme-secondary-800 h-5 css-1aie31u"
+                            class="h-5 text-theme-warning-200 dark:text-theme-secondary-800 css-1aie31u"
                             type="vertical"
                           />
                           <p

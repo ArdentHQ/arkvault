@@ -786,7 +786,7 @@ exports[`MultiSignatureDetail > should not broadcast if wallet is not ready to d
                                     width="3"
                                   />
                                   <div
-                                    class="text-theme-warning-200 dark:text-theme-secondary-800 h-5 css-1aie31u"
+                                    class="h-5 text-theme-warning-200 dark:text-theme-secondary-800 css-1aie31u"
                                     type="vertical"
                                   />
                                   <p

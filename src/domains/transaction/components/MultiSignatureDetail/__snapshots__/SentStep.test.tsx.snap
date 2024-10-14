@@ -415,7 +415,7 @@ exports[`Multisignature Detail Sent Step > should render sent step %s 1`] = `
                         Address
                       </div>
                       <div
-                        class="font-semibold max-sm:text-sm leading-5"
+                        class="font-semibold leading-5 max-sm:text-sm"
                       >
                         <div
                           class="flex space-x-2"
@@ -864,7 +864,7 @@ exports[`Multisignature Detail Sent Step > should render sent step %s 1`] = `
                     width="3"
                   />
                   <div
-                    class="text-theme-warning-200 dark:text-theme-secondary-800 h-5 css-1aie31u"
+                    class="h-5 text-theme-warning-200 dark:text-theme-secondary-800 css-1aie31u"
                     type="vertical"
                   />
                   <p
