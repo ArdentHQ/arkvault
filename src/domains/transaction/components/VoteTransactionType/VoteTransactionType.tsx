@@ -7,7 +7,7 @@ import { Label } from "@/app/components/Label";
 
 type VoteRegistryItem = Contracts.VoteRegistryItem;
 
-function getVoteCategory(votes: VoteRegistryItem[], unvotes: VoteRegistryItem[]) {
+export function getVoteCategory(votes: VoteRegistryItem[], unvotes: VoteRegistryItem[]): "swap" | "vote" | "unvote" {
 	if (votes.length > 0 && unvotes.length > 0) {
 		return "swap";
 	}

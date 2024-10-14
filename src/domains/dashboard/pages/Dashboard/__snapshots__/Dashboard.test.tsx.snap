@@ -1646,7 +1646,7 @@ exports[`Dashboard > should render 1`] = `
                                   class="relative grow leading-[17px] sm:leading-5 text-left"
                                 >
                                   <span
-                                    class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                                    class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 font-semibold text-sm absolute w-full"
                                     data-testid="Address__address"
                                   >
                                     D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -1810,7 +1810,7 @@ exports[`Dashboard > should render 1`] = `
                                   class="relative grow leading-[17px] sm:leading-5 text-left"
                                 >
                                   <span
-                                    class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                                    class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 font-semibold text-sm absolute w-full"
                                     data-testid="Address__address"
                                   >
                                     D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -1974,7 +1974,7 @@ exports[`Dashboard > should render 1`] = `
                                   class="relative grow leading-[17px] sm:leading-5 text-left"
                                 >
                                   <span
-                                    class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                                    class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 font-semibold text-sm absolute w-full"
                                     data-testid="Address__address"
                                   >
                                     D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -2138,7 +2138,7 @@ exports[`Dashboard > should render 1`] = `
                                   class="relative grow leading-[17px] sm:leading-5 text-left"
                                 >
                                   <span
-                                    class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                                    class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 font-semibold text-sm absolute w-full"
                                     data-testid="Address__address"
                                   >
                                     D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax

@@ -843,7 +843,7 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                                   class="flex h-full items-center space-x-1"
                                 >
                                   <span
-                                    class="whitespace-nowrap text-sm"
+                                    class="whitespace-nowrap text-sm text-[1rem]"
                                     data-testid="Amount"
                                   >
                                     - 1 DARK

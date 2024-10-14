@@ -558,7 +558,7 @@ exports[`Multisignature Detail Sent Step > should render sent step %s 1`] = `
                         class="flex h-full items-center space-x-1"
                       >
                         <span
-                          class="whitespace-nowrap text-sm"
+                          class="whitespace-nowrap text-sm text-[1rem]"
                           data-testid="Amount"
                         >
                           - 100 DARK

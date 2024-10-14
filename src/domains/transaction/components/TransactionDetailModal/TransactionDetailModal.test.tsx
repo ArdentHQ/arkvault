@@ -320,7 +320,7 @@ describe("TransactionDetailModal", () => {
 			},
 		);
 
-		expect(screen.getByTestId("Modal__inner")).toHaveTextContent(translations.MODAL_SECOND_SIGNATURE_DETAIL.TITLE);
+		expect(screen.getByTestId("Modal__inner")).toHaveTextContent(translations.TRANSACTION_TYPES.SECOND_SIGNATURE);
 	});
 
 	it("should render a magistrate modal", () => {

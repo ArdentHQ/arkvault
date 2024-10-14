@@ -140,7 +140,7 @@ exports[`TransactionDetailModal > should render a ipfs modal 1`] = `
                       </span>
                     </button>
                     <button
-                      class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 p-2"
+                      class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 p-2 bg-transparent dark:bg-theme-secondary-800 hover:border-transparent border-theme-secondary-300 dark:border-transparent border"
                       data-testid="explorer-link"
                       disabled=""
                       type="button"
@@ -479,7 +479,7 @@ exports[`TransactionDetailModal > should render a ipfs modal 1`] = `
                                 class="flex h-full items-center space-x-1"
                               >
                                 <span
-                                  class="whitespace-nowrap text-sm"
+                                  class="whitespace-nowrap text-sm text-[1rem]"
                                   data-testid="Amount"
                                 >
                                   - 100 DARK
@@ -946,7 +946,7 @@ exports[`TransactionDetailModal > should render a magistrate modal 1`] = `
                       </span>
                     </button>
                     <button
-                      class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 p-2"
+                      class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 p-2 bg-transparent dark:bg-theme-secondary-800 hover:border-transparent border-theme-secondary-300 dark:border-transparent border"
                       data-testid="explorer-link"
                       disabled=""
                       type="button"
@@ -1211,7 +1211,7 @@ exports[`TransactionDetailModal > should render a magistrate modal 1`] = `
                                 class="flex h-full items-center space-x-1"
                               >
                                 <span
-                                  class="whitespace-nowrap text-sm"
+                                  class="whitespace-nowrap text-sm text-[1rem]"
                                   data-testid="Amount"
                                 >
                                   - 100 DARK
@@ -1678,7 +1678,7 @@ exports[`TransactionDetailModal > should render a multi payment modal 1`] = `
                       </span>
                     </button>
                     <button
-                      class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 p-2"
+                      class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 p-2 bg-transparent dark:bg-theme-secondary-800 hover:border-transparent border-theme-secondary-300 dark:border-transparent border"
                       data-testid="explorer-link"
                       disabled=""
                       type="button"
@@ -2025,7 +2025,7 @@ exports[`TransactionDetailModal > should render a multi payment modal 1`] = `
                                 class="flex h-full items-center space-x-1"
                               >
                                 <span
-                                  class="whitespace-nowrap text-sm"
+                                  class="whitespace-nowrap text-sm text-[1rem]"
                                   data-testid="Amount"
                                 >
                                   - 100 DARK
@@ -2492,7 +2492,7 @@ exports[`TransactionDetailModal > should render a multi signature modal 1`] = `
                       </span>
                     </button>
                     <button
-                      class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 p-2"
+                      class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 p-2 bg-transparent dark:bg-theme-secondary-800 hover:border-transparent border-theme-secondary-300 dark:border-transparent border"
                       data-testid="explorer-link"
                       disabled=""
                       type="button"
@@ -2952,7 +2952,7 @@ exports[`TransactionDetailModal > should render a multi signature modal 1`] = `
                                 class="flex h-full items-center space-x-1"
                               >
                                 <span
-                                  class="whitespace-nowrap text-sm"
+                                  class="whitespace-nowrap text-sm text-[1rem]"
                                   data-testid="Amount"
                                 >
                                   - 100 DARK
@@ -3625,7 +3625,7 @@ exports[`TransactionDetailModal > should render a transfer modal 1`] = `
                       </span>
                     </button>
                     <button
-                      class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 p-2"
+                      class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 p-2 bg-transparent dark:bg-theme-secondary-800 hover:border-transparent border-theme-secondary-300 dark:border-transparent border"
                       data-testid="explorer-link"
                       disabled=""
                       type="button"
@@ -3964,7 +3964,7 @@ exports[`TransactionDetailModal > should render a transfer modal 1`] = `
                                 class="flex h-full items-center space-x-1"
                               >
                                 <span
-                                  class="whitespace-nowrap text-sm"
+                                  class="whitespace-nowrap text-sm text-[1rem]"
                                   data-testid="Amount"
                                 >
                                   - 100 DARK
@@ -4431,7 +4431,7 @@ exports[`TransactionDetailModal > should render a transfer modal with memo 1`] =
                       </span>
                     </button>
                     <button
-                      class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 p-2"
+                      class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 p-2 bg-transparent dark:bg-theme-secondary-800 hover:border-transparent border-theme-secondary-300 dark:border-transparent border"
                       data-testid="explorer-link"
                       disabled=""
                       type="button"
@@ -4770,7 +4770,7 @@ exports[`TransactionDetailModal > should render a transfer modal with memo 1`] =
                                 class="flex h-full items-center space-x-1"
                               >
                                 <span
-                                  class="whitespace-nowrap text-sm"
+                                  class="whitespace-nowrap text-sm text-[1rem]"
                                   data-testid="Amount"
                                 >
                                   - 100 DARK
@@ -5237,7 +5237,7 @@ exports[`TransactionDetailModal > should render an unlock tokens modal 1`] = `
                       </span>
                     </button>
                     <button
-                      class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 p-2"
+                      class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 p-2 bg-transparent dark:bg-theme-secondary-800 hover:border-transparent border-theme-secondary-300 dark:border-transparent border"
                       data-testid="explorer-link"
                       disabled=""
                       type="button"
@@ -5502,7 +5502,7 @@ exports[`TransactionDetailModal > should render an unlock tokens modal 1`] = `
                                 class="flex h-full items-center space-x-1"
                               >
                                 <span
-                                  class="whitespace-nowrap text-sm"
+                                  class="whitespace-nowrap text-sm text-[1rem]"
                                   data-testid="Amount"
                                 >
                                   - 100 DARK
