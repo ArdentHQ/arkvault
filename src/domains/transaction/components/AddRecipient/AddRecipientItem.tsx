@@ -26,7 +26,7 @@ export const AddRecipientItem: VFC<{
 		>
 			<div className="flex flex-col items-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
 				<div className="flex w-full flex-1 flex-row items-center space-x-4 overflow-auto sm:flex-col sm:items-start sm:space-x-0 sm:space-y-1">
-					<div className="whitespace-nowrap font-semibold text-theme-secondary-500 dark:text-theme-secondary-700">
+					<div className="whitespace-nowrap font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 text-sm">
 						{t("COMMON.RECIPIENT_#", { count: index + 1 })}
 					</div>
 					<div className="max-w-full overflow-auto sm:w-full">
@@ -44,7 +44,7 @@ export const AddRecipientItem: VFC<{
 								<span className="sm:hidden">{t("COMMON.AMOUNT")}</span>
 							</>
 						) : (
-							<span>{t("COMMON.AMOUNT")}</span>
+							<span className="text-sm">{t("COMMON.AMOUNT")}</span>
 						)}
 					</div>
 					<div className="flex flex-1 justify-end font-semibold text-theme-secondary-700 dark:text-theme-secondary-200 sm:text-theme-secondary-900">
