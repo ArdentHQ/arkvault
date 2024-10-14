@@ -21,7 +21,7 @@ exports[`VotesHeader > should render a different title if on select delegate ste
           class="group"
         >
           <button
-            class="ring-focus css-1r0gl86"
+            class="ring-focus css-14zm422"
             type="button"
           >
             <div
@@ -105,7 +105,7 @@ exports[`VotesHeader > should render a different title if on select delegate ste
               class="group"
             >
               <button
-                class="ring-focus -mr-2.5 px-2.5 css-vthdh6"
+                class="ring-focus -mr-2.5 px-2.5 css-15d5iox"
               >
                 <div
                   class="css-1i4b0eq"
@@ -186,7 +186,7 @@ exports[`VotesHeader > should render responsive (md) 1`] = `
                 class="group"
               >
                 <button
-                  class="ring-focus css-1r0gl86"
+                  class="ring-focus css-14zm422"
                   type="button"
                 >
                   <div
@@ -270,7 +270,7 @@ exports[`VotesHeader > should render responsive (md) 1`] = `
                     class="group"
                   >
                     <button
-                      class="ring-focus css-1r0gl86"
+                      class="ring-focus css-14zm422"
                     >
                       <div
                         class="css-1i4b0eq"
@@ -332,7 +332,7 @@ exports[`VotesHeader > should render responsive (xs) 1`] = `
           class="group"
         >
           <button
-            class="ring-focus css-1r0gl86"
+            class="ring-focus css-14zm422"
             type="button"
           >
             <div
@@ -416,7 +416,7 @@ exports[`VotesHeader > should render responsive (xs) 1`] = `
               class="group"
             >
               <button
-                class="ring-focus -mr-2.5 px-2.5 css-vthdh6"
+                class="ring-focus -mr-2.5 px-2.5 css-15d5iox"
               >
                 <div
                   class="css-1i4b0eq"

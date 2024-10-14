@@ -13,7 +13,7 @@ exports[`Add Recipient item > should render with exchange amount 1`] = `
         class="flex w-full flex-1 flex-row items-center space-x-4 overflow-auto sm:flex-col sm:items-start sm:space-x-0 sm:space-y-1"
       >
         <div
-          class="whitespace-nowrap font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+          class="whitespace-nowrap text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
         >
           Recipient #2
         </div>
@@ -144,7 +144,7 @@ exports[`Add Recipient item > should render without exchange amount 1`] = `
         class="flex w-full flex-1 flex-row items-center space-x-4 overflow-auto sm:flex-col sm:items-start sm:space-x-0 sm:space-y-1"
       >
         <div
-          class="whitespace-nowrap font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+          class="whitespace-nowrap text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
         >
           Recipient #2
         </div>
@@ -180,7 +180,9 @@ exports[`Add Recipient item > should render without exchange amount 1`] = `
         <div
           class="whitespace-nowrap font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
         >
-          <span>
+          <span
+            class="text-sm"
+          >
             Amount
           </span>
         </div>

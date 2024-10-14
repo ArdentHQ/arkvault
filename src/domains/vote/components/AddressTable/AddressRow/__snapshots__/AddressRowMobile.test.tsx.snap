@@ -103,14 +103,14 @@ exports[`AddressRowMobile > should emit action on select button 1`] = `
                       class="flex flex-1 justify-end overflow-hidden"
                     >
                       <a
-                        class="ring-focus group inline-block flex w-full items-center [&_svg]:hidden css-7nwwrh"
+                        class="ring-focus group/inner inline-block flex w-full items-center [&_svg]:hidden css-7nwwrh"
                         data-ring-focus-margin="-m-1"
                         data-testid="Link"
                         href="https://test.arkscan.io/wallets/D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
                         rel="noopener noreferrer"
                       >
                         <span
-                          class="css-170792"
+                          class="css-bxx244"
                         >
                           <div
                             class="flex w-full items-center"
@@ -316,14 +316,14 @@ exports[`AddressRowMobile > should render for a multisignature wallet 1`] = `
                       class="flex flex-1 justify-end overflow-hidden"
                     >
                       <a
-                        class="ring-focus group inline-block flex w-full items-center [&_svg]:hidden css-7nwwrh"
+                        class="ring-focus group/inner inline-block flex w-full items-center [&_svg]:hidden css-7nwwrh"
                         data-ring-focus-margin="-m-1"
                         data-testid="Link"
                         href="https://test.arkscan.io/wallets/D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
                         rel="noopener noreferrer"
                       >
                         <span
-                          class="css-170792"
+                          class="css-bxx244"
                         >
                           <div
                             class="flex w-full items-center"
@@ -527,14 +527,14 @@ exports[`AddressRowMobile > should render in 375 screen width 1`] = `
                       class="flex flex-1 justify-end overflow-hidden"
                     >
                       <a
-                        class="ring-focus group inline-block flex w-full items-center [&_svg]:hidden css-7nwwrh"
+                        class="ring-focus group/inner inline-block flex w-full items-center [&_svg]:hidden css-7nwwrh"
                         data-ring-focus-margin="-m-1"
                         data-testid="Link"
                         href=""
                         rel="noopener noreferrer"
                       >
                         <span
-                          class="css-170792"
+                          class="css-bxx244"
                         >
                           <div
                             class="flex w-full items-center"
@@ -739,14 +739,14 @@ exports[`AddressRowMobile > should render in 420 screen width 1`] = `
                       class="flex flex-1 justify-end overflow-hidden"
                     >
                       <a
-                        class="ring-focus group inline-block flex w-full items-center [&_svg]:hidden css-7nwwrh"
+                        class="ring-focus group/inner inline-block flex w-full items-center [&_svg]:hidden css-7nwwrh"
                         data-ring-focus-margin="-m-1"
                         data-testid="Link"
                         href=""
                         rel="noopener noreferrer"
                       >
                         <span
-                          class="css-170792"
+                          class="css-bxx244"
                         >
                           <div
                             class="flex w-full items-center"
@@ -951,14 +951,14 @@ exports[`AddressRowMobile > should render when the maximum votes is greater than
                       class="flex flex-1 justify-end overflow-hidden"
                     >
                       <a
-                        class="ring-focus group inline-block flex w-full items-center [&_svg]:hidden css-7nwwrh"
+                        class="ring-focus group/inner inline-block flex w-full items-center [&_svg]:hidden css-7nwwrh"
                         data-ring-focus-margin="-m-1"
                         data-testid="Link"
                         href=""
                         rel="noopener noreferrer"
                       >
                         <span
-                          class="css-170792"
+                          class="css-bxx244"
                         >
                           <div
                             class="flex w-full items-center"
@@ -1162,14 +1162,14 @@ exports[`AddressRowMobile > should render when the wallet has many votes 1`] = `
                       class="flex flex-1 justify-end overflow-hidden"
                     >
                       <a
-                        class="ring-focus group inline-block flex w-full items-center [&_svg]:hidden css-7nwwrh"
+                        class="ring-focus group/inner inline-block flex w-full items-center [&_svg]:hidden css-7nwwrh"
                         data-ring-focus-margin="-m-1"
                         data-testid="Link"
                         href=""
                         rel="noopener noreferrer"
                       >
                         <span
-                          class="css-170792"
+                          class="css-bxx244"
                         >
                           <div
                             class="flex w-full items-center"
@@ -1373,14 +1373,14 @@ exports[`AddressRowMobile > should render when wallet hasn't voted 1`] = `
                       class="flex flex-1 justify-end overflow-hidden"
                     >
                       <a
-                        class="ring-focus group inline-block flex w-full items-center [&_svg]:hidden css-7nwwrh"
+                        class="ring-focus group/inner inline-block flex w-full items-center [&_svg]:hidden css-7nwwrh"
                         data-ring-focus-margin="-m-1"
                         data-testid="Link"
                         href="https://test.arkscan.io/wallets/D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
                         rel="noopener noreferrer"
                       >
                         <span
-                          class="css-170792"
+                          class="css-bxx244"
                         >
                           <div
                             class="flex w-full items-center"
@@ -1708,14 +1708,14 @@ exports[`AddressRowMobile > should render when wallet not found for votes 1`] = 
                       class="flex flex-1 justify-end overflow-hidden"
                     >
                       <a
-                        class="ring-focus group inline-block flex w-full items-center [&_svg]:hidden css-7nwwrh"
+                        class="ring-focus group/inner inline-block flex w-full items-center [&_svg]:hidden css-7nwwrh"
                         data-ring-focus-margin="-m-1"
                         data-testid="Link"
                         href="https://test.arkscan.io/wallets/D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
                         rel="noopener noreferrer"
                       >
                         <span
-                          class="css-170792"
+                          class="css-bxx244"
                         >
                           <div
                             class="flex w-full items-center"
@@ -2162,14 +2162,14 @@ exports[`AddressRowMobile > should render with active delegate 1`] = `
                       class="flex flex-1 justify-end overflow-hidden"
                     >
                       <a
-                        class="ring-focus group inline-block flex w-full items-center [&_svg]:hidden css-7nwwrh"
+                        class="ring-focus group/inner inline-block flex w-full items-center [&_svg]:hidden css-7nwwrh"
                         data-ring-focus-margin="-m-1"
                         data-testid="Link"
                         href=""
                         rel="noopener noreferrer"
                       >
                         <span
-                          class="css-170792"
+                          class="css-bxx244"
                         >
                           <div
                             class="flex w-full items-center"
@@ -2373,14 +2373,14 @@ exports[`AddressRowMobile > should render with resigned delegate 1`] = `
                       class="flex flex-1 justify-end overflow-hidden"
                     >
                       <a
-                        class="ring-focus group inline-block flex w-full items-center [&_svg]:hidden css-7nwwrh"
+                        class="ring-focus group/inner inline-block flex w-full items-center [&_svg]:hidden css-7nwwrh"
                         data-ring-focus-margin="-m-1"
                         data-testid="Link"
                         href=""
                         rel="noopener noreferrer"
                       >
                         <span
-                          class="css-170792"
+                          class="css-bxx244"
                         >
                           <div
                             class="flex w-full items-center"
@@ -2584,14 +2584,14 @@ exports[`AddressRowMobile > should render with standby delegate 1`] = `
                       class="flex flex-1 justify-end overflow-hidden"
                     >
                       <a
-                        class="ring-focus group inline-block flex w-full items-center [&_svg]:hidden css-7nwwrh"
+                        class="ring-focus group/inner inline-block flex w-full items-center [&_svg]:hidden css-7nwwrh"
                         data-ring-focus-margin="-m-1"
                         data-testid="Link"
                         href=""
                         rel="noopener noreferrer"
                       >
                         <span
-                          class="css-170792"
+                          class="css-bxx244"
                         >
                           <div
                             class="flex w-full items-center"
