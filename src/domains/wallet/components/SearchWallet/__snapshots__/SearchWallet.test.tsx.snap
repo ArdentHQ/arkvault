@@ -201,7 +201,7 @@ exports[`SearchWallet uses fiat value = false > should render 1`] = `
                                   class="group"
                                 >
                                   <button
-                                    class="ring-focus css-vthdh6"
+                                    class="ring-focus css-15d5iox"
                                     type="button"
                                   >
                                     <div
@@ -616,7 +616,7 @@ exports[`SearchWallet uses fiat value = false > should render compact on md scre
                                   class="group"
                                 >
                                   <button
-                                    class="ring-focus css-vthdh6"
+                                    class="ring-focus css-15d5iox"
                                     type="button"
                                   >
                                     <div
@@ -1031,7 +1031,7 @@ exports[`SearchWallet uses fiat value = false > should render compact with selec
                                   class="group"
                                 >
                                   <button
-                                    class="ring-focus css-vthdh6"
+                                    class="ring-focus css-15d5iox"
                                     type="button"
                                   >
                                     <div
@@ -2389,7 +2389,7 @@ exports[`SearchWallet uses fiat value = false > should render with incompatible 
                                   class="group"
                                 >
                                   <button
-                                    class="ring-focus css-vthdh6"
+                                    class="ring-focus css-15d5iox"
                                     type="button"
                                   >
                                     <div
@@ -2729,7 +2729,7 @@ exports[`SearchWallet uses fiat value = false > should render with selected addr
                                   class="group"
                                 >
                                   <button
-                                    class="ring-focus css-vthdh6"
+                                    class="ring-focus css-15d5iox"
                                     type="button"
                                   >
                                     <div
@@ -3142,7 +3142,7 @@ exports[`SearchWallet uses fiat value = false > should render with the default e
                                   class="group"
                                 >
                                   <button
-                                    class="ring-focus css-vthdh6"
+                                    class="ring-focus css-15d5iox"
                                     type="button"
                                   >
                                     <div
@@ -3603,7 +3603,7 @@ exports[`SearchWallet uses fiat value = true > should render 1`] = `
                                   class="group"
                                 >
                                   <button
-                                    class="ring-focus css-vthdh6"
+                                    class="ring-focus css-15d5iox"
                                     type="button"
                                   >
                                     <div
@@ -4092,7 +4092,7 @@ exports[`SearchWallet uses fiat value = true > should render compact on md scree
                                   class="group"
                                 >
                                   <button
-                                    class="ring-focus css-vthdh6"
+                                    class="ring-focus css-15d5iox"
                                     type="button"
                                   >
                                     <div
@@ -4581,7 +4581,7 @@ exports[`SearchWallet uses fiat value = true > should render compact with select
                                   class="group"
                                 >
                                   <button
-                                    class="ring-focus css-vthdh6"
+                                    class="ring-focus css-15d5iox"
                                     type="button"
                                   >
                                     <div
@@ -6013,7 +6013,7 @@ exports[`SearchWallet uses fiat value = true > should render with incompatible l
                                   class="group"
                                 >
                                   <button
-                                    class="ring-focus css-vthdh6"
+                                    class="ring-focus css-15d5iox"
                                     type="button"
                                   >
                                     <div
@@ -6413,7 +6413,7 @@ exports[`SearchWallet uses fiat value = true > should render with selected addre
                                   class="group"
                                 >
                                   <button
-                                    class="ring-focus css-vthdh6"
+                                    class="ring-focus css-15d5iox"
                                     type="button"
                                   >
                                     <div
@@ -6900,7 +6900,7 @@ exports[`SearchWallet uses fiat value = true > should render with the default ex
                                   class="group"
                                 >
                                   <button
-                                    class="ring-focus css-vthdh6"
+                                    class="ring-focus css-15d5iox"
                                     type="button"
                                   >
                                     <div

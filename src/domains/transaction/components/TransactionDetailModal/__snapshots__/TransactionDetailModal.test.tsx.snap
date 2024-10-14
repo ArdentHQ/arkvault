@@ -140,7 +140,7 @@ exports[`TransactionDetailModal > should render a ipfs modal 1`] = `
                       </span>
                     </button>
                     <button
-                      class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 p-2 bg-transparent dark:bg-theme-secondary-800 hover:border-transparent border-theme-secondary-300 dark:border-transparent border"
+                      class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 border border-theme-secondary-300 bg-transparent p-2 hover:border-transparent dark:border-transparent dark:bg-theme-secondary-800"
                       data-testid="explorer-link"
                       disabled=""
                       type="button"
@@ -207,7 +207,7 @@ exports[`TransactionDetailModal > should render a ipfs modal 1`] = `
                         data-testid="DetailLabel"
                       >
                         <div
-                          class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                          class="no-ligatures text-md min-w-24 font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500"
                           data-testid="DetailLabelText"
                         >
                           Addressing
@@ -279,7 +279,7 @@ exports[`TransactionDetailModal > should render a ipfs modal 1`] = `
                           </div>
                         </div>
                         <div
-                          class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3"
+                          class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3 [.condensed_&]:leading-3"
                         >
                           <div
                             class="w-full [.condensed_&]:hidden"
@@ -387,7 +387,7 @@ exports[`TransactionDetailModal > should render a ipfs modal 1`] = `
                           data-testid="DetailLabel"
                         >
                           <div
-                            class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                            class="no-ligatures text-md min-w-24 font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500"
                             data-testid="DetailLabelText"
                           >
                             Transaction Type
@@ -403,13 +403,13 @@ exports[`TransactionDetailModal > should render a ipfs modal 1`] = `
                               class="flex w-full justify-between sm:justify-start"
                             >
                               <div
-                                class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                                class="no-ligatures text-md min-w-24 font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500"
                                 data-testid="DetailLabelText"
                               >
                                 Category
                               </div>
                               <div
-                                class="css-1chzvd4"
+                                class="css-1p04us5"
                                 color="neutral"
                               >
                                 IPFS
@@ -449,7 +449,7 @@ exports[`TransactionDetailModal > should render a ipfs modal 1`] = `
                         data-testid="DetailLabel"
                       >
                         <div
-                          class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                          class="no-ligatures text-md min-w-24 font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500"
                           data-testid="DetailLabelText"
                         >
                           Transaction Summary
@@ -465,13 +465,13 @@ exports[`TransactionDetailModal > should render a ipfs modal 1`] = `
                             class="flex w-full justify-between sm:justify-start"
                           >
                             <div
-                              class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
+                              class="no-ligatures text-md font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
                               data-testid="DetailLabelText"
                             >
                               Amount
                             </div>
                             <div
-                              class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
+                              class="flex h-full items-center justify-center rounded px-1.5 text-base leading-5 css-xqt0aw"
                               color="danger-bg"
                               data-testid="AmountLabel__wrapper"
                             >
@@ -479,7 +479,7 @@ exports[`TransactionDetailModal > should render a ipfs modal 1`] = `
                                 class="flex h-full items-center space-x-1"
                               >
                                 <span
-                                  class="whitespace-nowrap text-sm text-[1rem]"
+                                  class="whitespace-nowrap text-sm"
                                   data-testid="Amount"
                                 >
                                   - 100 DARK
@@ -488,7 +488,7 @@ exports[`TransactionDetailModal > should render a ipfs modal 1`] = `
                             </div>
                           </div>
                           <div
-                            class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3"
+                            class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3 [.condensed_&]:leading-3"
                           >
                             <div
                               class="w-full [.condensed_&]:hidden"
@@ -503,20 +503,20 @@ exports[`TransactionDetailModal > should render a ipfs modal 1`] = `
                             class="flex w-full justify-between sm:justify-start"
                           >
                             <div
-                              class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
+                              class="no-ligatures text-md font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
                               data-testid="DetailLabelText"
                             >
                               Fee
                             </div>
                             <span
-                              class="whitespace-nowrap font-semibold"
+                              class="whitespace-nowrap font-semibold leading-5"
                               data-testid="Amount"
                             >
                               21 DARK
                             </span>
                           </div>
                           <div
-                            class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3"
+                            class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3 [.condensed_&]:leading-3"
                           >
                             <div
                               class="w-full [.condensed_&]:hidden"
@@ -531,13 +531,13 @@ exports[`TransactionDetailModal > should render a ipfs modal 1`] = `
                             class="flex w-full justify-between sm:justify-start"
                           >
                             <div
-                              class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
+                              class="no-ligatures text-md font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
                               data-testid="DetailLabelText"
                             >
                               Value
                             </div>
                             <span
-                              class="whitespace-nowrap font-semibold"
+                              class="whitespace-nowrap font-semibold leading-5"
                               data-testid="Amount"
                             >
                               0 BTC
@@ -576,7 +576,7 @@ exports[`TransactionDetailModal > should render a ipfs modal 1`] = `
                         data-testid="DetailLabel"
                       >
                         <div
-                          class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                          class="no-ligatures text-md min-w-24 font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500"
                           data-testid="DetailLabelText"
                         >
                           Transaction Details
@@ -592,19 +592,19 @@ exports[`TransactionDetailModal > should render a ipfs modal 1`] = `
                             class="flex w-full justify-between sm:justify-start"
                           >
                             <div
-                              class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
+                              class="no-ligatures text-md font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
                               data-testid="DetailLabelText"
                             >
                               Timestamp
                             </div>
                             <div
-                              class="font-semibold"
+                              class="font-semibold leading-5"
                             >
                               31.07.2020 4:34 PM
                             </div>
                           </div>
                           <div
-                            class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3"
+                            class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3 [.condensed_&]:leading-3"
                           >
                             <div
                               class="w-full [.condensed_&]:hidden"
@@ -619,20 +619,20 @@ exports[`TransactionDetailModal > should render a ipfs modal 1`] = `
                             class="flex w-full justify-between sm:justify-start"
                           >
                             <div
-                              class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
+                              class="no-ligatures text-md font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
                               data-testid="DetailLabelText"
                             >
                               Block
                             </div>
                             <a
-                              class="ring-focus group inline-block css-7nwwrh"
+                              class="ring-focus group/inner inline-block h-5 leading-5 css-7nwwrh"
                               data-ring-focus-margin="-m-1"
                               data-testid="Link"
                               href="https://live.arkscan.io/blocks/71fd1a494ded5430586f4dd1c79c3ac77bf38120e868c8f8980972b8075d67e9"
                               rel="noopener noreferrer"
                             >
                               <span
-                                class="css-170792"
+                                class="css-bxx244"
                               />
                               <div
                                 class="mb-[3px] shrink-0 align-middle duration-200 css-v0ob3f"
@@ -661,7 +661,7 @@ exports[`TransactionDetailModal > should render a ipfs modal 1`] = `
                             </a>
                           </div>
                           <div
-                            class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3"
+                            class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3 [.condensed_&]:leading-3"
                           >
                             <div
                               class="w-full [.condensed_&]:hidden"
@@ -676,13 +676,13 @@ exports[`TransactionDetailModal > should render a ipfs modal 1`] = `
                             class="flex w-full justify-between sm:justify-start"
                           >
                             <div
-                              class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
+                              class="no-ligatures text-md font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
                               data-testid="DetailLabelText"
                             >
                               Nonce
                             </div>
                             <p
-                              class="text-theme-secondary-500"
+                              class="leading-5 text-theme-secondary-500"
                             >
                               N/A
                             </p>
@@ -720,7 +720,7 @@ exports[`TransactionDetailModal > should render a ipfs modal 1`] = `
                         data-testid="DetailLabel"
                       >
                         <div
-                          class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                          class="no-ligatures text-md min-w-24 font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500"
                           data-testid="DetailLabelText"
                         >
                           Memo (SmartBridge)
@@ -729,7 +729,9 @@ exports[`TransactionDetailModal > should render a ipfs modal 1`] = `
                       <div
                         class="w-full break-words rounded-lg border-theme-secondary-300 p-3 dark:border-theme-secondary-800 sm:border sm:px-6 sm:py-5 [.condensed_&]:sm:py-4 mt-0 sm:mt-2"
                       >
-                        <p>
+                        <p
+                          class="leading-5"
+                        >
                           Test
                         </p>
                       </div>
@@ -761,7 +763,7 @@ exports[`TransactionDetailModal > should render a ipfs modal 1`] = `
                       data-testid="DetailLabel"
                     >
                       <div
-                        class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                        class="no-ligatures text-md min-w-24 font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500"
                         data-testid="DetailLabelText"
                       >
                         Confirmations
@@ -774,7 +776,7 @@ exports[`TransactionDetailModal > should render a ipfs modal 1`] = `
                         class="mt-3 sm:mt-2"
                       >
                         <div
-                          class="flex items-center space-x-3 rounded-xl border border-theme-warning-200 bg-theme-warning-50 px-3 py-2 dark:border-theme-warning-600 dark:bg-transparent max-sm:text-sm sm:px-6 sm:py-5"
+                          class="flex items-center space-x-3 rounded-xl border border-theme-warning-200 bg-theme-warning-50 px-3 py-2 dark:border-theme-warning-600 dark:bg-transparent max-sm:text-sm sm:px-6 sm:py-4 sm:leading-5"
                           data-testid="PendingConfirmationAlert"
                         >
                           <div
@@ -783,7 +785,7 @@ exports[`TransactionDetailModal > should render a ipfs modal 1`] = `
                             width="3"
                           />
                           <div
-                            class="text-theme-warning-200 dark:text-theme-secondary-800 css-1aie31u"
+                            class="h-5 text-theme-warning-200 dark:text-theme-secondary-800 css-1aie31u"
                             type="vertical"
                           />
                           <p
@@ -944,7 +946,7 @@ exports[`TransactionDetailModal > should render a magistrate modal 1`] = `
                       </span>
                     </button>
                     <button
-                      class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 p-2 bg-transparent dark:bg-theme-secondary-800 hover:border-transparent border-theme-secondary-300 dark:border-transparent border"
+                      class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 border border-theme-secondary-300 bg-transparent p-2 hover:border-transparent dark:border-transparent dark:bg-theme-secondary-800"
                       data-testid="explorer-link"
                       disabled=""
                       type="button"
@@ -1011,7 +1013,7 @@ exports[`TransactionDetailModal > should render a magistrate modal 1`] = `
                         data-testid="DetailLabel"
                       >
                         <div
-                          class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                          class="no-ligatures text-md min-w-24 font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500"
                           data-testid="DetailLabelText"
                         >
                           Addressing
@@ -1117,7 +1119,7 @@ exports[`TransactionDetailModal > should render a magistrate modal 1`] = `
                           data-testid="DetailLabel"
                         >
                           <div
-                            class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                            class="no-ligatures text-md min-w-24 font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500"
                             data-testid="DetailLabelText"
                           >
                             Transaction Type
@@ -1133,13 +1135,13 @@ exports[`TransactionDetailModal > should render a magistrate modal 1`] = `
                               class="flex w-full justify-between sm:justify-start"
                             >
                               <div
-                                class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                                class="no-ligatures text-md min-w-24 font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500"
                                 data-testid="DetailLabelText"
                               >
                                 Category
                               </div>
                               <div
-                                class="css-1chzvd4"
+                                class="css-1p04us5"
                                 color="neutral"
                               >
                                 Magistrate
@@ -1179,7 +1181,7 @@ exports[`TransactionDetailModal > should render a magistrate modal 1`] = `
                         data-testid="DetailLabel"
                       >
                         <div
-                          class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                          class="no-ligatures text-md min-w-24 font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500"
                           data-testid="DetailLabelText"
                         >
                           Transaction Summary
@@ -1195,13 +1197,13 @@ exports[`TransactionDetailModal > should render a magistrate modal 1`] = `
                             class="flex w-full justify-between sm:justify-start"
                           >
                             <div
-                              class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
+                              class="no-ligatures text-md font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
                               data-testid="DetailLabelText"
                             >
                               Amount
                             </div>
                             <div
-                              class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
+                              class="flex h-full items-center justify-center rounded px-1.5 text-base leading-5 css-xqt0aw"
                               color="danger-bg"
                               data-testid="AmountLabel__wrapper"
                             >
@@ -1209,7 +1211,7 @@ exports[`TransactionDetailModal > should render a magistrate modal 1`] = `
                                 class="flex h-full items-center space-x-1"
                               >
                                 <span
-                                  class="whitespace-nowrap text-sm text-[1rem]"
+                                  class="whitespace-nowrap text-sm"
                                   data-testid="Amount"
                                 >
                                   - 100 DARK
@@ -1218,7 +1220,7 @@ exports[`TransactionDetailModal > should render a magistrate modal 1`] = `
                             </div>
                           </div>
                           <div
-                            class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3"
+                            class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3 [.condensed_&]:leading-3"
                           >
                             <div
                               class="w-full [.condensed_&]:hidden"
@@ -1233,20 +1235,20 @@ exports[`TransactionDetailModal > should render a magistrate modal 1`] = `
                             class="flex w-full justify-between sm:justify-start"
                           >
                             <div
-                              class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
+                              class="no-ligatures text-md font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
                               data-testid="DetailLabelText"
                             >
                               Fee
                             </div>
                             <span
-                              class="whitespace-nowrap font-semibold"
+                              class="whitespace-nowrap font-semibold leading-5"
                               data-testid="Amount"
                             >
                               21 DARK
                             </span>
                           </div>
                           <div
-                            class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3"
+                            class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3 [.condensed_&]:leading-3"
                           >
                             <div
                               class="w-full [.condensed_&]:hidden"
@@ -1261,13 +1263,13 @@ exports[`TransactionDetailModal > should render a magistrate modal 1`] = `
                             class="flex w-full justify-between sm:justify-start"
                           >
                             <div
-                              class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
+                              class="no-ligatures text-md font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
                               data-testid="DetailLabelText"
                             >
                               Value
                             </div>
                             <span
-                              class="whitespace-nowrap font-semibold"
+                              class="whitespace-nowrap font-semibold leading-5"
                               data-testid="Amount"
                             >
                               0 BTC
@@ -1306,7 +1308,7 @@ exports[`TransactionDetailModal > should render a magistrate modal 1`] = `
                         data-testid="DetailLabel"
                       >
                         <div
-                          class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                          class="no-ligatures text-md min-w-24 font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500"
                           data-testid="DetailLabelText"
                         >
                           Transaction Details
@@ -1322,19 +1324,19 @@ exports[`TransactionDetailModal > should render a magistrate modal 1`] = `
                             class="flex w-full justify-between sm:justify-start"
                           >
                             <div
-                              class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
+                              class="no-ligatures text-md font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
                               data-testid="DetailLabelText"
                             >
                               Timestamp
                             </div>
                             <div
-                              class="font-semibold"
+                              class="font-semibold leading-5"
                             >
                               31.07.2020 4:34 PM
                             </div>
                           </div>
                           <div
-                            class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3"
+                            class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3 [.condensed_&]:leading-3"
                           >
                             <div
                               class="w-full [.condensed_&]:hidden"
@@ -1349,20 +1351,20 @@ exports[`TransactionDetailModal > should render a magistrate modal 1`] = `
                             class="flex w-full justify-between sm:justify-start"
                           >
                             <div
-                              class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
+                              class="no-ligatures text-md font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
                               data-testid="DetailLabelText"
                             >
                               Block
                             </div>
                             <a
-                              class="ring-focus group inline-block css-7nwwrh"
+                              class="ring-focus group/inner inline-block h-5 leading-5 css-7nwwrh"
                               data-ring-focus-margin="-m-1"
                               data-testid="Link"
                               href="https://live.arkscan.io/blocks/71fd1a494ded5430586f4dd1c79c3ac77bf38120e868c8f8980972b8075d67e9"
                               rel="noopener noreferrer"
                             >
                               <span
-                                class="css-170792"
+                                class="css-bxx244"
                               />
                               <div
                                 class="mb-[3px] shrink-0 align-middle duration-200 css-v0ob3f"
@@ -1391,7 +1393,7 @@ exports[`TransactionDetailModal > should render a magistrate modal 1`] = `
                             </a>
                           </div>
                           <div
-                            class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3"
+                            class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3 [.condensed_&]:leading-3"
                           >
                             <div
                               class="w-full [.condensed_&]:hidden"
@@ -1406,13 +1408,13 @@ exports[`TransactionDetailModal > should render a magistrate modal 1`] = `
                             class="flex w-full justify-between sm:justify-start"
                           >
                             <div
-                              class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
+                              class="no-ligatures text-md font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
                               data-testid="DetailLabelText"
                             >
                               Nonce
                             </div>
                             <p
-                              class="text-theme-secondary-500"
+                              class="leading-5 text-theme-secondary-500"
                             >
                               N/A
                             </p>
@@ -1450,7 +1452,7 @@ exports[`TransactionDetailModal > should render a magistrate modal 1`] = `
                         data-testid="DetailLabel"
                       >
                         <div
-                          class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                          class="no-ligatures text-md min-w-24 font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500"
                           data-testid="DetailLabelText"
                         >
                           Memo (SmartBridge)
@@ -1459,7 +1461,9 @@ exports[`TransactionDetailModal > should render a magistrate modal 1`] = `
                       <div
                         class="w-full break-words rounded-lg border-theme-secondary-300 p-3 dark:border-theme-secondary-800 sm:border sm:px-6 sm:py-5 [.condensed_&]:sm:py-4 mt-0 sm:mt-2"
                       >
-                        <p>
+                        <p
+                          class="leading-5"
+                        >
                           Test
                         </p>
                       </div>
@@ -1491,7 +1495,7 @@ exports[`TransactionDetailModal > should render a magistrate modal 1`] = `
                       data-testid="DetailLabel"
                     >
                       <div
-                        class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                        class="no-ligatures text-md min-w-24 font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500"
                         data-testid="DetailLabelText"
                       >
                         Confirmations
@@ -1504,7 +1508,7 @@ exports[`TransactionDetailModal > should render a magistrate modal 1`] = `
                         class="mt-3 sm:mt-2"
                       >
                         <div
-                          class="flex items-center space-x-3 rounded-xl border border-theme-warning-200 bg-theme-warning-50 px-3 py-2 dark:border-theme-warning-600 dark:bg-transparent max-sm:text-sm sm:px-6 sm:py-5"
+                          class="flex items-center space-x-3 rounded-xl border border-theme-warning-200 bg-theme-warning-50 px-3 py-2 dark:border-theme-warning-600 dark:bg-transparent max-sm:text-sm sm:px-6 sm:py-4 sm:leading-5"
                           data-testid="PendingConfirmationAlert"
                         >
                           <div
@@ -1513,7 +1517,7 @@ exports[`TransactionDetailModal > should render a magistrate modal 1`] = `
                             width="3"
                           />
                           <div
-                            class="text-theme-warning-200 dark:text-theme-secondary-800 css-1aie31u"
+                            class="h-5 text-theme-warning-200 dark:text-theme-secondary-800 css-1aie31u"
                             type="vertical"
                           />
                           <p
@@ -1674,7 +1678,7 @@ exports[`TransactionDetailModal > should render a multi payment modal 1`] = `
                       </span>
                     </button>
                     <button
-                      class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 p-2 bg-transparent dark:bg-theme-secondary-800 hover:border-transparent border-theme-secondary-300 dark:border-transparent border"
+                      class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 border border-theme-secondary-300 bg-transparent p-2 hover:border-transparent dark:border-transparent dark:bg-theme-secondary-800"
                       data-testid="explorer-link"
                       disabled=""
                       type="button"
@@ -1741,7 +1745,7 @@ exports[`TransactionDetailModal > should render a multi payment modal 1`] = `
                         data-testid="DetailLabel"
                       >
                         <div
-                          class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                          class="no-ligatures text-md min-w-24 font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500"
                           data-testid="DetailLabelText"
                         >
                           Addressing
@@ -1813,7 +1817,7 @@ exports[`TransactionDetailModal > should render a multi payment modal 1`] = `
                           </div>
                         </div>
                         <div
-                          class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3"
+                          class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3 [.condensed_&]:leading-3"
                         >
                           <div
                             class="w-full [.condensed_&]:hidden"
@@ -1836,7 +1840,7 @@ exports[`TransactionDetailModal > should render a multi payment modal 1`] = `
                             class="flex items-center"
                           >
                             <span
-                              class="font-semibold"
+                              class="font-semibold leading-5"
                             >
                               <span>
                                 Multiple 
@@ -1848,7 +1852,7 @@ exports[`TransactionDetailModal > should render a multi payment modal 1`] = `
                               </span>
                             </span>
                             <div
-                              class="hidden sm:inline-block"
+                              class="hidden h-5 leading-5 sm:block"
                             >
                               <div
                                 class="border-theme-secondary-300 dark:border-theme-secondary-800 css-3y8nng"
@@ -1856,14 +1860,14 @@ exports[`TransactionDetailModal > should render a multi payment modal 1`] = `
                               />
                             </div>
                             <a
-                              class="ring-focus group inline-block hidden sm:block css-7nwwrh"
+                              class="ring-focus group/inner inline-block hidden h-5 leading-5 sm:block css-7nwwrh"
                               data-ring-focus-margin="-m-1"
                               data-testid="Link"
                               href="https://live.arkscan.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
                               rel="noopener noreferrer"
                             >
                               <span
-                                class="css-170792"
+                                class="css-bxx244"
                               >
                                 View Full List
                               </span>
@@ -1929,7 +1933,7 @@ exports[`TransactionDetailModal > should render a multi payment modal 1`] = `
                           data-testid="DetailLabel"
                         >
                           <div
-                            class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                            class="no-ligatures text-md min-w-24 font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500"
                             data-testid="DetailLabelText"
                           >
                             Transaction Type
@@ -1945,13 +1949,13 @@ exports[`TransactionDetailModal > should render a multi payment modal 1`] = `
                               class="flex w-full justify-between sm:justify-start"
                             >
                               <div
-                                class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                                class="no-ligatures text-md min-w-24 font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500"
                                 data-testid="DetailLabelText"
                               >
                                 Category
                               </div>
                               <div
-                                class="css-1chzvd4"
+                                class="css-1p04us5"
                                 color="neutral"
                               >
                                 Multipayment
@@ -1991,7 +1995,7 @@ exports[`TransactionDetailModal > should render a multi payment modal 1`] = `
                         data-testid="DetailLabel"
                       >
                         <div
-                          class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                          class="no-ligatures text-md min-w-24 font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500"
                           data-testid="DetailLabelText"
                         >
                           Transaction Summary
@@ -2007,13 +2011,13 @@ exports[`TransactionDetailModal > should render a multi payment modal 1`] = `
                             class="flex w-full justify-between sm:justify-start"
                           >
                             <div
-                              class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
+                              class="no-ligatures text-md font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
                               data-testid="DetailLabelText"
                             >
                               Amount
                             </div>
                             <div
-                              class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
+                              class="flex h-full items-center justify-center rounded px-1.5 text-base leading-5 css-xqt0aw"
                               color="danger-bg"
                               data-testid="AmountLabel__wrapper"
                             >
@@ -2021,7 +2025,7 @@ exports[`TransactionDetailModal > should render a multi payment modal 1`] = `
                                 class="flex h-full items-center space-x-1"
                               >
                                 <span
-                                  class="whitespace-nowrap text-sm text-[1rem]"
+                                  class="whitespace-nowrap text-sm"
                                   data-testid="Amount"
                                 >
                                   - 100 DARK
@@ -2030,7 +2034,7 @@ exports[`TransactionDetailModal > should render a multi payment modal 1`] = `
                             </div>
                           </div>
                           <div
-                            class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3"
+                            class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3 [.condensed_&]:leading-3"
                           >
                             <div
                               class="w-full [.condensed_&]:hidden"
@@ -2045,20 +2049,20 @@ exports[`TransactionDetailModal > should render a multi payment modal 1`] = `
                             class="flex w-full justify-between sm:justify-start"
                           >
                             <div
-                              class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
+                              class="no-ligatures text-md font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
                               data-testid="DetailLabelText"
                             >
                               Fee
                             </div>
                             <span
-                              class="whitespace-nowrap font-semibold"
+                              class="whitespace-nowrap font-semibold leading-5"
                               data-testid="Amount"
                             >
                               21 DARK
                             </span>
                           </div>
                           <div
-                            class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3"
+                            class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3 [.condensed_&]:leading-3"
                           >
                             <div
                               class="w-full [.condensed_&]:hidden"
@@ -2073,13 +2077,13 @@ exports[`TransactionDetailModal > should render a multi payment modal 1`] = `
                             class="flex w-full justify-between sm:justify-start"
                           >
                             <div
-                              class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
+                              class="no-ligatures text-md font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
                               data-testid="DetailLabelText"
                             >
                               Value
                             </div>
                             <span
-                              class="whitespace-nowrap font-semibold"
+                              class="whitespace-nowrap font-semibold leading-5"
                               data-testid="Amount"
                             >
                               0 BTC
@@ -2118,7 +2122,7 @@ exports[`TransactionDetailModal > should render a multi payment modal 1`] = `
                         data-testid="DetailLabel"
                       >
                         <div
-                          class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                          class="no-ligatures text-md min-w-24 font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500"
                           data-testid="DetailLabelText"
                         >
                           Transaction Details
@@ -2134,19 +2138,19 @@ exports[`TransactionDetailModal > should render a multi payment modal 1`] = `
                             class="flex w-full justify-between sm:justify-start"
                           >
                             <div
-                              class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
+                              class="no-ligatures text-md font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
                               data-testid="DetailLabelText"
                             >
                               Timestamp
                             </div>
                             <div
-                              class="font-semibold"
+                              class="font-semibold leading-5"
                             >
                               31.07.2020 4:34 PM
                             </div>
                           </div>
                           <div
-                            class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3"
+                            class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3 [.condensed_&]:leading-3"
                           >
                             <div
                               class="w-full [.condensed_&]:hidden"
@@ -2161,20 +2165,20 @@ exports[`TransactionDetailModal > should render a multi payment modal 1`] = `
                             class="flex w-full justify-between sm:justify-start"
                           >
                             <div
-                              class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
+                              class="no-ligatures text-md font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
                               data-testid="DetailLabelText"
                             >
                               Block
                             </div>
                             <a
-                              class="ring-focus group inline-block css-7nwwrh"
+                              class="ring-focus group/inner inline-block h-5 leading-5 css-7nwwrh"
                               data-ring-focus-margin="-m-1"
                               data-testid="Link"
                               href="https://live.arkscan.io/blocks/71fd1a494ded5430586f4dd1c79c3ac77bf38120e868c8f8980972b8075d67e9"
                               rel="noopener noreferrer"
                             >
                               <span
-                                class="css-170792"
+                                class="css-bxx244"
                               />
                               <div
                                 class="mb-[3px] shrink-0 align-middle duration-200 css-v0ob3f"
@@ -2203,7 +2207,7 @@ exports[`TransactionDetailModal > should render a multi payment modal 1`] = `
                             </a>
                           </div>
                           <div
-                            class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3"
+                            class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3 [.condensed_&]:leading-3"
                           >
                             <div
                               class="w-full [.condensed_&]:hidden"
@@ -2218,13 +2222,13 @@ exports[`TransactionDetailModal > should render a multi payment modal 1`] = `
                             class="flex w-full justify-between sm:justify-start"
                           >
                             <div
-                              class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
+                              class="no-ligatures text-md font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
                               data-testid="DetailLabelText"
                             >
                               Nonce
                             </div>
                             <p
-                              class="text-theme-secondary-500"
+                              class="leading-5 text-theme-secondary-500"
                             >
                               N/A
                             </p>
@@ -2262,7 +2266,7 @@ exports[`TransactionDetailModal > should render a multi payment modal 1`] = `
                         data-testid="DetailLabel"
                       >
                         <div
-                          class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                          class="no-ligatures text-md min-w-24 font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500"
                           data-testid="DetailLabelText"
                         >
                           Memo (SmartBridge)
@@ -2271,7 +2275,9 @@ exports[`TransactionDetailModal > should render a multi payment modal 1`] = `
                       <div
                         class="w-full break-words rounded-lg border-theme-secondary-300 p-3 dark:border-theme-secondary-800 sm:border sm:px-6 sm:py-5 [.condensed_&]:sm:py-4 mt-0 sm:mt-2"
                       >
-                        <p>
+                        <p
+                          class="leading-5"
+                        >
                           Test
                         </p>
                       </div>
@@ -2303,7 +2309,7 @@ exports[`TransactionDetailModal > should render a multi payment modal 1`] = `
                       data-testid="DetailLabel"
                     >
                       <div
-                        class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                        class="no-ligatures text-md min-w-24 font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500"
                         data-testid="DetailLabelText"
                       >
                         Confirmations
@@ -2316,7 +2322,7 @@ exports[`TransactionDetailModal > should render a multi payment modal 1`] = `
                         class="mt-3 sm:mt-2"
                       >
                         <div
-                          class="flex items-center space-x-3 rounded-xl border border-theme-warning-200 bg-theme-warning-50 px-3 py-2 dark:border-theme-warning-600 dark:bg-transparent max-sm:text-sm sm:px-6 sm:py-5"
+                          class="flex items-center space-x-3 rounded-xl border border-theme-warning-200 bg-theme-warning-50 px-3 py-2 dark:border-theme-warning-600 dark:bg-transparent max-sm:text-sm sm:px-6 sm:py-4 sm:leading-5"
                           data-testid="PendingConfirmationAlert"
                         >
                           <div
@@ -2325,7 +2331,7 @@ exports[`TransactionDetailModal > should render a multi payment modal 1`] = `
                             width="3"
                           />
                           <div
-                            class="text-theme-warning-200 dark:text-theme-secondary-800 css-1aie31u"
+                            class="h-5 text-theme-warning-200 dark:text-theme-secondary-800 css-1aie31u"
                             type="vertical"
                           />
                           <p
@@ -2486,7 +2492,7 @@ exports[`TransactionDetailModal > should render a multi signature modal 1`] = `
                       </span>
                     </button>
                     <button
-                      class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 p-2 bg-transparent dark:bg-theme-secondary-800 hover:border-transparent border-theme-secondary-300 dark:border-transparent border"
+                      class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 border border-theme-secondary-300 bg-transparent p-2 hover:border-transparent dark:border-transparent dark:bg-theme-secondary-800"
                       data-testid="explorer-link"
                       disabled=""
                       type="button"
@@ -2553,7 +2559,7 @@ exports[`TransactionDetailModal > should render a multi signature modal 1`] = `
                         data-testid="DetailLabel"
                       >
                         <div
-                          class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                          class="no-ligatures text-md min-w-24 font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500"
                           data-testid="DetailLabelText"
                         >
                           Addressing
@@ -2636,7 +2642,7 @@ exports[`TransactionDetailModal > should render a multi signature modal 1`] = `
                           </div>
                         </div>
                         <div
-                          class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3"
+                          class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3 [.condensed_&]:leading-3"
                         >
                           <div
                             class="w-full [.condensed_&]:hidden"
@@ -2755,7 +2761,7 @@ exports[`TransactionDetailModal > should render a multi signature modal 1`] = `
                           data-testid="DetailLabel"
                         >
                           <div
-                            class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                            class="no-ligatures text-md min-w-24 font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500"
                             data-testid="DetailLabelText"
                           >
                             Transaction Type
@@ -2771,20 +2777,20 @@ exports[`TransactionDetailModal > should render a multi signature modal 1`] = `
                               class="flex w-full justify-between sm:justify-start"
                             >
                               <div
-                                class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                                class="no-ligatures text-md min-w-24 font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500"
                                 data-testid="DetailLabelText"
                               >
                                 Category
                               </div>
                               <div
-                                class="css-1chzvd4"
+                                class="css-1p04us5"
                                 color="neutral"
                               >
                                 Multisignature
                               </div>
                             </div>
                             <div
-                              class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3"
+                              class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3 [.condensed_&]:leading-3"
                             >
                               <div
                                 class="w-full [.condensed_&]:hidden"
@@ -2799,13 +2805,13 @@ exports[`TransactionDetailModal > should render a multi signature modal 1`] = `
                               class="flex w-full justify-between sm:justify-start"
                             >
                               <div
-                                class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                                class="no-ligatures text-md min-w-24 font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500"
                                 data-testid="DetailLabelText"
                               >
                                 Address
                               </div>
                               <div
-                                class="font-semibold max-sm:text-sm"
+                                class="font-semibold leading-5 max-sm:text-sm"
                               >
                                 <div
                                   class="flex space-x-2"
@@ -2856,7 +2862,7 @@ exports[`TransactionDetailModal > should render a multi signature modal 1`] = `
                               </div>
                             </div>
                             <div
-                              class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3"
+                              class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3 [.condensed_&]:leading-3"
                             >
                               <div
                                 class="w-full [.condensed_&]:hidden"
@@ -2871,7 +2877,7 @@ exports[`TransactionDetailModal > should render a multi signature modal 1`] = `
                               class="flex w-full items-center justify-between sm:justify-start"
                             >
                               <div
-                                class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                                class="no-ligatures text-md min-w-24 font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500"
                                 data-testid="DetailLabelText"
                               >
                                 Signatures
@@ -2916,7 +2922,7 @@ exports[`TransactionDetailModal > should render a multi signature modal 1`] = `
                         data-testid="DetailLabel"
                       >
                         <div
-                          class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                          class="no-ligatures text-md min-w-24 font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500"
                           data-testid="DetailLabelText"
                         >
                           Transaction Summary
@@ -2932,13 +2938,13 @@ exports[`TransactionDetailModal > should render a multi signature modal 1`] = `
                             class="flex w-full justify-between sm:justify-start"
                           >
                             <div
-                              class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
+                              class="no-ligatures text-md font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
                               data-testid="DetailLabelText"
                             >
                               Amount
                             </div>
                             <div
-                              class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
+                              class="flex h-full items-center justify-center rounded px-1.5 text-base leading-5 css-xqt0aw"
                               color="danger-bg"
                               data-testid="AmountLabel__wrapper"
                             >
@@ -2946,7 +2952,7 @@ exports[`TransactionDetailModal > should render a multi signature modal 1`] = `
                                 class="flex h-full items-center space-x-1"
                               >
                                 <span
-                                  class="whitespace-nowrap text-sm text-[1rem]"
+                                  class="whitespace-nowrap text-sm"
                                   data-testid="Amount"
                                 >
                                   - 100 DARK
@@ -2955,7 +2961,7 @@ exports[`TransactionDetailModal > should render a multi signature modal 1`] = `
                             </div>
                           </div>
                           <div
-                            class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3"
+                            class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3 [.condensed_&]:leading-3"
                           >
                             <div
                               class="w-full [.condensed_&]:hidden"
@@ -2970,20 +2976,20 @@ exports[`TransactionDetailModal > should render a multi signature modal 1`] = `
                             class="flex w-full justify-between sm:justify-start"
                           >
                             <div
-                              class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
+                              class="no-ligatures text-md font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
                               data-testid="DetailLabelText"
                             >
                               Fee
                             </div>
                             <span
-                              class="whitespace-nowrap font-semibold"
+                              class="whitespace-nowrap font-semibold leading-5"
                               data-testid="Amount"
                             >
                               21 DARK
                             </span>
                           </div>
                           <div
-                            class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3"
+                            class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3 [.condensed_&]:leading-3"
                           >
                             <div
                               class="w-full [.condensed_&]:hidden"
@@ -2998,13 +3004,13 @@ exports[`TransactionDetailModal > should render a multi signature modal 1`] = `
                             class="flex w-full justify-between sm:justify-start"
                           >
                             <div
-                              class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
+                              class="no-ligatures text-md font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
                               data-testid="DetailLabelText"
                             >
                               Value
                             </div>
                             <span
-                              class="whitespace-nowrap font-semibold"
+                              class="whitespace-nowrap font-semibold leading-5"
                               data-testid="Amount"
                             >
                               0 BTC
@@ -3043,7 +3049,7 @@ exports[`TransactionDetailModal > should render a multi signature modal 1`] = `
                         data-testid="DetailLabel"
                       >
                         <div
-                          class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                          class="no-ligatures text-md min-w-24 font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500"
                           data-testid="DetailLabelText"
                         >
                           Transaction Details
@@ -3059,19 +3065,19 @@ exports[`TransactionDetailModal > should render a multi signature modal 1`] = `
                             class="flex w-full justify-between sm:justify-start"
                           >
                             <div
-                              class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
+                              class="no-ligatures text-md font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
                               data-testid="DetailLabelText"
                             >
                               Timestamp
                             </div>
                             <div
-                              class="font-semibold"
+                              class="font-semibold leading-5"
                             >
                               31.07.2020 4:34 PM
                             </div>
                           </div>
                           <div
-                            class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3"
+                            class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3 [.condensed_&]:leading-3"
                           >
                             <div
                               class="w-full [.condensed_&]:hidden"
@@ -3086,20 +3092,20 @@ exports[`TransactionDetailModal > should render a multi signature modal 1`] = `
                             class="flex w-full justify-between sm:justify-start"
                           >
                             <div
-                              class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
+                              class="no-ligatures text-md font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
                               data-testid="DetailLabelText"
                             >
                               Block
                             </div>
                             <a
-                              class="ring-focus group inline-block css-7nwwrh"
+                              class="ring-focus group/inner inline-block h-5 leading-5 css-7nwwrh"
                               data-ring-focus-margin="-m-1"
                               data-testid="Link"
                               href="https://live.arkscan.io/blocks/71fd1a494ded5430586f4dd1c79c3ac77bf38120e868c8f8980972b8075d67e9"
                               rel="noopener noreferrer"
                             >
                               <span
-                                class="css-170792"
+                                class="css-bxx244"
                               />
                               <div
                                 class="mb-[3px] shrink-0 align-middle duration-200 css-v0ob3f"
@@ -3128,7 +3134,7 @@ exports[`TransactionDetailModal > should render a multi signature modal 1`] = `
                             </a>
                           </div>
                           <div
-                            class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3"
+                            class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3 [.condensed_&]:leading-3"
                           >
                             <div
                               class="w-full [.condensed_&]:hidden"
@@ -3143,13 +3149,13 @@ exports[`TransactionDetailModal > should render a multi signature modal 1`] = `
                             class="flex w-full justify-between sm:justify-start"
                           >
                             <div
-                              class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
+                              class="no-ligatures text-md font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
                               data-testid="DetailLabelText"
                             >
                               Nonce
                             </div>
                             <p
-                              class="text-theme-secondary-500"
+                              class="leading-5 text-theme-secondary-500"
                             >
                               N/A
                             </p>
@@ -3187,7 +3193,7 @@ exports[`TransactionDetailModal > should render a multi signature modal 1`] = `
                         data-testid="DetailLabel"
                       >
                         <div
-                          class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                          class="no-ligatures text-md min-w-24 font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500"
                           data-testid="DetailLabelText"
                         >
                           Memo (SmartBridge)
@@ -3196,7 +3202,9 @@ exports[`TransactionDetailModal > should render a multi signature modal 1`] = `
                       <div
                         class="w-full break-words rounded-lg border-theme-secondary-300 p-3 dark:border-theme-secondary-800 sm:border sm:px-6 sm:py-5 [.condensed_&]:sm:py-4 mt-0 sm:mt-2"
                       >
-                        <p>
+                        <p
+                          class="leading-5"
+                        >
                           Test
                         </p>
                       </div>
@@ -3228,7 +3236,7 @@ exports[`TransactionDetailModal > should render a multi signature modal 1`] = `
                       data-testid="DetailLabel"
                     >
                       <div
-                        class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                        class="no-ligatures text-md min-w-24 font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500"
                         data-testid="DetailLabelText"
                       >
                         Confirmations
@@ -3241,7 +3249,7 @@ exports[`TransactionDetailModal > should render a multi signature modal 1`] = `
                         class="mt-3 sm:mt-2"
                       >
                         <div
-                          class="flex items-center space-x-3 rounded-xl border border-theme-warning-200 bg-theme-warning-50 px-3 py-2 dark:border-theme-warning-600 dark:bg-transparent max-sm:text-sm sm:px-6 sm:py-5"
+                          class="flex items-center space-x-3 rounded-xl border border-theme-warning-200 bg-theme-warning-50 px-3 py-2 dark:border-theme-warning-600 dark:bg-transparent max-sm:text-sm sm:px-6 sm:py-4 sm:leading-5"
                           data-testid="PendingConfirmationAlert"
                         >
                           <div
@@ -3250,7 +3258,7 @@ exports[`TransactionDetailModal > should render a multi signature modal 1`] = `
                             width="3"
                           />
                           <div
-                            class="text-theme-warning-200 dark:text-theme-secondary-800 css-1aie31u"
+                            class="h-5 text-theme-warning-200 dark:text-theme-secondary-800 css-1aie31u"
                             type="vertical"
                           />
                           <p
@@ -3288,7 +3296,7 @@ exports[`TransactionDetailModal > should render a multi signature modal 1`] = `
                       data-testid="DetailLabel"
                     >
                       <div
-                        class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                        class="no-ligatures text-md min-w-24 font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500"
                         data-testid="DetailLabelText"
                       >
                         Participants
@@ -3346,7 +3354,7 @@ exports[`TransactionDetailModal > should render a multi signature modal 1`] = `
                                       class="w-3/5 sm:w-auto"
                                     >
                                       <a
-                                        class="ring-focus group inline-block css-7nwwrh"
+                                        class="ring-focus group/inner inline-block css-7nwwrh"
                                         data-ring-focus-margin="-m-1"
                                         data-testid="Link"
                                         href="https://test.arkscan.io/wallets/D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -3410,7 +3418,7 @@ exports[`TransactionDetailModal > should render a multi signature modal 1`] = `
                                       class="w-3/5 sm:w-auto"
                                     >
                                       <a
-                                        class="ring-focus group inline-block css-7nwwrh"
+                                        class="ring-focus group/inner inline-block css-7nwwrh"
                                         data-ring-focus-margin="-m-1"
                                         data-testid="Link"
                                         href="https://test.arkscan.io/wallets/D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
@@ -3617,7 +3625,7 @@ exports[`TransactionDetailModal > should render a transfer modal 1`] = `
                       </span>
                     </button>
                     <button
-                      class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 p-2 bg-transparent dark:bg-theme-secondary-800 hover:border-transparent border-theme-secondary-300 dark:border-transparent border"
+                      class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 border border-theme-secondary-300 bg-transparent p-2 hover:border-transparent dark:border-transparent dark:bg-theme-secondary-800"
                       data-testid="explorer-link"
                       disabled=""
                       type="button"
@@ -3684,7 +3692,7 @@ exports[`TransactionDetailModal > should render a transfer modal 1`] = `
                         data-testid="DetailLabel"
                       >
                         <div
-                          class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                          class="no-ligatures text-md min-w-24 font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500"
                           data-testid="DetailLabelText"
                         >
                           Addressing
@@ -3756,7 +3764,7 @@ exports[`TransactionDetailModal > should render a transfer modal 1`] = `
                           </div>
                         </div>
                         <div
-                          class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3"
+                          class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3 [.condensed_&]:leading-3"
                         >
                           <div
                             class="w-full [.condensed_&]:hidden"
@@ -3864,7 +3872,7 @@ exports[`TransactionDetailModal > should render a transfer modal 1`] = `
                           data-testid="DetailLabel"
                         >
                           <div
-                            class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                            class="no-ligatures text-md min-w-24 font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500"
                             data-testid="DetailLabelText"
                           >
                             Transaction Type
@@ -3880,13 +3888,13 @@ exports[`TransactionDetailModal > should render a transfer modal 1`] = `
                               class="flex w-full justify-between sm:justify-start"
                             >
                               <div
-                                class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                                class="no-ligatures text-md min-w-24 font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500"
                                 data-testid="DetailLabelText"
                               >
                                 Category
                               </div>
                               <div
-                                class="css-1chzvd4"
+                                class="css-1p04us5"
                                 color="neutral"
                               >
                                 Transfer
@@ -3926,7 +3934,7 @@ exports[`TransactionDetailModal > should render a transfer modal 1`] = `
                         data-testid="DetailLabel"
                       >
                         <div
-                          class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                          class="no-ligatures text-md min-w-24 font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500"
                           data-testid="DetailLabelText"
                         >
                           Transaction Summary
@@ -3942,13 +3950,13 @@ exports[`TransactionDetailModal > should render a transfer modal 1`] = `
                             class="flex w-full justify-between sm:justify-start"
                           >
                             <div
-                              class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
+                              class="no-ligatures text-md font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
                               data-testid="DetailLabelText"
                             >
                               Amount
                             </div>
                             <div
-                              class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
+                              class="flex h-full items-center justify-center rounded px-1.5 text-base leading-5 css-xqt0aw"
                               color="danger-bg"
                               data-testid="AmountLabel__wrapper"
                             >
@@ -3956,7 +3964,7 @@ exports[`TransactionDetailModal > should render a transfer modal 1`] = `
                                 class="flex h-full items-center space-x-1"
                               >
                                 <span
-                                  class="whitespace-nowrap text-sm text-[1rem]"
+                                  class="whitespace-nowrap text-sm"
                                   data-testid="Amount"
                                 >
                                   - 100 DARK
@@ -3965,7 +3973,7 @@ exports[`TransactionDetailModal > should render a transfer modal 1`] = `
                             </div>
                           </div>
                           <div
-                            class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3"
+                            class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3 [.condensed_&]:leading-3"
                           >
                             <div
                               class="w-full [.condensed_&]:hidden"
@@ -3980,20 +3988,20 @@ exports[`TransactionDetailModal > should render a transfer modal 1`] = `
                             class="flex w-full justify-between sm:justify-start"
                           >
                             <div
-                              class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
+                              class="no-ligatures text-md font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
                               data-testid="DetailLabelText"
                             >
                               Fee
                             </div>
                             <span
-                              class="whitespace-nowrap font-semibold"
+                              class="whitespace-nowrap font-semibold leading-5"
                               data-testid="Amount"
                             >
                               21 DARK
                             </span>
                           </div>
                           <div
-                            class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3"
+                            class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3 [.condensed_&]:leading-3"
                           >
                             <div
                               class="w-full [.condensed_&]:hidden"
@@ -4008,13 +4016,13 @@ exports[`TransactionDetailModal > should render a transfer modal 1`] = `
                             class="flex w-full justify-between sm:justify-start"
                           >
                             <div
-                              class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
+                              class="no-ligatures text-md font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
                               data-testid="DetailLabelText"
                             >
                               Value
                             </div>
                             <span
-                              class="whitespace-nowrap font-semibold"
+                              class="whitespace-nowrap font-semibold leading-5"
                               data-testid="Amount"
                             >
                               0 BTC
@@ -4053,7 +4061,7 @@ exports[`TransactionDetailModal > should render a transfer modal 1`] = `
                         data-testid="DetailLabel"
                       >
                         <div
-                          class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                          class="no-ligatures text-md min-w-24 font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500"
                           data-testid="DetailLabelText"
                         >
                           Transaction Details
@@ -4069,19 +4077,19 @@ exports[`TransactionDetailModal > should render a transfer modal 1`] = `
                             class="flex w-full justify-between sm:justify-start"
                           >
                             <div
-                              class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
+                              class="no-ligatures text-md font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
                               data-testid="DetailLabelText"
                             >
                               Timestamp
                             </div>
                             <div
-                              class="font-semibold"
+                              class="font-semibold leading-5"
                             >
                               31.07.2020 4:34 PM
                             </div>
                           </div>
                           <div
-                            class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3"
+                            class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3 [.condensed_&]:leading-3"
                           >
                             <div
                               class="w-full [.condensed_&]:hidden"
@@ -4096,20 +4104,20 @@ exports[`TransactionDetailModal > should render a transfer modal 1`] = `
                             class="flex w-full justify-between sm:justify-start"
                           >
                             <div
-                              class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
+                              class="no-ligatures text-md font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
                               data-testid="DetailLabelText"
                             >
                               Block
                             </div>
                             <a
-                              class="ring-focus group inline-block css-7nwwrh"
+                              class="ring-focus group/inner inline-block h-5 leading-5 css-7nwwrh"
                               data-ring-focus-margin="-m-1"
                               data-testid="Link"
                               href="https://live.arkscan.io/blocks/71fd1a494ded5430586f4dd1c79c3ac77bf38120e868c8f8980972b8075d67e9"
                               rel="noopener noreferrer"
                             >
                               <span
-                                class="css-170792"
+                                class="css-bxx244"
                               />
                               <div
                                 class="mb-[3px] shrink-0 align-middle duration-200 css-v0ob3f"
@@ -4138,7 +4146,7 @@ exports[`TransactionDetailModal > should render a transfer modal 1`] = `
                             </a>
                           </div>
                           <div
-                            class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3"
+                            class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3 [.condensed_&]:leading-3"
                           >
                             <div
                               class="w-full [.condensed_&]:hidden"
@@ -4153,13 +4161,13 @@ exports[`TransactionDetailModal > should render a transfer modal 1`] = `
                             class="flex w-full justify-between sm:justify-start"
                           >
                             <div
-                              class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
+                              class="no-ligatures text-md font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
                               data-testid="DetailLabelText"
                             >
                               Nonce
                             </div>
                             <p
-                              class="text-theme-secondary-500"
+                              class="leading-5 text-theme-secondary-500"
                             >
                               N/A
                             </p>
@@ -4197,7 +4205,7 @@ exports[`TransactionDetailModal > should render a transfer modal 1`] = `
                         data-testid="DetailLabel"
                       >
                         <div
-                          class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                          class="no-ligatures text-md min-w-24 font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500"
                           data-testid="DetailLabelText"
                         >
                           Memo (SmartBridge)
@@ -4207,7 +4215,7 @@ exports[`TransactionDetailModal > should render a transfer modal 1`] = `
                         class="w-full break-words rounded-lg border-theme-secondary-300 p-3 dark:border-theme-secondary-800 sm:border sm:px-6 sm:py-5 [.condensed_&]:sm:py-4 mt-0 sm:mt-2"
                       >
                         <p
-                          class="text-theme-secondary-500"
+                          class="leading-5 text-theme-secondary-500"
                         >
                           N/A
                         </p>
@@ -4240,7 +4248,7 @@ exports[`TransactionDetailModal > should render a transfer modal 1`] = `
                       data-testid="DetailLabel"
                     >
                       <div
-                        class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                        class="no-ligatures text-md min-w-24 font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500"
                         data-testid="DetailLabelText"
                       >
                         Confirmations
@@ -4253,7 +4261,7 @@ exports[`TransactionDetailModal > should render a transfer modal 1`] = `
                         class="mt-3 sm:mt-2"
                       >
                         <div
-                          class="flex items-center space-x-3 rounded-xl border border-theme-warning-200 bg-theme-warning-50 px-3 py-2 dark:border-theme-warning-600 dark:bg-transparent max-sm:text-sm sm:px-6 sm:py-5"
+                          class="flex items-center space-x-3 rounded-xl border border-theme-warning-200 bg-theme-warning-50 px-3 py-2 dark:border-theme-warning-600 dark:bg-transparent max-sm:text-sm sm:px-6 sm:py-4 sm:leading-5"
                           data-testid="PendingConfirmationAlert"
                         >
                           <div
@@ -4262,7 +4270,7 @@ exports[`TransactionDetailModal > should render a transfer modal 1`] = `
                             width="3"
                           />
                           <div
-                            class="text-theme-warning-200 dark:text-theme-secondary-800 css-1aie31u"
+                            class="h-5 text-theme-warning-200 dark:text-theme-secondary-800 css-1aie31u"
                             type="vertical"
                           />
                           <p
@@ -4423,7 +4431,7 @@ exports[`TransactionDetailModal > should render a transfer modal with memo 1`] =
                       </span>
                     </button>
                     <button
-                      class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 p-2 bg-transparent dark:bg-theme-secondary-800 hover:border-transparent border-theme-secondary-300 dark:border-transparent border"
+                      class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 border border-theme-secondary-300 bg-transparent p-2 hover:border-transparent dark:border-transparent dark:bg-theme-secondary-800"
                       data-testid="explorer-link"
                       disabled=""
                       type="button"
@@ -4490,7 +4498,7 @@ exports[`TransactionDetailModal > should render a transfer modal with memo 1`] =
                         data-testid="DetailLabel"
                       >
                         <div
-                          class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                          class="no-ligatures text-md min-w-24 font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500"
                           data-testid="DetailLabelText"
                         >
                           Addressing
@@ -4562,7 +4570,7 @@ exports[`TransactionDetailModal > should render a transfer modal with memo 1`] =
                           </div>
                         </div>
                         <div
-                          class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3"
+                          class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3 [.condensed_&]:leading-3"
                         >
                           <div
                             class="w-full [.condensed_&]:hidden"
@@ -4670,7 +4678,7 @@ exports[`TransactionDetailModal > should render a transfer modal with memo 1`] =
                           data-testid="DetailLabel"
                         >
                           <div
-                            class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                            class="no-ligatures text-md min-w-24 font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500"
                             data-testid="DetailLabelText"
                           >
                             Transaction Type
@@ -4686,13 +4694,13 @@ exports[`TransactionDetailModal > should render a transfer modal with memo 1`] =
                               class="flex w-full justify-between sm:justify-start"
                             >
                               <div
-                                class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                                class="no-ligatures text-md min-w-24 font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500"
                                 data-testid="DetailLabelText"
                               >
                                 Category
                               </div>
                               <div
-                                class="css-1chzvd4"
+                                class="css-1p04us5"
                                 color="neutral"
                               >
                                 Transfer
@@ -4732,7 +4740,7 @@ exports[`TransactionDetailModal > should render a transfer modal with memo 1`] =
                         data-testid="DetailLabel"
                       >
                         <div
-                          class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                          class="no-ligatures text-md min-w-24 font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500"
                           data-testid="DetailLabelText"
                         >
                           Transaction Summary
@@ -4748,13 +4756,13 @@ exports[`TransactionDetailModal > should render a transfer modal with memo 1`] =
                             class="flex w-full justify-between sm:justify-start"
                           >
                             <div
-                              class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
+                              class="no-ligatures text-md font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
                               data-testid="DetailLabelText"
                             >
                               Amount
                             </div>
                             <div
-                              class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
+                              class="flex h-full items-center justify-center rounded px-1.5 text-base leading-5 css-xqt0aw"
                               color="danger-bg"
                               data-testid="AmountLabel__wrapper"
                             >
@@ -4762,7 +4770,7 @@ exports[`TransactionDetailModal > should render a transfer modal with memo 1`] =
                                 class="flex h-full items-center space-x-1"
                               >
                                 <span
-                                  class="whitespace-nowrap text-sm text-[1rem]"
+                                  class="whitespace-nowrap text-sm"
                                   data-testid="Amount"
                                 >
                                   - 100 DARK
@@ -4771,7 +4779,7 @@ exports[`TransactionDetailModal > should render a transfer modal with memo 1`] =
                             </div>
                           </div>
                           <div
-                            class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3"
+                            class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3 [.condensed_&]:leading-3"
                           >
                             <div
                               class="w-full [.condensed_&]:hidden"
@@ -4786,20 +4794,20 @@ exports[`TransactionDetailModal > should render a transfer modal with memo 1`] =
                             class="flex w-full justify-between sm:justify-start"
                           >
                             <div
-                              class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
+                              class="no-ligatures text-md font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
                               data-testid="DetailLabelText"
                             >
                               Fee
                             </div>
                             <span
-                              class="whitespace-nowrap font-semibold"
+                              class="whitespace-nowrap font-semibold leading-5"
                               data-testid="Amount"
                             >
                               21 DARK
                             </span>
                           </div>
                           <div
-                            class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3"
+                            class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3 [.condensed_&]:leading-3"
                           >
                             <div
                               class="w-full [.condensed_&]:hidden"
@@ -4814,13 +4822,13 @@ exports[`TransactionDetailModal > should render a transfer modal with memo 1`] =
                             class="flex w-full justify-between sm:justify-start"
                           >
                             <div
-                              class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
+                              class="no-ligatures text-md font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
                               data-testid="DetailLabelText"
                             >
                               Value
                             </div>
                             <span
-                              class="whitespace-nowrap font-semibold"
+                              class="whitespace-nowrap font-semibold leading-5"
                               data-testid="Amount"
                             >
                               0 BTC
@@ -4859,7 +4867,7 @@ exports[`TransactionDetailModal > should render a transfer modal with memo 1`] =
                         data-testid="DetailLabel"
                       >
                         <div
-                          class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                          class="no-ligatures text-md min-w-24 font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500"
                           data-testid="DetailLabelText"
                         >
                           Transaction Details
@@ -4875,19 +4883,19 @@ exports[`TransactionDetailModal > should render a transfer modal with memo 1`] =
                             class="flex w-full justify-between sm:justify-start"
                           >
                             <div
-                              class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
+                              class="no-ligatures text-md font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
                               data-testid="DetailLabelText"
                             >
                               Timestamp
                             </div>
                             <div
-                              class="font-semibold"
+                              class="font-semibold leading-5"
                             >
                               31.07.2020 4:34 PM
                             </div>
                           </div>
                           <div
-                            class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3"
+                            class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3 [.condensed_&]:leading-3"
                           >
                             <div
                               class="w-full [.condensed_&]:hidden"
@@ -4902,20 +4910,20 @@ exports[`TransactionDetailModal > should render a transfer modal with memo 1`] =
                             class="flex w-full justify-between sm:justify-start"
                           >
                             <div
-                              class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
+                              class="no-ligatures text-md font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
                               data-testid="DetailLabelText"
                             >
                               Block
                             </div>
                             <a
-                              class="ring-focus group inline-block css-7nwwrh"
+                              class="ring-focus group/inner inline-block h-5 leading-5 css-7nwwrh"
                               data-ring-focus-margin="-m-1"
                               data-testid="Link"
                               href="https://live.arkscan.io/blocks/71fd1a494ded5430586f4dd1c79c3ac77bf38120e868c8f8980972b8075d67e9"
                               rel="noopener noreferrer"
                             >
                               <span
-                                class="css-170792"
+                                class="css-bxx244"
                               />
                               <div
                                 class="mb-[3px] shrink-0 align-middle duration-200 css-v0ob3f"
@@ -4944,7 +4952,7 @@ exports[`TransactionDetailModal > should render a transfer modal with memo 1`] =
                             </a>
                           </div>
                           <div
-                            class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3"
+                            class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3 [.condensed_&]:leading-3"
                           >
                             <div
                               class="w-full [.condensed_&]:hidden"
@@ -4959,13 +4967,13 @@ exports[`TransactionDetailModal > should render a transfer modal with memo 1`] =
                             class="flex w-full justify-between sm:justify-start"
                           >
                             <div
-                              class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
+                              class="no-ligatures text-md font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
                               data-testid="DetailLabelText"
                             >
                               Nonce
                             </div>
                             <p
-                              class="text-theme-secondary-500"
+                              class="leading-5 text-theme-secondary-500"
                             >
                               N/A
                             </p>
@@ -5003,7 +5011,7 @@ exports[`TransactionDetailModal > should render a transfer modal with memo 1`] =
                         data-testid="DetailLabel"
                       >
                         <div
-                          class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                          class="no-ligatures text-md min-w-24 font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500"
                           data-testid="DetailLabelText"
                         >
                           Memo (SmartBridge)
@@ -5012,7 +5020,9 @@ exports[`TransactionDetailModal > should render a transfer modal with memo 1`] =
                       <div
                         class="w-full break-words rounded-lg border-theme-secondary-300 p-3 dark:border-theme-secondary-800 sm:border sm:px-6 sm:py-5 [.condensed_&]:sm:py-4 mt-0 sm:mt-2"
                       >
-                        <p>
+                        <p
+                          class="leading-5"
+                        >
                           memo
                         </p>
                       </div>
@@ -5044,7 +5054,7 @@ exports[`TransactionDetailModal > should render a transfer modal with memo 1`] =
                       data-testid="DetailLabel"
                     >
                       <div
-                        class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                        class="no-ligatures text-md min-w-24 font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500"
                         data-testid="DetailLabelText"
                       >
                         Confirmations
@@ -5057,7 +5067,7 @@ exports[`TransactionDetailModal > should render a transfer modal with memo 1`] =
                         class="mt-3 sm:mt-2"
                       >
                         <div
-                          class="flex items-center space-x-3 rounded-xl border border-theme-warning-200 bg-theme-warning-50 px-3 py-2 dark:border-theme-warning-600 dark:bg-transparent max-sm:text-sm sm:px-6 sm:py-5"
+                          class="flex items-center space-x-3 rounded-xl border border-theme-warning-200 bg-theme-warning-50 px-3 py-2 dark:border-theme-warning-600 dark:bg-transparent max-sm:text-sm sm:px-6 sm:py-4 sm:leading-5"
                           data-testid="PendingConfirmationAlert"
                         >
                           <div
@@ -5066,7 +5076,7 @@ exports[`TransactionDetailModal > should render a transfer modal with memo 1`] =
                             width="3"
                           />
                           <div
-                            class="text-theme-warning-200 dark:text-theme-secondary-800 css-1aie31u"
+                            class="h-5 text-theme-warning-200 dark:text-theme-secondary-800 css-1aie31u"
                             type="vertical"
                           />
                           <p
@@ -5227,7 +5237,7 @@ exports[`TransactionDetailModal > should render an unlock tokens modal 1`] = `
                       </span>
                     </button>
                     <button
-                      class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 p-2 bg-transparent dark:bg-theme-secondary-800 hover:border-transparent border-theme-secondary-300 dark:border-transparent border"
+                      class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 border border-theme-secondary-300 bg-transparent p-2 hover:border-transparent dark:border-transparent dark:bg-theme-secondary-800"
                       data-testid="explorer-link"
                       disabled=""
                       type="button"
@@ -5294,7 +5304,7 @@ exports[`TransactionDetailModal > should render an unlock tokens modal 1`] = `
                         data-testid="DetailLabel"
                       >
                         <div
-                          class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                          class="no-ligatures text-md min-w-24 font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500"
                           data-testid="DetailLabelText"
                         >
                           Addressing
@@ -5400,7 +5410,7 @@ exports[`TransactionDetailModal > should render an unlock tokens modal 1`] = `
                           data-testid="DetailLabel"
                         >
                           <div
-                            class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                            class="no-ligatures text-md min-w-24 font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500"
                             data-testid="DetailLabelText"
                           >
                             Transaction Type
@@ -5416,13 +5426,13 @@ exports[`TransactionDetailModal > should render an unlock tokens modal 1`] = `
                               class="flex w-full justify-between sm:justify-start"
                             >
                               <div
-                                class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                                class="no-ligatures text-md min-w-24 font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500"
                                 data-testid="DetailLabelText"
                               >
                                 Category
                               </div>
                               <div
-                                class="css-1chzvd4"
+                                class="css-1p04us5"
                                 color="neutral"
                               >
                                 Unlock Balance
@@ -5462,7 +5472,7 @@ exports[`TransactionDetailModal > should render an unlock tokens modal 1`] = `
                         data-testid="DetailLabel"
                       >
                         <div
-                          class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                          class="no-ligatures text-md min-w-24 font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500"
                           data-testid="DetailLabelText"
                         >
                           Transaction Summary
@@ -5478,13 +5488,13 @@ exports[`TransactionDetailModal > should render an unlock tokens modal 1`] = `
                             class="flex w-full justify-between sm:justify-start"
                           >
                             <div
-                              class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
+                              class="no-ligatures text-md font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
                               data-testid="DetailLabelText"
                             >
                               Amount
                             </div>
                             <div
-                              class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
+                              class="flex h-full items-center justify-center rounded px-1.5 text-base leading-5 css-xqt0aw"
                               color="danger-bg"
                               data-testid="AmountLabel__wrapper"
                             >
@@ -5492,7 +5502,7 @@ exports[`TransactionDetailModal > should render an unlock tokens modal 1`] = `
                                 class="flex h-full items-center space-x-1"
                               >
                                 <span
-                                  class="whitespace-nowrap text-sm text-[1rem]"
+                                  class="whitespace-nowrap text-sm"
                                   data-testid="Amount"
                                 >
                                   - 100 DARK
@@ -5501,7 +5511,7 @@ exports[`TransactionDetailModal > should render an unlock tokens modal 1`] = `
                             </div>
                           </div>
                           <div
-                            class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3"
+                            class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3 [.condensed_&]:leading-3"
                           >
                             <div
                               class="w-full [.condensed_&]:hidden"
@@ -5516,20 +5526,20 @@ exports[`TransactionDetailModal > should render an unlock tokens modal 1`] = `
                             class="flex w-full justify-between sm:justify-start"
                           >
                             <div
-                              class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
+                              class="no-ligatures text-md font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
                               data-testid="DetailLabelText"
                             >
                               Fee
                             </div>
                             <span
-                              class="whitespace-nowrap font-semibold"
+                              class="whitespace-nowrap font-semibold leading-5"
                               data-testid="Amount"
                             >
                               21 DARK
                             </span>
                           </div>
                           <div
-                            class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3"
+                            class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3 [.condensed_&]:leading-3"
                           >
                             <div
                               class="w-full [.condensed_&]:hidden"
@@ -5544,13 +5554,13 @@ exports[`TransactionDetailModal > should render an unlock tokens modal 1`] = `
                             class="flex w-full justify-between sm:justify-start"
                           >
                             <div
-                              class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
+                              class="no-ligatures text-md font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
                               data-testid="DetailLabelText"
                             >
                               Value
                             </div>
                             <span
-                              class="whitespace-nowrap font-semibold"
+                              class="whitespace-nowrap font-semibold leading-5"
                               data-testid="Amount"
                             >
                               0 BTC
@@ -5589,7 +5599,7 @@ exports[`TransactionDetailModal > should render an unlock tokens modal 1`] = `
                         data-testid="DetailLabel"
                       >
                         <div
-                          class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                          class="no-ligatures text-md min-w-24 font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500"
                           data-testid="DetailLabelText"
                         >
                           Transaction Details
@@ -5605,19 +5615,19 @@ exports[`TransactionDetailModal > should render an unlock tokens modal 1`] = `
                             class="flex w-full justify-between sm:justify-start"
                           >
                             <div
-                              class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
+                              class="no-ligatures text-md font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
                               data-testid="DetailLabelText"
                             >
                               Timestamp
                             </div>
                             <div
-                              class="font-semibold"
+                              class="font-semibold leading-5"
                             >
                               31.07.2020 4:34 PM
                             </div>
                           </div>
                           <div
-                            class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3"
+                            class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3 [.condensed_&]:leading-3"
                           >
                             <div
                               class="w-full [.condensed_&]:hidden"
@@ -5632,20 +5642,20 @@ exports[`TransactionDetailModal > should render an unlock tokens modal 1`] = `
                             class="flex w-full justify-between sm:justify-start"
                           >
                             <div
-                              class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
+                              class="no-ligatures text-md font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
                               data-testid="DetailLabelText"
                             >
                               Block
                             </div>
                             <a
-                              class="ring-focus group inline-block css-7nwwrh"
+                              class="ring-focus group/inner inline-block h-5 leading-5 css-7nwwrh"
                               data-ring-focus-margin="-m-1"
                               data-testid="Link"
                               href="https://live.arkscan.io/blocks/71fd1a494ded5430586f4dd1c79c3ac77bf38120e868c8f8980972b8075d67e9"
                               rel="noopener noreferrer"
                             >
                               <span
-                                class="css-170792"
+                                class="css-bxx244"
                               />
                               <div
                                 class="mb-[3px] shrink-0 align-middle duration-200 css-v0ob3f"
@@ -5674,7 +5684,7 @@ exports[`TransactionDetailModal > should render an unlock tokens modal 1`] = `
                             </a>
                           </div>
                           <div
-                            class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3"
+                            class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3 [.condensed_&]:leading-3"
                           >
                             <div
                               class="w-full [.condensed_&]:hidden"
@@ -5689,13 +5699,13 @@ exports[`TransactionDetailModal > should render an unlock tokens modal 1`] = `
                             class="flex w-full justify-between sm:justify-start"
                           >
                             <div
-                              class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
+                              class="no-ligatures text-md font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
                               data-testid="DetailLabelText"
                             >
                               Nonce
                             </div>
                             <p
-                              class="text-theme-secondary-500"
+                              class="leading-5 text-theme-secondary-500"
                             >
                               N/A
                             </p>
@@ -5733,7 +5743,7 @@ exports[`TransactionDetailModal > should render an unlock tokens modal 1`] = `
                         data-testid="DetailLabel"
                       >
                         <div
-                          class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                          class="no-ligatures text-md min-w-24 font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500"
                           data-testid="DetailLabelText"
                         >
                           Memo (SmartBridge)
@@ -5742,7 +5752,9 @@ exports[`TransactionDetailModal > should render an unlock tokens modal 1`] = `
                       <div
                         class="w-full break-words rounded-lg border-theme-secondary-300 p-3 dark:border-theme-secondary-800 sm:border sm:px-6 sm:py-5 [.condensed_&]:sm:py-4 mt-0 sm:mt-2"
                       >
-                        <p>
+                        <p
+                          class="leading-5"
+                        >
                           Test
                         </p>
                       </div>
@@ -5774,7 +5786,7 @@ exports[`TransactionDetailModal > should render an unlock tokens modal 1`] = `
                       data-testid="DetailLabel"
                     >
                       <div
-                        class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                        class="no-ligatures text-md min-w-24 font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500"
                         data-testid="DetailLabelText"
                       >
                         Confirmations
@@ -5787,7 +5799,7 @@ exports[`TransactionDetailModal > should render an unlock tokens modal 1`] = `
                         class="mt-3 sm:mt-2"
                       >
                         <div
-                          class="flex items-center space-x-3 rounded-xl border border-theme-warning-200 bg-theme-warning-50 px-3 py-2 dark:border-theme-warning-600 dark:bg-transparent max-sm:text-sm sm:px-6 sm:py-5"
+                          class="flex items-center space-x-3 rounded-xl border border-theme-warning-200 bg-theme-warning-50 px-3 py-2 dark:border-theme-warning-600 dark:bg-transparent max-sm:text-sm sm:px-6 sm:py-4 sm:leading-5"
                           data-testid="PendingConfirmationAlert"
                         >
                           <div
@@ -5796,7 +5808,7 @@ exports[`TransactionDetailModal > should render an unlock tokens modal 1`] = `
                             width="3"
                           />
                           <div
-                            class="text-theme-warning-200 dark:text-theme-secondary-800 css-1aie31u"
+                            class="h-5 text-theme-warning-200 dark:text-theme-secondary-800 css-1aie31u"
                             type="vertical"
                           />
                           <p

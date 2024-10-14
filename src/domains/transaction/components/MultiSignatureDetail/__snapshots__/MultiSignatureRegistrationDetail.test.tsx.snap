@@ -530,14 +530,14 @@ exports[`MultiSignatureRegistrationDetail > should render sender's address as ge
                       class="overflow-hidden"
                     >
                       <a
-                        class="ring-focus group inline-block flex items-center css-7nwwrh"
+                        class="ring-focus group/inner inline-block flex items-center css-7nwwrh"
                         data-ring-focus-margin="-m-1"
                         data-testid="Link"
                         href="https://live.arkscan.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
                         rel="noopener noreferrer"
                       >
                         <span
-                          class="css-170792"
+                          class="css-bxx244"
                         >
                           <span
                             class="no-ligatures css-0"
@@ -1144,14 +1144,14 @@ exports[`MultiSignatureRegistrationDetail > should render sender's address as ge
                       class="overflow-hidden"
                     >
                       <a
-                        class="ring-focus group inline-block flex items-center css-7nwwrh"
+                        class="ring-focus group/inner inline-block flex items-center css-7nwwrh"
                         data-ring-focus-margin="-m-1"
                         data-testid="Link"
                         href="https://live.arkscan.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
                         rel="noopener noreferrer"
                       >
                         <span
-                          class="css-170792"
+                          class="css-bxx244"
                         >
                           <span
                             class="no-ligatures css-0"
@@ -1511,14 +1511,14 @@ exports[`MultiSignatureRegistrationDetail > should render sender's address as ge
                       />
                     </div>
                     <a
-                      class="ring-focus group inline-block hidden sm:block css-7nwwrh"
+                      class="ring-focus group/inner inline-block hidden sm:block css-7nwwrh"
                       data-ring-focus-margin="-m-1"
                       data-testid="Link"
                       href="https://live.arkscan.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
                       rel="noopener noreferrer"
                     >
                       <span
-                        class="css-170792"
+                        class="css-bxx244"
                       >
                         View Full List
                       </span>
@@ -1570,14 +1570,14 @@ exports[`MultiSignatureRegistrationDetail > should render sender's address as ge
                       </div>
                     </div>
                     <a
-                      class="ring-focus group inline-block block w-32 sm:hidden css-7nwwrh"
+                      class="ring-focus group/inner inline-block block w-32 sm:hidden css-7nwwrh"
                       data-ring-focus-margin="-m-1"
                       data-testid="Link"
                       href="https://live.arkscan.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
                       rel="noopener noreferrer"
                     >
                       <span
-                        class="css-170792"
+                        class="css-bxx244"
                       >
                         View Full List
                       </span>
@@ -1731,14 +1731,14 @@ exports[`MultiSignatureRegistrationDetail > should render sender's address as ge
                         class="overflow-hidden w-full"
                       >
                         <a
-                          class="ring-focus group inline-block flex items-center justify-end css-7nwwrh"
+                          class="ring-focus group/inner inline-block flex items-center justify-end css-7nwwrh"
                           data-ring-focus-margin="-m-1"
                           data-testid="Link"
                           href="https://live.arkscan.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
                           rel="noopener noreferrer"
                         >
                           <span
-                            class="css-170792"
+                            class="css-bxx244"
                           >
                             <span
                               class="no-ligatures css-0"
@@ -2346,14 +2346,14 @@ exports[`MultiSignatureRegistrationDetail > should render sender's address as ge
                       class="overflow-hidden"
                     >
                       <a
-                        class="ring-focus group inline-block flex items-center css-7nwwrh"
+                        class="ring-focus group/inner inline-block flex items-center css-7nwwrh"
                         data-ring-focus-margin="-m-1"
                         data-testid="Link"
                         href="https://live.arkscan.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
                         rel="noopener noreferrer"
                       >
                         <span
-                          class="css-170792"
+                          class="css-bxx244"
                         >
                           <span
                             class="no-ligatures css-0"
@@ -2713,14 +2713,14 @@ exports[`MultiSignatureRegistrationDetail > should render sender's address as ge
                       />
                     </div>
                     <a
-                      class="ring-focus group inline-block hidden sm:block css-7nwwrh"
+                      class="ring-focus group/inner inline-block hidden sm:block css-7nwwrh"
                       data-ring-focus-margin="-m-1"
                       data-testid="Link"
                       href="https://live.arkscan.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
                       rel="noopener noreferrer"
                     >
                       <span
-                        class="css-170792"
+                        class="css-bxx244"
                       >
                         View Full List
                       </span>
@@ -2772,14 +2772,14 @@ exports[`MultiSignatureRegistrationDetail > should render sender's address as ge
                       </div>
                     </div>
                     <a
-                      class="ring-focus group inline-block block w-32 sm:hidden css-7nwwrh"
+                      class="ring-focus group/inner inline-block block w-32 sm:hidden css-7nwwrh"
                       data-ring-focus-margin="-m-1"
                       data-testid="Link"
                       href="https://live.arkscan.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
                       rel="noopener noreferrer"
                     >
                       <span
-                        class="css-170792"
+                        class="css-bxx244"
                       >
                         View Full List
                       </span>
@@ -2933,14 +2933,14 @@ exports[`MultiSignatureRegistrationDetail > should render sender's address as ge
                         class="overflow-hidden w-full"
                       >
                         <a
-                          class="ring-focus group inline-block flex items-center justify-end css-7nwwrh"
+                          class="ring-focus group/inner inline-block flex items-center justify-end css-7nwwrh"
                           data-ring-focus-margin="-m-1"
                           data-testid="Link"
                           href="https://live.arkscan.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
                           rel="noopener noreferrer"
                         >
                           <span
-                            class="css-170792"
+                            class="css-bxx244"
                           >
                             <span
                               class="no-ligatures css-0"
