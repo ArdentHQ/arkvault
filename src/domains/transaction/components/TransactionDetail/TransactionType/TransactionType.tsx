@@ -43,7 +43,7 @@ export const TransactionType = ({
 
 							<div className="flex w-full justify-between sm:justify-start">
 								<DetailLabelText>{t("COMMON.DELEGATE")}</DetailLabelText>
-								<div className="font-semibold">{transaction.username()}</div>
+								<div className="font-semibold leading-5">{transaction.username()}</div>
 							</div>
 						</>
 					)}
@@ -54,7 +54,7 @@ export const TransactionType = ({
 
 							<div className="flex w-full justify-between sm:justify-start">
 								<DetailLabelText>{t("COMMON.DELEGATE")}</DetailLabelText>
-								<div className="font-semibold"> {transaction.wallet().username()} </div>
+								<div className="font-semibold leading-5"> {transaction.wallet().username()} </div>
 							</div>
 						</>
 					)}
@@ -71,7 +71,7 @@ export const TransactionType = ({
 											availableWidth={width}
 											value={transaction.hash()}
 											parentRef={ref}
-											className="font-semibold"
+											className="font-semibold leading-5"
 										/>
 									</div>
 									<Clipboard
@@ -96,7 +96,7 @@ export const TransactionType = ({
 
 							<div className="flex w-full justify-between sm:justify-start">
 								<DetailLabelText>{t("COMMON.ADDRESS")}</DetailLabelText>
-								<div className="font-semibold max-sm:text-sm">
+								<div className="font-semibold leading-5 max-sm:text-sm">
 									<MusigGeneratedAddress
 										publicKeys={publicKeys}
 										min={min}
