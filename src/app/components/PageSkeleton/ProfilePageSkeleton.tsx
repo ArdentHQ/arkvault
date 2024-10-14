@@ -3,7 +3,7 @@ import { Skeleton } from "@/app/components/Skeleton";
 import { Section } from "@/app/components/Layout";
 import { Logo } from "@/app/components/Logo";
 
-const MenuItemSkeleton = ({ isCircle = false }: { isCircle?: boolena }) => (
+const MenuItemSkeleton = ({ isCircle = false }: { isCircle?: boolean }) => (
 	<div>
 		<div className="hidden sm:visible" >
 			<Skeleton height={40} width={40} circle={isCircle}/>
