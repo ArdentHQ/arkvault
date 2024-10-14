@@ -37,6 +37,7 @@ interface AmountLabelProperties {
 	hint?: string;
 	size?: Size;
 	className?: string;
+	textClassName?: string
 }
 
 export const AmountLabel: React.VFC<AmountLabelProperties> = ({
@@ -47,6 +48,7 @@ export const AmountLabel: React.VFC<AmountLabelProperties> = ({
 	hint,
 	size,
 	className,
+	textClassName
 }) => {
 	let labelColor = "success-bg";
 	let hintClassName =
@@ -83,7 +85,7 @@ export const AmountLabel: React.VFC<AmountLabelProperties> = ({
 					ticker={ticker}
 					value={value}
 					isNegative={isNegative}
-					className="text-sm"
+					className={cn("text-sm", textClassName)}
 				/>
 			</div>
 		</Label>
