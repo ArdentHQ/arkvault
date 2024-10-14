@@ -85,7 +85,7 @@ export const AmountLabel: React.VFC<AmountLabelProperties> = ({
 					ticker={ticker}
 					value={value}
 					isNegative={isNegative}
-					className={cn("text-sm", textClassName)}
+					className={twMerge("text-sm", textClassName)}
 				/>
 			</div>
 		</Label>
