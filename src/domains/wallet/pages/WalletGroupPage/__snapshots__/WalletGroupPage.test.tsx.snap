@@ -5107,14 +5107,16 @@ exports[`WalletGroupPage > should render empty list if no wallets 1`] = `
                 </div>
               </div>
               <div
-                class="flex w-full justify-between border-t border-theme-secondary-300 px-6 py-4"
+                class="flex w-full flex-col gap-4 border-theme-secondary-300 pt-4 dark:border-theme-secondary-800 sm:flex-row sm:justify-between sm:border-t sm:px-6 sm:pb-4"
               >
                 <div
-                  class="flex items-center gap-2 text-sm font-semibold leading-[17px] text-theme-secondary-700"
+                  class="flex items-center justify-center gap-2 text-sm font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-200 sm:justify-start"
                 >
-                  Show
+                  <span>
+                    Show
+                  </span>
                   <div
-                    class="relative w-full"
+                    class="relative"
                     data-testid="SelectDropdown"
                   >
                     <div
@@ -5159,7 +5161,7 @@ exports[`WalletGroupPage > should render empty list if no wallets 1`] = `
                                 aria-controls="downshift-6-menu"
                                 aria-labelledby="downshift-6-label"
                                 autocomplete="off"
-                                class="no-ligatures w-full border-none cursor-default !text-sm !leading-[17px] css-1vs1awz"
+                                class="no-ligatures w-full border-none cursor-default !text-sm css-1vs1awz"
                                 data-testid="SelectDropdown__input"
                                 id="downshift-6-input"
                                 placeholder="Select option"
@@ -5218,10 +5220,12 @@ exports[`WalletGroupPage > should render empty list if no wallets 1`] = `
                       </div>
                     </div>
                   </div>
-                  Records
+                  <span>
+                    Records
+                  </span>
                 </div>
                 <nav
-                  class="relative w-full sm:w-auto css-91czg2"
+                  class="relative w-full sm:w-auto css-4ybc2s"
                   data-testid="Pagination"
                 >
                   <button
