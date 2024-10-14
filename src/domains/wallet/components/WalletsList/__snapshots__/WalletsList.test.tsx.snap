@@ -895,12 +895,14 @@ exports[`WalletsList > should group starred wallets at the top 1`] = `
       </div>
     </div>
     <div
-      class="flex w-full flex-col sm:flex-row sm:justify-between border-t border-theme-secondary-300 px-6 py-4"
+      class="flex w-full flex-col gap-4 border-theme-secondary-300 pt-4 dark:border-theme-secondary-800 sm:flex-row sm:justify-between sm:border-t sm:px-6 sm:pb-4"
     >
       <div
-        class="flex items-center gap-2 text-sm font-semibold leading-[17px] text-theme-secondary-700"
+        class="flex items-center justify-center gap-2 text-sm font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-200 sm:justify-start"
       >
-        Show
+        <span>
+          Show
+        </span>
         <div
           class="relative"
           data-testid="SelectDropdown"
@@ -952,7 +954,7 @@ exports[`WalletsList > should group starred wallets at the top 1`] = `
                       aria-controls="downshift-9-menu"
                       aria-labelledby="downshift-9-label"
                       autocomplete="off"
-                      class="no-ligatures w-full border-none !text-sm !leading-[17px] css-1vs1awz"
+                      class="no-ligatures w-full border-none !text-sm css-1vs1awz"
                       data-testid="SelectDropdown__input"
                       id="downshift-9-input"
                       placeholder="Select option"
@@ -961,7 +963,7 @@ exports[`WalletsList > should group starred wallets at the top 1`] = `
                       value="10"
                     />
                     <span
-                      class="pointer-events-none absolute inset-y-0 flex w-full items-center font-normal opacity-50 !text-sm !leading-[17px]"
+                      class="pointer-events-none absolute inset-y-0 flex w-full items-center font-normal opacity-50 !text-sm"
                       data-testid="Input__suggestion"
                     >
                       <span
@@ -1021,7 +1023,9 @@ exports[`WalletsList > should group starred wallets at the top 1`] = `
             </div>
           </div>
         </div>
-        Records
+        <span>
+          Records
+        </span>
       </div>
     </div>
   </div>
@@ -1857,12 +1861,14 @@ exports[`WalletsList > should render 1`] = `
       </div>
     </div>
     <div
-      class="flex w-full flex-col sm:flex-row sm:justify-between border-t border-theme-secondary-300 px-6 py-4"
+      class="flex w-full flex-col gap-4 border-theme-secondary-300 pt-4 dark:border-theme-secondary-800 sm:flex-row sm:justify-between sm:border-t sm:px-6 sm:pb-4"
     >
       <div
-        class="flex items-center gap-2 text-sm font-semibold leading-[17px] text-theme-secondary-700"
+        class="flex items-center justify-center gap-2 text-sm font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-200 sm:justify-start"
       >
-        Show
+        <span>
+          Show
+        </span>
         <div
           class="relative"
           data-testid="SelectDropdown"
@@ -1914,7 +1920,7 @@ exports[`WalletsList > should render 1`] = `
                       aria-controls="downshift-0-menu"
                       aria-labelledby="downshift-0-label"
                       autocomplete="off"
-                      class="no-ligatures w-full border-none !text-sm !leading-[17px] css-1vs1awz"
+                      class="no-ligatures w-full border-none !text-sm css-1vs1awz"
                       data-testid="SelectDropdown__input"
                       id="downshift-0-input"
                       placeholder="Select option"
@@ -1923,7 +1929,7 @@ exports[`WalletsList > should render 1`] = `
                       value="10"
                     />
                     <span
-                      class="pointer-events-none absolute inset-y-0 flex w-full items-center font-normal opacity-50 !text-sm !leading-[17px]"
+                      class="pointer-events-none absolute inset-y-0 flex w-full items-center font-normal opacity-50 !text-sm"
                       data-testid="Input__suggestion"
                     >
                       <span
@@ -1983,7 +1989,9 @@ exports[`WalletsList > should render 1`] = `
             </div>
           </div>
         </div>
-        Records
+        <span>
+          Records
+        </span>
       </div>
     </div>
   </div>
@@ -2849,12 +2857,14 @@ exports[`WalletsList > should render empty skeleton block 1`] = `
       </div>
     </div>
     <div
-      class="flex w-full flex-col sm:flex-row sm:justify-between border-t border-theme-secondary-300 px-6 py-4"
+      class="flex w-full flex-col gap-4 border-theme-secondary-300 pt-4 dark:border-theme-secondary-800 sm:flex-row sm:justify-between sm:border-t sm:px-6 sm:pb-4"
     >
       <div
-        class="flex items-center gap-2 text-sm font-semibold leading-[17px] text-theme-secondary-700"
+        class="flex items-center justify-center gap-2 text-sm font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-200 sm:justify-start"
       >
-        Show
+        <span>
+          Show
+        </span>
         <div
           class="relative"
           data-testid="SelectDropdown"
@@ -2906,7 +2916,7 @@ exports[`WalletsList > should render empty skeleton block 1`] = `
                       aria-controls="downshift-6-menu"
                       aria-labelledby="downshift-6-label"
                       autocomplete="off"
-                      class="no-ligatures w-full border-none !text-sm !leading-[17px] css-1vs1awz"
+                      class="no-ligatures w-full border-none !text-sm css-1vs1awz"
                       data-testid="SelectDropdown__input"
                       id="downshift-6-input"
                       placeholder="Select option"
@@ -2915,7 +2925,7 @@ exports[`WalletsList > should render empty skeleton block 1`] = `
                       value="10"
                     />
                     <span
-                      class="pointer-events-none absolute inset-y-0 flex w-full items-center font-normal opacity-50 !text-sm !leading-[17px]"
+                      class="pointer-events-none absolute inset-y-0 flex w-full items-center font-normal opacity-50 !text-sm"
                       data-testid="Input__suggestion"
                     >
                       <span
@@ -2975,7 +2985,9 @@ exports[`WalletsList > should render empty skeleton block 1`] = `
             </div>
           </div>
         </div>
-        Records
+        <span>
+          Records
+        </span>
       </div>
     </div>
   </div>
@@ -3341,12 +3353,14 @@ exports[`WalletsList > should render responsive 1`] = `
       </div>
     </div>
     <div
-      class="flex w-full flex-col sm:flex-row sm:justify-between border-t border-theme-secondary-300 px-6 py-4"
+      class="flex w-full flex-col gap-4 border-theme-secondary-300 pt-4 dark:border-theme-secondary-800 sm:flex-row sm:justify-between sm:border-t sm:px-6 sm:pb-4"
     >
       <div
-        class="flex items-center gap-2 text-sm font-semibold leading-[17px] text-theme-secondary-700"
+        class="flex items-center justify-center gap-2 text-sm font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-200 sm:justify-start"
       >
-        Show
+        <span>
+          Show
+        </span>
         <div
           class="relative"
           data-testid="SelectDropdown"
@@ -3398,7 +3412,7 @@ exports[`WalletsList > should render responsive 1`] = `
                       aria-controls="downshift-3-menu"
                       aria-labelledby="downshift-3-label"
                       autocomplete="off"
-                      class="no-ligatures w-full border-none !text-sm !leading-[17px] css-1vs1awz"
+                      class="no-ligatures w-full border-none !text-sm css-1vs1awz"
                       data-testid="SelectDropdown__input"
                       id="downshift-3-input"
                       placeholder="Select option"
@@ -3407,7 +3421,7 @@ exports[`WalletsList > should render responsive 1`] = `
                       value="10"
                     />
                     <span
-                      class="pointer-events-none absolute inset-y-0 flex w-full items-center font-normal opacity-50 !text-sm !leading-[17px]"
+                      class="pointer-events-none absolute inset-y-0 flex w-full items-center font-normal opacity-50 !text-sm"
                       data-testid="Input__suggestion"
                     >
                       <span
@@ -3467,7 +3481,9 @@ exports[`WalletsList > should render responsive 1`] = `
             </div>
           </div>
         </div>
-        Records
+        <span>
+          Records
+        </span>
       </div>
     </div>
   </div>
