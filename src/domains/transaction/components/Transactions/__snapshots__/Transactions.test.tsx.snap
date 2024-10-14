@@ -7677,7 +7677,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     color="secondary"
                     data-testid="TransactionRow__type"
                   >
-                    Second Signature
+                    2nd Signature
                   </div>
                 </div>
               </td>
@@ -7841,7 +7841,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     color="secondary"
                     data-testid="TransactionRow__type"
                   >
-                    Second Signature
+                    2nd Signature
                   </div>
                 </div>
               </td>
@@ -8005,7 +8005,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     color="secondary"
                     data-testid="TransactionRow__type"
                   >
-                    Second Signature
+                    2nd Signature
                   </div>
                 </div>
               </td>
@@ -8169,7 +8169,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     color="secondary"
                     data-testid="TransactionRow__type"
                   >
-                    Second Signature
+                    2nd Signature
                   </div>
                 </div>
               </td>
@@ -14303,7 +14303,7 @@ exports[`Transactions > should hide view more button when there are no next page
                     color="secondary"
                     data-testid="TransactionRow__type"
                   >
-                    Second Signature
+                    2nd Signature
                   </div>
                 </div>
               </td>
@@ -14467,7 +14467,7 @@ exports[`Transactions > should hide view more button when there are no next page
                     color="secondary"
                     data-testid="TransactionRow__type"
                   >
-                    Second Signature
+                    2nd Signature
                   </div>
                 </div>
               </td>
@@ -19641,7 +19641,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                     color="secondary"
                     data-testid="TransactionRow__type"
                   >
-                    Second Signature
+                    2nd Signature
                   </div>
                 </div>
               </td>
@@ -19805,7 +19805,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                     color="secondary"
                     data-testid="TransactionRow__type"
                   >
-                    Second Signature
+                    2nd Signature
                   </div>
                 </div>
               </td>
