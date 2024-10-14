@@ -6,7 +6,7 @@ import cn from "classnames";
 
 type VoteRegistryItem = Contracts.VoteRegistryItem;
 
-export function getVoteCategory(votes: VoteRegistryItem[], unvotes: VoteRegistryItem[]): "swap"|"vote"|"unvote" {
+export function getVoteCategory(votes: VoteRegistryItem[], unvotes: VoteRegistryItem[]): "swap" | "vote" | "unvote" {
 	if (votes.length > 0 && unvotes.length > 0) {
 		return "swap";
 	}
