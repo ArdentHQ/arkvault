@@ -747,7 +747,7 @@ exports[`SendTransfer Fee Handling > should send a single transfer with a high f
                             </span>
                           </button>
                           <button
-                            class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-700 p-2"
+                            class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:text-theme-secondary-200 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-700 border border-theme-secondary-300 bg-transparent p-2 hover:border-transparent dark:border-transparent dark:bg-theme-secondary-800"
                             data-testid="explorer-link"
                             type="button"
                           >
@@ -1077,7 +1077,7 @@ exports[`SendTransfer Fee Handling > should send a single transfer with a high f
                                     Amount
                                   </div>
                                   <div
-                                    class="flex h-full items-center justify-center rounded px-1.5 leading-5 css-xqt0aw"
+                                    class="flex h-full items-center justify-center rounded px-1.5 text-base leading-5 css-xqt0aw"
                                     color="danger-bg"
                                     data-testid="AmountLabel__wrapper"
                                   >
@@ -1085,7 +1085,7 @@ exports[`SendTransfer Fee Handling > should send a single transfer with a high f
                                       class="flex h-full items-center space-x-1"
                                     >
                                       <span
-                                        class="whitespace-nowrap text-sm text-[1rem]"
+                                        class="whitespace-nowrap text-sm"
                                         data-testid="Amount"
                                       >
                                         - 400,000 DARK
@@ -1231,14 +1231,14 @@ exports[`SendTransfer Fee Handling > should send a single transfer with a high f
                                     Block
                                   </div>
                                   <a
-                                    class="ring-focus group inline-block h-5 leading-5 css-7nwwrh"
+                                    class="ring-focus group/inner inline-block h-5 leading-5 css-7nwwrh"
                                     data-ring-focus-margin="-m-1"
                                     data-testid="Link"
                                     href="https://test.arkscan.io/block/8f913b6b719e7767d49861c0aec79ced212767645cb793d75d2f1b89abb49877"
                                     rel="noopener noreferrer"
                                   >
                                     <span
-                                      class="css-170792"
+                                      class="css-bxx244"
                                     />
                                     <div
                                       class="mb-[3px] shrink-0 align-middle duration-200 css-v0ob3f"
@@ -2219,7 +2219,7 @@ exports[`SendTransfer Fee Handling > should send a single transfer with a low fe
                             </span>
                           </button>
                           <button
-                            class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-700 p-2"
+                            class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:text-theme-secondary-200 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-700 border border-theme-secondary-300 bg-transparent p-2 hover:border-transparent dark:border-transparent dark:bg-theme-secondary-800"
                             data-testid="explorer-link"
                             type="button"
                           >
@@ -2549,7 +2549,7 @@ exports[`SendTransfer Fee Handling > should send a single transfer with a low fe
                                     Amount
                                   </div>
                                   <div
-                                    class="flex h-full items-center justify-center rounded px-1.5 leading-5 css-xqt0aw"
+                                    class="flex h-full items-center justify-center rounded px-1.5 text-base leading-5 css-xqt0aw"
                                     color="danger-bg"
                                     data-testid="AmountLabel__wrapper"
                                   >
@@ -2557,7 +2557,7 @@ exports[`SendTransfer Fee Handling > should send a single transfer with a low fe
                                       class="flex h-full items-center space-x-1"
                                     >
                                       <span
-                                        class="whitespace-nowrap text-sm text-[1rem]"
+                                        class="whitespace-nowrap text-sm"
                                         data-testid="Amount"
                                       >
                                         - 400,000 DARK
@@ -2703,14 +2703,14 @@ exports[`SendTransfer Fee Handling > should send a single transfer with a low fe
                                     Block
                                   </div>
                                   <a
-                                    class="ring-focus group inline-block h-5 leading-5 css-7nwwrh"
+                                    class="ring-focus group/inner inline-block h-5 leading-5 css-7nwwrh"
                                     data-ring-focus-margin="-m-1"
                                     data-testid="Link"
                                     href="https://test.arkscan.io/block/8f913b6b719e7767d49861c0aec79ced212767645cb793d75d2f1b89abb49877"
                                     rel="noopener noreferrer"
                                   >
                                     <span
-                                      class="css-170792"
+                                      class="css-bxx244"
                                     />
                                     <div
                                       class="mb-[3px] shrink-0 align-middle duration-200 css-v0ob3f"
