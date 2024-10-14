@@ -5,24 +5,28 @@ import { Logo } from "@/app/components/Logo";
 
 const MenuItemSkeleton = ({ isCircle = false }: { isCircle?: boolean }) => (
 	<div>
-		<div className="hidden sm:visible" >
-			<Skeleton height={40} width={40} circle={isCircle}/>
+		<div className="hidden sm:visible">
+			<Skeleton height={40} width={40} circle={isCircle} />
 		</div>
 
-		<div className="visible sm:hidden" >
-			<Skeleton height={25} width={25} circle={isCircle}/>
+		<div className="visible sm:hidden">
+			<Skeleton height={25} width={25} circle={isCircle} />
 		</div>
 	</div>
-)
+);
 
 export const ProfilePageSkeleton: React.FC = () => (
 	<div className="relative flex min-h-screen flex-col" data-testid="ProfilePageSkeleton">
 		<div className="sticky inset-x-0 top-0 border-b border-theme-secondary-300 dark:border-theme-secondary-800">
 			<div className="relative flex h-14 sm:h-21">
-				<div className="flex flex-1 justify-between px-6 sm:px-8 sm:ml-12">
-					<div className="my-auto mr-4 flex h-8 sm:h-11 w-8 sm:w-11 items-center justify-center rounded-md sm:rounded-xl bg-theme-primary-600 text-white">
-						<div className="hidden sm:block"><Logo height={28} /></div>
-						<div className="block sm:hidden"><Logo height={23} /></div>
+				<div className="flex flex-1 justify-between px-6 sm:ml-12 sm:px-8">
+					<div className="my-auto mr-4 flex h-8 w-8 items-center justify-center rounded-md bg-theme-primary-600 text-white sm:h-11 sm:w-11 sm:rounded-xl">
+						<div className="hidden sm:block">
+							<Logo height={28} />
+						</div>
+						<div className="block sm:hidden">
+							<Logo height={23} />
+						</div>
 					</div>
 
 					<div className="flex">

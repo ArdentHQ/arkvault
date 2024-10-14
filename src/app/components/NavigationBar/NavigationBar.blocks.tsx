@@ -228,7 +228,7 @@ export const NavigationBarFull: React.FC<NavigationBarFullProperties> = ({
 
 	const renderNavigationMenu = () => (
 		<>
-			<ul className="ml-4 mr-auto hidden h-14 sm:h-21 space-x-8 lg:flex" data-testid="NavigationBar__menu">
+			<ul className="ml-4 mr-auto hidden h-14 space-x-8 sm:h-21 lg:flex" data-testid="NavigationBar__menu">
 				{navigationMenu.map((menuItem, index) => (
 					<li key={index} className="flex">
 						<NavLink
