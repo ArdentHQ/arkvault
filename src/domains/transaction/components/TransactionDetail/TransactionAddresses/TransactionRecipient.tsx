@@ -72,17 +72,17 @@ export const TransactionRecipients = ({
 				<DetailTitle className={labelClassName}>{t("COMMON.TO")}</DetailTitle>
 
 				<div className="flex items-center">
-					<span className="font-semibold">
+					<span className="font-semibold leading-5">
 						<span>{t("COMMON.MULTIPLE")} </span>
 						<span className="text-theme-secondary-700 dark:text-theme-secondary-500">
 							({recipients.length}){" "}
 						</span>
 					</span>
-					<div className="hidden sm:inline-block">
+					<div className="hidden h-5 leading-5 sm:block">
 						<Divider type="vertical" size="md" />
 					</div>
 
-					<Link to={explorerLink} isExternal className="hidden sm:block">
+					<Link to={explorerLink} isExternal className="hidden h-5 leading-5 sm:block">
 						{t("TRANSACTION.VIEW_RECIPIENTS_LIST")}
 					</Link>
 				</div>
