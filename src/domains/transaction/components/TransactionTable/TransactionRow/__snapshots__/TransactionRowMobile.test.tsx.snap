@@ -98,7 +98,7 @@ exports[`TransactionRowMobile > should render 1`] = `
                           class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
-                            class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold text-sm absolute w-full"
+                            class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold text-sm absolute w-full"
                             data-testid="Address__address"
                           >
                             D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -267,7 +267,7 @@ exports[`TransactionRowMobile > should render 2`] = `
                           class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
-                            class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold text-sm absolute w-full"
+                            class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold text-sm absolute w-full"
                             data-testid="Address__address"
                           >
                             D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -717,7 +717,7 @@ exports[`TransactionRowMobile > should render with currency 1`] = `
                           class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
-                            class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                            class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 font-semibold text-sm absolute w-full"
                             data-testid="Address__address"
                           >
                             D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -875,7 +875,7 @@ exports[`TransactionRowMobile > should render with currency 2`] = `
                           class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
-                            class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                            class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 font-semibold text-sm absolute w-full"
                             data-testid="Address__address"
                           >
                             D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
