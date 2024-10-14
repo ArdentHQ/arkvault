@@ -229,7 +229,8 @@ export const AuthenticationStep = ({
 								/>
 							}
 							title={title}
-							subtitle={t("TRANSACTION.AUTHENTICATION_STEP.DESCRIPTION_WIF")} />
+							subtitle={t("TRANSACTION.AUTHENTICATION_STEP.DESCRIPTION_WIF")}
+						/>
 					)}
 
 					<FormField name="wif">
