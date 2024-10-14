@@ -55,7 +55,7 @@ const ModalContent = ({
 	<div
 		className={twMerge(
 			"relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-xl",
-			"pt-4 px-6 md:p-8",
+			"px-6 pt-4 md:p-8",
 			noButtons && "pb-24",
 			className,
 		)}
@@ -89,7 +89,9 @@ const ModalContent = ({
 			)}
 
 			{!banner && title && (
-				<h2 className={cn("mb-0 text-lg font-bold md:pt-0 md:text-2xl max-w-[calc(100%_-_32px)]", titleClass)}>{title}</h2>
+				<h2 className={cn("mb-0 max-w-[calc(100%_-_32px)] text-lg font-bold md:pt-0 md:text-2xl", titleClass)}>
+					{title}
+				</h2>
 			)}
 
 			<div className="flex flex-1 flex-col">
