@@ -284,7 +284,7 @@ exports[`SearchRecipient > should call onAction when no address is selected 1`] 
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
                               <span
-                                class="font-semibold text-base text-sm text-theme-secondary-900 dark:text-theme-secondary-200"
+                                class="font-semibold text-base text-sm text-theme-secondary-900 dark:text-theme-secondary-200 leading-[17px]"
                                 data-testid="Address__alias"
                               >
                                 <span
@@ -294,19 +294,12 @@ exports[`SearchRecipient > should call onAction when no address is selected 1`] 
                                   ARK Wallet 1
                                 </span>
                               </span>
-                              <div
-                                class="relative grow leading-[17px] sm:leading-5 text-left"
+                              <span
+                                class="no-ligatures min-w-0 overflow-hidden text-sm text-theme-secondary-700 dark:text-theme-secondary-500 leading-[17px] font-semibold text-base"
+                                data-testid="Address__address"
                               >
-                                <span
-                                  class="no-ligatures min-w-0 overflow-hidden text-sm text-theme-secondary-700 mt-0.5 dark:text-theme-secondary-500 font-semibold text-base absolute w-full"
-                                  data-testid="Address__address"
-                                >
-                                  D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                                </span>
-                                <span>
-                                   
-                                </span>
-                              </div>
+                                D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                              </span>
                             </div>
                           </div>
                         </td>
@@ -315,7 +308,7 @@ exports[`SearchRecipient > should call onAction when no address is selected 1`] 
                             class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11"
                           >
                             <span
-                              class="whitespace-nowrap text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                              class="whitespace-nowrap text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500"
                               data-testid="RecipientListItem__type"
                             >
                               My Wallet
@@ -327,7 +320,7 @@ exports[`SearchRecipient > should call onAction when no address is selected 1`] 
                             class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
                           >
                             <button
-                              class="p-3 relative items-center inline-flex justify-center text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none -mr-3 text-sm font-semibold text-theme-primary-600"
+                              class="p-3 relative items-center inline-flex justify-center text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none -mr-3 text-sm font-semibold leading-[17px] text-theme-primary-600"
                               data-testid="RecipientListItem__select-button-0"
                               type="button"
                             >
@@ -352,7 +345,7 @@ exports[`SearchRecipient > should call onAction when no address is selected 1`] 
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
                               <span
-                                class="font-semibold text-base text-sm text-theme-secondary-900 dark:text-theme-secondary-200"
+                                class="font-semibold text-base text-sm text-theme-secondary-900 dark:text-theme-secondary-200 leading-[17px]"
                                 data-testid="Address__alias"
                               >
                                 <span
@@ -362,19 +355,12 @@ exports[`SearchRecipient > should call onAction when no address is selected 1`] 
                                   ARK Wallet 2
                                 </span>
                               </span>
-                              <div
-                                class="relative grow leading-[17px] sm:leading-5 text-left"
+                              <span
+                                class="no-ligatures min-w-0 overflow-hidden text-sm text-theme-secondary-700 dark:text-theme-secondary-500 leading-[17px] font-semibold text-base"
+                                data-testid="Address__address"
                               >
-                                <span
-                                  class="no-ligatures min-w-0 overflow-hidden text-sm text-theme-secondary-700 mt-0.5 dark:text-theme-secondary-500 font-semibold text-base absolute w-full"
-                                  data-testid="Address__address"
-                                >
-                                  D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
-                                </span>
-                                <span>
-                                   
-                                </span>
-                              </div>
+                                D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
+                              </span>
                             </div>
                           </div>
                         </td>
@@ -383,7 +369,7 @@ exports[`SearchRecipient > should call onAction when no address is selected 1`] 
                             class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11"
                           >
                             <span
-                              class="whitespace-nowrap text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                              class="whitespace-nowrap text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500"
                               data-testid="RecipientListItem__type"
                             >
                               My Wallet
@@ -395,7 +381,7 @@ exports[`SearchRecipient > should call onAction when no address is selected 1`] 
                             class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
                           >
                             <button
-                              class="p-3 relative items-center inline-flex justify-center text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none -mr-3 text-sm font-semibold text-theme-primary-600"
+                              class="p-3 relative items-center inline-flex justify-center text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none -mr-3 text-sm font-semibold leading-[17px] text-theme-primary-600"
                               data-testid="RecipientListItem__select-button-1"
                               type="button"
                             >
@@ -707,7 +693,7 @@ exports[`SearchRecipient > should render a modal 1`] = `
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
                               <span
-                                class="font-semibold text-base text-sm text-theme-secondary-900 dark:text-theme-secondary-200"
+                                class="font-semibold text-base text-sm text-theme-secondary-900 dark:text-theme-secondary-200 leading-[17px]"
                                 data-testid="Address__alias"
                               >
                                 <span
@@ -717,19 +703,12 @@ exports[`SearchRecipient > should render a modal 1`] = `
                                   ARK Wallet 1
                                 </span>
                               </span>
-                              <div
-                                class="relative grow leading-[17px] sm:leading-5 text-left"
+                              <span
+                                class="no-ligatures min-w-0 overflow-hidden text-sm text-theme-secondary-700 dark:text-theme-secondary-500 leading-[17px] font-semibold text-base"
+                                data-testid="Address__address"
                               >
-                                <span
-                                  class="no-ligatures min-w-0 overflow-hidden text-sm text-theme-secondary-700 mt-0.5 dark:text-theme-secondary-500 font-semibold text-base absolute w-full"
-                                  data-testid="Address__address"
-                                >
-                                  D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                                </span>
-                                <span>
-                                   
-                                </span>
-                              </div>
+                                D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                              </span>
                             </div>
                           </div>
                         </td>
@@ -738,7 +717,7 @@ exports[`SearchRecipient > should render a modal 1`] = `
                             class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11"
                           >
                             <span
-                              class="whitespace-nowrap text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                              class="whitespace-nowrap text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500"
                               data-testid="RecipientListItem__type"
                             >
                               My Wallet
@@ -750,7 +729,7 @@ exports[`SearchRecipient > should render a modal 1`] = `
                             class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
                           >
                             <button
-                              class="p-3 relative items-center inline-flex justify-center text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none -mr-3 text-sm font-semibold text-theme-primary-600"
+                              class="p-3 relative items-center inline-flex justify-center text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none -mr-3 text-sm font-semibold leading-[17px] text-theme-primary-600"
                               data-testid="RecipientListItem__select-button-0"
                               type="button"
                             >
@@ -775,7 +754,7 @@ exports[`SearchRecipient > should render a modal 1`] = `
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
                               <span
-                                class="font-semibold text-base text-sm text-theme-secondary-900 dark:text-theme-secondary-200"
+                                class="font-semibold text-base text-sm text-theme-secondary-900 dark:text-theme-secondary-200 leading-[17px]"
                                 data-testid="Address__alias"
                               >
                                 <span
@@ -785,19 +764,12 @@ exports[`SearchRecipient > should render a modal 1`] = `
                                   ARK Wallet 2
                                 </span>
                               </span>
-                              <div
-                                class="relative grow leading-[17px] sm:leading-5 text-left"
+                              <span
+                                class="no-ligatures min-w-0 overflow-hidden text-sm text-theme-secondary-700 dark:text-theme-secondary-500 leading-[17px] font-semibold text-base"
+                                data-testid="Address__address"
                               >
-                                <span
-                                  class="no-ligatures min-w-0 overflow-hidden text-sm text-theme-secondary-700 mt-0.5 dark:text-theme-secondary-500 font-semibold text-base absolute w-full"
-                                  data-testid="Address__address"
-                                >
-                                  D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
-                                </span>
-                                <span>
-                                   
-                                </span>
-                              </div>
+                                D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
+                              </span>
                             </div>
                           </div>
                         </td>
@@ -806,7 +778,7 @@ exports[`SearchRecipient > should render a modal 1`] = `
                             class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11"
                           >
                             <span
-                              class="whitespace-nowrap text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                              class="whitespace-nowrap text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500"
                               data-testid="RecipientListItem__type"
                             >
                               My Wallet
@@ -818,7 +790,7 @@ exports[`SearchRecipient > should render a modal 1`] = `
                             class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
                           >
                             <button
-                              class="p-3 relative items-center inline-flex justify-center text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none -mr-3 text-sm font-semibold text-theme-primary-600"
+                              class="p-3 relative items-center inline-flex justify-center text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none -mr-3 text-sm font-semibold leading-[17px] text-theme-primary-600"
                               data-testid="RecipientListItem__select-button-1"
                               type="button"
                             >
@@ -1128,7 +1100,7 @@ exports[`SearchRecipient > should render a modal with custom title and descripti
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
                               <span
-                                class="font-semibold text-base text-sm text-theme-secondary-900 dark:text-theme-secondary-200"
+                                class="font-semibold text-base text-sm text-theme-secondary-900 dark:text-theme-secondary-200 leading-[17px]"
                                 data-testid="Address__alias"
                               >
                                 <span
@@ -1138,19 +1110,12 @@ exports[`SearchRecipient > should render a modal with custom title and descripti
                                   ARK Wallet 1
                                 </span>
                               </span>
-                              <div
-                                class="relative grow leading-[17px] sm:leading-5 text-left"
+                              <span
+                                class="no-ligatures min-w-0 overflow-hidden text-sm text-theme-secondary-700 dark:text-theme-secondary-500 leading-[17px] font-semibold text-base"
+                                data-testid="Address__address"
                               >
-                                <span
-                                  class="no-ligatures min-w-0 overflow-hidden text-sm text-theme-secondary-700 mt-0.5 dark:text-theme-secondary-500 font-semibold text-base absolute w-full"
-                                  data-testid="Address__address"
-                                >
-                                  D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                                </span>
-                                <span>
-                                   
-                                </span>
-                              </div>
+                                D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                              </span>
                             </div>
                           </div>
                         </td>
@@ -1159,7 +1124,7 @@ exports[`SearchRecipient > should render a modal with custom title and descripti
                             class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11"
                           >
                             <span
-                              class="whitespace-nowrap text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                              class="whitespace-nowrap text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500"
                               data-testid="RecipientListItem__type"
                             >
                               My Wallet
@@ -1171,7 +1136,7 @@ exports[`SearchRecipient > should render a modal with custom title and descripti
                             class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
                           >
                             <button
-                              class="p-3 relative items-center inline-flex justify-center text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none -mr-3 text-sm font-semibold text-theme-primary-600"
+                              class="p-3 relative items-center inline-flex justify-center text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none -mr-3 text-sm font-semibold leading-[17px] text-theme-primary-600"
                               data-testid="RecipientListItem__select-button-0"
                               type="button"
                             >
@@ -1196,7 +1161,7 @@ exports[`SearchRecipient > should render a modal with custom title and descripti
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
                               <span
-                                class="font-semibold text-base text-sm text-theme-secondary-900 dark:text-theme-secondary-200"
+                                class="font-semibold text-base text-sm text-theme-secondary-900 dark:text-theme-secondary-200 leading-[17px]"
                                 data-testid="Address__alias"
                               >
                                 <span
@@ -1206,19 +1171,12 @@ exports[`SearchRecipient > should render a modal with custom title and descripti
                                   ARK Wallet 2
                                 </span>
                               </span>
-                              <div
-                                class="relative grow leading-[17px] sm:leading-5 text-left"
+                              <span
+                                class="no-ligatures min-w-0 overflow-hidden text-sm text-theme-secondary-700 dark:text-theme-secondary-500 leading-[17px] font-semibold text-base"
+                                data-testid="Address__address"
                               >
-                                <span
-                                  class="no-ligatures min-w-0 overflow-hidden text-sm text-theme-secondary-700 mt-0.5 dark:text-theme-secondary-500 font-semibold text-base absolute w-full"
-                                  data-testid="Address__address"
-                                >
-                                  D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
-                                </span>
-                                <span>
-                                   
-                                </span>
-                              </div>
+                                D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
+                              </span>
                             </div>
                           </div>
                         </td>
@@ -1227,7 +1185,7 @@ exports[`SearchRecipient > should render a modal with custom title and descripti
                             class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11"
                           >
                             <span
-                              class="whitespace-nowrap text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                              class="whitespace-nowrap text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500"
                               data-testid="RecipientListItem__type"
                             >
                               My Wallet
@@ -1239,7 +1197,7 @@ exports[`SearchRecipient > should render a modal with custom title and descripti
                             class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
                           >
                             <button
-                              class="p-3 relative items-center inline-flex justify-center text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none -mr-3 text-sm font-semibold text-theme-primary-600"
+                              class="p-3 relative items-center inline-flex justify-center text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none -mr-3 text-sm font-semibold leading-[17px] text-theme-primary-600"
                               data-testid="RecipientListItem__select-button-1"
                               type="button"
                             >
@@ -1549,7 +1507,7 @@ exports[`SearchRecipient > should render with contact on desktop 1`] = `
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
                               <span
-                                class="font-semibold text-base text-sm text-theme-secondary-900 dark:text-theme-secondary-200"
+                                class="font-semibold text-base text-sm text-theme-secondary-900 dark:text-theme-secondary-200 leading-[17px]"
                                 data-testid="Address__alias"
                               >
                                 <span
@@ -1559,19 +1517,12 @@ exports[`SearchRecipient > should render with contact on desktop 1`] = `
                                   ARK Wallet 1
                                 </span>
                               </span>
-                              <div
-                                class="relative grow leading-[17px] sm:leading-5 text-left"
+                              <span
+                                class="no-ligatures min-w-0 overflow-hidden text-sm text-theme-secondary-700 dark:text-theme-secondary-500 leading-[17px] font-semibold text-base"
+                                data-testid="Address__address"
                               >
-                                <span
-                                  class="no-ligatures min-w-0 overflow-hidden text-sm text-theme-secondary-700 mt-0.5 dark:text-theme-secondary-500 font-semibold text-base absolute w-full"
-                                  data-testid="Address__address"
-                                >
-                                  D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                                </span>
-                                <span>
-                                   
-                                </span>
-                              </div>
+                                D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                              </span>
                             </div>
                           </div>
                         </td>
@@ -1580,7 +1531,7 @@ exports[`SearchRecipient > should render with contact on desktop 1`] = `
                             class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11"
                           >
                             <span
-                              class="whitespace-nowrap text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                              class="whitespace-nowrap text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500"
                               data-testid="RecipientListItem__type"
                             >
                               Contact
@@ -1592,7 +1543,7 @@ exports[`SearchRecipient > should render with contact on desktop 1`] = `
                             class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
                           >
                             <button
-                              class="p-3 relative items-center inline-flex justify-center text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none -mr-3 text-sm font-semibold text-theme-primary-reverse-600"
+                              class="p-3 relative items-center inline-flex justify-center text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none -mr-3 text-sm font-semibold leading-[17px] text-theme-primary-reverse-600"
                               data-testid="RecipientListItem__selected-button-0"
                               type="button"
                             >
@@ -2194,7 +2145,7 @@ exports[`SearchRecipient > should render with my wallet on desktop 1`] = `
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
                               <span
-                                class="font-semibold text-base text-sm text-theme-secondary-900 dark:text-theme-secondary-200"
+                                class="font-semibold text-base text-sm text-theme-secondary-900 dark:text-theme-secondary-200 leading-[17px]"
                                 data-testid="Address__alias"
                               >
                                 <span
@@ -2204,19 +2155,12 @@ exports[`SearchRecipient > should render with my wallet on desktop 1`] = `
                                   ARK Wallet 1
                                 </span>
                               </span>
-                              <div
-                                class="relative grow leading-[17px] sm:leading-5 text-left"
+                              <span
+                                class="no-ligatures min-w-0 overflow-hidden text-sm text-theme-secondary-700 dark:text-theme-secondary-500 leading-[17px] font-semibold text-base"
+                                data-testid="Address__address"
                               >
-                                <span
-                                  class="no-ligatures min-w-0 overflow-hidden text-sm text-theme-secondary-700 mt-0.5 dark:text-theme-secondary-500 font-semibold text-base absolute w-full"
-                                  data-testid="Address__address"
-                                >
-                                  D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                                </span>
-                                <span>
-                                   
-                                </span>
-                              </div>
+                                D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                              </span>
                             </div>
                           </div>
                         </td>
@@ -2225,7 +2169,7 @@ exports[`SearchRecipient > should render with my wallet on desktop 1`] = `
                             class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11"
                           >
                             <span
-                              class="whitespace-nowrap text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                              class="whitespace-nowrap text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500"
                               data-testid="RecipientListItem__type"
                             >
                               My Wallet
@@ -2237,7 +2181,7 @@ exports[`SearchRecipient > should render with my wallet on desktop 1`] = `
                             class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
                           >
                             <button
-                              class="p-3 relative items-center inline-flex justify-center text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none -mr-3 text-sm font-semibold text-theme-primary-reverse-600"
+                              class="p-3 relative items-center inline-flex justify-center text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none -mr-3 text-sm font-semibold leading-[17px] text-theme-primary-reverse-600"
                               data-testid="RecipientListItem__selected-button-0"
                               type="button"
                             >
@@ -2838,19 +2782,12 @@ exports[`SearchRecipient > should render with no alias if the recipient address 
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
-                              <div
-                                class="relative grow leading-[17px] sm:leading-5 text-left"
+                              <span
+                                class="no-ligatures min-w-0 overflow-hidden text-sm text-theme-secondary-700 dark:text-theme-secondary-500 leading-[17px] font-semibold text-base"
+                                data-testid="Address__address"
                               >
-                                <span
-                                  class="no-ligatures min-w-0 overflow-hidden text-sm text-theme-secondary-700 mt-0.5 dark:text-theme-secondary-500 font-semibold text-base absolute w-full"
-                                  data-testid="Address__address"
-                                >
-                                  D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                                </span>
-                                <span>
-                                   
-                                </span>
-                              </div>
+                                D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                              </span>
                             </div>
                           </div>
                         </td>
@@ -2859,7 +2796,7 @@ exports[`SearchRecipient > should render with no alias if the recipient address 
                             class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11"
                           >
                             <span
-                              class="whitespace-nowrap text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                              class="whitespace-nowrap text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500"
                               data-testid="RecipientListItem__type"
                             >
                               My Wallet
@@ -2871,7 +2808,7 @@ exports[`SearchRecipient > should render with no alias if the recipient address 
                             class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
                           >
                             <button
-                              class="p-3 relative items-center inline-flex justify-center text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none -mr-3 text-sm font-semibold text-theme-primary-600"
+                              class="p-3 relative items-center inline-flex justify-center text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none -mr-3 text-sm font-semibold leading-[17px] text-theme-primary-600"
                               data-testid="RecipientListItem__select-button-0"
                               type="button"
                             >
@@ -3181,7 +3118,7 @@ exports[`SearchRecipient > should render with selected address 1`] = `
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
                               <span
-                                class="font-semibold text-base text-sm text-theme-secondary-900 dark:text-theme-secondary-200"
+                                class="font-semibold text-base text-sm text-theme-secondary-900 dark:text-theme-secondary-200 leading-[17px]"
                                 data-testid="Address__alias"
                               >
                                 <span
@@ -3191,19 +3128,12 @@ exports[`SearchRecipient > should render with selected address 1`] = `
                                   ARK Wallet 1
                                 </span>
                               </span>
-                              <div
-                                class="relative grow leading-[17px] sm:leading-5 text-left"
+                              <span
+                                class="no-ligatures min-w-0 overflow-hidden text-sm text-theme-secondary-700 dark:text-theme-secondary-500 leading-[17px] font-semibold text-base"
+                                data-testid="Address__address"
                               >
-                                <span
-                                  class="no-ligatures min-w-0 overflow-hidden text-sm text-theme-secondary-700 mt-0.5 dark:text-theme-secondary-500 font-semibold text-base absolute w-full"
-                                  data-testid="Address__address"
-                                >
-                                  D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                                </span>
-                                <span>
-                                   
-                                </span>
-                              </div>
+                                D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                              </span>
                             </div>
                           </div>
                         </td>
@@ -3212,7 +3142,7 @@ exports[`SearchRecipient > should render with selected address 1`] = `
                             class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11"
                           >
                             <span
-                              class="whitespace-nowrap text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                              class="whitespace-nowrap text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500"
                               data-testid="RecipientListItem__type"
                             >
                               My Wallet
@@ -3224,7 +3154,7 @@ exports[`SearchRecipient > should render with selected address 1`] = `
                             class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
                           >
                             <button
-                              class="p-3 relative items-center inline-flex justify-center text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none -mr-3 text-sm font-semibold text-theme-primary-reverse-600"
+                              class="p-3 relative items-center inline-flex justify-center text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none -mr-3 text-sm font-semibold leading-[17px] text-theme-primary-reverse-600"
                               data-testid="RecipientListItem__selected-button-0"
                               type="button"
                             >
@@ -3249,7 +3179,7 @@ exports[`SearchRecipient > should render with selected address 1`] = `
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
                               <span
-                                class="font-semibold text-base text-sm text-theme-secondary-900 dark:text-theme-secondary-200"
+                                class="font-semibold text-base text-sm text-theme-secondary-900 dark:text-theme-secondary-200 leading-[17px]"
                                 data-testid="Address__alias"
                               >
                                 <span
@@ -3259,19 +3189,12 @@ exports[`SearchRecipient > should render with selected address 1`] = `
                                   ARK Wallet 2
                                 </span>
                               </span>
-                              <div
-                                class="relative grow leading-[17px] sm:leading-5 text-left"
+                              <span
+                                class="no-ligatures min-w-0 overflow-hidden text-sm text-theme-secondary-700 dark:text-theme-secondary-500 leading-[17px] font-semibold text-base"
+                                data-testid="Address__address"
                               >
-                                <span
-                                  class="no-ligatures min-w-0 overflow-hidden text-sm text-theme-secondary-700 mt-0.5 dark:text-theme-secondary-500 font-semibold text-base absolute w-full"
-                                  data-testid="Address__address"
-                                >
-                                  D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
-                                </span>
-                                <span>
-                                   
-                                </span>
-                              </div>
+                                D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
+                              </span>
                             </div>
                           </div>
                         </td>
@@ -3280,7 +3203,7 @@ exports[`SearchRecipient > should render with selected address 1`] = `
                             class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11"
                           >
                             <span
-                              class="whitespace-nowrap text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                              class="whitespace-nowrap text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500"
                               data-testid="RecipientListItem__type"
                             >
                               My Wallet
@@ -3292,7 +3215,7 @@ exports[`SearchRecipient > should render with selected address 1`] = `
                             class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
                           >
                             <button
-                              class="p-3 relative items-center inline-flex justify-center text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none -mr-3 text-sm font-semibold text-theme-primary-600"
+                              class="p-3 relative items-center inline-flex justify-center text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none -mr-3 text-sm font-semibold leading-[17px] text-theme-primary-600"
                               data-testid="RecipientListItem__select-button-1"
                               type="button"
                             >
@@ -3602,7 +3525,7 @@ exports[`SearchRecipient > should render with selected address on md screen 1`] 
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
                               <span
-                                class="font-semibold text-base text-sm text-theme-secondary-900 dark:text-theme-secondary-200"
+                                class="font-semibold text-base text-sm text-theme-secondary-900 dark:text-theme-secondary-200 leading-[17px]"
                                 data-testid="Address__alias"
                               >
                                 <span
@@ -3612,19 +3535,12 @@ exports[`SearchRecipient > should render with selected address on md screen 1`] 
                                   ARK Wallet 1
                                 </span>
                               </span>
-                              <div
-                                class="relative grow leading-[17px] sm:leading-5 text-left"
+                              <span
+                                class="no-ligatures min-w-0 overflow-hidden text-sm text-theme-secondary-700 dark:text-theme-secondary-500 leading-[17px] font-semibold text-base"
+                                data-testid="Address__address"
                               >
-                                <span
-                                  class="no-ligatures min-w-0 overflow-hidden text-sm text-theme-secondary-700 mt-0.5 dark:text-theme-secondary-500 font-semibold text-base absolute w-full"
-                                  data-testid="Address__address"
-                                >
-                                  D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                                </span>
-                                <span>
-                                   
-                                </span>
-                              </div>
+                                D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                              </span>
                             </div>
                           </div>
                         </td>
@@ -3633,7 +3549,7 @@ exports[`SearchRecipient > should render with selected address on md screen 1`] 
                             class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11"
                           >
                             <span
-                              class="whitespace-nowrap text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                              class="whitespace-nowrap text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500"
                               data-testid="RecipientListItem__type"
                             >
                               My Wallet
@@ -3645,7 +3561,7 @@ exports[`SearchRecipient > should render with selected address on md screen 1`] 
                             class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
                           >
                             <button
-                              class="p-3 relative items-center inline-flex justify-center text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none -mr-3 text-sm font-semibold text-theme-primary-reverse-600"
+                              class="p-3 relative items-center inline-flex justify-center text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none -mr-3 text-sm font-semibold leading-[17px] text-theme-primary-reverse-600"
                               data-testid="RecipientListItem__selected-button-0"
                               type="button"
                             >
@@ -3670,7 +3586,7 @@ exports[`SearchRecipient > should render with selected address on md screen 1`] 
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
                               <span
-                                class="font-semibold text-base text-sm text-theme-secondary-900 dark:text-theme-secondary-200"
+                                class="font-semibold text-base text-sm text-theme-secondary-900 dark:text-theme-secondary-200 leading-[17px]"
                                 data-testid="Address__alias"
                               >
                                 <span
@@ -3680,19 +3596,12 @@ exports[`SearchRecipient > should render with selected address on md screen 1`] 
                                   ARK Wallet 2
                                 </span>
                               </span>
-                              <div
-                                class="relative grow leading-[17px] sm:leading-5 text-left"
+                              <span
+                                class="no-ligatures min-w-0 overflow-hidden text-sm text-theme-secondary-700 dark:text-theme-secondary-500 leading-[17px] font-semibold text-base"
+                                data-testid="Address__address"
                               >
-                                <span
-                                  class="no-ligatures min-w-0 overflow-hidden text-sm text-theme-secondary-700 mt-0.5 dark:text-theme-secondary-500 font-semibold text-base absolute w-full"
-                                  data-testid="Address__address"
-                                >
-                                  D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
-                                </span>
-                                <span>
-                                   
-                                </span>
-                              </div>
+                                D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
+                              </span>
                             </div>
                           </div>
                         </td>
@@ -3701,7 +3610,7 @@ exports[`SearchRecipient > should render with selected address on md screen 1`] 
                             class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11"
                           >
                             <span
-                              class="whitespace-nowrap text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                              class="whitespace-nowrap text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500"
                               data-testid="RecipientListItem__type"
                             >
                               My Wallet
@@ -3713,7 +3622,7 @@ exports[`SearchRecipient > should render with selected address on md screen 1`] 
                             class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
                           >
                             <button
-                              class="p-3 relative items-center inline-flex justify-center text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none -mr-3 text-sm font-semibold text-theme-primary-600"
+                              class="p-3 relative items-center inline-flex justify-center text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none -mr-3 text-sm font-semibold leading-[17px] text-theme-primary-600"
                               data-testid="RecipientListItem__select-button-1"
                               type="button"
                             >
