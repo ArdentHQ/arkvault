@@ -37,7 +37,7 @@ const SearchRecipientListItem: FC<SearchRecipientListItemProperties> = ({
 					size="icon"
 					variant="transparent"
 					onClick={() => onAction(recipient.address)}
-					className="-mr-3 text-sm font-semibold text-theme-primary-reverse-600 leading-[17px]"
+					className="-mr-3 text-sm font-semibold leading-[17px] text-theme-primary-reverse-600"
 				>
 					{t("COMMON.SELECTED")}
 				</Button>
@@ -50,7 +50,7 @@ const SearchRecipientListItem: FC<SearchRecipientListItemProperties> = ({
 				size="icon"
 				variant="transparent"
 				onClick={() => onAction(recipient.address)}
-				className="-mr-3 text-sm font-semibold text-theme-primary-600 leading-[17px]"
+				className="-mr-3 text-sm font-semibold leading-[17px] text-theme-primary-600"
 			>
 				{t("COMMON.SELECT")}
 			</Button>
@@ -71,7 +71,7 @@ const SearchRecipientListItem: FC<SearchRecipientListItemProperties> = ({
 			<TableCell>
 				<span
 					data-testid="RecipientListItem__type"
-					className="whitespace-nowrap text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 leading-[17px]"
+					className="whitespace-nowrap text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500"
 				>
 					{recipient.type === "wallet" ? t("COMMON.MY_WALLET") : t("COMMON.CONTACT")}
 				</span>
