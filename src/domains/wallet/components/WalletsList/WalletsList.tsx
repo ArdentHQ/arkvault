@@ -197,7 +197,7 @@ export const WalletsList: React.VFC<WalletsListProperties> = ({
 					</div>
 
 					{showPagination && (
-						<div className="flex w-full flex-col gap-4 border-theme-secondary-300 pt-4 dark:border-theme-secondary-800 sm:flex-row sm:justify-between sm:border-t sm:px-6 sm:pb-4">
+						<div className="flex w-full flex-col gap-4 border-theme-secondary-300 pt-4 dark:border-theme-secondary-800 sm:flex-row sm:justify-between md:border-t md:px-6 md:pb-4">
 							<div className="flex items-center justify-center gap-2 text-sm font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-200 sm:justify-start">
 								<span>{t("COMMON.SHOW")}</span>
 								<Select

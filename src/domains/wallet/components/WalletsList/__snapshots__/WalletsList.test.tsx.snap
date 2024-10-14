@@ -895,7 +895,7 @@ exports[`WalletsList > should group starred wallets at the top 1`] = `
       </div>
     </div>
     <div
-      class="flex w-full flex-col gap-4 border-theme-secondary-300 pt-4 dark:border-theme-secondary-800 sm:flex-row sm:justify-between sm:border-t sm:px-6 sm:pb-4"
+      class="flex w-full flex-col gap-4 border-theme-secondary-300 pt-4 dark:border-theme-secondary-800 sm:flex-row sm:justify-between md:border-t md:px-6 md:pb-4"
     >
       <div
         class="flex items-center justify-center gap-2 text-sm font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-200 sm:justify-start"
@@ -1861,7 +1861,7 @@ exports[`WalletsList > should render 1`] = `
       </div>
     </div>
     <div
-      class="flex w-full flex-col gap-4 border-theme-secondary-300 pt-4 dark:border-theme-secondary-800 sm:flex-row sm:justify-between sm:border-t sm:px-6 sm:pb-4"
+      class="flex w-full flex-col gap-4 border-theme-secondary-300 pt-4 dark:border-theme-secondary-800 sm:flex-row sm:justify-between md:border-t md:px-6 md:pb-4"
     >
       <div
         class="flex items-center justify-center gap-2 text-sm font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-200 sm:justify-start"
@@ -2857,7 +2857,7 @@ exports[`WalletsList > should render empty skeleton block 1`] = `
       </div>
     </div>
     <div
-      class="flex w-full flex-col gap-4 border-theme-secondary-300 pt-4 dark:border-theme-secondary-800 sm:flex-row sm:justify-between sm:border-t sm:px-6 sm:pb-4"
+      class="flex w-full flex-col gap-4 border-theme-secondary-300 pt-4 dark:border-theme-secondary-800 sm:flex-row sm:justify-between md:border-t md:px-6 md:pb-4"
     >
       <div
         class="flex items-center justify-center gap-2 text-sm font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-200 sm:justify-start"
@@ -3353,7 +3353,7 @@ exports[`WalletsList > should render responsive 1`] = `
       </div>
     </div>
     <div
-      class="flex w-full flex-col gap-4 border-theme-secondary-300 pt-4 dark:border-theme-secondary-800 sm:flex-row sm:justify-between sm:border-t sm:px-6 sm:pb-4"
+      class="flex w-full flex-col gap-4 border-theme-secondary-300 pt-4 dark:border-theme-secondary-800 sm:flex-row sm:justify-between md:border-t md:px-6 md:pb-4"
     >
       <div
         class="flex items-center justify-center gap-2 text-sm font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-200 sm:justify-start"
