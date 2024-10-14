@@ -53,7 +53,7 @@ export const TransactionId = ({ transaction }: Properties): ReactElement => {
 					icon="ArrowExternal"
 					variant="secondary"
 					size="icon"
-					className="p-2"
+					className="border border-theme-secondary-300 bg-transparent p-2 hover:border-transparent dark:border-transparent dark:bg-theme-secondary-800"
 					disabled={!transaction.isConfirmed()}
 					onClick={() => {
 						openExternal(transaction.explorerLink());
