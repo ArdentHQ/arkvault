@@ -58,7 +58,7 @@ const getSize = (size?: Size) => {
 	}
 
 	if (size === "xs") {
-		return tw`text-xs leading-5`;
+		return tw`text-xs leading-[15px]`;
 	}
 
 	return tw`text-base`;

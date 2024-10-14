@@ -3,6 +3,7 @@ import React from "react";
 import { Contracts } from "@ardenthq/sdk-profiles";
 import { useTranslation } from "react-i18next";
 import cn from "classnames";
+import { Label } from "@/app/components/Label";
 
 type VoteRegistryItem = Contracts.VoteRegistryItem;
 
@@ -41,11 +42,9 @@ export const VoteTransactionType = ({ unvotes, votes }: { unvotes: VoteRegistryI
 					>
 						{t("COMMON.CATEGORY")}
 					</DetailTitle>
-					<div className="flex items-center rounded bg-theme-secondary-200 px-1 py-[3px] dark:border dark:border-theme-secondary-800 dark:bg-transparent">
-						<span className="text-[12px] font-semibold leading-[15px] text-theme-secondary-700 dark:text-theme-secondary-500">
-							{categoryLabels[voteCategory]}
-						</span>
-					</div>
+					<Label color="neutral" size="xs">
+						{categoryLabels[voteCategory]}
+					</Label>
 				</div>
 
 				<DetailDivider />

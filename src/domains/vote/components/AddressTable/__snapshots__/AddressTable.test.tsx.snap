@@ -354,14 +354,14 @@ exports[`AddressTable > should render 1`] = `
                       class="flex items-center space-x-3 overflow-hidden"
                     >
                       <a
-                        class="ring-focus group inline-block w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700 css-7nwwrh"
+                        class="ring-focus group/inner inline-block w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700 css-7nwwrh"
                         data-ring-focus-margin="-m-1"
                         data-testid="Link"
                         href="https://test.arkscan.io/wallets/D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
                         rel="noopener noreferrer"
                       >
                         <span
-                          class="css-170792"
+                          class="css-bxx244"
                         >
                           arkx
                         </span>
@@ -832,14 +832,14 @@ exports[`AddressTable > should render when the maximum votes is greater than 1 1
                         </span>
                       </div>
                       <a
-                        class="ring-focus group inline-block w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700 css-7nwwrh"
+                        class="ring-focus group/inner inline-block w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700 css-7nwwrh"
                         data-ring-focus-margin="-m-1"
                         data-testid="Link"
                         href="https://test.arkscan.io/wallets/D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
                         rel="noopener noreferrer"
                       >
                         <span
-                          class="css-170792"
+                          class="css-bxx244"
                         >
                           arkx
                         </span>

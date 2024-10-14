@@ -751,7 +751,7 @@ exports[`SendVote > should send a unvote transaction 1`] = `
                             </span>
                           </button>
                           <button
-                            class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-700 p-2"
+                            class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:text-theme-secondary-200 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-700 border border-theme-secondary-300 bg-transparent p-2 hover:border-transparent dark:border-transparent dark:bg-theme-secondary-800"
                             data-testid="explorer-link"
                             type="button"
                           >
@@ -817,7 +817,7 @@ exports[`SendVote > should send a unvote transaction 1`] = `
                               data-testid="DetailLabel"
                             >
                               <div
-                                class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                                class="no-ligatures text-md min-w-24 font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500"
                                 data-testid="DetailLabelText"
                               >
                                 Addressing
@@ -931,7 +931,7 @@ exports[`SendVote > should send a unvote transaction 1`] = `
                               data-testid="DetailLabel"
                             >
                               <div
-                                class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                                class="no-ligatures text-md min-w-24 font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500"
                                 data-testid="DetailLabelText"
                               >
                                 Transaction Type
@@ -953,17 +953,14 @@ exports[`SendVote > should send a unvote transaction 1`] = `
                                     Category
                                   </div>
                                   <div
-                                    class="flex items-center rounded bg-theme-secondary-200 px-1 py-[3px] dark:border dark:border-theme-secondary-800 dark:bg-transparent"
+                                    class="css-1p04us5"
+                                    color="neutral"
                                   >
-                                    <span
-                                      class="text-[12px] font-semibold leading-[15px] text-theme-secondary-700 dark:text-theme-secondary-500"
-                                    >
-                                      Unvote
-                                    </span>
+                                    Unvote
                                   </div>
                                 </div>
                                 <div
-                                  class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3"
+                                  class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3 [.condensed_&]:leading-3"
                                 >
                                   <div
                                     class="w-full [.condensed_&]:hidden"
@@ -1019,7 +1016,7 @@ exports[`SendVote > should send a unvote transaction 1`] = `
                               data-testid="DetailLabel"
                             >
                               <div
-                                class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                                class="no-ligatures text-md min-w-24 font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500"
                                 data-testid="DetailLabelText"
                               >
                                 Transaction Summary
@@ -1035,20 +1032,20 @@ exports[`SendVote > should send a unvote transaction 1`] = `
                                   class="flex w-full justify-between sm:justify-start"
                                 >
                                   <div
-                                    class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
+                                    class="no-ligatures text-md font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
                                     data-testid="DetailLabelText"
                                   >
                                     Fee
                                   </div>
                                   <span
-                                    class="whitespace-nowrap font-semibold"
+                                    class="whitespace-nowrap font-semibold leading-5"
                                     data-testid="Amount"
                                   >
                                     0.20716584 DARK
                                   </span>
                                 </div>
                                 <div
-                                  class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3"
+                                  class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3 [.condensed_&]:leading-3"
                                 >
                                   <div
                                     class="w-full [.condensed_&]:hidden"
@@ -1063,13 +1060,13 @@ exports[`SendVote > should send a unvote transaction 1`] = `
                                   class="flex w-full justify-between sm:justify-start"
                                 >
                                   <div
-                                    class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
+                                    class="no-ligatures text-md font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
                                     data-testid="DetailLabelText"
                                   >
                                     Value
                                   </div>
                                   <span
-                                    class="whitespace-nowrap font-semibold"
+                                    class="whitespace-nowrap font-semibold leading-5"
                                     data-testid="Amount"
                                   >
                                     10 BTC
@@ -1108,7 +1105,7 @@ exports[`SendVote > should send a unvote transaction 1`] = `
                               data-testid="DetailLabel"
                             >
                               <div
-                                class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                                class="no-ligatures text-md min-w-24 font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500"
                                 data-testid="DetailLabelText"
                               >
                                 Transaction Details
@@ -1124,19 +1121,19 @@ exports[`SendVote > should send a unvote transaction 1`] = `
                                   class="flex w-full justify-between sm:justify-start"
                                 >
                                   <div
-                                    class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
+                                    class="no-ligatures text-md font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
                                     data-testid="DetailLabelText"
                                   >
                                     Timestamp
                                   </div>
                                   <div
-                                    class="font-semibold"
+                                    class="font-semibold leading-5"
                                   >
                                     01.07.2020 12:00 AM
                                   </div>
                                 </div>
                                 <div
-                                  class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3"
+                                  class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3 [.condensed_&]:leading-3"
                                 >
                                   <div
                                     class="w-full [.condensed_&]:hidden"
@@ -1151,20 +1148,20 @@ exports[`SendVote > should send a unvote transaction 1`] = `
                                   class="flex w-full justify-between sm:justify-start"
                                 >
                                   <div
-                                    class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
+                                    class="no-ligatures text-md font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
                                     data-testid="DetailLabelText"
                                   >
                                     Block
                                   </div>
                                   <a
-                                    class="ring-focus group inline-block css-7nwwrh"
+                                    class="ring-focus group/inner inline-block h-5 leading-5 css-7nwwrh"
                                     data-ring-focus-margin="-m-1"
                                     data-testid="Link"
                                     href="https://test.arkscan.io/block/d819c5199e323a62a4349948ff075edde91e509028329f66ec76b8518ad1e493"
                                     rel="noopener noreferrer"
                                   >
                                     <span
-                                      class="css-170792"
+                                      class="css-bxx244"
                                     />
                                     <div
                                       class="mb-[3px] shrink-0 align-middle duration-200 css-v0ob3f"
@@ -1193,7 +1190,7 @@ exports[`SendVote > should send a unvote transaction 1`] = `
                                   </a>
                                 </div>
                                 <div
-                                  class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3"
+                                  class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3 [.condensed_&]:leading-3"
                                 >
                                   <div
                                     class="w-full [.condensed_&]:hidden"
@@ -1208,13 +1205,13 @@ exports[`SendVote > should send a unvote transaction 1`] = `
                                   class="flex w-full justify-between sm:justify-start"
                                 >
                                   <div
-                                    class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
+                                    class="no-ligatures text-md font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
                                     data-testid="DetailLabelText"
                                   >
                                     Nonce
                                   </div>
                                   <p
-                                    class="text-theme-secondary-500"
+                                    class="leading-5 text-theme-secondary-500"
                                   >
                                     N/A
                                   </p>
@@ -1249,7 +1246,7 @@ exports[`SendVote > should send a unvote transaction 1`] = `
                             data-testid="DetailLabel"
                           >
                             <div
-                              class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                              class="no-ligatures text-md min-w-24 font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500"
                               data-testid="DetailLabelText"
                             >
                               Confirmations
@@ -1262,14 +1259,14 @@ exports[`SendVote > should send a unvote transaction 1`] = `
                               class="mt-3 sm:mt-2"
                             >
                               <div
-                                class="flex items-center space-x-3 rounded-xl border border-theme-success-200 bg-theme-success-50 px-3 py-2 dark:border-theme-success-600 dark:bg-transparent max-sm:text-sm sm:px-6 sm:py-5"
+                                class="flex items-center space-x-3 rounded-xl border border-theme-success-200 bg-theme-success-50 px-3 py-2 dark:border-theme-success-600 dark:bg-transparent max-sm:text-sm sm:px-6 sm:py-4 sm:leading-5"
                                 data-testid="TransactionSuccessAlert"
                               >
                                 <div
                                   class="flex items-center space-x-2 text-theme-success-700"
                                 >
                                   <div
-                                    class="css-1i4b0eq"
+                                    class="h-5 css-1i4b0eq"
                                     height="20"
                                     width="20"
                                   >
@@ -1308,7 +1305,7 @@ exports[`SendVote > should send a unvote transaction 1`] = `
                                   </p>
                                 </div>
                                 <div
-                                  class="text-theme-success-200 dark:text-theme-secondary-800 css-1aie31u"
+                                  class="h-5 text-theme-success-200 dark:text-theme-secondary-800 css-1aie31u"
                                   type="vertical"
                                 />
                                 <p
