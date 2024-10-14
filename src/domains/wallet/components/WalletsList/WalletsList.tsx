@@ -41,7 +41,7 @@ const StarredHeader = ({ active, onClick }: { active: boolean; onClick: () => vo
 
 export const WalletsList: React.VFC<WalletsListProperties> = ({
 	wallets,
-	itemsPerPage,
+	itemsPerPage: initialPerPage,
 	showPagination = true,
 	className,
 }) => {
@@ -54,7 +54,7 @@ export const WalletsList: React.VFC<WalletsListProperties> = ({
 	const [currentPage, setCurrentPage] = useState(1);
 	const [starredFirst, setStarredFirst] = useState(true);
 
-	const [perPage, setPerPage] = useState(itemsPerPage);
+	const [perPage, setPerPage] = useState(initialPerPage);
 
 	const initialState = useMemo<Partial<TableState<WalletListItemProperties>>>(
 		() => ({
@@ -166,7 +166,6 @@ export const WalletsList: React.VFC<WalletsListProperties> = ({
 		[showSkeletons],
 	);
 
-	console.log({currentPage, perPage, a:wallets.slice((currentPage - 1) * perPage, perPage), b:wallets.length})
 	return (
 		<AccordionContent data-testid="WalletsList" className={twMerge("px-6 pb-4 md:p-0", className)}>
 			{(wallets.length > 0 || showSkeletons) && (
@@ -181,7 +180,7 @@ export const WalletsList: React.VFC<WalletsListProperties> = ({
 								initialState={initialState}
 								className={cn("with-x-padding", {
 									"after:mx-[0.15rem] after:block after:h-[5px] after:rounded-b-lg after:bg-theme-primary-100 after:content-[''] after:dark:bg-theme-secondary-800":
-										wallets.length <= itemsPerPage,
+										wallets.length <= initialPerPage,
 								})}
 							>
 								{renderTableRow}
