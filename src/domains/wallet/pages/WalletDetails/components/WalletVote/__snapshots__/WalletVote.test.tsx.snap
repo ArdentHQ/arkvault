@@ -1150,14 +1150,14 @@ exports[`WalletVote > should disable vote button when balance is less than votes
             You have not voted for a Delegate yet.
           </span>
           <a
-            class="ring-focus group inline-block css-7nwwrh"
+            class="ring-focus group/inner inline-block css-7nwwrh"
             data-ring-focus-margin="-m-1"
             data-testid="Link"
             href="https://arkvault.io/docs/transactions/vote"
             rel="noopener noreferrer"
           >
             <span
-              class="css-170792"
+              class="css-bxx244"
             >
               <span
                 class="text-sm"
@@ -1344,14 +1344,14 @@ exports[`WalletVote > should render 1`] = `
             You have not voted for a Delegate yet.
           </span>
           <a
-            class="ring-focus group inline-block css-7nwwrh"
+            class="ring-focus group/inner inline-block css-7nwwrh"
             data-ring-focus-margin="-m-1"
             data-testid="Link"
             href="https://arkvault.io/docs/transactions/vote"
             rel="noopener noreferrer"
           >
             <span
-              class="css-170792"
+              class="css-bxx244"
             >
               <span
                 class="text-sm"
@@ -1679,14 +1679,14 @@ exports[`WalletVote > should render disabled vote button 1`] = `
             You have not voted for a Delegate yet.
           </span>
           <a
-            class="ring-focus group inline-block css-7nwwrh"
+            class="ring-focus group/inner inline-block css-7nwwrh"
             data-ring-focus-margin="-m-1"
             data-testid="Link"
             href="https://arkvault.io/docs/transactions/vote"
             rel="noopener noreferrer"
           >
             <span
-              class="css-170792"
+              class="css-bxx244"
             >
               <span
                 class="text-sm"
@@ -1839,14 +1839,14 @@ exports[`WalletVote > should render ledger for incompatible ledger wallet 1`] = 
             You have not voted for a Delegate yet.
           </span>
           <a
-            class="ring-focus group inline-block css-7nwwrh"
+            class="ring-focus group/inner inline-block css-7nwwrh"
             data-ring-focus-margin="-m-1"
             data-testid="Link"
             href="https://arkvault.io/docs/transactions/vote"
             rel="noopener noreferrer"
           >
             <span
-              class="css-170792"
+              class="css-bxx244"
             >
               <span
                 class="text-sm"
@@ -2111,14 +2111,14 @@ exports[`WalletVote > should render the maximum votes 1`] = `
             You have not voted for a Delegate yet.
           </span>
           <a
-            class="ring-focus group inline-block css-7nwwrh"
+            class="ring-focus group/inner inline-block css-7nwwrh"
             data-ring-focus-margin="-m-1"
             data-testid="Link"
             href="https://arkvault.io/docs/transactions/vote"
             rel="noopener noreferrer"
           >
             <span
-              class="css-170792"
+              class="css-bxx244"
             >
               <span
                 class="text-sm"
@@ -2270,14 +2270,14 @@ exports[`WalletVote > should render without votes 1`] = `
             You have not voted for a Delegate yet.
           </span>
           <a
-            class="ring-focus group inline-block css-7nwwrh"
+            class="ring-focus group/inner inline-block css-7nwwrh"
             data-ring-focus-margin="-m-1"
             data-testid="Link"
             href="https://arkvault.io/docs/transactions/vote"
             rel="noopener noreferrer"
           >
             <span
-              class="css-170792"
+              class="css-bxx244"
             >
               <span
                 class="text-sm"

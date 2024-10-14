@@ -483,7 +483,7 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                         </span>
                       </button>
                       <button
-                        class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-700 p-2"
+                        class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:text-theme-secondary-200 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-700 border border-theme-secondary-300 bg-transparent p-2 hover:border-transparent dark:border-transparent dark:bg-theme-secondary-800"
                         data-testid="explorer-link"
                         type="button"
                       >
@@ -843,7 +843,7 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                                   class="flex h-full items-center space-x-1"
                                 >
                                   <span
-                                    class="whitespace-nowrap text-sm text-[1rem]"
+                                    class="whitespace-nowrap text-base"
                                     data-testid="Amount"
                                   >
                                     - 1 DARK
@@ -989,14 +989,14 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                                 Block
                               </div>
                               <a
-                                class="ring-focus group inline-block css-7nwwrh"
+                                class="ring-focus group/inner inline-block css-7nwwrh"
                                 data-ring-focus-margin="-m-1"
                                 data-testid="Link"
                                 href="https://test.arkscan.io/blocks/e6d4760c50419d8665731d3391ba209767f3073d4b2b6661078ff220034d197e"
                                 rel="noopener noreferrer"
                               >
                                 <span
-                                  class="css-170792"
+                                  class="css-bxx244"
                                 />
                                 <div
                                   class="mb-[3px] shrink-0 align-middle duration-200 css-v0ob3f"

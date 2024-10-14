@@ -4379,7 +4379,7 @@ exports[`TransactionTable > should render compact 1`] = `
                   class="flex flex-col gap-1 font-semibold"
                 >
                   <a
-                    class="ring-focus group inline-block css-7nwwrh"
+                    class="ring-focus group/inner inline-block css-7nwwrh"
                     data-ring-focus-margin="-m-1"
                     data-testid="Link"
                     href="https://test.arkscan.io/transactions/ea63bf9a4b3eaf75a1dfff721967c45dce64eb7facf1aef29461868681b5c79b"
@@ -4487,8 +4487,8 @@ exports[`TransactionTable > should render compact 1`] = `
                   class="flex flex-col items-end gap-1"
                 >
                   <div
-                    class="flex items-center justify-center rounded px-1.5 h-[21px] css-xqt0aw"
-                    color="danger-bg"
+                    class="flex items-center justify-center rounded px-1.5 h-[21px] css-1jspzfx"
+                    color="success-bg"
                     data-testid="AmountLabel__wrapper"
                   >
                     <div
@@ -4498,7 +4498,7 @@ exports[`TransactionTable > should render compact 1`] = `
                         class="whitespace-nowrap text-sm"
                         data-testid="Amount"
                       >
-                        - 20.03499657 DARK
+                        + 20.03499657 DARK
                       </span>
                     </div>
                   </div>
@@ -4543,7 +4543,7 @@ exports[`TransactionTable > should render compact 1`] = `
                   class="flex flex-col gap-1 font-semibold"
                 >
                   <a
-                    class="ring-focus group inline-block css-7nwwrh"
+                    class="ring-focus group/inner inline-block css-7nwwrh"
                     data-ring-focus-margin="-m-1"
                     data-testid="Link"
                     href="https://test.arkscan.io/transactions/4425c04b0f0406c9a921a4c08e97251dbde5d0d11df2f20c97b08084b45cd09d"
@@ -4718,7 +4718,7 @@ exports[`TransactionTable > should render compact 1`] = `
                   class="flex flex-col gap-1 font-semibold"
                 >
                   <a
-                    class="ring-focus group inline-block css-7nwwrh"
+                    class="ring-focus group/inner inline-block css-7nwwrh"
                     data-ring-focus-margin="-m-1"
                     data-testid="Link"
                     href="https://test.arkscan.io/transactions/ee3739c4705393f847e41f4ccc7ba436e434a8a430cba18921b2128d6b18f0dd"
@@ -4826,8 +4826,8 @@ exports[`TransactionTable > should render compact 1`] = `
                   class="flex flex-col items-end gap-1"
                 >
                   <div
-                    class="flex items-center justify-center rounded px-1.5 h-[21px] css-xqt0aw"
-                    color="danger-bg"
+                    class="flex items-center justify-center rounded px-1.5 h-[21px] css-1jspzfx"
+                    color="success-bg"
                     data-testid="AmountLabel__wrapper"
                   >
                     <div
@@ -4837,7 +4837,7 @@ exports[`TransactionTable > should render compact 1`] = `
                         class="whitespace-nowrap text-sm"
                         data-testid="Amount"
                       >
-                        - 0.1000001 DARK
+                        + 0.1000001 DARK
                       </span>
                     </div>
                   </div>
@@ -4882,7 +4882,7 @@ exports[`TransactionTable > should render compact 1`] = `
                   class="flex flex-col gap-1 font-semibold"
                 >
                   <a
-                    class="ring-focus group inline-block css-7nwwrh"
+                    class="ring-focus group/inner inline-block css-7nwwrh"
                     data-ring-focus-margin="-m-1"
                     data-testid="Link"
                     href="https://test.arkscan.io/transactions/b0b409f48ed878d98ada880b3d85ff8834f3363d4aff0b9fdcb38fd32acb5320"
@@ -4990,8 +4990,8 @@ exports[`TransactionTable > should render compact 1`] = `
                   class="flex flex-col items-end gap-1"
                 >
                   <div
-                    class="flex items-center justify-center rounded px-1.5 h-[21px] css-xqt0aw"
-                    color="danger-bg"
+                    class="flex items-center justify-center rounded px-1.5 h-[21px] css-1jspzfx"
+                    color="success-bg"
                     data-testid="AmountLabel__wrapper"
                   >
                     <div
@@ -5001,7 +5001,7 @@ exports[`TransactionTable > should render compact 1`] = `
                         class="whitespace-nowrap text-sm"
                         data-testid="Amount"
                       >
-                        - 0.1000001 DARK
+                        + 0.1000001 DARK
                       </span>
                     </div>
                   </div>
@@ -5046,7 +5046,7 @@ exports[`TransactionTable > should render compact 1`] = `
                   class="flex flex-col gap-1 font-semibold"
                 >
                   <a
-                    class="ring-focus group inline-block css-7nwwrh"
+                    class="ring-focus group/inner inline-block css-7nwwrh"
                     data-ring-focus-margin="-m-1"
                     data-testid="Link"
                     href="https://test.arkscan.io/transactions/91097d212e343cb7cebc0cb34f6c7051902fe3072355514145221832bcdc6599"
@@ -5154,8 +5154,8 @@ exports[`TransactionTable > should render compact 1`] = `
                   class="flex flex-col items-end gap-1"
                 >
                   <div
-                    class="flex items-center justify-center rounded px-1.5 h-[21px] css-xqt0aw"
-                    color="danger-bg"
+                    class="flex items-center justify-center rounded px-1.5 h-[21px] css-1jspzfx"
+                    color="success-bg"
                     data-testid="AmountLabel__wrapper"
                   >
                     <div
@@ -5165,7 +5165,7 @@ exports[`TransactionTable > should render compact 1`] = `
                         class="whitespace-nowrap text-sm"
                         data-testid="Amount"
                       >
-                        - 0.1000001 DARK
+                        + 0.1000001 DARK
                       </span>
                     </div>
                   </div>
@@ -5210,7 +5210,7 @@ exports[`TransactionTable > should render compact 1`] = `
                   class="flex flex-col gap-1 font-semibold"
                 >
                   <a
-                    class="ring-focus group inline-block css-7nwwrh"
+                    class="ring-focus group/inner inline-block css-7nwwrh"
                     data-ring-focus-margin="-m-1"
                     data-testid="Link"
                     href="https://test.arkscan.io/transactions/e6fcdca7c3f95f809c784ace7d360710128f2070ee95e21beee87312ba632d4b"
@@ -5318,8 +5318,8 @@ exports[`TransactionTable > should render compact 1`] = `
                   class="flex flex-col items-end gap-1"
                 >
                   <div
-                    class="flex items-center justify-center rounded px-1.5 h-[21px] css-xqt0aw"
-                    color="danger-bg"
+                    class="flex items-center justify-center rounded px-1.5 h-[21px] css-1jspzfx"
+                    color="success-bg"
                     data-testid="AmountLabel__wrapper"
                   >
                     <div
@@ -5329,7 +5329,7 @@ exports[`TransactionTable > should render compact 1`] = `
                         class="whitespace-nowrap text-sm"
                         data-testid="Amount"
                       >
-                        - 0.1000001 DARK
+                        + 0.1000001 DARK
                       </span>
                     </div>
                   </div>
@@ -5374,7 +5374,7 @@ exports[`TransactionTable > should render compact 1`] = `
                   class="flex flex-col gap-1 font-semibold"
                 >
                   <a
-                    class="ring-focus group inline-block css-7nwwrh"
+                    class="ring-focus group/inner inline-block css-7nwwrh"
                     data-ring-focus-margin="-m-1"
                     data-testid="Link"
                     href="https://test.arkscan.io/transactions/59c8867267bed07b90567a6ac610a5b4dd4431e07789987b50f3804219618520"
@@ -5482,8 +5482,8 @@ exports[`TransactionTable > should render compact 1`] = `
                   class="flex flex-col items-end gap-1"
                 >
                   <div
-                    class="flex items-center justify-center rounded px-1.5 h-[21px] css-xqt0aw"
-                    color="danger-bg"
+                    class="flex items-center justify-center rounded px-1.5 h-[21px] css-1jspzfx"
+                    color="success-bg"
                     data-testid="AmountLabel__wrapper"
                   >
                     <div
@@ -5493,7 +5493,7 @@ exports[`TransactionTable > should render compact 1`] = `
                         class="whitespace-nowrap text-sm"
                         data-testid="Amount"
                       >
-                        - 0.1000001 DARK
+                        + 0.1000001 DARK
                       </span>
                     </div>
                   </div>
@@ -5538,7 +5538,7 @@ exports[`TransactionTable > should render compact 1`] = `
                   class="flex flex-col gap-1 font-semibold"
                 >
                   <a
-                    class="ring-focus group inline-block css-7nwwrh"
+                    class="ring-focus group/inner inline-block css-7nwwrh"
                     data-ring-focus-margin="-m-1"
                     data-testid="Link"
                     href="https://test.arkscan.io/transactions/8c7b53e0114801a0738651d31572981dedb0b85f769fb1b84bee3724f6e63ded"
@@ -5646,8 +5646,8 @@ exports[`TransactionTable > should render compact 1`] = `
                   class="flex flex-col items-end gap-1"
                 >
                   <div
-                    class="flex items-center justify-center rounded px-1.5 h-[21px] css-xqt0aw"
-                    color="danger-bg"
+                    class="flex items-center justify-center rounded px-1.5 h-[21px] css-1jspzfx"
+                    color="success-bg"
                     data-testid="AmountLabel__wrapper"
                   >
                     <div
@@ -5657,7 +5657,7 @@ exports[`TransactionTable > should render compact 1`] = `
                         class="whitespace-nowrap text-sm"
                         data-testid="Amount"
                       >
-                        - 0.1000001 DARK
+                        + 0.1000001 DARK
                       </span>
                     </div>
                   </div>
@@ -5702,7 +5702,7 @@ exports[`TransactionTable > should render compact 1`] = `
                   class="flex flex-col gap-1 font-semibold"
                 >
                   <a
-                    class="ring-focus group inline-block css-7nwwrh"
+                    class="ring-focus group/inner inline-block css-7nwwrh"
                     data-ring-focus-margin="-m-1"
                     data-testid="Link"
                     href="https://test.arkscan.io/transactions/1a767ebc0cc53246b9105a9f09b6c2ffa7baedcc7e632c8c1bac58f8f17389f6"
@@ -5810,8 +5810,8 @@ exports[`TransactionTable > should render compact 1`] = `
                   class="flex flex-col items-end gap-1"
                 >
                   <div
-                    class="flex items-center justify-center rounded px-1.5 h-[21px] css-xqt0aw"
-                    color="danger-bg"
+                    class="flex items-center justify-center rounded px-1.5 h-[21px] css-1jspzfx"
+                    color="success-bg"
                     data-testid="AmountLabel__wrapper"
                   >
                     <div
@@ -5821,7 +5821,7 @@ exports[`TransactionTable > should render compact 1`] = `
                         class="whitespace-nowrap text-sm"
                         data-testid="Amount"
                       >
-                        - 0.1000001 DARK
+                        + 0.1000001 DARK
                       </span>
                     </div>
                   </div>
@@ -5866,7 +5866,7 @@ exports[`TransactionTable > should render compact 1`] = `
                   class="flex flex-col gap-1 font-semibold"
                 >
                   <a
-                    class="ring-focus group inline-block css-7nwwrh"
+                    class="ring-focus group/inner inline-block css-7nwwrh"
                     data-ring-focus-margin="-m-1"
                     data-testid="Link"
                     href="https://test.arkscan.io/transactions/b233eabb5f858e13174b13d85e0efa2a3d0e44e8a6d45e9e2518d88e56358428"
@@ -6067,7 +6067,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                   class="flex h-10 w-full items-center justify-between bg-theme-secondary-100 px-4 dark:bg-black"
                 >
                   <a
-                    class="ring-focus group inline-block text-sm font-semibold css-7nwwrh"
+                    class="ring-focus group/inner inline-block text-sm font-semibold css-7nwwrh"
                     data-ring-focus-margin="-m-1"
                     data-testid="Link"
                     href="https://test.arkscan.io/transactions/ea63bf9a4b3eaf75a1dfff721967c45dce64eb7facf1aef29461868681b5c79b"
@@ -6216,7 +6216,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                   class="flex h-10 w-full items-center justify-between bg-theme-secondary-100 px-4 dark:bg-black"
                 >
                   <a
-                    class="ring-focus group inline-block text-sm font-semibold css-7nwwrh"
+                    class="ring-focus group/inner inline-block text-sm font-semibold css-7nwwrh"
                     data-ring-focus-margin="-m-1"
                     data-testid="Link"
                     href="https://test.arkscan.io/transactions/4425c04b0f0406c9a921a4c08e97251dbde5d0d11df2f20c97b08084b45cd09d"
@@ -6376,7 +6376,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                   class="flex h-10 w-full items-center justify-between bg-theme-secondary-100 px-4 dark:bg-black"
                 >
                   <a
-                    class="ring-focus group inline-block text-sm font-semibold css-7nwwrh"
+                    class="ring-focus group/inner inline-block text-sm font-semibold css-7nwwrh"
                     data-ring-focus-margin="-m-1"
                     data-testid="Link"
                     href="https://test.arkscan.io/transactions/ee3739c4705393f847e41f4ccc7ba436e434a8a430cba18921b2128d6b18f0dd"
@@ -6525,7 +6525,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                   class="flex h-10 w-full items-center justify-between bg-theme-secondary-100 px-4 dark:bg-black"
                 >
                   <a
-                    class="ring-focus group inline-block text-sm font-semibold css-7nwwrh"
+                    class="ring-focus group/inner inline-block text-sm font-semibold css-7nwwrh"
                     data-ring-focus-margin="-m-1"
                     data-testid="Link"
                     href="https://test.arkscan.io/transactions/b0b409f48ed878d98ada880b3d85ff8834f3363d4aff0b9fdcb38fd32acb5320"
@@ -6674,7 +6674,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                   class="flex h-10 w-full items-center justify-between bg-theme-secondary-100 px-4 dark:bg-black"
                 >
                   <a
-                    class="ring-focus group inline-block text-sm font-semibold css-7nwwrh"
+                    class="ring-focus group/inner inline-block text-sm font-semibold css-7nwwrh"
                     data-ring-focus-margin="-m-1"
                     data-testid="Link"
                     href="https://test.arkscan.io/transactions/91097d212e343cb7cebc0cb34f6c7051902fe3072355514145221832bcdc6599"
@@ -6823,7 +6823,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                   class="flex h-10 w-full items-center justify-between bg-theme-secondary-100 px-4 dark:bg-black"
                 >
                   <a
-                    class="ring-focus group inline-block text-sm font-semibold css-7nwwrh"
+                    class="ring-focus group/inner inline-block text-sm font-semibold css-7nwwrh"
                     data-ring-focus-margin="-m-1"
                     data-testid="Link"
                     href="https://test.arkscan.io/transactions/e6fcdca7c3f95f809c784ace7d360710128f2070ee95e21beee87312ba632d4b"
@@ -6972,7 +6972,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                   class="flex h-10 w-full items-center justify-between bg-theme-secondary-100 px-4 dark:bg-black"
                 >
                   <a
-                    class="ring-focus group inline-block text-sm font-semibold css-7nwwrh"
+                    class="ring-focus group/inner inline-block text-sm font-semibold css-7nwwrh"
                     data-ring-focus-margin="-m-1"
                     data-testid="Link"
                     href="https://test.arkscan.io/transactions/59c8867267bed07b90567a6ac610a5b4dd4431e07789987b50f3804219618520"
@@ -7121,7 +7121,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                   class="flex h-10 w-full items-center justify-between bg-theme-secondary-100 px-4 dark:bg-black"
                 >
                   <a
-                    class="ring-focus group inline-block text-sm font-semibold css-7nwwrh"
+                    class="ring-focus group/inner inline-block text-sm font-semibold css-7nwwrh"
                     data-ring-focus-margin="-m-1"
                     data-testid="Link"
                     href="https://test.arkscan.io/transactions/8c7b53e0114801a0738651d31572981dedb0b85f769fb1b84bee3724f6e63ded"
@@ -7270,7 +7270,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                   class="flex h-10 w-full items-center justify-between bg-theme-secondary-100 px-4 dark:bg-black"
                 >
                   <a
-                    class="ring-focus group inline-block text-sm font-semibold css-7nwwrh"
+                    class="ring-focus group/inner inline-block text-sm font-semibold css-7nwwrh"
                     data-ring-focus-margin="-m-1"
                     data-testid="Link"
                     href="https://test.arkscan.io/transactions/1a767ebc0cc53246b9105a9f09b6c2ffa7baedcc7e632c8c1bac58f8f17389f6"
@@ -7419,7 +7419,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                   class="flex h-10 w-full items-center justify-between bg-theme-secondary-100 px-4 dark:bg-black"
                 >
                   <a
-                    class="ring-focus group inline-block text-sm font-semibold css-7nwwrh"
+                    class="ring-focus group/inner inline-block text-sm font-semibold css-7nwwrh"
                     data-ring-focus-margin="-m-1"
                     data-testid="Link"
                     href="https://test.arkscan.io/transactions/b233eabb5f858e13174b13d85e0efa2a3d0e44e8a6d45e9e2518d88e56358428"
@@ -7603,7 +7603,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                   class="flex h-10 w-full items-center justify-between bg-theme-secondary-100 px-4 dark:bg-black"
                 >
                   <a
-                    class="ring-focus group inline-block text-sm font-semibold css-7nwwrh"
+                    class="ring-focus group/inner inline-block text-sm font-semibold css-7nwwrh"
                     data-ring-focus-margin="-m-1"
                     data-testid="Link"
                     href="https://test.arkscan.io/transactions/ea63bf9a4b3eaf75a1dfff721967c45dce64eb7facf1aef29461868681b5c79b"
@@ -7752,7 +7752,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                   class="flex h-10 w-full items-center justify-between bg-theme-secondary-100 px-4 dark:bg-black"
                 >
                   <a
-                    class="ring-focus group inline-block text-sm font-semibold css-7nwwrh"
+                    class="ring-focus group/inner inline-block text-sm font-semibold css-7nwwrh"
                     data-ring-focus-margin="-m-1"
                     data-testid="Link"
                     href="https://test.arkscan.io/transactions/4425c04b0f0406c9a921a4c08e97251dbde5d0d11df2f20c97b08084b45cd09d"
@@ -7912,7 +7912,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                   class="flex h-10 w-full items-center justify-between bg-theme-secondary-100 px-4 dark:bg-black"
                 >
                   <a
-                    class="ring-focus group inline-block text-sm font-semibold css-7nwwrh"
+                    class="ring-focus group/inner inline-block text-sm font-semibold css-7nwwrh"
                     data-ring-focus-margin="-m-1"
                     data-testid="Link"
                     href="https://test.arkscan.io/transactions/ee3739c4705393f847e41f4ccc7ba436e434a8a430cba18921b2128d6b18f0dd"
@@ -8061,7 +8061,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                   class="flex h-10 w-full items-center justify-between bg-theme-secondary-100 px-4 dark:bg-black"
                 >
                   <a
-                    class="ring-focus group inline-block text-sm font-semibold css-7nwwrh"
+                    class="ring-focus group/inner inline-block text-sm font-semibold css-7nwwrh"
                     data-ring-focus-margin="-m-1"
                     data-testid="Link"
                     href="https://test.arkscan.io/transactions/b0b409f48ed878d98ada880b3d85ff8834f3363d4aff0b9fdcb38fd32acb5320"
@@ -8210,7 +8210,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                   class="flex h-10 w-full items-center justify-between bg-theme-secondary-100 px-4 dark:bg-black"
                 >
                   <a
-                    class="ring-focus group inline-block text-sm font-semibold css-7nwwrh"
+                    class="ring-focus group/inner inline-block text-sm font-semibold css-7nwwrh"
                     data-ring-focus-margin="-m-1"
                     data-testid="Link"
                     href="https://test.arkscan.io/transactions/91097d212e343cb7cebc0cb34f6c7051902fe3072355514145221832bcdc6599"
@@ -8359,7 +8359,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                   class="flex h-10 w-full items-center justify-between bg-theme-secondary-100 px-4 dark:bg-black"
                 >
                   <a
-                    class="ring-focus group inline-block text-sm font-semibold css-7nwwrh"
+                    class="ring-focus group/inner inline-block text-sm font-semibold css-7nwwrh"
                     data-ring-focus-margin="-m-1"
                     data-testid="Link"
                     href="https://test.arkscan.io/transactions/e6fcdca7c3f95f809c784ace7d360710128f2070ee95e21beee87312ba632d4b"
@@ -8508,7 +8508,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                   class="flex h-10 w-full items-center justify-between bg-theme-secondary-100 px-4 dark:bg-black"
                 >
                   <a
-                    class="ring-focus group inline-block text-sm font-semibold css-7nwwrh"
+                    class="ring-focus group/inner inline-block text-sm font-semibold css-7nwwrh"
                     data-ring-focus-margin="-m-1"
                     data-testid="Link"
                     href="https://test.arkscan.io/transactions/59c8867267bed07b90567a6ac610a5b4dd4431e07789987b50f3804219618520"
@@ -8657,7 +8657,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                   class="flex h-10 w-full items-center justify-between bg-theme-secondary-100 px-4 dark:bg-black"
                 >
                   <a
-                    class="ring-focus group inline-block text-sm font-semibold css-7nwwrh"
+                    class="ring-focus group/inner inline-block text-sm font-semibold css-7nwwrh"
                     data-ring-focus-margin="-m-1"
                     data-testid="Link"
                     href="https://test.arkscan.io/transactions/8c7b53e0114801a0738651d31572981dedb0b85f769fb1b84bee3724f6e63ded"
@@ -8806,7 +8806,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                   class="flex h-10 w-full items-center justify-between bg-theme-secondary-100 px-4 dark:bg-black"
                 >
                   <a
-                    class="ring-focus group inline-block text-sm font-semibold css-7nwwrh"
+                    class="ring-focus group/inner inline-block text-sm font-semibold css-7nwwrh"
                     data-ring-focus-margin="-m-1"
                     data-testid="Link"
                     href="https://test.arkscan.io/transactions/1a767ebc0cc53246b9105a9f09b6c2ffa7baedcc7e632c8c1bac58f8f17389f6"
@@ -8955,7 +8955,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                   class="flex h-10 w-full items-center justify-between bg-theme-secondary-100 px-4 dark:bg-black"
                 >
                   <a
-                    class="ring-focus group inline-block text-sm font-semibold css-7nwwrh"
+                    class="ring-focus group/inner inline-block text-sm font-semibold css-7nwwrh"
                     data-ring-focus-margin="-m-1"
                     data-testid="Link"
                     href="https://test.arkscan.io/transactions/b233eabb5f858e13174b13d85e0efa2a3d0e44e8a6d45e9e2518d88e56358428"
@@ -9329,7 +9329,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                   class="flex flex-col gap-1 font-semibold"
                 >
                   <a
-                    class="ring-focus group inline-block css-7nwwrh"
+                    class="ring-focus group/inner inline-block css-7nwwrh"
                     data-ring-focus-margin="-m-1"
                     data-testid="Link"
                     href="https://test.arkscan.io/transactions/ea63bf9a4b3eaf75a1dfff721967c45dce64eb7facf1aef29461868681b5c79b"
@@ -9437,8 +9437,8 @@ exports[`TransactionTable > should render responsive 3`] = `
                   class="flex flex-col items-end gap-1"
                 >
                   <div
-                    class="flex items-center justify-center rounded px-1.5 h-[21px] css-xqt0aw"
-                    color="danger-bg"
+                    class="flex items-center justify-center rounded px-1.5 h-[21px] css-1jspzfx"
+                    color="success-bg"
                     data-testid="AmountLabel__wrapper"
                   >
                     <div
@@ -9448,7 +9448,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                         class="whitespace-nowrap text-sm"
                         data-testid="Amount"
                       >
-                        - 20.03499657 DARK
+                        + 20.03499657 DARK
                       </span>
                     </div>
                   </div>
@@ -9493,7 +9493,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                   class="flex flex-col gap-1 font-semibold"
                 >
                   <a
-                    class="ring-focus group inline-block css-7nwwrh"
+                    class="ring-focus group/inner inline-block css-7nwwrh"
                     data-ring-focus-margin="-m-1"
                     data-testid="Link"
                     href="https://test.arkscan.io/transactions/4425c04b0f0406c9a921a4c08e97251dbde5d0d11df2f20c97b08084b45cd09d"
@@ -9668,7 +9668,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                   class="flex flex-col gap-1 font-semibold"
                 >
                   <a
-                    class="ring-focus group inline-block css-7nwwrh"
+                    class="ring-focus group/inner inline-block css-7nwwrh"
                     data-ring-focus-margin="-m-1"
                     data-testid="Link"
                     href="https://test.arkscan.io/transactions/ee3739c4705393f847e41f4ccc7ba436e434a8a430cba18921b2128d6b18f0dd"
@@ -9776,8 +9776,8 @@ exports[`TransactionTable > should render responsive 3`] = `
                   class="flex flex-col items-end gap-1"
                 >
                   <div
-                    class="flex items-center justify-center rounded px-1.5 h-[21px] css-xqt0aw"
-                    color="danger-bg"
+                    class="flex items-center justify-center rounded px-1.5 h-[21px] css-1jspzfx"
+                    color="success-bg"
                     data-testid="AmountLabel__wrapper"
                   >
                     <div
@@ -9787,7 +9787,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                         class="whitespace-nowrap text-sm"
                         data-testid="Amount"
                       >
-                        - 0.1000001 DARK
+                        + 0.1000001 DARK
                       </span>
                     </div>
                   </div>
@@ -9832,7 +9832,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                   class="flex flex-col gap-1 font-semibold"
                 >
                   <a
-                    class="ring-focus group inline-block css-7nwwrh"
+                    class="ring-focus group/inner inline-block css-7nwwrh"
                     data-ring-focus-margin="-m-1"
                     data-testid="Link"
                     href="https://test.arkscan.io/transactions/b0b409f48ed878d98ada880b3d85ff8834f3363d4aff0b9fdcb38fd32acb5320"
@@ -9940,8 +9940,8 @@ exports[`TransactionTable > should render responsive 3`] = `
                   class="flex flex-col items-end gap-1"
                 >
                   <div
-                    class="flex items-center justify-center rounded px-1.5 h-[21px] css-xqt0aw"
-                    color="danger-bg"
+                    class="flex items-center justify-center rounded px-1.5 h-[21px] css-1jspzfx"
+                    color="success-bg"
                     data-testid="AmountLabel__wrapper"
                   >
                     <div
@@ -9951,7 +9951,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                         class="whitespace-nowrap text-sm"
                         data-testid="Amount"
                       >
-                        - 0.1000001 DARK
+                        + 0.1000001 DARK
                       </span>
                     </div>
                   </div>
@@ -9996,7 +9996,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                   class="flex flex-col gap-1 font-semibold"
                 >
                   <a
-                    class="ring-focus group inline-block css-7nwwrh"
+                    class="ring-focus group/inner inline-block css-7nwwrh"
                     data-ring-focus-margin="-m-1"
                     data-testid="Link"
                     href="https://test.arkscan.io/transactions/91097d212e343cb7cebc0cb34f6c7051902fe3072355514145221832bcdc6599"
@@ -10104,8 +10104,8 @@ exports[`TransactionTable > should render responsive 3`] = `
                   class="flex flex-col items-end gap-1"
                 >
                   <div
-                    class="flex items-center justify-center rounded px-1.5 h-[21px] css-xqt0aw"
-                    color="danger-bg"
+                    class="flex items-center justify-center rounded px-1.5 h-[21px] css-1jspzfx"
+                    color="success-bg"
                     data-testid="AmountLabel__wrapper"
                   >
                     <div
@@ -10115,7 +10115,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                         class="whitespace-nowrap text-sm"
                         data-testid="Amount"
                       >
-                        - 0.1000001 DARK
+                        + 0.1000001 DARK
                       </span>
                     </div>
                   </div>
@@ -10160,7 +10160,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                   class="flex flex-col gap-1 font-semibold"
                 >
                   <a
-                    class="ring-focus group inline-block css-7nwwrh"
+                    class="ring-focus group/inner inline-block css-7nwwrh"
                     data-ring-focus-margin="-m-1"
                     data-testid="Link"
                     href="https://test.arkscan.io/transactions/e6fcdca7c3f95f809c784ace7d360710128f2070ee95e21beee87312ba632d4b"
@@ -10268,8 +10268,8 @@ exports[`TransactionTable > should render responsive 3`] = `
                   class="flex flex-col items-end gap-1"
                 >
                   <div
-                    class="flex items-center justify-center rounded px-1.5 h-[21px] css-xqt0aw"
-                    color="danger-bg"
+                    class="flex items-center justify-center rounded px-1.5 h-[21px] css-1jspzfx"
+                    color="success-bg"
                     data-testid="AmountLabel__wrapper"
                   >
                     <div
@@ -10279,7 +10279,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                         class="whitespace-nowrap text-sm"
                         data-testid="Amount"
                       >
-                        - 0.1000001 DARK
+                        + 0.1000001 DARK
                       </span>
                     </div>
                   </div>
@@ -10324,7 +10324,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                   class="flex flex-col gap-1 font-semibold"
                 >
                   <a
-                    class="ring-focus group inline-block css-7nwwrh"
+                    class="ring-focus group/inner inline-block css-7nwwrh"
                     data-ring-focus-margin="-m-1"
                     data-testid="Link"
                     href="https://test.arkscan.io/transactions/59c8867267bed07b90567a6ac610a5b4dd4431e07789987b50f3804219618520"
@@ -10432,8 +10432,8 @@ exports[`TransactionTable > should render responsive 3`] = `
                   class="flex flex-col items-end gap-1"
                 >
                   <div
-                    class="flex items-center justify-center rounded px-1.5 h-[21px] css-xqt0aw"
-                    color="danger-bg"
+                    class="flex items-center justify-center rounded px-1.5 h-[21px] css-1jspzfx"
+                    color="success-bg"
                     data-testid="AmountLabel__wrapper"
                   >
                     <div
@@ -10443,7 +10443,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                         class="whitespace-nowrap text-sm"
                         data-testid="Amount"
                       >
-                        - 0.1000001 DARK
+                        + 0.1000001 DARK
                       </span>
                     </div>
                   </div>
@@ -10488,7 +10488,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                   class="flex flex-col gap-1 font-semibold"
                 >
                   <a
-                    class="ring-focus group inline-block css-7nwwrh"
+                    class="ring-focus group/inner inline-block css-7nwwrh"
                     data-ring-focus-margin="-m-1"
                     data-testid="Link"
                     href="https://test.arkscan.io/transactions/8c7b53e0114801a0738651d31572981dedb0b85f769fb1b84bee3724f6e63ded"
@@ -10596,8 +10596,8 @@ exports[`TransactionTable > should render responsive 3`] = `
                   class="flex flex-col items-end gap-1"
                 >
                   <div
-                    class="flex items-center justify-center rounded px-1.5 h-[21px] css-xqt0aw"
-                    color="danger-bg"
+                    class="flex items-center justify-center rounded px-1.5 h-[21px] css-1jspzfx"
+                    color="success-bg"
                     data-testid="AmountLabel__wrapper"
                   >
                     <div
@@ -10607,7 +10607,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                         class="whitespace-nowrap text-sm"
                         data-testid="Amount"
                       >
-                        - 0.1000001 DARK
+                        + 0.1000001 DARK
                       </span>
                     </div>
                   </div>
@@ -10652,7 +10652,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                   class="flex flex-col gap-1 font-semibold"
                 >
                   <a
-                    class="ring-focus group inline-block css-7nwwrh"
+                    class="ring-focus group/inner inline-block css-7nwwrh"
                     data-ring-focus-margin="-m-1"
                     data-testid="Link"
                     href="https://test.arkscan.io/transactions/1a767ebc0cc53246b9105a9f09b6c2ffa7baedcc7e632c8c1bac58f8f17389f6"
@@ -10760,8 +10760,8 @@ exports[`TransactionTable > should render responsive 3`] = `
                   class="flex flex-col items-end gap-1"
                 >
                   <div
-                    class="flex items-center justify-center rounded px-1.5 h-[21px] css-xqt0aw"
-                    color="danger-bg"
+                    class="flex items-center justify-center rounded px-1.5 h-[21px] css-1jspzfx"
+                    color="success-bg"
                     data-testid="AmountLabel__wrapper"
                   >
                     <div
@@ -10771,7 +10771,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                         class="whitespace-nowrap text-sm"
                         data-testid="Amount"
                       >
-                        - 0.1000001 DARK
+                        + 0.1000001 DARK
                       </span>
                     </div>
                   </div>
@@ -10816,7 +10816,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                   class="flex flex-col gap-1 font-semibold"
                 >
                   <a
-                    class="ring-focus group inline-block css-7nwwrh"
+                    class="ring-focus group/inner inline-block css-7nwwrh"
                     data-ring-focus-margin="-m-1"
                     data-testid="Link"
                     href="https://test.arkscan.io/transactions/b233eabb5f858e13174b13d85e0efa2a3d0e44e8a6d45e9e2518d88e56358428"
@@ -11207,7 +11207,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                   class="flex flex-col gap-1 font-semibold"
                 >
                   <a
-                    class="ring-focus group inline-block css-7nwwrh"
+                    class="ring-focus group/inner inline-block css-7nwwrh"
                     data-ring-focus-margin="-m-1"
                     data-testid="Link"
                     href="https://test.arkscan.io/transactions/ea63bf9a4b3eaf75a1dfff721967c45dce64eb7facf1aef29461868681b5c79b"
@@ -11315,8 +11315,8 @@ exports[`TransactionTable > should render responsive 4`] = `
                   class="flex flex-col items-end gap-1"
                 >
                   <div
-                    class="flex items-center justify-center rounded px-1.5 h-[21px] css-xqt0aw"
-                    color="danger-bg"
+                    class="flex items-center justify-center rounded px-1.5 h-[21px] css-1jspzfx"
+                    color="success-bg"
                     data-testid="AmountLabel__wrapper"
                   >
                     <div
@@ -11326,7 +11326,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                         class="whitespace-nowrap text-sm"
                         data-testid="Amount"
                       >
-                        - 20.03499657 DARK
+                        + 20.03499657 DARK
                       </span>
                     </div>
                   </div>
@@ -11371,7 +11371,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                   class="flex flex-col gap-1 font-semibold"
                 >
                   <a
-                    class="ring-focus group inline-block css-7nwwrh"
+                    class="ring-focus group/inner inline-block css-7nwwrh"
                     data-ring-focus-margin="-m-1"
                     data-testid="Link"
                     href="https://test.arkscan.io/transactions/4425c04b0f0406c9a921a4c08e97251dbde5d0d11df2f20c97b08084b45cd09d"
@@ -11546,7 +11546,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                   class="flex flex-col gap-1 font-semibold"
                 >
                   <a
-                    class="ring-focus group inline-block css-7nwwrh"
+                    class="ring-focus group/inner inline-block css-7nwwrh"
                     data-ring-focus-margin="-m-1"
                     data-testid="Link"
                     href="https://test.arkscan.io/transactions/ee3739c4705393f847e41f4ccc7ba436e434a8a430cba18921b2128d6b18f0dd"
@@ -11654,8 +11654,8 @@ exports[`TransactionTable > should render responsive 4`] = `
                   class="flex flex-col items-end gap-1"
                 >
                   <div
-                    class="flex items-center justify-center rounded px-1.5 h-[21px] css-xqt0aw"
-                    color="danger-bg"
+                    class="flex items-center justify-center rounded px-1.5 h-[21px] css-1jspzfx"
+                    color="success-bg"
                     data-testid="AmountLabel__wrapper"
                   >
                     <div
@@ -11665,7 +11665,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                         class="whitespace-nowrap text-sm"
                         data-testid="Amount"
                       >
-                        - 0.1000001 DARK
+                        + 0.1000001 DARK
                       </span>
                     </div>
                   </div>
@@ -11710,7 +11710,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                   class="flex flex-col gap-1 font-semibold"
                 >
                   <a
-                    class="ring-focus group inline-block css-7nwwrh"
+                    class="ring-focus group/inner inline-block css-7nwwrh"
                     data-ring-focus-margin="-m-1"
                     data-testid="Link"
                     href="https://test.arkscan.io/transactions/b0b409f48ed878d98ada880b3d85ff8834f3363d4aff0b9fdcb38fd32acb5320"
@@ -11818,8 +11818,8 @@ exports[`TransactionTable > should render responsive 4`] = `
                   class="flex flex-col items-end gap-1"
                 >
                   <div
-                    class="flex items-center justify-center rounded px-1.5 h-[21px] css-xqt0aw"
-                    color="danger-bg"
+                    class="flex items-center justify-center rounded px-1.5 h-[21px] css-1jspzfx"
+                    color="success-bg"
                     data-testid="AmountLabel__wrapper"
                   >
                     <div
@@ -11829,7 +11829,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                         class="whitespace-nowrap text-sm"
                         data-testid="Amount"
                       >
-                        - 0.1000001 DARK
+                        + 0.1000001 DARK
                       </span>
                     </div>
                   </div>
@@ -11874,7 +11874,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                   class="flex flex-col gap-1 font-semibold"
                 >
                   <a
-                    class="ring-focus group inline-block css-7nwwrh"
+                    class="ring-focus group/inner inline-block css-7nwwrh"
                     data-ring-focus-margin="-m-1"
                     data-testid="Link"
                     href="https://test.arkscan.io/transactions/91097d212e343cb7cebc0cb34f6c7051902fe3072355514145221832bcdc6599"
@@ -11982,8 +11982,8 @@ exports[`TransactionTable > should render responsive 4`] = `
                   class="flex flex-col items-end gap-1"
                 >
                   <div
-                    class="flex items-center justify-center rounded px-1.5 h-[21px] css-xqt0aw"
-                    color="danger-bg"
+                    class="flex items-center justify-center rounded px-1.5 h-[21px] css-1jspzfx"
+                    color="success-bg"
                     data-testid="AmountLabel__wrapper"
                   >
                     <div
@@ -11993,7 +11993,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                         class="whitespace-nowrap text-sm"
                         data-testid="Amount"
                       >
-                        - 0.1000001 DARK
+                        + 0.1000001 DARK
                       </span>
                     </div>
                   </div>
@@ -12038,7 +12038,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                   class="flex flex-col gap-1 font-semibold"
                 >
                   <a
-                    class="ring-focus group inline-block css-7nwwrh"
+                    class="ring-focus group/inner inline-block css-7nwwrh"
                     data-ring-focus-margin="-m-1"
                     data-testid="Link"
                     href="https://test.arkscan.io/transactions/e6fcdca7c3f95f809c784ace7d360710128f2070ee95e21beee87312ba632d4b"
@@ -12146,8 +12146,8 @@ exports[`TransactionTable > should render responsive 4`] = `
                   class="flex flex-col items-end gap-1"
                 >
                   <div
-                    class="flex items-center justify-center rounded px-1.5 h-[21px] css-xqt0aw"
-                    color="danger-bg"
+                    class="flex items-center justify-center rounded px-1.5 h-[21px] css-1jspzfx"
+                    color="success-bg"
                     data-testid="AmountLabel__wrapper"
                   >
                     <div
@@ -12157,7 +12157,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                         class="whitespace-nowrap text-sm"
                         data-testid="Amount"
                       >
-                        - 0.1000001 DARK
+                        + 0.1000001 DARK
                       </span>
                     </div>
                   </div>
@@ -12202,7 +12202,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                   class="flex flex-col gap-1 font-semibold"
                 >
                   <a
-                    class="ring-focus group inline-block css-7nwwrh"
+                    class="ring-focus group/inner inline-block css-7nwwrh"
                     data-ring-focus-margin="-m-1"
                     data-testid="Link"
                     href="https://test.arkscan.io/transactions/59c8867267bed07b90567a6ac610a5b4dd4431e07789987b50f3804219618520"
@@ -12310,8 +12310,8 @@ exports[`TransactionTable > should render responsive 4`] = `
                   class="flex flex-col items-end gap-1"
                 >
                   <div
-                    class="flex items-center justify-center rounded px-1.5 h-[21px] css-xqt0aw"
-                    color="danger-bg"
+                    class="flex items-center justify-center rounded px-1.5 h-[21px] css-1jspzfx"
+                    color="success-bg"
                     data-testid="AmountLabel__wrapper"
                   >
                     <div
@@ -12321,7 +12321,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                         class="whitespace-nowrap text-sm"
                         data-testid="Amount"
                       >
-                        - 0.1000001 DARK
+                        + 0.1000001 DARK
                       </span>
                     </div>
                   </div>
@@ -12366,7 +12366,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                   class="flex flex-col gap-1 font-semibold"
                 >
                   <a
-                    class="ring-focus group inline-block css-7nwwrh"
+                    class="ring-focus group/inner inline-block css-7nwwrh"
                     data-ring-focus-margin="-m-1"
                     data-testid="Link"
                     href="https://test.arkscan.io/transactions/8c7b53e0114801a0738651d31572981dedb0b85f769fb1b84bee3724f6e63ded"
@@ -12474,8 +12474,8 @@ exports[`TransactionTable > should render responsive 4`] = `
                   class="flex flex-col items-end gap-1"
                 >
                   <div
-                    class="flex items-center justify-center rounded px-1.5 h-[21px] css-xqt0aw"
-                    color="danger-bg"
+                    class="flex items-center justify-center rounded px-1.5 h-[21px] css-1jspzfx"
+                    color="success-bg"
                     data-testid="AmountLabel__wrapper"
                   >
                     <div
@@ -12485,7 +12485,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                         class="whitespace-nowrap text-sm"
                         data-testid="Amount"
                       >
-                        - 0.1000001 DARK
+                        + 0.1000001 DARK
                       </span>
                     </div>
                   </div>
@@ -12530,7 +12530,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                   class="flex flex-col gap-1 font-semibold"
                 >
                   <a
-                    class="ring-focus group inline-block css-7nwwrh"
+                    class="ring-focus group/inner inline-block css-7nwwrh"
                     data-ring-focus-margin="-m-1"
                     data-testid="Link"
                     href="https://test.arkscan.io/transactions/1a767ebc0cc53246b9105a9f09b6c2ffa7baedcc7e632c8c1bac58f8f17389f6"
@@ -12638,8 +12638,8 @@ exports[`TransactionTable > should render responsive 4`] = `
                   class="flex flex-col items-end gap-1"
                 >
                   <div
-                    class="flex items-center justify-center rounded px-1.5 h-[21px] css-xqt0aw"
-                    color="danger-bg"
+                    class="flex items-center justify-center rounded px-1.5 h-[21px] css-1jspzfx"
+                    color="success-bg"
                     data-testid="AmountLabel__wrapper"
                   >
                     <div
@@ -12649,7 +12649,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                         class="whitespace-nowrap text-sm"
                         data-testid="Amount"
                       >
-                        - 0.1000001 DARK
+                        + 0.1000001 DARK
                       </span>
                     </div>
                   </div>
@@ -12694,7 +12694,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                   class="flex flex-col gap-1 font-semibold"
                 >
                   <a
-                    class="ring-focus group inline-block css-7nwwrh"
+                    class="ring-focus group/inner inline-block css-7nwwrh"
                     data-ring-focus-margin="-m-1"
                     data-testid="Link"
                     href="https://test.arkscan.io/transactions/b233eabb5f858e13174b13d85e0efa2a3d0e44e8a6d45e9e2518d88e56358428"
@@ -13085,7 +13085,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                   class="flex flex-col gap-1 font-semibold"
                 >
                   <a
-                    class="ring-focus group inline-block css-7nwwrh"
+                    class="ring-focus group/inner inline-block css-7nwwrh"
                     data-ring-focus-margin="-m-1"
                     data-testid="Link"
                     href="https://test.arkscan.io/transactions/ea63bf9a4b3eaf75a1dfff721967c45dce64eb7facf1aef29461868681b5c79b"
@@ -13193,8 +13193,8 @@ exports[`TransactionTable > should render responsive 5`] = `
                   class="flex flex-col items-end gap-1"
                 >
                   <div
-                    class="flex items-center justify-center rounded px-1.5 h-[21px] css-xqt0aw"
-                    color="danger-bg"
+                    class="flex items-center justify-center rounded px-1.5 h-[21px] css-1jspzfx"
+                    color="success-bg"
                     data-testid="AmountLabel__wrapper"
                   >
                     <div
@@ -13204,7 +13204,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                         class="whitespace-nowrap text-sm"
                         data-testid="Amount"
                       >
-                        - 20.03499657 DARK
+                        + 20.03499657 DARK
                       </span>
                     </div>
                   </div>
@@ -13249,7 +13249,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                   class="flex flex-col gap-1 font-semibold"
                 >
                   <a
-                    class="ring-focus group inline-block css-7nwwrh"
+                    class="ring-focus group/inner inline-block css-7nwwrh"
                     data-ring-focus-margin="-m-1"
                     data-testid="Link"
                     href="https://test.arkscan.io/transactions/4425c04b0f0406c9a921a4c08e97251dbde5d0d11df2f20c97b08084b45cd09d"
@@ -13424,7 +13424,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                   class="flex flex-col gap-1 font-semibold"
                 >
                   <a
-                    class="ring-focus group inline-block css-7nwwrh"
+                    class="ring-focus group/inner inline-block css-7nwwrh"
                     data-ring-focus-margin="-m-1"
                     data-testid="Link"
                     href="https://test.arkscan.io/transactions/ee3739c4705393f847e41f4ccc7ba436e434a8a430cba18921b2128d6b18f0dd"
@@ -13532,8 +13532,8 @@ exports[`TransactionTable > should render responsive 5`] = `
                   class="flex flex-col items-end gap-1"
                 >
                   <div
-                    class="flex items-center justify-center rounded px-1.5 h-[21px] css-xqt0aw"
-                    color="danger-bg"
+                    class="flex items-center justify-center rounded px-1.5 h-[21px] css-1jspzfx"
+                    color="success-bg"
                     data-testid="AmountLabel__wrapper"
                   >
                     <div
@@ -13543,7 +13543,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                         class="whitespace-nowrap text-sm"
                         data-testid="Amount"
                       >
-                        - 0.1000001 DARK
+                        + 0.1000001 DARK
                       </span>
                     </div>
                   </div>
@@ -13588,7 +13588,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                   class="flex flex-col gap-1 font-semibold"
                 >
                   <a
-                    class="ring-focus group inline-block css-7nwwrh"
+                    class="ring-focus group/inner inline-block css-7nwwrh"
                     data-ring-focus-margin="-m-1"
                     data-testid="Link"
                     href="https://test.arkscan.io/transactions/b0b409f48ed878d98ada880b3d85ff8834f3363d4aff0b9fdcb38fd32acb5320"
@@ -13696,8 +13696,8 @@ exports[`TransactionTable > should render responsive 5`] = `
                   class="flex flex-col items-end gap-1"
                 >
                   <div
-                    class="flex items-center justify-center rounded px-1.5 h-[21px] css-xqt0aw"
-                    color="danger-bg"
+                    class="flex items-center justify-center rounded px-1.5 h-[21px] css-1jspzfx"
+                    color="success-bg"
                     data-testid="AmountLabel__wrapper"
                   >
                     <div
@@ -13707,7 +13707,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                         class="whitespace-nowrap text-sm"
                         data-testid="Amount"
                       >
-                        - 0.1000001 DARK
+                        + 0.1000001 DARK
                       </span>
                     </div>
                   </div>
@@ -13752,7 +13752,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                   class="flex flex-col gap-1 font-semibold"
                 >
                   <a
-                    class="ring-focus group inline-block css-7nwwrh"
+                    class="ring-focus group/inner inline-block css-7nwwrh"
                     data-ring-focus-margin="-m-1"
                     data-testid="Link"
                     href="https://test.arkscan.io/transactions/91097d212e343cb7cebc0cb34f6c7051902fe3072355514145221832bcdc6599"
@@ -13860,8 +13860,8 @@ exports[`TransactionTable > should render responsive 5`] = `
                   class="flex flex-col items-end gap-1"
                 >
                   <div
-                    class="flex items-center justify-center rounded px-1.5 h-[21px] css-xqt0aw"
-                    color="danger-bg"
+                    class="flex items-center justify-center rounded px-1.5 h-[21px] css-1jspzfx"
+                    color="success-bg"
                     data-testid="AmountLabel__wrapper"
                   >
                     <div
@@ -13871,7 +13871,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                         class="whitespace-nowrap text-sm"
                         data-testid="Amount"
                       >
-                        - 0.1000001 DARK
+                        + 0.1000001 DARK
                       </span>
                     </div>
                   </div>
@@ -13916,7 +13916,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                   class="flex flex-col gap-1 font-semibold"
                 >
                   <a
-                    class="ring-focus group inline-block css-7nwwrh"
+                    class="ring-focus group/inner inline-block css-7nwwrh"
                     data-ring-focus-margin="-m-1"
                     data-testid="Link"
                     href="https://test.arkscan.io/transactions/e6fcdca7c3f95f809c784ace7d360710128f2070ee95e21beee87312ba632d4b"
@@ -14024,8 +14024,8 @@ exports[`TransactionTable > should render responsive 5`] = `
                   class="flex flex-col items-end gap-1"
                 >
                   <div
-                    class="flex items-center justify-center rounded px-1.5 h-[21px] css-xqt0aw"
-                    color="danger-bg"
+                    class="flex items-center justify-center rounded px-1.5 h-[21px] css-1jspzfx"
+                    color="success-bg"
                     data-testid="AmountLabel__wrapper"
                   >
                     <div
@@ -14035,7 +14035,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                         class="whitespace-nowrap text-sm"
                         data-testid="Amount"
                       >
-                        - 0.1000001 DARK
+                        + 0.1000001 DARK
                       </span>
                     </div>
                   </div>
@@ -14080,7 +14080,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                   class="flex flex-col gap-1 font-semibold"
                 >
                   <a
-                    class="ring-focus group inline-block css-7nwwrh"
+                    class="ring-focus group/inner inline-block css-7nwwrh"
                     data-ring-focus-margin="-m-1"
                     data-testid="Link"
                     href="https://test.arkscan.io/transactions/59c8867267bed07b90567a6ac610a5b4dd4431e07789987b50f3804219618520"
@@ -14188,8 +14188,8 @@ exports[`TransactionTable > should render responsive 5`] = `
                   class="flex flex-col items-end gap-1"
                 >
                   <div
-                    class="flex items-center justify-center rounded px-1.5 h-[21px] css-xqt0aw"
-                    color="danger-bg"
+                    class="flex items-center justify-center rounded px-1.5 h-[21px] css-1jspzfx"
+                    color="success-bg"
                     data-testid="AmountLabel__wrapper"
                   >
                     <div
@@ -14199,7 +14199,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                         class="whitespace-nowrap text-sm"
                         data-testid="Amount"
                       >
-                        - 0.1000001 DARK
+                        + 0.1000001 DARK
                       </span>
                     </div>
                   </div>
@@ -14244,7 +14244,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                   class="flex flex-col gap-1 font-semibold"
                 >
                   <a
-                    class="ring-focus group inline-block css-7nwwrh"
+                    class="ring-focus group/inner inline-block css-7nwwrh"
                     data-ring-focus-margin="-m-1"
                     data-testid="Link"
                     href="https://test.arkscan.io/transactions/8c7b53e0114801a0738651d31572981dedb0b85f769fb1b84bee3724f6e63ded"
@@ -14352,8 +14352,8 @@ exports[`TransactionTable > should render responsive 5`] = `
                   class="flex flex-col items-end gap-1"
                 >
                   <div
-                    class="flex items-center justify-center rounded px-1.5 h-[21px] css-xqt0aw"
-                    color="danger-bg"
+                    class="flex items-center justify-center rounded px-1.5 h-[21px] css-1jspzfx"
+                    color="success-bg"
                     data-testid="AmountLabel__wrapper"
                   >
                     <div
@@ -14363,7 +14363,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                         class="whitespace-nowrap text-sm"
                         data-testid="Amount"
                       >
-                        - 0.1000001 DARK
+                        + 0.1000001 DARK
                       </span>
                     </div>
                   </div>
@@ -14408,7 +14408,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                   class="flex flex-col gap-1 font-semibold"
                 >
                   <a
-                    class="ring-focus group inline-block css-7nwwrh"
+                    class="ring-focus group/inner inline-block css-7nwwrh"
                     data-ring-focus-margin="-m-1"
                     data-testid="Link"
                     href="https://test.arkscan.io/transactions/1a767ebc0cc53246b9105a9f09b6c2ffa7baedcc7e632c8c1bac58f8f17389f6"
@@ -14516,8 +14516,8 @@ exports[`TransactionTable > should render responsive 5`] = `
                   class="flex flex-col items-end gap-1"
                 >
                   <div
-                    class="flex items-center justify-center rounded px-1.5 h-[21px] css-xqt0aw"
-                    color="danger-bg"
+                    class="flex items-center justify-center rounded px-1.5 h-[21px] css-1jspzfx"
+                    color="success-bg"
                     data-testid="AmountLabel__wrapper"
                   >
                     <div
@@ -14527,7 +14527,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                         class="whitespace-nowrap text-sm"
                         data-testid="Amount"
                       >
-                        - 0.1000001 DARK
+                        + 0.1000001 DARK
                       </span>
                     </div>
                   </div>
@@ -14572,7 +14572,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                   class="flex flex-col gap-1 font-semibold"
                 >
                   <a
-                    class="ring-focus group inline-block css-7nwwrh"
+                    class="ring-focus group/inner inline-block css-7nwwrh"
                     data-ring-focus-margin="-m-1"
                     data-testid="Link"
                     href="https://test.arkscan.io/transactions/b233eabb5f858e13174b13d85e0efa2a3d0e44e8a6d45e9e2518d88e56358428"

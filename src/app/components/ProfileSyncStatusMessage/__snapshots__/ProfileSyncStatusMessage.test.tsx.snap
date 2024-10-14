@@ -30,7 +30,7 @@ exports[`SyncErrorMessage > should handle retry 1`] = `
     data-testid="SyncErrorMessage__retry"
   >
     <a
-      class="ring-focus group inline-block css-7nwwrh"
+      class="ring-focus group/inner inline-block css-7nwwrh"
       data-ring-focus-margin="-m-1"
       data-testid="Link"
       href="#/"
@@ -76,7 +76,7 @@ exports[`SyncErrorMessage > should render multiple failed networks 1`] = `
     data-testid="SyncErrorMessage__retry"
   >
     <a
-      class="ring-focus group inline-block css-7nwwrh"
+      class="ring-focus group/inner inline-block css-7nwwrh"
       data-ring-focus-margin="-m-1"
       data-testid="Link"
       href="#/"
@@ -105,7 +105,7 @@ exports[`SyncErrorMessage > should render one failed network 1`] = `
     data-testid="SyncErrorMessage__retry"
   >
     <a
-      class="ring-focus group inline-block css-7nwwrh"
+      class="ring-focus group/inner inline-block css-7nwwrh"
       data-ring-focus-margin="-m-1"
       data-testid="Link"
       href="#/"
@@ -145,7 +145,7 @@ exports[`SyncErrorMessage > should render two failed networks 1`] = `
     data-testid="SyncErrorMessage__retry"
   >
     <a
-      class="ring-focus group inline-block css-7nwwrh"
+      class="ring-focus group/inner inline-block css-7nwwrh"
       data-ring-focus-margin="-m-1"
       data-testid="Link"
       href="#/"
