@@ -166,7 +166,7 @@ export const WalletsList: React.VFC<WalletsListProperties> = ({
 		[showSkeletons],
 	);
 
-	console.log({currentPage, perPage, a:wallets.slice((currentPage - 1) * perPage, perPage), b:wallets.length})
+	console.log({ a: wallets.slice((currentPage - 1) * perPage, perPage), b: wallets.length, currentPage, perPage });
 	return (
 		<AccordionContent data-testid="WalletsList" className={twMerge("px-6 pb-4 md:p-0", className)}>
 			{(wallets.length > 0 || showSkeletons) && (
