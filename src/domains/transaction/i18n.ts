@@ -395,7 +395,7 @@ export const translations = {
 		MAGISTRATE: "Magistrate",
 		MULTI_PAYMENT: "Multipayment",
 		MULTI_SIGNATURE: "Multisignature",
-		SECOND_SIGNATURE: "Second Signature",
+		SECOND_SIGNATURE: "2nd Signature",
 		TRANSFER: "Transfer",
 		UNLOCK_TOKEN: "Unlock Balance",
 		UNVOTE: "Unvote",

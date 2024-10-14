@@ -37,7 +37,7 @@ const Content = styled.span<{ isDisabled?: boolean; showExternalIcon?: boolean }
 		];
 
 		if (!isDisabled && showExternalIcon) {
-			styles.push(tw`group-hover:border-current`);
+			styles.push(tw`group-hover/inner:border-current`);
 		}
 
 		if (!isDisabled && !showExternalIcon) {
@@ -60,7 +60,7 @@ const Anchor = React.forwardRef<HTMLAnchorElement, AnchorProperties>(
 		reference,
 	) => (
 		<AnchorStyled
-			className={cn("ring-focus group inline-block", className)}
+			className={cn("ring-focus group/inner inline-block", className)}
 			data-testid="Link"
 			rel={isExternal ? "noopener noreferrer" : rel}
 			ref={reference}

@@ -41,7 +41,7 @@ const SearchWalletListItem = ({
 					size="icon"
 					variant="transparent"
 					onClick={() => onAction({ address: wallet.address(), name: alias, network: wallet.network() })}
-					className="-mr-3 text-theme-primary-reverse-600"
+					className="-mr-3 text-sm leading-[17px] text-theme-primary-reverse-600"
 				>
 					{t("COMMON.SELECTED")}
 				</Button>
@@ -56,7 +56,7 @@ const SearchWalletListItem = ({
 						disabled={disabled || !isLedgerWalletCompatible(wallet)}
 						size="icon"
 						variant="transparent"
-						className="-mr-3 text-theme-primary-600"
+						className="-mr-3 text-sm leading-[17px] text-theme-primary-600"
 						onClick={() => onAction({ address: wallet.address(), name: alias, network: wallet.network() })}
 					>
 						{t("COMMON.SELECT")}
@@ -69,16 +69,25 @@ const SearchWalletListItem = ({
 	return (
 		<TableRow className="relative">
 			<TableCell variant="start" innerClassName="space-x-4" className="w-full">
-				<Address walletName={alias} address={wallet.address()} truncateOnTable />
+				<Address
+					walletName={alias}
+					address={wallet.address()}
+					walletNameClass="text-sm leading-[17px]"
+					addressClass="leading-[17px] text-sm text-theme-secondary-500 dark:text-theme-secondary-700"
+				/>
 			</TableCell>
 
 			<TableCell innerClassName="font-semibold justify-end">
-				<Amount value={wallet.balance()} ticker={wallet.currency()} />
+				<Amount value={wallet.balance()} ticker={wallet.currency()} className="text-sm leading-[17px]" />
 			</TableCell>
 
 			{showConvertedValue && (
 				<TableCell innerClassName="text-theme-secondary-text justify-end" className="hidden xl:table-cell">
-					<Amount value={wallet.convertedBalance()} ticker={exchangeCurrency} />
+					<Amount
+						value={wallet.convertedBalance()}
+						ticker={exchangeCurrency}
+						className="text-sm leading-[17px]"
+					/>
 				</TableCell>
 			)}
 
