@@ -330,7 +330,7 @@ exports[`SecondSignatureRegistrationForm > should not generate mnemonic if alrea
               data-testid="DetailLabel"
             >
               <div
-                class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                class="no-ligatures text-md min-w-24 font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500"
                 data-testid="DetailLabelText"
               >
                 Addressing
@@ -631,7 +631,7 @@ exports[`SecondSignatureRegistrationForm > should render generation step 1`] = `
               data-testid="DetailLabel"
             >
               <div
-                class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                class="no-ligatures text-md min-w-24 font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500"
                 data-testid="DetailLabelText"
               >
                 Addressing

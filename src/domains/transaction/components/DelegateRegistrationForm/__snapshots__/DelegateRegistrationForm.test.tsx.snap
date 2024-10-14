@@ -798,7 +798,7 @@ exports[`DelegateRegistrationForm > should render review step 1`] = `
             data-testid="DetailLabel"
           >
             <div
-              class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+              class="no-ligatures text-md min-w-24 font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500"
               data-testid="DetailLabelText"
             >
               Addressing
@@ -890,7 +890,7 @@ exports[`DelegateRegistrationForm > should render review step 1`] = `
             data-testid="DetailLabel"
           >
             <div
-              class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+              class="no-ligatures text-md min-w-24 font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500"
               data-testid="DetailLabelText"
             >
               Transaction Type
@@ -951,7 +951,7 @@ exports[`DelegateRegistrationForm > should render review step 1`] = `
             data-testid="DetailLabel"
           >
             <div
-              class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+              class="no-ligatures text-md min-w-24 font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500"
               data-testid="DetailLabelText"
             >
               Transaction Summary

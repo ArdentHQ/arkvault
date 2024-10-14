@@ -70,7 +70,7 @@ exports[`TransactionRowMobile > should render 1`] = `
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-r9b6qf"
+                      class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-1qplu6d"
                       color="danger-bg"
                       data-testid="TransactionRowAddressing__label"
                     >
@@ -239,7 +239,7 @@ exports[`TransactionRowMobile > should render 2`] = `
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-r9b6qf"
+                      class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-1qplu6d"
                       color="danger-bg"
                       data-testid="TransactionRowAddressing__label"
                     >
@@ -700,7 +700,7 @@ exports[`TransactionRowMobile > should render with currency 1`] = `
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-r9b6qf"
+                      class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-1qplu6d"
                       color="danger-bg"
                       data-testid="TransactionRowAddressing__label"
                     >
@@ -858,7 +858,7 @@ exports[`TransactionRowMobile > should render with currency 2`] = `
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-r9b6qf"
+                      class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-1qplu6d"
                       color="danger-bg"
                       data-testid="TransactionRowAddressing__label"
                     >

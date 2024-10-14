@@ -68,7 +68,7 @@ exports[`TransactionRow > should omit the currency for transactions from test ne
             class="flex px-3 transition-colors duration-100 min-h-11 items-start xl:min-h-0 my-0 py-3"
           >
             <div
-              class="rounded px-1 dark:border css-1dx994f"
+              class="rounded px-1 dark:border css-1kocbuc"
               color="secondary"
               data-testid="TransactionRow__type"
             >
@@ -85,7 +85,7 @@ exports[`TransactionRow > should omit the currency for transactions from test ne
               data-testid="TransactionRowAddressing__container"
             >
               <div
-                class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-r9b6qf"
+                class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-1qplu6d"
                 color="danger-bg"
                 data-testid="TransactionRowAddressing__label"
               >
@@ -241,7 +241,7 @@ exports[`TransactionRow > should render 1`] = `
             class="flex px-3 transition-colors duration-100 min-h-11 items-start xl:min-h-0 my-0 py-3"
           >
             <div
-              class="rounded px-1 dark:border css-1dx994f"
+              class="rounded px-1 dark:border css-1kocbuc"
               color="secondary"
               data-testid="TransactionRow__type"
             >
@@ -258,7 +258,7 @@ exports[`TransactionRow > should render 1`] = `
               data-testid="TransactionRowAddressing__container"
             >
               <div
-                class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-r9b6qf"
+                class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-1qplu6d"
                 color="danger-bg"
                 data-testid="TransactionRowAddressing__label"
               >
@@ -427,7 +427,7 @@ exports[`TransactionRow > should render responsive 1`] = `
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-r9b6qf"
+                      class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-1qplu6d"
                       color="danger-bg"
                       data-testid="TransactionRowAddressing__label"
                     >
@@ -596,7 +596,7 @@ exports[`TransactionRow > should render responsive 2`] = `
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-r9b6qf"
+                      class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-1qplu6d"
                       color="danger-bg"
                       data-testid="TransactionRowAddressing__label"
                     >
@@ -1006,7 +1006,7 @@ exports[`TransactionRow > should render with currency 1`] = `
             class="flex px-3 transition-colors duration-100 min-h-11 items-start xl:min-h-0 my-0 py-3"
           >
             <div
-              class="rounded px-1 dark:border css-1dx994f"
+              class="rounded px-1 dark:border css-1kocbuc"
               color="secondary"
               data-testid="TransactionRow__type"
             >
@@ -1023,7 +1023,7 @@ exports[`TransactionRow > should render with currency 1`] = `
               data-testid="TransactionRowAddressing__container"
             >
               <div
-                class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-r9b6qf"
+                class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-1qplu6d"
                 color="danger-bg"
                 data-testid="TransactionRowAddressing__label"
               >
