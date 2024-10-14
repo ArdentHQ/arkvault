@@ -5,7 +5,7 @@ import { WalletsList } from "@/domains/wallet/components/WalletsList";
 import { AccordionWrapper } from "@/app/components/Accordion";
 import { useAccordion } from "@/app/hooks";
 
-const MAX_WALLETS_ON_DASHBOARD_LIST = 2;
+const MAX_WALLETS_ON_DASHBOARD_LIST = 10;
 
 export const WalletsGroup: React.VFC<WalletsGroupProperties> = ({ network, wallets, maxWidthReferences }) => {
 	const { isExpanded, handleHeaderClick } = useAccordion();
