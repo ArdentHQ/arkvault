@@ -206,9 +206,6 @@ export const WalletsList: React.VFC<WalletsListProperties> = ({
 										value: v.toString(),
 									}))}
 									allowOverflow={true}
-									renderLabel={(option) => (
-										<span className="text-sm font-semibold leading-[17px]"> {option.label} </span>
-									)}
 									allowFreeInput={false}
 									readOnly={true}
 									defaultValue={perPage.toString()}
