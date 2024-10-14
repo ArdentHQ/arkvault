@@ -133,7 +133,7 @@ export const WalletBalance: VFC<WalletBalanceProperties> = ({ profile, wallet, c
 	}, [wallet]);
 
 	return (
-		<div className="mr-auto flex flex-col lg:gap-2">
+		<div className="mr-auto flex flex-col">
 			<div className="flex items-center text-sm font-semibold text-theme-secondary-text">
 				<span>{t("COMMON.BALANCE")}:</span>
 
