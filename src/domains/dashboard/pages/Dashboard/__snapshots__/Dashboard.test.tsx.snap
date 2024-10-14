@@ -572,7 +572,7 @@ exports[`Dashboard > should render 1`] = `
             data-testid="Portfolio__Header"
           >
             <div
-              class="text-lg font-bold leading- sm:text-2xl"
+              class="text-lg font-bold leading-5 sm:text-2xl"
             >
               Portfolio
             </div>
