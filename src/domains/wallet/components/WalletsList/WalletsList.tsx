@@ -166,6 +166,7 @@ export const WalletsList: React.VFC<WalletsListProperties> = ({
 		[showSkeletons],
 	);
 
+	console.log({currentPage, perPage, a:wallets.slice((currentPage - 1) * perPage, perPage), b:wallets.length})
 	return (
 		<AccordionContent data-testid="WalletsList" className={twMerge("px-6 pb-4 md:p-0", className)}>
 			{(wallets.length > 0 || showSkeletons) && (
@@ -180,7 +181,7 @@ export const WalletsList: React.VFC<WalletsListProperties> = ({
 								initialState={initialState}
 								className={cn("with-x-padding", {
 									"after:mx-[0.15rem] after:block after:h-[5px] after:rounded-b-lg after:bg-theme-primary-100 after:content-[''] after:dark:bg-theme-secondary-800":
-										wallets.length <= perPage,
+										wallets.length <= itemsPerPage,
 								})}
 							>
 								{renderTableRow}
@@ -189,7 +190,7 @@ export const WalletsList: React.VFC<WalletsListProperties> = ({
 
 						{!isMdAndAbove && (
 							<div className="space-y-3">
-								{wallets.slice(0, perPage).map((wallet) => (
+								{wallets.slice((currentPage - 1) * perPage, perPage * currentPage).map((wallet) => (
 									<WalletListItem key={wallet.id()} wallet={wallet} isLargeScreen={false} />
 								))}
 							</div>
