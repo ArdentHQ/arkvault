@@ -4465,7 +4465,7 @@ exports[`TransactionTable > should render compact 1`] = `
                         class="relative grow leading-[17px] sm:leading-5 text-left"
                       >
                         <span
-                          class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 font-semibold text-sm absolute w-full"
                           data-testid="Address__address"
                         >
                           DK1f5frUPTNqhFxoyDUHwN7VC2B4Uzhpmy
@@ -4640,7 +4640,7 @@ exports[`TransactionTable > should render compact 1`] = `
                         class="relative grow leading-[17px] sm:leading-5 text-left"
                       >
                         <span
-                          class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold text-sm absolute w-full"
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold text-sm absolute w-full"
                           data-testid="Address__address"
                         >
                           D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -4804,7 +4804,7 @@ exports[`TransactionTable > should render compact 1`] = `
                         class="relative grow leading-[17px] sm:leading-5 text-left"
                       >
                         <span
-                          class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 font-semibold text-sm absolute w-full"
                           data-testid="Address__address"
                         >
                           DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
@@ -4968,7 +4968,7 @@ exports[`TransactionTable > should render compact 1`] = `
                         class="relative grow leading-[17px] sm:leading-5 text-left"
                       >
                         <span
-                          class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 font-semibold text-sm absolute w-full"
                           data-testid="Address__address"
                         >
                           DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
@@ -5132,7 +5132,7 @@ exports[`TransactionTable > should render compact 1`] = `
                         class="relative grow leading-[17px] sm:leading-5 text-left"
                       >
                         <span
-                          class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 font-semibold text-sm absolute w-full"
                           data-testid="Address__address"
                         >
                           DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
@@ -5296,7 +5296,7 @@ exports[`TransactionTable > should render compact 1`] = `
                         class="relative grow leading-[17px] sm:leading-5 text-left"
                       >
                         <span
-                          class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 font-semibold text-sm absolute w-full"
                           data-testid="Address__address"
                         >
                           DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
@@ -5460,7 +5460,7 @@ exports[`TransactionTable > should render compact 1`] = `
                         class="relative grow leading-[17px] sm:leading-5 text-left"
                       >
                         <span
-                          class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 font-semibold text-sm absolute w-full"
                           data-testid="Address__address"
                         >
                           DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
@@ -5624,7 +5624,7 @@ exports[`TransactionTable > should render compact 1`] = `
                         class="relative grow leading-[17px] sm:leading-5 text-left"
                       >
                         <span
-                          class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 font-semibold text-sm absolute w-full"
                           data-testid="Address__address"
                         >
                           DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
@@ -5788,7 +5788,7 @@ exports[`TransactionTable > should render compact 1`] = `
                         class="relative grow leading-[17px] sm:leading-5 text-left"
                       >
                         <span
-                          class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 font-semibold text-sm absolute w-full"
                           data-testid="Address__address"
                         >
                           DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
@@ -5963,7 +5963,7 @@ exports[`TransactionTable > should render compact 1`] = `
                         class="relative grow leading-[17px] sm:leading-5 text-left"
                       >
                         <span
-                          class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold text-sm absolute w-full"
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold text-sm absolute w-full"
                           data-testid="Address__address"
                         >
                           D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -6136,7 +6136,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                               class="relative grow leading-[17px] sm:leading-5 text-left"
                             >
                               <span
-                                class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                                class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 font-semibold text-sm absolute w-full"
                                 data-testid="Address__address"
                               >
                                 DK1f5frUPTNqhFxoyDUHwN7VC2B4Uzhpmy
@@ -6296,7 +6296,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                               class="relative grow leading-[17px] sm:leading-5 text-left"
                             >
                               <span
-                                class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold text-sm absolute w-full"
+                                class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold text-sm absolute w-full"
                                 data-testid="Address__address"
                               >
                                 D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -6445,7 +6445,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                               class="relative grow leading-[17px] sm:leading-5 text-left"
                             >
                               <span
-                                class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                                class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 font-semibold text-sm absolute w-full"
                                 data-testid="Address__address"
                               >
                                 DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
@@ -6594,7 +6594,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                               class="relative grow leading-[17px] sm:leading-5 text-left"
                             >
                               <span
-                                class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                                class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 font-semibold text-sm absolute w-full"
                                 data-testid="Address__address"
                               >
                                 DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
@@ -6743,7 +6743,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                               class="relative grow leading-[17px] sm:leading-5 text-left"
                             >
                               <span
-                                class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                                class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 font-semibold text-sm absolute w-full"
                                 data-testid="Address__address"
                               >
                                 DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
@@ -6892,7 +6892,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                               class="relative grow leading-[17px] sm:leading-5 text-left"
                             >
                               <span
-                                class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                                class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 font-semibold text-sm absolute w-full"
                                 data-testid="Address__address"
                               >
                                 DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
@@ -7041,7 +7041,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                               class="relative grow leading-[17px] sm:leading-5 text-left"
                             >
                               <span
-                                class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                                class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 font-semibold text-sm absolute w-full"
                                 data-testid="Address__address"
                               >
                                 DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
@@ -7190,7 +7190,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                               class="relative grow leading-[17px] sm:leading-5 text-left"
                             >
                               <span
-                                class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                                class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 font-semibold text-sm absolute w-full"
                                 data-testid="Address__address"
                               >
                                 DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
@@ -7339,7 +7339,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                               class="relative grow leading-[17px] sm:leading-5 text-left"
                             >
                               <span
-                                class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                                class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 font-semibold text-sm absolute w-full"
                                 data-testid="Address__address"
                               >
                                 DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
@@ -7499,7 +7499,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                               class="relative grow leading-[17px] sm:leading-5 text-left"
                             >
                               <span
-                                class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold text-sm absolute w-full"
+                                class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold text-sm absolute w-full"
                                 data-testid="Address__address"
                               >
                                 D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -7672,7 +7672,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                               class="relative grow leading-[17px] sm:leading-5 text-left"
                             >
                               <span
-                                class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                                class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 font-semibold text-sm absolute w-full"
                                 data-testid="Address__address"
                               >
                                 DK1f5frUPTNqhFxoyDUHwN7VC2B4Uzhpmy
@@ -7832,7 +7832,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                               class="relative grow leading-[17px] sm:leading-5 text-left"
                             >
                               <span
-                                class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold text-sm absolute w-full"
+                                class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold text-sm absolute w-full"
                                 data-testid="Address__address"
                               >
                                 D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -7981,7 +7981,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                               class="relative grow leading-[17px] sm:leading-5 text-left"
                             >
                               <span
-                                class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                                class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 font-semibold text-sm absolute w-full"
                                 data-testid="Address__address"
                               >
                                 DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
@@ -8130,7 +8130,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                               class="relative grow leading-[17px] sm:leading-5 text-left"
                             >
                               <span
-                                class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                                class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 font-semibold text-sm absolute w-full"
                                 data-testid="Address__address"
                               >
                                 DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
@@ -8279,7 +8279,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                               class="relative grow leading-[17px] sm:leading-5 text-left"
                             >
                               <span
-                                class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                                class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 font-semibold text-sm absolute w-full"
                                 data-testid="Address__address"
                               >
                                 DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
@@ -8428,7 +8428,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                               class="relative grow leading-[17px] sm:leading-5 text-left"
                             >
                               <span
-                                class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                                class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 font-semibold text-sm absolute w-full"
                                 data-testid="Address__address"
                               >
                                 DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
@@ -8577,7 +8577,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                               class="relative grow leading-[17px] sm:leading-5 text-left"
                             >
                               <span
-                                class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                                class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 font-semibold text-sm absolute w-full"
                                 data-testid="Address__address"
                               >
                                 DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
@@ -8726,7 +8726,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                               class="relative grow leading-[17px] sm:leading-5 text-left"
                             >
                               <span
-                                class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                                class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 font-semibold text-sm absolute w-full"
                                 data-testid="Address__address"
                               >
                                 DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
@@ -8875,7 +8875,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                               class="relative grow leading-[17px] sm:leading-5 text-left"
                             >
                               <span
-                                class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                                class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 font-semibold text-sm absolute w-full"
                                 data-testid="Address__address"
                               >
                                 DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
@@ -9035,7 +9035,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                               class="relative grow leading-[17px] sm:leading-5 text-left"
                             >
                               <span
-                                class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold text-sm absolute w-full"
+                                class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold text-sm absolute w-full"
                                 data-testid="Address__address"
                               >
                                 D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -9415,7 +9415,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                         class="relative grow leading-[17px] sm:leading-5 text-left"
                       >
                         <span
-                          class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 font-semibold text-sm absolute w-full"
                           data-testid="Address__address"
                         >
                           DK1f5frUPTNqhFxoyDUHwN7VC2B4Uzhpmy
@@ -9590,7 +9590,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                         class="relative grow leading-[17px] sm:leading-5 text-left"
                       >
                         <span
-                          class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold text-sm absolute w-full"
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold text-sm absolute w-full"
                           data-testid="Address__address"
                         >
                           D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -9754,7 +9754,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                         class="relative grow leading-[17px] sm:leading-5 text-left"
                       >
                         <span
-                          class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 font-semibold text-sm absolute w-full"
                           data-testid="Address__address"
                         >
                           DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
@@ -9918,7 +9918,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                         class="relative grow leading-[17px] sm:leading-5 text-left"
                       >
                         <span
-                          class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 font-semibold text-sm absolute w-full"
                           data-testid="Address__address"
                         >
                           DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
@@ -10082,7 +10082,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                         class="relative grow leading-[17px] sm:leading-5 text-left"
                       >
                         <span
-                          class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 font-semibold text-sm absolute w-full"
                           data-testid="Address__address"
                         >
                           DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
@@ -10246,7 +10246,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                         class="relative grow leading-[17px] sm:leading-5 text-left"
                       >
                         <span
-                          class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 font-semibold text-sm absolute w-full"
                           data-testid="Address__address"
                         >
                           DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
@@ -10410,7 +10410,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                         class="relative grow leading-[17px] sm:leading-5 text-left"
                       >
                         <span
-                          class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 font-semibold text-sm absolute w-full"
                           data-testid="Address__address"
                         >
                           DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
@@ -10574,7 +10574,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                         class="relative grow leading-[17px] sm:leading-5 text-left"
                       >
                         <span
-                          class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 font-semibold text-sm absolute w-full"
                           data-testid="Address__address"
                         >
                           DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
@@ -10738,7 +10738,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                         class="relative grow leading-[17px] sm:leading-5 text-left"
                       >
                         <span
-                          class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 font-semibold text-sm absolute w-full"
                           data-testid="Address__address"
                         >
                           DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
@@ -10913,7 +10913,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                         class="relative grow leading-[17px] sm:leading-5 text-left"
                       >
                         <span
-                          class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold text-sm absolute w-full"
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold text-sm absolute w-full"
                           data-testid="Address__address"
                         >
                           D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -11293,7 +11293,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                         class="relative grow leading-[17px] sm:leading-5 text-left"
                       >
                         <span
-                          class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 font-semibold text-sm absolute w-full"
                           data-testid="Address__address"
                         >
                           DK1f5frUPTNqhFxoyDUHwN7VC2B4Uzhpmy
@@ -11468,7 +11468,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                         class="relative grow leading-[17px] sm:leading-5 text-left"
                       >
                         <span
-                          class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold text-sm absolute w-full"
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold text-sm absolute w-full"
                           data-testid="Address__address"
                         >
                           D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -11632,7 +11632,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                         class="relative grow leading-[17px] sm:leading-5 text-left"
                       >
                         <span
-                          class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 font-semibold text-sm absolute w-full"
                           data-testid="Address__address"
                         >
                           DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
@@ -11796,7 +11796,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                         class="relative grow leading-[17px] sm:leading-5 text-left"
                       >
                         <span
-                          class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 font-semibold text-sm absolute w-full"
                           data-testid="Address__address"
                         >
                           DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
@@ -11960,7 +11960,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                         class="relative grow leading-[17px] sm:leading-5 text-left"
                       >
                         <span
-                          class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 font-semibold text-sm absolute w-full"
                           data-testid="Address__address"
                         >
                           DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
@@ -12124,7 +12124,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                         class="relative grow leading-[17px] sm:leading-5 text-left"
                       >
                         <span
-                          class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 font-semibold text-sm absolute w-full"
                           data-testid="Address__address"
                         >
                           DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
@@ -12288,7 +12288,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                         class="relative grow leading-[17px] sm:leading-5 text-left"
                       >
                         <span
-                          class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 font-semibold text-sm absolute w-full"
                           data-testid="Address__address"
                         >
                           DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
@@ -12452,7 +12452,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                         class="relative grow leading-[17px] sm:leading-5 text-left"
                       >
                         <span
-                          class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 font-semibold text-sm absolute w-full"
                           data-testid="Address__address"
                         >
                           DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
@@ -12616,7 +12616,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                         class="relative grow leading-[17px] sm:leading-5 text-left"
                       >
                         <span
-                          class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 font-semibold text-sm absolute w-full"
                           data-testid="Address__address"
                         >
                           DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
@@ -12791,7 +12791,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                         class="relative grow leading-[17px] sm:leading-5 text-left"
                       >
                         <span
-                          class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold text-sm absolute w-full"
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold text-sm absolute w-full"
                           data-testid="Address__address"
                         >
                           D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -13171,7 +13171,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                         class="relative grow leading-[17px] sm:leading-5 text-left"
                       >
                         <span
-                          class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 font-semibold text-sm absolute w-full"
                           data-testid="Address__address"
                         >
                           DK1f5frUPTNqhFxoyDUHwN7VC2B4Uzhpmy
@@ -13346,7 +13346,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                         class="relative grow leading-[17px] sm:leading-5 text-left"
                       >
                         <span
-                          class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold text-sm absolute w-full"
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold text-sm absolute w-full"
                           data-testid="Address__address"
                         >
                           D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -13510,7 +13510,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                         class="relative grow leading-[17px] sm:leading-5 text-left"
                       >
                         <span
-                          class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 font-semibold text-sm absolute w-full"
                           data-testid="Address__address"
                         >
                           DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
@@ -13674,7 +13674,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                         class="relative grow leading-[17px] sm:leading-5 text-left"
                       >
                         <span
-                          class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 font-semibold text-sm absolute w-full"
                           data-testid="Address__address"
                         >
                           DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
@@ -13838,7 +13838,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                         class="relative grow leading-[17px] sm:leading-5 text-left"
                       >
                         <span
-                          class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 font-semibold text-sm absolute w-full"
                           data-testid="Address__address"
                         >
                           DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
@@ -14002,7 +14002,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                         class="relative grow leading-[17px] sm:leading-5 text-left"
                       >
                         <span
-                          class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 font-semibold text-sm absolute w-full"
                           data-testid="Address__address"
                         >
                           DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
@@ -14166,7 +14166,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                         class="relative grow leading-[17px] sm:leading-5 text-left"
                       >
                         <span
-                          class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 font-semibold text-sm absolute w-full"
                           data-testid="Address__address"
                         >
                           DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
@@ -14330,7 +14330,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                         class="relative grow leading-[17px] sm:leading-5 text-left"
                       >
                         <span
-                          class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 font-semibold text-sm absolute w-full"
                           data-testid="Address__address"
                         >
                           DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
@@ -14494,7 +14494,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                         class="relative grow leading-[17px] sm:leading-5 text-left"
                       >
                         <span
-                          class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 font-semibold text-sm absolute w-full"
                           data-testid="Address__address"
                         >
                           DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
@@ -14669,7 +14669,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                         class="relative grow leading-[17px] sm:leading-5 text-left"
                       >
                         <span
-                          class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold text-sm absolute w-full"
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold text-sm absolute w-full"
                           data-testid="Address__address"
                         >
                           D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD

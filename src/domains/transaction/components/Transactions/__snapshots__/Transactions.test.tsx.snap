@@ -1770,7 +1770,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
-                            class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold text-sm absolute w-full"
+                            class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold text-sm absolute w-full"
                             data-testid="Address__address"
                           >
                             D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
@@ -1945,7 +1945,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
-                            class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold text-sm absolute w-full"
+                            class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold text-sm absolute w-full"
                             data-testid="Address__address"
                           >
                             D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
@@ -2120,7 +2120,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
-                            class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold text-sm absolute w-full"
+                            class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold text-sm absolute w-full"
                             data-testid="Address__address"
                           >
                             D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
@@ -2295,7 +2295,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
-                            class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold text-sm absolute w-full"
+                            class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold text-sm absolute w-full"
                             data-testid="Address__address"
                           >
                             D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
@@ -2459,7 +2459,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
-                            class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                            class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 font-semibold text-sm absolute w-full"
                             data-testid="Address__address"
                           >
                             D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -2623,7 +2623,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
-                            class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                            class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 font-semibold text-sm absolute w-full"
                             data-testid="Address__address"
                           >
                             D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -2787,7 +2787,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
-                            class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                            class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 font-semibold text-sm absolute w-full"
                             data-testid="Address__address"
                           >
                             D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -2951,7 +2951,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
-                            class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                            class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 font-semibold text-sm absolute w-full"
                             data-testid="Address__address"
                           >
                             D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -3115,7 +3115,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
-                            class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                            class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 font-semibold text-sm absolute w-full"
                             data-testid="Address__address"
                           >
                             D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -3279,7 +3279,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
-                            class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                            class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 font-semibold text-sm absolute w-full"
                             data-testid="Address__address"
                           >
                             D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -3443,7 +3443,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
-                            class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                            class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 font-semibold text-sm absolute w-full"
                             data-testid="Address__address"
                           >
                             D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -3607,7 +3607,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
-                            class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                            class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 font-semibold text-sm absolute w-full"
                             data-testid="Address__address"
                           >
                             D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -3771,7 +3771,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
-                            class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                            class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 font-semibold text-sm absolute w-full"
                             data-testid="Address__address"
                           >
                             D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -3935,7 +3935,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
-                            class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                            class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 font-semibold text-sm absolute w-full"
                             data-testid="Address__address"
                           >
                             D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -4099,7 +4099,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
-                            class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                            class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 font-semibold text-sm absolute w-full"
                             data-testid="Address__address"
                           >
                             D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -4263,7 +4263,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
-                            class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                            class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 font-semibold text-sm absolute w-full"
                             data-testid="Address__address"
                           >
                             D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -4427,7 +4427,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
-                            class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                            class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 font-semibold text-sm absolute w-full"
                             data-testid="Address__address"
                           >
                             D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -4591,7 +4591,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
-                            class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                            class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 font-semibold text-sm absolute w-full"
                             data-testid="Address__address"
                           >
                             D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -4755,7 +4755,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
-                            class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                            class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 font-semibold text-sm absolute w-full"
                             data-testid="Address__address"
                           >
                             D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -4919,7 +4919,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
-                            class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                            class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 font-semibold text-sm absolute w-full"
                             data-testid="Address__address"
                           >
                             D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -5083,7 +5083,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
-                            class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                            class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 font-semibold text-sm absolute w-full"
                             data-testid="Address__address"
                           >
                             D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -5247,7 +5247,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
-                            class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                            class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 font-semibold text-sm absolute w-full"
                             data-testid="Address__address"
                           >
                             D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -5411,7 +5411,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
-                            class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                            class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 font-semibold text-sm absolute w-full"
                             data-testid="Address__address"
                           >
                             D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -5575,7 +5575,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
-                            class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                            class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 font-semibold text-sm absolute w-full"
                             data-testid="Address__address"
                           >
                             D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -5739,7 +5739,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
-                            class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                            class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 font-semibold text-sm absolute w-full"
                             data-testid="Address__address"
                           >
                             D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -5903,7 +5903,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
-                            class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                            class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 font-semibold text-sm absolute w-full"
                             data-testid="Address__address"
                           >
                             D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -6067,7 +6067,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
-                            class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                            class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 font-semibold text-sm absolute w-full"
                             data-testid="Address__address"
                           >
                             D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -6231,7 +6231,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
-                            class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                            class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 font-semibold text-sm absolute w-full"
                             data-testid="Address__address"
                           >
                             D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -6395,7 +6395,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
-                            class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                            class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 font-semibold text-sm absolute w-full"
                             data-testid="Address__address"
                           >
                             D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -6559,7 +6559,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
-                            class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                            class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 font-semibold text-sm absolute w-full"
                             data-testid="Address__address"
                           >
                             D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -6723,7 +6723,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
-                            class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                            class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 font-semibold text-sm absolute w-full"
                             data-testid="Address__address"
                           >
                             D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -6887,7 +6887,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
-                            class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                            class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 font-semibold text-sm absolute w-full"
                             data-testid="Address__address"
                           >
                             D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -7051,7 +7051,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
-                            class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                            class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 font-semibold text-sm absolute w-full"
                             data-testid="Address__address"
                           >
                             D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -7215,7 +7215,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
-                            class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                            class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 font-semibold text-sm absolute w-full"
                             data-testid="Address__address"
                           >
                             D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -7379,7 +7379,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
-                            class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                            class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 font-semibold text-sm absolute w-full"
                             data-testid="Address__address"
                           >
                             D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -7543,7 +7543,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
-                            class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                            class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 font-semibold text-sm absolute w-full"
                             data-testid="Address__address"
                           >
                             D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -7707,7 +7707,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
-                            class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                            class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 font-semibold text-sm absolute w-full"
                             data-testid="Address__address"
                           >
                             D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -7871,7 +7871,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
-                            class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                            class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 font-semibold text-sm absolute w-full"
                             data-testid="Address__address"
                           >
                             D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -8035,7 +8035,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
-                            class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                            class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 font-semibold text-sm absolute w-full"
                             data-testid="Address__address"
                           >
                             D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -8199,7 +8199,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
-                            class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                            class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 font-semibold text-sm absolute w-full"
                             data-testid="Address__address"
                           >
                             D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -8363,7 +8363,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
-                            class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                            class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 font-semibold text-sm absolute w-full"
                             data-testid="Address__address"
                           >
                             D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -8527,7 +8527,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
-                            class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                            class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 font-semibold text-sm absolute w-full"
                             data-testid="Address__address"
                           >
                             D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -8691,7 +8691,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
-                            class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                            class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 font-semibold text-sm absolute w-full"
                             data-testid="Address__address"
                           >
                             D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -8855,7 +8855,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
-                            class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                            class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 font-semibold text-sm absolute w-full"
                             data-testid="Address__address"
                           >
                             D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -9627,7 +9627,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
-                            class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                            class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 font-semibold text-sm absolute w-full"
                             data-testid="Address__address"
                           >
                             D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -9791,7 +9791,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
-                            class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                            class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 font-semibold text-sm absolute w-full"
                             data-testid="Address__address"
                           >
                             D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -9955,7 +9955,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
-                            class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                            class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 font-semibold text-sm absolute w-full"
                             data-testid="Address__address"
                           >
                             D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -10119,7 +10119,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
-                            class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                            class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 font-semibold text-sm absolute w-full"
                             data-testid="Address__address"
                           >
                             D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -11370,7 +11370,7 @@ exports[`Transactions > should hide view more button when there are no next page
                           class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
-                            class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold text-sm absolute w-full"
+                            class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold text-sm absolute w-full"
                             data-testid="Address__address"
                           >
                             D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
@@ -11545,7 +11545,7 @@ exports[`Transactions > should hide view more button when there are no next page
                           class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
-                            class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold text-sm absolute w-full"
+                            class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold text-sm absolute w-full"
                             data-testid="Address__address"
                           >
                             D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
@@ -11709,7 +11709,7 @@ exports[`Transactions > should hide view more button when there are no next page
                           class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
-                            class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                            class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 font-semibold text-sm absolute w-full"
                             data-testid="Address__address"
                           >
                             D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -11873,7 +11873,7 @@ exports[`Transactions > should hide view more button when there are no next page
                           class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
-                            class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                            class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 font-semibold text-sm absolute w-full"
                             data-testid="Address__address"
                           >
                             D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -12037,7 +12037,7 @@ exports[`Transactions > should hide view more button when there are no next page
                           class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
-                            class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                            class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 font-semibold text-sm absolute w-full"
                             data-testid="Address__address"
                           >
                             D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -12201,7 +12201,7 @@ exports[`Transactions > should hide view more button when there are no next page
                           class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
-                            class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                            class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 font-semibold text-sm absolute w-full"
                             data-testid="Address__address"
                           >
                             D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -12365,7 +12365,7 @@ exports[`Transactions > should hide view more button when there are no next page
                           class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
-                            class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                            class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 font-semibold text-sm absolute w-full"
                             data-testid="Address__address"
                           >
                             D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -12529,7 +12529,7 @@ exports[`Transactions > should hide view more button when there are no next page
                           class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
-                            class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                            class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 font-semibold text-sm absolute w-full"
                             data-testid="Address__address"
                           >
                             D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -12693,7 +12693,7 @@ exports[`Transactions > should hide view more button when there are no next page
                           class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
-                            class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                            class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 font-semibold text-sm absolute w-full"
                             data-testid="Address__address"
                           >
                             D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -12857,7 +12857,7 @@ exports[`Transactions > should hide view more button when there are no next page
                           class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
-                            class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                            class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 font-semibold text-sm absolute w-full"
                             data-testid="Address__address"
                           >
                             D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -13021,7 +13021,7 @@ exports[`Transactions > should hide view more button when there are no next page
                           class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
-                            class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                            class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 font-semibold text-sm absolute w-full"
                             data-testid="Address__address"
                           >
                             D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -13185,7 +13185,7 @@ exports[`Transactions > should hide view more button when there are no next page
                           class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
-                            class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                            class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 font-semibold text-sm absolute w-full"
                             data-testid="Address__address"
                           >
                             D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -13349,7 +13349,7 @@ exports[`Transactions > should hide view more button when there are no next page
                           class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
-                            class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                            class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 font-semibold text-sm absolute w-full"
                             data-testid="Address__address"
                           >
                             D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -13513,7 +13513,7 @@ exports[`Transactions > should hide view more button when there are no next page
                           class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
-                            class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                            class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 font-semibold text-sm absolute w-full"
                             data-testid="Address__address"
                           >
                             D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -13677,7 +13677,7 @@ exports[`Transactions > should hide view more button when there are no next page
                           class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
-                            class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                            class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 font-semibold text-sm absolute w-full"
                             data-testid="Address__address"
                           >
                             D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -13841,7 +13841,7 @@ exports[`Transactions > should hide view more button when there are no next page
                           class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
-                            class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                            class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 font-semibold text-sm absolute w-full"
                             data-testid="Address__address"
                           >
                             D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -14005,7 +14005,7 @@ exports[`Transactions > should hide view more button when there are no next page
                           class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
-                            class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                            class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 font-semibold text-sm absolute w-full"
                             data-testid="Address__address"
                           >
                             D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -14169,7 +14169,7 @@ exports[`Transactions > should hide view more button when there are no next page
                           class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
-                            class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                            class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 font-semibold text-sm absolute w-full"
                             data-testid="Address__address"
                           >
                             D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -14333,7 +14333,7 @@ exports[`Transactions > should hide view more button when there are no next page
                           class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
-                            class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                            class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 font-semibold text-sm absolute w-full"
                             data-testid="Address__address"
                           >
                             D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -14497,7 +14497,7 @@ exports[`Transactions > should hide view more button when there are no next page
                           class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
-                            class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                            class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 font-semibold text-sm absolute w-full"
                             data-testid="Address__address"
                           >
                             D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -14661,7 +14661,7 @@ exports[`Transactions > should hide view more button when there are no next page
                           class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
-                            class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                            class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 font-semibold text-sm absolute w-full"
                             data-testid="Address__address"
                           >
                             D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -14825,7 +14825,7 @@ exports[`Transactions > should hide view more button when there are no next page
                           class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
-                            class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                            class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 font-semibold text-sm absolute w-full"
                             data-testid="Address__address"
                           >
                             D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -15293,7 +15293,7 @@ exports[`Transactions > should hide view more button when there are no next page
                           class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
-                            class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                            class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 font-semibold text-sm absolute w-full"
                             data-testid="Address__address"
                           >
                             D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -15457,7 +15457,7 @@ exports[`Transactions > should hide view more button when there are no next page
                           class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
-                            class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                            class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 font-semibold text-sm absolute w-full"
                             data-testid="Address__address"
                           >
                             D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -16708,7 +16708,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                           class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
-                            class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold text-sm absolute w-full"
+                            class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold text-sm absolute w-full"
                             data-testid="Address__address"
                           >
                             D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
@@ -16883,7 +16883,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                           class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
-                            class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold text-sm absolute w-full"
+                            class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold text-sm absolute w-full"
                             data-testid="Address__address"
                           >
                             D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
@@ -17047,7 +17047,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                           class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
-                            class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                            class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 font-semibold text-sm absolute w-full"
                             data-testid="Address__address"
                           >
                             D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -17211,7 +17211,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                           class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
-                            class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                            class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 font-semibold text-sm absolute w-full"
                             data-testid="Address__address"
                           >
                             D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -17375,7 +17375,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                           class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
-                            class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                            class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 font-semibold text-sm absolute w-full"
                             data-testid="Address__address"
                           >
                             D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -17539,7 +17539,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                           class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
-                            class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                            class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 font-semibold text-sm absolute w-full"
                             data-testid="Address__address"
                           >
                             D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -17703,7 +17703,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                           class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
-                            class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                            class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 font-semibold text-sm absolute w-full"
                             data-testid="Address__address"
                           >
                             D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -17867,7 +17867,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                           class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
-                            class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                            class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 font-semibold text-sm absolute w-full"
                             data-testid="Address__address"
                           >
                             D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -18031,7 +18031,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                           class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
-                            class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                            class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 font-semibold text-sm absolute w-full"
                             data-testid="Address__address"
                           >
                             D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -18195,7 +18195,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                           class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
-                            class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                            class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 font-semibold text-sm absolute w-full"
                             data-testid="Address__address"
                           >
                             D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -18359,7 +18359,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                           class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
-                            class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                            class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 font-semibold text-sm absolute w-full"
                             data-testid="Address__address"
                           >
                             D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -18523,7 +18523,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                           class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
-                            class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                            class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 font-semibold text-sm absolute w-full"
                             data-testid="Address__address"
                           >
                             D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -18687,7 +18687,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                           class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
-                            class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                            class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 font-semibold text-sm absolute w-full"
                             data-testid="Address__address"
                           >
                             D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -18851,7 +18851,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                           class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
-                            class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                            class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 font-semibold text-sm absolute w-full"
                             data-testid="Address__address"
                           >
                             D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -19015,7 +19015,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                           class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
-                            class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                            class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 font-semibold text-sm absolute w-full"
                             data-testid="Address__address"
                           >
                             D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -19179,7 +19179,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                           class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
-                            class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                            class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 font-semibold text-sm absolute w-full"
                             data-testid="Address__address"
                           >
                             D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -19343,7 +19343,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                           class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
-                            class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                            class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 font-semibold text-sm absolute w-full"
                             data-testid="Address__address"
                           >
                             D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -19507,7 +19507,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                           class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
-                            class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                            class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 font-semibold text-sm absolute w-full"
                             data-testid="Address__address"
                           >
                             D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -19671,7 +19671,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                           class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
-                            class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                            class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 font-semibold text-sm absolute w-full"
                             data-testid="Address__address"
                           >
                             D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -19835,7 +19835,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                           class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
-                            class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                            class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 font-semibold text-sm absolute w-full"
                             data-testid="Address__address"
                           >
                             D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -19999,7 +19999,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                           class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
-                            class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                            class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 font-semibold text-sm absolute w-full"
                             data-testid="Address__address"
                           >
                             D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -20163,7 +20163,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                           class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
-                            class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                            class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 font-semibold text-sm absolute w-full"
                             data-testid="Address__address"
                           >
                             D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -20631,7 +20631,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                           class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
-                            class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                            class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 font-semibold text-sm absolute w-full"
                             data-testid="Address__address"
                           >
                             D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -20795,7 +20795,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                           class="relative grow leading-[17px] sm:leading-5 text-left"
                         >
                           <span
-                            class="no-ligatures min-w-0 overflow-hidden md:pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                            class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 font-semibold text-sm absolute w-full"
                             data-testid="Address__address"
                           >
                             D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
