@@ -78,11 +78,11 @@ export const TransactionRecipients = ({
 							({recipients.length}){" "}
 						</span>
 					</span>
-					<div className="hidden sm:block h-5 leading-5">
+					<div className="hidden h-5 leading-5 sm:block">
 						<Divider type="vertical" size="md" />
 					</div>
 
-					<Link to={explorerLink} isExternal className="hidden sm:block leading-5 h-5">
+					<Link to={explorerLink} isExternal className="hidden h-5 leading-5 sm:block">
 						{t("TRANSACTION.VIEW_RECIPIENTS_LIST")}
 					</Link>
 				</div>
