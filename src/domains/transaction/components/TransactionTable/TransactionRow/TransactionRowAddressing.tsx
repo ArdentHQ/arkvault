@@ -53,7 +53,7 @@ export const TransactionRowAddressing = ({
 	});
 
 	useEffect(() => {
-		if (transaction?.isVote() || transaction?.isUnvote()) {
+		if (transaction.isVote() || transaction.isUnvote()) {
 			setDelegates({
 				unvotes: env.delegates().map(transaction.wallet(), transaction.unvotes()),
 				votes: env.delegates().map(transaction.wallet(), transaction.votes()),
@@ -61,7 +61,7 @@ export const TransactionRowAddressing = ({
 		}
 	}, [env, transaction]);
 
-	if (transaction?.isMultiPayment()) {
+	if (transaction.isMultiPayment()) {
 		return (
 			<div className="flex flex-row gap-2" data-testid="TransactionRowAddressing__multipayment">
 				<TransactionRowLabel isNegative={isNegative} />
@@ -75,7 +75,7 @@ export const TransactionRowAddressing = ({
 		);
 	}
 
-	if (transaction?.isVoteCombination() || transaction?.isVote() || transaction?.isUnvote()) {
+	if (transaction.isVoteCombination() || transaction.isVote() || transaction.isUnvote()) {
 		return (
 			<div className="flex flex-row gap-2" data-testid="TransactionRowAddressing__vote">
 				<TransactionRowLabel isNegative={isNegative} />
@@ -84,7 +84,7 @@ export const TransactionRowAddressing = ({
 					<span className="text-theme-secondary-700 dark:text-theme-secondary-500">
 						(
 						{delegates[
-							transaction?.isVote() || transaction?.isVoteCombination() ? "votes" : "unvotes"
+							transaction.isVote() || transaction.isVoteCombination() ? "votes" : "unvotes"
 						][0]?.username()}
 						)
 					</span>
@@ -93,7 +93,7 @@ export const TransactionRowAddressing = ({
 		);
 	}
 
-	if (transaction?.isDelegateRegistration()) {
+	if (transaction.isDelegateRegistration()) {
 		return (
 			<div className="flex flex-row gap-2" data-testid="TransactionRowAddressing__delegate_registration">
 				<TransactionRowLabel isNegative={isNegative} />
@@ -107,7 +107,7 @@ export const TransactionRowAddressing = ({
 		);
 	}
 
-	if (transaction?.isDelegateResignation()) {
+	if (transaction.isDelegateResignation()) {
 		return (
 			<div className="flex flex-row gap-2" data-testid="TransactionRowAddressing__delegate_resignation">
 				<TransactionRowLabel isNegative={isNegative} />
@@ -136,8 +136,8 @@ export const TransactionRowAddressing = ({
 					address={transaction.sender()}
 					truncateOnTable
 					addressClass={cn({
-						"text-theme-primary-600": !alias,
 						"text-theme-secondary-700 dark:text-theme-secondary-500": alias,
+						"text-theme-text": !alias,
 					})}
 					size="sm"
 				/>
