@@ -597,7 +597,7 @@ exports[`Dashboard > should render 1`] = `
                           class="group"
                         >
                           <button
-                            class="ring-focus css-1r0gl86"
+                            class="ring-focus css-14zm422"
                           >
                             <div
                               class="flex h-5 w-5 items-center justify-center"
@@ -1560,7 +1560,7 @@ exports[`Dashboard > should render 1`] = `
                             class="flex flex-col gap-1 font-semibold"
                           >
                             <a
-                              class="ring-focus group inline-block css-7nwwrh"
+                              class="ring-focus group/inner inline-block css-7nwwrh"
                               data-ring-focus-margin="-m-1"
                               data-testid="Link"
                               href="https://test.arkscan.io/transactions/8f913b6b719e7767d49861c0aec79ced212767645cb793d75d2f1b89abb49877"
@@ -1646,7 +1646,7 @@ exports[`Dashboard > should render 1`] = `
                                   class="relative grow leading-[17px] sm:leading-5 text-left"
                                 >
                                   <span
-                                    class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 font-semibold text-sm absolute w-full"
+                                    class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
                                     data-testid="Address__address"
                                   >
                                     D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -1668,8 +1668,8 @@ exports[`Dashboard > should render 1`] = `
                             class="flex flex-col items-end gap-1"
                           >
                             <div
-                              class="flex items-center justify-center rounded px-1.5 h-[21px] css-xqt0aw"
-                              color="danger-bg"
+                              class="flex items-center justify-center rounded px-1.5 h-[21px] css-1jspzfx"
+                              color="success-bg"
                               data-testid="AmountLabel__wrapper"
                             >
                               <div
@@ -1679,7 +1679,7 @@ exports[`Dashboard > should render 1`] = `
                                   class="whitespace-nowrap text-sm"
                                   data-testid="Amount"
                                 >
-                                  - 400,000.1 DARK
+                                  + 400,000.1 DARK
                                 </span>
                               </div>
                             </div>
@@ -1724,7 +1724,7 @@ exports[`Dashboard > should render 1`] = `
                             class="flex flex-col gap-1 font-semibold"
                           >
                             <a
-                              class="ring-focus group inline-block css-7nwwrh"
+                              class="ring-focus group/inner inline-block css-7nwwrh"
                               data-ring-focus-margin="-m-1"
                               data-testid="Link"
                               href="https://test.arkscan.io/transactions/8f913b6b719e7767d49861c0aec79ced212767645cb793d75d2f1b89abb49877"
@@ -1810,7 +1810,7 @@ exports[`Dashboard > should render 1`] = `
                                   class="relative grow leading-[17px] sm:leading-5 text-left"
                                 >
                                   <span
-                                    class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 font-semibold text-sm absolute w-full"
+                                    class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
                                     data-testid="Address__address"
                                   >
                                     D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -1832,8 +1832,8 @@ exports[`Dashboard > should render 1`] = `
                             class="flex flex-col items-end gap-1"
                           >
                             <div
-                              class="flex items-center justify-center rounded px-1.5 h-[21px] css-xqt0aw"
-                              color="danger-bg"
+                              class="flex items-center justify-center rounded px-1.5 h-[21px] css-1jspzfx"
+                              color="success-bg"
                               data-testid="AmountLabel__wrapper"
                             >
                               <div
@@ -1843,7 +1843,7 @@ exports[`Dashboard > should render 1`] = `
                                   class="whitespace-nowrap text-sm"
                                   data-testid="Amount"
                                 >
-                                  - 400,000.1 DARK
+                                  + 400,000.1 DARK
                                 </span>
                               </div>
                             </div>
@@ -1888,7 +1888,7 @@ exports[`Dashboard > should render 1`] = `
                             class="flex flex-col gap-1 font-semibold"
                           >
                             <a
-                              class="ring-focus group inline-block css-7nwwrh"
+                              class="ring-focus group/inner inline-block css-7nwwrh"
                               data-ring-focus-margin="-m-1"
                               data-testid="Link"
                               href="https://test.arkscan.io/transactions/0d8d12d7980bf0183ef015e5938e56c44c3db4d3695cefd16ccec4a7bfd8a2cf"
@@ -1974,7 +1974,7 @@ exports[`Dashboard > should render 1`] = `
                                   class="relative grow leading-[17px] sm:leading-5 text-left"
                                 >
                                   <span
-                                    class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 font-semibold text-sm absolute w-full"
+                                    class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
                                     data-testid="Address__address"
                                   >
                                     D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -1996,8 +1996,8 @@ exports[`Dashboard > should render 1`] = `
                             class="flex flex-col items-end gap-1"
                           >
                             <div
-                              class="flex items-center justify-center rounded px-1.5 h-[21px] css-xqt0aw"
-                              color="danger-bg"
+                              class="flex items-center justify-center rounded px-1.5 h-[21px] css-1jspzfx"
+                              color="success-bg"
                               data-testid="AmountLabel__wrapper"
                             >
                               <div
@@ -2007,7 +2007,7 @@ exports[`Dashboard > should render 1`] = `
                                   class="whitespace-nowrap text-sm"
                                   data-testid="Amount"
                                 >
-                                  - 50,000.1 DARK
+                                  + 50,000.1 DARK
                                 </span>
                               </div>
                             </div>
@@ -2052,7 +2052,7 @@ exports[`Dashboard > should render 1`] = `
                             class="flex flex-col gap-1 font-semibold"
                           >
                             <a
-                              class="ring-focus group inline-block css-7nwwrh"
+                              class="ring-focus group/inner inline-block css-7nwwrh"
                               data-ring-focus-margin="-m-1"
                               data-testid="Link"
                               href="https://test.arkscan.io/transactions/0d8d12d7980bf0183ef015e5938e56c44c3db4d3695cefd16ccec4a7bfd8a2cf"
@@ -2138,7 +2138,7 @@ exports[`Dashboard > should render 1`] = `
                                   class="relative grow leading-[17px] sm:leading-5 text-left"
                                 >
                                   <span
-                                    class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 font-semibold text-sm absolute w-full"
+                                    class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
                                     data-testid="Address__address"
                                   >
                                     D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -2160,8 +2160,8 @@ exports[`Dashboard > should render 1`] = `
                             class="flex flex-col items-end gap-1"
                           >
                             <div
-                              class="flex items-center justify-center rounded px-1.5 h-[21px] css-xqt0aw"
-                              color="danger-bg"
+                              class="flex items-center justify-center rounded px-1.5 h-[21px] css-1jspzfx"
+                              color="success-bg"
                               data-testid="AmountLabel__wrapper"
                             >
                               <div
@@ -2171,7 +2171,7 @@ exports[`Dashboard > should render 1`] = `
                                   class="whitespace-nowrap text-sm"
                                   data-testid="Amount"
                                 >
-                                  - 50,000.1 DARK
+                                  + 50,000.1 DARK
                                 </span>
                               </div>
                             </div>

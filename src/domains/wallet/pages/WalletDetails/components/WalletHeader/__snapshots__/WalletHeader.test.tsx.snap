@@ -117,7 +117,7 @@ exports[`WalletHeader > should handle locked balance 1`] = `
       class="h-13 flex w-full items-center lg:w-full lg:pl-6"
     >
       <div
-        class="mr-auto flex flex-col lg:gap-2"
+        class="mr-auto flex flex-col"
       >
         <div
           class="flex items-center text-sm font-semibold text-theme-secondary-text"
@@ -499,7 +499,7 @@ exports[`WalletHeader > should handle locked balance when is ledger 1`] = `
       class="h-13 flex w-full items-center lg:w-full lg:pl-6"
     >
       <div
-        class="mr-auto flex flex-col lg:gap-2"
+        class="mr-auto flex flex-col"
       >
         <div
           class="flex items-center text-sm font-semibold text-theme-secondary-text"
@@ -856,7 +856,7 @@ exports[`WalletHeader > should render 1`] = `
       class="h-13 flex w-full items-center lg:w-full lg:pl-6"
     >
       <div
-        class="mr-auto flex flex-col lg:gap-2"
+        class="mr-auto flex flex-col"
       >
         <div
           class="flex items-center text-sm font-semibold text-theme-secondary-text"
@@ -1131,7 +1131,7 @@ exports[`WalletHeader > should render amount for wallet in live network 1`] = `
       class="h-13 flex w-full items-center lg:w-full lg:pl-6"
     >
       <div
-        class="mr-auto flex flex-col lg:gap-2"
+        class="mr-auto flex flex-col"
       >
         <div
           class="flex items-center text-sm font-semibold text-theme-secondary-text"
@@ -1437,7 +1437,7 @@ exports[`WalletHeader > should render with incompatible ledger wallet 1`] = `
       class="h-13 flex w-full items-center lg:w-full lg:pl-6"
     >
       <div
-        class="mr-auto flex flex-col lg:gap-2"
+        class="mr-auto flex flex-col"
       >
         <div
           class="flex items-center text-sm font-semibold text-theme-secondary-text"
@@ -1713,7 +1713,7 @@ exports[`WalletHeader > should show currency delta (-5%) 1`] = `
       class="h-13 flex w-full items-center lg:w-full lg:pl-6"
     >
       <div
-        class="mr-auto flex flex-col lg:gap-2"
+        class="mr-auto flex flex-col"
       >
         <div
           class="flex items-center text-sm font-semibold text-theme-secondary-text"
@@ -2020,7 +2020,7 @@ exports[`WalletHeader > should show currency delta (5%) 1`] = `
       class="h-13 flex w-full items-center lg:w-full lg:pl-6"
     >
       <div
-        class="mr-auto flex flex-col lg:gap-2"
+        class="mr-auto flex flex-col"
       >
         <div
           class="flex items-center text-sm font-semibold text-theme-secondary-text"
@@ -2388,7 +2388,7 @@ exports[`WalletHeader > should show modifiers 1`] = `
       class="h-13 flex w-full items-center lg:w-full lg:pl-6"
     >
       <div
-        class="mr-auto flex flex-col lg:gap-2"
+        class="mr-auto flex flex-col"
       >
         <div
           class="flex items-center text-sm font-semibold text-theme-secondary-text"
@@ -2633,7 +2633,7 @@ exports[`WalletHeader > should use empty string in clipboard copy if publickey i
       class="h-13 flex w-full items-center lg:w-full lg:pl-6"
     >
       <div
-        class="mr-auto flex flex-col lg:gap-2"
+        class="mr-auto flex flex-col"
       >
         <div
           class="flex items-center text-sm font-semibold text-theme-secondary-text"

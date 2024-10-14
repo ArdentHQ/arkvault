@@ -89,14 +89,14 @@ exports[`ConfirmationStep > should render 1`] = `
                   data-testid="ExplorerLink"
                 >
                   <a
-                    class="ring-focus group inline-block css-7nwwrh"
+                    class="ring-focus group/inner inline-block css-7nwwrh"
                     data-ring-focus-margin="-m-1"
                     data-testid="Link"
                     href="https://blockchair.com/bitcoin/transaction/payinHash"
                     rel="noopener noreferrer"
                   >
                     <span
-                      class="css-170792"
+                      class="css-bxx244"
                     >
                       <span
                         class="no-ligatures min-w-0 overflow-hidden text-sm sm:text-base"
@@ -188,14 +188,14 @@ exports[`ConfirmationStep > should render 1`] = `
                   data-testid="ExplorerLink"
                 >
                   <a
-                    class="ring-focus group inline-block css-7nwwrh"
+                    class="ring-focus group/inner inline-block css-7nwwrh"
                     data-ring-focus-margin="-m-1"
                     data-testid="Link"
                     href="https://blockchair.com/bitcoin/address/payinAddress"
                     rel="noopener noreferrer"
                   >
                     <span
-                      class="css-170792"
+                      class="css-bxx244"
                     >
                       <span
                         class="no-ligatures min-w-0 overflow-hidden text-sm sm:text-base"
@@ -1129,14 +1129,14 @@ exports[`ExchangeForm > should render exchange form with id of finished order 1`
                           data-testid="ExplorerLink"
                         >
                           <a
-                            class="ring-focus group inline-block css-7nwwrh"
+                            class="ring-focus group/inner inline-block css-7nwwrh"
                             data-ring-focus-margin="-m-1"
                             data-testid="Link"
                             href="https://blockchair.com/bitcoin/transaction/payinHash?from=changenow"
                             rel="noopener noreferrer"
                           >
                             <span
-                              class="css-170792"
+                              class="css-bxx244"
                             >
                               <span
                                 class="no-ligatures min-w-0 overflow-hidden text-sm sm:text-base"
@@ -1228,14 +1228,14 @@ exports[`ExchangeForm > should render exchange form with id of finished order 1`
                           data-testid="ExplorerLink"
                         >
                           <a
-                            class="ring-focus group inline-block css-7nwwrh"
+                            class="ring-focus group/inner inline-block css-7nwwrh"
                             data-ring-focus-margin="-m-1"
                             data-testid="Link"
                             href="https://blockchair.com/bitcoin/address/payinAddress?from=changenow"
                             rel="noopener noreferrer"
                           >
                             <span
-                              class="css-170792"
+                              class="css-bxx244"
                             >
                               <span
                                 class="no-ligatures min-w-0 overflow-hidden text-sm sm:text-base"
@@ -1379,14 +1379,14 @@ exports[`ExchangeForm > should render exchange form with id of finished order 1`
                           data-testid="ExplorerLink"
                         >
                           <a
-                            class="ring-focus group inline-block css-7nwwrh"
+                            class="ring-focus group/inner inline-block css-7nwwrh"
                             data-ring-focus-margin="-m-1"
                             data-testid="Link"
                             href="https://live.arkscan.io/transaction/payoutHash"
                             rel="noopener noreferrer"
                           >
                             <span
-                              class="css-170792"
+                              class="css-bxx244"
                             >
                               <span
                                 class="no-ligatures min-w-0 overflow-hidden text-sm sm:text-base"
@@ -1478,14 +1478,14 @@ exports[`ExchangeForm > should render exchange form with id of finished order 1`
                           data-testid="ExplorerLink"
                         >
                           <a
-                            class="ring-focus group inline-block css-7nwwrh"
+                            class="ring-focus group/inner inline-block css-7nwwrh"
                             data-ring-focus-margin="-m-1"
                             data-testid="Link"
                             href="https://live.arkscan.io/wallets/payoutAddress"
                             rel="noopener noreferrer"
                           >
                             <span
-                              class="css-170792"
+                              class="css-bxx244"
                             >
                               <span
                                 class="no-ligatures min-w-0 overflow-hidden text-sm sm:text-base"
@@ -1948,14 +1948,14 @@ exports[`ExchangeForm > should render exchange form with id of pending order 1`]
             >
               If you have any question about your exchange, please contact ChangeNOW support team via email at 
               <a
-                class="ring-focus group inline-block css-7nwwrh"
+                class="ring-focus group/inner inline-block css-7nwwrh"
                 data-ring-focus-margin="-m-1"
                 data-testid="Link"
                 href="mailto:support@changenow.io"
                 rel="noopener noreferrer"
               >
                 <span
-                  class="css-170792"
+                  class="css-bxx244"
                 >
                   support@changenow.io
                 </span>
@@ -2644,14 +2644,14 @@ exports[`ReviewStep > should render 1`] = `
           >
             I've read and agree to the ChangeNOW 
             <a
-              class="ring-focus group inline-block css-7nwwrh"
+              class="ring-focus group/inner inline-block css-7nwwrh"
               data-ring-focus-margin="-m-1"
               data-testid="Link"
               href="https://changenow.io/terms-of-use"
               rel="noopener noreferrer"
             >
               <span
-                class="css-170792"
+                class="css-bxx244"
               >
                 Terms of Use
               </span>
@@ -2682,14 +2682,14 @@ exports[`ReviewStep > should render 1`] = `
             </a>
              and 
             <a
-              class="ring-focus group inline-block css-7nwwrh"
+              class="ring-focus group/inner inline-block css-7nwwrh"
               data-ring-focus-margin="-m-1"
               data-testid="Link"
               href="https://changenow.io/privacy-policy"
               rel="noopener noreferrer"
             >
               <span
-                class="css-170792"
+                class="css-bxx244"
               >
                 Privacy Policy
               </span>
@@ -3013,14 +3013,14 @@ exports[`StatusStep > should render 1`] = `
     >
       If you have any question about your exchange, please contact ChangeNOW support team via email at 
       <a
-        class="ring-focus group inline-block css-7nwwrh"
+        class="ring-focus group/inner inline-block css-7nwwrh"
         data-ring-focus-margin="-m-1"
         data-testid="Link"
         href="mailto:support@changenow.io"
         rel="noopener noreferrer"
       >
         <span
-          class="css-170792"
+          class="css-bxx244"
         >
           support@changenow.io
         </span>
