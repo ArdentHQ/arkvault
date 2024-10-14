@@ -160,7 +160,7 @@ exports[`MultiSignatureDetail > should not broadcast if wallet is not ready to d
                               </span>
                             </button>
                             <button
-                              class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 p-2"
+                              class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 border border-theme-secondary-300 bg-transparent p-2 hover:border-transparent dark:border-transparent dark:bg-theme-secondary-800"
                               data-testid="explorer-link"
                               disabled=""
                               type="button"
@@ -227,7 +227,7 @@ exports[`MultiSignatureDetail > should not broadcast if wallet is not ready to d
                                 data-testid="DetailLabel"
                               >
                                 <div
-                                  class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                                  class="no-ligatures text-md min-w-24 font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500"
                                   data-testid="DetailLabelText"
                                 >
                                   Addressing
@@ -299,7 +299,7 @@ exports[`MultiSignatureDetail > should not broadcast if wallet is not ready to d
                                   </div>
                                 </div>
                                 <div
-                                  class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3"
+                                  class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3 [.condensed_&]:leading-3"
                                 >
                                   <div
                                     class="w-full [.condensed_&]:hidden"
@@ -418,7 +418,7 @@ exports[`MultiSignatureDetail > should not broadcast if wallet is not ready to d
                                   data-testid="DetailLabel"
                                 >
                                   <div
-                                    class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                                    class="no-ligatures text-md min-w-24 font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500"
                                     data-testid="DetailLabelText"
                                   >
                                     Transaction Type
@@ -434,13 +434,13 @@ exports[`MultiSignatureDetail > should not broadcast if wallet is not ready to d
                                       class="flex w-full justify-between sm:justify-start"
                                     >
                                       <div
-                                        class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                                        class="no-ligatures text-md min-w-24 font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500"
                                         data-testid="DetailLabelText"
                                       >
                                         Category
                                       </div>
                                       <div
-                                        class="css-1chzvd4"
+                                        class="css-1p04us5"
                                         color="neutral"
                                       >
                                         Transfer
@@ -480,7 +480,7 @@ exports[`MultiSignatureDetail > should not broadcast if wallet is not ready to d
                                 data-testid="DetailLabel"
                               >
                                 <div
-                                  class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                                  class="no-ligatures text-md min-w-24 font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500"
                                   data-testid="DetailLabelText"
                                 >
                                   Transaction Summary
@@ -496,13 +496,13 @@ exports[`MultiSignatureDetail > should not broadcast if wallet is not ready to d
                                     class="flex w-full justify-between sm:justify-start"
                                   >
                                     <div
-                                      class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
+                                      class="no-ligatures text-md font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
                                       data-testid="DetailLabelText"
                                     >
                                       Amount
                                     </div>
                                     <div
-                                      class="flex h-full items-center justify-center rounded px-1.5 css-1jspzfx"
+                                      class="flex h-full items-center justify-center rounded px-1.5 text-base leading-5 css-1jspzfx"
                                       color="success-bg"
                                       data-testid="AmountLabel__wrapper"
                                     >
@@ -510,7 +510,7 @@ exports[`MultiSignatureDetail > should not broadcast if wallet is not ready to d
                                         class="flex h-full items-center space-x-1"
                                       >
                                         <span
-                                          class="whitespace-nowrap text-sm text-[1rem]"
+                                          class="whitespace-nowrap text-sm"
                                           data-testid="Amount"
                                         >
                                           + 1 DARK
@@ -519,7 +519,7 @@ exports[`MultiSignatureDetail > should not broadcast if wallet is not ready to d
                                     </div>
                                   </div>
                                   <div
-                                    class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3"
+                                    class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3 [.condensed_&]:leading-3"
                                   >
                                     <div
                                       class="w-full [.condensed_&]:hidden"
@@ -534,20 +534,20 @@ exports[`MultiSignatureDetail > should not broadcast if wallet is not ready to d
                                     class="flex w-full justify-between sm:justify-start"
                                   >
                                     <div
-                                      class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
+                                      class="no-ligatures text-md font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
                                       data-testid="DetailLabelText"
                                     >
                                       Fee
                                     </div>
                                     <span
-                                      class="whitespace-nowrap font-semibold"
+                                      class="whitespace-nowrap font-semibold leading-5"
                                       data-testid="Amount"
                                     >
                                       1 DARK
                                     </span>
                                   </div>
                                   <div
-                                    class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3"
+                                    class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3 [.condensed_&]:leading-3"
                                   >
                                     <div
                                       class="w-full [.condensed_&]:hidden"
@@ -562,13 +562,13 @@ exports[`MultiSignatureDetail > should not broadcast if wallet is not ready to d
                                     class="flex w-full justify-between sm:justify-start"
                                   >
                                     <div
-                                      class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
+                                      class="no-ligatures text-md font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
                                       data-testid="DetailLabelText"
                                     >
                                       Value
                                     </div>
                                     <span
-                                      class="whitespace-nowrap font-semibold"
+                                      class="whitespace-nowrap font-semibold leading-5"
                                       data-testid="Amount"
                                     >
                                       0 BTC
@@ -607,7 +607,7 @@ exports[`MultiSignatureDetail > should not broadcast if wallet is not ready to d
                                 data-testid="DetailLabel"
                               >
                                 <div
-                                  class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                                  class="no-ligatures text-md min-w-24 font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500"
                                   data-testid="DetailLabelText"
                                 >
                                   Transaction Details
@@ -623,19 +623,19 @@ exports[`MultiSignatureDetail > should not broadcast if wallet is not ready to d
                                     class="flex w-full justify-between sm:justify-start"
                                   >
                                     <div
-                                      class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
+                                      class="no-ligatures text-md font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
                                       data-testid="DetailLabelText"
                                     >
                                       Timestamp
                                     </div>
                                     <div
-                                      class="font-semibold"
+                                      class="font-semibold leading-5"
                                     >
                                       01.07.2020 12:00 AM
                                     </div>
                                   </div>
                                   <div
-                                    class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3"
+                                    class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3 [.condensed_&]:leading-3"
                                   >
                                     <div
                                       class="w-full [.condensed_&]:hidden"
@@ -650,7 +650,7 @@ exports[`MultiSignatureDetail > should not broadcast if wallet is not ready to d
                                     class="flex w-full justify-between sm:justify-start"
                                   >
                                     <div
-                                      class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
+                                      class="no-ligatures text-md font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
                                       data-testid="DetailLabelText"
                                     >
                                       Block
@@ -662,7 +662,7 @@ exports[`MultiSignatureDetail > should not broadcast if wallet is not ready to d
                                     </p>
                                   </div>
                                   <div
-                                    class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3"
+                                    class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3 [.condensed_&]:leading-3"
                                   >
                                     <div
                                       class="w-full [.condensed_&]:hidden"
@@ -677,13 +677,13 @@ exports[`MultiSignatureDetail > should not broadcast if wallet is not ready to d
                                     class="flex w-full justify-between sm:justify-start"
                                   >
                                     <div
-                                      class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
+                                      class="no-ligatures text-md font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
                                       data-testid="DetailLabelText"
                                     >
                                       Nonce
                                     </div>
                                     <p
-                                      class="text-theme-secondary-500"
+                                      class="leading-5 text-theme-secondary-500"
                                     >
                                       N/A
                                     </p>
@@ -721,7 +721,7 @@ exports[`MultiSignatureDetail > should not broadcast if wallet is not ready to d
                                 data-testid="DetailLabel"
                               >
                                 <div
-                                  class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                                  class="no-ligatures text-md min-w-24 font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500"
                                   data-testid="DetailLabelText"
                                 >
                                   Memo (SmartBridge)
@@ -731,7 +731,7 @@ exports[`MultiSignatureDetail > should not broadcast if wallet is not ready to d
                                 class="w-full break-words rounded-lg border-theme-secondary-300 p-3 dark:border-theme-secondary-800 sm:border sm:px-6 sm:py-5 [.condensed_&]:sm:py-4 mt-0 sm:mt-2"
                               >
                                 <p
-                                  class="text-theme-secondary-500"
+                                  class="leading-5 text-theme-secondary-500"
                                 >
                                   N/A
                                 </p>
@@ -764,7 +764,7 @@ exports[`MultiSignatureDetail > should not broadcast if wallet is not ready to d
                               data-testid="DetailLabel"
                             >
                               <div
-                                class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                                class="no-ligatures text-md min-w-24 font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500"
                                 data-testid="DetailLabelText"
                               >
                                 Confirmations
@@ -777,7 +777,7 @@ exports[`MultiSignatureDetail > should not broadcast if wallet is not ready to d
                                 class="mt-3 sm:mt-2"
                               >
                                 <div
-                                  class="flex items-center space-x-3 rounded-xl border border-theme-warning-200 bg-theme-warning-50 px-3 py-2 dark:border-theme-warning-600 dark:bg-transparent max-sm:text-sm sm:px-6 sm:py-5"
+                                  class="flex items-center space-x-3 rounded-xl border border-theme-warning-200 bg-theme-warning-50 px-3 py-2 dark:border-theme-warning-600 dark:bg-transparent max-sm:text-sm sm:px-6 sm:py-4 sm:leading-5"
                                   data-testid="PendingConfirmationAlert"
                                 >
                                   <div
@@ -786,7 +786,7 @@ exports[`MultiSignatureDetail > should not broadcast if wallet is not ready to d
                                     width="3"
                                   />
                                   <div
-                                    class="text-theme-warning-200 dark:text-theme-secondary-800 css-1aie31u"
+                                    class="h-5 text-theme-warning-200 dark:text-theme-secondary-800 css-1aie31u"
                                     type="vertical"
                                   />
                                   <p
@@ -824,7 +824,7 @@ exports[`MultiSignatureDetail > should not broadcast if wallet is not ready to d
                               data-testid="DetailLabel"
                             >
                               <div
-                                class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                                class="no-ligatures text-md min-w-24 font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500"
                                 data-testid="DetailLabelText"
                               >
                                 Signatures
@@ -1655,7 +1655,7 @@ exports[`MultiSignatureDetail > should sign transaction after authentication pag
                         data-testid="DetailLabel"
                       >
                         <div
-                          class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                          class="no-ligatures text-md min-w-24 font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500"
                           data-testid="DetailLabelText"
                         >
                           Participants
@@ -2135,7 +2135,7 @@ exports[`MultiSignatureDetail > should sign transaction with a ledger wallet 1`]
                         data-testid="DetailLabel"
                       >
                         <div
-                          class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                          class="no-ligatures text-md min-w-24 font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500"
                           data-testid="DetailLabelText"
                         >
                           Participants

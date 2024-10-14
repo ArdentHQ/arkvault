@@ -12,7 +12,7 @@ exports[`LayoutControls > should render 1`] = `
         class="group"
       >
         <button
-          class="ring-focus css-1r0gl86"
+          class="ring-focus css-14zm422"
           data-testid="LayoutControls__list--icon"
         >
           <div
@@ -56,7 +56,7 @@ exports[`LayoutControls > should render 1`] = `
         class="group"
       >
         <button
-          class="ring-focus active css-1r0gl86"
+          class="ring-focus active css-14zm422"
           data-testid="LayoutControls__grid--icon"
         >
           <div

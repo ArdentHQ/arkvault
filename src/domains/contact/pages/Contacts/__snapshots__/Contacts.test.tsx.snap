@@ -604,7 +604,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
                       class="group"
                     >
                       <button
-                        class="ring-focus css-1r0gl86"
+                        class="ring-focus css-14zm422"
                         type="button"
                       >
                         <div
@@ -2182,7 +2182,7 @@ exports[`Contacts > should render responsive with contacts 1`] = `
                 class="group"
               >
                 <button
-                  class="ring-focus css-1r0gl86"
+                  class="ring-focus css-14zm422"
                   type="button"
                 >
                   <div
@@ -3117,7 +3117,7 @@ exports[`Contacts > should render with contacts 1`] = `
                       class="group"
                     >
                       <button
-                        class="ring-focus css-1r0gl86"
+                        class="ring-focus css-14zm422"
                         type="button"
                       >
                         <div
