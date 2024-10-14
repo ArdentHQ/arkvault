@@ -38,7 +38,7 @@ export const TransactionRecipient = ({
 					showCopyButton
 					walletNameClass="text-theme-text text-sm leading-[17px] sm:leading-5 sm:text-base"
 					addressClass={cn("text-sm leading-[17px] sm:leading-5 sm:text-base", {
-						"text-theme-secondary-500 dark:text-theme-secondary-700 ": !!recipient?.alias
+						"text-theme-secondary-500 dark:text-theme-secondary-700 ": !!recipient?.alias,
 					})}
 					wrapperClass="justify-end sm:justify-start"
 				/>
