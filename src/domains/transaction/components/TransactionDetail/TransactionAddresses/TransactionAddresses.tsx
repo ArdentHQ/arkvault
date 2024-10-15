@@ -7,6 +7,7 @@ import { Address } from "@/app/components/Address";
 import { useWalletAlias } from "@/app/hooks";
 import { DetailTitle, DetailWrapper } from "@/app/components/DetailWrapper";
 import { TransactionRecipients, TransactionRecipient } from "./TransactionRecipient";
+import cn from "classnames";
 
 interface Properties {
 	senderAddress: string;
@@ -44,8 +45,10 @@ export const TransactionAddresses = ({
 					walletName={alias}
 					showCopyButton
 					walletNameClass="text-theme-text text-sm leading-[17px] sm:leading-5 sm:text-base"
-					addressClass="text-theme-secondary-500 dark:text-theme-secondary-700 text-sm leading-[17px] sm:leading-5 sm:text-base w-full w-3/4"
 					wrapperClass="justify-end sm:justify-start"
+					addressClass={cn("text-sm leading-[17px] sm:leading-5 sm:text-base w-full w-3/4", {
+						"text-theme-secondary-500 dark:text-theme-secondary-700 ": !!alias,
+					})}
 				/>
 			</div>
 
