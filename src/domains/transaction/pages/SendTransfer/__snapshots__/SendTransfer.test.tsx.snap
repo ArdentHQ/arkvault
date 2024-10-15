@@ -10,7 +10,7 @@ exports[`SendTransfer > should display unconfirmed transactions modal when submi
       class="css-1jzy9qi"
     >
       <div
-        class="relative flex h-21"
+        class="relative flex h-14 sm:h-21"
       >
         <div
           class="hidden w-12 sm:flex"
@@ -76,7 +76,7 @@ exports[`SendTransfer > should display unconfirmed transactions modal when submi
             </button>
           </div>
           <ul
-            class="ml-4 mr-auto hidden h-21 space-x-8 lg:flex"
+            class="ml-4 mr-auto hidden h-14 space-x-8 sm:h-21 lg:flex"
             data-testid="NavigationBar__menu"
           >
             <li
@@ -714,7 +714,7 @@ exports[`SendTransfer > should display unconfirmed transactions modal when submi
                                     class="relative grow leading-[17px] sm:leading-5 text-left"
                                   >
                                     <span
-                                      class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 text-sm leading-[17px] sm:leading-5 sm:text-base w-full w-3/4 font-semibold text-base absolute w-full"
+                                      class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] sm:leading-5 sm:text-base w-full w-3/4 font-semibold text-base absolute w-full"
                                       data-testid="Address__address"
                                     >
                                       D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -788,7 +788,7 @@ exports[`SendTransfer > should display unconfirmed transactions modal when submi
                                     class="relative grow leading-[17px] sm:leading-5 text-left"
                                   >
                                     <span
-                                      class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 text-sm leading-[17px] sm:leading-5 sm:text-base font-semibold text-base absolute w-full"
+                                      class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] sm:leading-5 sm:text-base font-semibold text-base absolute w-full"
                                       data-testid="Address__address"
                                     >
                                       D5pVkhZbSb4UNXvfmF6j7zdau8yGxfKwSv
@@ -1674,7 +1674,7 @@ exports[`SendTransfer > should error if wrong mnemonic 1`] = `
       class="css-1jzy9qi"
     >
       <div
-        class="relative flex h-21"
+        class="relative flex h-14 sm:h-21"
       >
         <div
           class="hidden w-12 sm:flex"
@@ -1740,7 +1740,7 @@ exports[`SendTransfer > should error if wrong mnemonic 1`] = `
             </button>
           </div>
           <ul
-            class="ml-4 mr-auto hidden h-21 space-x-8 lg:flex"
+            class="ml-4 mr-auto hidden h-14 space-x-8 sm:h-21 lg:flex"
             data-testid="NavigationBar__menu"
           >
             <li
@@ -3962,7 +3962,7 @@ exports[`SendTransfer > should render network selection without selected wallet 
       class="css-1jzy9qi"
     >
       <div
-        class="relative flex h-21"
+        class="relative flex h-14 sm:h-21"
       >
         <div
           class="hidden w-12 sm:flex"
@@ -4028,7 +4028,7 @@ exports[`SendTransfer > should render network selection without selected wallet 
             </button>
           </div>
           <ul
-            class="ml-4 mr-auto hidden h-21 space-x-8 lg:flex"
+            class="ml-4 mr-auto hidden h-14 space-x-8 sm:h-21 lg:flex"
             data-testid="NavigationBar__menu"
           >
             <li
@@ -5204,7 +5204,7 @@ exports[`SendTransfer > should render review step 1`] = `
                 class="relative grow leading-[17px] sm:leading-5 text-left"
               >
                 <span
-                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 text-sm leading-[17px] sm:leading-5 sm:text-base w-full w-3/4 font-semibold text-base absolute w-full"
+                  class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] sm:leading-5 sm:text-base w-full w-3/4 text-theme-secondary-500 dark:text-theme-secondary-700  font-semibold text-base absolute w-full"
                   data-testid="Address__address"
                 >
                   D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -5289,7 +5289,7 @@ exports[`SendTransfer > should render review step 1`] = `
                 class="relative grow leading-[17px] sm:leading-5 text-left"
               >
                 <span
-                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 text-sm leading-[17px] sm:leading-5 sm:text-base font-semibold text-base absolute w-full"
+                  class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] sm:leading-5 sm:text-base text-theme-secondary-500 dark:text-theme-secondary-700  font-semibold text-base absolute w-full"
                   data-testid="Address__address"
                 >
                   D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -5648,7 +5648,7 @@ exports[`SendTransfer > should render review step with multiple recipients (with
                 class="relative grow leading-[17px] sm:leading-5 text-left"
               >
                 <span
-                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 text-sm leading-[17px] sm:leading-5 sm:text-base w-full w-3/4 font-semibold text-base absolute w-full"
+                  class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] sm:leading-5 sm:text-base w-full w-3/4 text-theme-secondary-500 dark:text-theme-secondary-700  font-semibold text-base absolute w-full"
                   data-testid="Address__address"
                 >
                   D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -5722,7 +5722,7 @@ exports[`SendTransfer > should render review step with multiple recipients (with
                 class="relative grow leading-[17px] sm:leading-5 text-left"
               >
                 <span
-                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 text-sm leading-[17px] sm:leading-5 sm:text-base font-semibold text-base absolute w-full"
+                  class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] sm:leading-5 sm:text-base font-semibold text-base absolute w-full"
                   data-testid="Address__address"
                 >
                   D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -5796,7 +5796,7 @@ exports[`SendTransfer > should render review step with multiple recipients (with
                 class="relative grow leading-[17px] sm:leading-5 text-left"
               >
                 <span
-                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 text-sm leading-[17px] sm:leading-5 sm:text-base font-semibold text-base absolute w-full"
+                  class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] sm:leading-5 sm:text-base font-semibold text-base absolute w-full"
                   data-testid="Address__address"
                 >
                   D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
@@ -6155,7 +6155,7 @@ exports[`SendTransfer > should render review step with multiple recipients (with
                 class="relative grow leading-[17px] sm:leading-5 text-left"
               >
                 <span
-                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 text-sm leading-[17px] sm:leading-5 sm:text-base w-full w-3/4 font-semibold text-base absolute w-full"
+                  class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] sm:leading-5 sm:text-base w-full w-3/4 text-theme-secondary-500 dark:text-theme-secondary-700  font-semibold text-base absolute w-full"
                   data-testid="Address__address"
                 >
                   D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -6229,7 +6229,7 @@ exports[`SendTransfer > should render review step with multiple recipients (with
                 class="relative grow leading-[17px] sm:leading-5 text-left"
               >
                 <span
-                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 text-sm leading-[17px] sm:leading-5 sm:text-base font-semibold text-base absolute w-full"
+                  class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] sm:leading-5 sm:text-base font-semibold text-base absolute w-full"
                   data-testid="Address__address"
                 >
                   D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -6303,7 +6303,7 @@ exports[`SendTransfer > should render review step with multiple recipients (with
                 class="relative grow leading-[17px] sm:leading-5 text-left"
               >
                 <span
-                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 text-sm leading-[17px] sm:leading-5 sm:text-base font-semibold text-base absolute w-full"
+                  class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] sm:leading-5 sm:text-base font-semibold text-base absolute w-full"
                   data-testid="Address__address"
                 >
                   D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
@@ -6597,7 +6597,7 @@ exports[`SendTransfer > should send a single transfer and handle undefined expir
       class="css-1jzy9qi"
     >
       <div
-        class="relative flex h-21"
+        class="relative flex h-14 sm:h-21"
       >
         <div
           class="hidden w-12 sm:flex"
@@ -6663,7 +6663,7 @@ exports[`SendTransfer > should send a single transfer and handle undefined expir
             </button>
           </div>
           <ul
-            class="ml-4 mr-auto hidden h-21 space-x-8 lg:flex"
+            class="ml-4 mr-auto hidden h-14 space-x-8 sm:h-21 lg:flex"
             data-testid="NavigationBar__menu"
           >
             <li
@@ -7301,7 +7301,7 @@ exports[`SendTransfer > should send a single transfer and handle undefined expir
                                     class="relative grow leading-[17px] sm:leading-5 text-left"
                                   >
                                     <span
-                                      class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 text-sm leading-[17px] sm:leading-5 sm:text-base w-full w-3/4 font-semibold text-base absolute w-full"
+                                      class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] sm:leading-5 sm:text-base w-full w-3/4 font-semibold text-base absolute w-full"
                                       data-testid="Address__address"
                                     >
                                       D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -7375,7 +7375,7 @@ exports[`SendTransfer > should send a single transfer and handle undefined expir
                                     class="relative grow leading-[17px] sm:leading-5 text-left"
                                   >
                                     <span
-                                      class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 text-sm leading-[17px] sm:leading-5 sm:text-base font-semibold text-base absolute w-full"
+                                      class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] sm:leading-5 sm:text-base font-semibold text-base absolute w-full"
                                       data-testid="Address__address"
                                     >
                                       D5pVkhZbSb4UNXvfmF6j7zdau8yGxfKwSv
@@ -7946,7 +7946,7 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
       class="css-1jzy9qi"
     >
       <div
-        class="relative flex h-21"
+        class="relative flex h-14 sm:h-21"
       >
         <div
           class="hidden w-12 sm:flex"
@@ -8012,7 +8012,7 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
             </button>
           </div>
           <ul
-            class="ml-4 mr-auto hidden h-21 space-x-8 lg:flex"
+            class="ml-4 mr-auto hidden h-14 space-x-8 sm:h-21 lg:flex"
             data-testid="NavigationBar__menu"
           >
             <li
@@ -8650,7 +8650,7 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
                                     class="relative grow leading-[17px] sm:leading-5 text-left"
                                   >
                                     <span
-                                      class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 text-sm leading-[17px] sm:leading-5 sm:text-base w-full w-3/4 font-semibold text-base absolute w-full"
+                                      class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] sm:leading-5 sm:text-base w-full w-3/4 font-semibold text-base absolute w-full"
                                       data-testid="Address__address"
                                     >
                                       D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -8724,7 +8724,7 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
                                     class="relative grow leading-[17px] sm:leading-5 text-left"
                                   >
                                     <span
-                                      class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 text-sm leading-[17px] sm:leading-5 sm:text-base font-semibold text-base absolute w-full"
+                                      class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] sm:leading-5 sm:text-base font-semibold text-base absolute w-full"
                                       data-testid="Address__address"
                                     >
                                       D5pVkhZbSb4UNXvfmF6j7zdau8yGxfKwSv
@@ -9849,7 +9849,7 @@ exports[`SendTransfer > should send a single transfer using wallet with encrypti
       class="css-1jzy9qi"
     >
       <div
-        class="relative flex h-21"
+        class="relative flex h-14 sm:h-21"
       >
         <div
           class="hidden w-12 sm:flex"
@@ -9915,7 +9915,7 @@ exports[`SendTransfer > should send a single transfer using wallet with encrypti
             </button>
           </div>
           <ul
-            class="ml-4 mr-auto hidden h-21 space-x-8 lg:flex"
+            class="ml-4 mr-auto hidden h-14 space-x-8 sm:h-21 lg:flex"
             data-testid="NavigationBar__menu"
           >
             <li
@@ -10553,7 +10553,7 @@ exports[`SendTransfer > should send a single transfer using wallet with encrypti
                                     class="relative grow leading-[17px] sm:leading-5 text-left"
                                   >
                                     <span
-                                      class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 text-sm leading-[17px] sm:leading-5 sm:text-base w-full w-3/4 font-semibold text-base absolute w-full"
+                                      class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] sm:leading-5 sm:text-base w-full w-3/4 font-semibold text-base absolute w-full"
                                       data-testid="Address__address"
                                     >
                                       D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -10627,7 +10627,7 @@ exports[`SendTransfer > should send a single transfer using wallet with encrypti
                                     class="relative grow leading-[17px] sm:leading-5 text-left"
                                   >
                                     <span
-                                      class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 text-sm leading-[17px] sm:leading-5 sm:text-base font-semibold text-base absolute w-full"
+                                      class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] sm:leading-5 sm:text-base font-semibold text-base absolute w-full"
                                       data-testid="Address__address"
                                     >
                                       D5pVkhZbSb4UNXvfmF6j7zdau8yGxfKwSv
@@ -11198,7 +11198,7 @@ exports[`SendTransfer > should send a single transfer with keyboard 1`] = `
       class="css-1jzy9qi"
     >
       <div
-        class="relative flex h-21"
+        class="relative flex h-14 sm:h-21"
       >
         <div
           class="hidden w-12 sm:flex"
@@ -11264,7 +11264,7 @@ exports[`SendTransfer > should send a single transfer with keyboard 1`] = `
             </button>
           </div>
           <ul
-            class="ml-4 mr-auto hidden h-21 space-x-8 lg:flex"
+            class="ml-4 mr-auto hidden h-14 space-x-8 sm:h-21 lg:flex"
             data-testid="NavigationBar__menu"
           >
             <li
@@ -11902,7 +11902,7 @@ exports[`SendTransfer > should send a single transfer with keyboard 1`] = `
                                     class="relative grow leading-[17px] sm:leading-5 text-left"
                                   >
                                     <span
-                                      class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 text-sm leading-[17px] sm:leading-5 sm:text-base w-full w-3/4 font-semibold text-base absolute w-full"
+                                      class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] sm:leading-5 sm:text-base w-full w-3/4 font-semibold text-base absolute w-full"
                                       data-testid="Address__address"
                                     >
                                       D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -11976,7 +11976,7 @@ exports[`SendTransfer > should send a single transfer with keyboard 1`] = `
                                     class="relative grow leading-[17px] sm:leading-5 text-left"
                                   >
                                     <span
-                                      class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 text-sm leading-[17px] sm:leading-5 sm:text-base font-semibold text-base absolute w-full"
+                                      class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] sm:leading-5 sm:text-base font-semibold text-base absolute w-full"
                                       data-testid="Address__address"
                                     >
                                       D5pVkhZbSb4UNXvfmF6j7zdau8yGxfKwSv
@@ -12547,7 +12547,7 @@ exports[`SendTransfer > should send a single transfer without keyboard 1`] = `
       class="css-1jzy9qi"
     >
       <div
-        class="relative flex h-21"
+        class="relative flex h-14 sm:h-21"
       >
         <div
           class="hidden w-12 sm:flex"
@@ -12613,7 +12613,7 @@ exports[`SendTransfer > should send a single transfer without keyboard 1`] = `
             </button>
           </div>
           <ul
-            class="ml-4 mr-auto hidden h-21 space-x-8 lg:flex"
+            class="ml-4 mr-auto hidden h-14 space-x-8 sm:h-21 lg:flex"
             data-testid="NavigationBar__menu"
           >
             <li
@@ -13251,7 +13251,7 @@ exports[`SendTransfer > should send a single transfer without keyboard 1`] = `
                                     class="relative grow leading-[17px] sm:leading-5 text-left"
                                   >
                                     <span
-                                      class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 text-sm leading-[17px] sm:leading-5 sm:text-base w-full w-3/4 font-semibold text-base absolute w-full"
+                                      class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] sm:leading-5 sm:text-base w-full w-3/4 font-semibold text-base absolute w-full"
                                       data-testid="Address__address"
                                     >
                                       D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -13325,7 +13325,7 @@ exports[`SendTransfer > should send a single transfer without keyboard 1`] = `
                                     class="relative grow leading-[17px] sm:leading-5 text-left"
                                   >
                                     <span
-                                      class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 text-sm leading-[17px] sm:leading-5 sm:text-base font-semibold text-base absolute w-full"
+                                      class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] sm:leading-5 sm:text-base font-semibold text-base absolute w-full"
                                       data-testid="Address__address"
                                     >
                                       D5pVkhZbSb4UNXvfmF6j7zdau8yGxfKwSv
