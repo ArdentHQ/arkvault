@@ -169,9 +169,13 @@ export const Input = React.forwardRef<InputElement, InputProperties>(
 					<div className={cn("relative flex h-full flex-1", { invisible: hideInputValue })}>
 						<InputStyled
 							data-testid="Input"
-							className={cn("no-ligatures w-full border-none dark:placeholder:text-theme-secondary-700 text-theme-secondary-400", innerClassName, {
-								"text-theme-secondary-text": disabled,
-							})}
+							className={cn(
+								"no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700",
+								innerClassName,
+								{
+									"text-theme-secondary-text": disabled,
+								},
+							)}
 							name={fieldContext?.name}
 							aria-invalid={isInvalidValue}
 							disabled={disabled}
