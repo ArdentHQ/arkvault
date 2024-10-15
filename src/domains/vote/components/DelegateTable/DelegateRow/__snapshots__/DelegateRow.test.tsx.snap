@@ -443,7 +443,7 @@ exports[`DelegateRow > should render changed style when network requires vote am
                     <input
                       aria-invalid="false"
                       autocomplete="off"
-                      class="no-ligatures w-full border-none text-right focus:text-left pr-8 css-1vs1awz"
+                      class="no-ligatures w-full border-none !text-sm sm:!text-base text-right focus:text-left pr-8 css-1vs1awz"
                       data-testid="InputCurrency"
                       name="amount"
                       placeholder="0"
@@ -1813,7 +1813,7 @@ exports[`DelegateRow > should render when network requires vote amount 1`] = `
                     <input
                       aria-invalid="false"
                       autocomplete="off"
-                      class="no-ligatures w-full border-none text-right focus:text-left pr-8 text-theme-secondary-text css-1vs1awz"
+                      class="no-ligatures w-full border-none !text-sm sm:!text-base text-right focus:text-left pr-8 text-theme-secondary-text css-1vs1awz"
                       data-testid="InputCurrency"
                       disabled=""
                       name="amount"

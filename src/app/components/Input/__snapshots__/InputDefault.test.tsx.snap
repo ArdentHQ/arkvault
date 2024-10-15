@@ -10,7 +10,7 @@ exports[`InputDefault > should render a default input 1`] = `
     >
       <input
         autocomplete="off"
-        class="no-ligatures w-full border-none css-1vs1awz"
+        class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
         data-testid="Input"
         type="text"
         value=""

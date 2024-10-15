@@ -27,7 +27,7 @@ exports[`SelectAddress > should render disabled 1`] = `
       >
         <input
           autocomplete="off"
-          class="no-ligatures w-full border-none text-theme-secondary-text css-1vs1awz"
+          class="no-ligatures w-full border-none !text-sm sm:!text-base text-theme-secondary-text css-1vs1awz"
           data-testid="SelectAddress__input"
           disabled=""
           readonly=""
@@ -109,7 +109,7 @@ exports[`SelectAddress > should render empty 1`] = `
       >
         <input
           autocomplete="off"
-          class="no-ligatures w-full border-none css-1vs1awz"
+          class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
           data-testid="SelectAddress__input"
           readonly=""
           type="text"
@@ -191,7 +191,7 @@ exports[`SelectAddress > should render invalid 1`] = `
         <input
           aria-invalid="true"
           autocomplete="off"
-          class="no-ligatures w-full border-none css-1vs1awz"
+          class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
           data-testid="SelectAddress__input"
           readonly=""
           type="text"
@@ -342,7 +342,7 @@ exports[`SelectAddress > should render with preselected address 1`] = `
       >
         <input
           autocomplete="off"
-          class="no-ligatures w-full border-none css-1vs1awz"
+          class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
           data-testid="SelectAddress__input"
           readonly=""
           type="text"
@@ -423,7 +423,7 @@ exports[`SelectAddress > should render without user icon 1`] = `
       >
         <input
           autocomplete="off"
-          class="no-ligatures w-full border-none css-1vs1awz"
+          class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
           data-testid="SelectAddress__input"
           readonly=""
           type="text"

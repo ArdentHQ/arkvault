@@ -1367,7 +1367,7 @@ exports[`SearchWallet uses fiat value = false > should render responsive item 1`
                       >
                         <input
                           autocomplete="off"
-                          class="no-ligatures w-full border-none css-1vs1awz"
+                          class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
                           data-testid="HeaderSearchInput__input__input"
                           placeholder="Search..."
                           type="text"
@@ -1682,7 +1682,7 @@ exports[`SearchWallet uses fiat value = false > should render responsive item 2`
                       >
                         <input
                           autocomplete="off"
-                          class="no-ligatures w-full border-none css-1vs1awz"
+                          class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
                           data-testid="HeaderSearchInput__input__input"
                           placeholder="Search..."
                           type="text"
@@ -1997,7 +1997,7 @@ exports[`SearchWallet uses fiat value = false > should render responsive with se
                       >
                         <input
                           autocomplete="off"
-                          class="no-ligatures w-full border-none css-1vs1awz"
+                          class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
                           data-testid="HeaderSearchInput__input__input"
                           placeholder="Search..."
                           type="text"
@@ -4945,7 +4945,7 @@ exports[`SearchWallet uses fiat value = true > should render responsive item 1`]
                       >
                         <input
                           autocomplete="off"
-                          class="no-ligatures w-full border-none css-1vs1awz"
+                          class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
                           data-testid="HeaderSearchInput__input__input"
                           placeholder="Search..."
                           type="text"
@@ -5260,7 +5260,7 @@ exports[`SearchWallet uses fiat value = true > should render responsive item 2`]
                       >
                         <input
                           autocomplete="off"
-                          class="no-ligatures w-full border-none css-1vs1awz"
+                          class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
                           data-testid="HeaderSearchInput__input__input"
                           placeholder="Search..."
                           type="text"
@@ -5575,7 +5575,7 @@ exports[`SearchWallet uses fiat value = true > should render responsive with sel
                       >
                         <input
                           autocomplete="off"
-                          class="no-ligatures w-full border-none css-1vs1awz"
+                          class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
                           data-testid="HeaderSearchInput__input__input"
                           placeholder="Search..."
                           type="text"

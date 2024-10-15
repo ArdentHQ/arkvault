@@ -95,7 +95,7 @@ exports[`CreateContact > should render 1`] = `
                     >
                       <input
                         autocomplete="off"
-                        class="no-ligatures w-full border-none css-1vs1awz"
+                        class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
                         data-testid="contact-form__name-input"
                         name="name"
                         type="text"
@@ -129,7 +129,7 @@ exports[`CreateContact > should render 1`] = `
                         >
                           <input
                             autocomplete="off"
-                            class="no-ligatures w-full border-none css-1vs1awz"
+                            class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
                             data-testid="select-list__input"
                             name="network"
                             readonly=""
@@ -164,7 +164,7 @@ exports[`CreateContact > should render 1`] = `
                                   aria-controls="downshift-0-menu"
                                   aria-labelledby="downshift-0-label"
                                   autocomplete="off"
-                                  class="no-ligatures w-full border-none cursor-default css-1vs1awz"
+                                  class="no-ligatures w-full border-none !text-sm sm:!text-base cursor-default css-1vs1awz"
                                   data-testid="SelectDropdown__input"
                                   id="downshift-0-input"
                                   name="network"
@@ -243,7 +243,7 @@ exports[`CreateContact > should render 1`] = `
                       >
                         <input
                           autocomplete="off"
-                          class="no-ligatures w-full border-none css-1vs1awz"
+                          class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
                           data-testid="contact-form__address-input"
                           name="address"
                           type="text"

@@ -438,7 +438,7 @@ exports[`SecondSignatureRegistrationForm > should not generate mnemonic if alrea
                 >
                   <input
                     autocomplete="off"
-                    class="no-ligatures w-full border-none text-theme-secondary-text css-1vs1awz"
+                    class="no-ligatures w-full border-none !text-sm sm:!text-base text-theme-secondary-text css-1vs1awz"
                     data-testid="InputCurrency"
                     disabled=""
                     name="fee"
@@ -739,7 +739,7 @@ exports[`SecondSignatureRegistrationForm > should render generation step 1`] = `
                 >
                   <input
                     autocomplete="off"
-                    class="no-ligatures w-full border-none text-theme-secondary-text css-1vs1awz"
+                    class="no-ligatures w-full border-none !text-sm sm:!text-base text-theme-secondary-text css-1vs1awz"
                     data-testid="InputCurrency"
                     disabled=""
                     name="fee"

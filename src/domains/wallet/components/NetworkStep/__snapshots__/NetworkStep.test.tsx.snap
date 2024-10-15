@@ -268,7 +268,7 @@ exports[`SelectNetworkStep > should render with test networks 1`] = `
             >
               <input
                 autocomplete="off"
-                class="no-ligatures w-full border-none css-1vs1awz"
+                class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
                 data-testid="select-list__input"
                 name="network"
                 readonly=""
@@ -303,7 +303,7 @@ exports[`SelectNetworkStep > should render with test networks 1`] = `
                       aria-controls="downshift-0-menu"
                       aria-labelledby="downshift-0-label"
                       autocomplete="off"
-                      class="no-ligatures w-full border-none cursor-default css-1vs1awz"
+                      class="no-ligatures w-full border-none !text-sm sm:!text-base cursor-default css-1vs1awz"
                       data-testid="SelectDropdown__input"
                       id="downshift-0-input"
                       name="network"

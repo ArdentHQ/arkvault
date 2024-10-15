@@ -117,7 +117,7 @@ exports[`ImportWallet > import with private key > when is not valid 1`] = `
             >
               <input
                 autocomplete="off"
-                class="no-ligatures w-full border-none css-1vs1awz"
+                class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
                 data-testid="select-list__input"
                 name=""
                 readonly=""
@@ -158,7 +158,7 @@ exports[`ImportWallet > import with private key > when is not valid 1`] = `
                       aria-controls="ImportWallet__select-menu"
                       aria-labelledby="ImportWallet__select-label"
                       autocomplete="off"
-                      class="no-ligatures w-full border-none css-1vs1awz"
+                      class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
                       data-testid="SelectDropdown__input"
                       id="ImportWallet__select-input"
                       name=""
@@ -246,7 +246,7 @@ exports[`ImportWallet > import with private key > when is not valid 1`] = `
           >
             <input
               autocomplete="off"
-              class="no-ligatures w-full border-none css-1vs1awz"
+              class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
               data-testid="ImportWallet__privatekey-input"
               name="value"
               type="password"
@@ -464,7 +464,7 @@ exports[`ImportWallet > import with private key > when is valid 1`] = `
             >
               <input
                 autocomplete="off"
-                class="no-ligatures w-full border-none css-1vs1awz"
+                class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
                 data-testid="select-list__input"
                 name=""
                 readonly=""
@@ -505,7 +505,7 @@ exports[`ImportWallet > import with private key > when is valid 1`] = `
                       aria-controls="ImportWallet__select-menu"
                       aria-labelledby="ImportWallet__select-label"
                       autocomplete="off"
-                      class="no-ligatures w-full border-none css-1vs1awz"
+                      class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
                       data-testid="SelectDropdown__input"
                       id="ImportWallet__select-input"
                       name=""
@@ -593,7 +593,7 @@ exports[`ImportWallet > import with private key > when is valid 1`] = `
           >
             <input
               autocomplete="off"
-              class="no-ligatures w-full border-none css-1vs1awz"
+              class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
               data-testid="ImportWallet__privatekey-input"
               name="value"
               type="password"
@@ -811,7 +811,7 @@ exports[`ImportWallet > import with wif > with invalid wif 1`] = `
             >
               <input
                 autocomplete="off"
-                class="no-ligatures w-full border-none css-1vs1awz"
+                class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
                 data-testid="select-list__input"
                 name=""
                 readonly=""
@@ -852,7 +852,7 @@ exports[`ImportWallet > import with wif > with invalid wif 1`] = `
                       aria-controls="ImportWallet__select-menu"
                       aria-labelledby="ImportWallet__select-label"
                       autocomplete="off"
-                      class="no-ligatures w-full border-none css-1vs1awz"
+                      class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
                       data-testid="SelectDropdown__input"
                       id="ImportWallet__select-input"
                       name=""
@@ -940,7 +940,7 @@ exports[`ImportWallet > import with wif > with invalid wif 1`] = `
           >
             <input
               autocomplete="off"
-              class="no-ligatures w-full border-none css-1vs1awz"
+              class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
               data-testid="ImportWallet__wif-input"
               name="value"
               type="password"
@@ -1158,7 +1158,7 @@ exports[`ImportWallet > import with wif > with valid wif 1`] = `
             >
               <input
                 autocomplete="off"
-                class="no-ligatures w-full border-none css-1vs1awz"
+                class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
                 data-testid="select-list__input"
                 name=""
                 readonly=""
@@ -1199,7 +1199,7 @@ exports[`ImportWallet > import with wif > with valid wif 1`] = `
                       aria-controls="ImportWallet__select-menu"
                       aria-labelledby="ImportWallet__select-label"
                       autocomplete="off"
-                      class="no-ligatures w-full border-none css-1vs1awz"
+                      class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
                       data-testid="SelectDropdown__input"
                       id="ImportWallet__select-input"
                       name=""
@@ -1287,7 +1287,7 @@ exports[`ImportWallet > import with wif > with valid wif 1`] = `
           >
             <input
               autocomplete="off"
-              class="no-ligatures w-full border-none css-1vs1awz"
+              class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
               data-testid="ImportWallet__wif-input"
               name="value"
               type="password"
@@ -1505,7 +1505,7 @@ exports[`ImportWallet > should import with encryped wif 1`] = `
             >
               <input
                 autocomplete="off"
-                class="no-ligatures w-full border-none css-1vs1awz"
+                class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
                 data-testid="select-list__input"
                 name=""
                 readonly=""
@@ -1546,7 +1546,7 @@ exports[`ImportWallet > should import with encryped wif 1`] = `
                       aria-controls="ImportWallet__select-menu"
                       aria-labelledby="ImportWallet__select-label"
                       autocomplete="off"
-                      class="no-ligatures w-full border-none css-1vs1awz"
+                      class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
                       data-testid="SelectDropdown__input"
                       id="ImportWallet__select-input"
                       name=""
@@ -1637,7 +1637,7 @@ exports[`ImportWallet > should import with encryped wif 1`] = `
             >
               <input
                 autocomplete="off"
-                class="no-ligatures w-full border-none css-1vs1awz"
+                class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
                 data-testid="ImportWallet__encryptedWif-input"
                 name="encryptedWif"
                 type="text"
@@ -1665,7 +1665,7 @@ exports[`ImportWallet > should import with encryped wif 1`] = `
           >
             <input
               autocomplete="off"
-              class="no-ligatures w-full border-none css-1vs1awz"
+              class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
               data-testid="ImportWallet__encryptedWif__password-input"
               name="value"
               type="password"
@@ -2710,7 +2710,7 @@ exports[`ImportWallet > should render method step 1`] = `
             >
               <input
                 autocomplete="off"
-                class="no-ligatures w-full border-none css-1vs1awz"
+                class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
                 data-testid="select-list__input"
                 name=""
                 readonly=""
@@ -2751,7 +2751,7 @@ exports[`ImportWallet > should render method step 1`] = `
                       aria-controls="ImportWallet__select-menu"
                       aria-labelledby="ImportWallet__select-label"
                       autocomplete="off"
-                      class="no-ligatures w-full border-none css-1vs1awz"
+                      class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
                       data-testid="SelectDropdown__input"
                       id="ImportWallet__select-input"
                       name=""
@@ -2839,7 +2839,7 @@ exports[`ImportWallet > should render method step 1`] = `
           >
             <input
               autocomplete="off"
-              class="no-ligatures w-full border-none css-1vs1awz"
+              class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
               data-testid="ImportWallet__mnemonic-input"
               name="value"
               type="password"
@@ -3160,7 +3160,7 @@ exports[`ImportWallet > should render network step 1`] = `
             >
               <input
                 autocomplete="off"
-                class="no-ligatures w-full border-none css-1vs1awz"
+                class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
                 data-testid="select-list__input"
                 name="network"
                 readonly=""
@@ -3195,7 +3195,7 @@ exports[`ImportWallet > should render network step 1`] = `
                       aria-controls="downshift-0-menu"
                       aria-labelledby="downshift-0-label"
                       autocomplete="off"
-                      class="no-ligatures w-full border-none cursor-default css-1vs1awz"
+                      class="no-ligatures w-full border-none !text-sm sm:!text-base cursor-default css-1vs1awz"
                       data-testid="SelectDropdown__input"
                       id="downshift-0-input"
                       name="network"

@@ -196,7 +196,7 @@ exports[`ConfirmRemovePendingTransaction > should render multisignature registra
                       >
                         <input
                           autocomplete="off"
-                          class="no-ligatures w-full border-none css-1vs1awz"
+                          class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
                           data-testid="AuthenticationStep__mnemonic"
                           name="mnemonic"
                           type="password"
@@ -510,7 +510,7 @@ exports[`ConfirmRemovePendingTransaction > should render multisignature transact
                       >
                         <input
                           autocomplete="off"
-                          class="no-ligatures w-full border-none css-1vs1awz"
+                          class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
                           data-testid="AuthenticationStep__mnemonic"
                           name="mnemonic"
                           type="password"

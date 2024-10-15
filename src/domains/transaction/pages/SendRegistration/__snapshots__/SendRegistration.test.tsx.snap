@@ -745,7 +745,7 @@ exports[`Registration > should show error step and go back 1`] = `
                           >
                             <textarea
                               autocomplete="off"
-                              class="no-ligatures w-full border-none resize-none min-h-[8rem] md:min-h-auto md:resize-y resize-none text-theme-secondary-text css-1vs1awz"
+                              class="no-ligatures w-full border-none !text-sm sm:!text-base resize-none min-h-[8rem] md:min-h-auto md:resize-y resize-none text-theme-secondary-text css-1vs1awz"
                               data-testid="ErrorStep__errorMessage"
                               disabled=""
                               style="height: 4px;"
@@ -1465,7 +1465,7 @@ exports[`Registration > should show mnemonic error 1`] = `
                       >
                         <input
                           autocomplete="off"
-                          class="no-ligatures w-full border-none css-1vs1awz"
+                          class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
                           data-testid="AuthenticationStep__mnemonic"
                           name="mnemonic"
                           type="password"
@@ -1538,7 +1538,7 @@ exports[`Registration > should show mnemonic error 1`] = `
                         <input
                           aria-invalid="true"
                           autocomplete="off"
-                          class="no-ligatures w-full border-none css-1vs1awz"
+                          class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
                           data-testid="AuthenticationStep__second-mnemonic"
                           name="secondMnemonic"
                           type="password"

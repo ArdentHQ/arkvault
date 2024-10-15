@@ -5127,7 +5127,7 @@ exports[`WalletGroupPage > should render empty list if no wallets 1`] = `
                       >
                         <input
                           autocomplete="off"
-                          class="no-ligatures w-full border-none css-1vs1awz"
+                          class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
                           data-testid="select-list__input"
                           readonly=""
                           tabindex="-1"
@@ -5161,7 +5161,7 @@ exports[`WalletGroupPage > should render empty list if no wallets 1`] = `
                                 aria-controls="downshift-6-menu"
                                 aria-labelledby="downshift-6-label"
                                 autocomplete="off"
-                                class="no-ligatures w-full border-none cursor-default !text-sm css-1vs1awz"
+                                class="no-ligatures w-full border-none !text-sm sm:!text-base cursor-default !text-sm css-1vs1awz"
                                 data-testid="SelectDropdown__input"
                                 id="downshift-6-input"
                                 placeholder="Select option"

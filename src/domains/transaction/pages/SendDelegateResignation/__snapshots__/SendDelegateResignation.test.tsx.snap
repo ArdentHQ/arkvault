@@ -851,7 +851,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should change fee 1`] 
                             >
                               <input
                                 autocomplete="off"
-                                class="no-ligatures w-full border-none css-1vs1awz"
+                                class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
                                 data-testid="InputCurrency"
                                 name="fee"
                                 type="text"
@@ -3773,7 +3773,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should render 3rd step
                       >
                         <input
                           autocomplete="off"
-                          class="no-ligatures w-full border-none css-1vs1awz"
+                          class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
                           data-testid="AuthenticationStep__mnemonic"
                           name="mnemonic"
                           type="password"
@@ -3846,7 +3846,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should render 3rd step
                       >
                         <input
                           autocomplete="off"
-                          class="no-ligatures w-full border-none text-theme-secondary-text css-1vs1awz"
+                          class="no-ligatures w-full border-none !text-sm sm:!text-base text-theme-secondary-text css-1vs1awz"
                           data-testid="AuthenticationStep__second-mnemonic"
                           disabled=""
                           name="secondMnemonic"
@@ -4705,7 +4705,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should show error step
                           >
                             <textarea
                               autocomplete="off"
-                              class="no-ligatures w-full border-none resize-none min-h-[8rem] md:min-h-auto md:resize-y resize-none text-theme-secondary-text css-1vs1awz"
+                              class="no-ligatures w-full border-none !text-sm sm:!text-base resize-none min-h-[8rem] md:min-h-auto md:resize-y resize-none text-theme-secondary-text css-1vs1awz"
                               data-testid="ErrorStep__errorMessage"
                               disabled=""
                               style="height: 4px;"
@@ -5423,7 +5423,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should show mnemonic a
                       >
                         <input
                           autocomplete="off"
-                          class="no-ligatures w-full border-none css-1vs1awz"
+                          class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
                           data-testid="AuthenticationStep__mnemonic"
                           name="mnemonic"
                           type="password"
@@ -5496,7 +5496,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should show mnemonic a
                         <input
                           aria-invalid="true"
                           autocomplete="off"
-                          class="no-ligatures w-full border-none css-1vs1awz"
+                          class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
                           data-testid="AuthenticationStep__second-mnemonic"
                           name="secondMnemonic"
                           type="password"

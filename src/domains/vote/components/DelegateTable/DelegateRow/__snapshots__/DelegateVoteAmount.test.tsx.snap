@@ -27,7 +27,7 @@ exports[`DelegateVoteAmount > should render when isCompact = false 1`] = `
                     <input
                       aria-invalid="true"
                       autocomplete="off"
-                      class="no-ligatures w-full border-none text-right focus:text-left pr-12 css-1vs1awz"
+                      class="no-ligatures w-full border-none !text-sm sm:!text-base text-right focus:text-left pr-12 css-1vs1awz"
                       data-testid="InputCurrency"
                       name="amount"
                       placeholder="0"
@@ -134,7 +134,7 @@ exports[`DelegateVoteAmount > should render when isCompact = true 1`] = `
                     <input
                       aria-invalid="true"
                       autocomplete="off"
-                      class="no-ligatures w-full border-none text-right focus:text-left pr-12 css-1vs1awz"
+                      class="no-ligatures w-full border-none !text-sm sm:!text-base text-right focus:text-left pr-12 css-1vs1awz"
                       data-testid="InputCurrency"
                       name="amount"
                       placeholder="0"

@@ -1057,7 +1057,7 @@ exports[`General Settings > should disable submit button when profile is not res
                             >
                               <input
                                 autocomplete="off"
-                                class="no-ligatures w-full border-none css-1vs1awz"
+                                class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
                                 data-testid="General-settings__input--name"
                                 name="name"
                                 type="text"
@@ -1088,7 +1088,7 @@ exports[`General Settings > should disable submit button when profile is not res
                               >
                                 <input
                                   autocomplete="off"
-                                  class="no-ligatures w-full border-none css-1vs1awz"
+                                  class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
                                   data-testid="select-list__input"
                                   name="bip39Locale"
                                   readonly=""
@@ -1128,7 +1128,7 @@ exports[`General Settings > should disable submit button when profile is not res
                                         aria-controls="select-passphrase-language-menu"
                                         aria-labelledby="select-passphrase-language-label"
                                         autocomplete="off"
-                                        class="no-ligatures w-full border-none css-1vs1awz"
+                                        class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
                                         data-testid="SelectDropdown__input"
                                         id="select-passphrase-language-input"
                                         name="bip39Locale"
@@ -1220,7 +1220,7 @@ exports[`General Settings > should disable submit button when profile is not res
                               >
                                 <input
                                   autocomplete="off"
-                                  class="no-ligatures w-full border-none css-1vs1awz"
+                                  class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
                                   data-testid="select-list__input"
                                   name="exchangeCurrency"
                                   readonly=""
@@ -1260,7 +1260,7 @@ exports[`General Settings > should disable submit button when profile is not res
                                         aria-controls="select-currency-menu"
                                         aria-labelledby="select-currency-label"
                                         autocomplete="off"
-                                        class="no-ligatures w-full border-none css-1vs1awz"
+                                        class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
                                         data-testid="SelectDropdown__input"
                                         id="select-currency-input"
                                         name="exchangeCurrency"
@@ -1356,7 +1356,7 @@ exports[`General Settings > should disable submit button when profile is not res
                               >
                                 <input
                                   autocomplete="off"
-                                  class="no-ligatures w-full border-none css-1vs1awz"
+                                  class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
                                   data-testid="select-list__input"
                                   name="locale"
                                   readonly=""
@@ -1396,7 +1396,7 @@ exports[`General Settings > should disable submit button when profile is not res
                                         aria-controls="select-language-menu"
                                         aria-labelledby="select-language-label"
                                         autocomplete="off"
-                                        class="no-ligatures w-full border-none css-1vs1awz"
+                                        class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
                                         data-testid="SelectDropdown__input"
                                         id="select-language-input"
                                         name="locale"
@@ -1488,7 +1488,7 @@ exports[`General Settings > should disable submit button when profile is not res
                               >
                                 <input
                                   autocomplete="off"
-                                  class="no-ligatures w-full border-none css-1vs1awz"
+                                  class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
                                   data-testid="select-list__input"
                                   name="marketProvider"
                                   readonly=""
@@ -1528,7 +1528,7 @@ exports[`General Settings > should disable submit button when profile is not res
                                         aria-controls="select-market-provider-menu"
                                         aria-labelledby="select-market-provider-label"
                                         autocomplete="off"
-                                        class="no-ligatures w-full border-none css-1vs1awz"
+                                        class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
                                         data-testid="SelectDropdown__input"
                                         id="select-market-provider-input"
                                         name="marketProvider"
@@ -1620,7 +1620,7 @@ exports[`General Settings > should disable submit button when profile is not res
                               >
                                 <input
                                   autocomplete="off"
-                                  class="no-ligatures w-full border-none css-1vs1awz"
+                                  class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
                                   data-testid="select-list__input"
                                   name="timeFormat"
                                   readonly=""
@@ -1660,7 +1660,7 @@ exports[`General Settings > should disable submit button when profile is not res
                                         aria-controls="select-time-format-menu"
                                         aria-labelledby="select-time-format-label"
                                         autocomplete="off"
-                                        class="no-ligatures w-full border-none css-1vs1awz"
+                                        class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
                                         data-testid="SelectDropdown__input"
                                         id="select-time-format-input"
                                         name="timeFormat"
@@ -1776,7 +1776,7 @@ exports[`General Settings > should disable submit button when profile is not res
                                 >
                                   <input
                                     autocomplete="off"
-                                    class="no-ligatures w-full border-none css-1vs1awz"
+                                    class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
                                     data-testid="select-list__input"
                                     name="automaticSignOutPeriod"
                                     readonly=""
@@ -1816,7 +1816,7 @@ exports[`General Settings > should disable submit button when profile is not res
                                           aria-controls="select-auto-signout-menu"
                                           aria-labelledby="select-auto-signout-label"
                                           autocomplete="off"
-                                          class="no-ligatures w-full border-none css-1vs1awz"
+                                          class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
                                           data-testid="SelectDropdown__input"
                                           id="select-auto-signout-input"
                                           name="automaticSignOutPeriod"
@@ -3090,7 +3090,7 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                             >
                               <input
                                 autocomplete="off"
-                                class="no-ligatures w-full border-none css-1vs1awz"
+                                class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
                                 data-testid="General-settings__input--name"
                                 name="name"
                                 type="text"
@@ -3121,7 +3121,7 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                               >
                                 <input
                                   autocomplete="off"
-                                  class="no-ligatures w-full border-none css-1vs1awz"
+                                  class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
                                   data-testid="select-list__input"
                                   name="bip39Locale"
                                   readonly=""
@@ -3161,7 +3161,7 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                                         aria-controls="select-passphrase-language-menu"
                                         aria-labelledby="select-passphrase-language-label"
                                         autocomplete="off"
-                                        class="no-ligatures w-full border-none css-1vs1awz"
+                                        class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
                                         data-testid="SelectDropdown__input"
                                         id="select-passphrase-language-input"
                                         name="bip39Locale"
@@ -3253,7 +3253,7 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                               >
                                 <input
                                   autocomplete="off"
-                                  class="no-ligatures w-full border-none css-1vs1awz"
+                                  class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
                                   data-testid="select-list__input"
                                   name="exchangeCurrency"
                                   readonly=""
@@ -3293,7 +3293,7 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                                         aria-controls="select-currency-menu"
                                         aria-labelledby="select-currency-label"
                                         autocomplete="off"
-                                        class="no-ligatures w-full border-none css-1vs1awz"
+                                        class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
                                         data-testid="SelectDropdown__input"
                                         id="select-currency-input"
                                         name="exchangeCurrency"
@@ -3389,7 +3389,7 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                               >
                                 <input
                                   autocomplete="off"
-                                  class="no-ligatures w-full border-none css-1vs1awz"
+                                  class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
                                   data-testid="select-list__input"
                                   name="locale"
                                   readonly=""
@@ -3429,7 +3429,7 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                                         aria-controls="select-language-menu"
                                         aria-labelledby="select-language-label"
                                         autocomplete="off"
-                                        class="no-ligatures w-full border-none css-1vs1awz"
+                                        class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
                                         data-testid="SelectDropdown__input"
                                         id="select-language-input"
                                         name="locale"
@@ -3521,7 +3521,7 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                               >
                                 <input
                                   autocomplete="off"
-                                  class="no-ligatures w-full border-none css-1vs1awz"
+                                  class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
                                   data-testid="select-list__input"
                                   name="marketProvider"
                                   readonly=""
@@ -3561,7 +3561,7 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                                         aria-controls="select-market-provider-menu"
                                         aria-labelledby="select-market-provider-label"
                                         autocomplete="off"
-                                        class="no-ligatures w-full border-none css-1vs1awz"
+                                        class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
                                         data-testid="SelectDropdown__input"
                                         id="select-market-provider-input"
                                         name="marketProvider"
@@ -3653,7 +3653,7 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                               >
                                 <input
                                   autocomplete="off"
-                                  class="no-ligatures w-full border-none css-1vs1awz"
+                                  class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
                                   data-testid="select-list__input"
                                   name="timeFormat"
                                   readonly=""
@@ -3693,7 +3693,7 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                                         aria-controls="select-time-format-menu"
                                         aria-labelledby="select-time-format-label"
                                         autocomplete="off"
-                                        class="no-ligatures w-full border-none css-1vs1awz"
+                                        class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
                                         data-testid="SelectDropdown__input"
                                         id="select-time-format-input"
                                         name="timeFormat"
@@ -3809,7 +3809,7 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                                 >
                                   <input
                                     autocomplete="off"
-                                    class="no-ligatures w-full border-none css-1vs1awz"
+                                    class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
                                     data-testid="select-list__input"
                                     name="automaticSignOutPeriod"
                                     readonly=""
@@ -3849,7 +3849,7 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                                           aria-controls="select-auto-signout-menu"
                                           aria-labelledby="select-auto-signout-label"
                                           autocomplete="off"
-                                          class="no-ligatures w-full border-none css-1vs1awz"
+                                          class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
                                           data-testid="SelectDropdown__input"
                                           id="select-auto-signout-input"
                                           name="automaticSignOutPeriod"
@@ -5087,7 +5087,7 @@ exports[`General Settings > should render 1`] = `
                             >
                               <input
                                 autocomplete="off"
-                                class="no-ligatures w-full border-none css-1vs1awz"
+                                class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
                                 data-testid="General-settings__input--name"
                                 name="name"
                                 type="text"
@@ -5118,7 +5118,7 @@ exports[`General Settings > should render 1`] = `
                               >
                                 <input
                                   autocomplete="off"
-                                  class="no-ligatures w-full border-none css-1vs1awz"
+                                  class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
                                   data-testid="select-list__input"
                                   name="bip39Locale"
                                   readonly=""
@@ -5158,7 +5158,7 @@ exports[`General Settings > should render 1`] = `
                                         aria-controls="select-passphrase-language-menu"
                                         aria-labelledby="select-passphrase-language-label"
                                         autocomplete="off"
-                                        class="no-ligatures w-full border-none css-1vs1awz"
+                                        class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
                                         data-testid="SelectDropdown__input"
                                         id="select-passphrase-language-input"
                                         name="bip39Locale"
@@ -5250,7 +5250,7 @@ exports[`General Settings > should render 1`] = `
                               >
                                 <input
                                   autocomplete="off"
-                                  class="no-ligatures w-full border-none css-1vs1awz"
+                                  class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
                                   data-testid="select-list__input"
                                   name="exchangeCurrency"
                                   readonly=""
@@ -5290,7 +5290,7 @@ exports[`General Settings > should render 1`] = `
                                         aria-controls="select-currency-menu"
                                         aria-labelledby="select-currency-label"
                                         autocomplete="off"
-                                        class="no-ligatures w-full border-none css-1vs1awz"
+                                        class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
                                         data-testid="SelectDropdown__input"
                                         id="select-currency-input"
                                         name="exchangeCurrency"
@@ -5386,7 +5386,7 @@ exports[`General Settings > should render 1`] = `
                               >
                                 <input
                                   autocomplete="off"
-                                  class="no-ligatures w-full border-none css-1vs1awz"
+                                  class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
                                   data-testid="select-list__input"
                                   name="locale"
                                   readonly=""
@@ -5426,7 +5426,7 @@ exports[`General Settings > should render 1`] = `
                                         aria-controls="select-language-menu"
                                         aria-labelledby="select-language-label"
                                         autocomplete="off"
-                                        class="no-ligatures w-full border-none css-1vs1awz"
+                                        class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
                                         data-testid="SelectDropdown__input"
                                         id="select-language-input"
                                         name="locale"
@@ -5518,7 +5518,7 @@ exports[`General Settings > should render 1`] = `
                               >
                                 <input
                                   autocomplete="off"
-                                  class="no-ligatures w-full border-none css-1vs1awz"
+                                  class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
                                   data-testid="select-list__input"
                                   name="marketProvider"
                                   readonly=""
@@ -5558,7 +5558,7 @@ exports[`General Settings > should render 1`] = `
                                         aria-controls="select-market-provider-menu"
                                         aria-labelledby="select-market-provider-label"
                                         autocomplete="off"
-                                        class="no-ligatures w-full border-none css-1vs1awz"
+                                        class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
                                         data-testid="SelectDropdown__input"
                                         id="select-market-provider-input"
                                         name="marketProvider"
@@ -5650,7 +5650,7 @@ exports[`General Settings > should render 1`] = `
                               >
                                 <input
                                   autocomplete="off"
-                                  class="no-ligatures w-full border-none css-1vs1awz"
+                                  class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
                                   data-testid="select-list__input"
                                   name="timeFormat"
                                   readonly=""
@@ -5690,7 +5690,7 @@ exports[`General Settings > should render 1`] = `
                                         aria-controls="select-time-format-menu"
                                         aria-labelledby="select-time-format-label"
                                         autocomplete="off"
-                                        class="no-ligatures w-full border-none css-1vs1awz"
+                                        class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
                                         data-testid="SelectDropdown__input"
                                         id="select-time-format-input"
                                         name="timeFormat"
@@ -5806,7 +5806,7 @@ exports[`General Settings > should render 1`] = `
                                 >
                                   <input
                                     autocomplete="off"
-                                    class="no-ligatures w-full border-none css-1vs1awz"
+                                    class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
                                     data-testid="select-list__input"
                                     name="automaticSignOutPeriod"
                                     readonly=""
@@ -5846,7 +5846,7 @@ exports[`General Settings > should render 1`] = `
                                           aria-controls="select-auto-signout-menu"
                                           aria-labelledby="select-auto-signout-label"
                                           autocomplete="off"
-                                          class="no-ligatures w-full border-none css-1vs1awz"
+                                          class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
                                           data-testid="SelectDropdown__input"
                                           id="select-auto-signout-input"
                                           name="automaticSignOutPeriod"
@@ -7085,7 +7085,7 @@ exports[`General Settings > should show identicon when removing image if name is
                             >
                               <input
                                 autocomplete="off"
-                                class="no-ligatures w-full border-none css-1vs1awz"
+                                class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
                                 data-testid="General-settings__input--name"
                                 name="name"
                                 type="text"
@@ -7116,7 +7116,7 @@ exports[`General Settings > should show identicon when removing image if name is
                               >
                                 <input
                                   autocomplete="off"
-                                  class="no-ligatures w-full border-none css-1vs1awz"
+                                  class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
                                   data-testid="select-list__input"
                                   name="bip39Locale"
                                   readonly=""
@@ -7156,7 +7156,7 @@ exports[`General Settings > should show identicon when removing image if name is
                                         aria-controls="select-passphrase-language-menu"
                                         aria-labelledby="select-passphrase-language-label"
                                         autocomplete="off"
-                                        class="no-ligatures w-full border-none css-1vs1awz"
+                                        class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
                                         data-testid="SelectDropdown__input"
                                         id="select-passphrase-language-input"
                                         name="bip39Locale"
@@ -7248,7 +7248,7 @@ exports[`General Settings > should show identicon when removing image if name is
                               >
                                 <input
                                   autocomplete="off"
-                                  class="no-ligatures w-full border-none css-1vs1awz"
+                                  class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
                                   data-testid="select-list__input"
                                   name="exchangeCurrency"
                                   readonly=""
@@ -7288,7 +7288,7 @@ exports[`General Settings > should show identicon when removing image if name is
                                         aria-controls="select-currency-menu"
                                         aria-labelledby="select-currency-label"
                                         autocomplete="off"
-                                        class="no-ligatures w-full border-none css-1vs1awz"
+                                        class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
                                         data-testid="SelectDropdown__input"
                                         id="select-currency-input"
                                         name="exchangeCurrency"
@@ -7384,7 +7384,7 @@ exports[`General Settings > should show identicon when removing image if name is
                               >
                                 <input
                                   autocomplete="off"
-                                  class="no-ligatures w-full border-none css-1vs1awz"
+                                  class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
                                   data-testid="select-list__input"
                                   name="locale"
                                   readonly=""
@@ -7424,7 +7424,7 @@ exports[`General Settings > should show identicon when removing image if name is
                                         aria-controls="select-language-menu"
                                         aria-labelledby="select-language-label"
                                         autocomplete="off"
-                                        class="no-ligatures w-full border-none css-1vs1awz"
+                                        class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
                                         data-testid="SelectDropdown__input"
                                         id="select-language-input"
                                         name="locale"
@@ -7516,7 +7516,7 @@ exports[`General Settings > should show identicon when removing image if name is
                               >
                                 <input
                                   autocomplete="off"
-                                  class="no-ligatures w-full border-none css-1vs1awz"
+                                  class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
                                   data-testid="select-list__input"
                                   name="marketProvider"
                                   readonly=""
@@ -7556,7 +7556,7 @@ exports[`General Settings > should show identicon when removing image if name is
                                         aria-controls="select-market-provider-menu"
                                         aria-labelledby="select-market-provider-label"
                                         autocomplete="off"
-                                        class="no-ligatures w-full border-none css-1vs1awz"
+                                        class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
                                         data-testid="SelectDropdown__input"
                                         id="select-market-provider-input"
                                         name="marketProvider"
@@ -7648,7 +7648,7 @@ exports[`General Settings > should show identicon when removing image if name is
                               >
                                 <input
                                   autocomplete="off"
-                                  class="no-ligatures w-full border-none css-1vs1awz"
+                                  class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
                                   data-testid="select-list__input"
                                   name="timeFormat"
                                   readonly=""
@@ -7688,7 +7688,7 @@ exports[`General Settings > should show identicon when removing image if name is
                                         aria-controls="select-time-format-menu"
                                         aria-labelledby="select-time-format-label"
                                         autocomplete="off"
-                                        class="no-ligatures w-full border-none css-1vs1awz"
+                                        class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
                                         data-testid="SelectDropdown__input"
                                         id="select-time-format-input"
                                         name="timeFormat"
@@ -7804,7 +7804,7 @@ exports[`General Settings > should show identicon when removing image if name is
                                 >
                                   <input
                                     autocomplete="off"
-                                    class="no-ligatures w-full border-none css-1vs1awz"
+                                    class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
                                     data-testid="select-list__input"
                                     name="automaticSignOutPeriod"
                                     readonly=""
@@ -7844,7 +7844,7 @@ exports[`General Settings > should show identicon when removing image if name is
                                           aria-controls="select-auto-signout-menu"
                                           aria-labelledby="select-auto-signout-label"
                                           autocomplete="off"
-                                          class="no-ligatures w-full border-none css-1vs1awz"
+                                          class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
                                           data-testid="SelectDropdown__input"
                                           id="select-auto-signout-input"
                                           name="automaticSignOutPeriod"
@@ -9083,7 +9083,7 @@ exports[`General Settings > should update profile 1`] = `
                             >
                               <input
                                 autocomplete="off"
-                                class="no-ligatures w-full border-none css-1vs1awz"
+                                class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
                                 data-testid="General-settings__input--name"
                                 name="name"
                                 type="text"
@@ -9114,7 +9114,7 @@ exports[`General Settings > should update profile 1`] = `
                               >
                                 <input
                                   autocomplete="off"
-                                  class="no-ligatures w-full border-none css-1vs1awz"
+                                  class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
                                   data-testid="select-list__input"
                                   name="bip39Locale"
                                   readonly=""
@@ -9154,7 +9154,7 @@ exports[`General Settings > should update profile 1`] = `
                                         aria-controls="select-passphrase-language-menu"
                                         aria-labelledby="select-passphrase-language-label"
                                         autocomplete="off"
-                                        class="no-ligatures w-full border-none css-1vs1awz"
+                                        class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
                                         data-testid="SelectDropdown__input"
                                         id="select-passphrase-language-input"
                                         name="bip39Locale"
@@ -9246,7 +9246,7 @@ exports[`General Settings > should update profile 1`] = `
                               >
                                 <input
                                   autocomplete="off"
-                                  class="no-ligatures w-full border-none css-1vs1awz"
+                                  class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
                                   data-testid="select-list__input"
                                   name="exchangeCurrency"
                                   readonly=""
@@ -9286,7 +9286,7 @@ exports[`General Settings > should update profile 1`] = `
                                         aria-controls="select-currency-menu"
                                         aria-labelledby="select-currency-label"
                                         autocomplete="off"
-                                        class="no-ligatures w-full border-none css-1vs1awz"
+                                        class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
                                         data-testid="SelectDropdown__input"
                                         id="select-currency-input"
                                         name="exchangeCurrency"
@@ -9382,7 +9382,7 @@ exports[`General Settings > should update profile 1`] = `
                               >
                                 <input
                                   autocomplete="off"
-                                  class="no-ligatures w-full border-none css-1vs1awz"
+                                  class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
                                   data-testid="select-list__input"
                                   name="locale"
                                   readonly=""
@@ -9422,7 +9422,7 @@ exports[`General Settings > should update profile 1`] = `
                                         aria-controls="select-language-menu"
                                         aria-labelledby="select-language-label"
                                         autocomplete="off"
-                                        class="no-ligatures w-full border-none css-1vs1awz"
+                                        class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
                                         data-testid="SelectDropdown__input"
                                         id="select-language-input"
                                         name="locale"
@@ -9514,7 +9514,7 @@ exports[`General Settings > should update profile 1`] = `
                               >
                                 <input
                                   autocomplete="off"
-                                  class="no-ligatures w-full border-none css-1vs1awz"
+                                  class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
                                   data-testid="select-list__input"
                                   name="marketProvider"
                                   readonly=""
@@ -9554,7 +9554,7 @@ exports[`General Settings > should update profile 1`] = `
                                         aria-controls="select-market-provider-menu"
                                         aria-labelledby="select-market-provider-label"
                                         autocomplete="off"
-                                        class="no-ligatures w-full border-none css-1vs1awz"
+                                        class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
                                         data-testid="SelectDropdown__input"
                                         id="select-market-provider-input"
                                         name="marketProvider"
@@ -9646,7 +9646,7 @@ exports[`General Settings > should update profile 1`] = `
                               >
                                 <input
                                   autocomplete="off"
-                                  class="no-ligatures w-full border-none css-1vs1awz"
+                                  class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
                                   data-testid="select-list__input"
                                   name="timeFormat"
                                   readonly=""
@@ -9686,7 +9686,7 @@ exports[`General Settings > should update profile 1`] = `
                                         aria-controls="select-time-format-menu"
                                         aria-labelledby="select-time-format-label"
                                         autocomplete="off"
-                                        class="no-ligatures w-full border-none css-1vs1awz"
+                                        class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
                                         data-testid="SelectDropdown__input"
                                         id="select-time-format-input"
                                         name="timeFormat"
@@ -9802,7 +9802,7 @@ exports[`General Settings > should update profile 1`] = `
                                 >
                                   <input
                                     autocomplete="off"
-                                    class="no-ligatures w-full border-none css-1vs1awz"
+                                    class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
                                     data-testid="select-list__input"
                                     name="automaticSignOutPeriod"
                                     readonly=""
@@ -9842,7 +9842,7 @@ exports[`General Settings > should update profile 1`] = `
                                           aria-controls="select-auto-signout-menu"
                                           aria-labelledby="select-auto-signout-label"
                                           autocomplete="off"
-                                          class="no-ligatures w-full border-none css-1vs1awz"
+                                          class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
                                           data-testid="SelectDropdown__input"
                                           id="select-auto-signout-input"
                                           name="automaticSignOutPeriod"
@@ -11081,7 +11081,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                             >
                               <input
                                 autocomplete="off"
-                                class="no-ligatures w-full border-none css-1vs1awz"
+                                class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
                                 data-testid="General-settings__input--name"
                                 name="name"
                                 type="text"
@@ -11112,7 +11112,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                               >
                                 <input
                                   autocomplete="off"
-                                  class="no-ligatures w-full border-none css-1vs1awz"
+                                  class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
                                   data-testid="select-list__input"
                                   name="bip39Locale"
                                   readonly=""
@@ -11152,7 +11152,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                                         aria-controls="select-passphrase-language-menu"
                                         aria-labelledby="select-passphrase-language-label"
                                         autocomplete="off"
-                                        class="no-ligatures w-full border-none css-1vs1awz"
+                                        class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
                                         data-testid="SelectDropdown__input"
                                         id="select-passphrase-language-input"
                                         name="bip39Locale"
@@ -11244,7 +11244,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                               >
                                 <input
                                   autocomplete="off"
-                                  class="no-ligatures w-full border-none css-1vs1awz"
+                                  class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
                                   data-testid="select-list__input"
                                   name="exchangeCurrency"
                                   readonly=""
@@ -11284,7 +11284,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                                         aria-controls="select-currency-menu"
                                         aria-labelledby="select-currency-label"
                                         autocomplete="off"
-                                        class="no-ligatures w-full border-none css-1vs1awz"
+                                        class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
                                         data-testid="SelectDropdown__input"
                                         id="select-currency-input"
                                         name="exchangeCurrency"
@@ -11380,7 +11380,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                               >
                                 <input
                                   autocomplete="off"
-                                  class="no-ligatures w-full border-none css-1vs1awz"
+                                  class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
                                   data-testid="select-list__input"
                                   name="locale"
                                   readonly=""
@@ -11420,7 +11420,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                                         aria-controls="select-language-menu"
                                         aria-labelledby="select-language-label"
                                         autocomplete="off"
-                                        class="no-ligatures w-full border-none css-1vs1awz"
+                                        class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
                                         data-testid="SelectDropdown__input"
                                         id="select-language-input"
                                         name="locale"
@@ -11512,7 +11512,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                               >
                                 <input
                                   autocomplete="off"
-                                  class="no-ligatures w-full border-none css-1vs1awz"
+                                  class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
                                   data-testid="select-list__input"
                                   name="marketProvider"
                                   readonly=""
@@ -11552,7 +11552,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                                         aria-controls="select-market-provider-menu"
                                         aria-labelledby="select-market-provider-label"
                                         autocomplete="off"
-                                        class="no-ligatures w-full border-none css-1vs1awz"
+                                        class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
                                         data-testid="SelectDropdown__input"
                                         id="select-market-provider-input"
                                         name="marketProvider"
@@ -11644,7 +11644,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                               >
                                 <input
                                   autocomplete="off"
-                                  class="no-ligatures w-full border-none css-1vs1awz"
+                                  class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
                                   data-testid="select-list__input"
                                   name="timeFormat"
                                   readonly=""
@@ -11684,7 +11684,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                                         aria-controls="select-time-format-menu"
                                         aria-labelledby="select-time-format-label"
                                         autocomplete="off"
-                                        class="no-ligatures w-full border-none css-1vs1awz"
+                                        class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
                                         data-testid="SelectDropdown__input"
                                         id="select-time-format-input"
                                         name="timeFormat"
@@ -11800,7 +11800,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                                 >
                                   <input
                                     autocomplete="off"
-                                    class="no-ligatures w-full border-none css-1vs1awz"
+                                    class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
                                     data-testid="select-list__input"
                                     name="automaticSignOutPeriod"
                                     readonly=""
@@ -11840,7 +11840,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                                           aria-controls="select-auto-signout-menu"
                                           aria-labelledby="select-auto-signout-label"
                                           autocomplete="off"
-                                          class="no-ligatures w-full border-none css-1vs1awz"
+                                          class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
                                           data-testid="SelectDropdown__input"
                                           id="select-auto-signout-input"
                                           name="automaticSignOutPeriod"
@@ -13072,7 +13072,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                               <input
                                 aria-invalid="true"
                                 autocomplete="off"
-                                class="no-ligatures w-full border-none css-1vs1awz"
+                                class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
                                 data-testid="General-settings__input--name"
                                 name="name"
                                 type="text"
@@ -13150,7 +13150,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                               >
                                 <input
                                   autocomplete="off"
-                                  class="no-ligatures w-full border-none css-1vs1awz"
+                                  class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
                                   data-testid="select-list__input"
                                   name="bip39Locale"
                                   readonly=""
@@ -13190,7 +13190,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                                         aria-controls="select-passphrase-language-menu"
                                         aria-labelledby="select-passphrase-language-label"
                                         autocomplete="off"
-                                        class="no-ligatures w-full border-none css-1vs1awz"
+                                        class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
                                         data-testid="SelectDropdown__input"
                                         id="select-passphrase-language-input"
                                         name="bip39Locale"
@@ -13282,7 +13282,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                               >
                                 <input
                                   autocomplete="off"
-                                  class="no-ligatures w-full border-none css-1vs1awz"
+                                  class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
                                   data-testid="select-list__input"
                                   name="exchangeCurrency"
                                   readonly=""
@@ -13322,7 +13322,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                                         aria-controls="select-currency-menu"
                                         aria-labelledby="select-currency-label"
                                         autocomplete="off"
-                                        class="no-ligatures w-full border-none css-1vs1awz"
+                                        class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
                                         data-testid="SelectDropdown__input"
                                         id="select-currency-input"
                                         name="exchangeCurrency"
@@ -13418,7 +13418,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                               >
                                 <input
                                   autocomplete="off"
-                                  class="no-ligatures w-full border-none css-1vs1awz"
+                                  class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
                                   data-testid="select-list__input"
                                   name="locale"
                                   readonly=""
@@ -13458,7 +13458,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                                         aria-controls="select-language-menu"
                                         aria-labelledby="select-language-label"
                                         autocomplete="off"
-                                        class="no-ligatures w-full border-none css-1vs1awz"
+                                        class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
                                         data-testid="SelectDropdown__input"
                                         id="select-language-input"
                                         name="locale"
@@ -13550,7 +13550,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                               >
                                 <input
                                   autocomplete="off"
-                                  class="no-ligatures w-full border-none css-1vs1awz"
+                                  class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
                                   data-testid="select-list__input"
                                   name="marketProvider"
                                   readonly=""
@@ -13590,7 +13590,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                                         aria-controls="select-market-provider-menu"
                                         aria-labelledby="select-market-provider-label"
                                         autocomplete="off"
-                                        class="no-ligatures w-full border-none css-1vs1awz"
+                                        class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
                                         data-testid="SelectDropdown__input"
                                         id="select-market-provider-input"
                                         name="marketProvider"
@@ -13682,7 +13682,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                               >
                                 <input
                                   autocomplete="off"
-                                  class="no-ligatures w-full border-none css-1vs1awz"
+                                  class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
                                   data-testid="select-list__input"
                                   name="timeFormat"
                                   readonly=""
@@ -13722,7 +13722,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                                         aria-controls="select-time-format-menu"
                                         aria-labelledby="select-time-format-label"
                                         autocomplete="off"
-                                        class="no-ligatures w-full border-none css-1vs1awz"
+                                        class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
                                         data-testid="SelectDropdown__input"
                                         id="select-time-format-input"
                                         name="timeFormat"
@@ -13838,7 +13838,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                                 >
                                   <input
                                     autocomplete="off"
-                                    class="no-ligatures w-full border-none css-1vs1awz"
+                                    class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
                                     data-testid="select-list__input"
                                     name="automaticSignOutPeriod"
                                     readonly=""
@@ -13878,7 +13878,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                                           aria-controls="select-auto-signout-menu"
                                           aria-labelledby="select-auto-signout-label"
                                           autocomplete="off"
-                                          class="no-ligatures w-full border-none css-1vs1awz"
+                                          class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
                                           data-testid="SelectDropdown__input"
                                           id="select-auto-signout-input"
                                           name="automaticSignOutPeriod"

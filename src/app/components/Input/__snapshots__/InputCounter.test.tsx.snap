@@ -10,7 +10,7 @@ exports[`InputCounter > should render 1`] = `
     >
       <input
         autocomplete="off"
-        class="no-ligatures w-full border-none css-1vs1awz"
+        class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
         data-testid="InputCounter__input"
         maxlength="10"
         type="text"
@@ -47,7 +47,7 @@ exports[`InputCounter > should render with invalid state 1`] = `
       <input
         aria-invalid="true"
         autocomplete="off"
-        class="no-ligatures w-full border-none css-1vs1awz"
+        class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
         data-testid="InputCounter__input"
         maxlength="10"
         name="vendorField"

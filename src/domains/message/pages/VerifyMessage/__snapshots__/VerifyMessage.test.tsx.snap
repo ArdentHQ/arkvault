@@ -752,7 +752,7 @@ exports[`VerifyMessage > should render (lg) 1`] = `
                         >
                           <input
                             autocomplete="off"
-                            class="no-ligatures w-full border-none css-1vs1awz"
+                            class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
                             data-testid="VerifyMessage__manual-signatory"
                             name="signatory"
                             type="text"
@@ -779,7 +779,7 @@ exports[`VerifyMessage > should render (lg) 1`] = `
                         >
                           <input
                             autocomplete="off"
-                            class="no-ligatures w-full border-none css-1vs1awz"
+                            class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
                             data-testid="VerifyMessage__manual-message"
                             name="message"
                             type="text"
@@ -806,7 +806,7 @@ exports[`VerifyMessage > should render (lg) 1`] = `
                         >
                           <input
                             autocomplete="off"
-                            class="no-ligatures w-full border-none css-1vs1awz"
+                            class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
                             data-testid="VerifyMessage__manual-signature"
                             name="signature"
                             type="text"
@@ -1606,7 +1606,7 @@ exports[`VerifyMessage > should render (xs) 1`] = `
                         >
                           <input
                             autocomplete="off"
-                            class="no-ligatures w-full border-none css-1vs1awz"
+                            class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
                             data-testid="VerifyMessage__manual-signatory"
                             name="signatory"
                             type="text"
@@ -1633,7 +1633,7 @@ exports[`VerifyMessage > should render (xs) 1`] = `
                         >
                           <input
                             autocomplete="off"
-                            class="no-ligatures w-full border-none css-1vs1awz"
+                            class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
                             data-testid="VerifyMessage__manual-message"
                             name="message"
                             type="text"
@@ -1660,7 +1660,7 @@ exports[`VerifyMessage > should render (xs) 1`] = `
                         >
                           <input
                             autocomplete="off"
-                            class="no-ligatures w-full border-none css-1vs1awz"
+                            class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
                             data-testid="VerifyMessage__manual-signature"
                             name="signature"
                             type="text"
