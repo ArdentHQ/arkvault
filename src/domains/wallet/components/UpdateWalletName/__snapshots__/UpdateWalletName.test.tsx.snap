@@ -88,7 +88,7 @@ exports[`UpdateWalletName > should render 1`] = `
                   class="relative"
                 >
                   <div
-                    class="css-n1b0kl"
+                    class="css-14zfvme"
                   >
                     <div
                       class="relative flex h-full flex-1"
@@ -96,7 +96,7 @@ exports[`UpdateWalletName > should render 1`] = `
                       <input
                         aria-invalid="false"
                         autocomplete="off"
-                        class="no-ligatures w-full border-none css-1vs1awz"
+                        class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 css-1937ogs"
                         data-testid="UpdateWalletName__input"
                         name="name"
                         type="text"
@@ -230,7 +230,7 @@ exports[`UpdateWalletName > should show an error message for duplicate name 1`] 
                   class="relative"
                 >
                   <div
-                    class="css-12mz4i6"
+                    class="css-1njetft"
                   >
                     <div
                       class="relative flex h-full flex-1"
@@ -238,7 +238,7 @@ exports[`UpdateWalletName > should show an error message for duplicate name 1`] 
                       <input
                         aria-invalid="true"
                         autocomplete="off"
-                        class="no-ligatures w-full border-none css-1vs1awz"
+                        class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 css-1937ogs"
                         data-testid="UpdateWalletName__input"
                         name="name"
                         type="text"
@@ -419,7 +419,7 @@ exports[`UpdateWalletName > should show an error message for duplicate name 2`] 
                   class="relative"
                 >
                   <div
-                    class="css-12mz4i6"
+                    class="css-1njetft"
                   >
                     <div
                       class="relative flex h-full flex-1"
@@ -427,7 +427,7 @@ exports[`UpdateWalletName > should show an error message for duplicate name 2`] 
                       <input
                         aria-invalid="true"
                         autocomplete="off"
-                        class="no-ligatures w-full border-none css-1vs1awz"
+                        class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 css-1937ogs"
                         data-testid="UpdateWalletName__input"
                         name="name"
                         type="text"
@@ -608,7 +608,7 @@ exports[`UpdateWalletName > should show an error message for duplicate name 3`] 
                   class="relative"
                 >
                   <div
-                    class="css-12mz4i6"
+                    class="css-1njetft"
                   >
                     <div
                       class="relative flex h-full flex-1"
@@ -616,7 +616,7 @@ exports[`UpdateWalletName > should show an error message for duplicate name 3`] 
                       <input
                         aria-invalid="true"
                         autocomplete="off"
-                        class="no-ligatures w-full border-none css-1vs1awz"
+                        class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 css-1937ogs"
                         data-testid="UpdateWalletName__input"
                         name="name"
                         type="text"
@@ -797,7 +797,7 @@ exports[`UpdateWalletName > should show an error message for duplicate name 4`] 
                   class="relative"
                 >
                   <div
-                    class="css-12mz4i6"
+                    class="css-1njetft"
                   >
                     <div
                       class="relative flex h-full flex-1"
@@ -805,7 +805,7 @@ exports[`UpdateWalletName > should show an error message for duplicate name 4`] 
                       <input
                         aria-invalid="true"
                         autocomplete="off"
-                        class="no-ligatures w-full border-none css-1vs1awz"
+                        class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 css-1937ogs"
                         data-testid="UpdateWalletName__input"
                         name="name"
                         type="text"
@@ -986,7 +986,7 @@ exports[`UpdateWalletName > should show error message when name consists only of
                   class="relative"
                 >
                   <div
-                    class="css-12mz4i6"
+                    class="css-1njetft"
                   >
                     <div
                       class="relative flex h-full flex-1"
@@ -994,7 +994,7 @@ exports[`UpdateWalletName > should show error message when name consists only of
                       <input
                         aria-invalid="true"
                         autocomplete="off"
-                        class="no-ligatures w-full border-none css-1vs1awz"
+                        class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 css-1937ogs"
                         data-testid="UpdateWalletName__input"
                         name="name"
                         type="text"
@@ -1175,7 +1175,7 @@ exports[`UpdateWalletName > should show error message when name exceeds 42 chara
                   class="relative"
                 >
                   <div
-                    class="css-12mz4i6"
+                    class="css-1njetft"
                   >
                     <div
                       class="relative flex h-full flex-1"
@@ -1183,7 +1183,7 @@ exports[`UpdateWalletName > should show error message when name exceeds 42 chara
                       <input
                         aria-invalid="true"
                         autocomplete="off"
-                        class="no-ligatures w-full border-none css-1vs1awz"
+                        class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 css-1937ogs"
                         data-testid="UpdateWalletName__input"
                         name="name"
                         type="text"

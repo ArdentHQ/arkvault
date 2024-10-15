@@ -28,14 +28,14 @@ exports[`ReceiveFundsForm > should emit amount onChange event 1`] = `
           class="relative"
         >
           <div
-            class="pr-20 css-n1b0kl"
+            class="pr-20 css-14zfvme"
           >
             <div
               class="relative flex h-full flex-1"
             >
               <input
                 autocomplete="off"
-                class="no-ligatures w-full border-none css-1vs1awz"
+                class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 css-1937ogs"
                 data-testid="ReceiveFundsForm__amount"
                 name="amount"
                 placeholder="Amount"
@@ -63,14 +63,14 @@ exports[`ReceiveFundsForm > should emit amount onChange event 1`] = `
           </span>
         </label>
         <div
-          class="css-n1b0kl"
+          class="css-14zfvme"
         >
           <div
             class="relative flex h-full flex-1"
           >
             <input
               autocomplete="off"
-              class="no-ligatures w-full border-none css-1vs1awz"
+              class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 css-1937ogs"
               data-testid="ReceiveFundsForm__memo"
               name="memo"
               type="text"
@@ -127,14 +127,14 @@ exports[`ReceiveFundsForm > should emit memo onChange event 1`] = `
           class="relative"
         >
           <div
-            class="pr-20 css-n1b0kl"
+            class="pr-20 css-14zfvme"
           >
             <div
               class="relative flex h-full flex-1"
             >
               <input
                 autocomplete="off"
-                class="no-ligatures w-full border-none css-1vs1awz"
+                class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 css-1937ogs"
                 data-testid="ReceiveFundsForm__amount"
                 name="amount"
                 placeholder="Amount"
@@ -162,14 +162,14 @@ exports[`ReceiveFundsForm > should emit memo onChange event 1`] = `
           </span>
         </label>
         <div
-          class="css-n1b0kl"
+          class="css-14zfvme"
         >
           <div
             class="relative flex h-full flex-1"
           >
             <input
               autocomplete="off"
-              class="no-ligatures w-full border-none css-1vs1awz"
+              class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 css-1937ogs"
               data-testid="ReceiveFundsForm__memo"
               name="memo"
               type="text"
@@ -226,14 +226,14 @@ exports[`ReceiveFundsForm > should not show memo if is not supported by network 
           class="relative"
         >
           <div
-            class="pr-20 css-n1b0kl"
+            class="pr-20 css-14zfvme"
           >
             <div
               class="relative flex h-full flex-1"
             >
               <input
                 autocomplete="off"
-                class="no-ligatures w-full border-none css-1vs1awz"
+                class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 css-1937ogs"
                 data-testid="ReceiveFundsForm__amount"
                 name="amount"
                 placeholder="Amount"
@@ -277,14 +277,14 @@ exports[`ReceiveFundsForm > should render 1`] = `
           class="relative"
         >
           <div
-            class="pr-20 css-n1b0kl"
+            class="pr-20 css-14zfvme"
           >
             <div
               class="relative flex h-full flex-1"
             >
               <input
                 autocomplete="off"
-                class="no-ligatures w-full border-none css-1vs1awz"
+                class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 css-1937ogs"
                 data-testid="ReceiveFundsForm__amount"
                 name="amount"
                 placeholder="Amount"
@@ -312,14 +312,14 @@ exports[`ReceiveFundsForm > should render 1`] = `
           </span>
         </label>
         <div
-          class="css-n1b0kl"
+          class="css-14zfvme"
         >
           <div
             class="relative flex h-full flex-1"
           >
             <input
               autocomplete="off"
-              class="no-ligatures w-full border-none css-1vs1awz"
+              class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 css-1937ogs"
               data-testid="ReceiveFundsForm__memo"
               name="memo"
               type="text"
