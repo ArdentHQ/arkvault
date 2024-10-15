@@ -568,11 +568,11 @@ exports[`Dashboard > should render 1`] = `
           class="mx-auto px-6 lg:container md:px-10"
         >
           <div
-            class="-mx-8 -mt-8 flex items-center justify-between border-b border-theme-secondary-300 bg-theme-secondary-100 px-8 py-4 dark:border-theme-secondary-800 dark:bg-black sm:mx-0 sm:mb-6 sm:mt-0 sm:border-b-0 sm:bg-transparent sm:px-0 sm:py-0 sm:dark:bg-transparent"
+            class="-mx-8 -mt-8 flex items-center justify-between border-b border-theme-secondary-300 bg-theme-secondary-100 px-6 py-1.5 dark:border-theme-secondary-800 dark:bg-black sm:mx-0 sm:mb-6 sm:mt-0 sm:border-b-0 sm:bg-transparent sm:px-0 sm:py-0 sm:dark:bg-transparent"
             data-testid="Portfolio__Header"
           >
             <div
-              class="text-lg font-bold sm:text-2xl"
+              class="text-lg font-bold leading-5 sm:text-2xl"
             >
               Portfolio
             </div>
