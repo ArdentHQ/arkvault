@@ -58,7 +58,7 @@ export const PaginationButton = css`
 `;
 
 export const PaginationWrapper = css`
-	${tw`flex flex-col sm:flex-row sm:space-x-2 h-8`}
+	${tw`flex flex-col sm:flex-row sm:space-x-2 sm:h-8`}
 
 	button:first-of-type,button:last-of-type {
 		${tw``}

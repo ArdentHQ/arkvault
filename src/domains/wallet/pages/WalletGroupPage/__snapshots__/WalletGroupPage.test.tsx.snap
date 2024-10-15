@@ -5107,10 +5107,125 @@ exports[`WalletGroupPage > should render empty list if no wallets 1`] = `
                 </div>
               </div>
               <div
-                class="my-8 flex w-full justify-center"
+                class="flex w-full flex-col gap-4 border-theme-secondary-300 pt-4 dark:border-theme-secondary-800 sm:flex-row sm:justify-between md:border-t md:px-6 md:pb-4"
               >
+                <div
+                  class="flex items-center justify-center gap-2 text-sm font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-200 sm:justify-start"
+                >
+                  <span>
+                    Show
+                  </span>
+                  <div
+                    class="relative"
+                    data-testid="SelectDropdown"
+                  >
+                    <div
+                      class="sr-only css-n1b0kl"
+                    >
+                      <div
+                        class="relative flex h-full flex-1"
+                      >
+                        <input
+                          autocomplete="off"
+                          class="no-ligatures w-full border-none css-1vs1awz"
+                          data-testid="select-list__input"
+                          readonly=""
+                          tabindex="-1"
+                          type="text"
+                          value=""
+                        />
+                      </div>
+                    </div>
+                    <div
+                      class="w-full"
+                    >
+                      <div
+                        aria-expanded="false"
+                        aria-haspopup="listbox"
+                        aria-owns="downshift-6-menu"
+                        role="combobox"
+                      >
+                        <div>
+                          <label
+                            for="downshift-6-input"
+                            id="downshift-6-label"
+                          />
+                          <div
+                            class="!h-8 !w-[78px] !px-3 css-n1b0kl"
+                          >
+                            <div
+                              class="relative flex h-full flex-1"
+                            >
+                              <input
+                                aria-autocomplete="list"
+                                aria-controls="downshift-6-menu"
+                                aria-labelledby="downshift-6-label"
+                                autocomplete="off"
+                                class="no-ligatures w-full border-none cursor-default !text-sm css-1vs1awz"
+                                data-testid="SelectDropdown__input"
+                                id="downshift-6-input"
+                                placeholder="Select option"
+                                readonly=""
+                                type="text"
+                                value=""
+                              />
+                            </div>
+                            <div
+                              class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-primary-300 dark:text-theme-secondary-600"
+                              data-testid="Input__addon-end"
+                            >
+                              <div
+                                class=""
+                              >
+                                <div
+                                  class="flex items-center"
+                                >
+                                  <div
+                                    class="flex items-center justify-center px-1 py-2"
+                                    data-testid="SelectDropdown__caret"
+                                  >
+                                    <div
+                                      class="absolute inset-0 block cursor-pointer md:hidden"
+                                    />
+                                    <div
+                                      class="transition-transform text-theme-secondary-500 css-15txs7d"
+                                      height="10"
+                                      width="10"
+                                    >
+                                      <svg
+                                        id="caret-down"
+                                        viewBox="0 0 10 10"
+                                        x="0"
+                                        xml:space="preserve"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        y="0"
+                                      >
+                                        <path
+                                          d="M9.093 1.5H.907c-.754 0-1.178.859-.714 1.447l4.108 5.208a.91.91 0 0 0 1.43-.002l4.078-5.208c.46-.589.037-1.445-.716-1.445z"
+                                          fill="currentColor"
+                                        />
+                                      </svg>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          aria-labelledby="downshift-6-label"
+                          id="downshift-6-menu"
+                          role="listbox"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <span>
+                    Records
+                  </span>
+                </div>
                 <nav
-                  class="relative w-full sm:w-auto css-91czg2"
+                  class="relative w-full sm:w-auto css-4ybc2s"
                   data-testid="Pagination"
                 >
                   <button

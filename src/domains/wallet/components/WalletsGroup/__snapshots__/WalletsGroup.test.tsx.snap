@@ -2675,8 +2675,6 @@ exports[`WalletsGroup > should render with dark mode = true 1`] = `
 </DocumentFragment>
 `;
 
-exports[`WalletsGroup > should render with show all button 1`] = `<DocumentFragment />`;
-
 exports[`WalletsGroup > should show skeleton when syncing exchange rates 1`] = `
 <DocumentFragment>
   <div

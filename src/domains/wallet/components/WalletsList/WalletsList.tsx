@@ -14,6 +14,7 @@ import { Icon } from "@/app/components/Icon";
 import { AccordionContent } from "@/app/components/Accordion";
 import { twMerge } from "tailwind-merge";
 import cn from "classnames";
+import { Select } from "@/app/components/SelectDropdown";
 
 const StarredHeader = ({ active, onClick }: { active: boolean; onClick: () => void }) => {
 	const { t } = useTranslation();
@@ -40,7 +41,7 @@ const StarredHeader = ({ active, onClick }: { active: boolean; onClick: () => vo
 
 export const WalletsList: React.VFC<WalletsListProperties> = ({
 	wallets,
-	itemsPerPage,
+	itemsPerPage: initialPerPage,
 	showPagination = true,
 	className,
 }) => {
@@ -52,6 +53,8 @@ export const WalletsList: React.VFC<WalletsListProperties> = ({
 
 	const [currentPage, setCurrentPage] = useState(1);
 	const [starredFirst, setStarredFirst] = useState(true);
+
+	const [perPage, setPerPage] = useState(initialPerPage);
 
 	const initialState = useMemo<Partial<TableState<WalletListItemProperties>>>(
 		() => ({
@@ -172,12 +175,12 @@ export const WalletsList: React.VFC<WalletsListProperties> = ({
 							<Table
 								columns={columns}
 								data={tableRows}
-								rowsPerPage={itemsPerPage}
+								rowsPerPage={perPage}
 								currentPage={currentPage}
 								initialState={initialState}
 								className={cn("with-x-padding", {
 									"after:mx-[0.15rem] after:block after:h-[5px] after:rounded-b-lg after:bg-theme-primary-100 after:content-[''] after:dark:bg-theme-secondary-800":
-										wallets.length <= itemsPerPage,
+										wallets.length <= initialPerPage,
 								})}
 							>
 								{renderTableRow}
@@ -186,7 +189,7 @@ export const WalletsList: React.VFC<WalletsListProperties> = ({
 
 						{!isMdAndAbove && (
 							<div className="space-y-3">
-								{wallets.slice(0, itemsPerPage).map((wallet) => (
+								{wallets.slice((currentPage - 1) * perPage, perPage * currentPage).map((wallet) => (
 									<WalletListItem key={wallet.id()} wallet={wallet} isLargeScreen={false} />
 								))}
 							</div>
@@ -194,10 +197,32 @@ export const WalletsList: React.VFC<WalletsListProperties> = ({
 					</div>
 
 					{showPagination && (
-						<div className="my-8 flex w-full justify-center">
+						<div className="flex w-full flex-col gap-4 border-theme-secondary-300 pt-4 dark:border-theme-secondary-800 sm:flex-row sm:justify-between md:border-t md:px-6 md:pb-4">
+							<div className="flex items-center justify-center gap-2 text-sm font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-200 sm:justify-start">
+								<span>{t("COMMON.SHOW")}</span>
+								<Select
+									options={[1, 2, 10, 25, 50, 100].map((v) => ({
+										label: v.toString(),
+										value: v.toString(),
+									}))}
+									allowOverflow={true}
+									allowFreeInput={false}
+									readOnly={true}
+									defaultValue={perPage.toString()}
+									wrapperClassName="relative"
+									className="!h-8 !w-[78px] !px-3"
+									innerClassName="!text-sm"
+									onChange={(selected) => {
+										setCurrentPage(1);
+										setPerPage(Number(selected.value));
+									}}
+								/>
+								<span>{t("COMMON.RECORDS")}</span>
+							</div>
+
 							<Pagination
 								totalCount={wallets.length}
-								itemsPerPage={itemsPerPage}
+								itemsPerPage={perPage}
 								onSelectPage={setCurrentPage}
 								currentPage={currentPage}
 							/>
