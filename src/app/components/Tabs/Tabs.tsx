@@ -118,7 +118,7 @@ export const Tab = React.forwardRef<HTMLButtonElement, TabProperties>((propertie
 			data-testid={`tabs__tab-button-${properties.tabId}`}
 			role="tab"
 			type="button"
-			className={twMerge("ring-focus mx-6", properties.className)}
+			className={twMerge("ring-focus mx-6 before:bg-theme-secondary-300 before:dark:bg-theme-secondary-800", properties.className)}
 			ref={reference}
 			aria-selected={isActive}
 			tabIndex={isActive ? 0 : -1}
@@ -169,7 +169,7 @@ export const TabList = styled.div<{ noBackground?: boolean }>`
 		}
 
 		& + ${TabButton}:before {
-			${tw`content h-4 w-px bg-theme-secondary-300 dark:bg-theme-secondary-800 absolute -left-6 top-1/2 -translate-y-1/2 block`};
+			${tw`content h-4 w-px absolute -left-6 top-1/2 -translate-y-1/2 block`};
 		}
 	}
 `;
