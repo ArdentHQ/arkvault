@@ -46,14 +46,14 @@ exports[`HeaderSearchInput > should render 1`] = `
         class="flex-1"
       >
         <div
-          class="-ml-4 css-jq6j0b"
+          class="-ml-4 css-1sdc56v"
         >
           <div
             class="relative flex h-full flex-1"
           >
             <input
               autocomplete="off"
-              class="no-ligatures w-full border-none css-1vs1awz"
+              class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 css-1937ogs"
               data-testid="HeaderSearchInput__input__input"
               placeholder="Search..."
               type="text"

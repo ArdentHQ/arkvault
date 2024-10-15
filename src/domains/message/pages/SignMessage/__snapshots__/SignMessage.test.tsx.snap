@@ -726,7 +726,7 @@ exports[`SignMessage > Sign with Wallet > should render (lg) 1`] = `
                           </div>
                         </span>
                         <div
-                          class="css-xk5t3v"
+                          class="css-4lfin5"
                           disabled=""
                         >
                           <div
@@ -734,7 +734,7 @@ exports[`SignMessage > Sign with Wallet > should render (lg) 1`] = `
                           >
                             <input
                               autocomplete="off"
-                              class="no-ligatures w-full border-none text-theme-secondary-text css-1vs1awz"
+                              class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 text-theme-secondary-text css-1937ogs"
                               data-testid="SelectAddress__input"
                               disabled=""
                               name="signatory-address"
@@ -757,14 +757,14 @@ exports[`SignMessage > Sign with Wallet > should render (lg) 1`] = `
                         Message
                       </label>
                       <div
-                        class="css-n1b0kl"
+                        class="css-14zfvme"
                       >
                         <div
                           class="relative flex h-full flex-1"
                         >
                           <input
                             autocomplete="off"
-                            class="no-ligatures w-full border-none css-1vs1awz"
+                            class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 css-1937ogs"
                             data-testid="SignMessage__message-input"
                             name="message"
                             type="text"
@@ -807,14 +807,14 @@ exports[`SignMessage > Sign with Wallet > should render (lg) 1`] = `
                           Mnemonic
                         </label>
                         <div
-                          class="css-n1b0kl"
+                          class="css-14zfvme"
                         >
                           <div
                             class="relative flex h-full flex-1"
                           >
                             <input
                               autocomplete="off"
-                              class="no-ligatures w-full border-none css-1vs1awz"
+                              class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 css-1937ogs"
                               data-testid="AuthenticationStep__mnemonic"
                               name="mnemonic"
                               type="password"
@@ -1634,7 +1634,7 @@ exports[`SignMessage > Sign with Wallet > should render (xs) 1`] = `
                           </div>
                         </span>
                         <div
-                          class="css-xk5t3v"
+                          class="css-4lfin5"
                           disabled=""
                         >
                           <div
@@ -1642,7 +1642,7 @@ exports[`SignMessage > Sign with Wallet > should render (xs) 1`] = `
                           >
                             <input
                               autocomplete="off"
-                              class="no-ligatures w-full border-none text-theme-secondary-text css-1vs1awz"
+                              class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 text-theme-secondary-text css-1937ogs"
                               data-testid="SelectAddress__input"
                               disabled=""
                               name="signatory-address"
@@ -1665,14 +1665,14 @@ exports[`SignMessage > Sign with Wallet > should render (xs) 1`] = `
                         Message
                       </label>
                       <div
-                        class="css-n1b0kl"
+                        class="css-14zfvme"
                       >
                         <div
                           class="relative flex h-full flex-1"
                         >
                           <input
                             autocomplete="off"
-                            class="no-ligatures w-full border-none css-1vs1awz"
+                            class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 css-1937ogs"
                             data-testid="SignMessage__message-input"
                             name="message"
                             type="text"
@@ -1715,14 +1715,14 @@ exports[`SignMessage > Sign with Wallet > should render (xs) 1`] = `
                           Mnemonic
                         </label>
                         <div
-                          class="css-n1b0kl"
+                          class="css-14zfvme"
                         >
                           <div
                             class="relative flex h-full flex-1"
                           >
                             <input
                               autocomplete="off"
-                              class="no-ligatures w-full border-none css-1vs1awz"
+                              class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 css-1937ogs"
                               data-testid="AuthenticationStep__mnemonic"
                               name="mnemonic"
                               type="password"

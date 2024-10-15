@@ -745,14 +745,14 @@ exports[`VerifyMessage > should render (lg) 1`] = `
                         Signatory
                       </label>
                       <div
-                        class=" css-n1b0kl"
+                        class=" css-14zfvme"
                       >
                         <div
                           class="relative flex h-full flex-1"
                         >
                           <input
                             autocomplete="off"
-                            class="no-ligatures w-full border-none css-1vs1awz"
+                            class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 css-1937ogs"
                             data-testid="VerifyMessage__manual-signatory"
                             name="signatory"
                             type="text"
@@ -772,14 +772,14 @@ exports[`VerifyMessage > should render (lg) 1`] = `
                         Message
                       </label>
                       <div
-                        class=" css-n1b0kl"
+                        class=" css-14zfvme"
                       >
                         <div
                           class="relative flex h-full flex-1"
                         >
                           <input
                             autocomplete="off"
-                            class="no-ligatures w-full border-none css-1vs1awz"
+                            class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 css-1937ogs"
                             data-testid="VerifyMessage__manual-message"
                             name="message"
                             type="text"
@@ -799,14 +799,14 @@ exports[`VerifyMessage > should render (lg) 1`] = `
                         Signature
                       </label>
                       <div
-                        class=" css-n1b0kl"
+                        class=" css-14zfvme"
                       >
                         <div
                           class="relative flex h-full flex-1"
                         >
                           <input
                             autocomplete="off"
-                            class="no-ligatures w-full border-none css-1vs1awz"
+                            class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 css-1937ogs"
                             data-testid="VerifyMessage__manual-signature"
                             name="signature"
                             type="text"
@@ -1599,14 +1599,14 @@ exports[`VerifyMessage > should render (xs) 1`] = `
                         Signatory
                       </label>
                       <div
-                        class=" css-n1b0kl"
+                        class=" css-14zfvme"
                       >
                         <div
                           class="relative flex h-full flex-1"
                         >
                           <input
                             autocomplete="off"
-                            class="no-ligatures w-full border-none css-1vs1awz"
+                            class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 css-1937ogs"
                             data-testid="VerifyMessage__manual-signatory"
                             name="signatory"
                             type="text"
@@ -1626,14 +1626,14 @@ exports[`VerifyMessage > should render (xs) 1`] = `
                         Message
                       </label>
                       <div
-                        class=" css-n1b0kl"
+                        class=" css-14zfvme"
                       >
                         <div
                           class="relative flex h-full flex-1"
                         >
                           <input
                             autocomplete="off"
-                            class="no-ligatures w-full border-none css-1vs1awz"
+                            class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 css-1937ogs"
                             data-testid="VerifyMessage__manual-message"
                             name="message"
                             type="text"
@@ -1653,14 +1653,14 @@ exports[`VerifyMessage > should render (xs) 1`] = `
                         Signature
                       </label>
                       <div
-                        class=" css-n1b0kl"
+                        class=" css-14zfvme"
                       >
                         <div
                           class="relative flex h-full flex-1"
                         >
                           <input
                             autocomplete="off"
-                            class="no-ligatures w-full border-none css-1vs1awz"
+                            class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 css-1937ogs"
                             data-testid="VerifyMessage__manual-signature"
                             name="signature"
                             type="text"

@@ -100,7 +100,7 @@ exports[`AddRecipient > should hide available balance if fee > balance 1`] = `
                 data-testid="SelectDropdown"
               >
                 <div
-                  class="sr-only css-n1b0kl"
+                  class="sr-only css-14zfvme"
                 >
                   <div
                     class="relative flex h-full flex-1"
@@ -108,7 +108,7 @@ exports[`AddRecipient > should hide available balance if fee > balance 1`] = `
                     <input
                       aria-invalid="false"
                       autocomplete="off"
-                      class="no-ligatures w-full border-none css-1vs1awz"
+                      class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 css-1937ogs"
                       data-testid="select-list__input"
                       name="recipientAddress"
                       readonly=""
@@ -133,7 +133,7 @@ exports[`AddRecipient > should hide available balance if fee > balance 1`] = `
                         id="SelectRecipient__dropdown-label"
                       />
                       <div
-                        class="css-n1b0kl"
+                        class="css-14zfvme"
                       >
                         <div
                           class="relative flex h-full flex-1"
@@ -144,7 +144,7 @@ exports[`AddRecipient > should hide available balance if fee > balance 1`] = `
                             aria-invalid="false"
                             aria-labelledby="SelectRecipient__dropdown-label"
                             autocomplete="off"
-                            class="no-ligatures w-full border-none cursor-default css-1vs1awz"
+                            class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 cursor-default css-1937ogs"
                             data-testid="SelectDropdown__input"
                             id="SelectRecipient__dropdown-input"
                             name="recipientAddress"
@@ -248,14 +248,14 @@ exports[`AddRecipient > should hide available balance if fee > balance 1`] = `
                 class="relative"
               >
                 <div
-                  class="css-n1b0kl"
+                  class="css-14zfvme"
                 >
                   <div
                     class="relative flex h-full flex-1"
                   >
                     <input
                       autocomplete="off"
-                      class="no-ligatures w-full border-none css-1vs1awz"
+                      class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 css-1937ogs"
                       data-testid="AddRecipient__amount"
                       name="amount"
                       placeholder="Enter an amount"
@@ -400,7 +400,7 @@ exports[`AddRecipient > should render 1`] = `
                 data-testid="SelectDropdown"
               >
                 <div
-                  class="sr-only css-n1b0kl"
+                  class="sr-only css-14zfvme"
                 >
                   <div
                     class="relative flex h-full flex-1"
@@ -408,7 +408,7 @@ exports[`AddRecipient > should render 1`] = `
                     <input
                       aria-invalid="false"
                       autocomplete="off"
-                      class="no-ligatures w-full border-none css-1vs1awz"
+                      class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 css-1937ogs"
                       data-testid="select-list__input"
                       name="recipientAddress"
                       readonly=""
@@ -433,7 +433,7 @@ exports[`AddRecipient > should render 1`] = `
                         id="SelectRecipient__dropdown-label"
                       />
                       <div
-                        class="css-n1b0kl"
+                        class="css-14zfvme"
                       >
                         <div
                           class="relative flex h-full flex-1"
@@ -444,7 +444,7 @@ exports[`AddRecipient > should render 1`] = `
                             aria-invalid="false"
                             aria-labelledby="SelectRecipient__dropdown-label"
                             autocomplete="off"
-                            class="no-ligatures w-full border-none cursor-default css-1vs1awz"
+                            class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 cursor-default css-1937ogs"
                             data-testid="SelectDropdown__input"
                             id="SelectRecipient__dropdown-input"
                             name="recipientAddress"
@@ -548,14 +548,14 @@ exports[`AddRecipient > should render 1`] = `
                 class="relative"
               >
                 <div
-                  class="css-n1b0kl"
+                  class="css-14zfvme"
                 >
                   <div
                     class="relative flex h-full flex-1"
                   >
                     <input
                       autocomplete="off"
-                      class="no-ligatures w-full border-none css-1vs1awz"
+                      class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 css-1937ogs"
                       data-testid="AddRecipient__amount"
                       name="amount"
                       placeholder="Enter an amount"
@@ -685,7 +685,7 @@ exports[`AddRecipient > should render with empty array of recipients as default 
                 data-testid="SelectDropdown"
               >
                 <div
-                  class="sr-only css-n1b0kl"
+                  class="sr-only css-14zfvme"
                 >
                   <div
                     class="relative flex h-full flex-1"
@@ -693,7 +693,7 @@ exports[`AddRecipient > should render with empty array of recipients as default 
                     <input
                       aria-invalid="false"
                       autocomplete="off"
-                      class="no-ligatures w-full border-none css-1vs1awz"
+                      class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 css-1937ogs"
                       data-testid="select-list__input"
                       name="recipientAddress"
                       readonly=""
@@ -718,7 +718,7 @@ exports[`AddRecipient > should render with empty array of recipients as default 
                         id="SelectRecipient__dropdown-label"
                       />
                       <div
-                        class="css-n1b0kl"
+                        class="css-14zfvme"
                       >
                         <div
                           class="relative flex h-full flex-1"
@@ -729,7 +729,7 @@ exports[`AddRecipient > should render with empty array of recipients as default 
                             aria-invalid="false"
                             aria-labelledby="SelectRecipient__dropdown-label"
                             autocomplete="off"
-                            class="no-ligatures w-full border-none cursor-default css-1vs1awz"
+                            class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 cursor-default css-1937ogs"
                             data-testid="SelectDropdown__input"
                             id="SelectRecipient__dropdown-input"
                             name="recipientAddress"
@@ -833,14 +833,14 @@ exports[`AddRecipient > should render with empty array of recipients as default 
                 class="relative"
               >
                 <div
-                  class="css-n1b0kl"
+                  class="css-14zfvme"
                 >
                   <div
                     class="relative flex h-full flex-1"
                   >
                     <input
                       autocomplete="off"
-                      class="no-ligatures w-full border-none css-1vs1awz"
+                      class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 css-1937ogs"
                       data-testid="AddRecipient__amount"
                       name="amount"
                       placeholder="Enter an amount"
@@ -970,7 +970,7 @@ exports[`AddRecipient > should render with multiple recipients switch 1`] = `
                 data-testid="SelectDropdown"
               >
                 <div
-                  class="sr-only css-n1b0kl"
+                  class="sr-only css-14zfvme"
                 >
                   <div
                     class="relative flex h-full flex-1"
@@ -978,7 +978,7 @@ exports[`AddRecipient > should render with multiple recipients switch 1`] = `
                     <input
                       aria-invalid="false"
                       autocomplete="off"
-                      class="no-ligatures w-full border-none css-1vs1awz"
+                      class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 css-1937ogs"
                       data-testid="select-list__input"
                       name="recipientAddress"
                       readonly=""
@@ -1003,7 +1003,7 @@ exports[`AddRecipient > should render with multiple recipients switch 1`] = `
                         id="SelectRecipient__dropdown-label"
                       />
                       <div
-                        class="css-n1b0kl"
+                        class="css-14zfvme"
                       >
                         <div
                           class="relative flex h-full flex-1"
@@ -1014,7 +1014,7 @@ exports[`AddRecipient > should render with multiple recipients switch 1`] = `
                             aria-invalid="false"
                             aria-labelledby="SelectRecipient__dropdown-label"
                             autocomplete="off"
-                            class="no-ligatures w-full border-none cursor-default css-1vs1awz"
+                            class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 cursor-default css-1937ogs"
                             data-testid="SelectDropdown__input"
                             id="SelectRecipient__dropdown-input"
                             name="recipientAddress"
@@ -1118,14 +1118,14 @@ exports[`AddRecipient > should render with multiple recipients switch 1`] = `
                 class="relative"
               >
                 <div
-                  class="css-n1b0kl"
+                  class="css-14zfvme"
                 >
                   <div
                     class="relative flex h-full flex-1"
                   >
                     <input
                       autocomplete="off"
-                      class="no-ligatures w-full border-none css-1vs1awz"
+                      class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 css-1937ogs"
                       data-testid="AddRecipient__amount"
                       name="amount"
                       placeholder="Enter an amount"
@@ -1255,7 +1255,7 @@ exports[`AddRecipient > should render with single recipient data 1`] = `
                 data-testid="SelectDropdown"
               >
                 <div
-                  class="sr-only css-n1b0kl"
+                  class="sr-only css-14zfvme"
                 >
                   <div
                     class="relative flex h-full flex-1"
@@ -1263,7 +1263,7 @@ exports[`AddRecipient > should render with single recipient data 1`] = `
                     <input
                       aria-invalid="false"
                       autocomplete="off"
-                      class="no-ligatures w-full border-none css-1vs1awz"
+                      class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 css-1937ogs"
                       data-testid="select-list__input"
                       name="recipientAddress"
                       readonly=""
@@ -1288,7 +1288,7 @@ exports[`AddRecipient > should render with single recipient data 1`] = `
                         id="SelectRecipient__dropdown-label"
                       />
                       <div
-                        class="css-n1b0kl"
+                        class="css-14zfvme"
                       >
                         <div
                           class="relative flex h-full flex-1"
@@ -1299,7 +1299,7 @@ exports[`AddRecipient > should render with single recipient data 1`] = `
                             aria-invalid="false"
                             aria-labelledby="SelectRecipient__dropdown-label"
                             autocomplete="off"
-                            class="no-ligatures w-full border-none css-1vs1awz"
+                            class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 css-1937ogs"
                             data-testid="SelectDropdown__input"
                             id="SelectRecipient__dropdown-input"
                             name="recipientAddress"
@@ -1403,14 +1403,14 @@ exports[`AddRecipient > should render with single recipient data 1`] = `
                 class="relative"
               >
                 <div
-                  class="css-n1b0kl"
+                  class="css-14zfvme"
                 >
                   <div
                     class="relative flex h-full flex-1"
                   >
                     <input
                       autocomplete="off"
-                      class="no-ligatures w-full border-none css-1vs1awz"
+                      class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 css-1937ogs"
                       data-testid="AddRecipient__amount"
                       name="amount"
                       placeholder="Enter an amount"
@@ -1473,7 +1473,7 @@ exports[`AddRecipient > should render without the single & multiple switch 1`] =
                 data-testid="SelectDropdown"
               >
                 <div
-                  class="sr-only css-n1b0kl"
+                  class="sr-only css-14zfvme"
                 >
                   <div
                     class="relative flex h-full flex-1"
@@ -1481,7 +1481,7 @@ exports[`AddRecipient > should render without the single & multiple switch 1`] =
                     <input
                       aria-invalid="false"
                       autocomplete="off"
-                      class="no-ligatures w-full border-none css-1vs1awz"
+                      class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 css-1937ogs"
                       data-testid="select-list__input"
                       name="recipientAddress"
                       readonly=""
@@ -1506,7 +1506,7 @@ exports[`AddRecipient > should render without the single & multiple switch 1`] =
                         id="SelectRecipient__dropdown-label"
                       />
                       <div
-                        class="css-n1b0kl"
+                        class="css-14zfvme"
                       >
                         <div
                           class="relative flex h-full flex-1"
@@ -1517,7 +1517,7 @@ exports[`AddRecipient > should render without the single & multiple switch 1`] =
                             aria-invalid="false"
                             aria-labelledby="SelectRecipient__dropdown-label"
                             autocomplete="off"
-                            class="no-ligatures w-full border-none cursor-default css-1vs1awz"
+                            class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 cursor-default css-1937ogs"
                             data-testid="SelectDropdown__input"
                             id="SelectRecipient__dropdown-input"
                             name="recipientAddress"
@@ -1621,14 +1621,14 @@ exports[`AddRecipient > should render without the single & multiple switch 1`] =
                 class="relative"
               >
                 <div
-                  class="css-n1b0kl"
+                  class="css-14zfvme"
                 >
                   <div
                     class="relative flex h-full flex-1"
                   >
                     <input
                       autocomplete="off"
-                      class="no-ligatures w-full border-none css-1vs1awz"
+                      class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 css-1937ogs"
                       data-testid="AddRecipient__amount"
                       name="amount"
                       placeholder="Enter an amount"
@@ -1758,7 +1758,7 @@ exports[`AddRecipient > should set available amount 1`] = `
                 data-testid="SelectDropdown"
               >
                 <div
-                  class="sr-only css-n1b0kl"
+                  class="sr-only css-14zfvme"
                 >
                   <div
                     class="relative flex h-full flex-1"
@@ -1766,7 +1766,7 @@ exports[`AddRecipient > should set available amount 1`] = `
                     <input
                       aria-invalid="false"
                       autocomplete="off"
-                      class="no-ligatures w-full border-none css-1vs1awz"
+                      class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 css-1937ogs"
                       data-testid="select-list__input"
                       name="recipientAddress"
                       readonly=""
@@ -1791,7 +1791,7 @@ exports[`AddRecipient > should set available amount 1`] = `
                         id="SelectRecipient__dropdown-label"
                       />
                       <div
-                        class="css-n1b0kl"
+                        class="css-14zfvme"
                       >
                         <div
                           class="relative flex h-full flex-1"
@@ -1802,7 +1802,7 @@ exports[`AddRecipient > should set available amount 1`] = `
                             aria-invalid="false"
                             aria-labelledby="SelectRecipient__dropdown-label"
                             autocomplete="off"
-                            class="no-ligatures w-full border-none cursor-default css-1vs1awz"
+                            class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 cursor-default css-1937ogs"
                             data-testid="SelectDropdown__input"
                             id="SelectRecipient__dropdown-input"
                             name="recipientAddress"
@@ -1906,14 +1906,14 @@ exports[`AddRecipient > should set available amount 1`] = `
                 class="relative"
               >
                 <div
-                  class="css-n1b0kl"
+                  class="css-14zfvme"
                 >
                   <div
                     class="relative flex h-full flex-1"
                   >
                     <input
                       autocomplete="off"
-                      class="no-ligatures w-full border-none css-1vs1awz"
+                      class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 css-1937ogs"
                       data-testid="AddRecipient__amount"
                       name="amount"
                       placeholder="Enter an amount"
@@ -2043,7 +2043,7 @@ exports[`AddRecipient > should show available balance after fee 1`] = `
                 data-testid="SelectDropdown"
               >
                 <div
-                  class="sr-only css-n1b0kl"
+                  class="sr-only css-14zfvme"
                 >
                   <div
                     class="relative flex h-full flex-1"
@@ -2051,7 +2051,7 @@ exports[`AddRecipient > should show available balance after fee 1`] = `
                     <input
                       aria-invalid="false"
                       autocomplete="off"
-                      class="no-ligatures w-full border-none css-1vs1awz"
+                      class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 css-1937ogs"
                       data-testid="select-list__input"
                       name="recipientAddress"
                       readonly=""
@@ -2076,7 +2076,7 @@ exports[`AddRecipient > should show available balance after fee 1`] = `
                         id="SelectRecipient__dropdown-label"
                       />
                       <div
-                        class="css-n1b0kl"
+                        class="css-14zfvme"
                       >
                         <div
                           class="relative flex h-full flex-1"
@@ -2087,7 +2087,7 @@ exports[`AddRecipient > should show available balance after fee 1`] = `
                             aria-invalid="false"
                             aria-labelledby="SelectRecipient__dropdown-label"
                             autocomplete="off"
-                            class="no-ligatures w-full border-none cursor-default css-1vs1awz"
+                            class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 cursor-default css-1937ogs"
                             data-testid="SelectDropdown__input"
                             id="SelectRecipient__dropdown-input"
                             name="recipientAddress"
@@ -2191,14 +2191,14 @@ exports[`AddRecipient > should show available balance after fee 1`] = `
                 class="relative"
               >
                 <div
-                  class="css-n1b0kl"
+                  class="css-14zfvme"
                 >
                   <div
                     class="relative flex h-full flex-1"
                   >
                     <input
                       autocomplete="off"
-                      class="no-ligatures w-full border-none css-1vs1awz"
+                      class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 css-1937ogs"
                       data-testid="AddRecipient__amount"
                       name="amount"
                       placeholder="Enter an amount"
@@ -2343,7 +2343,7 @@ exports[`AddRecipient > should show zero amount if wallet has zero or insufficie
                 data-testid="SelectDropdown"
               >
                 <div
-                  class="sr-only css-n1b0kl"
+                  class="sr-only css-14zfvme"
                 >
                   <div
                     class="relative flex h-full flex-1"
@@ -2351,7 +2351,7 @@ exports[`AddRecipient > should show zero amount if wallet has zero or insufficie
                     <input
                       aria-invalid="false"
                       autocomplete="off"
-                      class="no-ligatures w-full border-none css-1vs1awz"
+                      class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 css-1937ogs"
                       data-testid="select-list__input"
                       name="recipientAddress"
                       readonly=""
@@ -2376,7 +2376,7 @@ exports[`AddRecipient > should show zero amount if wallet has zero or insufficie
                         id="SelectRecipient__dropdown-label"
                       />
                       <div
-                        class="css-n1b0kl"
+                        class="css-14zfvme"
                       >
                         <div
                           class="relative flex h-full flex-1"
@@ -2387,7 +2387,7 @@ exports[`AddRecipient > should show zero amount if wallet has zero or insufficie
                             aria-invalid="false"
                             aria-labelledby="SelectRecipient__dropdown-label"
                             autocomplete="off"
-                            class="no-ligatures w-full border-none cursor-default css-1vs1awz"
+                            class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 cursor-default css-1937ogs"
                             data-testid="SelectDropdown__input"
                             id="SelectRecipient__dropdown-input"
                             name="recipientAddress"
@@ -2491,7 +2491,7 @@ exports[`AddRecipient > should show zero amount if wallet has zero or insufficie
                 class="relative"
               >
                 <div
-                  class="css-12mz4i6"
+                  class="css-1njetft"
                 >
                   <div
                     class="relative flex h-full flex-1"
@@ -2499,7 +2499,7 @@ exports[`AddRecipient > should show zero amount if wallet has zero or insufficie
                     <input
                       aria-invalid="true"
                       autocomplete="off"
-                      class="no-ligatures w-full border-none css-1vs1awz"
+                      class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 css-1937ogs"
                       data-testid="AddRecipient__amount"
                       name="amount"
                       placeholder="Enter an amount"
