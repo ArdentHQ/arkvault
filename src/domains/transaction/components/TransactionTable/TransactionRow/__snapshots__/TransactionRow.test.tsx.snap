@@ -16,7 +16,7 @@ exports[`TransactionRow > should omit the currency for transactions from test ne
               class="flex flex-col gap-1 font-semibold"
             >
               <a
-                class="ring-focus group inline-block css-7nwwrh"
+                class="ring-focus group/inner inline-block css-7nwwrh"
                 data-ring-focus-margin="-m-1"
                 data-testid="Link"
                 href="https://live.arkscan.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
@@ -68,7 +68,7 @@ exports[`TransactionRow > should omit the currency for transactions from test ne
             class="flex px-3 transition-colors duration-100 min-h-11 items-start xl:min-h-0 my-0 py-3"
           >
             <div
-              class="rounded px-1 dark:border css-1dx994f"
+              class="rounded px-1 dark:border css-1kocbuc"
               color="secondary"
               data-testid="TransactionRow__type"
             >
@@ -85,7 +85,7 @@ exports[`TransactionRow > should omit the currency for transactions from test ne
               data-testid="TransactionRowAddressing__container"
             >
               <div
-                class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-r9b6qf"
+                class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-1qplu6d"
                 color="danger-bg"
                 data-testid="TransactionRowAddressing__label"
               >
@@ -102,7 +102,7 @@ exports[`TransactionRow > should omit the currency for transactions from test ne
                     class="relative grow leading-[17px] sm:leading-5 text-left"
                   >
                     <span
-                      class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 font-semibold text-sm absolute w-full"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
                       data-testid="Address__address"
                     >
                       D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -189,7 +189,7 @@ exports[`TransactionRow > should render 1`] = `
               class="flex flex-col gap-1 font-semibold"
             >
               <a
-                class="ring-focus group inline-block css-7nwwrh"
+                class="ring-focus group/inner inline-block css-7nwwrh"
                 data-ring-focus-margin="-m-1"
                 data-testid="Link"
                 href="https://live.arkscan.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
@@ -241,7 +241,7 @@ exports[`TransactionRow > should render 1`] = `
             class="flex px-3 transition-colors duration-100 min-h-11 items-start xl:min-h-0 my-0 py-3"
           >
             <div
-              class="rounded px-1 dark:border css-1dx994f"
+              class="rounded px-1 dark:border css-1kocbuc"
               color="secondary"
               data-testid="TransactionRow__type"
             >
@@ -258,7 +258,7 @@ exports[`TransactionRow > should render 1`] = `
               data-testid="TransactionRowAddressing__container"
             >
               <div
-                class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-r9b6qf"
+                class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-1qplu6d"
                 color="danger-bg"
                 data-testid="TransactionRowAddressing__label"
               >
@@ -375,7 +375,7 @@ exports[`TransactionRow > should render responsive 1`] = `
               class="flex h-10 w-full items-center justify-between bg-theme-secondary-100 px-4 dark:bg-black"
             >
               <a
-                class="ring-focus group inline-block text-sm font-semibold css-7nwwrh"
+                class="ring-focus group/inner inline-block text-sm font-semibold css-7nwwrh"
                 data-ring-focus-margin="-m-1"
                 data-testid="Link"
                 href="https://live.arkscan.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
@@ -427,7 +427,7 @@ exports[`TransactionRow > should render responsive 1`] = `
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-r9b6qf"
+                      class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-1qplu6d"
                       color="danger-bg"
                       data-testid="TransactionRowAddressing__label"
                     >
@@ -544,7 +544,7 @@ exports[`TransactionRow > should render responsive 2`] = `
               class="flex h-10 w-full items-center justify-between bg-theme-secondary-100 px-4 dark:bg-black"
             >
               <a
-                class="ring-focus group inline-block text-sm font-semibold css-7nwwrh"
+                class="ring-focus group/inner inline-block text-sm font-semibold css-7nwwrh"
                 data-ring-focus-margin="-m-1"
                 data-testid="Link"
                 href="https://live.arkscan.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
@@ -596,7 +596,7 @@ exports[`TransactionRow > should render responsive 2`] = `
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-r9b6qf"
+                      class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-1qplu6d"
                       color="danger-bg"
                       data-testid="TransactionRowAddressing__label"
                     >
@@ -954,7 +954,7 @@ exports[`TransactionRow > should render with currency 1`] = `
               class="flex flex-col gap-1 font-semibold"
             >
               <a
-                class="ring-focus group inline-block css-7nwwrh"
+                class="ring-focus group/inner inline-block css-7nwwrh"
                 data-ring-focus-margin="-m-1"
                 data-testid="Link"
                 href="https://live.arkscan.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
@@ -1006,7 +1006,7 @@ exports[`TransactionRow > should render with currency 1`] = `
             class="flex px-3 transition-colors duration-100 min-h-11 items-start xl:min-h-0 my-0 py-3"
           >
             <div
-              class="rounded px-1 dark:border css-1dx994f"
+              class="rounded px-1 dark:border css-1kocbuc"
               color="secondary"
               data-testid="TransactionRow__type"
             >
@@ -1023,7 +1023,7 @@ exports[`TransactionRow > should render with currency 1`] = `
               data-testid="TransactionRowAddressing__container"
             >
               <div
-                class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-r9b6qf"
+                class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-1qplu6d"
                 color="danger-bg"
                 data-testid="TransactionRowAddressing__label"
               >
@@ -1040,7 +1040,7 @@ exports[`TransactionRow > should render with currency 1`] = `
                     class="relative grow leading-[17px] sm:leading-5 text-left"
                   >
                     <span
-                      class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 font-semibold text-sm absolute w-full"
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
                       data-testid="Address__address"
                     >
                       D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD

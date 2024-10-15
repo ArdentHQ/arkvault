@@ -24,7 +24,7 @@ export const TransactionSummary = ({ transaction, senderWallet, labelClassName }
 								isNegative={transaction.isSent()}
 								value={transaction.amount()}
 								ticker={senderWallet.currency()}
-								textClassName="text-base"
+								className="text-base leading-5"
 							/>
 						</div>
 
@@ -34,7 +34,11 @@ export const TransactionSummary = ({ transaction, senderWallet, labelClassName }
 
 				<div className="flex w-full justify-between sm:justify-start">
 					<DetailLabelText className={labelClassName}>{t("COMMON.FEE")}</DetailLabelText>
-					<Amount ticker={senderWallet.currency()} value={transaction.fee()} className="font-semibold" />
+					<Amount
+						ticker={senderWallet.currency()}
+						value={transaction.fee()}
+						className="font-semibold leading-5"
+					/>
 				</div>
 
 				<DetailDivider />
@@ -44,7 +48,7 @@ export const TransactionSummary = ({ transaction, senderWallet, labelClassName }
 					<Amount
 						ticker={senderWallet.exchangeCurrency()}
 						value={transaction.convertedAmount()}
-						className="font-semibold"
+						className="font-semibold leading-5"
 					/>
 				</div>
 			</div>

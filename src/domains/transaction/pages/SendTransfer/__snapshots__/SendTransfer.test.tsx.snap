@@ -624,7 +624,7 @@ exports[`SendTransfer > should display unconfirmed transactions modal when submi
                             </span>
                           </button>
                           <button
-                            class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-700 p-2"
+                            class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:text-theme-secondary-200 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-700 border border-theme-secondary-300 bg-transparent p-2 hover:border-transparent dark:border-transparent dark:bg-theme-secondary-800"
                             data-testid="explorer-link"
                             type="button"
                           >
@@ -690,7 +690,7 @@ exports[`SendTransfer > should display unconfirmed transactions modal when submi
                               data-testid="DetailLabel"
                             >
                               <div
-                                class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                                class="no-ligatures text-md min-w-24 font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500"
                                 data-testid="DetailLabelText"
                               >
                                 Addressing
@@ -762,7 +762,7 @@ exports[`SendTransfer > should display unconfirmed transactions modal when submi
                                 </div>
                               </div>
                               <div
-                                class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3"
+                                class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3 [.condensed_&]:leading-3"
                               >
                                 <div
                                   class="w-full [.condensed_&]:hidden"
@@ -870,7 +870,7 @@ exports[`SendTransfer > should display unconfirmed transactions modal when submi
                                 data-testid="DetailLabel"
                               >
                                 <div
-                                  class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                                  class="no-ligatures text-md min-w-24 font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500"
                                   data-testid="DetailLabelText"
                                 >
                                   Transaction Type
@@ -886,13 +886,13 @@ exports[`SendTransfer > should display unconfirmed transactions modal when submi
                                     class="flex w-full justify-between sm:justify-start"
                                   >
                                     <div
-                                      class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                                      class="no-ligatures text-md min-w-24 font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500"
                                       data-testid="DetailLabelText"
                                     >
                                       Category
                                     </div>
                                     <div
-                                      class="css-1chzvd4"
+                                      class="css-1p04us5"
                                       color="neutral"
                                     >
                                       Transfer
@@ -932,7 +932,7 @@ exports[`SendTransfer > should display unconfirmed transactions modal when submi
                               data-testid="DetailLabel"
                             >
                               <div
-                                class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                                class="no-ligatures text-md min-w-24 font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500"
                                 data-testid="DetailLabelText"
                               >
                                 Transaction Summary
@@ -948,13 +948,13 @@ exports[`SendTransfer > should display unconfirmed transactions modal when submi
                                   class="flex w-full justify-between sm:justify-start"
                                 >
                                   <div
-                                    class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
+                                    class="no-ligatures text-md font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
                                     data-testid="DetailLabelText"
                                   >
                                     Amount
                                   </div>
                                   <div
-                                    class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
+                                    class="flex h-full items-center justify-center rounded px-1.5 text-base leading-5 css-xqt0aw"
                                     color="danger-bg"
                                     data-testid="AmountLabel__wrapper"
                                   >
@@ -962,7 +962,7 @@ exports[`SendTransfer > should display unconfirmed transactions modal when submi
                                       class="flex h-full items-center space-x-1"
                                     >
                                       <span
-                                        class="whitespace-nowrap text-sm text-[1rem]"
+                                        class="whitespace-nowrap text-sm"
                                         data-testid="Amount"
                                       >
                                         - 400,000 DARK
@@ -971,7 +971,7 @@ exports[`SendTransfer > should display unconfirmed transactions modal when submi
                                   </div>
                                 </div>
                                 <div
-                                  class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3"
+                                  class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3 [.condensed_&]:leading-3"
                                 >
                                   <div
                                     class="w-full [.condensed_&]:hidden"
@@ -986,20 +986,20 @@ exports[`SendTransfer > should display unconfirmed transactions modal when submi
                                   class="flex w-full justify-between sm:justify-start"
                                 >
                                   <div
-                                    class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
+                                    class="no-ligatures text-md font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
                                     data-testid="DetailLabelText"
                                   >
                                     Fee
                                   </div>
                                   <span
-                                    class="whitespace-nowrap font-semibold"
+                                    class="whitespace-nowrap font-semibold leading-5"
                                     data-testid="Amount"
                                   >
                                     0.1 DARK
                                   </span>
                                 </div>
                                 <div
-                                  class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3"
+                                  class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3 [.condensed_&]:leading-3"
                                 >
                                   <div
                                     class="w-full [.condensed_&]:hidden"
@@ -1014,13 +1014,13 @@ exports[`SendTransfer > should display unconfirmed transactions modal when submi
                                   class="flex w-full justify-between sm:justify-start"
                                 >
                                   <div
-                                    class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
+                                    class="no-ligatures text-md font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
                                     data-testid="DetailLabelText"
                                   >
                                     Value
                                   </div>
                                   <span
-                                    class="whitespace-nowrap font-semibold"
+                                    class="whitespace-nowrap font-semibold leading-5"
                                     data-testid="Amount"
                                   >
                                     400,000 BTC
@@ -1059,7 +1059,7 @@ exports[`SendTransfer > should display unconfirmed transactions modal when submi
                               data-testid="DetailLabel"
                             >
                               <div
-                                class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                                class="no-ligatures text-md min-w-24 font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500"
                                 data-testid="DetailLabelText"
                               >
                                 Transaction Details
@@ -1075,19 +1075,19 @@ exports[`SendTransfer > should display unconfirmed transactions modal when submi
                                   class="flex w-full justify-between sm:justify-start"
                                 >
                                   <div
-                                    class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
+                                    class="no-ligatures text-md font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
                                     data-testid="DetailLabelText"
                                   >
                                     Timestamp
                                   </div>
                                   <div
-                                    class="font-semibold"
+                                    class="font-semibold leading-5"
                                   >
                                     01.07.2020 12:00 AM
                                   </div>
                                 </div>
                                 <div
-                                  class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3"
+                                  class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3 [.condensed_&]:leading-3"
                                 >
                                   <div
                                     class="w-full [.condensed_&]:hidden"
@@ -1102,20 +1102,20 @@ exports[`SendTransfer > should display unconfirmed transactions modal when submi
                                   class="flex w-full justify-between sm:justify-start"
                                 >
                                   <div
-                                    class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
+                                    class="no-ligatures text-md font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
                                     data-testid="DetailLabelText"
                                   >
                                     Block
                                   </div>
                                   <a
-                                    class="ring-focus group inline-block css-7nwwrh"
+                                    class="ring-focus group/inner inline-block h-5 leading-5 css-7nwwrh"
                                     data-ring-focus-margin="-m-1"
                                     data-testid="Link"
                                     href="https://test.arkscan.io/block/8f913b6b719e7767d49861c0aec79ced212767645cb793d75d2f1b89abb49877"
                                     rel="noopener noreferrer"
                                   >
                                     <span
-                                      class="css-170792"
+                                      class="css-bxx244"
                                     />
                                     <div
                                       class="mb-[3px] shrink-0 align-middle duration-200 css-v0ob3f"
@@ -1144,7 +1144,7 @@ exports[`SendTransfer > should display unconfirmed transactions modal when submi
                                   </a>
                                 </div>
                                 <div
-                                  class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3"
+                                  class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3 [.condensed_&]:leading-3"
                                 >
                                   <div
                                     class="w-full [.condensed_&]:hidden"
@@ -1159,13 +1159,13 @@ exports[`SendTransfer > should display unconfirmed transactions modal when submi
                                   class="flex w-full justify-between sm:justify-start"
                                 >
                                   <div
-                                    class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
+                                    class="no-ligatures text-md font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
                                     data-testid="DetailLabelText"
                                   >
                                     Nonce
                                   </div>
                                   <p
-                                    class="text-theme-secondary-500"
+                                    class="leading-5 text-theme-secondary-500"
                                   >
                                     N/A
                                   </p>
@@ -1203,7 +1203,7 @@ exports[`SendTransfer > should display unconfirmed transactions modal when submi
                               data-testid="DetailLabel"
                             >
                               <div
-                                class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                                class="no-ligatures text-md min-w-24 font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500"
                                 data-testid="DetailLabelText"
                               >
                                 Memo (SmartBridge)
@@ -1213,7 +1213,7 @@ exports[`SendTransfer > should display unconfirmed transactions modal when submi
                               class="w-full break-words rounded-lg border-theme-secondary-300 p-3 dark:border-theme-secondary-800 sm:border sm:px-6 sm:py-5 [.condensed_&]:sm:py-4 mt-0 sm:mt-2"
                             >
                               <p
-                                class="text-theme-secondary-500"
+                                class="leading-5 text-theme-secondary-500"
                               >
                                 N/A
                               </p>
@@ -1246,7 +1246,7 @@ exports[`SendTransfer > should display unconfirmed transactions modal when submi
                             data-testid="DetailLabel"
                           >
                             <div
-                              class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                              class="no-ligatures text-md min-w-24 font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500"
                               data-testid="DetailLabelText"
                             >
                               Confirmations
@@ -1259,14 +1259,14 @@ exports[`SendTransfer > should display unconfirmed transactions modal when submi
                               class="mt-3 sm:mt-2"
                             >
                               <div
-                                class="flex items-center space-x-3 rounded-xl border border-theme-success-200 bg-theme-success-50 px-3 py-2 dark:border-theme-success-600 dark:bg-transparent max-sm:text-sm sm:px-6 sm:py-5"
+                                class="flex items-center space-x-3 rounded-xl border border-theme-success-200 bg-theme-success-50 px-3 py-2 dark:border-theme-success-600 dark:bg-transparent max-sm:text-sm sm:px-6 sm:py-4 sm:leading-5"
                                 data-testid="TransactionSuccessAlert"
                               >
                                 <div
                                   class="flex items-center space-x-2 text-theme-success-700"
                                 >
                                   <div
-                                    class="css-1i4b0eq"
+                                    class="h-5 css-1i4b0eq"
                                     height="20"
                                     width="20"
                                   >
@@ -1305,7 +1305,7 @@ exports[`SendTransfer > should display unconfirmed transactions modal when submi
                                   </p>
                                 </div>
                                 <div
-                                  class="text-theme-success-200 dark:text-theme-secondary-800 css-1aie31u"
+                                  class="h-5 text-theme-success-200 dark:text-theme-secondary-800 css-1aie31u"
                                   type="vertical"
                                 />
                                 <p
@@ -5169,7 +5169,7 @@ exports[`SendTransfer > should render review step 1`] = `
           data-testid="DetailLabel"
         >
           <div
-            class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+            class="no-ligatures text-md min-w-24 font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500"
             data-testid="DetailLabelText"
           >
             Addressing
@@ -5252,7 +5252,7 @@ exports[`SendTransfer > should render review step 1`] = `
             </div>
           </div>
           <div
-            class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3"
+            class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3 [.condensed_&]:leading-3"
           >
             <div
               class="w-full [.condensed_&]:hidden"
@@ -5346,7 +5346,7 @@ exports[`SendTransfer > should render review step 1`] = `
           data-testid="DetailLabel"
         >
           <div
-            class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+            class="no-ligatures text-md min-w-24 font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500"
             data-testid="DetailLabelText"
           >
             Memo (SmartBridge)
@@ -5368,7 +5368,7 @@ exports[`SendTransfer > should render review step 1`] = `
           data-testid="DetailLabel"
         >
           <div
-            class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+            class="no-ligatures text-md min-w-24 font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500"
             data-testid="DetailLabelText"
           >
             Transaction Summary
@@ -5613,7 +5613,7 @@ exports[`SendTransfer > should render review step with multiple recipients (with
           data-testid="DetailLabel"
         >
           <div
-            class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+            class="no-ligatures text-md min-w-24 font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500"
             data-testid="DetailLabelText"
           >
             Addressing
@@ -5696,7 +5696,7 @@ exports[`SendTransfer > should render review step with multiple recipients (with
             </div>
           </div>
           <div
-            class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3"
+            class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3 [.condensed_&]:leading-3"
           >
             <div
               class="w-full [.condensed_&]:hidden"
@@ -5770,7 +5770,7 @@ exports[`SendTransfer > should render review step with multiple recipients (with
             </div>
           </div>
           <div
-            class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3"
+            class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3 [.condensed_&]:leading-3"
           >
             <div
               class="w-full [.condensed_&]:hidden"
@@ -5853,7 +5853,7 @@ exports[`SendTransfer > should render review step with multiple recipients (with
           data-testid="DetailLabel"
         >
           <div
-            class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+            class="no-ligatures text-md min-w-24 font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500"
             data-testid="DetailLabelText"
           >
             Memo (SmartBridge)
@@ -5875,7 +5875,7 @@ exports[`SendTransfer > should render review step with multiple recipients (with
           data-testid="DetailLabel"
         >
           <div
-            class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+            class="no-ligatures text-md min-w-24 font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500"
             data-testid="DetailLabelText"
           >
             Transaction Summary
@@ -6120,7 +6120,7 @@ exports[`SendTransfer > should render review step with multiple recipients (with
           data-testid="DetailLabel"
         >
           <div
-            class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+            class="no-ligatures text-md min-w-24 font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500"
             data-testid="DetailLabelText"
           >
             Addressing
@@ -6203,7 +6203,7 @@ exports[`SendTransfer > should render review step with multiple recipients (with
             </div>
           </div>
           <div
-            class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3"
+            class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3 [.condensed_&]:leading-3"
           >
             <div
               class="w-full [.condensed_&]:hidden"
@@ -6277,7 +6277,7 @@ exports[`SendTransfer > should render review step with multiple recipients (with
             </div>
           </div>
           <div
-            class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3"
+            class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3 [.condensed_&]:leading-3"
           >
             <div
               class="w-full [.condensed_&]:hidden"
@@ -6360,7 +6360,7 @@ exports[`SendTransfer > should render review step with multiple recipients (with
           data-testid="DetailLabel"
         >
           <div
-            class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+            class="no-ligatures text-md min-w-24 font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500"
             data-testid="DetailLabelText"
           >
             Transaction Summary
@@ -7211,7 +7211,7 @@ exports[`SendTransfer > should send a single transfer and handle undefined expir
                             </span>
                           </button>
                           <button
-                            class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-700 p-2"
+                            class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:text-theme-secondary-200 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-700 border border-theme-secondary-300 bg-transparent p-2 hover:border-transparent dark:border-transparent dark:bg-theme-secondary-800"
                             data-testid="explorer-link"
                             type="button"
                           >
@@ -7277,7 +7277,7 @@ exports[`SendTransfer > should send a single transfer and handle undefined expir
                               data-testid="DetailLabel"
                             >
                               <div
-                                class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                                class="no-ligatures text-md min-w-24 font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500"
                                 data-testid="DetailLabelText"
                               >
                                 Addressing
@@ -7349,7 +7349,7 @@ exports[`SendTransfer > should send a single transfer and handle undefined expir
                                 </div>
                               </div>
                               <div
-                                class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3"
+                                class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3 [.condensed_&]:leading-3"
                               >
                                 <div
                                   class="w-full [.condensed_&]:hidden"
@@ -7457,7 +7457,7 @@ exports[`SendTransfer > should send a single transfer and handle undefined expir
                                 data-testid="DetailLabel"
                               >
                                 <div
-                                  class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                                  class="no-ligatures text-md min-w-24 font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500"
                                   data-testid="DetailLabelText"
                                 >
                                   Transaction Type
@@ -7473,13 +7473,13 @@ exports[`SendTransfer > should send a single transfer and handle undefined expir
                                     class="flex w-full justify-between sm:justify-start"
                                   >
                                     <div
-                                      class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                                      class="no-ligatures text-md min-w-24 font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500"
                                       data-testid="DetailLabelText"
                                     >
                                       Category
                                     </div>
                                     <div
-                                      class="css-1chzvd4"
+                                      class="css-1p04us5"
                                       color="neutral"
                                     >
                                       Transfer
@@ -7519,7 +7519,7 @@ exports[`SendTransfer > should send a single transfer and handle undefined expir
                               data-testid="DetailLabel"
                             >
                               <div
-                                class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                                class="no-ligatures text-md min-w-24 font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500"
                                 data-testid="DetailLabelText"
                               >
                                 Transaction Summary
@@ -7535,13 +7535,13 @@ exports[`SendTransfer > should send a single transfer and handle undefined expir
                                   class="flex w-full justify-between sm:justify-start"
                                 >
                                   <div
-                                    class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
+                                    class="no-ligatures text-md font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
                                     data-testid="DetailLabelText"
                                   >
                                     Amount
                                   </div>
                                   <div
-                                    class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
+                                    class="flex h-full items-center justify-center rounded px-1.5 text-base leading-5 css-xqt0aw"
                                     color="danger-bg"
                                     data-testid="AmountLabel__wrapper"
                                   >
@@ -7549,7 +7549,7 @@ exports[`SendTransfer > should send a single transfer and handle undefined expir
                                       class="flex h-full items-center space-x-1"
                                     >
                                       <span
-                                        class="whitespace-nowrap text-sm text-[1rem]"
+                                        class="whitespace-nowrap text-sm"
                                         data-testid="Amount"
                                       >
                                         - 400,000 DARK
@@ -7558,7 +7558,7 @@ exports[`SendTransfer > should send a single transfer and handle undefined expir
                                   </div>
                                 </div>
                                 <div
-                                  class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3"
+                                  class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3 [.condensed_&]:leading-3"
                                 >
                                   <div
                                     class="w-full [.condensed_&]:hidden"
@@ -7573,20 +7573,20 @@ exports[`SendTransfer > should send a single transfer and handle undefined expir
                                   class="flex w-full justify-between sm:justify-start"
                                 >
                                   <div
-                                    class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
+                                    class="no-ligatures text-md font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
                                     data-testid="DetailLabelText"
                                   >
                                     Fee
                                   </div>
                                   <span
-                                    class="whitespace-nowrap font-semibold"
+                                    class="whitespace-nowrap font-semibold leading-5"
                                     data-testid="Amount"
                                   >
                                     0.1 DARK
                                   </span>
                                 </div>
                                 <div
-                                  class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3"
+                                  class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3 [.condensed_&]:leading-3"
                                 >
                                   <div
                                     class="w-full [.condensed_&]:hidden"
@@ -7601,13 +7601,13 @@ exports[`SendTransfer > should send a single transfer and handle undefined expir
                                   class="flex w-full justify-between sm:justify-start"
                                 >
                                   <div
-                                    class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
+                                    class="no-ligatures text-md font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
                                     data-testid="DetailLabelText"
                                   >
                                     Value
                                   </div>
                                   <span
-                                    class="whitespace-nowrap font-semibold"
+                                    class="whitespace-nowrap font-semibold leading-5"
                                     data-testid="Amount"
                                   >
                                     400,000 BTC
@@ -7646,7 +7646,7 @@ exports[`SendTransfer > should send a single transfer and handle undefined expir
                               data-testid="DetailLabel"
                             >
                               <div
-                                class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                                class="no-ligatures text-md min-w-24 font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500"
                                 data-testid="DetailLabelText"
                               >
                                 Transaction Details
@@ -7662,19 +7662,19 @@ exports[`SendTransfer > should send a single transfer and handle undefined expir
                                   class="flex w-full justify-between sm:justify-start"
                                 >
                                   <div
-                                    class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
+                                    class="no-ligatures text-md font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
                                     data-testid="DetailLabelText"
                                   >
                                     Timestamp
                                   </div>
                                   <div
-                                    class="font-semibold"
+                                    class="font-semibold leading-5"
                                   >
                                     01.07.2020 12:00 AM
                                   </div>
                                 </div>
                                 <div
-                                  class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3"
+                                  class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3 [.condensed_&]:leading-3"
                                 >
                                   <div
                                     class="w-full [.condensed_&]:hidden"
@@ -7689,20 +7689,20 @@ exports[`SendTransfer > should send a single transfer and handle undefined expir
                                   class="flex w-full justify-between sm:justify-start"
                                 >
                                   <div
-                                    class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
+                                    class="no-ligatures text-md font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
                                     data-testid="DetailLabelText"
                                   >
                                     Block
                                   </div>
                                   <a
-                                    class="ring-focus group inline-block css-7nwwrh"
+                                    class="ring-focus group/inner inline-block h-5 leading-5 css-7nwwrh"
                                     data-ring-focus-margin="-m-1"
                                     data-testid="Link"
                                     href="https://test.arkscan.io/block/8f913b6b719e7767d49861c0aec79ced212767645cb793d75d2f1b89abb49877"
                                     rel="noopener noreferrer"
                                   >
                                     <span
-                                      class="css-170792"
+                                      class="css-bxx244"
                                     />
                                     <div
                                       class="mb-[3px] shrink-0 align-middle duration-200 css-v0ob3f"
@@ -7731,7 +7731,7 @@ exports[`SendTransfer > should send a single transfer and handle undefined expir
                                   </a>
                                 </div>
                                 <div
-                                  class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3"
+                                  class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3 [.condensed_&]:leading-3"
                                 >
                                   <div
                                     class="w-full [.condensed_&]:hidden"
@@ -7746,13 +7746,13 @@ exports[`SendTransfer > should send a single transfer and handle undefined expir
                                   class="flex w-full justify-between sm:justify-start"
                                 >
                                   <div
-                                    class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
+                                    class="no-ligatures text-md font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
                                     data-testid="DetailLabelText"
                                   >
                                     Nonce
                                   </div>
                                   <p
-                                    class="text-theme-secondary-500"
+                                    class="leading-5 text-theme-secondary-500"
                                   >
                                     N/A
                                   </p>
@@ -7790,7 +7790,7 @@ exports[`SendTransfer > should send a single transfer and handle undefined expir
                               data-testid="DetailLabel"
                             >
                               <div
-                                class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                                class="no-ligatures text-md min-w-24 font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500"
                                 data-testid="DetailLabelText"
                               >
                                 Memo (SmartBridge)
@@ -7800,7 +7800,7 @@ exports[`SendTransfer > should send a single transfer and handle undefined expir
                               class="w-full break-words rounded-lg border-theme-secondary-300 p-3 dark:border-theme-secondary-800 sm:border sm:px-6 sm:py-5 [.condensed_&]:sm:py-4 mt-0 sm:mt-2"
                             >
                               <p
-                                class="text-theme-secondary-500"
+                                class="leading-5 text-theme-secondary-500"
                               >
                                 N/A
                               </p>
@@ -7833,7 +7833,7 @@ exports[`SendTransfer > should send a single transfer and handle undefined expir
                             data-testid="DetailLabel"
                           >
                             <div
-                              class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                              class="no-ligatures text-md min-w-24 font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500"
                               data-testid="DetailLabelText"
                             >
                               Confirmations
@@ -7846,14 +7846,14 @@ exports[`SendTransfer > should send a single transfer and handle undefined expir
                               class="mt-3 sm:mt-2"
                             >
                               <div
-                                class="flex items-center space-x-3 rounded-xl border border-theme-success-200 bg-theme-success-50 px-3 py-2 dark:border-theme-success-600 dark:bg-transparent max-sm:text-sm sm:px-6 sm:py-5"
+                                class="flex items-center space-x-3 rounded-xl border border-theme-success-200 bg-theme-success-50 px-3 py-2 dark:border-theme-success-600 dark:bg-transparent max-sm:text-sm sm:px-6 sm:py-4 sm:leading-5"
                                 data-testid="TransactionSuccessAlert"
                               >
                                 <div
                                   class="flex items-center space-x-2 text-theme-success-700"
                                 >
                                   <div
-                                    class="css-1i4b0eq"
+                                    class="h-5 css-1i4b0eq"
                                     height="20"
                                     width="20"
                                   >
@@ -7892,7 +7892,7 @@ exports[`SendTransfer > should send a single transfer and handle undefined expir
                                   </p>
                                 </div>
                                 <div
-                                  class="text-theme-success-200 dark:text-theme-secondary-800 css-1aie31u"
+                                  class="h-5 text-theme-success-200 dark:text-theme-secondary-800 css-1aie31u"
                                   type="vertical"
                                 />
                                 <p
@@ -8560,7 +8560,7 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
                             </span>
                           </button>
                           <button
-                            class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-700 p-2"
+                            class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:text-theme-secondary-200 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-700 border border-theme-secondary-300 bg-transparent p-2 hover:border-transparent dark:border-transparent dark:bg-theme-secondary-800"
                             data-testid="explorer-link"
                             type="button"
                           >
@@ -8626,7 +8626,7 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
                               data-testid="DetailLabel"
                             >
                               <div
-                                class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                                class="no-ligatures text-md min-w-24 font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500"
                                 data-testid="DetailLabelText"
                               >
                                 Addressing
@@ -8698,7 +8698,7 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
                                 </div>
                               </div>
                               <div
-                                class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3"
+                                class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3 [.condensed_&]:leading-3"
                               >
                                 <div
                                   class="w-full [.condensed_&]:hidden"
@@ -8806,7 +8806,7 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
                                 data-testid="DetailLabel"
                               >
                                 <div
-                                  class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                                  class="no-ligatures text-md min-w-24 font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500"
                                   data-testid="DetailLabelText"
                                 >
                                   Transaction Type
@@ -8822,13 +8822,13 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
                                     class="flex w-full justify-between sm:justify-start"
                                   >
                                     <div
-                                      class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                                      class="no-ligatures text-md min-w-24 font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500"
                                       data-testid="DetailLabelText"
                                     >
                                       Category
                                     </div>
                                     <div
-                                      class="css-1chzvd4"
+                                      class="css-1p04us5"
                                       color="neutral"
                                     >
                                       Transfer
@@ -8868,7 +8868,7 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
                               data-testid="DetailLabel"
                             >
                               <div
-                                class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                                class="no-ligatures text-md min-w-24 font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500"
                                 data-testid="DetailLabelText"
                               >
                                 Transaction Summary
@@ -8884,13 +8884,13 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
                                   class="flex w-full justify-between sm:justify-start"
                                 >
                                   <div
-                                    class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
+                                    class="no-ligatures text-md font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
                                     data-testid="DetailLabelText"
                                   >
                                     Amount
                                   </div>
                                   <div
-                                    class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
+                                    class="flex h-full items-center justify-center rounded px-1.5 text-base leading-5 css-xqt0aw"
                                     color="danger-bg"
                                     data-testid="AmountLabel__wrapper"
                                   >
@@ -8898,7 +8898,7 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
                                       class="flex h-full items-center space-x-1"
                                     >
                                       <span
-                                        class="whitespace-nowrap text-sm text-[1rem]"
+                                        class="whitespace-nowrap text-sm"
                                         data-testid="Amount"
                                       >
                                         - 400,000 DARK
@@ -8907,7 +8907,7 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
                                   </div>
                                 </div>
                                 <div
-                                  class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3"
+                                  class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3 [.condensed_&]:leading-3"
                                 >
                                   <div
                                     class="w-full [.condensed_&]:hidden"
@@ -8922,20 +8922,20 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
                                   class="flex w-full justify-between sm:justify-start"
                                 >
                                   <div
-                                    class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
+                                    class="no-ligatures text-md font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
                                     data-testid="DetailLabelText"
                                   >
                                     Fee
                                   </div>
                                   <span
-                                    class="whitespace-nowrap font-semibold"
+                                    class="whitespace-nowrap font-semibold leading-5"
                                     data-testid="Amount"
                                   >
                                     0.1 DARK
                                   </span>
                                 </div>
                                 <div
-                                  class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3"
+                                  class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3 [.condensed_&]:leading-3"
                                 >
                                   <div
                                     class="w-full [.condensed_&]:hidden"
@@ -8950,13 +8950,13 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
                                   class="flex w-full justify-between sm:justify-start"
                                 >
                                   <div
-                                    class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
+                                    class="no-ligatures text-md font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
                                     data-testid="DetailLabelText"
                                   >
                                     Value
                                   </div>
                                   <span
-                                    class="whitespace-nowrap font-semibold"
+                                    class="whitespace-nowrap font-semibold leading-5"
                                     data-testid="Amount"
                                   >
                                     400,000 BTC
@@ -8995,7 +8995,7 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
                               data-testid="DetailLabel"
                             >
                               <div
-                                class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                                class="no-ligatures text-md min-w-24 font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500"
                                 data-testid="DetailLabelText"
                               >
                                 Transaction Details
@@ -9011,19 +9011,19 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
                                   class="flex w-full justify-between sm:justify-start"
                                 >
                                   <div
-                                    class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
+                                    class="no-ligatures text-md font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
                                     data-testid="DetailLabelText"
                                   >
                                     Timestamp
                                   </div>
                                   <div
-                                    class="font-semibold"
+                                    class="font-semibold leading-5"
                                   >
                                     01.07.2020 12:00 AM
                                   </div>
                                 </div>
                                 <div
-                                  class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3"
+                                  class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3 [.condensed_&]:leading-3"
                                 >
                                   <div
                                     class="w-full [.condensed_&]:hidden"
@@ -9038,20 +9038,20 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
                                   class="flex w-full justify-between sm:justify-start"
                                 >
                                   <div
-                                    class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
+                                    class="no-ligatures text-md font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
                                     data-testid="DetailLabelText"
                                   >
                                     Block
                                   </div>
                                   <a
-                                    class="ring-focus group inline-block css-7nwwrh"
+                                    class="ring-focus group/inner inline-block h-5 leading-5 css-7nwwrh"
                                     data-ring-focus-margin="-m-1"
                                     data-testid="Link"
                                     href="https://test.arkscan.io/block/8f913b6b719e7767d49861c0aec79ced212767645cb793d75d2f1b89abb49877"
                                     rel="noopener noreferrer"
                                   >
                                     <span
-                                      class="css-170792"
+                                      class="css-bxx244"
                                     />
                                     <div
                                       class="mb-[3px] shrink-0 align-middle duration-200 css-v0ob3f"
@@ -9080,7 +9080,7 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
                                   </a>
                                 </div>
                                 <div
-                                  class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3"
+                                  class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3 [.condensed_&]:leading-3"
                                 >
                                   <div
                                     class="w-full [.condensed_&]:hidden"
@@ -9095,13 +9095,13 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
                                   class="flex w-full justify-between sm:justify-start"
                                 >
                                   <div
-                                    class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
+                                    class="no-ligatures text-md font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
                                     data-testid="DetailLabelText"
                                   >
                                     Nonce
                                   </div>
                                   <p
-                                    class="text-theme-secondary-500"
+                                    class="leading-5 text-theme-secondary-500"
                                   >
                                     N/A
                                   </p>
@@ -9139,7 +9139,7 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
                               data-testid="DetailLabel"
                             >
                               <div
-                                class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                                class="no-ligatures text-md min-w-24 font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500"
                                 data-testid="DetailLabelText"
                               >
                                 Memo (SmartBridge)
@@ -9149,7 +9149,7 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
                               class="w-full break-words rounded-lg border-theme-secondary-300 p-3 dark:border-theme-secondary-800 sm:border sm:px-6 sm:py-5 [.condensed_&]:sm:py-4 mt-0 sm:mt-2"
                             >
                               <p
-                                class="text-theme-secondary-500"
+                                class="leading-5 text-theme-secondary-500"
                               >
                                 N/A
                               </p>
@@ -9182,7 +9182,7 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
                             data-testid="DetailLabel"
                           >
                             <div
-                              class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                              class="no-ligatures text-md min-w-24 font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500"
                               data-testid="DetailLabelText"
                             >
                               Confirmations
@@ -9195,14 +9195,14 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
                               class="mt-3 sm:mt-2"
                             >
                               <div
-                                class="flex items-center space-x-3 rounded-xl border border-theme-success-200 bg-theme-success-50 px-3 py-2 dark:border-theme-success-600 dark:bg-transparent max-sm:text-sm sm:px-6 sm:py-5"
+                                class="flex items-center space-x-3 rounded-xl border border-theme-success-200 bg-theme-success-50 px-3 py-2 dark:border-theme-success-600 dark:bg-transparent max-sm:text-sm sm:px-6 sm:py-4 sm:leading-5"
                                 data-testid="TransactionSuccessAlert"
                               >
                                 <div
                                   class="flex items-center space-x-2 text-theme-success-700"
                                 >
                                   <div
-                                    class="css-1i4b0eq"
+                                    class="h-5 css-1i4b0eq"
                                     height="20"
                                     width="20"
                                   >
@@ -9241,7 +9241,7 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
                                   </p>
                                 </div>
                                 <div
-                                  class="text-theme-success-200 dark:text-theme-secondary-800 css-1aie31u"
+                                  class="h-5 text-theme-success-200 dark:text-theme-secondary-800 css-1aie31u"
                                   type="vertical"
                                 />
                                 <p
@@ -10463,7 +10463,7 @@ exports[`SendTransfer > should send a single transfer using wallet with encrypti
                             </span>
                           </button>
                           <button
-                            class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-700 p-2"
+                            class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:text-theme-secondary-200 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-700 border border-theme-secondary-300 bg-transparent p-2 hover:border-transparent dark:border-transparent dark:bg-theme-secondary-800"
                             data-testid="explorer-link"
                             type="button"
                           >
@@ -10529,7 +10529,7 @@ exports[`SendTransfer > should send a single transfer using wallet with encrypti
                               data-testid="DetailLabel"
                             >
                               <div
-                                class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                                class="no-ligatures text-md min-w-24 font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500"
                                 data-testid="DetailLabelText"
                               >
                                 Addressing
@@ -10601,7 +10601,7 @@ exports[`SendTransfer > should send a single transfer using wallet with encrypti
                                 </div>
                               </div>
                               <div
-                                class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3"
+                                class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3 [.condensed_&]:leading-3"
                               >
                                 <div
                                   class="w-full [.condensed_&]:hidden"
@@ -10709,7 +10709,7 @@ exports[`SendTransfer > should send a single transfer using wallet with encrypti
                                 data-testid="DetailLabel"
                               >
                                 <div
-                                  class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                                  class="no-ligatures text-md min-w-24 font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500"
                                   data-testid="DetailLabelText"
                                 >
                                   Transaction Type
@@ -10725,13 +10725,13 @@ exports[`SendTransfer > should send a single transfer using wallet with encrypti
                                     class="flex w-full justify-between sm:justify-start"
                                   >
                                     <div
-                                      class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                                      class="no-ligatures text-md min-w-24 font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500"
                                       data-testid="DetailLabelText"
                                     >
                                       Category
                                     </div>
                                     <div
-                                      class="css-1chzvd4"
+                                      class="css-1p04us5"
                                       color="neutral"
                                     >
                                       Transfer
@@ -10771,7 +10771,7 @@ exports[`SendTransfer > should send a single transfer using wallet with encrypti
                               data-testid="DetailLabel"
                             >
                               <div
-                                class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                                class="no-ligatures text-md min-w-24 font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500"
                                 data-testid="DetailLabelText"
                               >
                                 Transaction Summary
@@ -10787,13 +10787,13 @@ exports[`SendTransfer > should send a single transfer using wallet with encrypti
                                   class="flex w-full justify-between sm:justify-start"
                                 >
                                   <div
-                                    class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
+                                    class="no-ligatures text-md font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
                                     data-testid="DetailLabelText"
                                   >
                                     Amount
                                   </div>
                                   <div
-                                    class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
+                                    class="flex h-full items-center justify-center rounded px-1.5 text-base leading-5 css-xqt0aw"
                                     color="danger-bg"
                                     data-testid="AmountLabel__wrapper"
                                   >
@@ -10801,7 +10801,7 @@ exports[`SendTransfer > should send a single transfer using wallet with encrypti
                                       class="flex h-full items-center space-x-1"
                                     >
                                       <span
-                                        class="whitespace-nowrap text-sm text-[1rem]"
+                                        class="whitespace-nowrap text-sm"
                                         data-testid="Amount"
                                       >
                                         - 400,000 DARK
@@ -10810,7 +10810,7 @@ exports[`SendTransfer > should send a single transfer using wallet with encrypti
                                   </div>
                                 </div>
                                 <div
-                                  class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3"
+                                  class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3 [.condensed_&]:leading-3"
                                 >
                                   <div
                                     class="w-full [.condensed_&]:hidden"
@@ -10825,20 +10825,20 @@ exports[`SendTransfer > should send a single transfer using wallet with encrypti
                                   class="flex w-full justify-between sm:justify-start"
                                 >
                                   <div
-                                    class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
+                                    class="no-ligatures text-md font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
                                     data-testid="DetailLabelText"
                                   >
                                     Fee
                                   </div>
                                   <span
-                                    class="whitespace-nowrap font-semibold"
+                                    class="whitespace-nowrap font-semibold leading-5"
                                     data-testid="Amount"
                                   >
                                     0.1 DARK
                                   </span>
                                 </div>
                                 <div
-                                  class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3"
+                                  class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3 [.condensed_&]:leading-3"
                                 >
                                   <div
                                     class="w-full [.condensed_&]:hidden"
@@ -10853,13 +10853,13 @@ exports[`SendTransfer > should send a single transfer using wallet with encrypti
                                   class="flex w-full justify-between sm:justify-start"
                                 >
                                   <div
-                                    class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
+                                    class="no-ligatures text-md font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
                                     data-testid="DetailLabelText"
                                   >
                                     Value
                                   </div>
                                   <span
-                                    class="whitespace-nowrap font-semibold"
+                                    class="whitespace-nowrap font-semibold leading-5"
                                     data-testid="Amount"
                                   >
                                     400,000 BTC
@@ -10898,7 +10898,7 @@ exports[`SendTransfer > should send a single transfer using wallet with encrypti
                               data-testid="DetailLabel"
                             >
                               <div
-                                class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                                class="no-ligatures text-md min-w-24 font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500"
                                 data-testid="DetailLabelText"
                               >
                                 Transaction Details
@@ -10914,19 +10914,19 @@ exports[`SendTransfer > should send a single transfer using wallet with encrypti
                                   class="flex w-full justify-between sm:justify-start"
                                 >
                                   <div
-                                    class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
+                                    class="no-ligatures text-md font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
                                     data-testid="DetailLabelText"
                                   >
                                     Timestamp
                                   </div>
                                   <div
-                                    class="font-semibold"
+                                    class="font-semibold leading-5"
                                   >
                                     01.07.2020 12:00 AM
                                   </div>
                                 </div>
                                 <div
-                                  class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3"
+                                  class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3 [.condensed_&]:leading-3"
                                 >
                                   <div
                                     class="w-full [.condensed_&]:hidden"
@@ -10941,20 +10941,20 @@ exports[`SendTransfer > should send a single transfer using wallet with encrypti
                                   class="flex w-full justify-between sm:justify-start"
                                 >
                                   <div
-                                    class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
+                                    class="no-ligatures text-md font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
                                     data-testid="DetailLabelText"
                                   >
                                     Block
                                   </div>
                                   <a
-                                    class="ring-focus group inline-block css-7nwwrh"
+                                    class="ring-focus group/inner inline-block h-5 leading-5 css-7nwwrh"
                                     data-ring-focus-margin="-m-1"
                                     data-testid="Link"
                                     href="https://test.arkscan.io/block/8f913b6b719e7767d49861c0aec79ced212767645cb793d75d2f1b89abb49877"
                                     rel="noopener noreferrer"
                                   >
                                     <span
-                                      class="css-170792"
+                                      class="css-bxx244"
                                     />
                                     <div
                                       class="mb-[3px] shrink-0 align-middle duration-200 css-v0ob3f"
@@ -10983,7 +10983,7 @@ exports[`SendTransfer > should send a single transfer using wallet with encrypti
                                   </a>
                                 </div>
                                 <div
-                                  class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3"
+                                  class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3 [.condensed_&]:leading-3"
                                 >
                                   <div
                                     class="w-full [.condensed_&]:hidden"
@@ -10998,13 +10998,13 @@ exports[`SendTransfer > should send a single transfer using wallet with encrypti
                                   class="flex w-full justify-between sm:justify-start"
                                 >
                                   <div
-                                    class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
+                                    class="no-ligatures text-md font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
                                     data-testid="DetailLabelText"
                                   >
                                     Nonce
                                   </div>
                                   <p
-                                    class="text-theme-secondary-500"
+                                    class="leading-5 text-theme-secondary-500"
                                   >
                                     N/A
                                   </p>
@@ -11042,7 +11042,7 @@ exports[`SendTransfer > should send a single transfer using wallet with encrypti
                               data-testid="DetailLabel"
                             >
                               <div
-                                class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                                class="no-ligatures text-md min-w-24 font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500"
                                 data-testid="DetailLabelText"
                               >
                                 Memo (SmartBridge)
@@ -11052,7 +11052,7 @@ exports[`SendTransfer > should send a single transfer using wallet with encrypti
                               class="w-full break-words rounded-lg border-theme-secondary-300 p-3 dark:border-theme-secondary-800 sm:border sm:px-6 sm:py-5 [.condensed_&]:sm:py-4 mt-0 sm:mt-2"
                             >
                               <p
-                                class="text-theme-secondary-500"
+                                class="leading-5 text-theme-secondary-500"
                               >
                                 N/A
                               </p>
@@ -11085,7 +11085,7 @@ exports[`SendTransfer > should send a single transfer using wallet with encrypti
                             data-testid="DetailLabel"
                           >
                             <div
-                              class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                              class="no-ligatures text-md min-w-24 font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500"
                               data-testid="DetailLabelText"
                             >
                               Confirmations
@@ -11098,14 +11098,14 @@ exports[`SendTransfer > should send a single transfer using wallet with encrypti
                               class="mt-3 sm:mt-2"
                             >
                               <div
-                                class="flex items-center space-x-3 rounded-xl border border-theme-success-200 bg-theme-success-50 px-3 py-2 dark:border-theme-success-600 dark:bg-transparent max-sm:text-sm sm:px-6 sm:py-5"
+                                class="flex items-center space-x-3 rounded-xl border border-theme-success-200 bg-theme-success-50 px-3 py-2 dark:border-theme-success-600 dark:bg-transparent max-sm:text-sm sm:px-6 sm:py-4 sm:leading-5"
                                 data-testid="TransactionSuccessAlert"
                               >
                                 <div
                                   class="flex items-center space-x-2 text-theme-success-700"
                                 >
                                   <div
-                                    class="css-1i4b0eq"
+                                    class="h-5 css-1i4b0eq"
                                     height="20"
                                     width="20"
                                   >
@@ -11144,7 +11144,7 @@ exports[`SendTransfer > should send a single transfer using wallet with encrypti
                                   </p>
                                 </div>
                                 <div
-                                  class="text-theme-success-200 dark:text-theme-secondary-800 css-1aie31u"
+                                  class="h-5 text-theme-success-200 dark:text-theme-secondary-800 css-1aie31u"
                                   type="vertical"
                                 />
                                 <p
@@ -11812,7 +11812,7 @@ exports[`SendTransfer > should send a single transfer with keyboard 1`] = `
                             </span>
                           </button>
                           <button
-                            class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-700 p-2"
+                            class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:text-theme-secondary-200 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-700 border border-theme-secondary-300 bg-transparent p-2 hover:border-transparent dark:border-transparent dark:bg-theme-secondary-800"
                             data-testid="explorer-link"
                             type="button"
                           >
@@ -11878,7 +11878,7 @@ exports[`SendTransfer > should send a single transfer with keyboard 1`] = `
                               data-testid="DetailLabel"
                             >
                               <div
-                                class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                                class="no-ligatures text-md min-w-24 font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500"
                                 data-testid="DetailLabelText"
                               >
                                 Addressing
@@ -11950,7 +11950,7 @@ exports[`SendTransfer > should send a single transfer with keyboard 1`] = `
                                 </div>
                               </div>
                               <div
-                                class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3"
+                                class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3 [.condensed_&]:leading-3"
                               >
                                 <div
                                   class="w-full [.condensed_&]:hidden"
@@ -12058,7 +12058,7 @@ exports[`SendTransfer > should send a single transfer with keyboard 1`] = `
                                 data-testid="DetailLabel"
                               >
                                 <div
-                                  class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                                  class="no-ligatures text-md min-w-24 font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500"
                                   data-testid="DetailLabelText"
                                 >
                                   Transaction Type
@@ -12074,13 +12074,13 @@ exports[`SendTransfer > should send a single transfer with keyboard 1`] = `
                                     class="flex w-full justify-between sm:justify-start"
                                   >
                                     <div
-                                      class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                                      class="no-ligatures text-md min-w-24 font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500"
                                       data-testid="DetailLabelText"
                                     >
                                       Category
                                     </div>
                                     <div
-                                      class="css-1chzvd4"
+                                      class="css-1p04us5"
                                       color="neutral"
                                     >
                                       Transfer
@@ -12120,7 +12120,7 @@ exports[`SendTransfer > should send a single transfer with keyboard 1`] = `
                               data-testid="DetailLabel"
                             >
                               <div
-                                class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                                class="no-ligatures text-md min-w-24 font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500"
                                 data-testid="DetailLabelText"
                               >
                                 Transaction Summary
@@ -12136,13 +12136,13 @@ exports[`SendTransfer > should send a single transfer with keyboard 1`] = `
                                   class="flex w-full justify-between sm:justify-start"
                                 >
                                   <div
-                                    class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
+                                    class="no-ligatures text-md font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
                                     data-testid="DetailLabelText"
                                   >
                                     Amount
                                   </div>
                                   <div
-                                    class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
+                                    class="flex h-full items-center justify-center rounded px-1.5 text-base leading-5 css-xqt0aw"
                                     color="danger-bg"
                                     data-testid="AmountLabel__wrapper"
                                   >
@@ -12150,7 +12150,7 @@ exports[`SendTransfer > should send a single transfer with keyboard 1`] = `
                                       class="flex h-full items-center space-x-1"
                                     >
                                       <span
-                                        class="whitespace-nowrap text-sm text-[1rem]"
+                                        class="whitespace-nowrap text-sm"
                                         data-testid="Amount"
                                       >
                                         - 400,000 DARK
@@ -12159,7 +12159,7 @@ exports[`SendTransfer > should send a single transfer with keyboard 1`] = `
                                   </div>
                                 </div>
                                 <div
-                                  class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3"
+                                  class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3 [.condensed_&]:leading-3"
                                 >
                                   <div
                                     class="w-full [.condensed_&]:hidden"
@@ -12174,20 +12174,20 @@ exports[`SendTransfer > should send a single transfer with keyboard 1`] = `
                                   class="flex w-full justify-between sm:justify-start"
                                 >
                                   <div
-                                    class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
+                                    class="no-ligatures text-md font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
                                     data-testid="DetailLabelText"
                                   >
                                     Fee
                                   </div>
                                   <span
-                                    class="whitespace-nowrap font-semibold"
+                                    class="whitespace-nowrap font-semibold leading-5"
                                     data-testid="Amount"
                                   >
                                     0.1 DARK
                                   </span>
                                 </div>
                                 <div
-                                  class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3"
+                                  class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3 [.condensed_&]:leading-3"
                                 >
                                   <div
                                     class="w-full [.condensed_&]:hidden"
@@ -12202,13 +12202,13 @@ exports[`SendTransfer > should send a single transfer with keyboard 1`] = `
                                   class="flex w-full justify-between sm:justify-start"
                                 >
                                   <div
-                                    class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
+                                    class="no-ligatures text-md font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
                                     data-testid="DetailLabelText"
                                   >
                                     Value
                                   </div>
                                   <span
-                                    class="whitespace-nowrap font-semibold"
+                                    class="whitespace-nowrap font-semibold leading-5"
                                     data-testid="Amount"
                                   >
                                     400,000 BTC
@@ -12247,7 +12247,7 @@ exports[`SendTransfer > should send a single transfer with keyboard 1`] = `
                               data-testid="DetailLabel"
                             >
                               <div
-                                class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                                class="no-ligatures text-md min-w-24 font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500"
                                 data-testid="DetailLabelText"
                               >
                                 Transaction Details
@@ -12263,19 +12263,19 @@ exports[`SendTransfer > should send a single transfer with keyboard 1`] = `
                                   class="flex w-full justify-between sm:justify-start"
                                 >
                                   <div
-                                    class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
+                                    class="no-ligatures text-md font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
                                     data-testid="DetailLabelText"
                                   >
                                     Timestamp
                                   </div>
                                   <div
-                                    class="font-semibold"
+                                    class="font-semibold leading-5"
                                   >
                                     01.07.2020 12:00 AM
                                   </div>
                                 </div>
                                 <div
-                                  class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3"
+                                  class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3 [.condensed_&]:leading-3"
                                 >
                                   <div
                                     class="w-full [.condensed_&]:hidden"
@@ -12290,20 +12290,20 @@ exports[`SendTransfer > should send a single transfer with keyboard 1`] = `
                                   class="flex w-full justify-between sm:justify-start"
                                 >
                                   <div
-                                    class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
+                                    class="no-ligatures text-md font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
                                     data-testid="DetailLabelText"
                                   >
                                     Block
                                   </div>
                                   <a
-                                    class="ring-focus group inline-block css-7nwwrh"
+                                    class="ring-focus group/inner inline-block h-5 leading-5 css-7nwwrh"
                                     data-ring-focus-margin="-m-1"
                                     data-testid="Link"
                                     href="https://test.arkscan.io/block/8f913b6b719e7767d49861c0aec79ced212767645cb793d75d2f1b89abb49877"
                                     rel="noopener noreferrer"
                                   >
                                     <span
-                                      class="css-170792"
+                                      class="css-bxx244"
                                     />
                                     <div
                                       class="mb-[3px] shrink-0 align-middle duration-200 css-v0ob3f"
@@ -12332,7 +12332,7 @@ exports[`SendTransfer > should send a single transfer with keyboard 1`] = `
                                   </a>
                                 </div>
                                 <div
-                                  class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3"
+                                  class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3 [.condensed_&]:leading-3"
                                 >
                                   <div
                                     class="w-full [.condensed_&]:hidden"
@@ -12347,13 +12347,13 @@ exports[`SendTransfer > should send a single transfer with keyboard 1`] = `
                                   class="flex w-full justify-between sm:justify-start"
                                 >
                                   <div
-                                    class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
+                                    class="no-ligatures text-md font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
                                     data-testid="DetailLabelText"
                                   >
                                     Nonce
                                   </div>
                                   <p
-                                    class="text-theme-secondary-500"
+                                    class="leading-5 text-theme-secondary-500"
                                   >
                                     N/A
                                   </p>
@@ -12391,7 +12391,7 @@ exports[`SendTransfer > should send a single transfer with keyboard 1`] = `
                               data-testid="DetailLabel"
                             >
                               <div
-                                class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                                class="no-ligatures text-md min-w-24 font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500"
                                 data-testid="DetailLabelText"
                               >
                                 Memo (SmartBridge)
@@ -12401,7 +12401,7 @@ exports[`SendTransfer > should send a single transfer with keyboard 1`] = `
                               class="w-full break-words rounded-lg border-theme-secondary-300 p-3 dark:border-theme-secondary-800 sm:border sm:px-6 sm:py-5 [.condensed_&]:sm:py-4 mt-0 sm:mt-2"
                             >
                               <p
-                                class="text-theme-secondary-500"
+                                class="leading-5 text-theme-secondary-500"
                               >
                                 N/A
                               </p>
@@ -12434,7 +12434,7 @@ exports[`SendTransfer > should send a single transfer with keyboard 1`] = `
                             data-testid="DetailLabel"
                           >
                             <div
-                              class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                              class="no-ligatures text-md min-w-24 font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500"
                               data-testid="DetailLabelText"
                             >
                               Confirmations
@@ -12447,14 +12447,14 @@ exports[`SendTransfer > should send a single transfer with keyboard 1`] = `
                               class="mt-3 sm:mt-2"
                             >
                               <div
-                                class="flex items-center space-x-3 rounded-xl border border-theme-success-200 bg-theme-success-50 px-3 py-2 dark:border-theme-success-600 dark:bg-transparent max-sm:text-sm sm:px-6 sm:py-5"
+                                class="flex items-center space-x-3 rounded-xl border border-theme-success-200 bg-theme-success-50 px-3 py-2 dark:border-theme-success-600 dark:bg-transparent max-sm:text-sm sm:px-6 sm:py-4 sm:leading-5"
                                 data-testid="TransactionSuccessAlert"
                               >
                                 <div
                                   class="flex items-center space-x-2 text-theme-success-700"
                                 >
                                   <div
-                                    class="css-1i4b0eq"
+                                    class="h-5 css-1i4b0eq"
                                     height="20"
                                     width="20"
                                   >
@@ -12493,7 +12493,7 @@ exports[`SendTransfer > should send a single transfer with keyboard 1`] = `
                                   </p>
                                 </div>
                                 <div
-                                  class="text-theme-success-200 dark:text-theme-secondary-800 css-1aie31u"
+                                  class="h-5 text-theme-success-200 dark:text-theme-secondary-800 css-1aie31u"
                                   type="vertical"
                                 />
                                 <p
@@ -13161,7 +13161,7 @@ exports[`SendTransfer > should send a single transfer without keyboard 1`] = `
                             </span>
                           </button>
                           <button
-                            class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-700 p-2"
+                            class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:text-theme-secondary-200 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-700 border border-theme-secondary-300 bg-transparent p-2 hover:border-transparent dark:border-transparent dark:bg-theme-secondary-800"
                             data-testid="explorer-link"
                             type="button"
                           >
@@ -13227,7 +13227,7 @@ exports[`SendTransfer > should send a single transfer without keyboard 1`] = `
                               data-testid="DetailLabel"
                             >
                               <div
-                                class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                                class="no-ligatures text-md min-w-24 font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500"
                                 data-testid="DetailLabelText"
                               >
                                 Addressing
@@ -13299,7 +13299,7 @@ exports[`SendTransfer > should send a single transfer without keyboard 1`] = `
                                 </div>
                               </div>
                               <div
-                                class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3"
+                                class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3 [.condensed_&]:leading-3"
                               >
                                 <div
                                   class="w-full [.condensed_&]:hidden"
@@ -13407,7 +13407,7 @@ exports[`SendTransfer > should send a single transfer without keyboard 1`] = `
                                 data-testid="DetailLabel"
                               >
                                 <div
-                                  class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                                  class="no-ligatures text-md min-w-24 font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500"
                                   data-testid="DetailLabelText"
                                 >
                                   Transaction Type
@@ -13423,13 +13423,13 @@ exports[`SendTransfer > should send a single transfer without keyboard 1`] = `
                                     class="flex w-full justify-between sm:justify-start"
                                   >
                                     <div
-                                      class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                                      class="no-ligatures text-md min-w-24 font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500"
                                       data-testid="DetailLabelText"
                                     >
                                       Category
                                     </div>
                                     <div
-                                      class="css-1chzvd4"
+                                      class="css-1p04us5"
                                       color="neutral"
                                     >
                                       Transfer
@@ -13469,7 +13469,7 @@ exports[`SendTransfer > should send a single transfer without keyboard 1`] = `
                               data-testid="DetailLabel"
                             >
                               <div
-                                class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                                class="no-ligatures text-md min-w-24 font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500"
                                 data-testid="DetailLabelText"
                               >
                                 Transaction Summary
@@ -13485,13 +13485,13 @@ exports[`SendTransfer > should send a single transfer without keyboard 1`] = `
                                   class="flex w-full justify-between sm:justify-start"
                                 >
                                   <div
-                                    class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
+                                    class="no-ligatures text-md font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
                                     data-testid="DetailLabelText"
                                   >
                                     Amount
                                   </div>
                                   <div
-                                    class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
+                                    class="flex h-full items-center justify-center rounded px-1.5 text-base leading-5 css-xqt0aw"
                                     color="danger-bg"
                                     data-testid="AmountLabel__wrapper"
                                   >
@@ -13499,7 +13499,7 @@ exports[`SendTransfer > should send a single transfer without keyboard 1`] = `
                                       class="flex h-full items-center space-x-1"
                                     >
                                       <span
-                                        class="whitespace-nowrap text-sm text-[1rem]"
+                                        class="whitespace-nowrap text-sm"
                                         data-testid="Amount"
                                       >
                                         - 400,000 DARK
@@ -13508,7 +13508,7 @@ exports[`SendTransfer > should send a single transfer without keyboard 1`] = `
                                   </div>
                                 </div>
                                 <div
-                                  class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3"
+                                  class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3 [.condensed_&]:leading-3"
                                 >
                                   <div
                                     class="w-full [.condensed_&]:hidden"
@@ -13523,20 +13523,20 @@ exports[`SendTransfer > should send a single transfer without keyboard 1`] = `
                                   class="flex w-full justify-between sm:justify-start"
                                 >
                                   <div
-                                    class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
+                                    class="no-ligatures text-md font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
                                     data-testid="DetailLabelText"
                                   >
                                     Fee
                                   </div>
                                   <span
-                                    class="whitespace-nowrap font-semibold"
+                                    class="whitespace-nowrap font-semibold leading-5"
                                     data-testid="Amount"
                                   >
                                     0.1 DARK
                                   </span>
                                 </div>
                                 <div
-                                  class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3"
+                                  class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3 [.condensed_&]:leading-3"
                                 >
                                   <div
                                     class="w-full [.condensed_&]:hidden"
@@ -13551,13 +13551,13 @@ exports[`SendTransfer > should send a single transfer without keyboard 1`] = `
                                   class="flex w-full justify-between sm:justify-start"
                                 >
                                   <div
-                                    class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
+                                    class="no-ligatures text-md font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
                                     data-testid="DetailLabelText"
                                   >
                                     Value
                                   </div>
                                   <span
-                                    class="whitespace-nowrap font-semibold"
+                                    class="whitespace-nowrap font-semibold leading-5"
                                     data-testid="Amount"
                                   >
                                     400,000 BTC
@@ -13596,7 +13596,7 @@ exports[`SendTransfer > should send a single transfer without keyboard 1`] = `
                               data-testid="DetailLabel"
                             >
                               <div
-                                class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                                class="no-ligatures text-md min-w-24 font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500"
                                 data-testid="DetailLabelText"
                               >
                                 Transaction Details
@@ -13612,19 +13612,19 @@ exports[`SendTransfer > should send a single transfer without keyboard 1`] = `
                                   class="flex w-full justify-between sm:justify-start"
                                 >
                                   <div
-                                    class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
+                                    class="no-ligatures text-md font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
                                     data-testid="DetailLabelText"
                                   >
                                     Timestamp
                                   </div>
                                   <div
-                                    class="font-semibold"
+                                    class="font-semibold leading-5"
                                   >
                                     01.07.2020 12:00 AM
                                   </div>
                                 </div>
                                 <div
-                                  class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3"
+                                  class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3 [.condensed_&]:leading-3"
                                 >
                                   <div
                                     class="w-full [.condensed_&]:hidden"
@@ -13639,20 +13639,20 @@ exports[`SendTransfer > should send a single transfer without keyboard 1`] = `
                                   class="flex w-full justify-between sm:justify-start"
                                 >
                                   <div
-                                    class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
+                                    class="no-ligatures text-md font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
                                     data-testid="DetailLabelText"
                                   >
                                     Block
                                   </div>
                                   <a
-                                    class="ring-focus group inline-block css-7nwwrh"
+                                    class="ring-focus group/inner inline-block h-5 leading-5 css-7nwwrh"
                                     data-ring-focus-margin="-m-1"
                                     data-testid="Link"
                                     href="https://test.arkscan.io/block/8f913b6b719e7767d49861c0aec79ced212767645cb793d75d2f1b89abb49877"
                                     rel="noopener noreferrer"
                                   >
                                     <span
-                                      class="css-170792"
+                                      class="css-bxx244"
                                     />
                                     <div
                                       class="mb-[3px] shrink-0 align-middle duration-200 css-v0ob3f"
@@ -13681,7 +13681,7 @@ exports[`SendTransfer > should send a single transfer without keyboard 1`] = `
                                   </a>
                                 </div>
                                 <div
-                                  class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3"
+                                  class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3 [.condensed_&]:leading-3"
                                 >
                                   <div
                                     class="w-full [.condensed_&]:hidden"
@@ -13696,13 +13696,13 @@ exports[`SendTransfer > should send a single transfer without keyboard 1`] = `
                                   class="flex w-full justify-between sm:justify-start"
                                 >
                                   <div
-                                    class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
+                                    class="no-ligatures text-md font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
                                     data-testid="DetailLabelText"
                                   >
                                     Nonce
                                   </div>
                                   <p
-                                    class="text-theme-secondary-500"
+                                    class="leading-5 text-theme-secondary-500"
                                   >
                                     N/A
                                   </p>
@@ -13740,7 +13740,7 @@ exports[`SendTransfer > should send a single transfer without keyboard 1`] = `
                               data-testid="DetailLabel"
                             >
                               <div
-                                class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                                class="no-ligatures text-md min-w-24 font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500"
                                 data-testid="DetailLabelText"
                               >
                                 Memo (SmartBridge)
@@ -13750,7 +13750,7 @@ exports[`SendTransfer > should send a single transfer without keyboard 1`] = `
                               class="w-full break-words rounded-lg border-theme-secondary-300 p-3 dark:border-theme-secondary-800 sm:border sm:px-6 sm:py-5 [.condensed_&]:sm:py-4 mt-0 sm:mt-2"
                             >
                               <p
-                                class="text-theme-secondary-500"
+                                class="leading-5 text-theme-secondary-500"
                               >
                                 N/A
                               </p>
@@ -13783,7 +13783,7 @@ exports[`SendTransfer > should send a single transfer without keyboard 1`] = `
                             data-testid="DetailLabel"
                           >
                             <div
-                              class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                              class="no-ligatures text-md min-w-24 font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500"
                               data-testid="DetailLabelText"
                             >
                               Confirmations
@@ -13796,14 +13796,14 @@ exports[`SendTransfer > should send a single transfer without keyboard 1`] = `
                               class="mt-3 sm:mt-2"
                             >
                               <div
-                                class="flex items-center space-x-3 rounded-xl border border-theme-success-200 bg-theme-success-50 px-3 py-2 dark:border-theme-success-600 dark:bg-transparent max-sm:text-sm sm:px-6 sm:py-5"
+                                class="flex items-center space-x-3 rounded-xl border border-theme-success-200 bg-theme-success-50 px-3 py-2 dark:border-theme-success-600 dark:bg-transparent max-sm:text-sm sm:px-6 sm:py-4 sm:leading-5"
                                 data-testid="TransactionSuccessAlert"
                               >
                                 <div
                                   class="flex items-center space-x-2 text-theme-success-700"
                                 >
                                   <div
-                                    class="css-1i4b0eq"
+                                    class="h-5 css-1i4b0eq"
                                     height="20"
                                     width="20"
                                   >
@@ -13842,7 +13842,7 @@ exports[`SendTransfer > should send a single transfer without keyboard 1`] = `
                                   </p>
                                 </div>
                                 <div
-                                  class="text-theme-success-200 dark:text-theme-secondary-800 css-1aie31u"
+                                  class="h-5 text-theme-success-200 dark:text-theme-secondary-800 css-1aie31u"
                                   type="vertical"
                                 />
                                 <p
