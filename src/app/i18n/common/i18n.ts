@@ -300,6 +300,7 @@ export const translations = {
 	RECIPIENT: "Recipient",
 	RECIPIENTS: "Recipients",
 	"RECIPIENT_#": "Recipient #{{count}}",
+	RECORDS: "Records",
 	REFRESH: "Refresh",
 	REGISTER: "Register",
 	REGISTRATIONS: "Registrations",
