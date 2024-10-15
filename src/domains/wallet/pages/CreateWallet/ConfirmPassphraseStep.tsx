@@ -44,10 +44,11 @@ export const ConfirmPassphraseStep = () => {
 
 			<Divider />
 
-			<label className="inline-flex cursor-pointer items-center space-x-3 text-theme-secondary-text">
+			<label className="inline-flex cursor-pointer space-x-3 text-theme-secondary-text">
 				<Checkbox
 					data-testid="CreateWallet__ConfirmPassphraseStep__passphraseDisclaimer"
 					checked={passphraseDisclaimer}
+					className="mt-1 sm:mt-0.5"
 					onChange={(event) => setValue("passphraseDisclaimer", event.target.checked)}
 				/>
 
