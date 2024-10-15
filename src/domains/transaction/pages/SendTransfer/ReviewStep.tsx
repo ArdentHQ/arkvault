@@ -45,7 +45,7 @@ export const ReviewStep: React.VFC<ReviewStepProperties> = ({ wallet }) => {
 				title={t("TRANSACTION.REVIEW_STEP.TITLE")}
 				subtitle={t("TRANSACTION.REVIEW_STEP.DESCRIPTION")}
 			/>
-			<div className="mt-4 space-y-3 sm:space-y-4 -mx-3 sm:mx-0">
+			<div className="-mx-3 mt-4 space-y-3 sm:mx-0 sm:space-y-4">
 				<TransactionAddresses
 					senderAddress={wallet.address()}
 					recipients={recipients}
@@ -61,7 +61,9 @@ export const ReviewStep: React.VFC<ReviewStepProperties> = ({ wallet }) => {
 
 				<div className="space-y-3 sm:space-y-2">
 					<DetailLabel>{t("COMMON.TRANSACTION_SUMMARY")}</DetailLabel>
-					<div className="mx-3 sm:mx-0"><TotalAmountBox amount={amount} fee={fee} ticker={wallet.currency()} /></div>
+					<div className="mx-3 sm:mx-0">
+						<TotalAmountBox amount={amount} fee={fee} ticker={wallet.currency()} />
+					</div>
 				</div>
 			</div>
 		</section>
