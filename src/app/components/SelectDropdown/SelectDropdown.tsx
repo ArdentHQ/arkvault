@@ -126,7 +126,7 @@ const SelectDropdown = ({
 
 						<div
 							data-testid="SelectDropdown__caret"
-							className="flex items-center justify-center px-1 py-2"
+							className="flex items-center justify-center"
 							onClick={() => {
 								if (disabled) {
 									return;
@@ -138,7 +138,7 @@ const SelectDropdown = ({
 							<div className="absolute inset-0 block cursor-pointer md:hidden" />
 
 							<Icon
-								name="CaretDown"
+								name="ChevronDownSmall"
 								className={cn(
 									"transition-transform",
 									isInvalid ? "text-theme-danger-500" : "text-theme-secondary-500",
