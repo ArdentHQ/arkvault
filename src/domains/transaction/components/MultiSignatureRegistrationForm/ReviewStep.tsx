@@ -36,7 +36,7 @@ export const ReviewStep = ({
 				}
 			/>
 
-			<div className="space-y-4 pt-5 -mx-3 sm:mx-0">
+			<div className="-mx-3 space-y-4 pt-5 sm:mx-0">
 				<FormField name="senderAddress">
 					<TransactionAddresses
 						senderAddress={wallet.address()}

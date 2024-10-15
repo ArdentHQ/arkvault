@@ -30,7 +30,7 @@ export const ReviewStep = ({
 	}, [unregister]);
 
 	return (
-		<section data-testid="DelegateRegistrationForm__review-step" >
+		<section data-testid="DelegateRegistrationForm__review-step">
 			<StepHeader
 				title={t("TRANSACTION.REVIEW_STEP.TITLE")}
 				subtitle={t("TRANSACTION.REVIEW_STEP.DESCRIPTION")}
@@ -39,7 +39,7 @@ export const ReviewStep = ({
 				}
 			/>
 
-			<div className="space-y-3 sm:space-y-4 -mx-3 sm:mx-0">
+			<div className="-mx-3 space-y-3 sm:mx-0 sm:space-y-4">
 				<TransactionAddresses
 					labelClassName="w-auto sm:min-w-28"
 					senderAddress={wallet.address()}

@@ -35,7 +35,7 @@ export const ReviewStep = ({
 				}
 			/>
 
-			<div className="space-y-3 sm:space-y-4 -mx-3 sm:mx-0">
+			<div className="-mx-3 space-y-3 sm:mx-0 sm:space-y-4">
 				<TransactionAddresses
 					labelClassName="w-auto sm:min-w-28"
 					senderAddress={senderWallet.address()}
@@ -68,7 +68,7 @@ export const ReviewStep = ({
 					</div>
 				</DetailWrapper>
 
-				<div className="mt-2 mx-3 sm:mx-0">
+				<div className="mx-3 mt-2 sm:mx-0">
 					<TotalAmountBox amount={0} fee={getValues("fee")} ticker={senderWallet.currency()} />
 				</div>
 			</div>
