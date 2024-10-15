@@ -118,7 +118,10 @@ export const Tab = React.forwardRef<HTMLButtonElement, TabProperties>((propertie
 			data-testid={`tabs__tab-button-${properties.tabId}`}
 			role="tab"
 			type="button"
-			className={twMerge("ring-focus mx-6 before:bg-theme-secondary-300 before:dark:bg-theme-secondary-800", properties.className)}
+			className={twMerge(
+				"ring-focus mx-6 before:bg-theme-secondary-300 before:dark:bg-theme-secondary-800",
+				properties.className,
+			)}
 			ref={reference}
 			aria-selected={isActive}
 			tabIndex={isActive ? 0 : -1}
