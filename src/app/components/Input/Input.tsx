@@ -172,7 +172,7 @@ export const Input = React.forwardRef<InputElement, InputProperties>(
 					<div className={cn("relative flex h-full flex-1", { invisible: hideInputValue })}>
 						<InputStyled
 							data-testid="Input"
-							className={cn("no-ligatures w-full border-none", innerClassName, {
+							className={cn("no-ligatures w-full border-none !text-sm sm:!text-base", innerClassName, {
 								"text-theme-secondary-text": disabled,
 							})}
 							name={fieldContext?.name}
