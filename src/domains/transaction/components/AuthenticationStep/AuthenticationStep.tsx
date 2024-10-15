@@ -219,7 +219,18 @@ export const AuthenticationStep = ({
 			{wallet.actsWithWif() && (
 				<>
 					{!noHeading && (
-						<StepHeader title={title} subtitle={t("TRANSACTION.AUTHENTICATION_STEP.DESCRIPTION_WIF")} />
+						<StepHeader
+							titleIcon={
+								<Icon
+									name="Mnemonic"
+									data-testid="icon-mnemonic"
+									className="text-theme-primary-600"
+									dimensions={[24, 24]}
+								/>
+							}
+							title={title}
+							subtitle={t("TRANSACTION.AUTHENTICATION_STEP.DESCRIPTION_WIF")}
+						/>
 					)}
 
 					<FormField name="wif">
@@ -236,6 +247,14 @@ export const AuthenticationStep = ({
 				<>
 					{!noHeading && (
 						<StepHeader
+							titleIcon={
+								<Icon
+									name="Mnemonic"
+									data-testid="icon-mnemonic"
+									className="text-theme-primary-600"
+									dimensions={[24, 24]}
+								/>
+							}
 							title={title}
 							subtitle={t("TRANSACTION.AUTHENTICATION_STEP.DESCRIPTION_PRIVATE_KEY")}
 						/>
@@ -256,6 +275,14 @@ export const AuthenticationStep = ({
 					{!noHeading && (
 						<StepHeader
 							title={title}
+							titleIcon={
+								<Icon
+									name="Mnemonic"
+									data-testid="icon-mnemonic"
+									className="text-theme-primary-600"
+									dimensions={[24, 24]}
+								/>
+							}
 							subtitle={
 								isTransaction
 									? t("TRANSACTION.AUTHENTICATION_STEP.DESCRIPTION_SECRET")
@@ -279,6 +306,14 @@ export const AuthenticationStep = ({
 					{!noHeading && (
 						<StepHeader
 							title={title}
+							titleIcon={
+								<Icon
+									name="Mnemonic"
+									data-testid="icon-mnemonic"
+									className="text-theme-primary-600"
+									dimensions={[24, 24]}
+								/>
+							}
 							subtitle={
 								isTransaction
 									? t("TRANSACTION.AUTHENTICATION_STEP.DESCRIPTION_ENCRYPTION_PASSWORD")
