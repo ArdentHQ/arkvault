@@ -139,7 +139,7 @@ export const FormStep = ({
 								name="QRCode"
 								className="text-theme-navy-600 transition-colors group-hover:text-white dark:text-theme-secondary-600"
 							/>
-							<span className="font-semibold leading-5 text-sm sm:text-base text-theme-navy-600 transition-colors group-hover:text-white dark:text-theme-secondary-200">
+							<span className="text-sm font-semibold leading-5 text-theme-navy-600 transition-colors group-hover:text-white dark:text-theme-secondary-200 sm:text-base">
 								{isXs
 									? t("TRANSACTION.PAGE_TRANSACTION_SEND.FORM_STEP.SCAN_FULL")
 									: t("TRANSACTION.PAGE_TRANSACTION_SEND.FORM_STEP.SCAN")}
