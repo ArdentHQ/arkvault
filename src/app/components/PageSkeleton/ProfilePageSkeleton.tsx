@@ -3,25 +3,42 @@ import { Skeleton } from "@/app/components/Skeleton";
 import { Section } from "@/app/components/Layout";
 import { Logo } from "@/app/components/Logo";
 
+const MenuItemSkeleton = ({ isCircle = false }: { isCircle?: boolean }) => (
+	<div>
+		<div className="hidden sm:visible">
+			<Skeleton height={40} width={40} circle={isCircle} />
+		</div>
+
+		<div className="visible sm:hidden">
+			<Skeleton height={25} width={25} circle={isCircle} />
+		</div>
+	</div>
+);
+
 export const ProfilePageSkeleton: React.FC = () => (
 	<div className="relative flex min-h-screen flex-col" data-testid="ProfilePageSkeleton">
 		<div className="sticky inset-x-0 top-0 border-b border-theme-secondary-300 dark:border-theme-secondary-800">
-			<div className="relative flex h-21">
-				<div className="flex flex-1 justify-between px-8 sm:ml-12">
-					<div className="my-auto mr-4 flex h-11 w-11 items-center justify-center rounded-xl bg-theme-primary-600 text-white">
-						<Logo height={28} />
+			<div className="relative flex h-14 sm:h-21">
+				<div className="flex flex-1 justify-between px-6 sm:ml-12 sm:px-8">
+					<div className="my-auto mr-4 flex h-8 w-8 items-center justify-center rounded-md bg-theme-primary-600 text-white sm:h-11 sm:w-11 sm:rounded-xl">
+						<div className="hidden sm:block">
+							<Logo height={28} />
+						</div>
+						<div className="block sm:hidden">
+							<Logo height={23} />
+						</div>
 					</div>
 
 					<div className="flex">
 						<div className="my-auto flex items-center space-x-4">
-							<Skeleton height={40} width={40} />
+							<MenuItemSkeleton />
 							<div className="h-8 border-r border-theme-secondary-300 dark:border-theme-secondary-800" />
 						</div>
 
 						<div className="my-auto ml-4 hidden items-center space-x-4 sm:flex">
-							<Skeleton height={40} width={40} />
+							<Skeleton height={40} width={40} className="hidden sm:visible" />
 							<div className="h-8 border-r border-theme-secondary-300 dark:border-theme-secondary-800" />
-							<Skeleton height={40} width={40} />
+							<Skeleton height={40} width={40} className="hidden sm:visible" />
 							<div className="h-8 border-r border-theme-secondary-300 dark:border-theme-secondary-800" />
 						</div>
 
@@ -35,7 +52,7 @@ export const ProfilePageSkeleton: React.FC = () => (
 								</p>
 							</div>
 
-							<Skeleton circle width={44} height={44} />
+							<MenuItemSkeleton isCircle />
 						</div>
 					</div>
 				</div>

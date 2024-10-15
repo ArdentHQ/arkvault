@@ -88,7 +88,7 @@ export const NavigationBarLogoOnly: React.VFC<NavigationBarLogoOnlyProperties> =
 
 	return (
 		<NavWrapper aria-labelledby="main menu" noBorder scroll={scroll}>
-			<div className="relative flex h-21">
+			<div className="relative flex h-14 sm:h-21">
 				<div className="flex flex-1 px-6 md:px-10">
 					<NavigationBarLogo title={title} />
 				</div>
@@ -228,7 +228,7 @@ export const NavigationBarFull: React.FC<NavigationBarFullProperties> = ({
 
 	const renderNavigationMenu = () => (
 		<>
-			<ul className="ml-4 mr-auto hidden h-21 space-x-8 lg:flex" data-testid="NavigationBar__menu">
+			<ul className="ml-4 mr-auto hidden h-14 space-x-8 sm:h-21 lg:flex" data-testid="NavigationBar__menu">
 				{navigationMenu.map((menuItem, index) => (
 					<li key={index} className="flex">
 						<NavLink
@@ -330,7 +330,7 @@ export const NavigationBarFull: React.FC<NavigationBarFullProperties> = ({
 			)}
 
 			<NavWrapper aria-labelledby="main menu" scroll={scroll}>
-				<div className="relative flex h-21">
+				<div className="relative flex h-14 sm:h-21">
 					<div className="hidden w-12 sm:flex">
 						<BackButton disabled={isBackDisabled} />
 					</div>
