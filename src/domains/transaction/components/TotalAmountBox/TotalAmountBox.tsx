@@ -49,7 +49,7 @@ export const TotalAmountBox = ({ ticker, ...properties }: Properties) => {
 
 			<div className="justfiy-center flex flex-col items-center rounded-b-lg border-t border-theme-secondary-300 bg-theme-secondary-100 py-4 dark:border-theme-secondary-800 dark:bg-theme-secondary-800 sm:py-5">
 				<AmountLabel>{t("TRANSACTION.TOTAL_AMOUNT")}</AmountLabel>
-				<Amount ticker={ticker} value={total} className="text-md font-bold sm:text-lg" />
+				<Amount ticker={ticker} value={total} className="text-md font-semibold sm:text-lg" />
 			</div>
 		</div>
 	);
