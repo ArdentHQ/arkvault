@@ -84,7 +84,7 @@ export const InputWrapperStyled = styled.div<{
 			return tw`[height:34px] overflow-hidden`;
 		}
 
-		return tw`h-14 overflow-hidden`;
+		return tw`h-12 sm:h-14 overflow-hidden`;
 	}}
 `;
 
