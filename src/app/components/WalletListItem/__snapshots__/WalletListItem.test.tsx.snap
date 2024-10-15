@@ -565,7 +565,7 @@ exports[`WalletListItem > should disable the send button when wallet has no bala
         class="flex"
       >
         <button
-          class="cursor-not-allowed opacity-50 flex flex-grow items-center justify-center bg-theme-primary-600 px-3 py-3 font-semibold text-white"
+          class="cursor-not-allowed bg-theme-primary-500 text-theme-primary-400 flex flex-grow items-center justify-center px-3 py-3 font-semibold"
           data-testid="WalletListItemMobile--button"
           disabled=""
           type="button"
@@ -1618,7 +1618,7 @@ exports[`WalletListItem > should render when isLargeScreen = false 1`] = `
         class="flex"
       >
         <button
-          class="flex flex-grow items-center justify-center bg-theme-primary-600 px-3 py-3 font-semibold text-white"
+          class="bg-theme-primary-600 text-white flex flex-grow items-center justify-center px-3 py-3 font-semibold"
           data-testid="WalletListItemMobile--button"
           type="button"
         >
@@ -1841,7 +1841,7 @@ exports[`WalletListItem > should render when isLargeScreen = false and wallet is
         class="flex"
       >
         <button
-          class="cursor-not-allowed opacity-50 flex flex-grow items-center justify-center bg-theme-primary-600 px-3 py-3 font-semibold text-white"
+          class="cursor-not-allowed bg-theme-primary-500 text-theme-primary-400 flex flex-grow items-center justify-center px-3 py-3 font-semibold"
           data-testid="WalletListItemMobile--button"
           disabled=""
           type="button"

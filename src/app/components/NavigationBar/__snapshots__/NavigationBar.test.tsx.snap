@@ -126,7 +126,7 @@ exports[`NavigationBar > should not render with title if variant is full 1`] = `
     class="css-1jzy9qi"
   >
     <div
-      class="relative flex h-21"
+      class="relative flex h-14 sm:h-21"
     >
       <div
         class="hidden w-12 sm:flex"
@@ -192,7 +192,7 @@ exports[`NavigationBar > should not render with title if variant is full 1`] = `
           </button>
         </div>
         <ul
-          class="ml-4 mr-auto hidden h-21 space-x-8 lg:flex"
+          class="ml-4 mr-auto hidden h-14 space-x-8 sm:h-21 lg:flex"
           data-testid="NavigationBar__menu"
         >
           <li
@@ -539,7 +539,7 @@ exports[`NavigationBar > should render as logo-only variant 1`] = `
     class="css-1pyu5ft"
   >
     <div
-      class="relative flex h-21"
+      class="relative flex h-14 sm:h-21"
     >
       <div
         class="flex flex-1 px-6 md:px-10"
@@ -707,7 +707,7 @@ exports[`NavigationBar > should render full variant when profile restored is fal
     class="css-1jzy9qi"
   >
     <div
-      class="relative flex h-21"
+      class="relative flex h-14 sm:h-21"
     >
       <div
         class="hidden w-12 sm:flex"
@@ -773,7 +773,7 @@ exports[`NavigationBar > should render full variant when profile restored is fal
           </button>
         </div>
         <ul
-          class="ml-4 mr-auto hidden h-21 space-x-8 lg:flex"
+          class="ml-4 mr-auto hidden h-14 space-x-8 sm:h-21 lg:flex"
           data-testid="NavigationBar__menu"
         >
           <li
@@ -1245,7 +1245,7 @@ exports[`NavigationBar > should render full variant when profile restored is tru
     class="css-1jzy9qi"
   >
     <div
-      class="relative flex h-21"
+      class="relative flex h-14 sm:h-21"
     >
       <div
         class="hidden w-12 sm:flex"
@@ -1311,7 +1311,7 @@ exports[`NavigationBar > should render full variant when profile restored is tru
           </button>
         </div>
         <ul
-          class="ml-4 mr-auto hidden h-21 space-x-8 lg:flex"
+          class="ml-4 mr-auto hidden h-14 space-x-8 sm:h-21 lg:flex"
           data-testid="NavigationBar__menu"
         >
           <li
@@ -1777,7 +1777,7 @@ exports[`NavigationBar > should render in lg 1`] = `
     class="css-1jzy9qi"
   >
     <div
-      class="relative flex h-21"
+      class="relative flex h-14 sm:h-21"
     >
       <div
         class="hidden w-12 sm:flex"
@@ -1843,7 +1843,7 @@ exports[`NavigationBar > should render in lg 1`] = `
           </button>
         </div>
         <ul
-          class="ml-4 mr-auto hidden h-21 space-x-8 lg:flex"
+          class="ml-4 mr-auto hidden h-14 space-x-8 sm:h-21 lg:flex"
           data-testid="NavigationBar__menu"
         >
           <li
@@ -2309,7 +2309,7 @@ exports[`NavigationBar > should render in md 1`] = `
     class="css-1jzy9qi"
   >
     <div
-      class="relative flex h-21"
+      class="relative flex h-14 sm:h-21"
     >
       <div
         class="hidden w-12 sm:flex"
@@ -2375,7 +2375,7 @@ exports[`NavigationBar > should render in md 1`] = `
           </button>
         </div>
         <ul
-          class="ml-4 mr-auto hidden h-21 space-x-8 lg:flex"
+          class="ml-4 mr-auto hidden h-14 space-x-8 sm:h-21 lg:flex"
           data-testid="NavigationBar__menu"
         >
           <li
@@ -2841,7 +2841,7 @@ exports[`NavigationBar > should render in sm 1`] = `
     class="css-1jzy9qi"
   >
     <div
-      class="relative flex h-21"
+      class="relative flex h-14 sm:h-21"
     >
       <div
         class="hidden w-12 sm:flex"
@@ -2907,7 +2907,7 @@ exports[`NavigationBar > should render in sm 1`] = `
           </button>
         </div>
         <ul
-          class="ml-4 mr-auto hidden h-21 space-x-8 lg:flex"
+          class="ml-4 mr-auto hidden h-14 space-x-8 sm:h-21 lg:flex"
           data-testid="NavigationBar__menu"
         >
           <li
@@ -3373,7 +3373,7 @@ exports[`NavigationBar > should render in small screen variant 1`] = `
     class="css-1jzy9qi"
   >
     <div
-      class="relative flex h-21"
+      class="relative flex h-14 sm:h-21"
     >
       <div
         class="hidden w-12 sm:flex"
@@ -3439,7 +3439,7 @@ exports[`NavigationBar > should render in small screen variant 1`] = `
           </button>
         </div>
         <ul
-          class="ml-4 mr-auto hidden h-21 space-x-8 lg:flex"
+          class="ml-4 mr-auto hidden h-14 space-x-8 sm:h-21 lg:flex"
           data-testid="NavigationBar__menu"
         >
           <li
@@ -3905,7 +3905,7 @@ exports[`NavigationBar > should render in xs 1`] = `
     class="css-1jzy9qi"
   >
     <div
-      class="relative flex h-21"
+      class="relative flex h-14 sm:h-21"
     >
       <div
         class="hidden w-12 sm:flex"
@@ -3971,7 +3971,7 @@ exports[`NavigationBar > should render in xs 1`] = `
           </button>
         </div>
         <ul
-          class="ml-4 mr-auto hidden h-21 space-x-8 lg:flex"
+          class="ml-4 mr-auto hidden h-14 space-x-8 sm:h-21 lg:flex"
           data-testid="NavigationBar__menu"
         >
           <li
@@ -4437,7 +4437,7 @@ exports[`NavigationBar > should render with custom menu 1`] = `
     class="css-1jzy9qi"
   >
     <div
-      class="relative flex h-21"
+      class="relative flex h-14 sm:h-21"
     >
       <div
         class="hidden w-12 sm:flex"
@@ -4503,7 +4503,7 @@ exports[`NavigationBar > should render with custom menu 1`] = `
           </button>
         </div>
         <ul
-          class="ml-4 mr-auto hidden h-21 space-x-8 lg:flex"
+          class="ml-4 mr-auto hidden h-14 space-x-8 sm:h-21 lg:flex"
           data-testid="NavigationBar__menu"
         >
           <li
@@ -4969,7 +4969,7 @@ exports[`NavigationBar > should render with shadow if there is a scroll 1`] = `
     class="css-19etq0o"
   >
     <div
-      class="relative flex h-21"
+      class="relative flex h-14 sm:h-21"
     >
       <div
         class="hidden w-12 sm:flex"
@@ -5035,7 +5035,7 @@ exports[`NavigationBar > should render with shadow if there is a scroll 1`] = `
           </button>
         </div>
         <ul
-          class="ml-4 mr-auto hidden h-21 space-x-8 lg:flex"
+          class="ml-4 mr-auto hidden h-14 space-x-8 sm:h-21 lg:flex"
           data-testid="NavigationBar__menu"
         >
           <li
@@ -5382,7 +5382,7 @@ exports[`NavigationBar > should render with title if variant is logo-only 1`] = 
     class="css-1pyu5ft"
   >
     <div
-      class="relative flex h-21"
+      class="relative flex h-14 sm:h-21"
     >
       <div
         class="flex flex-1 px-6 md:px-10"
