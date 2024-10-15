@@ -3147,7 +3147,7 @@ exports[`WalletsList > should render responsive 1`] = `
               class="flex"
             >
               <button
-                class="flex flex-grow items-center justify-center bg-theme-primary-600 px-3 py-3 font-semibold text-white"
+                class="bg-theme-primary-600 text-white flex flex-grow items-center justify-center px-3 py-3 font-semibold"
                 data-testid="WalletListItemMobile--button"
                 type="button"
               >
@@ -3319,7 +3319,7 @@ exports[`WalletsList > should render responsive 1`] = `
               class="flex"
             >
               <button
-                class="flex flex-grow items-center justify-center bg-theme-primary-600 px-3 py-3 font-semibold text-white"
+                class="bg-theme-primary-600 text-white flex flex-grow items-center justify-center px-3 py-3 font-semibold"
                 data-testid="WalletListItemMobile--button"
                 type="button"
               >

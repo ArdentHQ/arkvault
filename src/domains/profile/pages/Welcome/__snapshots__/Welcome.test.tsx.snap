@@ -10,7 +10,7 @@ exports[`Welcome > should change route to create profile 1`] = `
       class="css-1pyu5ft"
     >
       <div
-        class="relative flex h-21"
+        class="relative flex h-14 sm:h-21"
       >
         <div
           class="flex flex-1 px-6 md:px-10"
@@ -653,7 +653,7 @@ exports[`Welcome > should navigate to previous page with correct password 1`] = 
       class="css-1pyu5ft"
     >
       <div
-        class="relative flex h-21"
+        class="relative flex h-14 sm:h-21"
       >
         <div
           class="flex flex-1 px-6 md:px-10"
@@ -1390,7 +1390,7 @@ exports[`Welcome > should navigate to profile dashboard 1`] = `
       class="css-1pyu5ft"
     >
       <div
-        class="relative flex h-21"
+        class="relative flex h-14 sm:h-21"
       >
         <div
           class="flex flex-1 px-6 md:px-10"
@@ -2127,7 +2127,7 @@ exports[`Welcome > should navigate to profile dashboard with correct password 1`
       class="css-1pyu5ft"
     >
       <div
-        class="relative flex h-21"
+        class="relative flex h-14 sm:h-21"
       >
         <div
           class="flex flex-1 px-6 md:px-10"
@@ -2864,7 +2864,7 @@ exports[`Welcome > should navigate to profile settings from profile card menu 1`
       class="css-1pyu5ft"
     >
       <div
-        class="relative flex h-21"
+        class="relative flex h-14 sm:h-21"
       >
         <div
           class="flex flex-1 px-6 md:px-10"
@@ -3601,7 +3601,7 @@ exports[`Welcome > should navigate to profile settings with correct password 1`]
       class="css-1pyu5ft"
     >
       <div
-        class="relative flex h-21"
+        class="relative flex h-14 sm:h-21"
       >
         <div
           class="flex flex-1 px-6 md:px-10"
@@ -4338,7 +4338,7 @@ exports[`Welcome > should not select profile on wrong last location 1`] = `
       class="css-1pyu5ft"
     >
       <div
-        class="relative flex h-21"
+        class="relative flex h-14 sm:h-21"
       >
         <div
           class="flex flex-1 px-6 md:px-10"
@@ -4981,7 +4981,7 @@ exports[`Welcome > should render with profiles 1`] = `
       class="css-1pyu5ft"
     >
       <div
-        class="relative flex h-21"
+        class="relative flex h-14 sm:h-21"
       >
         <div
           class="flex flex-1 px-6 md:px-10"
@@ -5718,7 +5718,7 @@ exports[`Welcome > should render without profiles 1`] = `
       class="css-1pyu5ft"
     >
       <div
-        class="relative flex h-21"
+        class="relative flex h-14 sm:h-21"
       >
         <div
           class="flex flex-1 px-6 md:px-10"

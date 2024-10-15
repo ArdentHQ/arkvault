@@ -133,7 +133,7 @@ exports[`SendTransfer Fee Handling > should send a single transfer with a high f
       class="css-1jzy9qi"
     >
       <div
-        class="relative flex h-21"
+        class="relative flex h-14 sm:h-21"
       >
         <div
           class="hidden w-12 sm:flex"
@@ -199,7 +199,7 @@ exports[`SendTransfer Fee Handling > should send a single transfer with a high f
             </button>
           </div>
           <ul
-            class="ml-4 mr-auto hidden h-21 space-x-8 lg:flex"
+            class="ml-4 mr-auto hidden h-14 space-x-8 sm:h-21 lg:flex"
             data-testid="NavigationBar__menu"
           >
             <li
@@ -837,7 +837,7 @@ exports[`SendTransfer Fee Handling > should send a single transfer with a high f
                                     class="relative grow leading-[17px] sm:leading-5 text-left"
                                   >
                                     <span
-                                      class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 text-sm leading-[17px] sm:leading-5 sm:text-base w-full w-3/4 font-semibold text-base absolute w-full"
+                                      class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] sm:leading-5 sm:text-base w-full w-3/4 font-semibold text-base absolute w-full"
                                       data-testid="Address__address"
                                     >
                                       D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -911,7 +911,7 @@ exports[`SendTransfer Fee Handling > should send a single transfer with a high f
                                     class="relative grow leading-[17px] sm:leading-5 text-left"
                                   >
                                     <span
-                                      class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 text-sm leading-[17px] sm:leading-5 sm:text-base font-semibold text-base absolute w-full"
+                                      class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] sm:leading-5 sm:text-base font-semibold text-base absolute w-full"
                                       data-testid="Address__address"
                                     >
                                       D5pVkhZbSb4UNXvfmF6j7zdau8yGxfKwSv
@@ -1605,7 +1605,7 @@ exports[`SendTransfer Fee Handling > should send a single transfer with a low fe
       class="css-1jzy9qi"
     >
       <div
-        class="relative flex h-21"
+        class="relative flex h-14 sm:h-21"
       >
         <div
           class="hidden w-12 sm:flex"
@@ -1671,7 +1671,7 @@ exports[`SendTransfer Fee Handling > should send a single transfer with a low fe
             </button>
           </div>
           <ul
-            class="ml-4 mr-auto hidden h-21 space-x-8 lg:flex"
+            class="ml-4 mr-auto hidden h-14 space-x-8 sm:h-21 lg:flex"
             data-testid="NavigationBar__menu"
           >
             <li
@@ -2309,7 +2309,7 @@ exports[`SendTransfer Fee Handling > should send a single transfer with a low fe
                                     class="relative grow leading-[17px] sm:leading-5 text-left"
                                   >
                                     <span
-                                      class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 text-sm leading-[17px] sm:leading-5 sm:text-base w-full w-3/4 font-semibold text-base absolute w-full"
+                                      class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] sm:leading-5 sm:text-base w-full w-3/4 font-semibold text-base absolute w-full"
                                       data-testid="Address__address"
                                     >
                                       D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -2383,7 +2383,7 @@ exports[`SendTransfer Fee Handling > should send a single transfer with a low fe
                                     class="relative grow leading-[17px] sm:leading-5 text-left"
                                   >
                                     <span
-                                      class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 text-sm leading-[17px] sm:leading-5 sm:text-base font-semibold text-base absolute w-full"
+                                      class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] sm:leading-5 sm:text-base font-semibold text-base absolute w-full"
                                       data-testid="Address__address"
                                     >
                                       D5pVkhZbSb4UNXvfmF6j7zdau8yGxfKwSv

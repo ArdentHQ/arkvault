@@ -133,7 +133,7 @@ exports[`SendIpfs > should send an IPFS transaction using encryption password 1`
       class="css-1jzy9qi"
     >
       <div
-        class="relative flex h-21"
+        class="relative flex h-14 sm:h-21"
       >
         <div
           class="hidden w-12 sm:flex"
@@ -199,7 +199,7 @@ exports[`SendIpfs > should send an IPFS transaction using encryption password 1`
             </button>
           </div>
           <ul
-            class="ml-4 mr-auto hidden h-21 space-x-8 lg:flex"
+            class="ml-4 mr-auto hidden h-14 space-x-8 sm:h-21 lg:flex"
             data-testid="NavigationBar__menu"
           >
             <li
@@ -848,7 +848,7 @@ exports[`SendIpfs > should send an IPFS transaction using encryption password 1`
                                     class="relative grow leading-[17px] sm:leading-5 text-left"
                                   >
                                     <span
-                                      class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 text-sm leading-[17px] sm:leading-5 sm:text-base w-full w-3/4 font-semibold text-base absolute w-full"
+                                      class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] sm:leading-5 sm:text-base w-full w-3/4 text-theme-secondary-500 dark:text-theme-secondary-700  font-semibold text-base absolute w-full"
                                       data-testid="Address__address"
                                     >
                                       D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb

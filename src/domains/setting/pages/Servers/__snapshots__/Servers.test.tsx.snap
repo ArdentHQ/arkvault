@@ -133,7 +133,7 @@ exports[`Servers Settings > should render servers settings 1`] = `
       class="css-1jzy9qi"
     >
       <div
-        class="relative flex h-21"
+        class="relative flex h-14 sm:h-21"
       >
         <div
           class="hidden w-12 sm:flex"
@@ -199,7 +199,7 @@ exports[`Servers Settings > should render servers settings 1`] = `
             </button>
           </div>
           <ul
-            class="ml-4 mr-auto hidden h-21 space-x-8 lg:flex"
+            class="ml-4 mr-auto hidden h-14 space-x-8 sm:h-21 lg:flex"
             data-testid="NavigationBar__menu"
           >
             <li
@@ -1463,7 +1463,7 @@ exports[`Servers Settings > with servers > should ping the servers in an interva
       class="css-1jzy9qi"
     >
       <div
-        class="relative flex h-21"
+        class="relative flex h-14 sm:h-21"
       >
         <div
           class="hidden w-12 sm:flex"
@@ -1529,7 +1529,7 @@ exports[`Servers Settings > with servers > should ping the servers in an interva
             </button>
           </div>
           <ul
-            class="ml-4 mr-auto hidden h-21 space-x-8 lg:flex"
+            class="ml-4 mr-auto hidden h-14 space-x-8 sm:h-21 lg:flex"
             data-testid="NavigationBar__menu"
           >
             <li
@@ -3755,7 +3755,7 @@ exports[`Servers Settings > with servers > should render custom servers 1`] = `
       class="css-1jzy9qi"
     >
       <div
-        class="relative flex h-21"
+        class="relative flex h-14 sm:h-21"
       >
         <div
           class="hidden w-12 sm:flex"
@@ -3821,7 +3821,7 @@ exports[`Servers Settings > with servers > should render custom servers 1`] = `
             </button>
           </div>
           <ul
-            class="ml-4 mr-auto hidden h-21 space-x-8 lg:flex"
+            class="ml-4 mr-auto hidden h-14 space-x-8 sm:h-21 lg:flex"
             data-testid="NavigationBar__menu"
           >
             <li
@@ -5909,7 +5909,7 @@ exports[`Servers Settings > with servers > should render customs servers in xs 1
       class="css-1jzy9qi"
     >
       <div
-        class="relative flex h-21"
+        class="relative flex h-14 sm:h-21"
       >
         <div
           class="hidden w-12 sm:flex"
@@ -5975,7 +5975,7 @@ exports[`Servers Settings > with servers > should render customs servers in xs 1
             </button>
           </div>
           <ul
-            class="ml-4 mr-auto hidden h-21 space-x-8 lg:flex"
+            class="ml-4 mr-auto hidden h-14 space-x-8 sm:h-21 lg:flex"
             data-testid="NavigationBar__menu"
           >
             <li
@@ -7655,7 +7655,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
       class="css-1jzy9qi"
     >
       <div
-        class="relative flex h-21"
+        class="relative flex h-14 sm:h-21"
       >
         <div
           class="hidden w-12 sm:flex"
@@ -7721,7 +7721,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
             </button>
           </div>
           <ul
-            class="ml-4 mr-auto hidden h-21 space-x-8 lg:flex"
+            class="ml-4 mr-auto hidden h-14 space-x-8 sm:h-21 lg:flex"
             data-testid="NavigationBar__menu"
           >
             <li
@@ -9947,7 +9947,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
       class="css-1jzy9qi"
     >
       <div
-        class="relative flex h-21"
+        class="relative flex h-14 sm:h-21"
       >
         <div
           class="hidden w-12 sm:flex"
@@ -10013,7 +10013,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
             </button>
           </div>
           <ul
-            class="ml-4 mr-auto hidden h-21 space-x-8 lg:flex"
+            class="ml-4 mr-auto hidden h-14 space-x-8 sm:h-21 lg:flex"
             data-testid="NavigationBar__menu"
           >
             <li
@@ -11831,7 +11831,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
       class="css-1jzy9qi"
     >
       <div
-        class="relative flex h-21"
+        class="relative flex h-14 sm:h-21"
       >
         <div
           class="hidden w-12 sm:flex"
@@ -11897,7 +11897,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
             </button>
           </div>
           <ul
-            class="ml-4 mr-auto hidden h-21 space-x-8 lg:flex"
+            class="ml-4 mr-auto hidden h-14 space-x-8 sm:h-21 lg:flex"
             data-testid="NavigationBar__menu"
           >
             <li
@@ -13968,7 +13968,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
       class="css-1jzy9qi"
     >
       <div
-        class="relative flex h-21"
+        class="relative flex h-14 sm:h-21"
       >
         <div
           class="hidden w-12 sm:flex"
@@ -14034,7 +14034,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
             </button>
           </div>
           <ul
-            class="ml-4 mr-auto hidden h-21 space-x-8 lg:flex"
+            class="ml-4 mr-auto hidden h-14 space-x-8 sm:h-21 lg:flex"
             data-testid="NavigationBar__menu"
           >
             <li
@@ -16245,7 +16245,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
       class="css-1jzy9qi"
     >
       <div
-        class="relative flex h-21"
+        class="relative flex h-14 sm:h-21"
       >
         <div
           class="hidden w-12 sm:flex"
@@ -16311,7 +16311,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
             </button>
           </div>
           <ul
-            class="ml-4 mr-auto hidden h-21 space-x-8 lg:flex"
+            class="ml-4 mr-auto hidden h-14 space-x-8 sm:h-21 lg:flex"
             data-testid="NavigationBar__menu"
           >
             <li
@@ -18114,7 +18114,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
       class="css-1jzy9qi"
     >
       <div
-        class="relative flex h-21"
+        class="relative flex h-14 sm:h-21"
       >
         <div
           class="hidden w-12 sm:flex"
@@ -18180,7 +18180,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
             </button>
           </div>
           <ul
-            class="ml-4 mr-auto hidden h-21 space-x-8 lg:flex"
+            class="ml-4 mr-auto hidden h-14 space-x-8 sm:h-21 lg:flex"
             data-testid="NavigationBar__menu"
           >
             <li

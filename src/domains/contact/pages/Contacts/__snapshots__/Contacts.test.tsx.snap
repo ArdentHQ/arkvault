@@ -129,7 +129,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
       class="css-1jzy9qi"
     >
       <div
-        class="relative flex h-21"
+        class="relative flex h-14 sm:h-21"
       >
         <div
           class="hidden w-12 sm:flex"
@@ -195,7 +195,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
             </button>
           </div>
           <ul
-            class="ml-4 mr-auto hidden h-21 space-x-8 lg:flex"
+            class="ml-4 mr-auto hidden h-14 space-x-8 sm:h-21 lg:flex"
             data-testid="NavigationBar__menu"
           >
             <li
@@ -1729,7 +1729,7 @@ exports[`Contacts > should render responsive with contacts 1`] = `
       class="css-1jzy9qi"
     >
       <div
-        class="relative flex h-21"
+        class="relative flex h-14 sm:h-21"
       >
         <div
           class="hidden w-12 sm:flex"
@@ -1795,7 +1795,7 @@ exports[`Contacts > should render responsive with contacts 1`] = `
             </button>
           </div>
           <ul
-            class="ml-4 mr-auto hidden h-21 space-x-8 lg:flex"
+            class="ml-4 mr-auto hidden h-14 space-x-8 sm:h-21 lg:flex"
             data-testid="NavigationBar__menu"
           >
             <li
@@ -2642,7 +2642,7 @@ exports[`Contacts > should render with contacts 1`] = `
       class="css-1jzy9qi"
     >
       <div
-        class="relative flex h-21"
+        class="relative flex h-14 sm:h-21"
       >
         <div
           class="hidden w-12 sm:flex"
@@ -2708,7 +2708,7 @@ exports[`Contacts > should render with contacts 1`] = `
             </button>
           </div>
           <ul
-            class="ml-4 mr-auto hidden h-21 space-x-8 lg:flex"
+            class="ml-4 mr-auto hidden h-14 space-x-8 sm:h-21 lg:flex"
             data-testid="NavigationBar__menu"
           >
             <li
@@ -4242,7 +4242,7 @@ exports[`Contacts > should render without contacts 1`] = `
       class="css-1jzy9qi"
     >
       <div
-        class="relative flex h-21"
+        class="relative flex h-14 sm:h-21"
       >
         <div
           class="hidden w-12 sm:flex"
@@ -4308,7 +4308,7 @@ exports[`Contacts > should render without contacts 1`] = `
             </button>
           </div>
           <ul
-            class="ml-4 mr-auto hidden h-21 space-x-8 lg:flex"
+            class="ml-4 mr-auto hidden h-14 space-x-8 sm:h-21 lg:flex"
             data-testid="NavigationBar__menu"
           >
             <li

@@ -137,7 +137,7 @@ exports[`Votes > should filter current delegates 1`] = `
       class="css-1jzy9qi"
     >
       <div
-        class="relative flex h-21"
+        class="relative flex h-14 sm:h-21"
       >
         <div
           class="hidden w-12 sm:flex"
@@ -203,7 +203,7 @@ exports[`Votes > should filter current delegates 1`] = `
             </button>
           </div>
           <ul
-            class="ml-4 mr-auto hidden h-21 space-x-8 lg:flex"
+            class="ml-4 mr-auto hidden h-14 space-x-8 sm:h-21 lg:flex"
             data-testid="NavigationBar__menu"
           >
             <li
@@ -1410,7 +1410,7 @@ exports[`Votes > should render 1`] = `
       class="css-1jzy9qi"
     >
       <div
-        class="relative flex h-21"
+        class="relative flex h-14 sm:h-21"
       >
         <div
           class="hidden w-12 sm:flex"
@@ -1476,7 +1476,7 @@ exports[`Votes > should render 1`] = `
             </button>
           </div>
           <ul
-            class="ml-4 mr-auto hidden h-21 space-x-8 lg:flex"
+            class="ml-4 mr-auto hidden h-14 space-x-8 sm:h-21 lg:flex"
             data-testid="NavigationBar__menu"
           >
             <li
@@ -2925,7 +2925,7 @@ exports[`Votes > should render and handle wallet current voting exception 1`] = 
       class="css-1jzy9qi"
     >
       <div
-        class="relative flex h-21"
+        class="relative flex h-14 sm:h-21"
       >
         <div
           class="hidden w-12 sm:flex"
@@ -2991,7 +2991,7 @@ exports[`Votes > should render and handle wallet current voting exception 1`] = 
             </button>
           </div>
           <ul
-            class="ml-4 mr-auto hidden h-21 space-x-8 lg:flex"
+            class="ml-4 mr-auto hidden h-14 space-x-8 sm:h-21 lg:flex"
             data-testid="NavigationBar__menu"
           >
             <li
@@ -4438,7 +4438,7 @@ exports[`Votes > should render with no wallets 1`] = `
       class="css-1jzy9qi"
     >
       <div
-        class="relative flex h-21"
+        class="relative flex h-14 sm:h-21"
       >
         <div
           class="hidden w-12 sm:flex"
@@ -4504,7 +4504,7 @@ exports[`Votes > should render with no wallets 1`] = `
             </button>
           </div>
           <ul
-            class="ml-4 mr-auto hidden h-21 space-x-8 lg:flex"
+            class="ml-4 mr-auto hidden h-14 space-x-8 sm:h-21 lg:flex"
             data-testid="NavigationBar__menu"
           >
             <li
@@ -5161,7 +5161,7 @@ exports[`Votes > should select a delegate 1`] = `
       class="css-1jzy9qi"
     >
       <div
-        class="relative flex h-21"
+        class="relative flex h-14 sm:h-21"
       >
         <div
           class="hidden w-12 sm:flex"
@@ -5227,7 +5227,7 @@ exports[`Votes > should select a delegate 1`] = `
             </button>
           </div>
           <ul
-            class="ml-4 mr-auto hidden h-21 space-x-8 lg:flex"
+            class="ml-4 mr-auto hidden h-14 space-x-8 sm:h-21 lg:flex"
             data-testid="NavigationBar__menu"
           >
             <li
@@ -6672,7 +6672,7 @@ exports[`Votes > should select ledger option in the wallets display type 1`] = `
       class="css-1jzy9qi"
     >
       <div
-        class="relative flex h-21"
+        class="relative flex h-14 sm:h-21"
       >
         <div
           class="hidden w-12 sm:flex"
@@ -6738,7 +6738,7 @@ exports[`Votes > should select ledger option in the wallets display type 1`] = `
             </button>
           </div>
           <ul
-            class="ml-4 mr-auto hidden h-21 space-x-8 lg:flex"
+            class="ml-4 mr-auto hidden h-14 space-x-8 sm:h-21 lg:flex"
             data-testid="NavigationBar__menu"
           >
             <li
@@ -8084,7 +8084,7 @@ exports[`Votes > should select starred option in the wallets display type 1`] = 
       class="css-1jzy9qi"
     >
       <div
-        class="relative flex h-21"
+        class="relative flex h-14 sm:h-21"
       >
         <div
           class="hidden w-12 sm:flex"
@@ -8150,7 +8150,7 @@ exports[`Votes > should select starred option in the wallets display type 1`] = 
             </button>
           </div>
           <ul
-            class="ml-4 mr-auto hidden h-21 space-x-8 lg:flex"
+            class="ml-4 mr-auto hidden h-14 space-x-8 sm:h-21 lg:flex"
             data-testid="NavigationBar__menu"
           >
             <li
@@ -9496,7 +9496,7 @@ exports[`Votes > should toggle network selection from network filters 1`] = `
       class="css-1jzy9qi"
     >
       <div
-        class="relative flex h-21"
+        class="relative flex h-14 sm:h-21"
       >
         <div
           class="hidden w-12 sm:flex"
@@ -9562,7 +9562,7 @@ exports[`Votes > should toggle network selection from network filters 1`] = `
             </button>
           </div>
           <ul
-            class="ml-4 mr-auto hidden h-21 space-x-8 lg:flex"
+            class="ml-4 mr-auto hidden h-14 space-x-8 sm:h-21 lg:flex"
             data-testid="NavigationBar__menu"
           >
             <li
@@ -11076,7 +11076,7 @@ exports[`Votes > should trigger network connection warning 1`] = `
       class="css-1jzy9qi"
     >
       <div
-        class="relative flex h-21"
+        class="relative flex h-14 sm:h-21"
       >
         <div
           class="hidden w-12 sm:flex"
@@ -11142,7 +11142,7 @@ exports[`Votes > should trigger network connection warning 1`] = `
             </button>
           </div>
           <ul
-            class="ml-4 mr-auto hidden h-21 space-x-8 lg:flex"
+            class="ml-4 mr-auto hidden h-14 space-x-8 sm:h-21 lg:flex"
             data-testid="NavigationBar__menu"
           >
             <li
