@@ -221,7 +221,7 @@ exports[`LedgerReview > should render for unvote and vote transaction 1`] = `
           Total Amount
         </span>
         <span
-          class="whitespace-nowrap text-md font-bold sm:text-lg"
+          class="whitespace-nowrap text-md font-semibold sm:text-lg"
           data-testid="Amount"
         >
           0 DARK
@@ -387,7 +387,7 @@ exports[`LedgerReview > should render for unvote transaction 1`] = `
           Total Amount
         </span>
         <span
-          class="whitespace-nowrap text-md font-bold sm:text-lg"
+          class="whitespace-nowrap text-md font-semibold sm:text-lg"
           data-testid="Amount"
         >
           0 DARK
@@ -553,7 +553,7 @@ exports[`LedgerReview > should render for vote transaction 1`] = `
           Total Amount
         </span>
         <span
-          class="whitespace-nowrap text-md font-bold sm:text-lg"
+          class="whitespace-nowrap text-md font-semibold sm:text-lg"
           data-testid="Amount"
         >
           0 DARK

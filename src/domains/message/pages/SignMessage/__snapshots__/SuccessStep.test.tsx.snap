@@ -172,7 +172,7 @@ exports[`SignMessage success step > should render success step in lg 1`] = `
               >
                 <textarea
                   autocomplete="off"
-                  class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 resize-none min-h-[8rem] md:min-h-auto md:resize-y resize-none text-theme-secondary-text css-1937ogs"
+                  class="no-ligatures w-full border-none !text-sm text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base resize-none min-h-[8rem] md:min-h-auto md:resize-y resize-none text-theme-secondary-text css-1937ogs"
                   data-testid="TextArea"
                   disabled=""
                   name="json-signature"
@@ -364,7 +364,7 @@ exports[`SignMessage success step > should render success step in xs 1`] = `
               >
                 <textarea
                   autocomplete="off"
-                  class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 resize-none min-h-[8rem] md:min-h-auto md:resize-y resize-none text-theme-secondary-text css-1937ogs"
+                  class="no-ligatures w-full border-none !text-sm text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base resize-none min-h-[8rem] md:min-h-auto md:resize-y resize-none text-theme-secondary-text css-1937ogs"
                   data-testid="TextArea"
                   disabled=""
                   name="json-signature"

@@ -491,7 +491,7 @@ exports[`ExchangeForm > should render exchange form 1`] = `
                       >
                         <input
                           autocomplete="off"
-                          class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 css-1937ogs"
+                          class="no-ligatures w-full border-none !text-sm text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
                           data-testid="select-list__input"
                           name="fromCurrency"
                           readonly=""
@@ -533,7 +533,7 @@ exports[`ExchangeForm > should render exchange form 1`] = `
                                 aria-controls="fromCurrency-menu"
                                 aria-labelledby="fromCurrency-label"
                                 autocomplete="off"
-                                class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 cursor-default css-1937ogs"
+                                class="no-ligatures w-full border-none !text-sm text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base cursor-default css-1937ogs"
                                 data-testid="SelectDropdown__input"
                                 id="fromCurrency-input"
                                 name="fromCurrency"
@@ -622,7 +622,7 @@ exports[`ExchangeForm > should render exchange form 1`] = `
                       >
                         <input
                           autocomplete="off"
-                          class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 css-1937ogs"
+                          class="no-ligatures w-full border-none !text-sm text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
                           data-testid="InputCurrency"
                           name="payinAmount"
                           placeholder="Enter an amount"
@@ -728,7 +728,7 @@ exports[`ExchangeForm > should render exchange form 1`] = `
                         >
                           <input
                             autocomplete="off"
-                            class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 css-1937ogs"
+                            class="no-ligatures w-full border-none !text-sm text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
                             data-testid="select-list__input"
                             name="toCurrency"
                             readonly=""
@@ -770,7 +770,7 @@ exports[`ExchangeForm > should render exchange form 1`] = `
                                   aria-controls="toCurrency-menu"
                                   aria-labelledby="toCurrency-label"
                                   autocomplete="off"
-                                  class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 cursor-default css-1937ogs"
+                                  class="no-ligatures w-full border-none !text-sm text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base cursor-default css-1937ogs"
                                   data-testid="SelectDropdown__input"
                                   id="toCurrency-input"
                                   name="toCurrency"
@@ -859,7 +859,7 @@ exports[`ExchangeForm > should render exchange form 1`] = `
                         >
                           <input
                             autocomplete="off"
-                            class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 css-1937ogs"
+                            class="no-ligatures w-full border-none !text-sm text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
                             data-testid="InputCurrency"
                             name="payoutAmount"
                             placeholder="Enter an amount"
@@ -915,7 +915,7 @@ exports[`ExchangeForm > should render exchange form 1`] = `
                             <input
                               aria-invalid="false"
                               autocomplete="off"
-                              class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 css-1937ogs"
+                              class="no-ligatures w-full border-none !text-sm text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
                               data-testid="select-list__input"
                               name="recipientWallet"
                               readonly=""
@@ -952,7 +952,7 @@ exports[`ExchangeForm > should render exchange form 1`] = `
                                     aria-invalid="false"
                                     aria-labelledby="SelectRecipient__dropdown-label"
                                     autocomplete="off"
-                                    class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 cursor-default text-theme-secondary-text css-1937ogs"
+                                    class="no-ligatures w-full border-none !text-sm text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base cursor-default text-theme-secondary-text css-1937ogs"
                                     data-testid="SelectDropdown__input"
                                     disabled=""
                                     id="SelectRecipient__dropdown-input"
@@ -2035,7 +2035,7 @@ exports[`FormStep > should render 1`] = `
               >
                 <input
                   autocomplete="off"
-                  class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 css-1937ogs"
+                  class="no-ligatures w-full border-none !text-sm text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
                   data-testid="select-list__input"
                   name="fromCurrency"
                   readonly=""
@@ -2078,7 +2078,7 @@ exports[`FormStep > should render 1`] = `
                         aria-controls="fromCurrency-menu"
                         aria-labelledby="fromCurrency-label"
                         autocomplete="off"
-                        class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 cursor-default text-theme-secondary-text css-1937ogs"
+                        class="no-ligatures w-full border-none !text-sm text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base cursor-default text-theme-secondary-text css-1937ogs"
                         data-testid="SelectDropdown__input"
                         disabled=""
                         id="fromCurrency-input"
@@ -2168,7 +2168,7 @@ exports[`FormStep > should render 1`] = `
               >
                 <input
                   autocomplete="off"
-                  class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 css-1937ogs"
+                  class="no-ligatures w-full border-none !text-sm text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
                   data-testid="InputCurrency"
                   name="payinAmount"
                   placeholder="Enter an amount"
@@ -2274,7 +2274,7 @@ exports[`FormStep > should render 1`] = `
                 >
                   <input
                     autocomplete="off"
-                    class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 css-1937ogs"
+                    class="no-ligatures w-full border-none !text-sm text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
                     data-testid="select-list__input"
                     name="toCurrency"
                     readonly=""
@@ -2317,7 +2317,7 @@ exports[`FormStep > should render 1`] = `
                           aria-controls="toCurrency-menu"
                           aria-labelledby="toCurrency-label"
                           autocomplete="off"
-                          class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 cursor-default text-theme-secondary-text css-1937ogs"
+                          class="no-ligatures w-full border-none !text-sm text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base cursor-default text-theme-secondary-text css-1937ogs"
                           data-testid="SelectDropdown__input"
                           disabled=""
                           id="toCurrency-input"
@@ -2407,7 +2407,7 @@ exports[`FormStep > should render 1`] = `
                 >
                   <input
                     autocomplete="off"
-                    class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 css-1937ogs"
+                    class="no-ligatures w-full border-none !text-sm text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
                     data-testid="InputCurrency"
                     name="payoutAmount"
                     placeholder="Enter an amount"
@@ -2463,7 +2463,7 @@ exports[`FormStep > should render 1`] = `
                     <input
                       aria-invalid="false"
                       autocomplete="off"
-                      class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 css-1937ogs"
+                      class="no-ligatures w-full border-none !text-sm text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
                       data-testid="select-list__input"
                       name="recipientWallet"
                       readonly=""
@@ -2500,7 +2500,7 @@ exports[`FormStep > should render 1`] = `
                             aria-invalid="false"
                             aria-labelledby="SelectRecipient__dropdown-label"
                             autocomplete="off"
-                            class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 cursor-default text-theme-secondary-text css-1937ogs"
+                            class="no-ligatures w-full border-none !text-sm text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base cursor-default text-theme-secondary-text css-1937ogs"
                             data-testid="SelectDropdown__input"
                             disabled=""
                             id="SelectRecipient__dropdown-input"

@@ -151,7 +151,7 @@ exports[`IpfsLedgerReview > should render 1`] = `
           Total Amount
         </span>
         <span
-          class="whitespace-nowrap text-md font-bold sm:text-lg"
+          class="whitespace-nowrap text-md font-semibold sm:text-lg"
           data-testid="Amount"
         >
           0 DARK

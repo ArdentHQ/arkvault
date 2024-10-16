@@ -1742,7 +1742,7 @@ exports[`SearchRecipient > should render with contact on mobile 1`] = `
                       >
                         <input
                           autocomplete="off"
-                          class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 css-1937ogs"
+                          class="no-ligatures w-full border-none !text-sm text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
                           data-testid="HeaderSearchInput__input__input"
                           placeholder="Enter name or address"
                           type="text"
@@ -2387,7 +2387,7 @@ exports[`SearchRecipient > should render with my wallet on mobile 1`] = `
                       >
                         <input
                           autocomplete="off"
-                          class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 css-1937ogs"
+                          class="no-ligatures w-full border-none !text-sm text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
                           data-testid="HeaderSearchInput__input__input"
                           placeholder="Enter name or address"
                           type="text"
@@ -3863,7 +3863,7 @@ exports[`SearchRecipient > should render with selected address on mobile 1`] = `
                       >
                         <input
                           autocomplete="off"
-                          class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 css-1937ogs"
+                          class="no-ligatures w-full border-none !text-sm text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
                           data-testid="HeaderSearchInput__input__input"
                           placeholder="Enter name or address"
                           type="text"
