@@ -170,7 +170,7 @@ export const Input = React.forwardRef<InputElement, InputProperties>(
 						<InputStyled
 							data-testid="Input"
 							className={cn(
-								"no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700",
+								"no-ligatures w-full border-none !text-sm text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base",
 								innerClassName,
 								{
 									"text-theme-secondary-text": disabled,
