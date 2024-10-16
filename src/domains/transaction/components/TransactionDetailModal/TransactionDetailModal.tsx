@@ -29,13 +29,13 @@ export const TransactionDetailContent = ({
 	profile,
 	isConfirmed,
 	confirmations,
-	containerClassname
+	containerClassname,
 }: {
 	transactionItem: DTO.RawTransactionData;
 	profile: Contracts.IProfile;
 	isConfirmed?: boolean;
 	confirmations?: number;
-	containerClassname?: string
+	containerClassname?: string;
 }) => {
 	const { t } = useTranslation();
 
