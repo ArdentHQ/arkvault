@@ -135,14 +135,14 @@ exports[`SignIn > should render a modal 1`] = `
                   Password
                 </label>
                 <div
-                  class="css-n1b0kl"
+                  class="css-14zfvme"
                 >
                   <div
                     class="relative flex h-full flex-1"
                   >
                     <input
                       autocomplete="off"
-                      class="no-ligatures w-full border-none css-1vs1awz"
+                      class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 css-1937ogs"
                       data-testid="SignIn__input--password"
                       name="password"
                       type="password"
