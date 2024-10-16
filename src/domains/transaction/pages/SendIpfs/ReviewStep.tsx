@@ -42,7 +42,7 @@ export const ReviewStep = ({ wallet, transaction }: { wallet: Contracts.IReadWri
 					network={wallet.network()}
 				/>
 
-				<TransactionType transaction={transaction} labelClassName="min-w-32" />
+				<TransactionType transaction={transaction} />
 
 				<div data-testid="DetailWrapper">
 					<DetailLabel>{t("COMMON.TRANSACTION_SUMMARY")}</DetailLabel>
