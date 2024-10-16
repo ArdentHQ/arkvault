@@ -12,6 +12,7 @@ import { useTheme } from "@/app/hooks";
 import { DTO } from "@ardenthq/sdk-profiles";
 import { MusigGeneratedAddress } from "@/domains/transaction/components/TransactionDetail/MusigGeneratedAddress/MusigGeneratedAddress";
 import { transactionPublicKeys } from "@/domains/transaction/components/MultiSignatureDetail/MultiSignatureDetail.helpers";
+import { AddressLabel, AddressLink } from "@/app/components/Address";
 
 export const TransactionType = ({
 	transaction,
@@ -66,14 +67,7 @@ export const TransactionType = ({
 							<div className="flex w-full justify-between sm:justify-start">
 								<DetailLabelText>{t("COMMON.HASH")}</DetailLabelText>
 								<div className="flex w-full space-x-2">
-									<div ref={ref} className="flex w-full">
-										<TruncateMiddleDynamic
-											availableWidth={width}
-											value={transaction.hash()}
-											parentRef={ref}
-											className="font-semibold leading-5"
-										/>
-									</div>
+									<div className="font-semibold leading-5 text-base"><AddressLabel>{transaction.hash()}</AddressLabel></div>
 									<Clipboard
 										variant="icon"
 										data={transaction.hash()}

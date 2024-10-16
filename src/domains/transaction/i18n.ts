@@ -271,7 +271,7 @@ export const translations = {
 			TITLE: "IPFS",
 		},
 		SECOND_STEP: {
-			DESCRIPTION: "Review the IPFS transaction details before sending",
+			DESCRIPTION: "Review details below to send your transaction.",
 			TITLE: "Transaction Review",
 		},
 	},

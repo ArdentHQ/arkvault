@@ -1,5 +1,6 @@
 import { Services } from "@ardenthq/sdk";
-import { DTO } from "@ardenthq/sdk-profiles";
+import { DTO, Contracts } from "@ardenthq/sdk-profiles";
+import { DTO as SDKDTO } from "@ardenthq/sdk";
 import React, { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { useForm } from "react-hook-form";
 import { useTranslation } from "react-i18next";
@@ -22,6 +23,7 @@ import { useFeeConfirmation, useTransactionBuilder } from "@/domains/transaction
 import { handleBroadcastError } from "@/domains/transaction/utils";
 import { assertWallet } from "@/utils/assertions";
 import { TransactionSuccessful } from "@/domains/transaction/components/TransactionSuccessful";
+import { useIpfsStubTransaction } from "../../hooks/use-stub-transaction";
 
 enum Step {
 	FormStep = 1,
@@ -51,10 +53,12 @@ export const SendIpfs = () => {
 	const { clearErrors, formState, getValues, handleSubmit, register, setValue, watch } = form;
 	const { isDirty, isValid, isSubmitting } = formState;
 
-	const { fee, fees } = watch();
+	const { fee, fees, hash } = watch();
 
 	const abortReference = useRef(new AbortController());
 	const transactionBuilder = useTransactionBuilder();
+
+	const { ipfsStubTransaction } = useIpfsStubTransaction({ fee, hash, wallet: activeWallet })
 
 	useEffect(() => {
 		register("network", sendIpfs.network());
@@ -151,6 +155,7 @@ export const SendIpfs = () => {
 		setActiveTab(activeTab - 1);
 	};
 
+
 	const handleNext = async (suppressWarning?: boolean) => {
 		abortReference.current = new AbortController();
 
@@ -193,7 +198,7 @@ export const SendIpfs = () => {
 							</TabPanel>
 
 							<TabPanel tabId={Step.ReviewStep}>
-								<ReviewStep wallet={activeWallet} />
+								{ipfsStubTransaction && <ReviewStep wallet={activeWallet} transaction={ipfsStubTransaction} />}
 							</TabPanel>
 
 							<TabPanel tabId={Step.AuthenticationStep}>
