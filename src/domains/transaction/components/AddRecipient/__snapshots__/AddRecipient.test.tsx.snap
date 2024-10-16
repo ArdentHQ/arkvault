@@ -219,23 +219,44 @@ exports[`AddRecipient > should hide available balance if fee > balance 1`] = `
             data-testid="FormLabel"
             for="amount"
           >
-            <span>
-              Amount
-            </span>
             <span
-              class="ml-1 text-theme-secondary-500 dark:text-theme-secondary-700"
-              data-testid="AddRecipient__available"
+              class="items-centers flex w-full justify-between"
             >
-              (
-              Available
-               
-              <span
-                class="whitespace-nowrap"
-                data-testid="Amount"
-              >
-                0
+              <span>
+                <span>
+                  Amount
+                </span>
+                <span
+                  class="ml-1 text-theme-secondary-500 dark:text-theme-secondary-700"
+                  data-testid="AddRecipient__available"
+                >
+                  (
+                  Available
+                   
+                  <span
+                    class="whitespace-nowrap"
+                    data-testid="Amount"
+                  >
+                    0
+                  </span>
+                  )
+                </span>
               </span>
-              )
+              <span
+                class="inline-flex sm:hidden"
+              >
+                <button
+                  class="space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none p-0 text-theme-navy-600 dark:text-theme-secondary-700"
+                  data-testid="AddRecipient__send-all"
+                  type="button"
+                >
+                  <div
+                    class="flex items-center space-x-2"
+                  >
+                    Send All
+                  </div>
+                </button>
+              </span>
             </span>
           </label>
           <div
@@ -282,11 +303,11 @@ exports[`AddRecipient > should hide available balance if fee > balance 1`] = `
               </div>
             </div>
             <div
-              class="inline-flex"
+              class="hidden sm:inline-flex"
             >
               <button
-                class=" css-1v4a3it"
-                data-testid="AddRecipient__send-all"
+                class="text-theme-navy-600 dark:text-theme-secondary-700 css-1v4a3it"
+                data-testid="AddRecipient__sm_send-all"
                 type="button"
               >
                 Send All
@@ -519,23 +540,44 @@ exports[`AddRecipient > should render 1`] = `
             data-testid="FormLabel"
             for="amount"
           >
-            <span>
-              Amount
-            </span>
             <span
-              class="ml-1 text-theme-secondary-500 dark:text-theme-secondary-700"
-              data-testid="AddRecipient__available"
+              class="items-centers flex w-full justify-between"
             >
-              (
-              Available
-               
-              <span
-                class="whitespace-nowrap"
-                data-testid="Amount"
-              >
-                33.75089801
+              <span>
+                <span>
+                  Amount
+                </span>
+                <span
+                  class="ml-1 text-theme-secondary-500 dark:text-theme-secondary-700"
+                  data-testid="AddRecipient__available"
+                >
+                  (
+                  Available
+                   
+                  <span
+                    class="whitespace-nowrap"
+                    data-testid="Amount"
+                  >
+                    33.75089801
+                  </span>
+                  )
+                </span>
               </span>
-              )
+              <span
+                class="inline-flex sm:hidden"
+              >
+                <button
+                  class="space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none p-0 text-theme-navy-600 dark:text-theme-secondary-700"
+                  data-testid="AddRecipient__send-all"
+                  type="button"
+                >
+                  <div
+                    class="flex items-center space-x-2"
+                  >
+                    Send All
+                  </div>
+                </button>
+              </span>
             </span>
           </label>
           <div
@@ -567,11 +609,11 @@ exports[`AddRecipient > should render 1`] = `
               </div>
             </div>
             <div
-              class="inline-flex"
+              class="hidden sm:inline-flex"
             >
               <button
-                class=" css-1v4a3it"
-                data-testid="AddRecipient__send-all"
+                class="text-theme-navy-600 dark:text-theme-secondary-700 css-1v4a3it"
+                data-testid="AddRecipient__sm_send-all"
                 type="button"
               >
                 Send All
@@ -804,23 +846,44 @@ exports[`AddRecipient > should render with empty array of recipients as default 
             data-testid="FormLabel"
             for="amount"
           >
-            <span>
-              Amount
-            </span>
             <span
-              class="ml-1 text-theme-secondary-500 dark:text-theme-secondary-700"
-              data-testid="AddRecipient__available"
+              class="items-centers flex w-full justify-between"
             >
-              (
-              Available
-               
-              <span
-                class="whitespace-nowrap"
-                data-testid="Amount"
-              >
-                33.75089801
+              <span>
+                <span>
+                  Amount
+                </span>
+                <span
+                  class="ml-1 text-theme-secondary-500 dark:text-theme-secondary-700"
+                  data-testid="AddRecipient__available"
+                >
+                  (
+                  Available
+                   
+                  <span
+                    class="whitespace-nowrap"
+                    data-testid="Amount"
+                  >
+                    33.75089801
+                  </span>
+                  )
+                </span>
               </span>
-              )
+              <span
+                class="inline-flex sm:hidden"
+              >
+                <button
+                  class="space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none p-0 text-theme-navy-600 dark:text-theme-secondary-700"
+                  data-testid="AddRecipient__send-all"
+                  type="button"
+                >
+                  <div
+                    class="flex items-center space-x-2"
+                  >
+                    Send All
+                  </div>
+                </button>
+              </span>
             </span>
           </label>
           <div
@@ -852,11 +915,11 @@ exports[`AddRecipient > should render with empty array of recipients as default 
               </div>
             </div>
             <div
-              class="inline-flex"
+              class="hidden sm:inline-flex"
             >
               <button
-                class=" css-1v4a3it"
-                data-testid="AddRecipient__send-all"
+                class="text-theme-navy-600 dark:text-theme-secondary-700 css-1v4a3it"
+                data-testid="AddRecipient__sm_send-all"
                 type="button"
               >
                 Send All
@@ -1089,23 +1152,44 @@ exports[`AddRecipient > should render with multiple recipients switch 1`] = `
             data-testid="FormLabel"
             for="amount"
           >
-            <span>
-              Amount
-            </span>
             <span
-              class="ml-1 text-theme-secondary-500 dark:text-theme-secondary-700"
-              data-testid="AddRecipient__available"
+              class="items-centers flex w-full justify-between"
             >
-              (
-              Available
-               
-              <span
-                class="whitespace-nowrap"
-                data-testid="Amount"
-              >
-                33.75089801
+              <span>
+                <span>
+                  Amount
+                </span>
+                <span
+                  class="ml-1 text-theme-secondary-500 dark:text-theme-secondary-700"
+                  data-testid="AddRecipient__available"
+                >
+                  (
+                  Available
+                   
+                  <span
+                    class="whitespace-nowrap"
+                    data-testid="Amount"
+                  >
+                    33.75089801
+                  </span>
+                  )
+                </span>
               </span>
-              )
+              <span
+                class="inline-flex sm:hidden"
+              >
+                <button
+                  class="space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none p-0 text-theme-navy-600 dark:text-theme-secondary-700"
+                  data-testid="AddRecipient__send-all"
+                  type="button"
+                >
+                  <div
+                    class="flex items-center space-x-2"
+                  >
+                    Send All
+                  </div>
+                </button>
+              </span>
             </span>
           </label>
           <div
@@ -1137,11 +1221,11 @@ exports[`AddRecipient > should render with multiple recipients switch 1`] = `
               </div>
             </div>
             <div
-              class="inline-flex"
+              class="hidden sm:inline-flex"
             >
               <button
-                class=" css-1v4a3it"
-                data-testid="AddRecipient__send-all"
+                class="text-theme-navy-600 dark:text-theme-secondary-700 css-1v4a3it"
+                data-testid="AddRecipient__sm_send-all"
                 type="button"
               >
                 Send All
@@ -1374,23 +1458,44 @@ exports[`AddRecipient > should render with single recipient data 1`] = `
             data-testid="FormLabel"
             for="amount"
           >
-            <span>
-              Amount
-            </span>
             <span
-              class="ml-1 text-theme-secondary-500 dark:text-theme-secondary-700"
-              data-testid="AddRecipient__available"
+              class="items-centers flex w-full justify-between"
             >
-              (
-              Available
-               
-              <span
-                class="whitespace-nowrap"
-                data-testid="Amount"
-              >
-                33.75089801
+              <span>
+                <span>
+                  Amount
+                </span>
+                <span
+                  class="ml-1 text-theme-secondary-500 dark:text-theme-secondary-700"
+                  data-testid="AddRecipient__available"
+                >
+                  (
+                  Available
+                   
+                  <span
+                    class="whitespace-nowrap"
+                    data-testid="Amount"
+                  >
+                    33.75089801
+                  </span>
+                  )
+                </span>
               </span>
-              )
+              <span
+                class="inline-flex sm:hidden"
+              >
+                <button
+                  class="space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none p-0 text-theme-navy-600 dark:text-theme-secondary-700"
+                  data-testid="AddRecipient__send-all"
+                  type="button"
+                >
+                  <div
+                    class="flex items-center space-x-2"
+                  >
+                    Send All
+                  </div>
+                </button>
+              </span>
             </span>
           </label>
           <div
@@ -1422,11 +1527,11 @@ exports[`AddRecipient > should render with single recipient data 1`] = `
               </div>
             </div>
             <div
-              class="inline-flex"
+              class="hidden sm:inline-flex"
             >
               <button
-                class=" css-1v4a3it"
-                data-testid="AddRecipient__send-all"
+                class="text-theme-navy-600 dark:text-theme-secondary-700 css-1v4a3it"
+                data-testid="AddRecipient__sm_send-all"
                 type="button"
               >
                 Send All
@@ -1592,23 +1697,44 @@ exports[`AddRecipient > should render without the single & multiple switch 1`] =
             data-testid="FormLabel"
             for="amount"
           >
-            <span>
-              Amount
-            </span>
             <span
-              class="ml-1 text-theme-secondary-500 dark:text-theme-secondary-700"
-              data-testid="AddRecipient__available"
+              class="items-centers flex w-full justify-between"
             >
-              (
-              Available
-               
-              <span
-                class="whitespace-nowrap"
-                data-testid="Amount"
-              >
-                33.75089801
+              <span>
+                <span>
+                  Amount
+                </span>
+                <span
+                  class="ml-1 text-theme-secondary-500 dark:text-theme-secondary-700"
+                  data-testid="AddRecipient__available"
+                >
+                  (
+                  Available
+                   
+                  <span
+                    class="whitespace-nowrap"
+                    data-testid="Amount"
+                  >
+                    33.75089801
+                  </span>
+                  )
+                </span>
               </span>
-              )
+              <span
+                class="inline-flex sm:hidden"
+              >
+                <button
+                  class="space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none p-0 text-theme-navy-600 dark:text-theme-secondary-700"
+                  data-testid="AddRecipient__send-all"
+                  type="button"
+                >
+                  <div
+                    class="flex items-center space-x-2"
+                  >
+                    Send All
+                  </div>
+                </button>
+              </span>
             </span>
           </label>
           <div
@@ -1640,11 +1766,11 @@ exports[`AddRecipient > should render without the single & multiple switch 1`] =
               </div>
             </div>
             <div
-              class="inline-flex"
+              class="hidden sm:inline-flex"
             >
               <button
-                class=" css-1v4a3it"
-                data-testid="AddRecipient__send-all"
+                class="text-theme-navy-600 dark:text-theme-secondary-700 css-1v4a3it"
+                data-testid="AddRecipient__sm_send-all"
                 type="button"
               >
                 Send All
@@ -1877,23 +2003,44 @@ exports[`AddRecipient > should set available amount 1`] = `
             data-testid="FormLabel"
             for="amount"
           >
-            <span>
-              Amount
-            </span>
             <span
-              class="ml-1 text-theme-secondary-500 dark:text-theme-secondary-700"
-              data-testid="AddRecipient__available"
+              class="items-centers flex w-full justify-between"
             >
-              (
-              Available
-               
-              <span
-                class="whitespace-nowrap"
-                data-testid="Amount"
-              >
-                33.75089801
+              <span>
+                <span>
+                  Amount
+                </span>
+                <span
+                  class="ml-1 text-theme-secondary-500 dark:text-theme-secondary-700"
+                  data-testid="AddRecipient__available"
+                >
+                  (
+                  Available
+                   
+                  <span
+                    class="whitespace-nowrap"
+                    data-testid="Amount"
+                  >
+                    33.75089801
+                  </span>
+                  )
+                </span>
               </span>
-              )
+              <span
+                class="inline-flex sm:hidden"
+              >
+                <button
+                  class="space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none p-0 text-theme-navy-600 dark:text-theme-secondary-700"
+                  data-testid="AddRecipient__send-all"
+                  type="button"
+                >
+                  <div
+                    class="flex items-center space-x-2"
+                  >
+                    Send All
+                  </div>
+                </button>
+              </span>
             </span>
           </label>
           <div
@@ -1925,11 +2072,11 @@ exports[`AddRecipient > should set available amount 1`] = `
               </div>
             </div>
             <div
-              class="inline-flex"
+              class="hidden sm:inline-flex"
             >
               <button
-                class="active css-1v4a3it"
-                data-testid="AddRecipient__send-all"
+                class="text-theme-navy-600 dark:text-theme-secondary-700 active css-1v4a3it"
+                data-testid="AddRecipient__sm_send-all"
                 type="button"
               >
                 Send All
@@ -2162,23 +2309,44 @@ exports[`AddRecipient > should show available balance after fee 1`] = `
             data-testid="FormLabel"
             for="amount"
           >
-            <span>
-              Amount
-            </span>
             <span
-              class="ml-1 text-theme-secondary-500 dark:text-theme-secondary-700"
-              data-testid="AddRecipient__available"
+              class="items-centers flex w-full justify-between"
             >
-              (
-              Available
-               
-              <span
-                class="whitespace-nowrap"
-                data-testid="Amount"
-              >
-                4
+              <span>
+                <span>
+                  Amount
+                </span>
+                <span
+                  class="ml-1 text-theme-secondary-500 dark:text-theme-secondary-700"
+                  data-testid="AddRecipient__available"
+                >
+                  (
+                  Available
+                   
+                  <span
+                    class="whitespace-nowrap"
+                    data-testid="Amount"
+                  >
+                    4
+                  </span>
+                  )
+                </span>
               </span>
-              )
+              <span
+                class="inline-flex sm:hidden"
+              >
+                <button
+                  class="space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none p-0 text-theme-navy-600 dark:text-theme-secondary-700"
+                  data-testid="AddRecipient__send-all"
+                  type="button"
+                >
+                  <div
+                    class="flex items-center space-x-2"
+                  >
+                    Send All
+                  </div>
+                </button>
+              </span>
             </span>
           </label>
           <div
@@ -2225,11 +2393,11 @@ exports[`AddRecipient > should show available balance after fee 1`] = `
               </div>
             </div>
             <div
-              class="inline-flex"
+              class="hidden sm:inline-flex"
             >
               <button
-                class=" css-1v4a3it"
-                data-testid="AddRecipient__send-all"
+                class="text-theme-navy-600 dark:text-theme-secondary-700 css-1v4a3it"
+                data-testid="AddRecipient__sm_send-all"
                 type="button"
               >
                 Send All
@@ -2462,23 +2630,44 @@ exports[`AddRecipient > should show zero amount if wallet has zero or insufficie
             data-testid="FormLabel"
             for="amount"
           >
-            <span>
-              Amount
-            </span>
             <span
-              class="ml-1 text-theme-secondary-500 dark:text-theme-secondary-700"
-              data-testid="AddRecipient__available"
+              class="items-centers flex w-full justify-between"
             >
-              (
-              Available
-               
-              <span
-                class="whitespace-nowrap"
-                data-testid="Amount"
-              >
-                0
+              <span>
+                <span>
+                  Amount
+                </span>
+                <span
+                  class="ml-1 text-theme-secondary-500 dark:text-theme-secondary-700"
+                  data-testid="AddRecipient__available"
+                >
+                  (
+                  Available
+                   
+                  <span
+                    class="whitespace-nowrap"
+                    data-testid="Amount"
+                  >
+                    0
+                  </span>
+                  )
+                </span>
               </span>
-              )
+              <span
+                class="inline-flex sm:hidden"
+              >
+                <button
+                  class="space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none p-0 text-theme-navy-600 dark:text-theme-secondary-700"
+                  data-testid="AddRecipient__send-all"
+                  type="button"
+                >
+                  <div
+                    class="flex items-center space-x-2"
+                  >
+                    Send All
+                  </div>
+                </button>
+              </span>
             </span>
           </label>
           <div
@@ -2558,11 +2747,11 @@ exports[`AddRecipient > should show zero amount if wallet has zero or insufficie
               </div>
             </div>
             <div
-              class="inline-flex"
+              class="hidden sm:inline-flex"
             >
               <button
-                class="active css-1v4a3it"
-                data-testid="AddRecipient__send-all"
+                class="text-theme-navy-600 dark:text-theme-secondary-700 active css-1v4a3it"
+                data-testid="AddRecipient__sm_send-all"
                 type="button"
               >
                 Send All
