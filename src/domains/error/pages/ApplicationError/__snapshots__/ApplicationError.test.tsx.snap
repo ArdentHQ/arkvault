@@ -277,7 +277,7 @@ exports[`ApplicationError > should render with error message and reload 1`] = `
                   >
                     <textarea
                       autocomplete="off"
-                      class="no-ligatures w-full border-none !text-sm sm:!text-base resize-none min-h-[8rem] md:min-h-auto md:resize-y resize-none text-theme-secondary-text css-1vs1awz"
+                      class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 resize-none min-h-[8rem] md:min-h-auto md:resize-y resize-none text-theme-secondary-text css-1937ogs"
                       data-testid="ErrorStep__errorMessage"
                       disabled=""
                       type="text"

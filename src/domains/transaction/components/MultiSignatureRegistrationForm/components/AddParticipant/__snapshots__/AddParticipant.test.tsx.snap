@@ -28,7 +28,7 @@ exports[`Add Participant > should fail if cannot find the address remotely 1`] =
               data-testid="SelectDropdown"
             >
               <div
-                class="sr-only css-12mz4i6"
+                class="sr-only css-1njetft"
               >
                 <div
                   class="relative flex h-full flex-1"
@@ -36,7 +36,7 @@ exports[`Add Participant > should fail if cannot find the address remotely 1`] =
                   <input
                     aria-invalid="true"
                     autocomplete="off"
-                    class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
+                    class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 css-1937ogs"
                     data-testid="select-list__input"
                     name="address"
                     readonly=""
@@ -108,7 +108,7 @@ exports[`Add Participant > should fail if cannot find the address remotely 1`] =
                       id="SelectRecipient__dropdown-label"
                     />
                     <div
-                      class="css-12mz4i6"
+                      class="css-1njetft"
                     >
                       <div
                         class="relative flex h-full flex-1"
@@ -119,7 +119,7 @@ exports[`Add Participant > should fail if cannot find the address remotely 1`] =
                           aria-invalid="true"
                           aria-labelledby="SelectRecipient__dropdown-label"
                           autocomplete="off"
-                          class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
+                          class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 css-1937ogs"
                           data-testid="SelectDropdown__input"
                           id="SelectRecipient__dropdown-input"
                           name="address"
@@ -407,7 +407,7 @@ exports[`Add Participant > should fail to find 1`] = `
               data-testid="SelectDropdown"
             >
               <div
-                class="sr-only css-12mz4i6"
+                class="sr-only css-1njetft"
               >
                 <div
                   class="relative flex h-full flex-1"
@@ -415,7 +415,7 @@ exports[`Add Participant > should fail to find 1`] = `
                   <input
                     aria-invalid="true"
                     autocomplete="off"
-                    class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
+                    class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 css-1937ogs"
                     data-testid="select-list__input"
                     name="address"
                     readonly=""
@@ -487,7 +487,7 @@ exports[`Add Participant > should fail to find 1`] = `
                       id="SelectRecipient__dropdown-label"
                     />
                     <div
-                      class="css-12mz4i6"
+                      class="css-1njetft"
                     >
                       <div
                         class="relative flex h-full flex-1"
@@ -498,7 +498,7 @@ exports[`Add Participant > should fail to find 1`] = `
                           aria-invalid="true"
                           aria-labelledby="SelectRecipient__dropdown-label"
                           autocomplete="off"
-                          class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
+                          class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 css-1937ogs"
                           data-testid="SelectDropdown__input"
                           id="SelectRecipient__dropdown-input"
                           name="address"
@@ -786,7 +786,7 @@ exports[`Add Participant > should fail with a duplicate address 1`] = `
               data-testid="SelectDropdown"
             >
               <div
-                class="sr-only css-12mz4i6"
+                class="sr-only css-1njetft"
               >
                 <div
                   class="relative flex h-full flex-1"
@@ -794,7 +794,7 @@ exports[`Add Participant > should fail with a duplicate address 1`] = `
                   <input
                     aria-invalid="true"
                     autocomplete="off"
-                    class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
+                    class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 css-1937ogs"
                     data-testid="select-list__input"
                     name="address"
                     readonly=""
@@ -871,7 +871,7 @@ exports[`Add Participant > should fail with a duplicate address 1`] = `
                       D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD…
                     </div>
                     <div
-                      class="css-12mz4i6"
+                      class="css-1njetft"
                     >
                       <div
                         class="relative flex h-full flex-1"
@@ -882,7 +882,7 @@ exports[`Add Participant > should fail with a duplicate address 1`] = `
                           aria-invalid="true"
                           aria-labelledby="SelectRecipient__dropdown-label"
                           autocomplete="off"
-                          class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
+                          class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 css-1937ogs"
                           data-testid="SelectDropdown__input"
                           id="SelectRecipient__dropdown-input"
                           name="address"
@@ -1169,7 +1169,7 @@ exports[`Add Participant > should fail with cold wallet 1`] = `
               data-testid="SelectDropdown"
             >
               <div
-                class="sr-only css-12mz4i6"
+                class="sr-only css-1njetft"
               >
                 <div
                   class="relative flex h-full flex-1"
@@ -1177,7 +1177,7 @@ exports[`Add Participant > should fail with cold wallet 1`] = `
                   <input
                     aria-invalid="true"
                     autocomplete="off"
-                    class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
+                    class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 css-1937ogs"
                     data-testid="select-list__input"
                     name="address"
                     readonly=""
@@ -1249,7 +1249,7 @@ exports[`Add Participant > should fail with cold wallet 1`] = `
                       id="SelectRecipient__dropdown-label"
                     />
                     <div
-                      class="css-12mz4i6"
+                      class="css-1njetft"
                     >
                       <div
                         class="relative flex h-full flex-1"
@@ -1260,7 +1260,7 @@ exports[`Add Participant > should fail with cold wallet 1`] = `
                           aria-invalid="true"
                           aria-labelledby="SelectRecipient__dropdown-label"
                           autocomplete="off"
-                          class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
+                          class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 css-1937ogs"
                           data-testid="SelectDropdown__input"
                           id="SelectRecipient__dropdown-input"
                           name="address"
@@ -1548,7 +1548,7 @@ exports[`Add Participant > should handle exception on find and show address not 
               data-testid="SelectDropdown"
             >
               <div
-                class="sr-only css-12mz4i6"
+                class="sr-only css-1njetft"
               >
                 <div
                   class="relative flex h-full flex-1"
@@ -1556,7 +1556,7 @@ exports[`Add Participant > should handle exception on find and show address not 
                   <input
                     aria-invalid="true"
                     autocomplete="off"
-                    class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
+                    class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 css-1937ogs"
                     data-testid="select-list__input"
                     name="address"
                     readonly=""
@@ -1628,7 +1628,7 @@ exports[`Add Participant > should handle exception on find and show address not 
                       id="SelectRecipient__dropdown-label"
                     />
                     <div
-                      class="css-12mz4i6"
+                      class="css-1njetft"
                     >
                       <div
                         class="relative flex h-full flex-1"
@@ -1639,7 +1639,7 @@ exports[`Add Participant > should handle exception on find and show address not 
                           aria-invalid="true"
                           aria-labelledby="SelectRecipient__dropdown-label"
                           autocomplete="off"
-                          class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
+                          class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 css-1937ogs"
                           data-testid="SelectDropdown__input"
                           id="SelectRecipient__dropdown-input"
                           name="address"
@@ -1927,7 +1927,7 @@ exports[`Add Participant > should render custom participants 1`] = `
               data-testid="SelectDropdown"
             >
               <div
-                class="sr-only css-n1b0kl"
+                class="sr-only css-14zfvme"
               >
                 <div
                   class="relative flex h-full flex-1"
@@ -1935,7 +1935,7 @@ exports[`Add Participant > should render custom participants 1`] = `
                   <input
                     aria-invalid="false"
                     autocomplete="off"
-                    class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
+                    class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 css-1937ogs"
                     data-testid="select-list__input"
                     name="address"
                     readonly=""
@@ -1960,7 +1960,7 @@ exports[`Add Participant > should render custom participants 1`] = `
                       id="SelectRecipient__dropdown-label"
                     />
                     <div
-                      class="css-n1b0kl"
+                      class="css-14zfvme"
                     >
                       <div
                         class="relative flex h-full flex-1"
@@ -1971,7 +1971,7 @@ exports[`Add Participant > should render custom participants 1`] = `
                           aria-invalid="false"
                           aria-labelledby="SelectRecipient__dropdown-label"
                           autocomplete="off"
-                          class="no-ligatures w-full border-none !text-sm sm:!text-base cursor-default css-1vs1awz"
+                          class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 cursor-default css-1937ogs"
                           data-testid="SelectDropdown__input"
                           id="SelectRecipient__dropdown-input"
                           name="address"
@@ -2205,7 +2205,7 @@ exports[`Add Participant > should work with an imported wallet 1`] = `
               data-testid="SelectDropdown"
             >
               <div
-                class="sr-only css-n1b0kl"
+                class="sr-only css-14zfvme"
               >
                 <div
                   class="relative flex h-full flex-1"
@@ -2213,7 +2213,7 @@ exports[`Add Participant > should work with an imported wallet 1`] = `
                   <input
                     aria-invalid="false"
                     autocomplete="off"
-                    class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
+                    class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 css-1937ogs"
                     data-testid="select-list__input"
                     name="address"
                     readonly=""
@@ -2238,7 +2238,7 @@ exports[`Add Participant > should work with an imported wallet 1`] = `
                       id="SelectRecipient__dropdown-label"
                     />
                     <div
-                      class="css-n1b0kl"
+                      class="css-14zfvme"
                     >
                       <div
                         class="relative flex h-full flex-1"
@@ -2249,7 +2249,7 @@ exports[`Add Participant > should work with an imported wallet 1`] = `
                           aria-invalid="false"
                           aria-labelledby="SelectRecipient__dropdown-label"
                           autocomplete="off"
-                          class="no-ligatures w-full border-none !text-sm sm:!text-base cursor-default css-1vs1awz"
+                          class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 cursor-default css-1937ogs"
                           data-testid="SelectDropdown__input"
                           id="SelectRecipient__dropdown-input"
                           name="address"

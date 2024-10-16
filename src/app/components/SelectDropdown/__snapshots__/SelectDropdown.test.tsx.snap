@@ -7,14 +7,14 @@ exports[`SelectDropdown > should render disabled option base 1`] = `
     data-testid="SelectDropdown"
   >
     <div
-      class="sr-only css-n1b0kl"
+      class="sr-only css-14zfvme"
     >
       <div
         class="relative flex h-full flex-1"
       >
         <input
           autocomplete="off"
-          class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
+          class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 css-1937ogs"
           data-testid="select-list__input"
           readonly=""
           tabindex="-1"
@@ -38,7 +38,7 @@ exports[`SelectDropdown > should render disabled option base 1`] = `
             id="downshift-50-label"
           />
           <div
-            class="css-xk5t3v"
+            class="css-4lfin5"
             disabled=""
           >
             <div
@@ -49,7 +49,7 @@ exports[`SelectDropdown > should render disabled option base 1`] = `
                 aria-controls="downshift-50-menu"
                 aria-labelledby="downshift-50-label"
                 autocomplete="off"
-                class="no-ligatures w-full border-none !text-sm sm:!text-base cursor-default text-theme-secondary-text css-1vs1awz"
+                class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 cursor-default text-theme-secondary-text css-1937ogs"
                 data-testid="SelectDropdown__input"
                 disabled=""
                 id="downshift-50-input"
@@ -69,7 +69,7 @@ exports[`SelectDropdown > should render disabled option base 1`] = `
                   class="flex items-center"
                 >
                   <div
-                    class="flex items-center justify-center px-1 py-2"
+                    class="flex items-center justify-center"
                     data-testid="SelectDropdown__caret"
                   >
                     <div
@@ -81,7 +81,7 @@ exports[`SelectDropdown > should render disabled option base 1`] = `
                       width="10"
                     >
                       <svg
-                        id="caret-down"
+                        id="chevron-down-small"
                         viewBox="0 0 10 10"
                         x="0"
                         xml:space="preserve"
@@ -89,8 +89,12 @@ exports[`SelectDropdown > should render disabled option base 1`] = `
                         y="0"
                       >
                         <path
-                          d="M9.093 1.5H.907c-.754 0-1.178.859-.714 1.447l4.108 5.208a.91.91 0 0 0 1.43-.002l4.078-5.208c.46-.589.037-1.445-.716-1.445z"
-                          fill="currentColor"
+                          d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
                         />
                       </svg>
                     </div>
@@ -118,14 +122,14 @@ exports[`SelectDropdown > should render disabled option group 1`] = `
     data-testid="SelectDropdown"
   >
     <div
-      class="sr-only css-n1b0kl"
+      class="sr-only css-14zfvme"
     >
       <div
         class="relative flex h-full flex-1"
       >
         <input
           autocomplete="off"
-          class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
+          class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 css-1937ogs"
           data-testid="select-list__input"
           readonly=""
           tabindex="-1"
@@ -149,7 +153,7 @@ exports[`SelectDropdown > should render disabled option group 1`] = `
             id="downshift-52-label"
           />
           <div
-            class="css-xk5t3v"
+            class="css-4lfin5"
             disabled=""
           >
             <div
@@ -160,7 +164,7 @@ exports[`SelectDropdown > should render disabled option group 1`] = `
                 aria-controls="downshift-52-menu"
                 aria-labelledby="downshift-52-label"
                 autocomplete="off"
-                class="no-ligatures w-full border-none !text-sm sm:!text-base cursor-default text-theme-secondary-text css-1vs1awz"
+                class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 cursor-default text-theme-secondary-text css-1937ogs"
                 data-testid="SelectDropdown__input"
                 disabled=""
                 id="downshift-52-input"
@@ -180,7 +184,7 @@ exports[`SelectDropdown > should render disabled option group 1`] = `
                   class="flex items-center"
                 >
                   <div
-                    class="flex items-center justify-center px-1 py-2"
+                    class="flex items-center justify-center"
                     data-testid="SelectDropdown__caret"
                   >
                     <div
@@ -192,7 +196,7 @@ exports[`SelectDropdown > should render disabled option group 1`] = `
                       width="10"
                     >
                       <svg
-                        id="caret-down"
+                        id="chevron-down-small"
                         viewBox="0 0 10 10"
                         x="0"
                         xml:space="preserve"
@@ -200,8 +204,12 @@ exports[`SelectDropdown > should render disabled option group 1`] = `
                         y="0"
                       >
                         <path
-                          d="M9.093 1.5H.907c-.754 0-1.178.859-.714 1.447l4.108 5.208a.91.91 0 0 0 1.43-.002l4.078-5.208c.46-.589.037-1.445-.716-1.445z"
-                          fill="currentColor"
+                          d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
                         />
                       </svg>
                     </div>
@@ -229,7 +237,7 @@ exports[`SelectDropdown > should render invalid option base 1`] = `
     data-testid="SelectDropdown"
   >
     <div
-      class="sr-only css-12mz4i6"
+      class="sr-only css-1njetft"
     >
       <div
         class="relative flex h-full flex-1"
@@ -237,7 +245,7 @@ exports[`SelectDropdown > should render invalid option base 1`] = `
         <input
           aria-invalid="true"
           autocomplete="off"
-          class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
+          class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 css-1937ogs"
           data-testid="select-list__input"
           readonly=""
           tabindex="-1"
@@ -307,7 +315,7 @@ exports[`SelectDropdown > should render invalid option base 1`] = `
             id="downshift-46-label"
           />
           <div
-            class="css-12mz4i6"
+            class="css-1njetft"
           >
             <div
               class="relative flex h-full flex-1"
@@ -318,7 +326,7 @@ exports[`SelectDropdown > should render invalid option base 1`] = `
                 aria-invalid="true"
                 aria-labelledby="downshift-46-label"
                 autocomplete="off"
-                class="no-ligatures w-full border-none !text-sm sm:!text-base cursor-default css-1vs1awz"
+                class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 cursor-default css-1937ogs"
                 data-testid="SelectDropdown__input"
                 id="downshift-46-input"
                 placeholder="Select option"
@@ -378,7 +386,7 @@ exports[`SelectDropdown > should render invalid option base 1`] = `
                   class="flex items-center"
                 >
                   <div
-                    class="flex items-center justify-center px-1 py-2"
+                    class="flex items-center justify-center"
                     data-testid="SelectDropdown__caret"
                   >
                     <div
@@ -390,7 +398,7 @@ exports[`SelectDropdown > should render invalid option base 1`] = `
                       width="10"
                     >
                       <svg
-                        id="caret-down"
+                        id="chevron-down-small"
                         viewBox="0 0 10 10"
                         x="0"
                         xml:space="preserve"
@@ -398,8 +406,12 @@ exports[`SelectDropdown > should render invalid option base 1`] = `
                         y="0"
                       >
                         <path
-                          d="M9.093 1.5H.907c-.754 0-1.178.859-.714 1.447l4.108 5.208a.91.91 0 0 0 1.43-.002l4.078-5.208c.46-.589.037-1.445-.716-1.445z"
-                          fill="currentColor"
+                          d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
                         />
                       </svg>
                     </div>
@@ -427,7 +439,7 @@ exports[`SelectDropdown > should render invalid option group 1`] = `
     data-testid="SelectDropdown"
   >
     <div
-      class="sr-only css-12mz4i6"
+      class="sr-only css-1njetft"
     >
       <div
         class="relative flex h-full flex-1"
@@ -435,7 +447,7 @@ exports[`SelectDropdown > should render invalid option group 1`] = `
         <input
           aria-invalid="true"
           autocomplete="off"
-          class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
+          class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 css-1937ogs"
           data-testid="select-list__input"
           readonly=""
           tabindex="-1"
@@ -505,7 +517,7 @@ exports[`SelectDropdown > should render invalid option group 1`] = `
             id="downshift-48-label"
           />
           <div
-            class="css-12mz4i6"
+            class="css-1njetft"
           >
             <div
               class="relative flex h-full flex-1"
@@ -516,7 +528,7 @@ exports[`SelectDropdown > should render invalid option group 1`] = `
                 aria-invalid="true"
                 aria-labelledby="downshift-48-label"
                 autocomplete="off"
-                class="no-ligatures w-full border-none !text-sm sm:!text-base cursor-default css-1vs1awz"
+                class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 cursor-default css-1937ogs"
                 data-testid="SelectDropdown__input"
                 id="downshift-48-input"
                 placeholder="Select option"
@@ -576,7 +588,7 @@ exports[`SelectDropdown > should render invalid option group 1`] = `
                   class="flex items-center"
                 >
                   <div
-                    class="flex items-center justify-center px-1 py-2"
+                    class="flex items-center justify-center"
                     data-testid="SelectDropdown__caret"
                   >
                     <div
@@ -588,7 +600,7 @@ exports[`SelectDropdown > should render invalid option group 1`] = `
                       width="10"
                     >
                       <svg
-                        id="caret-down"
+                        id="chevron-down-small"
                         viewBox="0 0 10 10"
                         x="0"
                         xml:space="preserve"
@@ -596,8 +608,12 @@ exports[`SelectDropdown > should render invalid option group 1`] = `
                         y="0"
                       >
                         <path
-                          d="M9.093 1.5H.907c-.754 0-1.178.859-.714 1.447l4.108 5.208a.91.91 0 0 0 1.43-.002l4.078-5.208c.46-.589.037-1.445-.716-1.445z"
-                          fill="currentColor"
+                          d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
                         />
                       </svg>
                     </div>
@@ -625,14 +641,14 @@ exports[`SelectDropdown > should render option base 1`] = `
     data-testid="SelectDropdown"
   >
     <div
-      class="sr-only css-n1b0kl"
+      class="sr-only css-14zfvme"
     >
       <div
         class="relative flex h-full flex-1"
       >
         <input
           autocomplete="off"
-          class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
+          class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 css-1937ogs"
           data-testid="select-list__input"
           readonly=""
           tabindex="-1"
@@ -656,7 +672,7 @@ exports[`SelectDropdown > should render option base 1`] = `
             id="downshift-0-label"
           />
           <div
-            class="css-n1b0kl"
+            class="css-14zfvme"
           >
             <div
               class="relative flex h-full flex-1"
@@ -666,7 +682,7 @@ exports[`SelectDropdown > should render option base 1`] = `
                 aria-controls="downshift-0-menu"
                 aria-labelledby="downshift-0-label"
                 autocomplete="off"
-                class="no-ligatures w-full border-none !text-sm sm:!text-base cursor-default css-1vs1awz"
+                class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 cursor-default css-1937ogs"
                 data-testid="SelectDropdown__input"
                 id="downshift-0-input"
                 placeholder="Select option"
@@ -685,7 +701,7 @@ exports[`SelectDropdown > should render option base 1`] = `
                   class="flex items-center"
                 >
                   <div
-                    class="flex items-center justify-center px-1 py-2"
+                    class="flex items-center justify-center"
                     data-testid="SelectDropdown__caret"
                   >
                     <div
@@ -697,7 +713,7 @@ exports[`SelectDropdown > should render option base 1`] = `
                       width="10"
                     >
                       <svg
-                        id="caret-down"
+                        id="chevron-down-small"
                         viewBox="0 0 10 10"
                         x="0"
                         xml:space="preserve"
@@ -705,8 +721,12 @@ exports[`SelectDropdown > should render option base 1`] = `
                         y="0"
                       >
                         <path
-                          d="M9.093 1.5H.907c-.754 0-1.178.859-.714 1.447l4.108 5.208a.91.91 0 0 0 1.43-.002l4.078-5.208c.46-.589.037-1.445-.716-1.445z"
-                          fill="currentColor"
+                          d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
                         />
                       </svg>
                     </div>
@@ -734,14 +754,14 @@ exports[`SelectDropdown > should render option base with custom label 1`] = `
     data-testid="SelectDropdown"
   >
     <div
-      class="sr-only css-n1b0kl"
+      class="sr-only css-14zfvme"
     >
       <div
         class="relative flex h-full flex-1"
       >
         <input
           autocomplete="off"
-          class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
+          class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 css-1937ogs"
           data-testid="select-list__input"
           readonly=""
           tabindex="-1"
@@ -754,7 +774,7 @@ exports[`SelectDropdown > should render option base with custom label 1`] = `
       class="absolute z-10 w-full"
     >
       <ul
-        class="css-16mnyn9"
+        class="css-1jfh2qw"
       >
         <li
           aria-selected="false"
@@ -824,7 +844,7 @@ exports[`SelectDropdown > should render option base with custom label 1`] = `
             …
           </div>
           <div
-            class="css-n1b0kl"
+            class="css-14zfvme"
           >
             <div
               class="relative flex h-full flex-1"
@@ -834,7 +854,7 @@ exports[`SelectDropdown > should render option base with custom label 1`] = `
                 aria-controls="downshift-6-menu"
                 aria-labelledby="downshift-6-label"
                 autocomplete="off"
-                class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
+                class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 css-1937ogs"
                 data-testid="SelectDropdown__input"
                 id="downshift-6-input"
                 placeholder="Select option"
@@ -863,7 +883,7 @@ exports[`SelectDropdown > should render option base with custom label 1`] = `
                   class="flex items-center"
                 >
                   <div
-                    class="flex items-center justify-center px-1 py-2"
+                    class="flex items-center justify-center"
                     data-testid="SelectDropdown__caret"
                   >
                     <div
@@ -875,7 +895,7 @@ exports[`SelectDropdown > should render option base with custom label 1`] = `
                       width="10"
                     >
                       <svg
-                        id="caret-down"
+                        id="chevron-down-small"
                         viewBox="0 0 10 10"
                         x="0"
                         xml:space="preserve"
@@ -883,8 +903,12 @@ exports[`SelectDropdown > should render option base with custom label 1`] = `
                         y="0"
                       >
                         <path
-                          d="M9.093 1.5H.907c-.754 0-1.178.859-.714 1.447l4.108 5.208a.91.91 0 0 0 1.43-.002l4.078-5.208c.46-.589.037-1.445-.716-1.445z"
-                          fill="currentColor"
+                          d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
                         />
                       </svg>
                     </div>
@@ -912,14 +936,14 @@ exports[`SelectDropdown > should render option base with custom label and allowe
     data-testid="SelectDropdown"
   >
     <div
-      class="sr-only css-n1b0kl"
+      class="sr-only css-14zfvme"
     >
       <div
         class="relative flex h-full flex-1"
       >
         <input
           autocomplete="off"
-          class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
+          class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 css-1937ogs"
           data-testid="select-list__input"
           readonly=""
           tabindex="-1"
@@ -932,7 +956,7 @@ exports[`SelectDropdown > should render option base with custom label and allowe
       class="absolute z-10 w-full"
     >
       <ul
-        class="css-16mnyn9"
+        class="css-1jfh2qw"
       >
         <li
           aria-selected="false"
@@ -1002,7 +1026,7 @@ exports[`SelectDropdown > should render option base with custom label and allowe
             …
           </div>
           <div
-            class="css-n1b0kl"
+            class="css-14zfvme"
           >
             <div
               class="relative flex h-full flex-1"
@@ -1012,7 +1036,7 @@ exports[`SelectDropdown > should render option base with custom label and allowe
                 aria-controls="downshift-26-menu"
                 aria-labelledby="downshift-26-label"
                 autocomplete="off"
-                class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
+                class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 css-1937ogs"
                 data-testid="SelectDropdown__input"
                 id="downshift-26-input"
                 placeholder="Select option"
@@ -1041,7 +1065,7 @@ exports[`SelectDropdown > should render option base with custom label and allowe
                   class="flex items-center"
                 >
                   <div
-                    class="flex items-center justify-center px-1 py-2"
+                    class="flex items-center justify-center"
                     data-testid="SelectDropdown__caret"
                   >
                     <div
@@ -1053,7 +1077,7 @@ exports[`SelectDropdown > should render option base with custom label and allowe
                       width="10"
                     >
                       <svg
-                        id="caret-down"
+                        id="chevron-down-small"
                         viewBox="0 0 10 10"
                         x="0"
                         xml:space="preserve"
@@ -1061,8 +1085,12 @@ exports[`SelectDropdown > should render option base with custom label and allowe
                         y="0"
                       >
                         <path
-                          d="M9.093 1.5H.907c-.754 0-1.178.859-.714 1.447l4.108 5.208a.91.91 0 0 0 1.43-.002l4.078-5.208c.46-.589.037-1.445-.716-1.445z"
-                          fill="currentColor"
+                          d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
                         />
                       </svg>
                     </div>
@@ -1090,14 +1118,14 @@ exports[`SelectDropdown > should render option base with default value when free
     data-testid="SelectDropdown"
   >
     <div
-      class="sr-only css-n1b0kl"
+      class="sr-only css-14zfvme"
     >
       <div
         class="relative flex h-full flex-1"
       >
         <input
           autocomplete="off"
-          class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
+          class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 css-1937ogs"
           data-testid="select-list__input"
           readonly=""
           tabindex="-1"
@@ -1121,7 +1149,7 @@ exports[`SelectDropdown > should render option base with default value when free
             id="downshift-589-label"
           />
           <div
-            class="css-n1b0kl"
+            class="css-14zfvme"
           >
             <div
               class="relative flex h-full flex-1"
@@ -1131,7 +1159,7 @@ exports[`SelectDropdown > should render option base with default value when free
                 aria-controls="downshift-589-menu"
                 aria-labelledby="downshift-589-label"
                 autocomplete="off"
-                class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
+                class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 css-1937ogs"
                 data-testid="SelectDropdown__input"
                 id="downshift-589-input"
                 placeholder="Select option"
@@ -1150,7 +1178,7 @@ exports[`SelectDropdown > should render option base with default value when free
                   class="flex items-center"
                 >
                   <div
-                    class="flex items-center justify-center px-1 py-2"
+                    class="flex items-center justify-center"
                     data-testid="SelectDropdown__caret"
                   >
                     <div
@@ -1162,7 +1190,7 @@ exports[`SelectDropdown > should render option base with default value when free
                       width="10"
                     >
                       <svg
-                        id="caret-down"
+                        id="chevron-down-small"
                         viewBox="0 0 10 10"
                         x="0"
                         xml:space="preserve"
@@ -1170,8 +1198,12 @@ exports[`SelectDropdown > should render option base with default value when free
                         y="0"
                       >
                         <path
-                          d="M9.093 1.5H.907c-.754 0-1.178.859-.714 1.447l4.108 5.208a.91.91 0 0 0 1.43-.002l4.078-5.208c.46-.589.037-1.445-.716-1.445z"
-                          fill="currentColor"
+                          d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
                         />
                       </svg>
                     </div>
@@ -1199,14 +1231,14 @@ exports[`SelectDropdown > should render option base with initial default value 1
     data-testid="SelectDropdown"
   >
     <div
-      class="sr-only css-n1b0kl"
+      class="sr-only css-14zfvme"
     >
       <div
         class="relative flex h-full flex-1"
       >
         <input
           autocomplete="off"
-          class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
+          class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 css-1937ogs"
           data-testid="select-list__input"
           readonly=""
           tabindex="-1"
@@ -1236,7 +1268,7 @@ exports[`SelectDropdown > should render option base with initial default value 1
             …
           </div>
           <div
-            class="css-n1b0kl"
+            class="css-14zfvme"
           >
             <div
               class="relative flex h-full flex-1"
@@ -1246,7 +1278,7 @@ exports[`SelectDropdown > should render option base with initial default value 1
                 aria-controls="downshift-70-menu"
                 aria-labelledby="downshift-70-label"
                 autocomplete="off"
-                class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
+                class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 css-1937ogs"
                 data-testid="SelectDropdown__input"
                 id="downshift-70-input"
                 placeholder="Select option"
@@ -1275,7 +1307,7 @@ exports[`SelectDropdown > should render option base with initial default value 1
                   class="flex items-center"
                 >
                   <div
-                    class="flex items-center justify-center px-1 py-2"
+                    class="flex items-center justify-center"
                     data-testid="SelectDropdown__caret"
                   >
                     <div
@@ -1287,7 +1319,7 @@ exports[`SelectDropdown > should render option base with initial default value 1
                       width="10"
                     >
                       <svg
-                        id="caret-down"
+                        id="chevron-down-small"
                         viewBox="0 0 10 10"
                         x="0"
                         xml:space="preserve"
@@ -1295,8 +1327,12 @@ exports[`SelectDropdown > should render option base with initial default value 1
                         y="0"
                       >
                         <path
-                          d="M9.093 1.5H.907c-.754 0-1.178.859-.714 1.447l4.108 5.208a.91.91 0 0 0 1.43-.002l4.078-5.208c.46-.589.037-1.445-.716-1.445z"
-                          fill="currentColor"
+                          d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
                         />
                       </svg>
                     </div>
@@ -1324,14 +1360,14 @@ exports[`SelectDropdown > should render option base with wrong default value 1`]
     data-testid="SelectDropdown"
   >
     <div
-      class="sr-only css-n1b0kl"
+      class="sr-only css-14zfvme"
     >
       <div
         class="relative flex h-full flex-1"
       >
         <input
           autocomplete="off"
-          class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
+          class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 css-1937ogs"
           data-testid="select-list__input"
           readonly=""
           tabindex="-1"
@@ -1355,7 +1391,7 @@ exports[`SelectDropdown > should render option base with wrong default value 1`]
             id="downshift-76-label"
           />
           <div
-            class="css-n1b0kl"
+            class="css-14zfvme"
           >
             <div
               class="relative flex h-full flex-1"
@@ -1365,7 +1401,7 @@ exports[`SelectDropdown > should render option base with wrong default value 1`]
                 aria-controls="downshift-76-menu"
                 aria-labelledby="downshift-76-label"
                 autocomplete="off"
-                class="no-ligatures w-full border-none !text-sm sm:!text-base cursor-default css-1vs1awz"
+                class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 cursor-default css-1937ogs"
                 data-testid="SelectDropdown__input"
                 id="downshift-76-input"
                 placeholder="Select option"
@@ -1384,7 +1420,7 @@ exports[`SelectDropdown > should render option base with wrong default value 1`]
                   class="flex items-center"
                 >
                   <div
-                    class="flex items-center justify-center px-1 py-2"
+                    class="flex items-center justify-center"
                     data-testid="SelectDropdown__caret"
                   >
                     <div
@@ -1396,7 +1432,7 @@ exports[`SelectDropdown > should render option base with wrong default value 1`]
                       width="10"
                     >
                       <svg
-                        id="caret-down"
+                        id="chevron-down-small"
                         viewBox="0 0 10 10"
                         x="0"
                         xml:space="preserve"
@@ -1404,8 +1440,12 @@ exports[`SelectDropdown > should render option base with wrong default value 1`]
                         y="0"
                       >
                         <path
-                          d="M9.093 1.5H.907c-.754 0-1.178.859-.714 1.447l4.108 5.208a.91.91 0 0 0 1.43-.002l4.078-5.208c.46-.589.037-1.445-.716-1.445z"
-                          fill="currentColor"
+                          d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
                         />
                       </svg>
                     </div>
@@ -1433,14 +1473,14 @@ exports[`SelectDropdown > should render option base without caret 1`] = `
     data-testid="SelectDropdown"
   >
     <div
-      class="sr-only css-n1b0kl"
+      class="sr-only css-14zfvme"
     >
       <div
         class="relative flex h-full flex-1"
       >
         <input
           autocomplete="off"
-          class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
+          class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 css-1937ogs"
           data-testid="select-list__input"
           readonly=""
           tabindex="-1"
@@ -1464,7 +1504,7 @@ exports[`SelectDropdown > should render option base without caret 1`] = `
             id="downshift-54-label"
           />
           <div
-            class="css-n1b0kl"
+            class="css-14zfvme"
           >
             <div
               class="relative flex h-full flex-1"
@@ -1474,7 +1514,7 @@ exports[`SelectDropdown > should render option base without caret 1`] = `
                 aria-controls="downshift-54-menu"
                 aria-labelledby="downshift-54-label"
                 autocomplete="off"
-                class="no-ligatures w-full border-none !text-sm sm:!text-base cursor-default css-1vs1awz"
+                class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 cursor-default css-1937ogs"
                 data-testid="SelectDropdown__input"
                 id="downshift-54-input"
                 placeholder="Select option"
@@ -1502,14 +1542,14 @@ exports[`SelectDropdown > should render option group 1`] = `
     data-testid="SelectDropdown"
   >
     <div
-      class="sr-only css-n1b0kl"
+      class="sr-only css-14zfvme"
     >
       <div
         class="relative flex h-full flex-1"
       >
         <input
           autocomplete="off"
-          class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
+          class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 css-1937ogs"
           data-testid="select-list__input"
           readonly=""
           tabindex="-1"
@@ -1533,7 +1573,7 @@ exports[`SelectDropdown > should render option group 1`] = `
             id="downshift-2-label"
           />
           <div
-            class="css-n1b0kl"
+            class="css-14zfvme"
           >
             <div
               class="relative flex h-full flex-1"
@@ -1543,7 +1583,7 @@ exports[`SelectDropdown > should render option group 1`] = `
                 aria-controls="downshift-2-menu"
                 aria-labelledby="downshift-2-label"
                 autocomplete="off"
-                class="no-ligatures w-full border-none !text-sm sm:!text-base cursor-default css-1vs1awz"
+                class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 cursor-default css-1937ogs"
                 data-testid="SelectDropdown__input"
                 id="downshift-2-input"
                 placeholder="Select option"
@@ -1562,7 +1602,7 @@ exports[`SelectDropdown > should render option group 1`] = `
                   class="flex items-center"
                 >
                   <div
-                    class="flex items-center justify-center px-1 py-2"
+                    class="flex items-center justify-center"
                     data-testid="SelectDropdown__caret"
                   >
                     <div
@@ -1574,7 +1614,7 @@ exports[`SelectDropdown > should render option group 1`] = `
                       width="10"
                     >
                       <svg
-                        id="caret-down"
+                        id="chevron-down-small"
                         viewBox="0 0 10 10"
                         x="0"
                         xml:space="preserve"
@@ -1582,8 +1622,12 @@ exports[`SelectDropdown > should render option group 1`] = `
                         y="0"
                       >
                         <path
-                          d="M9.093 1.5H.907c-.754 0-1.178.859-.714 1.447l4.108 5.208a.91.91 0 0 0 1.43-.002l4.078-5.208c.46-.589.037-1.445-.716-1.445z"
-                          fill="currentColor"
+                          d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
                         />
                       </svg>
                     </div>
@@ -1611,14 +1655,14 @@ exports[`SelectDropdown > should render option group with custom label 1`] = `
     data-testid="SelectDropdown"
   >
     <div
-      class="sr-only css-n1b0kl"
+      class="sr-only css-14zfvme"
     >
       <div
         class="relative flex h-full flex-1"
       >
         <input
           autocomplete="off"
-          class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
+          class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 css-1937ogs"
           data-testid="select-list__input"
           readonly=""
           tabindex="-1"
@@ -1631,7 +1675,7 @@ exports[`SelectDropdown > should render option group with custom label 1`] = `
       class="absolute z-10 w-full"
     >
       <ul
-        class="css-16mnyn9"
+        class="css-1jfh2qw"
       >
         <ul
           class="select-list-option-group"
@@ -1700,7 +1744,7 @@ exports[`SelectDropdown > should render option group with custom label 1`] = `
             …
           </div>
           <div
-            class="css-n1b0kl"
+            class="css-14zfvme"
           >
             <div
               class="relative flex h-full flex-1"
@@ -1710,7 +1754,7 @@ exports[`SelectDropdown > should render option group with custom label 1`] = `
                 aria-controls="downshift-16-menu"
                 aria-labelledby="downshift-16-label"
                 autocomplete="off"
-                class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
+                class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 css-1937ogs"
                 data-testid="SelectDropdown__input"
                 id="downshift-16-input"
                 placeholder="Select option"
@@ -1739,7 +1783,7 @@ exports[`SelectDropdown > should render option group with custom label 1`] = `
                   class="flex items-center"
                 >
                   <div
-                    class="flex items-center justify-center px-1 py-2"
+                    class="flex items-center justify-center"
                     data-testid="SelectDropdown__caret"
                   >
                     <div
@@ -1751,7 +1795,7 @@ exports[`SelectDropdown > should render option group with custom label 1`] = `
                       width="10"
                     >
                       <svg
-                        id="caret-down"
+                        id="chevron-down-small"
                         viewBox="0 0 10 10"
                         x="0"
                         xml:space="preserve"
@@ -1759,8 +1803,12 @@ exports[`SelectDropdown > should render option group with custom label 1`] = `
                         y="0"
                       >
                         <path
-                          d="M9.093 1.5H.907c-.754 0-1.178.859-.714 1.447l4.108 5.208a.91.91 0 0 0 1.43-.002l4.078-5.208c.46-.589.037-1.445-.716-1.445z"
-                          fill="currentColor"
+                          d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
                         />
                       </svg>
                     </div>
@@ -1788,14 +1836,14 @@ exports[`SelectDropdown > should render option group with custom label and allow
     data-testid="SelectDropdown"
   >
     <div
-      class="sr-only css-n1b0kl"
+      class="sr-only css-14zfvme"
     >
       <div
         class="relative flex h-full flex-1"
       >
         <input
           autocomplete="off"
-          class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
+          class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 css-1937ogs"
           data-testid="select-list__input"
           readonly=""
           tabindex="-1"
@@ -1808,7 +1856,7 @@ exports[`SelectDropdown > should render option group with custom label and allow
       class="absolute z-10 w-full"
     >
       <ul
-        class="css-16mnyn9"
+        class="css-1jfh2qw"
       >
         <ul
           class="select-list-option-group"
@@ -1877,7 +1925,7 @@ exports[`SelectDropdown > should render option group with custom label and allow
             …
           </div>
           <div
-            class="css-n1b0kl"
+            class="css-14zfvme"
           >
             <div
               class="relative flex h-full flex-1"
@@ -1887,7 +1935,7 @@ exports[`SelectDropdown > should render option group with custom label and allow
                 aria-controls="downshift-36-menu"
                 aria-labelledby="downshift-36-label"
                 autocomplete="off"
-                class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
+                class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 css-1937ogs"
                 data-testid="SelectDropdown__input"
                 id="downshift-36-input"
                 placeholder="Select option"
@@ -1916,7 +1964,7 @@ exports[`SelectDropdown > should render option group with custom label and allow
                   class="flex items-center"
                 >
                   <div
-                    class="flex items-center justify-center px-1 py-2"
+                    class="flex items-center justify-center"
                     data-testid="SelectDropdown__caret"
                   >
                     <div
@@ -1928,7 +1976,7 @@ exports[`SelectDropdown > should render option group with custom label and allow
                       width="10"
                     >
                       <svg
-                        id="caret-down"
+                        id="chevron-down-small"
                         viewBox="0 0 10 10"
                         x="0"
                         xml:space="preserve"
@@ -1936,8 +1984,12 @@ exports[`SelectDropdown > should render option group with custom label and allow
                         y="0"
                       >
                         <path
-                          d="M9.093 1.5H.907c-.754 0-1.178.859-.714 1.447l4.108 5.208a.91.91 0 0 0 1.43-.002l4.078-5.208c.46-.589.037-1.445-.716-1.445z"
-                          fill="currentColor"
+                          d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
                         />
                       </svg>
                     </div>
@@ -1965,14 +2017,14 @@ exports[`SelectDropdown > should render option group with default value when fre
     data-testid="SelectDropdown"
   >
     <div
-      class="sr-only css-n1b0kl"
+      class="sr-only css-14zfvme"
     >
       <div
         class="relative flex h-full flex-1"
       >
         <input
           autocomplete="off"
-          class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
+          class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 css-1937ogs"
           data-testid="select-list__input"
           readonly=""
           tabindex="-1"
@@ -1996,7 +2048,7 @@ exports[`SelectDropdown > should render option group with default value when fre
             id="downshift-592-label"
           />
           <div
-            class="css-n1b0kl"
+            class="css-14zfvme"
           >
             <div
               class="relative flex h-full flex-1"
@@ -2006,7 +2058,7 @@ exports[`SelectDropdown > should render option group with default value when fre
                 aria-controls="downshift-592-menu"
                 aria-labelledby="downshift-592-label"
                 autocomplete="off"
-                class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
+                class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 css-1937ogs"
                 data-testid="SelectDropdown__input"
                 id="downshift-592-input"
                 placeholder="Select option"
@@ -2025,7 +2077,7 @@ exports[`SelectDropdown > should render option group with default value when fre
                   class="flex items-center"
                 >
                   <div
-                    class="flex items-center justify-center px-1 py-2"
+                    class="flex items-center justify-center"
                     data-testid="SelectDropdown__caret"
                   >
                     <div
@@ -2037,7 +2089,7 @@ exports[`SelectDropdown > should render option group with default value when fre
                       width="10"
                     >
                       <svg
-                        id="caret-down"
+                        id="chevron-down-small"
                         viewBox="0 0 10 10"
                         x="0"
                         xml:space="preserve"
@@ -2045,8 +2097,12 @@ exports[`SelectDropdown > should render option group with default value when fre
                         y="0"
                       >
                         <path
-                          d="M9.093 1.5H.907c-.754 0-1.178.859-.714 1.447l4.108 5.208a.91.91 0 0 0 1.43-.002l4.078-5.208c.46-.589.037-1.445-.716-1.445z"
-                          fill="currentColor"
+                          d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
                         />
                       </svg>
                     </div>
@@ -2074,14 +2130,14 @@ exports[`SelectDropdown > should render option group with initial default value 
     data-testid="SelectDropdown"
   >
     <div
-      class="sr-only css-n1b0kl"
+      class="sr-only css-14zfvme"
     >
       <div
         class="relative flex h-full flex-1"
       >
         <input
           autocomplete="off"
-          class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
+          class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 css-1937ogs"
           data-testid="select-list__input"
           readonly=""
           tabindex="-1"
@@ -2111,7 +2167,7 @@ exports[`SelectDropdown > should render option group with initial default value 
             …
           </div>
           <div
-            class="css-n1b0kl"
+            class="css-14zfvme"
           >
             <div
               class="relative flex h-full flex-1"
@@ -2121,7 +2177,7 @@ exports[`SelectDropdown > should render option group with initial default value 
                 aria-controls="downshift-73-menu"
                 aria-labelledby="downshift-73-label"
                 autocomplete="off"
-                class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
+                class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 css-1937ogs"
                 data-testid="SelectDropdown__input"
                 id="downshift-73-input"
                 placeholder="Select option"
@@ -2150,7 +2206,7 @@ exports[`SelectDropdown > should render option group with initial default value 
                   class="flex items-center"
                 >
                   <div
-                    class="flex items-center justify-center px-1 py-2"
+                    class="flex items-center justify-center"
                     data-testid="SelectDropdown__caret"
                   >
                     <div
@@ -2162,7 +2218,7 @@ exports[`SelectDropdown > should render option group with initial default value 
                       width="10"
                     >
                       <svg
-                        id="caret-down"
+                        id="chevron-down-small"
                         viewBox="0 0 10 10"
                         x="0"
                         xml:space="preserve"
@@ -2170,8 +2226,12 @@ exports[`SelectDropdown > should render option group with initial default value 
                         y="0"
                       >
                         <path
-                          d="M9.093 1.5H.907c-.754 0-1.178.859-.714 1.447l4.108 5.208a.91.91 0 0 0 1.43-.002l4.078-5.208c.46-.589.037-1.445-.716-1.445z"
-                          fill="currentColor"
+                          d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
                         />
                       </svg>
                     </div>
@@ -2199,14 +2259,14 @@ exports[`SelectDropdown > should render option group with wrong default value 1`
     data-testid="SelectDropdown"
   >
     <div
-      class="sr-only css-n1b0kl"
+      class="sr-only css-14zfvme"
     >
       <div
         class="relative flex h-full flex-1"
       >
         <input
           autocomplete="off"
-          class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
+          class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 css-1937ogs"
           data-testid="select-list__input"
           readonly=""
           tabindex="-1"
@@ -2230,7 +2290,7 @@ exports[`SelectDropdown > should render option group with wrong default value 1`
             id="downshift-78-label"
           />
           <div
-            class="css-n1b0kl"
+            class="css-14zfvme"
           >
             <div
               class="relative flex h-full flex-1"
@@ -2240,7 +2300,7 @@ exports[`SelectDropdown > should render option group with wrong default value 1`
                 aria-controls="downshift-78-menu"
                 aria-labelledby="downshift-78-label"
                 autocomplete="off"
-                class="no-ligatures w-full border-none !text-sm sm:!text-base cursor-default css-1vs1awz"
+                class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 cursor-default css-1937ogs"
                 data-testid="SelectDropdown__input"
                 id="downshift-78-input"
                 placeholder="Select option"
@@ -2259,7 +2319,7 @@ exports[`SelectDropdown > should render option group with wrong default value 1`
                   class="flex items-center"
                 >
                   <div
-                    class="flex items-center justify-center px-1 py-2"
+                    class="flex items-center justify-center"
                     data-testid="SelectDropdown__caret"
                   >
                     <div
@@ -2271,7 +2331,7 @@ exports[`SelectDropdown > should render option group with wrong default value 1`
                       width="10"
                     >
                       <svg
-                        id="caret-down"
+                        id="chevron-down-small"
                         viewBox="0 0 10 10"
                         x="0"
                         xml:space="preserve"
@@ -2279,8 +2339,12 @@ exports[`SelectDropdown > should render option group with wrong default value 1`
                         y="0"
                       >
                         <path
-                          d="M9.093 1.5H.907c-.754 0-1.178.859-.714 1.447l4.108 5.208a.91.91 0 0 0 1.43-.002l4.078-5.208c.46-.589.037-1.445-.716-1.445z"
-                          fill="currentColor"
+                          d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
                         />
                       </svg>
                     </div>
@@ -2308,14 +2372,14 @@ exports[`SelectDropdown > should render option group without caret 1`] = `
     data-testid="SelectDropdown"
   >
     <div
-      class="sr-only css-n1b0kl"
+      class="sr-only css-14zfvme"
     >
       <div
         class="relative flex h-full flex-1"
       >
         <input
           autocomplete="off"
-          class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
+          class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 css-1937ogs"
           data-testid="select-list__input"
           readonly=""
           tabindex="-1"
@@ -2339,7 +2403,7 @@ exports[`SelectDropdown > should render option group without caret 1`] = `
             id="downshift-56-label"
           />
           <div
-            class="css-n1b0kl"
+            class="css-14zfvme"
           >
             <div
               class="relative flex h-full flex-1"
@@ -2349,7 +2413,7 @@ exports[`SelectDropdown > should render option group without caret 1`] = `
                 aria-controls="downshift-56-menu"
                 aria-labelledby="downshift-56-label"
                 autocomplete="off"
-                class="no-ligatures w-full border-none !text-sm sm:!text-base cursor-default css-1vs1awz"
+                class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 cursor-default css-1937ogs"
                 data-testid="SelectDropdown__input"
                 id="downshift-56-input"
                 placeholder="Select option"
@@ -2377,14 +2441,14 @@ exports[`SelectDropdown > should render while allowing horizontal overflow 1`] =
     data-testid="SelectDropdown"
   >
     <div
-      class="sr-only css-n1b0kl"
+      class="sr-only css-14zfvme"
     >
       <div
         class="relative flex h-full flex-1"
       >
         <input
           autocomplete="off"
-          class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
+          class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 css-1937ogs"
           data-testid="select-list__input"
           readonly=""
           tabindex="-1"
@@ -2408,7 +2472,7 @@ exports[`SelectDropdown > should render while allowing horizontal overflow 1`] =
             id="downshift-84-label"
           />
           <div
-            class="css-n1b0kl"
+            class="css-14zfvme"
           >
             <div
               class="relative flex h-full flex-1"
@@ -2418,7 +2482,7 @@ exports[`SelectDropdown > should render while allowing horizontal overflow 1`] =
                 aria-controls="downshift-84-menu"
                 aria-labelledby="downshift-84-label"
                 autocomplete="off"
-                class="no-ligatures w-full border-none !text-sm sm:!text-base cursor-default css-1vs1awz"
+                class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 cursor-default css-1937ogs"
                 data-testid="SelectDropdown__input"
                 id="downshift-84-input"
                 placeholder="Select option"
@@ -2437,7 +2501,7 @@ exports[`SelectDropdown > should render while allowing horizontal overflow 1`] =
                   class="flex items-center"
                 >
                   <div
-                    class="flex items-center justify-center px-1 py-2"
+                    class="flex items-center justify-center"
                     data-testid="SelectDropdown__caret"
                   >
                     <div
@@ -2449,7 +2513,7 @@ exports[`SelectDropdown > should render while allowing horizontal overflow 1`] =
                       width="10"
                     >
                       <svg
-                        id="caret-down"
+                        id="chevron-down-small"
                         viewBox="0 0 10 10"
                         x="0"
                         xml:space="preserve"
@@ -2457,8 +2521,12 @@ exports[`SelectDropdown > should render while allowing horizontal overflow 1`] =
                         y="0"
                       >
                         <path
-                          d="M9.093 1.5H.907c-.754 0-1.178.859-.714 1.447l4.108 5.208a.91.91 0 0 0 1.43-.002l4.078-5.208c.46-.589.037-1.445-.716-1.445z"
-                          fill="currentColor"
+                          d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
                         />
                       </svg>
                     </div>
@@ -2486,14 +2554,14 @@ exports[`SelectDropdown > should render with custom wrapper class name 1`] = `
     data-testid="SelectDropdown"
   >
     <div
-      class="sr-only css-n1b0kl"
+      class="sr-only css-14zfvme"
     >
       <div
         class="relative flex h-full flex-1"
       >
         <input
           autocomplete="off"
-          class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
+          class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 css-1937ogs"
           data-testid="select-list__input"
           readonly=""
           tabindex="-1"
@@ -2517,7 +2585,7 @@ exports[`SelectDropdown > should render with custom wrapper class name 1`] = `
             id="downshift-4-label"
           />
           <div
-            class="css-n1b0kl"
+            class="css-14zfvme"
           >
             <div
               class="relative flex h-full flex-1"
@@ -2527,7 +2595,7 @@ exports[`SelectDropdown > should render with custom wrapper class name 1`] = `
                 aria-controls="downshift-4-menu"
                 aria-labelledby="downshift-4-label"
                 autocomplete="off"
-                class="no-ligatures w-full border-none !text-sm sm:!text-base cursor-default css-1vs1awz"
+                class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 cursor-default css-1937ogs"
                 data-testid="SelectDropdown__input"
                 id="downshift-4-input"
                 placeholder="Select option"
@@ -2546,7 +2614,7 @@ exports[`SelectDropdown > should render with custom wrapper class name 1`] = `
                   class="flex items-center"
                 >
                   <div
-                    class="flex items-center justify-center px-1 py-2"
+                    class="flex items-center justify-center"
                     data-testid="SelectDropdown__caret"
                   >
                     <div
@@ -2558,7 +2626,7 @@ exports[`SelectDropdown > should render with custom wrapper class name 1`] = `
                       width="10"
                     >
                       <svg
-                        id="caret-down"
+                        id="chevron-down-small"
                         viewBox="0 0 10 10"
                         x="0"
                         xml:space="preserve"
@@ -2566,8 +2634,12 @@ exports[`SelectDropdown > should render with custom wrapper class name 1`] = `
                         y="0"
                       >
                         <path
-                          d="M9.093 1.5H.907c-.754 0-1.178.859-.714 1.447l4.108 5.208a.91.91 0 0 0 1.43-.002l4.078-5.208c.46-.589.037-1.445-.716-1.445z"
-                          fill="currentColor"
+                          d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
                         />
                       </svg>
                     </div>
@@ -2595,14 +2667,14 @@ exports[`SelectDropdown > should render with empty options 1`] = `
     data-testid="SelectDropdown"
   >
     <div
-      class="sr-only css-n1b0kl"
+      class="sr-only css-14zfvme"
     >
       <div
         class="relative flex h-full flex-1"
       >
         <input
           autocomplete="off"
-          class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
+          class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 css-1937ogs"
           data-testid="select-list__input"
           readonly=""
           tabindex="-1"
@@ -2626,7 +2698,7 @@ exports[`SelectDropdown > should render with empty options 1`] = `
             id="downshift-80-label"
           />
           <div
-            class="css-n1b0kl"
+            class="css-14zfvme"
           >
             <div
               class="relative flex h-full flex-1"
@@ -2636,7 +2708,7 @@ exports[`SelectDropdown > should render with empty options 1`] = `
                 aria-controls="downshift-80-menu"
                 aria-labelledby="downshift-80-label"
                 autocomplete="off"
-                class="no-ligatures w-full border-none !text-sm sm:!text-base cursor-default css-1vs1awz"
+                class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 cursor-default css-1937ogs"
                 data-testid="SelectDropdown__input"
                 id="downshift-80-input"
                 placeholder="Select option"
@@ -2655,7 +2727,7 @@ exports[`SelectDropdown > should render with empty options 1`] = `
                   class="flex items-center"
                 >
                   <div
-                    class="flex items-center justify-center px-1 py-2"
+                    class="flex items-center justify-center"
                     data-testid="SelectDropdown__caret"
                   >
                     <div
@@ -2667,7 +2739,7 @@ exports[`SelectDropdown > should render with empty options 1`] = `
                       width="10"
                     >
                       <svg
-                        id="caret-down"
+                        id="chevron-down-small"
                         viewBox="0 0 10 10"
                         x="0"
                         xml:space="preserve"
@@ -2675,8 +2747,12 @@ exports[`SelectDropdown > should render with empty options 1`] = `
                         y="0"
                       >
                         <path
-                          d="M9.093 1.5H.907c-.754 0-1.178.859-.714 1.447l4.108 5.208a.91.91 0 0 0 1.43-.002l4.078-5.208c.46-.589.037-1.445-.716-1.445z"
-                          fill="currentColor"
+                          d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
                         />
                       </svg>
                     </div>
@@ -2704,14 +2780,14 @@ exports[`SelectDropdown > should render with options values as numbers 1`] = `
     data-testid="SelectDropdown"
   >
     <div
-      class="sr-only css-n1b0kl"
+      class="sr-only css-14zfvme"
     >
       <div
         class="relative flex h-full flex-1"
       >
         <input
           autocomplete="off"
-          class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
+          class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 css-1937ogs"
           data-testid="select-list__input"
           readonly=""
           tabindex="-1"
@@ -2735,7 +2811,7 @@ exports[`SelectDropdown > should render with options values as numbers 1`] = `
             id="downshift-82-label"
           />
           <div
-            class="css-n1b0kl"
+            class="css-14zfvme"
           >
             <div
               class="relative flex h-full flex-1"
@@ -2745,7 +2821,7 @@ exports[`SelectDropdown > should render with options values as numbers 1`] = `
                 aria-controls="downshift-82-menu"
                 aria-labelledby="downshift-82-label"
                 autocomplete="off"
-                class="no-ligatures w-full border-none !text-sm sm:!text-base cursor-default css-1vs1awz"
+                class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 cursor-default css-1937ogs"
                 data-testid="SelectDropdown__input"
                 id="downshift-82-input"
                 placeholder="Select option"
@@ -2764,7 +2840,7 @@ exports[`SelectDropdown > should render with options values as numbers 1`] = `
                   class="flex items-center"
                 >
                   <div
-                    class="flex items-center justify-center px-1 py-2"
+                    class="flex items-center justify-center"
                     data-testid="SelectDropdown__caret"
                   >
                     <div
@@ -2776,7 +2852,7 @@ exports[`SelectDropdown > should render with options values as numbers 1`] = `
                       width="10"
                     >
                       <svg
-                        id="caret-down"
+                        id="chevron-down-small"
                         viewBox="0 0 10 10"
                         x="0"
                         xml:space="preserve"
@@ -2784,8 +2860,12 @@ exports[`SelectDropdown > should render with options values as numbers 1`] = `
                         y="0"
                       >
                         <path
-                          d="M9.093 1.5H.907c-.754 0-1.178.859-.714 1.447l4.108 5.208a.91.91 0 0 0 1.43-.002l4.078-5.208c.46-.589.037-1.445-.716-1.445z"
-                          fill="currentColor"
+                          d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
                         />
                       </svg>
                     </div>

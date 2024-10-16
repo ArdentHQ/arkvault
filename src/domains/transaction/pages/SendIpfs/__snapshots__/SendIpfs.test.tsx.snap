@@ -599,7 +599,7 @@ exports[`SendIpfs > should error if wrong mnemonic 1`] = `
                       Mnemonic
                     </label>
                     <div
-                      class="css-12mz4i6"
+                      class="css-1njetft"
                     >
                       <div
                         class="relative flex h-full flex-1"
@@ -607,7 +607,7 @@ exports[`SendIpfs > should error if wrong mnemonic 1`] = `
                         <input
                           aria-invalid="true"
                           autocomplete="off"
-                          class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
+                          class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 css-1937ogs"
                           data-testid="AuthenticationStep__mnemonic"
                           name="mnemonic"
                           type="password"
@@ -950,14 +950,14 @@ exports[`SendIpfs > should render form step 1`] = `
           IPFS Hash
         </label>
         <div
-          class=" css-n1b0kl"
+          class=" css-14zfvme"
         >
           <div
             class="relative flex h-full flex-1"
           >
             <input
               autocomplete="off"
-              class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
+              class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 css-1937ogs"
               data-testid="Input__hash"
               name="hash"
               placeholder=" "
@@ -981,7 +981,7 @@ exports[`SendIpfs > should render form step 1`] = `
           class="relative"
         >
           <div
-            class="css-xk5t3v"
+            class="css-4lfin5"
             disabled=""
           >
             <div
@@ -989,7 +989,7 @@ exports[`SendIpfs > should render form step 1`] = `
             >
               <input
                 autocomplete="off"
-                class="no-ligatures w-full border-none !text-sm sm:!text-base text-theme-secondary-text css-1vs1awz"
+                class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 text-theme-secondary-text css-1937ogs"
                 data-testid="InputCurrency"
                 disabled=""
                 name="fee"
@@ -7318,7 +7318,7 @@ exports[`SendIpfs > should show an error if an invalid IPFS hash is entered 1`] 
                         IPFS Hash
                       </label>
                       <div
-                        class=" css-12mz4i6"
+                        class=" css-1njetft"
                       >
                         <div
                           class="relative flex h-full flex-1"
@@ -7326,7 +7326,7 @@ exports[`SendIpfs > should show an error if an invalid IPFS hash is entered 1`] 
                           <input
                             aria-invalid="true"
                             autocomplete="off"
-                            class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
+                            class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 css-1937ogs"
                             data-testid="Input__hash"
                             name="hash"
                             placeholder=" "
@@ -8282,7 +8282,7 @@ exports[`SendIpfs > should show error step and go back 1`] = `
                           >
                             <textarea
                               autocomplete="off"
-                              class="no-ligatures w-full border-none !text-sm sm:!text-base resize-none min-h-[8rem] md:min-h-auto md:resize-y resize-none text-theme-secondary-text css-1vs1awz"
+                              class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 resize-none min-h-[8rem] md:min-h-auto md:resize-y resize-none text-theme-secondary-text css-1937ogs"
                               data-testid="ErrorStep__errorMessage"
                               disabled=""
                               style="height: 4px;"

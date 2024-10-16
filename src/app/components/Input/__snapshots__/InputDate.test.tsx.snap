@@ -12,14 +12,14 @@ exports[`InputDate > should render 1`] = `
         class="react-datepicker__input-container"
       >
         <div
-          class="react-datepicker-ignore-onclickoutside css-n1b0kl"
+          class="react-datepicker-ignore-onclickoutside css-14zfvme"
         >
           <div
             class="relative flex h-full flex-1"
           >
             <input
               autocomplete="off"
-              class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
+              class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 css-1937ogs"
               data-testid="InputDate"
               type="text"
               value=""

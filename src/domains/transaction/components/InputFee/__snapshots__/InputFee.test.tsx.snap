@@ -46,14 +46,14 @@ exports[`InputFee > advanced view type > should allow to input a value 1`] = `
       class="relative"
     >
       <div
-        class="css-n1b0kl"
+        class="css-14zfvme"
       >
         <div
           class="relative flex h-full flex-1"
         >
           <input
             autocomplete="off"
-            class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
+            class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 css-1937ogs"
             data-testid="InputCurrency"
             type="text"
             value="0.447"
@@ -186,14 +186,14 @@ exports[`InputFee > advanced view type > should display converted value when on 
       class="relative"
     >
       <div
-        class="css-n1b0kl"
+        class="css-14zfvme"
       >
         <div
           class="relative flex h-full flex-1"
         >
           <input
             autocomplete="off"
-            class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
+            class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 css-1937ogs"
             data-testid="InputCurrency"
             type="text"
             value="0.3"
@@ -296,7 +296,7 @@ exports[`InputFee > advanced view type > should render disabled 1`] = `
     class="relative"
   >
     <div
-      class="css-xk5t3v"
+      class="css-4lfin5"
       disabled=""
     >
       <div
@@ -304,7 +304,7 @@ exports[`InputFee > advanced view type > should render disabled 1`] = `
       >
         <input
           autocomplete="off"
-          class="no-ligatures w-full border-none !text-sm sm:!text-base text-theme-secondary-text css-1vs1awz"
+          class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 text-theme-secondary-text css-1937ogs"
           data-testid="InputCurrency"
           disabled=""
           type="text"
@@ -438,14 +438,14 @@ exports[`InputFee > should keep different values for simple and advanced view ty
       class="relative"
     >
       <div
-        class="css-n1b0kl"
+        class="css-14zfvme"
       >
         <div
           class="relative flex h-full flex-1"
         >
           <input
             autocomplete="off"
-            class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
+            class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 css-1937ogs"
             data-testid="InputCurrency"
             type="text"
             value="0.3"
@@ -695,14 +695,14 @@ exports[`InputFee > simple view type > should change fee option with converted v
       data-testid="SelectDropdown"
     >
       <div
-        class="sr-only css-n1b0kl"
+        class="sr-only css-14zfvme"
       >
         <div
           class="relative flex h-full flex-1"
         >
           <input
             autocomplete="off"
-            class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
+            class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 css-1937ogs"
             data-testid="select-list__input"
             readonly=""
             tabindex="-1"
@@ -731,7 +731,7 @@ exports[`InputFee > simple view type > should change fee option with converted v
               0.006 DARK…
             </div>
             <div
-              class="relative css-n1b0kl"
+              class="relative css-14zfvme"
             >
               <div
                 class="-ml-4 mr-2 flex h-full items-center rounded-l border-r border-theme-secondary-400 bg-theme-secondary-100 px-4 dark:border-theme-secondary-700 dark:bg-theme-secondary-background"
@@ -746,7 +746,7 @@ exports[`InputFee > simple view type > should change fee option with converted v
                   aria-controls="InputFeeSimpleSelect__dropdown-menu"
                   aria-labelledby="InputFeeSimpleSelect__dropdown-label"
                   autocomplete="off"
-                  class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
+                  class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 css-1937ogs"
                   data-testid="SelectDropdown__input"
                   id="InputFeeSimpleSelect__dropdown-input"
                   placeholder="Select option"
@@ -776,7 +776,7 @@ exports[`InputFee > simple view type > should change fee option with converted v
                     class="flex items-center"
                   >
                     <div
-                      class="flex items-center justify-center px-1 py-2"
+                      class="flex items-center justify-center"
                       data-testid="SelectDropdown__caret"
                     >
                       <div
@@ -788,7 +788,7 @@ exports[`InputFee > simple view type > should change fee option with converted v
                         width="10"
                       >
                         <svg
-                          id="caret-down"
+                          id="chevron-down-small"
                           viewBox="0 0 10 10"
                           x="0"
                           xml:space="preserve"
@@ -796,8 +796,12 @@ exports[`InputFee > simple view type > should change fee option with converted v
                           y="0"
                         >
                           <path
-                            d="M9.093 1.5H.907c-.754 0-1.178.859-.714 1.447l4.108 5.208a.91.91 0 0 0 1.43-.002l4.078-5.208c.46-.589.037-1.445-.716-1.445z"
-                            fill="currentColor"
+                            d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
                           />
                         </svg>
                       </div>
@@ -865,14 +869,14 @@ exports[`InputFee > simple view type > should change fee option with converted v
       data-testid="SelectDropdown"
     >
       <div
-        class="sr-only css-n1b0kl"
+        class="sr-only css-14zfvme"
       >
         <div
           class="relative flex h-full flex-1"
         >
           <input
             autocomplete="off"
-            class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
+            class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 css-1937ogs"
             data-testid="select-list__input"
             readonly=""
             tabindex="-1"
@@ -901,7 +905,7 @@ exports[`InputFee > simple view type > should change fee option with converted v
               0.006 DARK…
             </div>
             <div
-              class="relative css-n1b0kl"
+              class="relative css-14zfvme"
             >
               <div
                 class="-ml-4 mr-2 flex h-full items-center rounded-l border-r border-theme-secondary-400 bg-theme-secondary-100 px-4 dark:border-theme-secondary-700 dark:bg-theme-secondary-background"
@@ -916,7 +920,7 @@ exports[`InputFee > simple view type > should change fee option with converted v
                   aria-controls="InputFeeSimpleSelect__dropdown-menu"
                   aria-labelledby="InputFeeSimpleSelect__dropdown-label"
                   autocomplete="off"
-                  class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
+                  class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 css-1937ogs"
                   data-testid="SelectDropdown__input"
                   id="InputFeeSimpleSelect__dropdown-input"
                   placeholder="Select option"
@@ -956,7 +960,7 @@ exports[`InputFee > simple view type > should change fee option with converted v
                       </span>
                     </div>
                     <div
-                      class="flex items-center justify-center px-1 py-2"
+                      class="flex items-center justify-center"
                       data-testid="SelectDropdown__caret"
                     >
                       <div
@@ -968,7 +972,7 @@ exports[`InputFee > simple view type > should change fee option with converted v
                         width="10"
                       >
                         <svg
-                          id="caret-down"
+                          id="chevron-down-small"
                           viewBox="0 0 10 10"
                           x="0"
                           xml:space="preserve"
@@ -976,8 +980,12 @@ exports[`InputFee > simple view type > should change fee option with converted v
                           y="0"
                         >
                           <path
-                            d="M9.093 1.5H.907c-.754 0-1.178.859-.714 1.447l4.108 5.208a.91.91 0 0 0 1.43-.002l4.078-5.208c.46-.589.037-1.445-.716-1.445z"
-                            fill="currentColor"
+                            d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
                           />
                         </svg>
                       </div>
@@ -1853,14 +1861,14 @@ exports[`InputFee > simple view type > should render simple view in xs 1`] = `
       data-testid="SelectDropdown"
     >
       <div
-        class="sr-only css-n1b0kl"
+        class="sr-only css-14zfvme"
       >
         <div
           class="relative flex h-full flex-1"
         >
           <input
             autocomplete="off"
-            class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
+            class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 css-1937ogs"
             data-testid="select-list__input"
             readonly=""
             tabindex="-1"
@@ -1889,7 +1897,7 @@ exports[`InputFee > simple view type > should render simple view in xs 1`] = `
               0.456 DARK…
             </div>
             <div
-              class="relative css-n1b0kl"
+              class="relative css-14zfvme"
             >
               <div
                 class="-ml-4 mr-2 flex h-full items-center rounded-l border-r border-theme-secondary-400 bg-theme-secondary-100 px-4 dark:border-theme-secondary-700 dark:bg-theme-secondary-background"
@@ -1904,7 +1912,7 @@ exports[`InputFee > simple view type > should render simple view in xs 1`] = `
                   aria-controls="InputFeeSimpleSelect__dropdown-menu"
                   aria-labelledby="InputFeeSimpleSelect__dropdown-label"
                   autocomplete="off"
-                  class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
+                  class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 css-1937ogs"
                   data-testid="SelectDropdown__input"
                   id="InputFeeSimpleSelect__dropdown-input"
                   placeholder="Select option"
@@ -1934,7 +1942,7 @@ exports[`InputFee > simple view type > should render simple view in xs 1`] = `
                     class="flex items-center"
                   >
                     <div
-                      class="flex items-center justify-center px-1 py-2"
+                      class="flex items-center justify-center"
                       data-testid="SelectDropdown__caret"
                     >
                       <div
@@ -1946,7 +1954,7 @@ exports[`InputFee > simple view type > should render simple view in xs 1`] = `
                         width="10"
                       >
                         <svg
-                          id="caret-down"
+                          id="chevron-down-small"
                           viewBox="0 0 10 10"
                           x="0"
                           xml:space="preserve"
@@ -1954,8 +1962,12 @@ exports[`InputFee > simple view type > should render simple view in xs 1`] = `
                           y="0"
                         >
                           <path
-                            d="M9.093 1.5H.907c-.754 0-1.178.859-.714 1.447l4.108 5.208a.91.91 0 0 0 1.43-.002l4.078-5.208c.46-.589.037-1.445-.716-1.445z"
-                            fill="currentColor"
+                            d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
                           />
                         </svg>
                       </div>
@@ -2563,14 +2575,14 @@ exports[`InputFee > simple view type > should render simple view with converted 
       data-testid="SelectDropdown"
     >
       <div
-        class="sr-only css-n1b0kl"
+        class="sr-only css-14zfvme"
       >
         <div
           class="relative flex h-full flex-1"
         >
           <input
             autocomplete="off"
-            class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
+            class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 css-1937ogs"
             data-testid="select-list__input"
             readonly=""
             tabindex="-1"
@@ -2599,7 +2611,7 @@ exports[`InputFee > simple view type > should render simple view with converted 
               0.456 DARK…
             </div>
             <div
-              class="relative css-n1b0kl"
+              class="relative css-14zfvme"
             >
               <div
                 class="-ml-4 mr-2 flex h-full items-center rounded-l border-r border-theme-secondary-400 bg-theme-secondary-100 px-4 dark:border-theme-secondary-700 dark:bg-theme-secondary-background"
@@ -2614,7 +2626,7 @@ exports[`InputFee > simple view type > should render simple view with converted 
                   aria-controls="InputFeeSimpleSelect__dropdown-menu"
                   aria-labelledby="InputFeeSimpleSelect__dropdown-label"
                   autocomplete="off"
-                  class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
+                  class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 css-1937ogs"
                   data-testid="SelectDropdown__input"
                   id="InputFeeSimpleSelect__dropdown-input"
                   placeholder="Select option"
@@ -2654,7 +2666,7 @@ exports[`InputFee > simple view type > should render simple view with converted 
                       </span>
                     </div>
                     <div
-                      class="flex items-center justify-center px-1 py-2"
+                      class="flex items-center justify-center"
                       data-testid="SelectDropdown__caret"
                     >
                       <div
@@ -2666,7 +2678,7 @@ exports[`InputFee > simple view type > should render simple view with converted 
                         width="10"
                       >
                         <svg
-                          id="caret-down"
+                          id="chevron-down-small"
                           viewBox="0 0 10 10"
                           x="0"
                           xml:space="preserve"
@@ -2674,8 +2686,12 @@ exports[`InputFee > simple view type > should render simple view with converted 
                           y="0"
                         >
                           <path
-                            d="M9.093 1.5H.907c-.754 0-1.178.859-.714 1.447l4.108 5.208a.91.91 0 0 0 1.43-.002l4.078-5.208c.46-.589.037-1.445-.716-1.445z"
-                            fill="currentColor"
+                            d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
                           />
                         </svg>
                       </div>

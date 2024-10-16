@@ -3,14 +3,14 @@
 exports[`Input > should render as custom element 1`] = `
 <DocumentFragment>
   <div
-    class="css-n1b0kl"
+    class="css-14zfvme"
   >
     <div
       class="relative flex h-full flex-1"
     >
       <select
         autocomplete="off"
-        class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
+        class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 css-1937ogs"
         data-testid="Input"
         type="text"
       />
@@ -29,7 +29,7 @@ exports[`Input > should render as textarea 1`] = `
     >
       <input
         autocomplete="off"
-        class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
+        class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 css-1937ogs"
         data-testid="Input"
         type="text"
         value=""
@@ -42,7 +42,7 @@ exports[`Input > should render as textarea 1`] = `
 exports[`Input > should render disabled 1`] = `
 <DocumentFragment>
   <div
-    class="css-xk5t3v"
+    class="css-4lfin5"
     disabled=""
   >
     <div
@@ -50,7 +50,7 @@ exports[`Input > should render disabled 1`] = `
     >
       <input
         autocomplete="off"
-        class="no-ligatures w-full border-none !text-sm sm:!text-base text-theme-secondary-text css-1vs1awz"
+        class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 text-theme-secondary-text css-1937ogs"
         data-testid="Input"
         disabled=""
         type="text"
@@ -64,7 +64,7 @@ exports[`Input > should render disabled 1`] = `
 exports[`Input > should render invalid 1`] = `
 <DocumentFragment>
   <div
-    class="css-12mz4i6"
+    class="css-1njetft"
   >
     <div
       class="relative flex h-full flex-1"
@@ -72,7 +72,7 @@ exports[`Input > should render invalid 1`] = `
       <input
         aria-invalid="true"
         autocomplete="off"
-        class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
+        class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 css-1937ogs"
         data-testid="Input"
         type="text"
         value=""
@@ -132,7 +132,7 @@ exports[`Input > should render invalid 1`] = `
 exports[`Input > should render invalid and disabled 1`] = `
 <DocumentFragment>
   <div
-    class="css-4xrsad"
+    class="css-1pvpq37"
     disabled=""
   >
     <div
@@ -141,7 +141,7 @@ exports[`Input > should render invalid and disabled 1`] = `
       <input
         aria-invalid="true"
         autocomplete="off"
-        class="no-ligatures w-full border-none !text-sm sm:!text-base text-theme-secondary-text css-1vs1awz"
+        class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 text-theme-secondary-text css-1937ogs"
         data-testid="Input"
         disabled=""
         type="text"
@@ -202,14 +202,14 @@ exports[`Input > should render invalid and disabled 1`] = `
 exports[`Input > should render when isCompact = false 1`] = `
 <DocumentFragment>
   <div
-    class="css-n1b0kl"
+    class="css-14zfvme"
   >
     <div
       class="relative flex h-full flex-1"
     >
       <input
         autocomplete="off"
-        class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
+        class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 css-1937ogs"
         data-testid="Input"
         type="text"
         value=""
@@ -229,7 +229,7 @@ exports[`Input > should render when isCompact = true 1`] = `
     >
       <input
         autocomplete="off"
-        class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
+        class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 css-1937ogs"
         data-testid="Input"
         type="text"
         value=""
@@ -242,7 +242,7 @@ exports[`Input > should render when isCompact = true 1`] = `
 exports[`Input > should render with addons 1`] = `
 <DocumentFragment>
   <div
-    class="css-n1b0kl"
+    class="css-14zfvme"
   >
     <span>
       start
@@ -252,7 +252,7 @@ exports[`Input > should render with addons 1`] = `
     >
       <input
         autocomplete="off"
-        class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
+        class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 css-1937ogs"
         data-testid="Input"
         type="text"
         value=""
@@ -277,14 +277,14 @@ exports[`Input > should render with addons 1`] = `
 exports[`Input > should render with focus 1`] = `
 <DocumentFragment>
   <div
-    class="css-n1b0kl"
+    class="css-14zfvme"
   >
     <div
       class="relative flex h-full flex-1"
     >
       <input
         autocomplete="off"
-        class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
+        class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 css-1937ogs"
         data-testid="Input"
         type="text"
         value=""
@@ -302,14 +302,14 @@ exports[`Input > should render with suggestion 1`] = `
     …
   </div>
   <div
-    class="css-n1b0kl"
+    class="css-14zfvme"
   >
     <div
       class="relative flex h-full flex-1"
     >
       <input
         autocomplete="off"
-        class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
+        class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 css-1937ogs"
         data-testid="Input"
         type="text"
         value=""

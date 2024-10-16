@@ -16,7 +16,7 @@ exports[`SelectAddress > should render disabled 1`] = `
       />
     </span>
     <div
-      class="css-xk5t3v"
+      class="css-4lfin5"
       disabled=""
     >
       <div
@@ -27,7 +27,7 @@ exports[`SelectAddress > should render disabled 1`] = `
       >
         <input
           autocomplete="off"
-          class="no-ligatures w-full border-none !text-sm sm:!text-base text-theme-secondary-text css-1vs1awz"
+          class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 text-theme-secondary-text css-1937ogs"
           data-testid="SelectAddress__input"
           disabled=""
           readonly=""
@@ -99,7 +99,7 @@ exports[`SelectAddress > should render empty 1`] = `
       />
     </span>
     <div
-      class="css-n1b0kl"
+      class="css-14zfvme"
     >
       <div
         class="border-theme-secondary-200 bg-theme-secondary-200 dark:border-theme-secondary-700 dark:bg-theme-secondary-700 ring-theme-background duration-100 css-cm9d5u"
@@ -109,7 +109,7 @@ exports[`SelectAddress > should render empty 1`] = `
       >
         <input
           autocomplete="off"
-          class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
+          class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 css-1937ogs"
           data-testid="SelectAddress__input"
           readonly=""
           type="text"
@@ -180,7 +180,7 @@ exports[`SelectAddress > should render invalid 1`] = `
       />
     </span>
     <div
-      class="css-12mz4i6"
+      class="css-1njetft"
     >
       <div
         class="border-theme-secondary-200 bg-theme-secondary-200 dark:border-theme-secondary-700 dark:bg-theme-secondary-700 ring-theme-background duration-100 css-cm9d5u"
@@ -191,7 +191,7 @@ exports[`SelectAddress > should render invalid 1`] = `
         <input
           aria-invalid="true"
           autocomplete="off"
-          class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
+          class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 css-1937ogs"
           data-testid="SelectAddress__input"
           readonly=""
           type="text"
@@ -321,7 +321,7 @@ exports[`SelectAddress > should render with preselected address 1`] = `
       </div>
     </span>
     <div
-      class="css-n1b0kl"
+      class="css-14zfvme"
     >
       <div
         class="shrink-0 css-1p5jpah"
@@ -342,7 +342,7 @@ exports[`SelectAddress > should render with preselected address 1`] = `
       >
         <input
           autocomplete="off"
-          class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
+          class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 css-1937ogs"
           data-testid="SelectAddress__input"
           readonly=""
           type="text"
@@ -413,7 +413,7 @@ exports[`SelectAddress > should render without user icon 1`] = `
       />
     </span>
     <div
-      class="css-n1b0kl"
+      class="css-14zfvme"
     >
       <div
         class="border-theme-secondary-200 bg-theme-secondary-200 dark:border-theme-secondary-700 dark:bg-theme-secondary-700 ring-theme-background duration-100 css-cm9d5u"
@@ -423,7 +423,7 @@ exports[`SelectAddress > should render without user icon 1`] = `
       >
         <input
           autocomplete="off"
-          class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
+          class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 css-1937ogs"
           data-testid="SelectAddress__input"
           readonly=""
           type="text"

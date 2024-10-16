@@ -3,14 +3,14 @@
 exports[`InputAddress > should not use default validation 1`] = `
 <DocumentFragment>
   <div
-    class="css-n1b0kl"
+    class="css-14zfvme"
   >
     <div
       class="relative flex h-full flex-1"
     >
       <input
         autocomplete="off"
-        class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
+        class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 css-1937ogs"
         data-testid="InputAddress__input"
         name="address"
         type="text"
@@ -24,14 +24,14 @@ exports[`InputAddress > should not use default validation 1`] = `
 exports[`InputAddress > should render 1`] = `
 <DocumentFragment>
   <div
-    class="css-n1b0kl"
+    class="css-14zfvme"
   >
     <div
       class="relative flex h-full flex-1"
     >
       <input
         autocomplete="off"
-        class="no-ligatures w-full border-none !text-sm sm:!text-base css-1vs1awz"
+        class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 css-1937ogs"
         data-testid="InputAddress__input"
         name="address"
         type="text"
