@@ -9,7 +9,13 @@ import { Icon } from "@/app/components/Icon";
 import { TransactionAddresses, TransactionType } from "@/domains/transaction/components/TransactionDetail";
 import { DetailLabel } from "@/app/components/DetailWrapper";
 
-export const ReviewStep = ({ wallet, transaction }: { wallet: Contracts.IReadWriteWallet, transaction: DTO.ExtendedSignedTransactionData }) => {
+export const ReviewStep = ({
+	wallet,
+	transaction,
+}: {
+	wallet: Contracts.IReadWriteWallet;
+	transaction: DTO.ExtendedSignedTransactionData;
+}) => {
 	const { t } = useTranslation();
 
 	const { unregister, watch } = useFormContext();
@@ -34,7 +40,7 @@ export const ReviewStep = ({ wallet, transaction }: { wallet: Contracts.IReadWri
 				}
 			/>
 
-			<div className="mt-4 space-y-4 -mx-3 sm:mx-0">
+			<div className="-mx-3 mt-4 space-y-4 sm:mx-0">
 				<TransactionAddresses
 					labelClassName="min-w-24"
 					profile={wallet.profile()}

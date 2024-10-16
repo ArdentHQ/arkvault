@@ -7,7 +7,6 @@ import { FormField, FormLabel } from "@/app/components/Form";
 import { InputDefault } from "@/app/components/Input";
 import { useFees } from "@/app/hooks";
 import { FeeField } from "@/domains/transaction/components/FeeField";
-import { TransactionNetwork, TransactionSender } from "@/domains/transaction/components/TransactionDetail";
 import { StepHeader } from "@/app/components/StepHeader";
 import { SelectAddress } from "@/domains/profile/components/SelectAddress";
 import { ThemeIcon } from "@/app/components/Icon";
@@ -53,7 +52,6 @@ const FormStep = ({ profile, wallet }: { profile: Contracts.IProfile; wallet: Co
 					<ThemeIcon dimensions={[24, 24]} lightIcon="SendTransactionLight" darkIcon="SendTransactionDark" />
 				}
 			/>
-
 
 			<div className="space-y-4 pt-4">
 				<FormField name="senderAddress">

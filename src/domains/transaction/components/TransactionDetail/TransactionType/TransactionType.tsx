@@ -4,15 +4,13 @@ import { useTranslation } from "react-i18next";
 import { useTransactionTypes } from "@/domains/transaction/hooks/use-transaction-types";
 import { DetailDivider, DetailLabelText, DetailWrapper } from "@/app/components/DetailWrapper";
 import { Label } from "@/app/components/Label";
-import { useResizeDetector } from "react-resize-detector";
-import { TruncateMiddleDynamic } from "@/app/components/TruncateMiddleDynamic";
 import { Clipboard } from "@/app/components/Clipboard";
 import { Icon } from "@/app/components/Icon";
 import { useTheme } from "@/app/hooks";
 import { DTO } from "@ardenthq/sdk-profiles";
 import { MusigGeneratedAddress } from "@/domains/transaction/components/TransactionDetail/MusigGeneratedAddress/MusigGeneratedAddress";
 import { transactionPublicKeys } from "@/domains/transaction/components/MultiSignatureDetail/MultiSignatureDetail.helpers";
-import { AddressLabel, AddressLink } from "@/app/components/Address";
+import { AddressLabel } from "@/app/components/Address";
 
 export const TransactionType = ({
 	transaction,
@@ -20,7 +18,6 @@ export const TransactionType = ({
 	transaction: DTO.ExtendedSignedTransactionData | DTO.ExtendedConfirmedTransactionData;
 }) => {
 	const { t } = useTranslation();
-	const { ref, width } = useResizeDetector<HTMLElement>({ handleHeight: false });
 	const { isDarkMode } = useTheme();
 
 	const { getLabel } = useTransactionTypes();
@@ -67,7 +64,9 @@ export const TransactionType = ({
 							<div className="flex w-full justify-between sm:justify-start">
 								<DetailLabelText>{t("COMMON.HASH")}</DetailLabelText>
 								<div className="flex w-full space-x-2">
-									<div className="font-semibold leading-5 text-base"><AddressLabel>{transaction.hash()}</AddressLabel></div>
+									<div className="text-base font-semibold leading-5">
+										<AddressLabel>{transaction.hash()}</AddressLabel>
+									</div>
 									<Clipboard
 										variant="icon"
 										data={transaction.hash()}
