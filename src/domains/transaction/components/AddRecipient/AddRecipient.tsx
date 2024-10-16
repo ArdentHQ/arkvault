@@ -352,16 +352,36 @@ export const AddRecipient: VFC<AddRecipientProperties> = ({
 
 					<FormField name="amount">
 						<FormLabel>
-							<span>{t("COMMON.AMOUNT")}</span>
-							{isSenderFilled && !!remainingNetBalance && (
-								<span
-									data-testid="AddRecipient__available"
-									className="ml-1 text-theme-secondary-500 dark:text-theme-secondary-700"
-								>
-									({t("COMMON.AVAILABLE")}{" "}
-									<Amount value={+remainingNetBalance} ticker={ticker} showTicker={false} />)
+							<span className="flex justify-between items-centers w-full">
+								<span>
+									<span>{t("COMMON.AMOUNT")}</span>
+									{isSenderFilled && !!remainingNetBalance && (
+										<span
+											data-testid="AddRecipient__available"
+											className="ml-1 text-theme-secondary-500 dark:text-theme-secondary-700"
+										>
+											({t("COMMON.AVAILABLE")}{" "}
+											<Amount value={+remainingNetBalance} ticker={ticker} showTicker={false} />)
+										</span>
+									)}
 								</span>
-							)}
+								{isSingle && (
+									<span className="inline-flex sm:hidden">
+										<Button
+											type="button"
+											variant="transparent"
+											disabled={!isSenderFilled}
+											className={cn("p-0 text-theme-navy-600 dark:text-theme-secondary-700", { active: getValues("isSendAllSelected") })}
+											onClick={() => {
+												setValue("isSendAllSelected", !getValues("isSendAllSelected"));
+											}}
+											data-testid="AddRecipient__send-all"
+										>
+											{t("TRANSACTION.SEND_ALL")}
+										</Button>
+									</span>
+								)}
+							</span>
 						</FormLabel>
 
 						<div className="flex space-x-2">
@@ -385,15 +405,15 @@ export const AddRecipient: VFC<AddRecipientProperties> = ({
 							</div>
 
 							{isSingle && (
-								<div className="inline-flex">
+								<div className="hidden sm:inline-flex">
 									<InputButtonStyled
 										type="button"
 										disabled={!isSenderFilled}
-										className={cn({ active: getValues("isSendAllSelected") })}
+										className={cn("text-theme-navy-600 dark:text-theme-secondary-700", { active: getValues("isSendAllSelected") })}
 										onClick={() => {
 											setValue("isSendAllSelected", !getValues("isSendAllSelected"));
 										}}
-										data-testid="AddRecipient__send-all"
+										data-testid="AddRecipient__sm_send-all"
 									>
 										{t("TRANSACTION.SEND_ALL")}
 									</InputButtonStyled>
