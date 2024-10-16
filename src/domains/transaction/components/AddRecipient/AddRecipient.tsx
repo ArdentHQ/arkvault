@@ -352,7 +352,7 @@ export const AddRecipient: VFC<AddRecipientProperties> = ({
 
 					<FormField name="amount">
 						<FormLabel>
-							<span className="flex justify-between items-centers w-full">
+							<span className="items-centers flex w-full justify-between">
 								<span>
 									<span>{t("COMMON.AMOUNT")}</span>
 									{isSenderFilled && !!remainingNetBalance && (
@@ -409,7 +409,9 @@ export const AddRecipient: VFC<AddRecipientProperties> = ({
 									<InputButtonStyled
 										type="button"
 										disabled={!isSenderFilled}
-										className={cn("text-theme-navy-600 dark:text-theme-secondary-700", { active: getValues("isSendAllSelected") })}
+										className={cn("text-theme-navy-600 dark:text-theme-secondary-700", {
+											active: getValues("isSendAllSelected"),
+										})}
 										onClick={() => {
 											setValue("isSendAllSelected", !getValues("isSendAllSelected"));
 										}}
