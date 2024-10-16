@@ -132,7 +132,8 @@ export const SendVote = () => {
 				return;
 			}
 
-			const isFullyRestoredAndSynced = senderWallet.hasBeenFullyRestored() && senderWallet.hasSyncedWithNetwork();
+			const isFullyRestoredAndSynced =
+				senderWallet?.hasBeenFullyRestored() && senderWallet.hasSyncedWithNetwork();
 
 			if (!isFullyRestoredAndSynced) {
 				syncProfileWallets(true);
@@ -277,7 +278,8 @@ export const SendVote = () => {
 			secret,
 			secondSecret,
 		} = getValues();
-		const abortSignal = abortReference.current.signal;
+
+		const abortSignal = abortReference.current?.signal;
 
 		assertWallet(activeWallet);
 
