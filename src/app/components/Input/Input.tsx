@@ -94,9 +94,6 @@ const InputStyled = styled.input`
 	&:focus {
 		${tw`outline-none shadow-none (ring-0 ring-transparent)!`}
 	}
-	&::placeholder {
-		${tw`text-theme-secondary-400 dark:text-theme-secondary-700`}
-	}
 	&.shadow-none {
 		${tw`shadow-none`}
 	}
@@ -172,9 +169,13 @@ export const Input = React.forwardRef<InputElement, InputProperties>(
 					<div className={cn("relative flex h-full flex-1", { invisible: hideInputValue })}>
 						<InputStyled
 							data-testid="Input"
-							className={cn("no-ligatures w-full border-none", innerClassName, {
-								"text-theme-secondary-text": disabled,
-							})}
+							className={cn(
+								"no-ligatures w-full border-none !text-sm text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base",
+								innerClassName,
+								{
+									"text-theme-secondary-text": disabled,
+								},
+							)}
 							name={fieldContext?.name}
 							aria-invalid={isInvalidValue}
 							disabled={disabled}

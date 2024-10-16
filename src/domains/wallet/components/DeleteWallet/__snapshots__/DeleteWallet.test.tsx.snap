@@ -196,7 +196,7 @@ exports[`DeleteWallet > should render a modal 1`] = `
                   </div>
                 </span>
                 <div
-                  class="css-xk5t3v"
+                  class="css-4lfin5"
                   disabled=""
                 >
                   <div
@@ -218,7 +218,7 @@ exports[`DeleteWallet > should render a modal 1`] = `
                   >
                     <input
                       autocomplete="off"
-                      class="no-ligatures w-full border-none text-theme-secondary-text css-1vs1awz"
+                      class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 text-theme-secondary-text css-1937ogs"
                       data-testid="SelectAddress__input"
                       disabled=""
                       name="wallet"

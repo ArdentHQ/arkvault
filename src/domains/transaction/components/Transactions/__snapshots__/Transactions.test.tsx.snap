@@ -6,11 +6,11 @@ exports[`Transactions > should fetch more transactions 1`] = `
     class="mb-3 hidden md:block"
   >
     <div
-      class="h-14 px-6 py-4 css-rw43kq"
+      class="h-14 px-6 py-4 css-1z5csy"
     >
       <button
         aria-selected="true"
-        class="ring-focus mx-6 pb-9 before:!top-1/3 css-0 tab-button"
+        class="ring-focus mx-6 before:bg-theme-secondary-300 before:dark:bg-theme-secondary-800 pb-9 before:!top-1/3 css-0 tab-button"
         data-ring-focus-margin="-mx-3"
         data-testid="tabs__tab-button-all"
         role="tab"
@@ -23,7 +23,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
       </button>
       <button
         aria-selected="false"
-        class="ring-focus mx-6 pb-9 before:!top-1/3 css-0 tab-button"
+        class="ring-focus mx-6 before:bg-theme-secondary-300 before:dark:bg-theme-secondary-800 pb-9 before:!top-1/3 css-0 tab-button"
         data-ring-focus-margin="-mx-3"
         data-testid="tabs__tab-button-received"
         role="tab"
@@ -36,7 +36,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
       </button>
       <button
         aria-selected="false"
-        class="ring-focus mx-6 pb-9 before:!top-1/3 css-0 tab-button"
+        class="ring-focus mx-6 before:bg-theme-secondary-300 before:dark:bg-theme-secondary-800 pb-9 before:!top-1/3 css-0 tab-button"
         data-ring-focus-margin="-mx-3"
         data-testid="tabs__tab-button-sent"
         role="tab"
@@ -10214,11 +10214,11 @@ exports[`Transactions > should hide view more button when there are no next page
     class="mb-3 hidden md:block"
   >
     <div
-      class="h-14 px-6 py-4 css-rw43kq"
+      class="h-14 px-6 py-4 css-1z5csy"
     >
       <button
         aria-selected="true"
-        class="ring-focus mx-6 pb-9 before:!top-1/3 css-0 tab-button"
+        class="ring-focus mx-6 before:bg-theme-secondary-300 before:dark:bg-theme-secondary-800 pb-9 before:!top-1/3 css-0 tab-button"
         data-ring-focus-margin="-mx-3"
         data-testid="tabs__tab-button-all"
         role="tab"
@@ -10231,7 +10231,7 @@ exports[`Transactions > should hide view more button when there are no next page
       </button>
       <button
         aria-selected="false"
-        class="ring-focus mx-6 pb-9 before:!top-1/3 css-0 tab-button"
+        class="ring-focus mx-6 before:bg-theme-secondary-300 before:dark:bg-theme-secondary-800 pb-9 before:!top-1/3 css-0 tab-button"
         data-ring-focus-margin="-mx-3"
         data-testid="tabs__tab-button-received"
         role="tab"
@@ -10244,7 +10244,7 @@ exports[`Transactions > should hide view more button when there are no next page
       </button>
       <button
         aria-selected="false"
-        class="ring-focus mx-6 pb-9 before:!top-1/3 css-0 tab-button"
+        class="ring-focus mx-6 before:bg-theme-secondary-300 before:dark:bg-theme-secondary-800 pb-9 before:!top-1/3 css-0 tab-button"
         data-ring-focus-margin="-mx-3"
         data-testid="tabs__tab-button-sent"
         role="tab"
@@ -15552,11 +15552,11 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
     class="mb-3 hidden md:block"
   >
     <div
-      class="h-14 px-6 py-4 css-rw43kq"
+      class="h-14 px-6 py-4 css-1z5csy"
     >
       <button
         aria-selected="true"
-        class="ring-focus mx-6 pb-9 before:!top-1/3 css-0 tab-button"
+        class="ring-focus mx-6 before:bg-theme-secondary-300 before:dark:bg-theme-secondary-800 pb-9 before:!top-1/3 css-0 tab-button"
         data-ring-focus-margin="-mx-3"
         data-testid="tabs__tab-button-all"
         role="tab"
@@ -15569,7 +15569,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
       </button>
       <button
         aria-selected="false"
-        class="ring-focus mx-6 pb-9 before:!top-1/3 css-0 tab-button"
+        class="ring-focus mx-6 before:bg-theme-secondary-300 before:dark:bg-theme-secondary-800 pb-9 before:!top-1/3 css-0 tab-button"
         data-ring-focus-margin="-mx-3"
         data-testid="tabs__tab-button-received"
         role="tab"
@@ -15582,7 +15582,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
       </button>
       <button
         aria-selected="false"
-        class="ring-focus mx-6 pb-9 before:!top-1/3 css-0 tab-button"
+        class="ring-focus mx-6 before:bg-theme-secondary-300 before:dark:bg-theme-secondary-800 pb-9 before:!top-1/3 css-0 tab-button"
         data-ring-focus-margin="-mx-3"
         data-testid="tabs__tab-button-sent"
         role="tab"

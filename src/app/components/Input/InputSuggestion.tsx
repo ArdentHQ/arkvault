@@ -31,7 +31,7 @@ export const InputSuggestion: VFC<InputSuggestionProperties> = ({ hiddenReferenc
 		<span
 			data-testid="Input__suggestion"
 			className={cn(
-				"pointer-events-none absolute inset-y-0 flex w-full items-center font-normal opacity-50",
+				"pointer-events-none absolute inset-y-0 flex w-full items-center text-sm font-normal opacity-50 sm:text-base",
 				{ invisible: hideSuggestion() },
 				innerClassName,
 			)}

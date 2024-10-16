@@ -138,7 +138,12 @@ export const SelectAddress = React.forwardRef<HTMLInputElement, SelectAddressPro
 							},
 						)}
 					>
-						<Address address={selectedWallet?.address} walletName={showWalletName ? alias : undefined} />
+						<Address
+							address={selectedWallet?.address}
+							walletName={showWalletName ? alias : undefined}
+							addressClass="text-sm sm:text-base text-theme-secondary-500 dark:text-theme-secondary-700"
+							walletNameClass="text-sm sm:text-base"
+						/>
 					</span>
 
 					<Input
