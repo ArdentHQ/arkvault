@@ -132,8 +132,7 @@ export const SendVote = () => {
 				return;
 			}
 
-			const isFullyRestoredAndSynced =
-				senderWallet.hasBeenFullyRestored() && senderWallet.hasSyncedWithNetwork();
+			const isFullyRestoredAndSynced = senderWallet.hasBeenFullyRestored() && senderWallet.hasSyncedWithNetwork();
 
 			if (!isFullyRestoredAndSynced) {
 				syncProfileWallets(true);
@@ -401,17 +400,17 @@ export const SendVote = () => {
 						...voteTransactionInput,
 						data: isUnvote
 							? {
-								unvotes: unvotes.map((unvote) => ({
-									amount: unvote.amount,
-									id: unvote.wallet?.governanceIdentifier(),
-								})),
-							}
+									unvotes: unvotes.map((unvote) => ({
+										amount: unvote.amount,
+										id: unvote.wallet?.governanceIdentifier(),
+									})),
+								}
 							: {
-								votes: votes.map((vote) => ({
-									amount: vote.amount,
-									id: vote.wallet?.governanceIdentifier(),
-								})),
-							},
+									votes: votes.map((vote) => ({
+										amount: vote.amount,
+										id: vote.wallet?.governanceIdentifier(),
+									})),
+								},
 					},
 					senderWallet,
 					{ abortSignal },
