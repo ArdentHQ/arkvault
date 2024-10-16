@@ -86,7 +86,7 @@ exports[`TotalAmountBox > should render with amount of 0.1 and fee of 0.01 1`] =
         Total Amount
       </span>
       <span
-        class="whitespace-nowrap text-md font-bold sm:text-lg"
+        class="whitespace-nowrap text-md font-semibold sm:text-lg"
         data-testid="Amount"
       >
         0.11 ARK
@@ -182,7 +182,7 @@ exports[`TotalAmountBox > should render with amount of 0.1 and fee of 0.01 2`] =
         Total Amount
       </span>
       <span
-        class="whitespace-nowrap text-md font-bold sm:text-lg"
+        class="whitespace-nowrap text-md font-semibold sm:text-lg"
         data-testid="Amount"
       >
         0.11 ARK
@@ -278,7 +278,7 @@ exports[`TotalAmountBox > should render with amount of 0.1 and fee of 0.01 3`] =
         Total Amount
       </span>
       <span
-        class="whitespace-nowrap text-md font-bold sm:text-lg"
+        class="whitespace-nowrap text-md font-semibold sm:text-lg"
         data-testid="Amount"
       >
         0.11 ARK
@@ -374,7 +374,7 @@ exports[`TotalAmountBox > should render with amount of 0.1 and fee of 0.01 4`] =
         Total Amount
       </span>
       <span
-        class="whitespace-nowrap text-md font-bold sm:text-lg"
+        class="whitespace-nowrap text-md font-semibold sm:text-lg"
         data-testid="Amount"
       >
         0.11 ARK

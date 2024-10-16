@@ -48,7 +48,7 @@ exports[`AuthenticationStep (message) > should request WIF if wallet was importe
         >
           <input
             autocomplete="off"
-            class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 css-1937ogs"
+            class="no-ligatures w-full border-none !text-sm text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
             data-testid="AuthenticationStep__wif"
             name="wif"
             type="password"
@@ -155,7 +155,7 @@ exports[`AuthenticationStep (message) > should request mnemonic if wallet was im
           <input
             aria-invalid="true"
             autocomplete="off"
-            class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 css-1937ogs"
+            class="no-ligatures w-full border-none !text-sm text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
             data-testid="AuthenticationStep__mnemonic"
             name="mnemonic"
             type="password"
@@ -304,7 +304,7 @@ exports[`AuthenticationStep (message) > should request mnemonic if wallet was im
           <input
             aria-invalid="true"
             autocomplete="off"
-            class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 css-1937ogs"
+            class="no-ligatures w-full border-none !text-sm text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
             data-testid="AuthenticationStep__mnemonic"
             name="mnemonic"
             type="password"
@@ -452,7 +452,7 @@ exports[`AuthenticationStep (message) > should request private key if wallet was
         >
           <input
             autocomplete="off"
-            class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 css-1937ogs"
+            class="no-ligatures w-full border-none !text-sm text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
             data-testid="AuthenticationStep__private-key"
             name="privateKey"
             type="password"
@@ -558,7 +558,7 @@ exports[`AuthenticationStep (message) > should request secret if wallet was impo
         >
           <input
             autocomplete="off"
-            class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 css-1937ogs"
+            class="no-ligatures w-full border-none !text-sm text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
             data-testid="AuthenticationStep__secret"
             name="secret"
             type="password"
@@ -1358,7 +1358,7 @@ exports[`AuthenticationStep (transaction) > should request WIF if wallet was imp
         >
           <input
             autocomplete="off"
-            class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 css-1937ogs"
+            class="no-ligatures w-full border-none !text-sm text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
             data-testid="AuthenticationStep__wif"
             name="wif"
             type="password"
@@ -1464,7 +1464,7 @@ exports[`AuthenticationStep (transaction) > should request mnemonic and second m
         >
           <input
             autocomplete="off"
-            class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 css-1937ogs"
+            class="no-ligatures w-full border-none !text-sm text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
             data-testid="AuthenticationStep__mnemonic"
             name="mnemonic"
             type="password"
@@ -1537,7 +1537,7 @@ exports[`AuthenticationStep (transaction) > should request mnemonic and second m
           <input
             aria-invalid="true"
             autocomplete="off"
-            class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 css-1937ogs"
+            class="no-ligatures w-full border-none !text-sm text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
             data-testid="AuthenticationStep__second-mnemonic"
             name="secondMnemonic"
             type="password"
@@ -1686,7 +1686,7 @@ exports[`AuthenticationStep (transaction) > should request mnemonic if wallet wa
           <input
             aria-invalid="true"
             autocomplete="off"
-            class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 css-1937ogs"
+            class="no-ligatures w-full border-none !text-sm text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
             data-testid="AuthenticationStep__mnemonic"
             name="mnemonic"
             type="password"
@@ -1835,7 +1835,7 @@ exports[`AuthenticationStep (transaction) > should request mnemonic if wallet wa
           <input
             aria-invalid="true"
             autocomplete="off"
-            class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 css-1937ogs"
+            class="no-ligatures w-full border-none !text-sm text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
             data-testid="AuthenticationStep__mnemonic"
             name="mnemonic"
             type="password"
@@ -1983,7 +1983,7 @@ exports[`AuthenticationStep (transaction) > should request private key if wallet
         >
           <input
             autocomplete="off"
-            class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 css-1937ogs"
+            class="no-ligatures w-full border-none !text-sm text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
             data-testid="AuthenticationStep__private-key"
             name="privateKey"
             type="password"
@@ -2089,7 +2089,7 @@ exports[`AuthenticationStep (transaction) > should request secret and second sec
         >
           <input
             autocomplete="off"
-            class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 css-1937ogs"
+            class="no-ligatures w-full border-none !text-sm text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
             data-testid="AuthenticationStep__secret"
             name="secret"
             type="password"
@@ -2161,7 +2161,7 @@ exports[`AuthenticationStep (transaction) > should request secret and second sec
         >
           <input
             autocomplete="off"
-            class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 css-1937ogs"
+            class="no-ligatures w-full border-none !text-sm text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
             data-testid="AuthenticationStep__second-secret"
             name="secondSecret"
             type="password"
@@ -2267,7 +2267,7 @@ exports[`AuthenticationStep (transaction) > should request secret if wallet was 
         >
           <input
             autocomplete="off"
-            class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 css-1937ogs"
+            class="no-ligatures w-full border-none !text-sm text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
             data-testid="AuthenticationStep__secret"
             name="secret"
             type="password"

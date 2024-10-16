@@ -718,7 +718,7 @@ exports[`SignMessage > Sign with Wallet > should render (lg) 1`] = `
                             class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
                             <span
-                              class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                              class="no-ligatures min-w-0 overflow-hidden text-sm sm:text-base text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                               data-testid="Address__address"
                             >
                               DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr
@@ -734,7 +734,7 @@ exports[`SignMessage > Sign with Wallet > should render (lg) 1`] = `
                           >
                             <input
                               autocomplete="off"
-                              class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 text-theme-secondary-text css-1937ogs"
+                              class="no-ligatures w-full border-none !text-sm text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base text-theme-secondary-text css-1937ogs"
                               data-testid="SelectAddress__input"
                               disabled=""
                               name="signatory-address"
@@ -764,7 +764,7 @@ exports[`SignMessage > Sign with Wallet > should render (lg) 1`] = `
                         >
                           <input
                             autocomplete="off"
-                            class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 css-1937ogs"
+                            class="no-ligatures w-full border-none !text-sm text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
                             data-testid="SignMessage__message-input"
                             name="message"
                             type="text"
@@ -814,7 +814,7 @@ exports[`SignMessage > Sign with Wallet > should render (lg) 1`] = `
                           >
                             <input
                               autocomplete="off"
-                              class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 css-1937ogs"
+                              class="no-ligatures w-full border-none !text-sm text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
                               data-testid="AuthenticationStep__mnemonic"
                               name="mnemonic"
                               type="password"
@@ -1626,7 +1626,7 @@ exports[`SignMessage > Sign with Wallet > should render (xs) 1`] = `
                             class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
                             <span
-                              class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                              class="no-ligatures min-w-0 overflow-hidden text-sm sm:text-base text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                               data-testid="Address__address"
                             >
                               DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr
@@ -1642,7 +1642,7 @@ exports[`SignMessage > Sign with Wallet > should render (xs) 1`] = `
                           >
                             <input
                               autocomplete="off"
-                              class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 text-theme-secondary-text css-1937ogs"
+                              class="no-ligatures w-full border-none !text-sm text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base text-theme-secondary-text css-1937ogs"
                               data-testid="SelectAddress__input"
                               disabled=""
                               name="signatory-address"
@@ -1672,7 +1672,7 @@ exports[`SignMessage > Sign with Wallet > should render (xs) 1`] = `
                         >
                           <input
                             autocomplete="off"
-                            class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 css-1937ogs"
+                            class="no-ligatures w-full border-none !text-sm text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
                             data-testid="SignMessage__message-input"
                             name="message"
                             type="text"
@@ -1722,7 +1722,7 @@ exports[`SignMessage > Sign with Wallet > should render (xs) 1`] = `
                           >
                             <input
                               autocomplete="off"
-                              class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 css-1937ogs"
+                              class="no-ligatures w-full border-none !text-sm text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
                               data-testid="AuthenticationStep__mnemonic"
                               name="mnemonic"
                               type="password"

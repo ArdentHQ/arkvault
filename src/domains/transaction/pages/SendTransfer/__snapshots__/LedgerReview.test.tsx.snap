@@ -241,7 +241,7 @@ exports[`TransferLedgerReview > should render 1`] = `
             Total Amount
           </span>
           <span
-            class="whitespace-nowrap text-md font-bold sm:text-lg"
+            class="whitespace-nowrap text-md font-semibold sm:text-lg"
             data-testid="Amount"
           >
             0 DARK
@@ -511,7 +511,7 @@ exports[`TransferLedgerReview > should render skeleton while loading expiration 
             Total Amount
           </span>
           <span
-            class="whitespace-nowrap text-md font-bold sm:text-lg"
+            class="whitespace-nowrap text-md font-semibold sm:text-lg"
             data-testid="Amount"
           >
             0 DARK
@@ -788,7 +788,7 @@ exports[`TransferLedgerReview > should render with memo 1`] = `
             Total Amount
           </span>
           <span
-            class="whitespace-nowrap text-md font-bold sm:text-lg"
+            class="whitespace-nowrap text-md font-semibold sm:text-lg"
             data-testid="Amount"
           >
             0 DARK
