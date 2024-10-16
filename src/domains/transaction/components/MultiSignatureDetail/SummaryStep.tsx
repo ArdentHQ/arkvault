@@ -16,7 +16,7 @@ export const SummaryStep = ({
 	return (
 		<section>
 			<Header title={t("TRANSACTION.TRANSACTION_DETAILS")} />
-			<TransactionDetailContent profile={wallet.profile()} transactionItem={transaction} />
+			<TransactionDetailContent profile={wallet.profile()} transactionItem={transaction} containerClassname="-mx-3 sm:mx-0" />
 		</section>
 	);
 };

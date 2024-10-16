@@ -8,7 +8,6 @@ import { useHistory } from "react-router-dom";
 import { FormStep } from "./FormStep";
 import { VoteLedgerReview } from "./LedgerReview";
 import { ReviewStep } from "./ReviewStep";
-import { SummaryStep } from "./SummaryStep";
 import { Form } from "@/app/components/Form";
 import { Page, Section } from "@/app/components/Layout";
 import { StepNavigation } from "@/app/components/StepNavigation";
@@ -32,6 +31,7 @@ import { assertNetwork, assertProfile, assertWallet } from "@/utils/assertions";
 import { useDelegatesFromURL } from "@/domains/vote/hooks/use-vote-query-parameters";
 import { toasts } from "@/app/services";
 import { isLedgerTransportSupported } from "@/app/contexts/Ledger/transport";
+import { TransactionSuccessful } from "@/domains/transaction/components/TransactionSuccessful";
 
 enum Step {
 	FormStep = 1,
@@ -133,7 +133,7 @@ export const SendVote = () => {
 			}
 
 			const isFullyRestoredAndSynced =
-				senderWallet?.hasBeenFullyRestored() && senderWallet.hasSyncedWithNetwork();
+				senderWallet.hasBeenFullyRestored() && senderWallet.hasSyncedWithNetwork();
 
 			if (!isFullyRestoredAndSynced) {
 				syncProfileWallets(true);
@@ -278,7 +278,7 @@ export const SendVote = () => {
 			secret,
 			secondSecret,
 		} = getValues();
-		const abortSignal = abortReference.current?.signal;
+		const abortSignal = abortReference.current.signal;
 
 		assertWallet(activeWallet);
 
@@ -401,17 +401,17 @@ export const SendVote = () => {
 						...voteTransactionInput,
 						data: isUnvote
 							? {
-									unvotes: unvotes.map((unvote) => ({
-										amount: unvote.amount,
-										id: unvote.wallet?.governanceIdentifier(),
-									})),
-								}
+								unvotes: unvotes.map((unvote) => ({
+									amount: unvote.amount,
+									id: unvote.wallet?.governanceIdentifier(),
+								})),
+							}
 							: {
-									votes: votes.map((vote) => ({
-										amount: vote.amount,
-										id: vote.wallet?.governanceIdentifier(),
-									})),
-								},
+								votes: votes.map((vote) => ({
+									amount: vote.amount,
+									id: vote.wallet?.governanceIdentifier(),
+								})),
+							},
 					},
 					senderWallet,
 					{ abortSignal },
@@ -491,13 +491,7 @@ export const SendVote = () => {
 
 							<TabPanel tabId={Step.SummaryStep}>
 								{activeWallet && (
-									<SummaryStep
-										wallet={activeWallet}
-										transaction={transaction}
-										unvotes={unvotes}
-										votes={votes}
-										network={activeWallet.network()}
-									/>
+									<TransactionSuccessful transaction={transaction} senderWallet={activeWallet} />
 								)}
 							</TabPanel>
 
