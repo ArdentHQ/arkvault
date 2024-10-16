@@ -2271,7 +2271,7 @@ exports[`SendTransfer > should error if wrong mnemonic 1`] = `
                         <input
                           aria-invalid="true"
                           autocomplete="off"
-                          class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 css-1937ogs"
+                          class="no-ligatures w-full border-none !text-sm text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
                           data-testid="AuthenticationStep__mnemonic"
                           name="mnemonic"
                           type="password"
@@ -2584,7 +2584,7 @@ exports[`SendTransfer > should render form step (lg) 1`] = `
                 </svg>
               </div>
               <span
-                class="font-semibold leading-5 text-theme-navy-600 transition-colors group-hover:text-white dark:text-theme-secondary-200"
+                class="text-sm font-semibold leading-5 text-theme-navy-600 transition-colors group-hover:text-white dark:text-theme-secondary-200 sm:text-base"
               >
                 Scan
               </span>
@@ -2629,7 +2629,7 @@ exports[`SendTransfer > should render form step (lg) 1`] = `
               >
                 <input
                   autocomplete="off"
-                  class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 css-1937ogs"
+                  class="no-ligatures w-full border-none !text-sm text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
                   data-testid="SelectAddress__input"
                   name="senderAddress"
                   readonly=""
@@ -2794,7 +2794,7 @@ exports[`SendTransfer > should render form step (lg) 1`] = `
                           <input
                             aria-invalid="false"
                             autocomplete="off"
-                            class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 css-1937ogs"
+                            class="no-ligatures w-full border-none !text-sm text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
                             data-testid="select-list__input"
                             name="recipientAddress"
                             readonly=""
@@ -2831,7 +2831,7 @@ exports[`SendTransfer > should render form step (lg) 1`] = `
                                   aria-invalid="false"
                                   aria-labelledby="SelectRecipient__dropdown-label"
                                   autocomplete="off"
-                                  class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 cursor-default text-theme-secondary-text css-1937ogs"
+                                  class="no-ligatures w-full border-none !text-sm text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base cursor-default text-theme-secondary-text css-1937ogs"
                                   data-testid="SelectDropdown__input"
                                   disabled=""
                                   id="SelectRecipient__dropdown-input"
@@ -2929,7 +2929,7 @@ exports[`SendTransfer > should render form step (lg) 1`] = `
                         >
                           <input
                             autocomplete="off"
-                            class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 text-theme-secondary-text css-1937ogs"
+                            class="no-ligatures w-full border-none !text-sm text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base text-theme-secondary-text css-1937ogs"
                             data-testid="AddRecipient__amount"
                             disabled=""
                             name="amount"
@@ -2983,7 +2983,7 @@ exports[`SendTransfer > should render form step (lg) 1`] = `
           >
             <input
               autocomplete="off"
-              class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 css-1937ogs"
+              class="no-ligatures w-full border-none !text-sm text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
               data-testid="Input__memo"
               name="memo"
               placeholder=" "
@@ -3290,7 +3290,7 @@ exports[`SendTransfer > should render form step (xs) 1`] = `
                 </svg>
               </div>
               <span
-                class="font-semibold leading-5 text-theme-navy-600 transition-colors group-hover:text-white dark:text-theme-secondary-200"
+                class="text-sm font-semibold leading-5 text-theme-navy-600 transition-colors group-hover:text-white dark:text-theme-secondary-200 sm:text-base"
               >
                 Scan QR-Code
               </span>
@@ -3335,7 +3335,7 @@ exports[`SendTransfer > should render form step (xs) 1`] = `
               >
                 <input
                   autocomplete="off"
-                  class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 css-1937ogs"
+                  class="no-ligatures w-full border-none !text-sm text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
                   data-testid="SelectAddress__input"
                   name="senderAddress"
                   readonly=""
@@ -3500,7 +3500,7 @@ exports[`SendTransfer > should render form step (xs) 1`] = `
                           <input
                             aria-invalid="false"
                             autocomplete="off"
-                            class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 css-1937ogs"
+                            class="no-ligatures w-full border-none !text-sm text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
                             data-testid="select-list__input"
                             name="recipientAddress"
                             readonly=""
@@ -3537,7 +3537,7 @@ exports[`SendTransfer > should render form step (xs) 1`] = `
                                   aria-invalid="false"
                                   aria-labelledby="SelectRecipient__dropdown-label"
                                   autocomplete="off"
-                                  class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 cursor-default text-theme-secondary-text css-1937ogs"
+                                  class="no-ligatures w-full border-none !text-sm text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base cursor-default text-theme-secondary-text css-1937ogs"
                                   data-testid="SelectDropdown__input"
                                   disabled=""
                                   id="SelectRecipient__dropdown-input"
@@ -3635,7 +3635,7 @@ exports[`SendTransfer > should render form step (xs) 1`] = `
                         >
                           <input
                             autocomplete="off"
-                            class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 text-theme-secondary-text css-1937ogs"
+                            class="no-ligatures w-full border-none !text-sm text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base text-theme-secondary-text css-1937ogs"
                             data-testid="AddRecipient__amount"
                             disabled=""
                             name="amount"
@@ -3689,7 +3689,7 @@ exports[`SendTransfer > should render form step (xs) 1`] = `
           >
             <input
               autocomplete="off"
-              class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 css-1937ogs"
+              class="no-ligatures w-full border-none !text-sm text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
               data-testid="Input__memo"
               name="memo"
               placeholder=" "
@@ -3736,7 +3736,7 @@ exports[`SendTransfer > should render form step (xs) 1`] = `
             >
               <input
                 autocomplete="off"
-                class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 text-theme-secondary-text css-1937ogs"
+                class="no-ligatures w-full border-none !text-sm text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base text-theme-secondary-text css-1937ogs"
                 data-testid="InputCurrency"
                 disabled=""
                 name="fee"
@@ -4728,7 +4728,7 @@ exports[`SendTransfer > should render network step with dropdown 1`] = `
             >
               <input
                 autocomplete="off"
-                class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 css-1937ogs"
+                class="no-ligatures w-full border-none !text-sm text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
                 data-testid="select-list__input"
                 name="network"
                 readonly=""
@@ -4763,7 +4763,7 @@ exports[`SendTransfer > should render network step with dropdown 1`] = `
                       aria-controls="downshift-0-menu"
                       aria-labelledby="downshift-0-label"
                       autocomplete="off"
-                      class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 cursor-default css-1937ogs"
+                      class="no-ligatures w-full border-none !text-sm text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base cursor-default css-1937ogs"
                       data-testid="SelectDropdown__input"
                       id="downshift-0-input"
                       name="network"
@@ -5163,7 +5163,7 @@ exports[`SendTransfer > should render review step 1`] = `
       </div>
     </div>
     <div
-      class="mt-4 space-y-3 sm:space-y-4"
+      class="-mx-3 mt-4 space-y-3 sm:mx-0 sm:space-y-4"
     >
       <div
         data-testid="DetailWrapper"
@@ -5379,94 +5379,98 @@ exports[`SendTransfer > should render review step 1`] = `
           </div>
         </div>
         <div
-          class="rounded-lg border border-theme-secondary-300 dark:border-theme-secondary-800"
+          class="mx-3 sm:mx-0"
         >
           <div
-            class="relative px-6 py-4 sm:py-5"
+            class="rounded-lg border border-theme-secondary-300 dark:border-theme-secondary-800"
           >
             <div
-              class="flex flex-col divide-y divide-theme-secondary-300 dark:divide-theme-secondary-800 sm:flex-row sm:divide-x sm:divide-y-0"
+              class="relative px-6 py-4 sm:py-5"
             >
               <div
-                class="mb-4 flex flex-col justify-center px-4 text-center sm:mb-0 sm:w-1/2 sm:p-0 sm:text-left"
-              >
-                <span
-                  class="css-1rmjubp"
-                >
-                  Transaction(s) Amount
-                </span>
-                <span
-                  class="whitespace-nowrap text-md mt-1 font-semibold"
-                  data-testid="Amount"
-                >
-                  1 DARK
-                </span>
-              </div>
-              <div
-                class="flex flex-col justify-center p-2 px-4 pt-6 text-center sm:w-1/2 sm:p-0 sm:text-right"
-              >
-                <span
-                  class="css-1rmjubp"
-                >
-                  Transaction Fee
-                </span>
-                <span
-                  class="whitespace-nowrap text-md mt-1 font-semibold"
-                  data-testid="Amount"
-                >
-                  1 DARK
-                </span>
-              </div>
-            </div>
-            <div
-              class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transform"
-            >
-              <div
-                class="ml-px bg-theme-background p-2 text-theme-secondary-900 dark:text-theme-secondary-600"
+                class="flex flex-col divide-y divide-theme-secondary-300 dark:divide-theme-secondary-800 sm:flex-row sm:divide-x sm:divide-y-0"
               >
                 <div
-                  class="css-v0ob3f"
-                  height="16"
-                  width="16"
+                  class="mb-4 flex flex-col justify-center px-4 text-center sm:mb-0 sm:w-1/2 sm:p-0 sm:text-left"
                 >
-                  <svg
-                    id="plus"
-                    viewBox="0 0 20 20"
-                    x="0"
-                    xml:space="preserve"
-                    xmlns="http://www.w3.org/2000/svg"
-                    y="0"
+                  <span
+                    class="css-1rmjubp"
                   >
-                    <g
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
+                    Transaction(s) Amount
+                  </span>
+                  <span
+                    class="whitespace-nowrap text-md mt-1 font-semibold"
+                    data-testid="Amount"
+                  >
+                    1 DARK
+                  </span>
+                </div>
+                <div
+                  class="flex flex-col justify-center p-2 px-4 pt-6 text-center sm:w-1/2 sm:p-0 sm:text-right"
+                >
+                  <span
+                    class="css-1rmjubp"
+                  >
+                    Transaction Fee
+                  </span>
+                  <span
+                    class="whitespace-nowrap text-md mt-1 font-semibold"
+                    data-testid="Amount"
+                  >
+                    1 DARK
+                  </span>
+                </div>
+              </div>
+              <div
+                class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transform"
+              >
+                <div
+                  class="ml-px bg-theme-background p-2 text-theme-secondary-900 dark:text-theme-secondary-600"
+                >
+                  <div
+                    class="css-v0ob3f"
+                    height="16"
+                    width="16"
+                  >
+                    <svg
+                      id="plus"
+                      viewBox="0 0 20 20"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
                     >
-                      <path
-                        d="M1 10h18M10 1v18"
-                      />
-                    </g>
-                  </svg>
+                      <g
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      >
+                        <path
+                          d="M1 10h18M10 1v18"
+                        />
+                      </g>
+                    </svg>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div
-            class="justfiy-center flex flex-col items-center rounded-b-lg border-t border-theme-secondary-300 bg-theme-secondary-100 py-4 dark:border-theme-secondary-800 dark:bg-theme-secondary-800 sm:py-5"
-          >
-            <span
-              class="css-1rmjubp"
+            <div
+              class="justfiy-center flex flex-col items-center rounded-b-lg border-t border-theme-secondary-300 bg-theme-secondary-100 py-4 dark:border-theme-secondary-800 dark:bg-theme-secondary-800 sm:py-5"
             >
-              Total Amount
-            </span>
-            <span
-              class="whitespace-nowrap text-md font-bold sm:text-lg"
-              data-testid="Amount"
-            >
-              2 DARK
-            </span>
+              <span
+                class="css-1rmjubp"
+              >
+                Total Amount
+              </span>
+              <span
+                class="whitespace-nowrap text-md font-semibold sm:text-lg"
+                data-testid="Amount"
+              >
+                2 DARK
+              </span>
+            </div>
           </div>
         </div>
       </div>
@@ -5607,7 +5611,7 @@ exports[`SendTransfer > should render review step with multiple recipients (with
       </div>
     </div>
     <div
-      class="mt-4 space-y-3 sm:space-y-4"
+      class="-mx-3 mt-4 space-y-3 sm:mx-0 sm:space-y-4"
     >
       <div
         data-testid="DetailWrapper"
@@ -5886,94 +5890,98 @@ exports[`SendTransfer > should render review step with multiple recipients (with
           </div>
         </div>
         <div
-          class="rounded-lg border border-theme-secondary-300 dark:border-theme-secondary-800"
+          class="mx-3 sm:mx-0"
         >
           <div
-            class="relative px-6 py-4 sm:py-5"
+            class="rounded-lg border border-theme-secondary-300 dark:border-theme-secondary-800"
           >
             <div
-              class="flex flex-col divide-y divide-theme-secondary-300 dark:divide-theme-secondary-800 sm:flex-row sm:divide-x sm:divide-y-0"
+              class="relative px-6 py-4 sm:py-5"
             >
               <div
-                class="mb-4 flex flex-col justify-center px-4 text-center sm:mb-0 sm:w-1/2 sm:p-0 sm:text-left"
-              >
-                <span
-                  class="css-1rmjubp"
-                >
-                  Transaction(s) Amount
-                </span>
-                <span
-                  class="whitespace-nowrap text-md mt-1 font-semibold"
-                  data-testid="Amount"
-                >
-                  2 DARK
-                </span>
-              </div>
-              <div
-                class="flex flex-col justify-center p-2 px-4 pt-6 text-center sm:w-1/2 sm:p-0 sm:text-right"
-              >
-                <span
-                  class="css-1rmjubp"
-                >
-                  Transaction Fee
-                </span>
-                <span
-                  class="whitespace-nowrap text-md mt-1 font-semibold"
-                  data-testid="Amount"
-                >
-                  1 DARK
-                </span>
-              </div>
-            </div>
-            <div
-              class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transform"
-            >
-              <div
-                class="ml-px bg-theme-background p-2 text-theme-secondary-900 dark:text-theme-secondary-600"
+                class="flex flex-col divide-y divide-theme-secondary-300 dark:divide-theme-secondary-800 sm:flex-row sm:divide-x sm:divide-y-0"
               >
                 <div
-                  class="css-v0ob3f"
-                  height="16"
-                  width="16"
+                  class="mb-4 flex flex-col justify-center px-4 text-center sm:mb-0 sm:w-1/2 sm:p-0 sm:text-left"
                 >
-                  <svg
-                    id="plus"
-                    viewBox="0 0 20 20"
-                    x="0"
-                    xml:space="preserve"
-                    xmlns="http://www.w3.org/2000/svg"
-                    y="0"
+                  <span
+                    class="css-1rmjubp"
                   >
-                    <g
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
+                    Transaction(s) Amount
+                  </span>
+                  <span
+                    class="whitespace-nowrap text-md mt-1 font-semibold"
+                    data-testid="Amount"
+                  >
+                    2 DARK
+                  </span>
+                </div>
+                <div
+                  class="flex flex-col justify-center p-2 px-4 pt-6 text-center sm:w-1/2 sm:p-0 sm:text-right"
+                >
+                  <span
+                    class="css-1rmjubp"
+                  >
+                    Transaction Fee
+                  </span>
+                  <span
+                    class="whitespace-nowrap text-md mt-1 font-semibold"
+                    data-testid="Amount"
+                  >
+                    1 DARK
+                  </span>
+                </div>
+              </div>
+              <div
+                class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transform"
+              >
+                <div
+                  class="ml-px bg-theme-background p-2 text-theme-secondary-900 dark:text-theme-secondary-600"
+                >
+                  <div
+                    class="css-v0ob3f"
+                    height="16"
+                    width="16"
+                  >
+                    <svg
+                      id="plus"
+                      viewBox="0 0 20 20"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
                     >
-                      <path
-                        d="M1 10h18M10 1v18"
-                      />
-                    </g>
-                  </svg>
+                      <g
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      >
+                        <path
+                          d="M1 10h18M10 1v18"
+                        />
+                      </g>
+                    </svg>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div
-            class="justfiy-center flex flex-col items-center rounded-b-lg border-t border-theme-secondary-300 bg-theme-secondary-100 py-4 dark:border-theme-secondary-800 dark:bg-theme-secondary-800 sm:py-5"
-          >
-            <span
-              class="css-1rmjubp"
+            <div
+              class="justfiy-center flex flex-col items-center rounded-b-lg border-t border-theme-secondary-300 bg-theme-secondary-100 py-4 dark:border-theme-secondary-800 dark:bg-theme-secondary-800 sm:py-5"
             >
-              Total Amount
-            </span>
-            <span
-              class="whitespace-nowrap text-md font-bold sm:text-lg"
-              data-testid="Amount"
-            >
-              3 DARK
-            </span>
+              <span
+                class="css-1rmjubp"
+              >
+                Total Amount
+              </span>
+              <span
+                class="whitespace-nowrap text-md font-semibold sm:text-lg"
+                data-testid="Amount"
+              >
+                3 DARK
+              </span>
+            </div>
           </div>
         </div>
       </div>
@@ -6114,7 +6122,7 @@ exports[`SendTransfer > should render review step with multiple recipients (with
       </div>
     </div>
     <div
-      class="mt-4 space-y-3 sm:space-y-4"
+      class="-mx-3 mt-4 space-y-3 sm:mx-0 sm:space-y-4"
     >
       <div
         data-testid="DetailWrapper"
@@ -6371,94 +6379,98 @@ exports[`SendTransfer > should render review step with multiple recipients (with
           </div>
         </div>
         <div
-          class="rounded-lg border border-theme-secondary-300 dark:border-theme-secondary-800"
+          class="mx-3 sm:mx-0"
         >
           <div
-            class="relative px-6 py-4 sm:py-5"
+            class="rounded-lg border border-theme-secondary-300 dark:border-theme-secondary-800"
           >
             <div
-              class="flex flex-col divide-y divide-theme-secondary-300 dark:divide-theme-secondary-800 sm:flex-row sm:divide-x sm:divide-y-0"
+              class="relative px-6 py-4 sm:py-5"
             >
               <div
-                class="mb-4 flex flex-col justify-center px-4 text-center sm:mb-0 sm:w-1/2 sm:p-0 sm:text-left"
-              >
-                <span
-                  class="css-1rmjubp"
-                >
-                  Transaction(s) Amount
-                </span>
-                <span
-                  class="whitespace-nowrap text-md mt-1 font-semibold"
-                  data-testid="Amount"
-                >
-                  2 DARK
-                </span>
-              </div>
-              <div
-                class="flex flex-col justify-center p-2 px-4 pt-6 text-center sm:w-1/2 sm:p-0 sm:text-right"
-              >
-                <span
-                  class="css-1rmjubp"
-                >
-                  Transaction Fee
-                </span>
-                <span
-                  class="whitespace-nowrap text-md mt-1 font-semibold"
-                  data-testid="Amount"
-                >
-                  1 DARK
-                </span>
-              </div>
-            </div>
-            <div
-              class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transform"
-            >
-              <div
-                class="ml-px bg-theme-background p-2 text-theme-secondary-900 dark:text-theme-secondary-600"
+                class="flex flex-col divide-y divide-theme-secondary-300 dark:divide-theme-secondary-800 sm:flex-row sm:divide-x sm:divide-y-0"
               >
                 <div
-                  class="css-v0ob3f"
-                  height="16"
-                  width="16"
+                  class="mb-4 flex flex-col justify-center px-4 text-center sm:mb-0 sm:w-1/2 sm:p-0 sm:text-left"
                 >
-                  <svg
-                    id="plus"
-                    viewBox="0 0 20 20"
-                    x="0"
-                    xml:space="preserve"
-                    xmlns="http://www.w3.org/2000/svg"
-                    y="0"
+                  <span
+                    class="css-1rmjubp"
                   >
-                    <g
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
+                    Transaction(s) Amount
+                  </span>
+                  <span
+                    class="whitespace-nowrap text-md mt-1 font-semibold"
+                    data-testid="Amount"
+                  >
+                    2 DARK
+                  </span>
+                </div>
+                <div
+                  class="flex flex-col justify-center p-2 px-4 pt-6 text-center sm:w-1/2 sm:p-0 sm:text-right"
+                >
+                  <span
+                    class="css-1rmjubp"
+                  >
+                    Transaction Fee
+                  </span>
+                  <span
+                    class="whitespace-nowrap text-md mt-1 font-semibold"
+                    data-testid="Amount"
+                  >
+                    1 DARK
+                  </span>
+                </div>
+              </div>
+              <div
+                class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transform"
+              >
+                <div
+                  class="ml-px bg-theme-background p-2 text-theme-secondary-900 dark:text-theme-secondary-600"
+                >
+                  <div
+                    class="css-v0ob3f"
+                    height="16"
+                    width="16"
+                  >
+                    <svg
+                      id="plus"
+                      viewBox="0 0 20 20"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
                     >
-                      <path
-                        d="M1 10h18M10 1v18"
-                      />
-                    </g>
-                  </svg>
+                      <g
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      >
+                        <path
+                          d="M1 10h18M10 1v18"
+                        />
+                      </g>
+                    </svg>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div
-            class="justfiy-center flex flex-col items-center rounded-b-lg border-t border-theme-secondary-300 bg-theme-secondary-100 py-4 dark:border-theme-secondary-800 dark:bg-theme-secondary-800 sm:py-5"
-          >
-            <span
-              class="css-1rmjubp"
+            <div
+              class="justfiy-center flex flex-col items-center rounded-b-lg border-t border-theme-secondary-300 bg-theme-secondary-100 py-4 dark:border-theme-secondary-800 dark:bg-theme-secondary-800 sm:py-5"
             >
-              Total Amount
-            </span>
-            <span
-              class="whitespace-nowrap text-md font-bold sm:text-lg"
-              data-testid="Amount"
-            >
-              3 DARK
-            </span>
+              <span
+                class="css-1rmjubp"
+              >
+                Total Amount
+              </span>
+              <span
+                class="whitespace-nowrap text-md font-semibold sm:text-lg"
+                data-testid="Amount"
+              >
+                3 DARK
+              </span>
+            </div>
           </div>
         </div>
       </div>

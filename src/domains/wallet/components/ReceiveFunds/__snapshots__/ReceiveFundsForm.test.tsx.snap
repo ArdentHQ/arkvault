@@ -35,7 +35,7 @@ exports[`ReceiveFundsForm > should emit amount onChange event 1`] = `
             >
               <input
                 autocomplete="off"
-                class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 css-1937ogs"
+                class="no-ligatures w-full border-none !text-sm text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
                 data-testid="ReceiveFundsForm__amount"
                 name="amount"
                 placeholder="Amount"
@@ -70,7 +70,7 @@ exports[`ReceiveFundsForm > should emit amount onChange event 1`] = `
           >
             <input
               autocomplete="off"
-              class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 css-1937ogs"
+              class="no-ligatures w-full border-none !text-sm text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
               data-testid="ReceiveFundsForm__memo"
               name="memo"
               type="text"
@@ -134,7 +134,7 @@ exports[`ReceiveFundsForm > should emit memo onChange event 1`] = `
             >
               <input
                 autocomplete="off"
-                class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 css-1937ogs"
+                class="no-ligatures w-full border-none !text-sm text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
                 data-testid="ReceiveFundsForm__amount"
                 name="amount"
                 placeholder="Amount"
@@ -169,7 +169,7 @@ exports[`ReceiveFundsForm > should emit memo onChange event 1`] = `
           >
             <input
               autocomplete="off"
-              class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 css-1937ogs"
+              class="no-ligatures w-full border-none !text-sm text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
               data-testid="ReceiveFundsForm__memo"
               name="memo"
               type="text"
@@ -233,7 +233,7 @@ exports[`ReceiveFundsForm > should not show memo if is not supported by network 
             >
               <input
                 autocomplete="off"
-                class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 css-1937ogs"
+                class="no-ligatures w-full border-none !text-sm text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
                 data-testid="ReceiveFundsForm__amount"
                 name="amount"
                 placeholder="Amount"
@@ -284,7 +284,7 @@ exports[`ReceiveFundsForm > should render 1`] = `
             >
               <input
                 autocomplete="off"
-                class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 css-1937ogs"
+                class="no-ligatures w-full border-none !text-sm text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
                 data-testid="ReceiveFundsForm__amount"
                 name="amount"
                 placeholder="Amount"
@@ -319,7 +319,7 @@ exports[`ReceiveFundsForm > should render 1`] = `
           >
             <input
               autocomplete="off"
-              class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 css-1937ogs"
+              class="no-ligatures w-full border-none !text-sm text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
               data-testid="ReceiveFundsForm__memo"
               name="memo"
               type="text"

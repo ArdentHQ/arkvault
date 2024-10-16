@@ -10,7 +10,7 @@ exports[`Input > should render as custom element 1`] = `
     >
       <select
         autocomplete="off"
-        class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 css-1937ogs"
+        class="no-ligatures w-full border-none !text-sm text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
         data-testid="Input"
         type="text"
       />
@@ -29,7 +29,7 @@ exports[`Input > should render as textarea 1`] = `
     >
       <input
         autocomplete="off"
-        class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 css-1937ogs"
+        class="no-ligatures w-full border-none !text-sm text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
         data-testid="Input"
         type="text"
         value=""
@@ -50,7 +50,7 @@ exports[`Input > should render disabled 1`] = `
     >
       <input
         autocomplete="off"
-        class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 text-theme-secondary-text css-1937ogs"
+        class="no-ligatures w-full border-none !text-sm text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base text-theme-secondary-text css-1937ogs"
         data-testid="Input"
         disabled=""
         type="text"
@@ -72,7 +72,7 @@ exports[`Input > should render invalid 1`] = `
       <input
         aria-invalid="true"
         autocomplete="off"
-        class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 css-1937ogs"
+        class="no-ligatures w-full border-none !text-sm text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
         data-testid="Input"
         type="text"
         value=""
@@ -141,7 +141,7 @@ exports[`Input > should render invalid and disabled 1`] = `
       <input
         aria-invalid="true"
         autocomplete="off"
-        class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 text-theme-secondary-text css-1937ogs"
+        class="no-ligatures w-full border-none !text-sm text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base text-theme-secondary-text css-1937ogs"
         data-testid="Input"
         disabled=""
         type="text"
@@ -209,7 +209,7 @@ exports[`Input > should render when isCompact = false 1`] = `
     >
       <input
         autocomplete="off"
-        class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 css-1937ogs"
+        class="no-ligatures w-full border-none !text-sm text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
         data-testid="Input"
         type="text"
         value=""
@@ -229,7 +229,7 @@ exports[`Input > should render when isCompact = true 1`] = `
     >
       <input
         autocomplete="off"
-        class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 css-1937ogs"
+        class="no-ligatures w-full border-none !text-sm text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
         data-testid="Input"
         type="text"
         value=""
@@ -252,7 +252,7 @@ exports[`Input > should render with addons 1`] = `
     >
       <input
         autocomplete="off"
-        class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 css-1937ogs"
+        class="no-ligatures w-full border-none !text-sm text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
         data-testid="Input"
         type="text"
         value=""
@@ -284,7 +284,7 @@ exports[`Input > should render with focus 1`] = `
     >
       <input
         autocomplete="off"
-        class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 css-1937ogs"
+        class="no-ligatures w-full border-none !text-sm text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
         data-testid="Input"
         type="text"
         value=""
@@ -309,13 +309,13 @@ exports[`Input > should render with suggestion 1`] = `
     >
       <input
         autocomplete="off"
-        class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 css-1937ogs"
+        class="no-ligatures w-full border-none !text-sm text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
         data-testid="Input"
         type="text"
         value=""
       />
       <span
-        class="pointer-events-none absolute inset-y-0 flex w-full items-center font-normal opacity-50"
+        class="pointer-events-none absolute inset-y-0 flex w-full items-center text-sm font-normal opacity-50 sm:text-base"
         data-testid="Input__suggestion"
       >
         <span
