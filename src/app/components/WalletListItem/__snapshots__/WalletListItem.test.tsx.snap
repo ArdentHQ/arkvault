@@ -364,7 +364,7 @@ exports[`WalletListItem > should disable the send button when wallet has no bala
                           class="relative"
                         >
                           <div
-                            class="css-n1b0kl"
+                            class="css-14zfvme"
                           >
                             <div
                               class="relative flex h-full flex-1"
@@ -372,7 +372,7 @@ exports[`WalletListItem > should disable the send button when wallet has no bala
                               <input
                                 aria-invalid="false"
                                 autocomplete="off"
-                                class="no-ligatures w-full border-none css-1vs1awz"
+                                class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 css-1937ogs"
                                 data-testid="UpdateWalletName__input"
                                 name="name"
                                 type="text"
@@ -961,7 +961,7 @@ exports[`WalletListItem > should render when isCompact = false 1`] = `
                           class="relative"
                         >
                           <div
-                            class="css-n1b0kl"
+                            class="css-14zfvme"
                           >
                             <div
                               class="relative flex h-full flex-1"
@@ -969,7 +969,7 @@ exports[`WalletListItem > should render when isCompact = false 1`] = `
                               <input
                                 aria-invalid="false"
                                 autocomplete="off"
-                                class="no-ligatures w-full border-none css-1vs1awz"
+                                class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 css-1937ogs"
                                 data-testid="UpdateWalletName__input"
                                 name="name"
                                 type="text"
@@ -1378,7 +1378,7 @@ exports[`WalletListItem > should render when isCompact = true 1`] = `
                           class="relative"
                         >
                           <div
-                            class="css-n1b0kl"
+                            class="css-14zfvme"
                           >
                             <div
                               class="relative flex h-full flex-1"
@@ -1386,7 +1386,7 @@ exports[`WalletListItem > should render when isCompact = true 1`] = `
                               <input
                                 aria-invalid="false"
                                 autocomplete="off"
-                                class="no-ligatures w-full border-none css-1vs1awz"
+                                class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 css-1937ogs"
                                 data-testid="UpdateWalletName__input"
                                 name="name"
                                 type="text"
@@ -2235,7 +2235,7 @@ exports[`WalletListItem > should render when isLargeScreen = true 1`] = `
                           class="relative"
                         >
                           <div
-                            class="css-n1b0kl"
+                            class="css-14zfvme"
                           >
                             <div
                               class="relative flex h-full flex-1"
@@ -2243,7 +2243,7 @@ exports[`WalletListItem > should render when isLargeScreen = true 1`] = `
                               <input
                                 aria-invalid="false"
                                 autocomplete="off"
-                                class="no-ligatures w-full border-none css-1vs1awz"
+                                class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 css-1937ogs"
                                 data-testid="UpdateWalletName__input"
                                 name="name"
                                 type="text"
@@ -2700,7 +2700,7 @@ exports[`WalletListItem > should render when isLargeScreen = true and wallet is 
                           class="relative"
                         >
                           <div
-                            class="css-n1b0kl"
+                            class="css-14zfvme"
                           >
                             <div
                               class="relative flex h-full flex-1"
@@ -2708,7 +2708,7 @@ exports[`WalletListItem > should render when isLargeScreen = true and wallet is 
                               <input
                                 aria-invalid="false"
                                 autocomplete="off"
-                                class="no-ligatures w-full border-none css-1vs1awz"
+                                class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 css-1937ogs"
                                 data-testid="UpdateWalletName__input"
                                 name="name"
                                 type="text"
@@ -3117,7 +3117,7 @@ exports[`WalletListItem > should render with a N/A for fiat 1`] = `
                           class="relative"
                         >
                           <div
-                            class="css-n1b0kl"
+                            class="css-14zfvme"
                           >
                             <div
                               class="relative flex h-full flex-1"
@@ -3125,7 +3125,7 @@ exports[`WalletListItem > should render with a N/A for fiat 1`] = `
                               <input
                                 aria-invalid="false"
                                 autocomplete="off"
-                                class="no-ligatures w-full border-none css-1vs1awz"
+                                class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 css-1937ogs"
                                 data-testid="UpdateWalletName__input"
                                 name="name"
                                 type="text"
@@ -3534,7 +3534,7 @@ exports[`WalletListItem > should render with default BTC as default exchangeCurr
                           class="relative"
                         >
                           <div
-                            class="css-n1b0kl"
+                            class="css-14zfvme"
                           >
                             <div
                               class="relative flex h-full flex-1"
@@ -3542,7 +3542,7 @@ exports[`WalletListItem > should render with default BTC as default exchangeCurr
                               <input
                                 aria-invalid="false"
                                 autocomplete="off"
-                                class="no-ligatures w-full border-none css-1vs1awz"
+                                class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 css-1937ogs"
                                 data-testid="UpdateWalletName__input"
                                 name="name"
                                 type="text"

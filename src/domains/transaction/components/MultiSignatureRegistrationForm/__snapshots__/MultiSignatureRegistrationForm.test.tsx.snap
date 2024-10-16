@@ -159,7 +159,7 @@ exports[`MultiSignature Registration Form > should render form step 1`] = `
                         data-testid="SelectDropdown"
                       >
                         <div
-                          class="sr-only css-n1b0kl"
+                          class="sr-only css-14zfvme"
                         >
                           <div
                             class="relative flex h-full flex-1"
@@ -167,7 +167,7 @@ exports[`MultiSignature Registration Form > should render form step 1`] = `
                             <input
                               aria-invalid="false"
                               autocomplete="off"
-                              class="no-ligatures w-full border-none css-1vs1awz"
+                              class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 css-1937ogs"
                               data-testid="select-list__input"
                               name="address"
                               readonly=""
@@ -192,7 +192,7 @@ exports[`MultiSignature Registration Form > should render form step 1`] = `
                                 id="SelectRecipient__dropdown-label"
                               />
                               <div
-                                class="css-n1b0kl"
+                                class="css-14zfvme"
                               >
                                 <div
                                   class="relative flex h-full flex-1"
@@ -203,7 +203,7 @@ exports[`MultiSignature Registration Form > should render form step 1`] = `
                                     aria-invalid="false"
                                     aria-labelledby="SelectRecipient__dropdown-label"
                                     autocomplete="off"
-                                    class="no-ligatures w-full border-none cursor-default css-1vs1awz"
+                                    class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 cursor-default css-1937ogs"
                                     data-testid="SelectDropdown__input"
                                     id="SelectRecipient__dropdown-input"
                                     name="address"
@@ -431,14 +431,14 @@ exports[`MultiSignature Registration Form > should render form step 1`] = `
               Minimum Required Signatures
             </label>
             <div
-              class="css-n1b0kl"
+              class="css-14zfvme"
             >
               <div
                 class="relative flex h-full flex-1"
               >
                 <input
                   autocomplete="off"
-                  class="no-ligatures w-full border-none css-1vs1awz"
+                  class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 css-1937ogs"
                   data-testid="MultiSignatureRegistrationForm__min-participants"
                   max="2"
                   min="2"
@@ -477,7 +477,7 @@ exports[`MultiSignature Registration Form > should render form step 1`] = `
               class="relative"
             >
               <div
-                class="css-xk5t3v"
+                class="css-4lfin5"
                 disabled=""
               >
                 <div
@@ -485,7 +485,7 @@ exports[`MultiSignature Registration Form > should render form step 1`] = `
                 >
                   <input
                     autocomplete="off"
-                    class="no-ligatures w-full border-none text-theme-secondary-text css-1vs1awz"
+                    class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 text-theme-secondary-text css-1937ogs"
                     data-testid="InputCurrency"
                     disabled=""
                     name="fee"

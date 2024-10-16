@@ -908,14 +908,14 @@ exports[`WalletsList > should group starred wallets at the top 1`] = `
           data-testid="SelectDropdown"
         >
           <div
-            class="sr-only css-n1b0kl"
+            class="sr-only css-14zfvme"
           >
             <div
               class="relative flex h-full flex-1"
             >
               <input
                 autocomplete="off"
-                class="no-ligatures w-full border-none css-1vs1awz"
+                class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 css-1937ogs"
                 data-testid="select-list__input"
                 readonly=""
                 tabindex="-1"
@@ -944,7 +944,7 @@ exports[`WalletsList > should group starred wallets at the top 1`] = `
                   10…
                 </div>
                 <div
-                  class="!h-8 !w-[78px] !px-3 css-n1b0kl"
+                  class="!h-8 !w-[78px] !px-3 css-14zfvme"
                 >
                   <div
                     class="relative flex h-full flex-1"
@@ -954,7 +954,7 @@ exports[`WalletsList > should group starred wallets at the top 1`] = `
                       aria-controls="downshift-9-menu"
                       aria-labelledby="downshift-9-label"
                       autocomplete="off"
-                      class="no-ligatures w-full border-none !text-sm css-1vs1awz"
+                      class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 !text-sm css-1937ogs"
                       data-testid="SelectDropdown__input"
                       id="downshift-9-input"
                       placeholder="Select option"
@@ -984,7 +984,7 @@ exports[`WalletsList > should group starred wallets at the top 1`] = `
                         class="flex items-center"
                       >
                         <div
-                          class="flex items-center justify-center px-1 py-2"
+                          class="flex items-center justify-center"
                           data-testid="SelectDropdown__caret"
                         >
                           <div
@@ -996,7 +996,7 @@ exports[`WalletsList > should group starred wallets at the top 1`] = `
                             width="10"
                           >
                             <svg
-                              id="caret-down"
+                              id="chevron-down-small"
                               viewBox="0 0 10 10"
                               x="0"
                               xml:space="preserve"
@@ -1004,8 +1004,12 @@ exports[`WalletsList > should group starred wallets at the top 1`] = `
                               y="0"
                             >
                               <path
-                                d="M9.093 1.5H.907c-.754 0-1.178.859-.714 1.447l4.108 5.208a.91.91 0 0 0 1.43-.002l4.078-5.208c.46-.589.037-1.445-.716-1.445z"
-                                fill="currentColor"
+                                d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
                               />
                             </svg>
                           </div>
@@ -1874,14 +1878,14 @@ exports[`WalletsList > should render 1`] = `
           data-testid="SelectDropdown"
         >
           <div
-            class="sr-only css-n1b0kl"
+            class="sr-only css-14zfvme"
           >
             <div
               class="relative flex h-full flex-1"
             >
               <input
                 autocomplete="off"
-                class="no-ligatures w-full border-none css-1vs1awz"
+                class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 css-1937ogs"
                 data-testid="select-list__input"
                 readonly=""
                 tabindex="-1"
@@ -1910,7 +1914,7 @@ exports[`WalletsList > should render 1`] = `
                   10…
                 </div>
                 <div
-                  class="!h-8 !w-[78px] !px-3 css-n1b0kl"
+                  class="!h-8 !w-[78px] !px-3 css-14zfvme"
                 >
                   <div
                     class="relative flex h-full flex-1"
@@ -1920,7 +1924,7 @@ exports[`WalletsList > should render 1`] = `
                       aria-controls="downshift-0-menu"
                       aria-labelledby="downshift-0-label"
                       autocomplete="off"
-                      class="no-ligatures w-full border-none !text-sm css-1vs1awz"
+                      class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 !text-sm css-1937ogs"
                       data-testid="SelectDropdown__input"
                       id="downshift-0-input"
                       placeholder="Select option"
@@ -1950,7 +1954,7 @@ exports[`WalletsList > should render 1`] = `
                         class="flex items-center"
                       >
                         <div
-                          class="flex items-center justify-center px-1 py-2"
+                          class="flex items-center justify-center"
                           data-testid="SelectDropdown__caret"
                         >
                           <div
@@ -1962,7 +1966,7 @@ exports[`WalletsList > should render 1`] = `
                             width="10"
                           >
                             <svg
-                              id="caret-down"
+                              id="chevron-down-small"
                               viewBox="0 0 10 10"
                               x="0"
                               xml:space="preserve"
@@ -1970,8 +1974,12 @@ exports[`WalletsList > should render 1`] = `
                               y="0"
                             >
                               <path
-                                d="M9.093 1.5H.907c-.754 0-1.178.859-.714 1.447l4.108 5.208a.91.91 0 0 0 1.43-.002l4.078-5.208c.46-.589.037-1.445-.716-1.445z"
-                                fill="currentColor"
+                                d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
                               />
                             </svg>
                           </div>
@@ -2870,14 +2878,14 @@ exports[`WalletsList > should render empty skeleton block 1`] = `
           data-testid="SelectDropdown"
         >
           <div
-            class="sr-only css-n1b0kl"
+            class="sr-only css-14zfvme"
           >
             <div
               class="relative flex h-full flex-1"
             >
               <input
                 autocomplete="off"
-                class="no-ligatures w-full border-none css-1vs1awz"
+                class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 css-1937ogs"
                 data-testid="select-list__input"
                 readonly=""
                 tabindex="-1"
@@ -2906,7 +2914,7 @@ exports[`WalletsList > should render empty skeleton block 1`] = `
                   10…
                 </div>
                 <div
-                  class="!h-8 !w-[78px] !px-3 css-n1b0kl"
+                  class="!h-8 !w-[78px] !px-3 css-14zfvme"
                 >
                   <div
                     class="relative flex h-full flex-1"
@@ -2916,7 +2924,7 @@ exports[`WalletsList > should render empty skeleton block 1`] = `
                       aria-controls="downshift-6-menu"
                       aria-labelledby="downshift-6-label"
                       autocomplete="off"
-                      class="no-ligatures w-full border-none !text-sm css-1vs1awz"
+                      class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 !text-sm css-1937ogs"
                       data-testid="SelectDropdown__input"
                       id="downshift-6-input"
                       placeholder="Select option"
@@ -2946,7 +2954,7 @@ exports[`WalletsList > should render empty skeleton block 1`] = `
                         class="flex items-center"
                       >
                         <div
-                          class="flex items-center justify-center px-1 py-2"
+                          class="flex items-center justify-center"
                           data-testid="SelectDropdown__caret"
                         >
                           <div
@@ -2958,7 +2966,7 @@ exports[`WalletsList > should render empty skeleton block 1`] = `
                             width="10"
                           >
                             <svg
-                              id="caret-down"
+                              id="chevron-down-small"
                               viewBox="0 0 10 10"
                               x="0"
                               xml:space="preserve"
@@ -2966,8 +2974,12 @@ exports[`WalletsList > should render empty skeleton block 1`] = `
                               y="0"
                             >
                               <path
-                                d="M9.093 1.5H.907c-.754 0-1.178.859-.714 1.447l4.108 5.208a.91.91 0 0 0 1.43-.002l4.078-5.208c.46-.589.037-1.445-.716-1.445z"
-                                fill="currentColor"
+                                d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
                               />
                             </svg>
                           </div>
@@ -3366,14 +3378,14 @@ exports[`WalletsList > should render responsive 1`] = `
           data-testid="SelectDropdown"
         >
           <div
-            class="sr-only css-n1b0kl"
+            class="sr-only css-14zfvme"
           >
             <div
               class="relative flex h-full flex-1"
             >
               <input
                 autocomplete="off"
-                class="no-ligatures w-full border-none css-1vs1awz"
+                class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 css-1937ogs"
                 data-testid="select-list__input"
                 readonly=""
                 tabindex="-1"
@@ -3402,7 +3414,7 @@ exports[`WalletsList > should render responsive 1`] = `
                   10…
                 </div>
                 <div
-                  class="!h-8 !w-[78px] !px-3 css-n1b0kl"
+                  class="!h-8 !w-[78px] !px-3 css-14zfvme"
                 >
                   <div
                     class="relative flex h-full flex-1"
@@ -3412,7 +3424,7 @@ exports[`WalletsList > should render responsive 1`] = `
                       aria-controls="downshift-3-menu"
                       aria-labelledby="downshift-3-label"
                       autocomplete="off"
-                      class="no-ligatures w-full border-none !text-sm css-1vs1awz"
+                      class="no-ligatures w-full border-none text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 !text-sm css-1937ogs"
                       data-testid="SelectDropdown__input"
                       id="downshift-3-input"
                       placeholder="Select option"
@@ -3442,7 +3454,7 @@ exports[`WalletsList > should render responsive 1`] = `
                         class="flex items-center"
                       >
                         <div
-                          class="flex items-center justify-center px-1 py-2"
+                          class="flex items-center justify-center"
                           data-testid="SelectDropdown__caret"
                         >
                           <div
@@ -3454,7 +3466,7 @@ exports[`WalletsList > should render responsive 1`] = `
                             width="10"
                           >
                             <svg
-                              id="caret-down"
+                              id="chevron-down-small"
                               viewBox="0 0 10 10"
                               x="0"
                               xml:space="preserve"
@@ -3462,8 +3474,12 @@ exports[`WalletsList > should render responsive 1`] = `
                               y="0"
                             >
                               <path
-                                d="M9.093 1.5H.907c-.754 0-1.178.859-.714 1.447l4.108 5.208a.91.91 0 0 0 1.43-.002l4.078-5.208c.46-.589.037-1.445-.716-1.445z"
-                                fill="currentColor"
+                                d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
                               />
                             </svg>
                           </div>
