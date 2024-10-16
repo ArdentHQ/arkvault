@@ -67,15 +67,20 @@ const OptionLabel = ({
 	);
 
 	return (
-		<div className="flex items-center space-x-2 whitespace-nowrap">
-			<div>
-				<Address
-					address={address}
-					walletName={alias}
-					addressClass={cn({ "text-theme-primary-600": !alias && option.isSelected })}
-					walletNameClass={cn({ "text-theme-primary-600": option.isSelected })}
-				/>
-			</div>
+		<div className="flex items-center space-x-2 whitespace-nowrap leading-5">
+			<Address
+				address={address}
+				walletName={alias}
+				truncateOnTable
+				addressClass={cn("leading-[17px] sm:leading-5", {
+					"text-theme-primary-600": !alias && option.isSelected,
+					"text-theme-secondary-500 dark:text-theme-secondary-700": alias,
+					"text-theme-text": !alias,
+				})}
+				walletNameClass={cn("leading-[17px] sm:leading-5 text-theme-text", {
+					"text-theme-primary-600": option.isSelected,
+				})}
+			/>
 		</div>
 	);
 };
