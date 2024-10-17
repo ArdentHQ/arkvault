@@ -8,7 +8,6 @@ import { useHistory } from "react-router-dom";
 import { FormStep } from "./FormStep";
 import { VoteLedgerReview } from "./LedgerReview";
 import { ReviewStep } from "./ReviewStep";
-import { SummaryStep } from "./SummaryStep";
 import { Form } from "@/app/components/Form";
 import { Page, Section } from "@/app/components/Layout";
 import { StepNavigation } from "@/app/components/StepNavigation";
@@ -32,6 +31,7 @@ import { assertNetwork, assertProfile, assertWallet } from "@/utils/assertions";
 import { useDelegatesFromURL } from "@/domains/vote/hooks/use-vote-query-parameters";
 import { toasts } from "@/app/services";
 import { isLedgerTransportSupported } from "@/app/contexts/Ledger/transport";
+import { TransactionSuccessful } from "@/domains/transaction/components/TransactionSuccessful";
 
 enum Step {
 	FormStep = 1,
@@ -278,6 +278,7 @@ export const SendVote = () => {
 			secret,
 			secondSecret,
 		} = getValues();
+
 		const abortSignal = abortReference.current?.signal;
 
 		assertWallet(activeWallet);
@@ -491,13 +492,7 @@ export const SendVote = () => {
 
 							<TabPanel tabId={Step.SummaryStep}>
 								{activeWallet && (
-									<SummaryStep
-										wallet={activeWallet}
-										transaction={transaction}
-										unvotes={unvotes}
-										votes={votes}
-										network={activeWallet.network()}
-									/>
+									<TransactionSuccessful transaction={transaction} senderWallet={activeWallet} />
 								)}
 							</TabPanel>
 

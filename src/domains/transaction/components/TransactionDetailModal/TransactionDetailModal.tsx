@@ -29,11 +29,13 @@ export const TransactionDetailContent = ({
 	profile,
 	isConfirmed,
 	confirmations,
+	containerClassname,
 }: {
 	transactionItem: DTO.RawTransactionData;
 	profile: Contracts.IProfile;
 	isConfirmed?: boolean;
 	confirmations?: number;
+	containerClassname?: string;
 }) => {
 	const { t } = useTranslation();
 
@@ -60,7 +62,7 @@ export const TransactionDetailContent = ({
 				<TransactionId transaction={transaction} />
 			</div>
 
-			<div className="mt-6 space-y-4">
+			<div className={cn("mt-6 space-y-4", containerClassname)}>
 				<DetailPadded>
 					<TransactionAddresses
 						explorerLink={transaction.explorerLink()}
