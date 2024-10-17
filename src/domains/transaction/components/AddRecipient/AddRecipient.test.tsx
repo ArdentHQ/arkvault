@@ -214,6 +214,14 @@ describe("AddRecipient", () => {
 		expect(container).toMatchSnapshot();
 	});
 
+	it("should set available amount in mobile", async () => {
+		renderWithFormProvider(<AddRecipient profile={profile} wallet={wallet} recipients={[]} onChange={vi.fn()} />);
+
+		await userEvent.click(screen.getByTestId("AddRecipient__send-all_mobile"));
+
+		await waitFor(() => expect(screen.getByTestId("AddRecipient__amount")).toHaveValue(`${wallet.balance()}`));
+	});
+
 	it("should show zero amount if wallet has zero or insufficient balance", async () => {
 		const emptyProfile = await env.profiles().create("Empty");
 
