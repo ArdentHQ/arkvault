@@ -56,7 +56,7 @@ const ipfsTransactionFixture = {
 	type: () => "ipfs",
 	usesMultiSignature: () => false,
 	wallet: () => wallet,
-}
+};
 
 const createTransactionMock = (wallet: Contracts.IReadWriteWallet) =>
 	// @ts-ignore
@@ -78,7 +78,7 @@ vi.mock("@/utils/delay", () => ({
 
 vi.mock("@/utils/debounce", () => ({
 	debounceAsync: (callback: () => void) =>
-		async function(...arguments_: any) {
+		async function (...arguments_: any) {
 			return new Promise((resolve) => {
 				setTimeout(() => {
 					resolve(callback.apply(this, arguments_));
@@ -105,10 +105,10 @@ describe("SendIpfs", () => {
 
 		await wallet.synchroniser().identity();
 
-		const signatory = await wallet.signatory().stub(MNEMONICS[0])
-		const signatoryMock = vi.spyOn(wallet.signatory(), "secret").mockResolvedValue(signatory);
+		const signatory = await wallet.signatory().stub(MNEMONICS[0]);
 
-		const ipfsStubTransactionMock = vi.spyOn(wallet.coin().transaction(), "ipfs").mockResolvedValue(ipfsTransactionFixture)
+		vi.spyOn(wallet.signatory(), "secret").mockResolvedValue(signatory);
+		vi.spyOn(wallet.coin().transaction(), "ipfs").mockResolvedValue(ipfsTransactionFixture);
 
 		await syncFees(profile);
 	});
@@ -162,7 +162,6 @@ describe("SendIpfs", () => {
 
 		await expect(formStep()).resolves.toBeVisible();
 
-		const networkLabel = `${wallet.network().coin()} ${wallet.network().name()}`;
 		await expect(screen.findByText(encryptedWallet.address())).resolves.toBeVisible();
 
 		await userEvent.type(screen.getByTestId("Input__hash"), "QmXoypizjW3WknFiJnKLwHCnL72vedxjQkDDP1mXWo6uco");

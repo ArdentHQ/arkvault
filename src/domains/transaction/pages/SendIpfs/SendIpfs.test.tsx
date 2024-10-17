@@ -65,7 +65,7 @@ const ipfsTransactionFixture = {
 	type: () => "ipfs",
 	usesMultiSignature: () => false,
 	wallet: () => wallet,
-}
+};
 
 const createTransactionMock = (wallet: Contracts.IReadWriteWallet) =>
 	// @ts-ignore
@@ -105,10 +105,9 @@ describe("SendIpfs", () => {
 			.spyOn(wallet.coin().ledger(), "getVersion")
 			.mockResolvedValue(minVersionList[wallet.network().coin()]);
 
-		const signatory = await wallet.signatory().stub(MNEMONICS[0])
-		const signatoryMock = vi.spyOn(wallet.signatory(), "secret").mockResolvedValue(signatory);
-
-		const ipfsStubTransactionMock = vi.spyOn(wallet.coin().transaction(), "ipfs").mockResolvedValue(ipfsTransactionFixture)
+		const signatory = await wallet.signatory().stub(MNEMONICS[0]);
+		vi.spyOn(wallet.signatory(), "secret").mockResolvedValue(signatory);
+		vi.spyOn(wallet.coin().transaction(), "ipfs").mockResolvedValue(ipfsTransactionFixture);
 
 		await wallet.synchroniser().identity();
 
@@ -258,8 +257,6 @@ describe("SendIpfs", () => {
 
 		await expect(formStep()).resolves.toBeVisible();
 
-		const networkLabel = `${wallet.network().coin()} ${wallet.network().name()}`;
-
 		await userEvent.clear(screen.getByTestId("Input__hash"));
 		await userEvent.type(screen.getByTestId("Input__hash"), "QmXoypizjW3WknFiJnKLwHCnL72vedxjQkDDP1mXWo6uco");
 		await waitFor(() =>
@@ -317,8 +314,6 @@ describe("SendIpfs", () => {
 		);
 
 		await expect(formStep()).resolves.toBeVisible();
-
-		const networkLabel = `${wallet.network().coin()} ${wallet.network().name()}`;
 
 		await userEvent.clear(screen.getByTestId("Input__hash"));
 		await userEvent.type(screen.getByTestId("Input__hash"), "QmXoypizjW3WknFiJnKLwHCnL72vedxjQkDDP1mXWo6uco");
@@ -417,8 +412,6 @@ describe("SendIpfs", () => {
 
 		await expect(formStep()).resolves.toBeVisible();
 
-		const networkLabel = `${wallet.network().coin()} ${wallet.network().name()}`;
-
 		await userEvent.clear(screen.getByTestId("Input__hash"));
 		await userEvent.type(screen.getByTestId("Input__hash"), "QmXoypizjW3WknFiJnKLwHCnL72vedxjQkDDP1mXWo6uco");
 
@@ -505,8 +498,6 @@ describe("SendIpfs", () => {
 
 		await expect(formStep()).resolves.toBeVisible();
 
-		const networkLabel = `${wallet.network().coin()} ${wallet.network().name()}`;
-
 		await userEvent.clear(screen.getByTestId("Input__hash"));
 		await userEvent.type(screen.getByTestId("Input__hash"), "QmXoypizjW3WknFiJnKLwHCnL72vedxjQkDDP1mXWo6uco");
 		await waitFor(() =>
@@ -554,8 +545,6 @@ describe("SendIpfs", () => {
 
 		await expect(formStep()).resolves.toBeVisible();
 
-		const networkLabel = `${wallet.network().coin()} ${wallet.network().name()}`;
-
 		await userEvent.type(screen.getByTestId("Input__hash"), "QmXoypizjW3WknFiJnKLwHCnL72vedxjQkDDP1mXWo6uco");
 		await waitFor(() =>
 			expect(screen.getByTestId("Input__hash")).toHaveValue("QmXoypizjW3WknFiJnKLwHCnL72vedxjQkDDP1mXWo6uco"),
@@ -600,8 +589,6 @@ describe("SendIpfs", () => {
 		);
 
 		await expect(formStep()).resolves.toBeVisible();
-
-		const networkLabel = `${wallet.network().coin()} ${wallet.network().name()}`;
 
 		await userEvent.clear(screen.getByTestId("Input__hash"));
 		await userEvent.type(screen.getByTestId("Input__hash"), "QmXoypizjW3WknFiJnKLwHCnL72vedxjQkDDP1mXWo6uco");
@@ -706,8 +693,6 @@ describe("SendIpfs", () => {
 
 		await expect(formStep()).resolves.toBeVisible();
 
-		const networkLabel = `${wallet.network().coin()} ${wallet.network().name()}`;
-
 		await userEvent.clear(screen.getByTestId("Input__hash"));
 		await userEvent.type(screen.getByTestId("Input__hash"), "QmXoypizjW3WknFiJnKLwHCnL72vedxjQkDDP1mXWo6uco");
 		await waitFor(() =>
@@ -811,8 +796,6 @@ describe("SendIpfs", () => {
 
 		await expect(formStep()).resolves.toBeVisible();
 
-		const networkLabel = `${wallet.network().coin()} ${wallet.network().name()}`;
-
 		await userEvent.clear(screen.getByTestId("Input__hash"));
 		await userEvent.type(screen.getByTestId("Input__hash"), "QmXoypizjW3WknFiJnKLwHCnL72vedxjQkDDP1mXWo6uco");
 		await waitFor(() =>
@@ -911,8 +894,6 @@ describe("SendIpfs", () => {
 		);
 
 		await expect(formStep()).resolves.toBeVisible();
-
-		const networkLabel = `${wallet.network().coin()} ${wallet.network().name()}`;
 
 		await userEvent.clear(screen.getByTestId("Input__hash"));
 		await userEvent.type(screen.getByTestId("Input__hash"), "QmXoypizjW3WknFiJnKLwHCnL72vedxjQkDDP1mXWo6uco");
