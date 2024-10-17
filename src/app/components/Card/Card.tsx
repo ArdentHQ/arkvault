@@ -33,7 +33,7 @@ export const Card = ({ variant, children, addonIcons, actions, onClick, onSelect
 				{addonIcons}
 				{actions && actions.length > 0 && (
 					<Dropdown
-						position="top-right"
+						position="bottom"
 						options={actions}
 						onSelect={onSelect}
 						toggleContent={
