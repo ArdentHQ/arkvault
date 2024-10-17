@@ -11,7 +11,7 @@ const options = [
 	{ disabled: true, label: "Option 3", value: "3" },
 ];
 
-const getOptionAtIndex = (index = 0) => screen.getByTestId(`dropdown__option--${index}`)
+const getOptionAtIndex = (index = 0) => screen.getByTestId(`dropdown__option--${index}`);
 
 describe("Dropdown", () => {
 	it("should render", () => {
@@ -57,7 +57,7 @@ describe("Dropdown", () => {
 		await expect(screen.findByTestId("dropdown__content")).resolves.toBeVisible();
 
 		// eslint-disable-next-line testing-library/no-node-access
-		const containerDiv = getOptionAtIndex().children.item(1)
+		const containerDiv = getOptionAtIndex().children.item(1);
 		expect(containerDiv).toHaveClass("custom-class-name");
 	});
 
@@ -75,7 +75,7 @@ describe("Dropdown", () => {
 		await expect(screen.findByTestId("dropdown__content")).resolves.toBeVisible();
 
 		// eslint-disable-next-line testing-library/no-node-access
-		const containerDiv = getOptionAtIndex().children.item(1)
+		const containerDiv = getOptionAtIndex().children.item(1);
 		expect(containerDiv).toHaveClass("option-1--class");
 	});
 
