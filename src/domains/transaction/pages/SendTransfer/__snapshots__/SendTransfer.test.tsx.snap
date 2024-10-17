@@ -954,7 +954,7 @@ exports[`SendTransfer > should display unconfirmed transactions modal when submi
                                     Amount
                                   </div>
                                   <div
-                                    class="flex h-full items-center justify-center rounded px-1.5 text-base leading-5 css-xqt0aw"
+                                    class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
                                     color="danger-bg"
                                     data-testid="AmountLabel__wrapper"
                                   >
@@ -962,7 +962,7 @@ exports[`SendTransfer > should display unconfirmed transactions modal when submi
                                       class="flex h-full items-center space-x-1"
                                     >
                                       <span
-                                        class="whitespace-nowrap text-sm"
+                                        class="whitespace-nowrap text-base leading-5"
                                         data-testid="Amount"
                                       >
                                         - 400,000 DARK
@@ -7557,7 +7557,7 @@ exports[`SendTransfer > should send a single transfer and handle undefined expir
                                     Amount
                                   </div>
                                   <div
-                                    class="flex h-full items-center justify-center rounded px-1.5 text-base leading-5 css-xqt0aw"
+                                    class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
                                     color="danger-bg"
                                     data-testid="AmountLabel__wrapper"
                                   >
@@ -7565,7 +7565,7 @@ exports[`SendTransfer > should send a single transfer and handle undefined expir
                                       class="flex h-full items-center space-x-1"
                                     >
                                       <span
-                                        class="whitespace-nowrap text-sm"
+                                        class="whitespace-nowrap text-base leading-5"
                                         data-testid="Amount"
                                       >
                                         - 400,000 DARK
@@ -8906,7 +8906,7 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
                                     Amount
                                   </div>
                                   <div
-                                    class="flex h-full items-center justify-center rounded px-1.5 text-base leading-5 css-xqt0aw"
+                                    class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
                                     color="danger-bg"
                                     data-testid="AmountLabel__wrapper"
                                   >
@@ -8914,7 +8914,7 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
                                       class="flex h-full items-center space-x-1"
                                     >
                                       <span
-                                        class="whitespace-nowrap text-sm"
+                                        class="whitespace-nowrap text-base leading-5"
                                         data-testid="Amount"
                                       >
                                         - 400,000 DARK
@@ -10809,7 +10809,7 @@ exports[`SendTransfer > should send a single transfer using wallet with encrypti
                                     Amount
                                   </div>
                                   <div
-                                    class="flex h-full items-center justify-center rounded px-1.5 text-base leading-5 css-xqt0aw"
+                                    class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
                                     color="danger-bg"
                                     data-testid="AmountLabel__wrapper"
                                   >
@@ -10817,7 +10817,7 @@ exports[`SendTransfer > should send a single transfer using wallet with encrypti
                                       class="flex h-full items-center space-x-1"
                                     >
                                       <span
-                                        class="whitespace-nowrap text-sm"
+                                        class="whitespace-nowrap text-base leading-5"
                                         data-testid="Amount"
                                       >
                                         - 400,000 DARK
@@ -12158,7 +12158,7 @@ exports[`SendTransfer > should send a single transfer with keyboard 1`] = `
                                     Amount
                                   </div>
                                   <div
-                                    class="flex h-full items-center justify-center rounded px-1.5 text-base leading-5 css-xqt0aw"
+                                    class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
                                     color="danger-bg"
                                     data-testid="AmountLabel__wrapper"
                                   >
@@ -12166,7 +12166,7 @@ exports[`SendTransfer > should send a single transfer with keyboard 1`] = `
                                       class="flex h-full items-center space-x-1"
                                     >
                                       <span
-                                        class="whitespace-nowrap text-sm"
+                                        class="whitespace-nowrap text-base leading-5"
                                         data-testid="Amount"
                                       >
                                         - 400,000 DARK
@@ -13507,7 +13507,7 @@ exports[`SendTransfer > should send a single transfer without keyboard 1`] = `
                                     Amount
                                   </div>
                                   <div
-                                    class="flex h-full items-center justify-center rounded px-1.5 text-base leading-5 css-xqt0aw"
+                                    class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
                                     color="danger-bg"
                                     data-testid="AmountLabel__wrapper"
                                   >
@@ -13515,7 +13515,7 @@ exports[`SendTransfer > should send a single transfer without keyboard 1`] = `
                                       class="flex h-full items-center space-x-1"
                                     >
                                       <span
-                                        class="whitespace-nowrap text-sm"
+                                        class="whitespace-nowrap text-base leading-5"
                                         data-testid="Amount"
                                       >
                                         - 400,000 DARK

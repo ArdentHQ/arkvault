@@ -835,7 +835,7 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                                 Amount
                               </div>
                               <div
-                                class="flex h-full items-center justify-center rounded px-1.5 text-base leading-5 css-xqt0aw"
+                                class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
                                 color="danger-bg"
                                 data-testid="AmountLabel__wrapper"
                               >
@@ -843,7 +843,7 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                                   class="flex h-full items-center space-x-1"
                                 >
                                   <span
-                                    class="whitespace-nowrap text-sm"
+                                    class="whitespace-nowrap text-base leading-5"
                                     data-testid="Amount"
                                   >
                                     - 1 DARK
