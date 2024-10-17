@@ -59,7 +59,7 @@ export const TransactionDetailContent = ({
 	return (
 		<DetailsCondensed>
 			<div className="mt-4">
-				<TransactionId transaction={transaction} />
+				<TransactionId transaction={transaction} isConfirmed={isConfirmed}/>
 			</div>
 
 			<div className={cn("mt-6 space-y-4", containerClassname)}>
