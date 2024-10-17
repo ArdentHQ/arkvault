@@ -47,7 +47,14 @@ export const FormStep = ({ unvotes, votes, wallet, profile, network }: FormStepP
 
 			<FormField name="senderAddress">
 				<div data-testid="sender-address" className="mb-3 sm:mb-0">
-					{wallet?.address() && <TransactionAddresses senderAddress={wallet.address()} recipients={[]} network={wallet.network()} profile={profile} />}
+					{wallet?.address() && (
+						<TransactionAddresses
+							senderAddress={wallet.address()}
+							recipients={[]}
+							network={wallet.network()}
+							profile={profile}
+						/>
+					)}
 				</div>
 			</FormField>
 
