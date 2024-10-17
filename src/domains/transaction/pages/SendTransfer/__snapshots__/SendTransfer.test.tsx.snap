@@ -660,7 +660,7 @@ exports[`SendTransfer > should display unconfirmed transactions modal when submi
                       </div>
                     </div>
                     <div
-                      class="mt-6 space-y-4"
+                      class="mt-6 space-y-4 -mx-3 sm:mx-0"
                     >
                       <div
                         class="group flex"
@@ -7263,7 +7263,7 @@ exports[`SendTransfer > should send a single transfer and handle undefined expir
                       </div>
                     </div>
                     <div
-                      class="mt-6 space-y-4"
+                      class="mt-6 space-y-4 -mx-3 sm:mx-0"
                     >
                       <div
                         class="group flex"
@@ -8612,7 +8612,7 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
                       </div>
                     </div>
                     <div
-                      class="mt-6 space-y-4"
+                      class="mt-6 space-y-4 -mx-3 sm:mx-0"
                     >
                       <div
                         class="group flex"
@@ -10515,7 +10515,7 @@ exports[`SendTransfer > should send a single transfer using wallet with encrypti
                       </div>
                     </div>
                     <div
-                      class="mt-6 space-y-4"
+                      class="mt-6 space-y-4 -mx-3 sm:mx-0"
                     >
                       <div
                         class="group flex"
@@ -11864,7 +11864,7 @@ exports[`SendTransfer > should send a single transfer with keyboard 1`] = `
                       </div>
                     </div>
                     <div
-                      class="mt-6 space-y-4"
+                      class="mt-6 space-y-4 -mx-3 sm:mx-0"
                     >
                       <div
                         class="group flex"
@@ -13213,7 +13213,7 @@ exports[`SendTransfer > should send a single transfer without keyboard 1`] = `
                       </div>
                     </div>
                     <div
-                      class="mt-6 space-y-4"
+                      class="mt-6 space-y-4 -mx-3 sm:mx-0"
                     >
                       <div
                         class="group flex"
