@@ -29,6 +29,7 @@ describe("TransactionId", () => {
 
 		render(
 			<TransactionId
+				isConfirmed
 				transaction={
 					{
 						explorerLink: () => "https://test.com",

@@ -13,9 +13,10 @@ import cn from "classnames";
 
 interface Properties {
 	transaction: DTO.ExtendedSignedTransactionData | DTO.ExtendedConfirmedTransactionData;
+	isConfirmed?: boolean;
 }
 
-export const TransactionId = ({ transaction }: Properties): ReactElement => {
+export const TransactionId = ({ transaction, isConfirmed }: Properties): ReactElement => {
 	const { t } = useTranslation();
 	const { isDarkMode } = useTheme();
 	const { isSmAndAbove } = useBreakpoint();
@@ -54,7 +55,7 @@ export const TransactionId = ({ transaction }: Properties): ReactElement => {
 					variant="secondary"
 					size="icon"
 					className="border border-theme-secondary-300 bg-transparent p-2 hover:border-transparent dark:border-transparent dark:bg-theme-secondary-800"
-					disabled={!transaction.isConfirmed()}
+					disabled={[!isConfirmed, !transaction.isConfirmed()].every(Boolean)}
 					onClick={() => {
 						openExternal(transaction.explorerLink());
 					}}
