@@ -50,6 +50,7 @@ export const TransactionSuccessful = ({ transaction, senderWallet }: Transaction
 				profile={senderWallet.profile()}
 				isConfirmed={isConfirmed}
 				confirmations={confirmations}
+				containerClassname="-mx-3 sm:mx-0"
 			/>
 		</section>
 	);
