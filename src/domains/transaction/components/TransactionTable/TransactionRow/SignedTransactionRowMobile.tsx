@@ -111,7 +111,10 @@ export const SignedTransactionRowMobile = ({
 
 					<div className="flex w-full flex-col gap-4 px-4 pb-4 pt-3 sm:grid sm:grid-cols-[auto_auto_80px] sm:pb-2">
 						<MobileSection title={t("COMMON.TRANSFER")}>
-							<TransactionRowAddressing transaction={transaction} profile={transaction.wallet().profile()} />
+							<TransactionRowAddressing
+								transaction={transaction}
+								profile={transaction.wallet().profile()}
+							/>
 						</MobileSection>
 
 						<MobileSection title={`${t("COMMON.VALUE")} (${transaction.wallet().network().coinName()})`}>

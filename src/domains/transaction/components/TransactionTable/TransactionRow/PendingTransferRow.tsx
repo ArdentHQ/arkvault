@@ -9,7 +9,7 @@ import { TimeAgo } from "@/app/components/TimeAgo";
 import { DateTime } from "@ardenthq/sdk-intl";
 import { Label } from "@/app/components/Label";
 import { useTransactionTypes } from "@/domains/transaction/hooks/use-transaction-types";
-import { Amount, AmountLabel } from "@/app/components/Amount";
+import { Amount } from "@/app/components/Amount";
 import { TransactionRowAddressing } from "./TransactionRowAddressing";
 
 export const PendingTransferRow = ({

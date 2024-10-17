@@ -16,7 +16,7 @@ import { Label } from "@/app/components/Label";
 import { Amount, AmountLabel } from "@/app/components/Amount";
 import { Divider } from "@/app/components/Divider";
 import { Icon } from "@/app/components/Icon";
-import { TransactionRowLabel, TransactionRowAddressing } from "./TransactionRowAddressing";
+import { TransactionRowAddressing } from "./TransactionRowAddressing";
 
 interface SignedTransactionRowProperties {
 	transaction: DTO.ExtendedSignedTransactionData;
@@ -87,7 +87,6 @@ export const SignedTransactionRow = ({
 }: SignedTransactionRowProperties) => {
 	const { t } = useTranslation();
 	const { getLabel } = useTransactionTypes();
-	const recipient = transaction.get<string>("recipientId");
 	const { canBeSigned, isAwaitingFinalSignature, isAwaitingOurFinalSignature, status } = useMultiSignatureStatus({
 		transaction,
 		wallet,
@@ -147,7 +146,7 @@ export const SignedTransactionRow = ({
 				</Label>
 			</TableCell>
 
-			<TableCell innerClassName="space-x-2 items-start xl:min-h-0" >
+			<TableCell innerClassName="space-x-2 items-start xl:min-h-0">
 				<TransactionRowAddressing transaction={transaction} profile={transaction.wallet().profile()} />
 			</TableCell>
 
