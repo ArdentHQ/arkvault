@@ -76,7 +76,7 @@ export const PendingTransferRowMobile = ({
 						<MobileSection title={`${t("COMMON.VALUE")} (${transaction.wallet().network().coinName()})`}>
 							<AmountLabel
 								value={transaction.amount() + transaction.fee()}
-								isNegative={true}
+								isNegative={transaction.isSent()}
 								ticker={wallet.currency()}
 								isCompact
 								className="py-[3px]"

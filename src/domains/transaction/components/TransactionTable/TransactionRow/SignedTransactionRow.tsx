@@ -16,7 +16,7 @@ import { Label } from "@/app/components/Label";
 import { Amount, AmountLabel } from "@/app/components/Amount";
 import { Divider } from "@/app/components/Divider";
 import { Icon } from "@/app/components/Icon";
-import { TransactionRowLabel } from "./TransactionRowAddressing";
+import { TransactionRowAddressing } from "./TransactionRowAddressing";
 
 interface SignedTransactionRowProperties {
 	transaction: DTO.ExtendedSignedTransactionData;
@@ -87,7 +87,6 @@ export const SignedTransactionRow = ({
 }: SignedTransactionRowProperties) => {
 	const { t } = useTranslation();
 	const { getLabel } = useTransactionTypes();
-	const recipient = transaction.get<string>("recipientId");
 	const { canBeSigned, isAwaitingFinalSignature, isAwaitingOurFinalSignature, status } = useMultiSignatureStatus({
 		transaction,
 		wallet,
@@ -148,15 +147,7 @@ export const SignedTransactionRow = ({
 			</TableCell>
 
 			<TableCell innerClassName="space-x-2 items-start xl:min-h-0">
-				<TransactionRowLabel isNegative />
-				<span className="text-sm">
-					<TruncateMiddle
-						className="cursor-pointer font-semibold text-theme-primary-600"
-						text={recipient || ""}
-						maxChars={14}
-						data-testid="TransactionRowRecipientLabel"
-					/>
-				</span>
+				<TransactionRowAddressing transaction={transaction} profile={transaction.wallet().profile()} />
 			</TableCell>
 
 			<TableCell
@@ -174,7 +165,7 @@ export const SignedTransactionRow = ({
 				<div className="flex flex-col items-end gap-1">
 					<AmountLabel
 						value={transaction.amount() + transaction.fee()}
-						isNegative={true}
+						isNegative={transaction.isSent()}
 						ticker={wallet.currency()}
 						isCompact
 					/>
