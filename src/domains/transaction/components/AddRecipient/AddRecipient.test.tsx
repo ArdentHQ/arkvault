@@ -215,7 +215,7 @@ describe("AddRecipient", () => {
 	});
 
 	it("should set available amount in mobile", async () => {
-		const { container } = renderWithFormProvider(
+		renderWithFormProvider(
 			<AddRecipient profile={profile} wallet={wallet} recipients={[]} onChange={vi.fn()} />,
 		);
 
