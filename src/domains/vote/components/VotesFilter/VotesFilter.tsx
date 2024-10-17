@@ -18,8 +18,9 @@ export const VotesFilter = ({
 	const { t } = useTranslation();
 
 	return (
-		<div data-testid="VotesFilter" {...properties}>
+		<div {...properties}>
 			<Dropdown
+				data-testid="VotesFilter"
 				variant="votesFilter"
 				placement="bottom-end"
 				toggleContent={
