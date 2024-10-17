@@ -283,9 +283,7 @@ describe("Votes", () => {
 
 		await userEvent.click(screen.getByTestId("dropdown__toggle" + testIdSuffix));
 
-		await waitFor(() =>
-			expect(screen.getByTestId("dropdown__content" + testIdSuffix)).toBeInTheDocument(),
-		);
+		await expect(screen.findByTestId("dropdown__content" + testIdSuffix)).resolves.toBeVisible();
 
 		await userEvent.click(screen.getByTestId("VotesFilter__option--current"));
 
@@ -452,9 +450,7 @@ describe("Votes", () => {
 
 		await userEvent.click(screen.getByTestId("dropdown__toggle" + testIdSuffix));
 
-		await waitFor(() =>
-			expect(screen.getByTestId("dropdown__content" + testIdSuffix)).toBeInTheDocument(),
-		);
+		await expect(screen.findByTestId("dropdown__content" + testIdSuffix)).resolves.toBeVisible();
 
 		await userEvent.click(screen.getByTestId("VotesFilter__option--current"));
 
