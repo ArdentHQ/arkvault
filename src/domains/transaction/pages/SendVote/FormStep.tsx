@@ -16,7 +16,7 @@ type FormStepProperties = {
 	isWalletFieldDisabled?: boolean;
 } & Omit<SendVoteStepProperties, "wallet">;
 
-export const FormStep = ({ unvotes, votes, wallet, profile, network, isWalletFieldDisabled }: FormStepProperties) => {
+export const FormStep = ({ unvotes, votes, wallet, profile, network }: FormStepProperties) => {
 	const { t } = useTranslation();
 
 	const showFeeInput = useMemo(() => network.chargesZeroFees() === false, [wallet]);
