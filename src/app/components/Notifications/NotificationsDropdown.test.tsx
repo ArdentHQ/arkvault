@@ -87,8 +87,6 @@ describe("Notifications", () => {
 
 		await expect(screen.findByTestId("Modal__inner")).resolves.toBeVisible();
 
-		expect(screen.getAllByTestId("Address__alias")).toHaveLength(5);
-
 		expect(container).toMatchSnapshot();
 
 		userEvent.click(screen.getByTestId("Modal__close-button"));

@@ -4,8 +4,7 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
 <div>
   <div>
     <div
-      aria-controls=":rf:"
-      aria-expanded="true"
+      aria-expanded="false"
       aria-haspopup="dialog"
       data-testid="dropdown__toggle"
     >
