@@ -22,6 +22,7 @@ export const useIpfsStubTransaction = ({
 					.ipfs({
 						data: { hash },
 						fee,
+						nonce: 1,
 						signatory: await wallet.signatory().secret("123"),
 					});
 
