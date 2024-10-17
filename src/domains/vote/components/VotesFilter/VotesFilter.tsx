@@ -18,11 +18,11 @@ export const VotesFilter = ({
 	const { t } = useTranslation();
 
 	return (
-		<div data-testid="VotesFilter" {...properties}>
+		<div {...properties}>
 			<Dropdown
+				data-testid="VotesFilter"
 				variant="votesFilter"
-				dropdownClass="shadow-votes-filter mx-4 sm:mx-0"
-				position="right"
+				placement="bottom-end"
 				toggleContent={
 					<ControlButton isChanged={selectedOption !== "all"}>
 						<div className="flex h-5 w-5 items-center justify-center">

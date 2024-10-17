@@ -119,53 +119,50 @@ exports[`TransactionExportForm > should render fiat column if wallets network is
                 class="flex min-w-0 flex-col css-1bcidjh"
               >
                 <div
-                  class="static sm:relative"
-                  data-testid="TransactionExportForm--daterange-options"
+                  aria-expanded="false"
+                  aria-haspopup="dialog"
+                  data-testid="dropdown__toggle-TransactionExportForm--daterange-options"
                 >
-                  <span
-                    data-testid="dropdown__toggle"
+                  <button
+                    class="flex items-center space-x-2 font-semibold focus:outline-none w-full cursor-pointer justify-between space-x-4 overflow-hidden"
+                    data-testid="CollapseToggleButton"
+                    type="button"
                   >
-                    <button
-                      class="flex items-center space-x-2 font-semibold focus:outline-none w-full cursor-pointer justify-between space-x-4 overflow-hidden"
-                      data-testid="CollapseToggleButton"
-                      type="button"
+                    <span
+                      class="flex items-center space-x-1"
                     >
-                      <span
-                        class="flex items-center space-x-1"
+                      <div
+                        class="whitespace-nowrap leading-tight"
+                      />
+                    </span>
+                    <span
+                      class="css-1uvxu7z"
+                    >
+                      <div
+                        class="p-1 css-15txs7d"
+                        height="10"
+                        width="10"
                       >
-                        <div
-                          class="whitespace-nowrap leading-tight"
-                        />
-                      </span>
-                      <span
-                        class="css-1uvxu7z"
-                      >
-                        <div
-                          class="p-1 css-15txs7d"
-                          height="10"
-                          width="10"
+                        <svg
+                          id="chevron-down-small"
+                          viewBox="0 0 10 10"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
                         >
-                          <svg
-                            id="chevron-down-small"
-                            viewBox="0 0 10 10"
-                            x="0"
-                            xml:space="preserve"
-                            xmlns="http://www.w3.org/2000/svg"
-                            y="0"
-                          >
-                            <path
-                              d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
-                              fill="none"
-                              stroke="currentColor"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              stroke-width="2"
-                            />
-                          </svg>
-                        </div>
-                      </span>
-                    </button>
-                  </span>
+                          <path
+                            d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          />
+                        </svg>
+                      </div>
+                    </span>
+                  </button>
                 </div>
               </fieldset>
             </span>
@@ -258,60 +255,57 @@ exports[`TransactionExportForm > should render fiat column if wallets network is
                 class="flex min-w-0 flex-col css-1bcidjh"
               >
                 <div
-                  class="static sm:relative"
-                  data-testid="TransactionExportForm--delimiter-options"
+                  aria-expanded="false"
+                  aria-haspopup="dialog"
+                  data-testid="dropdown__toggle-TransactionExportForm--delimiter-options"
                 >
-                  <span
-                    data-testid="dropdown__toggle"
+                  <button
+                    class="flex items-center space-x-2 font-semibold focus:outline-none w-full cursor-pointer justify-between space-x-4 overflow-hidden"
+                    data-testid="CollapseToggleButton"
+                    type="button"
                   >
-                    <button
-                      class="flex items-center space-x-2 font-semibold focus:outline-none w-full cursor-pointer justify-between space-x-4 overflow-hidden"
-                      data-testid="CollapseToggleButton"
-                      type="button"
+                    <span
+                      class="flex items-center space-x-1"
                     >
                       <span
-                        class="flex items-center space-x-1"
+                        class="px-1 leading-tight text-theme-secondary-500 dark:text-theme-secondary-600"
                       >
-                        <span
-                          class="px-1 leading-tight text-theme-secondary-500 dark:text-theme-secondary-600"
-                        >
-                          (
-                        </span>
-                        <span
-                          class="leading-tight text-theme-secondary-500 dark:text-theme-secondary-600"
-                        >
-                          )
-                        </span>
+                        (
                       </span>
                       <span
-                        class="css-1uvxu7z"
+                        class="leading-tight text-theme-secondary-500 dark:text-theme-secondary-600"
                       >
-                        <div
-                          class="p-1 css-15txs7d"
-                          height="10"
-                          width="10"
-                        >
-                          <svg
-                            id="chevron-down-small"
-                            viewBox="0 0 10 10"
-                            x="0"
-                            xml:space="preserve"
-                            xmlns="http://www.w3.org/2000/svg"
-                            y="0"
-                          >
-                            <path
-                              d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
-                              fill="none"
-                              stroke="currentColor"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              stroke-width="2"
-                            />
-                          </svg>
-                        </div>
+                        )
                       </span>
-                    </button>
-                  </span>
+                    </span>
+                    <span
+                      class="css-1uvxu7z"
+                    >
+                      <div
+                        class="p-1 css-15txs7d"
+                        height="10"
+                        width="10"
+                      >
+                        <svg
+                          id="chevron-down-small"
+                          viewBox="0 0 10 10"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
+                        >
+                          <path
+                            d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          />
+                        </svg>
+                      </div>
+                    </span>
+                  </button>
                 </div>
               </fieldset>
             </span>
@@ -708,53 +702,50 @@ exports[`TransactionExportForm > should render in lg 1`] = `
                 class="flex min-w-0 flex-col css-1bcidjh"
               >
                 <div
-                  class="static sm:relative"
-                  data-testid="TransactionExportForm--daterange-options"
+                  aria-expanded="false"
+                  aria-haspopup="dialog"
+                  data-testid="dropdown__toggle-TransactionExportForm--daterange-options"
                 >
-                  <span
-                    data-testid="dropdown__toggle"
+                  <button
+                    class="flex items-center space-x-2 font-semibold focus:outline-none w-full cursor-pointer justify-between space-x-4 overflow-hidden"
+                    data-testid="CollapseToggleButton"
+                    type="button"
                   >
-                    <button
-                      class="flex items-center space-x-2 font-semibold focus:outline-none w-full cursor-pointer justify-between space-x-4 overflow-hidden"
-                      data-testid="CollapseToggleButton"
-                      type="button"
+                    <span
+                      class="flex items-center space-x-1"
                     >
-                      <span
-                        class="flex items-center space-x-1"
+                      <div
+                        class="whitespace-nowrap leading-tight"
+                      />
+                    </span>
+                    <span
+                      class="css-1uvxu7z"
+                    >
+                      <div
+                        class="p-1 css-15txs7d"
+                        height="10"
+                        width="10"
                       >
-                        <div
-                          class="whitespace-nowrap leading-tight"
-                        />
-                      </span>
-                      <span
-                        class="css-1uvxu7z"
-                      >
-                        <div
-                          class="p-1 css-15txs7d"
-                          height="10"
-                          width="10"
+                        <svg
+                          id="chevron-down-small"
+                          viewBox="0 0 10 10"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
                         >
-                          <svg
-                            id="chevron-down-small"
-                            viewBox="0 0 10 10"
-                            x="0"
-                            xml:space="preserve"
-                            xmlns="http://www.w3.org/2000/svg"
-                            y="0"
-                          >
-                            <path
-                              d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
-                              fill="none"
-                              stroke="currentColor"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              stroke-width="2"
-                            />
-                          </svg>
-                        </div>
-                      </span>
-                    </button>
-                  </span>
+                          <path
+                            d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          />
+                        </svg>
+                      </div>
+                    </span>
+                  </button>
                 </div>
               </fieldset>
             </span>
@@ -847,60 +838,57 @@ exports[`TransactionExportForm > should render in lg 1`] = `
                 class="flex min-w-0 flex-col css-1bcidjh"
               >
                 <div
-                  class="static sm:relative"
-                  data-testid="TransactionExportForm--delimiter-options"
+                  aria-expanded="false"
+                  aria-haspopup="dialog"
+                  data-testid="dropdown__toggle-TransactionExportForm--delimiter-options"
                 >
-                  <span
-                    data-testid="dropdown__toggle"
+                  <button
+                    class="flex items-center space-x-2 font-semibold focus:outline-none w-full cursor-pointer justify-between space-x-4 overflow-hidden"
+                    data-testid="CollapseToggleButton"
+                    type="button"
                   >
-                    <button
-                      class="flex items-center space-x-2 font-semibold focus:outline-none w-full cursor-pointer justify-between space-x-4 overflow-hidden"
-                      data-testid="CollapseToggleButton"
-                      type="button"
+                    <span
+                      class="flex items-center space-x-1"
                     >
                       <span
-                        class="flex items-center space-x-1"
+                        class="px-1 leading-tight text-theme-secondary-500 dark:text-theme-secondary-600"
                       >
-                        <span
-                          class="px-1 leading-tight text-theme-secondary-500 dark:text-theme-secondary-600"
-                        >
-                          (
-                        </span>
-                        <span
-                          class="leading-tight text-theme-secondary-500 dark:text-theme-secondary-600"
-                        >
-                          )
-                        </span>
+                        (
                       </span>
                       <span
-                        class="css-1uvxu7z"
+                        class="leading-tight text-theme-secondary-500 dark:text-theme-secondary-600"
                       >
-                        <div
-                          class="p-1 css-15txs7d"
-                          height="10"
-                          width="10"
-                        >
-                          <svg
-                            id="chevron-down-small"
-                            viewBox="0 0 10 10"
-                            x="0"
-                            xml:space="preserve"
-                            xmlns="http://www.w3.org/2000/svg"
-                            y="0"
-                          >
-                            <path
-                              d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
-                              fill="none"
-                              stroke="currentColor"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              stroke-width="2"
-                            />
-                          </svg>
-                        </div>
+                        )
                       </span>
-                    </button>
-                  </span>
+                    </span>
+                    <span
+                      class="css-1uvxu7z"
+                    >
+                      <div
+                        class="p-1 css-15txs7d"
+                        height="10"
+                        width="10"
+                      >
+                        <svg
+                          id="chevron-down-small"
+                          viewBox="0 0 10 10"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
+                        >
+                          <path
+                            d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          />
+                        </svg>
+                      </div>
+                    </span>
+                  </button>
                 </div>
               </fieldset>
             </span>
@@ -1251,53 +1239,50 @@ exports[`TransactionExportForm > should render in md 1`] = `
                 class="flex min-w-0 flex-col css-1bcidjh"
               >
                 <div
-                  class="static sm:relative"
-                  data-testid="TransactionExportForm--daterange-options"
+                  aria-expanded="false"
+                  aria-haspopup="dialog"
+                  data-testid="dropdown__toggle-TransactionExportForm--daterange-options"
                 >
-                  <span
-                    data-testid="dropdown__toggle"
+                  <button
+                    class="flex items-center space-x-2 font-semibold focus:outline-none w-full cursor-pointer justify-between space-x-4 overflow-hidden"
+                    data-testid="CollapseToggleButton"
+                    type="button"
                   >
-                    <button
-                      class="flex items-center space-x-2 font-semibold focus:outline-none w-full cursor-pointer justify-between space-x-4 overflow-hidden"
-                      data-testid="CollapseToggleButton"
-                      type="button"
+                    <span
+                      class="flex items-center space-x-1"
                     >
-                      <span
-                        class="flex items-center space-x-1"
+                      <div
+                        class="whitespace-nowrap leading-tight"
+                      />
+                    </span>
+                    <span
+                      class="css-1uvxu7z"
+                    >
+                      <div
+                        class="p-1 css-15txs7d"
+                        height="10"
+                        width="10"
                       >
-                        <div
-                          class="whitespace-nowrap leading-tight"
-                        />
-                      </span>
-                      <span
-                        class="css-1uvxu7z"
-                      >
-                        <div
-                          class="p-1 css-15txs7d"
-                          height="10"
-                          width="10"
+                        <svg
+                          id="chevron-down-small"
+                          viewBox="0 0 10 10"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
                         >
-                          <svg
-                            id="chevron-down-small"
-                            viewBox="0 0 10 10"
-                            x="0"
-                            xml:space="preserve"
-                            xmlns="http://www.w3.org/2000/svg"
-                            y="0"
-                          >
-                            <path
-                              d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
-                              fill="none"
-                              stroke="currentColor"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              stroke-width="2"
-                            />
-                          </svg>
-                        </div>
-                      </span>
-                    </button>
-                  </span>
+                          <path
+                            d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          />
+                        </svg>
+                      </div>
+                    </span>
+                  </button>
                 </div>
               </fieldset>
             </span>
@@ -1390,60 +1375,57 @@ exports[`TransactionExportForm > should render in md 1`] = `
                 class="flex min-w-0 flex-col css-1bcidjh"
               >
                 <div
-                  class="static sm:relative"
-                  data-testid="TransactionExportForm--delimiter-options"
+                  aria-expanded="false"
+                  aria-haspopup="dialog"
+                  data-testid="dropdown__toggle-TransactionExportForm--delimiter-options"
                 >
-                  <span
-                    data-testid="dropdown__toggle"
+                  <button
+                    class="flex items-center space-x-2 font-semibold focus:outline-none w-full cursor-pointer justify-between space-x-4 overflow-hidden"
+                    data-testid="CollapseToggleButton"
+                    type="button"
                   >
-                    <button
-                      class="flex items-center space-x-2 font-semibold focus:outline-none w-full cursor-pointer justify-between space-x-4 overflow-hidden"
-                      data-testid="CollapseToggleButton"
-                      type="button"
+                    <span
+                      class="flex items-center space-x-1"
                     >
                       <span
-                        class="flex items-center space-x-1"
+                        class="px-1 leading-tight text-theme-secondary-500 dark:text-theme-secondary-600"
                       >
-                        <span
-                          class="px-1 leading-tight text-theme-secondary-500 dark:text-theme-secondary-600"
-                        >
-                          (
-                        </span>
-                        <span
-                          class="leading-tight text-theme-secondary-500 dark:text-theme-secondary-600"
-                        >
-                          )
-                        </span>
+                        (
                       </span>
                       <span
-                        class="css-1uvxu7z"
+                        class="leading-tight text-theme-secondary-500 dark:text-theme-secondary-600"
                       >
-                        <div
-                          class="p-1 css-15txs7d"
-                          height="10"
-                          width="10"
-                        >
-                          <svg
-                            id="chevron-down-small"
-                            viewBox="0 0 10 10"
-                            x="0"
-                            xml:space="preserve"
-                            xmlns="http://www.w3.org/2000/svg"
-                            y="0"
-                          >
-                            <path
-                              d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
-                              fill="none"
-                              stroke="currentColor"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              stroke-width="2"
-                            />
-                          </svg>
-                        </div>
+                        )
                       </span>
-                    </button>
-                  </span>
+                    </span>
+                    <span
+                      class="css-1uvxu7z"
+                    >
+                      <div
+                        class="p-1 css-15txs7d"
+                        height="10"
+                        width="10"
+                      >
+                        <svg
+                          id="chevron-down-small"
+                          viewBox="0 0 10 10"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
+                        >
+                          <path
+                            d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          />
+                        </svg>
+                      </div>
+                    </span>
+                  </button>
                 </div>
               </fieldset>
             </span>
@@ -1794,53 +1776,50 @@ exports[`TransactionExportForm > should render in sm 1`] = `
                 class="flex min-w-0 flex-col css-1bcidjh"
               >
                 <div
-                  class="static sm:relative"
-                  data-testid="TransactionExportForm--daterange-options"
+                  aria-expanded="false"
+                  aria-haspopup="dialog"
+                  data-testid="dropdown__toggle-TransactionExportForm--daterange-options"
                 >
-                  <span
-                    data-testid="dropdown__toggle"
+                  <button
+                    class="flex items-center space-x-2 font-semibold focus:outline-none w-full cursor-pointer justify-between space-x-4 overflow-hidden"
+                    data-testid="CollapseToggleButton"
+                    type="button"
                   >
-                    <button
-                      class="flex items-center space-x-2 font-semibold focus:outline-none w-full cursor-pointer justify-between space-x-4 overflow-hidden"
-                      data-testid="CollapseToggleButton"
-                      type="button"
+                    <span
+                      class="flex items-center space-x-1"
                     >
-                      <span
-                        class="flex items-center space-x-1"
+                      <div
+                        class="whitespace-nowrap leading-tight"
+                      />
+                    </span>
+                    <span
+                      class="css-1uvxu7z"
+                    >
+                      <div
+                        class="p-1 css-15txs7d"
+                        height="10"
+                        width="10"
                       >
-                        <div
-                          class="whitespace-nowrap leading-tight"
-                        />
-                      </span>
-                      <span
-                        class="css-1uvxu7z"
-                      >
-                        <div
-                          class="p-1 css-15txs7d"
-                          height="10"
-                          width="10"
+                        <svg
+                          id="chevron-down-small"
+                          viewBox="0 0 10 10"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
                         >
-                          <svg
-                            id="chevron-down-small"
-                            viewBox="0 0 10 10"
-                            x="0"
-                            xml:space="preserve"
-                            xmlns="http://www.w3.org/2000/svg"
-                            y="0"
-                          >
-                            <path
-                              d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
-                              fill="none"
-                              stroke="currentColor"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              stroke-width="2"
-                            />
-                          </svg>
-                        </div>
-                      </span>
-                    </button>
-                  </span>
+                          <path
+                            d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          />
+                        </svg>
+                      </div>
+                    </span>
+                  </button>
                 </div>
               </fieldset>
             </span>
@@ -1933,60 +1912,57 @@ exports[`TransactionExportForm > should render in sm 1`] = `
                 class="flex min-w-0 flex-col css-1bcidjh"
               >
                 <div
-                  class="static sm:relative"
-                  data-testid="TransactionExportForm--delimiter-options"
+                  aria-expanded="false"
+                  aria-haspopup="dialog"
+                  data-testid="dropdown__toggle-TransactionExportForm--delimiter-options"
                 >
-                  <span
-                    data-testid="dropdown__toggle"
+                  <button
+                    class="flex items-center space-x-2 font-semibold focus:outline-none w-full cursor-pointer justify-between space-x-4 overflow-hidden"
+                    data-testid="CollapseToggleButton"
+                    type="button"
                   >
-                    <button
-                      class="flex items-center space-x-2 font-semibold focus:outline-none w-full cursor-pointer justify-between space-x-4 overflow-hidden"
-                      data-testid="CollapseToggleButton"
-                      type="button"
+                    <span
+                      class="flex items-center space-x-1"
                     >
                       <span
-                        class="flex items-center space-x-1"
+                        class="px-1 leading-tight text-theme-secondary-500 dark:text-theme-secondary-600"
                       >
-                        <span
-                          class="px-1 leading-tight text-theme-secondary-500 dark:text-theme-secondary-600"
-                        >
-                          (
-                        </span>
-                        <span
-                          class="leading-tight text-theme-secondary-500 dark:text-theme-secondary-600"
-                        >
-                          )
-                        </span>
+                        (
                       </span>
                       <span
-                        class="css-1uvxu7z"
+                        class="leading-tight text-theme-secondary-500 dark:text-theme-secondary-600"
                       >
-                        <div
-                          class="p-1 css-15txs7d"
-                          height="10"
-                          width="10"
-                        >
-                          <svg
-                            id="chevron-down-small"
-                            viewBox="0 0 10 10"
-                            x="0"
-                            xml:space="preserve"
-                            xmlns="http://www.w3.org/2000/svg"
-                            y="0"
-                          >
-                            <path
-                              d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
-                              fill="none"
-                              stroke="currentColor"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              stroke-width="2"
-                            />
-                          </svg>
-                        </div>
+                        )
                       </span>
-                    </button>
-                  </span>
+                    </span>
+                    <span
+                      class="css-1uvxu7z"
+                    >
+                      <div
+                        class="p-1 css-15txs7d"
+                        height="10"
+                        width="10"
+                      >
+                        <svg
+                          id="chevron-down-small"
+                          viewBox="0 0 10 10"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
+                        >
+                          <path
+                            d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          />
+                        </svg>
+                      </div>
+                    </span>
+                  </button>
                 </div>
               </fieldset>
             </span>
@@ -2337,53 +2313,50 @@ exports[`TransactionExportForm > should render in xl 1`] = `
                 class="flex min-w-0 flex-col css-1bcidjh"
               >
                 <div
-                  class="static sm:relative"
-                  data-testid="TransactionExportForm--daterange-options"
+                  aria-expanded="false"
+                  aria-haspopup="dialog"
+                  data-testid="dropdown__toggle-TransactionExportForm--daterange-options"
                 >
-                  <span
-                    data-testid="dropdown__toggle"
+                  <button
+                    class="flex items-center space-x-2 font-semibold focus:outline-none w-full cursor-pointer justify-between space-x-4 overflow-hidden"
+                    data-testid="CollapseToggleButton"
+                    type="button"
                   >
-                    <button
-                      class="flex items-center space-x-2 font-semibold focus:outline-none w-full cursor-pointer justify-between space-x-4 overflow-hidden"
-                      data-testid="CollapseToggleButton"
-                      type="button"
+                    <span
+                      class="flex items-center space-x-1"
                     >
-                      <span
-                        class="flex items-center space-x-1"
+                      <div
+                        class="whitespace-nowrap leading-tight"
+                      />
+                    </span>
+                    <span
+                      class="css-1uvxu7z"
+                    >
+                      <div
+                        class="p-1 css-15txs7d"
+                        height="10"
+                        width="10"
                       >
-                        <div
-                          class="whitespace-nowrap leading-tight"
-                        />
-                      </span>
-                      <span
-                        class="css-1uvxu7z"
-                      >
-                        <div
-                          class="p-1 css-15txs7d"
-                          height="10"
-                          width="10"
+                        <svg
+                          id="chevron-down-small"
+                          viewBox="0 0 10 10"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
                         >
-                          <svg
-                            id="chevron-down-small"
-                            viewBox="0 0 10 10"
-                            x="0"
-                            xml:space="preserve"
-                            xmlns="http://www.w3.org/2000/svg"
-                            y="0"
-                          >
-                            <path
-                              d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
-                              fill="none"
-                              stroke="currentColor"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              stroke-width="2"
-                            />
-                          </svg>
-                        </div>
-                      </span>
-                    </button>
-                  </span>
+                          <path
+                            d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          />
+                        </svg>
+                      </div>
+                    </span>
+                  </button>
                 </div>
               </fieldset>
             </span>
@@ -2476,60 +2449,57 @@ exports[`TransactionExportForm > should render in xl 1`] = `
                 class="flex min-w-0 flex-col css-1bcidjh"
               >
                 <div
-                  class="static sm:relative"
-                  data-testid="TransactionExportForm--delimiter-options"
+                  aria-expanded="false"
+                  aria-haspopup="dialog"
+                  data-testid="dropdown__toggle-TransactionExportForm--delimiter-options"
                 >
-                  <span
-                    data-testid="dropdown__toggle"
+                  <button
+                    class="flex items-center space-x-2 font-semibold focus:outline-none w-full cursor-pointer justify-between space-x-4 overflow-hidden"
+                    data-testid="CollapseToggleButton"
+                    type="button"
                   >
-                    <button
-                      class="flex items-center space-x-2 font-semibold focus:outline-none w-full cursor-pointer justify-between space-x-4 overflow-hidden"
-                      data-testid="CollapseToggleButton"
-                      type="button"
+                    <span
+                      class="flex items-center space-x-1"
                     >
                       <span
-                        class="flex items-center space-x-1"
+                        class="px-1 leading-tight text-theme-secondary-500 dark:text-theme-secondary-600"
                       >
-                        <span
-                          class="px-1 leading-tight text-theme-secondary-500 dark:text-theme-secondary-600"
-                        >
-                          (
-                        </span>
-                        <span
-                          class="leading-tight text-theme-secondary-500 dark:text-theme-secondary-600"
-                        >
-                          )
-                        </span>
+                        (
                       </span>
                       <span
-                        class="css-1uvxu7z"
+                        class="leading-tight text-theme-secondary-500 dark:text-theme-secondary-600"
                       >
-                        <div
-                          class="p-1 css-15txs7d"
-                          height="10"
-                          width="10"
-                        >
-                          <svg
-                            id="chevron-down-small"
-                            viewBox="0 0 10 10"
-                            x="0"
-                            xml:space="preserve"
-                            xmlns="http://www.w3.org/2000/svg"
-                            y="0"
-                          >
-                            <path
-                              d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
-                              fill="none"
-                              stroke="currentColor"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              stroke-width="2"
-                            />
-                          </svg>
-                        </div>
+                        )
                       </span>
-                    </button>
-                  </span>
+                    </span>
+                    <span
+                      class="css-1uvxu7z"
+                    >
+                      <div
+                        class="p-1 css-15txs7d"
+                        height="10"
+                        width="10"
+                      >
+                        <svg
+                          id="chevron-down-small"
+                          viewBox="0 0 10 10"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
+                        >
+                          <path
+                            d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          />
+                        </svg>
+                      </div>
+                    </span>
+                  </button>
                 </div>
               </fieldset>
             </span>
@@ -2879,53 +2849,50 @@ exports[`TransactionExportForm > should render in xs 1`] = `
                 class="flex min-w-0 flex-col css-1bcidjh"
               >
                 <div
-                  class="static sm:relative"
-                  data-testid="TransactionExportForm--daterange-options"
+                  aria-expanded="false"
+                  aria-haspopup="dialog"
+                  data-testid="dropdown__toggle-TransactionExportForm--daterange-options"
                 >
-                  <span
-                    data-testid="dropdown__toggle"
+                  <button
+                    class="flex items-center space-x-2 font-semibold focus:outline-none w-full cursor-pointer justify-between space-x-4 overflow-hidden"
+                    data-testid="CollapseToggleButton"
+                    type="button"
                   >
-                    <button
-                      class="flex items-center space-x-2 font-semibold focus:outline-none w-full cursor-pointer justify-between space-x-4 overflow-hidden"
-                      data-testid="CollapseToggleButton"
-                      type="button"
+                    <span
+                      class="flex items-center space-x-1"
                     >
-                      <span
-                        class="flex items-center space-x-1"
+                      <div
+                        class="whitespace-nowrap leading-tight"
+                      />
+                    </span>
+                    <span
+                      class="css-1uvxu7z"
+                    >
+                      <div
+                        class="p-1 css-15txs7d"
+                        height="10"
+                        width="10"
                       >
-                        <div
-                          class="whitespace-nowrap leading-tight"
-                        />
-                      </span>
-                      <span
-                        class="css-1uvxu7z"
-                      >
-                        <div
-                          class="p-1 css-15txs7d"
-                          height="10"
-                          width="10"
+                        <svg
+                          id="chevron-down-small"
+                          viewBox="0 0 10 10"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
                         >
-                          <svg
-                            id="chevron-down-small"
-                            viewBox="0 0 10 10"
-                            x="0"
-                            xml:space="preserve"
-                            xmlns="http://www.w3.org/2000/svg"
-                            y="0"
-                          >
-                            <path
-                              d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
-                              fill="none"
-                              stroke="currentColor"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              stroke-width="2"
-                            />
-                          </svg>
-                        </div>
-                      </span>
-                    </button>
-                  </span>
+                          <path
+                            d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          />
+                        </svg>
+                      </div>
+                    </span>
+                  </button>
                 </div>
               </fieldset>
             </span>
@@ -3018,60 +2985,57 @@ exports[`TransactionExportForm > should render in xs 1`] = `
                 class="flex min-w-0 flex-col css-1bcidjh"
               >
                 <div
-                  class="static sm:relative"
-                  data-testid="TransactionExportForm--delimiter-options"
+                  aria-expanded="false"
+                  aria-haspopup="dialog"
+                  data-testid="dropdown__toggle-TransactionExportForm--delimiter-options"
                 >
-                  <span
-                    data-testid="dropdown__toggle"
+                  <button
+                    class="flex items-center space-x-2 font-semibold focus:outline-none w-full cursor-pointer justify-between space-x-4 overflow-hidden"
+                    data-testid="CollapseToggleButton"
+                    type="button"
                   >
-                    <button
-                      class="flex items-center space-x-2 font-semibold focus:outline-none w-full cursor-pointer justify-between space-x-4 overflow-hidden"
-                      data-testid="CollapseToggleButton"
-                      type="button"
+                    <span
+                      class="flex items-center space-x-1"
                     >
                       <span
-                        class="flex items-center space-x-1"
+                        class="px-1 leading-tight text-theme-secondary-500 dark:text-theme-secondary-600"
                       >
-                        <span
-                          class="px-1 leading-tight text-theme-secondary-500 dark:text-theme-secondary-600"
-                        >
-                          (
-                        </span>
-                        <span
-                          class="leading-tight text-theme-secondary-500 dark:text-theme-secondary-600"
-                        >
-                          )
-                        </span>
+                        (
                       </span>
                       <span
-                        class="css-1uvxu7z"
+                        class="leading-tight text-theme-secondary-500 dark:text-theme-secondary-600"
                       >
-                        <div
-                          class="p-1 css-15txs7d"
-                          height="10"
-                          width="10"
-                        >
-                          <svg
-                            id="chevron-down-small"
-                            viewBox="0 0 10 10"
-                            x="0"
-                            xml:space="preserve"
-                            xmlns="http://www.w3.org/2000/svg"
-                            y="0"
-                          >
-                            <path
-                              d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
-                              fill="none"
-                              stroke="currentColor"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              stroke-width="2"
-                            />
-                          </svg>
-                        </div>
+                        )
                       </span>
-                    </button>
-                  </span>
+                    </span>
+                    <span
+                      class="css-1uvxu7z"
+                    >
+                      <div
+                        class="p-1 css-15txs7d"
+                        height="10"
+                        width="10"
+                      >
+                        <svg
+                          id="chevron-down-small"
+                          viewBox="0 0 10 10"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
+                        >
+                          <path
+                            d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          />
+                        </svg>
+                      </div>
+                    </span>
+                  </button>
                 </div>
               </fieldset>
             </span>

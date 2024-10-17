@@ -456,6 +456,7 @@ export const ButtonsCell: React.VFC<ButtonsCellProperties> = ({ wallet, onSend, 
 			</Tooltip>
 			<div data-testid="WalletListItem__more-button">
 				<Dropdown
+					placement="bottom-end"
 					toggleContent={
 						<Button
 							variant="transparent"

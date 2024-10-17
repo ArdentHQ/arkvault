@@ -14,9 +14,9 @@ describe("VotesFilter", () => {
 	it("should render default", async () => {
 		const { asFragment } = render(<VotesFilter totalCurrentVotes={1} />);
 
-		userEvent.click(screen.getByTestId("dropdown__toggle"));
+		userEvent.click(screen.getByTestId("dropdown__toggle-VotesFilter"));
 
-		await expect(screen.findByTestId("dropdown__content")).resolves.toBeVisible();
+		await expect(screen.findByTestId("dropdown__content-VotesFilter")).resolves.toBeVisible();
 
 		expect(asFragment()).toMatchSnapshot();
 	});
@@ -24,9 +24,9 @@ describe("VotesFilter", () => {
 	it("should render with current option selected", async () => {
 		const { asFragment } = render(<VotesFilter totalCurrentVotes={1} selectedOption="current" />);
 
-		userEvent.click(screen.getByTestId("dropdown__toggle"));
+		userEvent.click(screen.getByTestId("dropdown__toggle-VotesFilter"));
 
-		await expect(screen.findByTestId("dropdown__content")).resolves.toBeVisible();
+		await expect(screen.findByTestId("dropdown__content-VotesFilter")).resolves.toBeVisible();
 
 		expect(asFragment()).toMatchSnapshot();
 	});
@@ -34,9 +34,9 @@ describe("VotesFilter", () => {
 	it("should render with disabled current option", async () => {
 		const { asFragment } = render(<VotesFilter totalCurrentVotes={0} />);
 
-		userEvent.click(screen.getByTestId("dropdown__toggle"));
+		userEvent.click(screen.getByTestId("dropdown__toggle-VotesFilter"));
 
-		await expect(screen.findByTestId("dropdown__content")).resolves.toBeVisible();
+		await expect(screen.findByTestId("dropdown__content-VotesFilter")).resolves.toBeVisible();
 
 		expect(asFragment()).toMatchSnapshot();
 	});
@@ -45,9 +45,9 @@ describe("VotesFilter", () => {
 		const onChange = vi.fn();
 		render(<VotesFilter totalCurrentVotes={2} onChange={onChange} />);
 
-		userEvent.click(screen.getByTestId("dropdown__toggle"));
+		userEvent.click(screen.getByTestId("dropdown__toggle-VotesFilter"));
 
-		await expect(screen.findByTestId("dropdown__content")).resolves.toBeVisible();
+		await expect(screen.findByTestId("dropdown__content-VotesFilter")).resolves.toBeVisible();
 
 		userEvent.click(screen.getByTestId("VotesFilter__option--current"));
 

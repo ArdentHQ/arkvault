@@ -96,46 +96,44 @@ exports[`VotesHeader > should render a different title if on select delegate ste
         data-testid="Votes__FilterWallets"
       >
         <div
-          class="static sm:relative"
+          aria-expanded="false"
+          aria-haspopup="dialog"
+          data-testid="dropdown__toggle"
         >
-          <span
-            data-testid="dropdown__toggle"
+          <div
+            class="group"
           >
-            <div
-              class="group"
+            <button
+              class="ring-focus -mr-2.5 px-2.5 css-15d5iox"
             >
-              <button
-                class="ring-focus -mr-2.5 px-2.5 css-15d5iox"
+              <div
+                class="css-1i4b0eq"
+                height="20"
+                width="20"
               >
-                <div
-                  class="css-1i4b0eq"
-                  height="20"
-                  width="20"
+                <svg
+                  id="sliders-vertical"
+                  viewBox="0 0 20 20"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
                 >
-                  <svg
-                    id="sliders-vertical"
-                    viewBox="0 0 20 20"
-                    x="0"
-                    xml:space="preserve"
-                    xmlns="http://www.w3.org/2000/svg"
-                    y="0"
+                  <g
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
                   >
-                    <g
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                    >
-                      <path
-                        d="M15 9V1M15 19v-4M18 12c0 1.7-1.4 3-3 3-1.7 0-3-1.4-3-3s1.2-3 3-3h0c1.7 0 3 1.3 3 3h0zM5 7.1V19M8 4c0-1.7-1.4-3-3-3S2 2.4 2 4c0 1.7 1.4 3 3 3s3-1.3 3-3c0 .1 0 0 0 0z"
-                      />
-                    </g>
-                  </svg>
-                </div>
-              </button>
-            </div>
-          </span>
+                    <path
+                      d="M15 9V1M15 19v-4M18 12c0 1.7-1.4 3-3 3-1.7 0-3-1.4-3-3s1.2-3 3-3h0c1.7 0 3 1.3 3 3h0zM5 7.1V19M8 4c0-1.7-1.4-3-3-3S2 2.4 2 4c0 1.7 1.4 3 3 3s3-1.3 3-3c0 .1 0 0 0 0z"
+                    />
+                  </g>
+                </svg>
+              </div>
+            </button>
+          </div>
         </div>
       </div>
     </div>
@@ -261,46 +259,44 @@ exports[`VotesHeader > should render responsive (md) 1`] = `
               data-testid="Votes__FilterWallets"
             >
               <div
-                class="static sm:relative"
+                aria-expanded="false"
+                aria-haspopup="dialog"
+                data-testid="dropdown__toggle"
               >
-                <span
-                  data-testid="dropdown__toggle"
+                <div
+                  class="group"
                 >
-                  <div
-                    class="group"
+                  <button
+                    class="ring-focus css-14zm422"
                   >
-                    <button
-                      class="ring-focus css-14zm422"
+                    <div
+                      class="css-1i4b0eq"
+                      height="20"
+                      width="20"
                     >
-                      <div
-                        class="css-1i4b0eq"
-                        height="20"
-                        width="20"
+                      <svg
+                        id="sliders-vertical"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
                       >
-                        <svg
-                          id="sliders-vertical"
-                          viewBox="0 0 20 20"
-                          x="0"
-                          xml:space="preserve"
-                          xmlns="http://www.w3.org/2000/svg"
-                          y="0"
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
                         >
-                          <g
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                          >
-                            <path
-                              d="M15 9V1M15 19v-4M18 12c0 1.7-1.4 3-3 3-1.7 0-3-1.4-3-3s1.2-3 3-3h0c1.7 0 3 1.3 3 3h0zM5 7.1V19M8 4c0-1.7-1.4-3-3-3S2 2.4 2 4c0 1.7 1.4 3 3 3s3-1.3 3-3c0 .1 0 0 0 0z"
-                            />
-                          </g>
-                        </svg>
-                      </div>
-                    </button>
-                  </div>
-                </span>
+                          <path
+                            d="M15 9V1M15 19v-4M18 12c0 1.7-1.4 3-3 3-1.7 0-3-1.4-3-3s1.2-3 3-3h0c1.7 0 3 1.3 3 3h0zM5 7.1V19M8 4c0-1.7-1.4-3-3-3S2 2.4 2 4c0 1.7 1.4 3 3 3s3-1.3 3-3c0 .1 0 0 0 0z"
+                          />
+                        </g>
+                      </svg>
+                    </div>
+                  </button>
+                </div>
               </div>
             </div>
           </div>
@@ -407,46 +403,44 @@ exports[`VotesHeader > should render responsive (xs) 1`] = `
         data-testid="Votes__FilterWallets"
       >
         <div
-          class="static sm:relative"
+          aria-expanded="false"
+          aria-haspopup="dialog"
+          data-testid="dropdown__toggle"
         >
-          <span
-            data-testid="dropdown__toggle"
+          <div
+            class="group"
           >
-            <div
-              class="group"
+            <button
+              class="ring-focus -mr-2.5 px-2.5 css-15d5iox"
             >
-              <button
-                class="ring-focus -mr-2.5 px-2.5 css-15d5iox"
+              <div
+                class="css-1i4b0eq"
+                height="20"
+                width="20"
               >
-                <div
-                  class="css-1i4b0eq"
-                  height="20"
-                  width="20"
+                <svg
+                  id="sliders-vertical"
+                  viewBox="0 0 20 20"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
                 >
-                  <svg
-                    id="sliders-vertical"
-                    viewBox="0 0 20 20"
-                    x="0"
-                    xml:space="preserve"
-                    xmlns="http://www.w3.org/2000/svg"
-                    y="0"
+                  <g
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
                   >
-                    <g
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                    >
-                      <path
-                        d="M15 9V1M15 19v-4M18 12c0 1.7-1.4 3-3 3-1.7 0-3-1.4-3-3s1.2-3 3-3h0c1.7 0 3 1.3 3 3h0zM5 7.1V19M8 4c0-1.7-1.4-3-3-3S2 2.4 2 4c0 1.7 1.4 3 3 3s3-1.3 3-3c0 .1 0 0 0 0z"
-                      />
-                    </g>
-                  </svg>
-                </div>
-              </button>
-            </div>
-          </span>
+                    <path
+                      d="M15 9V1M15 19v-4M18 12c0 1.7-1.4 3-3 3-1.7 0-3-1.4-3-3s1.2-3 3-3h0c1.7 0 3 1.3 3 3h0zM5 7.1V19M8 4c0-1.7-1.4-3-3-3S2 2.4 2 4c0 1.7 1.4 3 3 3s3-1.3 3-3c0 .1 0 0 0 0z"
+                    />
+                  </g>
+                </svg>
+              </div>
+            </button>
+          </div>
         </div>
       </div>
     </div>

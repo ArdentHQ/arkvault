@@ -223,54 +223,52 @@ exports[`WalletListItem > should disable the send button when wallet has no bala
               data-testid="WalletListItem__more-button"
             >
               <div
-                class="static sm:relative"
+                aria-expanded="false"
+                aria-haspopup="dialog"
+                data-testid="dropdown__toggle"
               >
-                <span
-                  data-testid="dropdown__toggle"
+                <button
+                  class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-theme-gray-700 -mr-1.5 hover:text-theme-primary-600"
+                  type="button"
                 >
-                  <button
-                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-theme-gray-700 -mr-1.5 hover:text-theme-primary-600"
-                    type="button"
+                  <div
+                    class="flex items-center space-x-2"
                   >
                     <div
-                      class="flex items-center space-x-2"
+                      class="css-1i4b0eq"
+                      height="20"
+                      width="20"
                     >
-                      <div
-                        class="css-1i4b0eq"
-                        height="20"
-                        width="20"
+                      <svg
+                        fill="none"
+                        viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg"
                       >
-                        <svg
-                          fill="none"
-                          viewBox="0 0 20 20"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <circle
-                            cx="10.002"
-                            cy="2.99609"
-                            fill="currentColor"
-                            r="2"
-                            transform="rotate(90 10.002 2.99609)"
-                          />
-                          <circle
-                            cx="10.002"
-                            cy="9.99805"
-                            fill="currentColor"
-                            r="2"
-                            transform="rotate(90 10.002 9.99805)"
-                          />
-                          <circle
-                            cx="10.002"
-                            cy="17"
-                            fill="currentColor"
-                            r="2"
-                            transform="rotate(90 10.002 17)"
-                          />
-                        </svg>
-                      </div>
+                        <circle
+                          cx="10.002"
+                          cy="2.99609"
+                          fill="currentColor"
+                          r="2"
+                          transform="rotate(90 10.002 2.99609)"
+                        />
+                        <circle
+                          cx="10.002"
+                          cy="9.99805"
+                          fill="currentColor"
+                          r="2"
+                          transform="rotate(90 10.002 9.99805)"
+                        />
+                        <circle
+                          cx="10.002"
+                          cy="17"
+                          fill="currentColor"
+                          r="2"
+                          transform="rotate(90 10.002 17)"
+                        />
+                      </svg>
                     </div>
-                  </button>
-                </span>
+                  </div>
+                </button>
               </div>
             </div>
           </div>
@@ -820,54 +818,52 @@ exports[`WalletListItem > should render when isCompact = false 1`] = `
               data-testid="WalletListItem__more-button"
             >
               <div
-                class="static sm:relative"
+                aria-expanded="false"
+                aria-haspopup="dialog"
+                data-testid="dropdown__toggle"
               >
-                <span
-                  data-testid="dropdown__toggle"
+                <button
+                  class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-theme-gray-700 -mr-1.5 hover:text-theme-primary-600"
+                  type="button"
                 >
-                  <button
-                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-theme-gray-700 -mr-1.5 hover:text-theme-primary-600"
-                    type="button"
+                  <div
+                    class="flex items-center space-x-2"
                   >
                     <div
-                      class="flex items-center space-x-2"
+                      class="css-1i4b0eq"
+                      height="20"
+                      width="20"
                     >
-                      <div
-                        class="css-1i4b0eq"
-                        height="20"
-                        width="20"
+                      <svg
+                        fill="none"
+                        viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg"
                       >
-                        <svg
-                          fill="none"
-                          viewBox="0 0 20 20"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <circle
-                            cx="10.002"
-                            cy="2.99609"
-                            fill="currentColor"
-                            r="2"
-                            transform="rotate(90 10.002 2.99609)"
-                          />
-                          <circle
-                            cx="10.002"
-                            cy="9.99805"
-                            fill="currentColor"
-                            r="2"
-                            transform="rotate(90 10.002 9.99805)"
-                          />
-                          <circle
-                            cx="10.002"
-                            cy="17"
-                            fill="currentColor"
-                            r="2"
-                            transform="rotate(90 10.002 17)"
-                          />
-                        </svg>
-                      </div>
+                        <circle
+                          cx="10.002"
+                          cy="2.99609"
+                          fill="currentColor"
+                          r="2"
+                          transform="rotate(90 10.002 2.99609)"
+                        />
+                        <circle
+                          cx="10.002"
+                          cy="9.99805"
+                          fill="currentColor"
+                          r="2"
+                          transform="rotate(90 10.002 9.99805)"
+                        />
+                        <circle
+                          cx="10.002"
+                          cy="17"
+                          fill="currentColor"
+                          r="2"
+                          transform="rotate(90 10.002 17)"
+                        />
+                      </svg>
                     </div>
-                  </button>
-                </span>
+                  </div>
+                </button>
               </div>
             </div>
           </div>
@@ -1237,54 +1233,52 @@ exports[`WalletListItem > should render when isCompact = true 1`] = `
               data-testid="WalletListItem__more-button"
             >
               <div
-                class="static sm:relative"
+                aria-expanded="false"
+                aria-haspopup="dialog"
+                data-testid="dropdown__toggle"
               >
-                <span
-                  data-testid="dropdown__toggle"
+                <button
+                  class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-theme-gray-700 -mr-1.5 hover:text-theme-primary-600"
+                  type="button"
                 >
-                  <button
-                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-theme-gray-700 -mr-1.5 hover:text-theme-primary-600"
-                    type="button"
+                  <div
+                    class="flex items-center space-x-2"
                   >
                     <div
-                      class="flex items-center space-x-2"
+                      class="css-1i4b0eq"
+                      height="20"
+                      width="20"
                     >
-                      <div
-                        class="css-1i4b0eq"
-                        height="20"
-                        width="20"
+                      <svg
+                        fill="none"
+                        viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg"
                       >
-                        <svg
-                          fill="none"
-                          viewBox="0 0 20 20"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <circle
-                            cx="10.002"
-                            cy="2.99609"
-                            fill="currentColor"
-                            r="2"
-                            transform="rotate(90 10.002 2.99609)"
-                          />
-                          <circle
-                            cx="10.002"
-                            cy="9.99805"
-                            fill="currentColor"
-                            r="2"
-                            transform="rotate(90 10.002 9.99805)"
-                          />
-                          <circle
-                            cx="10.002"
-                            cy="17"
-                            fill="currentColor"
-                            r="2"
-                            transform="rotate(90 10.002 17)"
-                          />
-                        </svg>
-                      </div>
+                        <circle
+                          cx="10.002"
+                          cy="2.99609"
+                          fill="currentColor"
+                          r="2"
+                          transform="rotate(90 10.002 2.99609)"
+                        />
+                        <circle
+                          cx="10.002"
+                          cy="9.99805"
+                          fill="currentColor"
+                          r="2"
+                          transform="rotate(90 10.002 9.99805)"
+                        />
+                        <circle
+                          cx="10.002"
+                          cy="17"
+                          fill="currentColor"
+                          r="2"
+                          transform="rotate(90 10.002 17)"
+                        />
+                      </svg>
                     </div>
-                  </button>
-                </span>
+                  </div>
+                </button>
               </div>
             </div>
           </div>
@@ -2094,54 +2088,52 @@ exports[`WalletListItem > should render when isLargeScreen = true 1`] = `
               data-testid="WalletListItem__more-button"
             >
               <div
-                class="static sm:relative"
+                aria-expanded="false"
+                aria-haspopup="dialog"
+                data-testid="dropdown__toggle"
               >
-                <span
-                  data-testid="dropdown__toggle"
+                <button
+                  class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-theme-gray-700 -mr-1.5 hover:text-theme-primary-600"
+                  type="button"
                 >
-                  <button
-                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-theme-gray-700 -mr-1.5 hover:text-theme-primary-600"
-                    type="button"
+                  <div
+                    class="flex items-center space-x-2"
                   >
                     <div
-                      class="flex items-center space-x-2"
+                      class="css-1i4b0eq"
+                      height="20"
+                      width="20"
                     >
-                      <div
-                        class="css-1i4b0eq"
-                        height="20"
-                        width="20"
+                      <svg
+                        fill="none"
+                        viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg"
                       >
-                        <svg
-                          fill="none"
-                          viewBox="0 0 20 20"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <circle
-                            cx="10.002"
-                            cy="2.99609"
-                            fill="currentColor"
-                            r="2"
-                            transform="rotate(90 10.002 2.99609)"
-                          />
-                          <circle
-                            cx="10.002"
-                            cy="9.99805"
-                            fill="currentColor"
-                            r="2"
-                            transform="rotate(90 10.002 9.99805)"
-                          />
-                          <circle
-                            cx="10.002"
-                            cy="17"
-                            fill="currentColor"
-                            r="2"
-                            transform="rotate(90 10.002 17)"
-                          />
-                        </svg>
-                      </div>
+                        <circle
+                          cx="10.002"
+                          cy="2.99609"
+                          fill="currentColor"
+                          r="2"
+                          transform="rotate(90 10.002 2.99609)"
+                        />
+                        <circle
+                          cx="10.002"
+                          cy="9.99805"
+                          fill="currentColor"
+                          r="2"
+                          transform="rotate(90 10.002 9.99805)"
+                        />
+                        <circle
+                          cx="10.002"
+                          cy="17"
+                          fill="currentColor"
+                          r="2"
+                          transform="rotate(90 10.002 17)"
+                        />
+                      </svg>
                     </div>
-                  </button>
-                </span>
+                  </div>
+                </button>
               </div>
             </div>
           </div>
@@ -2558,55 +2550,53 @@ exports[`WalletListItem > should render when isLargeScreen = true and wallet is 
               data-testid="WalletListItem__more-button"
             >
               <div
-                class="static sm:relative"
+                aria-expanded="false"
+                aria-haspopup="dialog"
+                data-testid="dropdown__toggle"
               >
-                <span
-                  data-testid="dropdown__toggle"
+                <button
+                  class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 text-theme-gray-700 -mr-1.5 hover:text-theme-primary-600"
+                  disabled=""
+                  type="button"
                 >
-                  <button
-                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 text-theme-gray-700 -mr-1.5 hover:text-theme-primary-600"
-                    disabled=""
-                    type="button"
+                  <div
+                    class="flex items-center space-x-2"
                   >
                     <div
-                      class="flex items-center space-x-2"
+                      class="css-1i4b0eq"
+                      height="20"
+                      width="20"
                     >
-                      <div
-                        class="css-1i4b0eq"
-                        height="20"
-                        width="20"
+                      <svg
+                        fill="none"
+                        viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg"
                       >
-                        <svg
-                          fill="none"
-                          viewBox="0 0 20 20"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <circle
-                            cx="10.002"
-                            cy="2.99609"
-                            fill="currentColor"
-                            r="2"
-                            transform="rotate(90 10.002 2.99609)"
-                          />
-                          <circle
-                            cx="10.002"
-                            cy="9.99805"
-                            fill="currentColor"
-                            r="2"
-                            transform="rotate(90 10.002 9.99805)"
-                          />
-                          <circle
-                            cx="10.002"
-                            cy="17"
-                            fill="currentColor"
-                            r="2"
-                            transform="rotate(90 10.002 17)"
-                          />
-                        </svg>
-                      </div>
+                        <circle
+                          cx="10.002"
+                          cy="2.99609"
+                          fill="currentColor"
+                          r="2"
+                          transform="rotate(90 10.002 2.99609)"
+                        />
+                        <circle
+                          cx="10.002"
+                          cy="9.99805"
+                          fill="currentColor"
+                          r="2"
+                          transform="rotate(90 10.002 9.99805)"
+                        />
+                        <circle
+                          cx="10.002"
+                          cy="17"
+                          fill="currentColor"
+                          r="2"
+                          transform="rotate(90 10.002 17)"
+                        />
+                      </svg>
                     </div>
-                  </button>
-                </span>
+                  </div>
+                </button>
               </div>
             </div>
           </div>
@@ -2976,54 +2966,52 @@ exports[`WalletListItem > should render with a N/A for fiat 1`] = `
               data-testid="WalletListItem__more-button"
             >
               <div
-                class="static sm:relative"
+                aria-expanded="false"
+                aria-haspopup="dialog"
+                data-testid="dropdown__toggle"
               >
-                <span
-                  data-testid="dropdown__toggle"
+                <button
+                  class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-theme-gray-700 -mr-1.5 hover:text-theme-primary-600"
+                  type="button"
                 >
-                  <button
-                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-theme-gray-700 -mr-1.5 hover:text-theme-primary-600"
-                    type="button"
+                  <div
+                    class="flex items-center space-x-2"
                   >
                     <div
-                      class="flex items-center space-x-2"
+                      class="css-1i4b0eq"
+                      height="20"
+                      width="20"
                     >
-                      <div
-                        class="css-1i4b0eq"
-                        height="20"
-                        width="20"
+                      <svg
+                        fill="none"
+                        viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg"
                       >
-                        <svg
-                          fill="none"
-                          viewBox="0 0 20 20"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <circle
-                            cx="10.002"
-                            cy="2.99609"
-                            fill="currentColor"
-                            r="2"
-                            transform="rotate(90 10.002 2.99609)"
-                          />
-                          <circle
-                            cx="10.002"
-                            cy="9.99805"
-                            fill="currentColor"
-                            r="2"
-                            transform="rotate(90 10.002 9.99805)"
-                          />
-                          <circle
-                            cx="10.002"
-                            cy="17"
-                            fill="currentColor"
-                            r="2"
-                            transform="rotate(90 10.002 17)"
-                          />
-                        </svg>
-                      </div>
+                        <circle
+                          cx="10.002"
+                          cy="2.99609"
+                          fill="currentColor"
+                          r="2"
+                          transform="rotate(90 10.002 2.99609)"
+                        />
+                        <circle
+                          cx="10.002"
+                          cy="9.99805"
+                          fill="currentColor"
+                          r="2"
+                          transform="rotate(90 10.002 9.99805)"
+                        />
+                        <circle
+                          cx="10.002"
+                          cy="17"
+                          fill="currentColor"
+                          r="2"
+                          transform="rotate(90 10.002 17)"
+                        />
+                      </svg>
                     </div>
-                  </button>
-                </span>
+                  </div>
+                </button>
               </div>
             </div>
           </div>
@@ -3393,54 +3381,52 @@ exports[`WalletListItem > should render with default BTC as default exchangeCurr
               data-testid="WalletListItem__more-button"
             >
               <div
-                class="static sm:relative"
+                aria-expanded="false"
+                aria-haspopup="dialog"
+                data-testid="dropdown__toggle"
               >
-                <span
-                  data-testid="dropdown__toggle"
+                <button
+                  class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-theme-gray-700 -mr-1.5 hover:text-theme-primary-600"
+                  type="button"
                 >
-                  <button
-                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-theme-gray-700 -mr-1.5 hover:text-theme-primary-600"
-                    type="button"
+                  <div
+                    class="flex items-center space-x-2"
                   >
                     <div
-                      class="flex items-center space-x-2"
+                      class="css-1i4b0eq"
+                      height="20"
+                      width="20"
                     >
-                      <div
-                        class="css-1i4b0eq"
-                        height="20"
-                        width="20"
+                      <svg
+                        fill="none"
+                        viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg"
                       >
-                        <svg
-                          fill="none"
-                          viewBox="0 0 20 20"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <circle
-                            cx="10.002"
-                            cy="2.99609"
-                            fill="currentColor"
-                            r="2"
-                            transform="rotate(90 10.002 2.99609)"
-                          />
-                          <circle
-                            cx="10.002"
-                            cy="9.99805"
-                            fill="currentColor"
-                            r="2"
-                            transform="rotate(90 10.002 9.99805)"
-                          />
-                          <circle
-                            cx="10.002"
-                            cy="17"
-                            fill="currentColor"
-                            r="2"
-                            transform="rotate(90 10.002 17)"
-                          />
-                        </svg>
-                      </div>
+                        <circle
+                          cx="10.002"
+                          cy="2.99609"
+                          fill="currentColor"
+                          r="2"
+                          transform="rotate(90 10.002 2.99609)"
+                        />
+                        <circle
+                          cx="10.002"
+                          cy="9.99805"
+                          fill="currentColor"
+                          r="2"
+                          transform="rotate(90 10.002 9.99805)"
+                        />
+                        <circle
+                          cx="10.002"
+                          cy="17"
+                          fill="currentColor"
+                          r="2"
+                          transform="rotate(90 10.002 17)"
+                        />
+                      </svg>
                     </div>
-                  </button>
-                </span>
+                  </div>
+                </button>
               </div>
             </div>
           </div>

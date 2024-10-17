@@ -125,7 +125,7 @@ const ContactListItemAddress: FC<ContactListItemAddressProperties> = ({
 
 					<div className={index === 0 ? "visible" : "invisible"}>
 						<Dropdown
-							dropdownClass="mx-4 sm:mx-0"
+							placement="bottom-end"
 							toggleContent={
 								<Button
 									size="icon"

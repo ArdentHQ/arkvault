@@ -165,7 +165,6 @@ export const Transactions = memo(function Transactions({
 							<Dropdown
 								data-testid="Transactions--filter-dropdown"
 								disableToggle={wallets.length === 0 || isLoadingTransactions}
-								dropdownClass="mx-4 sm:w-full sm:mx-0"
 								options={filterOptions}
 								onSelect={({ value }) => activeModeChangeHandler(value)}
 								toggleContent={(isOpen) => (
