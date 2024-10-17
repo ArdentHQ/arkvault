@@ -41,7 +41,7 @@ export interface DropdownProperties extends JSX.IntrinsicAttributes {
 	onSelect?: OnSelectProperties;
 	variant?: DropdownVariantType;
 	options?: DropdownOption[] | DropdownOptionGroup[];
-	position?: Placement;
+	placement?: Placement;
 	dropdownClass?: string;
 	wrapperClass?: string;
 	toggleIcon?: "Gear" | "ChevronDownSmall";

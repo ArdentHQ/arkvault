@@ -51,7 +51,7 @@ export const ProfileRow = ({ actions, className, profile, onClick, onSelect }: P
 
 		<div className="relative">
 			<Dropdown
-				position="bottom-end"
+				placement="bottom-end"
 				options={actions}
 				onSelect={onSelect}
 				toggleContent={

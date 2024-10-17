@@ -68,7 +68,7 @@ export const WalletsControls = React.memo(
 			<div data-testid="WalletControls" className="flex items-center justify-end">
 				<div className="static mr-0 flex items-center border-theme-secondary-300 pr-0 text-theme-primary-300 dark:border-theme-secondary-800 dark:text-theme-secondary-600 sm:mr-8 sm:border-r sm:pr-5 md:relative">
 					<Dropdown
-						position="bottom"
+						placement="bottom"
 						dropdownClass="mx-4 md:mx-0"
 						toggleContent={
 							<Tooltip content={filterProperties.disabled ? t("COMMON.NOTICE_NO_WALLETS") : undefined}>

@@ -30,7 +30,7 @@ export const Dropdown: FC<DropdownProperties> = ({
 	variant,
 	options,
 	onSelect,
-	position = "bottom",
+	placement = "bottom",
 	toggleIcon = "Gear",
 	toggleSize,
 	toggleContent,
@@ -70,7 +70,7 @@ export const Dropdown: FC<DropdownProperties> = ({
 		middleware: [offset(10), flip(), shift()],
 		onOpenChange: setIsOpen,
 		open: isOpen,
-		placement: position,
+		placement: placement,
 		whileElementsMounted: autoUpdate,
 	});
 

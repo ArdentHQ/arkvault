@@ -53,7 +53,7 @@ export const SideBar: React.FC<Properties> = ({ activeItem, handleActiveItem, it
 		<>
 			<div className="relative -mx-4 lg:hidden">
 				<Dropdown
-					position="bottom-start"
+					placement="bottom-start"
 					wrapperClass="sm:w-full"
 					options={options}
 					onSelect={({ value }) => handleActiveItem(String(value))}

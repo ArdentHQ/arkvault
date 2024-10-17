@@ -3,13 +3,15 @@ import React from "react";
 
 import { Dropdown, DropdownOptionGroup } from "@/app/components/Dropdown";
 import { clickOutsideHandler } from "@/app/hooks/click-outside";
-import { fireEvent, render, screen } from "@/utils/testing-library";
+import { render, screen } from "@/utils/testing-library";
 
 const options = [
 	{ label: "Option 1", value: "1" },
 	{ label: "Option 2", value: "2" },
 	{ disabled: true, label: "Option 3", value: "3" },
 ];
+
+const getOptionAtIndex = (index = 0) => screen.getByTestId(`dropdown__option--${index}`)
 
 describe("Dropdown", () => {
 	it("should render", () => {
@@ -46,13 +48,17 @@ describe("Dropdown", () => {
 	it("should render with custom icon classname", async () => {
 		const optionsWithIcon = [{ icon: "trash", iconClassName: "custom-class-name", label: "Option 1", value: "1" }];
 
-		const { container } = render(<Dropdown options={optionsWithIcon} />);
+		render(<Dropdown options={optionsWithIcon} />);
 
 		const dropdown = screen.getByTestId("dropdown__toggle");
 
 		await userEvent.click(dropdown);
 
-		expect(container).toContainHTML("custom-class-name");
+		await expect(screen.findByTestId("dropdown__content")).resolves.toBeVisible();
+
+		// eslint-disable-next-line testing-library/no-node-access
+		const containerDiv = getOptionAtIndex().children.item(1)
+		expect(containerDiv).toHaveClass("custom-class-name");
 	});
 
 	it("should render with custom icon classname from a function", async () => {
@@ -60,13 +66,17 @@ describe("Dropdown", () => {
 			{ icon: "trash", iconClassName: (option) => option.label + "--class", label: "option-1", value: "1" },
 		];
 
-		const { container } = render(<Dropdown options={optionsWithIcon} />);
+		render(<Dropdown options={optionsWithIcon} />);
 
 		const dropdown = screen.getByTestId("dropdown__toggle");
 
 		await userEvent.click(dropdown);
 
-		expect(container).toContainHTML("option-1--class");
+		await expect(screen.findByTestId("dropdown__content")).resolves.toBeVisible();
+
+		// eslint-disable-next-line testing-library/no-node-access
+		const containerDiv = getOptionAtIndex().children.item(1)
+		expect(containerDiv).toHaveClass("option-1--class");
 	});
 
 	it("should render with secondary label", async () => {
@@ -75,18 +85,20 @@ describe("Dropdown", () => {
 				icon: "trash",
 				iconClassName: (option) => option.label + "--class",
 				label: "option-1",
-				secondaryLabel: () => "1",
+				secondaryLabel: () => "secondary label",
 				value: "1",
 			},
 		];
 
-		const { container } = render(<Dropdown options={optionsWithIcon} />);
+		render(<Dropdown options={optionsWithIcon} />);
 
 		const dropdown = screen.getByTestId("dropdown__toggle");
 
 		await userEvent.click(dropdown);
 
-		expect(container).toContainHTML("option-1--class");
+		await expect(screen.findByTestId("dropdown__content")).resolves.toBeVisible();
+
+		await expect(screen.findByText("secondary label")).resolves.toBeVisible();
 	});
 
 	it("should open dropdown options on icon click", async () => {
@@ -248,7 +260,7 @@ describe("Dropdown", () => {
 	});
 
 	it("should render a bottom position", async () => {
-		const { container } = render(<Dropdown options={options} position="bottom" />);
+		const { container } = render(<Dropdown options={options} placement="bottom" />);
 		const toggle = screen.getByTestId("dropdown__toggle");
 
 		await userEvent.click(toggle);
@@ -257,7 +269,7 @@ describe("Dropdown", () => {
 	});
 
 	it("should render a bottom-left position", async () => {
-		const { container } = render(<Dropdown options={options} position="bottom-left" />);
+		const { container } = render(<Dropdown options={options} placement="bottom-left" />);
 		const toggle = screen.getByTestId("dropdown__toggle");
 
 		await userEvent.click(toggle);
@@ -266,7 +278,7 @@ describe("Dropdown", () => {
 	});
 
 	it("should render a left position", async () => {
-		const { container } = render(<Dropdown options={options} position="left" />);
+		const { container } = render(<Dropdown options={options} placement="left" />);
 		const toggle = screen.getByTestId("dropdown__toggle");
 
 		await userEvent.click(toggle);
@@ -275,7 +287,7 @@ describe("Dropdown", () => {
 	});
 
 	it("should render a top-left position", async () => {
-		const { container } = render(<Dropdown options={options} position="top-left" />);
+		const { container } = render(<Dropdown options={options} placement="top-left" />);
 		const toggle = screen.getByTestId("dropdown__toggle");
 
 		await userEvent.click(toggle);
@@ -284,7 +296,7 @@ describe("Dropdown", () => {
 	});
 
 	it("should render a top", async () => {
-		const { container } = render(<Dropdown options={options} position="top" />);
+		const { container } = render(<Dropdown options={options} placement="top" />);
 		const toggle = screen.getByTestId("dropdown__toggle");
 
 		await userEvent.click(toggle);
@@ -293,7 +305,7 @@ describe("Dropdown", () => {
 	});
 
 	it("should render a top-right", async () => {
-		const { container } = render(<Dropdown options={options} position="top-right" />);
+		const { container } = render(<Dropdown options={options} placement="top-right" />);
 		const toggle = screen.getByTestId("dropdown__toggle");
 
 		await userEvent.click(toggle);
@@ -337,7 +349,7 @@ describe("Dropdown", () => {
 				},
 			],
 		};
-		const { container } = render(<Dropdown options={[primaryOptions, secondaryOptions]} position="top-right" />);
+		const { container } = render(<Dropdown options={[primaryOptions, secondaryOptions]} placement="top-right" />);
 		const toggle = screen.getByTestId("dropdown__toggle");
 
 		await userEvent.click(toggle);
@@ -358,7 +370,7 @@ describe("Dropdown", () => {
 			options: [],
 			title: "Secondary Options 1",
 		};
-		const { container } = render(<Dropdown options={[primaryOptions, secondaryOptions]} position="top-right" />);
+		const { container } = render(<Dropdown options={[primaryOptions, secondaryOptions]} placement="top-right" />);
 		const toggle = screen.getByTestId("dropdown__toggle");
 
 		await userEvent.click(toggle);
@@ -389,109 +401,5 @@ describe("Dropdown ClickOutside Hook", () => {
 		await userEvent.click(document.body);
 
 		expect(callback).toHaveBeenCalledWith();
-	});
-});
-
-describe("Dropdown positioning", () => {
-	it("should render content below toggle", async () => {
-		const documentClientHeightSpy = vi.spyOn(document.body, "clientHeight", "get").mockReturnValue(50);
-		const getComputedStyleSpy = vi.spyOn(window, "getComputedStyle").mockReturnValueOnce({ marginTop: "10px" });
-
-		render(
-			<Dropdown>
-				<span>hello</span>
-			</Dropdown>,
-		);
-		const toggle = screen.getByTestId("dropdown__toggle");
-
-		await userEvent.click(toggle);
-
-		expect(screen.getByTestId("dropdown__content")).toHaveAttribute("style", "opacity: 1;");
-
-		documentClientHeightSpy.mockRestore();
-		getComputedStyleSpy.mockRestore();
-	});
-
-	it("should render content below toggle and reduce its height", async () => {
-		const getBoundingClientRectSpy = vi
-			.spyOn(Element.prototype, "getBoundingClientRect")
-			.mockReturnValue({ height: 90, top: 0 });
-
-		const toggleHeightSpy = vi.spyOn(HTMLElement.prototype, "offsetHeight", "get").mockReturnValueOnce(10);
-		const dropdownHeightSpy = vi.spyOn(HTMLElement.prototype, "offsetHeight", "get").mockReturnValue(100);
-		const documentClientHeightSpy = vi.spyOn(document.body, "clientHeight", "get").mockReturnValue(190);
-		const elementClientHeightSpy = vi.spyOn(Element.prototype, "clientHeight", "get").mockReturnValue(100);
-
-		render(
-			<Dropdown>
-				<span>hello</span>
-			</Dropdown>,
-		);
-		const toggle = screen.getByTestId("dropdown__toggle");
-
-		await userEvent.click(toggle);
-
-		expect(screen.getByTestId("dropdown__content")).toHaveAttribute(
-			"style",
-			"opacity: 1; height: 60px; overflow-y: scroll;",
-		);
-
-		getBoundingClientRectSpy.mockRestore();
-		toggleHeightSpy.mockRestore();
-		dropdownHeightSpy.mockRestore();
-		documentClientHeightSpy.mockRestore();
-		elementClientHeightSpy.mockRestore();
-	});
-
-	it("should render content above toggle and apply a negative margin", async () => {
-		const getBoundingClientRectSpy = vi
-			.spyOn(Element.prototype, "getBoundingClientRect")
-			.mockReturnValue({ height: 50, top: 100 });
-
-		const offsetHeightSpy = vi.spyOn(HTMLElement.prototype, "offsetHeight", "get").mockReturnValue(50);
-		const documentClientHeightSpy = vi.spyOn(document.body, "clientHeight", "get").mockReturnValue(200);
-
-		render(
-			<Dropdown>
-				<span>hello</span>
-			</Dropdown>,
-		);
-		const toggle = screen.getByTestId("dropdown__toggle");
-
-		await userEvent.click(toggle);
-
-		fireEvent.resize(window);
-
-		expect(screen.getByTestId("dropdown__content")).toHaveAttribute("style", "opacity: 1; margin-top: -100px;");
-
-		getBoundingClientRectSpy.mockRestore();
-		offsetHeightSpy.mockRestore();
-		documentClientHeightSpy.mockRestore();
-	});
-
-	it("shouldn't do resize if no ref found", async () => {
-		const reference = { current: undefined };
-		Object.defineProperty(reference, "current", {
-			get: vi.fn(() => {}),
-			set: vi.fn(() => {}),
-		});
-		const useReferenceSpy = vi.spyOn(React, "useRef").mockReturnValue(reference);
-		const getBoundingClientRectSpy = vi.spyOn(Element.prototype, "getBoundingClientRect");
-		const documentClientHeightSpy = vi.spyOn(document.body, "clientHeight", "get").mockReturnValue(100);
-
-		render(
-			<Dropdown>
-				<span>hello</span>
-			</Dropdown>,
-		);
-		const toggle = screen.getByTestId("dropdown__toggle");
-
-		await userEvent.click(toggle);
-
-		expect(getBoundingClientRectSpy).not.toHaveBeenCalled();
-
-		getBoundingClientRectSpy.mockRestore();
-		documentClientHeightSpy.mockRestore();
-		useReferenceSpy.mockRestore();
 	});
 });

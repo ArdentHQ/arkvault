@@ -74,7 +74,7 @@ export const VotesHeader = ({
 					{!selectedAddress && (
 						<div data-testid="Votes__FilterWallets">
 							<Dropdown
-								position="bottom-end"
+								placement="bottom-end"
 								dropdownClass="mx-4 sm:mx-0"
 								toggleContent={
 									<ControlButton

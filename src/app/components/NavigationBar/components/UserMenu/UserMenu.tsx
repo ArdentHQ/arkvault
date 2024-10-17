@@ -48,7 +48,7 @@ export const UserMenu: FC<UserMenuProperties> = ({ onUserAction, avatarImage, us
 
 	return (
 		<Dropdown
-			position="bottom-end"
+			placement="bottom-end"
 			onSelect={onUserAction}
 			options={userMenuActions}
 			dropdownClass="mt-8 mx-4 sm:mx-0 overflow-hidden"
