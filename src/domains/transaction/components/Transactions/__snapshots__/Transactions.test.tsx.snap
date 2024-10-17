@@ -58,7 +58,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
       <div
         aria-expanded="false"
         aria-haspopup="dialog"
-        data-testid="dropdown__toggle"
+        data-testid="dropdown__toggle-Transactions--filter-dropdown"
       >
         <div
           class="flex h-11 w-full cursor-pointer items-center justify-between space-x-4 overflow-hidden rounded-xl border border-theme-primary-100 p-3 dark:border-theme-secondary-800 sm:px-4 sm:py-3"
@@ -10259,7 +10259,7 @@ exports[`Transactions > should hide view more button when there are no next page
       <div
         aria-expanded="false"
         aria-haspopup="dialog"
-        data-testid="dropdown__toggle"
+        data-testid="dropdown__toggle-Transactions--filter-dropdown"
       >
         <div
           class="flex h-11 w-full cursor-pointer items-center justify-between space-x-4 overflow-hidden rounded-xl border border-theme-primary-100 p-3 dark:border-theme-secondary-800 sm:px-4 sm:py-3"
@@ -15590,7 +15590,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
       <div
         aria-expanded="false"
         aria-haspopup="dialog"
-        data-testid="dropdown__toggle"
+        data-testid="dropdown__toggle-Transactions--filter-dropdown"
       >
         <div
           class="flex h-11 w-full cursor-pointer items-center justify-between space-x-4 overflow-hidden rounded-xl border border-theme-primary-100 p-3 dark:border-theme-secondary-800 sm:px-4 sm:py-3"
