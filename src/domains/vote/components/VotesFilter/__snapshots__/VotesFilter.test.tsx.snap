@@ -2,13 +2,11 @@
 
 exports[`VotesFilter > should render 1`] = `
 <DocumentFragment>
-  <div
-    data-testid="VotesFilter"
-  >
+  <div>
     <div
       aria-expanded="false"
       aria-haspopup="dialog"
-      data-testid="dropdown__toggle"
+      data-testid="dropdown__toggle-VotesFilter"
     >
       <div
         class="group"
@@ -55,14 +53,12 @@ exports[`VotesFilter > should render 1`] = `
 
 exports[`VotesFilter > should render default 1`] = `
 <DocumentFragment>
-  <div
-    data-testid="VotesFilter"
-  >
+  <div>
     <div
       aria-controls=":r2:"
       aria-expanded="true"
       aria-haspopup="dialog"
-      data-testid="dropdown__toggle"
+      data-testid="dropdown__toggle-VotesFilter"
     >
       <div
         class="group"
@@ -109,14 +105,12 @@ exports[`VotesFilter > should render default 1`] = `
 
 exports[`VotesFilter > should render with current option selected 1`] = `
 <DocumentFragment>
-  <div
-    data-testid="VotesFilter"
-  >
+  <div>
     <div
       aria-controls=":r5:"
       aria-expanded="true"
       aria-haspopup="dialog"
-      data-testid="dropdown__toggle"
+      data-testid="dropdown__toggle-VotesFilter"
     >
       <div
         class="group"
@@ -170,14 +164,12 @@ exports[`VotesFilter > should render with current option selected 1`] = `
 
 exports[`VotesFilter > should render with disabled current option 1`] = `
 <DocumentFragment>
-  <div
-    data-testid="VotesFilter"
-  >
+  <div>
     <div
       aria-controls=":r8:"
       aria-expanded="true"
       aria-haspopup="dialog"
-      data-testid="dropdown__toggle"
+      data-testid="dropdown__toggle-VotesFilter"
     >
       <div
         class="group"
