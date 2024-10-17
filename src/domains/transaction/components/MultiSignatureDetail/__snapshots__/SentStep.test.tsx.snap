@@ -133,7 +133,7 @@ exports[`Multisignature Detail Sent Step > should render sent step %s 1`] = `
         </div>
       </div>
       <div
-        class="mt-6 space-y-4"
+        class="mt-6 space-y-4 -mx-3 sm:mx-0"
       >
         <div
           class="group flex"
