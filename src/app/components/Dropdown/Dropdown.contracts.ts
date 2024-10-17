@@ -36,7 +36,7 @@ export type DropdownVariantType = "options" | "custom" | "votesFilter";
 
 export interface DropdownProperties extends JSX.IntrinsicAttributes {
 	as?: React.ElementType;
-	children?: React.ReactNode;
+	children?: React.ReactElement;
 	top?: React.ReactNode;
 	onSelect?: OnSelectProperties;
 	variant?: DropdownVariantType;

@@ -1,5 +1,5 @@
 import cn from "classnames";
-import React, { FC, useCallback, useState } from "react";
+import React, {cloneElement, FC, useCallback, useState} from "react";
 import { styled } from "twin.macro";
 
 import { DropdownOption, DropdownProperties, DropdownVariantType } from "./Dropdown.contracts";
@@ -88,6 +88,8 @@ export const Dropdown: FC<DropdownProperties> = ({
 	const testId: string | undefined = properties["data-testid"];
 	const testIdSuffix = testId ? `-${testId}` : "";
 
+	const clonedElement = children ? cloneElement(children, { hideDropdown: () => setIsOpen(false) }) : undefined;
+
 	return (
 		<>
 			<div
@@ -115,7 +117,7 @@ export const Dropdown: FC<DropdownProperties> = ({
 						<Wrapper variant={variant || options ? "options" : "custom"} className={cn(defaultClasses)}>
 							{top}
 							{options?.length && renderOptions({ onSelect: onSelectOption, options })}
-							{children && <div>{children}</div>}
+							{clonedElement && <div>{clonedElement}</div>}
 						</Wrapper>
 					</div>
 				</FloatingPortal>
