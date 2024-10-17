@@ -107,7 +107,7 @@ export const Dropdown: FC<DropdownProperties> = ({
 				<FloatingPortal>
 					<div
 						ref={refs.setFloating}
-						className={twMerge("z-50 w-full px-5 sm:w-auto sm:px-0", wrapperClass)}
+						className={twMerge("z-40 w-full px-5 sm:w-auto sm:px-0", wrapperClass)}
 						style={floatingStyles}
 						{...getFloatingProps()}
 						data-testid={"dropdown__content" + testIdSuffix}
