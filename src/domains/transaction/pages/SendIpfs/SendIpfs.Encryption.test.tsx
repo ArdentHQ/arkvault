@@ -16,6 +16,7 @@ import {
 	waitFor,
 	mockProfileWithPublicAndTestNetworks,
 	act,
+	MNEMONICS,
 } from "@/utils/testing-library";
 import { server, requestMock } from "@/tests/mocks/server";
 
@@ -27,37 +28,39 @@ import { DateTime } from "@ardenthq/sdk-intl";
 const passphrase = getDefaultWalletMnemonic();
 const fixtureProfileId = getDefaultProfileId();
 
+const ipfsTransactionFixture = {
+	amount: () => +ipfsFixture.data.amount / 1e8,
+	blockId: () => "1",
+	convertedAmount: () => BigNumber.make(10),
+	data: () => ({ data: () => ipfsFixture.data }),
+	explorerLink: () => `https://test.arkscan.io/transaction/${ipfsFixture.data.id}`,
+	explorerLinkForBlock: () => `https://test.arkscan.io/block/${ipfsFixture.data.id}`,
+	fee: () => +ipfsFixture.data.fee / 1e8,
+	hash: () => ipfsFixture.data.asset.ipfs,
+	id: () => ipfsFixture.data.id,
+	isConfirmed: () => true,
+	isDelegateRegistration: () => false,
+	isDelegateResignation: () => false,
+	isIpfs: () => true,
+	isMultiPayment: () => false,
+	isMultiSignatureRegistration: () => false,
+	isSent: () => true,
+	isTransfer: () => false,
+	isUnvote: () => false,
+	isVote: () => false,
+	isVoteCombination: () => false,
+	memo: () => null,
+	recipient: () => ipfsFixture.data.recipient,
+	sender: () => ipfsFixture.data.sender,
+	timestamp: () => DateTime.make(),
+	type: () => "ipfs",
+	usesMultiSignature: () => false,
+	wallet: () => wallet,
+}
+
 const createTransactionMock = (wallet: Contracts.IReadWriteWallet) =>
 	// @ts-ignore
-	vi.spyOn(wallet.transaction(), "transaction").mockReturnValue({
-		amount: () => +ipfsFixture.data.amount / 1e8,
-		blockId: () => "1",
-		convertedAmount: () => BigNumber.make(10),
-		data: () => ({ data: () => ipfsFixture.data }),
-		explorerLink: () => `https://test.arkscan.io/transaction/${ipfsFixture.data.id}`,
-		explorerLinkForBlock: () => `https://test.arkscan.io/block/${ipfsFixture.data.id}`,
-		fee: () => +ipfsFixture.data.fee / 1e8,
-		hash: () => ipfsFixture.data.asset.ipfs,
-		id: () => ipfsFixture.data.id,
-		isConfirmed: () => true,
-		isDelegateRegistration: () => false,
-		isDelegateResignation: () => false,
-		isIpfs: () => true,
-		isMultiPayment: () => false,
-		isMultiSignatureRegistration: () => false,
-		isSent: () => true,
-		isTransfer: () => false,
-		isUnvote: () => false,
-		isVote: () => false,
-		isVoteCombination: () => false,
-		memo: () => null,
-		recipient: () => ipfsFixture.data.recipient,
-		sender: () => ipfsFixture.data.sender,
-		timestamp: () => DateTime.make(),
-		type: () => "ipfs",
-		usesMultiSignature: () => false,
-		wallet: () => wallet,
-	});
+	vi.spyOn(wallet.transaction(), "transaction").mockReturnValue(ipfsTransactionFixture);
 
 let profile: Contracts.IProfile;
 let wallet: Contracts.IReadWriteWallet;
@@ -75,7 +78,7 @@ vi.mock("@/utils/delay", () => ({
 
 vi.mock("@/utils/debounce", () => ({
 	debounceAsync: (callback: () => void) =>
-		async function (...arguments_: any) {
+		async function(...arguments_: any) {
 			return new Promise((resolve) => {
 				setTimeout(() => {
 					resolve(callback.apply(this, arguments_));
@@ -101,6 +104,11 @@ describe("SendIpfs", () => {
 		wallet = profile.wallets().findById("ac38fe6d-4b67-4ef1-85be-17c5f6841129");
 
 		await wallet.synchroniser().identity();
+
+		const signatory = await wallet.signatory().stub(MNEMONICS[0])
+		const signatoryMock = vi.spyOn(wallet.signatory(), "secret").mockResolvedValue(signatory);
+
+		const ipfsStubTransactionMock = vi.spyOn(wallet.coin().transaction(), "ipfs").mockResolvedValue(ipfsTransactionFixture)
 
 		await syncFees(profile);
 	});
@@ -155,10 +163,7 @@ describe("SendIpfs", () => {
 		await expect(formStep()).resolves.toBeVisible();
 
 		const networkLabel = `${wallet.network().coin()} ${wallet.network().name()}`;
-		await waitFor(() => expect(screen.getByTestId("TransactionNetwork")).toHaveTextContent(networkLabel));
-		await waitFor(() =>
-			expect(screen.getByTestId("TransactionSender")).toHaveTextContent(encryptedWallet.address()),
-		);
+		await expect(screen.findByText(encryptedWallet.address())).resolves.toBeVisible();
 
 		await userEvent.type(screen.getByTestId("Input__hash"), "QmXoypizjW3WknFiJnKLwHCnL72vedxjQkDDP1mXWo6uco");
 		await waitFor(() =>

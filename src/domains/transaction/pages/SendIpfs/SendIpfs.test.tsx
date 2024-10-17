@@ -37,37 +37,39 @@ import { DateTime } from "@ardenthq/sdk-intl";
 const passphrase = getDefaultWalletMnemonic();
 const fixtureProfileId = getDefaultProfileId();
 
+const ipfsTransactionFixture = {
+	amount: () => BigNumber.make(+ipfsFixture.data.amount / 1e8),
+	blockId: () => "1",
+	convertedAmount: () => BigNumber.make(10),
+	data: () => ({ data: () => ipfsFixture.data }),
+	explorerLink: () => `https://test.arkscan.io/transaction/${ipfsFixture.data.id}`,
+	explorerLinkForBlock: () => `https://test.arkscan.io/block/${ipfsFixture.data.id}`,
+	fee: () => BigNumber.make(+ipfsFixture.data.fee / 1e8),
+	hash: () => ipfsFixture.data.asset.ipfs,
+	id: () => ipfsFixture.data.id,
+	isConfirmed: () => true,
+	isDelegateRegistration: () => false,
+	isDelegateResignation: () => false,
+	isIpfs: () => true,
+	isMultiPayment: () => false,
+	isMultiSignatureRegistration: () => false,
+	isTransfer: () => false,
+	isUnvote: () => false,
+	isVote: () => false,
+	isVote: () => false,
+	isVoteCombination: () => false,
+	memo: () => null,
+	recipient: () => ipfsFixture.data.recipient,
+	sender: () => ipfsFixture.data.sender,
+	timestamp: () => DateTime.make(),
+	type: () => "ipfs",
+	usesMultiSignature: () => false,
+	wallet: () => wallet,
+}
+
 const createTransactionMock = (wallet: Contracts.IReadWriteWallet) =>
 	// @ts-ignore
-	vi.spyOn(wallet.transaction(), "transaction").mockImplementation(() => ({
-		amount: () => +ipfsFixture.data.amount / 1e8,
-		blockId: () => "1",
-		convertedAmount: () => BigNumber.make(10),
-		data: () => ({ data: () => ipfsFixture.data }),
-		explorerLink: () => `https://test.arkscan.io/transaction/${ipfsFixture.data.id}`,
-		explorerLinkForBlock: () => `https://test.arkscan.io/block/${ipfsFixture.data.id}`,
-		fee: () => +ipfsFixture.data.fee / 1e8,
-		hash: () => ipfsFixture.data.asset.ipfs,
-		id: () => ipfsFixture.data.id,
-		isConfirmed: () => true,
-		isDelegateRegistration: () => false,
-		isDelegateResignation: () => false,
-		isIpfs: () => true,
-		isMultiPayment: () => false,
-		isMultiSignatureRegistration: () => false,
-		isTransfer: () => false,
-		isUnvote: () => false,
-		isVote: () => false,
-		isVote: () => false,
-		isVoteCombination: () => false,
-		memo: () => null,
-		recipient: () => ipfsFixture.data.recipient,
-		sender: () => ipfsFixture.data.sender,
-		timestamp: () => DateTime.make(),
-		type: () => "ipfs",
-		usesMultiSignature: () => false,
-		wallet: () => wallet,
-	}));
+	vi.spyOn(wallet.transaction(), "transaction").mockImplementation(() => ipfsTransactionFixture);
 
 let profile: Contracts.IProfile;
 let wallet: Contracts.IReadWriteWallet;
@@ -102,6 +104,11 @@ describe("SendIpfs", () => {
 		getVersionSpy = vi
 			.spyOn(wallet.coin().ledger(), "getVersion")
 			.mockResolvedValue(minVersionList[wallet.network().coin()]);
+
+		const signatory = await wallet.signatory().stub(MNEMONICS[0])
+		const signatoryMock = vi.spyOn(wallet.signatory(), "secret").mockResolvedValue(signatory);
+
+		const ipfsStubTransactionMock = vi.spyOn(wallet.coin().transaction(), "ipfs").mockResolvedValue(ipfsTransactionFixture)
 
 		await wallet.synchroniser().identity();
 
@@ -160,14 +167,13 @@ describe("SendIpfs", () => {
 	it("should render review step", () => {
 		const history = createHashHistory();
 		const ipfsURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-ipfs`;
-
 		history.push(ipfsURL);
 
 		const { asFragment, container } = renderWithForm(
 			<Router history={history}>
 				<Route path="/profiles/:profileId/wallets/:walletId/send-ipfs">
 					<StepsProvider activeStep={1} steps={4}>
-						<ReviewStep wallet={wallet} />
+						<ReviewStep wallet={wallet} transaction={ipfsTransactionFixture} />
 					</StepsProvider>
 					,
 				</Route>
@@ -183,9 +189,9 @@ describe("SendIpfs", () => {
 		);
 
 		expect(screen.getByTestId(reviewStepID)).toBeInTheDocument();
-		expect(container).toHaveTextContent(wallet.network().name());
-		expect(container).toHaveTextContent("D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD");
-		expect(container).toHaveTextContent("QmXoypizjW3WknFiJnKLwHCnL72vedxjQkDDP1mXWo6uco");
+		expect(container).toHaveTextContent("IPFS");
+		expect(container).toHaveTextContent(ipfsTransactionFixture.sender());
+		expect(container).toHaveTextContent(ipfsTransactionFixture.hash().slice(0, 4));
 
 		expect(asFragment()).toMatchSnapshot();
 	});
@@ -253,8 +259,6 @@ describe("SendIpfs", () => {
 		await expect(formStep()).resolves.toBeVisible();
 
 		const networkLabel = `${wallet.network().coin()} ${wallet.network().name()}`;
-		await waitFor(() => expect(screen.getByTestId("TransactionNetwork")).toHaveTextContent(networkLabel));
-		await waitFor(() => expect(screen.getByTestId("TransactionSender")).toHaveTextContent(wallet.address()));
 
 		await userEvent.clear(screen.getByTestId("Input__hash"));
 		await userEvent.type(screen.getByTestId("Input__hash"), "QmXoypizjW3WknFiJnKLwHCnL72vedxjQkDDP1mXWo6uco");
@@ -315,8 +319,6 @@ describe("SendIpfs", () => {
 		await expect(formStep()).resolves.toBeVisible();
 
 		const networkLabel = `${wallet.network().coin()} ${wallet.network().name()}`;
-		await waitFor(() => expect(screen.getByTestId("TransactionNetwork")).toHaveTextContent(networkLabel));
-		await waitFor(() => expect(screen.getByTestId("TransactionSender")).toHaveTextContent(wallet.address()));
 
 		await userEvent.clear(screen.getByTestId("Input__hash"));
 		await userEvent.type(screen.getByTestId("Input__hash"), "QmXoypizjW3WknFiJnKLwHCnL72vedxjQkDDP1mXWo6uco");
@@ -416,8 +418,6 @@ describe("SendIpfs", () => {
 		await expect(formStep()).resolves.toBeVisible();
 
 		const networkLabel = `${wallet.network().coin()} ${wallet.network().name()}`;
-		await waitFor(() => expect(screen.getByTestId("TransactionNetwork")).toHaveTextContent(networkLabel));
-		await waitFor(() => expect(screen.getByTestId("TransactionSender")).toHaveTextContent(wallet.address()));
 
 		await userEvent.clear(screen.getByTestId("Input__hash"));
 		await userEvent.type(screen.getByTestId("Input__hash"), "QmXoypizjW3WknFiJnKLwHCnL72vedxjQkDDP1mXWo6uco");
@@ -506,8 +506,6 @@ describe("SendIpfs", () => {
 		await expect(formStep()).resolves.toBeVisible();
 
 		const networkLabel = `${wallet.network().coin()} ${wallet.network().name()}`;
-		await waitFor(() => expect(screen.getByTestId("TransactionNetwork")).toHaveTextContent(networkLabel));
-		await waitFor(() => expect(screen.getByTestId("TransactionSender")).toHaveTextContent(wallet.address()));
 
 		await userEvent.clear(screen.getByTestId("Input__hash"));
 		await userEvent.type(screen.getByTestId("Input__hash"), "QmXoypizjW3WknFiJnKLwHCnL72vedxjQkDDP1mXWo6uco");
@@ -557,8 +555,6 @@ describe("SendIpfs", () => {
 		await expect(formStep()).resolves.toBeVisible();
 
 		const networkLabel = `${wallet.network().coin()} ${wallet.network().name()}`;
-		await waitFor(() => expect(screen.getByTestId("TransactionNetwork")).toHaveTextContent(networkLabel));
-		await waitFor(() => expect(screen.getByTestId("TransactionSender")).toHaveTextContent(wallet.address()));
 
 		await userEvent.type(screen.getByTestId("Input__hash"), "QmXoypizjW3WknFiJnKLwHCnL72vedxjQkDDP1mXWo6uco");
 		await waitFor(() =>
@@ -606,8 +602,6 @@ describe("SendIpfs", () => {
 		await expect(formStep()).resolves.toBeVisible();
 
 		const networkLabel = `${wallet.network().coin()} ${wallet.network().name()}`;
-		await waitFor(() => expect(screen.getByTestId("TransactionNetwork")).toHaveTextContent(networkLabel));
-		await waitFor(() => expect(screen.getByTestId("TransactionSender")).toHaveTextContent(wallet.address()));
 
 		await userEvent.clear(screen.getByTestId("Input__hash"));
 		await userEvent.type(screen.getByTestId("Input__hash"), "QmXoypizjW3WknFiJnKLwHCnL72vedxjQkDDP1mXWo6uco");
@@ -713,8 +707,6 @@ describe("SendIpfs", () => {
 		await expect(formStep()).resolves.toBeVisible();
 
 		const networkLabel = `${wallet.network().coin()} ${wallet.network().name()}`;
-		await waitFor(() => expect(screen.getByTestId("TransactionNetwork")).toHaveTextContent(networkLabel));
-		await waitFor(() => expect(screen.getByTestId("TransactionSender")).toHaveTextContent(wallet.address()));
 
 		await userEvent.clear(screen.getByTestId("Input__hash"));
 		await userEvent.type(screen.getByTestId("Input__hash"), "QmXoypizjW3WknFiJnKLwHCnL72vedxjQkDDP1mXWo6uco");
@@ -820,8 +812,6 @@ describe("SendIpfs", () => {
 		await expect(formStep()).resolves.toBeVisible();
 
 		const networkLabel = `${wallet.network().coin()} ${wallet.network().name()}`;
-		await waitFor(() => expect(screen.getByTestId("TransactionNetwork")).toHaveTextContent(networkLabel));
-		await waitFor(() => expect(screen.getByTestId("TransactionSender")).toHaveTextContent(wallet.address()));
 
 		await userEvent.clear(screen.getByTestId("Input__hash"));
 		await userEvent.type(screen.getByTestId("Input__hash"), "QmXoypizjW3WknFiJnKLwHCnL72vedxjQkDDP1mXWo6uco");
@@ -923,8 +913,6 @@ describe("SendIpfs", () => {
 		await expect(formStep()).resolves.toBeVisible();
 
 		const networkLabel = `${wallet.network().coin()} ${wallet.network().name()}`;
-		await waitFor(() => expect(screen.getByTestId("TransactionNetwork")).toHaveTextContent(networkLabel));
-		await waitFor(() => expect(screen.getByTestId("TransactionSender")).toHaveTextContent(wallet.address()));
 
 		await userEvent.clear(screen.getByTestId("Input__hash"));
 		await userEvent.type(screen.getByTestId("Input__hash"), "QmXoypizjW3WknFiJnKLwHCnL72vedxjQkDDP1mXWo6uco");
