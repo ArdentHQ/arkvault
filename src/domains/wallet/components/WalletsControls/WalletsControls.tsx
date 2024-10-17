@@ -8,7 +8,6 @@ import { Dropdown, DropdownOption } from "@/app/components/Dropdown";
 import { Tooltip } from "@/app/components/Tooltip";
 import { FilterWallets, FilterWalletsHookProperties } from "@/domains/dashboard/components/FilterWallets";
 import { Divider } from "@/app/components/Divider";
-import { useBreakpoint } from "@/app/hooks";
 import { isLedgerTransportSupported } from "@/app/contexts/Ledger/transport";
 
 enum NewWalletOption {
@@ -33,7 +32,6 @@ export const WalletsControls = React.memo(
 		onFilterChange,
 	}: WalletsControlsProperties) => {
 		const { t } = useTranslation();
-		const { isXl } = useBreakpoint();
 
 		const newWalletOptions = useMemo<DropdownOption[]>(
 			() => [
