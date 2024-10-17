@@ -130,6 +130,6 @@ describe("TransactionType", () => {
 		);
 
 		expect(container).toHaveTextContent(translations.TRANSACTION_TYPES.DELEGATE_RESIGNATION);
-		expect(container).toHaveTextContent(hash);
+		expect(container).toHaveTextContent(hash.slice(0, 4));
 	});
 });
