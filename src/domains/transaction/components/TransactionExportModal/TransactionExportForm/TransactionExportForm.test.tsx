@@ -19,8 +19,11 @@ const history = createHashHistory();
 const fixtureProfileId = getDefaultProfileId();
 let dashboardURL: string;
 
+const toggleTestId = "dropdown__toggle-TransactionExportForm--daterange-options";
+const dropdownContentTestId = "dropdown__content-TransactionExportForm--daterange-options";
+
 const dateToggle = () =>
-	within(screen.getByTestId("TransactionExportForm--daterange-options")).getByTestId("CollapseToggleButton");
+	within(screen.getByTestId(toggleTestId)).getByTestId("CollapseToggleButton");
 
 describe("TransactionExportForm", () => {
 	let profile: Contracts.IProfile;
@@ -107,9 +110,9 @@ describe("TransactionExportForm", () => {
 			expect(dateToggle()).toBeEnabled();
 		});
 
-		await userEvent.click(screen.getAllByTestId("dropdown__toggle")[0]);
+		await userEvent.click(screen.getByTestId(toggleTestId));
 
-		expect(screen.getByTestId("dropdown__content")).toBeInTheDocument();
+		expect(screen.getByTestId(dropdownContentTestId)).toBeInTheDocument();
 
 		await userEvent.click(screen.getByTestId("dropdown__option--all-1"));
 	});
@@ -133,9 +136,9 @@ describe("TransactionExportForm", () => {
 			expect(dateToggle()).toBeEnabled();
 		});
 
-		await userEvent.click(screen.getAllByTestId("dropdown__toggle")[0]);
+		await userEvent.click(screen.getByTestId(toggleTestId));
 
-		expect(screen.getByTestId("dropdown__content")).toBeInTheDocument();
+		expect(screen.getByTestId(dropdownContentTestId)).toBeInTheDocument();
 
 		await userEvent.click(screen.getByTestId("dropdown__option--custom-0"));
 	});
@@ -153,9 +156,9 @@ describe("TransactionExportForm", () => {
 			expect(dateToggle()).toBeEnabled();
 		});
 
-		await userEvent.click(screen.getAllByTestId("dropdown__toggle")[1]);
+		await userEvent.click(screen.getByTestId("dropdown__toggle-TransactionExportForm--delimiter-options"));
 
-		expect(screen.getByTestId("dropdown__content")).toBeInTheDocument();
+		expect(screen.getByTestId("dropdown__content-TransactionExportForm--delimiter-options")).toBeInTheDocument();
 
 		await userEvent.click(screen.getByTestId("dropdown__option--2"));
 	});
