@@ -24,7 +24,7 @@ export const TransactionSummary = ({ transaction, senderWallet, labelClassName }
 								isNegative={transaction.isSent()}
 								value={transaction.amount()}
 								ticker={senderWallet.currency()}
-								className="text-base leading-5"
+								textClassName="text-base leading-5"
 							/>
 						</div>
 
