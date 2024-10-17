@@ -132,7 +132,6 @@ export const WalletHeaderMobile: React.FC<WalletHeaderProperties> = ({ profile, 
 
 				<div data-testid="WalletHeaderMobile__more-button" className="my-auto ml-3">
 					<Dropdown
-						dropdownClass="mx-4"
 						options={[primaryOptions, registrationOptions, additionalOptions, secondaryOptions]}
 						toggleContent={
 							<Button

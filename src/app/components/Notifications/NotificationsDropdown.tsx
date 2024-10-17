@@ -19,7 +19,6 @@ export const NotificationsDropdown = ({ profile }: { profile: Contracts.IProfile
 	return (
 		<div>
 			<Dropdown
-				dropdownClass="mx-4 sm:mx-0 border-none pt-0 w-full md:w-auto"
 				toggleContent={
 					<NavigationButtonWrapper className="group">
 						<Button variant="transparent" size="icon" data-testid="NavigationBar__buttons--notifications">

@@ -39,7 +39,6 @@ export const ServerStatusIndicator = ({ profile }: { profile: Contracts.IProfile
 		<div>
 			<Dropdown
 				placement="bottom"
-				dropdownClass="mt-8 mx-4 sm:mx-0 border-none"
 				toggleContent={
 					<NavigationButtonWrapper className="group">
 						<Button variant="transparent" size="icon" data-testid="NavigationBar__buttons--server-status">

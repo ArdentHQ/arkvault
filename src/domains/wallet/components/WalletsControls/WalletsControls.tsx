@@ -69,7 +69,6 @@ export const WalletsControls = React.memo(
 				<div className="static mr-0 flex items-center border-theme-secondary-300 pr-0 text-theme-primary-300 dark:border-theme-secondary-800 dark:text-theme-secondary-600 sm:mr-8 sm:border-r sm:pr-5 md:relative">
 					<Dropdown
 						placement="bottom"
-						dropdownClass="mx-4 md:mx-0"
 						toggleContent={
 							<Tooltip content={filterProperties.disabled ? t("COMMON.NOTICE_NO_WALLETS") : undefined}>
 								<span>
@@ -133,7 +132,6 @@ export const WalletsControls = React.memo(
 
 				<div className="flex items-center sm:hidden">
 					<Dropdown
-						dropdownClass="mx-4 md:mx-0"
 						toggleContent={
 							<span className="-mx-1 flex items-center px-5 py-3 text-theme-primary-300 dark:text-theme-secondary-600">
 								<Icon name="Plus" />

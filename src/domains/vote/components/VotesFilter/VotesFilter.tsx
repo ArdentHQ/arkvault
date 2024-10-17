@@ -21,7 +21,6 @@ export const VotesFilter = ({
 		<div data-testid="VotesFilter" {...properties}>
 			<Dropdown
 				variant="votesFilter"
-				dropdownClass="shadow-votes-filter mx-4 sm:mx-0"
 				placement="bottom-end"
 				toggleContent={
 					<ControlButton isChanged={selectedOption !== "all"}>
