@@ -18,7 +18,7 @@ const openDeleteContactModal = async (t: TestController) => {
 		Selector('[data-testid="ContactList"] tbody > tr:first-child [data-testid="dropdown__toggle"]').child(0),
 	);
 	await t.click(
-		Selector('[data-testid="ContactList"] tbody > tr:first-child [data-testid="dropdown__options"] li').withText(
+		Selector('[data-testid="dropdown__options"] li').withText(
 			translations.COMMON.DELETE,
 		),
 	);

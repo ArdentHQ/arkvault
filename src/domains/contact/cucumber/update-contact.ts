@@ -20,7 +20,7 @@ const preSteps = {
 			Selector('[data-testid="ContactList"] tbody > tr:first-child [data-testid="dropdown__toggle"]').child(0),
 		);
 		await t.click(
-			Selector('[data-testid="ContactList"] tbody > tr:first-child [data-testid="dropdown__option--0"]').withText(
+			Selector('[data-testid="dropdown__option--0"]').withText(
 				translations.COMMON.EDIT,
 			),
 		);
