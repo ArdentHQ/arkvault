@@ -56,7 +56,7 @@ export const FilterTransactions = memo(
 		return (
 			<div className={className} data-testid="FilterTransactions" {...properties}>
 				<Dropdown
-					dropdownClass="md:w-80 md:max-h-128 md:overflow-y-auto md:w-auto mx-4 sm:w-full sm:mx-0"
+					position="bottom-end"
 					options={allOptions}
 					disableToggle={isDisabled}
 					toggleContent={

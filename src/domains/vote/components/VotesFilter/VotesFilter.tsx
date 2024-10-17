@@ -22,7 +22,7 @@ export const VotesFilter = ({
 			<Dropdown
 				variant="votesFilter"
 				dropdownClass="shadow-votes-filter mx-4 sm:mx-0"
-				position="right"
+				position="bottom-end"
 				toggleContent={
 					<ControlButton isChanged={selectedOption !== "all"}>
 						<div className="flex h-5 w-5 items-center justify-center">

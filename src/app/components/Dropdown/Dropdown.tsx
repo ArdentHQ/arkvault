@@ -1,31 +1,41 @@
 import cn from "classnames";
-import React, { FC, useCallback, useEffect, useState } from "react";
+import React, { FC, useCallback, useState } from "react";
 import { styled } from "twin.macro";
 
 import { DropdownOption, DropdownProperties, DropdownVariantType } from "./Dropdown.contracts";
 import { defaultClasses, getStyles } from "./Dropdown.styles";
 import { renderOptions } from "./Dropdown.helpers";
 import { Icon } from "@/app/components/Icon";
-import { clickOutsideHandler } from "@/app/hooks";
 import { Position } from "@/types";
+import {
+	useFloating,
+	autoUpdate,
+	offset,
+	flip,
+	shift,
+	useClick,
+	useDismiss,
+	useRole,
+	useInteractions,
+	FloatingPortal,
+} from "@floating-ui/react";
+import {twMerge} from "tailwind-merge";
 
 export const Wrapper = styled.div<{ position?: Position; variant: DropdownVariantType }>(getStyles);
 
 export const Dropdown: FC<DropdownProperties> = ({
 	children,
 	top,
-	dropdownClass,
+	wrapperClass,
 	variant,
 	options,
 	onSelect,
-	position = "right",
+	position = "bottom",
 	toggleIcon = "Gear",
 	toggleSize,
 	toggleContent,
 	disableToggle = false,
-	...properties
 }) => {
-	const rootDivReference = React.useRef<HTMLDivElement>(null);
 	const [isOpen, setIsOpen] = useState(false);
 
 	const onSelectOption = useCallback(
@@ -56,124 +66,47 @@ export const Dropdown: FC<DropdownProperties> = ({
 		return toggleContent;
 	};
 
-	const toggleHandler = useCallback(
-		(event: React.MouseEvent) => {
-			if (disableToggle) {
-				return;
-			}
-			event.preventDefault();
-			event.stopPropagation();
-			setIsOpen(!isOpen);
-		},
-		[disableToggle, setIsOpen, isOpen],
-	);
+	const { refs, floatingStyles, context } = useFloating({
+		middleware: [offset(10), flip(), shift()],
+		onOpenChange: setIsOpen,
+		open: isOpen,
+		placement: position,
+		whileElementsMounted: autoUpdate,
+	});
 
-	const hide = useCallback(() => setIsOpen(false), [setIsOpen]);
+	const click = useClick(context, {
+		enabled: !disableToggle,
+	});
 
-	const handleResize = useCallback(() => {
-		const parentElement = rootDivReference.current;
-		if (!parentElement) {
-			return;
-		}
+	const dismiss = useDismiss(context);
+	const role = useRole(context);
 
-		const numberFromPixels = (value: string): number => (value ? Number.parseInt(value.replace("px", "")) : 0);
-
-		const OFFSET = 30;
-
-		const toggleElement = parentElement.querySelector<HTMLElement>('[data-testid="dropdown__toggle"]');
-		const dropdownElement = parentElement.querySelector<HTMLElement>('[data-testid="dropdown__content"]');
-
-		if (!toggleElement || !dropdownElement) {
-			return;
-		}
-
-		const setStyles = (styles: Partial<CSSStyleDeclaration>) => {
-			Object.assign(dropdownElement.style, styles);
-		};
-
-		const toggleHeight = toggleElement.parentElement!.offsetHeight;
-
-		const spaceBefore = toggleElement.getBoundingClientRect().top + document.documentElement.scrollTop;
-		const spaceAfter = document.body.clientHeight - (spaceBefore + toggleHeight);
-
-		setStyles({ height: "", marginTop: "" });
-
-		const styles = getComputedStyle(dropdownElement);
-
-		const calculatedSpace = dropdownElement.offsetHeight + numberFromPixels(styles.marginTop) + OFFSET;
-		if (spaceAfter < calculatedSpace && spaceBefore > calculatedSpace) {
-			setStyles({
-				marginTop: `-${dropdownElement.offsetHeight + toggleHeight + numberFromPixels(styles.marginTop)}px`,
-				opacity: "1",
-			});
-			return;
-		}
-
-		const newHeight = spaceAfter - numberFromPixels(styles.marginTop) - OFFSET;
-
-		const newStyles =
-			newHeight >=
-			dropdownElement.firstElementChild!.clientHeight +
-				numberFromPixels(styles.paddingTop) +
-				numberFromPixels(styles.paddingBottom)
-				? {
-						height: "",
-						overflowY: "",
-					}
-				: {
-						height: `${newHeight}px`,
-						marginTop: "",
-						overflowY: "scroll",
-					};
-
-		setStyles({ opacity: "1", ...newStyles });
-	}, [rootDivReference]);
-
-	useEffect(() => {
-		if (isOpen) {
-			window.addEventListener("resize", handleResize);
-		}
-
-		handleResize();
-
-		return () => window.removeEventListener("resize", handleResize);
-	}, [isOpen, handleResize]);
-
-	useEffect(() => clickOutsideHandler(rootDivReference, hide), [rootDivReference, hide]);
-
-	useEffect(() => {
-		const handleKeys = (event: KeyboardEvent) => {
-			/* istanbul ignore next -- @preserve */
-			if (event.key === "Escape") {
-				hide();
-			}
-		};
-
-		if (isOpen) {
-			window.addEventListener("keydown", handleKeys);
-		}
-
-		return () => window.removeEventListener("keydown", handleKeys);
-	}, [isOpen, hide]);
+	// Merge all the interactions into prop getters
+	const { getReferenceProps, getFloatingProps } = useInteractions([click, dismiss, role]);
 
 	return (
-		<div ref={rootDivReference} className="static sm:relative" {...properties}>
-			<span data-testid="dropdown__toggle" onClick={toggleHandler}>
+		<>
+			<div data-testid="dropdown__toggle" ref={refs.setReference} {...getReferenceProps({  onClick(event) {
+					event.stopPropagation();
+				}})}>
 				{renderToggle()}
-			</span>
+			</div>
 
 			{isOpen && (
-				<Wrapper
-					data-testid="dropdown__content"
-					position={position}
-					variant={variant || options ? "options" : "custom"}
-					className={cn("opacity-0", defaultClasses, dropdownClass)}
-				>
-					{top}
-					{options?.length && renderOptions({ onSelect: onSelectOption, options })}
-					{children && <div>{children}</div>}
-				</Wrapper>
+				<FloatingPortal>
+					<div ref={refs.setFloating} className={twMerge("w-full px-5 z-50 sm:w-auto sm:px-0", wrapperClass)} style={floatingStyles} {...getFloatingProps()}>
+						<Wrapper
+							data-testid="dropdown__content"
+							variant={variant || options ? "options" : "custom"}
+							className={cn(defaultClasses)}
+						>
+							{top}
+							{options?.length && renderOptions({ onSelect: onSelectOption, options })}
+							{children && <div>{children}</div>}
+						</Wrapper>
+					</div>
+				</FloatingPortal>
 			)}
-		</div>
+		</>
 	);
 };

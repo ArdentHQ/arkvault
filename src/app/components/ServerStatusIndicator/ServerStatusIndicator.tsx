@@ -5,7 +5,7 @@ import { useTranslation } from "react-i18next";
 import { Button } from "@/app/components/Button";
 import { Dropdown } from "@/app/components/Dropdown";
 import { NavigationButtonWrapper } from "@/app/components/NavigationBar/NavigationBar.blocks";
-import { useBreakpoint, useServerHealthStatus } from "@/app/hooks";
+import { useServerHealthStatus } from "@/app/hooks";
 import { Link } from "@/app/components/Link";
 import { ServerHealthStatus } from "@/domains/setting/pages/Servers/Servers.contracts";
 import { Icon } from "@/app/components/Icon";
@@ -33,13 +33,12 @@ const StatusDot = ({ status }: { status: ServerHealthStatus }) => {
 export const ServerStatusIndicator = ({ profile }: { profile: Contracts.IProfile }) => {
 	const { t } = useTranslation();
 
-	const { isSm, isMd } = useBreakpoint();
 	const { status } = useServerHealthStatus();
 
 	return (
 		<div>
 			<Dropdown
-				position={isSm || isMd ? "top-center" : "right"}
+				position="bottom"
 				dropdownClass="mt-8 mx-4 sm:mx-0 border-none"
 				toggleContent={
 					<NavigationButtonWrapper className="group">
@@ -52,7 +51,7 @@ export const ServerStatusIndicator = ({ profile }: { profile: Contracts.IProfile
 					</NavigationButtonWrapper>
 				}
 			>
-				<div className="-mt-3 flex w-full items-center justify-between rounded-t-xl bg-theme-secondary-100 px-8 py-4 dark:bg-black sm:w-128">
+				<div className="flex w-full items-center justify-between rounded-t-xl bg-theme-secondary-100 px-8 py-4 dark:bg-black sm:w-128">
 					<div className="text-sm font-semibold text-theme-secondary-500">{t("COMMON.NETWORK_STATUS")}</div>
 					<Link to={`/profiles/${profile.id()}/settings/servers`}>
 						<span className="text-sm font-semibold">{t("COMMON.MANAGE_SERVERS")}</span>

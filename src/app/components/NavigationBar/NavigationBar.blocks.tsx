@@ -247,7 +247,7 @@ export const NavigationBarFull: React.FC<NavigationBarFullProperties> = ({
 				className="ml-2 mr-auto flex content-center items-center lg:hidden"
 			>
 				<Dropdown
-					dropdownClass="w-full sm:w-auto mt-6 sm:mt-10 mx-0 rounded-none sm:rounded-xl"
+					// dropdownClass="w-full sm:w-auto mt-6 sm:mt-10 mx-0 rounded-none sm:rounded-xl"
 					toggleContent={(isOpen) => (
 						<button
 							type="button"
