@@ -215,9 +215,7 @@ describe("AddRecipient", () => {
 	});
 
 	it("should set available amount in mobile", async () => {
-		renderWithFormProvider(
-			<AddRecipient profile={profile} wallet={wallet} recipients={[]} onChange={vi.fn()} />,
-		);
+		renderWithFormProvider(<AddRecipient profile={profile} wallet={wallet} recipients={[]} onChange={vi.fn()} />);
 
 		await userEvent.click(screen.getByTestId("AddRecipient__send-all_mobile"));
 
