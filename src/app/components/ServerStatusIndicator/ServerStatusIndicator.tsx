@@ -50,18 +50,20 @@ export const ServerStatusIndicator = ({ profile }: { profile: Contracts.IProfile
 					</NavigationButtonWrapper>
 				}
 			>
-				<div className="flex w-full items-center justify-between rounded-t-xl bg-theme-secondary-100 px-8 py-4 dark:bg-black sm:w-128">
-					<div className="text-sm font-semibold text-theme-secondary-500">{t("COMMON.NETWORK_STATUS")}</div>
-					<Link to={`/profiles/${profile.id()}/settings/servers`}>
-						<span className="text-sm font-semibold">{t("COMMON.MANAGE_SERVERS")}</span>
-					</Link>
-				</div>
-				<div className="flex items-start space-x-2 px-8 py-4 text-theme-text">
-					<div className="mt-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800">
-						<StatusDot status={status.value} />
+				<>
+					<div className="flex w-full items-center justify-between rounded-t-xl bg-theme-secondary-100 px-8 py-4 dark:bg-black sm:w-128">
+						<div className="text-sm font-semibold text-theme-secondary-500">{t("COMMON.NETWORK_STATUS")}</div>
+						<Link to={`/profiles/${profile.id()}/settings/servers`}>
+							<span className="text-sm font-semibold">{t("COMMON.MANAGE_SERVERS")}</span>
+						</Link>
 					</div>
-					<div>{status.label}</div>
-				</div>
+					<div className="flex items-start space-x-2 px-8 py-4 text-theme-text">
+						<div className="mt-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800">
+							<StatusDot status={status.value} />
+						</div>
+						<div>{status.label}</div>
+					</div>
+				</>
 			</Dropdown>
 		</div>
 	);
