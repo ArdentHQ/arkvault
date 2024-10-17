@@ -1077,7 +1077,7 @@ exports[`SendTransfer Fee Handling > should send a single transfer with a high f
                                     Amount
                                   </div>
                                   <div
-                                    class="flex h-full items-center justify-center rounded px-1.5 text-base leading-5 css-xqt0aw"
+                                    class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
                                     color="danger-bg"
                                     data-testid="AmountLabel__wrapper"
                                   >
@@ -1085,7 +1085,7 @@ exports[`SendTransfer Fee Handling > should send a single transfer with a high f
                                       class="flex h-full items-center space-x-1"
                                     >
                                       <span
-                                        class="whitespace-nowrap text-sm"
+                                        class="whitespace-nowrap text-base leading-5"
                                         data-testid="Amount"
                                       >
                                         - 400,000 DARK
@@ -2549,7 +2549,7 @@ exports[`SendTransfer Fee Handling > should send a single transfer with a low fe
                                     Amount
                                   </div>
                                   <div
-                                    class="flex h-full items-center justify-center rounded px-1.5 text-base leading-5 css-xqt0aw"
+                                    class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
                                     color="danger-bg"
                                     data-testid="AmountLabel__wrapper"
                                   >
@@ -2557,7 +2557,7 @@ exports[`SendTransfer Fee Handling > should send a single transfer with a low fe
                                       class="flex h-full items-center space-x-1"
                                     >
                                       <span
-                                        class="whitespace-nowrap text-sm"
+                                        class="whitespace-nowrap text-base leading-5"
                                         data-testid="Amount"
                                       >
                                         - 400,000 DARK
