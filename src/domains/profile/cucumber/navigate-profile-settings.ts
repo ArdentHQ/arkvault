@@ -15,11 +15,7 @@ cucumber("@navigateProfileSettings-noPassword", {
 			.expect(Selector('[data-testid="ProfileRow"] [data-testid="dropdown__toggle"]').child(0).exists)
 			.ok({ timeout: 60_000 });
 		await t.click(Selector('[data-testid="ProfileRow"] [data-testid="dropdown__toggle"]').child(0));
-		await t.click(
-			Selector('[data-testid="dropdown__option--0"]').withText(
-				translations.COMMON.SETTINGS,
-			),
-		);
+		await t.click(Selector('[data-testid="dropdown__option--0"]').withText(translations.COMMON.SETTINGS));
 	},
 	"Then she is navigated to the settings page for that profile": async (t: TestController) => {
 		await t.expect(Selector("h1").withText(translations.SETTINGS.GENERAL.TITLE).exists).ok();
