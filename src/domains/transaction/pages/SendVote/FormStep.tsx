@@ -8,8 +8,7 @@ import { FeeField } from "@/domains/transaction/components/FeeField";
 import { StepHeader } from "@/app/components/StepHeader";
 import { ThemeIcon } from "@/app/components/Icon";
 import { VoteTransactionType } from "@/domains/transaction/components/VoteTransactionType";
-import { SelectAddress } from "@/domains/profile/components/SelectAddress";
-import { useFormContext } from "react-hook-form";
+import { TransactionAddresses } from "@/domains/transaction/components/TransactionDetail";
 
 type FormStepProperties = {
 	profile: ProfilesContracts.IProfile;
@@ -36,8 +35,6 @@ export const FormStep = ({ unvotes, votes, wallet, profile, network, isWalletFie
 		[unvotes, votes, wallet],
 	);
 
-	const { setValue } = useFormContext();
-
 	return (
 		<section data-testid="SendVote__form-step" className="space-y-3 sm:space-y-4">
 			<StepHeader
@@ -49,28 +46,8 @@ export const FormStep = ({ unvotes, votes, wallet, profile, network, isWalletFie
 			/>
 
 			<FormField name="senderAddress">
-				<FormLabel label={t("TRANSACTION.SENDER")} />
-
 				<div data-testid="sender-address" className="mb-3 sm:mb-0">
-					<SelectAddress
-						inputClassName="!bg-transparent"
-						showWalletAvatar={false}
-						showUserIcon={!isWalletFieldDisabled}
-						disabled={isWalletFieldDisabled !== false}
-						wallet={
-							wallet
-								? {
-										address: wallet.address(),
-										network: wallet.network(),
-									}
-								: undefined
-						}
-						wallets={profile.wallets().findByCoinWithNetwork(network.coin(), network.id())}
-						profile={profile}
-						onChange={(address: string) =>
-							setValue("senderAddress", address, { shouldDirty: true, shouldValidate: false })
-						}
-					/>
+					{wallet?.address() && <TransactionAddresses senderAddress={wallet.address()} recipients={[]} network={wallet.network()} profile={profile} />}
 				</div>
 			</FormField>
 
