@@ -1,5 +1,5 @@
 import cn from "classnames";
-import React, {cloneElement, FC, useCallback, useState} from "react";
+import React, { cloneElement, FC, useCallback, useState } from "react";
 import { styled } from "twin.macro";
 
 import { DropdownOption, DropdownProperties, DropdownVariantType } from "./Dropdown.contracts";
