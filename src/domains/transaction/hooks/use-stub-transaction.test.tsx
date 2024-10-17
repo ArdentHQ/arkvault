@@ -1,15 +1,11 @@
-
 import { renderHook } from "@testing-library/react";
-import React from "react";
 
-import { useProfileTransactions } from "./use-profile-transactions";
-import { ConfigurationProvider, EnvironmentProvider } from "@/app/contexts";
-import { env, getDefaultProfileId, syncDelegates, waitFor, MNEMONICS } from "@/utils/testing-library";
+import { env, waitFor, MNEMONICS } from "@/utils/testing-library";
 import { useIpfsStubTransaction } from "./use-stub-transaction"
 
 describe("IPFS Stub Transaction", () => {
 	const hash = "QmVqNrDfr2dxzQUo4VN3zhG4NV78uYFmRpgSktWDc2eeh2"
-	it("should handle exception and return undefined", async () => {
+	it("should handle exception and return undefined", () => {
 		const { result: { current } } = renderHook(() => useIpfsStubTransaction({
 			fee: 10,
 			hash: "QmVqNrDfr2dxzQUo4VN3zhG4NV78uYFmRpgSktWDc2eeh2",
@@ -31,7 +27,7 @@ describe("IPFS Stub Transaction", () => {
 			sender: () => wallet.address()
 		})
 
-		const { result: { current } } = renderHook(() => useIpfsStubTransaction({
+		renderHook(() => useIpfsStubTransaction({
 			fee: 10,
 			hash,
 			wallet,
