@@ -783,7 +783,7 @@ exports[`SendTransfer Fee Handling > should send a single transfer with a high f
                       </div>
                     </div>
                     <div
-                      class="mt-6 space-y-4"
+                      class="mt-6 space-y-4 -mx-3 sm:mx-0"
                     >
                       <div
                         class="group flex"
@@ -2255,7 +2255,7 @@ exports[`SendTransfer Fee Handling > should send a single transfer with a low fe
                       </div>
                     </div>
                     <div
-                      class="mt-6 space-y-4"
+                      class="mt-6 space-y-4 -mx-3 sm:mx-0"
                     >
                       <div
                         class="group flex"

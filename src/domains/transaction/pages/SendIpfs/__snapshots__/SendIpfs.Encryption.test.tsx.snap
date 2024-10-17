@@ -783,7 +783,7 @@ exports[`SendIpfs > should send an IPFS transaction using encryption password 1`
                       </div>
                     </div>
                     <div
-                      class="mt-6 space-y-4"
+                      class="mt-6 space-y-4 -mx-3 sm:mx-0"
                     >
                       <div
                         class="group flex"
@@ -986,13 +986,13 @@ exports[`SendIpfs > should send an IPFS transaction using encryption password 1`
                                         class="flex w-full space-x-2"
                                       >
                                         <div
-                                          class="flex w-full"
+                                          class="text-base font-semibold leading-5"
                                         >
-                                          <span
-                                            class="no-ligatures min-w-0 overflow-hidden font-semibold leading-5"
+                                          <div
+                                            class="text-theme-secondary-900 dark:text-theme-text"
                                           >
-                                            QmPRqPTEEwx95WNcSsk6YQk7aGW9hoZbTF9zE92dBj9H68
-                                          </span>
+                                            QmPRq...j9H68
+                                          </div>
                                         </div>
                                         <button
                                           class="ring-focus relative focus:outline-none"
