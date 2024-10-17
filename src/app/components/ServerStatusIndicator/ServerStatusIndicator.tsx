@@ -52,7 +52,9 @@ export const ServerStatusIndicator = ({ profile }: { profile: Contracts.IProfile
 			>
 				<>
 					<div className="flex w-full items-center justify-between rounded-t-xl bg-theme-secondary-100 px-8 py-4 dark:bg-black sm:w-128">
-						<div className="text-sm font-semibold text-theme-secondary-500">{t("COMMON.NETWORK_STATUS")}</div>
+						<div className="text-sm font-semibold text-theme-secondary-500">
+							{t("COMMON.NETWORK_STATUS")}
+						</div>
 						<Link to={`/profiles/${profile.id()}/settings/servers`}>
 							<span className="text-sm font-semibold">{t("COMMON.MANAGE_SERVERS")}</span>
 						</Link>
