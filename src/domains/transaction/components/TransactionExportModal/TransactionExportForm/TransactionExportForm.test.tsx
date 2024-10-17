@@ -22,8 +22,7 @@ let dashboardURL: string;
 const toggleTestId = "dropdown__toggle-TransactionExportForm--daterange-options";
 const dropdownContentTestId = "dropdown__content-TransactionExportForm--daterange-options";
 
-const dateToggle = () =>
-	within(screen.getByTestId(toggleTestId)).getByTestId("CollapseToggleButton");
+const dateToggle = () => within(screen.getByTestId(toggleTestId)).getByTestId("CollapseToggleButton");
 
 describe("TransactionExportForm", () => {
 	let profile: Contracts.IProfile;
