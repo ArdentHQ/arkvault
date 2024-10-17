@@ -96,6 +96,7 @@ export const Dropdown: FC<DropdownProperties> = ({
 				{...getReferenceProps({
 					onClick(event) {
 						event.stopPropagation();
+						event.preventDefault();
 					},
 				})}
 			>
