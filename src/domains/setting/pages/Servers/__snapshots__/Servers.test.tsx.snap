@@ -2905,7 +2905,7 @@ exports[`Servers Settings > with servers > should ping the servers in an interva
                                         <div
                                           aria-expanded="false"
                                           aria-haspopup="dialog"
-                                          data-testid="dropdown__toggle"
+                                          data-testid="dropdown__toggle-CustomPeers--dropdown"
                                         >
                                           <button
                                             class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-theme-primary-300 hover:text-theme-primary-600"
@@ -3199,7 +3199,7 @@ exports[`Servers Settings > with servers > should ping the servers in an interva
                                         <div
                                           aria-expanded="false"
                                           aria-haspopup="dialog"
-                                          data-testid="dropdown__toggle"
+                                          data-testid="dropdown__toggle-CustomPeers--dropdown"
                                         >
                                           <button
                                             class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-theme-primary-300 hover:text-theme-primary-600"
@@ -3466,7 +3466,7 @@ exports[`Servers Settings > with servers > should ping the servers in an interva
                                         <div
                                           aria-expanded="false"
                                           aria-haspopup="dialog"
-                                          data-testid="dropdown__toggle"
+                                          data-testid="dropdown__toggle-CustomPeers--dropdown"
                                         >
                                           <button
                                             class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-theme-primary-300 hover:text-theme-primary-600"
@@ -5096,7 +5096,7 @@ exports[`Servers Settings > with servers > should render custom servers 1`] = `
                                         <div
                                           aria-expanded="false"
                                           aria-haspopup="dialog"
-                                          data-testid="dropdown__toggle"
+                                          data-testid="dropdown__toggle-CustomPeers--dropdown"
                                         >
                                           <button
                                             class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-theme-primary-300 hover:text-theme-primary-600"
@@ -5362,7 +5362,7 @@ exports[`Servers Settings > with servers > should render custom servers 1`] = `
                                         <div
                                           aria-expanded="false"
                                           aria-haspopup="dialog"
-                                          data-testid="dropdown__toggle"
+                                          data-testid="dropdown__toggle-CustomPeers--dropdown"
                                         >
                                           <button
                                             class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-theme-primary-300 hover:text-theme-primary-600"
@@ -5601,7 +5601,7 @@ exports[`Servers Settings > with servers > should render custom servers 1`] = `
                                         <div
                                           aria-expanded="false"
                                           aria-haspopup="dialog"
-                                          data-testid="dropdown__toggle"
+                                          data-testid="dropdown__toggle-CustomPeers--dropdown"
                                         >
                                           <button
                                             class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-theme-primary-300 hover:text-theme-primary-600"
@@ -9049,7 +9049,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                                         <div
                                           aria-expanded="false"
                                           aria-haspopup="dialog"
-                                          data-testid="dropdown__toggle"
+                                          data-testid="dropdown__toggle-CustomPeers--dropdown"
                                         >
                                           <button
                                             class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-theme-primary-300 hover:text-theme-primary-600"
@@ -9343,7 +9343,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                                         <div
                                           aria-expanded="false"
                                           aria-haspopup="dialog"
-                                          data-testid="dropdown__toggle"
+                                          data-testid="dropdown__toggle-CustomPeers--dropdown"
                                         >
                                           <button
                                             class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-theme-primary-300 hover:text-theme-primary-600"
@@ -9610,7 +9610,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                                         <div
                                           aria-expanded="false"
                                           aria-haspopup="dialog"
-                                          data-testid="dropdown__toggle"
+                                          data-testid="dropdown__toggle-CustomPeers--dropdown"
                                         >
                                           <button
                                             class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-theme-primary-300 hover:text-theme-primary-600"
@@ -15314,7 +15314,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                                         <div
                                           aria-expanded="false"
                                           aria-haspopup="dialog"
-                                          data-testid="dropdown__toggle"
+                                          data-testid="dropdown__toggle-CustomPeers--dropdown"
                                         >
                                           <button
                                             class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-theme-primary-300 hover:text-theme-primary-600"
@@ -15605,7 +15605,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                                         <div
                                           aria-expanded="false"
                                           aria-haspopup="dialog"
-                                          data-testid="dropdown__toggle"
+                                          data-testid="dropdown__toggle-CustomPeers--dropdown"
                                         >
                                           <button
                                             class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-theme-primary-300 hover:text-theme-primary-600"
@@ -15869,7 +15869,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                                         <div
                                           aria-expanded="false"
                                           aria-haspopup="dialog"
-                                          data-testid="dropdown__toggle"
+                                          data-testid="dropdown__toggle-CustomPeers--dropdown"
                                         >
                                           <button
                                             class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-theme-primary-300 hover:text-theme-primary-600"

@@ -35,6 +35,7 @@ export const Dropdown: FC<DropdownProperties> = ({
 	toggleSize,
 	toggleContent,
 	disableToggle = false,
+	...properties
 }) => {
 	const [isOpen, setIsOpen] = useState(false);
 
@@ -84,10 +85,13 @@ export const Dropdown: FC<DropdownProperties> = ({
 	// Merge all the interactions into prop getters
 	const { getReferenceProps, getFloatingProps } = useInteractions([click, dismiss, role]);
 
+	const testId: string|undefined = properties["data-testid"];
+	const testIdSuffix = testId ? `-${testId}` : '';
+
 	return (
 		<>
 			<div
-				data-testid="dropdown__toggle"
+				data-testid={"dropdown__toggle" +  testIdSuffix}
 				ref={refs.setReference}
 				{...getReferenceProps({
 					onClick(event) {
@@ -105,9 +109,9 @@ export const Dropdown: FC<DropdownProperties> = ({
 						className={twMerge("z-50 w-full px-5 sm:w-auto sm:px-0", wrapperClass)}
 						style={floatingStyles}
 						{...getFloatingProps()}
+						data-testid={"dropdown__content" + testIdSuffix}
 					>
 						<Wrapper
-							data-testid="dropdown__content"
 							variant={variant || options ? "options" : "custom"}
 							className={cn(defaultClasses)}
 						>
