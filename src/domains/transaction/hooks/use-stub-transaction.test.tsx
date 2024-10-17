@@ -19,7 +19,7 @@ describe("IPFS Stub Transaction", () => {
 		const wallet = env.profiles().first().wallets().first();
 
 		const signatory = await wallet.signatory().stub(MNEMONICS[0])
-		const signatoryMock = vi.spyOn(wallet.signatory(), "secret").mockResolvedValue();
+		const signatoryMock = vi.spyOn(wallet.signatory(), "secret").mockResolvedValue(signatory);
 
 		const ipfsStubTransactionMock = vi.spyOn(wallet.coin().transaction(), "ipfs").mockResolvedValue({
 			fee: () => "10",
