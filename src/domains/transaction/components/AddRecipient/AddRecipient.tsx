@@ -375,7 +375,7 @@ export const AddRecipient: VFC<AddRecipientProperties> = ({
 											onClick={() => {
 												setValue("isSendAllSelected", !getValues("isSendAllSelected"));
 											}}
-											data-testid="AddRecipient__send-all"
+											data-testid="AddRecipient__send-all_mobile"
 										>
 											{t("TRANSACTION.SEND_ALL")}
 										</Button>
