@@ -19,7 +19,7 @@ import {
 	useInteractions,
 	FloatingPortal,
 } from "@floating-ui/react";
-import {twMerge} from "tailwind-merge";
+import { twMerge } from "tailwind-merge";
 
 export const Wrapper = styled.div<{ position?: Position; variant: DropdownVariantType }>(getStyles);
 
@@ -86,15 +86,26 @@ export const Dropdown: FC<DropdownProperties> = ({
 
 	return (
 		<>
-			<div data-testid="dropdown__toggle" ref={refs.setReference} {...getReferenceProps({  onClick(event) {
-					event.stopPropagation();
-				}})}>
+			<div
+				data-testid="dropdown__toggle"
+				ref={refs.setReference}
+				{...getReferenceProps({
+					onClick(event) {
+						event.stopPropagation();
+					},
+				})}
+			>
 				{renderToggle()}
 			</div>
 
 			{isOpen && (
 				<FloatingPortal>
-					<div ref={refs.setFloating} className={twMerge("w-full px-5 z-50 sm:w-auto sm:px-0", wrapperClass)} style={floatingStyles} {...getFloatingProps()}>
+					<div
+						ref={refs.setFloating}
+						className={twMerge("z-50 w-full px-5 sm:w-auto sm:px-0", wrapperClass)}
+						style={floatingStyles}
+						{...getFloatingProps()}
+					>
 						<Wrapper
 							data-testid="dropdown__content"
 							variant={variant || options ? "options" : "custom"}

@@ -10,6 +10,4 @@ const getVariant = (variant: DropdownVariantType) => {
 	}
 };
 
-export const getStyles = ({ variant }: { variant: DropdownVariantType }) => [
-	getVariant(variant),
-];
+export const getStyles = ({ variant }: { variant: DropdownVariantType }) => [getVariant(variant)];

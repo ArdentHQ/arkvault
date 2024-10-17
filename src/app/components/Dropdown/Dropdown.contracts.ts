@@ -2,7 +2,7 @@ import React from "react";
 
 import { DefaultTReturn, TOptions } from "i18next";
 import { Size } from "@/types";
-import {Placement} from "@floating-ui/react";
+import { Placement } from "@floating-ui/react";
 
 export interface DropdownOption {
 	icon?: string;
