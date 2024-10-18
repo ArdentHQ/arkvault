@@ -201,7 +201,7 @@ export const WalletsList: React.VFC<WalletsListProperties> = ({
 							<div className="flex items-center justify-center gap-2 text-sm font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-200 sm:justify-start">
 								<span>{t("COMMON.SHOW")}</span>
 								<Select
-									options={[1, 2, 10, 25, 50, 100].map((v) => ({
+									options={[10, 25, 50, 100].map((v) => ({
 										label: v.toString(),
 										value: v.toString(),
 									}))}
@@ -211,7 +211,6 @@ export const WalletsList: React.VFC<WalletsListProperties> = ({
 									defaultValue={perPage.toString()}
 									wrapperClassName="relative"
 									className="!h-8 !w-[78px] !px-3"
-									innerClassName="!text-sm"
 									onChange={(selected) => {
 										setCurrentPage(1);
 										setPerPage(Number(selected.value));

@@ -1636,7 +1636,7 @@ exports[`Dashboard > should render 1`] = `
                               From
                             </div>
                             <div
-                              class="w-30"
+                              class="w-50 sm:w-30"
                               data-testid="TransactionRowAddressing__address-container"
                             >
                               <div
@@ -1800,7 +1800,7 @@ exports[`Dashboard > should render 1`] = `
                               From
                             </div>
                             <div
-                              class="w-30"
+                              class="w-50 sm:w-30"
                               data-testid="TransactionRowAddressing__address-container"
                             >
                               <div
@@ -1964,7 +1964,7 @@ exports[`Dashboard > should render 1`] = `
                               From
                             </div>
                             <div
-                              class="w-30"
+                              class="w-50 sm:w-30"
                               data-testid="TransactionRowAddressing__address-container"
                             >
                               <div
@@ -2128,7 +2128,7 @@ exports[`Dashboard > should render 1`] = `
                               From
                             </div>
                             <div
-                              class="w-30"
+                              class="w-50 sm:w-30"
                               data-testid="TransactionRowAddressing__address-container"
                             >
                               <div

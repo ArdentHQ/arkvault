@@ -2919,8 +2919,8 @@ exports[`SendTransfer > should render form step (lg) 1`] = `
                       class="inline-flex sm:hidden"
                     >
                       <button
-                        class="space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 p-0 text-theme-navy-600 dark:text-theme-secondary-700"
-                        data-testid="AddRecipient__send-all"
+                        class="space-x-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 p-0 text-sm text-theme-navy-600 dark:text-theme-secondary-700"
+                        data-testid="AddRecipient__send-all_mobile"
                         disabled=""
                         type="button"
                       >
@@ -2968,7 +2968,7 @@ exports[`SendTransfer > should render form step (lg) 1`] = `
                   >
                     <button
                       class="text-theme-navy-600 dark:text-theme-secondary-700 css-1v4a3it"
-                      data-testid="AddRecipient__sm_send-all"
+                      data-testid="AddRecipient__send-all"
                       disabled=""
                       type="button"
                     >
@@ -3647,8 +3647,8 @@ exports[`SendTransfer > should render form step (xs) 1`] = `
                       class="inline-flex sm:hidden"
                     >
                       <button
-                        class="space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 p-0 text-theme-navy-600 dark:text-theme-secondary-700"
-                        data-testid="AddRecipient__send-all"
+                        class="space-x-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 p-0 text-sm text-theme-navy-600 dark:text-theme-secondary-700"
+                        data-testid="AddRecipient__send-all_mobile"
                         disabled=""
                         type="button"
                       >
@@ -3696,7 +3696,7 @@ exports[`SendTransfer > should render form step (xs) 1`] = `
                   >
                     <button
                       class="text-theme-navy-600 dark:text-theme-secondary-700 css-1v4a3it"
-                      data-testid="AddRecipient__sm_send-all"
+                      data-testid="AddRecipient__send-all"
                       disabled=""
                       type="button"
                     >
