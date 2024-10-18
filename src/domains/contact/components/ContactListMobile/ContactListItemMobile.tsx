@@ -56,7 +56,6 @@ export const ContactListItemMobile: React.VFC<Properties> = ({
 
 					<div className="ml-5 flex items-center space-x-3">
 						<Dropdown
-							dropdownClass="mx-4 sm:mx-0"
 							toggleContent={
 								<button type="button" className="flex text-theme-secondary-700">
 									<Icon name="EllipsisVerticalFilled" size="lg" />
