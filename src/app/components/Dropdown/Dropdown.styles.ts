@@ -2,7 +2,7 @@ import tw from "twin.macro";
 
 import { DropdownVariantType } from "./Dropdown.contracts";
 
-export const defaultClasses = "overflow-hidden bg-theme-background rounded-xl shadow-xl";
+export const defaultClasses = "dropdown-body overflow-hidden bg-theme-background rounded-xl shadow-xl";
 
 const getVariant = (variant: DropdownVariantType) => {
 	if (variant === "options" || variant === "votesFilter") {
