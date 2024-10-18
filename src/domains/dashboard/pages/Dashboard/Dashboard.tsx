@@ -1,6 +1,6 @@
 import { uniq } from "@ardenthq/sdk-helpers";
 import { Contracts, DTO } from "@ardenthq/sdk-profiles";
-import React, { useMemo, useState } from "react";
+import React, {useEffect, useMemo, useState} from "react";
 import { useTranslation } from "react-i18next";
 import { EmptyBlock } from "@/app/components/EmptyBlock";
 import { useWalletFilters } from "@/domains/dashboard/components/FilterWallets";
@@ -16,6 +16,8 @@ import { useConfiguration, useEnvironmentContext } from "@/app/contexts";
 import { useActiveProfile } from "@/app/hooks";
 import { WelcomeModal } from "@/domains/profile/components/WelcomeModal";
 import { TransactionDetailModal } from "@/domains/transaction/components/TransactionDetailModal";
+import {generatePath} from "react-router-dom";
+import {ProfilePaths} from "@/router/paths";
 
 export const Dashboard: React.VFC = () => {
 	const activeProfile = useActiveProfile();
@@ -35,6 +37,10 @@ export const Dashboard: React.VFC = () => {
 		profile: activeProfile,
 		profileIsSyncing,
 	});
+
+	useEffect(() => {
+		generatePath(ProfilePaths.SendTransfer, { profileId: activeProfile.id() })
+	}, []);
 
 	const liveNetworkIds = useMemo(
 		() =>
