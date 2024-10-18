@@ -17,8 +17,8 @@ interface Properties {
 const extractVotingData = ({ transaction }: { transaction: DTO.RawTransactionData }) => {
 	const data =
 		typeof transaction.data?.().data === "function" ? transaction.data?.().data() : transaction.data?.().data;
-	const votes = data?.asset.votes ?? [];
-	const unvotes = data?.asset.unvotes ?? [];
+	const votes = data?.asset?.votes ?? [];
+	const unvotes = data?.asset?.unvotes ?? [];
 
 	return {
 		unvotes: unvotes.map((publikKey: string) => publikKey.replace(/^[+-]+/, "")),
