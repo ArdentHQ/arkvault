@@ -16,8 +16,6 @@ import { useConfiguration, useEnvironmentContext } from "@/app/contexts";
 import { useActiveProfile } from "@/app/hooks";
 import { WelcomeModal } from "@/domains/profile/components/WelcomeModal";
 import { TransactionDetailModal } from "@/domains/transaction/components/TransactionDetailModal";
-import {generatePath} from "react-router-dom";
-import {ProfilePaths} from "@/router/paths";
 
 export const Dashboard: React.VFC = () => {
 	const activeProfile = useActiveProfile();
