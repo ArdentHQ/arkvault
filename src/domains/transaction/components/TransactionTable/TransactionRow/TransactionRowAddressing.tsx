@@ -54,10 +54,10 @@ export const TransactionRowAddressing = ({
 	});
 
 	useEffect(() => {
-		if (transaction.votes?.() || transaction.unvotes?.()) {
+		if (transaction.isVote() || transaction.isUnvote()) {
 			setDelegates({
-				unvotes: env.delegates().map(transaction.wallet(), transaction.unvotes()),
-				votes: env.delegates().map(transaction.wallet(), transaction.votes()),
+				unvotes: env.delegates().map(transaction.wallet(), transaction.unvotes?.() ?? []),
+				votes: env.delegates().map(transaction.wallet(), transaction.votes?.() ?? []),
 			});
 		}
 	}, [env, transaction]);
