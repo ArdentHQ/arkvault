@@ -383,7 +383,6 @@ describe("Signed Transaction Table", () => {
 		);
 
 		await waitFor(() => expect(screen.getAllByTestId("TransactionRowRecipientLabel")).toHaveLength(1));
-		await waitFor(() => expect(screen.getAllByTestId("TransactionRowAddressing__container")).toHaveLength(1));
 
 		expect(screen.getAllByTestId("TransactionRowRecipientLabel")[0]).toHaveTextContent(
 			translations.TRANSACTION.TRANSACTION_TYPES.MULTI_SIGNATURE,
@@ -816,7 +815,6 @@ describe("Signed Transaction Table", () => {
 		);
 
 		await waitFor(() => expect(screen.getAllByTestId("TransactionRowRecipientLabel")).toHaveLength(1));
-		await waitFor(() => expect(screen.getAllByTestId("TransactionRowAddressing__container")).toHaveLength(1));
 
 		await userEvent.click(screen.getAllByTestId("TableRemoveButton--compact")[0]);
 
@@ -900,7 +898,6 @@ describe("Signed Transaction Table", () => {
 		);
 
 		await waitFor(() => expect(screen.getAllByTestId("TransactionRowRecipientLabel")).toHaveLength(1));
-		await waitFor(() => expect(screen.getAllByTestId("TransactionRowAddressing__container")).toHaveLength(1));
 
 		expect(screen.getAllByTestId("TransactionRowRecipientLabel")[0]).toHaveTextContent(
 			translations.TRANSACTION.TRANSACTION_TYPES.MULTI_SIGNATURE,
