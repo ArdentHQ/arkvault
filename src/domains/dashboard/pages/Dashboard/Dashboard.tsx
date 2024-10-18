@@ -38,10 +38,6 @@ export const Dashboard: React.VFC = () => {
 		profileIsSyncing,
 	});
 
-	useEffect(() => {
-		generatePath(ProfilePaths.SendTransfer, { profileId: activeProfile.id() })
-	}, []);
-
 	const liveNetworkIds = useMemo(
 		() =>
 			uniq(
