@@ -15,7 +15,8 @@ import { TableRemoveButton } from "@/app/components/TableRemoveButton";
 import { Amount, AmountLabel } from "@/app/components/Amount";
 import { TimeAgo } from "@/app/components/TimeAgo";
 import { DateTime } from "@ardenthq/sdk-intl";
-import { TransactionRowLabel } from "./TransactionRowAddressing";
+import { TransactionRowAddressing } from "./TransactionRowAddressing";
+
 interface SignedTransactionRowMobileProperties {
 	transaction: DTO.ExtendedSignedTransactionData;
 	onRowClick?: (transaction: DTO.ExtendedSignedTransactionData) => void;
@@ -110,13 +111,16 @@ export const SignedTransactionRowMobile = ({
 
 					<div className="flex w-full flex-col gap-4 px-4 pb-4 pt-3 sm:grid sm:grid-cols-[auto_auto_80px] sm:pb-2">
 						<MobileSection title={t("COMMON.TRANSFER")}>
-							<TransactionRowLabel isNegative />
+							<TransactionRowAddressing
+								transaction={transaction}
+								profile={transaction.wallet().profile()}
+							/>
 						</MobileSection>
 
 						<MobileSection title={`${t("COMMON.VALUE")} (${transaction.wallet().network().coinName()})`}>
 							<AmountLabel
 								value={transaction.amount() + transaction.fee()}
-								isNegative={true}
+								isNegative={transaction.isSent()}
 								ticker={transaction.wallet().currency()}
 								isCompact
 								className="h-[21px]"

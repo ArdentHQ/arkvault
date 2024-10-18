@@ -1749,7 +1749,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       To
                     </div>
                     <div
-                      class="w-40 lg:w-50"
+                      class="w-50 sm:w-40 lg:w-50"
                       data-testid="TransactionRowAddressing__address-container"
                     >
                       <div
@@ -1924,7 +1924,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       From
                     </div>
                     <div
-                      class="w-40 lg:w-50"
+                      class="w-50 sm:w-40 lg:w-50"
                       data-testid="TransactionRowAddressing__address-container"
                     >
                       <div
@@ -2099,7 +2099,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       To
                     </div>
                     <div
-                      class="w-40 lg:w-50"
+                      class="w-50 sm:w-40 lg:w-50"
                       data-testid="TransactionRowAddressing__address-container"
                     >
                       <div
@@ -2274,7 +2274,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       From
                     </div>
                     <div
-                      class="w-40 lg:w-50"
+                      class="w-50 sm:w-40 lg:w-50"
                       data-testid="TransactionRowAddressing__address-container"
                     >
                       <div
@@ -2449,7 +2449,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       From
                     </div>
                     <div
-                      class="w-30"
+                      class="w-50 sm:w-30"
                       data-testid="TransactionRowAddressing__address-container"
                     >
                       <div
@@ -2613,7 +2613,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       From
                     </div>
                     <div
-                      class="w-30"
+                      class="w-50 sm:w-30"
                       data-testid="TransactionRowAddressing__address-container"
                     >
                       <div
@@ -2777,7 +2777,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       From
                     </div>
                     <div
-                      class="w-30"
+                      class="w-50 sm:w-30"
                       data-testid="TransactionRowAddressing__address-container"
                     >
                       <div
@@ -2941,7 +2941,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       From
                     </div>
                     <div
-                      class="w-30"
+                      class="w-50 sm:w-30"
                       data-testid="TransactionRowAddressing__address-container"
                     >
                       <div
@@ -3105,7 +3105,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       From
                     </div>
                     <div
-                      class="w-30"
+                      class="w-50 sm:w-30"
                       data-testid="TransactionRowAddressing__address-container"
                     >
                       <div
@@ -3269,7 +3269,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       From
                     </div>
                     <div
-                      class="w-30"
+                      class="w-50 sm:w-30"
                       data-testid="TransactionRowAddressing__address-container"
                     >
                       <div
@@ -3433,7 +3433,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       From
                     </div>
                     <div
-                      class="w-30"
+                      class="w-50 sm:w-30"
                       data-testid="TransactionRowAddressing__address-container"
                     >
                       <div
@@ -3597,7 +3597,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       From
                     </div>
                     <div
-                      class="w-30"
+                      class="w-50 sm:w-30"
                       data-testid="TransactionRowAddressing__address-container"
                     >
                       <div
@@ -3761,7 +3761,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       From
                     </div>
                     <div
-                      class="w-30"
+                      class="w-50 sm:w-30"
                       data-testid="TransactionRowAddressing__address-container"
                     >
                       <div
@@ -3925,7 +3925,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       From
                     </div>
                     <div
-                      class="w-30"
+                      class="w-50 sm:w-30"
                       data-testid="TransactionRowAddressing__address-container"
                     >
                       <div
@@ -4089,7 +4089,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       From
                     </div>
                     <div
-                      class="w-30"
+                      class="w-50 sm:w-30"
                       data-testid="TransactionRowAddressing__address-container"
                     >
                       <div
@@ -4253,7 +4253,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       From
                     </div>
                     <div
-                      class="w-30"
+                      class="w-50 sm:w-30"
                       data-testid="TransactionRowAddressing__address-container"
                     >
                       <div
@@ -4417,7 +4417,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       From
                     </div>
                     <div
-                      class="w-30"
+                      class="w-50 sm:w-30"
                       data-testid="TransactionRowAddressing__address-container"
                     >
                       <div
@@ -4581,7 +4581,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       From
                     </div>
                     <div
-                      class="w-30"
+                      class="w-50 sm:w-30"
                       data-testid="TransactionRowAddressing__address-container"
                     >
                       <div
@@ -4745,7 +4745,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       From
                     </div>
                     <div
-                      class="w-30"
+                      class="w-50 sm:w-30"
                       data-testid="TransactionRowAddressing__address-container"
                     >
                       <div
@@ -4909,7 +4909,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       From
                     </div>
                     <div
-                      class="w-30"
+                      class="w-50 sm:w-30"
                       data-testid="TransactionRowAddressing__address-container"
                     >
                       <div
@@ -5073,7 +5073,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       From
                     </div>
                     <div
-                      class="w-30"
+                      class="w-50 sm:w-30"
                       data-testid="TransactionRowAddressing__address-container"
                     >
                       <div
@@ -5237,7 +5237,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       From
                     </div>
                     <div
-                      class="w-30"
+                      class="w-50 sm:w-30"
                       data-testid="TransactionRowAddressing__address-container"
                     >
                       <div
@@ -5401,7 +5401,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       From
                     </div>
                     <div
-                      class="w-30"
+                      class="w-50 sm:w-30"
                       data-testid="TransactionRowAddressing__address-container"
                     >
                       <div
@@ -5565,7 +5565,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       From
                     </div>
                     <div
-                      class="w-30"
+                      class="w-50 sm:w-30"
                       data-testid="TransactionRowAddressing__address-container"
                     >
                       <div
@@ -5729,7 +5729,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       From
                     </div>
                     <div
-                      class="w-30"
+                      class="w-50 sm:w-30"
                       data-testid="TransactionRowAddressing__address-container"
                     >
                       <div
@@ -5893,7 +5893,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       From
                     </div>
                     <div
-                      class="w-30"
+                      class="w-50 sm:w-30"
                       data-testid="TransactionRowAddressing__address-container"
                     >
                       <div
@@ -6057,7 +6057,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       From
                     </div>
                     <div
-                      class="w-30"
+                      class="w-50 sm:w-30"
                       data-testid="TransactionRowAddressing__address-container"
                     >
                       <div
@@ -6221,7 +6221,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       From
                     </div>
                     <div
-                      class="w-30"
+                      class="w-50 sm:w-30"
                       data-testid="TransactionRowAddressing__address-container"
                     >
                       <div
@@ -6385,7 +6385,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       From
                     </div>
                     <div
-                      class="w-30"
+                      class="w-50 sm:w-30"
                       data-testid="TransactionRowAddressing__address-container"
                     >
                       <div
@@ -6549,7 +6549,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       From
                     </div>
                     <div
-                      class="w-30"
+                      class="w-50 sm:w-30"
                       data-testid="TransactionRowAddressing__address-container"
                     >
                       <div
@@ -6713,7 +6713,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       From
                     </div>
                     <div
-                      class="w-30"
+                      class="w-50 sm:w-30"
                       data-testid="TransactionRowAddressing__address-container"
                     >
                       <div
@@ -6877,7 +6877,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       From
                     </div>
                     <div
-                      class="w-30"
+                      class="w-50 sm:w-30"
                       data-testid="TransactionRowAddressing__address-container"
                     >
                       <div
@@ -7041,7 +7041,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       From
                     </div>
                     <div
-                      class="w-30"
+                      class="w-50 sm:w-30"
                       data-testid="TransactionRowAddressing__address-container"
                     >
                       <div
@@ -7205,7 +7205,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       From
                     </div>
                     <div
-                      class="w-30"
+                      class="w-50 sm:w-30"
                       data-testid="TransactionRowAddressing__address-container"
                     >
                       <div
@@ -7369,7 +7369,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       From
                     </div>
                     <div
-                      class="w-30"
+                      class="w-50 sm:w-30"
                       data-testid="TransactionRowAddressing__address-container"
                     >
                       <div
@@ -7533,7 +7533,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       From
                     </div>
                     <div
-                      class="w-30"
+                      class="w-50 sm:w-30"
                       data-testid="TransactionRowAddressing__address-container"
                     >
                       <div
@@ -7697,7 +7697,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       From
                     </div>
                     <div
-                      class="w-30"
+                      class="w-50 sm:w-30"
                       data-testid="TransactionRowAddressing__address-container"
                     >
                       <div
@@ -7861,7 +7861,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       From
                     </div>
                     <div
-                      class="w-30"
+                      class="w-50 sm:w-30"
                       data-testid="TransactionRowAddressing__address-container"
                     >
                       <div
@@ -8025,7 +8025,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       From
                     </div>
                     <div
-                      class="w-30"
+                      class="w-50 sm:w-30"
                       data-testid="TransactionRowAddressing__address-container"
                     >
                       <div
@@ -8189,7 +8189,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       From
                     </div>
                     <div
-                      class="w-30"
+                      class="w-50 sm:w-30"
                       data-testid="TransactionRowAddressing__address-container"
                     >
                       <div
@@ -8353,7 +8353,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       From
                     </div>
                     <div
-                      class="w-30"
+                      class="w-50 sm:w-30"
                       data-testid="TransactionRowAddressing__address-container"
                     >
                       <div
@@ -8517,7 +8517,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       From
                     </div>
                     <div
-                      class="w-30"
+                      class="w-50 sm:w-30"
                       data-testid="TransactionRowAddressing__address-container"
                     >
                       <div
@@ -8681,7 +8681,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       From
                     </div>
                     <div
-                      class="w-30"
+                      class="w-50 sm:w-30"
                       data-testid="TransactionRowAddressing__address-container"
                     >
                       <div
@@ -8845,7 +8845,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       From
                     </div>
                     <div
-                      class="w-30"
+                      class="w-50 sm:w-30"
                       data-testid="TransactionRowAddressing__address-container"
                     >
                       <div
@@ -9617,7 +9617,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       From
                     </div>
                     <div
-                      class="w-30"
+                      class="w-50 sm:w-30"
                       data-testid="TransactionRowAddressing__address-container"
                     >
                       <div
@@ -9781,7 +9781,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       From
                     </div>
                     <div
-                      class="w-30"
+                      class="w-50 sm:w-30"
                       data-testid="TransactionRowAddressing__address-container"
                     >
                       <div
@@ -9945,7 +9945,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       From
                     </div>
                     <div
-                      class="w-30"
+                      class="w-50 sm:w-30"
                       data-testid="TransactionRowAddressing__address-container"
                     >
                       <div
@@ -10109,7 +10109,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       From
                     </div>
                     <div
-                      class="w-30"
+                      class="w-50 sm:w-30"
                       data-testid="TransactionRowAddressing__address-container"
                     >
                       <div
@@ -11349,7 +11349,7 @@ exports[`Transactions > should hide view more button when there are no next page
                       To
                     </div>
                     <div
-                      class="w-40 lg:w-50"
+                      class="w-50 sm:w-40 lg:w-50"
                       data-testid="TransactionRowAddressing__address-container"
                     >
                       <div
@@ -11524,7 +11524,7 @@ exports[`Transactions > should hide view more button when there are no next page
                       From
                     </div>
                     <div
-                      class="w-40 lg:w-50"
+                      class="w-50 sm:w-40 lg:w-50"
                       data-testid="TransactionRowAddressing__address-container"
                     >
                       <div
@@ -11699,7 +11699,7 @@ exports[`Transactions > should hide view more button when there are no next page
                       From
                     </div>
                     <div
-                      class="w-30"
+                      class="w-50 sm:w-30"
                       data-testid="TransactionRowAddressing__address-container"
                     >
                       <div
@@ -11863,7 +11863,7 @@ exports[`Transactions > should hide view more button when there are no next page
                       From
                     </div>
                     <div
-                      class="w-30"
+                      class="w-50 sm:w-30"
                       data-testid="TransactionRowAddressing__address-container"
                     >
                       <div
@@ -12027,7 +12027,7 @@ exports[`Transactions > should hide view more button when there are no next page
                       From
                     </div>
                     <div
-                      class="w-30"
+                      class="w-50 sm:w-30"
                       data-testid="TransactionRowAddressing__address-container"
                     >
                       <div
@@ -12191,7 +12191,7 @@ exports[`Transactions > should hide view more button when there are no next page
                       From
                     </div>
                     <div
-                      class="w-30"
+                      class="w-50 sm:w-30"
                       data-testid="TransactionRowAddressing__address-container"
                     >
                       <div
@@ -12355,7 +12355,7 @@ exports[`Transactions > should hide view more button when there are no next page
                       From
                     </div>
                     <div
-                      class="w-30"
+                      class="w-50 sm:w-30"
                       data-testid="TransactionRowAddressing__address-container"
                     >
                       <div
@@ -12519,7 +12519,7 @@ exports[`Transactions > should hide view more button when there are no next page
                       From
                     </div>
                     <div
-                      class="w-30"
+                      class="w-50 sm:w-30"
                       data-testid="TransactionRowAddressing__address-container"
                     >
                       <div
@@ -12683,7 +12683,7 @@ exports[`Transactions > should hide view more button when there are no next page
                       From
                     </div>
                     <div
-                      class="w-30"
+                      class="w-50 sm:w-30"
                       data-testid="TransactionRowAddressing__address-container"
                     >
                       <div
@@ -12847,7 +12847,7 @@ exports[`Transactions > should hide view more button when there are no next page
                       From
                     </div>
                     <div
-                      class="w-30"
+                      class="w-50 sm:w-30"
                       data-testid="TransactionRowAddressing__address-container"
                     >
                       <div
@@ -13011,7 +13011,7 @@ exports[`Transactions > should hide view more button when there are no next page
                       From
                     </div>
                     <div
-                      class="w-30"
+                      class="w-50 sm:w-30"
                       data-testid="TransactionRowAddressing__address-container"
                     >
                       <div
@@ -13175,7 +13175,7 @@ exports[`Transactions > should hide view more button when there are no next page
                       From
                     </div>
                     <div
-                      class="w-30"
+                      class="w-50 sm:w-30"
                       data-testid="TransactionRowAddressing__address-container"
                     >
                       <div
@@ -13339,7 +13339,7 @@ exports[`Transactions > should hide view more button when there are no next page
                       From
                     </div>
                     <div
-                      class="w-30"
+                      class="w-50 sm:w-30"
                       data-testid="TransactionRowAddressing__address-container"
                     >
                       <div
@@ -13503,7 +13503,7 @@ exports[`Transactions > should hide view more button when there are no next page
                       From
                     </div>
                     <div
-                      class="w-30"
+                      class="w-50 sm:w-30"
                       data-testid="TransactionRowAddressing__address-container"
                     >
                       <div
@@ -13667,7 +13667,7 @@ exports[`Transactions > should hide view more button when there are no next page
                       From
                     </div>
                     <div
-                      class="w-30"
+                      class="w-50 sm:w-30"
                       data-testid="TransactionRowAddressing__address-container"
                     >
                       <div
@@ -13831,7 +13831,7 @@ exports[`Transactions > should hide view more button when there are no next page
                       From
                     </div>
                     <div
-                      class="w-30"
+                      class="w-50 sm:w-30"
                       data-testid="TransactionRowAddressing__address-container"
                     >
                       <div
@@ -13995,7 +13995,7 @@ exports[`Transactions > should hide view more button when there are no next page
                       From
                     </div>
                     <div
-                      class="w-30"
+                      class="w-50 sm:w-30"
                       data-testid="TransactionRowAddressing__address-container"
                     >
                       <div
@@ -14159,7 +14159,7 @@ exports[`Transactions > should hide view more button when there are no next page
                       From
                     </div>
                     <div
-                      class="w-30"
+                      class="w-50 sm:w-30"
                       data-testid="TransactionRowAddressing__address-container"
                     >
                       <div
@@ -14323,7 +14323,7 @@ exports[`Transactions > should hide view more button when there are no next page
                       From
                     </div>
                     <div
-                      class="w-30"
+                      class="w-50 sm:w-30"
                       data-testid="TransactionRowAddressing__address-container"
                     >
                       <div
@@ -14487,7 +14487,7 @@ exports[`Transactions > should hide view more button when there are no next page
                       From
                     </div>
                     <div
-                      class="w-30"
+                      class="w-50 sm:w-30"
                       data-testid="TransactionRowAddressing__address-container"
                     >
                       <div
@@ -14651,7 +14651,7 @@ exports[`Transactions > should hide view more button when there are no next page
                       From
                     </div>
                     <div
-                      class="w-30"
+                      class="w-50 sm:w-30"
                       data-testid="TransactionRowAddressing__address-container"
                     >
                       <div
@@ -14815,7 +14815,7 @@ exports[`Transactions > should hide view more button when there are no next page
                       From
                     </div>
                     <div
-                      class="w-30"
+                      class="w-50 sm:w-30"
                       data-testid="TransactionRowAddressing__address-container"
                     >
                       <div
@@ -15283,7 +15283,7 @@ exports[`Transactions > should hide view more button when there are no next page
                       From
                     </div>
                     <div
-                      class="w-30"
+                      class="w-50 sm:w-30"
                       data-testid="TransactionRowAddressing__address-container"
                     >
                       <div
@@ -15447,7 +15447,7 @@ exports[`Transactions > should hide view more button when there are no next page
                       From
                     </div>
                     <div
-                      class="w-30"
+                      class="w-50 sm:w-30"
                       data-testid="TransactionRowAddressing__address-container"
                     >
                       <div
@@ -16687,7 +16687,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                       To
                     </div>
                     <div
-                      class="w-40 lg:w-50"
+                      class="w-50 sm:w-40 lg:w-50"
                       data-testid="TransactionRowAddressing__address-container"
                     >
                       <div
@@ -16862,7 +16862,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                       From
                     </div>
                     <div
-                      class="w-40 lg:w-50"
+                      class="w-50 sm:w-40 lg:w-50"
                       data-testid="TransactionRowAddressing__address-container"
                     >
                       <div
@@ -17037,7 +17037,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                       From
                     </div>
                     <div
-                      class="w-30"
+                      class="w-50 sm:w-30"
                       data-testid="TransactionRowAddressing__address-container"
                     >
                       <div
@@ -17201,7 +17201,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                       From
                     </div>
                     <div
-                      class="w-30"
+                      class="w-50 sm:w-30"
                       data-testid="TransactionRowAddressing__address-container"
                     >
                       <div
@@ -17365,7 +17365,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                       From
                     </div>
                     <div
-                      class="w-30"
+                      class="w-50 sm:w-30"
                       data-testid="TransactionRowAddressing__address-container"
                     >
                       <div
@@ -17529,7 +17529,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                       From
                     </div>
                     <div
-                      class="w-30"
+                      class="w-50 sm:w-30"
                       data-testid="TransactionRowAddressing__address-container"
                     >
                       <div
@@ -17693,7 +17693,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                       From
                     </div>
                     <div
-                      class="w-30"
+                      class="w-50 sm:w-30"
                       data-testid="TransactionRowAddressing__address-container"
                     >
                       <div
@@ -17857,7 +17857,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                       From
                     </div>
                     <div
-                      class="w-30"
+                      class="w-50 sm:w-30"
                       data-testid="TransactionRowAddressing__address-container"
                     >
                       <div
@@ -18021,7 +18021,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                       From
                     </div>
                     <div
-                      class="w-30"
+                      class="w-50 sm:w-30"
                       data-testid="TransactionRowAddressing__address-container"
                     >
                       <div
@@ -18185,7 +18185,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                       From
                     </div>
                     <div
-                      class="w-30"
+                      class="w-50 sm:w-30"
                       data-testid="TransactionRowAddressing__address-container"
                     >
                       <div
@@ -18349,7 +18349,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                       From
                     </div>
                     <div
-                      class="w-30"
+                      class="w-50 sm:w-30"
                       data-testid="TransactionRowAddressing__address-container"
                     >
                       <div
@@ -18513,7 +18513,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                       From
                     </div>
                     <div
-                      class="w-30"
+                      class="w-50 sm:w-30"
                       data-testid="TransactionRowAddressing__address-container"
                     >
                       <div
@@ -18677,7 +18677,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                       From
                     </div>
                     <div
-                      class="w-30"
+                      class="w-50 sm:w-30"
                       data-testid="TransactionRowAddressing__address-container"
                     >
                       <div
@@ -18841,7 +18841,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                       From
                     </div>
                     <div
-                      class="w-30"
+                      class="w-50 sm:w-30"
                       data-testid="TransactionRowAddressing__address-container"
                     >
                       <div
@@ -19005,7 +19005,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                       From
                     </div>
                     <div
-                      class="w-30"
+                      class="w-50 sm:w-30"
                       data-testid="TransactionRowAddressing__address-container"
                     >
                       <div
@@ -19169,7 +19169,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                       From
                     </div>
                     <div
-                      class="w-30"
+                      class="w-50 sm:w-30"
                       data-testid="TransactionRowAddressing__address-container"
                     >
                       <div
@@ -19333,7 +19333,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                       From
                     </div>
                     <div
-                      class="w-30"
+                      class="w-50 sm:w-30"
                       data-testid="TransactionRowAddressing__address-container"
                     >
                       <div
@@ -19497,7 +19497,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                       From
                     </div>
                     <div
-                      class="w-30"
+                      class="w-50 sm:w-30"
                       data-testid="TransactionRowAddressing__address-container"
                     >
                       <div
@@ -19661,7 +19661,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                       From
                     </div>
                     <div
-                      class="w-30"
+                      class="w-50 sm:w-30"
                       data-testid="TransactionRowAddressing__address-container"
                     >
                       <div
@@ -19825,7 +19825,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                       From
                     </div>
                     <div
-                      class="w-30"
+                      class="w-50 sm:w-30"
                       data-testid="TransactionRowAddressing__address-container"
                     >
                       <div
@@ -19989,7 +19989,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                       From
                     </div>
                     <div
-                      class="w-30"
+                      class="w-50 sm:w-30"
                       data-testid="TransactionRowAddressing__address-container"
                     >
                       <div
@@ -20153,7 +20153,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                       From
                     </div>
                     <div
-                      class="w-30"
+                      class="w-50 sm:w-30"
                       data-testid="TransactionRowAddressing__address-container"
                     >
                       <div
@@ -20621,7 +20621,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                       From
                     </div>
                     <div
-                      class="w-30"
+                      class="w-50 sm:w-30"
                       data-testid="TransactionRowAddressing__address-container"
                     >
                       <div
@@ -20785,7 +20785,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                       From
                     </div>
                     <div
-                      class="w-30"
+                      class="w-50 sm:w-30"
                       data-testid="TransactionRowAddressing__address-container"
                     >
                       <div
