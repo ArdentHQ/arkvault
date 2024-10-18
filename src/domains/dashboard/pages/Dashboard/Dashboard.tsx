@@ -1,6 +1,6 @@
 import { uniq } from "@ardenthq/sdk-helpers";
 import { Contracts, DTO } from "@ardenthq/sdk-profiles";
-import React, {useEffect, useMemo, useState} from "react";
+import React, { useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { EmptyBlock } from "@/app/components/EmptyBlock";
 import { useWalletFilters } from "@/domains/dashboard/components/FilterWallets";
