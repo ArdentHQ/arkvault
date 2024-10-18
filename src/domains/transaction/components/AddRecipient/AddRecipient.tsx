@@ -360,7 +360,6 @@ export const AddRecipient: VFC<AddRecipientProperties> = ({
 											data-testid="AddRecipient__available"
 											className="ml-1 text-theme-secondary-500 dark:text-theme-secondary-700"
 										>
-											({t("COMMON.AVAILABLE")}{" "}
 											<Amount value={+remainingNetBalance} ticker={ticker} showTicker={false} />)
 										</span>
 									)}
