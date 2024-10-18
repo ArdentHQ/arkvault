@@ -29,5 +29,6 @@ export interface NotificationTransactionItemProperties {
 export interface NotificationsProperties {
 	profile: Contracts.IProfile;
 	onNotificationAction?: (id: string) => void;
+	hideDropdown?: () => void;
 	onTransactionClick?: (item?: DTO.ExtendedConfirmedTransactionData) => void;
 }

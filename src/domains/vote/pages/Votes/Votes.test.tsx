@@ -279,11 +279,11 @@ describe("Votes", () => {
 
 		await expect(screen.findByTestId(firstVoteButtonID)).resolves.toBeVisible();
 
-		await userEvent.click(within(screen.getByTestId("VotesFilter")).getByTestId("dropdown__toggle"));
+		const testIdSuffix = "-VotesFilter";
 
-		await waitFor(() =>
-			expect(within(screen.getByTestId("VotesFilter")).getByTestId("dropdown__content")).toBeInTheDocument(),
-		);
+		await userEvent.click(screen.getByTestId("dropdown__toggle" + testIdSuffix));
+
+		await expect(screen.findByTestId("dropdown__content" + testIdSuffix)).resolves.toBeVisible();
 
 		await userEvent.click(screen.getByTestId("VotesFilter__option--current"));
 
@@ -446,11 +446,11 @@ describe("Votes", () => {
 
 		await expect(screen.findByTestId(firstVoteButtonID)).resolves.toBeVisible();
 
-		await userEvent.click(within(screen.getByTestId("VotesFilter")).getByTestId("dropdown__toggle"));
+		const testIdSuffix = "-VotesFilter";
 
-		await waitFor(() =>
-			expect(within(screen.getByTestId("VotesFilter")).getByTestId("dropdown__content")).not.toBeDisabled(),
-		);
+		await userEvent.click(screen.getByTestId("dropdown__toggle" + testIdSuffix));
+
+		await expect(screen.findByTestId("dropdown__content" + testIdSuffix)).resolves.toBeVisible();
 
 		await userEvent.click(screen.getByTestId("VotesFilter__option--current"));
 
