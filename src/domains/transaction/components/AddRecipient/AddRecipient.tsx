@@ -371,7 +371,7 @@ export const AddRecipient: VFC<AddRecipientProperties> = ({
 											type="button"
 											variant="transparent"
 											disabled={!isSenderFilled}
-											className="p-0 text-theme-navy-600 dark:text-theme-secondary-700"
+											className="p-0 text-theme-navy-600 dark:text-theme-secondary-700 text-sm"
 											onClick={() => {
 												setValue("isSendAllSelected", !getValues("isSendAllSelected"));
 											}}
