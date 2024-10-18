@@ -17,7 +17,7 @@ const preSteps = {
 	"When she selects to sign message": async (t: TestController) => {
 		await t.click(Selector('[data-testid="WalletHeader__more-button"]'));
 		await t.click(
-			Selector('[data-testid="WalletHeader__more-button"] li').withText(
+			Selector('[data-testid="dropdown__options"] li').withText(
 				translations.WALLETS.PAGE_WALLET_DETAILS.OPTIONS.SIGN_MESSAGE,
 			),
 		);

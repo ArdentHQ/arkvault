@@ -16,7 +16,7 @@ const preSteps = {
 	"When she attempts to delete the wallet": async (t: TestController) => {
 		await scrollToTop();
 		await t.click(Selector('[data-testid="WalletHeader__more-button"]'));
-		await t.click(Selector('[data-testid="WalletHeader__more-button"] li').withText(translations.COMMON.DELETE));
+		await t.click(Selector('[data-testid="dropdown__options"] li').withText(translations.COMMON.DELETE));
 	},
 };
 cucumber("@deleteWallet", {

@@ -22,51 +22,49 @@ exports[`Portfolio grouped networks > should apply ledger import 1`] = `
           class="static mr-0 flex items-center border-theme-secondary-300 pr-0 text-theme-primary-300 dark:border-theme-secondary-800 dark:text-theme-secondary-600 sm:mr-8 sm:border-r sm:pr-5 md:relative"
         >
           <div
-            class="static sm:relative"
+            aria-expanded="false"
+            aria-haspopup="dialog"
+            data-testid="dropdown__toggle"
           >
-            <span
-              data-testid="dropdown__toggle"
-            >
-              <span>
-                <div
-                  class="group"
+            <span>
+              <div
+                class="group"
+              >
+                <button
+                  class="ring-focus css-14zm422"
                 >
-                  <button
-                    class="ring-focus css-14zm422"
+                  <div
+                    class="flex h-5 w-5 items-center justify-center"
                   >
                     <div
-                      class="flex h-5 w-5 items-center justify-center"
+                      class="css-1i4b0eq"
+                      height="20"
+                      width="20"
                     >
-                      <div
-                        class="css-1i4b0eq"
-                        height="20"
-                        width="20"
+                      <svg
+                        id="sliders-vertical"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
                       >
-                        <svg
-                          id="sliders-vertical"
-                          viewBox="0 0 20 20"
-                          x="0"
-                          xml:space="preserve"
-                          xmlns="http://www.w3.org/2000/svg"
-                          y="0"
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
                         >
-                          <g
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                          >
-                            <path
-                              d="M15 9V1M15 19v-4M18 12c0 1.7-1.4 3-3 3-1.7 0-3-1.4-3-3s1.2-3 3-3h0c1.7 0 3 1.3 3 3h0zM5 7.1V19M8 4c0-1.7-1.4-3-3-3S2 2.4 2 4c0 1.7 1.4 3 3 3s3-1.3 3-3c0 .1 0 0 0 0z"
-                            />
-                          </g>
-                        </svg>
-                      </div>
+                          <path
+                            d="M15 9V1M15 19v-4M18 12c0 1.7-1.4 3-3 3-1.7 0-3-1.4-3-3s1.2-3 3-3h0c1.7 0 3 1.3 3 3h0zM5 7.1V19M8 4c0-1.7-1.4-3-3-3S2 2.4 2 4c0 1.7 1.4 3 3 3s3-1.3 3-3c0 .1 0 0 0 0z"
+                          />
+                        </g>
+                      </svg>
                     </div>
-                  </button>
-                </div>
-              </span>
+                  </div>
+                </button>
+              </div>
             </span>
           </div>
         </div>
@@ -215,41 +213,39 @@ exports[`Portfolio grouped networks > should apply ledger import 1`] = `
           class="flex items-center sm:hidden"
         >
           <div
-            class="static sm:relative"
+            aria-expanded="false"
+            aria-haspopup="dialog"
+            data-testid="dropdown__toggle"
           >
             <span
-              data-testid="dropdown__toggle"
+              class="-mx-1 flex items-center px-5 py-3 text-theme-primary-300 dark:text-theme-secondary-600"
             >
-              <span
-                class="-mx-1 flex items-center px-5 py-3 text-theme-primary-300 dark:text-theme-secondary-600"
+              <div
+                class="css-v0ob3f"
+                height="16"
+                width="16"
               >
-                <div
-                  class="css-v0ob3f"
-                  height="16"
-                  width="16"
+                <svg
+                  id="plus"
+                  viewBox="0 0 20 20"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
                 >
-                  <svg
-                    id="plus"
-                    viewBox="0 0 20 20"
-                    x="0"
-                    xml:space="preserve"
-                    xmlns="http://www.w3.org/2000/svg"
-                    y="0"
+                  <g
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
                   >
-                    <g
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                    >
-                      <path
-                        d="M1 10h18M10 1v18"
-                      />
-                    </g>
-                  </svg>
-                </div>
-              </span>
+                    <path
+                      d="M1 10h18M10 1v18"
+                    />
+                  </g>
+                </svg>
+              </div>
             </span>
           </div>
         </div>
@@ -789,51 +785,49 @@ exports[`Portfolio grouped networks > should render list 1`] = `
           class="static mr-0 flex items-center border-theme-secondary-300 pr-0 text-theme-primary-300 dark:border-theme-secondary-800 dark:text-theme-secondary-600 sm:mr-8 sm:border-r sm:pr-5 md:relative"
         >
           <div
-            class="static sm:relative"
+            aria-expanded="false"
+            aria-haspopup="dialog"
+            data-testid="dropdown__toggle"
           >
-            <span
-              data-testid="dropdown__toggle"
-            >
-              <span>
-                <div
-                  class="group"
+            <span>
+              <div
+                class="group"
+              >
+                <button
+                  class="ring-focus css-14zm422"
                 >
-                  <button
-                    class="ring-focus css-14zm422"
+                  <div
+                    class="flex h-5 w-5 items-center justify-center"
                   >
                     <div
-                      class="flex h-5 w-5 items-center justify-center"
+                      class="css-1i4b0eq"
+                      height="20"
+                      width="20"
                     >
-                      <div
-                        class="css-1i4b0eq"
-                        height="20"
-                        width="20"
+                      <svg
+                        id="sliders-vertical"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
                       >
-                        <svg
-                          id="sliders-vertical"
-                          viewBox="0 0 20 20"
-                          x="0"
-                          xml:space="preserve"
-                          xmlns="http://www.w3.org/2000/svg"
-                          y="0"
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
                         >
-                          <g
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                          >
-                            <path
-                              d="M15 9V1M15 19v-4M18 12c0 1.7-1.4 3-3 3-1.7 0-3-1.4-3-3s1.2-3 3-3h0c1.7 0 3 1.3 3 3h0zM5 7.1V19M8 4c0-1.7-1.4-3-3-3S2 2.4 2 4c0 1.7 1.4 3 3 3s3-1.3 3-3c0 .1 0 0 0 0z"
-                            />
-                          </g>
-                        </svg>
-                      </div>
+                          <path
+                            d="M15 9V1M15 19v-4M18 12c0 1.7-1.4 3-3 3-1.7 0-3-1.4-3-3s1.2-3 3-3h0c1.7 0 3 1.3 3 3h0zM5 7.1V19M8 4c0-1.7-1.4-3-3-3S2 2.4 2 4c0 1.7 1.4 3 3 3s3-1.3 3-3c0 .1 0 0 0 0z"
+                          />
+                        </g>
+                      </svg>
                     </div>
-                  </button>
-                </div>
-              </span>
+                  </div>
+                </button>
+              </div>
             </span>
           </div>
         </div>
@@ -982,41 +976,39 @@ exports[`Portfolio grouped networks > should render list 1`] = `
           class="flex items-center sm:hidden"
         >
           <div
-            class="static sm:relative"
+            aria-expanded="false"
+            aria-haspopup="dialog"
+            data-testid="dropdown__toggle"
           >
             <span
-              data-testid="dropdown__toggle"
+              class="-mx-1 flex items-center px-5 py-3 text-theme-primary-300 dark:text-theme-secondary-600"
             >
-              <span
-                class="-mx-1 flex items-center px-5 py-3 text-theme-primary-300 dark:text-theme-secondary-600"
+              <div
+                class="css-v0ob3f"
+                height="16"
+                width="16"
               >
-                <div
-                  class="css-v0ob3f"
-                  height="16"
-                  width="16"
+                <svg
+                  id="plus"
+                  viewBox="0 0 20 20"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
                 >
-                  <svg
-                    id="plus"
-                    viewBox="0 0 20 20"
-                    x="0"
-                    xml:space="preserve"
-                    xmlns="http://www.w3.org/2000/svg"
-                    y="0"
+                  <g
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
                   >
-                    <g
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                    >
-                      <path
-                        d="M1 10h18M10 1v18"
-                      />
-                    </g>
-                  </svg>
-                </div>
-              </span>
+                    <path
+                      d="M1 10h18M10 1v18"
+                    />
+                  </g>
+                </svg>
+              </div>
             </span>
           </div>
         </div>
@@ -1556,51 +1548,49 @@ exports[`Portfolio grouped networks > should render without testnet wallets 1`] 
           class="static mr-0 flex items-center border-theme-secondary-300 pr-0 text-theme-primary-300 dark:border-theme-secondary-800 dark:text-theme-secondary-600 sm:mr-8 sm:border-r sm:pr-5 md:relative"
         >
           <div
-            class="static sm:relative"
+            aria-expanded="false"
+            aria-haspopup="dialog"
+            data-testid="dropdown__toggle"
           >
-            <span
-              data-testid="dropdown__toggle"
-            >
-              <span>
-                <div
-                  class="group"
+            <span>
+              <div
+                class="group"
+              >
+                <button
+                  class="ring-focus css-14zm422"
                 >
-                  <button
-                    class="ring-focus css-14zm422"
+                  <div
+                    class="flex h-5 w-5 items-center justify-center"
                   >
                     <div
-                      class="flex h-5 w-5 items-center justify-center"
+                      class="css-1i4b0eq"
+                      height="20"
+                      width="20"
                     >
-                      <div
-                        class="css-1i4b0eq"
-                        height="20"
-                        width="20"
+                      <svg
+                        id="sliders-vertical"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
                       >
-                        <svg
-                          id="sliders-vertical"
-                          viewBox="0 0 20 20"
-                          x="0"
-                          xml:space="preserve"
-                          xmlns="http://www.w3.org/2000/svg"
-                          y="0"
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
                         >
-                          <g
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                          >
-                            <path
-                              d="M15 9V1M15 19v-4M18 12c0 1.7-1.4 3-3 3-1.7 0-3-1.4-3-3s1.2-3 3-3h0c1.7 0 3 1.3 3 3h0zM5 7.1V19M8 4c0-1.7-1.4-3-3-3S2 2.4 2 4c0 1.7 1.4 3 3 3s3-1.3 3-3c0 .1 0 0 0 0z"
-                            />
-                          </g>
-                        </svg>
-                      </div>
+                          <path
+                            d="M15 9V1M15 19v-4M18 12c0 1.7-1.4 3-3 3-1.7 0-3-1.4-3-3s1.2-3 3-3h0c1.7 0 3 1.3 3 3h0zM5 7.1V19M8 4c0-1.7-1.4-3-3-3S2 2.4 2 4c0 1.7 1.4 3 3 3s3-1.3 3-3c0 .1 0 0 0 0z"
+                          />
+                        </g>
+                      </svg>
                     </div>
-                  </button>
-                </div>
-              </span>
+                  </div>
+                </button>
+              </div>
             </span>
           </div>
         </div>
@@ -1749,41 +1739,39 @@ exports[`Portfolio grouped networks > should render without testnet wallets 1`] 
           class="flex items-center sm:hidden"
         >
           <div
-            class="static sm:relative"
+            aria-expanded="false"
+            aria-haspopup="dialog"
+            data-testid="dropdown__toggle"
           >
             <span
-              data-testid="dropdown__toggle"
+              class="-mx-1 flex items-center px-5 py-3 text-theme-primary-300 dark:text-theme-secondary-600"
             >
-              <span
-                class="-mx-1 flex items-center px-5 py-3 text-theme-primary-300 dark:text-theme-secondary-600"
+              <div
+                class="css-v0ob3f"
+                height="16"
+                width="16"
               >
-                <div
-                  class="css-v0ob3f"
-                  height="16"
-                  width="16"
+                <svg
+                  id="plus"
+                  viewBox="0 0 20 20"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
                 >
-                  <svg
-                    id="plus"
-                    viewBox="0 0 20 20"
-                    x="0"
-                    xml:space="preserve"
-                    xmlns="http://www.w3.org/2000/svg"
-                    y="0"
+                  <g
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
                   >
-                    <g
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                    >
-                      <path
-                        d="M1 10h18M10 1v18"
-                      />
-                    </g>
-                  </svg>
-                </div>
-              </span>
+                    <path
+                      d="M1 10h18M10 1v18"
+                    />
+                  </g>
+                </svg>
+              </div>
             </span>
           </div>
         </div>
