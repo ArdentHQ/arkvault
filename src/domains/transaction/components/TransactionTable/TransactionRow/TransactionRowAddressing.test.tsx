@@ -50,6 +50,16 @@ describe("TransactionRowAddressing", () => {
 		expect(screen.getByTestId("TransactionRowAddressing__delegate_resignation")).toBeInTheDocument();
 	});
 
+	it("should render as to-contract if transaction is musig registration", () => {
+		const resignationFixture = {
+			...fixture,
+			isMultiSignatureRegistration: () => true,
+		};
+		render(<TransactionRowAddressing transaction={resignationFixture as any} profile={profile} />);
+
+		expect(screen.getByTestId("TransactionRowAddressing__musig_registration")).toBeInTheDocument();
+	});
+
 	it("should render multipayment variant", () => {
 		const multiPaymentFixture = { ...fixture, isMultiPayment: () => true };
 		render(<TransactionRowAddressing transaction={multiPaymentFixture as any} profile={profile} />);

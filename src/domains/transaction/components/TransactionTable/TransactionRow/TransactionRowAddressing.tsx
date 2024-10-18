@@ -94,6 +94,17 @@ export const TransactionRowAddressing = ({
 		);
 	}
 
+	if (transaction.isMultiSignatureRegistration()) {
+		return (
+			<div className="flex flex-row gap-2" data-testid="TransactionRowAddressing__musig_registration">
+				<TransactionRowLabel isNegative />
+				<span className="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200">
+					{t("COMMON.CONTRACT")}
+				</span>
+			</div>
+		);
+	}
+
 	if (transaction.isDelegateRegistration()) {
 		return (
 			<div className="flex flex-row gap-2" data-testid="TransactionRowAddressing__delegate_registration">
