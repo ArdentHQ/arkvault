@@ -6,212 +6,60 @@ exports[`FilterTransactions > should open dropdown list with all transaction typ
     data-testid="FilterTransactions"
   >
     <div
-      class="static sm:relative"
+      aria-controls=":r4:"
+      aria-expanded="true"
+      aria-haspopup="dialog"
+      data-testid="dropdown__toggle"
     >
-      <span
-        data-testid="dropdown__toggle"
-      >
-        <button
-          class="space-x-2 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-700 w-full px-4 py-1.5 text-base sm:w-fit"
-          data-testid="CollapseToggleButton"
-          type="button"
-        >
-          <div
-            class="flex items-center space-x-2"
-          >
-            <div
-              class="css-v0ob3f"
-              height="16"
-              width="16"
-            >
-              <svg
-                fill="none"
-                height="16"
-                viewBox="0 0 16 16"
-                width="16"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <g
-                  clip-path="url(#clip0_13768_41214)"
-                >
-                  <path
-                    d="M9.75946 11.5209V8.00094L14.6395 3.12094C14.9595 2.80094 15.1195 2.24094 14.8795 1.76094C14.7195 1.28094 14.2395 0.960938 13.7595 0.960938H2.23946C1.75946 0.960938 1.27946 1.28094 1.11946 1.76094C0.879462 2.24094 1.03946 2.72094 1.35946 3.12094L6.23946 8.00094V15.0409L9.75946 11.5209Z"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="1.6"
-                  />
-                </g>
-                <defs>
-                  <clippath
-                    id="clip0_13768_41214"
-                  >
-                    <rect
-                      fill="white"
-                      height="16"
-                      width="16"
-                    />
-                  </clippath>
-                </defs>
-              </svg>
-            </div>
-            <span>
-              Type
-            </span>
-          </div>
-        </button>
-      </span>
-      <div
-        class="opacity-0 mt-3 py-3 absolute z-10 bg-theme-background rounded-xl shadow-xl md:w-80 md:max-h-128 md:overflow-y-auto md:w-auto mx-4 sm:w-full sm:mx-0 css-jowtd0"
-        data-testid="dropdown__content"
-        style="opacity: 1; height: -30px; overflow-y: scroll;"
+      <button
+        class="space-x-2 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-700 w-full px-4 py-1.5 text-base sm:w-fit"
+        data-testid="CollapseToggleButton"
+        type="button"
       >
         <div
-          class="py-1"
+          class="flex items-center space-x-2"
         >
           <div
-            class=""
+            class="css-v0ob3f"
+            height="16"
+            width="16"
           >
-            <ul>
-              <ul
-                data-testid="dropdown__options"
-              >
-                <li
-                  class="css-8ahleb"
-                  data-testid="dropdown__option--all-0"
-                  tabindex="0"
-                >
-                  <span>
-                    All
-                  </span>
-                </li>
-              </ul>
-            </ul>
-          </div>
-          <div
-            class="mt-4"
-          >
-            <div
-              class="-my-2 mx-8"
+            <svg
+              fill="none"
+              height="16"
+              viewBox="0 0 16 16"
+              width="16"
+              xmlns="http://www.w3.org/2000/svg"
             >
-              <div
-                class="border-theme-secondary-300 dark:border-theme-secondary-600 css-1m3aobs"
-                type="horizontal"
-              />
-            </div>
-            <ul>
-              <li
-                class="block whitespace-nowrap px-8 text-left text-xs font-bold uppercase text-theme-secondary-500 dark:text-theme-secondary-600"
+              <g
+                clip-path="url(#clip0_13768_41214)"
               >
-                CORE
-              </li>
-              <ul
-                data-testid="dropdown__options"
-              >
-                <li
-                  class="css-8ahleb"
-                  data-testid="dropdown__option--core-0"
-                  tabindex="0"
+                <path
+                  d="M9.75946 11.5209V8.00094L14.6395 3.12094C14.9595 2.80094 15.1195 2.24094 14.8795 1.76094C14.7195 1.28094 14.2395 0.960938 13.7595 0.960938H2.23946C1.75946 0.960938 1.27946 1.28094 1.11946 1.76094C0.879462 2.24094 1.03946 2.72094 1.35946 3.12094L6.23946 8.00094V15.0409L9.75946 11.5209Z"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.6"
+                />
+              </g>
+              <defs>
+                <clippath
+                  id="clip0_13768_41214"
                 >
-                  <span>
-                    Registration
-                  </span>
-                </li>
-                <li
-                  class="css-8ahleb"
-                  data-testid="dropdown__option--core-1"
-                  tabindex="0"
-                >
-                  <span>
-                    Resignation
-                  </span>
-                </li>
-                <li
-                  class="css-8ahleb"
-                  data-testid="dropdown__option--core-2"
-                  tabindex="0"
-                >
-                  <span>
-                    IPFS
-                  </span>
-                </li>
-                <li
-                  class="css-8ahleb"
-                  data-testid="dropdown__option--core-3"
-                  tabindex="0"
-                >
-                  <span>
-                    Multipayment
-                  </span>
-                </li>
-                <li
-                  class="css-8ahleb"
-                  data-testid="dropdown__option--core-4"
-                  tabindex="0"
-                >
-                  <span>
-                    Multisignature
-                  </span>
-                </li>
-                <li
-                  class="css-8ahleb"
-                  data-testid="dropdown__option--core-5"
-                  tabindex="0"
-                >
-                  <span>
-                    2nd Signature
-                  </span>
-                </li>
-                <li
-                  class="css-8ahleb"
-                  data-testid="dropdown__option--core-6"
-                  tabindex="0"
-                >
-                  <span>
-                    Transfer
-                  </span>
-                </li>
-                <li
-                  class="css-8ahleb"
-                  data-testid="dropdown__option--core-7"
-                  tabindex="0"
-                >
-                  <span>
-                    Vote
-                  </span>
-                </li>
-              </ul>
-            </ul>
+                  <rect
+                    fill="white"
+                    height="16"
+                    width="16"
+                  />
+                </clippath>
+              </defs>
+            </svg>
           </div>
-          <div
-            class="mt-4"
-          >
-            <div
-              class="-my-2 mx-8"
-            >
-              <div
-                class="border-theme-secondary-300 dark:border-theme-secondary-600 css-1m3aobs"
-                type="horizontal"
-              />
-            </div>
-            <ul>
-              <ul
-                data-testid="dropdown__options"
-              >
-                <li
-                  class="css-8ahleb"
-                  data-testid="dropdown__option--magistrate-0"
-                  tabindex="0"
-                >
-                  <span>
-                    Magistrate
-                  </span>
-                </li>
-              </ul>
-            </ul>
-          </div>
+          <span>
+            Type
+          </span>
         </div>
-      </div>
+      </button>
     </div>
   </div>
 </div>
@@ -223,61 +71,59 @@ exports[`FilterTransactions > should render 1`] = `
     data-testid="FilterTransactions"
   >
     <div
-      class="static sm:relative"
+      aria-expanded="false"
+      aria-haspopup="dialog"
+      data-testid="dropdown__toggle"
     >
-      <span
-        data-testid="dropdown__toggle"
+      <button
+        class="space-x-2 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-700 w-full px-4 py-1.5 text-base sm:w-fit"
+        data-testid="CollapseToggleButton"
+        type="button"
       >
-        <button
-          class="space-x-2 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-700 w-full px-4 py-1.5 text-base sm:w-fit"
-          data-testid="CollapseToggleButton"
-          type="button"
+        <div
+          class="flex items-center space-x-2"
         >
           <div
-            class="flex items-center space-x-2"
+            class="css-v0ob3f"
+            height="16"
+            width="16"
           >
-            <div
-              class="css-v0ob3f"
+            <svg
+              fill="none"
               height="16"
+              viewBox="0 0 16 16"
               width="16"
+              xmlns="http://www.w3.org/2000/svg"
             >
-              <svg
-                fill="none"
-                height="16"
-                viewBox="0 0 16 16"
-                width="16"
-                xmlns="http://www.w3.org/2000/svg"
+              <g
+                clip-path="url(#clip0_13768_41214)"
               >
-                <g
-                  clip-path="url(#clip0_13768_41214)"
+                <path
+                  d="M9.75946 11.5209V8.00094L14.6395 3.12094C14.9595 2.80094 15.1195 2.24094 14.8795 1.76094C14.7195 1.28094 14.2395 0.960938 13.7595 0.960938H2.23946C1.75946 0.960938 1.27946 1.28094 1.11946 1.76094C0.879462 2.24094 1.03946 2.72094 1.35946 3.12094L6.23946 8.00094V15.0409L9.75946 11.5209Z"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.6"
+                />
+              </g>
+              <defs>
+                <clippath
+                  id="clip0_13768_41214"
                 >
-                  <path
-                    d="M9.75946 11.5209V8.00094L14.6395 3.12094C14.9595 2.80094 15.1195 2.24094 14.8795 1.76094C14.7195 1.28094 14.2395 0.960938 13.7595 0.960938H2.23946C1.75946 0.960938 1.27946 1.28094 1.11946 1.76094C0.879462 2.24094 1.03946 2.72094 1.35946 3.12094L6.23946 8.00094V15.0409L9.75946 11.5209Z"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="1.6"
+                  <rect
+                    fill="white"
+                    height="16"
+                    width="16"
                   />
-                </g>
-                <defs>
-                  <clippath
-                    id="clip0_13768_41214"
-                  >
-                    <rect
-                      fill="white"
-                      height="16"
-                      width="16"
-                    />
-                  </clippath>
-                </defs>
-              </svg>
-            </div>
-            <span>
-              Type
-            </span>
+                </clippath>
+              </defs>
+            </svg>
           </div>
-        </button>
-      </span>
+          <span>
+            Type
+          </span>
+        </div>
+      </button>
     </div>
   </div>
 </div>
@@ -290,61 +136,59 @@ exports[`FilterTransactions > should render with default selected option 1`] = `
     defaultselected="[object Object]"
   >
     <div
-      class="static sm:relative"
+      aria-expanded="false"
+      aria-haspopup="dialog"
+      data-testid="dropdown__toggle"
     >
-      <span
-        data-testid="dropdown__toggle"
+      <button
+        class="space-x-2 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-700 w-full px-4 py-1.5 text-base sm:w-fit"
+        data-testid="CollapseToggleButton"
+        type="button"
       >
-        <button
-          class="space-x-2 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-700 w-full px-4 py-1.5 text-base sm:w-fit"
-          data-testid="CollapseToggleButton"
-          type="button"
+        <div
+          class="flex items-center space-x-2"
         >
           <div
-            class="flex items-center space-x-2"
+            class="css-v0ob3f"
+            height="16"
+            width="16"
           >
-            <div
-              class="css-v0ob3f"
+            <svg
+              fill="none"
               height="16"
+              viewBox="0 0 16 16"
               width="16"
+              xmlns="http://www.w3.org/2000/svg"
             >
-              <svg
-                fill="none"
-                height="16"
-                viewBox="0 0 16 16"
-                width="16"
-                xmlns="http://www.w3.org/2000/svg"
+              <g
+                clip-path="url(#clip0_13768_41214)"
               >
-                <g
-                  clip-path="url(#clip0_13768_41214)"
+                <path
+                  d="M9.75946 11.5209V8.00094L14.6395 3.12094C14.9595 2.80094 15.1195 2.24094 14.8795 1.76094C14.7195 1.28094 14.2395 0.960938 13.7595 0.960938H2.23946C1.75946 0.960938 1.27946 1.28094 1.11946 1.76094C0.879462 2.24094 1.03946 2.72094 1.35946 3.12094L6.23946 8.00094V15.0409L9.75946 11.5209Z"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.6"
+                />
+              </g>
+              <defs>
+                <clippath
+                  id="clip0_13768_41214"
                 >
-                  <path
-                    d="M9.75946 11.5209V8.00094L14.6395 3.12094C14.9595 2.80094 15.1195 2.24094 14.8795 1.76094C14.7195 1.28094 14.2395 0.960938 13.7595 0.960938H2.23946C1.75946 0.960938 1.27946 1.28094 1.11946 1.76094C0.879462 2.24094 1.03946 2.72094 1.35946 3.12094L6.23946 8.00094V15.0409L9.75946 11.5209Z"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="1.6"
+                  <rect
+                    fill="white"
+                    height="16"
+                    width="16"
                   />
-                </g>
-                <defs>
-                  <clippath
-                    id="clip0_13768_41214"
-                  >
-                    <rect
-                      fill="white"
-                      height="16"
-                      width="16"
-                    />
-                  </clippath>
-                </defs>
-              </svg>
-            </div>
-            <span>
-              Type
-            </span>
+                </clippath>
+              </defs>
+            </svg>
           </div>
-        </button>
-      </span>
+          <span>
+            Type
+          </span>
+        </div>
+      </button>
     </div>
   </div>
 </div>

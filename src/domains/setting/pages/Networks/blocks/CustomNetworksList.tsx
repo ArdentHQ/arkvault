@@ -79,7 +79,6 @@ const CustomNetworksListNetwork: React.VFC<{
 					<Divider type="vertical" />
 				</div>
 				<Dropdown
-					dropdownClass="mx-4 sm:mx-0"
 					options={actions}
 					onSelect={onSelect}
 					toggleContent={
