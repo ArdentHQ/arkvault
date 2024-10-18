@@ -1,13 +1,30 @@
 import { useEnvironmentContext } from "@/app/contexts";
-import { Networks } from "@ardenthq/sdk";
-import { Contracts, DTO } from "@ardenthq/sdk-profiles";
+import { Networks, DTO } from "@ardenthq/sdk";
+import { Contracts } from "@ardenthq/sdk-profiles";
 import { useEffect, useState } from "react";
 
 interface Properties {
 	network: Networks.Network;
-	transaction: DTO.ExtendedConfirmedTransactionData;
+	transaction: DTO.RawTransactionData;
 	profile: Contracts.IProfile;
 }
+
+/**
+ * @TODO: This can be handled in SDK to retrieve voting and unvoting public keys (or generally the asset data)
+ * through a common method/format, whether it's a signed or confirmed transaction.
+ * Currently `data` is a function in signed transaction and an object in confirmed transaction.
+ */
+const extractVotingData = ({ transaction }: { transaction: DTO.RawTransactionData }) => {
+	const data =
+		typeof transaction.data?.().data === "function" ? transaction.data?.().data() : transaction.data?.().data;
+	const votes = data?.asset.votes ?? [];
+	const unvotes = data?.asset.unvotes ?? [];
+
+	return {
+		unvotes: unvotes.map((publikKey: string) => publikKey.replace(/^[+-]+/, "")),
+		votes: votes.map((publikKey: string) => publikKey.replace(/^[+-]+/, "")),
+	};
+};
 
 export const useTransactionVotingWallets = ({ transaction, network, profile }: Properties) => {
 	const [isLoading, setIsLoading] = useState(false);
@@ -26,19 +43,22 @@ export const useTransactionVotingWallets = ({ transaction, network, profile }: P
 			}
 
 			try {
-				const votesList = transaction.votes().map((publicKey: string) => ({
+				const { votes, unvotes } = extractVotingData({ transaction });
+
+				const votesList = votes.map((publicKey: string) => ({
 					amount: transaction.amount(),
 					wallet: env.delegates().findByPublicKey(network.coin(), network.id(), publicKey),
 				}));
 
-				const unvotesList = transaction.unvotes().map((publicKey: string) => ({
+				const unvotesList = unvotes.map((publicKey: string) => ({
 					amount: transaction.amount(),
 					wallet: env.delegates().findByPublicKey(network.coin(), network.id(), publicKey),
 				}));
 
 				setVotes(votesList);
 				setUnvotes(unvotesList);
-			} catch {
+			} catch (error) {
+				console.log({ error });
 				//
 			}
 
