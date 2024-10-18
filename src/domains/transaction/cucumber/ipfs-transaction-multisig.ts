@@ -14,7 +14,7 @@ const preSteps = {
 		await importWalletByAddress(t, "DJXg9Vqg2tofRNrMAvMzhZTkegu8QyyNQq");
 		await t.click(Selector('[data-testid="WalletHeader__more-button"]'));
 		await t.click(
-			Selector('[data-testid="WalletHeader__more-button"] li').withText(
+			Selector('[data-testid="dropdown__options"] li').withText(
 				translations.WALLETS.PAGE_WALLET_DETAILS.OPTIONS.STORE_HASH,
 			),
 		);
