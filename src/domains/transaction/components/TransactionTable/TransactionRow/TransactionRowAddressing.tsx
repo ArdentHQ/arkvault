@@ -2,7 +2,8 @@ import { Address } from "@/app/components/Address";
 import { Label } from "@/app/components/Label";
 import { useEnvironmentContext } from "@/app/contexts";
 import { useWalletAlias } from "@/app/hooks";
-import { Contracts, DTO } from "@ardenthq/sdk-profiles";
+import { Contracts } from "@ardenthq/sdk-profiles";
+import { DTO } from "@ardenthq/sdk";
 import React, { useEffect, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
 import cn from "classnames";
@@ -27,7 +28,7 @@ export const TransactionRowAddressing = ({
 	transaction,
 	profile,
 }: {
-	transaction: DTO.ExtendedConfirmedTransactionData;
+	transaction: DTO.RawTransactionData;
 	profile: Contracts.IProfile;
 }) => {
 	const isNegative = transaction.isSent();
@@ -55,8 +56,8 @@ export const TransactionRowAddressing = ({
 	useEffect(() => {
 		if (transaction.isVote() || transaction.isUnvote()) {
 			setDelegates({
-				unvotes: env.delegates().map(transaction.wallet(), transaction.unvotes()),
-				votes: env.delegates().map(transaction.wallet(), transaction.votes()),
+				unvotes: env.delegates().map(transaction.wallet(), transaction.unvotes?.() ?? []),
+				votes: env.delegates().map(transaction.wallet(), transaction.votes?.() ?? []),
 			});
 		}
 	}, [env, transaction]);
@@ -126,8 +127,8 @@ export const TransactionRowAddressing = ({
 			<TransactionRowLabel isNegative={isNegative} />
 			<div
 				className={cn({
-					"w-30": !alias,
-					"w-40 lg:w-50": alias,
+					"w-50 sm:w-30": !alias,
+					"w-50 sm:w-40 lg:w-50": alias,
 				})}
 				data-testid="TransactionRowAddressing__address-container"
 			>

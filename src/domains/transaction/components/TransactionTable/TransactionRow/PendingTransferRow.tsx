@@ -9,7 +9,8 @@ import { TimeAgo } from "@/app/components/TimeAgo";
 import { DateTime } from "@ardenthq/sdk-intl";
 import { Label } from "@/app/components/Label";
 import { useTransactionTypes } from "@/domains/transaction/hooks/use-transaction-types";
-import { Amount, AmountLabel } from "@/app/components/Amount";
+import { Amount } from "@/app/components/Amount";
+import { TransactionRowAddressing } from "./TransactionRowAddressing";
 
 export const PendingTransferRow = ({
 	transaction,
@@ -90,17 +91,7 @@ export const PendingTransferRow = ({
 			</TableCell>
 
 			<TableCell innerClassName="justify-end items-start xl:min-h-0 my-0 py-3">
-				<div className="flex flex-col items-end gap-1">
-					<AmountLabel
-						value={transaction.amount() + transaction.fee()}
-						isNegative={true}
-						ticker={wallet.currency()}
-						isCompact
-					/>
-					<span className="text-xs font-semibold text-theme-secondary-700 lg:hidden">
-						<Amount value={wallet.convertedBalance()} ticker={wallet.exchangeCurrency()} />
-					</span>
-				</div>
+				<TransactionRowAddressing transaction={transaction} profile={transaction.wallet().profile()} />
 			</TableCell>
 
 			<TableCell
