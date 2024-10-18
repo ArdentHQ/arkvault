@@ -54,7 +54,7 @@ export const TransactionRowAddressing = ({
 	});
 
 	useEffect(() => {
-		if (transaction.isVote() || transaction.isUnvote()) {
+		if (transaction.votes?.() || transaction.unvotes?.()) {
 			setDelegates({
 				unvotes: env.delegates().map(transaction.wallet(), transaction.unvotes()),
 				votes: env.delegates().map(transaction.wallet(), transaction.votes()),
