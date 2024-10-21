@@ -3,93 +3,179 @@
 exports[`Add Recipient item > should render with exchange amount 1`] = `
 <DocumentFragment>
   <div
-    class="border-b border-dashed border-theme-secondary-300 py-3 last:border-none last:pb-0 dark:border-theme-secondary-800"
+    class="mb-3 overflow-hidden rounded border border-theme-secondary-300 bg-white last:mb-0 dark:border-theme-secondary-800 dark:bg-black sm:rounded-none sm:border-x-0 sm:border-b-0 sm:border-dashed sm:bg-transparent sm:pt-3 sm:dark:bg-transparent"
     data-testid="AddRecipientItem"
   >
     <div
       class="flex flex-col items-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0"
     >
       <div
-        class="flex w-full flex-1 flex-row items-center space-x-4 overflow-auto sm:flex-col sm:items-start sm:space-x-0 sm:space-y-1"
+        class="flex w-full min-w-0 flex-1 flex-col sm:w-auto sm:items-start sm:space-x-0 sm:space-y-1"
       >
         <div
-          class="whitespace-nowrap text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
-        >
-          Recipient #2
-        </div>
-        <div
-          class="max-w-full overflow-auto sm:w-full"
+          class="flex w-full flex-1 flex-row items-center justify-between bg-theme-secondary-100 px-4 py-3 dark:bg-theme-secondary-900 sm:bg-transparent sm:p-0 dark:sm:bg-transparent"
         >
           <div
-            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+            class="flex w-full items-center justify-between"
           >
-            <span
-              class="font-semibold text-base text-theme-text"
-              data-testid="Address__alias"
+            <div
+              class="whitespace-nowrap text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500"
             >
-              <span
-                class="no-ligatures css-9nx3be"
-                data-testid="TruncateEnd"
+              Recipient #2
+            </div>
+            <button
+              class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none p-0 text-theme-secondary-700 dark:text-theme-secondary-500 sm:hidden"
+              data-testid="AddRecipientItem--deleteButton_mobile"
+              type="button"
+            >
+              <div
+                class="flex items-center space-x-2"
               >
-                ARK Wallet 1
-              </span>
-            </span>
-            <span
-              class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-              data-testid="Address__address"
+                <div
+                  class="css-1i4b0eq"
+                  height="20"
+                  width="20"
+                >
+                  <svg
+                    id="trash"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
+                  >
+                    <g
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    >
+                      <path
+                        d="M1 3.629h18M11.8 1H8c-.7 0-1.3.607-1.3 1.315h0v1.314H13V2.315C13 1.607 12.5 1 11.8 1h0zM8 14.449v-6.37M11.8 14.449v-6.37M15.7 17.787c-.1.707-.6 1.213-1.3 1.213H5.3c-.7 0-1.2-.506-1.3-1.213L2.9 3.629h14l-1.2 14.158z"
+                      />
+                    </g>
+                  </svg>
+                </div>
+              </div>
+            </button>
+          </div>
+        </div>
+        <div
+          class="px-4 pb-4 pt-3 sm:w-full sm:p-0"
+        >
+          <div>
+            <div
+              class="mt-1 hidden leading-5 sm:block"
             >
-              D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-            </span>
+              <div
+                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+              >
+                <span
+                  class="font-semibold text-base leading-5"
+                  data-testid="Address__alias"
+                >
+                  <span
+                    class="no-ligatures css-9nx3be"
+                    data-testid="TruncateEnd"
+                  >
+                    ARK Wallet 1
+                  </span>
+                </span>
+                <span
+                  class="no-ligatures min-w-0 overflow-hidden leading-5 text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                  data-testid="Address__address"
+                >
+                  D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                </span>
+              </div>
+            </div>
+            <div
+              class="space-y-4 sm:hidden"
+            >
+              <div>
+                <div
+                  class="mb-2 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500"
+                >
+                  Address
+                </div>
+                <div
+                  class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                >
+                  <span
+                    class="font-semibold text-base leading-[17px] text-sm"
+                    data-testid="Address__alias"
+                  >
+                    <span
+                      class="no-ligatures css-9nx3be"
+                      data-testid="TruncateEnd"
+                    >
+                      ARK Wallet 1
+                    </span>
+                  </span>
+                  <span
+                    class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                    data-testid="Address__address"
+                  >
+                    D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                  </span>
+                </div>
+              </div>
+              <div>
+                <div
+                  class="mb-2 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500"
+                >
+                  Value
+                </div>
+                <span
+                  class="whitespace-nowrap text-sm font-semibold leading-[17px] text-theme-secondary-900 dark:text-theme-secondary-200"
+                  data-testid="Amount"
+                >
+                  1 DARK
+                </span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
       <div
-        class="flex w-full flex-row items-center space-x-4 overflow-auto sm:w-auto sm:flex-col sm:items-start sm:space-x-0 sm:space-y-1 sm:pl-7"
+        class="hidden sm:block"
       >
         <div
-          class="whitespace-nowrap font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
-        >
-          <span
-            class="hidden sm:inline"
-            data-testid="AddRecipientItem--exchangeAmount"
-          >
-            <span
-              class="whitespace-nowrap"
-              data-testid="Amount"
-            >
-              $0.00
-            </span>
-          </span>
-          <span
-            class="sm:hidden"
-          >
-            Amount
-          </span>
-        </div>
-        <div
-          class="flex flex-1 justify-end font-semibold text-theme-secondary-700 dark:text-theme-secondary-200 sm:text-theme-secondary-900"
-        >
-          <span
-            class="whitespace-nowrap"
-            data-testid="Amount"
-          >
-            1 DARK
-          </span>
-        </div>
-      </div>
-      <div
-        class="w-full sm:w-auto"
-      >
-        <button
-          class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 disabled:cursor-not-allowed rounded bg-theme-danger-100 text-theme-danger-400 dark:bg-theme-danger-400 dark:text-white hover:bg-theme-danger-400 hover:text-white dark:hover:bg-theme-danger-500 focus:ring-theme-danger-300 w-full sm:w-auto"
-          data-testid="AddRecipientItem--deleteButton"
-          type="button"
+          class="flex items-center gap-3"
         >
           <div
-            class="flex items-center space-x-2"
+            class="flex flex-col items-end space-y-2"
           >
             <div
-              class="flex items-center space-x-2 py-1"
+              class="whitespace-nowrap font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500"
+            >
+              <span
+                class="hidden sm:inline"
+                data-testid="AddRecipientItem--exchangeAmount"
+              >
+                <span
+                  class="whitespace-nowrap text-sm leading-[17px]"
+                  data-testid="Amount"
+                >
+                  $0.00
+                </span>
+              </span>
+            </div>
+            <span
+              class="whitespace-nowrap font-semibold leading-5 text-theme-secondary-900 dark:text-theme-secondary-200"
+              data-testid="Amount"
+            >
+              1 DARK
+            </span>
+          </div>
+          <button
+            class="space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 disabled:cursor-not-allowed rounded bg-theme-danger-100 text-theme-danger-400 dark:bg-theme-danger-400 dark:text-white hover:bg-theme-danger-400 hover:text-white dark:hover:bg-theme-danger-500 focus:ring-theme-danger-300 h-11 w-11 p-2.5"
+            data-testid="AddRecipientItem--deleteButton"
+            type="button"
+          >
+            <div
+              class="flex items-center space-x-2"
             >
               <div
                 class="css-v0ob3f"
@@ -117,14 +203,9 @@ exports[`Add Recipient item > should render with exchange amount 1`] = `
                   </g>
                 </svg>
               </div>
-              <div
-                class="block sm:hidden"
-              >
-                Remove
-              </div>
             </div>
-          </div>
-        </button>
+          </button>
+        </div>
       </div>
     </div>
   </div>
@@ -134,82 +215,173 @@ exports[`Add Recipient item > should render with exchange amount 1`] = `
 exports[`Add Recipient item > should render without exchange amount 1`] = `
 <DocumentFragment>
   <div
-    class="border-b border-dashed border-theme-secondary-300 py-3 last:border-none last:pb-0 dark:border-theme-secondary-800"
+    class="mb-3 overflow-hidden rounded border border-theme-secondary-300 bg-white last:mb-0 dark:border-theme-secondary-800 dark:bg-black sm:rounded-none sm:border-x-0 sm:border-b-0 sm:border-dashed sm:bg-transparent sm:pt-3 sm:dark:bg-transparent"
     data-testid="AddRecipientItem"
   >
     <div
       class="flex flex-col items-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0"
     >
       <div
-        class="flex w-full flex-1 flex-row items-center space-x-4 overflow-auto sm:flex-col sm:items-start sm:space-x-0 sm:space-y-1"
+        class="flex w-full min-w-0 flex-1 flex-col sm:w-auto sm:items-start sm:space-x-0 sm:space-y-1"
       >
         <div
-          class="whitespace-nowrap text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
-        >
-          Recipient #2
-        </div>
-        <div
-          class="max-w-full overflow-auto sm:w-full"
+          class="flex w-full flex-1 flex-row items-center justify-between bg-theme-secondary-100 px-4 py-3 dark:bg-theme-secondary-900 sm:bg-transparent sm:p-0 dark:sm:bg-transparent"
         >
           <div
-            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+            class="flex w-full items-center justify-between"
           >
-            <span
-              class="font-semibold text-base text-theme-text"
-              data-testid="Address__alias"
+            <div
+              class="whitespace-nowrap text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500"
             >
-              <span
-                class="no-ligatures css-9nx3be"
-                data-testid="TruncateEnd"
+              Recipient #2
+            </div>
+            <button
+              class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none p-0 text-theme-secondary-700 dark:text-theme-secondary-500 sm:hidden"
+              data-testid="AddRecipientItem--deleteButton_mobile"
+              type="button"
+            >
+              <div
+                class="flex items-center space-x-2"
               >
-                ARK Wallet 1
-              </span>
-            </span>
-            <span
-              class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-              data-testid="Address__address"
+                <div
+                  class="css-1i4b0eq"
+                  height="20"
+                  width="20"
+                >
+                  <svg
+                    id="trash"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
+                  >
+                    <g
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    >
+                      <path
+                        d="M1 3.629h18M11.8 1H8c-.7 0-1.3.607-1.3 1.315h0v1.314H13V2.315C13 1.607 12.5 1 11.8 1h0zM8 14.449v-6.37M11.8 14.449v-6.37M15.7 17.787c-.1.707-.6 1.213-1.3 1.213H5.3c-.7 0-1.2-.506-1.3-1.213L2.9 3.629h14l-1.2 14.158z"
+                      />
+                    </g>
+                  </svg>
+                </div>
+              </div>
+            </button>
+          </div>
+        </div>
+        <div
+          class="px-4 pb-4 pt-3 sm:w-full sm:p-0"
+        >
+          <div>
+            <div
+              class="mt-1 hidden leading-5 sm:block"
             >
-              D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-            </span>
+              <div
+                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+              >
+                <span
+                  class="font-semibold text-base leading-5"
+                  data-testid="Address__alias"
+                >
+                  <span
+                    class="no-ligatures css-9nx3be"
+                    data-testid="TruncateEnd"
+                  >
+                    ARK Wallet 1
+                  </span>
+                </span>
+                <span
+                  class="no-ligatures min-w-0 overflow-hidden leading-5 text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                  data-testid="Address__address"
+                >
+                  D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                </span>
+              </div>
+            </div>
+            <div
+              class="space-y-4 sm:hidden"
+            >
+              <div>
+                <div
+                  class="mb-2 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500"
+                >
+                  Address
+                </div>
+                <div
+                  class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                >
+                  <span
+                    class="font-semibold text-base leading-[17px] text-sm"
+                    data-testid="Address__alias"
+                  >
+                    <span
+                      class="no-ligatures css-9nx3be"
+                      data-testid="TruncateEnd"
+                    >
+                      ARK Wallet 1
+                    </span>
+                  </span>
+                  <span
+                    class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                    data-testid="Address__address"
+                  >
+                    D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                  </span>
+                </div>
+              </div>
+              <div>
+                <div
+                  class="mb-2 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500"
+                >
+                  Value
+                </div>
+                <span
+                  class="whitespace-nowrap text-sm font-semibold leading-[17px] text-theme-secondary-900 dark:text-theme-secondary-200"
+                  data-testid="Amount"
+                >
+                  1 DARK
+                </span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
       <div
-        class="flex w-full flex-row items-center space-x-4 overflow-auto sm:w-auto sm:flex-col sm:items-start sm:space-x-0 sm:space-y-1 sm:pl-7"
+        class="hidden sm:block"
       >
         <div
-          class="whitespace-nowrap font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
-        >
-          <span
-            class="text-sm"
-          >
-            Amount
-          </span>
-        </div>
-        <div
-          class="flex flex-1 justify-end font-semibold text-theme-secondary-700 dark:text-theme-secondary-200 sm:text-theme-secondary-900"
-        >
-          <span
-            class="whitespace-nowrap"
-            data-testid="Amount"
-          >
-            1 DARK
-          </span>
-        </div>
-      </div>
-      <div
-        class="w-full sm:w-auto"
-      >
-        <button
-          class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 disabled:cursor-not-allowed rounded bg-theme-danger-100 text-theme-danger-400 dark:bg-theme-danger-400 dark:text-white hover:bg-theme-danger-400 hover:text-white dark:hover:bg-theme-danger-500 focus:ring-theme-danger-300 w-full sm:w-auto"
-          data-testid="AddRecipientItem--deleteButton"
-          type="button"
+          class="flex items-center gap-3"
         >
           <div
-            class="flex items-center space-x-2"
+            class="flex flex-col items-end space-y-2"
           >
             <div
-              class="flex items-center space-x-2 py-1"
+              class="whitespace-nowrap font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500"
+            >
+              <span
+                class="text-sm leading-[17px]"
+              >
+                Amount
+              </span>
+            </div>
+            <span
+              class="whitespace-nowrap font-semibold leading-5 text-theme-secondary-900 dark:text-theme-secondary-200"
+              data-testid="Amount"
+            >
+              1 DARK
+            </span>
+          </div>
+          <button
+            class="space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 disabled:cursor-not-allowed rounded bg-theme-danger-100 text-theme-danger-400 dark:bg-theme-danger-400 dark:text-white hover:bg-theme-danger-400 hover:text-white dark:hover:bg-theme-danger-500 focus:ring-theme-danger-300 h-11 w-11 p-2.5"
+            data-testid="AddRecipientItem--deleteButton"
+            type="button"
+          >
+            <div
+              class="flex items-center space-x-2"
             >
               <div
                 class="css-v0ob3f"
@@ -237,14 +409,9 @@ exports[`Add Recipient item > should render without exchange amount 1`] = `
                   </g>
                 </svg>
               </div>
-              <div
-                class="block sm:hidden"
-              >
-                Remove
-              </div>
             </div>
-          </div>
-        </button>
+          </button>
+        </div>
       </div>
     </div>
   </div>
