@@ -30,6 +30,7 @@ export const AddRecipientItem: React.FC<{
 					</div>
 					<Button
 						onClick={() => onDelete(index)}
+						data-testid="AddRecipientItem--deleteButton_mobile"
 						size="icon"
 						sizeClassName="p-0"
 						className="text-theme-secondary-700 dark:text-theme-secondary-500 sm:hidden"
