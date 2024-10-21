@@ -219,7 +219,7 @@ describe("TransactionDetailModal", () => {
 							data: {
 								asset: {
 									unvotes: transactionType === "vote" ? [] : TransactionFixture.unvotes(),
-									votes: transactionType === "unvote" ? [] : TransactionFixture.votes()
+									votes: transactionType === "unvote" ? [] : TransactionFixture.votes(),
 								},
 								blockId: "as32d1as65d1as3d1as32d1asd51as3d21as3d2as165das",
 							},
