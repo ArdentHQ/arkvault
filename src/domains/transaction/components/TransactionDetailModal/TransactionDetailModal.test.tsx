@@ -214,16 +214,13 @@ describe("TransactionDetailModal", () => {
 					transactionItem={{
 						...TransactionFixture,
 						blockId: () => "as32d1as65d1as3d1as32d1asd51as3d21as3d2as165das",
-						data: () => {},
 						data: () => ({
 							data: {
-								asset: {
-									unvotes: transactionType === "vote" ? [] : TransactionFixture.unvotes(),
-									votes: transactionType === "unvote" ? [] : TransactionFixture.votes(),
-								},
+								asset: {},
 								blockId: "as32d1as65d1as3d1as32d1asd51as3d21as3d2as165das",
 							},
 						}),
+						isConfirmed: () => true,
 						isUnvote: () => transactionType === "unvote",
 						isVote: () => transactionType === "vote",
 						isVoteCombination: () => transactionType === "voteCombination",
