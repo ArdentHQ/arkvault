@@ -21,8 +21,8 @@ const extractVotingData = ({ transaction }: { transaction: DTO.RawTransactionDat
 	const unvotes = data?.asset?.unvotes ?? [];
 
 	return {
-		unvotes: unvotes.map((publikKey: string) => publikKey.replace(/^[+-]+/, "")),
-		votes: votes.map((publikKey: string) => publikKey.replace(/^[+-]+/, "")),
+		unvotes: unvotes.map((publicKey: string) => publicKey.replace(/^[+-]+/, "")),
+		votes: votes.map((publicKey: string) => publicKey.replace(/^[+-]+/, "")),
 	};
 };
 
