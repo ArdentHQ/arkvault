@@ -256,6 +256,54 @@ describe("TransactionDetailModal", () => {
 		expect(screen.getByTestId("Modal__inner")).toHaveTextContent(labels[transactionType]);
 	});
 
+	it("should render an unvote modal for signed transaction", () => {
+		vi.spyOn(env.delegates(), "map").mockImplementation((wallet, votes) =>
+			votes.map(
+				(vote: string, index: number) =>
+					// @ts-ignore
+					new ReadOnlyWallet({
+						address: vote,
+						username: `delegate-${index}`,
+					}),
+			),
+		);
+
+		render(
+			<Route path="/profiles/:profileId/dashboard">
+				<TransactionDetailModal
+					isOpen={true}
+					transactionItem={{
+						...TransactionFixture,
+						blockId: () => "as32d1as65d1as3d1as32d1asd51as3d21as3d2as165das",
+						data: () => ({
+							data: () => ({
+								asset: {
+									unvotes: TransactionFixture.unvotes(),
+									votes: TransactionFixture.votes(),
+								},
+								blockId: "as32d1as65d1as3d1as32d1asd51as3d21as3d2as165das",
+							}),
+						}),
+						isConfirmed: () => false,
+						isUnvote: () => false,
+						isVote: () => false,
+						isVoteCombination: () => false,
+						type: () => "unvote",
+						unvotes: () => TransactionFixture.unvotes(),
+						votes: () => [],
+						wallet: () => wallet,
+					}}
+				/>
+			</Route>,
+			{
+				history,
+				route: dashboardURL,
+			},
+		);
+
+		expect(screen.getByTestId("Modal__inner")).toHaveTextContent("Unvote");
+	});
+
 	it("should render a delegate registration modal", () => {
 		render(
 			<Route path="/profiles/:profileId/dashboard">
