@@ -83,5 +83,11 @@ describe("Add Recipient item", () => {
 		await userEvent.click(deleteButton());
 
 		expect(onDelete).toHaveBeenCalledWith(1);
+
+		onDelete.mockReset();
+
+		await userEvent.click(screen.getByTestId("AddRecipientItem--deleteButton_mobile"));
+
+		expect(onDelete).toHaveBeenCalledWith(1);
 	});
 });
