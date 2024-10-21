@@ -532,7 +532,7 @@ describe("AddRecipient", () => {
 		await waitFor(() => expect(recipientList()).toHaveLength(1));
 
 		expect(screen.getAllByTestId("Address__alias")).toHaveLength(2);
-		expect(screen.getByText("ARK Wallet 1")).toBeInTheDocument();
+		expect(screen.getAllByText("ARK Wallet 1").length).toBe(2);
 	});
 
 	it("should show error for low balance", async () => {
