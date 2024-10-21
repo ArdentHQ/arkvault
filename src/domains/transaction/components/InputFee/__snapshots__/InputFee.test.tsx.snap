@@ -53,7 +53,7 @@ exports[`InputFee > advanced view type > should allow to input a value 1`] = `
         >
           <input
             autocomplete="off"
-            class="no-ligatures w-full border-none !text-sm text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
+            class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
             data-testid="InputCurrency"
             type="text"
             value="0.447"
@@ -193,7 +193,7 @@ exports[`InputFee > advanced view type > should display converted value when on 
         >
           <input
             autocomplete="off"
-            class="no-ligatures w-full border-none !text-sm text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
+            class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
             data-testid="InputCurrency"
             type="text"
             value="0.3"
@@ -304,7 +304,7 @@ exports[`InputFee > advanced view type > should render disabled 1`] = `
       >
         <input
           autocomplete="off"
-          class="no-ligatures w-full border-none !text-sm text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base text-theme-secondary-text css-1937ogs"
+          class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base text-theme-secondary-text css-1937ogs"
           data-testid="InputCurrency"
           disabled=""
           type="text"
@@ -445,7 +445,7 @@ exports[`InputFee > should keep different values for simple and advanced view ty
         >
           <input
             autocomplete="off"
-            class="no-ligatures w-full border-none !text-sm text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
+            class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
             data-testid="InputCurrency"
             type="text"
             value="0.3"
@@ -702,7 +702,7 @@ exports[`InputFee > simple view type > should change fee option with converted v
         >
           <input
             autocomplete="off"
-            class="no-ligatures w-full border-none !text-sm text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
+            class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
             data-testid="select-list__input"
             readonly=""
             tabindex="-1"
@@ -746,7 +746,7 @@ exports[`InputFee > simple view type > should change fee option with converted v
                   aria-controls="InputFeeSimpleSelect__dropdown-menu"
                   aria-labelledby="InputFeeSimpleSelect__dropdown-label"
                   autocomplete="off"
-                  class="no-ligatures w-full border-none !text-sm text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
+                  class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
                   data-testid="SelectDropdown__input"
                   id="InputFeeSimpleSelect__dropdown-input"
                   placeholder="Select option"
@@ -876,7 +876,7 @@ exports[`InputFee > simple view type > should change fee option with converted v
         >
           <input
             autocomplete="off"
-            class="no-ligatures w-full border-none !text-sm text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
+            class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
             data-testid="select-list__input"
             readonly=""
             tabindex="-1"
@@ -920,7 +920,7 @@ exports[`InputFee > simple view type > should change fee option with converted v
                   aria-controls="InputFeeSimpleSelect__dropdown-menu"
                   aria-labelledby="InputFeeSimpleSelect__dropdown-label"
                   autocomplete="off"
-                  class="no-ligatures w-full border-none !text-sm text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
+                  class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
                   data-testid="SelectDropdown__input"
                   id="InputFeeSimpleSelect__dropdown-input"
                   placeholder="Select option"
@@ -1868,7 +1868,7 @@ exports[`InputFee > simple view type > should render simple view in xs 1`] = `
         >
           <input
             autocomplete="off"
-            class="no-ligatures w-full border-none !text-sm text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
+            class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
             data-testid="select-list__input"
             readonly=""
             tabindex="-1"
@@ -1912,7 +1912,7 @@ exports[`InputFee > simple view type > should render simple view in xs 1`] = `
                   aria-controls="InputFeeSimpleSelect__dropdown-menu"
                   aria-labelledby="InputFeeSimpleSelect__dropdown-label"
                   autocomplete="off"
-                  class="no-ligatures w-full border-none !text-sm text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
+                  class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
                   data-testid="SelectDropdown__input"
                   id="InputFeeSimpleSelect__dropdown-input"
                   placeholder="Select option"
@@ -2582,7 +2582,7 @@ exports[`InputFee > simple view type > should render simple view with converted 
         >
           <input
             autocomplete="off"
-            class="no-ligatures w-full border-none !text-sm text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
+            class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
             data-testid="select-list__input"
             readonly=""
             tabindex="-1"
@@ -2626,7 +2626,7 @@ exports[`InputFee > simple view type > should render simple view with converted 
                   aria-controls="InputFeeSimpleSelect__dropdown-menu"
                   aria-labelledby="InputFeeSimpleSelect__dropdown-label"
                   autocomplete="off"
-                  class="no-ligatures w-full border-none !text-sm text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
+                  class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
                   data-testid="SelectDropdown__input"
                   id="InputFeeSimpleSelect__dropdown-input"
                   placeholder="Select option"

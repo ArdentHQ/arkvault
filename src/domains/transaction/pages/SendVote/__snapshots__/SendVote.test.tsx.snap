@@ -1940,7 +1940,7 @@ exports[`SendVote > should show error if wrong mnemonic 1`] = `
                         <input
                           aria-invalid="true"
                           autocomplete="off"
-                          class="no-ligatures w-full border-none !text-sm text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
+                          class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
                           data-testid="AuthenticationStep__mnemonic"
                           name="mnemonic"
                           type="password"
@@ -2828,7 +2828,7 @@ exports[`SendVote > should show error step and go back 1`] = `
                           >
                             <textarea
                               autocomplete="off"
-                              class="no-ligatures w-full border-none !text-sm text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base resize-none min-h-[8rem] md:min-h-auto md:resize-y resize-none text-theme-secondary-text css-1937ogs"
+                              class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base resize-none min-h-[8rem] md:min-h-auto md:resize-y resize-none text-theme-secondary-text css-1937ogs"
                               data-testid="ErrorStep__errorMessage"
                               disabled=""
                               style="height: 4px;"

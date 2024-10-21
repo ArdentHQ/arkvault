@@ -117,7 +117,7 @@ exports[`ImportWallet WIF > should import with invalid wif 1`] = `
             >
               <input
                 autocomplete="off"
-                class="no-ligatures w-full border-none !text-sm text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
+                class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
                 data-testid="select-list__input"
                 name=""
                 readonly=""
@@ -158,7 +158,7 @@ exports[`ImportWallet WIF > should import with invalid wif 1`] = `
                       aria-controls="ImportWallet__select-menu"
                       aria-labelledby="ImportWallet__select-label"
                       autocomplete="off"
-                      class="no-ligatures w-full border-none !text-sm text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
+                      class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
                       data-testid="SelectDropdown__input"
                       id="ImportWallet__select-input"
                       name=""
@@ -250,7 +250,7 @@ exports[`ImportWallet WIF > should import with invalid wif 1`] = `
           >
             <input
               autocomplete="off"
-              class="no-ligatures w-full border-none !text-sm text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
+              class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
               data-testid="ImportWallet__wif-input"
               name="value"
               type="password"
@@ -468,7 +468,7 @@ exports[`ImportWallet WIF > should import with valid wif 1`] = `
             >
               <input
                 autocomplete="off"
-                class="no-ligatures w-full border-none !text-sm text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
+                class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
                 data-testid="select-list__input"
                 name=""
                 readonly=""
@@ -509,7 +509,7 @@ exports[`ImportWallet WIF > should import with valid wif 1`] = `
                       aria-controls="ImportWallet__select-menu"
                       aria-labelledby="ImportWallet__select-label"
                       autocomplete="off"
-                      class="no-ligatures w-full border-none !text-sm text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
+                      class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
                       data-testid="SelectDropdown__input"
                       id="ImportWallet__select-input"
                       name=""
@@ -601,7 +601,7 @@ exports[`ImportWallet WIF > should import with valid wif 1`] = `
           >
             <input
               autocomplete="off"
-              class="no-ligatures w-full border-none !text-sm text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
+              class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
               data-testid="ImportWallet__wif-input"
               name="value"
               type="password"

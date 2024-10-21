@@ -726,7 +726,7 @@ exports[`SignMessage > Sign with Wallet > should render (lg) 1`] = `
                           >
                             <input
                               autocomplete="off"
-                              class="no-ligatures w-full border-none !text-sm text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base text-theme-secondary-text css-1937ogs"
+                              class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base text-theme-secondary-text css-1937ogs"
                               data-testid="SelectAddress__input"
                               disabled=""
                               name="signatory-address"
@@ -756,7 +756,7 @@ exports[`SignMessage > Sign with Wallet > should render (lg) 1`] = `
                         >
                           <input
                             autocomplete="off"
-                            class="no-ligatures w-full border-none !text-sm text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
+                            class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
                             data-testid="SignMessage__message-input"
                             name="message"
                             type="text"
@@ -806,7 +806,7 @@ exports[`SignMessage > Sign with Wallet > should render (lg) 1`] = `
                           >
                             <input
                               autocomplete="off"
-                              class="no-ligatures w-full border-none !text-sm text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
+                              class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
                               data-testid="AuthenticationStep__mnemonic"
                               name="mnemonic"
                               type="password"
@@ -1626,7 +1626,7 @@ exports[`SignMessage > Sign with Wallet > should render (xs) 1`] = `
                           >
                             <input
                               autocomplete="off"
-                              class="no-ligatures w-full border-none !text-sm text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base text-theme-secondary-text css-1937ogs"
+                              class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base text-theme-secondary-text css-1937ogs"
                               data-testid="SelectAddress__input"
                               disabled=""
                               name="signatory-address"
@@ -1656,7 +1656,7 @@ exports[`SignMessage > Sign with Wallet > should render (xs) 1`] = `
                         >
                           <input
                             autocomplete="off"
-                            class="no-ligatures w-full border-none !text-sm text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
+                            class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
                             data-testid="SignMessage__message-input"
                             name="message"
                             type="text"
@@ -1706,7 +1706,7 @@ exports[`SignMessage > Sign with Wallet > should render (xs) 1`] = `
                           >
                             <input
                               autocomplete="off"
-                              class="no-ligatures w-full border-none !text-sm text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
+                              class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
                               data-testid="AuthenticationStep__mnemonic"
                               name="mnemonic"
                               type="password"

@@ -216,7 +216,7 @@ exports[`DelegateRegistrationForm > should error if username is too long 1`] = `
                 <input
                   aria-invalid="true"
                   autocomplete="off"
-                  class="no-ligatures w-full border-none !text-sm text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
+                  class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
                   data-testid="Input__username"
                   name="username"
                   type="text"
@@ -617,7 +617,7 @@ exports[`DelegateRegistrationForm > should render form step 1`] = `
               >
                 <input
                   autocomplete="off"
-                  class="no-ligatures w-full border-none !text-sm text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
+                  class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
                   data-testid="Input__username"
                   name="username"
                   type="text"
@@ -1277,7 +1277,7 @@ exports[`DelegateRegistrationForm > should set fee 1`] = `
               >
                 <input
                   autocomplete="off"
-                  class="no-ligatures w-full border-none !text-sm text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
+                  class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
                   data-testid="Input__username"
                   name="username"
                   type="text"
@@ -1346,7 +1346,7 @@ exports[`DelegateRegistrationForm > should set fee 1`] = `
                   >
                     <input
                       autocomplete="off"
-                      class="no-ligatures w-full border-none !text-sm text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
+                      class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
                       data-testid="InputCurrency"
                       name="fee"
                       type="text"
@@ -1655,7 +1655,7 @@ exports[`DelegateRegistrationForm > should show error if username already exists
                 <input
                   aria-invalid="true"
                   autocomplete="off"
-                  class="no-ligatures w-full border-none !text-sm text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
+                  class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
                   data-testid="Input__username"
                   name="username"
                   type="text"
@@ -2057,7 +2057,7 @@ exports[`DelegateRegistrationForm > should show error if username contains illeg
                 <input
                   aria-invalid="true"
                   autocomplete="off"
-                  class="no-ligatures w-full border-none !text-sm text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
+                  class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
                   data-testid="Input__username"
                   name="username"
                   type="text"
