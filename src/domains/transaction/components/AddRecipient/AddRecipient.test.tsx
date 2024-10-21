@@ -531,7 +531,7 @@ describe("AddRecipient", () => {
 
 		await waitFor(() => expect(recipientList()).toHaveLength(1));
 
-		expect(screen.getAllByTestId("Address__alias")).toHaveLength(1);
+		expect(screen.getAllByTestId("Address__alias")).toHaveLength(2);
 		expect(screen.getByText("ARK Wallet 1")).toBeInTheDocument();
 	});
 
