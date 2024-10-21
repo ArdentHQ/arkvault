@@ -8,7 +8,7 @@ import { Image } from "@/app/components/Image";
 import { useEnvironmentContext } from "@/app/contexts";
 import { NotificationTransactionsTable } from "@/domains/transaction/components/TransactionTable/NotificationTransactionsTable";
 
-export const Notifications = ({ profile, onTransactionClick }: NotificationsProperties) => {
+export const Notifications = ({ profile, onTransactionClick, hideDropdown }: NotificationsProperties) => {
 	const { t } = useTranslation();
 	const { persist } = useEnvironmentContext();
 
@@ -46,7 +46,10 @@ export const Notifications = ({ profile, onTransactionClick }: NotificationsProp
 							profile={profile}
 							isLoading={profile.notifications().transactions().isSyncing() || transactions.length === 0}
 							transactions={transactions}
-							onClick={onTransactionClick}
+							onClick={(item) => {
+								onTransactionClick?.(item);
+								hideDropdown?.();
+							}}
 						/>
 					)}
 				</div>

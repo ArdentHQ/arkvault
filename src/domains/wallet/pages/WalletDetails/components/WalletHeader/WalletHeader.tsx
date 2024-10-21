@@ -41,6 +41,7 @@ export const WalletHeader: React.VFC<WalletHeaderProperties> = ({
 
 					<div data-testid="WalletHeader__more-button" className="my-auto ml-3">
 						<Dropdown
+							placement="bottom-end"
 							toggleContent={
 								<Button
 									variant="transparent"
