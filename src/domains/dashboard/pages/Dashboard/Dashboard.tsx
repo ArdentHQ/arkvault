@@ -1,6 +1,6 @@
 import { uniq } from "@ardenthq/sdk-helpers";
 import { Contracts, DTO } from "@ardenthq/sdk-profiles";
-import React, {useEffect, useMemo, useState} from "react";
+import React, { useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { EmptyBlock } from "@/app/components/EmptyBlock";
 import { useWalletFilters } from "@/domains/dashboard/components/FilterWallets";
@@ -16,9 +16,6 @@ import { useConfiguration, useEnvironmentContext } from "@/app/contexts";
 import { useActiveProfile } from "@/app/hooks";
 import { WelcomeModal } from "@/domains/profile/components/WelcomeModal";
 import { TransactionDetailModal } from "@/domains/transaction/components/TransactionDetailModal";
-import {generatePath} from "react-router";
-import {ProfilePaths} from "@/router/paths";
-import {useHistory} from "react-router-dom";
 
 export const Dashboard: React.VFC = () => {
 	const activeProfile = useActiveProfile();
@@ -50,16 +47,6 @@ export const Dashboard: React.VFC = () => {
 			),
 		[activeProfile, walletsCount, profileIsSyncedWithNetwork], // eslint-disable-line react-hooks/exhaustive-deps
 	);
-
-	const history = useHistory();
-
-	useEffect(() => {
-		const p = generatePath(ProfilePaths.SendTransferWallet, {
-			profileId: activeProfile.id(),
-			walletId: wallet.id(),
-		});
-		history.push(p)
-	}, []);
 
 	return (
 		<>
