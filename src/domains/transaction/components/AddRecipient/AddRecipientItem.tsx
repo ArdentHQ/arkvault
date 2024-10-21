@@ -1,4 +1,4 @@
-import React, { VFC } from "react";
+import React from "react";
 
 import { useTranslation } from "react-i18next";
 import { Button } from "@/app/components/Button";
@@ -7,8 +7,9 @@ import { Icon } from "@/app/components/Icon";
 import { RecipientItem } from "@/domains/transaction/components/RecipientList/RecipientList.contracts";
 import { Amount } from "@/app/components/Amount";
 import { useExchangeRate } from "@/app/hooks/use-exchange-rate";
+import { MultiEntryItem, InfoDetail } from "@/app/components/MultiEntryItem/MultiEntryItem";
 
-export const AddRecipientItem: VFC<{
+export const AddRecipientItem: React.FC<{
 	index: number;
 	recipient: RecipientItem;
 	ticker: string;
@@ -20,52 +21,91 @@ export const AddRecipientItem: VFC<{
 	const { convert } = useExchangeRate({ exchangeTicker, ticker });
 
 	return (
-		<div
-			data-testid="AddRecipientItem"
-			className="border-b border-dashed border-theme-secondary-300 py-3 last:border-none last:pb-0 dark:border-theme-secondary-800"
-		>
-			<div className="flex flex-col items-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
-				<div className="flex w-full flex-1 flex-row items-center space-x-4 overflow-auto sm:flex-col sm:items-start sm:space-x-0 sm:space-y-1">
-					<div className="whitespace-nowrap text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700">
+		<MultiEntryItem
+			dataTestId="AddRecipientItem"
+			titleSlot={
+				<div className="flex w-full items-center justify-between">
+					<div className="whitespace-nowrap text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500">
 						{t("COMMON.RECIPIENT_#", { count: index + 1 })}
 					</div>
-					<div className="max-w-full overflow-auto sm:w-full">
-						<Address address={address} walletName={alias} />
+					<Button
+						onClick={() => onDelete(index)}
+						size="icon"
+						sizeClassName="p-0"
+						className="text-theme-secondary-700 dark:text-theme-secondary-500 sm:hidden"
+						variant="transparent"
+					>
+						<Icon name="Trash" size="lg" />
+					</Button>
+				</div>
+			}
+			bodySlot={
+				<div>
+					<div className="mt-1 hidden leading-5 sm:block">
+						<Address
+							address={address}
+							walletName={alias}
+							addressClass="leading-5 text-theme-secondary-500 dark:text-theme-secondary-700"
+							walletNameClass="leading-5"
+						/>
+					</div>
+					<div className="space-y-4 sm:hidden">
+						<InfoDetail
+							label="Address"
+							body={
+								<Address
+									address={address}
+									walletName={alias}
+									walletNameClass="leading-[17px] text-sm"
+									addressClass="leading-[17px] text-sm text-theme-secondary-500 dark:text-theme-secondary-700"
+								/>
+							}
+						/>
+						<InfoDetail
+							label="Value"
+							body={
+								<Amount
+									ticker={ticker}
+									value={amount!}
+									className="text-sm font-semibold leading-[17px] text-theme-secondary-900 dark:text-theme-secondary-200"
+								/>
+							}
+						/>
 					</div>
 				</div>
-
-				<div className="flex w-full flex-row items-center space-x-4 overflow-auto sm:w-auto sm:flex-col sm:items-start sm:space-x-0 sm:space-y-1 sm:pl-7">
-					<div className="whitespace-nowrap font-semibold text-theme-secondary-500 dark:text-theme-secondary-700">
-						{showExchangeAmount ? (
-							<>
+			}
+			rightSlot={
+				<div className="flex items-center gap-3">
+					<div className="flex flex-col items-end space-y-2">
+						<div className="whitespace-nowrap font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500">
+							{showExchangeAmount ? (
 								<span data-testid="AddRecipientItem--exchangeAmount" className="hidden sm:inline">
-									<Amount ticker={exchangeTicker} value={convert(amount)} />
+									<Amount
+										ticker={exchangeTicker}
+										value={convert(amount)}
+										className="text-sm leading-[17px]"
+									/>
 								</span>
-								<span className="sm:hidden">{t("COMMON.AMOUNT")}</span>
-							</>
-						) : (
-							<span className="text-sm">{t("COMMON.AMOUNT")}</span>
-						)}
+							) : (
+								<span className="text-sm leading-[17px]">{t("COMMON.AMOUNT")}</span>
+							)}
+						</div>
+						<Amount
+							ticker={ticker}
+							value={amount!}
+							className="font-semibold leading-5 text-theme-secondary-900 dark:text-theme-secondary-200"
+						/>
 					</div>
-					<div className="flex flex-1 justify-end font-semibold text-theme-secondary-700 dark:text-theme-secondary-200 sm:text-theme-secondary-900">
-						<Amount ticker={ticker} value={amount!} />
-					</div>
-				</div>
-
-				<div className="w-full sm:w-auto">
 					<Button
 						variant="danger"
 						onClick={() => onDelete(index)}
 						data-testid="AddRecipientItem--deleteButton"
-						className="w-full sm:w-auto"
+						className="h-11 w-11 p-2.5"
 					>
-						<div className="flex items-center space-x-2 py-1">
-							<Icon name="Trash" />
-							<div className="block sm:hidden">{t("COMMON.REMOVE")}</div>
-						</div>
+						<Icon name="Trash" />
 					</Button>
 				</div>
-			</div>
-		</div>
+			}
+		/>
 	);
 };
