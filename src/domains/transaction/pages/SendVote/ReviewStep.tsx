@@ -31,7 +31,7 @@ export const ReviewStep = ({ unvotes, votes, wallet }: SendVoteStepProperties) =
 				}
 				subtitle={t("TRANSACTION.REVIEW_STEP.DESCRIPTION")}
 			/>
-			<div className="-mx-3 space-y-3 sm:mx-0 sm:space-y-4 mt-4">
+			<div className="-mx-3 mt-4 space-y-3 sm:mx-0 sm:space-y-4">
 				<DetailWrapper label={t("TRANSACTION.ADDRESSING")}>
 					<div className="flex w-full items-center justify-between gap-4 space-x-2 sm:justify-start sm:space-x-0">
 						<DetailTitle
