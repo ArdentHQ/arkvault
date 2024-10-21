@@ -412,15 +412,15 @@ describe("Transactions", () => {
 			expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow__mobile")).toHaveLength(30),
 		);
 
-		const dropdownContainer = within(screen.getByTestId("Transactions--filter-dropdown"));
-
-		const button = dropdownContainer.getByTestId("dropdown__toggle");
+		const button = screen.getByTestId("dropdown__toggle-Transactions--filter-dropdown");
 
 		expect(button).toBeInTheDocument();
 
 		expect(button).not.toBeDisabled();
 
 		await userEvent.click(button);
+
+		const dropdownContainer = within(screen.getByTestId("dropdown__content-Transactions--filter-dropdown"));
 
 		await expect(dropdownContainer.findByTestId("dropdown__option--2")).resolves.toBeVisible();
 

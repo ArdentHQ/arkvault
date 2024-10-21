@@ -19,11 +19,7 @@ const preSteps = {
 		await t.click(
 			Selector('[data-testid="ContactList"] tbody > tr:first-child [data-testid="dropdown__toggle"]').child(0),
 		);
-		await t.click(
-			Selector('[data-testid="ContactList"] tbody > tr:first-child [data-testid="dropdown__option--0"]').withText(
-				translations.COMMON.EDIT,
-			),
-		);
+		await t.click(Selector('[data-testid="dropdown__option--0"]').withText(translations.COMMON.EDIT));
 		await t
 			.expect(
 				Selector('[data-testid="Modal__inner"]').withText(translations.CONTACTS.MODAL_UPDATE_CONTACT.TITLE)

@@ -52,7 +52,6 @@ export const FilterWallets = ({ networks, walletsDisplayType, onChange }: Filter
 					</div>
 
 					<Dropdown
-						dropdownClass="mx-4 sm:mx-0"
 						toggleIcon="ChevronDownSmall"
 						toggleSize="sm"
 						options={walletDisplayOptions}

@@ -519,50 +519,48 @@ exports[`Welcome > should change route to create profile 1`] = `
                           class="relative"
                         >
                           <div
-                            class="static sm:relative"
+                            aria-expanded="false"
+                            aria-haspopup="dialog"
+                            data-testid="dropdown__toggle"
                           >
-                            <span
-                              data-testid="dropdown__toggle"
+                            <div
+                              class="group mr-2.5 flex cursor-pointer justify-center rounded-md p-1.5 hover:bg-theme-navy-200 dark:hover:bg-theme-secondary-700"
+                              tabindex="1"
                             >
                               <div
-                                class="group mr-2.5 flex cursor-pointer justify-center rounded-md p-1.5 hover:bg-theme-navy-200 dark:hover:bg-theme-secondary-700"
-                                tabindex="1"
+                                class="text-theme-secondary-700 transition-colors duration-200 group-hover:text-theme-navy-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200 css-1i4b0eq"
+                                height="20"
+                                width="20"
                               >
-                                <div
-                                  class="text-theme-secondary-700 transition-colors duration-200 group-hover:text-theme-navy-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200 css-1i4b0eq"
-                                  height="20"
-                                  width="20"
+                                <svg
+                                  fill="none"
+                                  viewBox="0 0 20 20"
+                                  xmlns="http://www.w3.org/2000/svg"
                                 >
-                                  <svg
-                                    fill="none"
-                                    viewBox="0 0 20 20"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                  >
-                                    <circle
-                                      cx="10.002"
-                                      cy="2.99609"
-                                      fill="currentColor"
-                                      r="2"
-                                      transform="rotate(90 10.002 2.99609)"
-                                    />
-                                    <circle
-                                      cx="10.002"
-                                      cy="9.99805"
-                                      fill="currentColor"
-                                      r="2"
-                                      transform="rotate(90 10.002 9.99805)"
-                                    />
-                                    <circle
-                                      cx="10.002"
-                                      cy="17"
-                                      fill="currentColor"
-                                      r="2"
-                                      transform="rotate(90 10.002 17)"
-                                    />
-                                  </svg>
-                                </div>
+                                  <circle
+                                    cx="10.002"
+                                    cy="2.99609"
+                                    fill="currentColor"
+                                    r="2"
+                                    transform="rotate(90 10.002 2.99609)"
+                                  />
+                                  <circle
+                                    cx="10.002"
+                                    cy="9.99805"
+                                    fill="currentColor"
+                                    r="2"
+                                    transform="rotate(90 10.002 9.99805)"
+                                  />
+                                  <circle
+                                    cx="10.002"
+                                    cy="17"
+                                    fill="currentColor"
+                                    r="2"
+                                    transform="rotate(90 10.002 17)"
+                                  />
+                                </svg>
                               </div>
-                            </span>
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -1135,50 +1133,48 @@ exports[`Welcome > should navigate to previous page with correct password 1`] = 
                           class="relative"
                         >
                           <div
-                            class="static sm:relative"
+                            aria-expanded="false"
+                            aria-haspopup="dialog"
+                            data-testid="dropdown__toggle"
                           >
-                            <span
-                              data-testid="dropdown__toggle"
+                            <div
+                              class="group mr-2.5 flex cursor-pointer justify-center rounded-md p-1.5 hover:bg-theme-navy-200 dark:hover:bg-theme-secondary-700"
+                              tabindex="1"
                             >
                               <div
-                                class="group mr-2.5 flex cursor-pointer justify-center rounded-md p-1.5 hover:bg-theme-navy-200 dark:hover:bg-theme-secondary-700"
-                                tabindex="1"
+                                class="text-theme-secondary-700 transition-colors duration-200 group-hover:text-theme-navy-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200 css-1i4b0eq"
+                                height="20"
+                                width="20"
                               >
-                                <div
-                                  class="text-theme-secondary-700 transition-colors duration-200 group-hover:text-theme-navy-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200 css-1i4b0eq"
-                                  height="20"
-                                  width="20"
+                                <svg
+                                  fill="none"
+                                  viewBox="0 0 20 20"
+                                  xmlns="http://www.w3.org/2000/svg"
                                 >
-                                  <svg
-                                    fill="none"
-                                    viewBox="0 0 20 20"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                  >
-                                    <circle
-                                      cx="10.002"
-                                      cy="2.99609"
-                                      fill="currentColor"
-                                      r="2"
-                                      transform="rotate(90 10.002 2.99609)"
-                                    />
-                                    <circle
-                                      cx="10.002"
-                                      cy="9.99805"
-                                      fill="currentColor"
-                                      r="2"
-                                      transform="rotate(90 10.002 9.99805)"
-                                    />
-                                    <circle
-                                      cx="10.002"
-                                      cy="17"
-                                      fill="currentColor"
-                                      r="2"
-                                      transform="rotate(90 10.002 17)"
-                                    />
-                                  </svg>
-                                </div>
+                                  <circle
+                                    cx="10.002"
+                                    cy="2.99609"
+                                    fill="currentColor"
+                                    r="2"
+                                    transform="rotate(90 10.002 2.99609)"
+                                  />
+                                  <circle
+                                    cx="10.002"
+                                    cy="9.99805"
+                                    fill="currentColor"
+                                    r="2"
+                                    transform="rotate(90 10.002 9.99805)"
+                                  />
+                                  <circle
+                                    cx="10.002"
+                                    cy="17"
+                                    fill="currentColor"
+                                    r="2"
+                                    transform="rotate(90 10.002 17)"
+                                  />
+                                </svg>
                               </div>
-                            </span>
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -1256,50 +1252,48 @@ exports[`Welcome > should navigate to previous page with correct password 1`] = 
                           class="relative"
                         >
                           <div
-                            class="static sm:relative"
+                            aria-expanded="false"
+                            aria-haspopup="dialog"
+                            data-testid="dropdown__toggle"
                           >
-                            <span
-                              data-testid="dropdown__toggle"
+                            <div
+                              class="group mr-2.5 flex cursor-pointer justify-center rounded-md p-1.5 hover:bg-theme-navy-200 dark:hover:bg-theme-secondary-700"
+                              tabindex="1"
                             >
                               <div
-                                class="group mr-2.5 flex cursor-pointer justify-center rounded-md p-1.5 hover:bg-theme-navy-200 dark:hover:bg-theme-secondary-700"
-                                tabindex="1"
+                                class="text-theme-secondary-700 transition-colors duration-200 group-hover:text-theme-navy-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200 css-1i4b0eq"
+                                height="20"
+                                width="20"
                               >
-                                <div
-                                  class="text-theme-secondary-700 transition-colors duration-200 group-hover:text-theme-navy-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200 css-1i4b0eq"
-                                  height="20"
-                                  width="20"
+                                <svg
+                                  fill="none"
+                                  viewBox="0 0 20 20"
+                                  xmlns="http://www.w3.org/2000/svg"
                                 >
-                                  <svg
-                                    fill="none"
-                                    viewBox="0 0 20 20"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                  >
-                                    <circle
-                                      cx="10.002"
-                                      cy="2.99609"
-                                      fill="currentColor"
-                                      r="2"
-                                      transform="rotate(90 10.002 2.99609)"
-                                    />
-                                    <circle
-                                      cx="10.002"
-                                      cy="9.99805"
-                                      fill="currentColor"
-                                      r="2"
-                                      transform="rotate(90 10.002 9.99805)"
-                                    />
-                                    <circle
-                                      cx="10.002"
-                                      cy="17"
-                                      fill="currentColor"
-                                      r="2"
-                                      transform="rotate(90 10.002 17)"
-                                    />
-                                  </svg>
-                                </div>
+                                  <circle
+                                    cx="10.002"
+                                    cy="2.99609"
+                                    fill="currentColor"
+                                    r="2"
+                                    transform="rotate(90 10.002 2.99609)"
+                                  />
+                                  <circle
+                                    cx="10.002"
+                                    cy="9.99805"
+                                    fill="currentColor"
+                                    r="2"
+                                    transform="rotate(90 10.002 9.99805)"
+                                  />
+                                  <circle
+                                    cx="10.002"
+                                    cy="17"
+                                    fill="currentColor"
+                                    r="2"
+                                    transform="rotate(90 10.002 17)"
+                                  />
+                                </svg>
                               </div>
-                            </span>
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -1872,50 +1866,48 @@ exports[`Welcome > should navigate to profile dashboard 1`] = `
                           class="relative"
                         >
                           <div
-                            class="static sm:relative"
+                            aria-expanded="false"
+                            aria-haspopup="dialog"
+                            data-testid="dropdown__toggle"
                           >
-                            <span
-                              data-testid="dropdown__toggle"
+                            <div
+                              class="group mr-2.5 flex cursor-pointer justify-center rounded-md p-1.5 hover:bg-theme-navy-200 dark:hover:bg-theme-secondary-700"
+                              tabindex="1"
                             >
                               <div
-                                class="group mr-2.5 flex cursor-pointer justify-center rounded-md p-1.5 hover:bg-theme-navy-200 dark:hover:bg-theme-secondary-700"
-                                tabindex="1"
+                                class="text-theme-secondary-700 transition-colors duration-200 group-hover:text-theme-navy-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200 css-1i4b0eq"
+                                height="20"
+                                width="20"
                               >
-                                <div
-                                  class="text-theme-secondary-700 transition-colors duration-200 group-hover:text-theme-navy-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200 css-1i4b0eq"
-                                  height="20"
-                                  width="20"
+                                <svg
+                                  fill="none"
+                                  viewBox="0 0 20 20"
+                                  xmlns="http://www.w3.org/2000/svg"
                                 >
-                                  <svg
-                                    fill="none"
-                                    viewBox="0 0 20 20"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                  >
-                                    <circle
-                                      cx="10.002"
-                                      cy="2.99609"
-                                      fill="currentColor"
-                                      r="2"
-                                      transform="rotate(90 10.002 2.99609)"
-                                    />
-                                    <circle
-                                      cx="10.002"
-                                      cy="9.99805"
-                                      fill="currentColor"
-                                      r="2"
-                                      transform="rotate(90 10.002 9.99805)"
-                                    />
-                                    <circle
-                                      cx="10.002"
-                                      cy="17"
-                                      fill="currentColor"
-                                      r="2"
-                                      transform="rotate(90 10.002 17)"
-                                    />
-                                  </svg>
-                                </div>
+                                  <circle
+                                    cx="10.002"
+                                    cy="2.99609"
+                                    fill="currentColor"
+                                    r="2"
+                                    transform="rotate(90 10.002 2.99609)"
+                                  />
+                                  <circle
+                                    cx="10.002"
+                                    cy="9.99805"
+                                    fill="currentColor"
+                                    r="2"
+                                    transform="rotate(90 10.002 9.99805)"
+                                  />
+                                  <circle
+                                    cx="10.002"
+                                    cy="17"
+                                    fill="currentColor"
+                                    r="2"
+                                    transform="rotate(90 10.002 17)"
+                                  />
+                                </svg>
                               </div>
-                            </span>
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -1993,50 +1985,48 @@ exports[`Welcome > should navigate to profile dashboard 1`] = `
                           class="relative"
                         >
                           <div
-                            class="static sm:relative"
+                            aria-expanded="false"
+                            aria-haspopup="dialog"
+                            data-testid="dropdown__toggle"
                           >
-                            <span
-                              data-testid="dropdown__toggle"
+                            <div
+                              class="group mr-2.5 flex cursor-pointer justify-center rounded-md p-1.5 hover:bg-theme-navy-200 dark:hover:bg-theme-secondary-700"
+                              tabindex="1"
                             >
                               <div
-                                class="group mr-2.5 flex cursor-pointer justify-center rounded-md p-1.5 hover:bg-theme-navy-200 dark:hover:bg-theme-secondary-700"
-                                tabindex="1"
+                                class="text-theme-secondary-700 transition-colors duration-200 group-hover:text-theme-navy-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200 css-1i4b0eq"
+                                height="20"
+                                width="20"
                               >
-                                <div
-                                  class="text-theme-secondary-700 transition-colors duration-200 group-hover:text-theme-navy-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200 css-1i4b0eq"
-                                  height="20"
-                                  width="20"
+                                <svg
+                                  fill="none"
+                                  viewBox="0 0 20 20"
+                                  xmlns="http://www.w3.org/2000/svg"
                                 >
-                                  <svg
-                                    fill="none"
-                                    viewBox="0 0 20 20"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                  >
-                                    <circle
-                                      cx="10.002"
-                                      cy="2.99609"
-                                      fill="currentColor"
-                                      r="2"
-                                      transform="rotate(90 10.002 2.99609)"
-                                    />
-                                    <circle
-                                      cx="10.002"
-                                      cy="9.99805"
-                                      fill="currentColor"
-                                      r="2"
-                                      transform="rotate(90 10.002 9.99805)"
-                                    />
-                                    <circle
-                                      cx="10.002"
-                                      cy="17"
-                                      fill="currentColor"
-                                      r="2"
-                                      transform="rotate(90 10.002 17)"
-                                    />
-                                  </svg>
-                                </div>
+                                  <circle
+                                    cx="10.002"
+                                    cy="2.99609"
+                                    fill="currentColor"
+                                    r="2"
+                                    transform="rotate(90 10.002 2.99609)"
+                                  />
+                                  <circle
+                                    cx="10.002"
+                                    cy="9.99805"
+                                    fill="currentColor"
+                                    r="2"
+                                    transform="rotate(90 10.002 9.99805)"
+                                  />
+                                  <circle
+                                    cx="10.002"
+                                    cy="17"
+                                    fill="currentColor"
+                                    r="2"
+                                    transform="rotate(90 10.002 17)"
+                                  />
+                                </svg>
                               </div>
-                            </span>
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -2609,50 +2599,48 @@ exports[`Welcome > should navigate to profile dashboard with correct password 1`
                           class="relative"
                         >
                           <div
-                            class="static sm:relative"
+                            aria-expanded="false"
+                            aria-haspopup="dialog"
+                            data-testid="dropdown__toggle"
                           >
-                            <span
-                              data-testid="dropdown__toggle"
+                            <div
+                              class="group mr-2.5 flex cursor-pointer justify-center rounded-md p-1.5 hover:bg-theme-navy-200 dark:hover:bg-theme-secondary-700"
+                              tabindex="1"
                             >
                               <div
-                                class="group mr-2.5 flex cursor-pointer justify-center rounded-md p-1.5 hover:bg-theme-navy-200 dark:hover:bg-theme-secondary-700"
-                                tabindex="1"
+                                class="text-theme-secondary-700 transition-colors duration-200 group-hover:text-theme-navy-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200 css-1i4b0eq"
+                                height="20"
+                                width="20"
                               >
-                                <div
-                                  class="text-theme-secondary-700 transition-colors duration-200 group-hover:text-theme-navy-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200 css-1i4b0eq"
-                                  height="20"
-                                  width="20"
+                                <svg
+                                  fill="none"
+                                  viewBox="0 0 20 20"
+                                  xmlns="http://www.w3.org/2000/svg"
                                 >
-                                  <svg
-                                    fill="none"
-                                    viewBox="0 0 20 20"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                  >
-                                    <circle
-                                      cx="10.002"
-                                      cy="2.99609"
-                                      fill="currentColor"
-                                      r="2"
-                                      transform="rotate(90 10.002 2.99609)"
-                                    />
-                                    <circle
-                                      cx="10.002"
-                                      cy="9.99805"
-                                      fill="currentColor"
-                                      r="2"
-                                      transform="rotate(90 10.002 9.99805)"
-                                    />
-                                    <circle
-                                      cx="10.002"
-                                      cy="17"
-                                      fill="currentColor"
-                                      r="2"
-                                      transform="rotate(90 10.002 17)"
-                                    />
-                                  </svg>
-                                </div>
+                                  <circle
+                                    cx="10.002"
+                                    cy="2.99609"
+                                    fill="currentColor"
+                                    r="2"
+                                    transform="rotate(90 10.002 2.99609)"
+                                  />
+                                  <circle
+                                    cx="10.002"
+                                    cy="9.99805"
+                                    fill="currentColor"
+                                    r="2"
+                                    transform="rotate(90 10.002 9.99805)"
+                                  />
+                                  <circle
+                                    cx="10.002"
+                                    cy="17"
+                                    fill="currentColor"
+                                    r="2"
+                                    transform="rotate(90 10.002 17)"
+                                  />
+                                </svg>
                               </div>
-                            </span>
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -2730,50 +2718,48 @@ exports[`Welcome > should navigate to profile dashboard with correct password 1`
                           class="relative"
                         >
                           <div
-                            class="static sm:relative"
+                            aria-expanded="false"
+                            aria-haspopup="dialog"
+                            data-testid="dropdown__toggle"
                           >
-                            <span
-                              data-testid="dropdown__toggle"
+                            <div
+                              class="group mr-2.5 flex cursor-pointer justify-center rounded-md p-1.5 hover:bg-theme-navy-200 dark:hover:bg-theme-secondary-700"
+                              tabindex="1"
                             >
                               <div
-                                class="group mr-2.5 flex cursor-pointer justify-center rounded-md p-1.5 hover:bg-theme-navy-200 dark:hover:bg-theme-secondary-700"
-                                tabindex="1"
+                                class="text-theme-secondary-700 transition-colors duration-200 group-hover:text-theme-navy-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200 css-1i4b0eq"
+                                height="20"
+                                width="20"
                               >
-                                <div
-                                  class="text-theme-secondary-700 transition-colors duration-200 group-hover:text-theme-navy-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200 css-1i4b0eq"
-                                  height="20"
-                                  width="20"
+                                <svg
+                                  fill="none"
+                                  viewBox="0 0 20 20"
+                                  xmlns="http://www.w3.org/2000/svg"
                                 >
-                                  <svg
-                                    fill="none"
-                                    viewBox="0 0 20 20"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                  >
-                                    <circle
-                                      cx="10.002"
-                                      cy="2.99609"
-                                      fill="currentColor"
-                                      r="2"
-                                      transform="rotate(90 10.002 2.99609)"
-                                    />
-                                    <circle
-                                      cx="10.002"
-                                      cy="9.99805"
-                                      fill="currentColor"
-                                      r="2"
-                                      transform="rotate(90 10.002 9.99805)"
-                                    />
-                                    <circle
-                                      cx="10.002"
-                                      cy="17"
-                                      fill="currentColor"
-                                      r="2"
-                                      transform="rotate(90 10.002 17)"
-                                    />
-                                  </svg>
-                                </div>
+                                  <circle
+                                    cx="10.002"
+                                    cy="2.99609"
+                                    fill="currentColor"
+                                    r="2"
+                                    transform="rotate(90 10.002 2.99609)"
+                                  />
+                                  <circle
+                                    cx="10.002"
+                                    cy="9.99805"
+                                    fill="currentColor"
+                                    r="2"
+                                    transform="rotate(90 10.002 9.99805)"
+                                  />
+                                  <circle
+                                    cx="10.002"
+                                    cy="17"
+                                    fill="currentColor"
+                                    r="2"
+                                    transform="rotate(90 10.002 17)"
+                                  />
+                                </svg>
                               </div>
-                            </span>
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -3346,50 +3332,48 @@ exports[`Welcome > should navigate to profile settings from profile card menu 1`
                           class="relative"
                         >
                           <div
-                            class="static sm:relative"
+                            aria-expanded="false"
+                            aria-haspopup="dialog"
+                            data-testid="dropdown__toggle"
                           >
-                            <span
-                              data-testid="dropdown__toggle"
+                            <div
+                              class="group mr-2.5 flex cursor-pointer justify-center rounded-md p-1.5 hover:bg-theme-navy-200 dark:hover:bg-theme-secondary-700"
+                              tabindex="1"
                             >
                               <div
-                                class="group mr-2.5 flex cursor-pointer justify-center rounded-md p-1.5 hover:bg-theme-navy-200 dark:hover:bg-theme-secondary-700"
-                                tabindex="1"
+                                class="text-theme-secondary-700 transition-colors duration-200 group-hover:text-theme-navy-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200 css-1i4b0eq"
+                                height="20"
+                                width="20"
                               >
-                                <div
-                                  class="text-theme-secondary-700 transition-colors duration-200 group-hover:text-theme-navy-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200 css-1i4b0eq"
-                                  height="20"
-                                  width="20"
+                                <svg
+                                  fill="none"
+                                  viewBox="0 0 20 20"
+                                  xmlns="http://www.w3.org/2000/svg"
                                 >
-                                  <svg
-                                    fill="none"
-                                    viewBox="0 0 20 20"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                  >
-                                    <circle
-                                      cx="10.002"
-                                      cy="2.99609"
-                                      fill="currentColor"
-                                      r="2"
-                                      transform="rotate(90 10.002 2.99609)"
-                                    />
-                                    <circle
-                                      cx="10.002"
-                                      cy="9.99805"
-                                      fill="currentColor"
-                                      r="2"
-                                      transform="rotate(90 10.002 9.99805)"
-                                    />
-                                    <circle
-                                      cx="10.002"
-                                      cy="17"
-                                      fill="currentColor"
-                                      r="2"
-                                      transform="rotate(90 10.002 17)"
-                                    />
-                                  </svg>
-                                </div>
+                                  <circle
+                                    cx="10.002"
+                                    cy="2.99609"
+                                    fill="currentColor"
+                                    r="2"
+                                    transform="rotate(90 10.002 2.99609)"
+                                  />
+                                  <circle
+                                    cx="10.002"
+                                    cy="9.99805"
+                                    fill="currentColor"
+                                    r="2"
+                                    transform="rotate(90 10.002 9.99805)"
+                                  />
+                                  <circle
+                                    cx="10.002"
+                                    cy="17"
+                                    fill="currentColor"
+                                    r="2"
+                                    transform="rotate(90 10.002 17)"
+                                  />
+                                </svg>
                               </div>
-                            </span>
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -3467,50 +3451,48 @@ exports[`Welcome > should navigate to profile settings from profile card menu 1`
                           class="relative"
                         >
                           <div
-                            class="static sm:relative"
+                            aria-expanded="false"
+                            aria-haspopup="dialog"
+                            data-testid="dropdown__toggle"
                           >
-                            <span
-                              data-testid="dropdown__toggle"
+                            <div
+                              class="group mr-2.5 flex cursor-pointer justify-center rounded-md p-1.5 hover:bg-theme-navy-200 dark:hover:bg-theme-secondary-700"
+                              tabindex="1"
                             >
                               <div
-                                class="group mr-2.5 flex cursor-pointer justify-center rounded-md p-1.5 hover:bg-theme-navy-200 dark:hover:bg-theme-secondary-700"
-                                tabindex="1"
+                                class="text-theme-secondary-700 transition-colors duration-200 group-hover:text-theme-navy-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200 css-1i4b0eq"
+                                height="20"
+                                width="20"
                               >
-                                <div
-                                  class="text-theme-secondary-700 transition-colors duration-200 group-hover:text-theme-navy-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200 css-1i4b0eq"
-                                  height="20"
-                                  width="20"
+                                <svg
+                                  fill="none"
+                                  viewBox="0 0 20 20"
+                                  xmlns="http://www.w3.org/2000/svg"
                                 >
-                                  <svg
-                                    fill="none"
-                                    viewBox="0 0 20 20"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                  >
-                                    <circle
-                                      cx="10.002"
-                                      cy="2.99609"
-                                      fill="currentColor"
-                                      r="2"
-                                      transform="rotate(90 10.002 2.99609)"
-                                    />
-                                    <circle
-                                      cx="10.002"
-                                      cy="9.99805"
-                                      fill="currentColor"
-                                      r="2"
-                                      transform="rotate(90 10.002 9.99805)"
-                                    />
-                                    <circle
-                                      cx="10.002"
-                                      cy="17"
-                                      fill="currentColor"
-                                      r="2"
-                                      transform="rotate(90 10.002 17)"
-                                    />
-                                  </svg>
-                                </div>
+                                  <circle
+                                    cx="10.002"
+                                    cy="2.99609"
+                                    fill="currentColor"
+                                    r="2"
+                                    transform="rotate(90 10.002 2.99609)"
+                                  />
+                                  <circle
+                                    cx="10.002"
+                                    cy="9.99805"
+                                    fill="currentColor"
+                                    r="2"
+                                    transform="rotate(90 10.002 9.99805)"
+                                  />
+                                  <circle
+                                    cx="10.002"
+                                    cy="17"
+                                    fill="currentColor"
+                                    r="2"
+                                    transform="rotate(90 10.002 17)"
+                                  />
+                                </svg>
                               </div>
-                            </span>
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -4083,50 +4065,48 @@ exports[`Welcome > should navigate to profile settings with correct password 1`]
                           class="relative"
                         >
                           <div
-                            class="static sm:relative"
+                            aria-expanded="false"
+                            aria-haspopup="dialog"
+                            data-testid="dropdown__toggle"
                           >
-                            <span
-                              data-testid="dropdown__toggle"
+                            <div
+                              class="group mr-2.5 flex cursor-pointer justify-center rounded-md p-1.5 hover:bg-theme-navy-200 dark:hover:bg-theme-secondary-700"
+                              tabindex="1"
                             >
                               <div
-                                class="group mr-2.5 flex cursor-pointer justify-center rounded-md p-1.5 hover:bg-theme-navy-200 dark:hover:bg-theme-secondary-700"
-                                tabindex="1"
+                                class="text-theme-secondary-700 transition-colors duration-200 group-hover:text-theme-navy-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200 css-1i4b0eq"
+                                height="20"
+                                width="20"
                               >
-                                <div
-                                  class="text-theme-secondary-700 transition-colors duration-200 group-hover:text-theme-navy-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200 css-1i4b0eq"
-                                  height="20"
-                                  width="20"
+                                <svg
+                                  fill="none"
+                                  viewBox="0 0 20 20"
+                                  xmlns="http://www.w3.org/2000/svg"
                                 >
-                                  <svg
-                                    fill="none"
-                                    viewBox="0 0 20 20"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                  >
-                                    <circle
-                                      cx="10.002"
-                                      cy="2.99609"
-                                      fill="currentColor"
-                                      r="2"
-                                      transform="rotate(90 10.002 2.99609)"
-                                    />
-                                    <circle
-                                      cx="10.002"
-                                      cy="9.99805"
-                                      fill="currentColor"
-                                      r="2"
-                                      transform="rotate(90 10.002 9.99805)"
-                                    />
-                                    <circle
-                                      cx="10.002"
-                                      cy="17"
-                                      fill="currentColor"
-                                      r="2"
-                                      transform="rotate(90 10.002 17)"
-                                    />
-                                  </svg>
-                                </div>
+                                  <circle
+                                    cx="10.002"
+                                    cy="2.99609"
+                                    fill="currentColor"
+                                    r="2"
+                                    transform="rotate(90 10.002 2.99609)"
+                                  />
+                                  <circle
+                                    cx="10.002"
+                                    cy="9.99805"
+                                    fill="currentColor"
+                                    r="2"
+                                    transform="rotate(90 10.002 9.99805)"
+                                  />
+                                  <circle
+                                    cx="10.002"
+                                    cy="17"
+                                    fill="currentColor"
+                                    r="2"
+                                    transform="rotate(90 10.002 17)"
+                                  />
+                                </svg>
                               </div>
-                            </span>
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -4204,50 +4184,48 @@ exports[`Welcome > should navigate to profile settings with correct password 1`]
                           class="relative"
                         >
                           <div
-                            class="static sm:relative"
+                            aria-expanded="false"
+                            aria-haspopup="dialog"
+                            data-testid="dropdown__toggle"
                           >
-                            <span
-                              data-testid="dropdown__toggle"
+                            <div
+                              class="group mr-2.5 flex cursor-pointer justify-center rounded-md p-1.5 hover:bg-theme-navy-200 dark:hover:bg-theme-secondary-700"
+                              tabindex="1"
                             >
                               <div
-                                class="group mr-2.5 flex cursor-pointer justify-center rounded-md p-1.5 hover:bg-theme-navy-200 dark:hover:bg-theme-secondary-700"
-                                tabindex="1"
+                                class="text-theme-secondary-700 transition-colors duration-200 group-hover:text-theme-navy-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200 css-1i4b0eq"
+                                height="20"
+                                width="20"
                               >
-                                <div
-                                  class="text-theme-secondary-700 transition-colors duration-200 group-hover:text-theme-navy-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200 css-1i4b0eq"
-                                  height="20"
-                                  width="20"
+                                <svg
+                                  fill="none"
+                                  viewBox="0 0 20 20"
+                                  xmlns="http://www.w3.org/2000/svg"
                                 >
-                                  <svg
-                                    fill="none"
-                                    viewBox="0 0 20 20"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                  >
-                                    <circle
-                                      cx="10.002"
-                                      cy="2.99609"
-                                      fill="currentColor"
-                                      r="2"
-                                      transform="rotate(90 10.002 2.99609)"
-                                    />
-                                    <circle
-                                      cx="10.002"
-                                      cy="9.99805"
-                                      fill="currentColor"
-                                      r="2"
-                                      transform="rotate(90 10.002 9.99805)"
-                                    />
-                                    <circle
-                                      cx="10.002"
-                                      cy="17"
-                                      fill="currentColor"
-                                      r="2"
-                                      transform="rotate(90 10.002 17)"
-                                    />
-                                  </svg>
-                                </div>
+                                  <circle
+                                    cx="10.002"
+                                    cy="2.99609"
+                                    fill="currentColor"
+                                    r="2"
+                                    transform="rotate(90 10.002 2.99609)"
+                                  />
+                                  <circle
+                                    cx="10.002"
+                                    cy="9.99805"
+                                    fill="currentColor"
+                                    r="2"
+                                    transform="rotate(90 10.002 9.99805)"
+                                  />
+                                  <circle
+                                    cx="10.002"
+                                    cy="17"
+                                    fill="currentColor"
+                                    r="2"
+                                    transform="rotate(90 10.002 17)"
+                                  />
+                                </svg>
                               </div>
-                            </span>
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -4847,50 +4825,48 @@ exports[`Welcome > should not select profile on wrong last location 1`] = `
                           class="relative"
                         >
                           <div
-                            class="static sm:relative"
+                            aria-expanded="false"
+                            aria-haspopup="dialog"
+                            data-testid="dropdown__toggle"
                           >
-                            <span
-                              data-testid="dropdown__toggle"
+                            <div
+                              class="group mr-2.5 flex cursor-pointer justify-center rounded-md p-1.5 hover:bg-theme-navy-200 dark:hover:bg-theme-secondary-700"
+                              tabindex="1"
                             >
                               <div
-                                class="group mr-2.5 flex cursor-pointer justify-center rounded-md p-1.5 hover:bg-theme-navy-200 dark:hover:bg-theme-secondary-700"
-                                tabindex="1"
+                                class="text-theme-secondary-700 transition-colors duration-200 group-hover:text-theme-navy-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200 css-1i4b0eq"
+                                height="20"
+                                width="20"
                               >
-                                <div
-                                  class="text-theme-secondary-700 transition-colors duration-200 group-hover:text-theme-navy-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200 css-1i4b0eq"
-                                  height="20"
-                                  width="20"
+                                <svg
+                                  fill="none"
+                                  viewBox="0 0 20 20"
+                                  xmlns="http://www.w3.org/2000/svg"
                                 >
-                                  <svg
-                                    fill="none"
-                                    viewBox="0 0 20 20"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                  >
-                                    <circle
-                                      cx="10.002"
-                                      cy="2.99609"
-                                      fill="currentColor"
-                                      r="2"
-                                      transform="rotate(90 10.002 2.99609)"
-                                    />
-                                    <circle
-                                      cx="10.002"
-                                      cy="9.99805"
-                                      fill="currentColor"
-                                      r="2"
-                                      transform="rotate(90 10.002 9.99805)"
-                                    />
-                                    <circle
-                                      cx="10.002"
-                                      cy="17"
-                                      fill="currentColor"
-                                      r="2"
-                                      transform="rotate(90 10.002 17)"
-                                    />
-                                  </svg>
-                                </div>
+                                  <circle
+                                    cx="10.002"
+                                    cy="2.99609"
+                                    fill="currentColor"
+                                    r="2"
+                                    transform="rotate(90 10.002 2.99609)"
+                                  />
+                                  <circle
+                                    cx="10.002"
+                                    cy="9.99805"
+                                    fill="currentColor"
+                                    r="2"
+                                    transform="rotate(90 10.002 9.99805)"
+                                  />
+                                  <circle
+                                    cx="10.002"
+                                    cy="17"
+                                    fill="currentColor"
+                                    r="2"
+                                    transform="rotate(90 10.002 17)"
+                                  />
+                                </svg>
                               </div>
-                            </span>
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -5463,50 +5439,48 @@ exports[`Welcome > should render with profiles 1`] = `
                           class="relative"
                         >
                           <div
-                            class="static sm:relative"
+                            aria-expanded="false"
+                            aria-haspopup="dialog"
+                            data-testid="dropdown__toggle"
                           >
-                            <span
-                              data-testid="dropdown__toggle"
+                            <div
+                              class="group mr-2.5 flex cursor-pointer justify-center rounded-md p-1.5 hover:bg-theme-navy-200 dark:hover:bg-theme-secondary-700"
+                              tabindex="1"
                             >
                               <div
-                                class="group mr-2.5 flex cursor-pointer justify-center rounded-md p-1.5 hover:bg-theme-navy-200 dark:hover:bg-theme-secondary-700"
-                                tabindex="1"
+                                class="text-theme-secondary-700 transition-colors duration-200 group-hover:text-theme-navy-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200 css-1i4b0eq"
+                                height="20"
+                                width="20"
                               >
-                                <div
-                                  class="text-theme-secondary-700 transition-colors duration-200 group-hover:text-theme-navy-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200 css-1i4b0eq"
-                                  height="20"
-                                  width="20"
+                                <svg
+                                  fill="none"
+                                  viewBox="0 0 20 20"
+                                  xmlns="http://www.w3.org/2000/svg"
                                 >
-                                  <svg
-                                    fill="none"
-                                    viewBox="0 0 20 20"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                  >
-                                    <circle
-                                      cx="10.002"
-                                      cy="2.99609"
-                                      fill="currentColor"
-                                      r="2"
-                                      transform="rotate(90 10.002 2.99609)"
-                                    />
-                                    <circle
-                                      cx="10.002"
-                                      cy="9.99805"
-                                      fill="currentColor"
-                                      r="2"
-                                      transform="rotate(90 10.002 9.99805)"
-                                    />
-                                    <circle
-                                      cx="10.002"
-                                      cy="17"
-                                      fill="currentColor"
-                                      r="2"
-                                      transform="rotate(90 10.002 17)"
-                                    />
-                                  </svg>
-                                </div>
+                                  <circle
+                                    cx="10.002"
+                                    cy="2.99609"
+                                    fill="currentColor"
+                                    r="2"
+                                    transform="rotate(90 10.002 2.99609)"
+                                  />
+                                  <circle
+                                    cx="10.002"
+                                    cy="9.99805"
+                                    fill="currentColor"
+                                    r="2"
+                                    transform="rotate(90 10.002 9.99805)"
+                                  />
+                                  <circle
+                                    cx="10.002"
+                                    cy="17"
+                                    fill="currentColor"
+                                    r="2"
+                                    transform="rotate(90 10.002 17)"
+                                  />
+                                </svg>
                               </div>
-                            </span>
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -5584,50 +5558,48 @@ exports[`Welcome > should render with profiles 1`] = `
                           class="relative"
                         >
                           <div
-                            class="static sm:relative"
+                            aria-expanded="false"
+                            aria-haspopup="dialog"
+                            data-testid="dropdown__toggle"
                           >
-                            <span
-                              data-testid="dropdown__toggle"
+                            <div
+                              class="group mr-2.5 flex cursor-pointer justify-center rounded-md p-1.5 hover:bg-theme-navy-200 dark:hover:bg-theme-secondary-700"
+                              tabindex="1"
                             >
                               <div
-                                class="group mr-2.5 flex cursor-pointer justify-center rounded-md p-1.5 hover:bg-theme-navy-200 dark:hover:bg-theme-secondary-700"
-                                tabindex="1"
+                                class="text-theme-secondary-700 transition-colors duration-200 group-hover:text-theme-navy-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200 css-1i4b0eq"
+                                height="20"
+                                width="20"
                               >
-                                <div
-                                  class="text-theme-secondary-700 transition-colors duration-200 group-hover:text-theme-navy-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200 css-1i4b0eq"
-                                  height="20"
-                                  width="20"
+                                <svg
+                                  fill="none"
+                                  viewBox="0 0 20 20"
+                                  xmlns="http://www.w3.org/2000/svg"
                                 >
-                                  <svg
-                                    fill="none"
-                                    viewBox="0 0 20 20"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                  >
-                                    <circle
-                                      cx="10.002"
-                                      cy="2.99609"
-                                      fill="currentColor"
-                                      r="2"
-                                      transform="rotate(90 10.002 2.99609)"
-                                    />
-                                    <circle
-                                      cx="10.002"
-                                      cy="9.99805"
-                                      fill="currentColor"
-                                      r="2"
-                                      transform="rotate(90 10.002 9.99805)"
-                                    />
-                                    <circle
-                                      cx="10.002"
-                                      cy="17"
-                                      fill="currentColor"
-                                      r="2"
-                                      transform="rotate(90 10.002 17)"
-                                    />
-                                  </svg>
-                                </div>
+                                  <circle
+                                    cx="10.002"
+                                    cy="2.99609"
+                                    fill="currentColor"
+                                    r="2"
+                                    transform="rotate(90 10.002 2.99609)"
+                                  />
+                                  <circle
+                                    cx="10.002"
+                                    cy="9.99805"
+                                    fill="currentColor"
+                                    r="2"
+                                    transform="rotate(90 10.002 9.99805)"
+                                  />
+                                  <circle
+                                    cx="10.002"
+                                    cy="17"
+                                    fill="currentColor"
+                                    r="2"
+                                    transform="rotate(90 10.002 17)"
+                                  />
+                                </svg>
                               </div>
-                            </span>
+                            </div>
                           </div>
                         </div>
                       </div>
