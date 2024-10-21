@@ -85,7 +85,7 @@ export const AddRecipient: VFC<AddRecipientProperties> = ({
 }) => {
 	const { t } = useTranslation();
 	const [addedRecipients, setAddedRecipients] = useState<RecipientItem[]>([]);
-	const [isSingle, setIsSingle] = useState(false);
+	const [isSingle, setIsSingle] = useState(recipients.length <= 1);
 	const isMountedReference = useRef(false);
 
 	const {
