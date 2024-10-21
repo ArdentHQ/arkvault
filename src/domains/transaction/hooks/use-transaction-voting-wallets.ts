@@ -41,8 +41,7 @@ export const useTransactionVotingWallets = ({ transaction, network, profile }: P
 
 				setVotes(votesList);
 				setUnvotes(unvotesList);
-			} catch (error) {
-				console.log({ error });
+			} catch {
 				//
 			}
 
