@@ -1,11 +1,12 @@
 import { useEnvironmentContext } from "@/app/contexts";
-import { Networks } from "@ardenthq/sdk";
-import { Contracts, DTO } from "@ardenthq/sdk-profiles";
+import { Networks, DTO } from "@ardenthq/sdk";
+import { Contracts } from "@ardenthq/sdk-profiles";
 import { useEffect, useState } from "react";
+import { extractVotingData } from "@/domains/transaction/components/VoteTransactionType/helpers";
 
 interface Properties {
 	network: Networks.Network;
-	transaction: DTO.ExtendedConfirmedTransactionData;
+	transaction: DTO.RawTransactionData;
 	profile: Contracts.IProfile;
 }
 
@@ -26,12 +27,14 @@ export const useTransactionVotingWallets = ({ transaction, network, profile }: P
 			}
 
 			try {
-				const votesList = transaction.votes().map((publicKey: string) => ({
+				const { votes, unvotes } = extractVotingData({ transaction });
+
+				const votesList = votes.map((publicKey: string) => ({
 					amount: transaction.amount(),
 					wallet: env.delegates().findByPublicKey(network.coin(), network.id(), publicKey),
 				}));
 
-				const unvotesList = transaction.unvotes().map((publicKey: string) => ({
+				const unvotesList = unvotes.map((publicKey: string) => ({
 					amount: transaction.amount(),
 					wallet: env.delegates().findByPublicKey(network.coin(), network.id(), publicKey),
 				}));
