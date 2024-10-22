@@ -1,7 +1,7 @@
 import React from "react";
-import {RecipientsList} from "./RecipientsList";
-import {RecipientItem} from "./RecipientsModal.contracts";
-import {render, screen} from "@testing-library/react";
+import { RecipientsList } from "./RecipientsList";
+import { RecipientItem } from "./RecipientsModal.contracts";
+import { render, screen } from "@testing-library/react";
 
 const recipients: RecipientItem[] = [
 	{
@@ -22,7 +22,7 @@ describe("RecipientsList", () => {
 
 		render(<RecipientsList recipients={recipients} ticker={ticker} />);
 
-		expect(screen.getAllByTestId("RecipientsListItem").length).toBe(recipients.length)
+		expect(screen.getAllByTestId("RecipientsListItem").length).toBe(recipients.length);
 		expect(screen.getByText(recipients[0].alias)).toBeInTheDocument();
 		expect(screen.getByText(recipients[0].amount + ` ${ticker}`)).toBeInTheDocument();
 	});
