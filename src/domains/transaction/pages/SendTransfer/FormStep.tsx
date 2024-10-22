@@ -168,7 +168,6 @@ export const FormStep = ({
 								variant="transparent"
 								className="block p-0 text-sm text-theme-navy-600 sm:hidden"
 								onClick={onScan}
-								data-testid="QRCodeModalButton"
 							>
 								{t("TRANSACTION.PAGE_TRANSACTION_SEND.FORM_STEP.SCAN_FULL")}
 							</Button>
