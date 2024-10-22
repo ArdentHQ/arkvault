@@ -1,7 +1,7 @@
 import React from "react";
-import {RecipientsList} from "./RecipientsList";
-import {RecipientItem} from "./RecipientsModal.contracts";
-import {render, screen} from "@testing-library/react";
+import { RecipientsList } from "./RecipientsList";
+import { RecipientItem } from "./RecipientsModal.contracts";
+import { render, screen } from "@testing-library/react";
 
 const recipients: RecipientItem[] = [
 	{
@@ -18,8 +18,8 @@ const recipients: RecipientItem[] = [
 
 describe("RecipientsList", () => {
 	it("should render", () => {
-		render(<RecipientsList recipients={recipients} ticker="DARK"/>);
+		render(<RecipientsList recipients={recipients} ticker="DARK" />);
 
-		expect(screen.getAllByTestId("RecipientsListItem").length).toBe(recipients.length)
+		expect(screen.getAllByTestId("RecipientsListItem").length).toBe(recipients.length);
 	});
 });
