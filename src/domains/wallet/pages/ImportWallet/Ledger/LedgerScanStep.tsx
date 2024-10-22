@@ -366,7 +366,7 @@ export const LedgerScanStep = ({
 				title={t("WALLETS.PAGE_IMPORT_WALLET.LEDGER_SCAN_STEP.TITLE")}
 				subtitle={t("WALLETS.PAGE_IMPORT_WALLET.LEDGER_SCAN_STEP.SUBTITLE")}
 				titleIcon={<Icon name="NoteCheck" dimensions={[22, 22]} className="text-theme-primary-600" />}
-				className="hidden md:block"
+				className="hidden sm:block"
 			/>
 
 			{error ? (

@@ -27,7 +27,7 @@ exports[`DelegateVoteAmount > should render when isCompact = false 1`] = `
                     <input
                       aria-invalid="true"
                       autocomplete="off"
-                      class="no-ligatures w-full border-none !text-sm text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base text-right focus:text-left pr-12 css-1937ogs"
+                      class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base text-right focus:text-left pr-12 css-1937ogs"
                       data-testid="InputCurrency"
                       name="amount"
                       placeholder="0"
@@ -134,7 +134,7 @@ exports[`DelegateVoteAmount > should render when isCompact = true 1`] = `
                     <input
                       aria-invalid="true"
                       autocomplete="off"
-                      class="no-ligatures w-full border-none !text-sm text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base text-right focus:text-left pr-12 css-1937ogs"
+                      class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base text-right focus:text-left pr-12 css-1937ogs"
                       data-testid="InputCurrency"
                       name="amount"
                       placeholder="0"

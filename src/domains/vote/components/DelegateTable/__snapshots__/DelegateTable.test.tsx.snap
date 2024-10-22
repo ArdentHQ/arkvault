@@ -28695,7 +28695,7 @@ exports[`DelegateTable > should render vote amount column 1`] = `
                         <input
                           aria-invalid="false"
                           autocomplete="off"
-                          class="no-ligatures w-full border-none !text-sm text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base text-right focus:text-left pr-8 text-theme-secondary-text css-1937ogs"
+                          class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base text-right focus:text-left pr-8 text-theme-secondary-text css-1937ogs"
                           data-testid="InputCurrency"
                           disabled=""
                           name="amount"
@@ -28883,7 +28883,7 @@ exports[`DelegateTable > should render vote amount column 1`] = `
                         <input
                           aria-invalid="false"
                           autocomplete="off"
-                          class="no-ligatures w-full border-none !text-sm text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base text-right focus:text-left pr-8 text-theme-secondary-text css-1937ogs"
+                          class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base text-right focus:text-left pr-8 text-theme-secondary-text css-1937ogs"
                           data-testid="InputCurrency"
                           disabled=""
                           name="amount"
@@ -29071,7 +29071,7 @@ exports[`DelegateTable > should render vote amount column 1`] = `
                         <input
                           aria-invalid="false"
                           autocomplete="off"
-                          class="no-ligatures w-full border-none !text-sm text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base text-right focus:text-left pr-8 text-theme-secondary-text css-1937ogs"
+                          class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base text-right focus:text-left pr-8 text-theme-secondary-text css-1937ogs"
                           data-testid="InputCurrency"
                           disabled=""
                           name="amount"
@@ -33231,7 +33231,7 @@ exports[`DelegateTable > should select a changed delegate to unvote 1`] = `
                         <input
                           aria-invalid="false"
                           autocomplete="off"
-                          class="no-ligatures w-full border-none !text-sm text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base text-right focus:text-left pr-8 css-1937ogs"
+                          class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base text-right focus:text-left pr-8 css-1937ogs"
                           data-testid="InputCurrency"
                           name="amount"
                           placeholder="0"
@@ -33418,7 +33418,7 @@ exports[`DelegateTable > should select a changed delegate to unvote 1`] = `
                         <input
                           aria-invalid="false"
                           autocomplete="off"
-                          class="no-ligatures w-full border-none !text-sm text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base text-right focus:text-left pr-8 text-theme-secondary-text css-1937ogs"
+                          class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base text-right focus:text-left pr-8 text-theme-secondary-text css-1937ogs"
                           data-testid="InputCurrency"
                           disabled=""
                           name="amount"
@@ -33606,7 +33606,7 @@ exports[`DelegateTable > should select a changed delegate to unvote 1`] = `
                         <input
                           aria-invalid="false"
                           autocomplete="off"
-                          class="no-ligatures w-full border-none !text-sm text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base text-right focus:text-left pr-8 text-theme-secondary-text css-1937ogs"
+                          class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base text-right focus:text-left pr-8 text-theme-secondary-text css-1937ogs"
                           data-testid="InputCurrency"
                           disabled=""
                           name="amount"
@@ -36504,7 +36504,7 @@ exports[`DelegateTable > should select a delegate with vote amount and make it u
                         <input
                           aria-invalid="false"
                           autocomplete="off"
-                          class="no-ligatures w-full border-none !text-sm text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base text-right focus:text-left pr-8 css-1937ogs"
+                          class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base text-right focus:text-left pr-8 css-1937ogs"
                           data-testid="InputCurrency"
                           name="amount"
                           placeholder="0"
@@ -36691,7 +36691,7 @@ exports[`DelegateTable > should select a delegate with vote amount and make it u
                         <input
                           aria-invalid="false"
                           autocomplete="off"
-                          class="no-ligatures w-full border-none !text-sm text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base text-right focus:text-left pr-8 text-theme-secondary-text css-1937ogs"
+                          class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base text-right focus:text-left pr-8 text-theme-secondary-text css-1937ogs"
                           data-testid="InputCurrency"
                           disabled=""
                           name="amount"
@@ -36879,7 +36879,7 @@ exports[`DelegateTable > should select a delegate with vote amount and make it u
                         <input
                           aria-invalid="false"
                           autocomplete="off"
-                          class="no-ligatures w-full border-none !text-sm text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base text-right focus:text-left pr-8 text-theme-secondary-text css-1937ogs"
+                          class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base text-right focus:text-left pr-8 text-theme-secondary-text css-1937ogs"
                           data-testid="InputCurrency"
                           disabled=""
                           name="amount"

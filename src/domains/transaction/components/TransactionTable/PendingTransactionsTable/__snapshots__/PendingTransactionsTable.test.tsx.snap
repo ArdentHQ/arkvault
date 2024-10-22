@@ -315,7 +315,7 @@ exports[`Signed Transaction Table > should handle the onRowClick function when t
                 >
                   <div
                     class="flex flex-row gap-2"
-                    data-testid="TransactionRowAddressing__container"
+                    data-testid="TransactionRowAddressing__musig_registration"
                   >
                     <div
                       class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-1qplu6d"
@@ -324,26 +324,11 @@ exports[`Signed Transaction Table > should handle the onRowClick function when t
                     >
                       To
                     </div>
-                    <div
-                      class="w-50 sm:w-40 lg:w-50"
-                      data-testid="TransactionRowAddressing__address-container"
+                    <span
+                      class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                     >
-                      <div
-                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
-                      >
-                        <span
-                          class="font-semibold text-sm text-theme-text"
-                          data-testid="Address__alias"
-                        >
-                          <span
-                            class="no-ligatures css-9nx3be"
-                            data-testid="TruncateEnd"
-                          >
-                            ARK Wallet 1
-                          </span>
-                        </span>
-                      </div>
-                    </div>
+                      Contract
+                    </span>
                   </div>
                 </div>
               </td>
@@ -654,7 +639,7 @@ exports[`Signed Transaction Table > should render different status > should show
                       >
                         <div
                           class="flex flex-row gap-2"
-                          data-testid="TransactionRowAddressing__container"
+                          data-testid="TransactionRowAddressing__musig_registration"
                         >
                           <div
                             class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-1qplu6d"
@@ -663,26 +648,11 @@ exports[`Signed Transaction Table > should render different status > should show
                           >
                             To
                           </div>
-                          <div
-                            class="w-50 sm:w-40 lg:w-50"
-                            data-testid="TransactionRowAddressing__address-container"
+                          <span
+                            class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                           >
-                            <div
-                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
-                            >
-                              <span
-                                class="font-semibold text-sm text-theme-text"
-                                data-testid="Address__alias"
-                              >
-                                <span
-                                  class="no-ligatures css-9nx3be"
-                                  data-testid="TruncateEnd"
-                                >
-                                  ARK Wallet 1
-                                </span>
-                              </span>
-                            </div>
-                          </div>
+                            Contract
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -1079,7 +1049,7 @@ exports[`Signed Transaction Table > should render different status > should show
                 >
                   <div
                     class="flex flex-row gap-2"
-                    data-testid="TransactionRowAddressing__container"
+                    data-testid="TransactionRowAddressing__musig_registration"
                   >
                     <div
                       class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-1qplu6d"
@@ -1088,26 +1058,11 @@ exports[`Signed Transaction Table > should render different status > should show
                     >
                       To
                     </div>
-                    <div
-                      class="w-50 sm:w-40 lg:w-50"
-                      data-testid="TransactionRowAddressing__address-container"
+                    <span
+                      class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                     >
-                      <div
-                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
-                      >
-                        <span
-                          class="font-semibold text-sm text-theme-text"
-                          data-testid="Address__alias"
-                        >
-                          <span
-                            class="no-ligatures css-9nx3be"
-                            data-testid="TruncateEnd"
-                          >
-                            ARK Wallet 1
-                          </span>
-                        </span>
-                      </div>
-                    </div>
+                      Contract
+                    </span>
                   </div>
                 </div>
               </td>
@@ -1408,7 +1363,7 @@ exports[`Signed Transaction Table > should render different status > should show
                       >
                         <div
                           class="flex flex-row gap-2"
-                          data-testid="TransactionRowAddressing__container"
+                          data-testid="TransactionRowAddressing__musig_registration"
                         >
                           <div
                             class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-1qplu6d"
@@ -1417,26 +1372,11 @@ exports[`Signed Transaction Table > should render different status > should show
                           >
                             To
                           </div>
-                          <div
-                            class="w-50 sm:w-40 lg:w-50"
-                            data-testid="TransactionRowAddressing__address-container"
+                          <span
+                            class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                           >
-                            <div
-                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
-                            >
-                              <span
-                                class="font-semibold text-sm text-theme-text"
-                                data-testid="Address__alias"
-                              >
-                                <span
-                                  class="no-ligatures css-9nx3be"
-                                  data-testid="TruncateEnd"
-                                >
-                                  ARK Wallet 1
-                                </span>
-                              </span>
-                            </div>
-                          </div>
+                            Contract
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -1833,7 +1773,7 @@ exports[`Signed Transaction Table > should render different status > should show
                 >
                   <div
                     class="flex flex-row gap-2"
-                    data-testid="TransactionRowAddressing__container"
+                    data-testid="TransactionRowAddressing__musig_registration"
                   >
                     <div
                       class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-1qplu6d"
@@ -1842,26 +1782,11 @@ exports[`Signed Transaction Table > should render different status > should show
                     >
                       To
                     </div>
-                    <div
-                      class="w-50 sm:w-40 lg:w-50"
-                      data-testid="TransactionRowAddressing__address-container"
+                    <span
+                      class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                     >
-                      <div
-                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
-                      >
-                        <span
-                          class="font-semibold text-sm text-theme-text"
-                          data-testid="Address__alias"
-                        >
-                          <span
-                            class="no-ligatures css-9nx3be"
-                            data-testid="TruncateEnd"
-                          >
-                            ARK Wallet 1
-                          </span>
-                        </span>
-                      </div>
-                    </div>
+                      Contract
+                    </span>
                   </div>
                 </div>
               </td>
@@ -3382,7 +3307,7 @@ exports[`Signed Transaction Table > should render different status > should show
                       >
                         <div
                           class="flex flex-row gap-2"
-                          data-testid="TransactionRowAddressing__container"
+                          data-testid="TransactionRowAddressing__musig_registration"
                         >
                           <div
                             class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-1qplu6d"
@@ -3391,26 +3316,11 @@ exports[`Signed Transaction Table > should render different status > should show
                           >
                             To
                           </div>
-                          <div
-                            class="w-50 sm:w-40 lg:w-50"
-                            data-testid="TransactionRowAddressing__address-container"
+                          <span
+                            class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                           >
-                            <div
-                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
-                            >
-                              <span
-                                class="font-semibold text-sm text-theme-text"
-                                data-testid="Address__alias"
-                              >
-                                <span
-                                  class="no-ligatures css-9nx3be"
-                                  data-testid="TruncateEnd"
-                                >
-                                  ARK Wallet 1
-                                </span>
-                              </span>
-                            </div>
-                          </div>
+                            Contract
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -3807,7 +3717,7 @@ exports[`Signed Transaction Table > should render different status > should show
                 >
                   <div
                     class="flex flex-row gap-2"
-                    data-testid="TransactionRowAddressing__container"
+                    data-testid="TransactionRowAddressing__musig_registration"
                   >
                     <div
                       class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-1qplu6d"
@@ -3816,26 +3726,11 @@ exports[`Signed Transaction Table > should render different status > should show
                     >
                       To
                     </div>
-                    <div
-                      class="w-50 sm:w-40 lg:w-50"
-                      data-testid="TransactionRowAddressing__address-container"
+                    <span
+                      class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                     >
-                      <div
-                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
-                      >
-                        <span
-                          class="font-semibold text-sm text-theme-text"
-                          data-testid="Address__alias"
-                        >
-                          <span
-                            class="no-ligatures css-9nx3be"
-                            data-testid="TruncateEnd"
-                          >
-                            ARK Wallet 1
-                          </span>
-                        </span>
-                      </div>
-                    </div>
+                      Contract
+                    </span>
                   </div>
                 </div>
               </td>
@@ -4325,7 +4220,7 @@ exports[`Signed Transaction Table > should render ready to broadcast transaction
                 >
                   <div
                     class="flex flex-row gap-2"
-                    data-testid="TransactionRowAddressing__container"
+                    data-testid="TransactionRowAddressing__musig_registration"
                   >
                     <div
                       class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-1qplu6d"
@@ -4334,26 +4229,11 @@ exports[`Signed Transaction Table > should render ready to broadcast transaction
                     >
                       To
                     </div>
-                    <div
-                      class="w-50 sm:w-40 lg:w-50"
-                      data-testid="TransactionRowAddressing__address-container"
+                    <span
+                      class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                     >
-                      <div
-                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
-                      >
-                        <span
-                          class="font-semibold text-sm text-theme-text"
-                          data-testid="Address__alias"
-                        >
-                          <span
-                            class="no-ligatures css-9nx3be"
-                            data-testid="TruncateEnd"
-                          >
-                            ARK Wallet 1
-                          </span>
-                        </span>
-                      </div>
-                    </div>
+                      Contract
+                    </span>
                   </div>
                 </div>
               </td>
@@ -4815,7 +4695,7 @@ exports[`Signed Transaction Table > should render signed transactions and handle
                 >
                   <div
                     class="flex flex-row gap-2"
-                    data-testid="TransactionRowAddressing__container"
+                    data-testid="TransactionRowAddressing__musig_registration"
                   >
                     <div
                       class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-1qplu6d"
@@ -4824,26 +4704,11 @@ exports[`Signed Transaction Table > should render signed transactions and handle
                     >
                       To
                     </div>
-                    <div
-                      class="w-50 sm:w-40 lg:w-50"
-                      data-testid="TransactionRowAddressing__address-container"
+                    <span
+                      class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                     >
-                      <div
-                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
-                      >
-                        <span
-                          class="font-semibold text-sm text-theme-text"
-                          data-testid="Address__alias"
-                        >
-                          <span
-                            class="no-ligatures css-9nx3be"
-                            data-testid="TruncateEnd"
-                          >
-                            ARK Wallet 1
-                          </span>
-                        </span>
-                      </div>
-                    </div>
+                      Contract
+                    </span>
                   </div>
                 </div>
               </td>
@@ -5950,7 +5815,7 @@ exports[`Signed Transaction Table > should show the sign button with isCompact =
                 >
                   <div
                     class="flex flex-row gap-2"
-                    data-testid="TransactionRowAddressing__container"
+                    data-testid="TransactionRowAddressing__musig_registration"
                   >
                     <div
                       class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-1qplu6d"
@@ -5959,26 +5824,11 @@ exports[`Signed Transaction Table > should show the sign button with isCompact =
                     >
                       To
                     </div>
-                    <div
-                      class="w-50 sm:w-40 lg:w-50"
-                      data-testid="TransactionRowAddressing__address-container"
+                    <span
+                      class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                     >
-                      <div
-                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
-                      >
-                        <span
-                          class="font-semibold text-sm text-theme-text"
-                          data-testid="Address__alias"
-                        >
-                          <span
-                            class="no-ligatures css-9nx3be"
-                            data-testid="TruncateEnd"
-                          >
-                            ARK Wallet 1
-                          </span>
-                        </span>
-                      </div>
-                    </div>
+                      Contract
+                    </span>
                   </div>
                 </div>
               </td>
@@ -6468,7 +6318,7 @@ exports[`Signed Transaction Table > should show the sign button with isCompact =
                 >
                   <div
                     class="flex flex-row gap-2"
-                    data-testid="TransactionRowAddressing__container"
+                    data-testid="TransactionRowAddressing__musig_registration"
                   >
                     <div
                       class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-1qplu6d"
@@ -6477,26 +6327,11 @@ exports[`Signed Transaction Table > should show the sign button with isCompact =
                     >
                       To
                     </div>
-                    <div
-                      class="w-50 sm:w-40 lg:w-50"
-                      data-testid="TransactionRowAddressing__address-container"
+                    <span
+                      class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                     >
-                      <div
-                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
-                      >
-                        <span
-                          class="font-semibold text-sm text-theme-text"
-                          data-testid="Address__alias"
-                        >
-                          <span
-                            class="no-ligatures css-9nx3be"
-                            data-testid="TruncateEnd"
-                          >
-                            ARK Wallet 1
-                          </span>
-                        </span>
-                      </div>
-                    </div>
+                      Contract
+                    </span>
                   </div>
                 </div>
               </td>
