@@ -61,7 +61,11 @@ export const TransactionAddresses = ({
 			)}
 
 			{!explorerLink && (
-				<TransactionRecipientsModal recipients={recipients} ticker={network.ticker()} labelClassName={labelClassName} />
+				<TransactionRecipientsModal
+					recipients={recipients}
+					ticker={network.ticker()}
+					labelClassName={labelClassName}
+				/>
 			)}
 		</DetailWrapper>
 	);
