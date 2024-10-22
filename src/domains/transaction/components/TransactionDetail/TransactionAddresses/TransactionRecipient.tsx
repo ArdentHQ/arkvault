@@ -7,7 +7,7 @@ import { Divider } from "@/app/components/Divider";
 import { Link } from "@/app/components/Link";
 import cn from "classnames";
 import { RecipientsList } from "@/domains/transaction/components/RecipientsList";
-import {Button} from "@/app/components/Button";
+import { Button } from "@/app/components/Button";
 
 export const TransactionRecipient = ({
 	recipient,
@@ -124,7 +124,7 @@ export const TransactionRecipientsModal = ({
 				<DetailTitle className={labelClassName}>{t("COMMON.TO")}</DetailTitle>
 
 				<div className="flex items-center">
-					<span className="font-semibold sm:leading-5 text-sm leading-[17px] sm:text-base">
+					<span className="text-sm font-semibold leading-[17px] sm:text-base sm:leading-5">
 						<span>{t("COMMON.MULTIPLE")} </span>
 						<span className="text-theme-secondary-700 dark:text-theme-secondary-500">
 							({recipients.length}){" "}
@@ -137,7 +137,8 @@ export const TransactionRecipientsModal = ({
 					<Button
 						onClick={() => setShowModal(true)}
 						variant="transparent"
-						className="sm:leading-5 text-sm leading-[17px] sm:text-base p-0 decoration-dashed underline-offset-4 text-theme-navy-600 decoration-theme-navy-600 underline decoration-1">
+						className="p-0 text-sm leading-[17px] text-theme-navy-600 underline decoration-theme-navy-600 decoration-dashed decoration-1 underline-offset-4 sm:text-base sm:leading-5"
+					>
 						{t("TRANSACTION.VIEW_RECIPIENTS_LIST")}
 					</Button>
 				</div>

@@ -15,43 +15,35 @@ interface Properties {
 	ticker: string;
 }
 
-const ModalTitle = ({count}: {count: number}) => {
-	const {t} = useTranslation();
+const ModalTitle = ({ count }: { count: number }) => {
+	const { t } = useTranslation();
 
 	return (
 		<span className="font-semibold leading-5">
 			<span>{t("COMMON.RECIPIENTS")} </span>
-			<span className="text-theme-secondary-500 dark:text-theme-secondary-500">
-				({count}){" "}
-			</span>
+			<span className="text-theme-secondary-500 dark:text-theme-secondary-500">({count}) </span>
 		</span>
-	)
-}
+	);
+};
 
-export const RecipientsList: React.FC<Properties> = ({isOpen, onClose, recipients, ticker}) => {
-	const {isMdAndAbove} = useBreakpoint();
+export const RecipientsList: React.FC<Properties> = ({ isOpen, onClose, recipients, ticker }) => {
+	const { isMdAndAbove } = useBreakpoint();
 
 	return (
-		<Modal
-			isOpen={isOpen}
-			size="3xl"
-			title={<ModalTitle count={recipients.length}/>}
-			onClose={onClose}
-			noButtons
-		>
+		<Modal isOpen={isOpen} size="3xl" title={<ModalTitle count={recipients.length} />} onClose={onClose} noButtons>
 			<div className="mt-4">
 				{isMdAndAbove ? (
-					<RecipientsTable recipients={recipients} ticker={ticker}/>
+					<RecipientsTable recipients={recipients} ticker={ticker} />
 				) : (
-					<Recipients recipients={recipients} ticker={ticker}/>
+					<Recipients recipients={recipients} ticker={ticker} />
 				)}
 			</div>
 		</Modal>
 	);
 };
 
-const Recipients = ({recipients, ticker}: RecipientsProperties) => {
-	const {t} = useTranslation();
+const Recipients = ({ recipients, ticker }: RecipientsProperties) => {
+	const { t } = useTranslation();
 
 	return (
 		<>
