@@ -78,7 +78,7 @@ export const WalletHeaderMobile: React.FC<WalletHeaderProperties> = ({ profile, 
 							alignment="center"
 							address={wallet.address()}
 							walletName={alias}
-							addressClass="text-sm max-w-32 text-theme-secondary-600"
+							addressClass="text-sm text-theme-secondary-600"
 							walletNameClass="text-theme-secondary-200 text-sm"
 						/>
 					</div>
