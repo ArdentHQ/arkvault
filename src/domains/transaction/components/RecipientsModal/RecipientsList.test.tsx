@@ -1,7 +1,7 @@
 import React from "react";
-import { RecipientItem } from "../RecipientList/RecipientList.contracts";
-import { render, screen } from "../../../../utils/testing-library";
 import {RecipientsList} from "./RecipientsList";
+import {RecipientItem} from "./RecipientsModal.contracts";
+import {render, screen} from "@testing-library/react";
 
 const recipients: RecipientItem[] = [
 	{
