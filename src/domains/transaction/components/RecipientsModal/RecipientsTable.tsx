@@ -3,12 +3,13 @@ import { useTranslation } from "react-i18next";
 import { Column } from "react-table";
 import { TableWrapper } from "@/app/components/Table/TableWrapper";
 import { Table, TableCell, TableRow } from "@/app/components/Table";
-import {
-	RecipientItem,
-	RecipientsProperties,
-} from "@/domains/transaction/components/RecipientsList/RecipientList.contracts";
 import { Address } from "@/app/components/Address";
 import { Amount } from "@/app/components/Amount";
+import {
+	RecipientItem,
+	RecipientsProperties
+} from "@/domains/transaction/components/RecipientsModal/RecipientsModal.contracts";
+
 
 export const RecipientsTable: FC<RecipientsProperties> = ({ recipients, ticker }) => {
 	const { t } = useTranslation();

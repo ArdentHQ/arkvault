@@ -6,8 +6,8 @@ import { useTranslation } from "react-i18next";
 import { Divider } from "@/app/components/Divider";
 import { Link } from "@/app/components/Link";
 import cn from "classnames";
-import { RecipientsList } from "@/domains/transaction/components/RecipientsList";
 import { Button } from "@/app/components/Button";
+import {RecipientsModal} from "@/domains/transaction/components/RecipientsModal";
 
 export const TransactionRecipient = ({
 	recipient,
@@ -143,7 +143,7 @@ export const TransactionRecipientsModal = ({
 					</Button>
 				</div>
 			</div>
-			<RecipientsList
+			<RecipientsModal
 				isOpen={showModal}
 				onClose={() => setShowModal(false)}
 				recipients={recipients}
