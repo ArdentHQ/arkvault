@@ -19,6 +19,7 @@ const recipients: RecipientItem[] = [
 describe("RecipientsTable", () => {
 	it("should render", () => {
 		const ticker = "DARK";
+
 		render(<RecipientsTable recipients={recipients} ticker={ticker} />);
 
 		expect(screen.getByTestId("TableWrapper")).toBeInTheDocument();

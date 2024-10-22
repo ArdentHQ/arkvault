@@ -19,7 +19,11 @@ const ModalTitle = ({ count }: { count: number }) => {
 	return (
 		<span className="font-semibold leading-5">
 			<span>{t("COMMON.RECIPIENTS")} </span>
-			<span className="text-theme-secondary-500 dark:text-theme-secondary-500">({count}) </span>
+			<span
+				className="text-theme-secondary-500 dark:text-theme-secondary-500"
+				data-testid="RecipientsModal--RecipientsCount"
+			>({count})
+			</span>
 		</span>
 	);
 };

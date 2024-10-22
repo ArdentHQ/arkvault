@@ -7,7 +7,7 @@ const recipients: RecipientItem[] = [
 	{
 		address: "FJKDSALJFKASLJFKSDAJD333FKFKDSAJFKSAJFKLASJKDFJ",
 		alias: "Recipient 1",
-		amount: 100,
+		amount: 150,
 	},
 	{
 		address: "AhFJKDSALJFKASLJFKSDEAJ333FKFKDSAJFKSAJFKLASJKDFJ",
@@ -18,8 +18,12 @@ const recipients: RecipientItem[] = [
 
 describe("RecipientsList", () => {
 	it("should render", () => {
-		render(<RecipientsList recipients={recipients} ticker="DARK"/>);
+		const ticker = "DARK";
+
+		render(<RecipientsList recipients={recipients} ticker={ticker} />);
 
 		expect(screen.getAllByTestId("RecipientsListItem").length).toBe(recipients.length)
+		expect(screen.getByText(recipients[0].alias)).toBeInTheDocument();
+		expect(screen.getByText(recipients[0].amount + ` ${ticker}`)).toBeInTheDocument();
 	});
 });
