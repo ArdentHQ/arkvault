@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Address } from "@/app/components/Address";
 import { DetailDivider, DetailTitle } from "@/app/components/DetailWrapper";
 import { RecipientItem } from "@/domains/transaction/components/RecipientList/RecipientList.contracts";
@@ -6,6 +6,8 @@ import { useTranslation } from "react-i18next";
 import { Divider } from "@/app/components/Divider";
 import { Link } from "@/app/components/Link";
 import cn from "classnames";
+import { RecipientsList } from "@/domains/transaction/components/RecipientsList";
+import {Button} from "@/app/components/Button";
 
 export const TransactionRecipient = ({
 	recipient,
@@ -89,6 +91,63 @@ export const TransactionRecipients = ({
 					</Link>
 				</div>
 			</div>
+		</>
+	);
+};
+
+export const TransactionRecipientsModal = ({
+	recipients,
+	labelClassName,
+	ticker,
+}: {
+	recipients: RecipientItem[];
+	labelClassName?: string;
+	ticker: string;
+}) => {
+	const { t } = useTranslation();
+
+	const [showModal, setShowModal] = useState(false);
+
+	if (recipients.length === 0) {
+		return <></>;
+	}
+
+	if (recipients.length === 1) {
+		return <TransactionRecipient recipient={recipients.at(0)} labelClassName={labelClassName} showLabel />;
+	}
+
+	return (
+		<>
+			<DetailDivider />
+
+			<div className="mt-3 flex w-full items-center justify-between space-x-2 sm:mt-0 sm:justify-start sm:space-x-0">
+				<DetailTitle className={labelClassName}>{t("COMMON.TO")}</DetailTitle>
+
+				<div className="flex items-center">
+					<span className="font-semibold sm:leading-5 text-sm leading-[17px] sm:text-base">
+						<span>{t("COMMON.MULTIPLE")} </span>
+						<span className="text-theme-secondary-700 dark:text-theme-secondary-500">
+							({recipients.length}){" "}
+						</span>
+					</span>
+					<div className="h-5 leading-5">
+						<Divider type="vertical" size="md" />
+					</div>
+
+					<Button
+						onClick={() => setShowModal(true)}
+						variant="transparent"
+						className="sm:leading-5 text-sm leading-[17px] sm:text-base p-0 decoration-dashed underline-offset-4 text-theme-navy-600 decoration-theme-navy-600 underline decoration-1">
+						{t("TRANSACTION.VIEW_RECIPIENTS_LIST")}
+					</Button>
+				</div>
+			</div>
+			<RecipientsList
+				isOpen={showModal}
+				onClose={() => setShowModal(false)}
+				recipients={recipients}
+				ticker={ticker}
+			/>
 		</>
 	);
 };
