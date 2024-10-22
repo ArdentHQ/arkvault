@@ -14,7 +14,7 @@ export const RecipientsList = ({ recipients, ticker }: RecipientsProperties): JS
 				<MultiEntryItem
 					key={index}
 					size="md"
-					dataTestId="AddRecipientItem"
+					dataTestId="RecipientsListItem"
 					titleSlot={
 						<div className="flex w-full items-center justify-between">
 							<div className="whitespace-nowrap text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500">
