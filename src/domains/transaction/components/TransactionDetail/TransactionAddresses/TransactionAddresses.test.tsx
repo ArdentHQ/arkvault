@@ -3,13 +3,13 @@ import { Contracts } from "@ardenthq/sdk-profiles";
 import {env, getDefaultProfileId, screen, renderResponsive, render} from "@/utils/testing-library";
 import { TransactionAddresses } from "./TransactionAddresses";
 import { translations } from "@/app/i18n/common/i18n";
-import {RecipientProperties} from "../../SearchRecipient/SearchRecipient.contracts";
 import {expect} from "vitest";
 import userEvent from "@testing-library/user-event";
+import {RecipientItem} from "@/domains/transaction/components/RecipientsModal/RecipientsModal.contracts";
 
 describe("TransactionAddresses", () => {
 	let profile: Contracts.IProfile;
-	let recipients: RecipientProperties[];
+	let recipients: RecipientItem[];
 	let wallet: Contracts.IReadWriteWallet;
 
 	beforeAll(() => {
@@ -21,10 +21,8 @@ describe("TransactionAddresses", () => {
 		recipients = wallets.map((wallet) => ({
 			address: wallet.address(),
 			alias: wallet.alias(),
-			avatar: wallet.avatar(),
-			id: wallet.id(),
-			network: wallet.networkId(),
-			type: "wallet",
+			amount: 100,
+			isDelegate: false,
 		}));
 	});
 
