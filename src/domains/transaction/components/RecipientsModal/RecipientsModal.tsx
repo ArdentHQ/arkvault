@@ -2,10 +2,9 @@ import React from "react";
 import { Modal } from "@/app/components/Modal";
 import { useTranslation } from "react-i18next";
 import { useBreakpoint } from "@/app/hooks";
-import {RecipientsTable} from "@/domains/transaction/components/RecipientsModal/RecipientsTable";
-import {RecipientsList} from "@/domains/transaction/components/RecipientsModal/RecipientsList";
-import {RecipientItem} from "@/domains/transaction/components/RecipientsModal/RecipientsModal.contracts";
-
+import { RecipientsTable } from "@/domains/transaction/components/RecipientsModal/RecipientsTable";
+import { RecipientsList } from "@/domains/transaction/components/RecipientsModal/RecipientsList";
+import { RecipientItem } from "@/domains/transaction/components/RecipientsModal/RecipientsModal.contracts";
 
 interface Properties {
 	isOpen: boolean;
@@ -40,4 +39,3 @@ export const RecipientsModal: React.FC<Properties> = ({ isOpen, onClose, recipie
 		</Modal>
 	);
 };
-

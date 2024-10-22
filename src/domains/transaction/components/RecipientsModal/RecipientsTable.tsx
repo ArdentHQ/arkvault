@@ -7,9 +7,8 @@ import { Address } from "@/app/components/Address";
 import { Amount } from "@/app/components/Amount";
 import {
 	RecipientItem,
-	RecipientsProperties
+	RecipientsProperties,
 } from "@/domains/transaction/components/RecipientsModal/RecipientsModal.contracts";
-
 
 export const RecipientsTable: FC<RecipientsProperties> = ({ recipients, ticker }) => {
 	const { t } = useTranslation();

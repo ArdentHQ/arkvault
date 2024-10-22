@@ -7,7 +7,7 @@ import { Divider } from "@/app/components/Divider";
 import { Link } from "@/app/components/Link";
 import cn from "classnames";
 import { Button } from "@/app/components/Button";
-import {RecipientsModal} from "@/domains/transaction/components/RecipientsModal";
+import { RecipientsModal } from "@/domains/transaction/components/RecipientsModal";
 
 export const TransactionRecipient = ({
 	recipient,
