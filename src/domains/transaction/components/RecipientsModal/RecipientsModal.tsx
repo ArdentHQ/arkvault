@@ -33,7 +33,13 @@ export const RecipientsModal: React.FC<Properties> = ({ isOpen, onClose, recipie
 	const { isMdAndAbove } = useBreakpoint();
 
 	return (
-		<Modal isOpen={isOpen} size="3xl" title={<ModalTitle count={recipients.length} />} onClose={onClose} noButtons>
+		<Modal
+			isOpen={isOpen}
+			size="3xl"
+			title={<ModalTitle count={recipients.length} />}
+			onClose={onClose} noButtons
+			data-testid="RecipientsModal"
+		>
 			<div className="mt-4">
 				{isMdAndAbove ? (
 					<RecipientsTable recipients={recipients} ticker={ticker} />

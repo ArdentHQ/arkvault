@@ -103,7 +103,7 @@ export const TransactionRecipientsModal = ({
 	recipients: RecipientItem[];
 	labelClassName?: string;
 	ticker: string;
-}) => {
+}): JSX.Element => {
 	const { t } = useTranslation();
 
 	const [showModal, setShowModal] = useState(false);
@@ -126,7 +126,10 @@ export const TransactionRecipientsModal = ({
 				<div className="flex items-center">
 					<span className="text-sm font-semibold leading-[17px] sm:text-base sm:leading-5">
 						<span>{t("COMMON.MULTIPLE")} </span>
-						<span className="text-theme-secondary-700 dark:text-theme-secondary-500">
+						<span
+							className="text-theme-secondary-700 dark:text-theme-secondary-500"
+							data-testid="TransactionRecipientsModal--RecipientsCount"
+						>
 							({recipients.length}){" "}
 						</span>
 					</span>
@@ -137,6 +140,7 @@ export const TransactionRecipientsModal = ({
 					<Button
 						onClick={() => setShowModal(true)}
 						variant="transparent"
+						data-testid="TransactionRecipientsModal--ShowList"
 						className="p-0 text-sm leading-[17px] text-theme-navy-600 underline decoration-theme-navy-600 decoration-dashed decoration-1 underline-offset-4 sm:text-base sm:leading-5"
 					>
 						{t("TRANSACTION.VIEW_RECIPIENTS_LIST")}
