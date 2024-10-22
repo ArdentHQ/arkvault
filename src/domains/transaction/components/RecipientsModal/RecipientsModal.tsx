@@ -22,7 +22,8 @@ const ModalTitle = ({ count }: { count: number }) => {
 			<span
 				className="text-theme-secondary-500 dark:text-theme-secondary-500"
 				data-testid="RecipientsModal--RecipientsCount"
-			>({count})
+			>
+				({count})
 			</span>
 		</span>
 	);
