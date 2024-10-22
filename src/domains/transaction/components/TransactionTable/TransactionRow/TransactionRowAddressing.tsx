@@ -32,8 +32,12 @@ export const TransactionRowAddressing = ({
 	transaction: DTO.RawTransactionData;
 	profile: Contracts.IProfile;
 }) => {
-	const isMusigTransfer = [!!transaction.usesMultiSignature?.(), !transaction.isConfirmed(), !transaction.isMultiSignatureRegistration()].every(Boolean)
-	const isNegative = [isMusigTransfer, transaction.isSent()].some(Boolean)
+	const isMusigTransfer = [
+		!!transaction.usesMultiSignature?.(),
+		!transaction.isConfirmed(),
+		!transaction.isMultiSignatureRegistration(),
+	].every(Boolean);
+	const isNegative = [isMusigTransfer, transaction.isSent()].some(Boolean);
 
 	const { env } = useEnvironmentContext();
 	const { t } = useTranslation();
@@ -58,7 +62,7 @@ export const TransactionRowAddressing = ({
 
 	useEffect(() => {
 		if (transaction.isVote() || transaction.isUnvote()) {
-			const { votes, unvotes } = extractVotingData({ transaction })
+			const { votes, unvotes } = extractVotingData({ transaction });
 
 			setDelegates({
 				unvotes: env.delegates().map(transaction.wallet(), unvotes),

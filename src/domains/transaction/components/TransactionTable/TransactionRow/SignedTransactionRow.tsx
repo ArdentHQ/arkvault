@@ -108,8 +108,10 @@ export const SignedTransactionRow = ({
 		onRemovePendingTransaction?.(transaction);
 	};
 
-	const isMusigTransfer = [transaction.usesMultiSignature(), !transaction.isMultiSignatureRegistration()].every(Boolean)
-	const isNegative = [isMusigTransfer, transaction.isSent()].some(Boolean)
+	const isMusigTransfer = [transaction.usesMultiSignature(), !transaction.isMultiSignatureRegistration()].every(
+		Boolean,
+	);
+	const isNegative = [isMusigTransfer, transaction.isSent()].some(Boolean);
 
 	return (
 		<TableRow className="relative">
