@@ -24,9 +24,12 @@ describe("TransactionAddresses", () => {
 	});
 
 	it.each(["sm", "md", "lg"])("should render in %s", (breakpoint: string) => {
+		const wallet = profile.wallets().first();
+
 		renderResponsive(
 			<TransactionAddresses
-				senderWallet={profile.wallets().first()}
+				senderAddress={wallet.address()}
+				network={wallet.network()}
 				recipients={[recipients[1]]}
 				profile={profile}
 			/>,
@@ -40,8 +43,9 @@ describe("TransactionAddresses", () => {
 	});
 
 	it("should default to empty array if recipients is undefined", (breakpoint: string) => {
+		const wallet = profile.wallets().first();
 		renderResponsive(
-			<TransactionAddresses senderWallet={profile.wallets().first()} profile={profile} />,
+			<TransactionAddresses senderAddress={wallet.address()} network={wallet.network()} profile={profile} />,
 			breakpoint,
 		);
 

@@ -16,7 +16,6 @@ interface Properties {
 	labelClassName?: string;
 	network: Networks.Network;
 	explorerLink?: string;
-	ticker?: string;
 }
 
 export const TransactionAddresses = ({
@@ -26,7 +25,6 @@ export const TransactionAddresses = ({
 	network,
 	labelClassName,
 	explorerLink,
-	ticker,
 }: Properties): ReactElement => {
 	const { t } = useTranslation();
 	const { getWalletAlias } = useWalletAlias();
@@ -62,8 +60,8 @@ export const TransactionAddresses = ({
 				/>
 			)}
 
-			{!explorerLink && ticker && (
-				<TransactionRecipientsModal recipients={recipients} ticker={ticker} labelClassName={labelClassName} />
+			{!explorerLink && (
+				<TransactionRecipientsModal recipients={recipients} ticker={network.ticker()} labelClassName={labelClassName} />
 			)}
 		</DetailWrapper>
 	);
