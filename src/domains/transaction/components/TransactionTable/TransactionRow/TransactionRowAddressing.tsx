@@ -7,6 +7,7 @@ import { DTO } from "@ardenthq/sdk";
 import React, { useEffect, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
 import cn from "classnames";
+import { extractVotingData } from "@/domains/transaction/components/VoteTransactionType/helpers";
 
 export const TransactionRowLabel = ({ isNegative }: { isNegative: boolean }) => {
 	const { t } = useTranslation();
@@ -31,7 +32,9 @@ export const TransactionRowAddressing = ({
 	transaction: DTO.RawTransactionData;
 	profile: Contracts.IProfile;
 }) => {
-	const isNegative = transaction.isSent();
+	const isMusigTransfer = [!!transaction.usesMultiSignature?.(), !transaction.isConfirmed(), !transaction.isMultiSignatureRegistration()].every(Boolean)
+	const isNegative = [isMusigTransfer, transaction.isSent()].some(Boolean)
+
 	const { env } = useEnvironmentContext();
 	const { t } = useTranslation();
 	const { getWalletAlias } = useWalletAlias();
@@ -55,9 +58,11 @@ export const TransactionRowAddressing = ({
 
 	useEffect(() => {
 		if (transaction.isVote() || transaction.isUnvote()) {
+			const { votes, unvotes } = extractVotingData({ transaction })
+
 			setDelegates({
-				unvotes: env.delegates().map(transaction.wallet(), transaction.unvotes?.() ?? []),
-				votes: env.delegates().map(transaction.wallet(), transaction.votes?.() ?? []),
+				unvotes: env.delegates().map(transaction.wallet(), unvotes),
+				votes: env.delegates().map(transaction.wallet(), votes),
 			});
 		}
 	}, [env, transaction]);
