@@ -167,7 +167,7 @@ exports[`MultiSignature Registration Form > should render form step 1`] = `
                             <input
                               aria-invalid="false"
                               autocomplete="off"
-                              class="no-ligatures w-full border-none !text-sm text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
+                              class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
                               data-testid="select-list__input"
                               name="address"
                               readonly=""
@@ -203,7 +203,7 @@ exports[`MultiSignature Registration Form > should render form step 1`] = `
                                     aria-invalid="false"
                                     aria-labelledby="SelectRecipient__dropdown-label"
                                     autocomplete="off"
-                                    class="no-ligatures w-full border-none !text-sm text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base cursor-default css-1937ogs"
+                                    class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base cursor-default css-1937ogs"
                                     data-testid="SelectDropdown__input"
                                     id="SelectRecipient__dropdown-input"
                                     name="address"
@@ -438,7 +438,7 @@ exports[`MultiSignature Registration Form > should render form step 1`] = `
               >
                 <input
                   autocomplete="off"
-                  class="no-ligatures w-full border-none !text-sm text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
+                  class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
                   data-testid="MultiSignatureRegistrationForm__min-participants"
                   max="2"
                   min="2"
@@ -485,7 +485,7 @@ exports[`MultiSignature Registration Form > should render form step 1`] = `
                 >
                   <input
                     autocomplete="off"
-                    class="no-ligatures w-full border-none !text-sm text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base text-theme-secondary-text css-1937ogs"
+                    class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base text-theme-secondary-text css-1937ogs"
                     data-testid="InputCurrency"
                     disabled=""
                     name="fee"

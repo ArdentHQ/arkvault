@@ -10,7 +10,7 @@ exports[`InputAddress > should not use default validation 1`] = `
     >
       <input
         autocomplete="off"
-        class="no-ligatures w-full border-none !text-sm text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
+        class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
         data-testid="InputAddress__input"
         name="address"
         type="text"
@@ -31,7 +31,7 @@ exports[`InputAddress > should render 1`] = `
     >
       <input
         autocomplete="off"
-        class="no-ligatures w-full border-none !text-sm text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
+        class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
         data-testid="InputAddress__input"
         name="address"
         type="text"

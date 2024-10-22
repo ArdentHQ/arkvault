@@ -19,7 +19,7 @@ exports[`SelectRecipient > should render disabled 1`] = `
           >
             <input
               autocomplete="off"
-              class="no-ligatures w-full border-none !text-sm text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
+              class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
               data-testid="select-list__input"
               readonly=""
               tabindex="-1"
@@ -61,7 +61,7 @@ exports[`SelectRecipient > should render disabled 1`] = `
                     aria-controls="SelectRecipient__dropdown-menu"
                     aria-labelledby="SelectRecipient__dropdown-label"
                     autocomplete="off"
-                    class="no-ligatures w-full border-none !text-sm text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base cursor-default text-theme-secondary-text css-1937ogs"
+                    class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base cursor-default text-theme-secondary-text css-1937ogs"
                     data-testid="SelectDropdown__input"
                     disabled=""
                     id="SelectRecipient__dropdown-input"
@@ -149,7 +149,7 @@ exports[`SelectRecipient > should render empty 1`] = `
           >
             <input
               autocomplete="off"
-              class="no-ligatures w-full border-none !text-sm text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
+              class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
               data-testid="select-list__input"
               readonly=""
               tabindex="-1"
@@ -190,7 +190,7 @@ exports[`SelectRecipient > should render empty 1`] = `
                     aria-controls="SelectRecipient__dropdown-menu"
                     aria-labelledby="SelectRecipient__dropdown-label"
                     autocomplete="off"
-                    class="no-ligatures w-full border-none !text-sm text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base cursor-default css-1937ogs"
+                    class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base cursor-default css-1937ogs"
                     data-testid="SelectDropdown__input"
                     id="SelectRecipient__dropdown-input"
                     placeholder="Address"
@@ -278,7 +278,7 @@ exports[`SelectRecipient > should render invalid 1`] = `
             <input
               aria-invalid="true"
               autocomplete="off"
-              class="no-ligatures w-full border-none !text-sm text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
+              class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
               data-testid="select-list__input"
               readonly=""
               tabindex="-1"
@@ -366,7 +366,7 @@ exports[`SelectRecipient > should render invalid 1`] = `
                     aria-invalid="true"
                     aria-labelledby="SelectRecipient__dropdown-label"
                     autocomplete="off"
-                    class="no-ligatures w-full border-none !text-sm text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base cursor-default css-1937ogs"
+                    class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base cursor-default css-1937ogs"
                     data-testid="SelectDropdown__input"
                     id="SelectRecipient__dropdown-input"
                     placeholder="Address"
@@ -494,7 +494,7 @@ exports[`SelectRecipient > should update internal state when prop changes 1`] = 
           >
             <input
               autocomplete="off"
-              class="no-ligatures w-full border-none !text-sm text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
+              class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
               data-testid="select-list__input"
               readonly=""
               tabindex="-1"
@@ -546,7 +546,7 @@ exports[`SelectRecipient > should update internal state when prop changes 1`] = 
                     aria-controls="SelectRecipient__dropdown-menu"
                     aria-labelledby="SelectRecipient__dropdown-label"
                     autocomplete="off"
-                    class="no-ligatures w-full border-none !text-sm text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
+                    class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
                     data-testid="SelectDropdown__input"
                     id="SelectRecipient__dropdown-input"
                     placeholder="Address"

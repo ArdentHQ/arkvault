@@ -2255,7 +2255,7 @@ exports[`SendTransfer > should error if wrong mnemonic 1`] = `
                         <input
                           aria-invalid="true"
                           autocomplete="off"
-                          class="no-ligatures w-full border-none !text-sm text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
+                          class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
                           data-testid="AuthenticationStep__mnemonic"
                           name="mnemonic"
                           type="password"
@@ -2613,7 +2613,7 @@ exports[`SendTransfer > should render form step (lg) 1`] = `
               >
                 <input
                   autocomplete="off"
-                  class="no-ligatures w-full border-none !text-sm text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
+                  class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
                   data-testid="SelectAddress__input"
                   name="senderAddress"
                   readonly=""
@@ -2778,7 +2778,7 @@ exports[`SendTransfer > should render form step (lg) 1`] = `
                           <input
                             aria-invalid="false"
                             autocomplete="off"
-                            class="no-ligatures w-full border-none !text-sm text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
+                            class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
                             data-testid="select-list__input"
                             name="recipientAddress"
                             readonly=""
@@ -2815,7 +2815,7 @@ exports[`SendTransfer > should render form step (lg) 1`] = `
                                   aria-invalid="false"
                                   aria-labelledby="SelectRecipient__dropdown-label"
                                   autocomplete="off"
-                                  class="no-ligatures w-full border-none !text-sm text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base cursor-default text-theme-secondary-text css-1937ogs"
+                                  class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base cursor-default text-theme-secondary-text css-1937ogs"
                                   data-testid="SelectDropdown__input"
                                   disabled=""
                                   id="SelectRecipient__dropdown-input"
@@ -2903,7 +2903,7 @@ exports[`SendTransfer > should render form step (lg) 1`] = `
                       class="inline-flex sm:hidden"
                     >
                       <button
-                        class="space-x-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 p-0 text-sm text-theme-navy-600 dark:text-theme-secondary-700"
+                        class="space-x-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 p-0 text-sm text-theme-navy-600"
                         data-testid="AddRecipient__send-all_mobile"
                         disabled=""
                         type="button"
@@ -2935,7 +2935,7 @@ exports[`SendTransfer > should render form step (lg) 1`] = `
                         >
                           <input
                             autocomplete="off"
-                            class="no-ligatures w-full border-none !text-sm text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base text-theme-secondary-text css-1937ogs"
+                            class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base text-theme-secondary-text css-1937ogs"
                             data-testid="AddRecipient__amount"
                             disabled=""
                             name="amount"
@@ -2989,7 +2989,7 @@ exports[`SendTransfer > should render form step (lg) 1`] = `
           >
             <input
               autocomplete="off"
-              class="no-ligatures w-full border-none !text-sm text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
+              class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
               data-testid="Input__memo"
               name="memo"
               placeholder=" "
@@ -3341,7 +3341,7 @@ exports[`SendTransfer > should render form step (xs) 1`] = `
               >
                 <input
                   autocomplete="off"
-                  class="no-ligatures w-full border-none !text-sm text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
+                  class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
                   data-testid="SelectAddress__input"
                   name="senderAddress"
                   readonly=""
@@ -3506,7 +3506,7 @@ exports[`SendTransfer > should render form step (xs) 1`] = `
                           <input
                             aria-invalid="false"
                             autocomplete="off"
-                            class="no-ligatures w-full border-none !text-sm text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
+                            class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
                             data-testid="select-list__input"
                             name="recipientAddress"
                             readonly=""
@@ -3543,7 +3543,7 @@ exports[`SendTransfer > should render form step (xs) 1`] = `
                                   aria-invalid="false"
                                   aria-labelledby="SelectRecipient__dropdown-label"
                                   autocomplete="off"
-                                  class="no-ligatures w-full border-none !text-sm text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base cursor-default text-theme-secondary-text css-1937ogs"
+                                  class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base cursor-default text-theme-secondary-text css-1937ogs"
                                   data-testid="SelectDropdown__input"
                                   disabled=""
                                   id="SelectRecipient__dropdown-input"
@@ -3631,7 +3631,7 @@ exports[`SendTransfer > should render form step (xs) 1`] = `
                       class="inline-flex sm:hidden"
                     >
                       <button
-                        class="space-x-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 p-0 text-sm text-theme-navy-600 dark:text-theme-secondary-700"
+                        class="space-x-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 p-0 text-sm text-theme-navy-600"
                         data-testid="AddRecipient__send-all_mobile"
                         disabled=""
                         type="button"
@@ -3663,7 +3663,7 @@ exports[`SendTransfer > should render form step (xs) 1`] = `
                         >
                           <input
                             autocomplete="off"
-                            class="no-ligatures w-full border-none !text-sm text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base text-theme-secondary-text css-1937ogs"
+                            class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base text-theme-secondary-text css-1937ogs"
                             data-testid="AddRecipient__amount"
                             disabled=""
                             name="amount"
@@ -3717,7 +3717,7 @@ exports[`SendTransfer > should render form step (xs) 1`] = `
           >
             <input
               autocomplete="off"
-              class="no-ligatures w-full border-none !text-sm text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
+              class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
               data-testid="Input__memo"
               name="memo"
               placeholder=" "
@@ -3764,7 +3764,7 @@ exports[`SendTransfer > should render form step (xs) 1`] = `
             >
               <input
                 autocomplete="off"
-                class="no-ligatures w-full border-none !text-sm text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base text-theme-secondary-text css-1937ogs"
+                class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base text-theme-secondary-text css-1937ogs"
                 data-testid="InputCurrency"
                 disabled=""
                 name="fee"
@@ -4748,7 +4748,7 @@ exports[`SendTransfer > should render network step with dropdown 1`] = `
             >
               <input
                 autocomplete="off"
-                class="no-ligatures w-full border-none !text-sm text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
+                class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
                 data-testid="select-list__input"
                 name="network"
                 readonly=""
@@ -4783,7 +4783,7 @@ exports[`SendTransfer > should render network step with dropdown 1`] = `
                       aria-controls="downshift-0-menu"
                       aria-labelledby="downshift-0-label"
                       autocomplete="off"
-                      class="no-ligatures w-full border-none !text-sm text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base cursor-default css-1937ogs"
+                      class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base cursor-default css-1937ogs"
                       data-testid="SelectDropdown__input"
                       id="downshift-0-input"
                       name="network"

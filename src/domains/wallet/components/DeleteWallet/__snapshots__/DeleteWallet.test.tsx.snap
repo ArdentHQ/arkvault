@@ -218,7 +218,7 @@ exports[`DeleteWallet > should render a modal 1`] = `
                   >
                     <input
                       autocomplete="off"
-                      class="no-ligatures w-full border-none !text-sm text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base text-theme-secondary-text css-1937ogs"
+                      class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base text-theme-secondary-text css-1937ogs"
                       data-testid="SelectAddress__input"
                       disabled=""
                       name="wallet"

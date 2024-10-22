@@ -14,7 +14,7 @@ exports[`SelectDropdown > should render disabled option base 1`] = `
       >
         <input
           autocomplete="off"
-          class="no-ligatures w-full border-none !text-sm text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
+          class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
           data-testid="select-list__input"
           readonly=""
           tabindex="-1"
@@ -49,7 +49,7 @@ exports[`SelectDropdown > should render disabled option base 1`] = `
                 aria-controls="downshift-50-menu"
                 aria-labelledby="downshift-50-label"
                 autocomplete="off"
-                class="no-ligatures w-full border-none !text-sm text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base cursor-default text-theme-secondary-text css-1937ogs"
+                class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base cursor-default text-theme-secondary-text css-1937ogs"
                 data-testid="SelectDropdown__input"
                 disabled=""
                 id="downshift-50-input"
@@ -129,7 +129,7 @@ exports[`SelectDropdown > should render disabled option group 1`] = `
       >
         <input
           autocomplete="off"
-          class="no-ligatures w-full border-none !text-sm text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
+          class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
           data-testid="select-list__input"
           readonly=""
           tabindex="-1"
@@ -164,7 +164,7 @@ exports[`SelectDropdown > should render disabled option group 1`] = `
                 aria-controls="downshift-52-menu"
                 aria-labelledby="downshift-52-label"
                 autocomplete="off"
-                class="no-ligatures w-full border-none !text-sm text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base cursor-default text-theme-secondary-text css-1937ogs"
+                class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base cursor-default text-theme-secondary-text css-1937ogs"
                 data-testid="SelectDropdown__input"
                 disabled=""
                 id="downshift-52-input"
@@ -245,7 +245,7 @@ exports[`SelectDropdown > should render invalid option base 1`] = `
         <input
           aria-invalid="true"
           autocomplete="off"
-          class="no-ligatures w-full border-none !text-sm text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
+          class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
           data-testid="select-list__input"
           readonly=""
           tabindex="-1"
@@ -326,7 +326,7 @@ exports[`SelectDropdown > should render invalid option base 1`] = `
                 aria-invalid="true"
                 aria-labelledby="downshift-46-label"
                 autocomplete="off"
-                class="no-ligatures w-full border-none !text-sm text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base cursor-default css-1937ogs"
+                class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base cursor-default css-1937ogs"
                 data-testid="SelectDropdown__input"
                 id="downshift-46-input"
                 placeholder="Select option"
@@ -447,7 +447,7 @@ exports[`SelectDropdown > should render invalid option group 1`] = `
         <input
           aria-invalid="true"
           autocomplete="off"
-          class="no-ligatures w-full border-none !text-sm text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
+          class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
           data-testid="select-list__input"
           readonly=""
           tabindex="-1"
@@ -528,7 +528,7 @@ exports[`SelectDropdown > should render invalid option group 1`] = `
                 aria-invalid="true"
                 aria-labelledby="downshift-48-label"
                 autocomplete="off"
-                class="no-ligatures w-full border-none !text-sm text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base cursor-default css-1937ogs"
+                class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base cursor-default css-1937ogs"
                 data-testid="SelectDropdown__input"
                 id="downshift-48-input"
                 placeholder="Select option"
@@ -648,7 +648,7 @@ exports[`SelectDropdown > should render option base 1`] = `
       >
         <input
           autocomplete="off"
-          class="no-ligatures w-full border-none !text-sm text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
+          class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
           data-testid="select-list__input"
           readonly=""
           tabindex="-1"
@@ -682,7 +682,7 @@ exports[`SelectDropdown > should render option base 1`] = `
                 aria-controls="downshift-0-menu"
                 aria-labelledby="downshift-0-label"
                 autocomplete="off"
-                class="no-ligatures w-full border-none !text-sm text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base cursor-default css-1937ogs"
+                class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base cursor-default css-1937ogs"
                 data-testid="SelectDropdown__input"
                 id="downshift-0-input"
                 placeholder="Select option"
@@ -761,7 +761,7 @@ exports[`SelectDropdown > should render option base with custom label 1`] = `
       >
         <input
           autocomplete="off"
-          class="no-ligatures w-full border-none !text-sm text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
+          class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
           data-testid="select-list__input"
           readonly=""
           tabindex="-1"
@@ -854,7 +854,7 @@ exports[`SelectDropdown > should render option base with custom label 1`] = `
                 aria-controls="downshift-6-menu"
                 aria-labelledby="downshift-6-label"
                 autocomplete="off"
-                class="no-ligatures w-full border-none !text-sm text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
+                class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
                 data-testid="SelectDropdown__input"
                 id="downshift-6-input"
                 placeholder="Select option"
@@ -943,7 +943,7 @@ exports[`SelectDropdown > should render option base with custom label and allowe
       >
         <input
           autocomplete="off"
-          class="no-ligatures w-full border-none !text-sm text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
+          class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
           data-testid="select-list__input"
           readonly=""
           tabindex="-1"
@@ -1036,7 +1036,7 @@ exports[`SelectDropdown > should render option base with custom label and allowe
                 aria-controls="downshift-26-menu"
                 aria-labelledby="downshift-26-label"
                 autocomplete="off"
-                class="no-ligatures w-full border-none !text-sm text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
+                class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
                 data-testid="SelectDropdown__input"
                 id="downshift-26-input"
                 placeholder="Select option"
@@ -1125,7 +1125,7 @@ exports[`SelectDropdown > should render option base with default value when free
       >
         <input
           autocomplete="off"
-          class="no-ligatures w-full border-none !text-sm text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
+          class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
           data-testid="select-list__input"
           readonly=""
           tabindex="-1"
@@ -1159,7 +1159,7 @@ exports[`SelectDropdown > should render option base with default value when free
                 aria-controls="downshift-589-menu"
                 aria-labelledby="downshift-589-label"
                 autocomplete="off"
-                class="no-ligatures w-full border-none !text-sm text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
+                class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
                 data-testid="SelectDropdown__input"
                 id="downshift-589-input"
                 placeholder="Select option"
@@ -1238,7 +1238,7 @@ exports[`SelectDropdown > should render option base with initial default value 1
       >
         <input
           autocomplete="off"
-          class="no-ligatures w-full border-none !text-sm text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
+          class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
           data-testid="select-list__input"
           readonly=""
           tabindex="-1"
@@ -1278,7 +1278,7 @@ exports[`SelectDropdown > should render option base with initial default value 1
                 aria-controls="downshift-70-menu"
                 aria-labelledby="downshift-70-label"
                 autocomplete="off"
-                class="no-ligatures w-full border-none !text-sm text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
+                class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
                 data-testid="SelectDropdown__input"
                 id="downshift-70-input"
                 placeholder="Select option"
@@ -1367,7 +1367,7 @@ exports[`SelectDropdown > should render option base with wrong default value 1`]
       >
         <input
           autocomplete="off"
-          class="no-ligatures w-full border-none !text-sm text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
+          class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
           data-testid="select-list__input"
           readonly=""
           tabindex="-1"
@@ -1401,7 +1401,7 @@ exports[`SelectDropdown > should render option base with wrong default value 1`]
                 aria-controls="downshift-76-menu"
                 aria-labelledby="downshift-76-label"
                 autocomplete="off"
-                class="no-ligatures w-full border-none !text-sm text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base cursor-default css-1937ogs"
+                class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base cursor-default css-1937ogs"
                 data-testid="SelectDropdown__input"
                 id="downshift-76-input"
                 placeholder="Select option"
@@ -1480,7 +1480,7 @@ exports[`SelectDropdown > should render option base without caret 1`] = `
       >
         <input
           autocomplete="off"
-          class="no-ligatures w-full border-none !text-sm text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
+          class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
           data-testid="select-list__input"
           readonly=""
           tabindex="-1"
@@ -1514,7 +1514,7 @@ exports[`SelectDropdown > should render option base without caret 1`] = `
                 aria-controls="downshift-54-menu"
                 aria-labelledby="downshift-54-label"
                 autocomplete="off"
-                class="no-ligatures w-full border-none !text-sm text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base cursor-default css-1937ogs"
+                class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base cursor-default css-1937ogs"
                 data-testid="SelectDropdown__input"
                 id="downshift-54-input"
                 placeholder="Select option"
@@ -1549,7 +1549,7 @@ exports[`SelectDropdown > should render option group 1`] = `
       >
         <input
           autocomplete="off"
-          class="no-ligatures w-full border-none !text-sm text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
+          class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
           data-testid="select-list__input"
           readonly=""
           tabindex="-1"
@@ -1583,7 +1583,7 @@ exports[`SelectDropdown > should render option group 1`] = `
                 aria-controls="downshift-2-menu"
                 aria-labelledby="downshift-2-label"
                 autocomplete="off"
-                class="no-ligatures w-full border-none !text-sm text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base cursor-default css-1937ogs"
+                class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base cursor-default css-1937ogs"
                 data-testid="SelectDropdown__input"
                 id="downshift-2-input"
                 placeholder="Select option"
@@ -1662,7 +1662,7 @@ exports[`SelectDropdown > should render option group with custom label 1`] = `
       >
         <input
           autocomplete="off"
-          class="no-ligatures w-full border-none !text-sm text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
+          class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
           data-testid="select-list__input"
           readonly=""
           tabindex="-1"
@@ -1754,7 +1754,7 @@ exports[`SelectDropdown > should render option group with custom label 1`] = `
                 aria-controls="downshift-16-menu"
                 aria-labelledby="downshift-16-label"
                 autocomplete="off"
-                class="no-ligatures w-full border-none !text-sm text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
+                class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
                 data-testid="SelectDropdown__input"
                 id="downshift-16-input"
                 placeholder="Select option"
@@ -1843,7 +1843,7 @@ exports[`SelectDropdown > should render option group with custom label and allow
       >
         <input
           autocomplete="off"
-          class="no-ligatures w-full border-none !text-sm text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
+          class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
           data-testid="select-list__input"
           readonly=""
           tabindex="-1"
@@ -1935,7 +1935,7 @@ exports[`SelectDropdown > should render option group with custom label and allow
                 aria-controls="downshift-36-menu"
                 aria-labelledby="downshift-36-label"
                 autocomplete="off"
-                class="no-ligatures w-full border-none !text-sm text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
+                class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
                 data-testid="SelectDropdown__input"
                 id="downshift-36-input"
                 placeholder="Select option"
@@ -2024,7 +2024,7 @@ exports[`SelectDropdown > should render option group with default value when fre
       >
         <input
           autocomplete="off"
-          class="no-ligatures w-full border-none !text-sm text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
+          class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
           data-testid="select-list__input"
           readonly=""
           tabindex="-1"
@@ -2058,7 +2058,7 @@ exports[`SelectDropdown > should render option group with default value when fre
                 aria-controls="downshift-592-menu"
                 aria-labelledby="downshift-592-label"
                 autocomplete="off"
-                class="no-ligatures w-full border-none !text-sm text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
+                class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
                 data-testid="SelectDropdown__input"
                 id="downshift-592-input"
                 placeholder="Select option"
@@ -2137,7 +2137,7 @@ exports[`SelectDropdown > should render option group with initial default value 
       >
         <input
           autocomplete="off"
-          class="no-ligatures w-full border-none !text-sm text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
+          class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
           data-testid="select-list__input"
           readonly=""
           tabindex="-1"
@@ -2177,7 +2177,7 @@ exports[`SelectDropdown > should render option group with initial default value 
                 aria-controls="downshift-73-menu"
                 aria-labelledby="downshift-73-label"
                 autocomplete="off"
-                class="no-ligatures w-full border-none !text-sm text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
+                class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
                 data-testid="SelectDropdown__input"
                 id="downshift-73-input"
                 placeholder="Select option"
@@ -2266,7 +2266,7 @@ exports[`SelectDropdown > should render option group with wrong default value 1`
       >
         <input
           autocomplete="off"
-          class="no-ligatures w-full border-none !text-sm text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
+          class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
           data-testid="select-list__input"
           readonly=""
           tabindex="-1"
@@ -2300,7 +2300,7 @@ exports[`SelectDropdown > should render option group with wrong default value 1`
                 aria-controls="downshift-78-menu"
                 aria-labelledby="downshift-78-label"
                 autocomplete="off"
-                class="no-ligatures w-full border-none !text-sm text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base cursor-default css-1937ogs"
+                class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base cursor-default css-1937ogs"
                 data-testid="SelectDropdown__input"
                 id="downshift-78-input"
                 placeholder="Select option"
@@ -2379,7 +2379,7 @@ exports[`SelectDropdown > should render option group without caret 1`] = `
       >
         <input
           autocomplete="off"
-          class="no-ligatures w-full border-none !text-sm text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
+          class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
           data-testid="select-list__input"
           readonly=""
           tabindex="-1"
@@ -2413,7 +2413,7 @@ exports[`SelectDropdown > should render option group without caret 1`] = `
                 aria-controls="downshift-56-menu"
                 aria-labelledby="downshift-56-label"
                 autocomplete="off"
-                class="no-ligatures w-full border-none !text-sm text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base cursor-default css-1937ogs"
+                class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base cursor-default css-1937ogs"
                 data-testid="SelectDropdown__input"
                 id="downshift-56-input"
                 placeholder="Select option"
@@ -2448,7 +2448,7 @@ exports[`SelectDropdown > should render while allowing horizontal overflow 1`] =
       >
         <input
           autocomplete="off"
-          class="no-ligatures w-full border-none !text-sm text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
+          class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
           data-testid="select-list__input"
           readonly=""
           tabindex="-1"
@@ -2482,7 +2482,7 @@ exports[`SelectDropdown > should render while allowing horizontal overflow 1`] =
                 aria-controls="downshift-84-menu"
                 aria-labelledby="downshift-84-label"
                 autocomplete="off"
-                class="no-ligatures w-full border-none !text-sm text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base cursor-default css-1937ogs"
+                class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base cursor-default css-1937ogs"
                 data-testid="SelectDropdown__input"
                 id="downshift-84-input"
                 placeholder="Select option"
@@ -2561,7 +2561,7 @@ exports[`SelectDropdown > should render with custom wrapper class name 1`] = `
       >
         <input
           autocomplete="off"
-          class="no-ligatures w-full border-none !text-sm text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
+          class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
           data-testid="select-list__input"
           readonly=""
           tabindex="-1"
@@ -2595,7 +2595,7 @@ exports[`SelectDropdown > should render with custom wrapper class name 1`] = `
                 aria-controls="downshift-4-menu"
                 aria-labelledby="downshift-4-label"
                 autocomplete="off"
-                class="no-ligatures w-full border-none !text-sm text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base cursor-default css-1937ogs"
+                class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base cursor-default css-1937ogs"
                 data-testid="SelectDropdown__input"
                 id="downshift-4-input"
                 placeholder="Select option"
@@ -2674,7 +2674,7 @@ exports[`SelectDropdown > should render with empty options 1`] = `
       >
         <input
           autocomplete="off"
-          class="no-ligatures w-full border-none !text-sm text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
+          class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
           data-testid="select-list__input"
           readonly=""
           tabindex="-1"
@@ -2708,7 +2708,7 @@ exports[`SelectDropdown > should render with empty options 1`] = `
                 aria-controls="downshift-80-menu"
                 aria-labelledby="downshift-80-label"
                 autocomplete="off"
-                class="no-ligatures w-full border-none !text-sm text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base cursor-default css-1937ogs"
+                class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base cursor-default css-1937ogs"
                 data-testid="SelectDropdown__input"
                 id="downshift-80-input"
                 placeholder="Select option"
@@ -2787,7 +2787,7 @@ exports[`SelectDropdown > should render with options values as numbers 1`] = `
       >
         <input
           autocomplete="off"
-          class="no-ligatures w-full border-none !text-sm text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
+          class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
           data-testid="select-list__input"
           readonly=""
           tabindex="-1"
@@ -2821,7 +2821,7 @@ exports[`SelectDropdown > should render with options values as numbers 1`] = `
                 aria-controls="downshift-82-menu"
                 aria-labelledby="downshift-82-label"
                 autocomplete="off"
-                class="no-ligatures w-full border-none !text-sm text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base cursor-default css-1937ogs"
+                class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base cursor-default css-1937ogs"
                 data-testid="SelectDropdown__input"
                 id="downshift-82-input"
                 placeholder="Select option"
