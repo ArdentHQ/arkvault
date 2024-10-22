@@ -30,7 +30,7 @@ export const MultiEntryItem = ({
 	>
 		<div
 			className={cn("flex flex-col items-center space-y-4", {
-				"md:flex-row md:space-x-4 md:space-y-0": "md",
+				"md:flex-row md:space-x-4 md:space-y-0": size === "md",
 				"sm:flex-row sm:space-x-4 sm:space-y-0": size === "sm",
 			})}
 		>
