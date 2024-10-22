@@ -17,6 +17,7 @@ import { buildTransferData } from "@/domains/transaction/pages/SendTransfer/Send
 import { assertNetwork } from "@/utils/assertions";
 import { StepHeader } from "@/app/components/StepHeader";
 import { ThemeIcon, Icon } from "@/app/components/Icon";
+import { Button } from "@/app/components/Button";
 
 const QRCodeButton = styled.button`
 	${tw`mt-auto flex w-full items-center space-x-2 rounded py-3 px-5 transition-colors duration-300 sm:w-auto sm:py-5`}
@@ -132,28 +133,47 @@ export const FormStep = ({
 				}
 				subtitle={t("TRANSACTION.PAGE_TRANSACTION_SEND.FORM_STEP.DESCRIPTION")}
 				extra={
-					<div className="flex h-full align-bottom">
-						<QRCodeButton className="group" type="button" onClick={onScan} data-testid="QRCodeModalButton">
-							<Icon
-								size="lg"
-								name="QRCode"
-								className="text-theme-navy-600 transition-colors group-hover:text-white dark:text-theme-secondary-600"
-							/>
-							<span className="text-sm font-semibold leading-5 text-theme-navy-600 transition-colors group-hover:text-white dark:text-theme-secondary-200 sm:text-base">
-								{isXs
-									? t("TRANSACTION.PAGE_TRANSACTION_SEND.FORM_STEP.SCAN_FULL")
-									: t("TRANSACTION.PAGE_TRANSACTION_SEND.FORM_STEP.SCAN")}
-							</span>
-						</QRCodeButton>
-					</div>
+					!isXs && (
+						<div className="hidden sm:flex sm:h-full sm:align-bottom">
+							<QRCodeButton
+								className="group"
+								type="button"
+								onClick={onScan}
+								data-testid="QRCodeModalButton"
+							>
+								<Icon
+									size="lg"
+									name="QRCode"
+									className="text-theme-navy-600 transition-colors group-hover:text-white dark:text-theme-secondary-600"
+								/>
+								<span className="text-base font-semibold leading-5 text-theme-navy-600 transition-colors group-hover:text-white dark:text-theme-secondary-200">
+									{t("TRANSACTION.PAGE_TRANSACTION_SEND.FORM_STEP.SCAN")}
+								</span>
+							</QRCodeButton>
+						</div>
+					)
 				}
 			/>
 
 			<div className="space-y-4 pt-4">
 				<FormField name="senderAddress">
-					<FormLabel label={t("TRANSACTION.SENDER")} />
-
 					<div data-testid="sender-address">
+						<div className="mb-2 flex items-center justify-between">
+							<FormLabel
+								label={t("TRANSACTION.SENDER")}
+								className="mb-0 text-sm font-semibold leading-[17px] text-theme-secondary-text"
+							/>
+							<Button
+								type="button"
+								variant="transparent"
+								className="block p-0 text-sm text-theme-navy-600 sm:hidden"
+								onClick={onScan}
+								data-testid="QRCodeModalButton"
+							>
+								{t("TRANSACTION.PAGE_TRANSACTION_SEND.FORM_STEP.SCAN_FULL")}
+							</Button>
+						</div>
+
 						<SelectAddress
 							showWalletAvatar={false}
 							wallet={
