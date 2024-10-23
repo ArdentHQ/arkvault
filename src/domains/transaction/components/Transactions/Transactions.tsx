@@ -209,7 +209,7 @@ export const Transactions = memo(function Transactions({
 					)}
 				</>
 			) : (
-				<TableWrapper className={cn("border-none", { "!rounded-b-none": hasMore })}>
+				<TableWrapper className={cn({ "!rounded-b-none": hasMore })}>
 					<div className="flex w-full flex-col items-start justify-between gap-3 border-b-0 border-b-theme-secondary-300 pb-4 pt-3 dark:border-b-theme-secondary-800 sm:flex-row md:items-center md:border-b md:px-6 md:py-4">
 						<span className="text-base font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500">
 							{t("COMMON.SHOWING_RESULTS", { count: transactions.length })}
