@@ -17,7 +17,7 @@ const ModalTitle = ({ count }: { count: number }) => {
 	const { t } = useTranslation();
 
 	return (
-		<span className="font-semibold leading-5 inline-flex items-center gap-1">
+		<span className="inline-flex items-center gap-1 font-semibold leading-5">
 			<span>{t("COMMON.RECIPIENTS")} </span>
 			<span
 				className="text-theme-secondary-500 dark:text-theme-secondary-500"
