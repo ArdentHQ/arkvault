@@ -39,7 +39,7 @@ export const ReviewStep = ({
 				}
 			/>
 
-			<div className="-mx-3 space-y-3 sm:mx-0 sm:space-y-4">
+			<div className="-mx-3 space-y-3 sm:mx-0 mt-6 sm:mt-4 sm:space-y-4">
 				<TransactionAddresses
 					labelClassName="w-auto sm:min-w-28"
 					senderAddress={wallet.address()}
