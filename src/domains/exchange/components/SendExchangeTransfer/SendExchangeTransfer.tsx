@@ -63,6 +63,7 @@ export const SendExchangeTransfer: React.FC<TransferProperties> = ({
 		form,
 		submitForm,
 		lastEstimatedExpiration,
+		handleSubmit,
 		values: { fee },
 		formState: { isValid, isSubmitting },
 	} = useSendTransferForm(senderWallet);
@@ -117,10 +118,15 @@ export const SendExchangeTransfer: React.FC<TransferProperties> = ({
 		void calculateFee();
 	}, [calculate, network, profile, recipients]);
 
-	const { hasDeviceAvailable, isConnected } = useLedgerContext();
+	const { hasDeviceAvailable, isConnected, connect, ledgerDevice} = useLedgerContext();
 
 	const [transaction, setTransaction] = useState<DTO.ExtendedSignedTransactionData | undefined>(undefined);
 	const [errorMessage, setErrorMessage] = useState<string | undefined>();
+
+	const connectLedger = useCallback(async () => {
+		await connect(profile, senderWallet!.coinId(), senderWallet!.networkId());
+		void handleSubmit(() => submitForm(abortReference));
+	}, [senderWallet, connect, profile]);
 
 	const abortReference = useRef(new AbortController());
 
@@ -149,6 +155,13 @@ export const SendExchangeTransfer: React.FC<TransferProperties> = ({
 
 		setSenderWallet(newSenderWallet);
 	};
+
+
+	useEffect(() => {
+		if(senderWallet?.isLedger()) {
+			connectLedger();
+		}
+	}, [senderWallet])
 
 	if (transaction) {
 		return (
@@ -242,6 +255,8 @@ export const SendExchangeTransfer: React.FC<TransferProperties> = ({
 								}
 								ledgerIsAwaitingDevice={!hasDeviceAvailable}
 								ledgerIsAwaitingApp={!isConnected}
+								ledgerConnectedModel={ledgerDevice?.id}
+								ledgerSupportedModels={[Contracts.WalletLedgerModel.NanoX]}
 								// onDeviceNotAvailable={() => {
 								// 	// @TODO handle ledger
 								// }}
