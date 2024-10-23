@@ -17,7 +17,7 @@ const ModalTitle = ({ count }: { count: number }) => {
 	const { t } = useTranslation();
 
 	return (
-		<span className="font-semibold leading-5">
+		<span className="font-semibold leading-5 inline-flex items-center gap-2">
 			<span>{t("COMMON.RECIPIENTS")} </span>
 			<span
 				className="text-theme-secondary-500 dark:text-theme-secondary-500"
@@ -40,7 +40,7 @@ export const RecipientsModal: React.FC<Properties> = ({ isOpen, onClose, recipie
 			onClose={onClose} noButtons
 			data-testid="RecipientsModal"
 		>
-			<div className="mt-4">
+			<div className="mt-2.5 md:mt-[18px]">
 				{isMdAndAbove ? (
 					<RecipientsTable recipients={recipients} ticker={ticker} />
 				) : (

@@ -16,8 +16,13 @@ export const RecipientsTable: FC<RecipientsProperties> = ({ recipients, ticker }
 	const columns = useMemo<Column<RecipientItem>[]>(
 		() => [
 			{
+				Header: "#",
+				headerClassName: "no-border",
+			},
+			{
 				Header: t("COMMON.ADDRESS"),
 				accessor: "alias",
+				headerClassName: "no-border",
 			},
 			{
 				Header: t("COMMON.AMOUNT"),
@@ -32,7 +37,11 @@ export const RecipientsTable: FC<RecipientsProperties> = ({ recipients, ticker }
 	const renderTableRow = useCallback(
 		(recipient: RecipientItem, index: number) => (
 			<TableRow key={index} border className="relative">
-				<TableCell variant="start" innerClassName="space-x-4 pl-6">
+				<TableCell variant="start" innerClassName="pl-6">
+					<span className="text-sm font-semibold leading-[17px] text-theme-text">{index + 1}</span>
+				</TableCell>
+
+				<TableCell>
 					<Address
 						walletName={recipient.alias}
 						address={recipient.address}
@@ -43,7 +52,7 @@ export const RecipientsTable: FC<RecipientsProperties> = ({ recipients, ticker }
 					/>
 				</TableCell>
 
-				<TableCell innerClassName="justify-end pr-6">
+				<TableCell variant="end" innerClassName="justify-end pr-6">
 					<span className="whitespace-nowrap text-sm font-semibold leading-[17px]">
 						<Amount ticker={ticker} value={recipient.amount as number} />
 					</span>
