@@ -6,7 +6,7 @@ import { Networks } from "@ardenthq/sdk";
 import { Address } from "@/app/components/Address";
 import { useWalletAlias } from "@/app/hooks";
 import { DetailTitle, DetailWrapper } from "@/app/components/DetailWrapper";
-import { TransactionRecipients, TransactionRecipient } from "./TransactionRecipient";
+import { TransactionRecipients, TransactionRecipientsModal } from "./TransactionRecipient";
 import cn from "classnames";
 
 interface Properties {
@@ -60,15 +60,13 @@ export const TransactionAddresses = ({
 				/>
 			)}
 
-			{!explorerLink &&
-				recipients.map((recipient, index) => (
-					<TransactionRecipient
-						recipient={recipient}
-						labelClassName={labelClassName}
-						key={index}
-						showLabel={index === 0}
-					/>
-				))}
+			{!explorerLink && (
+				<TransactionRecipientsModal
+					recipients={recipients}
+					ticker={network.ticker()}
+					labelClassName={labelClassName}
+				/>
+			)}
 		</DetailWrapper>
 	);
 };
