@@ -124,7 +124,7 @@ export const TransactionRecipientsModal = ({
 				<DetailTitle className={labelClassName}>{t("COMMON.TO")}</DetailTitle>
 
 				<div className="flex items-center">
-					<span className="text-sm font-semibold leading-[17px] sm:text-base sm:leading-5">
+					<span className="inline-flex items-center gap-1 text-sm font-semibold leading-[17px] sm:text-base sm:leading-5">
 						<span>{t("COMMON.MULTIPLE")} </span>
 						<span
 							className="text-theme-secondary-700 dark:text-theme-secondary-500"
