@@ -5206,7 +5206,7 @@ exports[`SendTransfer > should render review step 1`] = `
             class="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0"
           >
             <div
-              class="no-ligatures w-20 flex-shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:text-base sm:leading-5"
+              class="no-ligatures flex-shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:text-base sm:leading-5 w-14 sm:w-20"
             >
               From
             </div>
@@ -5291,7 +5291,7 @@ exports[`SendTransfer > should render review step 1`] = `
             class="mt-3 flex w-full items-center justify-between space-x-2 sm:mt-0 sm:justify-start sm:space-x-0"
           >
             <div
-              class="no-ligatures w-20 flex-shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:text-base sm:leading-5"
+              class="no-ligatures flex-shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:text-base sm:leading-5 w-14 sm:w-20"
             >
               To
             </div>
@@ -5747,7 +5747,7 @@ exports[`SendTransfer > should render review step with multiple recipients (with
               class="flex items-center"
             >
               <span
-                class="text-sm font-semibold leading-[17px] sm:text-base sm:leading-5"
+                class="inline-flex items-center gap-1 text-sm font-semibold leading-[17px] sm:text-base sm:leading-5"
               >
                 <span>
                   Multiple 
@@ -6167,7 +6167,7 @@ exports[`SendTransfer > should render review step with multiple recipients (with
               class="flex items-center"
             >
               <span
-                class="text-sm font-semibold leading-[17px] sm:text-base sm:leading-5"
+                class="inline-flex items-center gap-1 text-sm font-semibold leading-[17px] sm:text-base sm:leading-5"
               >
                 <span>
                   Multiple 
