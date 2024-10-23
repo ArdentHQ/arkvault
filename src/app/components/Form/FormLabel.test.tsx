@@ -46,4 +46,10 @@ describe("FormLabel", () => {
 		expect(baseElement).toHaveTextContent("This field is optional");
 		expect(asFragment()).toMatchSnapshot();
 	});
+
+	it("should render with classnames", () => {
+		const { container } = render(<FormLabel label="Test" className="text-red-500" />);
+
+		expect(container.firstChild).toHaveClass("text-red-500");
+	})
 });
