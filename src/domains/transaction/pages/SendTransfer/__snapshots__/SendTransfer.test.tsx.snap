@@ -2598,7 +2598,6 @@ exports[`SendTransfer > should render form step (lg) 1`] = `
             </label>
             <button
               class="space-x-3 relative items-center justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none block p-0 text-sm text-theme-navy-600 sm:hidden"
-              data-testid="QRCodeModalButton"
               type="button"
             >
               <div
@@ -3299,7 +3298,6 @@ exports[`SendTransfer > should render form step (xs) 1`] = `
             </label>
             <button
               class="space-x-3 relative items-center justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none block p-0 text-sm text-theme-navy-600 sm:hidden"
-              data-testid="QRCodeModalButton"
               type="button"
             >
               <div
