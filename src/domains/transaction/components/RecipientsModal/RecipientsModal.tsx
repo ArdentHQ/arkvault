@@ -37,7 +37,8 @@ export const RecipientsModal: React.FC<Properties> = ({ isOpen, onClose, recipie
 			isOpen={isOpen}
 			size="3xl"
 			title={<ModalTitle count={recipients.length} />}
-			onClose={onClose} noButtons
+			onClose={onClose}
+			noButtons
 			data-testid="RecipientsModal"
 		>
 			<div className="mt-2.5 md:mt-[18px]">

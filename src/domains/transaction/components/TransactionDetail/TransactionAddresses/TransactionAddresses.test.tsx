@@ -1,11 +1,11 @@
 import React from "react";
 import { Contracts } from "@ardenthq/sdk-profiles";
-import {env, getDefaultProfileId, screen, renderResponsive, render} from "@/utils/testing-library";
+import { env, getDefaultProfileId, screen, renderResponsive, render } from "@/utils/testing-library";
 import { TransactionAddresses } from "./TransactionAddresses";
 import { translations } from "@/app/i18n/common/i18n";
-import {expect} from "vitest";
+import { expect } from "vitest";
 import userEvent from "@testing-library/user-event";
-import {RecipientItem} from "@/domains/transaction/components/RecipientsModal/RecipientsModal.contracts";
+import { RecipientItem } from "@/domains/transaction/components/RecipientsModal/RecipientsModal.contracts";
 
 describe("TransactionAddresses", () => {
 	let profile: Contracts.IProfile;
@@ -51,24 +51,28 @@ describe("TransactionAddresses", () => {
 	});
 
 	it("should render `View recipients list` if there are more than 1 recipient", () => {
-		render(<TransactionAddresses
-			senderAddress={wallet.address()}
-			network={wallet.network()}
-			profile={profile}
-			recipients={recipients}
-		/>);
+		render(
+			<TransactionAddresses
+				senderAddress={wallet.address()}
+				network={wallet.network()}
+				profile={profile}
+				recipients={recipients}
+			/>,
+		);
 
 		expect(screen.getByTestId("TransactionRecipientsModal--ShowList")).toBeInTheDocument();
-		expect(screen.getByTestId("TransactionRecipientsModal--RecipientsCount")).toHaveTextContent(recipients.length)
+		expect(screen.getByTestId("TransactionRecipientsModal--RecipientsCount")).toHaveTextContent(recipients.length);
 	});
 
 	it("should show recipients modal", async () => {
-		render(<TransactionAddresses
-			senderAddress={wallet.address()}
-			network={wallet.network()}
-			profile={profile}
-			recipients={recipients}
-		/>);
+		render(
+			<TransactionAddresses
+				senderAddress={wallet.address()}
+				network={wallet.network()}
+				profile={profile}
+				recipients={recipients}
+			/>,
+		);
 
 		await userEvent.click(screen.getByTestId("TransactionRecipientsModal--ShowList"));
 		expect(screen.getByTestId("RecipientsModal")).toBeInTheDocument();
