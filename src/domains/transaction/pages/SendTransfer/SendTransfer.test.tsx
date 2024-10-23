@@ -481,7 +481,7 @@ describe("SendTransfer", () => {
 
 		expect(screen.getByTestId(reviewStepID)).toBeInTheDocument();
 		expect(container).toHaveTextContent(wallet.address());
-		expect(container).toHaveTextContent(secondWallet.address());
+		expect(container).toHaveTextContent("View Full List");
 
 		if (memo) {
 			expect(container).toHaveTextContent(memo);
