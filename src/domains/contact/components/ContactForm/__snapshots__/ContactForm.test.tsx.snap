@@ -7,7 +7,7 @@ exports[`ContactForm > should render responsive 1`] = `
     data-testid="contact-form"
   >
     <fieldset
-      class="flex min-w-0 flex-col css-1bcidjh"
+      class="flex min-w-0 flex-col css-ea0il3"
     >
       <label
         class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
@@ -37,7 +37,7 @@ exports[`ContactForm > should render responsive 1`] = `
       class="!-mx-4 !mt-4 !p-4 css-1mwq138"
     >
       <fieldset
-        class="flex min-w-0 flex-col css-1bcidjh"
+        class="flex min-w-0 flex-col css-ea0il3"
       >
         <label
           class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
@@ -158,7 +158,7 @@ exports[`ContactForm > should render responsive 1`] = `
         </div>
       </fieldset>
       <fieldset
-        class="flex min-w-0 flex-col css-1bcidjh"
+        class="flex min-w-0 flex-col css-ea0il3"
         data-testid="ContactForm__address"
       >
         <label
@@ -244,7 +244,7 @@ exports[`ContactForm > should render responsive 2`] = `
     data-testid="contact-form"
   >
     <fieldset
-      class="flex min-w-0 flex-col css-1bcidjh"
+      class="flex min-w-0 flex-col css-ea0il3"
     >
       <label
         class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
@@ -274,7 +274,7 @@ exports[`ContactForm > should render responsive 2`] = `
       class="!-mx-4 !mt-4 !p-4 css-1mwq138"
     >
       <fieldset
-        class="flex min-w-0 flex-col css-1bcidjh"
+        class="flex min-w-0 flex-col css-ea0il3"
       >
         <label
           class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
@@ -311,13 +311,13 @@ exports[`ContactForm > should render responsive 2`] = `
             <div
               aria-expanded="false"
               aria-haspopup="listbox"
-              aria-owns="downshift-3-menu"
+              aria-owns="downshift-4-menu"
               role="combobox"
             >
               <div>
                 <label
-                  for="downshift-3-input"
-                  id="downshift-3-label"
+                  for="downshift-4-input"
+                  id="downshift-4-label"
                 />
                 <div
                   class="css-14zfvme"
@@ -327,12 +327,12 @@ exports[`ContactForm > should render responsive 2`] = `
                   >
                     <input
                       aria-autocomplete="list"
-                      aria-controls="downshift-3-menu"
-                      aria-labelledby="downshift-3-label"
+                      aria-controls="downshift-4-menu"
+                      aria-labelledby="downshift-4-label"
                       autocomplete="off"
                       class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base cursor-default css-1937ogs"
                       data-testid="SelectDropdown__input"
-                      id="downshift-3-input"
+                      id="downshift-4-input"
                       name="network"
                       placeholder="Enter a cryptoasset name"
                       type="text"
@@ -386,8 +386,8 @@ exports[`ContactForm > should render responsive 2`] = `
                 </div>
               </div>
               <div
-                aria-labelledby="downshift-3-label"
-                id="downshift-3-menu"
+                aria-labelledby="downshift-4-label"
+                id="downshift-4-menu"
                 role="listbox"
               />
             </div>
@@ -395,7 +395,7 @@ exports[`ContactForm > should render responsive 2`] = `
         </div>
       </fieldset>
       <fieldset
-        class="flex min-w-0 flex-col css-1bcidjh"
+        class="flex min-w-0 flex-col css-ea0il3"
         data-testid="ContactForm__address"
       >
         <label
