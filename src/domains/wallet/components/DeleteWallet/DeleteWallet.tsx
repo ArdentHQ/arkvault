@@ -24,7 +24,7 @@ export const DeleteWallet = ({ onClose, onCancel, onDelete, wallet }: DeleteWall
 			onDelete={onDelete}
 		>
 			<FormField name="wallet" className="mt-4">
-				<FormLabel label={t("COMMON.WALLET")} />
+				<FormLabel label={t("COMMON.WALLET")} className="hover:!text-theme-secondary-text" />
 				<SelectAddress
 					wallet={{
 						address: wallet.address(),
