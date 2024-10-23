@@ -118,7 +118,7 @@ export const SendExchangeTransfer: React.FC<TransferProperties> = ({
 		void calculateFee();
 	}, [calculate, network, profile, recipients]);
 
-	const { hasDeviceAvailable, isConnected, connect, ledgerDevice} = useLedgerContext();
+	const { hasDeviceAvailable, isConnected, connect, ledgerDevice } = useLedgerContext();
 
 	const [transaction, setTransaction] = useState<DTO.ExtendedSignedTransactionData | undefined>(undefined);
 	const [errorMessage, setErrorMessage] = useState<string | undefined>();
@@ -156,12 +156,11 @@ export const SendExchangeTransfer: React.FC<TransferProperties> = ({
 		setSenderWallet(newSenderWallet);
 	};
 
-
 	useEffect(() => {
-		if(senderWallet?.isLedger()) {
+		if (senderWallet?.isLedger()) {
 			connectLedger();
 		}
-	}, [senderWallet])
+	}, [senderWallet]);
 
 	if (transaction) {
 		return (
