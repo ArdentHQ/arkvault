@@ -23,7 +23,7 @@ export const TableCell = ({
 	...properties
 }: TableCellProperties) => (
 	<td className={className} {...properties}>
-		<TableCellInnerWrapper className={twMerge(getStyles({ size, variant, isSelected }), innerClassName)}>
+		<TableCellInnerWrapper className={twMerge(getStyles({ isSelected, size, variant }), innerClassName)}>
 			{children}
 		</TableCellInnerWrapper>
 	</td>
