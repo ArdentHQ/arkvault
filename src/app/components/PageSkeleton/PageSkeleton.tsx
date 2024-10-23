@@ -21,7 +21,7 @@ export const PageSkeleton = () => {
 							<WelcomeSlider />
 						</div>
 						<div className="min-w-0 basis-1/2 rounded-xl border-theme-navy-100 dark:border-theme-secondary-800 sm:border sm:p-6">
-							<div className="mx-auto flex max-w-[400px] flex-col h-[calc(100vh_-_160px)] sm:h-full">
+							<div className="mx-auto flex h-[calc(100vh_-_160px)] max-w-[400px] flex-col sm:h-full">
 								<div className="flex flex-1 flex-col items-center justify-center">
 									<div className="flex flex-col items-center space-y-2 text-center sm:px-4">
 										<ThemeIcon
