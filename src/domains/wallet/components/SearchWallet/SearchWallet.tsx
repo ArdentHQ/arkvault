@@ -84,7 +84,11 @@ const SearchWalletListItem = ({
 			</TableCell>
 
 			{showConvertedValue && (
-				<TableCell innerClassName="text-theme-secondary-text justify-end" className="hidden xl:table-cell" isSelected={isSelected}>
+				<TableCell
+					innerClassName="text-theme-secondary-text justify-end"
+					className="hidden xl:table-cell"
+					isSelected={isSelected}
+				>
 					<Amount
 						value={wallet.convertedBalance()}
 						ticker={exchangeCurrency}

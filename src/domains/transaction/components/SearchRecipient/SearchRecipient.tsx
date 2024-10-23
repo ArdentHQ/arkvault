@@ -58,10 +58,9 @@ const SearchRecipientListItem: FC<SearchRecipientListItemProperties> = ({
 		);
 	};
 
-
 	return (
 		<TableRow key={recipient.id} border className="relative">
-			<TableCell variant="start" innerClassName="space-x-4 my-0.5" isSelected={isSelected} >
+			<TableCell variant="start" innerClassName="space-x-4 my-0.5" isSelected={isSelected}>
 				<Address
 					walletName={recipient.alias}
 					address={recipient.address}

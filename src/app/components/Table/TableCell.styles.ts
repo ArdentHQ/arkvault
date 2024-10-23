@@ -22,4 +22,5 @@ const getVariant = (isSelected: boolean, variant: "start" | "middle" | "end", si
 	return isSelected ? "bg-theme-success-100" : "";
 };
 
-export const getStyles = ({ variant, size, isSelected }: any) => `${baseStyle} ${getVariant(isSelected, variant, size)}`;
+export const getStyles = ({ variant, size, isSelected }: any) =>
+	`${baseStyle} ${getVariant(isSelected, variant, size)}`;
