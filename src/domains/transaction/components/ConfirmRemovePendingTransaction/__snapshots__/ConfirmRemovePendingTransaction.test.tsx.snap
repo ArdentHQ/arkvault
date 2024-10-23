@@ -179,7 +179,7 @@ exports[`ConfirmRemovePendingTransaction > should render multisignature registra
                   data-testid="AuthenticationStep"
                 >
                   <fieldset
-                    class="flex min-w-0 flex-col css-1bcidjh"
+                    class="flex min-w-0 flex-col css-ea0il3"
                   >
                     <label
                       class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
@@ -493,7 +493,7 @@ exports[`ConfirmRemovePendingTransaction > should render multisignature transact
                   data-testid="AuthenticationStep"
                 >
                   <fieldset
-                    class="flex min-w-0 flex-col css-1bcidjh"
+                    class="flex min-w-0 flex-col css-ea0il3"
                   >
                     <label
                       class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
