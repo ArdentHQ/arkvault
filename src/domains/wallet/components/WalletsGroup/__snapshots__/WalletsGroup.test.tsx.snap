@@ -3165,7 +3165,7 @@ exports[`WalletsGroup > should show skeleton when syncing exchange rates 1`] = `
                     data-testid="TableCell_Starred"
                   >
                     <div
-                      class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 rounded-l space-x-3 pl-6 ml-0"
+                      class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 rounded-l space-x-3 pl-6 ml-0"
                     >
                       <div
                         class="flex h-5 items-center pr-3 dark:border-theme-secondary-800"
@@ -3205,7 +3205,7 @@ exports[`WalletsGroup > should show skeleton when syncing exchange rates 1`] = `
                     class="hidden lg:table-cell"
                   >
                     <div
-                      class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 -ml-3 space-x-3"
+                      class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 -ml-3 space-x-3"
                     >
                       <div
                         class="w-24 flex-1 overflow-hidden"
@@ -3232,7 +3232,7 @@ exports[`WalletsGroup > should show skeleton when syncing exchange rates 1`] = `
                     data-testid="TableCell_Wallet"
                   >
                     <div
-                      class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 -ml-3 space-x-3"
+                      class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 -ml-3 space-x-3"
                     >
                       <div
                         class="w-full max-w-64 flex-1 overflow-hidden md:max-w-40 lg:max-w-48 xl:max-w-full"
@@ -3299,7 +3299,7 @@ exports[`WalletsGroup > should show skeleton when syncing exchange rates 1`] = `
                   </td>
                   <td>
                     <div
-                      class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 justify-center text-sm font-bold text-center align-middle"
+                      class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 justify-center text-sm font-bold text-center align-middle"
                     >
                       <div
                         class="inline-flex items-center space-x-1"
@@ -3345,7 +3345,7 @@ exports[`WalletsGroup > should show skeleton when syncing exchange rates 1`] = `
                   </td>
                   <td>
                     <div
-                      class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 font-semibold justify-end"
+                      class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 font-semibold justify-end"
                     >
                       <span
                         class="whitespace-nowrap dark:text-theme-white text-theme-secondary-700 dark:md:text-theme-secondary-500"
@@ -3360,7 +3360,7 @@ exports[`WalletsGroup > should show skeleton when syncing exchange rates 1`] = `
                     data-testid="CurrencyCell"
                   >
                     <div
-                      class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 justify-end"
+                      class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 justify-end"
                     >
                       <span
                         aria-busy="true"
@@ -3379,7 +3379,7 @@ exports[`WalletsGroup > should show skeleton when syncing exchange rates 1`] = `
                   </td>
                   <td>
                     <div
-                      class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 -mr-2 rounded-r justify-end text-theme-secondary-text pr-6"
+                      class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 -mr-2 rounded-r justify-end text-theme-secondary-text pr-6"
                     >
                       <div>
                         <button

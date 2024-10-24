@@ -137,7 +137,7 @@ exports[`Unconfirmed transaction table > should not render in lg 1`] = `
           >
             <td>
               <div
-                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l space-x-3 text-theme-secondary-500 whitespace-nowrap"
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l space-x-3 text-theme-secondary-500 whitespace-nowrap"
               >
                 <span
                   data-testid="TimeAgo"
@@ -148,7 +148,7 @@ exports[`Unconfirmed transaction table > should not render in lg 1`] = `
             </td>
             <td>
               <div
-                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 space-x-4"
               >
                 <div
                   class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-1i0wxh3"
@@ -193,7 +193,7 @@ exports[`Unconfirmed transaction table > should not render in lg 1`] = `
             </td>
             <td>
               <div
-                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
               >
                 <div
                   class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
@@ -220,7 +220,7 @@ exports[`Unconfirmed transaction table > should not render in lg 1`] = `
           >
             <td>
               <div
-                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l space-x-3 text-theme-secondary-500 whitespace-nowrap"
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l space-x-3 text-theme-secondary-500 whitespace-nowrap"
               >
                 <span
                   data-testid="TimeAgo"
@@ -231,7 +231,7 @@ exports[`Unconfirmed transaction table > should not render in lg 1`] = `
             </td>
             <td>
               <div
-                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 space-x-4"
               >
                 <span
                   class="flex h-5 w-5 items-center justify-center text-theme-text dark:text-theme-secondary-600"
@@ -309,7 +309,7 @@ exports[`Unconfirmed transaction table > should not render in lg 1`] = `
             </td>
             <td>
               <div
-                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
               >
                 <div
                   class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
@@ -474,7 +474,7 @@ exports[`Unconfirmed transaction table > should not render in md 1`] = `
           >
             <td>
               <div
-                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l space-x-3 text-theme-secondary-500 whitespace-nowrap"
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l space-x-3 text-theme-secondary-500 whitespace-nowrap"
               >
                 <span
                   data-testid="TimeAgo"
@@ -485,7 +485,7 @@ exports[`Unconfirmed transaction table > should not render in md 1`] = `
             </td>
             <td>
               <div
-                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 space-x-4"
               >
                 <div
                   class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-1i0wxh3"
@@ -530,7 +530,7 @@ exports[`Unconfirmed transaction table > should not render in md 1`] = `
             </td>
             <td>
               <div
-                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
               >
                 <div
                   class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
@@ -557,7 +557,7 @@ exports[`Unconfirmed transaction table > should not render in md 1`] = `
           >
             <td>
               <div
-                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l space-x-3 text-theme-secondary-500 whitespace-nowrap"
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l space-x-3 text-theme-secondary-500 whitespace-nowrap"
               >
                 <span
                   data-testid="TimeAgo"
@@ -568,7 +568,7 @@ exports[`Unconfirmed transaction table > should not render in md 1`] = `
             </td>
             <td>
               <div
-                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 space-x-4"
               >
                 <span
                   class="flex h-5 w-5 items-center justify-center text-theme-text dark:text-theme-secondary-600"
@@ -646,7 +646,7 @@ exports[`Unconfirmed transaction table > should not render in md 1`] = `
             </td>
             <td>
               <div
-                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
               >
                 <div
                   class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
@@ -1078,7 +1078,7 @@ exports[`Unconfirmed transaction table > should not render in xl 1`] = `
           >
             <td>
               <div
-                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l space-x-3 text-theme-secondary-500 whitespace-nowrap"
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l space-x-3 text-theme-secondary-500 whitespace-nowrap"
               >
                 <span
                   data-testid="TimeAgo"
@@ -1089,7 +1089,7 @@ exports[`Unconfirmed transaction table > should not render in xl 1`] = `
             </td>
             <td>
               <div
-                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 space-x-4"
               >
                 <div
                   class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-1i0wxh3"
@@ -1134,7 +1134,7 @@ exports[`Unconfirmed transaction table > should not render in xl 1`] = `
             </td>
             <td>
               <div
-                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
               >
                 <div
                   class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
@@ -1161,7 +1161,7 @@ exports[`Unconfirmed transaction table > should not render in xl 1`] = `
           >
             <td>
               <div
-                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l space-x-3 text-theme-secondary-500 whitespace-nowrap"
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l space-x-3 text-theme-secondary-500 whitespace-nowrap"
               >
                 <span
                   data-testid="TimeAgo"
@@ -1172,7 +1172,7 @@ exports[`Unconfirmed transaction table > should not render in xl 1`] = `
             </td>
             <td>
               <div
-                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 space-x-4"
               >
                 <span
                   class="flex h-5 w-5 items-center justify-center text-theme-text dark:text-theme-secondary-600"
@@ -1250,7 +1250,7 @@ exports[`Unconfirmed transaction table > should not render in xl 1`] = `
             </td>
             <td>
               <div
-                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
               >
                 <div
                   class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
