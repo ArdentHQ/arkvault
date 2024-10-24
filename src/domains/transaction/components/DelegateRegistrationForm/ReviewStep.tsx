@@ -41,7 +41,7 @@ export const ReviewStep = ({
 
 			<div className="-mx-3 mt-6 space-y-3 sm:mx-0 sm:mt-4 sm:space-y-4">
 				<TransactionAddresses
-					labelClassName="w-auto sm:min-w-28"
+					labelClassName="w-auto sm:min-w-32"
 					senderAddress={wallet.address()}
 					recipients={[]}
 					profile={profile}
