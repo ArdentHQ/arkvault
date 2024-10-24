@@ -65,8 +65,8 @@ export class HttpClient extends Http.AbstractRequest {
 				return new Http.Response({
 					body: `{ "data": { "address": "ALfqDdsnMxFuccCWTExMVWu1jLgsTzHg8m'", "attributes": {}, "balance": "10000000000", "nonce": "154", "publicKey": "0364c00dee112dee7a1e181b4ad358ad604eac05f1e37bd6d9c208002cd08ae383" } }`,
 					headers: {},
-					statusCode: 200
-				})
+					statusCode: 200,
+				});
 			}
 
 			const response = await fetch(url, options);
