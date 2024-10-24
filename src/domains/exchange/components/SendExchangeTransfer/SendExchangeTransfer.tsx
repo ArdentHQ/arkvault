@@ -155,7 +155,7 @@ export const SendExchangeTransfer: React.FC<TransferProperties> = ({
 	useEffect(() => {
 		const connectLedgerAndSubmit = async () => {
 			if ([transaction, !senderWallet, isConnected, !senderWallet?.isLedger()].some(Boolean)) {
-				return
+				return;
 			}
 
 			if (!isLedgerTransportSupported()) {
@@ -165,12 +165,10 @@ export const SendExchangeTransfer: React.FC<TransferProperties> = ({
 
 			await connect(profile, senderWallet!.coinId(), senderWallet!.networkId());
 			handleSubmit(() => submit())();
-		}
+		};
 
-		connectLedgerAndSubmit()
-
-	}, [senderWallet, isConnected, transaction])
-
+		connectLedgerAndSubmit();
+	}, [senderWallet, isConnected, transaction]);
 
 	if (transaction) {
 		return (
@@ -220,9 +218,9 @@ export const SendExchangeTransfer: React.FC<TransferProperties> = ({
 									wallet={
 										senderWallet
 											? {
-												address: senderWallet.address(),
-												network: senderWallet.network(),
-											}
+													address: senderWallet.address(),
+													network: senderWallet.network(),
+												}
 											: undefined
 									}
 									wallets={wallets}
