@@ -1543,7 +1543,7 @@ exports[`SearchRecipient > should render with contact on desktop 1`] = `
                       >
                         <td>
                           <div
-                            class="flex px-3 items-center transition-colors duration-100 min-h-11 pl-3 ml-3 bg-theme-success-100 rounded-l space-x-4 my-0.5"
+                            class="flex px-3 items-center transition-colors duration-100 min-h-11 pl-3 ml-3 bg-theme-success-100 rounded-l dark:bg-transparent dark:border-y-2 dark:border-l-2 dark:border-theme-success-600 space-x-4 my-0.5"
                           >
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -1577,7 +1577,7 @@ exports[`SearchRecipient > should render with contact on desktop 1`] = `
                         </td>
                         <td>
                           <div
-                            class="flex px-3 items-center transition-colors duration-100 min-h-11 bg-theme-success-100 my-0.5"
+                            class="flex px-3 items-center transition-colors duration-100 min-h-11 bg-theme-success-100 dark:bg-transparent dark:border-y-2 dark:border-theme-success-600 my-0.5"
                           >
                             <span
                               class="whitespace-nowrap text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500"
@@ -1589,10 +1589,10 @@ exports[`SearchRecipient > should render with contact on desktop 1`] = `
                         </td>
                         <td>
                           <div
-                            class="flex px-3 items-center transition-colors duration-100 min-h-11 pr-3 mr-3 bg-theme-success-100 rounded-r justify-end my-0.5"
+                            class="flex px-3 items-center transition-colors duration-100 min-h-11 pr-3 mr-3 bg-theme-success-100 rounded-r dark:bg-transparent dark:border-y-2 dark:border-r-2 dark:border-theme-success-600 justify-end my-0.5"
                           >
                             <button
-                              class="p-3 relative items-center inline-flex justify-center text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none -mr-3 text-sm font-semibold leading-[17px] text-theme-primary-reverse-600"
+                              class="p-3 relative items-center inline-flex justify-center text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none -mr-3 text-sm font-semibold leading-[17px] text-theme-primary-reverse-600 py-0"
                               data-testid="RecipientListItem__selected-button-0"
                               type="button"
                             >
@@ -2188,7 +2188,7 @@ exports[`SearchRecipient > should render with my wallet on desktop 1`] = `
                       >
                         <td>
                           <div
-                            class="flex px-3 items-center transition-colors duration-100 min-h-11 pl-3 ml-3 bg-theme-success-100 rounded-l space-x-4 my-0.5"
+                            class="flex px-3 items-center transition-colors duration-100 min-h-11 pl-3 ml-3 bg-theme-success-100 rounded-l dark:bg-transparent dark:border-y-2 dark:border-l-2 dark:border-theme-success-600 space-x-4 my-0.5"
                           >
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -2222,7 +2222,7 @@ exports[`SearchRecipient > should render with my wallet on desktop 1`] = `
                         </td>
                         <td>
                           <div
-                            class="flex px-3 items-center transition-colors duration-100 min-h-11 bg-theme-success-100 my-0.5"
+                            class="flex px-3 items-center transition-colors duration-100 min-h-11 bg-theme-success-100 dark:bg-transparent dark:border-y-2 dark:border-theme-success-600 my-0.5"
                           >
                             <span
                               class="whitespace-nowrap text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500"
@@ -2234,10 +2234,10 @@ exports[`SearchRecipient > should render with my wallet on desktop 1`] = `
                         </td>
                         <td>
                           <div
-                            class="flex px-3 items-center transition-colors duration-100 min-h-11 pr-3 mr-3 bg-theme-success-100 rounded-r justify-end my-0.5"
+                            class="flex px-3 items-center transition-colors duration-100 min-h-11 pr-3 mr-3 bg-theme-success-100 rounded-r dark:bg-transparent dark:border-y-2 dark:border-r-2 dark:border-theme-success-600 justify-end my-0.5"
                           >
                             <button
-                              class="p-3 relative items-center inline-flex justify-center text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none -mr-3 text-sm font-semibold leading-[17px] text-theme-primary-reverse-600"
+                              class="p-3 relative items-center inline-flex justify-center text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none -mr-3 text-sm font-semibold leading-[17px] text-theme-primary-reverse-600 py-0"
                               data-testid="RecipientListItem__selected-button-0"
                               type="button"
                             >
@@ -3175,7 +3175,7 @@ exports[`SearchRecipient > should render with selected address 1`] = `
                       >
                         <td>
                           <div
-                            class="flex px-3 items-center transition-colors duration-100 min-h-11 pl-3 ml-3 bg-theme-success-100 rounded-l space-x-4 my-0.5"
+                            class="flex px-3 items-center transition-colors duration-100 min-h-11 pl-3 ml-3 bg-theme-success-100 rounded-l dark:bg-transparent dark:border-y-2 dark:border-l-2 dark:border-theme-success-600 space-x-4 my-0.5"
                           >
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -3209,7 +3209,7 @@ exports[`SearchRecipient > should render with selected address 1`] = `
                         </td>
                         <td>
                           <div
-                            class="flex px-3 items-center transition-colors duration-100 min-h-11 bg-theme-success-100 my-0.5"
+                            class="flex px-3 items-center transition-colors duration-100 min-h-11 bg-theme-success-100 dark:bg-transparent dark:border-y-2 dark:border-theme-success-600 my-0.5"
                           >
                             <span
                               class="whitespace-nowrap text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500"
@@ -3221,10 +3221,10 @@ exports[`SearchRecipient > should render with selected address 1`] = `
                         </td>
                         <td>
                           <div
-                            class="flex px-3 items-center transition-colors duration-100 min-h-11 pr-3 mr-3 bg-theme-success-100 rounded-r justify-end my-0.5"
+                            class="flex px-3 items-center transition-colors duration-100 min-h-11 pr-3 mr-3 bg-theme-success-100 rounded-r dark:bg-transparent dark:border-y-2 dark:border-r-2 dark:border-theme-success-600 justify-end my-0.5"
                           >
                             <button
-                              class="p-3 relative items-center inline-flex justify-center text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none -mr-3 text-sm font-semibold leading-[17px] text-theme-primary-reverse-600"
+                              class="p-3 relative items-center inline-flex justify-center text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none -mr-3 text-sm font-semibold leading-[17px] text-theme-primary-reverse-600 py-0"
                               data-testid="RecipientListItem__selected-button-0"
                               type="button"
                             >
@@ -3596,7 +3596,7 @@ exports[`SearchRecipient > should render with selected address on md screen 1`] 
                       >
                         <td>
                           <div
-                            class="flex px-3 items-center transition-colors duration-100 min-h-11 pl-3 ml-3 bg-theme-success-100 rounded-l space-x-4 my-0.5"
+                            class="flex px-3 items-center transition-colors duration-100 min-h-11 pl-3 ml-3 bg-theme-success-100 rounded-l dark:bg-transparent dark:border-y-2 dark:border-l-2 dark:border-theme-success-600 space-x-4 my-0.5"
                           >
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -3630,7 +3630,7 @@ exports[`SearchRecipient > should render with selected address on md screen 1`] 
                         </td>
                         <td>
                           <div
-                            class="flex px-3 items-center transition-colors duration-100 min-h-11 bg-theme-success-100 my-0.5"
+                            class="flex px-3 items-center transition-colors duration-100 min-h-11 bg-theme-success-100 dark:bg-transparent dark:border-y-2 dark:border-theme-success-600 my-0.5"
                           >
                             <span
                               class="whitespace-nowrap text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500"
@@ -3642,10 +3642,10 @@ exports[`SearchRecipient > should render with selected address on md screen 1`] 
                         </td>
                         <td>
                           <div
-                            class="flex px-3 items-center transition-colors duration-100 min-h-11 pr-3 mr-3 bg-theme-success-100 rounded-r justify-end my-0.5"
+                            class="flex px-3 items-center transition-colors duration-100 min-h-11 pr-3 mr-3 bg-theme-success-100 rounded-r dark:bg-transparent dark:border-y-2 dark:border-r-2 dark:border-theme-success-600 justify-end my-0.5"
                           >
                             <button
-                              class="p-3 relative items-center inline-flex justify-center text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none -mr-3 text-sm font-semibold leading-[17px] text-theme-primary-reverse-600"
+                              class="p-3 relative items-center inline-flex justify-center text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none -mr-3 text-sm font-semibold leading-[17px] text-theme-primary-reverse-600 py-0"
                               data-testid="RecipientListItem__selected-button-0"
                               type="button"
                             >
