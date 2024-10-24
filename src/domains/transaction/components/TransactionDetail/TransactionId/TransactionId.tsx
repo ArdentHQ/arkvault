@@ -27,7 +27,7 @@ export const TransactionId = ({ transaction, isConfirmed }: Properties): ReactEl
 			data-testid="TransactionId"
 			className="flex-row items-center sm:flex sm:rounded-lg sm:border sm:border-theme-secondary-300 sm:dark:border-theme-secondary-800"
 		>
-			<div className="text-sm leading-[17px] sm:text-base sm:leading-5 mb-2 whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 sm:mb-0 sm:h-full sm:rounded-l-lg sm:bg-theme-secondary-200 sm:px-4 sm:py-3 sm:dark:bg-black">
+			<div className="mb-2 whitespace-nowrap text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:mb-0 sm:h-full sm:rounded-l-lg sm:bg-theme-secondary-200 sm:px-4 sm:py-3 sm:text-base sm:leading-5 sm:dark:bg-black">
 				{t("TRANSACTION.TRANSACTION_ID")}
 			</div>
 

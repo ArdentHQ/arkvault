@@ -37,7 +37,7 @@ export const TransactionSummary = ({ transaction, senderWallet, labelClassName }
 					<Amount
 						ticker={senderWallet.currency()}
 						value={transaction.fee()}
-						className="font-semibold text-sm leading-[17px] sm:text-base sm:leading-5"
+						className="text-sm font-semibold leading-[17px] sm:text-base sm:leading-5"
 					/>
 				</div>
 
@@ -48,7 +48,7 @@ export const TransactionSummary = ({ transaction, senderWallet, labelClassName }
 					<Amount
 						ticker={senderWallet.exchangeCurrency()}
 						value={transaction.convertedAmount()}
-						className="font-semibold text-sm leading-[17px] sm:text-base sm:leading-5"
+						className="text-sm font-semibold leading-[17px] sm:text-base sm:leading-5"
 					/>
 				</div>
 			</div>
