@@ -21,21 +21,7 @@ import { LedgerCancelling } from "@/domains/wallet/pages/ImportWallet/Ledger/Led
 import { Button } from "@/app/components/Button";
 import { Icon } from "@/app/components/Icon";
 import cn from "classnames";
-import { AmountWrapper, LedgerMobileItem } from "./LedgerScanStep.blocks";
-import { Spinner } from "@/app/components/Spinner";
-
-const LedgerLoaderOverlay = ({ length }: { length?: number }) => <div>
-	<div className="absolute inset-0 bg-theme-secondary-900 dark:md:border-theme-secondary-800 opacity-75 md:border-theme-secondary-300 rounded-xl border -m-px" />
-	<div className="w-full h-full flex items-center justify-center space-x-3 absolute inset-0">
-		<div><Spinner /></div>
-		<div>
-			<Trans
-				i18nKey="WALLETS.PAGE_IMPORT_WALLET.LEDGER_SCAN_STEP.LOADING_WALLETS"
-				values={{ count: length }}
-			/>
-		</div>
-	</div>
-</div>
+import { AmountWrapper, LedgerLoaderOverlay, LedgerMobileItem } from "./LedgerScanStep.blocks";
 
 export const LedgerTable: FC<LedgerTableProperties> = ({
 	network,
@@ -90,7 +76,7 @@ export const LedgerTable: FC<LedgerTableProperties> = ({
 	/* istanbul ignore next -- @preserve */
 	const showSkeleton = (isScanning || (isBusy && wallets.length === 0)) && !isScanningMore;
 
-	const length = 5
+	const length = 5;
 	const data = useMemo(() => {
 		const skeletonRows = Array.from<LedgerData>({ length }).fill({} as LedgerData);
 		return showSkeleton ? skeletonRows : wallets;
@@ -151,7 +137,7 @@ export const LedgerTable: FC<LedgerTableProperties> = ({
 
 	return (
 		<div>
-			<div className="hidden rounded-xl border border-transparent sm:block md:border-theme-secondary-300 dark:md:border-theme-secondary-800 relative">
+			<div className="relative hidden rounded-xl border border-transparent sm:block md:border-theme-secondary-300 dark:md:border-theme-secondary-800">
 				<div>
 					<Table columns={columns} data={showAll ? data : data.slice(0, 6)} className="with-x-padding">
 						{renderTableRow}
@@ -192,7 +178,15 @@ export const LedgerTable: FC<LedgerTableProperties> = ({
 						)}
 					</div>
 				)}
-				{isScanning && <LedgerLoaderOverlay length={length} />}
+
+				{isScanning && (
+					<LedgerLoaderOverlay className="rounded-xl">
+						<Trans
+							i18nKey="WALLETS.PAGE_IMPORT_WALLET.LEDGER_SCAN_STEP.LOADING_WALLETS"
+							values={{ count: length }}
+						/>
+					</LedgerLoaderOverlay>
+				)}
 			</div>
 
 			<div className="sm:hidden">
@@ -233,11 +227,12 @@ export const LedgerTable: FC<LedgerTableProperties> = ({
 					{showSkeleton &&
 						Array.from({ length: 4 }).map((_, index) => (
 							<LedgerMobileItem
+								index={index}
 								key={index}
-								isLoading={showSkeleton}
+								isLoading
 								address=""
 								coin=""
-								handleClick={() => { }}
+								handleClick={() => {}}
 								isSelected={false}
 							/>
 						))}
