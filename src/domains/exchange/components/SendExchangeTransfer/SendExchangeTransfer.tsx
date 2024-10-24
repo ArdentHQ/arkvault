@@ -18,7 +18,6 @@ import { Button } from "@/app/components/Button";
 import { Alert } from "@/app/components/Alert";
 import { TotalAmountBox } from "@/domains/transaction/components/TotalAmountBox";
 import { BigNumber } from "@ardenthq/sdk-helpers";
-import { send } from "vite";
 import { isLedgerTransportSupported } from "@/app/contexts/Ledger/transport";
 
 interface TransferProperties {
