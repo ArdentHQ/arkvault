@@ -27,7 +27,7 @@ const ExplorerLink = ({ value, explorerMask }: ExplorerLinkProperties) => {
 
 	if (explorerMask) {
 		return (
-			<span data-testid="ExplorerLink" ref={reference} className="overflow-hidden">
+			<span data-testid="ExplorerLink" ref={reference} className="overflow-hidden w-full">
 				<Link to={explorerUrl(value, explorerMask)} isExternal>
 					<TruncateMiddleDynamic
 						value={value}
