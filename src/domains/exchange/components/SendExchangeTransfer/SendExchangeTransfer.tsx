@@ -18,6 +18,7 @@ import { Button } from "@/app/components/Button";
 import { Alert } from "@/app/components/Alert";
 import { TotalAmountBox } from "@/domains/transaction/components/TotalAmountBox";
 import { BigNumber } from "@ardenthq/sdk-helpers";
+import { isLedgerTransportSupported } from "@/app/contexts/Ledger/transport";
 
 interface TransferProperties {
 	onClose: () => void;
@@ -65,6 +66,7 @@ export const SendExchangeTransfer: React.FC<TransferProperties> = ({
 		lastEstimatedExpiration,
 		values: { fee },
 		formState: { isValid, isSubmitting },
+		handleSubmit,
 	} = useSendTransferForm(senderWallet);
 
 	useEffect(() => {
@@ -117,7 +119,7 @@ export const SendExchangeTransfer: React.FC<TransferProperties> = ({
 		void calculateFee();
 	}, [calculate, network, profile, recipients]);
 
-	const { hasDeviceAvailable, isConnected } = useLedgerContext();
+	const { hasDeviceAvailable, isConnected, connect, isAwaitingConnection } = useLedgerContext();
 
 	const [transaction, setTransaction] = useState<DTO.ExtendedSignedTransactionData | undefined>(undefined);
 	const [errorMessage, setErrorMessage] = useState<string | undefined>();
@@ -150,6 +152,24 @@ export const SendExchangeTransfer: React.FC<TransferProperties> = ({
 		setSenderWallet(newSenderWallet);
 	};
 
+	useEffect(() => {
+		const connectLedgerAndSubmit = async () => {
+			if ([transaction, !senderWallet, isConnected, !senderWallet?.isLedger()].some(Boolean)) {
+				return;
+			}
+
+			if (!isLedgerTransportSupported()) {
+				setErrorMessage(t("WALLETS.MODAL_LEDGER_WALLET.COMPATIBILITY_ERROR"));
+				return;
+			}
+
+			await connect(profile, senderWallet!.coinId(), senderWallet!.networkId());
+			handleSubmit(() => submit())();
+		};
+
+		connectLedgerAndSubmit();
+	}, [senderWallet, isConnected, transaction]);
+
 	if (transaction) {
 		return (
 			<Modal
@@ -171,6 +191,8 @@ export const SendExchangeTransfer: React.FC<TransferProperties> = ({
 		);
 	}
 
+	const isLedger = senderWallet?.isLedger() && (isAwaitingConnection || isConnected);
+
 	return (
 		<Modal
 			isOpen
@@ -187,65 +209,79 @@ export const SendExchangeTransfer: React.FC<TransferProperties> = ({
 
 			<Form context={form} onSubmit={() => submit()}>
 				<div className="mt-4 space-y-4">
-					<FormField name="senderAddress">
-						<FormLabel label={t("TRANSACTION.SENDER")} />
-						<div data-testid="sender-address">
-							<SelectAddress
-								showWalletAvatar={false}
-								wallet={
-									senderWallet
-										? {
-												address: senderWallet.address(),
-												network: senderWallet.network(),
-											}
-										: undefined
-								}
-								wallets={wallets}
-								profile={profile}
-								disabled={wallets.length === 1}
-								onChange={handleWalletSelect}
-							/>
-						</div>
-					</FormField>
+					{!errorMessage && (
+						<FormField name="senderAddress">
+							<FormLabel label={t("TRANSACTION.SENDER")} />
+							<div data-testid="sender-address">
+								<SelectAddress
+									showWalletAvatar={false}
+									wallet={
+										senderWallet
+											? {
+													address: senderWallet.address(),
+													network: senderWallet.network(),
+												}
+											: undefined
+									}
+									wallets={wallets}
+									profile={profile}
+									disabled={wallets.length === 1}
+									onChange={handleWalletSelect}
+								/>
+							</div>
+						</FormField>
+					)}
 
-					<DetailWrapper label={t("TRANSACTION.ADDRESSING")}>
-						<div className="flex w-full items-center justify-between gap-4 space-x-2 sm:justify-start sm:space-x-0">
-							<DetailTitle className="w-auto sm:min-w-16">{t("COMMON.TO")}</DetailTitle>
-							<Address
-								address={exchangeInput.address}
-								addressClass="text-theme-secondary-900 dark:text-theme-secondary-200 text-sm leading-[17px] sm:leading-5 sm:text-base"
-								wrapperClass="justify-end sm:justify-start"
-								showCopyButton
-							/>
-						</div>
-					</DetailWrapper>
+					{!isLedger && (
+						<DetailWrapper label={t("TRANSACTION.ADDRESSING")}>
+							<div className="flex w-full items-center justify-between gap-4 space-x-2 sm:justify-start sm:space-x-0">
+								<DetailTitle className="w-auto sm:min-w-16">{t("COMMON.TO")}</DetailTitle>
+								<Address
+									address={exchangeInput.address}
+									addressClass="text-theme-secondary-900 dark:text-theme-secondary-200 text-sm leading-[17px] sm:leading-5 sm:text-base"
+									wrapperClass="justify-end sm:justify-start"
+									showCopyButton
+								/>
+							</div>
+						</DetailWrapper>
+					)}
 
 					{senderWallet && (
 						<>
-							<div className="space-y-3 sm:space-y-2">
-								<DetailLabel>{t("COMMON.TRANSACTION_SUMMARY")}</DetailLabel>
-								<TotalAmountBox
-									amount={exchangeInput.amount}
-									fee={fee || 0}
-									ticker={senderWallet.currency()}
-								/>
-							</div>
-							<AuthenticationStep
-								noHeading
-								wallet={senderWallet}
-								ledgerDetails={
-									<TransferLedgerReview
-										wallet={senderWallet}
-										estimatedExpiration={lastEstimatedExpiration}
-										profile={profile}
+							{!isLedger && (
+								<div className="space-y-3 sm:space-y-2">
+									<DetailLabel>{t("COMMON.TRANSACTION_SUMMARY")}</DetailLabel>
+									<TotalAmountBox
+										amount={exchangeInput.amount}
+										fee={fee || 0}
+										ticker={senderWallet.currency()}
 									/>
-								}
-								ledgerIsAwaitingDevice={!hasDeviceAvailable}
-								ledgerIsAwaitingApp={!isConnected}
-								// onDeviceNotAvailable={() => {
-								// 	// @TODO handle ledger
-								// }}
-							/>
+								</div>
+							)}
+
+							{!errorMessage && (
+								<AuthenticationStep
+									noHeading
+									wallet={senderWallet}
+									ledgerDetails={
+										<TransferLedgerReview
+											wallet={senderWallet}
+											estimatedExpiration={lastEstimatedExpiration}
+											profile={profile}
+										/>
+									}
+									ledgerIsAwaitingDevice={!hasDeviceAvailable}
+									ledgerIsAwaitingApp={!isConnected}
+									onDeviceNotAvailable={() => {
+										setErrorMessage(
+											JSON.stringify({
+												message: t("WALLETS.MODAL_LEDGER_WALLET.DEVICE_NOT_AVAILABLE"),
+												type: "failed",
+											}),
+										);
+									}}
+								/>
+							)}
 						</>
 					)}
 				</div>
@@ -257,7 +293,7 @@ export const SendExchangeTransfer: React.FC<TransferProperties> = ({
 					<Button
 						type="submit"
 						data-testid="ExchangeTransfer__send-button"
-						disabled={isSubmitting || !isValid}
+						disabled={isSubmitting || !isValid || !!errorMessage || isAwaitingConnection}
 						isLoading={isSubmitting}
 						icon="DoubleArrowRight"
 						iconPosition="right"
