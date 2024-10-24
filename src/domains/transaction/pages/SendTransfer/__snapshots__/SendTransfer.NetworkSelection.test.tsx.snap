@@ -633,7 +633,7 @@ exports[`SendTransfer Network Selection > should select cryptoasset 1`] = `
                     </div>
                   </div>
                   <fieldset
-                    class="mt-8 my-8 css-1bcidjh"
+                    class="mt-8 my-8 css-ea0il3"
                   >
                     <div
                       data-testid="SendTransfer__network-step__select"

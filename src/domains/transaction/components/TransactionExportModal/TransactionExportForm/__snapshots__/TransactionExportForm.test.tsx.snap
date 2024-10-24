@@ -116,7 +116,7 @@ exports[`TransactionExportForm > should render fiat column if wallets network is
               data-testid="list-divided-item__value"
             >
               <fieldset
-                class="flex min-w-0 flex-col css-1bcidjh"
+                class="flex min-w-0 flex-col css-ea0il3"
               >
                 <div
                   aria-expanded="false"
@@ -252,7 +252,7 @@ exports[`TransactionExportForm > should render fiat column if wallets network is
               data-testid="list-divided-item__value"
             >
               <fieldset
-                class="flex min-w-0 flex-col css-1bcidjh"
+                class="flex min-w-0 flex-col css-ea0il3"
               >
                 <div
                   aria-expanded="false"
@@ -699,7 +699,7 @@ exports[`TransactionExportForm > should render in lg 1`] = `
               data-testid="list-divided-item__value"
             >
               <fieldset
-                class="flex min-w-0 flex-col css-1bcidjh"
+                class="flex min-w-0 flex-col css-ea0il3"
               >
                 <div
                   aria-expanded="false"
@@ -835,7 +835,7 @@ exports[`TransactionExportForm > should render in lg 1`] = `
               data-testid="list-divided-item__value"
             >
               <fieldset
-                class="flex min-w-0 flex-col css-1bcidjh"
+                class="flex min-w-0 flex-col css-ea0il3"
               >
                 <div
                   aria-expanded="false"
@@ -1236,7 +1236,7 @@ exports[`TransactionExportForm > should render in md 1`] = `
               data-testid="list-divided-item__value"
             >
               <fieldset
-                class="flex min-w-0 flex-col css-1bcidjh"
+                class="flex min-w-0 flex-col css-ea0il3"
               >
                 <div
                   aria-expanded="false"
@@ -1372,7 +1372,7 @@ exports[`TransactionExportForm > should render in md 1`] = `
               data-testid="list-divided-item__value"
             >
               <fieldset
-                class="flex min-w-0 flex-col css-1bcidjh"
+                class="flex min-w-0 flex-col css-ea0il3"
               >
                 <div
                   aria-expanded="false"
@@ -1773,7 +1773,7 @@ exports[`TransactionExportForm > should render in sm 1`] = `
               data-testid="list-divided-item__value"
             >
               <fieldset
-                class="flex min-w-0 flex-col css-1bcidjh"
+                class="flex min-w-0 flex-col css-ea0il3"
               >
                 <div
                   aria-expanded="false"
@@ -1909,7 +1909,7 @@ exports[`TransactionExportForm > should render in sm 1`] = `
               data-testid="list-divided-item__value"
             >
               <fieldset
-                class="flex min-w-0 flex-col css-1bcidjh"
+                class="flex min-w-0 flex-col css-ea0il3"
               >
                 <div
                   aria-expanded="false"
@@ -2310,7 +2310,7 @@ exports[`TransactionExportForm > should render in xl 1`] = `
               data-testid="list-divided-item__value"
             >
               <fieldset
-                class="flex min-w-0 flex-col css-1bcidjh"
+                class="flex min-w-0 flex-col css-ea0il3"
               >
                 <div
                   aria-expanded="false"
@@ -2446,7 +2446,7 @@ exports[`TransactionExportForm > should render in xl 1`] = `
               data-testid="list-divided-item__value"
             >
               <fieldset
-                class="flex min-w-0 flex-col css-1bcidjh"
+                class="flex min-w-0 flex-col css-ea0il3"
               >
                 <div
                   aria-expanded="false"
@@ -2846,7 +2846,7 @@ exports[`TransactionExportForm > should render in xs 1`] = `
               data-testid="list-divided-item__value"
             >
               <fieldset
-                class="flex min-w-0 flex-col css-1bcidjh"
+                class="flex min-w-0 flex-col css-ea0il3"
               >
                 <div
                   aria-expanded="false"
@@ -2982,7 +2982,7 @@ exports[`TransactionExportForm > should render in xs 1`] = `
               data-testid="list-divided-item__value"
             >
               <fieldset
-                class="flex min-w-0 flex-col css-1bcidjh"
+                class="flex min-w-0 flex-col css-ea0il3"
               >
                 <div
                   aria-expanded="false"

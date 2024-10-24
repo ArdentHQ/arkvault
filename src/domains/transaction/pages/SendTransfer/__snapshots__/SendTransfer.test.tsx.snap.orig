@@ -2099,7 +2099,7 @@ exports[`SendTransfer > should error if wrong mnemonic 1`] = `
                     </div>
                   </div>
                   <fieldset
-                    class="flex min-w-0 flex-col css-5kz4tk"
+                    class="flex min-w-0 flex-col css-s0h7ue"
                   >
                     <label
                       class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
@@ -2443,7 +2443,7 @@ exports[`SendTransfer > should render form step (lg) 1`] = `
       class="space-y-4 pt-4"
     >
       <fieldset
-        class="flex min-w-0 flex-col css-1bcidjh"
+        class="flex min-w-0 flex-col css-ea0il3"
       >
         <label
           class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
@@ -2620,7 +2620,7 @@ exports[`SendTransfer > should render form step (lg) 1`] = `
               class="space-y-4"
             >
               <fieldset
-                class="flex min-w-0 flex-col css-1bcidjh"
+                class="flex min-w-0 flex-col css-ea0il3"
               >
                 <div>
                   <div
@@ -2746,7 +2746,7 @@ exports[`SendTransfer > should render form step (lg) 1`] = `
                 </div>
               </fieldset>
               <fieldset
-                class="flex min-w-0 flex-col css-1bcidjh"
+                class="flex min-w-0 flex-col css-ea0il3"
               >
                 <label
                   class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
@@ -2806,7 +2806,7 @@ exports[`SendTransfer > should render form step (lg) 1`] = `
         </div>
       </div>
       <fieldset
-        class="relative css-1bcidjh"
+        class="relative css-ea0il3"
       >
         <label
           class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
@@ -2855,7 +2855,7 @@ exports[`SendTransfer > should render form step (lg) 1`] = `
         </div>
       </fieldset>
       <fieldset
-        class="flex min-w-0 flex-col css-1bcidjh"
+        class="flex min-w-0 flex-col css-ea0il3"
       >
         <label
           class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
@@ -3149,7 +3149,7 @@ exports[`SendTransfer > should render form step (xs) 1`] = `
       class="space-y-4 pt-4"
     >
       <fieldset
-        class="flex min-w-0 flex-col css-1bcidjh"
+        class="flex min-w-0 flex-col css-ea0il3"
       >
         <label
           class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
@@ -3326,7 +3326,7 @@ exports[`SendTransfer > should render form step (xs) 1`] = `
               class="space-y-4"
             >
               <fieldset
-                class="flex min-w-0 flex-col css-1bcidjh"
+                class="flex min-w-0 flex-col css-ea0il3"
               >
                 <div>
                   <div
@@ -3452,7 +3452,7 @@ exports[`SendTransfer > should render form step (xs) 1`] = `
                 </div>
               </fieldset>
               <fieldset
-                class="flex min-w-0 flex-col css-1bcidjh"
+                class="flex min-w-0 flex-col css-ea0il3"
               >
                 <label
                   class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
@@ -3512,7 +3512,7 @@ exports[`SendTransfer > should render form step (xs) 1`] = `
         </div>
       </div>
       <fieldset
-        class="relative css-1bcidjh"
+        class="relative css-ea0il3"
       >
         <label
           class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
@@ -3561,7 +3561,7 @@ exports[`SendTransfer > should render form step (xs) 1`] = `
         </div>
       </fieldset>
       <fieldset
-        class="flex min-w-0 flex-col css-1bcidjh"
+        class="flex min-w-0 flex-col css-ea0il3"
       >
         <label
           class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
@@ -4316,7 +4316,7 @@ exports[`SendTransfer > should render network selection without selected wallet 
                     </div>
                   </div>
                   <fieldset
-                    class="mt-8 my-8 css-1bcidjh"
+                    class="mt-8 my-8 css-ea0il3"
                   >
                     <div
                       data-testid="SendTransfer__network-step__select"
@@ -4550,7 +4550,7 @@ exports[`SendTransfer > should render network step with dropdown 1`] = `
       </div>
     </div>
     <fieldset
-      class="mt-8 css-1bcidjh"
+      class="mt-8 css-ea0il3"
     >
       <label
         class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
@@ -4737,7 +4737,7 @@ exports[`SendTransfer > should render network step with network cards 1`] = `
       </div>
     </div>
     <fieldset
-      class="mt-8 my-8 css-1bcidjh"
+      class="mt-8 my-8 css-ea0il3"
     >
       <div
         data-testid="SendTransfer__network-step__select"

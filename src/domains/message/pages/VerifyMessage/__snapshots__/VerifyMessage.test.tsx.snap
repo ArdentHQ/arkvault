@@ -727,7 +727,7 @@ exports[`VerifyMessage > should render (lg) 1`] = `
                     data-testid="VerifyMessage__manual"
                   >
                     <fieldset
-                      class="flex min-w-0 flex-col css-1bcidjh"
+                      class="flex min-w-0 flex-col css-ea0il3"
                     >
                       <label
                         class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
@@ -754,7 +754,7 @@ exports[`VerifyMessage > should render (lg) 1`] = `
                       </div>
                     </fieldset>
                     <fieldset
-                      class="flex min-w-0 flex-col css-1bcidjh"
+                      class="flex min-w-0 flex-col css-ea0il3"
                     >
                       <label
                         class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
@@ -781,7 +781,7 @@ exports[`VerifyMessage > should render (lg) 1`] = `
                       </div>
                     </fieldset>
                     <fieldset
-                      class="flex min-w-0 flex-col css-1bcidjh"
+                      class="flex min-w-0 flex-col css-ea0il3"
                     >
                       <label
                         class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
@@ -1573,7 +1573,7 @@ exports[`VerifyMessage > should render (xs) 1`] = `
                     data-testid="VerifyMessage__manual"
                   >
                     <fieldset
-                      class="flex min-w-0 flex-col css-1bcidjh"
+                      class="flex min-w-0 flex-col css-ea0il3"
                     >
                       <label
                         class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
@@ -1600,7 +1600,7 @@ exports[`VerifyMessage > should render (xs) 1`] = `
                       </div>
                     </fieldset>
                     <fieldset
-                      class="flex min-w-0 flex-col css-1bcidjh"
+                      class="flex min-w-0 flex-col css-ea0il3"
                     >
                       <label
                         class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
@@ -1627,7 +1627,7 @@ exports[`VerifyMessage > should render (xs) 1`] = `
                       </div>
                     </fieldset>
                     <fieldset
-                      class="flex min-w-0 flex-col css-1bcidjh"
+                      class="flex min-w-0 flex-col css-ea0il3"
                     >
                       <label
                         class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"

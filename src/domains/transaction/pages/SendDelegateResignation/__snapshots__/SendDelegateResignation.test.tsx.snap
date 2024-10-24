@@ -625,7 +625,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should change fee 1`] 
                     class="space-y-3 sm:space-y-4"
                   >
                     <fieldset
-                      class="flex min-w-0 flex-col css-1bcidjh"
+                      class="flex min-w-0 flex-col css-ea0il3"
                     >
                       <div
                         data-testid="DetailWrapper"
@@ -784,7 +784,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should change fee 1`] 
                       </div>
                     </div>
                     <fieldset
-                      class="flex min-w-0 flex-col css-1bcidjh"
+                      class="flex min-w-0 flex-col css-ea0il3"
                     >
                       <label
                         class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
@@ -1717,7 +1717,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should render 1st step
                     class="space-y-3 sm:space-y-4"
                   >
                     <fieldset
-                      class="flex min-w-0 flex-col css-1bcidjh"
+                      class="flex min-w-0 flex-col css-ea0il3"
                     >
                       <div
                         data-testid="DetailWrapper"
@@ -1876,7 +1876,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should render 1st step
                       </div>
                     </div>
                     <fieldset
-                      class="flex min-w-0 flex-col css-1bcidjh"
+                      class="flex min-w-0 flex-col css-ea0il3"
                     >
                       <label
                         class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
@@ -3727,7 +3727,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should render 3rd step
                     </div>
                   </div>
                   <fieldset
-                    class="flex min-w-0 flex-col css-1bcidjh"
+                    class="flex min-w-0 flex-col css-ea0il3"
                   >
                     <label
                       class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
@@ -3799,7 +3799,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should render 3rd step
                     </div>
                   </fieldset>
                   <fieldset
-                    class="flex min-w-0 flex-col css-1bcidjh"
+                    class="flex min-w-0 flex-col css-ea0il3"
                   >
                     <label
                       class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
@@ -5361,7 +5361,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should show mnemonic a
                     </div>
                   </div>
                   <fieldset
-                    class="flex min-w-0 flex-col css-1bcidjh"
+                    class="flex min-w-0 flex-col css-ea0il3"
                   >
                     <label
                       class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
@@ -5433,7 +5433,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should show mnemonic a
                     </div>
                   </fieldset>
                   <fieldset
-                    class="flex min-w-0 flex-col css-5kz4tk"
+                    class="flex min-w-0 flex-col css-s0h7ue"
                   >
                     <label
                       class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"

@@ -96,7 +96,7 @@ exports[`ImportWallet WIF > should import with invalid wif 1`] = `
       class="mt-4 space-y-4"
     >
       <fieldset
-        class="flex min-w-0 flex-col css-1bcidjh"
+        class="flex min-w-0 flex-col css-ea0il3"
       >
         <label
           class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
@@ -233,7 +233,7 @@ exports[`ImportWallet WIF > should import with invalid wif 1`] = `
         </div>
       </fieldset>
       <fieldset
-        class="flex min-w-0 flex-col css-1bcidjh"
+        class="flex min-w-0 flex-col css-ea0il3"
       >
         <label
           class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
@@ -447,7 +447,7 @@ exports[`ImportWallet WIF > should import with valid wif 1`] = `
       class="mt-4 space-y-4"
     >
       <fieldset
-        class="flex min-w-0 flex-col css-1bcidjh"
+        class="flex min-w-0 flex-col css-ea0il3"
       >
         <label
           class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
@@ -584,7 +584,7 @@ exports[`ImportWallet WIF > should import with valid wif 1`] = `
         </div>
       </fieldset>
       <fieldset
-        class="flex min-w-0 flex-col css-1bcidjh"
+        class="flex min-w-0 flex-col css-ea0il3"
       >
         <label
           class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"

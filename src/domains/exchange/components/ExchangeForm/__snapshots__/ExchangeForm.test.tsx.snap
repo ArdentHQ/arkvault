@@ -470,7 +470,7 @@ exports[`ExchangeForm > should render exchange form 1`] = `
                 class="w-2/5"
               >
                 <fieldset
-                  class="flex min-w-0 flex-col css-1bcidjh"
+                  class="flex min-w-0 flex-col css-ea0il3"
                 >
                   <label
                     class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
@@ -602,7 +602,7 @@ exports[`ExchangeForm > should render exchange form 1`] = `
                 class="w-3/5"
               >
                 <fieldset
-                  class="flex min-w-0 flex-col css-1bcidjh"
+                  class="flex min-w-0 flex-col css-ea0il3"
                 >
                   <label
                     class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
@@ -707,7 +707,7 @@ exports[`ExchangeForm > should render exchange form 1`] = `
                   class="w-2/5"
                 >
                   <fieldset
-                    class="flex min-w-0 flex-col css-1bcidjh"
+                    class="flex min-w-0 flex-col css-ea0il3"
                   >
                     <label
                       class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
@@ -839,7 +839,7 @@ exports[`ExchangeForm > should render exchange form 1`] = `
                   class="w-3/5"
                 >
                   <fieldset
-                    class="flex min-w-0 flex-col css-1bcidjh"
+                    class="flex min-w-0 flex-col css-ea0il3"
                   >
                     <label
                       class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
@@ -876,7 +876,7 @@ exports[`ExchangeForm > should render exchange form 1`] = `
                 data-testid="ExchangeForm__recipient-address"
               >
                 <fieldset
-                  class="flex min-w-0 flex-col css-1bcidjh"
+                  class="flex min-w-0 flex-col css-ea0il3"
                 >
                   <label
                     class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
@@ -2014,7 +2014,7 @@ exports[`FormStep > should render 1`] = `
         class="w-2/5"
       >
         <fieldset
-          class="flex min-w-0 flex-col css-1bcidjh"
+          class="flex min-w-0 flex-col css-ea0il3"
         >
           <label
             class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
@@ -2148,7 +2148,7 @@ exports[`FormStep > should render 1`] = `
         class="w-3/5"
       >
         <fieldset
-          class="flex min-w-0 flex-col css-1bcidjh"
+          class="flex min-w-0 flex-col css-ea0il3"
         >
           <label
             class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
@@ -2253,7 +2253,7 @@ exports[`FormStep > should render 1`] = `
           class="w-2/5"
         >
           <fieldset
-            class="flex min-w-0 flex-col css-1bcidjh"
+            class="flex min-w-0 flex-col css-ea0il3"
           >
             <label
               class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
@@ -2387,7 +2387,7 @@ exports[`FormStep > should render 1`] = `
           class="w-3/5"
         >
           <fieldset
-            class="flex min-w-0 flex-col css-1bcidjh"
+            class="flex min-w-0 flex-col css-ea0il3"
           >
             <label
               class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
@@ -2424,7 +2424,7 @@ exports[`FormStep > should render 1`] = `
         data-testid="ExchangeForm__recipient-address"
       >
         <fieldset
-          class="flex min-w-0 flex-col css-1bcidjh"
+          class="flex min-w-0 flex-col css-ea0il3"
         >
           <label
             class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
@@ -2644,7 +2644,7 @@ exports[`ReviewStep > should render 1`] = `
     </div>
     <div>
       <fieldset
-        class="sm:pt-2 css-1bcidjh"
+        class="sm:pt-2 css-ea0il3"
       >
         <label
           class="flex cursor-pointer items-center space-x-3"

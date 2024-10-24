@@ -9,7 +9,7 @@ exports[`ReceiveFundsForm > should emit amount onChange event 1`] = `
       class="mt-4 space-y-4"
     >
       <fieldset
-        class="flex min-w-0 flex-col css-1bcidjh"
+        class="flex min-w-0 flex-col css-ea0il3"
       >
         <label
           class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
@@ -47,7 +47,7 @@ exports[`ReceiveFundsForm > should emit amount onChange event 1`] = `
         </div>
       </fieldset>
       <fieldset
-        class="flex min-w-0 flex-col css-1bcidjh"
+        class="flex min-w-0 flex-col css-ea0il3"
       >
         <label
           class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
@@ -108,7 +108,7 @@ exports[`ReceiveFundsForm > should emit memo onChange event 1`] = `
       class="mt-4 space-y-4"
     >
       <fieldset
-        class="flex min-w-0 flex-col css-1bcidjh"
+        class="flex min-w-0 flex-col css-ea0il3"
       >
         <label
           class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
@@ -146,7 +146,7 @@ exports[`ReceiveFundsForm > should emit memo onChange event 1`] = `
         </div>
       </fieldset>
       <fieldset
-        class="flex min-w-0 flex-col css-1bcidjh"
+        class="flex min-w-0 flex-col css-ea0il3"
       >
         <label
           class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
@@ -207,7 +207,7 @@ exports[`ReceiveFundsForm > should not show memo if is not supported by network 
       class="mt-4 space-y-4"
     >
       <fieldset
-        class="flex min-w-0 flex-col css-1bcidjh"
+        class="flex min-w-0 flex-col css-ea0il3"
       >
         <label
           class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
@@ -258,7 +258,7 @@ exports[`ReceiveFundsForm > should render 1`] = `
       class="mt-4 space-y-4"
     >
       <fieldset
-        class="flex min-w-0 flex-col css-1bcidjh"
+        class="flex min-w-0 flex-col css-ea0il3"
       >
         <label
           class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
@@ -296,7 +296,7 @@ exports[`ReceiveFundsForm > should render 1`] = `
         </div>
       </fieldset>
       <fieldset
-        class="flex min-w-0 flex-col css-1bcidjh"
+        class="flex min-w-0 flex-col css-ea0il3"
       >
         <label
           class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"

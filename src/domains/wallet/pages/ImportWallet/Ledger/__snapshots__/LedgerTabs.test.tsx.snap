@@ -155,7 +155,7 @@ exports[`LedgerTabs > should render connection step 1`] = `
             </div>
           </div>
           <fieldset
-            class="mt-4 my-4 css-1bcidjh"
+            class="mt-4 my-4 css-ea0il3"
           >
             <div
               data-testid="SelectNetwork"

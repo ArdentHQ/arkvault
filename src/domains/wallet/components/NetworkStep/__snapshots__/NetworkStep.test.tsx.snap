@@ -117,7 +117,7 @@ exports[`SelectNetworkStep > should render 1`] = `
       </div>
     </div>
     <fieldset
-      class="mt-4 css-1bcidjh"
+      class="mt-4 css-ea0il3"
     >
       <div
         data-testid="SelectNetwork"
@@ -244,7 +244,7 @@ exports[`SelectNetworkStep > should render with test networks 1`] = `
       </div>
     </div>
     <fieldset
-      class="mt-4 css-1bcidjh"
+      class="mt-4 css-ea0il3"
     >
       <label
         class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
@@ -489,7 +489,7 @@ exports[`SelectNetworkStep > should render without test networks 1`] = `
       </div>
     </div>
     <fieldset
-      class="mt-4 css-1bcidjh"
+      class="mt-4 css-ea0il3"
     >
       <div
         data-testid="SelectNetwork"
