@@ -38,7 +38,7 @@ const SearchRecipientListItem: FC<SearchRecipientListItemProperties> = ({
 					size="icon"
 					variant="transparent"
 					onClick={() => onAction(recipient.address)}
-					className="-mr-3 text-sm font-semibold leading-[17px] text-theme-primary-reverse-600 py-0"
+					className="-mr-3 py-0 text-sm font-semibold leading-[17px] text-theme-primary-reverse-600"
 				>
 					{t("COMMON.SELECTED")}
 				</Button>

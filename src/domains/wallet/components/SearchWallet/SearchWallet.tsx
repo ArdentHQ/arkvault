@@ -43,7 +43,7 @@ const SearchWalletListItem = ({
 					size="icon"
 					variant="transparent"
 					onClick={() => onAction({ address: wallet.address(), name: alias, network: wallet.network() })}
-					className="-mr-3 text-sm leading-[17px] text-theme-primary-reverse-600 py-0"
+					className="-mr-3 py-0 text-sm leading-[17px] text-theme-primary-reverse-600"
 				>
 					{t("COMMON.SELECTED")}
 				</Button>
