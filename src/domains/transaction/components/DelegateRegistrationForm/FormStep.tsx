@@ -9,9 +9,10 @@ import { InputDefault } from "@/app/components/Input";
 import { useEnvironmentContext } from "@/app/contexts";
 import { useValidation } from "@/app/hooks";
 import { FeeField } from "@/domains/transaction/components/FeeField";
-import { TransactionNetwork, TransactionSender } from "@/domains/transaction/components/TransactionDetail";
+import { TransactionAddresses } from "@/domains/transaction/components/TransactionDetail";
 import { FormStepProperties } from "@/domains/transaction/pages/SendRegistration/SendRegistration.contracts";
 import { StepHeader } from "@/app/components/StepHeader";
+import { ThemeIcon } from "@/app/components/Icon";
 
 export const FormStep: React.FC<FormStepProperties> = ({ wallet, profile }: FormStepProperties) => {
 	const { t } = useTranslation();
@@ -46,15 +47,18 @@ export const FormStep: React.FC<FormStepProperties> = ({ wallet, profile }: Form
 			<StepHeader
 				title={t("TRANSACTION.PAGE_DELEGATE_REGISTRATION.FORM_STEP.TITLE")}
 				subtitle={t("TRANSACTION.PAGE_DELEGATE_REGISTRATION.FORM_STEP.DESCRIPTION")}
+				titleIcon={
+					<ThemeIcon dimensions={[24, 24]} lightIcon="SendTransactionLight" darkIcon="SendTransactionDark" />
+				}
 			/>
 
-			<Alert className="mt-6">{t("TRANSACTION.PAGE_DELEGATE_REGISTRATION.FORM_STEP.WARNING")}</Alert>
+			<Alert className="mt-6 sm:mt-4">{t("TRANSACTION.PAGE_DELEGATE_REGISTRATION.FORM_STEP.WARNING")}</Alert>
 
-			<TransactionNetwork network={wallet.network()} border={false} />
+			<div className="-mx-3 mt-6 sm:mx-0 sm:mt-4">
+				<TransactionAddresses senderAddress={wallet.address()} profile={profile} network={wallet.network()} />
+			</div>
 
-			<TransactionSender address={wallet.address()} network={wallet.network()} borderPosition="both" />
-
-			<div className="space-y-6 pt-6">
+			<div className="mt-3 space-y-4 sm:mt-4">
 				<FormField name="username">
 					<FormLabel label={t("TRANSACTION.DELEGATE_NAME")} />
 					<InputDefault
