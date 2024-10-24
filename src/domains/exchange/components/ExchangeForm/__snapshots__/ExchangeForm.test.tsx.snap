@@ -85,7 +85,7 @@ exports[`ConfirmationStep > should render 1`] = `
                 class="flex items-center space-x-2 whitespace-nowrap text-lg font-semibold"
               >
                 <span
-                  class="overflow-hidden"
+                  class="overflow-hidden w-full"
                   data-testid="ExplorerLink"
                 >
                   <a
@@ -184,7 +184,7 @@ exports[`ConfirmationStep > should render 1`] = `
                 class="flex items-center space-x-2 whitespace-nowrap text-lg font-semibold"
               >
                 <span
-                  class="overflow-hidden"
+                  class="overflow-hidden w-full"
                   data-testid="ExplorerLink"
                 >
                   <a
@@ -1133,7 +1133,7 @@ exports[`ExchangeForm > should render exchange form with id of finished order 1`
                         class="flex items-center space-x-2 whitespace-nowrap text-lg font-semibold"
                       >
                         <span
-                          class="overflow-hidden"
+                          class="overflow-hidden w-full"
                           data-testid="ExplorerLink"
                         >
                           <a
@@ -1232,7 +1232,7 @@ exports[`ExchangeForm > should render exchange form with id of finished order 1`
                         class="flex items-center space-x-2 whitespace-nowrap text-lg font-semibold"
                       >
                         <span
-                          class="overflow-hidden"
+                          class="overflow-hidden w-full"
                           data-testid="ExplorerLink"
                         >
                           <a
@@ -1383,7 +1383,7 @@ exports[`ExchangeForm > should render exchange form with id of finished order 1`
                         class="flex items-center space-x-2 whitespace-nowrap text-lg font-semibold"
                       >
                         <span
-                          class="overflow-hidden"
+                          class="overflow-hidden w-full"
                           data-testid="ExplorerLink"
                         >
                           <a
@@ -1482,7 +1482,7 @@ exports[`ExchangeForm > should render exchange form with id of finished order 1`
                         class="flex items-center space-x-2 whitespace-nowrap text-lg font-semibold"
                       >
                         <span
-                          class="overflow-hidden"
+                          class="overflow-hidden w-full"
                           data-testid="ExplorerLink"
                         >
                           <a
