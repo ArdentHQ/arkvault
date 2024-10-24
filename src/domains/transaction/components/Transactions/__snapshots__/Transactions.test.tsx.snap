@@ -159,7 +159,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
     </div>
   </div>
   <div
-    class="rounded-xl border-transparent pb-2 outline outline-1 outline-transparent md:border-b-[5px] md:border-b-theme-secondary-200 md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800 border-none !rounded-b-none"
+    class="rounded-xl border-transparent pb-2 outline outline-1 outline-transparent md:border-b-[5px] md:border-b-theme-secondary-200 md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800 !rounded-b-none border-none"
     data-testid="TableWrapper"
   >
     <div
@@ -10360,7 +10360,7 @@ exports[`Transactions > should hide view more button when there are no next page
     </div>
   </div>
   <div
-    class="rounded-xl border-transparent pb-2 outline outline-1 outline-transparent md:border-b-[5px] md:border-b-theme-secondary-200 md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800 border-none !rounded-b-none"
+    class="rounded-xl border-transparent pb-2 outline outline-1 outline-transparent md:border-b-[5px] md:border-b-theme-secondary-200 md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800 !rounded-b-none border-none"
     data-testid="TableWrapper"
   >
     <div
@@ -15691,7 +15691,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
     </div>
   </div>
   <div
-    class="rounded-xl border-transparent pb-2 outline outline-1 outline-transparent md:border-b-[5px] md:border-b-theme-secondary-200 md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800 border-none !rounded-b-none"
+    class="rounded-xl border-transparent pb-2 outline outline-1 outline-transparent md:border-b-[5px] md:border-b-theme-secondary-200 md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800 !rounded-b-none border-none"
     data-testid="TableWrapper"
   >
     <div
