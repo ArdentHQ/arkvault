@@ -62,7 +62,7 @@ export const TransactionDetailContent = ({
 				<TransactionId transaction={transaction} isConfirmed={isConfirmed} />
 			</div>
 
-			<div className={cn("mt-6 space-y-4", containerClassname)}>
+			<div className={cn("mt-6 space-y-3 sm:space-y-4", containerClassname)}>
 				<DetailPadded>
 					<TransactionAddresses
 						explorerLink={transaction.explorerLink()}
@@ -98,9 +98,9 @@ export const TransactionDetailContent = ({
 				{[!!transaction.memo(), transaction.isMultiPayment(), transaction.isTransfer()].some(Boolean) && (
 					<DetailPadded>
 						<DetailWrapper label={t("COMMON.MEMO_SMARTBRIDGE")}>
-							{transaction.memo() && <p className="leading-5">{transaction.memo()}</p>}
+							{transaction.memo() && <p className="font-semibold text-sm leading-[17px] sm:text-base sm:leading-5">{transaction.memo()}</p>}
 							{!transaction.memo() && (
-								<p className="leading-5 text-theme-secondary-500">{t("COMMON.NOT_AVAILABLE")}</p>
+								<p className="text-sm leading-[17px] sm:text-base sm:leading-5 text-theme-secondary-500">{t("COMMON.NOT_AVAILABLE")}</p>
 							)}
 						</DetailWrapper>
 					</DetailPadded>
