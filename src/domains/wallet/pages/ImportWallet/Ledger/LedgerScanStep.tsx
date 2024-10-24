@@ -21,7 +21,7 @@ import { LedgerCancelling } from "@/domains/wallet/pages/ImportWallet/Ledger/Led
 import { Button } from "@/app/components/Button";
 import { Icon } from "@/app/components/Icon";
 import cn from "classnames";
-import { AmountWrapper, LedgerMobileItem } from "./LedgerScanStep.blocks";
+import { AmountWrapper, LedgerLoaderOverlay, LedgerMobileItem } from "./LedgerScanStep.blocks";
 
 export const LedgerTable: FC<LedgerTableProperties> = ({
 	network,
@@ -76,8 +76,9 @@ export const LedgerTable: FC<LedgerTableProperties> = ({
 	/* istanbul ignore next -- @preserve */
 	const showSkeleton = (isScanning || (isBusy && wallets.length === 0)) && !isScanningMore;
 
+	const length = 5;
 	const data = useMemo(() => {
-		const skeletonRows = Array.from<LedgerData>({ length: 5 }).fill({} as LedgerData);
+		const skeletonRows = Array.from<LedgerData>({ length }).fill({} as LedgerData);
 		return showSkeleton ? skeletonRows : wallets;
 	}, [wallets, showSkeleton]);
 
@@ -136,7 +137,7 @@ export const LedgerTable: FC<LedgerTableProperties> = ({
 
 	return (
 		<div>
-			<div className="hidden rounded-xl border border-transparent sm:block md:border-theme-secondary-300 dark:md:border-theme-secondary-800">
+			<div className="relative hidden rounded-xl border border-transparent sm:block md:border-theme-secondary-300 dark:md:border-theme-secondary-800">
 				<div>
 					<Table columns={columns} data={showAll ? data : data.slice(0, 6)} className="with-x-padding">
 						{renderTableRow}
@@ -176,6 +177,15 @@ export const LedgerTable: FC<LedgerTableProperties> = ({
 							</Button>
 						)}
 					</div>
+				)}
+
+				{isScanning && (
+					<LedgerLoaderOverlay className="rounded-xl">
+						<Trans
+							i18nKey="WALLETS.PAGE_IMPORT_WALLET.LEDGER_SCAN_STEP.LOADING_WALLETS"
+							values={{ count: length }}
+						/>
+					</LedgerLoaderOverlay>
 				)}
 			</div>
 
@@ -217,8 +227,9 @@ export const LedgerTable: FC<LedgerTableProperties> = ({
 					{showSkeleton &&
 						Array.from({ length: 4 }).map((_, index) => (
 							<LedgerMobileItem
+								index={index}
 								key={index}
-								isLoading={showSkeleton}
+								isLoading
 								address=""
 								coin=""
 								handleClick={() => {}}
