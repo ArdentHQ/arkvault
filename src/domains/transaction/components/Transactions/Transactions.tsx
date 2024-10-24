@@ -1,19 +1,19 @@
 import { Contracts, DTO } from "@ardenthq/sdk-profiles";
 import React, { memo, useCallback, useEffect, useMemo, useState } from "react";
+import { Tab, TabList, Tabs } from "@/app/components/Tabs";
 import { Trans, useTranslation } from "react-i18next";
 
 import { Button } from "@/app/components/Button";
+import { Dropdown } from "@/app/components/Dropdown";
 import { EmptyBlock } from "@/app/components/EmptyBlock";
-import { Tab, TabList, Tabs } from "@/app/components/Tabs";
 import { FilterTransactions } from "@/domains/transaction/components/FilterTransactions";
+import { Icon } from "@/app/components/Icon";
+import { TabId } from "@/app/components/Tabs/useTab";
+import { TableWrapper } from "@/app/components/Table/TableWrapper";
 import { TransactionDetailModal } from "@/domains/transaction/components/TransactionDetailModal";
 import { TransactionTable } from "@/domains/transaction/components/TransactionTable";
-import { useProfileTransactions } from "@/domains/transaction/hooks/use-profile-transactions";
-import { Dropdown } from "@/app/components/Dropdown";
-import { TabId } from "@/app/components/Tabs/useTab";
-import { Icon } from "@/app/components/Icon";
-import { TableWrapper } from "@/app/components/Table/TableWrapper";
 import cn from "classnames";
+import { useProfileTransactions } from "@/domains/transaction/hooks/use-profile-transactions";
 
 interface TransactionsProperties {
 	emptyText?: string;
@@ -209,7 +209,7 @@ export const Transactions = memo(function Transactions({
 					)}
 				</>
 			) : (
-				<TableWrapper className={cn({ "!rounded-b-none": hasMore })}>
+				<TableWrapper className={cn({ "!rounded-b-none border-none": hasMore })}>
 					<div className="flex w-full flex-col items-start justify-between gap-3 border-b-0 border-b-theme-secondary-300 pb-4 pt-3 dark:border-b-theme-secondary-800 sm:flex-row md:items-center md:border-b md:px-6 md:py-4">
 						<span className="text-base font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500">
 							{t("COMMON.SHOWING_RESULTS", { count: transactions.length })}
