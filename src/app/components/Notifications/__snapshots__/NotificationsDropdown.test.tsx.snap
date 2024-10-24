@@ -50,7 +50,7 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
       </div>
     </div>
     <div
-      class="overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900-rgba bg-opacity-60 dark:bg-black-rgba dark:bg-opacity-80 md:py-20"
+      class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900-rgba bg-opacity-60 dark:bg-black-rgba dark:bg-opacity-80 md:py-20"
       data-testid="Modal__overlay"
     >
       <div
