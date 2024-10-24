@@ -166,7 +166,7 @@ exports[`DeleteWallet > should render a modal 1`] = `
               </div>
             </div>
             <fieldset
-              class="mt-4 css-ea0il3"
+              class="mt-4 css-svx9dt"
             >
               <label
                 class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"

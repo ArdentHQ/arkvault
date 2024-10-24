@@ -7,7 +7,7 @@ exports[`Add Participant > should fail if cannot find the address remotely 1`] =
       class="css-1t71j9b"
     >
       <fieldset
-        class="flex min-w-0 flex-col css-5kz4tk"
+        class="flex min-w-0 flex-col css-s0h7ue"
       >
         <label
           class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
@@ -395,7 +395,7 @@ exports[`Add Participant > should fail to find 1`] = `
       class="css-1t71j9b"
     >
       <fieldset
-        class="flex min-w-0 flex-col css-5kz4tk"
+        class="flex min-w-0 flex-col css-s0h7ue"
       >
         <label
           class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
@@ -783,7 +783,7 @@ exports[`Add Participant > should fail with a duplicate address 1`] = `
       class="css-1t71j9b"
     >
       <fieldset
-        class="flex min-w-0 flex-col css-5kz4tk"
+        class="flex min-w-0 flex-col css-s0h7ue"
       >
         <label
           class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
@@ -1181,7 +1181,7 @@ exports[`Add Participant > should fail with cold wallet 1`] = `
       class="css-1t71j9b"
     >
       <fieldset
-        class="flex min-w-0 flex-col css-5kz4tk"
+        class="flex min-w-0 flex-col css-s0h7ue"
       >
         <label
           class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
@@ -1569,7 +1569,7 @@ exports[`Add Participant > should handle exception on find and show address not 
       class="css-1t71j9b"
     >
       <fieldset
-        class="flex min-w-0 flex-col css-5kz4tk"
+        class="flex min-w-0 flex-col css-s0h7ue"
       >
         <label
           class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"

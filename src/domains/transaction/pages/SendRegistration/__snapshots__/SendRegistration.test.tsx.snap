@@ -1504,7 +1504,7 @@ exports[`Registration > should show mnemonic error 1`] = `
                     </div>
                   </fieldset>
                   <fieldset
-                    class="flex min-w-0 flex-col css-5kz4tk"
+                    class="flex min-w-0 flex-col css-s0h7ue"
                   >
                     <label
                       class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
