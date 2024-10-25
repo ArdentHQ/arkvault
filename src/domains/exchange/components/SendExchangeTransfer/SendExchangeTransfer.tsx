@@ -202,7 +202,7 @@ export const SendExchangeTransfer: React.FC<TransferProperties> = ({
 			titleClass="!leading-[21px] sm!:leading-7"
 		>
 			{errorMessage && (
-				<div className="mt-4">
+				<div className="mt-4" data-testid="ErrorState">
 					<Alert variant="danger"> {errorMessage} </Alert>
 				</div>
 			)}
