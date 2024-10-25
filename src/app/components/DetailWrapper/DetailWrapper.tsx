@@ -3,11 +3,20 @@ import React, { ReactElement, ReactNode } from "react";
 import { twMerge } from "tailwind-merge";
 import { Divider } from "@/app/components/Divider";
 
-export const DetailLabelText = ({ children, className }: { children: ReactNode; className?: string }) => (
+export const DetailLabelText = ({
+	children,
+	className,
+	isHeader = false,
+}: {
+	children: ReactNode;
+	className?: string;
+	isHeader?: boolean;
+}) => (
 	<div
 		data-testid="DetailLabelText"
 		className={twMerge(
-			"no-ligatures text-md min-w-24 font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500",
+			"no-ligatures min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500",
+			isHeader ? "text-md leading-5" : "text-sm leading-[17px] sm:text-base sm:leading-5",
 			className,
 		)}
 	>
@@ -18,11 +27,9 @@ export const DetailLabelText = ({ children, className }: { children: ReactNode; 
 export const DetailLabel = ({ children }: { children: ReactNode }) => (
 	<div
 		data-testid="DetailLabel"
-		className={cn(
-			"border-l-2 border-x-theme-primary-400 bg-theme-secondary-100 px-3 py-2 dark:bg-black sm:border-none sm:bg-transparent sm:p-0 dark:sm:bg-transparent",
-		)}
+		className="border-l-2 border-x-theme-primary-400 bg-theme-secondary-100 px-3 py-2 dark:bg-black sm:border-none sm:bg-transparent sm:p-0 dark:sm:bg-transparent"
 	>
-		<DetailLabelText>{children}</DetailLabelText>
+		<DetailLabelText isHeader>{children}</DetailLabelText>
 	</div>
 );
 
