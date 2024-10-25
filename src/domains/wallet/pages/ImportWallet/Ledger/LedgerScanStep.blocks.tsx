@@ -111,11 +111,11 @@ export const LedgerLoaderOverlay = ({ children, className }: { className?: strin
 	<div>
 		<div
 			className={twMerge(
-				"absolute inset-0 -m-px rounded border border-theme-secondary-300 bg-theme-secondary-900 opacity-75 dark:border-theme-secondary-800",
+				"absolute inset-0 -m-px rounded border border-theme-secondary-300 bg-white opacity-75 dark:border-theme-secondary-800 dark:bg-theme-secondary-900",
 				className,
 			)}
 		/>
-		<div className="absolute inset-0 flex h-full w-full items-center justify-center space-x-3">
+		<div className="absolute inset-0 flex h-full w-full items-center justify-center space-x-3 text-theme-secondary-700 dark:text-white">
 			{children && (
 				<div>
 					<Spinner />
