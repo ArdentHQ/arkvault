@@ -29,7 +29,9 @@ export const TransactionDetails = ({
 			<div className="space-y-3 sm:space-y-0">
 				<div className="flex w-full justify-between sm:justify-start">
 					<DetailLabelText className={labelClassName}>{t("COMMON.TIMESTAMP")}</DetailLabelText>
-					<div className="font-semibold leading-5">{timestamp.format(format)}</div>
+					<div className="text-sm font-semibold leading-[17px] sm:text-base sm:leading-5">
+						{timestamp.format(format)}
+					</div>
 				</div>
 
 				<DetailDivider />
@@ -37,20 +39,36 @@ export const TransactionDetails = ({
 				<div className="flex w-full justify-between sm:justify-start">
 					<DetailLabelText className={labelClassName}>{t("COMMON.BLOCK")}</DetailLabelText>
 					{transaction.blockId() && (
-						<Link isExternal to={transaction.explorerLinkForBlock() as string} className="h-5 leading-5">
+						<Link
+							isExternal
+							to={transaction.explorerLinkForBlock() as string}
+							className="h-5 text-sm leading-[17px] sm:text-base sm:leading-5"
+						>
 							{blockHeight}
 						</Link>
 					)}
 
-					{!transaction.blockId() && <p className="text-theme-secondary-500">{t("COMMON.NOT_AVAILABLE")}</p>}
+					{!transaction.blockId() && (
+						<p className="text-sm leading-[17px] text-theme-secondary-500 sm:text-base sm:leading-5">
+							{t("COMMON.NOT_AVAILABLE")}
+						</p>
+					)}
 				</div>
 
 				<DetailDivider />
 
 				<div className="flex w-full justify-between sm:justify-start">
 					<DetailLabelText className={labelClassName}>{t("COMMON.NONCE")}</DetailLabelText>
-					{data.nonce && <div className="font-semibold leading-5">{data.nonce}</div>}
-					{!data.nonce && <p className="leading-5 text-theme-secondary-500">{t("COMMON.NOT_AVAILABLE")}</p>}
+					{data.nonce && (
+						<div className="text-sm font-semibold leading-[17px] sm:text-base sm:leading-5">
+							{data.nonce}
+						</div>
+					)}
+					{!data.nonce && (
+						<p className="text-sm leading-[17px] text-theme-secondary-500 sm:text-base sm:leading-5">
+							{t("COMMON.NOT_AVAILABLE")}
+						</p>
+					)}
 				</div>
 			</div>
 		</DetailWrapper>
