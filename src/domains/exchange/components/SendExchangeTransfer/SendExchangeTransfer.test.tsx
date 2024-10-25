@@ -296,10 +296,8 @@ describe("SendExchangeTransfer", () => {
 			rejected: [],
 		});
 
-
 		renderComponent();
 
 		await selectSender();
 	});
-
 });
