@@ -8,23 +8,23 @@ import React, { useEffect, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
 import cn from "classnames";
 import { extractVotingData } from "@/domains/transaction/components/VoteTransactionType/helpers";
-import {ColorType} from "@/app/components/Label/Label.styles";
+import { ColorType } from "@/app/components/Label/Label.styles";
 
 type Direction = "sent" | "received" | "return";
 export const TransactionRowLabel = ({ direction }: { direction: Direction }) => {
 	const { t } = useTranslation();
 
 	const color: Record<typeof direction, ColorType> = {
-		"received": "success-bg",
-		"return": "neutral",
-		"sent": "danger-bg",
-	}
+		received: "success-bg",
+		return: "neutral",
+		sent: "danger-bg",
+	};
 
 	const title: Record<typeof direction, string> = {
-		"received": t("COMMON.FROM"),
-		"return": t("COMMON.RETURN"),
-		"sent": t("COMMON.TO"),
-	}
+		received: t("COMMON.FROM"),
+		return: t("COMMON.RETURN"),
+		sent: t("COMMON.TO"),
+	};
 
 	return (
 		<Label
@@ -158,7 +158,7 @@ export const TransactionRowAddressing = ({
 		);
 	}
 
-	if(transaction.sender() === transaction.recipient()) {
+	if (transaction.sender() === transaction.recipient()) {
 		direction = "return";
 	}
 
