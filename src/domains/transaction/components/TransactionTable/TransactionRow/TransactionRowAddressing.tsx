@@ -10,7 +10,8 @@ import cn from "classnames";
 import { extractVotingData } from "@/domains/transaction/components/VoteTransactionType/helpers";
 import {ColorType} from "@/app/components/Label/Label.styles";
 
-export const TransactionRowLabel = ({ direction }: { direction: "sent" | "received" | "return" }) => {
+type Direction = "sent" | "received" | "return";
+export const TransactionRowLabel = ({ direction }: { direction: Direction }) => {
 	const { t } = useTranslation();
 
 	const color: Record<typeof direction, ColorType> = {
@@ -52,7 +53,7 @@ export const TransactionRowAddressing = ({
 	].every(Boolean);
 	const isNegative = [isMusigTransfer, transaction.isSent()].some(Boolean);
 
-	let direction = isNegative ? "sent" : "received";
+	let direction: Direction = isNegative ? "sent" : "received";
 
 	const { env } = useEnvironmentContext();
 	const { t } = useTranslation();
@@ -157,9 +158,9 @@ export const TransactionRowAddressing = ({
 		);
 	}
 
-	direction =  transaction.sender() === transaction.recipient()
-		? "return"
-		: (isNegative ? "sent" : "received");
+	if(transaction.sender() === transaction.recipient()) {
+		direction = "return";
+	}
 
 	return (
 		<div className="flex flex-row gap-2" data-testid="TransactionRowAddressing__container">
