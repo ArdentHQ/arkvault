@@ -6,6 +6,7 @@ import {
 	env,
 	getDefaultProfileId,
 	getDefaultWalletMnemonic,
+	mockNanoXTransport,
 	render,
 	screen,
 	syncFees,
@@ -172,6 +173,40 @@ describe("SendExchangeTransfer", () => {
 		signMock.mockRestore();
 		broadcastMock.mockRestore();
 		transactionMock.mockRestore();
+	});
+
+	it("should render ledger authentication screen", async () => {
+		vi.spyOn(wallet, "isLedger").mockImplementation(() => true);
+		vi.spyOn(wallet.coin(), "__construct").mockImplementation(vi.fn());
+		vi.spyOn(wallet.ledger(), "isNanoX").mockResolvedValue(true);
+
+		vi.spyOn(wallet.coin().ledger(), "getPublicKey").mockResolvedValue(
+			"0335a27397927bfa1704116814474d39c2b933aabb990e7226389f022886e48deb",
+		);
+
+		vi.spyOn(wallet.transaction(), "signTransfer").mockReturnValue(Promise.resolve(transactionFixture.data.id));
+
+		vi.spyOn(wallet.coin().ledger(), "scan").mockImplementation(({ onProgress }) => {
+			onProgress(wallet);
+			return {
+				"m/44'/1'/0'/0/0": wallet.toData(),
+			};
+		});
+
+		mockNanoXTransport();
+
+		createTransactionMock(wallet);
+
+		vi.spyOn(wallet.transaction(), "broadcast").mockResolvedValue({
+			accepted: [transactionFixture.data.id],
+			errors: {},
+			rejected: [],
+		});
+
+
+		renderComponent();
+
+		await selectSender();
 	});
 
 	it("should show an error if wallet does not have enough funds", async () => {
