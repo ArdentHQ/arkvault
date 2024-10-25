@@ -273,12 +273,7 @@ export const SendExchangeTransfer: React.FC<TransferProperties> = ({
 									ledgerIsAwaitingDevice={!hasDeviceAvailable}
 									ledgerIsAwaitingApp={!isConnected}
 									onDeviceNotAvailable={() => {
-										setErrorMessage(
-											JSON.stringify({
-												message: t("WALLETS.MODAL_LEDGER_WALLET.DEVICE_NOT_AVAILABLE"),
-												type: "failed",
-											}),
-										);
+										setErrorMessage(t("WALLETS.MODAL_LEDGER_WALLET.DEVICE_NOT_AVAILABLE"));
 									}}
 								/>
 							)}
