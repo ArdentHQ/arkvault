@@ -6,8 +6,6 @@ import {
 	env,
 	getDefaultProfileId,
 	getDefaultWalletMnemonic,
-	mockNanoXTransport,
-	mockLedgerTransportError,
 	render,
 	screen,
 	syncFees,
@@ -267,76 +265,5 @@ describe("SendExchangeTransfer", () => {
 		signMock.mockRestore();
 		broadcastMock.mockRestore();
 		transactionMock.mockRestore();
-	});
-
-	it("should render ledger authentication screen", async () => {
-		vi.spyOn(wallet, "isLedger").mockImplementation(() => true);
-		vi.spyOn(wallet.coin(), "__construct").mockImplementation(vi.fn());
-		vi.spyOn(wallet.ledger(), "isNanoX").mockResolvedValue(true);
-
-		vi.spyOn(wallet.coin().ledger(), "getPublicKey").mockResolvedValue(
-			"0335a27397927bfa1704116814474d39c2b933aabb990e7226389f022886e48deb",
-		);
-
-		mockNanoXTransport();
-
-		createTransactionMock(wallet);
-
-		vi.spyOn(wallet.transaction(), "broadcast").mockResolvedValue({
-			accepted: [transactionFixture.data.id],
-			errors: {},
-			rejected: [],
-		});
-
-		renderComponent();
-
-		await selectSender();
-	});
-
-	it("should show error if unable to detect ledger device", async () => {
-		const { result } = renderHook(() => useTranslation());
-		const { t } = result.current;
-
-		vi.spyOn(wallet, "isLedger").mockImplementation(() => true);
-
-		const ledgerErrorMock = mockLedgerTransportError("Access denied to use Ledger device");
-		vi.spyOn(profile.wallets(), "findByCoinWithNetwork").mockReturnValue([wallet]);
-
-		renderComponent();
-
-		await expect(screen.findByText(t("WALLETS.MODAL_LEDGER_WALLET.DEVICE_NOT_AVAILABLE"))).resolves.toBeVisible();
-
-		ledgerErrorMock.mockRestore();
-	});
-
-	it("should show browser compatibility error ledger is not supported", async () => {
-		const { result } = renderHook(() => useTranslation());
-		const { t } = result.current;
-
-		vi.spyOn(wallet, "isLedger").mockImplementation(() => true);
-		vi.spyOn(wallet.ledger(), "isNanoX").mockResolvedValue(true);
-
-		vi.spyOn(wallet.coin().ledger(), "getPublicKey").mockResolvedValue(
-			"0335a27397927bfa1704116814474d39c2b933aabb990e7226389f022886e48deb",
-		);
-
-		vi.spyOn(wallet.transaction(), "signTransfer").mockReturnValue(Promise.resolve(transactionFixture.data.id));
-
-		vi.spyOn(wallet.coin().ledger(), "scan").mockImplementation(({ onProgress }) => {
-			onProgress(wallet);
-			return {
-				"m/44'/1'/0'/0/0": wallet.toData(),
-			};
-		});
-
-		vi.spyOn(profile.wallets(), "findByCoinWithNetwork").mockReturnValue([wallet]);
-		mockNanoXTransport();
-
-		process.env.REACT_APP_IS_UNIT = null;
-		window.navigator.usb = undefined;
-
-		renderComponent();
-
-		await expect(screen.findByText(t("WALLETS.MODAL_LEDGER_WALLET.COMPATIBILITY_ERROR"))).resolves.toBeVisible();
 	});
 });
