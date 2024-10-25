@@ -635,7 +635,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should change fee 1`] 
                           data-testid="DetailLabel"
                         >
                           <div
-                            class="no-ligatures text-md min-w-24 font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500"
+                            class="no-ligatures min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-md leading-5"
                             data-testid="DetailLabelText"
                           >
                             Addressing
@@ -728,7 +728,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should change fee 1`] 
                         data-testid="DetailLabel"
                       >
                         <div
-                          class="no-ligatures text-md min-w-24 font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500"
+                          class="no-ligatures min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-md leading-5"
                           data-testid="DetailLabelText"
                         >
                           Transaction Type
@@ -1727,7 +1727,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should render 1st step
                           data-testid="DetailLabel"
                         >
                           <div
-                            class="no-ligatures text-md min-w-24 font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500"
+                            class="no-ligatures min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-md leading-5"
                             data-testid="DetailLabelText"
                           >
                             Addressing
@@ -1820,7 +1820,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should render 1st step
                         data-testid="DetailLabel"
                       >
                         <div
-                          class="no-ligatures text-md min-w-24 font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500"
+                          class="no-ligatures min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-md leading-5"
                           data-testid="DetailLabelText"
                         >
                           Transaction Type
@@ -2739,7 +2739,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should render 2nd step
                         data-testid="DetailLabel"
                       >
                         <div
-                          class="no-ligatures text-md min-w-24 font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500"
+                          class="no-ligatures min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-md leading-5"
                           data-testid="DetailLabelText"
                         >
                           Addressing
@@ -2831,7 +2831,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should render 2nd step
                         data-testid="DetailLabel"
                       >
                         <div
-                          class="no-ligatures text-md min-w-24 font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500"
+                          class="no-ligatures min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-md leading-5"
                           data-testid="DetailLabelText"
                         >
                           Transaction Type
