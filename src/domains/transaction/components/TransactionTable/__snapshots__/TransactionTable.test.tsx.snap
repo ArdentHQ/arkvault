@@ -4448,7 +4448,7 @@ exports[`TransactionTable > should render compact 1`] = `
                   data-testid="TransactionRowAddressing__container"
                 >
                   <div
-                    class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-6yoktf"
+                    class="!flex h-[21px] w-12 items-center justify-center rounded py-[3px] css-6yoktf"
                     color="success-bg"
                     data-testid="TransactionRowAddressing__label"
                   >
@@ -4465,7 +4465,7 @@ exports[`TransactionTable > should render compact 1`] = `
                         class="relative grow leading-[17px] sm:leading-5 text-left"
                       >
                         <span
-                          class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
+                          class="no-ligatures min-w-0 overflow-hidden leading-[17px] sm:leading-5 text-theme-text font-semibold text-sm absolute w-full"
                           data-testid="Address__address"
                         >
                           DK1f5frUPTNqhFxoyDUHwN7VC2B4Uzhpmy
@@ -4612,7 +4612,7 @@ exports[`TransactionTable > should render compact 1`] = `
                   data-testid="TransactionRowAddressing__container"
                 >
                   <div
-                    class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-1qplu6d"
+                    class="!flex h-[21px] w-12 items-center justify-center rounded py-[3px] css-1qplu6d"
                     color="danger-bg"
                     data-testid="TransactionRowAddressing__label"
                   >
@@ -4640,7 +4640,7 @@ exports[`TransactionTable > should render compact 1`] = `
                         class="relative grow leading-[17px] sm:leading-5 text-left"
                       >
                         <span
-                          class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold text-sm absolute w-full"
+                          class="no-ligatures min-w-0 overflow-hidden leading-[17px] sm:leading-5 text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold text-sm absolute w-full"
                           data-testid="Address__address"
                         >
                           DPKAyxsa7s9K3kQ5av8wwn9JY9a5ezxh4g
@@ -4787,7 +4787,7 @@ exports[`TransactionTable > should render compact 1`] = `
                   data-testid="TransactionRowAddressing__container"
                 >
                   <div
-                    class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-6yoktf"
+                    class="!flex h-[21px] w-12 items-center justify-center rounded py-[3px] css-6yoktf"
                     color="success-bg"
                     data-testid="TransactionRowAddressing__label"
                   >
@@ -4804,7 +4804,7 @@ exports[`TransactionTable > should render compact 1`] = `
                         class="relative grow leading-[17px] sm:leading-5 text-left"
                       >
                         <span
-                          class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
+                          class="no-ligatures min-w-0 overflow-hidden leading-[17px] sm:leading-5 text-theme-text font-semibold text-sm absolute w-full"
                           data-testid="Address__address"
                         >
                           DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
@@ -4951,7 +4951,7 @@ exports[`TransactionTable > should render compact 1`] = `
                   data-testid="TransactionRowAddressing__container"
                 >
                   <div
-                    class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-6yoktf"
+                    class="!flex h-[21px] w-12 items-center justify-center rounded py-[3px] css-6yoktf"
                     color="success-bg"
                     data-testid="TransactionRowAddressing__label"
                   >
@@ -4968,7 +4968,7 @@ exports[`TransactionTable > should render compact 1`] = `
                         class="relative grow leading-[17px] sm:leading-5 text-left"
                       >
                         <span
-                          class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
+                          class="no-ligatures min-w-0 overflow-hidden leading-[17px] sm:leading-5 text-theme-text font-semibold text-sm absolute w-full"
                           data-testid="Address__address"
                         >
                           DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
@@ -5115,7 +5115,7 @@ exports[`TransactionTable > should render compact 1`] = `
                   data-testid="TransactionRowAddressing__container"
                 >
                   <div
-                    class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-6yoktf"
+                    class="!flex h-[21px] w-12 items-center justify-center rounded py-[3px] css-6yoktf"
                     color="success-bg"
                     data-testid="TransactionRowAddressing__label"
                   >
@@ -5132,7 +5132,7 @@ exports[`TransactionTable > should render compact 1`] = `
                         class="relative grow leading-[17px] sm:leading-5 text-left"
                       >
                         <span
-                          class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
+                          class="no-ligatures min-w-0 overflow-hidden leading-[17px] sm:leading-5 text-theme-text font-semibold text-sm absolute w-full"
                           data-testid="Address__address"
                         >
                           DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
@@ -5279,7 +5279,7 @@ exports[`TransactionTable > should render compact 1`] = `
                   data-testid="TransactionRowAddressing__container"
                 >
                   <div
-                    class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-6yoktf"
+                    class="!flex h-[21px] w-12 items-center justify-center rounded py-[3px] css-6yoktf"
                     color="success-bg"
                     data-testid="TransactionRowAddressing__label"
                   >
@@ -5296,7 +5296,7 @@ exports[`TransactionTable > should render compact 1`] = `
                         class="relative grow leading-[17px] sm:leading-5 text-left"
                       >
                         <span
-                          class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
+                          class="no-ligatures min-w-0 overflow-hidden leading-[17px] sm:leading-5 text-theme-text font-semibold text-sm absolute w-full"
                           data-testid="Address__address"
                         >
                           DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
@@ -5443,7 +5443,7 @@ exports[`TransactionTable > should render compact 1`] = `
                   data-testid="TransactionRowAddressing__container"
                 >
                   <div
-                    class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-6yoktf"
+                    class="!flex h-[21px] w-12 items-center justify-center rounded py-[3px] css-6yoktf"
                     color="success-bg"
                     data-testid="TransactionRowAddressing__label"
                   >
@@ -5460,7 +5460,7 @@ exports[`TransactionTable > should render compact 1`] = `
                         class="relative grow leading-[17px] sm:leading-5 text-left"
                       >
                         <span
-                          class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
+                          class="no-ligatures min-w-0 overflow-hidden leading-[17px] sm:leading-5 text-theme-text font-semibold text-sm absolute w-full"
                           data-testid="Address__address"
                         >
                           DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
@@ -5607,7 +5607,7 @@ exports[`TransactionTable > should render compact 1`] = `
                   data-testid="TransactionRowAddressing__container"
                 >
                   <div
-                    class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-6yoktf"
+                    class="!flex h-[21px] w-12 items-center justify-center rounded py-[3px] css-6yoktf"
                     color="success-bg"
                     data-testid="TransactionRowAddressing__label"
                   >
@@ -5624,7 +5624,7 @@ exports[`TransactionTable > should render compact 1`] = `
                         class="relative grow leading-[17px] sm:leading-5 text-left"
                       >
                         <span
-                          class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
+                          class="no-ligatures min-w-0 overflow-hidden leading-[17px] sm:leading-5 text-theme-text font-semibold text-sm absolute w-full"
                           data-testid="Address__address"
                         >
                           DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
@@ -5771,7 +5771,7 @@ exports[`TransactionTable > should render compact 1`] = `
                   data-testid="TransactionRowAddressing__container"
                 >
                   <div
-                    class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-6yoktf"
+                    class="!flex h-[21px] w-12 items-center justify-center rounded py-[3px] css-6yoktf"
                     color="success-bg"
                     data-testid="TransactionRowAddressing__label"
                   >
@@ -5788,7 +5788,7 @@ exports[`TransactionTable > should render compact 1`] = `
                         class="relative grow leading-[17px] sm:leading-5 text-left"
                       >
                         <span
-                          class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
+                          class="no-ligatures min-w-0 overflow-hidden leading-[17px] sm:leading-5 text-theme-text font-semibold text-sm absolute w-full"
                           data-testid="Address__address"
                         >
                           DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
@@ -5935,7 +5935,7 @@ exports[`TransactionTable > should render compact 1`] = `
                   data-testid="TransactionRowAddressing__container"
                 >
                   <div
-                    class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-1qplu6d"
+                    class="!flex h-[21px] w-12 items-center justify-center rounded py-[3px] css-1qplu6d"
                     color="danger-bg"
                     data-testid="TransactionRowAddressing__label"
                   >
@@ -5963,7 +5963,7 @@ exports[`TransactionTable > should render compact 1`] = `
                         class="relative grow leading-[17px] sm:leading-5 text-left"
                       >
                         <span
-                          class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold text-sm absolute w-full"
+                          class="no-ligatures min-w-0 overflow-hidden leading-[17px] sm:leading-5 text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold text-sm absolute w-full"
                           data-testid="Address__address"
                         >
                           DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
@@ -6119,7 +6119,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                         data-testid="TransactionRowAddressing__container"
                       >
                         <div
-                          class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-6yoktf"
+                          class="!flex h-[21px] w-12 items-center justify-center rounded py-[3px] css-6yoktf"
                           color="success-bg"
                           data-testid="TransactionRowAddressing__label"
                         >
@@ -6136,7 +6136,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                               class="relative grow leading-[17px] sm:leading-5 text-left"
                             >
                               <span
-                                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
+                                class="no-ligatures min-w-0 overflow-hidden leading-[17px] sm:leading-5 text-theme-text font-semibold text-sm absolute w-full"
                                 data-testid="Address__address"
                               >
                                 DK1f5frUPTNqhFxoyDUHwN7VC2B4Uzhpmy
@@ -6268,7 +6268,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                         data-testid="TransactionRowAddressing__container"
                       >
                         <div
-                          class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-1qplu6d"
+                          class="!flex h-[21px] w-12 items-center justify-center rounded py-[3px] css-1qplu6d"
                           color="danger-bg"
                           data-testid="TransactionRowAddressing__label"
                         >
@@ -6296,7 +6296,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                               class="relative grow leading-[17px] sm:leading-5 text-left"
                             >
                               <span
-                                class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold text-sm absolute w-full"
+                                class="no-ligatures min-w-0 overflow-hidden leading-[17px] sm:leading-5 text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold text-sm absolute w-full"
                                 data-testid="Address__address"
                               >
                                 DPKAyxsa7s9K3kQ5av8wwn9JY9a5ezxh4g
@@ -6428,7 +6428,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                         data-testid="TransactionRowAddressing__container"
                       >
                         <div
-                          class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-6yoktf"
+                          class="!flex h-[21px] w-12 items-center justify-center rounded py-[3px] css-6yoktf"
                           color="success-bg"
                           data-testid="TransactionRowAddressing__label"
                         >
@@ -6445,7 +6445,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                               class="relative grow leading-[17px] sm:leading-5 text-left"
                             >
                               <span
-                                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
+                                class="no-ligatures min-w-0 overflow-hidden leading-[17px] sm:leading-5 text-theme-text font-semibold text-sm absolute w-full"
                                 data-testid="Address__address"
                               >
                                 DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
@@ -6577,7 +6577,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                         data-testid="TransactionRowAddressing__container"
                       >
                         <div
-                          class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-6yoktf"
+                          class="!flex h-[21px] w-12 items-center justify-center rounded py-[3px] css-6yoktf"
                           color="success-bg"
                           data-testid="TransactionRowAddressing__label"
                         >
@@ -6594,7 +6594,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                               class="relative grow leading-[17px] sm:leading-5 text-left"
                             >
                               <span
-                                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
+                                class="no-ligatures min-w-0 overflow-hidden leading-[17px] sm:leading-5 text-theme-text font-semibold text-sm absolute w-full"
                                 data-testid="Address__address"
                               >
                                 DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
@@ -6726,7 +6726,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                         data-testid="TransactionRowAddressing__container"
                       >
                         <div
-                          class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-6yoktf"
+                          class="!flex h-[21px] w-12 items-center justify-center rounded py-[3px] css-6yoktf"
                           color="success-bg"
                           data-testid="TransactionRowAddressing__label"
                         >
@@ -6743,7 +6743,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                               class="relative grow leading-[17px] sm:leading-5 text-left"
                             >
                               <span
-                                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
+                                class="no-ligatures min-w-0 overflow-hidden leading-[17px] sm:leading-5 text-theme-text font-semibold text-sm absolute w-full"
                                 data-testid="Address__address"
                               >
                                 DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
@@ -6875,7 +6875,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                         data-testid="TransactionRowAddressing__container"
                       >
                         <div
-                          class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-6yoktf"
+                          class="!flex h-[21px] w-12 items-center justify-center rounded py-[3px] css-6yoktf"
                           color="success-bg"
                           data-testid="TransactionRowAddressing__label"
                         >
@@ -6892,7 +6892,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                               class="relative grow leading-[17px] sm:leading-5 text-left"
                             >
                               <span
-                                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
+                                class="no-ligatures min-w-0 overflow-hidden leading-[17px] sm:leading-5 text-theme-text font-semibold text-sm absolute w-full"
                                 data-testid="Address__address"
                               >
                                 DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
@@ -7024,7 +7024,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                         data-testid="TransactionRowAddressing__container"
                       >
                         <div
-                          class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-6yoktf"
+                          class="!flex h-[21px] w-12 items-center justify-center rounded py-[3px] css-6yoktf"
                           color="success-bg"
                           data-testid="TransactionRowAddressing__label"
                         >
@@ -7041,7 +7041,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                               class="relative grow leading-[17px] sm:leading-5 text-left"
                             >
                               <span
-                                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
+                                class="no-ligatures min-w-0 overflow-hidden leading-[17px] sm:leading-5 text-theme-text font-semibold text-sm absolute w-full"
                                 data-testid="Address__address"
                               >
                                 DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
@@ -7173,7 +7173,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                         data-testid="TransactionRowAddressing__container"
                       >
                         <div
-                          class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-6yoktf"
+                          class="!flex h-[21px] w-12 items-center justify-center rounded py-[3px] css-6yoktf"
                           color="success-bg"
                           data-testid="TransactionRowAddressing__label"
                         >
@@ -7190,7 +7190,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                               class="relative grow leading-[17px] sm:leading-5 text-left"
                             >
                               <span
-                                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
+                                class="no-ligatures min-w-0 overflow-hidden leading-[17px] sm:leading-5 text-theme-text font-semibold text-sm absolute w-full"
                                 data-testid="Address__address"
                               >
                                 DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
@@ -7322,7 +7322,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                         data-testid="TransactionRowAddressing__container"
                       >
                         <div
-                          class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-6yoktf"
+                          class="!flex h-[21px] w-12 items-center justify-center rounded py-[3px] css-6yoktf"
                           color="success-bg"
                           data-testid="TransactionRowAddressing__label"
                         >
@@ -7339,7 +7339,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                               class="relative grow leading-[17px] sm:leading-5 text-left"
                             >
                               <span
-                                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
+                                class="no-ligatures min-w-0 overflow-hidden leading-[17px] sm:leading-5 text-theme-text font-semibold text-sm absolute w-full"
                                 data-testid="Address__address"
                               >
                                 DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
@@ -7471,7 +7471,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                         data-testid="TransactionRowAddressing__container"
                       >
                         <div
-                          class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-1qplu6d"
+                          class="!flex h-[21px] w-12 items-center justify-center rounded py-[3px] css-1qplu6d"
                           color="danger-bg"
                           data-testid="TransactionRowAddressing__label"
                         >
@@ -7499,7 +7499,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                               class="relative grow leading-[17px] sm:leading-5 text-left"
                             >
                               <span
-                                class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold text-sm absolute w-full"
+                                class="no-ligatures min-w-0 overflow-hidden leading-[17px] sm:leading-5 text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold text-sm absolute w-full"
                                 data-testid="Address__address"
                               >
                                 DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
@@ -7655,7 +7655,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                         data-testid="TransactionRowAddressing__container"
                       >
                         <div
-                          class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-6yoktf"
+                          class="!flex h-[21px] w-12 items-center justify-center rounded py-[3px] css-6yoktf"
                           color="success-bg"
                           data-testid="TransactionRowAddressing__label"
                         >
@@ -7672,7 +7672,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                               class="relative grow leading-[17px] sm:leading-5 text-left"
                             >
                               <span
-                                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
+                                class="no-ligatures min-w-0 overflow-hidden leading-[17px] sm:leading-5 text-theme-text font-semibold text-sm absolute w-full"
                                 data-testid="Address__address"
                               >
                                 DK1f5frUPTNqhFxoyDUHwN7VC2B4Uzhpmy
@@ -7804,7 +7804,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                         data-testid="TransactionRowAddressing__container"
                       >
                         <div
-                          class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-1qplu6d"
+                          class="!flex h-[21px] w-12 items-center justify-center rounded py-[3px] css-1qplu6d"
                           color="danger-bg"
                           data-testid="TransactionRowAddressing__label"
                         >
@@ -7832,7 +7832,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                               class="relative grow leading-[17px] sm:leading-5 text-left"
                             >
                               <span
-                                class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold text-sm absolute w-full"
+                                class="no-ligatures min-w-0 overflow-hidden leading-[17px] sm:leading-5 text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold text-sm absolute w-full"
                                 data-testid="Address__address"
                               >
                                 DPKAyxsa7s9K3kQ5av8wwn9JY9a5ezxh4g
@@ -7964,7 +7964,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                         data-testid="TransactionRowAddressing__container"
                       >
                         <div
-                          class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-6yoktf"
+                          class="!flex h-[21px] w-12 items-center justify-center rounded py-[3px] css-6yoktf"
                           color="success-bg"
                           data-testid="TransactionRowAddressing__label"
                         >
@@ -7981,7 +7981,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                               class="relative grow leading-[17px] sm:leading-5 text-left"
                             >
                               <span
-                                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
+                                class="no-ligatures min-w-0 overflow-hidden leading-[17px] sm:leading-5 text-theme-text font-semibold text-sm absolute w-full"
                                 data-testid="Address__address"
                               >
                                 DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
@@ -8113,7 +8113,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                         data-testid="TransactionRowAddressing__container"
                       >
                         <div
-                          class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-6yoktf"
+                          class="!flex h-[21px] w-12 items-center justify-center rounded py-[3px] css-6yoktf"
                           color="success-bg"
                           data-testid="TransactionRowAddressing__label"
                         >
@@ -8130,7 +8130,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                               class="relative grow leading-[17px] sm:leading-5 text-left"
                             >
                               <span
-                                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
+                                class="no-ligatures min-w-0 overflow-hidden leading-[17px] sm:leading-5 text-theme-text font-semibold text-sm absolute w-full"
                                 data-testid="Address__address"
                               >
                                 DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
@@ -8262,7 +8262,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                         data-testid="TransactionRowAddressing__container"
                       >
                         <div
-                          class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-6yoktf"
+                          class="!flex h-[21px] w-12 items-center justify-center rounded py-[3px] css-6yoktf"
                           color="success-bg"
                           data-testid="TransactionRowAddressing__label"
                         >
@@ -8279,7 +8279,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                               class="relative grow leading-[17px] sm:leading-5 text-left"
                             >
                               <span
-                                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
+                                class="no-ligatures min-w-0 overflow-hidden leading-[17px] sm:leading-5 text-theme-text font-semibold text-sm absolute w-full"
                                 data-testid="Address__address"
                               >
                                 DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
@@ -8411,7 +8411,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                         data-testid="TransactionRowAddressing__container"
                       >
                         <div
-                          class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-6yoktf"
+                          class="!flex h-[21px] w-12 items-center justify-center rounded py-[3px] css-6yoktf"
                           color="success-bg"
                           data-testid="TransactionRowAddressing__label"
                         >
@@ -8428,7 +8428,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                               class="relative grow leading-[17px] sm:leading-5 text-left"
                             >
                               <span
-                                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
+                                class="no-ligatures min-w-0 overflow-hidden leading-[17px] sm:leading-5 text-theme-text font-semibold text-sm absolute w-full"
                                 data-testid="Address__address"
                               >
                                 DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
@@ -8560,7 +8560,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                         data-testid="TransactionRowAddressing__container"
                       >
                         <div
-                          class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-6yoktf"
+                          class="!flex h-[21px] w-12 items-center justify-center rounded py-[3px] css-6yoktf"
                           color="success-bg"
                           data-testid="TransactionRowAddressing__label"
                         >
@@ -8577,7 +8577,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                               class="relative grow leading-[17px] sm:leading-5 text-left"
                             >
                               <span
-                                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
+                                class="no-ligatures min-w-0 overflow-hidden leading-[17px] sm:leading-5 text-theme-text font-semibold text-sm absolute w-full"
                                 data-testid="Address__address"
                               >
                                 DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
@@ -8709,7 +8709,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                         data-testid="TransactionRowAddressing__container"
                       >
                         <div
-                          class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-6yoktf"
+                          class="!flex h-[21px] w-12 items-center justify-center rounded py-[3px] css-6yoktf"
                           color="success-bg"
                           data-testid="TransactionRowAddressing__label"
                         >
@@ -8726,7 +8726,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                               class="relative grow leading-[17px] sm:leading-5 text-left"
                             >
                               <span
-                                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
+                                class="no-ligatures min-w-0 overflow-hidden leading-[17px] sm:leading-5 text-theme-text font-semibold text-sm absolute w-full"
                                 data-testid="Address__address"
                               >
                                 DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
@@ -8858,7 +8858,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                         data-testid="TransactionRowAddressing__container"
                       >
                         <div
-                          class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-6yoktf"
+                          class="!flex h-[21px] w-12 items-center justify-center rounded py-[3px] css-6yoktf"
                           color="success-bg"
                           data-testid="TransactionRowAddressing__label"
                         >
@@ -8875,7 +8875,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                               class="relative grow leading-[17px] sm:leading-5 text-left"
                             >
                               <span
-                                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
+                                class="no-ligatures min-w-0 overflow-hidden leading-[17px] sm:leading-5 text-theme-text font-semibold text-sm absolute w-full"
                                 data-testid="Address__address"
                               >
                                 DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
@@ -9007,7 +9007,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                         data-testid="TransactionRowAddressing__container"
                       >
                         <div
-                          class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-1qplu6d"
+                          class="!flex h-[21px] w-12 items-center justify-center rounded py-[3px] css-1qplu6d"
                           color="danger-bg"
                           data-testid="TransactionRowAddressing__label"
                         >
@@ -9035,7 +9035,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                               class="relative grow leading-[17px] sm:leading-5 text-left"
                             >
                               <span
-                                class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold text-sm absolute w-full"
+                                class="no-ligatures min-w-0 overflow-hidden leading-[17px] sm:leading-5 text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold text-sm absolute w-full"
                                 data-testid="Address__address"
                               >
                                 DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
@@ -9398,7 +9398,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                   data-testid="TransactionRowAddressing__container"
                 >
                   <div
-                    class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-6yoktf"
+                    class="!flex h-[21px] w-12 items-center justify-center rounded py-[3px] css-6yoktf"
                     color="success-bg"
                     data-testid="TransactionRowAddressing__label"
                   >
@@ -9415,7 +9415,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                         class="relative grow leading-[17px] sm:leading-5 text-left"
                       >
                         <span
-                          class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
+                          class="no-ligatures min-w-0 overflow-hidden leading-[17px] sm:leading-5 text-theme-text font-semibold text-sm absolute w-full"
                           data-testid="Address__address"
                         >
                           DK1f5frUPTNqhFxoyDUHwN7VC2B4Uzhpmy
@@ -9562,7 +9562,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                   data-testid="TransactionRowAddressing__container"
                 >
                   <div
-                    class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-1qplu6d"
+                    class="!flex h-[21px] w-12 items-center justify-center rounded py-[3px] css-1qplu6d"
                     color="danger-bg"
                     data-testid="TransactionRowAddressing__label"
                   >
@@ -9590,7 +9590,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                         class="relative grow leading-[17px] sm:leading-5 text-left"
                       >
                         <span
-                          class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold text-sm absolute w-full"
+                          class="no-ligatures min-w-0 overflow-hidden leading-[17px] sm:leading-5 text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold text-sm absolute w-full"
                           data-testid="Address__address"
                         >
                           DPKAyxsa7s9K3kQ5av8wwn9JY9a5ezxh4g
@@ -9737,7 +9737,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                   data-testid="TransactionRowAddressing__container"
                 >
                   <div
-                    class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-6yoktf"
+                    class="!flex h-[21px] w-12 items-center justify-center rounded py-[3px] css-6yoktf"
                     color="success-bg"
                     data-testid="TransactionRowAddressing__label"
                   >
@@ -9754,7 +9754,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                         class="relative grow leading-[17px] sm:leading-5 text-left"
                       >
                         <span
-                          class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
+                          class="no-ligatures min-w-0 overflow-hidden leading-[17px] sm:leading-5 text-theme-text font-semibold text-sm absolute w-full"
                           data-testid="Address__address"
                         >
                           DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
@@ -9901,7 +9901,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                   data-testid="TransactionRowAddressing__container"
                 >
                   <div
-                    class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-6yoktf"
+                    class="!flex h-[21px] w-12 items-center justify-center rounded py-[3px] css-6yoktf"
                     color="success-bg"
                     data-testid="TransactionRowAddressing__label"
                   >
@@ -9918,7 +9918,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                         class="relative grow leading-[17px] sm:leading-5 text-left"
                       >
                         <span
-                          class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
+                          class="no-ligatures min-w-0 overflow-hidden leading-[17px] sm:leading-5 text-theme-text font-semibold text-sm absolute w-full"
                           data-testid="Address__address"
                         >
                           DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
@@ -10065,7 +10065,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                   data-testid="TransactionRowAddressing__container"
                 >
                   <div
-                    class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-6yoktf"
+                    class="!flex h-[21px] w-12 items-center justify-center rounded py-[3px] css-6yoktf"
                     color="success-bg"
                     data-testid="TransactionRowAddressing__label"
                   >
@@ -10082,7 +10082,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                         class="relative grow leading-[17px] sm:leading-5 text-left"
                       >
                         <span
-                          class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
+                          class="no-ligatures min-w-0 overflow-hidden leading-[17px] sm:leading-5 text-theme-text font-semibold text-sm absolute w-full"
                           data-testid="Address__address"
                         >
                           DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
@@ -10229,7 +10229,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                   data-testid="TransactionRowAddressing__container"
                 >
                   <div
-                    class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-6yoktf"
+                    class="!flex h-[21px] w-12 items-center justify-center rounded py-[3px] css-6yoktf"
                     color="success-bg"
                     data-testid="TransactionRowAddressing__label"
                   >
@@ -10246,7 +10246,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                         class="relative grow leading-[17px] sm:leading-5 text-left"
                       >
                         <span
-                          class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
+                          class="no-ligatures min-w-0 overflow-hidden leading-[17px] sm:leading-5 text-theme-text font-semibold text-sm absolute w-full"
                           data-testid="Address__address"
                         >
                           DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
@@ -10393,7 +10393,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                   data-testid="TransactionRowAddressing__container"
                 >
                   <div
-                    class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-6yoktf"
+                    class="!flex h-[21px] w-12 items-center justify-center rounded py-[3px] css-6yoktf"
                     color="success-bg"
                     data-testid="TransactionRowAddressing__label"
                   >
@@ -10410,7 +10410,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                         class="relative grow leading-[17px] sm:leading-5 text-left"
                       >
                         <span
-                          class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
+                          class="no-ligatures min-w-0 overflow-hidden leading-[17px] sm:leading-5 text-theme-text font-semibold text-sm absolute w-full"
                           data-testid="Address__address"
                         >
                           DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
@@ -10557,7 +10557,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                   data-testid="TransactionRowAddressing__container"
                 >
                   <div
-                    class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-6yoktf"
+                    class="!flex h-[21px] w-12 items-center justify-center rounded py-[3px] css-6yoktf"
                     color="success-bg"
                     data-testid="TransactionRowAddressing__label"
                   >
@@ -10574,7 +10574,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                         class="relative grow leading-[17px] sm:leading-5 text-left"
                       >
                         <span
-                          class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
+                          class="no-ligatures min-w-0 overflow-hidden leading-[17px] sm:leading-5 text-theme-text font-semibold text-sm absolute w-full"
                           data-testid="Address__address"
                         >
                           DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
@@ -10721,7 +10721,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                   data-testid="TransactionRowAddressing__container"
                 >
                   <div
-                    class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-6yoktf"
+                    class="!flex h-[21px] w-12 items-center justify-center rounded py-[3px] css-6yoktf"
                     color="success-bg"
                     data-testid="TransactionRowAddressing__label"
                   >
@@ -10738,7 +10738,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                         class="relative grow leading-[17px] sm:leading-5 text-left"
                       >
                         <span
-                          class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
+                          class="no-ligatures min-w-0 overflow-hidden leading-[17px] sm:leading-5 text-theme-text font-semibold text-sm absolute w-full"
                           data-testid="Address__address"
                         >
                           DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
@@ -10885,7 +10885,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                   data-testid="TransactionRowAddressing__container"
                 >
                   <div
-                    class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-1qplu6d"
+                    class="!flex h-[21px] w-12 items-center justify-center rounded py-[3px] css-1qplu6d"
                     color="danger-bg"
                     data-testid="TransactionRowAddressing__label"
                   >
@@ -10913,7 +10913,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                         class="relative grow leading-[17px] sm:leading-5 text-left"
                       >
                         <span
-                          class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold text-sm absolute w-full"
+                          class="no-ligatures min-w-0 overflow-hidden leading-[17px] sm:leading-5 text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold text-sm absolute w-full"
                           data-testid="Address__address"
                         >
                           DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
@@ -11276,7 +11276,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                   data-testid="TransactionRowAddressing__container"
                 >
                   <div
-                    class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-6yoktf"
+                    class="!flex h-[21px] w-12 items-center justify-center rounded py-[3px] css-6yoktf"
                     color="success-bg"
                     data-testid="TransactionRowAddressing__label"
                   >
@@ -11293,7 +11293,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                         class="relative grow leading-[17px] sm:leading-5 text-left"
                       >
                         <span
-                          class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
+                          class="no-ligatures min-w-0 overflow-hidden leading-[17px] sm:leading-5 text-theme-text font-semibold text-sm absolute w-full"
                           data-testid="Address__address"
                         >
                           DK1f5frUPTNqhFxoyDUHwN7VC2B4Uzhpmy
@@ -11440,7 +11440,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                   data-testid="TransactionRowAddressing__container"
                 >
                   <div
-                    class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-1qplu6d"
+                    class="!flex h-[21px] w-12 items-center justify-center rounded py-[3px] css-1qplu6d"
                     color="danger-bg"
                     data-testid="TransactionRowAddressing__label"
                   >
@@ -11468,7 +11468,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                         class="relative grow leading-[17px] sm:leading-5 text-left"
                       >
                         <span
-                          class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold text-sm absolute w-full"
+                          class="no-ligatures min-w-0 overflow-hidden leading-[17px] sm:leading-5 text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold text-sm absolute w-full"
                           data-testid="Address__address"
                         >
                           DPKAyxsa7s9K3kQ5av8wwn9JY9a5ezxh4g
@@ -11615,7 +11615,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                   data-testid="TransactionRowAddressing__container"
                 >
                   <div
-                    class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-6yoktf"
+                    class="!flex h-[21px] w-12 items-center justify-center rounded py-[3px] css-6yoktf"
                     color="success-bg"
                     data-testid="TransactionRowAddressing__label"
                   >
@@ -11632,7 +11632,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                         class="relative grow leading-[17px] sm:leading-5 text-left"
                       >
                         <span
-                          class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
+                          class="no-ligatures min-w-0 overflow-hidden leading-[17px] sm:leading-5 text-theme-text font-semibold text-sm absolute w-full"
                           data-testid="Address__address"
                         >
                           DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
@@ -11779,7 +11779,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                   data-testid="TransactionRowAddressing__container"
                 >
                   <div
-                    class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-6yoktf"
+                    class="!flex h-[21px] w-12 items-center justify-center rounded py-[3px] css-6yoktf"
                     color="success-bg"
                     data-testid="TransactionRowAddressing__label"
                   >
@@ -11796,7 +11796,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                         class="relative grow leading-[17px] sm:leading-5 text-left"
                       >
                         <span
-                          class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
+                          class="no-ligatures min-w-0 overflow-hidden leading-[17px] sm:leading-5 text-theme-text font-semibold text-sm absolute w-full"
                           data-testid="Address__address"
                         >
                           DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
@@ -11943,7 +11943,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                   data-testid="TransactionRowAddressing__container"
                 >
                   <div
-                    class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-6yoktf"
+                    class="!flex h-[21px] w-12 items-center justify-center rounded py-[3px] css-6yoktf"
                     color="success-bg"
                     data-testid="TransactionRowAddressing__label"
                   >
@@ -11960,7 +11960,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                         class="relative grow leading-[17px] sm:leading-5 text-left"
                       >
                         <span
-                          class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
+                          class="no-ligatures min-w-0 overflow-hidden leading-[17px] sm:leading-5 text-theme-text font-semibold text-sm absolute w-full"
                           data-testid="Address__address"
                         >
                           DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
@@ -12107,7 +12107,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                   data-testid="TransactionRowAddressing__container"
                 >
                   <div
-                    class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-6yoktf"
+                    class="!flex h-[21px] w-12 items-center justify-center rounded py-[3px] css-6yoktf"
                     color="success-bg"
                     data-testid="TransactionRowAddressing__label"
                   >
@@ -12124,7 +12124,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                         class="relative grow leading-[17px] sm:leading-5 text-left"
                       >
                         <span
-                          class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
+                          class="no-ligatures min-w-0 overflow-hidden leading-[17px] sm:leading-5 text-theme-text font-semibold text-sm absolute w-full"
                           data-testid="Address__address"
                         >
                           DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
@@ -12271,7 +12271,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                   data-testid="TransactionRowAddressing__container"
                 >
                   <div
-                    class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-6yoktf"
+                    class="!flex h-[21px] w-12 items-center justify-center rounded py-[3px] css-6yoktf"
                     color="success-bg"
                     data-testid="TransactionRowAddressing__label"
                   >
@@ -12288,7 +12288,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                         class="relative grow leading-[17px] sm:leading-5 text-left"
                       >
                         <span
-                          class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
+                          class="no-ligatures min-w-0 overflow-hidden leading-[17px] sm:leading-5 text-theme-text font-semibold text-sm absolute w-full"
                           data-testid="Address__address"
                         >
                           DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
@@ -12435,7 +12435,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                   data-testid="TransactionRowAddressing__container"
                 >
                   <div
-                    class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-6yoktf"
+                    class="!flex h-[21px] w-12 items-center justify-center rounded py-[3px] css-6yoktf"
                     color="success-bg"
                     data-testid="TransactionRowAddressing__label"
                   >
@@ -12452,7 +12452,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                         class="relative grow leading-[17px] sm:leading-5 text-left"
                       >
                         <span
-                          class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
+                          class="no-ligatures min-w-0 overflow-hidden leading-[17px] sm:leading-5 text-theme-text font-semibold text-sm absolute w-full"
                           data-testid="Address__address"
                         >
                           DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
@@ -12599,7 +12599,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                   data-testid="TransactionRowAddressing__container"
                 >
                   <div
-                    class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-6yoktf"
+                    class="!flex h-[21px] w-12 items-center justify-center rounded py-[3px] css-6yoktf"
                     color="success-bg"
                     data-testid="TransactionRowAddressing__label"
                   >
@@ -12616,7 +12616,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                         class="relative grow leading-[17px] sm:leading-5 text-left"
                       >
                         <span
-                          class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
+                          class="no-ligatures min-w-0 overflow-hidden leading-[17px] sm:leading-5 text-theme-text font-semibold text-sm absolute w-full"
                           data-testid="Address__address"
                         >
                           DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
@@ -12763,7 +12763,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                   data-testid="TransactionRowAddressing__container"
                 >
                   <div
-                    class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-1qplu6d"
+                    class="!flex h-[21px] w-12 items-center justify-center rounded py-[3px] css-1qplu6d"
                     color="danger-bg"
                     data-testid="TransactionRowAddressing__label"
                   >
@@ -12791,7 +12791,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                         class="relative grow leading-[17px] sm:leading-5 text-left"
                       >
                         <span
-                          class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold text-sm absolute w-full"
+                          class="no-ligatures min-w-0 overflow-hidden leading-[17px] sm:leading-5 text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold text-sm absolute w-full"
                           data-testid="Address__address"
                         >
                           DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
@@ -13154,7 +13154,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                   data-testid="TransactionRowAddressing__container"
                 >
                   <div
-                    class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-6yoktf"
+                    class="!flex h-[21px] w-12 items-center justify-center rounded py-[3px] css-6yoktf"
                     color="success-bg"
                     data-testid="TransactionRowAddressing__label"
                   >
@@ -13171,7 +13171,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                         class="relative grow leading-[17px] sm:leading-5 text-left"
                       >
                         <span
-                          class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
+                          class="no-ligatures min-w-0 overflow-hidden leading-[17px] sm:leading-5 text-theme-text font-semibold text-sm absolute w-full"
                           data-testid="Address__address"
                         >
                           DK1f5frUPTNqhFxoyDUHwN7VC2B4Uzhpmy
@@ -13318,7 +13318,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                   data-testid="TransactionRowAddressing__container"
                 >
                   <div
-                    class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-1qplu6d"
+                    class="!flex h-[21px] w-12 items-center justify-center rounded py-[3px] css-1qplu6d"
                     color="danger-bg"
                     data-testid="TransactionRowAddressing__label"
                   >
@@ -13346,7 +13346,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                         class="relative grow leading-[17px] sm:leading-5 text-left"
                       >
                         <span
-                          class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold text-sm absolute w-full"
+                          class="no-ligatures min-w-0 overflow-hidden leading-[17px] sm:leading-5 text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold text-sm absolute w-full"
                           data-testid="Address__address"
                         >
                           DPKAyxsa7s9K3kQ5av8wwn9JY9a5ezxh4g
@@ -13493,7 +13493,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                   data-testid="TransactionRowAddressing__container"
                 >
                   <div
-                    class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-6yoktf"
+                    class="!flex h-[21px] w-12 items-center justify-center rounded py-[3px] css-6yoktf"
                     color="success-bg"
                     data-testid="TransactionRowAddressing__label"
                   >
@@ -13510,7 +13510,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                         class="relative grow leading-[17px] sm:leading-5 text-left"
                       >
                         <span
-                          class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
+                          class="no-ligatures min-w-0 overflow-hidden leading-[17px] sm:leading-5 text-theme-text font-semibold text-sm absolute w-full"
                           data-testid="Address__address"
                         >
                           DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
@@ -13657,7 +13657,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                   data-testid="TransactionRowAddressing__container"
                 >
                   <div
-                    class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-6yoktf"
+                    class="!flex h-[21px] w-12 items-center justify-center rounded py-[3px] css-6yoktf"
                     color="success-bg"
                     data-testid="TransactionRowAddressing__label"
                   >
@@ -13674,7 +13674,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                         class="relative grow leading-[17px] sm:leading-5 text-left"
                       >
                         <span
-                          class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
+                          class="no-ligatures min-w-0 overflow-hidden leading-[17px] sm:leading-5 text-theme-text font-semibold text-sm absolute w-full"
                           data-testid="Address__address"
                         >
                           DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
@@ -13821,7 +13821,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                   data-testid="TransactionRowAddressing__container"
                 >
                   <div
-                    class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-6yoktf"
+                    class="!flex h-[21px] w-12 items-center justify-center rounded py-[3px] css-6yoktf"
                     color="success-bg"
                     data-testid="TransactionRowAddressing__label"
                   >
@@ -13838,7 +13838,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                         class="relative grow leading-[17px] sm:leading-5 text-left"
                       >
                         <span
-                          class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
+                          class="no-ligatures min-w-0 overflow-hidden leading-[17px] sm:leading-5 text-theme-text font-semibold text-sm absolute w-full"
                           data-testid="Address__address"
                         >
                           DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
@@ -13985,7 +13985,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                   data-testid="TransactionRowAddressing__container"
                 >
                   <div
-                    class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-6yoktf"
+                    class="!flex h-[21px] w-12 items-center justify-center rounded py-[3px] css-6yoktf"
                     color="success-bg"
                     data-testid="TransactionRowAddressing__label"
                   >
@@ -14002,7 +14002,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                         class="relative grow leading-[17px] sm:leading-5 text-left"
                       >
                         <span
-                          class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
+                          class="no-ligatures min-w-0 overflow-hidden leading-[17px] sm:leading-5 text-theme-text font-semibold text-sm absolute w-full"
                           data-testid="Address__address"
                         >
                           DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
@@ -14149,7 +14149,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                   data-testid="TransactionRowAddressing__container"
                 >
                   <div
-                    class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-6yoktf"
+                    class="!flex h-[21px] w-12 items-center justify-center rounded py-[3px] css-6yoktf"
                     color="success-bg"
                     data-testid="TransactionRowAddressing__label"
                   >
@@ -14166,7 +14166,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                         class="relative grow leading-[17px] sm:leading-5 text-left"
                       >
                         <span
-                          class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
+                          class="no-ligatures min-w-0 overflow-hidden leading-[17px] sm:leading-5 text-theme-text font-semibold text-sm absolute w-full"
                           data-testid="Address__address"
                         >
                           DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
@@ -14313,7 +14313,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                   data-testid="TransactionRowAddressing__container"
                 >
                   <div
-                    class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-6yoktf"
+                    class="!flex h-[21px] w-12 items-center justify-center rounded py-[3px] css-6yoktf"
                     color="success-bg"
                     data-testid="TransactionRowAddressing__label"
                   >
@@ -14330,7 +14330,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                         class="relative grow leading-[17px] sm:leading-5 text-left"
                       >
                         <span
-                          class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
+                          class="no-ligatures min-w-0 overflow-hidden leading-[17px] sm:leading-5 text-theme-text font-semibold text-sm absolute w-full"
                           data-testid="Address__address"
                         >
                           DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
@@ -14477,7 +14477,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                   data-testid="TransactionRowAddressing__container"
                 >
                   <div
-                    class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-6yoktf"
+                    class="!flex h-[21px] w-12 items-center justify-center rounded py-[3px] css-6yoktf"
                     color="success-bg"
                     data-testid="TransactionRowAddressing__label"
                   >
@@ -14494,7 +14494,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                         class="relative grow leading-[17px] sm:leading-5 text-left"
                       >
                         <span
-                          class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
+                          class="no-ligatures min-w-0 overflow-hidden leading-[17px] sm:leading-5 text-theme-text font-semibold text-sm absolute w-full"
                           data-testid="Address__address"
                         >
                           DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
@@ -14641,7 +14641,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                   data-testid="TransactionRowAddressing__container"
                 >
                   <div
-                    class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-1qplu6d"
+                    class="!flex h-[21px] w-12 items-center justify-center rounded py-[3px] css-1qplu6d"
                     color="danger-bg"
                     data-testid="TransactionRowAddressing__label"
                   >
@@ -14669,7 +14669,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                         class="relative grow leading-[17px] sm:leading-5 text-left"
                       >
                         <span
-                          class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold text-sm absolute w-full"
+                          class="no-ligatures min-w-0 overflow-hidden leading-[17px] sm:leading-5 text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold text-sm absolute w-full"
                           data-testid="Address__address"
                         >
                           DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2

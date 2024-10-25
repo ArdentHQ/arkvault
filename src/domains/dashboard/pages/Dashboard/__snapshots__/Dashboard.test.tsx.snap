@@ -1617,7 +1617,7 @@ exports[`Dashboard > should render 1`] = `
                             data-testid="TransactionRowAddressing__container"
                           >
                             <div
-                              class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-6yoktf"
+                              class="!flex h-[21px] w-12 items-center justify-center rounded py-[3px] css-6yoktf"
                               color="success-bg"
                               data-testid="TransactionRowAddressing__label"
                             >
@@ -1634,7 +1634,7 @@ exports[`Dashboard > should render 1`] = `
                                   class="relative grow leading-[17px] sm:leading-5 text-left"
                                 >
                                   <span
-                                    class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
+                                    class="no-ligatures min-w-0 overflow-hidden leading-[17px] sm:leading-5 text-theme-text font-semibold text-sm absolute w-full"
                                     data-testid="Address__address"
                                   >
                                     D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -1781,7 +1781,7 @@ exports[`Dashboard > should render 1`] = `
                             data-testid="TransactionRowAddressing__container"
                           >
                             <div
-                              class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-6yoktf"
+                              class="!flex h-[21px] w-12 items-center justify-center rounded py-[3px] css-6yoktf"
                               color="success-bg"
                               data-testid="TransactionRowAddressing__label"
                             >
@@ -1798,7 +1798,7 @@ exports[`Dashboard > should render 1`] = `
                                   class="relative grow leading-[17px] sm:leading-5 text-left"
                                 >
                                   <span
-                                    class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
+                                    class="no-ligatures min-w-0 overflow-hidden leading-[17px] sm:leading-5 text-theme-text font-semibold text-sm absolute w-full"
                                     data-testid="Address__address"
                                   >
                                     D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -1945,7 +1945,7 @@ exports[`Dashboard > should render 1`] = `
                             data-testid="TransactionRowAddressing__container"
                           >
                             <div
-                              class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-6yoktf"
+                              class="!flex h-[21px] w-12 items-center justify-center rounded py-[3px] css-6yoktf"
                               color="success-bg"
                               data-testid="TransactionRowAddressing__label"
                             >
@@ -1962,7 +1962,7 @@ exports[`Dashboard > should render 1`] = `
                                   class="relative grow leading-[17px] sm:leading-5 text-left"
                                 >
                                   <span
-                                    class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
+                                    class="no-ligatures min-w-0 overflow-hidden leading-[17px] sm:leading-5 text-theme-text font-semibold text-sm absolute w-full"
                                     data-testid="Address__address"
                                   >
                                     D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -2109,7 +2109,7 @@ exports[`Dashboard > should render 1`] = `
                             data-testid="TransactionRowAddressing__container"
                           >
                             <div
-                              class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-6yoktf"
+                              class="!flex h-[21px] w-12 items-center justify-center rounded py-[3px] css-6yoktf"
                               color="success-bg"
                               data-testid="TransactionRowAddressing__label"
                             >
@@ -2126,7 +2126,7 @@ exports[`Dashboard > should render 1`] = `
                                   class="relative grow leading-[17px] sm:leading-5 text-left"
                                 >
                                   <span
-                                    class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
+                                    class="no-ligatures min-w-0 overflow-hidden leading-[17px] sm:leading-5 text-theme-text font-semibold text-sm absolute w-full"
                                     data-testid="Address__address"
                                   >
                                     D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
