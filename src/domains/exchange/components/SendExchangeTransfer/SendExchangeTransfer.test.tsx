@@ -300,15 +300,11 @@ describe("SendExchangeTransfer", () => {
 		vi.spyOn(wallet, "isLedger").mockImplementation(() => true);
 
 		const ledgerErrorMock = mockLedgerTransportError("Access denied to use Ledger device");
-		vi.spyOn(profile.wallets(), "findByCoinWithNetwork").mockReturnValue([wallet])
+		vi.spyOn(profile.wallets(), "findByCoinWithNetwork").mockReturnValue([wallet]);
 
 		renderComponent();
 
-		await expect(
-			screen.findByText(
-				t("WALLETS.MODAL_LEDGER_WALLET.DEVICE_NOT_AVAILABLE"),
-			),
-		).resolves.toBeVisible();
+		await expect(screen.findByText(t("WALLETS.MODAL_LEDGER_WALLET.DEVICE_NOT_AVAILABLE"))).resolves.toBeVisible();
 
 		ledgerErrorMock.mockRestore();
 	});
@@ -333,19 +329,14 @@ describe("SendExchangeTransfer", () => {
 			};
 		});
 
-		vi.spyOn(profile.wallets(), "findByCoinWithNetwork").mockReturnValue([wallet])
+		vi.spyOn(profile.wallets(), "findByCoinWithNetwork").mockReturnValue([wallet]);
 		mockNanoXTransport();
 
-		process.env.REACT_APP_IS_UNIT = null
-		window.navigator.usb = undefined
+		process.env.REACT_APP_IS_UNIT = null;
+		window.navigator.usb = undefined;
 
 		renderComponent();
 
-		await expect(
-			screen.findByText(
-				t("WALLETS.MODAL_LEDGER_WALLET.COMPATIBILITY_ERROR"),
-			),
-		).resolves.toBeVisible();
+		await expect(screen.findByText(t("WALLETS.MODAL_LEDGER_WALLET.COMPATIBILITY_ERROR"))).resolves.toBeVisible();
 	});
-
 });
