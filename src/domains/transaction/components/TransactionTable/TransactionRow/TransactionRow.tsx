@@ -104,6 +104,7 @@ export const TransactionRow = memo(
 						<AmountLabel
 							value={transaction.amount() + transaction.fee()}
 							isNegative={transaction.isSent()}
+							hideSign={transaction.isTransfer() && transaction.sender() === transaction.recipient()}
 							ticker={transaction.wallet().currency()}
 							isCompact
 							className="h-[21px]"

@@ -8,19 +8,32 @@ import React, { useEffect, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
 import cn from "classnames";
 import { extractVotingData } from "@/domains/transaction/components/VoteTransactionType/helpers";
+import {ColorType} from "@/app/components/Label/Label.styles";
 
-export const TransactionRowLabel = ({ isNegative }: { isNegative: boolean }) => {
+export const TransactionRowLabel = ({ direction }: { direction: "sent" | "received" | "return" }) => {
 	const { t } = useTranslation();
+
+	const color: Record<typeof direction, ColorType> = {
+		"received": "success-bg",
+		"return": "neutral",
+		"sent": "danger-bg",
+	}
+
+	const title: Record<typeof direction, string> = {
+		"received": t("COMMON.FROM"),
+		"return": t("COMMON.RETURN"),
+		"sent": t("COMMON.TO"),
+	}
 
 	return (
 		<Label
-			color={isNegative ? "danger-bg" : "success-bg"}
+			color={color[direction]}
 			size="xs"
 			noBorder
-			className="!flex h-[21px] w-10 items-center justify-center rounded py-[3px]"
+			className="!flex h-[21px] w-12 items-center justify-center rounded py-[3px]"
 			data-testid="TransactionRowAddressing__label"
 		>
-			{isNegative ? t("COMMON.TO") : t("COMMON.FROM")}
+			{title[direction]}
 		</Label>
 	);
 };
@@ -38,6 +51,8 @@ export const TransactionRowAddressing = ({
 		!transaction.isMultiSignatureRegistration(),
 	].every(Boolean);
 	const isNegative = [isMusigTransfer, transaction.isSent()].some(Boolean);
+
+	let direction = isNegative ? "sent" : "received";
 
 	const { env } = useEnvironmentContext();
 	const { t } = useTranslation();
@@ -74,7 +89,7 @@ export const TransactionRowAddressing = ({
 	if (transaction.isMultiPayment()) {
 		return (
 			<div className="flex flex-row gap-2" data-testid="TransactionRowAddressing__multipayment">
-				<TransactionRowLabel isNegative={isNegative} />
+				<TransactionRowLabel direction={direction} />
 				<span className="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200">
 					{t("COMMON.MULTIPLE")}{" "}
 					<span className="text-theme-secondary-700 dark:text-theme-secondary-500">
@@ -88,7 +103,7 @@ export const TransactionRowAddressing = ({
 	if (transaction.isVoteCombination() || transaction.isVote() || transaction.isUnvote()) {
 		return (
 			<div className="flex flex-row gap-2" data-testid="TransactionRowAddressing__vote">
-				<TransactionRowLabel isNegative={isNegative} />
+				<TransactionRowLabel direction={direction} />
 				<span className="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200">
 					{t("COMMON.CONTRACT")}{" "}
 					<span className="text-theme-secondary-700 dark:text-theme-secondary-500">
@@ -106,7 +121,7 @@ export const TransactionRowAddressing = ({
 	if (transaction.isMultiSignatureRegistration() || transaction.isIpfs()) {
 		return (
 			<div className="flex flex-row gap-2" data-testid="TransactionRowAddressing__musig_registration">
-				<TransactionRowLabel isNegative />
+				<TransactionRowLabel direction={direction} />
 				<span className="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200">
 					{t("COMMON.CONTRACT")}
 				</span>
@@ -117,7 +132,7 @@ export const TransactionRowAddressing = ({
 	if (transaction.isDelegateRegistration()) {
 		return (
 			<div className="flex flex-row gap-2" data-testid="TransactionRowAddressing__delegate_registration">
-				<TransactionRowLabel isNegative={isNegative} />
+				<TransactionRowLabel direction={direction} />
 				<span className="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200">
 					{t("COMMON.CONTRACT")}{" "}
 					<span className="text-theme-secondary-700 dark:text-theme-secondary-500">
@@ -131,7 +146,7 @@ export const TransactionRowAddressing = ({
 	if (transaction.isDelegateResignation()) {
 		return (
 			<div className="flex flex-row gap-2" data-testid="TransactionRowAddressing__delegate_resignation">
-				<TransactionRowLabel isNegative={isNegative} />
+				<TransactionRowLabel direction={direction} />
 				<span className="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200">
 					{t("COMMON.CONTRACT")}{" "}
 					<span className="text-theme-secondary-700 dark:text-theme-secondary-500">
@@ -142,9 +157,13 @@ export const TransactionRowAddressing = ({
 		);
 	}
 
+	direction =  transaction.sender() === transaction.recipient()
+		? "return"
+		: (isNegative ? "sent" : "received");
+
 	return (
 		<div className="flex flex-row gap-2" data-testid="TransactionRowAddressing__container">
-			<TransactionRowLabel isNegative={isNegative} />
+			<TransactionRowLabel direction={direction} />
 			<div
 				className={cn({
 					"w-50 sm:w-30": !alias,
@@ -156,7 +175,7 @@ export const TransactionRowAddressing = ({
 					walletName={alias}
 					address={isNegative ? transaction.recipient() : transaction.sender()}
 					truncateOnTable
-					addressClass={cn({
+					addressClass={cn("leading-[17px] sm:leading-5", {
 						"text-theme-secondary-700 dark:text-theme-secondary-500": alias,
 						"text-theme-text": !alias,
 					})}
