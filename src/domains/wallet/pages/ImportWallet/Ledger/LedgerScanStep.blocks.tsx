@@ -118,7 +118,7 @@ export const LedgerLoaderOverlay = ({ children, className }: { className?: strin
 		<div className="absolute inset-0 flex h-full w-full items-center justify-center space-x-3 text-theme-secondary-700 dark:text-white">
 			{children && (
 				<div>
-					<Spinner size="sm" width={2} />
+					<Spinner size="sm" width={3} />
 				</div>
 			)}
 			<div>{children}</div>
