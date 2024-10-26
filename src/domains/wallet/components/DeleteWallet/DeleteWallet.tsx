@@ -34,6 +34,7 @@ export const DeleteWallet = ({ onClose, onCancel, onDelete, wallet }: DeleteWall
 					showUserIcon={false}
 					profile={wallet.profile()}
 					disabled={true}
+					showWalletAvatar={false}
 				/>
 			</FormField>
 		</DeleteResource>
