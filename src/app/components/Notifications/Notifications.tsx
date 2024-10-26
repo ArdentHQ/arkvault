@@ -32,8 +32,8 @@ export const Notifications = ({ profile, onTransactionClick, hideDropdown }: Not
 					<EmptyBlock className="py-4">
 						<span>{t("COMMON.NOTIFICATIONS.EMPTY")}</span>
 					</EmptyBlock>
-					<div className="w-full mb-2 mt-8">
-					<Image name="EmptyNotifications" className="mx-auto w-full sm:w-64" />
+					<div className="mb-2 mt-8 w-full">
+						<Image name="EmptyNotifications" className="mx-auto w-full sm:w-64" />
 					</div>
 				</div>
 			)}
