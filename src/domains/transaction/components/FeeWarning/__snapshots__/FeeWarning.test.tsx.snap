@@ -5,7 +5,7 @@ exports[`FeeWarning > should not render if not open 1`] = `<DocumentFragment />`
 exports[`FeeWarning > should render a warning for a fee that is too HIGH 1`] = `
 <DocumentFragment>
   <div
-    class="overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900-rgba bg-opacity-60 dark:bg-black-rgba dark:bg-opacity-80 md:py-20"
+    class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900-rgba bg-opacity-60 dark:bg-black-rgba dark:bg-opacity-80 md:py-20"
     data-testid="Modal__overlay"
   >
     <div
@@ -218,7 +218,7 @@ exports[`FeeWarning > should render a warning for a fee that is too HIGH 1`] = `
 exports[`FeeWarning > should render a warning for a fee that is too LOW 1`] = `
 <DocumentFragment>
   <div
-    class="overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900-rgba bg-opacity-60 dark:bg-black-rgba dark:bg-opacity-80 md:py-20"
+    class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900-rgba bg-opacity-60 dark:bg-black-rgba dark:bg-opacity-80 md:py-20"
     data-testid="Modal__overlay"
   >
     <div
