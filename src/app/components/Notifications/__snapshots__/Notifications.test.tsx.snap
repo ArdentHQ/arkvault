@@ -322,7 +322,7 @@ exports[`Notifications > should render with empty notifications 1`] = `
         </div>
       </div>
       <div
-        class="w-full mb-2 mt-8"
+        class="mb-2 mt-8 w-full"
       >
         <svg
           class="mx-auto w-full sm:w-64"
