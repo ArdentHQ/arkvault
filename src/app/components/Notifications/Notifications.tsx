@@ -30,9 +30,11 @@ export const Notifications = ({ profile, onTransactionClick, hideDropdown }: Not
 			{transactions.length === 0 && (
 				<div className="px-6 pb-8 pt-4">
 					<EmptyBlock className="py-4">
-						<span className="whitespace-nowrap">{t("COMMON.NOTIFICATIONS.EMPTY")}</span>
+						<span>{t("COMMON.NOTIFICATIONS.EMPTY")}</span>
 					</EmptyBlock>
-					<Image name="EmptyNotifications" className="mx-auto mb-2 mt-8 w-64" />
+					<div className="w-full mb-2 mt-8">
+					<Image name="EmptyNotifications" className="mx-auto w-full sm:w-64" />
+					</div>
 				</div>
 			)}
 
