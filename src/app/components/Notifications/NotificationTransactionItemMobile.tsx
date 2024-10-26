@@ -34,7 +34,7 @@ export const NotificationTransactionItemMobile = ({
 				<td className="flex-col space-y-4 px-6 py-4" data-testid="NotificationTransactionItemMobile">
 					<RowWrapper>
 						<RowLabel>{t("COMMON.ADDRESS")}</RowLabel>
-						<div className="w-2/3">
+						<div className="w-40 xs:w-50 min-[480px]:w-2/3 sm:w-2/3">
 							<Address address={transaction.sender()} walletName={alias} />
 						</div>
 					</RowWrapper>
