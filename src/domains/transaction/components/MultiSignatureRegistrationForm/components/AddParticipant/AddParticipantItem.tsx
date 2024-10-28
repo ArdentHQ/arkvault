@@ -40,8 +40,7 @@ export const AddParticipantItem: VFC<{
 									onClick={() => onDelete(index)}
 									data-testid="AddParticipantItem--mobile-deleteButton"
 									size="icon"
-									sizeClassName="p-0"
-									className="text-theme-secondary-700 dark:text-theme-secondary-500"
+									className="text-theme-secondary-700 dark:text-theme-secondary-500 p-0 space-x-0"
 									variant="transparent"
 								>
 									<Icon name="Trash" size="lg" />
