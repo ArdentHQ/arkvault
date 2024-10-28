@@ -8,6 +8,7 @@ type TableCellProperties = {
 	className?: string;
 	innerClassName?: string;
 	children: React.ReactNode;
+	isSelected?: boolean;
 } & Omit<React.HTMLProps<any>, "size">;
 
 const TableCellInnerWrapper = ({ ...props }) => <div {...props} />;
@@ -18,10 +19,11 @@ export const TableCell = ({
 	className,
 	innerClassName,
 	children,
+	isSelected = false,
 	...properties
 }: TableCellProperties) => (
 	<td className={className} {...properties}>
-		<TableCellInnerWrapper className={twMerge(getStyles({ size, variant }), innerClassName)}>
+		<TableCellInnerWrapper className={twMerge(getStyles({ isSelected, size, variant }), innerClassName)}>
 			{children}
 		</TableCellInnerWrapper>
 	</td>

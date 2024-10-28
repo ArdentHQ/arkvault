@@ -512,7 +512,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
               </td>
               <td>
                 <div
-                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
+                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 space-x-4"
                 >
                   <div
                     class="flex flex-row gap-2"
@@ -664,7 +664,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
               </td>
               <td>
                 <div
-                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
+                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 space-x-4"
                 >
                   <div
                     class="flex flex-row gap-2"
@@ -816,7 +816,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
               </td>
               <td>
                 <div
-                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
+                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 space-x-4"
                 >
                   <div
                     class="flex flex-row gap-2"
@@ -968,7 +968,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
               </td>
               <td>
                 <div
-                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
+                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 space-x-4"
                 >
                   <div
                     class="flex flex-row gap-2"
@@ -1120,7 +1120,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
               </td>
               <td>
                 <div
-                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
+                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 space-x-4"
                 >
                   <div
                     class="flex flex-row gap-2"
@@ -1272,7 +1272,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
               </td>
               <td>
                 <div
-                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
+                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 space-x-4"
                 >
                   <div
                     class="flex flex-row gap-2"
@@ -1424,7 +1424,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
               </td>
               <td>
                 <div
-                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
+                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 space-x-4"
                 >
                   <div
                     class="flex flex-row gap-2"
@@ -1576,7 +1576,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
               </td>
               <td>
                 <div
-                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
+                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 space-x-4"
                 >
                   <div
                     class="flex flex-row gap-2"
@@ -1728,7 +1728,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
               </td>
               <td>
                 <div
-                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
+                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 space-x-4"
                 >
                   <div
                     class="flex flex-row gap-2"
@@ -1875,7 +1875,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
               </td>
               <td>
                 <div
-                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
+                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 space-x-4"
                 >
                   <div
                     class="flex flex-row gap-2"
@@ -2022,7 +2022,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
               </td>
               <td>
                 <div
-                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
+                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 space-x-4"
                 >
                   <div
                     class="flex flex-row gap-2"
@@ -2169,7 +2169,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
               </td>
               <td>
                 <div
-                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
+                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 space-x-4"
                 >
                   <div
                     class="flex flex-row gap-2"
@@ -2316,7 +2316,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
               </td>
               <td>
                 <div
-                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
+                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 space-x-4"
                 >
                   <div
                     class="flex flex-row gap-2"
@@ -2480,7 +2480,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
               </td>
               <td>
                 <div
-                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
+                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 space-x-4"
                 >
                   <div
                     class="flex flex-row gap-2"
@@ -2644,7 +2644,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
               </td>
               <td>
                 <div
-                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
+                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 space-x-4"
                 >
                   <div
                     class="flex flex-row gap-2"
@@ -2808,7 +2808,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
               </td>
               <td>
                 <div
-                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
+                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 space-x-4"
                 >
                   <div
                     class="flex flex-row gap-2"
@@ -2972,7 +2972,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
               </td>
               <td>
                 <div
-                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
+                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 space-x-4"
                 >
                   <div
                     class="flex flex-row gap-2"
@@ -3136,7 +3136,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
               </td>
               <td>
                 <div
-                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
+                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 space-x-4"
                 >
                   <div
                     class="flex flex-row gap-2"
@@ -3300,7 +3300,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
               </td>
               <td>
                 <div
-                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
+                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 space-x-4"
                 >
                   <div
                     class="flex flex-row gap-2"
@@ -3464,7 +3464,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
               </td>
               <td>
                 <div
-                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
+                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 space-x-4"
                 >
                   <div
                     class="flex flex-row gap-2"
@@ -3628,7 +3628,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
               </td>
               <td>
                 <div
-                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
+                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 space-x-4"
                 >
                   <div
                     class="flex flex-row gap-2"
@@ -3792,7 +3792,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
               </td>
               <td>
                 <div
-                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
+                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 space-x-4"
                 >
                   <div
                     class="flex flex-row gap-2"
@@ -3956,7 +3956,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
               </td>
               <td>
                 <div
-                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
+                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 space-x-4"
                 >
                   <div
                     class="flex flex-row gap-2"
@@ -4120,7 +4120,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
               </td>
               <td>
                 <div
-                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
+                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 space-x-4"
                 >
                   <div
                     class="flex flex-row gap-2"
@@ -4284,7 +4284,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
               </td>
               <td>
                 <div
-                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
+                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 space-x-4"
                 >
                   <div
                     class="flex flex-row gap-2"
@@ -4448,7 +4448,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
               </td>
               <td>
                 <div
-                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
+                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 space-x-4"
                 >
                   <div
                     class="flex flex-row gap-2"
@@ -4612,7 +4612,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
               </td>
               <td>
                 <div
-                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
+                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 space-x-4"
                 >
                   <div
                     class="flex flex-row gap-2"
@@ -4776,7 +4776,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
               </td>
               <td>
                 <div
-                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
+                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 space-x-4"
                 >
                   <div
                     class="flex flex-row gap-2"
@@ -4940,7 +4940,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
               </td>
               <td>
                 <div
-                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
+                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 space-x-4"
                 >
                   <div
                     class="flex flex-row gap-2"
@@ -5104,7 +5104,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
               </td>
               <td>
                 <div
-                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
+                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 space-x-4"
                 >
                   <div
                     class="flex flex-row gap-2"
@@ -5268,7 +5268,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
               </td>
               <td>
                 <div
-                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
+                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 space-x-4"
                 >
                   <div
                     class="flex flex-row gap-2"
@@ -5432,7 +5432,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
               </td>
               <td>
                 <div
-                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
+                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 space-x-4"
                 >
                   <div
                     class="flex flex-row gap-2"
@@ -5596,7 +5596,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
               </td>
               <td>
                 <div
-                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
+                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 space-x-4"
                 >
                   <div
                     class="flex flex-row gap-2"
@@ -5760,7 +5760,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
               </td>
               <td>
                 <div
-                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
+                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 space-x-4"
                 >
                   <div
                     class="flex flex-row gap-2"
@@ -5924,7 +5924,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
               </td>
               <td>
                 <div
-                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
+                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 space-x-4"
                 >
                   <div
                     class="flex flex-row gap-2"
@@ -6088,7 +6088,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
               </td>
               <td>
                 <div
-                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
+                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 space-x-4"
                 >
                   <div
                     class="flex flex-row gap-2"
@@ -6252,7 +6252,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
               </td>
               <td>
                 <div
-                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
+                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 space-x-4"
                 >
                   <div
                     class="flex flex-row gap-2"
@@ -6416,7 +6416,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
               </td>
               <td>
                 <div
-                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
+                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 space-x-4"
                 >
                   <div
                     class="flex flex-row gap-2"
@@ -6580,7 +6580,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
               </td>
               <td>
                 <div
-                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
+                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 space-x-4"
                 >
                   <div
                     class="flex flex-row gap-2"
@@ -6744,7 +6744,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
               </td>
               <td>
                 <div
-                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
+                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 space-x-4"
                 >
                   <div
                     class="flex flex-row gap-2"
@@ -6908,7 +6908,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
               </td>
               <td>
                 <div
-                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
+                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 space-x-4"
                 >
                   <div
                     class="flex flex-row gap-2"
@@ -7072,7 +7072,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
               </td>
               <td>
                 <div
-                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
+                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 space-x-4"
                 >
                   <div
                     class="flex flex-row gap-2"
@@ -7236,7 +7236,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
               </td>
               <td>
                 <div
-                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
+                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 space-x-4"
                 >
                   <div
                     class="flex flex-row gap-2"
@@ -7400,7 +7400,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
               </td>
               <td>
                 <div
-                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
+                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 space-x-4"
                 >
                   <div
                     class="flex flex-row gap-2"
@@ -7564,7 +7564,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
               </td>
               <td>
                 <div
-                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
+                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 space-x-4"
                 >
                   <div
                     class="flex flex-row gap-2"
@@ -7728,7 +7728,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
               </td>
               <td>
                 <div
-                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
+                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 space-x-4"
                 >
                   <div
                     class="flex flex-row gap-2"
@@ -7892,7 +7892,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
               </td>
               <td>
                 <div
-                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
+                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 space-x-4"
                 >
                   <div
                     class="flex flex-row gap-2"
@@ -8056,7 +8056,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
               </td>
               <td>
                 <div
-                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
+                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 space-x-4"
                 >
                   <div
                     class="flex flex-row gap-2"
@@ -8220,7 +8220,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
               </td>
               <td>
                 <div
-                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
+                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 space-x-4"
                 >
                   <div
                     class="flex flex-row gap-2"
@@ -8384,7 +8384,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
               </td>
               <td>
                 <div
-                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
+                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 space-x-4"
                 >
                   <div
                     class="flex flex-row gap-2"
@@ -8548,7 +8548,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
               </td>
               <td>
                 <div
-                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
+                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 space-x-4"
                 >
                   <div
                     class="flex flex-row gap-2"
@@ -8712,7 +8712,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
               </td>
               <td>
                 <div
-                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
+                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 space-x-4"
                 >
                   <div
                     class="flex flex-row gap-2"
@@ -8876,7 +8876,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
               </td>
               <td>
                 <div
-                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
+                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 space-x-4"
                 >
                   <div
                     class="flex flex-row gap-2"
@@ -9028,7 +9028,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
               </td>
               <td>
                 <div
-                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
+                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 space-x-4"
                 >
                   <div
                     class="flex flex-row gap-2"
@@ -9180,7 +9180,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
               </td>
               <td>
                 <div
-                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
+                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 space-x-4"
                 >
                   <div
                     class="flex flex-row gap-2"
@@ -9332,7 +9332,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
               </td>
               <td>
                 <div
-                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
+                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 space-x-4"
                 >
                   <div
                     class="flex flex-row gap-2"
@@ -9484,7 +9484,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
               </td>
               <td>
                 <div
-                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
+                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 space-x-4"
                 >
                   <div
                     class="flex flex-row gap-2"
@@ -9648,7 +9648,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
               </td>
               <td>
                 <div
-                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
+                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 space-x-4"
                 >
                   <div
                     class="flex flex-row gap-2"
@@ -9812,7 +9812,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
               </td>
               <td>
                 <div
-                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
+                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 space-x-4"
                 >
                   <div
                     class="flex flex-row gap-2"
@@ -9976,7 +9976,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
               </td>
               <td>
                 <div
-                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
+                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 space-x-4"
                 >
                   <div
                     class="flex flex-row gap-2"
@@ -10601,7 +10601,7 @@ exports[`Transactions > should hide view more button when there are no next page
               </td>
               <td>
                 <div
-                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
+                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 space-x-4"
                 >
                   <div
                     class="flex flex-row gap-2"
@@ -10753,7 +10753,7 @@ exports[`Transactions > should hide view more button when there are no next page
               </td>
               <td>
                 <div
-                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
+                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 space-x-4"
                 >
                   <div
                     class="flex flex-row gap-2"
@@ -10905,7 +10905,7 @@ exports[`Transactions > should hide view more button when there are no next page
               </td>
               <td>
                 <div
-                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
+                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 space-x-4"
                 >
                   <div
                     class="flex flex-row gap-2"
@@ -11057,7 +11057,7 @@ exports[`Transactions > should hide view more button when there are no next page
               </td>
               <td>
                 <div
-                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
+                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 space-x-4"
                 >
                   <div
                     class="flex flex-row gap-2"
@@ -11209,7 +11209,7 @@ exports[`Transactions > should hide view more button when there are no next page
               </td>
               <td>
                 <div
-                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
+                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 space-x-4"
                 >
                   <div
                     class="flex flex-row gap-2"
@@ -11356,7 +11356,7 @@ exports[`Transactions > should hide view more button when there are no next page
               </td>
               <td>
                 <div
-                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
+                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 space-x-4"
                 >
                   <div
                     class="flex flex-row gap-2"
@@ -11503,7 +11503,7 @@ exports[`Transactions > should hide view more button when there are no next page
               </td>
               <td>
                 <div
-                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
+                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 space-x-4"
                 >
                   <div
                     class="flex flex-row gap-2"
@@ -11667,7 +11667,7 @@ exports[`Transactions > should hide view more button when there are no next page
               </td>
               <td>
                 <div
-                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
+                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 space-x-4"
                 >
                   <div
                     class="flex flex-row gap-2"
@@ -11831,7 +11831,7 @@ exports[`Transactions > should hide view more button when there are no next page
               </td>
               <td>
                 <div
-                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
+                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 space-x-4"
                 >
                   <div
                     class="flex flex-row gap-2"
@@ -11995,7 +11995,7 @@ exports[`Transactions > should hide view more button when there are no next page
               </td>
               <td>
                 <div
-                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
+                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 space-x-4"
                 >
                   <div
                     class="flex flex-row gap-2"
@@ -12159,7 +12159,7 @@ exports[`Transactions > should hide view more button when there are no next page
               </td>
               <td>
                 <div
-                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
+                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 space-x-4"
                 >
                   <div
                     class="flex flex-row gap-2"
@@ -12323,7 +12323,7 @@ exports[`Transactions > should hide view more button when there are no next page
               </td>
               <td>
                 <div
-                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
+                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 space-x-4"
                 >
                   <div
                     class="flex flex-row gap-2"
@@ -12487,7 +12487,7 @@ exports[`Transactions > should hide view more button when there are no next page
               </td>
               <td>
                 <div
-                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
+                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 space-x-4"
                 >
                   <div
                     class="flex flex-row gap-2"
@@ -12651,7 +12651,7 @@ exports[`Transactions > should hide view more button when there are no next page
               </td>
               <td>
                 <div
-                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
+                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 space-x-4"
                 >
                   <div
                     class="flex flex-row gap-2"
@@ -12815,7 +12815,7 @@ exports[`Transactions > should hide view more button when there are no next page
               </td>
               <td>
                 <div
-                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
+                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 space-x-4"
                 >
                   <div
                     class="flex flex-row gap-2"
@@ -12979,7 +12979,7 @@ exports[`Transactions > should hide view more button when there are no next page
               </td>
               <td>
                 <div
-                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
+                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 space-x-4"
                 >
                   <div
                     class="flex flex-row gap-2"
@@ -13143,7 +13143,7 @@ exports[`Transactions > should hide view more button when there are no next page
               </td>
               <td>
                 <div
-                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
+                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 space-x-4"
                 >
                   <div
                     class="flex flex-row gap-2"
@@ -13307,7 +13307,7 @@ exports[`Transactions > should hide view more button when there are no next page
               </td>
               <td>
                 <div
-                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
+                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 space-x-4"
                 >
                   <div
                     class="flex flex-row gap-2"
@@ -13471,7 +13471,7 @@ exports[`Transactions > should hide view more button when there are no next page
               </td>
               <td>
                 <div
-                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
+                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 space-x-4"
                 >
                   <div
                     class="flex flex-row gap-2"
@@ -13635,7 +13635,7 @@ exports[`Transactions > should hide view more button when there are no next page
               </td>
               <td>
                 <div
-                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
+                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 space-x-4"
                 >
                   <div
                     class="flex flex-row gap-2"
@@ -13799,7 +13799,7 @@ exports[`Transactions > should hide view more button when there are no next page
               </td>
               <td>
                 <div
-                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
+                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 space-x-4"
                 >
                   <div
                     class="flex flex-row gap-2"
@@ -13963,7 +13963,7 @@ exports[`Transactions > should hide view more button when there are no next page
               </td>
               <td>
                 <div
-                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
+                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 space-x-4"
                 >
                   <div
                     class="flex flex-row gap-2"
@@ -14127,7 +14127,7 @@ exports[`Transactions > should hide view more button when there are no next page
               </td>
               <td>
                 <div
-                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
+                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 space-x-4"
                 >
                   <div
                     class="flex flex-row gap-2"
@@ -14291,7 +14291,7 @@ exports[`Transactions > should hide view more button when there are no next page
               </td>
               <td>
                 <div
-                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
+                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 space-x-4"
                 >
                   <div
                     class="flex flex-row gap-2"
@@ -14455,7 +14455,7 @@ exports[`Transactions > should hide view more button when there are no next page
               </td>
               <td>
                 <div
-                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
+                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 space-x-4"
                 >
                   <div
                     class="flex flex-row gap-2"
@@ -14619,7 +14619,7 @@ exports[`Transactions > should hide view more button when there are no next page
               </td>
               <td>
                 <div
-                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
+                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 space-x-4"
                 >
                   <div
                     class="flex flex-row gap-2"
@@ -14783,7 +14783,7 @@ exports[`Transactions > should hide view more button when there are no next page
               </td>
               <td>
                 <div
-                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
+                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 space-x-4"
                 >
                   <div
                     class="flex flex-row gap-2"
@@ -14935,7 +14935,7 @@ exports[`Transactions > should hide view more button when there are no next page
               </td>
               <td>
                 <div
-                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
+                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 space-x-4"
                 >
                   <div
                     class="flex flex-row gap-2"
@@ -15087,7 +15087,7 @@ exports[`Transactions > should hide view more button when there are no next page
               </td>
               <td>
                 <div
-                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
+                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 space-x-4"
                 >
                   <div
                     class="flex flex-row gap-2"
@@ -15251,7 +15251,7 @@ exports[`Transactions > should hide view more button when there are no next page
               </td>
               <td>
                 <div
-                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
+                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 space-x-4"
                 >
                   <div
                     class="flex flex-row gap-2"
@@ -15876,7 +15876,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
               </td>
               <td>
                 <div
-                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
+                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 space-x-4"
                 >
                   <div
                     class="flex flex-row gap-2"
@@ -16028,7 +16028,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
               </td>
               <td>
                 <div
-                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
+                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 space-x-4"
                 >
                   <div
                     class="flex flex-row gap-2"
@@ -16180,7 +16180,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
               </td>
               <td>
                 <div
-                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
+                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 space-x-4"
                 >
                   <div
                     class="flex flex-row gap-2"
@@ -16332,7 +16332,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
               </td>
               <td>
                 <div
-                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
+                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 space-x-4"
                 >
                   <div
                     class="flex flex-row gap-2"
@@ -16484,7 +16484,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
               </td>
               <td>
                 <div
-                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
+                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 space-x-4"
                 >
                   <div
                     class="flex flex-row gap-2"
@@ -16631,7 +16631,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
               </td>
               <td>
                 <div
-                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
+                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 space-x-4"
                 >
                   <div
                     class="flex flex-row gap-2"
@@ -16778,7 +16778,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
               </td>
               <td>
                 <div
-                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
+                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 space-x-4"
                 >
                   <div
                     class="flex flex-row gap-2"
@@ -16942,7 +16942,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
               </td>
               <td>
                 <div
-                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
+                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 space-x-4"
                 >
                   <div
                     class="flex flex-row gap-2"
@@ -17106,7 +17106,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
               </td>
               <td>
                 <div
-                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
+                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 space-x-4"
                 >
                   <div
                     class="flex flex-row gap-2"
@@ -17270,7 +17270,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
               </td>
               <td>
                 <div
-                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
+                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 space-x-4"
                 >
                   <div
                     class="flex flex-row gap-2"
@@ -17434,7 +17434,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
               </td>
               <td>
                 <div
-                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
+                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 space-x-4"
                 >
                   <div
                     class="flex flex-row gap-2"
@@ -17598,7 +17598,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
               </td>
               <td>
                 <div
-                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
+                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 space-x-4"
                 >
                   <div
                     class="flex flex-row gap-2"
@@ -17762,7 +17762,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
               </td>
               <td>
                 <div
-                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
+                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 space-x-4"
                 >
                   <div
                     class="flex flex-row gap-2"
@@ -17926,7 +17926,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
               </td>
               <td>
                 <div
-                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
+                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 space-x-4"
                 >
                   <div
                     class="flex flex-row gap-2"
@@ -18090,7 +18090,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
               </td>
               <td>
                 <div
-                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
+                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 space-x-4"
                 >
                   <div
                     class="flex flex-row gap-2"
@@ -18254,7 +18254,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
               </td>
               <td>
                 <div
-                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
+                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 space-x-4"
                 >
                   <div
                     class="flex flex-row gap-2"
@@ -18418,7 +18418,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
               </td>
               <td>
                 <div
-                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
+                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 space-x-4"
                 >
                   <div
                     class="flex flex-row gap-2"
@@ -18582,7 +18582,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
               </td>
               <td>
                 <div
-                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
+                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 space-x-4"
                 >
                   <div
                     class="flex flex-row gap-2"
@@ -18746,7 +18746,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
               </td>
               <td>
                 <div
-                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
+                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 space-x-4"
                 >
                   <div
                     class="flex flex-row gap-2"
@@ -18910,7 +18910,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
               </td>
               <td>
                 <div
-                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
+                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 space-x-4"
                 >
                   <div
                     class="flex flex-row gap-2"
@@ -19074,7 +19074,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
               </td>
               <td>
                 <div
-                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
+                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 space-x-4"
                 >
                   <div
                     class="flex flex-row gap-2"
@@ -19238,7 +19238,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
               </td>
               <td>
                 <div
-                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
+                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 space-x-4"
                 >
                   <div
                     class="flex flex-row gap-2"
@@ -19402,7 +19402,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
               </td>
               <td>
                 <div
-                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
+                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 space-x-4"
                 >
                   <div
                     class="flex flex-row gap-2"
@@ -19566,7 +19566,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
               </td>
               <td>
                 <div
-                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
+                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 space-x-4"
                 >
                   <div
                     class="flex flex-row gap-2"
@@ -19730,7 +19730,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
               </td>
               <td>
                 <div
-                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
+                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 space-x-4"
                 >
                   <div
                     class="flex flex-row gap-2"
@@ -19894,7 +19894,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
               </td>
               <td>
                 <div
-                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
+                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 space-x-4"
                 >
                   <div
                     class="flex flex-row gap-2"
@@ -20058,7 +20058,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
               </td>
               <td>
                 <div
-                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
+                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 space-x-4"
                 >
                   <div
                     class="flex flex-row gap-2"
@@ -20210,7 +20210,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
               </td>
               <td>
                 <div
-                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
+                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 space-x-4"
                 >
                   <div
                     class="flex flex-row gap-2"
@@ -20362,7 +20362,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
               </td>
               <td>
                 <div
-                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
+                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 space-x-4"
                 >
                   <div
                     class="flex flex-row gap-2"
@@ -20526,7 +20526,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
               </td>
               <td>
                 <div
-                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
+                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 space-x-4"
                 >
                   <div
                     class="flex flex-row gap-2"

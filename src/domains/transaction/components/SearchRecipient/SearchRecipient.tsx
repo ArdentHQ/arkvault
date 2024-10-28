@@ -28,16 +28,17 @@ const SearchRecipientListItem: FC<SearchRecipientListItemProperties> = ({
 	selectedAddress,
 }) => {
 	const { t } = useTranslation();
+	const isSelected = useMemo(() => selectedAddress === recipient.address, [selectedAddress, recipient]);
 
 	const renderButton = () => {
-		if (selectedAddress === recipient.address) {
+		if (isSelected) {
 			return (
 				<Button
 					data-testid={`RecipientListItem__selected-button-${index}`}
 					size="icon"
 					variant="transparent"
 					onClick={() => onAction(recipient.address)}
-					className="-mr-3 text-sm font-semibold leading-[17px] text-theme-primary-reverse-600"
+					className="-mr-3 py-0 text-sm font-semibold leading-[17px] text-theme-primary-reverse-600"
 				>
 					{t("COMMON.SELECTED")}
 				</Button>
@@ -59,7 +60,7 @@ const SearchRecipientListItem: FC<SearchRecipientListItemProperties> = ({
 
 	return (
 		<TableRow key={recipient.id} border className="relative">
-			<TableCell variant="start" innerClassName="space-x-4 pl-6">
+			<TableCell variant="start" innerClassName="space-x-4 my-0.5" isSelected={isSelected}>
 				<Address
 					walletName={recipient.alias}
 					address={recipient.address}
@@ -69,7 +70,7 @@ const SearchRecipientListItem: FC<SearchRecipientListItemProperties> = ({
 				/>
 			</TableCell>
 
-			<TableCell>
+			<TableCell isSelected={isSelected} innerClassName="my-0.5">
 				<span
 					data-testid="RecipientListItem__type"
 					className="whitespace-nowrap text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500"
@@ -78,7 +79,7 @@ const SearchRecipientListItem: FC<SearchRecipientListItemProperties> = ({
 				</span>
 			</TableCell>
 
-			<TableCell variant="end" innerClassName="justify-end">
+			<TableCell variant="end" innerClassName="justify-end my-0.5" isSelected={isSelected}>
 				{renderButton()}
 			</TableCell>
 		</TableRow>

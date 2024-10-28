@@ -215,7 +215,7 @@ exports[`TransactionTable > loading state > should render 1`] = `
           >
             <td>
               <div
-                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l"
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l"
               >
                 <div
                   class="hidden xl:block"
@@ -274,7 +274,7 @@ exports[`TransactionTable > loading state > should render 1`] = `
               class="table-cell sm:hidden xl:table-cell"
             >
               <div
-                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11"
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11"
               >
                 <span
                   aria-busy="true"
@@ -293,7 +293,7 @@ exports[`TransactionTable > loading state > should render 1`] = `
             </td>
             <td>
               <div
-                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11"
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11"
               >
                 <div
                   class="flex items-center"
@@ -316,7 +316,7 @@ exports[`TransactionTable > loading state > should render 1`] = `
             </td>
             <td>
               <div
-                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11"
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11"
               >
                 <div
                   class="mr-2"
@@ -358,7 +358,7 @@ exports[`TransactionTable > loading state > should render 1`] = `
               class="table-cell sm:hidden lg:table-cell"
             >
               <div
-                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 justify-end"
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 justify-end"
               >
                 <div
                   class="rounded border border-theme-secondary-300 p-1 px-2 dark:border-theme-secondary-800"
@@ -383,7 +383,7 @@ exports[`TransactionTable > loading state > should render 1`] = `
               class="hidden md:table-cell"
             >
               <div
-                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
               >
                 <div
                   class="hidden lg:block"
@@ -449,7 +449,7 @@ exports[`TransactionTable > loading state > should render 1`] = `
           >
             <td>
               <div
-                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l"
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l"
               >
                 <div
                   class="hidden xl:block"
@@ -508,7 +508,7 @@ exports[`TransactionTable > loading state > should render 1`] = `
               class="table-cell sm:hidden xl:table-cell"
             >
               <div
-                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11"
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11"
               >
                 <span
                   aria-busy="true"
@@ -527,7 +527,7 @@ exports[`TransactionTable > loading state > should render 1`] = `
             </td>
             <td>
               <div
-                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11"
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11"
               >
                 <div
                   class="flex items-center"
@@ -550,7 +550,7 @@ exports[`TransactionTable > loading state > should render 1`] = `
             </td>
             <td>
               <div
-                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11"
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11"
               >
                 <div
                   class="mr-2"
@@ -592,7 +592,7 @@ exports[`TransactionTable > loading state > should render 1`] = `
               class="table-cell sm:hidden lg:table-cell"
             >
               <div
-                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 justify-end"
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 justify-end"
               >
                 <div
                   class="rounded border border-theme-secondary-300 p-1 px-2 dark:border-theme-secondary-800"
@@ -617,7 +617,7 @@ exports[`TransactionTable > loading state > should render 1`] = `
               class="hidden md:table-cell"
             >
               <div
-                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
               >
                 <div
                   class="hidden lg:block"
@@ -683,7 +683,7 @@ exports[`TransactionTable > loading state > should render 1`] = `
           >
             <td>
               <div
-                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l"
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l"
               >
                 <div
                   class="hidden xl:block"
@@ -742,7 +742,7 @@ exports[`TransactionTable > loading state > should render 1`] = `
               class="table-cell sm:hidden xl:table-cell"
             >
               <div
-                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11"
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11"
               >
                 <span
                   aria-busy="true"
@@ -761,7 +761,7 @@ exports[`TransactionTable > loading state > should render 1`] = `
             </td>
             <td>
               <div
-                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11"
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11"
               >
                 <div
                   class="flex items-center"
@@ -784,7 +784,7 @@ exports[`TransactionTable > loading state > should render 1`] = `
             </td>
             <td>
               <div
-                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11"
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11"
               >
                 <div
                   class="mr-2"
@@ -826,7 +826,7 @@ exports[`TransactionTable > loading state > should render 1`] = `
               class="table-cell sm:hidden lg:table-cell"
             >
               <div
-                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 justify-end"
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 justify-end"
               >
                 <div
                   class="rounded border border-theme-secondary-300 p-1 px-2 dark:border-theme-secondary-800"
@@ -851,7 +851,7 @@ exports[`TransactionTable > loading state > should render 1`] = `
               class="hidden md:table-cell"
             >
               <div
-                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
               >
                 <div
                   class="hidden lg:block"
@@ -917,7 +917,7 @@ exports[`TransactionTable > loading state > should render 1`] = `
           >
             <td>
               <div
-                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l"
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l"
               >
                 <div
                   class="hidden xl:block"
@@ -976,7 +976,7 @@ exports[`TransactionTable > loading state > should render 1`] = `
               class="table-cell sm:hidden xl:table-cell"
             >
               <div
-                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11"
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11"
               >
                 <span
                   aria-busy="true"
@@ -995,7 +995,7 @@ exports[`TransactionTable > loading state > should render 1`] = `
             </td>
             <td>
               <div
-                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11"
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11"
               >
                 <div
                   class="flex items-center"
@@ -1018,7 +1018,7 @@ exports[`TransactionTable > loading state > should render 1`] = `
             </td>
             <td>
               <div
-                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11"
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11"
               >
                 <div
                   class="mr-2"
@@ -1060,7 +1060,7 @@ exports[`TransactionTable > loading state > should render 1`] = `
               class="table-cell sm:hidden lg:table-cell"
             >
               <div
-                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 justify-end"
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 justify-end"
               >
                 <div
                   class="rounded border border-theme-secondary-300 p-1 px-2 dark:border-theme-secondary-800"
@@ -1085,7 +1085,7 @@ exports[`TransactionTable > loading state > should render 1`] = `
               class="hidden md:table-cell"
             >
               <div
-                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
               >
                 <div
                   class="hidden lg:block"
@@ -1151,7 +1151,7 @@ exports[`TransactionTable > loading state > should render 1`] = `
           >
             <td>
               <div
-                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l"
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l"
               >
                 <div
                   class="hidden xl:block"
@@ -1210,7 +1210,7 @@ exports[`TransactionTable > loading state > should render 1`] = `
               class="table-cell sm:hidden xl:table-cell"
             >
               <div
-                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11"
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11"
               >
                 <span
                   aria-busy="true"
@@ -1229,7 +1229,7 @@ exports[`TransactionTable > loading state > should render 1`] = `
             </td>
             <td>
               <div
-                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11"
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11"
               >
                 <div
                   class="flex items-center"
@@ -1252,7 +1252,7 @@ exports[`TransactionTable > loading state > should render 1`] = `
             </td>
             <td>
               <div
-                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11"
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11"
               >
                 <div
                   class="mr-2"
@@ -1294,7 +1294,7 @@ exports[`TransactionTable > loading state > should render 1`] = `
               class="table-cell sm:hidden lg:table-cell"
             >
               <div
-                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 justify-end"
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 justify-end"
               >
                 <div
                   class="rounded border border-theme-secondary-300 p-1 px-2 dark:border-theme-secondary-800"
@@ -1319,7 +1319,7 @@ exports[`TransactionTable > loading state > should render 1`] = `
               class="hidden md:table-cell"
             >
               <div
-                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
               >
                 <div
                   class="hidden lg:block"
@@ -1601,7 +1601,7 @@ exports[`TransactionTable > loading state > should render compact 1`] = `
           >
             <td>
               <div
-                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l"
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l"
               >
                 <div
                   class="hidden xl:block"
@@ -1660,7 +1660,7 @@ exports[`TransactionTable > loading state > should render compact 1`] = `
               class="table-cell sm:hidden xl:table-cell"
             >
               <div
-                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11"
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11"
               >
                 <span
                   aria-busy="true"
@@ -1679,7 +1679,7 @@ exports[`TransactionTable > loading state > should render compact 1`] = `
             </td>
             <td>
               <div
-                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11"
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11"
               >
                 <div
                   class="flex items-center"
@@ -1702,7 +1702,7 @@ exports[`TransactionTable > loading state > should render compact 1`] = `
             </td>
             <td>
               <div
-                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11"
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11"
               >
                 <div
                   class="mr-2"
@@ -1744,7 +1744,7 @@ exports[`TransactionTable > loading state > should render compact 1`] = `
               class="table-cell sm:hidden lg:table-cell"
             >
               <div
-                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 justify-end"
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 justify-end"
               >
                 <div
                   class="rounded border border-theme-secondary-300 p-1 px-2 dark:border-theme-secondary-800"
@@ -1769,7 +1769,7 @@ exports[`TransactionTable > loading state > should render compact 1`] = `
               class="hidden md:table-cell"
             >
               <div
-                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
               >
                 <div
                   class="hidden lg:block"
@@ -1835,7 +1835,7 @@ exports[`TransactionTable > loading state > should render compact 1`] = `
           >
             <td>
               <div
-                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l"
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l"
               >
                 <div
                   class="hidden xl:block"
@@ -1894,7 +1894,7 @@ exports[`TransactionTable > loading state > should render compact 1`] = `
               class="table-cell sm:hidden xl:table-cell"
             >
               <div
-                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11"
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11"
               >
                 <span
                   aria-busy="true"
@@ -1913,7 +1913,7 @@ exports[`TransactionTable > loading state > should render compact 1`] = `
             </td>
             <td>
               <div
-                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11"
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11"
               >
                 <div
                   class="flex items-center"
@@ -1936,7 +1936,7 @@ exports[`TransactionTable > loading state > should render compact 1`] = `
             </td>
             <td>
               <div
-                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11"
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11"
               >
                 <div
                   class="mr-2"
@@ -1978,7 +1978,7 @@ exports[`TransactionTable > loading state > should render compact 1`] = `
               class="table-cell sm:hidden lg:table-cell"
             >
               <div
-                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 justify-end"
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 justify-end"
               >
                 <div
                   class="rounded border border-theme-secondary-300 p-1 px-2 dark:border-theme-secondary-800"
@@ -2003,7 +2003,7 @@ exports[`TransactionTable > loading state > should render compact 1`] = `
               class="hidden md:table-cell"
             >
               <div
-                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
               >
                 <div
                   class="hidden lg:block"
@@ -2069,7 +2069,7 @@ exports[`TransactionTable > loading state > should render compact 1`] = `
           >
             <td>
               <div
-                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l"
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l"
               >
                 <div
                   class="hidden xl:block"
@@ -2128,7 +2128,7 @@ exports[`TransactionTable > loading state > should render compact 1`] = `
               class="table-cell sm:hidden xl:table-cell"
             >
               <div
-                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11"
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11"
               >
                 <span
                   aria-busy="true"
@@ -2147,7 +2147,7 @@ exports[`TransactionTable > loading state > should render compact 1`] = `
             </td>
             <td>
               <div
-                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11"
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11"
               >
                 <div
                   class="flex items-center"
@@ -2170,7 +2170,7 @@ exports[`TransactionTable > loading state > should render compact 1`] = `
             </td>
             <td>
               <div
-                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11"
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11"
               >
                 <div
                   class="mr-2"
@@ -2212,7 +2212,7 @@ exports[`TransactionTable > loading state > should render compact 1`] = `
               class="table-cell sm:hidden lg:table-cell"
             >
               <div
-                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 justify-end"
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 justify-end"
               >
                 <div
                   class="rounded border border-theme-secondary-300 p-1 px-2 dark:border-theme-secondary-800"
@@ -2237,7 +2237,7 @@ exports[`TransactionTable > loading state > should render compact 1`] = `
               class="hidden md:table-cell"
             >
               <div
-                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
               >
                 <div
                   class="hidden lg:block"
@@ -2303,7 +2303,7 @@ exports[`TransactionTable > loading state > should render compact 1`] = `
           >
             <td>
               <div
-                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l"
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l"
               >
                 <div
                   class="hidden xl:block"
@@ -2362,7 +2362,7 @@ exports[`TransactionTable > loading state > should render compact 1`] = `
               class="table-cell sm:hidden xl:table-cell"
             >
               <div
-                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11"
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11"
               >
                 <span
                   aria-busy="true"
@@ -2381,7 +2381,7 @@ exports[`TransactionTable > loading state > should render compact 1`] = `
             </td>
             <td>
               <div
-                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11"
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11"
               >
                 <div
                   class="flex items-center"
@@ -2404,7 +2404,7 @@ exports[`TransactionTable > loading state > should render compact 1`] = `
             </td>
             <td>
               <div
-                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11"
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11"
               >
                 <div
                   class="mr-2"
@@ -2446,7 +2446,7 @@ exports[`TransactionTable > loading state > should render compact 1`] = `
               class="table-cell sm:hidden lg:table-cell"
             >
               <div
-                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 justify-end"
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 justify-end"
               >
                 <div
                   class="rounded border border-theme-secondary-300 p-1 px-2 dark:border-theme-secondary-800"
@@ -2471,7 +2471,7 @@ exports[`TransactionTable > loading state > should render compact 1`] = `
               class="hidden md:table-cell"
             >
               <div
-                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
               >
                 <div
                   class="hidden lg:block"
@@ -2537,7 +2537,7 @@ exports[`TransactionTable > loading state > should render compact 1`] = `
           >
             <td>
               <div
-                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l"
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l"
               >
                 <div
                   class="hidden xl:block"
@@ -2596,7 +2596,7 @@ exports[`TransactionTable > loading state > should render compact 1`] = `
               class="table-cell sm:hidden xl:table-cell"
             >
               <div
-                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11"
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11"
               >
                 <span
                   aria-busy="true"
@@ -2615,7 +2615,7 @@ exports[`TransactionTable > loading state > should render compact 1`] = `
             </td>
             <td>
               <div
-                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11"
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11"
               >
                 <div
                   class="flex items-center"
@@ -2638,7 +2638,7 @@ exports[`TransactionTable > loading state > should render compact 1`] = `
             </td>
             <td>
               <div
-                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11"
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11"
               >
                 <div
                   class="mr-2"
@@ -2680,7 +2680,7 @@ exports[`TransactionTable > loading state > should render compact 1`] = `
               class="table-cell sm:hidden lg:table-cell"
             >
               <div
-                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 justify-end"
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 justify-end"
               >
                 <div
                   class="rounded border border-theme-secondary-300 p-1 px-2 dark:border-theme-secondary-800"
@@ -2705,7 +2705,7 @@ exports[`TransactionTable > loading state > should render compact 1`] = `
               class="hidden md:table-cell"
             >
               <div
-                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
               >
                 <div
                   class="hidden lg:block"
@@ -2987,7 +2987,7 @@ exports[`TransactionTable > loading state > should render with currency column 1
           >
             <td>
               <div
-                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l"
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l"
               >
                 <div
                   class="hidden xl:block"
@@ -3046,7 +3046,7 @@ exports[`TransactionTable > loading state > should render with currency column 1
               class="table-cell sm:hidden xl:table-cell"
             >
               <div
-                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11"
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11"
               >
                 <span
                   aria-busy="true"
@@ -3065,7 +3065,7 @@ exports[`TransactionTable > loading state > should render with currency column 1
             </td>
             <td>
               <div
-                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11"
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11"
               >
                 <div
                   class="flex items-center"
@@ -3088,7 +3088,7 @@ exports[`TransactionTable > loading state > should render with currency column 1
             </td>
             <td>
               <div
-                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11"
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11"
               >
                 <div
                   class="mr-2"
@@ -3130,7 +3130,7 @@ exports[`TransactionTable > loading state > should render with currency column 1
               class="table-cell sm:hidden lg:table-cell"
             >
               <div
-                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 justify-end"
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 justify-end"
               >
                 <div
                   class="rounded border border-theme-secondary-300 p-1 px-2 dark:border-theme-secondary-800"
@@ -3155,7 +3155,7 @@ exports[`TransactionTable > loading state > should render with currency column 1
               class="hidden md:table-cell"
             >
               <div
-                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
               >
                 <div
                   class="hidden lg:block"
@@ -3221,7 +3221,7 @@ exports[`TransactionTable > loading state > should render with currency column 1
           >
             <td>
               <div
-                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l"
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l"
               >
                 <div
                   class="hidden xl:block"
@@ -3280,7 +3280,7 @@ exports[`TransactionTable > loading state > should render with currency column 1
               class="table-cell sm:hidden xl:table-cell"
             >
               <div
-                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11"
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11"
               >
                 <span
                   aria-busy="true"
@@ -3299,7 +3299,7 @@ exports[`TransactionTable > loading state > should render with currency column 1
             </td>
             <td>
               <div
-                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11"
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11"
               >
                 <div
                   class="flex items-center"
@@ -3322,7 +3322,7 @@ exports[`TransactionTable > loading state > should render with currency column 1
             </td>
             <td>
               <div
-                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11"
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11"
               >
                 <div
                   class="mr-2"
@@ -3364,7 +3364,7 @@ exports[`TransactionTable > loading state > should render with currency column 1
               class="table-cell sm:hidden lg:table-cell"
             >
               <div
-                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 justify-end"
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 justify-end"
               >
                 <div
                   class="rounded border border-theme-secondary-300 p-1 px-2 dark:border-theme-secondary-800"
@@ -3389,7 +3389,7 @@ exports[`TransactionTable > loading state > should render with currency column 1
               class="hidden md:table-cell"
             >
               <div
-                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
               >
                 <div
                   class="hidden lg:block"
@@ -3455,7 +3455,7 @@ exports[`TransactionTable > loading state > should render with currency column 1
           >
             <td>
               <div
-                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l"
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l"
               >
                 <div
                   class="hidden xl:block"
@@ -3514,7 +3514,7 @@ exports[`TransactionTable > loading state > should render with currency column 1
               class="table-cell sm:hidden xl:table-cell"
             >
               <div
-                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11"
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11"
               >
                 <span
                   aria-busy="true"
@@ -3533,7 +3533,7 @@ exports[`TransactionTable > loading state > should render with currency column 1
             </td>
             <td>
               <div
-                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11"
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11"
               >
                 <div
                   class="flex items-center"
@@ -3556,7 +3556,7 @@ exports[`TransactionTable > loading state > should render with currency column 1
             </td>
             <td>
               <div
-                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11"
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11"
               >
                 <div
                   class="mr-2"
@@ -3598,7 +3598,7 @@ exports[`TransactionTable > loading state > should render with currency column 1
               class="table-cell sm:hidden lg:table-cell"
             >
               <div
-                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 justify-end"
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 justify-end"
               >
                 <div
                   class="rounded border border-theme-secondary-300 p-1 px-2 dark:border-theme-secondary-800"
@@ -3623,7 +3623,7 @@ exports[`TransactionTable > loading state > should render with currency column 1
               class="hidden md:table-cell"
             >
               <div
-                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
               >
                 <div
                   class="hidden lg:block"
@@ -3689,7 +3689,7 @@ exports[`TransactionTable > loading state > should render with currency column 1
           >
             <td>
               <div
-                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l"
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l"
               >
                 <div
                   class="hidden xl:block"
@@ -3748,7 +3748,7 @@ exports[`TransactionTable > loading state > should render with currency column 1
               class="table-cell sm:hidden xl:table-cell"
             >
               <div
-                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11"
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11"
               >
                 <span
                   aria-busy="true"
@@ -3767,7 +3767,7 @@ exports[`TransactionTable > loading state > should render with currency column 1
             </td>
             <td>
               <div
-                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11"
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11"
               >
                 <div
                   class="flex items-center"
@@ -3790,7 +3790,7 @@ exports[`TransactionTable > loading state > should render with currency column 1
             </td>
             <td>
               <div
-                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11"
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11"
               >
                 <div
                   class="mr-2"
@@ -3832,7 +3832,7 @@ exports[`TransactionTable > loading state > should render with currency column 1
               class="table-cell sm:hidden lg:table-cell"
             >
               <div
-                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 justify-end"
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 justify-end"
               >
                 <div
                   class="rounded border border-theme-secondary-300 p-1 px-2 dark:border-theme-secondary-800"
@@ -3857,7 +3857,7 @@ exports[`TransactionTable > loading state > should render with currency column 1
               class="hidden md:table-cell"
             >
               <div
-                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
               >
                 <div
                   class="hidden lg:block"
@@ -3923,7 +3923,7 @@ exports[`TransactionTable > loading state > should render with currency column 1
           >
             <td>
               <div
-                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l"
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l"
               >
                 <div
                   class="hidden xl:block"
@@ -3982,7 +3982,7 @@ exports[`TransactionTable > loading state > should render with currency column 1
               class="table-cell sm:hidden xl:table-cell"
             >
               <div
-                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11"
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11"
               >
                 <span
                   aria-busy="true"
@@ -4001,7 +4001,7 @@ exports[`TransactionTable > loading state > should render with currency column 1
             </td>
             <td>
               <div
-                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11"
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11"
               >
                 <div
                   class="flex items-center"
@@ -4024,7 +4024,7 @@ exports[`TransactionTable > loading state > should render with currency column 1
             </td>
             <td>
               <div
-                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11"
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11"
               >
                 <div
                   class="mr-2"
@@ -4066,7 +4066,7 @@ exports[`TransactionTable > loading state > should render with currency column 1
               class="table-cell sm:hidden lg:table-cell"
             >
               <div
-                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 justify-end"
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 justify-end"
               >
                 <div
                   class="rounded border border-theme-secondary-300 p-1 px-2 dark:border-theme-secondary-800"
@@ -4091,7 +4091,7 @@ exports[`TransactionTable > loading state > should render with currency column 1
               class="hidden md:table-cell"
             >
               <div
-                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
               >
                 <div
                   class="hidden lg:block"
@@ -4441,7 +4441,7 @@ exports[`TransactionTable > should render compact 1`] = `
             </td>
             <td>
               <div
-                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 space-x-4"
               >
                 <div
                   class="flex flex-row gap-2"
@@ -4605,7 +4605,7 @@ exports[`TransactionTable > should render compact 1`] = `
             </td>
             <td>
               <div
-                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 space-x-4"
               >
                 <div
                   class="flex flex-row gap-2"
@@ -4780,7 +4780,7 @@ exports[`TransactionTable > should render compact 1`] = `
             </td>
             <td>
               <div
-                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 space-x-4"
               >
                 <div
                   class="flex flex-row gap-2"
@@ -4944,7 +4944,7 @@ exports[`TransactionTable > should render compact 1`] = `
             </td>
             <td>
               <div
-                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 space-x-4"
               >
                 <div
                   class="flex flex-row gap-2"
@@ -5108,7 +5108,7 @@ exports[`TransactionTable > should render compact 1`] = `
             </td>
             <td>
               <div
-                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 space-x-4"
               >
                 <div
                   class="flex flex-row gap-2"
@@ -5272,7 +5272,7 @@ exports[`TransactionTable > should render compact 1`] = `
             </td>
             <td>
               <div
-                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 space-x-4"
               >
                 <div
                   class="flex flex-row gap-2"
@@ -5436,7 +5436,7 @@ exports[`TransactionTable > should render compact 1`] = `
             </td>
             <td>
               <div
-                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 space-x-4"
               >
                 <div
                   class="flex flex-row gap-2"
@@ -5600,7 +5600,7 @@ exports[`TransactionTable > should render compact 1`] = `
             </td>
             <td>
               <div
-                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 space-x-4"
               >
                 <div
                   class="flex flex-row gap-2"
@@ -5764,7 +5764,7 @@ exports[`TransactionTable > should render compact 1`] = `
             </td>
             <td>
               <div
-                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 space-x-4"
               >
                 <div
                   class="flex flex-row gap-2"
@@ -5928,7 +5928,7 @@ exports[`TransactionTable > should render compact 1`] = `
             </td>
             <td>
               <div
-                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 space-x-4"
               >
                 <div
                   class="flex flex-row gap-2"
@@ -9391,7 +9391,7 @@ exports[`TransactionTable > should render responsive 3`] = `
             </td>
             <td>
               <div
-                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 space-x-4"
               >
                 <div
                   class="flex flex-row gap-2"
@@ -9555,7 +9555,7 @@ exports[`TransactionTable > should render responsive 3`] = `
             </td>
             <td>
               <div
-                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 space-x-4"
               >
                 <div
                   class="flex flex-row gap-2"
@@ -9730,7 +9730,7 @@ exports[`TransactionTable > should render responsive 3`] = `
             </td>
             <td>
               <div
-                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 space-x-4"
               >
                 <div
                   class="flex flex-row gap-2"
@@ -9894,7 +9894,7 @@ exports[`TransactionTable > should render responsive 3`] = `
             </td>
             <td>
               <div
-                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 space-x-4"
               >
                 <div
                   class="flex flex-row gap-2"
@@ -10058,7 +10058,7 @@ exports[`TransactionTable > should render responsive 3`] = `
             </td>
             <td>
               <div
-                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 space-x-4"
               >
                 <div
                   class="flex flex-row gap-2"
@@ -10222,7 +10222,7 @@ exports[`TransactionTable > should render responsive 3`] = `
             </td>
             <td>
               <div
-                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 space-x-4"
               >
                 <div
                   class="flex flex-row gap-2"
@@ -10386,7 +10386,7 @@ exports[`TransactionTable > should render responsive 3`] = `
             </td>
             <td>
               <div
-                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 space-x-4"
               >
                 <div
                   class="flex flex-row gap-2"
@@ -10550,7 +10550,7 @@ exports[`TransactionTable > should render responsive 3`] = `
             </td>
             <td>
               <div
-                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 space-x-4"
               >
                 <div
                   class="flex flex-row gap-2"
@@ -10714,7 +10714,7 @@ exports[`TransactionTable > should render responsive 3`] = `
             </td>
             <td>
               <div
-                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 space-x-4"
               >
                 <div
                   class="flex flex-row gap-2"
@@ -10878,7 +10878,7 @@ exports[`TransactionTable > should render responsive 3`] = `
             </td>
             <td>
               <div
-                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 space-x-4"
               >
                 <div
                   class="flex flex-row gap-2"
@@ -11269,7 +11269,7 @@ exports[`TransactionTable > should render responsive 4`] = `
             </td>
             <td>
               <div
-                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 space-x-4"
               >
                 <div
                   class="flex flex-row gap-2"
@@ -11433,7 +11433,7 @@ exports[`TransactionTable > should render responsive 4`] = `
             </td>
             <td>
               <div
-                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 space-x-4"
               >
                 <div
                   class="flex flex-row gap-2"
@@ -11608,7 +11608,7 @@ exports[`TransactionTable > should render responsive 4`] = `
             </td>
             <td>
               <div
-                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 space-x-4"
               >
                 <div
                   class="flex flex-row gap-2"
@@ -11772,7 +11772,7 @@ exports[`TransactionTable > should render responsive 4`] = `
             </td>
             <td>
               <div
-                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 space-x-4"
               >
                 <div
                   class="flex flex-row gap-2"
@@ -11936,7 +11936,7 @@ exports[`TransactionTable > should render responsive 4`] = `
             </td>
             <td>
               <div
-                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 space-x-4"
               >
                 <div
                   class="flex flex-row gap-2"
@@ -12100,7 +12100,7 @@ exports[`TransactionTable > should render responsive 4`] = `
             </td>
             <td>
               <div
-                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 space-x-4"
               >
                 <div
                   class="flex flex-row gap-2"
@@ -12264,7 +12264,7 @@ exports[`TransactionTable > should render responsive 4`] = `
             </td>
             <td>
               <div
-                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 space-x-4"
               >
                 <div
                   class="flex flex-row gap-2"
@@ -12428,7 +12428,7 @@ exports[`TransactionTable > should render responsive 4`] = `
             </td>
             <td>
               <div
-                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 space-x-4"
               >
                 <div
                   class="flex flex-row gap-2"
@@ -12592,7 +12592,7 @@ exports[`TransactionTable > should render responsive 4`] = `
             </td>
             <td>
               <div
-                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 space-x-4"
               >
                 <div
                   class="flex flex-row gap-2"
@@ -12756,7 +12756,7 @@ exports[`TransactionTable > should render responsive 4`] = `
             </td>
             <td>
               <div
-                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 space-x-4"
               >
                 <div
                   class="flex flex-row gap-2"
@@ -13147,7 +13147,7 @@ exports[`TransactionTable > should render responsive 5`] = `
             </td>
             <td>
               <div
-                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 space-x-4"
               >
                 <div
                   class="flex flex-row gap-2"
@@ -13311,7 +13311,7 @@ exports[`TransactionTable > should render responsive 5`] = `
             </td>
             <td>
               <div
-                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 space-x-4"
               >
                 <div
                   class="flex flex-row gap-2"
@@ -13486,7 +13486,7 @@ exports[`TransactionTable > should render responsive 5`] = `
             </td>
             <td>
               <div
-                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 space-x-4"
               >
                 <div
                   class="flex flex-row gap-2"
@@ -13650,7 +13650,7 @@ exports[`TransactionTable > should render responsive 5`] = `
             </td>
             <td>
               <div
-                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 space-x-4"
               >
                 <div
                   class="flex flex-row gap-2"
@@ -13814,7 +13814,7 @@ exports[`TransactionTable > should render responsive 5`] = `
             </td>
             <td>
               <div
-                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 space-x-4"
               >
                 <div
                   class="flex flex-row gap-2"
@@ -13978,7 +13978,7 @@ exports[`TransactionTable > should render responsive 5`] = `
             </td>
             <td>
               <div
-                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 space-x-4"
               >
                 <div
                   class="flex flex-row gap-2"
@@ -14142,7 +14142,7 @@ exports[`TransactionTable > should render responsive 5`] = `
             </td>
             <td>
               <div
-                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 space-x-4"
               >
                 <div
                   class="flex flex-row gap-2"
@@ -14306,7 +14306,7 @@ exports[`TransactionTable > should render responsive 5`] = `
             </td>
             <td>
               <div
-                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 space-x-4"
               >
                 <div
                   class="flex flex-row gap-2"
@@ -14470,7 +14470,7 @@ exports[`TransactionTable > should render responsive 5`] = `
             </td>
             <td>
               <div
-                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 space-x-4"
               >
                 <div
                   class="flex flex-row gap-2"
@@ -14634,7 +14634,7 @@ exports[`TransactionTable > should render responsive 5`] = `
             </td>
             <td>
               <div
-                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 space-x-4"
               >
                 <div
                   class="flex flex-row gap-2"
