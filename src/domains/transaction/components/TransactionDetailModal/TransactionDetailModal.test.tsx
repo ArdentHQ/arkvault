@@ -278,10 +278,7 @@ describe("TransactionDetailModal", () => {
 						data: () => ({
 							data: () => ({
 								asset: {
-									votes: [
-										"+" + TransactionFixture.votes()[0],
-										"-" + TransactionFixture.unvotes()[0]
-									],
+									votes: ["+" + TransactionFixture.votes()[0], "-" + TransactionFixture.unvotes()[0]],
 								},
 								blockId: "as32d1as65d1as3d1as32d1asd51as3d21as3d2as165das",
 							}),
