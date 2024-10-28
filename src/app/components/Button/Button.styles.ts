@@ -1,15 +1,11 @@
 import { ButtonVariant, Size, Theme } from "@/types";
 
-const getBaseStyle = (roundedClassName?: string) => {
+const getBaseStyle = () => {
 	const baseStyle: string[] = [
 		`relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none`,
 		`focus:outline-none focus:ring-2 focus:ring-theme-primary-400`,
 		`disabled:cursor-not-allowed`,
 	];
-
-	if (!roundedClassName) {
-		baseStyle.push(`rounded`);
-	}
 
 	return baseStyle;
 };
@@ -88,11 +84,7 @@ const getVariant = (variant?: ButtonVariant, theme?: Theme, disabled?: boolean, 
 	return [(variants[variant as keyof typeof variants] || variants.default)()];
 };
 
-const getSize = (size?: Size, sizeClassName?: string) => {
-	if (sizeClassName) {
-		return;
-	}
-
+const getSize = (size?: Size) => {
 	const sizes = {
 		default: () => `px-5 py-3 space-x-3 text-base`,
 		icon: () => `p-3`,
@@ -109,15 +101,11 @@ export const getStyles = ({
 	theme,
 	size,
 	disabled,
-	roundedClassName,
-	sizeClassName,
 	isCompact,
 }: {
 	variant?: ButtonVariant;
 	theme?: Theme;
 	size?: Size;
-	sizeClassName?: string;
 	disabled?: boolean;
-	roundedClassName?: string;
 	isCompact?: boolean;
-}) => [getSize(size, sizeClassName), getBaseStyle(roundedClassName), getVariant(variant, theme, disabled, isCompact)];
+}) => [getSize(size), getBaseStyle(), getVariant(variant, theme, disabled, isCompact)];
