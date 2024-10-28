@@ -82,7 +82,7 @@ const Modal = ({
 
 	return (
 		<div
-			className={`custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full ${overflowYClass} bg-theme-secondary-900-rgba/40 dark:bg-black-rgba/40 dark:bg-opacity-80 md:py-20 backdrop-blur-xl`}
+			className={`custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full ${overflowYClass} bg-theme-secondary-900-rgba/40 backdrop-blur-xl dark:bg-black-rgba/40 dark:bg-opacity-80 md:py-20`}
 			onClick={handleClickOverlay}
 			data-testid="Modal__overlay"
 			{...attributes}
