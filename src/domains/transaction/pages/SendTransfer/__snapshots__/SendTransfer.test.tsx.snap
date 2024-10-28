@@ -1334,7 +1334,7 @@ exports[`SendTransfer > should display unconfirmed transactions modal when submi
               </div>
             </div>
             <div
-              class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900-rgba/40 backdrop-blur-xl dark:bg-black-rgba/40 dark:bg-opacity-80 md:py-20"
+              class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900-rgba bg-opacity-60 dark:bg-black-rgba dark:bg-opacity-80 md:py-20"
               data-testid="Modal__overlay"
             >
               <div
@@ -1536,7 +1536,7 @@ exports[`SendTransfer > should display unconfirmed transactions modal when submi
                               >
                                 <td>
                                   <div
-                                    class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l space-x-3 text-theme-secondary-500 whitespace-nowrap"
+                                    class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l space-x-3 text-theme-secondary-500 whitespace-nowrap"
                                   >
                                     <span
                                       data-testid="TimeAgo"
@@ -1547,7 +1547,7 @@ exports[`SendTransfer > should display unconfirmed transactions modal when submi
                                 </td>
                                 <td>
                                   <div
-                                    class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 space-x-4"
+                                    class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
                                   >
                                     <div
                                       class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-1i0wxh3"
@@ -1592,7 +1592,7 @@ exports[`SendTransfer > should display unconfirmed transactions modal when submi
                                 </td>
                                 <td>
                                   <div
-                                    class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
+                                    class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
                                   >
                                     <div
                                       class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
@@ -2237,7 +2237,7 @@ exports[`SendTransfer > should error if wrong mnemonic 1`] = `
                     </div>
                   </div>
                   <fieldset
-                    class="flex min-w-0 flex-col css-s0h7ue"
+                    class="flex min-w-0 flex-col css-5kz4tk"
                   >
                     <label
                       class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
@@ -2537,7 +2537,7 @@ exports[`SendTransfer > should render form step (lg) 1`] = `
           class="mt-8 sm:mt-0"
         >
           <div
-            class="flex h-full align-bottom"
+            class="hidden sm:flex sm:h-full sm:align-bottom"
           >
             <button
               class="group css-1wfiwjx"
@@ -2568,7 +2568,7 @@ exports[`SendTransfer > should render form step (lg) 1`] = `
                 </svg>
               </div>
               <span
-                class="text-sm font-semibold leading-5 text-theme-navy-600 transition-colors group-hover:text-white dark:text-theme-secondary-200 sm:text-base"
+                class="text-base font-semibold leading-5 text-theme-navy-600 transition-colors group-hover:text-white dark:text-theme-secondary-200"
               >
                 Scan
               </span>
@@ -2581,18 +2581,32 @@ exports[`SendTransfer > should render form step (lg) 1`] = `
       class="space-y-4 pt-4"
     >
       <fieldset
-        class="flex min-w-0 flex-col css-ea0il3"
+        class="flex min-w-0 flex-col css-1bcidjh"
       >
-        <label
-          class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
-          data-testid="FormLabel"
-          for="senderAddress"
-        >
-          Sender
-        </label>
         <div
           data-testid="sender-address"
         >
+          <div
+            class="mb-2 flex items-center justify-between"
+          >
+            <label
+              class="mb-0 text-sm font-semibold leading-[17px] text-theme-secondary-text"
+              data-testid="FormLabel"
+              for="senderAddress"
+            >
+              Sender
+            </label>
+            <button
+              class="space-x-3 relative items-center justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none block p-0 text-sm text-theme-navy-600 sm:hidden"
+              type="button"
+            >
+              <div
+                class="flex items-center space-x-2"
+              >
+                Scan QR-Code
+              </div>
+            </button>
+          </div>
           <button
             class="relative w-full rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400"
             data-testid="SelectAddress__wrapper"
@@ -2758,7 +2772,7 @@ exports[`SendTransfer > should render form step (lg) 1`] = `
               class="space-y-4"
             >
               <fieldset
-                class="flex min-w-0 flex-col css-ea0il3"
+                class="flex min-w-0 flex-col css-1bcidjh"
               >
                 <div>
                   <div
@@ -2884,7 +2898,7 @@ exports[`SendTransfer > should render form step (lg) 1`] = `
                 </div>
               </fieldset>
               <fieldset
-                class="flex min-w-0 flex-col css-ea0il3"
+                class="flex min-w-0 flex-col css-1bcidjh"
               >
                 <label
                   class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
@@ -2966,7 +2980,7 @@ exports[`SendTransfer > should render form step (lg) 1`] = `
         </div>
       </div>
       <fieldset
-        class="relative css-ea0il3"
+        class="relative css-1bcidjh"
       >
         <label
           class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
@@ -3015,7 +3029,7 @@ exports[`SendTransfer > should render form step (lg) 1`] = `
         </div>
       </fieldset>
       <fieldset
-        class="flex min-w-0 flex-col css-ea0il3"
+        class="flex min-w-0 flex-col css-1bcidjh"
       >
         <label
           class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
@@ -3261,66 +3275,38 @@ exports[`SendTransfer > should render form step (xs) 1`] = `
             </div>
           </div>
         </div>
-        <div
-          class="mt-8 sm:mt-0"
-        >
-          <div
-            class="flex h-full align-bottom"
-          >
-            <button
-              class="group css-1wfiwjx"
-              data-testid="QRCodeModalButton"
-              type="button"
-            >
-              <div
-                class="text-theme-navy-600 transition-colors group-hover:text-white dark:text-theme-secondary-600 css-1i4b0eq"
-                height="20"
-                width="20"
-              >
-                <svg
-                  id="qr-code"
-                  viewBox="0 0 20 20"
-                  x="0"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
-                  y="0"
-                >
-                  <path
-                    d="M8 1H1v7h7V1zm11 0h-7v7h7V1zM8 12H1v7h7v-7zm4 0h2m-2 3v4h2m1-3.5h4V12h-2m0 7h2"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                  />
-                </svg>
-              </div>
-              <span
-                class="text-sm font-semibold leading-5 text-theme-navy-600 transition-colors group-hover:text-white dark:text-theme-secondary-200 sm:text-base"
-              >
-                Scan QR-Code
-              </span>
-            </button>
-          </div>
-        </div>
       </div>
     </div>
     <div
       class="space-y-4 pt-4"
     >
       <fieldset
-        class="flex min-w-0 flex-col css-ea0il3"
+        class="flex min-w-0 flex-col css-1bcidjh"
       >
-        <label
-          class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
-          data-testid="FormLabel"
-          for="senderAddress"
-        >
-          Sender
-        </label>
         <div
           data-testid="sender-address"
         >
+          <div
+            class="mb-2 flex items-center justify-between"
+          >
+            <label
+              class="mb-0 text-sm font-semibold leading-[17px] text-theme-secondary-text"
+              data-testid="FormLabel"
+              for="senderAddress"
+            >
+              Sender
+            </label>
+            <button
+              class="space-x-3 relative items-center justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none block p-0 text-sm text-theme-navy-600 sm:hidden"
+              type="button"
+            >
+              <div
+                class="flex items-center space-x-2"
+              >
+                Scan QR-Code
+              </div>
+            </button>
+          </div>
           <button
             class="relative w-full rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400"
             data-testid="SelectAddress__wrapper"
@@ -3486,7 +3472,7 @@ exports[`SendTransfer > should render form step (xs) 1`] = `
               class="space-y-4"
             >
               <fieldset
-                class="flex min-w-0 flex-col css-ea0il3"
+                class="flex min-w-0 flex-col css-1bcidjh"
               >
                 <div>
                   <div
@@ -3612,7 +3598,7 @@ exports[`SendTransfer > should render form step (xs) 1`] = `
                 </div>
               </fieldset>
               <fieldset
-                class="flex min-w-0 flex-col css-ea0il3"
+                class="flex min-w-0 flex-col css-1bcidjh"
               >
                 <label
                   class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
@@ -3694,7 +3680,7 @@ exports[`SendTransfer > should render form step (xs) 1`] = `
         </div>
       </div>
       <fieldset
-        class="relative css-ea0il3"
+        class="relative css-1bcidjh"
       >
         <label
           class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
@@ -3743,7 +3729,7 @@ exports[`SendTransfer > should render form step (xs) 1`] = `
         </div>
       </fieldset>
       <fieldset
-        class="flex min-w-0 flex-col css-ea0il3"
+        class="flex min-w-0 flex-col css-1bcidjh"
       >
         <label
           class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
@@ -4490,7 +4476,7 @@ exports[`SendTransfer > should render network selection without selected wallet 
                     </div>
                   </div>
                   <fieldset
-                    class="mt-8 my-8 css-ea0il3"
+                    class="mt-8 my-8 css-1bcidjh"
                   >
                     <div
                       data-testid="SendTransfer__network-step__select"
@@ -4724,7 +4710,7 @@ exports[`SendTransfer > should render network step with dropdown 1`] = `
       </div>
     </div>
     <fieldset
-      class="mt-8 css-ea0il3"
+      class="mt-8 css-1bcidjh"
     >
       <label
         class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
@@ -4915,7 +4901,7 @@ exports[`SendTransfer > should render network step with network cards 1`] = `
       </div>
     </div>
     <fieldset
-      class="mt-8 my-8 css-ea0il3"
+      class="mt-8 my-8 css-1bcidjh"
     >
       <div
         data-testid="SendTransfer__network-step__select"
@@ -9116,7 +9102,7 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
               </div>
             </div>
             <div
-              class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900-rgba/40 backdrop-blur-xl dark:bg-black-rgba/40 dark:bg-opacity-80 md:py-20"
+              class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900-rgba bg-opacity-60 dark:bg-black-rgba dark:bg-opacity-80 md:py-20"
               data-testid="Modal__overlay"
             >
               <div
@@ -9318,7 +9304,7 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
                               >
                                 <td>
                                   <div
-                                    class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l space-x-3 text-theme-secondary-500 whitespace-nowrap"
+                                    class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l space-x-3 text-theme-secondary-500 whitespace-nowrap"
                                   >
                                     <span
                                       data-testid="TimeAgo"
@@ -9329,7 +9315,7 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
                                 </td>
                                 <td>
                                   <div
-                                    class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 space-x-4"
+                                    class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
                                   >
                                     <div
                                       class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-1i0wxh3"
@@ -9374,7 +9360,7 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
                                 </td>
                                 <td>
                                   <div
-                                    class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
+                                    class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
                                   >
                                     <div
                                       class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
@@ -9401,7 +9387,7 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
                               >
                                 <td>
                                   <div
-                                    class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l space-x-3 text-theme-secondary-500 whitespace-nowrap"
+                                    class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l space-x-3 text-theme-secondary-500 whitespace-nowrap"
                                   >
                                     <span
                                       data-testid="TimeAgo"
@@ -9412,7 +9398,7 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
                                 </td>
                                 <td>
                                   <div
-                                    class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 space-x-4"
+                                    class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
                                   >
                                     <span
                                       class="flex h-5 w-5 items-center justify-center text-theme-text dark:text-theme-secondary-600"
@@ -9490,7 +9476,7 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
                                 </td>
                                 <td>
                                   <div
-                                    class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
+                                    class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
                                   >
                                     <div
                                       class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
