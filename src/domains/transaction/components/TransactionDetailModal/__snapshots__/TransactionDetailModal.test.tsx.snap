@@ -5,7 +5,7 @@ exports[`TransactionDetailModal > should not render if not open 1`] = `<Document
 exports[`TransactionDetailModal > should render a ipfs modal 1`] = `
 <DocumentFragment>
   <div
-    class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900-rgba/40 dark:bg-black-rgba/40 dark:bg-opacity-80 md:py-20 backdrop-blur-xl"
+    class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900-rgba/40 backdrop-blur-xl dark:bg-black-rgba/40 dark:bg-opacity-80 md:py-20"
     data-testid="Modal__overlay"
   >
     <div
@@ -811,7 +811,7 @@ exports[`TransactionDetailModal > should render a ipfs modal 1`] = `
 exports[`TransactionDetailModal > should render a magistrate modal 1`] = `
 <DocumentFragment>
   <div
-    class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900-rgba/40 dark:bg-black-rgba/40 dark:bg-opacity-80 md:py-20 backdrop-blur-xl"
+    class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900-rgba/40 backdrop-blur-xl dark:bg-black-rgba/40 dark:bg-opacity-80 md:py-20"
     data-testid="Modal__overlay"
   >
     <div
@@ -1543,7 +1543,7 @@ exports[`TransactionDetailModal > should render a magistrate modal 1`] = `
 exports[`TransactionDetailModal > should render a multi payment modal 1`] = `
 <DocumentFragment>
   <div
-    class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900-rgba/40 dark:bg-black-rgba/40 dark:bg-opacity-80 md:py-20 backdrop-blur-xl"
+    class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900-rgba/40 backdrop-blur-xl dark:bg-black-rgba/40 dark:bg-opacity-80 md:py-20"
     data-testid="Modal__overlay"
   >
     <div
@@ -2357,7 +2357,7 @@ exports[`TransactionDetailModal > should render a multi payment modal 1`] = `
 exports[`TransactionDetailModal > should render a multi signature modal 1`] = `
 <DocumentFragment>
   <div
-    class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900-rgba/40 dark:bg-black-rgba/40 dark:bg-opacity-80 md:py-20 backdrop-blur-xl"
+    class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900-rgba/40 backdrop-blur-xl dark:bg-black-rgba/40 dark:bg-opacity-80 md:py-20"
     data-testid="Modal__overlay"
   >
     <div
@@ -3490,7 +3490,7 @@ exports[`TransactionDetailModal > should render a multi signature modal 1`] = `
 exports[`TransactionDetailModal > should render a transfer modal 1`] = `
 <DocumentFragment>
   <div
-    class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900-rgba/40 dark:bg-black-rgba/40 dark:bg-opacity-80 md:py-20 backdrop-blur-xl"
+    class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900-rgba/40 backdrop-blur-xl dark:bg-black-rgba/40 dark:bg-opacity-80 md:py-20"
     data-testid="Modal__overlay"
   >
     <div
@@ -4296,7 +4296,7 @@ exports[`TransactionDetailModal > should render a transfer modal 1`] = `
 exports[`TransactionDetailModal > should render a transfer modal with memo 1`] = `
 <DocumentFragment>
   <div
-    class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900-rgba/40 dark:bg-black-rgba/40 dark:bg-opacity-80 md:py-20 backdrop-blur-xl"
+    class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900-rgba/40 backdrop-blur-xl dark:bg-black-rgba/40 dark:bg-opacity-80 md:py-20"
     data-testid="Modal__overlay"
   >
     <div
@@ -5102,7 +5102,7 @@ exports[`TransactionDetailModal > should render a transfer modal with memo 1`] =
 exports[`TransactionDetailModal > should render an unlock tokens modal 1`] = `
 <DocumentFragment>
   <div
-    class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900-rgba/40 dark:bg-black-rgba/40 dark:bg-opacity-80 md:py-20 backdrop-blur-xl"
+    class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900-rgba/40 backdrop-blur-xl dark:bg-black-rgba/40 dark:bg-opacity-80 md:py-20"
     data-testid="Modal__overlay"
   >
     <div

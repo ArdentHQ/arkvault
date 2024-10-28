@@ -5,7 +5,7 @@ exports[`ConfirmRemovePendingTransaction > should not render if transaction type
 exports[`ConfirmRemovePendingTransaction > should render multisignature registration 1`] = `
 <DocumentFragment>
   <div
-    class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900-rgba/40 dark:bg-black-rgba/40 dark:bg-opacity-80 md:py-20 backdrop-blur-xl"
+    class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900-rgba/40 backdrop-blur-xl dark:bg-black-rgba/40 dark:bg-opacity-80 md:py-20"
     data-testid="ConfirmRemovePendingTransaction__Multisignature-Registration"
   >
     <div
@@ -319,7 +319,7 @@ exports[`ConfirmRemovePendingTransaction > should render multisignature registra
 exports[`ConfirmRemovePendingTransaction > should render multisignature transaction 1`] = `
 <DocumentFragment>
   <div
-    class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900-rgba/40 dark:bg-black-rgba/40 dark:bg-opacity-80 md:py-20 backdrop-blur-xl"
+    class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900-rgba/40 backdrop-blur-xl dark:bg-black-rgba/40 dark:bg-opacity-80 md:py-20"
     data-testid="ConfirmRemovePendingTransaction__Transfer-Transaction"
   >
     <div
