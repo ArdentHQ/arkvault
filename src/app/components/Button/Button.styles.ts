@@ -2,7 +2,7 @@ import { ButtonVariant, Size, Theme } from "@/types";
 
 const getBaseStyle = () => {
 	const baseStyle: string[] = [
-		`relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none`,
+		`relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded`,
 		`focus:outline-none focus:ring-2 focus:ring-theme-primary-400`,
 		`disabled:cursor-not-allowed`,
 	];
