@@ -23,7 +23,7 @@ export const DeleteWallet = ({ onClose, onCancel, onDelete, wallet }: DeleteWall
 			onCancel={onCancel}
 			onDelete={onDelete}
 		>
-			<FormField name="wallet" className="mt-4">
+			<FormField name="wallet" className="mt-4" disableHover>
 				<FormLabel label={t("COMMON.WALLET")} />
 				<SelectAddress
 					wallet={{
@@ -34,6 +34,7 @@ export const DeleteWallet = ({ onClose, onCancel, onDelete, wallet }: DeleteWall
 					showUserIcon={false}
 					profile={wallet.profile()}
 					disabled={true}
+					showWalletAvatar={false}
 				/>
 			</FormField>
 		</DeleteResource>

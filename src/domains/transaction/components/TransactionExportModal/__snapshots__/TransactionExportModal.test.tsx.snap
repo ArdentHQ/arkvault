@@ -192,7 +192,7 @@ exports[`TransactionExportModal > should render 1`] = `
                               data-testid="list-divided-item__value"
                             >
                               <fieldset
-                                class="flex min-w-0 flex-col css-1bcidjh"
+                                class="flex min-w-0 flex-col css-ea0il3"
                               >
                                 <div
                                   aria-expanded="false"
@@ -331,7 +331,7 @@ exports[`TransactionExportModal > should render 1`] = `
                               data-testid="list-divided-item__value"
                             >
                               <fieldset
-                                class="flex min-w-0 flex-col css-1bcidjh"
+                                class="flex min-w-0 flex-col css-ea0il3"
                               >
                                 <div
                                   aria-expanded="false"
@@ -822,7 +822,7 @@ exports[`TransactionExportModal > should render error status 1`] = `
                               data-testid="list-divided-item__value"
                             >
                               <fieldset
-                                class="flex min-w-0 flex-col css-1bcidjh"
+                                class="flex min-w-0 flex-col css-ea0il3"
                               >
                                 <div
                                   aria-expanded="false"
@@ -961,7 +961,7 @@ exports[`TransactionExportModal > should render error status 1`] = `
                               data-testid="list-divided-item__value"
                             >
                               <fieldset
-                                class="flex min-w-0 flex-col css-1bcidjh"
+                                class="flex min-w-0 flex-col css-ea0il3"
                               >
                                 <div
                                   aria-expanded="false"
@@ -1452,7 +1452,7 @@ exports[`TransactionExportModal > should render progress status 1`] = `
                               data-testid="list-divided-item__value"
                             >
                               <fieldset
-                                class="flex min-w-0 flex-col css-1bcidjh"
+                                class="flex min-w-0 flex-col css-ea0il3"
                               >
                                 <div
                                   aria-expanded="false"
@@ -1591,7 +1591,7 @@ exports[`TransactionExportModal > should render progress status 1`] = `
                               data-testid="list-divided-item__value"
                             >
                               <fieldset
-                                class="flex min-w-0 flex-col css-1bcidjh"
+                                class="flex min-w-0 flex-col css-ea0il3"
                               >
                                 <div
                                   aria-expanded="false"
@@ -2648,7 +2648,7 @@ exports[`TransactionExportModal > should render success status 1`] = `
                               data-testid="list-divided-item__value"
                             >
                               <fieldset
-                                class="flex min-w-0 flex-col css-1bcidjh"
+                                class="flex min-w-0 flex-col css-ea0il3"
                               >
                                 <div
                                   aria-expanded="false"
@@ -2787,7 +2787,7 @@ exports[`TransactionExportModal > should render success status 1`] = `
                               data-testid="list-divided-item__value"
                             >
                               <fieldset
-                                class="flex min-w-0 flex-col css-1bcidjh"
+                                class="flex min-w-0 flex-col css-ea0il3"
                               >
                                 <div
                                   aria-expanded="false"
@@ -3278,7 +3278,7 @@ exports[`TransactionExportModal > should render with fiat column 1`] = `
                               data-testid="list-divided-item__value"
                             >
                               <fieldset
-                                class="flex min-w-0 flex-col css-1bcidjh"
+                                class="flex min-w-0 flex-col css-ea0il3"
                               >
                                 <div
                                   aria-expanded="false"
@@ -3417,7 +3417,7 @@ exports[`TransactionExportModal > should render with fiat column 1`] = `
                               data-testid="list-divided-item__value"
                             >
                               <fieldset
-                                class="flex min-w-0 flex-col css-1bcidjh"
+                                class="flex min-w-0 flex-col css-ea0il3"
                               >
                                 <div
                                   aria-expanded="false"

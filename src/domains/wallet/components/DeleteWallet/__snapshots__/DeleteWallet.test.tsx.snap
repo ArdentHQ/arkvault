@@ -166,7 +166,7 @@ exports[`DeleteWallet > should render a modal 1`] = `
               </div>
             </div>
             <fieldset
-              class="mt-4 css-1bcidjh"
+              class="mt-4 css-svx9dt"
             >
               <label
                 class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
@@ -182,7 +182,7 @@ exports[`DeleteWallet > should render a modal 1`] = `
                 type="button"
               >
                 <span
-                  class="absolute inset-y-0 left-14 flex items-center border border-transparent right-4 left-14"
+                  class="absolute inset-y-0 left-14 flex items-center border border-transparent right-4 left-4"
                 >
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -199,20 +199,6 @@ exports[`DeleteWallet > should render a modal 1`] = `
                   class="css-4lfin5"
                   disabled=""
                 >
-                  <div
-                    class="shrink-0 css-1p5jpah"
-                    data-testid="Avatar"
-                  >
-                    <div
-                      class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
-                    >
-                      <img
-                        alt="AdVSe37niA3uFUPgCgMUH2tMsHF4LpLoiX"
-                        src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(156, 39, 176)" width="100" height="100"/><circle r="40" cx="10" cy="40" fill="rgb(0, 150, 136)"/><circle r="45" cx="70" cy="60" fill="rgb(33, 150, 243)"/><circle r="60" cx="0" cy="70" fill="rgb(3, 169, 244)"/></svg>"
-                        title="AdVSe37niA3uFUPgCgMUH2tMsHF4LpLoiX"
-                      />
-                    </div>
-                  </div>
                   <div
                     class="relative flex h-full flex-1 invisible"
                   >

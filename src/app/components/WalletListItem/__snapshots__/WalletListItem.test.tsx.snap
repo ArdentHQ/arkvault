@@ -349,7 +349,7 @@ exports[`WalletListItem > should disable the send button when wallet has no bala
                       data-testid="Form"
                     >
                       <fieldset
-                        class="flex min-w-0 flex-col css-1bcidjh"
+                        class="flex min-w-0 flex-col css-ea0il3"
                       >
                         <label
                           class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
@@ -944,7 +944,7 @@ exports[`WalletListItem > should render when isCompact = false 1`] = `
                       data-testid="Form"
                     >
                       <fieldset
-                        class="flex min-w-0 flex-col css-1bcidjh"
+                        class="flex min-w-0 flex-col css-ea0il3"
                       >
                         <label
                           class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
@@ -1359,7 +1359,7 @@ exports[`WalletListItem > should render when isCompact = true 1`] = `
                       data-testid="Form"
                     >
                       <fieldset
-                        class="flex min-w-0 flex-col css-1bcidjh"
+                        class="flex min-w-0 flex-col css-ea0il3"
                       >
                         <label
                           class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
@@ -2214,7 +2214,7 @@ exports[`WalletListItem > should render when isLargeScreen = true 1`] = `
                       data-testid="Form"
                     >
                       <fieldset
-                        class="flex min-w-0 flex-col css-1bcidjh"
+                        class="flex min-w-0 flex-col css-ea0il3"
                       >
                         <label
                           class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
@@ -2677,7 +2677,7 @@ exports[`WalletListItem > should render when isLargeScreen = true and wallet is 
                       data-testid="Form"
                     >
                       <fieldset
-                        class="flex min-w-0 flex-col css-1bcidjh"
+                        class="flex min-w-0 flex-col css-ea0il3"
                       >
                         <label
                           class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
@@ -3092,7 +3092,7 @@ exports[`WalletListItem > should render with a N/A for fiat 1`] = `
                       data-testid="Form"
                     >
                       <fieldset
-                        class="flex min-w-0 flex-col css-1bcidjh"
+                        class="flex min-w-0 flex-col css-ea0il3"
                       >
                         <label
                           class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
@@ -3507,7 +3507,7 @@ exports[`WalletListItem > should render with default BTC as default exchangeCurr
                       data-testid="Form"
                     >
                       <fieldset
-                        class="flex min-w-0 flex-col css-1bcidjh"
+                        class="flex min-w-0 flex-col css-ea0il3"
                       >
                         <label
                           class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"

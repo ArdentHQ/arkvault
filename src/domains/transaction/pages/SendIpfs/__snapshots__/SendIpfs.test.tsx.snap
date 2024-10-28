@@ -581,7 +581,7 @@ exports[`SendIpfs > should error if wrong mnemonic 1`] = `
                     </div>
                   </div>
                   <fieldset
-                    class="flex min-w-0 flex-col css-5kz4tk"
+                    class="flex min-w-0 flex-col css-s0h7ue"
                   >
                     <label
                       class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
@@ -883,7 +883,7 @@ exports[`SendIpfs > should render form step 1`] = `
       class="space-y-4 pt-4"
     >
       <fieldset
-        class="flex min-w-0 flex-col css-1bcidjh"
+        class="flex min-w-0 flex-col css-ea0il3"
       >
         <label
           class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
@@ -950,7 +950,7 @@ exports[`SendIpfs > should render form step 1`] = `
         </div>
       </fieldset>
       <fieldset
-        class="flex min-w-0 flex-col css-1bcidjh"
+        class="flex min-w-0 flex-col css-ea0il3"
       >
         <label
           class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
@@ -978,7 +978,7 @@ exports[`SendIpfs > should render form step 1`] = `
         </div>
       </fieldset>
       <fieldset
-        class="flex min-w-0 flex-col css-1bcidjh"
+        class="flex min-w-0 flex-col css-ea0il3"
       >
         <label
           class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
@@ -7162,7 +7162,7 @@ exports[`SendIpfs > should show an error if an invalid IPFS hash is entered 1`] 
                     class="space-y-4 pt-4"
                   >
                     <fieldset
-                      class="flex min-w-0 flex-col css-1bcidjh"
+                      class="flex min-w-0 flex-col css-ea0il3"
                     >
                       <label
                         class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
@@ -7229,7 +7229,7 @@ exports[`SendIpfs > should show an error if an invalid IPFS hash is entered 1`] 
                       </div>
                     </fieldset>
                     <fieldset
-                      class="flex min-w-0 flex-col css-5kz4tk"
+                      class="flex min-w-0 flex-col css-s0h7ue"
                     >
                       <label
                         class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
@@ -7305,7 +7305,7 @@ exports[`SendIpfs > should show an error if an invalid IPFS hash is entered 1`] 
                       </div>
                     </fieldset>
                     <fieldset
-                      class="flex min-w-0 flex-col css-1bcidjh"
+                      class="flex min-w-0 flex-col css-ea0il3"
                     >
                       <label
                         class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
