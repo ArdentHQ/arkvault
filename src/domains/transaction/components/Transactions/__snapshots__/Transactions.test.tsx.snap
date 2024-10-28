@@ -1732,7 +1732,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                 >
                   <div
                     class="flex flex-row gap-2"
-                    data-testid="TransactionRowAddressing__container"
+                    data-testid="TransactionRowAddressing__musig_registration"
                   >
                     <div
                       class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-1qplu6d"
@@ -1741,39 +1741,11 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     >
                       To
                     </div>
-                    <div
-                      class="w-50 sm:w-40 lg:w-50"
-                      data-testid="TransactionRowAddressing__address-container"
+                    <span
+                      class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                     >
-                      <div
-                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
-                      >
-                        <span
-                          class="font-semibold text-sm text-theme-text"
-                          data-testid="Address__alias"
-                        >
-                          <span
-                            class="no-ligatures css-9nx3be"
-                            data-testid="TruncateEnd"
-                          >
-                            ARK Wallet 2
-                          </span>
-                        </span>
-                        <div
-                          class="relative grow leading-[17px] sm:leading-5 text-left"
-                        >
-                          <span
-                            class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold text-sm absolute w-full"
-                            data-testid="Address__address"
-                          >
-                            D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
-                          </span>
-                          <span>
-                             
-                          </span>
-                        </div>
-                      </div>
-                    </div>
+                      Contract
+                    </span>
                   </div>
                 </div>
               </td>
@@ -1907,48 +1879,20 @@ exports[`Transactions > should fetch more transactions 1`] = `
                 >
                   <div
                     class="flex flex-row gap-2"
-                    data-testid="TransactionRowAddressing__container"
+                    data-testid="TransactionRowAddressing__musig_registration"
                   >
                     <div
-                      class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-6yoktf"
-                      color="success-bg"
+                      class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-1qplu6d"
+                      color="danger-bg"
                       data-testid="TransactionRowAddressing__label"
                     >
-                      From
+                      To
                     </div>
-                    <div
-                      class="w-50 sm:w-40 lg:w-50"
-                      data-testid="TransactionRowAddressing__address-container"
+                    <span
+                      class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                     >
-                      <div
-                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
-                      >
-                        <span
-                          class="font-semibold text-sm text-theme-text"
-                          data-testid="Address__alias"
-                        >
-                          <span
-                            class="no-ligatures css-9nx3be"
-                            data-testid="TruncateEnd"
-                          >
-                            ARK Wallet 2
-                          </span>
-                        </span>
-                        <div
-                          class="relative grow leading-[17px] sm:leading-5 text-left"
-                        >
-                          <span
-                            class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold text-sm absolute w-full"
-                            data-testid="Address__address"
-                          >
-                            D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
-                          </span>
-                          <span>
-                             
-                          </span>
-                        </div>
-                      </div>
-                    </div>
+                      Contract
+                    </span>
                   </div>
                 </div>
               </td>
@@ -2082,7 +2026,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                 >
                   <div
                     class="flex flex-row gap-2"
-                    data-testid="TransactionRowAddressing__container"
+                    data-testid="TransactionRowAddressing__musig_registration"
                   >
                     <div
                       class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-1qplu6d"
@@ -2091,39 +2035,11 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     >
                       To
                     </div>
-                    <div
-                      class="w-50 sm:w-40 lg:w-50"
-                      data-testid="TransactionRowAddressing__address-container"
+                    <span
+                      class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                     >
-                      <div
-                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
-                      >
-                        <span
-                          class="font-semibold text-sm text-theme-text"
-                          data-testid="Address__alias"
-                        >
-                          <span
-                            class="no-ligatures css-9nx3be"
-                            data-testid="TruncateEnd"
-                          >
-                            ARK Wallet 2
-                          </span>
-                        </span>
-                        <div
-                          class="relative grow leading-[17px] sm:leading-5 text-left"
-                        >
-                          <span
-                            class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold text-sm absolute w-full"
-                            data-testid="Address__address"
-                          >
-                            D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
-                          </span>
-                          <span>
-                             
-                          </span>
-                        </div>
-                      </div>
-                    </div>
+                      Contract
+                    </span>
                   </div>
                 </div>
               </td>
@@ -2257,48 +2173,20 @@ exports[`Transactions > should fetch more transactions 1`] = `
                 >
                   <div
                     class="flex flex-row gap-2"
-                    data-testid="TransactionRowAddressing__container"
+                    data-testid="TransactionRowAddressing__musig_registration"
                   >
                     <div
-                      class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-6yoktf"
-                      color="success-bg"
+                      class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-1qplu6d"
+                      color="danger-bg"
                       data-testid="TransactionRowAddressing__label"
                     >
-                      From
+                      To
                     </div>
-                    <div
-                      class="w-50 sm:w-40 lg:w-50"
-                      data-testid="TransactionRowAddressing__address-container"
+                    <span
+                      class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                     >
-                      <div
-                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
-                      >
-                        <span
-                          class="font-semibold text-sm text-theme-text"
-                          data-testid="Address__alias"
-                        >
-                          <span
-                            class="no-ligatures css-9nx3be"
-                            data-testid="TruncateEnd"
-                          >
-                            ARK Wallet 2
-                          </span>
-                        </span>
-                        <div
-                          class="relative grow leading-[17px] sm:leading-5 text-left"
-                        >
-                          <span
-                            class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold text-sm absolute w-full"
-                            data-testid="Address__address"
-                          >
-                            D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
-                          </span>
-                          <span>
-                             
-                          </span>
-                        </div>
-                      </div>
-                    </div>
+                      Contract
+                    </span>
                   </div>
                 </div>
               </td>
@@ -11325,7 +11213,7 @@ exports[`Transactions > should hide view more button when there are no next page
                 >
                   <div
                     class="flex flex-row gap-2"
-                    data-testid="TransactionRowAddressing__container"
+                    data-testid="TransactionRowAddressing__musig_registration"
                   >
                     <div
                       class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-1qplu6d"
@@ -11334,39 +11222,11 @@ exports[`Transactions > should hide view more button when there are no next page
                     >
                       To
                     </div>
-                    <div
-                      class="w-50 sm:w-40 lg:w-50"
-                      data-testid="TransactionRowAddressing__address-container"
+                    <span
+                      class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                     >
-                      <div
-                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
-                      >
-                        <span
-                          class="font-semibold text-sm text-theme-text"
-                          data-testid="Address__alias"
-                        >
-                          <span
-                            class="no-ligatures css-9nx3be"
-                            data-testid="TruncateEnd"
-                          >
-                            ARK Wallet 2
-                          </span>
-                        </span>
-                        <div
-                          class="relative grow leading-[17px] sm:leading-5 text-left"
-                        >
-                          <span
-                            class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold text-sm absolute w-full"
-                            data-testid="Address__address"
-                          >
-                            D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
-                          </span>
-                          <span>
-                             
-                          </span>
-                        </div>
-                      </div>
-                    </div>
+                      Contract
+                    </span>
                   </div>
                 </div>
               </td>
@@ -11500,48 +11360,20 @@ exports[`Transactions > should hide view more button when there are no next page
                 >
                   <div
                     class="flex flex-row gap-2"
-                    data-testid="TransactionRowAddressing__container"
+                    data-testid="TransactionRowAddressing__musig_registration"
                   >
                     <div
-                      class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-6yoktf"
-                      color="success-bg"
+                      class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-1qplu6d"
+                      color="danger-bg"
                       data-testid="TransactionRowAddressing__label"
                     >
-                      From
+                      To
                     </div>
-                    <div
-                      class="w-50 sm:w-40 lg:w-50"
-                      data-testid="TransactionRowAddressing__address-container"
+                    <span
+                      class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                     >
-                      <div
-                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
-                      >
-                        <span
-                          class="font-semibold text-sm text-theme-text"
-                          data-testid="Address__alias"
-                        >
-                          <span
-                            class="no-ligatures css-9nx3be"
-                            data-testid="TruncateEnd"
-                          >
-                            ARK Wallet 2
-                          </span>
-                        </span>
-                        <div
-                          class="relative grow leading-[17px] sm:leading-5 text-left"
-                        >
-                          <span
-                            class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold text-sm absolute w-full"
-                            data-testid="Address__address"
-                          >
-                            D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
-                          </span>
-                          <span>
-                             
-                          </span>
-                        </div>
-                      </div>
-                    </div>
+                      Contract
+                    </span>
                   </div>
                 </div>
               </td>
@@ -16656,7 +16488,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                 >
                   <div
                     class="flex flex-row gap-2"
-                    data-testid="TransactionRowAddressing__container"
+                    data-testid="TransactionRowAddressing__musig_registration"
                   >
                     <div
                       class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-1qplu6d"
@@ -16665,39 +16497,11 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                     >
                       To
                     </div>
-                    <div
-                      class="w-50 sm:w-40 lg:w-50"
-                      data-testid="TransactionRowAddressing__address-container"
+                    <span
+                      class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                     >
-                      <div
-                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
-                      >
-                        <span
-                          class="font-semibold text-sm text-theme-text"
-                          data-testid="Address__alias"
-                        >
-                          <span
-                            class="no-ligatures css-9nx3be"
-                            data-testid="TruncateEnd"
-                          >
-                            ARK Wallet 2
-                          </span>
-                        </span>
-                        <div
-                          class="relative grow leading-[17px] sm:leading-5 text-left"
-                        >
-                          <span
-                            class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold text-sm absolute w-full"
-                            data-testid="Address__address"
-                          >
-                            D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
-                          </span>
-                          <span>
-                             
-                          </span>
-                        </div>
-                      </div>
-                    </div>
+                      Contract
+                    </span>
                   </div>
                 </div>
               </td>
@@ -16831,48 +16635,20 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                 >
                   <div
                     class="flex flex-row gap-2"
-                    data-testid="TransactionRowAddressing__container"
+                    data-testid="TransactionRowAddressing__musig_registration"
                   >
                     <div
-                      class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-6yoktf"
-                      color="success-bg"
+                      class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-1qplu6d"
+                      color="danger-bg"
                       data-testid="TransactionRowAddressing__label"
                     >
-                      From
+                      To
                     </div>
-                    <div
-                      class="w-50 sm:w-40 lg:w-50"
-                      data-testid="TransactionRowAddressing__address-container"
+                    <span
+                      class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                     >
-                      <div
-                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
-                      >
-                        <span
-                          class="font-semibold text-sm text-theme-text"
-                          data-testid="Address__alias"
-                        >
-                          <span
-                            class="no-ligatures css-9nx3be"
-                            data-testid="TruncateEnd"
-                          >
-                            ARK Wallet 2
-                          </span>
-                        </span>
-                        <div
-                          class="relative grow leading-[17px] sm:leading-5 text-left"
-                        >
-                          <span
-                            class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold text-sm absolute w-full"
-                            data-testid="Address__address"
-                          >
-                            D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
-                          </span>
-                          <span>
-                             
-                          </span>
-                        </div>
-                      </div>
-                    </div>
+                      Contract
+                    </span>
                   </div>
                 </div>
               </td>
