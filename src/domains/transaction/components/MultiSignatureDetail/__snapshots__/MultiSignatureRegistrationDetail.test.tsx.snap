@@ -13,7 +13,7 @@ exports[`MultiSignatureRegistrationDetail > should render in xs 1`] = `<div />`;
 exports[`MultiSignatureRegistrationDetail > should render sender's address as generated address when musig address derivation is not supported in lg 1`] = `
 <div>
   <div
-    class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900-rgba bg-opacity-60 dark:bg-black-rgba dark:bg-opacity-80 md:py-20"
+    class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900-rgba/40 backdrop-blur-xl dark:bg-black-rgba/40 dark:bg-opacity-80 md:py-20"
     data-testid="Modal__overlay"
   >
     <div
@@ -627,7 +627,7 @@ exports[`MultiSignatureRegistrationDetail > should render sender's address as ge
 exports[`MultiSignatureRegistrationDetail > should render sender's address as generated address when musig address derivation is not supported in md 1`] = `
 <div>
   <div
-    class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900-rgba bg-opacity-60 dark:bg-black-rgba dark:bg-opacity-80 md:py-20"
+    class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900-rgba/40 backdrop-blur-xl dark:bg-black-rgba/40 dark:bg-opacity-80 md:py-20"
     data-testid="Modal__overlay"
   >
     <div
@@ -1241,7 +1241,7 @@ exports[`MultiSignatureRegistrationDetail > should render sender's address as ge
 exports[`MultiSignatureRegistrationDetail > should render sender's address as generated address when musig address derivation is not supported in sm 1`] = `
 <div>
   <div
-    class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900-rgba bg-opacity-60 dark:bg-black-rgba dark:bg-opacity-80 md:py-20"
+    class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900-rgba/40 backdrop-blur-xl dark:bg-black-rgba/40 dark:bg-opacity-80 md:py-20"
     data-testid="Modal__overlay"
   >
     <div
@@ -1829,7 +1829,7 @@ exports[`MultiSignatureRegistrationDetail > should render sender's address as ge
 exports[`MultiSignatureRegistrationDetail > should render sender's address as generated address when musig address derivation is not supported in xl 1`] = `
 <div>
   <div
-    class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900-rgba bg-opacity-60 dark:bg-black-rgba dark:bg-opacity-80 md:py-20"
+    class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900-rgba/40 backdrop-blur-xl dark:bg-black-rgba/40 dark:bg-opacity-80 md:py-20"
     data-testid="Modal__overlay"
   >
     <div
@@ -2443,7 +2443,7 @@ exports[`MultiSignatureRegistrationDetail > should render sender's address as ge
 exports[`MultiSignatureRegistrationDetail > should render sender's address as generated address when musig address derivation is not supported in xs 1`] = `
 <div>
   <div
-    class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900-rgba bg-opacity-60 dark:bg-black-rgba dark:bg-opacity-80 md:py-20"
+    class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900-rgba/40 backdrop-blur-xl dark:bg-black-rgba/40 dark:bg-opacity-80 md:py-20"
     data-testid="Modal__overlay"
   >
     <div

@@ -1334,7 +1334,7 @@ exports[`SendTransfer > should display unconfirmed transactions modal when submi
               </div>
             </div>
             <div
-              class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900-rgba bg-opacity-60 dark:bg-black-rgba dark:bg-opacity-80 md:py-20"
+              class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900-rgba/40 backdrop-blur-xl dark:bg-black-rgba/40 dark:bg-opacity-80 md:py-20"
               data-testid="Modal__overlay"
             >
               <div
@@ -1536,7 +1536,7 @@ exports[`SendTransfer > should display unconfirmed transactions modal when submi
                               >
                                 <td>
                                   <div
-                                    class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l space-x-3 text-theme-secondary-500 whitespace-nowrap"
+                                    class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l space-x-3 text-theme-secondary-500 whitespace-nowrap"
                                   >
                                     <span
                                       data-testid="TimeAgo"
@@ -1547,7 +1547,7 @@ exports[`SendTransfer > should display unconfirmed transactions modal when submi
                                 </td>
                                 <td>
                                   <div
-                                    class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
+                                    class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 space-x-4"
                                   >
                                     <div
                                       class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-1i0wxh3"
@@ -1592,7 +1592,7 @@ exports[`SendTransfer > should display unconfirmed transactions modal when submi
                                 </td>
                                 <td>
                                   <div
-                                    class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
+                                    class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
                                   >
                                     <div
                                       class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
@@ -2237,7 +2237,7 @@ exports[`SendTransfer > should error if wrong mnemonic 1`] = `
                     </div>
                   </div>
                   <fieldset
-                    class="flex min-w-0 flex-col css-5kz4tk"
+                    class="flex min-w-0 flex-col css-s0h7ue"
                   >
                     <label
                       class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
@@ -2581,7 +2581,7 @@ exports[`SendTransfer > should render form step (lg) 1`] = `
       class="space-y-4 pt-4"
     >
       <fieldset
-        class="flex min-w-0 flex-col css-1bcidjh"
+        class="flex min-w-0 flex-col css-ea0il3"
       >
         <label
           class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
@@ -2758,7 +2758,7 @@ exports[`SendTransfer > should render form step (lg) 1`] = `
               class="space-y-4"
             >
               <fieldset
-                class="flex min-w-0 flex-col css-1bcidjh"
+                class="flex min-w-0 flex-col css-ea0il3"
               >
                 <div>
                   <div
@@ -2884,7 +2884,7 @@ exports[`SendTransfer > should render form step (lg) 1`] = `
                 </div>
               </fieldset>
               <fieldset
-                class="flex min-w-0 flex-col css-1bcidjh"
+                class="flex min-w-0 flex-col css-ea0il3"
               >
                 <label
                   class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
@@ -2966,7 +2966,7 @@ exports[`SendTransfer > should render form step (lg) 1`] = `
         </div>
       </div>
       <fieldset
-        class="relative css-1bcidjh"
+        class="relative css-ea0il3"
       >
         <label
           class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
@@ -3015,7 +3015,7 @@ exports[`SendTransfer > should render form step (lg) 1`] = `
         </div>
       </fieldset>
       <fieldset
-        class="flex min-w-0 flex-col css-1bcidjh"
+        class="flex min-w-0 flex-col css-ea0il3"
       >
         <label
           class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
@@ -3309,7 +3309,7 @@ exports[`SendTransfer > should render form step (xs) 1`] = `
       class="space-y-4 pt-4"
     >
       <fieldset
-        class="flex min-w-0 flex-col css-1bcidjh"
+        class="flex min-w-0 flex-col css-ea0il3"
       >
         <label
           class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
@@ -3486,7 +3486,7 @@ exports[`SendTransfer > should render form step (xs) 1`] = `
               class="space-y-4"
             >
               <fieldset
-                class="flex min-w-0 flex-col css-1bcidjh"
+                class="flex min-w-0 flex-col css-ea0il3"
               >
                 <div>
                   <div
@@ -3612,7 +3612,7 @@ exports[`SendTransfer > should render form step (xs) 1`] = `
                 </div>
               </fieldset>
               <fieldset
-                class="flex min-w-0 flex-col css-1bcidjh"
+                class="flex min-w-0 flex-col css-ea0il3"
               >
                 <label
                   class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
@@ -3694,7 +3694,7 @@ exports[`SendTransfer > should render form step (xs) 1`] = `
         </div>
       </div>
       <fieldset
-        class="relative css-1bcidjh"
+        class="relative css-ea0il3"
       >
         <label
           class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
@@ -3743,7 +3743,7 @@ exports[`SendTransfer > should render form step (xs) 1`] = `
         </div>
       </fieldset>
       <fieldset
-        class="flex min-w-0 flex-col css-1bcidjh"
+        class="flex min-w-0 flex-col css-ea0il3"
       >
         <label
           class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
@@ -4490,7 +4490,7 @@ exports[`SendTransfer > should render network selection without selected wallet 
                     </div>
                   </div>
                   <fieldset
-                    class="mt-8 my-8 css-1bcidjh"
+                    class="mt-8 my-8 css-ea0il3"
                   >
                     <div
                       data-testid="SendTransfer__network-step__select"
@@ -4724,7 +4724,7 @@ exports[`SendTransfer > should render network step with dropdown 1`] = `
       </div>
     </div>
     <fieldset
-      class="mt-8 css-1bcidjh"
+      class="mt-8 css-ea0il3"
     >
       <label
         class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
@@ -4915,7 +4915,7 @@ exports[`SendTransfer > should render network step with network cards 1`] = `
       </div>
     </div>
     <fieldset
-      class="mt-8 my-8 css-1bcidjh"
+      class="mt-8 my-8 css-ea0il3"
     >
       <div
         data-testid="SendTransfer__network-step__select"
@@ -9298,7 +9298,7 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
               </div>
             </div>
             <div
-              class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900-rgba bg-opacity-60 dark:bg-black-rgba dark:bg-opacity-80 md:py-20"
+              class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900-rgba/40 backdrop-blur-xl dark:bg-black-rgba/40 dark:bg-opacity-80 md:py-20"
               data-testid="Modal__overlay"
             >
               <div
@@ -9500,7 +9500,7 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
                               >
                                 <td>
                                   <div
-                                    class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l space-x-3 text-theme-secondary-500 whitespace-nowrap"
+                                    class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l space-x-3 text-theme-secondary-500 whitespace-nowrap"
                                   >
                                     <span
                                       data-testid="TimeAgo"
@@ -9511,7 +9511,7 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
                                 </td>
                                 <td>
                                   <div
-                                    class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
+                                    class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 space-x-4"
                                   >
                                     <div
                                       class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-1i0wxh3"
@@ -9556,7 +9556,7 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
                                 </td>
                                 <td>
                                   <div
-                                    class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
+                                    class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
                                   >
                                     <div
                                       class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
@@ -9583,7 +9583,7 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
                               >
                                 <td>
                                   <div
-                                    class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l space-x-3 text-theme-secondary-500 whitespace-nowrap"
+                                    class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l space-x-3 text-theme-secondary-500 whitespace-nowrap"
                                   >
                                     <span
                                       data-testid="TimeAgo"
@@ -9594,7 +9594,7 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
                                 </td>
                                 <td>
                                   <div
-                                    class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
+                                    class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 space-x-4"
                                   >
                                     <span
                                       class="flex h-5 w-5 items-center justify-center text-theme-text dark:text-theme-secondary-600"
@@ -9672,7 +9672,7 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
                                 </td>
                                 <td>
                                   <div
-                                    class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
+                                    class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
                                   >
                                     <div
                                       class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"

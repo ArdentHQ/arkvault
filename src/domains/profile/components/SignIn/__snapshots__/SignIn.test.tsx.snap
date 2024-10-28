@@ -5,7 +5,7 @@ exports[`SignIn > should not render if not open 1`] = `<DocumentFragment />`;
 exports[`SignIn > should render a modal 1`] = `
 <DocumentFragment>
   <div
-    class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900-rgba bg-opacity-60 dark:bg-black-rgba dark:bg-opacity-80 md:py-20"
+    class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900-rgba/40 backdrop-blur-xl dark:bg-black-rgba/40 dark:bg-opacity-80 md:py-20"
     data-testid="Modal__overlay"
   >
     <div
@@ -125,7 +125,7 @@ exports[`SignIn > should render a modal 1`] = `
               data-testid="Form"
             >
               <fieldset
-                class="flex min-w-0 flex-col css-1bcidjh"
+                class="flex min-w-0 flex-col css-ea0il3"
               >
                 <label
                   class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
