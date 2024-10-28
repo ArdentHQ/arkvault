@@ -41,7 +41,7 @@ export const TransactionId = ({ transaction, isConfirmed }: Properties): ReactEl
 					data={transaction.id()}
 					tooltip={t("COMMON.COPY_ID")}
 					tooltipDarkTheme={isDarkMode}
-					iconButtonClassName={cn("p-2", getStyles({ sizeClassName: "p-2", variant: "secondary" }))}
+					iconButtonClassName={cn("p-2 space-x-0", getStyles({ variant: "secondary" }))}
 					buttonClassName="h-8 grow"
 					wrapperClassName="flex w-full"
 				>
