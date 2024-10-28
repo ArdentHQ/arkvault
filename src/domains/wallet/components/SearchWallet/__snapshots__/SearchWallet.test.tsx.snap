@@ -3,7 +3,7 @@
 exports[`SearchWallet uses fiat value = false > should render 1`] = `
 <DocumentFragment>
   <div
-    class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900-rgba bg-opacity-60 dark:bg-black-rgba dark:bg-opacity-80 md:py-20"
+    class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900-rgba/40 backdrop-blur-xl dark:bg-black-rgba/40 dark:bg-opacity-80 md:py-20"
     data-testid="Modal__overlay"
   >
     <div
@@ -280,7 +280,7 @@ exports[`SearchWallet uses fiat value = false > should render 1`] = `
                           class="w-full"
                         >
                           <div
-                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l space-x-4"
+                            class="flex px-3 items-center transition-colors duration-100 min-h-11 pl-6 rounded-l space-x-4 my-0.5"
                           >
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -307,7 +307,7 @@ exports[`SearchWallet uses fiat value = false > should render 1`] = `
                         </td>
                         <td>
                           <div
-                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 font-semibold justify-end"
+                            class="flex px-3 items-center transition-colors duration-100 min-h-11 font-semibold justify-end my-0.5"
                           >
                             <span
                               class="whitespace-nowrap text-sm leading-[17px]"
@@ -319,7 +319,7 @@ exports[`SearchWallet uses fiat value = false > should render 1`] = `
                         </td>
                         <td>
                           <div
-                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
+                            class="flex px-3 items-center transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end my-0.5"
                           >
                             <div>
                               <button
@@ -345,7 +345,7 @@ exports[`SearchWallet uses fiat value = false > should render 1`] = `
                           class="w-full"
                         >
                           <div
-                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l space-x-4"
+                            class="flex px-3 items-center transition-colors duration-100 min-h-11 pl-6 rounded-l space-x-4 my-0.5"
                           >
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -372,7 +372,7 @@ exports[`SearchWallet uses fiat value = false > should render 1`] = `
                         </td>
                         <td>
                           <div
-                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 font-semibold justify-end"
+                            class="flex px-3 items-center transition-colors duration-100 min-h-11 font-semibold justify-end my-0.5"
                           >
                             <span
                               class="whitespace-nowrap text-sm leading-[17px]"
@@ -384,7 +384,7 @@ exports[`SearchWallet uses fiat value = false > should render 1`] = `
                         </td>
                         <td>
                           <div
-                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
+                            class="flex px-3 items-center transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end my-0.5"
                           >
                             <div>
                               <button
@@ -418,7 +418,7 @@ exports[`SearchWallet uses fiat value = false > should render 1`] = `
 exports[`SearchWallet uses fiat value = false > should render compact on md screen 1`] = `
 <DocumentFragment>
   <div
-    class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900-rgba bg-opacity-60 dark:bg-black-rgba dark:bg-opacity-80 md:py-20"
+    class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900-rgba/40 backdrop-blur-xl dark:bg-black-rgba/40 dark:bg-opacity-80 md:py-20"
     data-testid="Modal__overlay"
   >
     <div
@@ -695,7 +695,7 @@ exports[`SearchWallet uses fiat value = false > should render compact on md scre
                           class="w-full"
                         >
                           <div
-                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l space-x-4"
+                            class="flex px-3 items-center transition-colors duration-100 min-h-11 pl-6 rounded-l space-x-4 my-0.5"
                           >
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -722,7 +722,7 @@ exports[`SearchWallet uses fiat value = false > should render compact on md scre
                         </td>
                         <td>
                           <div
-                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 font-semibold justify-end"
+                            class="flex px-3 items-center transition-colors duration-100 min-h-11 font-semibold justify-end my-0.5"
                           >
                             <span
                               class="whitespace-nowrap text-sm leading-[17px]"
@@ -734,7 +734,7 @@ exports[`SearchWallet uses fiat value = false > should render compact on md scre
                         </td>
                         <td>
                           <div
-                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
+                            class="flex px-3 items-center transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end my-0.5"
                           >
                             <div>
                               <button
@@ -760,7 +760,7 @@ exports[`SearchWallet uses fiat value = false > should render compact on md scre
                           class="w-full"
                         >
                           <div
-                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l space-x-4"
+                            class="flex px-3 items-center transition-colors duration-100 min-h-11 pl-6 rounded-l space-x-4 my-0.5"
                           >
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -787,7 +787,7 @@ exports[`SearchWallet uses fiat value = false > should render compact on md scre
                         </td>
                         <td>
                           <div
-                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 font-semibold justify-end"
+                            class="flex px-3 items-center transition-colors duration-100 min-h-11 font-semibold justify-end my-0.5"
                           >
                             <span
                               class="whitespace-nowrap text-sm leading-[17px]"
@@ -799,7 +799,7 @@ exports[`SearchWallet uses fiat value = false > should render compact on md scre
                         </td>
                         <td>
                           <div
-                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
+                            class="flex px-3 items-center transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end my-0.5"
                           >
                             <div>
                               <button
@@ -833,7 +833,7 @@ exports[`SearchWallet uses fiat value = false > should render compact on md scre
 exports[`SearchWallet uses fiat value = false > should render compact with selected address 1`] = `
 <DocumentFragment>
   <div
-    class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900-rgba bg-opacity-60 dark:bg-black-rgba dark:bg-opacity-80 md:py-20"
+    class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900-rgba/40 backdrop-blur-xl dark:bg-black-rgba/40 dark:bg-opacity-80 md:py-20"
     data-testid="Modal__overlay"
   >
     <div
@@ -1110,7 +1110,7 @@ exports[`SearchWallet uses fiat value = false > should render compact with selec
                           class="w-full"
                         >
                           <div
-                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l space-x-4"
+                            class="flex px-3 items-center transition-colors duration-100 min-h-11 pl-3 ml-3 bg-theme-success-100 rounded-l dark:bg-transparent dark:border-y-2 dark:border-l-2 dark:border-theme-success-600 space-x-4 my-0.5"
                           >
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -1137,7 +1137,7 @@ exports[`SearchWallet uses fiat value = false > should render compact with selec
                         </td>
                         <td>
                           <div
-                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 font-semibold justify-end"
+                            class="flex px-3 items-center transition-colors duration-100 min-h-11 bg-theme-success-100 dark:bg-transparent dark:border-y-2 dark:border-theme-success-600 font-semibold justify-end my-0.5"
                           >
                             <span
                               class="whitespace-nowrap text-sm leading-[17px]"
@@ -1149,10 +1149,10 @@ exports[`SearchWallet uses fiat value = false > should render compact with selec
                         </td>
                         <td>
                           <div
-                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
+                            class="flex px-3 items-center transition-colors duration-100 min-h-11 pr-3 mr-3 bg-theme-success-100 rounded-r dark:bg-transparent dark:border-y-2 dark:border-r-2 dark:border-theme-success-600 justify-end my-0.5"
                           >
                             <button
-                              class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 text-sm leading-[17px] text-theme-primary-reverse-600"
+                              class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 py-0 text-sm leading-[17px] text-theme-primary-reverse-600"
                               data-testid="SearchWalletListItem__selected-0"
                               type="button"
                             >
@@ -1173,7 +1173,7 @@ exports[`SearchWallet uses fiat value = false > should render compact with selec
                           class="w-full"
                         >
                           <div
-                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l space-x-4"
+                            class="flex px-3 items-center transition-colors duration-100 min-h-11 pl-6 rounded-l space-x-4 my-0.5"
                           >
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -1200,7 +1200,7 @@ exports[`SearchWallet uses fiat value = false > should render compact with selec
                         </td>
                         <td>
                           <div
-                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 font-semibold justify-end"
+                            class="flex px-3 items-center transition-colors duration-100 min-h-11 font-semibold justify-end my-0.5"
                           >
                             <span
                               class="whitespace-nowrap text-sm leading-[17px]"
@@ -1212,7 +1212,7 @@ exports[`SearchWallet uses fiat value = false > should render compact with selec
                         </td>
                         <td>
                           <div
-                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
+                            class="flex px-3 items-center transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end my-0.5"
                           >
                             <div>
                               <button
@@ -1246,7 +1246,7 @@ exports[`SearchWallet uses fiat value = false > should render compact with selec
 exports[`SearchWallet uses fiat value = false > should render responsive item 1`] = `
 <DocumentFragment>
   <div
-    class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900-rgba bg-opacity-60 dark:bg-black-rgba dark:bg-opacity-80 md:py-20"
+    class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900-rgba/40 backdrop-blur-xl dark:bg-black-rgba/40 dark:bg-opacity-80 md:py-20"
     data-testid="Modal__overlay"
   >
     <div
@@ -1561,7 +1561,7 @@ exports[`SearchWallet uses fiat value = false > should render responsive item 1`
 exports[`SearchWallet uses fiat value = false > should render responsive item 2`] = `
 <DocumentFragment>
   <div
-    class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900-rgba bg-opacity-60 dark:bg-black-rgba dark:bg-opacity-80 md:py-20"
+    class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900-rgba/40 backdrop-blur-xl dark:bg-black-rgba/40 dark:bg-opacity-80 md:py-20"
     data-testid="Modal__overlay"
   >
     <div
@@ -1876,7 +1876,7 @@ exports[`SearchWallet uses fiat value = false > should render responsive item 2`
 exports[`SearchWallet uses fiat value = false > should render responsive with selected address 1`] = `
 <DocumentFragment>
   <div
-    class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900-rgba bg-opacity-60 dark:bg-black-rgba dark:bg-opacity-80 md:py-20"
+    class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900-rgba/40 backdrop-blur-xl dark:bg-black-rgba/40 dark:bg-opacity-80 md:py-20"
     data-testid="Modal__overlay"
   >
     <div
@@ -2191,7 +2191,7 @@ exports[`SearchWallet uses fiat value = false > should render responsive with se
 exports[`SearchWallet uses fiat value = false > should render with incompatible ledger wallet 1`] = `
 <DocumentFragment>
   <div
-    class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900-rgba bg-opacity-60 dark:bg-black-rgba dark:bg-opacity-80 md:py-20"
+    class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900-rgba/40 backdrop-blur-xl dark:bg-black-rgba/40 dark:bg-opacity-80 md:py-20"
     data-testid="Modal__overlay"
   >
     <div
@@ -2468,7 +2468,7 @@ exports[`SearchWallet uses fiat value = false > should render with incompatible 
                           class="w-full"
                         >
                           <div
-                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l space-x-4"
+                            class="flex px-3 items-center transition-colors duration-100 min-h-11 pl-6 rounded-l space-x-4 my-0.5"
                           >
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -2484,7 +2484,7 @@ exports[`SearchWallet uses fiat value = false > should render with incompatible 
                         </td>
                         <td>
                           <div
-                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 font-semibold justify-end"
+                            class="flex px-3 items-center transition-colors duration-100 min-h-11 font-semibold justify-end my-0.5"
                           >
                             <span
                               class="whitespace-nowrap text-sm leading-[17px]"
@@ -2496,7 +2496,7 @@ exports[`SearchWallet uses fiat value = false > should render with incompatible 
                         </td>
                         <td>
                           <div
-                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
+                            class="flex px-3 items-center transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end my-0.5"
                           >
                             <div>
                               <button
@@ -2531,7 +2531,7 @@ exports[`SearchWallet uses fiat value = false > should render with incompatible 
 exports[`SearchWallet uses fiat value = false > should render with selected address 1`] = `
 <DocumentFragment>
   <div
-    class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900-rgba bg-opacity-60 dark:bg-black-rgba dark:bg-opacity-80 md:py-20"
+    class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900-rgba/40 backdrop-blur-xl dark:bg-black-rgba/40 dark:bg-opacity-80 md:py-20"
     data-testid="Modal__overlay"
   >
     <div
@@ -2808,7 +2808,7 @@ exports[`SearchWallet uses fiat value = false > should render with selected addr
                           class="w-full"
                         >
                           <div
-                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l space-x-4"
+                            class="flex px-3 items-center transition-colors duration-100 min-h-11 pl-3 ml-3 bg-theme-success-100 rounded-l dark:bg-transparent dark:border-y-2 dark:border-l-2 dark:border-theme-success-600 space-x-4 my-0.5"
                           >
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -2835,7 +2835,7 @@ exports[`SearchWallet uses fiat value = false > should render with selected addr
                         </td>
                         <td>
                           <div
-                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 font-semibold justify-end"
+                            class="flex px-3 items-center transition-colors duration-100 min-h-11 bg-theme-success-100 dark:bg-transparent dark:border-y-2 dark:border-theme-success-600 font-semibold justify-end my-0.5"
                           >
                             <span
                               class="whitespace-nowrap text-sm leading-[17px]"
@@ -2847,10 +2847,10 @@ exports[`SearchWallet uses fiat value = false > should render with selected addr
                         </td>
                         <td>
                           <div
-                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
+                            class="flex px-3 items-center transition-colors duration-100 min-h-11 pr-3 mr-3 bg-theme-success-100 rounded-r dark:bg-transparent dark:border-y-2 dark:border-r-2 dark:border-theme-success-600 justify-end my-0.5"
                           >
                             <button
-                              class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 text-sm leading-[17px] text-theme-primary-reverse-600"
+                              class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 py-0 text-sm leading-[17px] text-theme-primary-reverse-600"
                               data-testid="SearchWalletListItem__selected-0"
                               type="button"
                             >
@@ -2871,7 +2871,7 @@ exports[`SearchWallet uses fiat value = false > should render with selected addr
                           class="w-full"
                         >
                           <div
-                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l space-x-4"
+                            class="flex px-3 items-center transition-colors duration-100 min-h-11 pl-6 rounded-l space-x-4 my-0.5"
                           >
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -2898,7 +2898,7 @@ exports[`SearchWallet uses fiat value = false > should render with selected addr
                         </td>
                         <td>
                           <div
-                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 font-semibold justify-end"
+                            class="flex px-3 items-center transition-colors duration-100 min-h-11 font-semibold justify-end my-0.5"
                           >
                             <span
                               class="whitespace-nowrap text-sm leading-[17px]"
@@ -2910,7 +2910,7 @@ exports[`SearchWallet uses fiat value = false > should render with selected addr
                         </td>
                         <td>
                           <div
-                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
+                            class="flex px-3 items-center transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end my-0.5"
                           >
                             <div>
                               <button
@@ -2944,7 +2944,7 @@ exports[`SearchWallet uses fiat value = false > should render with selected addr
 exports[`SearchWallet uses fiat value = false > should render with the default exchange currency enabled from profile settings 1`] = `
 <DocumentFragment>
   <div
-    class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900-rgba bg-opacity-60 dark:bg-black-rgba dark:bg-opacity-80 md:py-20"
+    class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900-rgba/40 backdrop-blur-xl dark:bg-black-rgba/40 dark:bg-opacity-80 md:py-20"
     data-testid="Modal__overlay"
   >
     <div
@@ -3221,7 +3221,7 @@ exports[`SearchWallet uses fiat value = false > should render with the default e
                           class="w-full"
                         >
                           <div
-                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l space-x-4"
+                            class="flex px-3 items-center transition-colors duration-100 min-h-11 pl-6 rounded-l space-x-4 my-0.5"
                           >
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -3248,7 +3248,7 @@ exports[`SearchWallet uses fiat value = false > should render with the default e
                         </td>
                         <td>
                           <div
-                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 font-semibold justify-end"
+                            class="flex px-3 items-center transition-colors duration-100 min-h-11 font-semibold justify-end my-0.5"
                           >
                             <span
                               class="whitespace-nowrap text-sm leading-[17px]"
@@ -3260,7 +3260,7 @@ exports[`SearchWallet uses fiat value = false > should render with the default e
                         </td>
                         <td>
                           <div
-                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
+                            class="flex px-3 items-center transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end my-0.5"
                           >
                             <div>
                               <button
@@ -3286,7 +3286,7 @@ exports[`SearchWallet uses fiat value = false > should render with the default e
                           class="w-full"
                         >
                           <div
-                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l space-x-4"
+                            class="flex px-3 items-center transition-colors duration-100 min-h-11 pl-6 rounded-l space-x-4 my-0.5"
                           >
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -3313,7 +3313,7 @@ exports[`SearchWallet uses fiat value = false > should render with the default e
                         </td>
                         <td>
                           <div
-                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 font-semibold justify-end"
+                            class="flex px-3 items-center transition-colors duration-100 min-h-11 font-semibold justify-end my-0.5"
                           >
                             <span
                               class="whitespace-nowrap text-sm leading-[17px]"
@@ -3325,7 +3325,7 @@ exports[`SearchWallet uses fiat value = false > should render with the default e
                         </td>
                         <td>
                           <div
-                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
+                            class="flex px-3 items-center transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end my-0.5"
                           >
                             <div>
                               <button
@@ -3359,7 +3359,7 @@ exports[`SearchWallet uses fiat value = false > should render with the default e
 exports[`SearchWallet uses fiat value = true > should render 1`] = `
 <DocumentFragment>
   <div
-    class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900-rgba bg-opacity-60 dark:bg-black-rgba dark:bg-opacity-80 md:py-20"
+    class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900-rgba/40 backdrop-blur-xl dark:bg-black-rgba/40 dark:bg-opacity-80 md:py-20"
     data-testid="Modal__overlay"
   >
     <div
@@ -3682,7 +3682,7 @@ exports[`SearchWallet uses fiat value = true > should render 1`] = `
                           class="w-full"
                         >
                           <div
-                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l space-x-4"
+                            class="flex px-3 items-center transition-colors duration-100 min-h-11 pl-6 rounded-l space-x-4 my-0.5"
                           >
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -3709,7 +3709,7 @@ exports[`SearchWallet uses fiat value = true > should render 1`] = `
                         </td>
                         <td>
                           <div
-                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 font-semibold justify-end"
+                            class="flex px-3 items-center transition-colors duration-100 min-h-11 font-semibold justify-end my-0.5"
                           >
                             <span
                               class="whitespace-nowrap text-sm leading-[17px]"
@@ -3723,7 +3723,7 @@ exports[`SearchWallet uses fiat value = true > should render 1`] = `
                           class="hidden xl:table-cell"
                         >
                           <div
-                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 text-theme-secondary-text justify-end"
+                            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 text-theme-secondary-text justify-end"
                           >
                             <span
                               class="whitespace-nowrap text-sm leading-[17px]"
@@ -3735,7 +3735,7 @@ exports[`SearchWallet uses fiat value = true > should render 1`] = `
                         </td>
                         <td>
                           <div
-                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
+                            class="flex px-3 items-center transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end my-0.5"
                           >
                             <div>
                               <button
@@ -3761,7 +3761,7 @@ exports[`SearchWallet uses fiat value = true > should render 1`] = `
                           class="w-full"
                         >
                           <div
-                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l space-x-4"
+                            class="flex px-3 items-center transition-colors duration-100 min-h-11 pl-6 rounded-l space-x-4 my-0.5"
                           >
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -3788,7 +3788,7 @@ exports[`SearchWallet uses fiat value = true > should render 1`] = `
                         </td>
                         <td>
                           <div
-                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 font-semibold justify-end"
+                            class="flex px-3 items-center transition-colors duration-100 min-h-11 font-semibold justify-end my-0.5"
                           >
                             <span
                               class="whitespace-nowrap text-sm leading-[17px]"
@@ -3802,7 +3802,7 @@ exports[`SearchWallet uses fiat value = true > should render 1`] = `
                           class="hidden xl:table-cell"
                         >
                           <div
-                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 text-theme-secondary-text justify-end"
+                            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 text-theme-secondary-text justify-end"
                           >
                             <span
                               class="whitespace-nowrap text-sm leading-[17px]"
@@ -3814,7 +3814,7 @@ exports[`SearchWallet uses fiat value = true > should render 1`] = `
                         </td>
                         <td>
                           <div
-                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
+                            class="flex px-3 items-center transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end my-0.5"
                           >
                             <div>
                               <button
@@ -3848,7 +3848,7 @@ exports[`SearchWallet uses fiat value = true > should render 1`] = `
 exports[`SearchWallet uses fiat value = true > should render compact on md screen 1`] = `
 <DocumentFragment>
   <div
-    class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900-rgba bg-opacity-60 dark:bg-black-rgba dark:bg-opacity-80 md:py-20"
+    class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900-rgba/40 backdrop-blur-xl dark:bg-black-rgba/40 dark:bg-opacity-80 md:py-20"
     data-testid="Modal__overlay"
   >
     <div
@@ -4171,7 +4171,7 @@ exports[`SearchWallet uses fiat value = true > should render compact on md scree
                           class="w-full"
                         >
                           <div
-                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l space-x-4"
+                            class="flex px-3 items-center transition-colors duration-100 min-h-11 pl-6 rounded-l space-x-4 my-0.5"
                           >
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -4198,7 +4198,7 @@ exports[`SearchWallet uses fiat value = true > should render compact on md scree
                         </td>
                         <td>
                           <div
-                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 font-semibold justify-end"
+                            class="flex px-3 items-center transition-colors duration-100 min-h-11 font-semibold justify-end my-0.5"
                           >
                             <span
                               class="whitespace-nowrap text-sm leading-[17px]"
@@ -4212,7 +4212,7 @@ exports[`SearchWallet uses fiat value = true > should render compact on md scree
                           class="hidden xl:table-cell"
                         >
                           <div
-                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 text-theme-secondary-text justify-end"
+                            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 text-theme-secondary-text justify-end"
                           >
                             <span
                               class="whitespace-nowrap text-sm leading-[17px]"
@@ -4224,7 +4224,7 @@ exports[`SearchWallet uses fiat value = true > should render compact on md scree
                         </td>
                         <td>
                           <div
-                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
+                            class="flex px-3 items-center transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end my-0.5"
                           >
                             <div>
                               <button
@@ -4250,7 +4250,7 @@ exports[`SearchWallet uses fiat value = true > should render compact on md scree
                           class="w-full"
                         >
                           <div
-                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l space-x-4"
+                            class="flex px-3 items-center transition-colors duration-100 min-h-11 pl-6 rounded-l space-x-4 my-0.5"
                           >
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -4277,7 +4277,7 @@ exports[`SearchWallet uses fiat value = true > should render compact on md scree
                         </td>
                         <td>
                           <div
-                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 font-semibold justify-end"
+                            class="flex px-3 items-center transition-colors duration-100 min-h-11 font-semibold justify-end my-0.5"
                           >
                             <span
                               class="whitespace-nowrap text-sm leading-[17px]"
@@ -4291,7 +4291,7 @@ exports[`SearchWallet uses fiat value = true > should render compact on md scree
                           class="hidden xl:table-cell"
                         >
                           <div
-                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 text-theme-secondary-text justify-end"
+                            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 text-theme-secondary-text justify-end"
                           >
                             <span
                               class="whitespace-nowrap text-sm leading-[17px]"
@@ -4303,7 +4303,7 @@ exports[`SearchWallet uses fiat value = true > should render compact on md scree
                         </td>
                         <td>
                           <div
-                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
+                            class="flex px-3 items-center transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end my-0.5"
                           >
                             <div>
                               <button
@@ -4337,7 +4337,7 @@ exports[`SearchWallet uses fiat value = true > should render compact on md scree
 exports[`SearchWallet uses fiat value = true > should render compact with selected address 1`] = `
 <DocumentFragment>
   <div
-    class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900-rgba bg-opacity-60 dark:bg-black-rgba dark:bg-opacity-80 md:py-20"
+    class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900-rgba/40 backdrop-blur-xl dark:bg-black-rgba/40 dark:bg-opacity-80 md:py-20"
     data-testid="Modal__overlay"
   >
     <div
@@ -4660,7 +4660,7 @@ exports[`SearchWallet uses fiat value = true > should render compact with select
                           class="w-full"
                         >
                           <div
-                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l space-x-4"
+                            class="flex px-3 items-center transition-colors duration-100 min-h-11 pl-3 ml-3 bg-theme-success-100 rounded-l dark:bg-transparent dark:border-y-2 dark:border-l-2 dark:border-theme-success-600 space-x-4 my-0.5"
                           >
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -4687,7 +4687,7 @@ exports[`SearchWallet uses fiat value = true > should render compact with select
                         </td>
                         <td>
                           <div
-                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 font-semibold justify-end"
+                            class="flex px-3 items-center transition-colors duration-100 min-h-11 bg-theme-success-100 dark:bg-transparent dark:border-y-2 dark:border-theme-success-600 font-semibold justify-end my-0.5"
                           >
                             <span
                               class="whitespace-nowrap text-sm leading-[17px]"
@@ -4701,7 +4701,7 @@ exports[`SearchWallet uses fiat value = true > should render compact with select
                           class="hidden xl:table-cell"
                         >
                           <div
-                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 text-theme-secondary-text justify-end"
+                            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 bg-theme-success-100 dark:bg-transparent dark:border-y-2 dark:border-theme-success-600 text-theme-secondary-text justify-end"
                           >
                             <span
                               class="whitespace-nowrap text-sm leading-[17px]"
@@ -4713,10 +4713,10 @@ exports[`SearchWallet uses fiat value = true > should render compact with select
                         </td>
                         <td>
                           <div
-                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
+                            class="flex px-3 items-center transition-colors duration-100 min-h-11 pr-3 mr-3 bg-theme-success-100 rounded-r dark:bg-transparent dark:border-y-2 dark:border-r-2 dark:border-theme-success-600 justify-end my-0.5"
                           >
                             <button
-                              class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 text-sm leading-[17px] text-theme-primary-reverse-600"
+                              class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 py-0 text-sm leading-[17px] text-theme-primary-reverse-600"
                               data-testid="SearchWalletListItem__selected-0"
                               type="button"
                             >
@@ -4737,7 +4737,7 @@ exports[`SearchWallet uses fiat value = true > should render compact with select
                           class="w-full"
                         >
                           <div
-                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l space-x-4"
+                            class="flex px-3 items-center transition-colors duration-100 min-h-11 pl-6 rounded-l space-x-4 my-0.5"
                           >
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -4764,7 +4764,7 @@ exports[`SearchWallet uses fiat value = true > should render compact with select
                         </td>
                         <td>
                           <div
-                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 font-semibold justify-end"
+                            class="flex px-3 items-center transition-colors duration-100 min-h-11 font-semibold justify-end my-0.5"
                           >
                             <span
                               class="whitespace-nowrap text-sm leading-[17px]"
@@ -4778,7 +4778,7 @@ exports[`SearchWallet uses fiat value = true > should render compact with select
                           class="hidden xl:table-cell"
                         >
                           <div
-                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 text-theme-secondary-text justify-end"
+                            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 text-theme-secondary-text justify-end"
                           >
                             <span
                               class="whitespace-nowrap text-sm leading-[17px]"
@@ -4790,7 +4790,7 @@ exports[`SearchWallet uses fiat value = true > should render compact with select
                         </td>
                         <td>
                           <div
-                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
+                            class="flex px-3 items-center transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end my-0.5"
                           >
                             <div>
                               <button
@@ -4824,7 +4824,7 @@ exports[`SearchWallet uses fiat value = true > should render compact with select
 exports[`SearchWallet uses fiat value = true > should render responsive item 1`] = `
 <DocumentFragment>
   <div
-    class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900-rgba bg-opacity-60 dark:bg-black-rgba dark:bg-opacity-80 md:py-20"
+    class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900-rgba/40 backdrop-blur-xl dark:bg-black-rgba/40 dark:bg-opacity-80 md:py-20"
     data-testid="Modal__overlay"
   >
     <div
@@ -5139,7 +5139,7 @@ exports[`SearchWallet uses fiat value = true > should render responsive item 1`]
 exports[`SearchWallet uses fiat value = true > should render responsive item 2`] = `
 <DocumentFragment>
   <div
-    class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900-rgba bg-opacity-60 dark:bg-black-rgba dark:bg-opacity-80 md:py-20"
+    class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900-rgba/40 backdrop-blur-xl dark:bg-black-rgba/40 dark:bg-opacity-80 md:py-20"
     data-testid="Modal__overlay"
   >
     <div
@@ -5454,7 +5454,7 @@ exports[`SearchWallet uses fiat value = true > should render responsive item 2`]
 exports[`SearchWallet uses fiat value = true > should render responsive with selected address 1`] = `
 <DocumentFragment>
   <div
-    class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900-rgba bg-opacity-60 dark:bg-black-rgba dark:bg-opacity-80 md:py-20"
+    class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900-rgba/40 backdrop-blur-xl dark:bg-black-rgba/40 dark:bg-opacity-80 md:py-20"
     data-testid="Modal__overlay"
   >
     <div
@@ -5769,7 +5769,7 @@ exports[`SearchWallet uses fiat value = true > should render responsive with sel
 exports[`SearchWallet uses fiat value = true > should render with incompatible ledger wallet 1`] = `
 <DocumentFragment>
   <div
-    class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900-rgba bg-opacity-60 dark:bg-black-rgba dark:bg-opacity-80 md:py-20"
+    class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900-rgba/40 backdrop-blur-xl dark:bg-black-rgba/40 dark:bg-opacity-80 md:py-20"
     data-testid="Modal__overlay"
   >
     <div
@@ -6092,7 +6092,7 @@ exports[`SearchWallet uses fiat value = true > should render with incompatible l
                           class="w-full"
                         >
                           <div
-                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l space-x-4"
+                            class="flex px-3 items-center transition-colors duration-100 min-h-11 pl-6 rounded-l space-x-4 my-0.5"
                           >
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -6108,7 +6108,7 @@ exports[`SearchWallet uses fiat value = true > should render with incompatible l
                         </td>
                         <td>
                           <div
-                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 font-semibold justify-end"
+                            class="flex px-3 items-center transition-colors duration-100 min-h-11 font-semibold justify-end my-0.5"
                           >
                             <span
                               class="whitespace-nowrap text-sm leading-[17px]"
@@ -6122,7 +6122,7 @@ exports[`SearchWallet uses fiat value = true > should render with incompatible l
                           class="hidden xl:table-cell"
                         >
                           <div
-                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 text-theme-secondary-text justify-end"
+                            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 text-theme-secondary-text justify-end"
                           >
                             <span
                               class="whitespace-nowrap text-sm leading-[17px]"
@@ -6134,7 +6134,7 @@ exports[`SearchWallet uses fiat value = true > should render with incompatible l
                         </td>
                         <td>
                           <div
-                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
+                            class="flex px-3 items-center transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end my-0.5"
                           >
                             <div>
                               <button
@@ -6169,7 +6169,7 @@ exports[`SearchWallet uses fiat value = true > should render with incompatible l
 exports[`SearchWallet uses fiat value = true > should render with selected address 1`] = `
 <DocumentFragment>
   <div
-    class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900-rgba bg-opacity-60 dark:bg-black-rgba dark:bg-opacity-80 md:py-20"
+    class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900-rgba/40 backdrop-blur-xl dark:bg-black-rgba/40 dark:bg-opacity-80 md:py-20"
     data-testid="Modal__overlay"
   >
     <div
@@ -6492,7 +6492,7 @@ exports[`SearchWallet uses fiat value = true > should render with selected addre
                           class="w-full"
                         >
                           <div
-                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l space-x-4"
+                            class="flex px-3 items-center transition-colors duration-100 min-h-11 pl-3 ml-3 bg-theme-success-100 rounded-l dark:bg-transparent dark:border-y-2 dark:border-l-2 dark:border-theme-success-600 space-x-4 my-0.5"
                           >
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -6519,7 +6519,7 @@ exports[`SearchWallet uses fiat value = true > should render with selected addre
                         </td>
                         <td>
                           <div
-                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 font-semibold justify-end"
+                            class="flex px-3 items-center transition-colors duration-100 min-h-11 bg-theme-success-100 dark:bg-transparent dark:border-y-2 dark:border-theme-success-600 font-semibold justify-end my-0.5"
                           >
                             <span
                               class="whitespace-nowrap text-sm leading-[17px]"
@@ -6533,7 +6533,7 @@ exports[`SearchWallet uses fiat value = true > should render with selected addre
                           class="hidden xl:table-cell"
                         >
                           <div
-                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 text-theme-secondary-text justify-end"
+                            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 bg-theme-success-100 dark:bg-transparent dark:border-y-2 dark:border-theme-success-600 text-theme-secondary-text justify-end"
                           >
                             <span
                               class="whitespace-nowrap text-sm leading-[17px]"
@@ -6545,10 +6545,10 @@ exports[`SearchWallet uses fiat value = true > should render with selected addre
                         </td>
                         <td>
                           <div
-                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
+                            class="flex px-3 items-center transition-colors duration-100 min-h-11 pr-3 mr-3 bg-theme-success-100 rounded-r dark:bg-transparent dark:border-y-2 dark:border-r-2 dark:border-theme-success-600 justify-end my-0.5"
                           >
                             <button
-                              class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 text-sm leading-[17px] text-theme-primary-reverse-600"
+                              class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 py-0 text-sm leading-[17px] text-theme-primary-reverse-600"
                               data-testid="SearchWalletListItem__selected-0"
                               type="button"
                             >
@@ -6569,7 +6569,7 @@ exports[`SearchWallet uses fiat value = true > should render with selected addre
                           class="w-full"
                         >
                           <div
-                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l space-x-4"
+                            class="flex px-3 items-center transition-colors duration-100 min-h-11 pl-6 rounded-l space-x-4 my-0.5"
                           >
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -6596,7 +6596,7 @@ exports[`SearchWallet uses fiat value = true > should render with selected addre
                         </td>
                         <td>
                           <div
-                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 font-semibold justify-end"
+                            class="flex px-3 items-center transition-colors duration-100 min-h-11 font-semibold justify-end my-0.5"
                           >
                             <span
                               class="whitespace-nowrap text-sm leading-[17px]"
@@ -6610,7 +6610,7 @@ exports[`SearchWallet uses fiat value = true > should render with selected addre
                           class="hidden xl:table-cell"
                         >
                           <div
-                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 text-theme-secondary-text justify-end"
+                            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 text-theme-secondary-text justify-end"
                           >
                             <span
                               class="whitespace-nowrap text-sm leading-[17px]"
@@ -6622,7 +6622,7 @@ exports[`SearchWallet uses fiat value = true > should render with selected addre
                         </td>
                         <td>
                           <div
-                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
+                            class="flex px-3 items-center transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end my-0.5"
                           >
                             <div>
                               <button
@@ -6656,7 +6656,7 @@ exports[`SearchWallet uses fiat value = true > should render with selected addre
 exports[`SearchWallet uses fiat value = true > should render with the default exchange currency enabled from profile settings 1`] = `
 <DocumentFragment>
   <div
-    class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900-rgba bg-opacity-60 dark:bg-black-rgba dark:bg-opacity-80 md:py-20"
+    class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900-rgba/40 backdrop-blur-xl dark:bg-black-rgba/40 dark:bg-opacity-80 md:py-20"
     data-testid="Modal__overlay"
   >
     <div
@@ -6979,7 +6979,7 @@ exports[`SearchWallet uses fiat value = true > should render with the default ex
                           class="w-full"
                         >
                           <div
-                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l space-x-4"
+                            class="flex px-3 items-center transition-colors duration-100 min-h-11 pl-6 rounded-l space-x-4 my-0.5"
                           >
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -7006,7 +7006,7 @@ exports[`SearchWallet uses fiat value = true > should render with the default ex
                         </td>
                         <td>
                           <div
-                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 font-semibold justify-end"
+                            class="flex px-3 items-center transition-colors duration-100 min-h-11 font-semibold justify-end my-0.5"
                           >
                             <span
                               class="whitespace-nowrap text-sm leading-[17px]"
@@ -7020,7 +7020,7 @@ exports[`SearchWallet uses fiat value = true > should render with the default ex
                           class="hidden xl:table-cell"
                         >
                           <div
-                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 text-theme-secondary-text justify-end"
+                            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 text-theme-secondary-text justify-end"
                           >
                             <span
                               class="whitespace-nowrap text-sm leading-[17px]"
@@ -7032,7 +7032,7 @@ exports[`SearchWallet uses fiat value = true > should render with the default ex
                         </td>
                         <td>
                           <div
-                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
+                            class="flex px-3 items-center transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end my-0.5"
                           >
                             <div>
                               <button
@@ -7058,7 +7058,7 @@ exports[`SearchWallet uses fiat value = true > should render with the default ex
                           class="w-full"
                         >
                           <div
-                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l space-x-4"
+                            class="flex px-3 items-center transition-colors duration-100 min-h-11 pl-6 rounded-l space-x-4 my-0.5"
                           >
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -7085,7 +7085,7 @@ exports[`SearchWallet uses fiat value = true > should render with the default ex
                         </td>
                         <td>
                           <div
-                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 font-semibold justify-end"
+                            class="flex px-3 items-center transition-colors duration-100 min-h-11 font-semibold justify-end my-0.5"
                           >
                             <span
                               class="whitespace-nowrap text-sm leading-[17px]"
@@ -7099,7 +7099,7 @@ exports[`SearchWallet uses fiat value = true > should render with the default ex
                           class="hidden xl:table-cell"
                         >
                           <div
-                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 text-theme-secondary-text justify-end"
+                            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 text-theme-secondary-text justify-end"
                           >
                             <span
                               class="whitespace-nowrap text-sm leading-[17px]"
@@ -7111,7 +7111,7 @@ exports[`SearchWallet uses fiat value = true > should render with the default ex
                         </td>
                         <td>
                           <div
-                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
+                            class="flex px-3 items-center transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end my-0.5"
                           >
                             <div>
                               <button
