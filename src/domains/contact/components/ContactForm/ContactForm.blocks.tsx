@@ -37,7 +37,7 @@ const AddressListItem: React.VFC<AddressListItemProperties> = ({ address, onRemo
 					<Button
 						data-testid="contact-form__remove-address-btn-xs"
 						size="icon"
-						className="text-theme-secondary-700 dark:text-theme-secondary-500 sm:!hidden p-0"
+						className="p-0 text-theme-secondary-700 dark:text-theme-secondary-500 sm:!hidden"
 						variant="transparent"
 						onClick={() => onRemove()}
 					>
