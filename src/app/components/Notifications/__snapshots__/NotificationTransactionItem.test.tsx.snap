@@ -22,7 +22,7 @@ exports[`Notifications > should render in xs 1`] = `
                 Address
               </div>
               <div
-                class="w-2/3"
+                class="w-40 xs:w-50 min-[480px]:w-2/3"
               >
                 <div
                   class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -102,7 +102,7 @@ exports[`Notifications > should render in xs 2`] = `
                 Address
               </div>
               <div
-                class="w-2/3"
+                class="w-40 xs:w-50 min-[480px]:w-2/3"
               >
                 <div
                   class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
