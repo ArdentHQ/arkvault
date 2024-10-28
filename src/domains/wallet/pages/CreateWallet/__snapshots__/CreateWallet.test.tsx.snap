@@ -716,7 +716,7 @@ exports[`CreateWallet > should create a wallet 1`] = `
                       </div>
                     </div>
                     <fieldset
-                      class="mt-4 my-4 css-1bcidjh"
+                      class="mt-4 my-4 css-ea0il3"
                     >
                       <div
                         data-testid="SelectNetwork"
@@ -2459,7 +2459,7 @@ exports[`CreateWallet > should create a wallet with encryption 1`] = `
                       </div>
                     </div>
                     <fieldset
-                      class="mt-4 my-4 css-1bcidjh"
+                      class="mt-4 my-4 css-ea0il3"
                     >
                       <div
                         data-testid="SelectNetwork"
@@ -3349,7 +3349,7 @@ exports[`CreateWallet > should remove pending wallet if not submitted 1`] = `
                       </div>
                     </div>
                     <fieldset
-                      class="mt-4 my-4 css-1bcidjh"
+                      class="mt-4 my-4 css-ea0il3"
                     >
                       <div
                         data-testid="SelectNetwork"
@@ -4235,7 +4235,7 @@ exports[`CreateWallet > should show an error message for duplicate name 1`] = `
                       </div>
                     </div>
                     <fieldset
-                      class="mt-4 my-4 css-1bcidjh"
+                      class="mt-4 my-4 css-ea0il3"
                     >
                       <div
                         data-testid="SelectNetwork"
@@ -5175,7 +5175,7 @@ exports[`CreateWallet > should show an error message if wallet generation failed
                       </div>
                     </div>
                     <fieldset
-                      class="mt-4 my-4 css-1bcidjh"
+                      class="mt-4 my-4 css-ea0il3"
                     >
                       <div
                         data-testid="SelectNetwork"

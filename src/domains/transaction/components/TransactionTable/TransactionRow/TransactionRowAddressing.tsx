@@ -94,7 +94,7 @@ export const TransactionRowAddressing = ({
 		);
 	}
 
-	if (transaction.isMultiSignatureRegistration()) {
+	if (transaction.isMultiSignatureRegistration() || transaction.isIpfs()) {
 		return (
 			<div className="flex flex-row gap-2" data-testid="TransactionRowAddressing__musig_registration">
 				<TransactionRowLabel isNegative />

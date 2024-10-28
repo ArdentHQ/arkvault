@@ -1610,7 +1610,7 @@ exports[`Dashboard > should render 1`] = `
                       </td>
                       <td>
                         <div
-                          class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
+                          class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 space-x-4"
                         >
                           <div
                             class="flex flex-row gap-2"
@@ -1774,7 +1774,7 @@ exports[`Dashboard > should render 1`] = `
                       </td>
                       <td>
                         <div
-                          class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
+                          class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 space-x-4"
                         >
                           <div
                             class="flex flex-row gap-2"
@@ -1938,7 +1938,7 @@ exports[`Dashboard > should render 1`] = `
                       </td>
                       <td>
                         <div
-                          class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
+                          class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 space-x-4"
                         >
                           <div
                             class="flex flex-row gap-2"
@@ -2102,7 +2102,7 @@ exports[`Dashboard > should render 1`] = `
                       </td>
                       <td>
                         <div
-                          class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
+                          class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 space-x-4"
                         >
                           <div
                             class="flex flex-row gap-2"

@@ -7,11 +7,12 @@ import { FormFieldProvider } from "./useFormField";
 
 type FormFieldProperties = {
 	name: string;
+	disableHover?: boolean;
 } & React.FieldsetHTMLAttributes<any>;
 
-export const FormFieldStyled = styled.fieldset<{ isInvalid: boolean }>`
+export const FormFieldStyled = styled.fieldset<{ isInvalid: boolean; disableHover: boolean }>`
 	&:hover .FormLabel {
-		${({ isInvalid }) => !isInvalid && tw`text-theme-primary-600`};
+		${({ isInvalid, disableHover }) => !isInvalid && !disableHover && tw`text-theme-primary-600`}
 	}
 	.FormLabel {
 		${({ isInvalid }) => isInvalid && tw`text-theme-danger-500`};
@@ -21,7 +22,7 @@ export const FormFieldStyled = styled.fieldset<{ isInvalid: boolean }>`
 	}
 `;
 
-export const FormField: React.FC<FormFieldProperties> = ({ name, ...properties }) => {
+export const FormField: React.FC<FormFieldProperties> = ({ name, disableHover = false, ...properties }) => {
 	const FormProvider = useFormContext();
 	const { isInvalid, errorMessage } = React.useMemo(() => {
 		const error: { message: string } | undefined = get(FormProvider?.errors, name);
@@ -33,7 +34,12 @@ export const FormField: React.FC<FormFieldProperties> = ({ name, ...properties }
 	}, [FormProvider, name]);
 
 	return (
-		<FormFieldStyled isInvalid={isInvalid} className="flex min-w-0 flex-col" {...properties}>
+		<FormFieldStyled
+			isInvalid={isInvalid}
+			className="flex min-w-0 flex-col"
+			disableHover={disableHover}
+			{...properties}
+		>
 			<FormFieldProvider value={{ errorMessage, isInvalid, name }}>
 				<>{properties.children}</>
 			</FormFieldProvider>
