@@ -102,7 +102,7 @@ exports[`LedgerImportStep > should render with multiple import 1`] = `
               ARK Devnet #3
             </span>
             <button
-              class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none !p-0 text-theme-primary-600 dark:text-theme-secondary-500"
+              class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none !p-0 text-theme-primary-600 dark:text-theme-secondary-500"
               data-testid="LedgerImportStep__edit-alias"
               type="button"
             >
@@ -237,7 +237,7 @@ exports[`LedgerImportStep > should render with multiple import 1`] = `
               ARK Devnet #4
             </span>
             <button
-              class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none !p-0 text-theme-primary-600 dark:text-theme-secondary-500"
+              class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none !p-0 text-theme-primary-600 dark:text-theme-secondary-500"
               data-testid="LedgerImportStep__edit-alias"
               type="button"
             >
@@ -655,7 +655,7 @@ exports[`LedgerImportStep > should render with multiple import 2`] = `
                     class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end font-semibold"
                   >
                     <button
-                      class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-700"
+                      class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-700"
                       data-testid="LedgerImportStep__edit-alias"
                       type="button"
                     >
@@ -781,7 +781,7 @@ exports[`LedgerImportStep > should render with multiple import 2`] = `
                     class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end font-semibold"
                   >
                     <button
-                      class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-700"
+                      class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-700"
                       data-testid="LedgerImportStep__edit-alias"
                       type="button"
                     >
@@ -1034,7 +1034,7 @@ exports[`LedgerImportStep > should render with single import (lg) 1`] = `
                     ARK Devnet #4
                   </span>
                   <button
-                    class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none !p-0 text-theme-primary-600 dark:text-theme-secondary-500"
+                    class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none !p-0 text-theme-primary-600 dark:text-theme-secondary-500"
                     data-testid="LedgerImportStep__edit-alias"
                     type="button"
                   >
@@ -1289,7 +1289,7 @@ exports[`LedgerImportStep > should render with single import (xs) 1`] = `
                   class="h-5 w-px border-transparent bg-theme-secondary-300 dark:bg-theme-secondary-800"
                 />
                 <button
-                  class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none !p-0 text-theme-primary-600 dark:text-theme-secondary-500"
+                  class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none !p-0 text-theme-primary-600 dark:text-theme-secondary-500"
                   data-testid="LedgerImportStep__edit-alias"
                   type="button"
                 >
