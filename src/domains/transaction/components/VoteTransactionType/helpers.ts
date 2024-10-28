@@ -27,7 +27,7 @@ const signedTransactionVotingData = ({ transaction }: { transaction: ProfilesDTO
 	const rawVotes: string[] = data?.asset?.votes ?? [];
 
 	for (const publicKey of rawVotes) {
-		const destination = publicKey.startsWith('-') ? unvotes : votes;
+		const destination = publicKey.startsWith("-") ? unvotes : votes;
 		destination.push(publicKey.replace(/^[+-]+/, ""));
 	}
 
