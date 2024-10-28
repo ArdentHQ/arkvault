@@ -75,7 +75,11 @@ describe("TransactionRowAddressing", () => {
 	});
 
 	it("should render label with the 'from' prefix if transaction is not outgoing", () => {
-		const notSentFixture = { ...fixture, isSent: () => false, recipient: () => "DMFzWa3nHt9T1ChXdMwFrBZRTfKMjDyNss" };
+		const notSentFixture = {
+			...fixture,
+			isSent: () => false,
+			recipient: () => "DMFzWa3nHt9T1ChXdMwFrBZRTfKMjDyNss",
+		};
 		render(<TransactionRowAddressing transaction={notSentFixture as any} profile={profile} />);
 
 		expect(screen.getByTestId("TransactionRowAddressing__label")).toHaveTextContent("From");
