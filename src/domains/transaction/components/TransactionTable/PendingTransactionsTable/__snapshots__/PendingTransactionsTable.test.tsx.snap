@@ -318,7 +318,7 @@ exports[`Signed Transaction Table > should handle the onRowClick function when t
                     data-testid="TransactionRowAddressing__musig_registration"
                   >
                     <div
-                      class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-1qplu6d"
+                      class="!flex h-[21px] w-12 items-center justify-center rounded px-1 py-[3px] dark:border css-1qplu6d"
                       color="danger-bg"
                       data-testid="TransactionRowAddressing__label"
                     >
@@ -642,7 +642,7 @@ exports[`Signed Transaction Table > should render different status > should show
                           data-testid="TransactionRowAddressing__musig_registration"
                         >
                           <div
-                            class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-1qplu6d"
+                            class="!flex h-[21px] w-12 items-center justify-center rounded px-1 py-[3px] dark:border css-1qplu6d"
                             color="danger-bg"
                             data-testid="TransactionRowAddressing__label"
                           >
@@ -1052,7 +1052,7 @@ exports[`Signed Transaction Table > should render different status > should show
                     data-testid="TransactionRowAddressing__musig_registration"
                   >
                     <div
-                      class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-1qplu6d"
+                      class="!flex h-[21px] w-12 items-center justify-center rounded px-1 py-[3px] dark:border css-1qplu6d"
                       color="danger-bg"
                       data-testid="TransactionRowAddressing__label"
                     >
@@ -1366,7 +1366,7 @@ exports[`Signed Transaction Table > should render different status > should show
                           data-testid="TransactionRowAddressing__musig_registration"
                         >
                           <div
-                            class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-1qplu6d"
+                            class="!flex h-[21px] w-12 items-center justify-center rounded px-1 py-[3px] dark:border css-1qplu6d"
                             color="danger-bg"
                             data-testid="TransactionRowAddressing__label"
                           >
@@ -1776,7 +1776,7 @@ exports[`Signed Transaction Table > should render different status > should show
                     data-testid="TransactionRowAddressing__musig_registration"
                   >
                     <div
-                      class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-1qplu6d"
+                      class="!flex h-[21px] w-12 items-center justify-center rounded px-1 py-[3px] dark:border css-1qplu6d"
                       color="danger-bg"
                       data-testid="TransactionRowAddressing__label"
                     >
@@ -2497,7 +2497,7 @@ exports[`Signed Transaction Table > should render different status > should show
                     data-testid="TransactionRowAddressing__vote"
                   >
                     <div
-                      class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-6yoktf"
+                      class="!flex h-[21px] w-12 items-center justify-center rounded px-1 py-[3px] dark:border css-6yoktf"
                       color="success-bg"
                       data-testid="TransactionRowAddressing__label"
                     >
@@ -3116,7 +3116,7 @@ exports[`Signed Transaction Table > should render different status > should show
                     data-testid="TransactionRowAddressing__vote"
                   >
                     <div
-                      class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-6yoktf"
+                      class="!flex h-[21px] w-12 items-center justify-center rounded px-1 py-[3px] dark:border css-6yoktf"
                       color="success-bg"
                       data-testid="TransactionRowAddressing__label"
                     >
@@ -3310,7 +3310,7 @@ exports[`Signed Transaction Table > should render different status > should show
                           data-testid="TransactionRowAddressing__musig_registration"
                         >
                           <div
-                            class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-1qplu6d"
+                            class="!flex h-[21px] w-12 items-center justify-center rounded px-1 py-[3px] dark:border css-1qplu6d"
                             color="danger-bg"
                             data-testid="TransactionRowAddressing__label"
                           >
@@ -3720,7 +3720,7 @@ exports[`Signed Transaction Table > should render different status > should show
                     data-testid="TransactionRowAddressing__musig_registration"
                   >
                     <div
-                      class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-1qplu6d"
+                      class="!flex h-[21px] w-12 items-center justify-center rounded px-1 py-[3px] dark:border css-1qplu6d"
                       color="danger-bg"
                       data-testid="TransactionRowAddressing__label"
                     >
@@ -4223,7 +4223,7 @@ exports[`Signed Transaction Table > should render ready to broadcast transaction
                     data-testid="TransactionRowAddressing__musig_registration"
                   >
                     <div
-                      class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-1qplu6d"
+                      class="!flex h-[21px] w-12 items-center justify-center rounded px-1 py-[3px] dark:border css-1qplu6d"
                       color="danger-bg"
                       data-testid="TransactionRowAddressing__label"
                     >
@@ -4698,7 +4698,7 @@ exports[`Signed Transaction Table > should render signed transactions and handle
                     data-testid="TransactionRowAddressing__musig_registration"
                   >
                     <div
-                      class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-1qplu6d"
+                      class="!flex h-[21px] w-12 items-center justify-center rounded px-1 py-[3px] dark:border css-1qplu6d"
                       color="danger-bg"
                       data-testid="TransactionRowAddressing__label"
                     >
@@ -5249,7 +5249,7 @@ exports[`Signed Transaction Table > should show as awaiting confirmations 1`] = 
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-6yoktf"
+                      class="!flex h-[21px] w-12 items-center justify-center rounded px-1 py-[3px] dark:border css-6yoktf"
                       color="success-bg"
                       data-testid="TransactionRowAddressing__label"
                     >
@@ -5818,7 +5818,7 @@ exports[`Signed Transaction Table > should show the sign button with isCompact =
                     data-testid="TransactionRowAddressing__musig_registration"
                   >
                     <div
-                      class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-1qplu6d"
+                      class="!flex h-[21px] w-12 items-center justify-center rounded px-1 py-[3px] dark:border css-1qplu6d"
                       color="danger-bg"
                       data-testid="TransactionRowAddressing__label"
                     >
@@ -6321,7 +6321,7 @@ exports[`Signed Transaction Table > should show the sign button with isCompact =
                     data-testid="TransactionRowAddressing__musig_registration"
                   >
                     <div
-                      class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-1qplu6d"
+                      class="!flex h-[21px] w-12 items-center justify-center rounded px-1 py-[3px] dark:border css-1qplu6d"
                       color="danger-bg"
                       data-testid="TransactionRowAddressing__label"
                     >
