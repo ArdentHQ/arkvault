@@ -217,14 +217,14 @@ export const SelectRecipient = React.forwardRef<HTMLInputElement, SelectRecipien
 										),
 									}
 								: undefined,
-							start: showWalletAvatar
+							start: selectedAddressAlias?.alias || showWalletAvatar
 								? {
 										content: (
 											<div className="flex items-center">
-												<ProfileAvatar address={selectedAddress} />
-												{!!selectedAddressAlias?.alias && (
+												{showWalletAvatar && <ProfileAvatar address={selectedAddress} /> }
+												{selectedAddressAlias?.alias && (
 													<TruncateEnd
-														className="ml-2 font-semibold"
+														className={cn("font-semibold", {"ml-2": showWalletAvatar})}
 														text={selectedAddressAlias.alias}
 														showTooltip
 													/>
