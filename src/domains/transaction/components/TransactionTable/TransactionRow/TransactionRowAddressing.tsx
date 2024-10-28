@@ -31,7 +31,7 @@ export const TransactionRowLabel = ({ direction }: { direction: Direction }) => 
 			color={color[direction]}
 			size="xs"
 			noBorder
-			className="!flex h-[21px] w-12 items-center justify-center py-[3px] rounded px-1 dark:border"
+			className="!flex h-[21px] w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
 			data-testid="TransactionRowAddressing__label"
 		>
 			{title[direction]}
