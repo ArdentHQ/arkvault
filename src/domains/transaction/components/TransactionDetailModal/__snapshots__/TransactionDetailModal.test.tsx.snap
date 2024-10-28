@@ -20,7 +20,7 @@ exports[`TransactionDetailModal > should render a ipfs modal 1`] = `
           class="absolute right-0 top-0 z-10 mr-6 mt-4 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 md:mr-8 md:mt-8"
         >
           <button
-            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none h-8 w-8"
+            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-8 w-8"
             data-testid="Modal__close-button"
             type="button"
           >
@@ -95,7 +95,7 @@ exports[`TransactionDetailModal > should render a ipfs modal 1`] = `
                     class="mt-4 flex items-center space-x-2 sm:mr-4 sm:mt-0"
                   >
                     <button
-                      class="ring-focus relative focus:outline-none p-2 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200
+                      class="ring-focus relative focus:outline-none p-2 space-x-0 px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200
 					bg-theme-primary-100 text-theme-primary-600
 					hover:bg-theme-primary-700 hover:text-white
 					dark:hover:bg-theme-primary-700
@@ -140,7 +140,7 @@ exports[`TransactionDetailModal > should render a ipfs modal 1`] = `
                       </span>
                     </button>
                     <button
-                      class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 border border-theme-secondary-300 bg-transparent p-2 hover:border-transparent dark:border-transparent dark:bg-theme-secondary-800"
+                      class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 border border-theme-secondary-300 bg-transparent p-2 hover:border-transparent dark:border-transparent dark:bg-theme-secondary-800"
                       data-testid="explorer-link"
                       disabled=""
                       type="button"
@@ -826,7 +826,7 @@ exports[`TransactionDetailModal > should render a magistrate modal 1`] = `
           class="absolute right-0 top-0 z-10 mr-6 mt-4 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 md:mr-8 md:mt-8"
         >
           <button
-            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none h-8 w-8"
+            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-8 w-8"
             data-testid="Modal__close-button"
             type="button"
           >
@@ -901,7 +901,7 @@ exports[`TransactionDetailModal > should render a magistrate modal 1`] = `
                     class="mt-4 flex items-center space-x-2 sm:mr-4 sm:mt-0"
                   >
                     <button
-                      class="ring-focus relative focus:outline-none p-2 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200
+                      class="ring-focus relative focus:outline-none p-2 space-x-0 px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200
 					bg-theme-primary-100 text-theme-primary-600
 					hover:bg-theme-primary-700 hover:text-white
 					dark:hover:bg-theme-primary-700
@@ -946,7 +946,7 @@ exports[`TransactionDetailModal > should render a magistrate modal 1`] = `
                       </span>
                     </button>
                     <button
-                      class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 border border-theme-secondary-300 bg-transparent p-2 hover:border-transparent dark:border-transparent dark:bg-theme-secondary-800"
+                      class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 border border-theme-secondary-300 bg-transparent p-2 hover:border-transparent dark:border-transparent dark:bg-theme-secondary-800"
                       data-testid="explorer-link"
                       disabled=""
                       type="button"
@@ -1558,7 +1558,7 @@ exports[`TransactionDetailModal > should render a multi payment modal 1`] = `
           class="absolute right-0 top-0 z-10 mr-6 mt-4 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 md:mr-8 md:mt-8"
         >
           <button
-            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none h-8 w-8"
+            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-8 w-8"
             data-testid="Modal__close-button"
             type="button"
           >
@@ -1633,7 +1633,7 @@ exports[`TransactionDetailModal > should render a multi payment modal 1`] = `
                     class="mt-4 flex items-center space-x-2 sm:mr-4 sm:mt-0"
                   >
                     <button
-                      class="ring-focus relative focus:outline-none p-2 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200
+                      class="ring-focus relative focus:outline-none p-2 space-x-0 px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200
 					bg-theme-primary-100 text-theme-primary-600
 					hover:bg-theme-primary-700 hover:text-white
 					dark:hover:bg-theme-primary-700
@@ -1678,7 +1678,7 @@ exports[`TransactionDetailModal > should render a multi payment modal 1`] = `
                       </span>
                     </button>
                     <button
-                      class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 border border-theme-secondary-300 bg-transparent p-2 hover:border-transparent dark:border-transparent dark:bg-theme-secondary-800"
+                      class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 border border-theme-secondary-300 bg-transparent p-2 hover:border-transparent dark:border-transparent dark:bg-theme-secondary-800"
                       data-testid="explorer-link"
                       disabled=""
                       type="button"
@@ -2372,7 +2372,7 @@ exports[`TransactionDetailModal > should render a multi signature modal 1`] = `
           class="absolute right-0 top-0 z-10 mr-6 mt-4 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 md:mr-8 md:mt-8"
         >
           <button
-            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none h-8 w-8"
+            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-8 w-8"
             data-testid="Modal__close-button"
             type="button"
           >
@@ -2447,7 +2447,7 @@ exports[`TransactionDetailModal > should render a multi signature modal 1`] = `
                     class="mt-4 flex items-center space-x-2 sm:mr-4 sm:mt-0"
                   >
                     <button
-                      class="ring-focus relative focus:outline-none p-2 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200
+                      class="ring-focus relative focus:outline-none p-2 space-x-0 px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200
 					bg-theme-primary-100 text-theme-primary-600
 					hover:bg-theme-primary-700 hover:text-white
 					dark:hover:bg-theme-primary-700
@@ -2492,7 +2492,7 @@ exports[`TransactionDetailModal > should render a multi signature modal 1`] = `
                       </span>
                     </button>
                     <button
-                      class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 border border-theme-secondary-300 bg-transparent p-2 hover:border-transparent dark:border-transparent dark:bg-theme-secondary-800"
+                      class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 border border-theme-secondary-300 bg-transparent p-2 hover:border-transparent dark:border-transparent dark:bg-theme-secondary-800"
                       data-testid="explorer-link"
                       disabled=""
                       type="button"
@@ -3505,7 +3505,7 @@ exports[`TransactionDetailModal > should render a transfer modal 1`] = `
           class="absolute right-0 top-0 z-10 mr-6 mt-4 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 md:mr-8 md:mt-8"
         >
           <button
-            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none h-8 w-8"
+            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-8 w-8"
             data-testid="Modal__close-button"
             type="button"
           >
@@ -3580,7 +3580,7 @@ exports[`TransactionDetailModal > should render a transfer modal 1`] = `
                     class="mt-4 flex items-center space-x-2 sm:mr-4 sm:mt-0"
                   >
                     <button
-                      class="ring-focus relative focus:outline-none p-2 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200
+                      class="ring-focus relative focus:outline-none p-2 space-x-0 px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200
 					bg-theme-primary-100 text-theme-primary-600
 					hover:bg-theme-primary-700 hover:text-white
 					dark:hover:bg-theme-primary-700
@@ -3625,7 +3625,7 @@ exports[`TransactionDetailModal > should render a transfer modal 1`] = `
                       </span>
                     </button>
                     <button
-                      class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 border border-theme-secondary-300 bg-transparent p-2 hover:border-transparent dark:border-transparent dark:bg-theme-secondary-800"
+                      class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 border border-theme-secondary-300 bg-transparent p-2 hover:border-transparent dark:border-transparent dark:bg-theme-secondary-800"
                       data-testid="explorer-link"
                       disabled=""
                       type="button"
@@ -4311,7 +4311,7 @@ exports[`TransactionDetailModal > should render a transfer modal with memo 1`] =
           class="absolute right-0 top-0 z-10 mr-6 mt-4 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 md:mr-8 md:mt-8"
         >
           <button
-            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none h-8 w-8"
+            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-8 w-8"
             data-testid="Modal__close-button"
             type="button"
           >
@@ -4386,7 +4386,7 @@ exports[`TransactionDetailModal > should render a transfer modal with memo 1`] =
                     class="mt-4 flex items-center space-x-2 sm:mr-4 sm:mt-0"
                   >
                     <button
-                      class="ring-focus relative focus:outline-none p-2 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200
+                      class="ring-focus relative focus:outline-none p-2 space-x-0 px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200
 					bg-theme-primary-100 text-theme-primary-600
 					hover:bg-theme-primary-700 hover:text-white
 					dark:hover:bg-theme-primary-700
@@ -4431,7 +4431,7 @@ exports[`TransactionDetailModal > should render a transfer modal with memo 1`] =
                       </span>
                     </button>
                     <button
-                      class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 border border-theme-secondary-300 bg-transparent p-2 hover:border-transparent dark:border-transparent dark:bg-theme-secondary-800"
+                      class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 border border-theme-secondary-300 bg-transparent p-2 hover:border-transparent dark:border-transparent dark:bg-theme-secondary-800"
                       data-testid="explorer-link"
                       disabled=""
                       type="button"
@@ -5117,7 +5117,7 @@ exports[`TransactionDetailModal > should render an unlock tokens modal 1`] = `
           class="absolute right-0 top-0 z-10 mr-6 mt-4 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 md:mr-8 md:mt-8"
         >
           <button
-            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none h-8 w-8"
+            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-8 w-8"
             data-testid="Modal__close-button"
             type="button"
           >
@@ -5192,7 +5192,7 @@ exports[`TransactionDetailModal > should render an unlock tokens modal 1`] = `
                     class="mt-4 flex items-center space-x-2 sm:mr-4 sm:mt-0"
                   >
                     <button
-                      class="ring-focus relative focus:outline-none p-2 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200
+                      class="ring-focus relative focus:outline-none p-2 space-x-0 px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200
 					bg-theme-primary-100 text-theme-primary-600
 					hover:bg-theme-primary-700 hover:text-white
 					dark:hover:bg-theme-primary-700
@@ -5237,7 +5237,7 @@ exports[`TransactionDetailModal > should render an unlock tokens modal 1`] = `
                       </span>
                     </button>
                     <button
-                      class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 border border-theme-secondary-300 bg-transparent p-2 hover:border-transparent dark:border-transparent dark:bg-theme-secondary-800"
+                      class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 border border-theme-secondary-300 bg-transparent p-2 hover:border-transparent dark:border-transparent dark:bg-theme-secondary-800"
                       data-testid="explorer-link"
                       disabled=""
                       type="button"
