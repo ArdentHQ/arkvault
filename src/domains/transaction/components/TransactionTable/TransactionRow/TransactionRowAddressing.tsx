@@ -16,7 +16,7 @@ export const TransactionRowLabel = ({ direction }: { direction: Direction }) => 
 
 	const color: Record<typeof direction, ColorType> = {
 		received: "success-bg",
-		return: "neutral",
+		return: "secondary",
 		sent: "danger-bg",
 	};
 
@@ -31,7 +31,7 @@ export const TransactionRowLabel = ({ direction }: { direction: Direction }) => 
 			color={color[direction]}
 			size="xs"
 			noBorder
-			className="!flex h-[21px] w-12 items-center justify-center rounded py-[3px]"
+			className="!flex h-[21px] w-12 items-center justify-center py-[3px] rounded px-1 dark:border"
 			data-testid="TransactionRowAddressing__label"
 		>
 			{title[direction]}
