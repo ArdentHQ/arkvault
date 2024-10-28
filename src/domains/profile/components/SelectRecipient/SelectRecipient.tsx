@@ -217,22 +217,25 @@ export const SelectRecipient = React.forwardRef<HTMLInputElement, SelectRecipien
 										),
 									}
 								: undefined,
-							start: selectedAddressAlias?.alias || showWalletAvatar
-								? {
-										content: (
-											<div className="flex items-center">
-												{showWalletAvatar && <ProfileAvatar address={selectedAddress} /> }
-												{selectedAddressAlias?.alias && (
-													<TruncateEnd
-														className={cn("font-semibold", {"ml-2": showWalletAvatar})}
-														text={selectedAddressAlias.alias}
-														showTooltip
-													/>
-												)}
-											</div>
-										),
-									}
-								: undefined,
+							start:
+								selectedAddressAlias?.alias || showWalletAvatar
+									? {
+											content: (
+												<div className="flex items-center">
+													{showWalletAvatar && <ProfileAvatar address={selectedAddress} />}
+													{selectedAddressAlias?.alias && (
+														<TruncateEnd
+															className={cn("font-semibold", {
+																"ml-2": showWalletAvatar,
+															})}
+															text={selectedAddressAlias.alias}
+															showTooltip
+														/>
+													)}
+												</div>
+											),
+										}
+									: undefined,
 						}}
 						renderLabel={(option) => <OptionLabel option={option} network={network} profile={profile} />}
 					/>
