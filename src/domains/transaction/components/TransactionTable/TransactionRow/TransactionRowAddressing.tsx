@@ -7,30 +7,30 @@ import { DTO } from "@ardenthq/sdk";
 import React, { useEffect, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
 import cn from "classnames";
-import {ColorType} from "@/app/components/Label/Label.styles";
+import { ColorType } from "@/app/components/Label/Label.styles";
 
 type Direction = "sent" | "received" | "return";
 export const TransactionRowLabel = ({ direction }: { direction: Direction }) => {
 	const { t } = useTranslation();
 
 	const color: Record<typeof direction, ColorType> = {
-		"received": "success-bg",
-		"return": "secondary",
-		"sent": "danger-bg",
-	}
+		received: "success-bg",
+		return: "secondary",
+		sent: "danger-bg",
+	};
 
 	const title: Record<typeof direction, string> = {
-		"received": t("COMMON.FROM"),
-		"return": t("COMMON.RETURN"),
-		"sent": t("COMMON.TO"),
-	}
+		received: t("COMMON.FROM"),
+		return: t("COMMON.RETURN"),
+		sent: t("COMMON.TO"),
+	};
 
 	return (
 		<Label
 			color={color[direction]}
 			size="xs"
 			noBorder
-			className="!flex h-[21px] w-12 items-center justify-center py-[3px] rounded px-1 dark:border"
+			className="!flex h-[21px] w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
 			data-testid="TransactionRowAddressing__label"
 		>
 			{title[direction]}
@@ -39,13 +39,13 @@ export const TransactionRowLabel = ({ direction }: { direction: Direction }) => 
 };
 
 export const TransactionRowAddressing = ({
-											 transaction,
-											 profile,
-										 }: {
+	transaction,
+	profile,
+}: {
 	transaction: DTO.RawTransactionData;
 	profile: Contracts.IProfile;
 }) => {
-	const isNegative =  transaction.isSent();
+	const isNegative = transaction.isSent();
 
 	let direction: Direction = isNegative ? "sent" : "received";
 
@@ -150,7 +150,7 @@ export const TransactionRowAddressing = ({
 		);
 	}
 
-	if(transaction.sender() === transaction.recipient()) {
+	if (transaction.sender() === transaction.recipient()) {
 		direction = "return";
 	}
 

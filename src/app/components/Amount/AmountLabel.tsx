@@ -42,16 +42,16 @@ interface AmountLabelProperties {
 }
 
 export const AmountLabel: React.FC<AmountLabelProperties> = ({
-																 value,
-																 ticker,
-																 isCompact,
-																 isNegative,
-																 hint,
-																 size,
-																 className,
-																 textClassName,
-																 hideSign,
-															 }) => {
+	value,
+	ticker,
+	isCompact,
+	isNegative,
+	hint,
+	size,
+	className,
+	textClassName,
+	hideSign,
+}) => {
 	let labelColor = "success-bg";
 	let hintClassName =
 		"bg-theme-success-200 dark:bg-theme-success-700 text-theme-success-700 dark:text-white/70 dark:bg-theme-success-700";
