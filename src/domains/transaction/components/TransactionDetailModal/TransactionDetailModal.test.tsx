@@ -256,7 +256,7 @@ describe("TransactionDetailModal", () => {
 		expect(screen.getByTestId("Modal__inner")).toHaveTextContent(labels[transactionType]);
 	});
 
-	it("should render an unvote modal for signed transaction", () => {
+	it("should render an vote swap modal for signed transaction", () => {
 		vi.spyOn(env.delegates(), "map").mockImplementation((wallet, votes) =>
 			votes.map(
 				(vote: string, index: number) =>
@@ -278,8 +278,10 @@ describe("TransactionDetailModal", () => {
 						data: () => ({
 							data: () => ({
 								asset: {
-									unvotes: TransactionFixture.unvotes(),
-									votes: TransactionFixture.votes(),
+									votes: [
+										"+" + TransactionFixture.votes()[0],
+										"-" + TransactionFixture.unvotes()[0]
+									],
 								},
 								blockId: "as32d1as65d1as3d1as32d1asd51as3d21as3d2as165das",
 							}),
@@ -287,8 +289,8 @@ describe("TransactionDetailModal", () => {
 						isConfirmed: () => false,
 						isUnvote: () => false,
 						isVote: () => false,
-						isVoteCombination: () => false,
-						type: () => "unvote",
+						isVoteCombination: () => true,
+						type: () => "swap",
 						unvotes: () => TransactionFixture.unvotes(),
 						votes: () => [],
 						wallet: () => wallet,
@@ -301,7 +303,7 @@ describe("TransactionDetailModal", () => {
 			},
 		);
 
-		expect(screen.getByTestId("Modal__inner")).toHaveTextContent("Unvote");
+		expect(screen.getByTestId("Modal__inner")).toHaveTextContent("Vote Swap");
 	});
 
 	it("should render a delegate registration modal", () => {
