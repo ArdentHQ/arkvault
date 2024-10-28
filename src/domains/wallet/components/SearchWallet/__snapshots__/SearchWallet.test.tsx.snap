@@ -3,7 +3,7 @@
 exports[`SearchWallet uses fiat value = false > should render 1`] = `
 <DocumentFragment>
   <div
-    class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900-rgba bg-opacity-60 dark:bg-black-rgba dark:bg-opacity-80 md:py-20"
+    class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900-rgba/40 dark:bg-black-rgba/40 dark:bg-opacity-80 md:py-20 backdrop-blur-xl"
     data-testid="Modal__overlay"
   >
     <div
@@ -418,7 +418,7 @@ exports[`SearchWallet uses fiat value = false > should render 1`] = `
 exports[`SearchWallet uses fiat value = false > should render compact on md screen 1`] = `
 <DocumentFragment>
   <div
-    class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900-rgba bg-opacity-60 dark:bg-black-rgba dark:bg-opacity-80 md:py-20"
+    class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900-rgba/40 dark:bg-black-rgba/40 dark:bg-opacity-80 md:py-20 backdrop-blur-xl"
     data-testid="Modal__overlay"
   >
     <div
@@ -833,7 +833,7 @@ exports[`SearchWallet uses fiat value = false > should render compact on md scre
 exports[`SearchWallet uses fiat value = false > should render compact with selected address 1`] = `
 <DocumentFragment>
   <div
-    class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900-rgba bg-opacity-60 dark:bg-black-rgba dark:bg-opacity-80 md:py-20"
+    class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900-rgba/40 dark:bg-black-rgba/40 dark:bg-opacity-80 md:py-20 backdrop-blur-xl"
     data-testid="Modal__overlay"
   >
     <div
@@ -1246,7 +1246,7 @@ exports[`SearchWallet uses fiat value = false > should render compact with selec
 exports[`SearchWallet uses fiat value = false > should render responsive item 1`] = `
 <DocumentFragment>
   <div
-    class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900-rgba bg-opacity-60 dark:bg-black-rgba dark:bg-opacity-80 md:py-20"
+    class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900-rgba/40 dark:bg-black-rgba/40 dark:bg-opacity-80 md:py-20 backdrop-blur-xl"
     data-testid="Modal__overlay"
   >
     <div
@@ -1561,7 +1561,7 @@ exports[`SearchWallet uses fiat value = false > should render responsive item 1`
 exports[`SearchWallet uses fiat value = false > should render responsive item 2`] = `
 <DocumentFragment>
   <div
-    class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900-rgba bg-opacity-60 dark:bg-black-rgba dark:bg-opacity-80 md:py-20"
+    class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900-rgba/40 dark:bg-black-rgba/40 dark:bg-opacity-80 md:py-20 backdrop-blur-xl"
     data-testid="Modal__overlay"
   >
     <div
@@ -1876,7 +1876,7 @@ exports[`SearchWallet uses fiat value = false > should render responsive item 2`
 exports[`SearchWallet uses fiat value = false > should render responsive with selected address 1`] = `
 <DocumentFragment>
   <div
-    class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900-rgba bg-opacity-60 dark:bg-black-rgba dark:bg-opacity-80 md:py-20"
+    class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900-rgba/40 dark:bg-black-rgba/40 dark:bg-opacity-80 md:py-20 backdrop-blur-xl"
     data-testid="Modal__overlay"
   >
     <div
@@ -2191,7 +2191,7 @@ exports[`SearchWallet uses fiat value = false > should render responsive with se
 exports[`SearchWallet uses fiat value = false > should render with incompatible ledger wallet 1`] = `
 <DocumentFragment>
   <div
-    class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900-rgba bg-opacity-60 dark:bg-black-rgba dark:bg-opacity-80 md:py-20"
+    class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900-rgba/40 dark:bg-black-rgba/40 dark:bg-opacity-80 md:py-20 backdrop-blur-xl"
     data-testid="Modal__overlay"
   >
     <div
@@ -2531,7 +2531,7 @@ exports[`SearchWallet uses fiat value = false > should render with incompatible 
 exports[`SearchWallet uses fiat value = false > should render with selected address 1`] = `
 <DocumentFragment>
   <div
-    class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900-rgba bg-opacity-60 dark:bg-black-rgba dark:bg-opacity-80 md:py-20"
+    class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900-rgba/40 dark:bg-black-rgba/40 dark:bg-opacity-80 md:py-20 backdrop-blur-xl"
     data-testid="Modal__overlay"
   >
     <div
@@ -2944,7 +2944,7 @@ exports[`SearchWallet uses fiat value = false > should render with selected addr
 exports[`SearchWallet uses fiat value = false > should render with the default exchange currency enabled from profile settings 1`] = `
 <DocumentFragment>
   <div
-    class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900-rgba bg-opacity-60 dark:bg-black-rgba dark:bg-opacity-80 md:py-20"
+    class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900-rgba/40 dark:bg-black-rgba/40 dark:bg-opacity-80 md:py-20 backdrop-blur-xl"
     data-testid="Modal__overlay"
   >
     <div
@@ -3359,7 +3359,7 @@ exports[`SearchWallet uses fiat value = false > should render with the default e
 exports[`SearchWallet uses fiat value = true > should render 1`] = `
 <DocumentFragment>
   <div
-    class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900-rgba bg-opacity-60 dark:bg-black-rgba dark:bg-opacity-80 md:py-20"
+    class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900-rgba/40 dark:bg-black-rgba/40 dark:bg-opacity-80 md:py-20 backdrop-blur-xl"
     data-testid="Modal__overlay"
   >
     <div
@@ -3848,7 +3848,7 @@ exports[`SearchWallet uses fiat value = true > should render 1`] = `
 exports[`SearchWallet uses fiat value = true > should render compact on md screen 1`] = `
 <DocumentFragment>
   <div
-    class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900-rgba bg-opacity-60 dark:bg-black-rgba dark:bg-opacity-80 md:py-20"
+    class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900-rgba/40 dark:bg-black-rgba/40 dark:bg-opacity-80 md:py-20 backdrop-blur-xl"
     data-testid="Modal__overlay"
   >
     <div
@@ -4337,7 +4337,7 @@ exports[`SearchWallet uses fiat value = true > should render compact on md scree
 exports[`SearchWallet uses fiat value = true > should render compact with selected address 1`] = `
 <DocumentFragment>
   <div
-    class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900-rgba bg-opacity-60 dark:bg-black-rgba dark:bg-opacity-80 md:py-20"
+    class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900-rgba/40 dark:bg-black-rgba/40 dark:bg-opacity-80 md:py-20 backdrop-blur-xl"
     data-testid="Modal__overlay"
   >
     <div
@@ -4824,7 +4824,7 @@ exports[`SearchWallet uses fiat value = true > should render compact with select
 exports[`SearchWallet uses fiat value = true > should render responsive item 1`] = `
 <DocumentFragment>
   <div
-    class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900-rgba bg-opacity-60 dark:bg-black-rgba dark:bg-opacity-80 md:py-20"
+    class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900-rgba/40 dark:bg-black-rgba/40 dark:bg-opacity-80 md:py-20 backdrop-blur-xl"
     data-testid="Modal__overlay"
   >
     <div
@@ -5139,7 +5139,7 @@ exports[`SearchWallet uses fiat value = true > should render responsive item 1`]
 exports[`SearchWallet uses fiat value = true > should render responsive item 2`] = `
 <DocumentFragment>
   <div
-    class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900-rgba bg-opacity-60 dark:bg-black-rgba dark:bg-opacity-80 md:py-20"
+    class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900-rgba/40 dark:bg-black-rgba/40 dark:bg-opacity-80 md:py-20 backdrop-blur-xl"
     data-testid="Modal__overlay"
   >
     <div
@@ -5454,7 +5454,7 @@ exports[`SearchWallet uses fiat value = true > should render responsive item 2`]
 exports[`SearchWallet uses fiat value = true > should render responsive with selected address 1`] = `
 <DocumentFragment>
   <div
-    class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900-rgba bg-opacity-60 dark:bg-black-rgba dark:bg-opacity-80 md:py-20"
+    class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900-rgba/40 dark:bg-black-rgba/40 dark:bg-opacity-80 md:py-20 backdrop-blur-xl"
     data-testid="Modal__overlay"
   >
     <div
@@ -5769,7 +5769,7 @@ exports[`SearchWallet uses fiat value = true > should render responsive with sel
 exports[`SearchWallet uses fiat value = true > should render with incompatible ledger wallet 1`] = `
 <DocumentFragment>
   <div
-    class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900-rgba bg-opacity-60 dark:bg-black-rgba dark:bg-opacity-80 md:py-20"
+    class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900-rgba/40 dark:bg-black-rgba/40 dark:bg-opacity-80 md:py-20 backdrop-blur-xl"
     data-testid="Modal__overlay"
   >
     <div
@@ -6169,7 +6169,7 @@ exports[`SearchWallet uses fiat value = true > should render with incompatible l
 exports[`SearchWallet uses fiat value = true > should render with selected address 1`] = `
 <DocumentFragment>
   <div
-    class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900-rgba bg-opacity-60 dark:bg-black-rgba dark:bg-opacity-80 md:py-20"
+    class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900-rgba/40 dark:bg-black-rgba/40 dark:bg-opacity-80 md:py-20 backdrop-blur-xl"
     data-testid="Modal__overlay"
   >
     <div
@@ -6656,7 +6656,7 @@ exports[`SearchWallet uses fiat value = true > should render with selected addre
 exports[`SearchWallet uses fiat value = true > should render with the default exchange currency enabled from profile settings 1`] = `
 <DocumentFragment>
   <div
-    class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900-rgba bg-opacity-60 dark:bg-black-rgba dark:bg-opacity-80 md:py-20"
+    class="custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900-rgba/40 dark:bg-black-rgba/40 dark:bg-opacity-80 md:py-20 backdrop-blur-xl"
     data-testid="Modal__overlay"
   >
     <div
