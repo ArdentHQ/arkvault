@@ -68,14 +68,14 @@ describe("TransactionRowAddressing", () => {
 	});
 
 	it("should render label with the 'to' prefix if transaction is outgoing", () => {
-		const sentFixture = { ...fixture, isSent: () => true };
+		const sentFixture = { ...fixture, isSent: () => true, recipient: () => "DMFzWa3nHt9T1ChXdMwFrBZRTfKMjDyNss" };
 		render(<TransactionRowAddressing transaction={sentFixture as any} profile={profile} />);
 
 		expect(screen.getByTestId("TransactionRowAddressing__label")).toHaveTextContent("To");
 	});
 
 	it("should render label with the 'from' prefix if transaction is not outgoing", () => {
-		const notSentFixture = { ...fixture, isSent: () => false };
+		const notSentFixture = { ...fixture, isSent: () => false, recipient: () => "DMFzWa3nHt9T1ChXdMwFrBZRTfKMjDyNss" };
 		render(<TransactionRowAddressing transaction={notSentFixture as any} profile={profile} />);
 
 		expect(screen.getByTestId("TransactionRowAddressing__label")).toHaveTextContent("From");
@@ -87,6 +87,13 @@ describe("TransactionRowAddressing", () => {
 		render(<TransactionRowAddressing transaction={aliasFixture as any} profile={profile} />);
 
 		expect(screen.getByTestId("TransactionRowAddressing__address-container")).toHaveClass("w-50 sm:w-40 lg:w-50");
+	});
+
+	it("should render label with the 'Return' prefix if transaction is sent to address itself", () => {
+		const notSentFixture = { ...fixture, isSent: () => false };
+		render(<TransactionRowAddressing transaction={notSentFixture as any} profile={profile} />);
+
+		expect(screen.getByTestId("TransactionRowAddressing__label")).toHaveTextContent("Return");
 	});
 
 	it("should not expand width of address container if the wallet has no alias", () => {
