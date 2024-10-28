@@ -289,7 +289,7 @@ exports[`UpdateContact > should render responsive 1`] = `
                               ARK Devnet
                             </div>
                             <button
-                              class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-0 text-theme-secondary-700 dark:text-theme-secondary-500 sm:!hidden"
+                              class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-0 text-theme-secondary-700 dark:text-theme-secondary-500 sm:hidden"
                               data-testid="contact-form__remove-address-btn-xs"
                               type="button"
                             >
@@ -718,7 +718,7 @@ exports[`UpdateContact > should render responsive 2`] = `
                               ARK Devnet
                             </div>
                             <button
-                              class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-0 text-theme-secondary-700 dark:text-theme-secondary-500 sm:!hidden"
+                              class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-0 text-theme-secondary-700 dark:text-theme-secondary-500 sm:hidden"
                               data-testid="contact-form__remove-address-btn-xs"
                               type="button"
                             >
@@ -1191,7 +1191,7 @@ exports[`UpdateContact > should render responsive 3`] = `
                               ARK Devnet
                             </div>
                             <button
-                              class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-0 text-theme-secondary-700 dark:text-theme-secondary-500 sm:!hidden"
+                              class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-0 text-theme-secondary-700 dark:text-theme-secondary-500 sm:hidden"
                               data-testid="contact-form__remove-address-btn-xs"
                               type="button"
                             >
