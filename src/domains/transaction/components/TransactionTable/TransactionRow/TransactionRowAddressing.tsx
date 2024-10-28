@@ -15,7 +15,7 @@ export const TransactionRowLabel = ({ direction }: { direction: Direction }) => 
 
 	const color: Record<typeof direction, ColorType> = {
 		"received": "success-bg",
-		"return": "neutral",
+		"return": "secondary",
 		"sent": "danger-bg",
 	}
 
@@ -45,12 +45,7 @@ export const TransactionRowAddressing = ({
 	transaction: DTO.RawTransactionData;
 	profile: Contracts.IProfile;
 }) => {
-	const isMusigTransfer = [
-		!!transaction.usesMultiSignature?.(),
-		!transaction.isConfirmed(),
-		!transaction.isMultiSignatureRegistration(),
-	].every(Boolean);
-	const isNegative = [isMusigTransfer, transaction.isSent()].some(Boolean);
+	const isNegative =  transaction.isSent();
 
 	let direction: Direction = isNegative ? "sent" : "received";
 
