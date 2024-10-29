@@ -24,9 +24,12 @@ describe("TransactionAddresses", () => {
 	});
 
 	it.each(["sm", "md", "lg"])("should render in %s", (breakpoint: string) => {
+		const wallet = profile.wallets().first();
+
 		renderResponsive(
 			<TransactionAddresses
-				senderWallet={profile.wallets().first()}
+				senderAddress={wallet.address()}
+				network={wallet.network()}
 				recipients={[recipients[1]]}
 				profile={profile}
 			/>,

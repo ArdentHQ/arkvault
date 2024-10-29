@@ -365,7 +365,7 @@ exports[`Welcome > should change route to create profile 1`] = `
               class="min-w-0 basis-1/2 rounded-xl border-theme-navy-100 dark:border-theme-secondary-800 sm:border sm:p-6"
             >
               <div
-                class="mx-auto flex h-full max-w-[400px] flex-col"
+                class="mx-auto flex max-w-[400px] flex-col h-[calc(100vh_-_160px)] sm:h-full"
               >
                 <div
                   class="flex flex-1 flex-col items-center justify-center"
@@ -1006,7 +1006,7 @@ exports[`Welcome > should navigate to previous page with correct password 1`] = 
               class="min-w-0 basis-1/2 rounded-xl border-theme-navy-100 dark:border-theme-secondary-800 sm:border sm:p-6"
             >
               <div
-                class="mx-auto flex h-full max-w-[400px] flex-col"
+                class="mx-auto flex max-w-[400px] flex-col h-[calc(100vh_-_160px)] sm:h-full"
               >
                 <div
                   class="flex flex-1 flex-col items-center justify-center"
@@ -1739,7 +1739,7 @@ exports[`Welcome > should navigate to profile dashboard 1`] = `
               class="min-w-0 basis-1/2 rounded-xl border-theme-navy-100 dark:border-theme-secondary-800 sm:border sm:p-6"
             >
               <div
-                class="mx-auto flex h-full max-w-[400px] flex-col"
+                class="mx-auto flex max-w-[400px] flex-col h-[calc(100vh_-_160px)] sm:h-full"
               >
                 <div
                   class="flex flex-1 flex-col items-center justify-center"
@@ -2472,7 +2472,7 @@ exports[`Welcome > should navigate to profile dashboard with correct password 1`
               class="min-w-0 basis-1/2 rounded-xl border-theme-navy-100 dark:border-theme-secondary-800 sm:border sm:p-6"
             >
               <div
-                class="mx-auto flex h-full max-w-[400px] flex-col"
+                class="mx-auto flex max-w-[400px] flex-col h-[calc(100vh_-_160px)] sm:h-full"
               >
                 <div
                   class="flex flex-1 flex-col items-center justify-center"
@@ -3205,7 +3205,7 @@ exports[`Welcome > should navigate to profile settings from profile card menu 1`
               class="min-w-0 basis-1/2 rounded-xl border-theme-navy-100 dark:border-theme-secondary-800 sm:border sm:p-6"
             >
               <div
-                class="mx-auto flex h-full max-w-[400px] flex-col"
+                class="mx-auto flex max-w-[400px] flex-col h-[calc(100vh_-_160px)] sm:h-full"
               >
                 <div
                   class="flex flex-1 flex-col items-center justify-center"
@@ -3938,7 +3938,7 @@ exports[`Welcome > should navigate to profile settings with correct password 1`]
               class="min-w-0 basis-1/2 rounded-xl border-theme-navy-100 dark:border-theme-secondary-800 sm:border sm:p-6"
             >
               <div
-                class="mx-auto flex h-full max-w-[400px] flex-col"
+                class="mx-auto flex max-w-[400px] flex-col h-[calc(100vh_-_160px)] sm:h-full"
               >
                 <div
                   class="flex flex-1 flex-col items-center justify-center"
@@ -4671,7 +4671,7 @@ exports[`Welcome > should not select profile on wrong last location 1`] = `
               class="min-w-0 basis-1/2 rounded-xl border-theme-navy-100 dark:border-theme-secondary-800 sm:border sm:p-6"
             >
               <div
-                class="mx-auto flex h-full max-w-[400px] flex-col"
+                class="mx-auto flex max-w-[400px] flex-col h-[calc(100vh_-_160px)] sm:h-full"
               >
                 <div
                   class="flex flex-1 flex-col items-center justify-center"
@@ -5312,7 +5312,7 @@ exports[`Welcome > should render with profiles 1`] = `
               class="min-w-0 basis-1/2 rounded-xl border-theme-navy-100 dark:border-theme-secondary-800 sm:border sm:p-6"
             >
               <div
-                class="mx-auto flex h-full max-w-[400px] flex-col"
+                class="mx-auto flex max-w-[400px] flex-col h-[calc(100vh_-_160px)] sm:h-full"
               >
                 <div
                   class="flex flex-1 flex-col items-center justify-center"
@@ -6045,7 +6045,7 @@ exports[`Welcome > should render without profiles 1`] = `
               class="min-w-0 basis-1/2 rounded-xl border-theme-navy-100 dark:border-theme-secondary-800 sm:border sm:p-6"
             >
               <div
-                class="mx-auto flex h-full max-w-[400px] flex-col"
+                class="mx-auto flex max-w-[400px] flex-col h-full"
               >
                 <div
                   class="flex flex-1 flex-col items-center justify-center"
