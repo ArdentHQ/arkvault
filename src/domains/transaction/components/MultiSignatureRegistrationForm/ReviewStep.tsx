@@ -4,12 +4,13 @@ import { useFormContext } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 
 import { TotalAmountBox } from "@/domains/transaction/components/TotalAmountBox";
-import { TransactionAddresses } from "@/domains/transaction/components/TransactionDetail";
+import { TransactionAddresses, TransactionType } from "@/domains/transaction/components/TransactionDetail";
 import { StepHeader } from "@/app/components/StepHeader";
 import { ThemeIcon } from "@/app/components/Icon";
 import { FormField } from "@/app/components/Form";
 import { DetailDivider, DetailLabel, DetailTitle, DetailWrapper } from "@/app/components/DetailWrapper";
 import { Address } from "@/app/components/Address";
+import { useMusigRegistrationStubTransaction } from "../../hooks/use-stub-transaction";
 
 export const ReviewStep = ({
 	wallet,
@@ -25,6 +26,19 @@ export const ReviewStep = ({
 	useEffect(() => {
 		unregister("mnemonic");
 	}, [unregister]);
+	console.log({ participants: JSON.stringify(participants) })
+	console.log({ participants })
+	const publicKeys = participants.map((participant) => {
+		console.log({ participant })
+		console.log({ p: participant.publicKey })
+		return participant.publicKey
+	})
+	const addresses = participants.map(({ address }) => { address })
+	console.log({ addresses, pub: publicKeys })
+
+
+	const { musigRegistrationStubTransaction } = useMusigRegistrationStubTransaction({ fee, min: minParticipants, publicKeys, wallet })
+	console.log({ musigRegistrationStubTransaction })
 
 	return (
 		<section data-testid="MultiSignature__review-step">
@@ -47,28 +61,7 @@ export const ReviewStep = ({
 					/>
 				</FormField>
 
-				<DetailWrapper label={t("TRANSACTION.TRANSACTION_TYPE")}>
-					<div className="space-y-3 sm:space-y-0" data-testid="MultisignatureDetail">
-						<div className="flex w-full items-center justify-between sm:justify-start">
-							<DetailTitle className="w-auto sm:min-w-24">{t("COMMON.CATEGORY")}</DetailTitle>
-							<div className="flex items-center rounded bg-theme-secondary-200 px-1 py-[3px] dark:border dark:border-theme-secondary-800 dark:bg-transparent">
-								<span className="text-[12px] font-semibold leading-[15px] text-theme-secondary-700 dark:text-theme-secondary-500">
-									{t("TRANSACTION.TRANSACTION_TYPES.MULTI_SIGNATURE")}
-								</span>
-							</div>
-						</div>
-
-						<DetailDivider />
-
-						<div className="flex w-full items-center justify-between sm:justify-start">
-							<DetailTitle className="w-auto sm:min-w-24">{t("TRANSACTION.SIGNATURES")}</DetailTitle>
-							<div className="no-ligatures truncate text-sm font-semibold leading-[17px] text-theme-secondary-900 dark:text-theme-secondary-200 sm:text-base sm:leading-5">
-								{minParticipants}{" "}
-								{t("TRANSACTION.MULTISIGNATURE.OF_LENGTH", { length: participants.length })}
-							</div>
-						</div>
-					</div>
-				</DetailWrapper>
+				{musigRegistrationStubTransaction && <TransactionType transaction={musigRegistrationStubTransaction} />}
 
 				<div data-testid="DetailWrapper">
 					<DetailLabel>{t("TRANSACTION.PARTICIPANTS")}</DetailLabel>

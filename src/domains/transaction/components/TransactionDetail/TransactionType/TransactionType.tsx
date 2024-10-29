@@ -85,18 +85,22 @@ export const TransactionType = ({
 
 					{transaction.isMultiSignatureRegistration() && (
 						<>
-							<DetailDivider />
+							{transaction.wallet() && (
+								<>
+									<DetailDivider />
 
-							<div className="flex w-full justify-between sm:justify-start">
-								<DetailLabelText>{t("COMMON.ADDRESS")}</DetailLabelText>
-								<div className="font-semibold leading-5 max-sm:text-sm">
-									<MusigGeneratedAddress
-										publicKeys={publicKeys}
-										min={min}
-										wallet={transaction.wallet()}
-									/>
-								</div>
-							</div>
+									<div className="flex w-full justify-between sm:justify-start">
+										<DetailLabelText>{t("COMMON.ADDRESS")}</DetailLabelText>
+										<div className="font-semibold leading-5 max-sm:text-sm">
+											<MusigGeneratedAddress
+												publicKeys={publicKeys}
+												min={min}
+												wallet={transaction.wallet()}
+											/>
+										</div>
+									</div>
+								</>
+							)}
 
 							<DetailDivider />
 
