@@ -70,11 +70,11 @@ exports[`TransactionRowMobile > should render 1`] = `
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-1qplu6d"
-                      color="danger-bg"
+                      class="!flex h-[21px] w-12 items-center justify-center rounded px-1 py-[3px] dark:border css-1kocbuc"
+                      color="secondary"
                       data-testid="TransactionRowAddressing__label"
                     >
-                      To
+                      Return
                     </div>
                     <div
                       class="w-50 sm:w-40 lg:w-50"
@@ -239,11 +239,11 @@ exports[`TransactionRowMobile > should render 2`] = `
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-1qplu6d"
-                      color="danger-bg"
+                      class="!flex h-[21px] w-12 items-center justify-center rounded px-1 py-[3px] dark:border css-1kocbuc"
+                      color="secondary"
                       data-testid="TransactionRowAddressing__label"
                     >
-                      To
+                      Return
                     </div>
                     <div
                       class="w-50 sm:w-40 lg:w-50"
@@ -700,11 +700,11 @@ exports[`TransactionRowMobile > should render with currency 1`] = `
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-1qplu6d"
-                      color="danger-bg"
+                      class="!flex h-[21px] w-12 items-center justify-center rounded px-1 py-[3px] dark:border css-1kocbuc"
+                      color="secondary"
                       data-testid="TransactionRowAddressing__label"
                     >
-                      To
+                      Return
                     </div>
                     <div
                       class="w-50 sm:w-30"
@@ -858,11 +858,11 @@ exports[`TransactionRowMobile > should render with currency 2`] = `
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-1qplu6d"
-                      color="danger-bg"
+                      class="!flex h-[21px] w-12 items-center justify-center rounded px-1 py-[3px] dark:border css-1kocbuc"
+                      color="secondary"
                       data-testid="TransactionRowAddressing__label"
                     >
-                      To
+                      Return
                     </div>
                     <div
                       class="w-50 sm:w-30"
