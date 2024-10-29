@@ -72,12 +72,12 @@ const OptionLabel = ({
 				address={address}
 				walletName={alias}
 				truncateOnTable
-				addressClass={cn("leading-[17px] sm:leading-5", {
+				addressClass={cn("leading-[17px] sm:leading-5 text-sm sm:text-base", {
 					"text-theme-primary-600": !alias && option.isSelected,
 					"text-theme-secondary-500 dark:text-theme-secondary-700": alias,
 					"text-theme-text": !alias,
 				})}
-				walletNameClass={cn("leading-[17px] sm:leading-5 text-theme-text", {
+				walletNameClass={cn("leading-[17px] sm:leading-5 text-theme-text text-sm sm:text-base", {
 					"text-theme-primary-600": option.isSelected,
 				})}
 			/>
