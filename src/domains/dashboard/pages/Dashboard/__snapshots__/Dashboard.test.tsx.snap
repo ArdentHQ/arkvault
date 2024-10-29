@@ -1617,7 +1617,7 @@ exports[`Dashboard > should render 1`] = `
                             data-testid="TransactionRowAddressing__container"
                           >
                             <div
-                              class="!flex h-[21px] w-12 items-center justify-center rounded px-1 py-[3px] dark:border css-6yoktf"
+                              class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-6yoktf"
                               color="success-bg"
                               data-testid="TransactionRowAddressing__label"
                             >
@@ -1781,7 +1781,7 @@ exports[`Dashboard > should render 1`] = `
                             data-testid="TransactionRowAddressing__container"
                           >
                             <div
-                              class="!flex h-[21px] w-12 items-center justify-center rounded px-1 py-[3px] dark:border css-6yoktf"
+                              class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-6yoktf"
                               color="success-bg"
                               data-testid="TransactionRowAddressing__label"
                             >
@@ -1945,7 +1945,7 @@ exports[`Dashboard > should render 1`] = `
                             data-testid="TransactionRowAddressing__container"
                           >
                             <div
-                              class="!flex h-[21px] w-12 items-center justify-center rounded px-1 py-[3px] dark:border css-6yoktf"
+                              class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-6yoktf"
                               color="success-bg"
                               data-testid="TransactionRowAddressing__label"
                             >
@@ -2109,7 +2109,7 @@ exports[`Dashboard > should render 1`] = `
                             data-testid="TransactionRowAddressing__container"
                           >
                             <div
-                              class="!flex h-[21px] w-12 items-center justify-center rounded px-1 py-[3px] dark:border css-6yoktf"
+                              class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-6yoktf"
                               color="success-bg"
                               data-testid="TransactionRowAddressing__label"
                             >
