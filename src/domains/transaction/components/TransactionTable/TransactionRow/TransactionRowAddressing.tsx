@@ -7,7 +7,6 @@ import { DTO } from "@ardenthq/sdk";
 import React, { useEffect, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
 import cn from "classnames";
-import { extractVotingData } from "@/domains/transaction/components/VoteTransactionType/helpers";
 
 export const TransactionRowLabel = ({ isNegative }: { isNegative: boolean }) => {
 	const { t } = useTranslation();
@@ -62,11 +61,9 @@ export const TransactionRowAddressing = ({
 
 	useEffect(() => {
 		if (transaction.isVote() || transaction.isUnvote()) {
-			const { votes, unvotes } = extractVotingData({ transaction });
-
 			setDelegates({
-				unvotes: env.delegates().map(transaction.wallet(), unvotes),
-				votes: env.delegates().map(transaction.wallet(), votes),
+				unvotes: env.delegates().map(transaction.wallet(), transaction.unvotes()),
+				votes: env.delegates().map(transaction.wallet(), transaction.votes()),
 			});
 		}
 	}, [env, transaction]);
