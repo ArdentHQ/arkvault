@@ -22,6 +22,7 @@ type SelectRecipientProperties = {
 	disabled?: boolean;
 	isInvalid?: boolean;
 	showOptions?: boolean;
+	showWalletAvatar?: boolean;
 	contactSearchTitle?: string;
 	contactSearchDescription?: string;
 	placeholder?: string;
@@ -66,13 +67,19 @@ const OptionLabel = ({
 	);
 
 	return (
-		<div className="flex items-center space-x-2 whitespace-nowrap">
-			<Avatar size="sm" address={address} className="shrink-0" noShadow />
+		<div className="flex items-center space-x-2 whitespace-nowrap leading-5">
 			<Address
 				address={address}
 				walletName={alias}
-				addressClass={cn({ "text-theme-primary-600": !alias && option.isSelected })}
-				walletNameClass={cn({ "text-theme-primary-600": option.isSelected })}
+				truncateOnTable
+				addressClass={cn("leading-[17px] sm:leading-5 text-sm sm:text-base", {
+					"text-theme-primary-600": !alias && option.isSelected,
+					"text-theme-secondary-500 dark:text-theme-secondary-700": alias,
+					"text-theme-text": !alias,
+				})}
+				walletNameClass={cn("leading-[17px] sm:leading-5 text-theme-text text-sm sm:text-base", {
+					"text-theme-primary-600": option.isSelected,
+				})}
 			/>
 		</div>
 	);
@@ -86,6 +93,7 @@ export const SelectRecipient = React.forwardRef<HTMLInputElement, SelectRecipien
 			disabled,
 			isInvalid,
 			showOptions = true,
+			showWalletAvatar = true,
 			network,
 			placeholder,
 			exceptMultiSignature,
@@ -119,7 +127,7 @@ export const SelectRecipient = React.forwardRef<HTMLInputElement, SelectRecipien
 				}
 
 				const alias = getWalletAlias({
-					address: addressValue,
+					address: addressValue ?? "",
 					network,
 					profile,
 				});
@@ -209,20 +217,22 @@ export const SelectRecipient = React.forwardRef<HTMLInputElement, SelectRecipien
 										),
 									}
 								: undefined,
-							start: {
-								content: (
-									<div className="flex items-center">
-										<ProfileAvatar address={selectedAddress} />
-										{!!selectedAddressAlias?.alias && (
-											<TruncateEnd
-												className="ml-2 font-semibold"
-												text={selectedAddressAlias.alias}
-												showTooltip
-											/>
-										)}
-									</div>
-								),
-							},
+							start: showWalletAvatar
+								? {
+										content: (
+											<div className="flex items-center">
+												<ProfileAvatar address={selectedAddress} />
+												{!!selectedAddressAlias?.alias && (
+													<TruncateEnd
+														className="ml-2 font-semibold"
+														text={selectedAddressAlias.alias}
+														showTooltip
+													/>
+												)}
+											</div>
+										),
+									}
+								: undefined,
 						}}
 						renderLabel={(option) => <OptionLabel option={option} network={network} profile={profile} />}
 					/>

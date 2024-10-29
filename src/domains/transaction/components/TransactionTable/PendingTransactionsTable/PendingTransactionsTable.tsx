@@ -11,6 +11,7 @@ import { PendingTransferRowMobile } from "@/domains/transaction/components/Trans
 import { SignedTransactionRow } from "@/domains/transaction/components/TransactionTable/TransactionRow/SignedTransactionRow";
 import { usePendingTransactionTableColumns } from "@/domains/transaction/components/TransactionTable/TransactionTable.helpers";
 import { useBreakpoint } from "@/app/hooks";
+import { TableWrapper } from "@/app/components/Table/TableWrapper";
 
 export const PendingTransactions = ({
 	profile,
@@ -19,12 +20,11 @@ export const PendingTransactions = ({
 	onRemove,
 	onPendingTransactionClick,
 	pendingTransactions,
-	isCompact,
 }: Properties) => {
 	const { t } = useTranslation();
 	const [pendingRemovalTransaction, setPendingRemovalTransaction] = useState<DTO.ExtendedSignedTransactionData>();
 
-	const columns = usePendingTransactionTableColumns();
+	const columns = usePendingTransactionTableColumns({ coin: wallet.network().coinName() });
 
 	const { isXs, isSm } = useBreakpoint();
 
@@ -32,6 +32,7 @@ export const PendingTransactions = ({
 
 	const renderTableRow = useCallback(
 		(transaction: PendingTransaction) => {
+			/* NOTE: Pending transfer refers to the status of the transaction pending validation in the chain and not related to musig wallet */
 			if (transaction.isPendingTransfer) {
 				if (useResponsive) {
 					return (
@@ -45,7 +46,6 @@ export const PendingTransactions = ({
 
 				return (
 					<PendingTransferRow
-						isCompact={isCompact}
 						wallet={wallet}
 						transaction={transaction.transaction as DTO.ExtendedConfirmedTransactionData}
 						onRowClick={onPendingTransactionClick}
@@ -58,7 +58,6 @@ export const PendingTransactions = ({
 					<SignedTransactionRowMobile
 						transaction={transaction.transaction as DTO.ExtendedSignedTransactionData}
 						wallet={wallet}
-						onSign={onClick}
 						onRowClick={onClick}
 						onRemovePendingTransaction={setPendingRemovalTransaction}
 					/>
@@ -67,16 +66,14 @@ export const PendingTransactions = ({
 
 			return (
 				<SignedTransactionRow
-					isCompact={isCompact}
 					transaction={transaction.transaction as DTO.ExtendedSignedTransactionData}
 					wallet={wallet}
-					onSign={onClick}
 					onRowClick={onClick}
 					onRemovePendingTransaction={setPendingRemovalTransaction}
 				/>
 			);
 		},
-		[isCompact, wallet, onClick, setPendingRemovalTransaction, onPendingTransactionClick, useResponsive],
+		[wallet, onClick, setPendingRemovalTransaction, onPendingTransactionClick, useResponsive],
 	);
 
 	const handleRemove = async (transaction: DTO.ExtendedSignedTransactionData) => {
@@ -87,11 +84,20 @@ export const PendingTransactions = ({
 
 	return (
 		<div data-testid="PendingTransactions" className="relative">
-			<h2 className="mb-6 text-2xl font-bold">{t("WALLETS.PAGE_WALLET_DETAILS.PENDING_TRANSACTIONS")}</h2>
+			<h2 className="mb-3 hidden text-2xl font-bold md:block">
+				{t("WALLETS.PAGE_WALLET_DETAILS.PENDING_TRANSACTIONS")}
+			</h2>
 
-			<Table columns={columns} data={pendingTransactions} hideHeader={useResponsive}>
-				{renderTableRow}
-			</Table>
+			<TableWrapper>
+				<Table
+					columns={columns}
+					data={pendingTransactions}
+					hideHeader={useResponsive}
+					className="with-x-padding"
+				>
+					{renderTableRow}
+				</Table>
+			</TableWrapper>
 
 			{!!pendingRemovalTransaction && (
 				<ConfirmRemovePendingTransaction

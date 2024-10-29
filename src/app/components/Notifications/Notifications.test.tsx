@@ -50,32 +50,12 @@ describe("Notifications", () => {
 		await profile.notifications().transactions().sync();
 	});
 
-	it("should render with plugins", async () => {
-		const { container } = render(<Notifications profile={profile} />);
-		await waitFor(() => expect(screen.queryAllByTestId("TransactionRowMode")).not.toHaveLength(0));
-
-		expect(container).toMatchSnapshot();
-	});
-
 	it("should render with transactions and plugins", async () => {
 		const { container } = render(<Notifications profile={profile} />);
 
-		await waitFor(() => expect(screen.getAllByTestId("NotificationItem")).toHaveLength(2));
-		await waitFor(() => expect(screen.queryAllByTestId("TransactionRowMode")).toHaveLength(3));
+		await waitFor(() => expect(screen.queryAllByTestId("TableRow")).toHaveLength(3));
 
 		expect(container).toMatchSnapshot();
-	});
-
-	it("should emit onNotificationAction event", async () => {
-		const onNotificationAction = vi.fn();
-
-		render(<Notifications profile={profile} onNotificationAction={onNotificationAction} />);
-		await waitFor(() => expect(screen.getAllByTestId("NotificationItem")).toHaveLength(2));
-		await waitFor(() => expect(screen.queryAllByTestId("TransactionRowMode")).toHaveLength(3));
-
-		userEvent.click(screen.getAllByTestId("NotificationItem__action")[1]);
-
-		await waitFor(() => expect(onNotificationAction).toHaveBeenCalledWith(expect.any(String)));
 	});
 
 	it("should emit transactionClick event", async () => {
@@ -83,10 +63,9 @@ describe("Notifications", () => {
 
 		const { container } = render(<Notifications profile={profile} onTransactionClick={onTransactionClick} />);
 
-		await waitFor(() => expect(screen.getAllByTestId("NotificationItem")).toHaveLength(2));
-		await waitFor(() => expect(screen.queryAllByTestId("TransactionRowMode")).toHaveLength(3));
+		await waitFor(() => expect(screen.queryAllByTestId("TableRow")).toHaveLength(3));
 
-		userEvent.click(screen.getAllByTestId("TransactionRowMode")[0]);
+		await userEvent.click(screen.getAllByTestId("TableRow")[0]);
 
 		await waitFor(() =>
 			expect(onTransactionClick).toHaveBeenCalledWith(expect.any(DTO.ExtendedConfirmedTransactionData)),

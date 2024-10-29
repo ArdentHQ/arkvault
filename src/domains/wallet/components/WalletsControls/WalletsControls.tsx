@@ -8,7 +8,6 @@ import { Dropdown, DropdownOption } from "@/app/components/Dropdown";
 import { Tooltip } from "@/app/components/Tooltip";
 import { FilterWallets, FilterWalletsHookProperties } from "@/domains/dashboard/components/FilterWallets";
 import { Divider } from "@/app/components/Divider";
-import { useBreakpoint } from "@/app/hooks";
 import { isLedgerTransportSupported } from "@/app/contexts/Ledger/transport";
 
 enum NewWalletOption {
@@ -33,7 +32,6 @@ export const WalletsControls = React.memo(
 		onFilterChange,
 	}: WalletsControlsProperties) => {
 		const { t } = useTranslation();
-		const { isXl } = useBreakpoint();
 
 		const newWalletOptions = useMemo<DropdownOption[]>(
 			() => [
@@ -70,8 +68,7 @@ export const WalletsControls = React.memo(
 			<div data-testid="WalletControls" className="flex items-center justify-end">
 				<div className="static mr-0 flex items-center border-theme-secondary-300 pr-0 text-theme-primary-300 dark:border-theme-secondary-800 dark:text-theme-secondary-600 sm:mr-8 sm:border-r sm:pr-5 md:relative">
 					<Dropdown
-						position={isXl ? "right" : "top-center"}
-						dropdownClass="mx-4 md:mx-0"
+						placement="bottom"
 						toggleContent={
 							<Tooltip content={filterProperties.disabled ? t("COMMON.NOTICE_NO_WALLETS") : undefined}>
 								<span>
@@ -105,7 +102,7 @@ export const WalletsControls = React.memo(
 								disabled={!isLedgerTransportSupported()}
 								onClick={onImportLedgerWallet}
 								variant="secondary"
-								showOn="md"
+								className="hidden md:inline-flex"
 								data-testid="WalletControls__import-ledger"
 							>
 								<div className="flex items-center space-x-2">
@@ -135,7 +132,6 @@ export const WalletsControls = React.memo(
 
 				<div className="flex items-center sm:hidden">
 					<Dropdown
-						dropdownClass="mx-4 md:mx-0"
 						toggleContent={
 							<span className="-mx-1 flex items-center px-5 py-3 text-theme-primary-300 dark:text-theme-secondary-600">
 								<Icon name="Plus" />

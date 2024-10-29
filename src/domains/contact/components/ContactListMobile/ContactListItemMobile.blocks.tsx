@@ -2,9 +2,7 @@ import React, { useMemo } from "react";
 import { useTranslation } from "react-i18next";
 import { Contracts } from "@ardenthq/sdk-profiles";
 import cn from "classnames";
-import { Avatar } from "@/app/components/Avatar";
 import { Address } from "@/app/components/Address";
-import { Clipboard } from "@/app/components/Clipboard";
 import { Icon } from "@/app/components/Icon";
 import { AvailableNetwork } from "@/domains/contact/pages/Contacts";
 import { Tooltip } from "@/app/components/Tooltip";
@@ -51,29 +49,21 @@ export const ContactListItemMobileAddress: React.VFC<ContactListItemMobileAddres
 	const network = networkById(address.network());
 
 	return (
-		<div className="flex h-20 items-center justify-between overflow-hidden">
+		<div className="flex h-18 items-center justify-between overflow-hidden rounded-xl dark:border-2 dark:border-theme-secondary-800">
 			<div
 				className={cn(
-					"flex h-full flex-1 flex-col justify-center overflow-hidden rounded-l-xl px-6 dark:border-2 dark:border-r-0 dark:border-theme-secondary-800 dark:bg-theme-secondary-900",
+					"flex h-full flex-1 flex-col justify-center overflow-hidden px-6 dark:bg-theme-secondary-900",
 					{
 						"bg-theme-primary-100": !sendIsDisabled,
 						"bg-theme-secondary-100": sendIsDisabled,
 					},
 				)}
 			>
-				<div className="mb-2 text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700">
+				<div className="mb-2 text-xs font-semibold leading-[15px] text-theme-secondary-700 dark:text-theme-secondary-700">
 					{network && networkDisplayName(network)}
 				</div>
-				<div className="flex items-center space-x-3 overflow-hidden">
-					<Avatar address={address.address()} size="xs" noShadow />
-
-					<Address address={address.address()} />
-
-					<Clipboard variant="icon" data={address.address()}>
-						<div className="text-theme-primary-300 dark:text-theme-secondary-700">
-							<Icon name="Copy" />
-						</div>
-					</Clipboard>
+				<div className="flex items-center overflow-hidden">
+					<Address address={address.address()} showCopyButton />
 				</div>
 			</div>
 			<Tooltip content={sendButtonTooltip}>
@@ -83,11 +73,14 @@ export const ContactListItemMobileAddress: React.VFC<ContactListItemMobileAddres
 						type="button"
 						disabled={sendIsDisabled}
 						onClick={onSend}
-						className={cn("flex h-full items-center justify-center rounded-r-xl px-3", {
-							"bg-theme-primary-600 text-white hover:bg-theme-primary-700": !sendIsDisabled,
-							"bg-theme-secondary-200 text-theme-secondary-500 dark:bg-theme-secondary-800 dark:text-theme-secondary-700":
-								sendIsDisabled,
-						})}
+						className={cn(
+							"flex h-full items-center justify-center bg-theme-primary-100 px-3 dark:bg-theme-secondary-900",
+							{
+								"text-theme-navy-600 hover:bg-theme-primary-700 hover:text-white dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200":
+									!sendIsDisabled,
+								"text-theme-secondary-500 dark:text-theme-secondary-800": sendIsDisabled,
+							},
+						)}
 					>
 						<Icon size="lg" name="DoubleArrowRight" />
 					</button>

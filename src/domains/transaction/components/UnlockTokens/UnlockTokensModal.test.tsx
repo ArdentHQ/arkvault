@@ -70,14 +70,31 @@ describe("UnlockTokensModal", () => {
 
 		vi.spyOn(wallet.transaction(), "transaction").mockReturnValue({
 			amount: () => 30,
+			blockId: () => "1",
 			convertedAmount: () => 0,
 			convertedFee: () => 0,
+			data: () => ({ data: { nonce: 1 } }),
 			explorerLink: () => `https://test.arkscan.io/transaction/${transactionFixture.data.id}`,
+			explorerLinkForBlock: () => `https://test.arkscan.io/block/${transactionFixture.data.blockId}`,
 			fee: () => +transactionFixture.data.fee / 1e8,
 			id: () => transactionFixture.data.id,
+			isConfirmed: () => true,
+			isDelegateRegistration: () => false,
+			isDelegateResignation: () => false,
+			isIpfs: () => false,
+			isMultiPayment: () => false,
+			isMultiPayment: () => false,
 			isMultiSignatureRegistration: () => false,
+			isSent: () => true,
+			isTransfer: () => true,
+			isTransfer: () => true,
 			isUnlockToken: () => true,
-			sender: () => transactionFixture.data.sender,
+			isUnvote: () => false,
+			isVote: () => true,
+			isVoteCombination: () => false,
+			memo: () => {},
+			recipient: () => wallet.address(),
+			sender: () => transactionFixture.data.sender.address,
 			timestamp: () => DateTime.make(),
 			type: () => "unlockToken",
 			usesMultiSignature: () => false,
@@ -113,7 +130,7 @@ describe("UnlockTokensModal", () => {
 
 		await expect(screen.findByTestId("UnlockTokensModal")).resolves.toBeVisible();
 
-		userEvent.click(screen.getByText(translations.COMMON.CLOSE));
+		await userEvent.click(screen.getByText(translations.COMMON.CLOSE));
 
 		expect(onClose).toHaveBeenCalledWith(expect.objectContaining({ nativeEvent: expect.any(MouseEvent) }));
 	});
@@ -148,13 +165,13 @@ describe("UnlockTokensModal", () => {
 
 		// continue to review step
 
-		userEvent.click(screen.getByText(translations.TRANSACTION.UNLOCK_TOKENS.UNLOCK));
+		await userEvent.click(screen.getByText(translations.TRANSACTION.UNLOCK_TOKENS.UNLOCK));
 
 		expect(screen.getByText(translations.TRANSACTION.UNLOCK_TOKENS.REVIEW.TITLE)).toBeInTheDocument();
 
 		// back to select step
 
-		userEvent.click(screen.getByText(translations.COMMON.BACK));
+		await userEvent.click(screen.getByText(translations.COMMON.BACK));
 
 		await waitFor(() => {
 			expect(within(screen.getAllByTestId("UnlockTokensTotal")[1]).getByTestId("Amount")).toHaveTextContent(
@@ -164,19 +181,19 @@ describe("UnlockTokensModal", () => {
 
 		// continue to review step
 
-		userEvent.click(screen.getByText(translations.TRANSACTION.UNLOCK_TOKENS.UNLOCK));
+		await userEvent.click(screen.getByText(translations.TRANSACTION.UNLOCK_TOKENS.UNLOCK));
 
 		expect(screen.getByText(translations.TRANSACTION.UNLOCK_TOKENS.REVIEW.TITLE)).toBeInTheDocument();
 
 		// continue to auth step
 
-		userEvent.click(screen.getByText(translations.COMMON.CONFIRM));
+		await userEvent.click(screen.getByText(translations.COMMON.CONFIRM));
 
 		await expect(screen.findByTestId("AuthenticationStep")).resolves.toBeVisible();
 
 		// back to review step
 
-		userEvent.click(screen.getByText(translations.COMMON.BACK));
+		await userEvent.click(screen.getByText(translations.COMMON.BACK));
 
 		expect(screen.getByText(translations.TRANSACTION.UNLOCK_TOKENS.REVIEW.TITLE)).toBeInTheDocument();
 
@@ -188,7 +205,8 @@ describe("UnlockTokensModal", () => {
 
 		// enter signing key
 
-		userEvent.paste(screen.getByTestId("AuthenticationStep__mnemonic"), mnemonic);
+		await userEvent.clear(screen.getByTestId("AuthenticationStep__mnemonic"));
+		await userEvent.type(screen.getByTestId("AuthenticationStep__mnemonic"), mnemonic);
 
 		await waitFor(() => expect(screen.getByTestId("AuthenticationStep__mnemonic")).toHaveValue(mnemonic));
 
@@ -216,18 +234,22 @@ describe("UnlockTokensModal", () => {
 			expect(screen.getByTestId("UnlockTokensAuthentication__send")).toBeEnabled();
 		});
 
-		userEvent.click(screen.getByTestId("UnlockTokensAuthentication__send"));
+		await userEvent.click(screen.getByTestId("UnlockTokensAuthentication__send"));
 
 		await act(() => vi.runOnlyPendingTimers());
 
 		if (expectedOutcome === "success") {
 			await waitFor(() => {
-				expect(screen.getByTestId("TransactionSuccessful")).toBeInTheDocument();
+				expect(screen.findByTestId("TransactionId")).resolves.toBeVisible();
 			});
 		} else {
 			await waitFor(() => {
 				expect(screen.getByTestId("ErrorStep__errorMessage")).toBeInTheDocument();
 			});
+
+			await userEvent.click(screen.getByTestId("ErrorStep__back-button"));
+
+			await expect(screen.findByTestId("ErrorStep__errorMessage")).rejects.toThrow();
 		}
 
 		expect(signMock).toHaveBeenCalledWith({

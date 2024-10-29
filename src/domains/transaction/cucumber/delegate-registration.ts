@@ -24,7 +24,7 @@ cucumber(
 			await t.expect(Selector("[data-testid=Registration__form]").exists).ok();
 			await t.typeText(Selector("[data-testid=Input__username]"), "test_delegate");
 			await t.click(Selector("button").withText(translations.COMMON.CONTINUE));
-			await t.expect(Selector("[data-testid=TransactionDetail]").withText("test_delegate").exists).ok();
+			await t.expect(Selector("[data-testid=DetailWrapper]").withText("test_delegate").exists).ok();
 			await t.click(Selector("button").withText(translations.COMMON.CONTINUE));
 		},
 		"And sends the delegate registration transaction": async (t: TestController) => {
@@ -37,7 +37,7 @@ cucumber(
 		},
 		"Then the transaction is sent successfully": async (t: TestController) => {
 			await t
-				.expect(Selector("h1").withText(translations.TRANSACTION.SUCCESS.TITLE).exists)
+				.expect(Selector("h1").withText(translations.TRANSACTION.SUCCESS.CONFIRMED).exists)
 				.ok({ timeout: 5000 });
 		},
 	},

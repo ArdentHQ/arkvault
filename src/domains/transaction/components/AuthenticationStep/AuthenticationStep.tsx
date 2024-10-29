@@ -1,4 +1,3 @@
-/* eslint-disable sonarjs/cognitive-complexity */
 import { Contracts } from "@ardenthq/sdk-profiles";
 import React, { useMemo, useState } from "react";
 import { useFormContext } from "react-hook-form";
@@ -17,6 +16,7 @@ import {
 import { StepHeader } from "@/app/components/StepHeader";
 import { Spinner } from "@/app/components/Spinner";
 import { Image } from "@/app/components/Image";
+import { Icon } from "@/app/components/Icon";
 export interface LedgerStates {
 	ledgerIsAwaitingDevice?: boolean;
 	ledgerIsAwaitingApp?: boolean;
@@ -111,7 +111,7 @@ const LedgerAuthentication = ({
 	}
 
 	return (
-		<div data-testid="AuthenticationStep" className="space-y-8">
+		<div data-testid="AuthenticationStep" className="space-y-6">
 			<LedgerStateWrapper
 				ledgerIsAwaitingApp={ledgerIsAwaitingApp}
 				ledgerIsAwaitingDevice={ledgerIsAwaitingDevice}
@@ -123,6 +123,14 @@ const LedgerAuthentication = ({
 				<>
 					{!noHeading && (
 						<StepHeader
+							titleIcon={
+								<Icon
+									dimensions={[24, 24]}
+									name="ConfirmTransaction"
+									data-testid="icon-confirm"
+									className="text-theme-primary-600"
+								/>
+							}
 							title={
 								subject === "transaction"
 									? t("TRANSACTION.LEDGER_CONFIRMATION.TITLE")
@@ -131,9 +139,7 @@ const LedgerAuthentication = ({
 						/>
 					)}
 
-					{requireLedgerConfirmation && (
-						<LedgerConfirmation noHeading={subject === "message"}>{ledgerDetails}</LedgerConfirmation>
-					)}
+					{requireLedgerConfirmation && <LedgerConfirmation noHeading>{ledgerDetails}</LedgerConfirmation>}
 
 					{!requireLedgerConfirmation && (
 						<div className="space-y-8">
@@ -209,11 +215,22 @@ export const AuthenticationStep = ({
 	const requireSecondSecret = isTransaction && wallet.isSecondSignature() && wallet.actsWithSecret();
 
 	return (
-		<div data-testid="AuthenticationStep" className="space-y-6">
+		<div data-testid="AuthenticationStep" className="space-y-4">
 			{wallet.actsWithWif() && (
 				<>
 					{!noHeading && (
-						<StepHeader title={title} subtitle={t("TRANSACTION.AUTHENTICATION_STEP.DESCRIPTION_WIF")} />
+						<StepHeader
+							titleIcon={
+								<Icon
+									name="Mnemonic"
+									data-testid="icon-mnemonic"
+									className="text-theme-primary-600"
+									dimensions={[24, 24]}
+								/>
+							}
+							title={title}
+							subtitle={t("TRANSACTION.AUTHENTICATION_STEP.DESCRIPTION_WIF")}
+						/>
 					)}
 
 					<FormField name="wif">
@@ -230,6 +247,14 @@ export const AuthenticationStep = ({
 				<>
 					{!noHeading && (
 						<StepHeader
+							titleIcon={
+								<Icon
+									name="Mnemonic"
+									data-testid="icon-mnemonic"
+									className="text-theme-primary-600"
+									dimensions={[24, 24]}
+								/>
+							}
 							title={title}
 							subtitle={t("TRANSACTION.AUTHENTICATION_STEP.DESCRIPTION_PRIVATE_KEY")}
 						/>
@@ -250,6 +275,14 @@ export const AuthenticationStep = ({
 					{!noHeading && (
 						<StepHeader
 							title={title}
+							titleIcon={
+								<Icon
+									name="Mnemonic"
+									data-testid="icon-mnemonic"
+									className="text-theme-primary-600"
+									dimensions={[24, 24]}
+								/>
+							}
 							subtitle={
 								isTransaction
 									? t("TRANSACTION.AUTHENTICATION_STEP.DESCRIPTION_SECRET")
@@ -273,6 +306,14 @@ export const AuthenticationStep = ({
 					{!noHeading && (
 						<StepHeader
 							title={title}
+							titleIcon={
+								<Icon
+									name="Mnemonic"
+									data-testid="icon-mnemonic"
+									className="text-theme-primary-600"
+									dimensions={[24, 24]}
+								/>
+							}
 							subtitle={
 								isTransaction
 									? t("TRANSACTION.AUTHENTICATION_STEP.DESCRIPTION_ENCRYPTION_PASSWORD")
@@ -296,6 +337,14 @@ export const AuthenticationStep = ({
 					{!noHeading && (
 						<StepHeader
 							title={title}
+							titleIcon={
+								<Icon
+									name="Mnemonic"
+									data-testid="icon-mnemonic"
+									className="text-theme-primary-600"
+									dimensions={[24, 24]}
+								/>
+							}
 							subtitle={
 								isTransaction
 									? t("TRANSACTION.AUTHENTICATION_STEP.DESCRIPTION_MNEMONIC")

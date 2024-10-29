@@ -61,6 +61,7 @@ const NavigationBarLogo: React.FC<NavigationBarLogoOnlyProperties> = ({
 	onClick,
 }: NavigationBarLogoOnlyProperties) => {
 	const history = useHistory();
+	const { isXs } = useBreakpoint();
 
 	const defaultHandler = useCallback(() => {
 		history.push("/");
@@ -71,10 +72,10 @@ const NavigationBarLogo: React.FC<NavigationBarLogoOnlyProperties> = ({
 			<button
 				data-testid="NavigationBarLogo--button"
 				type="button"
-				className="my-auto mr-4 flex h-11 w-11 cursor-pointer items-center justify-center rounded-xl bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400"
+				className="my-auto mr-2 flex h-8 w-8 cursor-pointer items-center justify-center rounded bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 sm:mr-4 sm:h-11 sm:w-11 sm:rounded-xl"
 				onClick={() => (onClick ? onClick() : defaultHandler())}
 			>
-				<Logo height={28} />
+				<Logo height={isXs ? 22 : 28} />
 			</button>
 
 			{title && <span className="text-lg uppercase">{title}</span>}
@@ -87,8 +88,8 @@ export const NavigationBarLogoOnly: React.VFC<NavigationBarLogoOnlyProperties> =
 
 	return (
 		<NavWrapper aria-labelledby="main menu" noBorder scroll={scroll}>
-			<div className="relative flex h-21">
-				<div className="flex flex-1 px-8 sm:ml-12">
+			<div className="relative flex h-14 sm:h-21">
+				<div className="flex flex-1 px-6 md:px-10">
 					<NavigationBarLogo title={title} />
 				</div>
 			</div>
@@ -227,7 +228,7 @@ export const NavigationBarFull: React.FC<NavigationBarFullProperties> = ({
 
 	const renderNavigationMenu = () => (
 		<>
-			<ul className="ml-4 mr-auto hidden h-21 space-x-8 lg:flex" data-testid="NavigationBar__menu">
+			<ul className="ml-4 mr-auto hidden h-14 space-x-8 sm:h-21 lg:flex" data-testid="NavigationBar__menu">
 				{navigationMenu.map((menuItem, index) => (
 					<li key={index} className="flex">
 						<NavLink
@@ -246,7 +247,6 @@ export const NavigationBarFull: React.FC<NavigationBarFullProperties> = ({
 				className="ml-2 mr-auto flex content-center items-center lg:hidden"
 			>
 				<Dropdown
-					dropdownClass="w-full sm:w-auto mt-6 sm:mt-10 mx-0 rounded-none sm:rounded-xl"
 					toggleContent={(isOpen) => (
 						<button
 							type="button"
@@ -329,12 +329,12 @@ export const NavigationBarFull: React.FC<NavigationBarFullProperties> = ({
 			)}
 
 			<NavWrapper aria-labelledby="main menu" scroll={scroll}>
-				<div className="relative flex h-21">
+				<div className="relative flex h-14 sm:h-21">
 					<div className="hidden w-12 sm:flex">
 						<BackButton disabled={isBackDisabled} />
 					</div>
 
-					<div className="flex flex-1 items-center px-8">
+					<div className="flex flex-1 items-center px-6 sm:px-8">
 						<NavigationBarLogo onClick={homeButtonHandler} />
 
 						{renderNavigationMenu()}

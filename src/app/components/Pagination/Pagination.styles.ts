@@ -2,7 +2,7 @@ import tw, { css } from "twin.macro";
 
 export const PaginationSearchWrapper = css`
 	.search-form {
-		${tw`px-2 flex absolute inset-0 z-10 rounded bg-theme-primary-100 dark:bg-theme-secondary-800`}
+		${tw`px-2 flex absolute left-0 top-0.5 sm:top-0 w-full z-10 rounded bg-theme-primary-100 dark:bg-theme-secondary-800`}
 	}
 
 	.search-control {
@@ -12,7 +12,7 @@ export const PaginationSearchWrapper = css`
 
 export const SearchInput = css`
 	& {
-		${tw`p-2 w-full dark:text-theme-secondary-200`}
+		${tw`p-2 w-full leading-[17px] dark:text-theme-secondary-200`}
 		background-color: transparent !important;
 		border: none;
 		appearance: none !important;
@@ -28,12 +28,10 @@ export const SearchInput = css`
 `;
 
 export const PaginationSearchToggleButton = css`
-	${tw`relative text-theme-primary-600 p-2 cursor-pointer flex w-full justify-center flex-nowrap items-center dark:text-theme-secondary-200`}
+	${tw`relative text-theme-primary-600 p-1.5 px-4 cursor-pointer flex w-full justify-center flex-nowrap items-center dark:text-theme-secondary-200`}
 
 	&:hover {
-		${tw`bg-theme-primary-600 text-white rounded`}
-		box-shadow: 2px 3px 10px 2px rgba(var(--theme-color-primary-rgb), 0.2);
-		transform: scale(1.1);
+		${tw`sm:bg-theme-primary-600 sm:text-white sm:rounded`}
 	}
 
 	&:focus {
@@ -60,13 +58,9 @@ export const PaginationButton = css`
 `;
 
 export const PaginationWrapper = css`
-	${tw`flex flex-col sm:flex-row space-x-3 h-10`}
+	${tw`flex flex-col sm:flex-row sm:space-x-2 sm:h-8`}
 
 	button:first-of-type,button:last-of-type {
 		${tw``}
-	}
-
-	& > button {
-		${tw`py-2 px-4`}
 	}
 `;

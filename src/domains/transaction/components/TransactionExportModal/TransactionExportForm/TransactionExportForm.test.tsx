@@ -19,8 +19,10 @@ const history = createHashHistory();
 const fixtureProfileId = getDefaultProfileId();
 let dashboardURL: string;
 
-const dateToggle = () =>
-	within(screen.getByTestId("TransactionExportForm--daterange-options")).getByTestId("CollapseToggleButton");
+const toggleTestId = "dropdown__toggle-TransactionExportForm--daterange-options";
+const dropdownContentTestId = "dropdown__content-TransactionExportForm--daterange-options";
+
+const dateToggle = () => within(screen.getByTestId(toggleTestId)).getByTestId("CollapseToggleButton");
 
 describe("TransactionExportForm", () => {
 	let profile: Contracts.IProfile;
@@ -61,7 +63,7 @@ describe("TransactionExportForm", () => {
 			expect(dateToggle()).toBeEnabled();
 		});
 
-		userEvent.click(screen.getByTestId("TransactionExportForm__cancel-button"));
+		await userEvent.click(screen.getByTestId("TransactionExportForm__cancel-button"));
 
 		expect(onCancel).toHaveBeenCalledWith();
 	});
@@ -95,7 +97,7 @@ describe("TransactionExportForm", () => {
 			expect(dateToggle()).toBeEnabled();
 		});
 
-		userEvent.click(screen.getAllByTestId("ButtonGroupOption")[1]);
+		await userEvent.click(screen.getAllByTestId("ButtonGroupOption")[1]);
 	});
 
 	it("should select last month", async () => {
@@ -107,11 +109,11 @@ describe("TransactionExportForm", () => {
 			expect(dateToggle()).toBeEnabled();
 		});
 
-		userEvent.click(screen.getAllByTestId("dropdown__toggle")[0]);
+		await userEvent.click(screen.getByTestId(toggleTestId));
 
-		expect(screen.getByTestId("dropdown__content")).toBeInTheDocument();
+		expect(screen.getByTestId(dropdownContentTestId)).toBeInTheDocument();
 
-		userEvent.click(screen.getByTestId("dropdown__option--all-1"));
+		await userEvent.click(screen.getByTestId("dropdown__option--all-1"));
 	});
 
 	it("should render custom date range", async () => {
@@ -133,11 +135,11 @@ describe("TransactionExportForm", () => {
 			expect(dateToggle()).toBeEnabled();
 		});
 
-		userEvent.click(screen.getAllByTestId("dropdown__toggle")[0]);
+		await userEvent.click(screen.getByTestId(toggleTestId));
 
-		expect(screen.getByTestId("dropdown__content")).toBeInTheDocument();
+		expect(screen.getByTestId(dropdownContentTestId)).toBeInTheDocument();
 
-		userEvent.click(screen.getByTestId("dropdown__option--custom-0"));
+		await userEvent.click(screen.getByTestId("dropdown__option--custom-0"));
 	});
 
 	it("should select tab delimiter", async () => {
@@ -153,10 +155,10 @@ describe("TransactionExportForm", () => {
 			expect(dateToggle()).toBeEnabled();
 		});
 
-		userEvent.click(screen.getAllByTestId("dropdown__toggle")[1]);
+		await userEvent.click(screen.getByTestId("dropdown__toggle-TransactionExportForm--delimiter-options"));
 
-		expect(screen.getByTestId("dropdown__content")).toBeInTheDocument();
+		expect(screen.getByTestId("dropdown__content-TransactionExportForm--delimiter-options")).toBeInTheDocument();
 
-		userEvent.click(screen.getByTestId("dropdown__option--2"));
+		await userEvent.click(screen.getByTestId("dropdown__option--2"));
 	});
 });

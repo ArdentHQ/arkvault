@@ -1,5 +1,5 @@
 import { Contracts } from "@ardenthq/sdk-profiles";
-import { renderHook } from "@testing-library/react-hooks";
+import { renderHook } from "@testing-library/react";
 import React from "react";
 
 import { useWalletAlias } from "./use-wallet-alias";
@@ -21,6 +21,7 @@ describe("useWalletAlias", () => {
 		const { result } = renderHook(() => useWalletAlias(), { wrapper });
 
 		expect(result.current.getWalletAlias({ address: "wrong-address", profile })).toStrictEqual({
+			address: "wrong-address",
 			alias: undefined,
 			isContact: false,
 			isDelegate: false,
@@ -58,6 +59,7 @@ describe("useWalletAlias", () => {
 		const { result } = renderHook(() => useWalletAlias(), { wrapper });
 
 		expect(result.current.getWalletAlias({ address: contactAddress.address(), profile })).toStrictEqual({
+			address: contactAddress.address(),
 			alias: contact.name(),
 			isContact: true,
 			isDelegate: false,
@@ -74,6 +76,7 @@ describe("useWalletAlias", () => {
 				profile,
 			}),
 		).toStrictEqual({
+			address: wallet.address(),
 			alias: wallet.displayName(),
 			isContact: false,
 			isDelegate: false,
@@ -94,6 +97,7 @@ describe("useWalletAlias", () => {
 				profile,
 			}),
 		).toStrictEqual({
+			address: wallet.address(),
 			alias: wallet.displayName(),
 			isContact: false,
 			isDelegate: true,
@@ -112,11 +116,13 @@ describe("useWalletAlias", () => {
 
 		expect(
 			result.current.getWalletAlias({
+				address: wallet.address(),
 				address: delegate.address(),
 				network: wallet.network(),
 				profile,
 			}),
 		).toStrictEqual({
+			address: delegate.address(),
 			alias: delegate.username(),
 			isContact: false,
 			isDelegate: true,
@@ -142,6 +148,7 @@ describe("useWalletAlias", () => {
 				profile,
 			}),
 		).toStrictEqual({
+			address: wallet.address(),
 			alias: "delegate username",
 			isContact: false,
 			isDelegate: true,

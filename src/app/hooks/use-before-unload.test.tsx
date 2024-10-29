@@ -1,5 +1,4 @@
-import { render, screen } from "@testing-library/react";
-import { renderHook } from "@testing-library/react-hooks";
+import { render, screen, renderHook } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import React from "react";
 import { beforeunloadEventListener, useBeforeunload } from "./use-before-unload";
@@ -32,7 +31,7 @@ describe("useBeforeunload", () => {
 		eventSpy.mockRestore();
 	});
 
-	it("should set and remove `beforeunload` listener", () => {
+	it("should set and remove `beforeunload` listener", async () => {
 		const Component = () => {
 			const { addBeforeunload, removeBeforeunload } = useBeforeunload();
 
@@ -49,12 +48,12 @@ describe("useBeforeunload", () => {
 
 		render(<Component />);
 
-		userEvent.click(screen.getByTestId("addBeforeunload"));
+		await userEvent.click(screen.getByTestId("addBeforeunload"));
 		window.dispatchEvent(new Event("beforeunload"));
 
 		expect(addEventListenerSpy).toHaveBeenCalledWith("beforeunload", beforeunloadEventListener);
 
-		userEvent.click(screen.getByTestId("removeBeforeunload"));
+		await userEvent.click(screen.getByTestId("removeBeforeunload"));
 
 		expect(removeEventListenerSpy).toHaveBeenCalledWith("beforeunload", beforeunloadEventListener);
 

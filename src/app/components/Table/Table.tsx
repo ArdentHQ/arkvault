@@ -7,6 +7,7 @@ import { styled } from "twin.macro";
 import { TableProperties } from "./Table.contracts";
 import { defaultTableStyle } from "./Table.styles";
 import { Icon } from "@/app/components/Icon";
+import { twMerge } from "tailwind-merge";
 
 const TableWrapper = styled.div`
 	${defaultTableStyle}
@@ -51,23 +52,22 @@ export const Table = <RowDataType extends Record<never, unknown>>({
 		return <tr />;
 	};
 
-	const renderHeaderGroup = (headerGroup: HeaderGroup<RowDataType>) => (
-		<tr
-			className="border-b border-theme-secondary-300 dark:border-theme-secondary-800"
-			{...headerGroup.getHeaderGroupProps()}
-		>
-			{headerGroup.headers.map(renderColumn)}
-		</tr>
-	);
+	const renderHeaderGroup = (headerGroup: HeaderGroup<RowDataType>) => {
+		const { key, ...headerGroupProps } = headerGroup.getHeaderGroupProps();
+		return (
+			<tr key={key} {...headerGroupProps}>
+				{headerGroup.headers.map(renderColumn)}
+			</tr>
+		);
+	};
 
 	const renderColumn = (column: HeaderGroup<RowDataType>, thIndex: number) => {
-		const thElementClassName = cn(
-			"group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold",
+		const thElementClassName = twMerge(
+			"group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 ",
 			column.headerClassName,
-			{ "w-1": column.minimumWidth },
-			{
-				[`${column.cellWidth} min-${column.cellWidth}`]: !column.minimumWidth && column.cellWidth,
-			},
+			column.minimumWidth && "w-1",
+			!column.noRoundedBorders && "first:rounded-tl-xl last:rounded-tr-xl",
+			!column.minimumWidth && column.cellWidth && `${column.cellWidth} min-${column.cellWidth}`,
 		);
 		const rootDivClassName = cn("flex flex-inline align-top", column.className, {
 			"flex-row-reverse": column.className?.includes("justify-end") && !column.disableSortBy,
@@ -84,12 +84,10 @@ export const Table = <RowDataType extends Record<never, unknown>>({
 			"rotate-180": (column.isSorted && !column.isSortedDesc) || (!column.isSorted && !column.sortDescFirst),
 		});
 
+		const { key, ...headerProps } = column.getHeaderProps(column.getSortByToggleProps());
+
 		return (
-			<th
-				className={thElementClassName}
-				data-testid={`table__th--${thIndex}`}
-				{...column.getHeaderProps(column.getSortByToggleProps())}
-			>
+			<th className={thElementClassName} data-testid={`table__th--${thIndex}`} key={key} {...headerProps}>
 				<div className={rootDivClassName}>
 					<div className={cn({ "whitespace-nowrap": column.noWrap })}>{column.render("Header")}</div>
 					{!column.hideSortArrow && column.canSort && (
@@ -105,8 +103,8 @@ export const Table = <RowDataType extends Record<never, unknown>>({
 	const renderHeader = <thead>{headerGroups.map(renderHeaderGroup)}</thead>;
 
 	return (
-		<TableWrapper {...getTableProps({ className })} className={cn({ "-mt-3": !hideHeader })}>
-			<table cellPadding={0} className="table-auto">
+		<TableWrapper {...getTableProps({ className })}>
+			<table cellPadding={0} className="w-full table-auto">
 				{!hideHeader && renderHeader}
 
 				<tbody {...getTableBodyProps()}>

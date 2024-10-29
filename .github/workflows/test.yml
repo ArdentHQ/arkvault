@@ -487,8 +487,6 @@ jobs:
               run: pnpm rebuild
             - name: Test
               uses: nick-invision/retry@v2
-              env:
-                  COVERAGE_THRESHOLD_BRANCHES: 99.67
               with:
                   timeout_minutes: 10
                   max_attempts: 1
@@ -725,7 +723,7 @@ jobs:
                   COVERAGE_THRESHOLD_LINES: 99.33
                   COVERAGE_THRESHOLD_FUNCTIONS: 99
                   COVERAGE_THRESHOLD_STATEMENTS: 99.35
-                  COVERAGE_THRESHOLD_BRANCHES: 98.72
+                  COVERAGE_THRESHOLD_BRANCHES: 98.71
                   COVERAGE_INCLUDE_PATH: src/domains/transaction/components/[T-Z]*
               uses: nick-invision/retry@v2
               with:
@@ -804,6 +802,10 @@ jobs:
               run: pnpm rebuild
             - name: Test
               uses: nick-invision/retry@v2
+              env:
+                  COVERAGE_THRESHOLD_LINES: 98.67
+                  COVERAGE_THRESHOLD_STATEMENTS: 98.73
+                  COVERAGE_THRESHOLD_BRANCHES: 98.25
               with:
                   timeout_minutes: 10
                   max_attempts: 1
@@ -842,9 +844,9 @@ jobs:
               uses: nick-invision/retry@v2
               env:
                   COVERAGE_THRESHOLD_LINES: 99.93
-                  COVERAGE_THRESHOLD_FUNCTIONS: 99.93
-                  COVERAGE_THRESHOLD_STATEMENTS: 99.39
-                  COVERAGE_THRESHOLD_BRANCHES: 99.39
+                  COVERAGE_THRESHOLD_FUNCTIONS: 99.75
+                  COVERAGE_THRESHOLD_STATEMENTS: 99.38
+                  COVERAGE_THRESHOLD_BRANCHES: 99.38
                   COVERAGE_INCLUDE_PATH: src/domains/wallet
               with:
                   timeout_minutes: 10

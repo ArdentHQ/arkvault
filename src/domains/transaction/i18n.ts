@@ -2,9 +2,11 @@ export const translations = {
 	ACCOUNT: "Account",
 	ACCOUNT_NICKNAME: "Account Nickname",
 	ADDRESS: "Address",
+	ADDRESSING: "Addressing",
 	ADD_LINK: "Add Link",
 	ADD_RECIPIENT: "Add Recipient",
 	ALL: "All",
+	ALL_HISTORY: "All History",
 	AMOUNT: "Amount",
 	AUTHENTICATION_STEP: {
 		DESCRIPTION_ENCRYPTION_PASSWORD: "Enter your encryption password to authenticate the transaction.",
@@ -32,7 +34,7 @@ export const translations = {
 	ENCRYPTION_PASSWORD: "Encryption Password",
 	ERROR: {
 		DESCRIPTION:
-			"An error occurred that prevented the broadcast of this transaction. Select Retry to attempt to broadcast the transaction again. Alternatively, return to your wallet",
+			"An error occurred while sending your transaction. Please go 'Back' and try again, or click 'Close' to return to the wallet.",
 		TITLE: "Transaction Error",
 	},
 	EXPIRATION: {
@@ -169,7 +171,7 @@ export const translations = {
 			TITLE: "Multisignature Passphrase",
 		},
 		STEP_3: {
-			DESCRIPTION: "Your signature has been confirmed and sent successfully.",
+			DESCRIPTION: "Your signature was successfully confirmed and sent.",
 			TITLE: "Transaction Sent",
 		},
 		WAITING_FOR_SIGNATURES: "Waiting for Signatures",
@@ -181,23 +183,27 @@ export const translations = {
 			"The data scanned via QR conflicts with pre-filled input fields. Please confirm if you wish to overwrite the following data.",
 	},
 	MODAL_QR_CODE: {
-		DESCRIPTION: "Hold a compatible QR Code in front of your device's camera",
+		DESCRIPTION: "Hold a compatible QR code in front of your device's camera to scan the information",
 		ERROR: "Something went wrong.",
 		INVALID_QR_CODE: "The uploaded QR code is invalid.",
 		PERMISSION_ERROR: {
-			DESCRIPTION: "Please allow access to the camera in the browser settings.",
-			TITLE: "Permission Denied",
+			DESCRIPTION:
+				"You have blocked ARK Vault from accessing your camera. In order to scan a QR code, please allow access to your camera from your browser settings.",
+			TITLE: "Camera Permission Denied",
 		},
 		TITLE: "Scan QR-Code",
 		UPLOAD: "Upload Image",
 	},
 	MODAL_SEARCH_RECIPIENT: {
-		DESCRIPTION: "Find and select a recipient from your contacts and wallets",
+		DESCRIPTION: "Locate and select the recipient address.",
 		SEARCH_PLACEHOLDER: "Enter name or address",
-		TITLE: "Select Recipient",
+		TITLE: "Recipient Search",
 	},
 	MODAL_SECOND_SIGNATURE_DETAIL: {
 		TITLE: "Second Signature",
+	},
+	MODAL_TRANSACTION_DETAILS: {
+		TITLE: "Transaction Details",
 	},
 	MODAL_TRANSFER_DETAIL: {
 		TITLE: "Transfer",
@@ -206,6 +212,7 @@ export const translations = {
 		TITLE: "Delegate Vote",
 	},
 	MULTIPLE: "Multiple",
+	MULTIPLE_COUNT: "Multiple ({{count}})",
 	MULTISIGNATURE: {
 		ADD_PARTICIPANT: "Add Participant",
 		AWAITING_BY: "by",
@@ -217,6 +224,7 @@ export const translations = {
 		AWAITING_OUR_BROADCAST: "Awaiting our broadcast",
 		AWAITING_OUR_SIGNATURE: "Awaiting our signature",
 		AWAITING_SOME_SIGNATURES: "One or more transactions are awaiting our signature.",
+		AWAITING_SUFFICIENT_SIGNATURES: "Awaiting sufficient signatures",
 		ERROR: {
 			ADDRESS_ALREADY_ADDED: "The address is already in the list",
 			ADDRESS_NOT_FOUND: "The address could not be found",
@@ -226,6 +234,7 @@ export const translations = {
 		},
 		GENERATED_ADDRESS: "Multisignature Address",
 		MIN_SIGNATURES: "Minimum Required Signatures",
+		OF_LENGTH: "of {{ length }}",
 		OUT_OF_LENGTH: "out of {{ length }}",
 		PARTICIPANT: "Multisignature Participant",
 		PARTICIPANTS: "Multisignature Participants",
@@ -262,7 +271,7 @@ export const translations = {
 			TITLE: "IPFS",
 		},
 		SECOND_STEP: {
-			DESCRIPTION: "Review the IPFS transaction details before sending",
+			DESCRIPTION: "Review details below to send your transaction.",
 			TITLE: "Transaction Review",
 		},
 	},
@@ -313,6 +322,7 @@ export const translations = {
 			TITLE: "Vote Transaction",
 		},
 	},
+	PARTICIPANTS: "Participants",
 	PENDING: {
 		DESCRIPTION:
 			"Your transaction was successfully sent. Please monitor the blockchain to ensure your transaction is confirmed and processed. The following  is the relevant information for your transaction:",
@@ -355,6 +365,7 @@ export const translations = {
 	},
 	STATUS: "Status",
 	SUCCESS: {
+		CONFIRMED: "Transaction Confirmed",
 		CREATED: "Transaction Created",
 		DESCRIPTION:
 			"Your transaction has been sent successfully. Please monitor the blockchain to ensure your transaction is confirmed and processed. The following is relevant information for your transaction:",
@@ -362,18 +373,21 @@ export const translations = {
 			"Your transaction has been created successfully. Participants can now sign the transaction to broadcast it to the network. The following is relevant information for your transaction:",
 		TITLE: "Transaction Sent",
 	},
+	SUMMARY: "Transaction Summary",
 	TIMESTAMP: "Timestamp",
 	TOTAL_AMOUNT: "Total Amount",
 	TRANSACTION: "Transaction",
+	TRANSACTIONS_AMOUNT: "Transaction(s) Amount",
 	TRANSACTION_AMOUNT: "Transaction Amount",
 	TRANSACTION_DETAILS: "Transaction Details",
 	TRANSACTION_FEE: "Transaction Fee",
+	TRANSACTION_ID: "Transaction ID",
 	TRANSACTION_REMOVED: "Transaction successfully removed",
 	TRANSACTION_SIGNED: "Transaction Signed",
 	TRANSACTION_TYPE: "Transaction Type",
 	TRANSACTION_TYPES: {
-		DELEGATE_REGISTRATION: "Delegate Registration",
-		DELEGATE_RESIGNATION: "Delegate Resignation",
+		DELEGATE_REGISTRATION: "Registration",
+		DELEGATE_RESIGNATION: "Resignation",
 		HTLC_CLAIM: "Timelock Claim",
 		HTLC_LOCK: "Timelock",
 		HTLC_REFUND: "Timelock Refund",
@@ -381,7 +395,7 @@ export const translations = {
 		MAGISTRATE: "Magistrate",
 		MULTI_PAYMENT: "Multipayment",
 		MULTI_SIGNATURE: "Multisignature",
-		SECOND_SIGNATURE: "Second Signature",
+		SECOND_SIGNATURE: "2nd Signature",
 		TRANSFER: "Transfer",
 		UNLOCK_TOKEN: "Unlock Balance",
 		UNVOTE: "Unvote",

@@ -3,11 +3,11 @@
 exports[`TransactionRowRecipientIcon > should render avatar 1`] = `
 <DocumentFragment>
   <div
-    class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-1n9jllj"
+    class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-1i0wxh3"
     data-testid="Avatar"
   >
     <div
-      class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+      class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
     >
       <img
         alt="test"
@@ -62,8 +62,8 @@ exports[`TransactionRowRecipientIcon > should render compact 1`] = `
 
 exports[`TransactionRowRecipientIcon > should render icon 1`] = `
 <DocumentFragment>
-  <div
-    class="border-theme-text text-theme-text dark:border-theme-secondary-600 dark:text-theme-secondary-600 ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background duration-100 css-1nqcsx"
+  <span
+    class="flex h-5 w-5 items-center justify-center text-theme-text dark:text-theme-secondary-600"
     data-testid="TransactionRowRecipientIcon"
   >
     <div
@@ -97,6 +97,6 @@ exports[`TransactionRowRecipientIcon > should render icon 1`] = `
         </g>
       </svg>
     </div>
-  </div>
+  </span>
 </DocumentFragment>
 `;

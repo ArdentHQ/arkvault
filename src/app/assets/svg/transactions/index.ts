@@ -16,17 +16,27 @@ import UnlockToken from "./unlock-token.svg?react";
 import Unvote from "./unvote.svg?react";
 import Vote from "./vote.svg?react";
 import VoteCombination from "./vote-combination.svg?react";
+import SendTransactionLight from "./send-transaction-light.svg?react";
+import SendTransactionDark from "./send-transaction-dark.svg?react";
+import ConfirmTransaction from "./confirm-transaction.svg?react";
+import PendingTransaction from "./compass.svg?react";
+import Mnemonic from "./mnemonic.svg?react";
 
 export const TransactionIcons: any = {
+	ConfirmTransaction,
 	DelegateRegistration,
 	DelegateResignation,
 	Ipfs,
 	Magistrate,
+	Mnemonic,
 	Multipayment,
 	Multisignature,
+	PendingTransaction,
 	Received,
 	Return,
 	SecondSignature,
+	SendTransactionDark,
+	SendTransactionLight,
 	Sent,
 	Timelock,
 	Transfer,

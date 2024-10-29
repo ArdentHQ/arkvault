@@ -3,22 +3,21 @@ import React, { useState } from "react";
 import { styled } from "twin.macro";
 import { useTranslation } from "react-i18next";
 
-import { getBodyStyles, getChevronProperties, getHeaderStyles } from "./Alert.styles";
-import { Color } from "@/types";
-
+import { AlertColor, getBodyStyles, getChevronProperties, getHeaderStyles } from "./Alert.styles";
 import { Icon } from "@/app/components/Icon";
 
 interface AlertProperties extends React.HTMLAttributes<HTMLDivElement> {
 	children: React.ReactNode;
 	className?: string;
 	title?: string;
-	variant?: Color;
+	variant?: AlertColor;
 	collapsible?: boolean;
 }
 
-const TypeIcon = ({ variant }: { variant: Color }) => {
-	const iconVariant: Record<Color, string> = {
+const TypeIcon = ({ variant }: { variant: AlertColor }) => {
+	const iconVariant: Record<AlertColor, string> = {
 		danger: "CircleCross",
+		"danger-dark": "CircleCross",
 		hint: "CircleQuestionMark",
 		info: "CircleInfo",
 		success: "CircleCheckMark",
@@ -52,15 +51,25 @@ export const Alert = ({
 		<div className={cn("flex flex-col overflow-hidden rounded-xl", className)} {...attributes}>
 			<AlertHeader
 				variant={variant}
-				onClick={() => setCollapsed((current) => !current)}
+				onClick={() => collapsible && setCollapsed((current) => !current)}
 				collapsible={collapsible}
 			>
 				<TypeIcon variant={variant} />
 				<span>{title || t(`COMMON.ALERT.${variant.toUpperCase()}`)}</span>
 
 				{collapsible && (
-					<AlertChevron collapsed={collapsed} variant={variant} data-testid="Alert__chevron">
-						<Icon name="ChevronDownSmall" size="sm" />
+					<AlertChevron
+						collapsed={collapsible ? false : collapsed}
+						variant={variant}
+						data-testid="Alert__chevron"
+					>
+						<Icon
+							name="ChevronDownSmall"
+							size="sm"
+							className={cn("transition-transform duration-200", {
+								"rotate-180": collapsed,
+							})}
+						/>
 					</AlertChevron>
 				)}
 			</AlertHeader>

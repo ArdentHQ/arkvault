@@ -12,7 +12,6 @@ interface VoteButtonProperties {
 	variant?: ButtonVariant;
 	compactClassName: string;
 	onClick?: () => void;
-	isCompact?: boolean;
 	children: React.ReactNode;
 }
 
@@ -21,7 +20,10 @@ const CompactButton = ({ index, disabled, compactClassName, onClick, children }:
 		size="icon"
 		variant="transparent"
 		disabled={disabled}
-		className={cn("-mr-3", compactClassName)}
+		className={cn(
+			"-mr-3 w-full rounded-none py-3 text-sm leading-[17px] sm:w-auto sm:rounded sm:py-0",
+			compactClassName,
+		)}
 		onClick={onClick}
 		data-testid={`DelegateRow__toggle-${index}`}
 	>
@@ -29,46 +31,24 @@ const CompactButton = ({ index, disabled, compactClassName, onClick, children }:
 	</Button>
 );
 
-export const DelegateVoteButton = ({
-	index,
-	disabled,
-	variant,
-	compactClassName,
-	onClick,
-	isCompact,
-	children,
-}: VoteButtonProperties) => {
+export const DelegateVoteButton = ({ index, disabled, compactClassName, onClick, children }: VoteButtonProperties) => {
 	const { t } = useTranslation();
 
 	if (disabled) {
 		return (
-			<Tooltip content={t("VOTE.DELEGATE_TABLE.TOOLTIP.MAX_VOTES")} className={cn({ "-mr-3": isCompact })}>
-				<span>
-					{isCompact ? (
-						<CompactButton disabled index={index} compactClassName={cn("relative", compactClassName)}>
-							{children}
-						</CompactButton>
-					) : (
-						<Button disabled variant="primary" data-testid={`DelegateRow__toggle-${index}`}>
-							{children}
-						</Button>
-					)}
+			<Tooltip content={t("VOTE.DELEGATE_TABLE.TOOLTIP.MAX_VOTES")} className="-mr-3">
+				<span className="w-full sm:w-auto">
+					<CompactButton disabled index={index} compactClassName={cn("relative", compactClassName)}>
+						{children}
+					</CompactButton>
 				</span>
 			</Tooltip>
 		);
 	}
 
-	if (isCompact) {
-		return (
-			<CompactButton index={index} compactClassName={cn("relative", compactClassName)} onClick={onClick}>
-				{children}
-			</CompactButton>
-		);
-	}
-
 	return (
-		<Button variant={variant} onClick={onClick} data-testid={`DelegateRow__toggle-${index}`}>
+		<CompactButton index={index} compactClassName={cn("relative", compactClassName)} onClick={onClick}>
 			{children}
-		</Button>
+		</CompactButton>
 	);
 };

@@ -17,7 +17,7 @@ const preSteps = {
 	"When she selects to sign message": async (t: TestController) => {
 		await t.click(Selector('[data-testid="WalletHeader__more-button"]'));
 		await t.click(
-			Selector('[data-testid="WalletHeader__more-button"] li').withText(
+			Selector('[data-testid="dropdown__options"] li').withText(
 				translations.WALLETS.PAGE_WALLET_DETAILS.OPTIONS.SIGN_MESSAGE,
 			),
 		);
@@ -28,9 +28,8 @@ cucumber("@signMessage", {
 	...preSteps,
 	"And submits the form with a valid mnemonic": async (t: TestController) => {
 		await t.typeText(Selector("input[name=message]"), "Hello World");
-		await t.click(Selector("[data-testid=SignMessage__continue-button]"));
 		await t.typeText(Selector("input[name=mnemonic]"), mnemonic, { paste: true });
-		await t.click(Selector("[data-testid=SignMessage__sign-button]"));
+		await t.click(Selector("[data-testid=SignMessage__continue-button]"));
 	},
 	"Then the message is successfully signed": async (t: TestController) => {
 		await t.expect(Selector("h1").withText(translations.MESSAGE.PAGE_SIGN_MESSAGE.SUCCESS_STEP.TITLE).exists).ok();
@@ -41,14 +40,13 @@ cucumber("@signMessage-invalidMnemonic", {
 	...preSteps,
 	"And completes the form with an invalid mnemonic": async (t: TestController) => {
 		await t.typeText(Selector("input[name=message]"), "Hello World");
-		await t.click(Selector("[data-testid=SignMessage__continue-button]"));
 		await t.typeText(Selector("input[name=mnemonic]"), "invalid mnemonic", { paste: true });
 	},
 	"Then an error is displayed in the mnemonic field": async (t: TestController) => {
 		await t.expect(Selector('[data-testid="Input__error"]').exists).ok();
 	},
 	"And the sign button is disabled": async (t: TestController) => {
-		await t.expect(Selector("[data-testid=SignMessage__sign-button]").hasAttribute("disabled")).ok();
+		await t.expect(Selector("[data-testid=SignMessage__continue-button]").hasAttribute("disabled")).ok();
 	},
 });
 

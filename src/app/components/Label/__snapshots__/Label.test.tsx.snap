@@ -21,7 +21,7 @@ exports[`Label > should render a large one 1`] = `
 exports[`Label > should render a small one 1`] = `
 <div>
   <div
-    class="css-i6g9fr"
+    class="css-1ysecpq"
     color="primary"
   />
 </div>
@@ -48,7 +48,7 @@ exports[`Label > should render as solid and danger 1`] = `
 exports[`Label > should render as solid and default 1`] = `
 <div>
   <div
-    class="css-jelrnc"
+    class="css-1nwmp3b"
     color="neutral"
   />
 </div>
@@ -84,7 +84,7 @@ exports[`Label > should render danger color 1`] = `
 exports[`Label > should render neutral color 1`] = `
 <div>
   <div
-    class="css-6qumvg"
+    class="css-vy12ck"
     color="neutral"
   />
 </div>

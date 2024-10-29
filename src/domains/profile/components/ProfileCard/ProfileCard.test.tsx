@@ -18,53 +18,50 @@ describe("ProfileCard", () => {
 	});
 
 	it("should render", () => {
-		const { container, asFragment } = render(<ProfileCard profile={profile} />);
+		const { container } = render(<ProfileCard profile={profile} />);
 
 		expect(container).toBeInTheDocument();
 		expect(screen.getByText(profile.name())).toBeInTheDocument();
 		expect(screen.getByTestId("ProfileAvatar__svg")).toBeInTheDocument();
-		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should render the profile with avatar image", () => {
 		profile.settings().set(Contracts.ProfileSetting.Avatar, "avatarImage");
 
-		const { container, asFragment } = render(<ProfileCard profile={profile} />);
+		const { container } = render(<ProfileCard profile={profile} />);
 
 		expect(container).toBeInTheDocument();
 		expect(screen.getByText(profile.name())).toBeInTheDocument();
 		expect(screen.getByTestId("ProfileAvatar__image")).toBeInTheDocument();
-		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should render the settings icon", () => {
-		const { container } = render(<ProfileCard profile={profile} actions={options} showSettings />);
+		render(<ProfileCard profile={profile} actions={options} showSettings />);
 
-		expect(container).toMatchSnapshot();
 		expect(screen.getByTestId("dropdown__toggle")).toBeInTheDocument();
 	});
 
 	it("should hide the settings icon", () => {
-		const { container } = render(<ProfileCard profile={profile} actions={options} showSettings={false} />);
+		render(<ProfileCard profile={profile} actions={options} showSettings={false} />);
 
-		expect(container).toMatchSnapshot();
+		expect(screen.queryByTestId("dropdown__toggle")).not.toBeInTheDocument();
 	});
 
-	it("should open dropdown settings on icon click", () => {
+	it("should open dropdown settings on icon click", async () => {
 		render(<ProfileCard profile={profile} actions={options} />);
 		const toggle = screen.getByTestId("dropdown__toggle");
 
-		userEvent.click(toggle);
+		await userEvent.click(toggle);
 
 		expect(screen.getByTestId("dropdown__content")).toBeInTheDocument();
 	});
 
-	it("should select an option in the settings", () => {
+	it("should select an option in the settings", async () => {
 		const onSelect = vi.fn();
 		render(<ProfileCard profile={profile} actions={options} onSelect={onSelect} />);
 		const toggle = screen.getByTestId("dropdown__toggle");
 
-		userEvent.click(toggle);
+		await userEvent.click(toggle);
 
 		expect(screen.getByTestId("dropdown__content")).toBeInTheDocument();
 
@@ -72,16 +69,16 @@ describe("ProfileCard", () => {
 
 		expect(firstOption).toBeInTheDocument();
 
-		userEvent.click(firstOption);
+		await userEvent.click(firstOption);
 
 		expect(onSelect).toHaveBeenCalledWith({ label: "Option 1", value: "1" });
 	});
 
-	it("should ignore triggering onSelect callback if not exists", () => {
+	it("should ignore triggering onSelect callback if not exists", async () => {
 		render(<ProfileCard profile={profile} actions={options} />);
 		const toggle = screen.getByTestId("dropdown__toggle");
 
-		userEvent.click(toggle);
+		await userEvent.click(toggle);
 
 		expect(screen.getByTestId("dropdown__content")).toBeInTheDocument();
 
@@ -89,8 +86,19 @@ describe("ProfileCard", () => {
 
 		expect(firstOption).toBeInTheDocument();
 
-		userEvent.click(firstOption);
+		await userEvent.click(firstOption);
 
 		expect(screen.queryAllByRole("listbox")).toHaveLength(0);
+	});
+
+	it("should render lock icon if profile is password protected", () => {
+		const mockUsesPassword = vi.spyOn(profile, "usesPassword").mockImplementation(() => true);
+
+		const { container } = render(<ProfileCard profile={profile} actions={options} />);
+
+		// eslint-disable-next-line testing-library/no-container,testing-library/no-node-access
+		expect(container.querySelector("svg#lock")).toBeInTheDocument();
+
+		mockUsesPassword.mockRestore();
 	});
 });

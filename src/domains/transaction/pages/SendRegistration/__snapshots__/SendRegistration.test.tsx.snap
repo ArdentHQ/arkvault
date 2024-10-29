@@ -7,17 +7,21 @@ exports[`Registration > should register delegate without keyboard 1`] = `<Docume
 exports[`Registration > should show error step and go back 1`] = `
 <DocumentFragment>
   <div
-    class="css-kmmje1"
+    class="css-w3nefz"
   >
     <div
-      class="css-wwznix"
+      class="css-sdeely"
       data-testid="NavigationBarMobile"
     >
+      <div
+        class="border-t border-theme-secondary-300 dark:border-theme-secondary-900"
+        data-testid="NavigationBar__buttons-separator"
+      />
       <div
         class="flex h-14 items-center justify-center space-x-4"
       >
         <button
-          class="cursor-not-allowed text-theme-secondary-500 css-5e9bdv"
+          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 cursor-not-allowed text-theme-secondary-500"
           data-testid="NavigationBar__buttons__mobile--receive"
           disabled=""
           type="button"
@@ -58,7 +62,7 @@ exports[`Registration > should show error step and go back 1`] = `
           type="vertical"
         />
         <button
-          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1hei9vx"
+          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-theme-secondary-700 dark:text-theme-secondary-600"
           data-testid="NavigationBar__buttons__mobile--home"
           type="button"
         >
@@ -95,7 +99,7 @@ exports[`Registration > should show error step and go back 1`] = `
           type="vertical"
         />
         <button
-          class="cursor-not-allowed text-theme-secondary-500 css-5e9bdv"
+          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 cursor-not-allowed text-theme-secondary-500"
           data-testid="NavigationBar__buttons__mobile--send"
           disabled=""
           type="button"
@@ -135,7 +139,7 @@ exports[`Registration > should show error step and go back 1`] = `
       class="css-1jzy9qi"
     >
       <div
-        class="relative flex h-21"
+        class="relative flex h-14 sm:h-21"
       >
         <div
           class="hidden w-12 sm:flex"
@@ -169,13 +173,13 @@ exports[`Registration > should show error step and go back 1`] = `
           </button>
         </div>
         <div
-          class="flex flex-1 items-center px-8"
+          class="flex flex-1 items-center px-6 sm:px-8"
         >
           <div
             class="my-auto flex items-center"
           >
             <button
-              class="my-auto mr-4 flex h-11 w-11 cursor-pointer items-center justify-center rounded-xl bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400"
+              class="my-auto mr-2 flex h-8 w-8 cursor-pointer items-center justify-center rounded bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 sm:mr-4 sm:h-11 sm:w-11 sm:rounded-xl"
               data-testid="NavigationBarLogo--button"
               type="button"
             >
@@ -201,7 +205,7 @@ exports[`Registration > should show error step and go back 1`] = `
             </button>
           </div>
           <ul
-            class="ml-4 mr-auto hidden h-21 space-x-8 lg:flex"
+            class="ml-4 mr-auto hidden h-14 space-x-8 sm:h-21 lg:flex"
             data-testid="NavigationBar__menu"
           >
             <li
@@ -258,37 +262,35 @@ exports[`Registration > should show error step and go back 1`] = `
             data-testid="NavigationBar__menu-toggle"
           >
             <div
-              class="static sm:relative"
+              aria-expanded="false"
+              aria-haspopup="dialog"
+              data-testid="dropdown__toggle"
             >
-              <span
-                data-testid="dropdown__toggle"
+              <button
+                class="cursor-pointer rounded p-2 focus:outline-none focus:ring-2 focus:ring-theme-primary-400"
+                type="button"
               >
-                <button
-                  class="cursor-pointer rounded p-2 focus:outline-none focus:ring-2 focus:ring-theme-primary-400"
-                  type="button"
+                <div
+                  class="css-1i4b0eq"
+                  height="20"
+                  width="20"
                 >
-                  <div
-                    class="css-1i4b0eq"
-                    height="20"
-                    width="20"
+                  <svg
+                    viewBox="0 0 20 20"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
                   >
-                    <svg
-                      viewBox="0 0 20 20"
-                      xml:space="preserve"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M1 15.5h18M1 10h18M1 4.5h18"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                      />
-                    </svg>
-                  </div>
-                </button>
-              </span>
+                    <path
+                      d="M1 15.5h18M1 10h18M1 4.5h18"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    />
+                  </svg>
+                </div>
+              </button>
             </div>
           </div>
           <div
@@ -296,52 +298,50 @@ exports[`Registration > should show error step and go back 1`] = `
           >
             <div>
               <div
-                class="static sm:relative"
+                aria-expanded="false"
+                aria-haspopup="dialog"
+                data-testid="dropdown__toggle"
               >
-                <span
-                  data-testid="dropdown__toggle"
+                <div
+                  class="group css-c93wvv"
                 >
-                  <div
-                    class="group css-c93wvv"
+                  <button
+                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none"
+                    data-testid="NavigationBar__buttons--server-status"
+                    type="button"
                   >
-                    <button
-                      class="css-1hei9vx"
-                      data-testid="NavigationBar__buttons--server-status"
-                      type="button"
+                    <div
+                      class="flex items-center space-x-2"
                     >
                       <div
-                        class="flex items-center space-x-2"
+                        class="p-1 css-1i4b0eq"
+                        height="20"
+                        width="20"
+                      >
+                        <svg
+                          fill="none"
+                          viewBox="0 0 20 15"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M6.595 6.285c.618-3.372 3.654-5.664 6.932-5.233 3.279.43 5.67 3.435 5.46 6.86-.21 3.426-2.948 6.092-6.252 6.088H4.912c-1.606.003-3.05-1.017-3.64-2.569-.589-1.552-.203-3.32.972-4.457a3.795 3.795 0 0 1 4.35-.69zm0 0C6.5 7 6.6 7.8 7 9"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          />
+                        </svg>
+                      </div>
+                      <div
+                        class="absolute right-1 top-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
                       >
                         <div
-                          class="p-1 css-1i4b0eq"
-                          height="20"
-                          width="20"
-                        >
-                          <svg
-                            fill="none"
-                            viewBox="0 0 20 15"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M6.595 6.285c.618-3.372 3.654-5.664 6.932-5.233 3.279.43 5.67 3.435 5.46 6.86-.21 3.426-2.948 6.092-6.252 6.088H4.912c-1.606.003-3.05-1.017-3.64-2.569-.589-1.552-.203-3.32.972-4.457a3.795 3.795 0 0 1 4.35-.69zm0 0C6.5 7 6.6 7.8 7 9"
-                              stroke="currentColor"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              stroke-width="2"
-                            />
-                          </svg>
-                        </div>
-                        <div
-                          class="absolute right-1 top-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
-                        >
-                          <div
-                            class="h-2 w-2 rounded-full bg-theme-success-700"
-                          />
-                        </div>
+                          class="h-2 w-2 rounded-full bg-theme-success-700"
+                        />
                       </div>
-                    </button>
-                  </div>
-                </span>
+                    </div>
+                  </button>
+                </div>
               </div>
             </div>
             <div
@@ -349,59 +349,57 @@ exports[`Registration > should show error step and go back 1`] = `
             />
             <div>
               <div
-                class="static sm:relative"
+                aria-expanded="false"
+                aria-haspopup="dialog"
+                data-testid="dropdown__toggle"
               >
-                <span
-                  data-testid="dropdown__toggle"
+                <div
+                  class="group css-c93wvv"
                 >
-                  <div
-                    class="group css-c93wvv"
+                  <button
+                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none"
+                    data-testid="NavigationBar__buttons--notifications"
+                    type="button"
                   >
-                    <button
-                      class="css-1hei9vx"
-                      data-testid="NavigationBar__buttons--notifications"
-                      type="button"
+                    <div
+                      class="flex items-center space-x-2"
                     >
                       <div
-                        class="flex items-center space-x-2"
+                        class="p-1 css-1i4b0eq"
+                        height="20"
+                        width="20"
+                      >
+                        <svg
+                          id="bell"
+                          viewBox="0 0 20 20"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
+                        >
+                          <g
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          >
+                            <path
+                              d="M8.4 17.8c.3.9 1.2 1.4 2.1 1.1.5-.2 1-.6 1.1-1.1M10 2.8V1M10 2.8c3.3 0 6 2.7 6 6h0c0 5.6 1.2 6.6 1.2 6.6H2.8S4 13.9 4 8.8c0-3.3 2.7-6 6-6z"
+                            />
+                          </g>
+                        </svg>
+                      </div>
+                      <div
+                        class="absolute right-1 top-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
                       >
                         <div
-                          class="p-1 css-1i4b0eq"
-                          height="20"
-                          width="20"
-                        >
-                          <svg
-                            id="bell"
-                            viewBox="0 0 20 20"
-                            x="0"
-                            xml:space="preserve"
-                            xmlns="http://www.w3.org/2000/svg"
-                            y="0"
-                          >
-                            <g
-                              fill="none"
-                              stroke="currentColor"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              stroke-width="2"
-                            >
-                              <path
-                                d="M8.4 17.8c.3.9 1.2 1.4 2.1 1.1.5-.2 1-.6 1.1-1.1M10 2.8V1M10 2.8c3.3 0 6 2.7 6 6h0c0 5.6 1.2 6.6 1.2 6.6H2.8S4 13.9 4 8.8c0-3.3 2.7-6 6-6z"
-                              />
-                            </g>
-                          </svg>
-                        </div>
-                        <div
-                          class="absolute right-1 top-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
-                        >
-                          <div
-                            class="h-2 w-2 rounded-full bg-theme-danger-500"
-                          />
-                        </div>
+                          class="h-2 w-2 rounded-full bg-theme-danger-500"
+                        />
                       </div>
-                    </button>
-                  </div>
-                </span>
+                    </div>
+                  </button>
+                </div>
               </div>
             </div>
             <div
@@ -417,7 +415,7 @@ exports[`Registration > should show error step and go back 1`] = `
                   class="css-c93wvv"
                 >
                   <button
-                    class="css-5e9bdv"
+                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700"
                     data-testid="NavigationBar__buttons--receive"
                     disabled=""
                     type="button"
@@ -465,7 +463,7 @@ exports[`Registration > should show error step and go back 1`] = `
                   class="css-c93wvv"
                 >
                   <button
-                    class="css-5e9bdv"
+                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700"
                     data-testid="NavigationBar__buttons--send"
                     disabled=""
                     type="button"
@@ -510,7 +508,7 @@ exports[`Registration > should show error step and go back 1`] = `
             data-testid="NavigationBar__balance"
           >
             <div
-              class="-mt-3 flex flex-row items-center justify-center space-x-2 bg-theme-secondary-100 px-8 py-2.5 dark:bg-black md:m-0 md:flex-col md:items-start md:justify-start md:space-x-0 md:bg-transparent md:p-0 md:text-right md:dark:bg-transparent"
+              class="flex flex-row items-center justify-center space-x-2 bg-theme-secondary-100 px-8 py-2.5 dark:bg-black md:m-0 md:flex-col md:items-start md:justify-start md:space-x-0 md:bg-transparent md:p-0 md:text-right md:dark:bg-transparent"
             >
               <div
                 class="whitespace-nowrap text-theme-secondary-700 dark:text-theme-secondary-500 md:text-xs md:font-semibold md:text-theme-secondary-500"
@@ -531,35 +529,33 @@ exports[`Registration > should show error step and go back 1`] = `
             </div>
           </div>
           <div
-            class="static sm:relative"
+            aria-expanded="false"
+            aria-haspopup="dialog"
+            data-testid="dropdown__toggle"
           >
-            <span
-              data-testid="dropdown__toggle"
+            <div
+              class="relative cursor-pointer items-center justify-center rounded-full align-middle"
+              data-testid="UserMenu"
             >
               <div
-                class="relative cursor-pointer items-center justify-center rounded-full align-middle"
-                data-testid="UserMenu"
+                class="shrink-0 css-1n9jllj"
+                data-testid="Avatar"
               >
                 <div
-                  class="shrink-0 css-1n9jllj"
-                  data-testid="Avatar"
+                  class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                 >
-                  <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                  <img
+                    alt="Profile Avatar"
+                    src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(233, 30, 99)" width="100" height="100"/><circle r="45" cx="80" cy="30" fill="rgb(76, 175, 80)"/><circle r="55" cx="0" cy="60" fill="rgb(255, 152, 0)"/><circle r="40" cx="50" cy="50" fill="rgb(3, 169, 244)"/></svg>"
+                  />
+                  <span
+                    class="absolute text-sm font-semibold text-theme-background dark:text-theme-text"
                   >
-                    <img
-                      alt="Profile Avatar"
-                      src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(233, 30, 99)" width="100" height="100"/><circle r="45" cx="80" cy="30" fill="rgb(76, 175, 80)"/><circle r="55" cx="0" cy="60" fill="rgb(255, 152, 0)"/><circle r="40" cx="50" cy="50" fill="rgb(3, 169, 244)"/></svg>"
-                    />
-                    <span
-                      class="absolute text-sm font-semibold text-theme-background dark:text-theme-text"
-                    >
-                      JO
-                    </span>
-                  </div>
+                    JO
+                  </span>
                 </div>
               </div>
-            </span>
+            </div>
           </div>
         </div>
       </div>
@@ -568,10 +564,10 @@ exports[`Registration > should show error step and go back 1`] = `
       class="flex flex-1 flex-col"
     >
       <div
-        class="flex-1 css-ycib48"
+        class="w-full py-4 first:pt-8 last:pb-8 flex-1 css-9mualq"
       >
         <div
-          class="mx-auto px-8 lg:container md:px-10"
+          class="mx-auto px-6 lg:container md:px-10"
         >
           <form
             class="mx-auto max-w-xl"
@@ -585,342 +581,98 @@ exports[`Registration > should show error step and go back 1`] = `
                   data-testid="ErrorStep"
                 >
                   <div
-                    class="space-y-8"
+                    class="space-y-2"
                   >
                     <div
-                      class="sm:mt-8"
+                      class="flex flex-row items-center justify-start gap-3"
                     >
                       <div
-                        class="flex flex-col"
-                      >
-                        <span
-                          class="css-tgbw37"
-                        >
-                          Transaction Error
-                        </span>
-                        <ul
-                          class="css-xa5o6q"
-                        >
-                          <li
-                            class="css-11vjikd"
-                          />
-                          <li
-                            class="css-11vjikd"
-                          />
-                          <li
-                            class="css-11vjikd"
-                          />
-                          <li
-                            class="css-11vjikd"
-                          />
-                        </ul>
-                      </div>
-                      <div
-                        class="flex flex-col justify-between sm:flex-row"
+                        class="w-full sm:mt-8"
                       >
                         <div
-                          class="flex items-end justify-between bg-theme-background mt-6 hidden sm:block"
+                          class="flex flex-col"
+                        >
+                          <span
+                            class="css-tgbw37"
+                          >
+                            Transaction Error
+                          </span>
+                          <ul
+                            class="css-xa5o6q"
+                          >
+                            <li
+                              class="css-11vjikd"
+                            />
+                            <li
+                              class="css-11vjikd"
+                            />
+                            <li
+                              class="css-11vjikd"
+                            />
+                            <li
+                              class="css-11vjikd"
+                            />
+                          </ul>
+                        </div>
+                        <div
+                          class="flex flex-col justify-between sm:flex-row"
                         >
                           <div
-                            class="space-y-4"
+                            class="flex items-end justify-between bg-theme-background mt-8 hidden sm:block"
                           >
-                            <h1
-                              class="mb-0 text-2xl"
-                              data-testid="header__title"
+                            <div
+                              class="space-y-2"
                             >
-                              Transaction Error
-                            </h1>
+                              <div
+                                class="flex items-center gap-3"
+                              >
+                                <svg
+                                  class="block h-[22px] w-[22px]"
+                                  fill="none"
+                                  height="25"
+                                  viewBox="0 0 24 25"
+                                  width="24"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                >
+                                  <path
+                                    clip-rule="evenodd"
+                                    d="M12 23.5C18.0751 23.5 23 18.5751 23 12.5C23 6.42487 18.0751 1.5 12 1.5C5.92487 1.5 1 6.42487 1 12.5C1 18.5751 5.92487 23.5 12 23.5Z"
+                                    fill-rule="evenodd"
+                                    stroke="#DE5846"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                  />
+                                  <path
+                                    clip-rule="evenodd"
+                                    d="M17.1845 14.5747L15.1136 12.5008L17.1845 10.426C17.7571 9.85323 17.7571 8.92483 17.1845 8.35209L16.151 7.31858C15.8759 7.04332 15.5027 6.88867 15.1136 6.88867C14.7244 6.88867 14.3512 7.04332 14.0761 7.31858L12.0023 9.38951L9.9284 7.31858C9.65332 7.04332 9.28013 6.88867 8.89098 6.88867C8.50183 6.88867 8.12864 7.04332 7.85356 7.31858L6.82005 8.35209C6.24748 8.92483 6.24748 9.85323 6.82005 10.426L8.89098 12.5008L6.82005 14.5747C6.24748 15.1474 6.24748 16.0758 6.82005 16.6485L7.85356 17.683C8.12864 17.9583 8.50183 18.1129 8.89098 18.1129C9.28013 18.1129 9.65332 17.9583 9.9284 17.683L12.0023 15.6121L14.0761 17.683C14.3512 17.9583 14.7244 18.1129 15.1136 18.1129C15.5027 18.1129 15.8759 17.9583 16.151 17.683L17.1874 16.6456C17.7572 16.0724 17.7559 15.1463 17.1845 14.5747Z"
+                                    fill="#FFE0DA"
+                                    fill-rule="evenodd"
+                                    stroke="#DE5846"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                  />
+                                </svg>
+                                <h1
+                                  class="mb-0 text-2xl leading-[29px]"
+                                  data-testid="header__title"
+                                >
+                                  Transaction Error
+                                </h1>
+                              </div>
+                            </div>
                           </div>
                         </div>
                       </div>
                     </div>
-                    <svg
-                      class="hidden w-full md:block"
-                      height="142"
-                      viewBox="0 0 550 142"
-                      width="550"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <g
-                        id="images"
-                        transform="translate(-404 -340)"
-                      >
-                        <g
-                          data-name="\\u0413\\u0440\\u0443\\u043F\\u043F\\u0430 4 \\u043A\\u043E\\u043F\\u0438\\u044F 3"
-                          id="\\u0413\\u0440\\u0443\\u043F\\u043F\\u0430_4_\\u043A\\u043E\\u043F\\u0438\\u044F_3"
-                        >
-                          <path
-                            d="M454.184,476.9a52.5,52.5,0,1,1,55.6-57.241c.146,1.595,1.488,4.344,7.22,4.344h97"
-                            data-name="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441 2047 \\u043A\\u043E\\u043F\\u0438\\u044F 4"
-                            fill="none"
-                            id="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441_2047_\\u043A\\u043E\\u043F\\u0438\\u044F_4"
-                            stroke="#dbdee5"
-                            stroke-width="2"
-                          />
-                          <g
-                            data-name="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441 2050"
-                            fill="none"
-                            id="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441_2050"
-                            stroke="#dbdee5"
-                            stroke-width="2"
-                            transform="translate(453 472)"
-                          >
-                            <circle
-                              cx="5"
-                              cy="5"
-                              r="5"
-                              stroke="none"
-                            />
-                            <circle
-                              cx="5"
-                              cy="5"
-                              fill="none"
-                              r="4"
-                            />
-                          </g>
-                          <g
-                            data-name="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441 2047 \\u043A\\u043E\\u043F\\u0438\\u044F"
-                            fill="none"
-                            id="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441_2047_\\u043A\\u043E\\u043F\\u0438\\u044F"
-                            stroke="#dbdee5"
-                            stroke-width="2"
-                            transform="translate(425 392)"
-                          >
-                            <circle
-                              cx="32.5"
-                              cy="32.5"
-                              r="32.5"
-                              stroke="none"
-                            />
-                            <circle
-                              cx="32.5"
-                              cy="32.5"
-                              fill="none"
-                              r="31.5"
-                            />
-                          </g>
-                          <path
-                            d="M484,407s-17.041,12.613-19,14-6,4.6-6,9v26"
-                            data-name="\\u0424\\u0438\\u0433\\u0443\\u0440\\u0430 1007"
-                            fill="none"
-                            id="\\u0424\\u0438\\u0433\\u0443\\u0440\\u0430_1007"
-                            stroke="#dbdee5"
-                            stroke-width="2"
-                          />
-                          <path
-                            d="M478,401s-15.94,11.4-18,13-7.1,2.131-11-1-13-11-13-11"
-                            data-name="\\u0424\\u0438\\u0433\\u0443\\u0440\\u0430 1008"
-                            fill="none"
-                            id="\\u0424\\u0438\\u0433\\u0443\\u0440\\u0430_1008"
-                            stroke="#dbdee5"
-                            stroke-width="2"
-                          />
-                        </g>
-                        <g
-                          data-name="\\u0413\\u0440\\u0443\\u043F\\u043F\\u0430 4 \\u043A\\u043E\\u043F\\u0438\\u044F 4"
-                          id="\\u0413\\u0440\\u0443\\u043F\\u043F\\u0430_4_\\u043A\\u043E\\u043F\\u0438\\u044F_4"
-                        >
-                          <path
-                            d="M903.816,372.1a52.5,52.5,0,1,1-55.6,57.241c-.146-1.6-1.488-4.344-7.221-4.344H748"
-                            data-name="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441 2047 \\u043A\\u043E\\u043F\\u0438\\u044F 4"
-                            fill="none"
-                            id="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441_2047_\\u043A\\u043E\\u043F\\u0438\\u044F_4-2"
-                            stroke="#dbdee5"
-                            stroke-width="2"
-                          />
-                          <g
-                            data-name="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441 2050"
-                            fill="none"
-                            id="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441_2050-2"
-                            stroke="#dbdee5"
-                            stroke-width="2"
-                            transform="translate(895 367)"
-                          >
-                            <circle
-                              cx="5"
-                              cy="5"
-                              r="5"
-                              stroke="none"
-                            />
-                            <circle
-                              cx="5"
-                              cy="5"
-                              fill="none"
-                              r="4"
-                            />
-                          </g>
-                          <g
-                            data-name="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441 2047 \\u043A\\u043E\\u043F\\u0438\\u044F"
-                            fill="none"
-                            id="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441_2047_\\u043A\\u043E\\u043F\\u0438\\u044F-2"
-                            stroke="#dbdee5"
-                            stroke-width="2"
-                            transform="translate(868 392)"
-                          >
-                            <circle
-                              cx="32.5"
-                              cy="32.5"
-                              r="32.5"
-                              stroke="none"
-                            />
-                            <circle
-                              cx="32.5"
-                              cy="32.5"
-                              fill="none"
-                              r="31.5"
-                            />
-                          </g>
-                          <path
-                            d="M874,442s17.041-12.613,19-14,6-4.6,6-9V393"
-                            data-name="\\u0424\\u0438\\u0433\\u0443\\u0440\\u0430 1007"
-                            fill="none"
-                            id="\\u0424\\u0438\\u0433\\u0443\\u0440\\u0430_1007-2"
-                            stroke="#dbdee5"
-                            stroke-width="2"
-                          />
-                          <path
-                            d="M880,448s15.94-11.4,18-13,7.1-2.131,11,1,13,11,13,11"
-                            data-name="\\u0424\\u0438\\u0433\\u0443\\u0440\\u0430 1008"
-                            fill="none"
-                            id="\\u0424\\u0438\\u0433\\u0443\\u0440\\u0430_1008-2"
-                            stroke="#dbdee5"
-                            stroke-width="2"
-                          />
-                        </g>
-                        <g
-                          data-name="\\u0413\\u0440\\u0443\\u043F\\u043F\\u0430 4"
-                          id="\\u0413\\u0440\\u0443\\u043F\\u043F\\u0430_4"
-                        >
-                          <path
-                            d="M631.179,442.532a52.513,52.513,0,0,0,101.469-11.917c.233-2.006,4.1-5.615,7.352-5.615h8"
-                            data-name="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441 2047 \\u043A\\u043E\\u043F\\u0438\\u044F 5"
-                            fill="none"
-                            id="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441_2047_\\u043A\\u043E\\u043F\\u0438\\u044F_5"
-                            stroke="#dbdee5"
-                            stroke-width="2"
-                          />
-                          <path
-                            d="M730.129,406.468a52.681,52.681,0,0,0-101.736,11.917c-.233,2.006-4.107,5.615-7.372,5.615H613"
-                            data-name="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441 2047 \\u043A\\u043E\\u043F\\u0438\\u044F 6"
-                            fill="none"
-                            id="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441_2047_\\u043A\\u043E\\u043F\\u0438\\u044F_6"
-                            stroke="#dbdee5"
-                            stroke-width="2"
-                          />
-                          <g
-                            data-name="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441 2050 \\u043A\\u043E\\u043F\\u0438\\u044F"
-                            fill="none"
-                            id="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441_2050_\\u043A\\u043E\\u043F\\u0438\\u044F"
-                            stroke="#dbdee5"
-                            stroke-width="2"
-                            transform="translate(726 406)"
-                          >
-                            <circle
-                              cx="5"
-                              cy="5"
-                              r="5"
-                              stroke="none"
-                            />
-                            <circle
-                              cx="5"
-                              cy="5"
-                              fill="none"
-                              r="4"
-                            />
-                          </g>
-                          <g
-                            data-name="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441 2050 \\u043A\\u043E\\u043F\\u0438\\u044F 2"
-                            fill="none"
-                            id="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441_2050_\\u043A\\u043E\\u043F\\u0438\\u044F_2"
-                            stroke="#dbdee5"
-                            stroke-width="2"
-                            transform="translate(625 434)"
-                          >
-                            <circle
-                              cx="5"
-                              cy="5"
-                              r="5"
-                              stroke="none"
-                            />
-                            <circle
-                              cx="5"
-                              cy="5"
-                              fill="none"
-                              r="4"
-                            />
-                          </g>
-                          <g
-                            data-name="\\u0421\\u0433\\u0440\\u0443\\u043F\\u043F\\u0438\\u0440\\u043E\\u0432\\u0430\\u0442\\u044C 715"
-                            id="\\u0421\\u0433\\u0440\\u0443\\u043F\\u043F\\u0438\\u0440\\u043E\\u0432\\u0430\\u0442\\u044C_715"
-                            transform="translate(-56 -698.5)"
-                          >
-                            <g
-                              data-name="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441 2047 \\u043A\\u043E\\u043F\\u0438\\u044F 3"
-                              fill="none"
-                              id="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441_2047_\\u043A\\u043E\\u043F\\u0438\\u044F_3"
-                              stroke="#de5846"
-                              stroke-width="2"
-                              transform="translate(704 1090)"
-                            >
-                              <circle
-                                cx="32.5"
-                                cy="32.5"
-                                r="32.5"
-                                stroke="none"
-                              />
-                              <circle
-                                cx="32.5"
-                                cy="32.5"
-                                fill="none"
-                                r="31.5"
-                              />
-                            </g>
-                            <path
-                              d="M739.823,1130.253,736,1126.43l-3.823,3.823a2.447,2.447,0,0,1-3.461-3.461l3.823-3.823-3.792-3.792a2.447,2.447,0,0,1,3.461-3.46l3.792,3.792,3.792-3.792a2.447,2.447,0,0,1,3.461,3.46l-3.792,3.792,3.823,3.823a2.448,2.448,0,1,1-3.461,3.461Z"
-                              data-name="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A, \\u0441\\u043A\\u0440\\u0443\\u0433\\u043B. \\u0443\\u0433\\u043B\\u044B2086 \\u043A\\u043E\\u043F\\u0438\\u044F"
-                              fill="#ffe0da"
-                              id="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A_\\u0441\\u043A\\u0440\\u0443\\u0433\\u043B._\\u0443\\u0433\\u043B\\u044B2086_\\u043A\\u043E\\u043F\\u0438\\u044F"
-                              stroke="#de5846"
-                              stroke-width="2"
-                            />
-                            <g
-                              data-name="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441 2047 \\u043A\\u043E\\u043F\\u0438\\u044F 3"
-                              fill="none"
-                              id="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441_2047_\\u043A\\u043E\\u043F\\u0438\\u044F_3-2"
-                              stroke="#de5846"
-                              stroke-width="2"
-                              transform="translate(708 1094)"
-                            >
-                              <circle
-                                cx="28.5"
-                                cy="28.5"
-                                r="28.5"
-                                stroke="none"
-                              />
-                              <circle
-                                cx="28.5"
-                                cy="28.5"
-                                fill="none"
-                                r="27.5"
-                              />
-                            </g>
-                          </g>
-                        </g>
-                        <path
-                          d="M815,475v-7H777v7h-2v-7H760v-2h15V448h2v18h38v-8h2v8h10v2H817v7Zm-240,0v-7H537v7h-2v-7H525v-2h10V454h2v12h38V456h2v10h18v2H577v7Zm-40-31v-4h-4v-2h4v-4h2v4h4v2h-4v4Zm280-45V388H805v-2h10V348H777v11h-2V348H764v-2h11v-6h2v6h38v-6h2v6h38v-6h2v6h8v2h-8v21h-2V348H817v38h16v2H817v11Zm-280,0V388H521v-2h14V348H497v11h-2V348H477v-2h18v-6h2v6h38v-6h2v6h11v2H537v38h9v2h-9v11Zm80-33V348H597v-2h18v-6h2v6h16v2H617v18Zm265-14v-4h-4v-2h4v-4h2v4h4v2h-4v4Zm-230,0v-4h-4v-2h4v-4h2v4h4v2h-4v4Z"
-                          data-name="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A 21"
-                          fill="#dbdee5"
-                          id="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A_21"
-                        />
-                      </g>
-                    </svg>
                     <div
-                      class="space-y-6"
+                      class="space-y-4"
                     >
                       <p
                         class="hidden text-theme-secondary-text md:block"
                       >
-                        An error occurred that prevented the broadcast of this transaction. Select Retry to attempt to broadcast the transaction again. Alternatively, return to your wallet
+                        An error occurred while sending your transaction. Please go 'Back' and try again, or click 'Close' to return to the wallet.
                       </p>
                       <div
                         class="flex flex-col overflow-hidden rounded-xl md:hidden"
@@ -967,7 +719,7 @@ exports[`Registration > should show error step and go back 1`] = `
                         <div
                           class="css-1y2ht9o"
                         >
-                          An error occurred that prevented the broadcast of this transaction. Select Retry to attempt to broadcast the transaction again. Alternatively, return to your wallet
+                          An error occurred while sending your transaction. Please go 'Back' and try again, or click 'Close' to return to the wallet.
                         </div>
                       </div>
                       <div
@@ -985,7 +737,7 @@ exports[`Registration > should show error step and go back 1`] = `
                           >
                             <textarea
                               autocomplete="off"
-                              class="no-ligatures w-full border-none resize-none min-h-[8rem] md:min-h-auto md:resize-y resize-none text-theme-secondary-text css-1vs1awz"
+                              class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base resize-none min-h-[8rem] md:min-h-auto md:resize-y resize-none text-theme-secondary-text css-1937ogs"
                               data-testid="ErrorStep__errorMessage"
                               disabled=""
                               style="height: 4px;"
@@ -999,7 +751,7 @@ exports[`Registration > should show error step and go back 1`] = `
                     </div>
                   </div>
                   <div
-                    class="css-gu3ikl"
+                    class="css-145pihz"
                   >
                     <div
                       class="mr-auto"
@@ -1008,7 +760,7 @@ exports[`Registration > should show error step and go back 1`] = `
                         class="relative"
                       >
                         <button
-                          class="css-6419sw"
+                          class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-700"
                           data-testid="clipboard-button__wrapper"
                           type="button"
                         >
@@ -1054,7 +806,7 @@ exports[`Registration > should show error step and go back 1`] = `
                       </div>
                     </div>
                     <button
-                      class="css-6419sw"
+                      class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-700"
                       data-testid="ErrorStep__close-button"
                       type="button"
                     >
@@ -1069,7 +821,7 @@ exports[`Registration > should show error step and go back 1`] = `
                       </div>
                     </button>
                     <button
-                      class="css-fl4fi0"
+                      class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded text-white bg-theme-primary-600 hover:bg-theme-primary-700"
                       data-testid="ErrorStep__back-button"
                       type="button"
                     >
@@ -1106,7 +858,7 @@ exports[`Registration > should show mnemonic error 1`] = `
       class="css-1jzy9qi"
     >
       <div
-        class="relative flex h-21"
+        class="relative flex h-14 sm:h-21"
       >
         <div
           class="hidden w-12 sm:flex"
@@ -1140,13 +892,13 @@ exports[`Registration > should show mnemonic error 1`] = `
           </button>
         </div>
         <div
-          class="flex flex-1 items-center px-8"
+          class="flex flex-1 items-center px-6 sm:px-8"
         >
           <div
             class="my-auto flex items-center"
           >
             <button
-              class="my-auto mr-4 flex h-11 w-11 cursor-pointer items-center justify-center rounded-xl bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400"
+              class="my-auto mr-2 flex h-8 w-8 cursor-pointer items-center justify-center rounded bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 sm:mr-4 sm:h-11 sm:w-11 sm:rounded-xl"
               data-testid="NavigationBarLogo--button"
               type="button"
             >
@@ -1172,7 +924,7 @@ exports[`Registration > should show mnemonic error 1`] = `
             </button>
           </div>
           <ul
-            class="ml-4 mr-auto hidden h-21 space-x-8 lg:flex"
+            class="ml-4 mr-auto hidden h-14 space-x-8 sm:h-21 lg:flex"
             data-testid="NavigationBar__menu"
           >
             <li
@@ -1229,37 +981,35 @@ exports[`Registration > should show mnemonic error 1`] = `
             data-testid="NavigationBar__menu-toggle"
           >
             <div
-              class="static sm:relative"
+              aria-expanded="false"
+              aria-haspopup="dialog"
+              data-testid="dropdown__toggle"
             >
-              <span
-                data-testid="dropdown__toggle"
+              <button
+                class="cursor-pointer rounded p-2 focus:outline-none focus:ring-2 focus:ring-theme-primary-400"
+                type="button"
               >
-                <button
-                  class="cursor-pointer rounded p-2 focus:outline-none focus:ring-2 focus:ring-theme-primary-400"
-                  type="button"
+                <div
+                  class="css-1i4b0eq"
+                  height="20"
+                  width="20"
                 >
-                  <div
-                    class="css-1i4b0eq"
-                    height="20"
-                    width="20"
+                  <svg
+                    viewBox="0 0 20 20"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
                   >
-                    <svg
-                      viewBox="0 0 20 20"
-                      xml:space="preserve"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M1 15.5h18M1 10h18M1 4.5h18"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                      />
-                    </svg>
-                  </div>
-                </button>
-              </span>
+                    <path
+                      d="M1 15.5h18M1 10h18M1 4.5h18"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    />
+                  </svg>
+                </div>
+              </button>
             </div>
           </div>
           <div
@@ -1267,52 +1017,50 @@ exports[`Registration > should show mnemonic error 1`] = `
           >
             <div>
               <div
-                class="static sm:relative"
+                aria-expanded="false"
+                aria-haspopup="dialog"
+                data-testid="dropdown__toggle"
               >
-                <span
-                  data-testid="dropdown__toggle"
+                <div
+                  class="group css-c93wvv"
                 >
-                  <div
-                    class="group css-c93wvv"
+                  <button
+                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none"
+                    data-testid="NavigationBar__buttons--server-status"
+                    type="button"
                   >
-                    <button
-                      class="css-1hei9vx"
-                      data-testid="NavigationBar__buttons--server-status"
-                      type="button"
+                    <div
+                      class="flex items-center space-x-2"
                     >
                       <div
-                        class="flex items-center space-x-2"
+                        class="p-1 css-1i4b0eq"
+                        height="20"
+                        width="20"
+                      >
+                        <svg
+                          fill="none"
+                          viewBox="0 0 20 15"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M6.595 6.285c.618-3.372 3.654-5.664 6.932-5.233 3.279.43 5.67 3.435 5.46 6.86-.21 3.426-2.948 6.092-6.252 6.088H4.912c-1.606.003-3.05-1.017-3.64-2.569-.589-1.552-.203-3.32.972-4.457a3.795 3.795 0 0 1 4.35-.69zm0 0C6.5 7 6.6 7.8 7 9"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          />
+                        </svg>
+                      </div>
+                      <div
+                        class="absolute right-1 top-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
                       >
                         <div
-                          class="p-1 css-1i4b0eq"
-                          height="20"
-                          width="20"
-                        >
-                          <svg
-                            fill="none"
-                            viewBox="0 0 20 15"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M6.595 6.285c.618-3.372 3.654-5.664 6.932-5.233 3.279.43 5.67 3.435 5.46 6.86-.21 3.426-2.948 6.092-6.252 6.088H4.912c-1.606.003-3.05-1.017-3.64-2.569-.589-1.552-.203-3.32.972-4.457a3.795 3.795 0 0 1 4.35-.69zm0 0C6.5 7 6.6 7.8 7 9"
-                              stroke="currentColor"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              stroke-width="2"
-                            />
-                          </svg>
-                        </div>
-                        <div
-                          class="absolute right-1 top-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
-                        >
-                          <div
-                            class="h-2 w-2 rounded-full bg-theme-success-700"
-                          />
-                        </div>
+                          class="h-2 w-2 rounded-full bg-theme-success-700"
+                        />
                       </div>
-                    </button>
-                  </div>
-                </span>
+                    </div>
+                  </button>
+                </div>
               </div>
             </div>
             <div
@@ -1320,59 +1068,57 @@ exports[`Registration > should show mnemonic error 1`] = `
             />
             <div>
               <div
-                class="static sm:relative"
+                aria-expanded="false"
+                aria-haspopup="dialog"
+                data-testid="dropdown__toggle"
               >
-                <span
-                  data-testid="dropdown__toggle"
+                <div
+                  class="group css-c93wvv"
                 >
-                  <div
-                    class="group css-c93wvv"
+                  <button
+                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none"
+                    data-testid="NavigationBar__buttons--notifications"
+                    type="button"
                   >
-                    <button
-                      class="css-1hei9vx"
-                      data-testid="NavigationBar__buttons--notifications"
-                      type="button"
+                    <div
+                      class="flex items-center space-x-2"
                     >
                       <div
-                        class="flex items-center space-x-2"
+                        class="p-1 css-1i4b0eq"
+                        height="20"
+                        width="20"
+                      >
+                        <svg
+                          id="bell"
+                          viewBox="0 0 20 20"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
+                        >
+                          <g
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          >
+                            <path
+                              d="M8.4 17.8c.3.9 1.2 1.4 2.1 1.1.5-.2 1-.6 1.1-1.1M10 2.8V1M10 2.8c3.3 0 6 2.7 6 6h0c0 5.6 1.2 6.6 1.2 6.6H2.8S4 13.9 4 8.8c0-3.3 2.7-6 6-6z"
+                            />
+                          </g>
+                        </svg>
+                      </div>
+                      <div
+                        class="absolute right-1 top-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
                       >
                         <div
-                          class="p-1 css-1i4b0eq"
-                          height="20"
-                          width="20"
-                        >
-                          <svg
-                            id="bell"
-                            viewBox="0 0 20 20"
-                            x="0"
-                            xml:space="preserve"
-                            xmlns="http://www.w3.org/2000/svg"
-                            y="0"
-                          >
-                            <g
-                              fill="none"
-                              stroke="currentColor"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              stroke-width="2"
-                            >
-                              <path
-                                d="M8.4 17.8c.3.9 1.2 1.4 2.1 1.1.5-.2 1-.6 1.1-1.1M10 2.8V1M10 2.8c3.3 0 6 2.7 6 6h0c0 5.6 1.2 6.6 1.2 6.6H2.8S4 13.9 4 8.8c0-3.3 2.7-6 6-6z"
-                              />
-                            </g>
-                          </svg>
-                        </div>
-                        <div
-                          class="absolute right-1 top-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
-                        >
-                          <div
-                            class="h-2 w-2 rounded-full bg-theme-danger-500"
-                          />
-                        </div>
+                          class="h-2 w-2 rounded-full bg-theme-danger-500"
+                        />
                       </div>
-                    </button>
-                  </div>
-                </span>
+                    </div>
+                  </button>
+                </div>
               </div>
             </div>
             <div
@@ -1388,7 +1134,7 @@ exports[`Registration > should show mnemonic error 1`] = `
                   class="css-c93wvv"
                 >
                   <button
-                    class="css-5e9bdv"
+                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700"
                     data-testid="NavigationBar__buttons--receive"
                     disabled=""
                     type="button"
@@ -1436,7 +1182,7 @@ exports[`Registration > should show mnemonic error 1`] = `
                   class="css-c93wvv"
                 >
                   <button
-                    class="css-5e9bdv"
+                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700"
                     data-testid="NavigationBar__buttons--send"
                     disabled=""
                     type="button"
@@ -1481,7 +1227,7 @@ exports[`Registration > should show mnemonic error 1`] = `
             data-testid="NavigationBar__balance"
           >
             <div
-              class="-mt-3 flex flex-row items-center justify-center space-x-2 bg-theme-secondary-100 px-8 py-2.5 dark:bg-black md:m-0 md:flex-col md:items-start md:justify-start md:space-x-0 md:bg-transparent md:p-0 md:text-right md:dark:bg-transparent"
+              class="flex flex-row items-center justify-center space-x-2 bg-theme-secondary-100 px-8 py-2.5 dark:bg-black md:m-0 md:flex-col md:items-start md:justify-start md:space-x-0 md:bg-transparent md:p-0 md:text-right md:dark:bg-transparent"
             >
               <div
                 class="whitespace-nowrap text-theme-secondary-700 dark:text-theme-secondary-500 md:text-xs md:font-semibold md:text-theme-secondary-500"
@@ -1502,35 +1248,33 @@ exports[`Registration > should show mnemonic error 1`] = `
             </div>
           </div>
           <div
-            class="static sm:relative"
+            aria-expanded="false"
+            aria-haspopup="dialog"
+            data-testid="dropdown__toggle"
           >
-            <span
-              data-testid="dropdown__toggle"
+            <div
+              class="relative cursor-pointer items-center justify-center rounded-full align-middle"
+              data-testid="UserMenu"
             >
               <div
-                class="relative cursor-pointer items-center justify-center rounded-full align-middle"
-                data-testid="UserMenu"
+                class="shrink-0 css-1n9jllj"
+                data-testid="Avatar"
               >
                 <div
-                  class="shrink-0 css-1n9jllj"
-                  data-testid="Avatar"
+                  class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                 >
-                  <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                  <img
+                    alt="Profile Avatar"
+                    src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(233, 30, 99)" width="100" height="100"/><circle r="45" cx="80" cy="30" fill="rgb(76, 175, 80)"/><circle r="55" cx="0" cy="60" fill="rgb(255, 152, 0)"/><circle r="40" cx="50" cy="50" fill="rgb(3, 169, 244)"/></svg>"
+                  />
+                  <span
+                    class="absolute text-sm font-semibold text-theme-background dark:text-theme-text"
                   >
-                    <img
-                      alt="Profile Avatar"
-                      src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(233, 30, 99)" width="100" height="100"/><circle r="45" cx="80" cy="30" fill="rgb(76, 175, 80)"/><circle r="55" cx="0" cy="60" fill="rgb(255, 152, 0)"/><circle r="40" cx="50" cy="50" fill="rgb(3, 169, 244)"/></svg>"
-                    />
-                    <span
-                      class="absolute text-sm font-semibold text-theme-background dark:text-theme-text"
-                    >
-                      JO
-                    </span>
-                  </div>
+                    JO
+                  </span>
                 </div>
               </div>
-            </span>
+            </div>
           </div>
         </div>
       </div>
@@ -1539,10 +1283,10 @@ exports[`Registration > should show mnemonic error 1`] = `
       class="flex flex-1 flex-col"
     >
       <div
-        class="flex-1 css-ycib48"
+        class="w-full py-4 first:pt-8 last:pb-8 flex-1 css-9mualq"
       >
         <div
-          class="mx-auto px-8 lg:container md:px-10"
+          class="mx-auto px-6 lg:container md:px-10"
         >
           <form
             class="mx-auto max-w-xl"
@@ -1554,11 +1298,11 @@ exports[`Registration > should show mnemonic error 1`] = `
                 data-testid="tab-pabel__active-panel"
               >
                 <div
-                  class="space-y-6"
+                  class="space-y-4"
                   data-testid="AuthenticationStep"
                 >
                   <div
-                    class="sm:mt-8"
+                    class="w-full sm:mt-8"
                   >
                     <div
                       class="flex flex-col"
@@ -1589,19 +1333,96 @@ exports[`Registration > should show mnemonic error 1`] = `
                       class="flex flex-col justify-between sm:flex-row"
                     >
                       <div
-                        class="flex items-end justify-between bg-theme-background mt-6 hidden sm:block"
+                        class="flex items-end justify-between bg-theme-background mt-8 hidden sm:block"
                       >
                         <div
-                          class="space-y-4"
+                          class="space-y-2"
                         >
-                          <h1
-                            class="mb-0 text-2xl"
-                            data-testid="header__title"
-                          >
-                            Authenticate
-                          </h1>
                           <div
-                            class="flex items-center text-theme-secondary-text"
+                            class="flex items-center gap-3"
+                          >
+                            <div
+                              class="text-theme-primary-600 css-h1kfx5"
+                              data-testid="icon-mnemonic"
+                              height="24"
+                              width="24"
+                            >
+                              <svg
+                                fill="none"
+                                viewBox="0 0 25 25"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <g
+                                  clip-path="url(#clip0_13420_137872)"
+                                >
+                                  <path
+                                    d="M18.0078 14.9033H20.9411"
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                  />
+                                  <path
+                                    clip-rule="evenodd"
+                                    d="M1.875 6.57031C1.875 6.01803 2.32272 5.57031 2.875 5.57031H22.875C23.4273 5.57031 23.875 6.01803 23.875 6.57031V18.837C23.875 19.3893 23.4273 19.837 22.875 19.837H2.875C2.32272 19.837 1.875 19.3893 1.875 18.837V6.57031Z"
+                                    fill-rule="evenodd"
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                  />
+                                  <path
+                                    d="M8.47526 11.2373L4.80859 14.904"
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                  />
+                                  <path
+                                    d="M8.47526 14.904L4.80859 11.2373"
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                  />
+                                  <path
+                                    d="M15.0729 11.2373L11.4062 14.904"
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                  />
+                                  <path
+                                    d="M15.0729 14.904L11.4062 11.2373"
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                  />
+                                </g>
+                                <defs>
+                                  <clippath
+                                    id="clip0_13420_137872"
+                                  >
+                                    <rect
+                                      fill="white"
+                                      height="24"
+                                      transform="translate(24.875 24.5) rotate(-180)"
+                                      width="24"
+                                    />
+                                  </clippath>
+                                </defs>
+                              </svg>
+                            </div>
+                            <h1
+                              class="mb-0 text-2xl leading-[29px]"
+                              data-testid="header__title"
+                            >
+                              Authenticate
+                            </h1>
+                          </div>
+                          <div
+                            class="flex items-center leading-5 text-theme-secondary-text"
                             data-testid="header__subtitle"
                           >
                             Enter your mnemonic passphrase to authenticate the transaction.
@@ -1614,21 +1435,21 @@ exports[`Registration > should show mnemonic error 1`] = `
                     class="flex min-w-0 flex-col css-1bcidjh"
                   >
                     <label
-                      class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+                      class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
                       data-testid="FormLabel"
                       for="mnemonic"
                     >
                       Mnemonic
                     </label>
                     <div
-                      class="css-n1b0kl"
+                      class="css-14zfvme"
                     >
                       <div
                         class="relative flex h-full flex-1"
                       >
                         <input
                           autocomplete="off"
-                          class="no-ligatures w-full border-none css-1vs1awz"
+                          class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
                           data-testid="AuthenticationStep__mnemonic"
                           name="mnemonic"
                           type="password"
@@ -1686,14 +1507,14 @@ exports[`Registration > should show mnemonic error 1`] = `
                     class="flex min-w-0 flex-col css-5kz4tk"
                   >
                     <label
-                      class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+                      class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
                       data-testid="FormLabel"
                       for="secondMnemonic"
                     >
                       2nd Mnemonic
                     </label>
                     <div
-                      class="css-12mz4i6"
+                      class="css-1njetft"
                     >
                       <div
                         class="relative flex h-full flex-1"
@@ -1701,7 +1522,7 @@ exports[`Registration > should show mnemonic error 1`] = `
                         <input
                           aria-invalid="true"
                           autocomplete="off"
-                          class="no-ligatures w-full border-none css-1vs1awz"
+                          class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
                           data-testid="AuthenticationStep__second-mnemonic"
                           name="secondMnemonic"
                           type="password"
@@ -1800,10 +1621,10 @@ exports[`Registration > should show mnemonic error 1`] = `
                 </div>
               </div>
               <div
-                class="css-gu3ikl"
+                class="css-145pihz"
               >
                 <button
-                  class="css-6419sw"
+                  class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-700"
                   data-testid="StepNavigation__back-button"
                   type="button"
                 >
@@ -1814,7 +1635,7 @@ exports[`Registration > should show mnemonic error 1`] = `
                   </div>
                 </button>
                 <button
-                  class="css-qrwjsp"
+                  class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700"
                   data-testid="StepNavigation__send-button"
                   disabled=""
                   type="submit"

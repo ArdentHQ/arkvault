@@ -101,22 +101,23 @@ describe("MultiSignature Registration Form", () => {
 
 	it("should fill form", async () => {
 		const { form } = renderComponent();
+		const participantsCount = 2;
 
-		userEvent.click(screen.getByText(translations.FEES.AVERAGE));
+		await userEvent.click(screen.getByText(translations.FEES.AVERAGE));
 
-		const inputElement: HTMLInputElement = screen.getByTestId("MultiSignatureRegistrationForm__min-participants");
+		await waitFor(() =>
+			expect(form?.formState.errors.feeCalculation.message).toBe("fee calculation not completed"),
+		);
+		await waitFor(() => expect(form?.formState.errors.feeCalculation).toBeUndefined());
 
-		userEvent.clear(inputElement);
-		userEvent.paste(inputElement, "3");
+		await waitFor(() => expect(form?.getValues("minParticipants")).toBe(participantsCount));
+		await waitFor(() => expect(form?.getValues("fee")).toBe(fees.avg * participantsCount));
 
-		await waitFor(() => expect(form?.getValues("fee")).toBe(String(fees.avg)));
-		await waitFor(() => expect(form?.getValues("minParticipants")).toBe("3"));
+		await userEvent.clear(screen.getByTestId("SelectDropdown__input"));
+		await userEvent.type(screen.getByTestId("SelectDropdown__input"), wallet2.address());
 
-		userEvent.paste(screen.getByTestId("SelectDropdown__input"), wallet2.address());
+		await userEvent.click(screen.getByText(translations.MULTISIGNATURE.ADD_PARTICIPANT));
 
-		userEvent.click(screen.getByText(translations.MULTISIGNATURE.ADD_PARTICIPANT));
-
-		await waitFor(() => expect(form?.getValues("minParticipants")).toBe("3"));
 		await waitFor(() =>
 			expect(form?.getValues("participants")).toStrictEqual([
 				{
@@ -133,14 +134,36 @@ describe("MultiSignature Registration Form", () => {
 		);
 	});
 
+	it("should set min participants", async () => {
+		const { form } = renderComponent();
+		const participantsCount = 2;
+
+		await userEvent.click(screen.getByText(translations.FEES.AVERAGE));
+
+		await waitFor(() =>
+			expect(form?.formState.errors.feeCalculation.message).toBe("fee calculation not completed"),
+		);
+
+		await waitFor(() => expect(form?.formState.errors.feeCalculation).toBeUndefined());
+
+		await waitFor(() => expect(form?.getValues("minParticipants")).toBe(participantsCount));
+		await waitFor(() => expect(form?.getValues("fee")).toBe(fees.avg * participantsCount));
+
+		await userEvent.clear(screen.getByTestId("MultiSignatureRegistrationForm__min-participants"));
+		await userEvent.type(screen.getByTestId("MultiSignatureRegistrationForm__min-participants"), "3");
+
+		await waitFor(() => expect(form?.getValues("minParticipants")).toBe("3"));
+	});
+
 	it("should show name of wallets in form step", async () => {
 		const { form } = renderComponent();
 
-		await waitFor(() => expect(screen.getAllByTestId("Address__alias")).toHaveLength(1));
+		await waitFor(() => expect(screen.getAllByTestId("Address__alias")).toHaveLength(2));
 
-		userEvent.paste(screen.getByTestId("SelectDropdown__input"), wallet2.address());
+		await userEvent.clear(screen.getByTestId("SelectDropdown__input"));
+		await userEvent.type(screen.getByTestId("SelectDropdown__input"), wallet2.address());
 
-		userEvent.click(screen.getByText(translations.MULTISIGNATURE.ADD_PARTICIPANT));
+		await userEvent.click(screen.getByText(translations.MULTISIGNATURE.ADD_PARTICIPANT));
 
 		await waitFor(() => expect(form?.getValues("participants")).toHaveLength(2));
 
@@ -195,8 +218,8 @@ describe("MultiSignature Registration Form", () => {
 			},
 		});
 
-		expect(screen.getAllByTestId("recipient-list__recipient-list-item")[0]).toHaveTextContent("ARK Wallet 1");
-		expect(screen.getAllByTestId("recipient-list__recipient-list-item")[1]).toHaveTextContent("ARK Wallet 2");
+		expect(screen.getAllByTestId("Address__address")[1]).toHaveTextContent(wallet.address());
+		expect(screen.getAllByTestId("Address__address")[2]).toHaveTextContent(wallet2.address());
 	});
 
 	it("should render transaction details", async () => {

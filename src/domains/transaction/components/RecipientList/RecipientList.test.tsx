@@ -72,7 +72,6 @@ describe("RecipientList", () => {
 				route: `/profiles/${profile.id()}`,
 			},
 		);
-
 		expect(container).toMatchSnapshot();
 	});
 
@@ -167,7 +166,7 @@ describe("RecipientList", () => {
 
 		expect(removeButton[0]).toBeInTheDocument();
 
-		userEvent.click(removeButton[0]);
+		await userEvent.click(removeButton[0]);
 
 		expect(onRemove).toHaveBeenCalledWith(0);
 	});

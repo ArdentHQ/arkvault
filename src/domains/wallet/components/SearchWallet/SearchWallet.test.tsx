@@ -43,7 +43,7 @@ describe.each([true, false])("SearchWallet uses fiat value = %s", (showConverted
 	it("should render", async () => {
 		const networkMocksRestore = mockProfileWithPublicAndTestNetworks(profile);
 
-		const { asFragment } = render(
+		const { asFragment } = renderResponsiveWithRoute(
 			<Route path="/profiles/:profileId/dashboard">
 				<SearchWallet
 					profile={profile}
@@ -55,6 +55,7 @@ describe.each([true, false])("SearchWallet uses fiat value = %s", (showConverted
 					onSelectWallet={() => void 0}
 				/>
 			</Route>,
+			"md",
 			{
 				history,
 				route: dashboardURL,
@@ -87,7 +88,7 @@ describe.each([true, false])("SearchWallet uses fiat value = %s", (showConverted
 
 		profile.wallets().push(wallet);
 
-		const { asFragment } = render(
+		const { asFragment } = renderResponsiveWithRoute(
 			<Route path="/profiles/:profileId/dashboard">
 				<SearchWallet
 					profile={profile}
@@ -99,6 +100,7 @@ describe.each([true, false])("SearchWallet uses fiat value = %s", (showConverted
 					onSelectWallet={() => void 0}
 				/>
 			</Route>,
+			"md",
 			{
 				history,
 				route: dashboardURL,
@@ -140,38 +142,7 @@ describe.each([true, false])("SearchWallet uses fiat value = %s", (showConverted
 			},
 		);
 
-		expect(screen.getAllByTestId("SearchWalletAvatar--compact")).toHaveLength(wallets.length);
-
 		expect(asFragment()).toMatchSnapshot();
-	});
-
-	it("should render expanded on > md screen according to user settings", async () => {
-		profile.settings().set(Contracts.ProfileSetting.UseExpandedTables, true);
-
-		const { asFragment } = renderResponsiveWithRoute(
-			<Route path="/profiles/:profileId/dashboard">
-				<SearchWallet
-					profile={profile}
-					showConvertedValue={showConvertedValue}
-					isOpen={true}
-					title={translations.MODAL_SELECT_ACCOUNT.TITLE}
-					description={translations.MODAL_SELECT_ACCOUNT.DESCRIPTION}
-					wallets={wallets}
-					onSelectWallet={() => void 0}
-				/>
-			</Route>,
-			"lg",
-			{
-				history,
-				route: dashboardURL,
-			},
-		);
-
-		expect(screen.queryAllByTestId("SearchWalletAvatar--compact")).toHaveLength(0);
-
-		expect(asFragment()).toMatchSnapshot();
-
-		profile.settings().set(Contracts.ProfileSetting.UseExpandedTables, true);
 	});
 
 	it.each(["xs", "sm"])("has a search input on responsive screen", async (breakpoint) => {
@@ -199,7 +170,8 @@ describe.each([true, false])("SearchWallet uses fiat value = %s", (showConverted
 		expect(searchInput).toBeInTheDocument();
 		expect(searchInput).toHaveValue("");
 
-		userEvent.paste(searchInput, "something");
+		await userEvent.clear(searchInput);
+		await userEvent.type(searchInput, "something");
 
 		expect(searchInput).toHaveValue("something");
 
@@ -207,7 +179,7 @@ describe.each([true, false])("SearchWallet uses fiat value = %s", (showConverted
 
 		expect(resetSearchButton).toBeInTheDocument();
 
-		userEvent.click(resetSearchButton);
+		await userEvent.click(resetSearchButton);
 
 		expect(searchInput).toHaveValue("");
 	});
@@ -232,7 +204,7 @@ describe.each([true, false])("SearchWallet uses fiat value = %s", (showConverted
 			},
 		);
 
-		expect(screen.getAllByTestId("SearchWalletListItemResponsive--item")).toHaveLength(wallets.length);
+		expect(screen.getAllByTestId("SenderWalletItemResponsive--item")).toHaveLength(wallets.length);
 
 		expect(asFragment()).toMatchSnapshot();
 	});
@@ -259,9 +231,13 @@ describe.each([true, false])("SearchWallet uses fiat value = %s", (showConverted
 			},
 		);
 
-		userEvent.click(screen.getAllByTestId("WalletListItemMobile")[0]);
+		const walletItems = screen.getAllByTestId("ReceiverItemMobile");
 
-		expect(onSelectWalletMock).toHaveBeenCalledTimes(1);
+		userEvent.click(walletItems[0]);
+
+		await waitFor(() => {
+			expect(onSelectWalletMock).toHaveBeenCalledTimes(1);
+		});
 
 		onSelectWalletMock.mockReset();
 	});
@@ -323,30 +299,33 @@ describe.each([true, false])("SearchWallet uses fiat value = %s", (showConverted
 			},
 		);
 
-		expect(screen.getByTestId("SearchWalletListItem__selected-0")).toBeInTheDocument();
-		expect(screen.getByTestId("SearchWalletListItem__select-1")).toBeInTheDocument();
+		await expect(screen.findByTestId("SearchWalletListItem__selected-0")).resolves.toBeInTheDocument();
 
 		userEvent.click(screen.getByTestId("SearchWalletListItem__selected-0"));
 
-		expect(onSelectWallet).toHaveBeenNthCalledWith(
-			1,
-			expect.objectContaining({
-				address: "D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD",
-				name: wallets[0].alias(),
-				network: expect.any(Networks.Network),
-			}),
-		);
+		await waitFor(() => {
+			expect(onSelectWallet).toHaveBeenNthCalledWith(
+				1,
+				expect.objectContaining({
+					address: "D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD",
+					name: wallets[0].alias(),
+					network: expect.any(Networks.Network),
+				}),
+			);
+		});
 
 		userEvent.click(screen.getByTestId("SearchWalletListItem__select-1"));
 
-		expect(onSelectWallet).toHaveBeenNthCalledWith(
-			2,
-			expect.objectContaining({
-				address: wallets[1].address(),
-				name: wallets[1].alias(),
-				network: expect.any(Networks.Network),
-			}),
-		);
+		await waitFor(() => {
+			expect(onSelectWallet).toHaveBeenNthCalledWith(
+				2,
+				expect.objectContaining({
+					address: wallets[1].address(),
+					name: wallets[1].alias(),
+					network: expect.any(Networks.Network),
+				}),
+			);
+		});
 
 		expect(asFragment()).toMatchSnapshot();
 	});
@@ -374,32 +353,33 @@ describe.each([true, false])("SearchWallet uses fiat value = %s", (showConverted
 			},
 		);
 
-		expect(screen.getByTestId("SearchWalletListItem__selected-0")).toBeInTheDocument();
-		expect(screen.getByTestId("SearchWalletListItem__select-1")).toBeInTheDocument();
+		await expect(screen.findByTestId("SearchWalletListItem__selected-0")).resolves.toBeInTheDocument();
 
 		userEvent.click(screen.getByTestId("SearchWalletListItem__selected-0"));
 
-		expect(onSelectWallet).toHaveBeenNthCalledWith(
-			1,
-			expect.objectContaining({
-				address: "D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD",
-				name: wallets[0].alias(),
-				network: expect.any(Networks.Network),
-			}),
-		);
+		await waitFor(() => {
+			expect(onSelectWallet).toHaveBeenNthCalledWith(
+				1,
+				expect.objectContaining({
+					address: "D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD",
+					name: wallets[0].alias(),
+					network: expect.any(Networks.Network),
+				}),
+			);
+		});
 
 		userEvent.click(screen.getByTestId("SearchWalletListItem__select-1"));
 
-		expect(onSelectWallet).toHaveBeenNthCalledWith(
-			2,
-			expect.objectContaining({
-				address: wallets[1].address(),
-				name: wallets[1].alias(),
-				network: expect.any(Networks.Network),
-			}),
-		);
-
-		expect(screen.getAllByTestId("SearchWalletAvatar--compact")).toHaveLength(wallets.length);
+		await waitFor(() => {
+			expect(onSelectWallet).toHaveBeenNthCalledWith(
+				2,
+				expect.objectContaining({
+					address: wallets[1].address(),
+					name: wallets[1].alias(),
+					network: expect.any(Networks.Network),
+				}),
+			);
+		});
 
 		expect(asFragment()).toMatchSnapshot();
 	});
@@ -427,12 +407,12 @@ describe.each([true, false])("SearchWallet uses fiat value = %s", (showConverted
 			},
 		);
 
-		expect(screen.getAllByTestId("SearchWalletListItemResponsive--item")).toHaveLength(wallets.length);
+		expect(screen.getAllByTestId("SenderWalletItemResponsive--item")).toHaveLength(wallets.length);
 
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it("should handle close", () => {
+	it("should handle close", async () => {
 		const onClose = vi.fn();
 
 		render(
@@ -453,13 +433,17 @@ describe.each([true, false])("SearchWallet uses fiat value = %s", (showConverted
 			},
 		);
 
+		await expect(screen.findByTestId("Modal__close-button")).resolves.toBeInTheDocument();
+
 		userEvent.click(screen.getByTestId("Modal__close-button"));
 
-		expect(onClose).toHaveBeenCalledWith(expect.objectContaining({ nativeEvent: expect.any(MouseEvent) }));
+		await waitFor(() => {
+			expect(onClose).toHaveBeenCalledWith(expect.objectContaining({ nativeEvent: expect.any(MouseEvent) }));
+		});
 	});
 
 	it("should filter wallets by address", async () => {
-		vi.useFakeTimers();
+		vi.useFakeTimers({ shouldAdvanceTime: true });
 
 		render(
 			<Route path="/profiles/:profileId/dashboard">
@@ -495,7 +479,8 @@ describe.each([true, false])("SearchWallet uses fiat value = %s", (showConverted
 		const searchInput = within(screen.getByTestId("HeaderSearchBar__input")).getByTestId("Input");
 		await waitFor(() => expect(searchInput).toBeInTheDocument());
 
-		userEvent.paste(searchInput, "D8rr7B1d6TL6pf1");
+		await userEvent.clear(searchInput);
+		await userEvent.type(searchInput, "D8rr7B1d6TL6pf1");
 
 		act(() => {
 			vi.advanceTimersByTime(100);
@@ -506,7 +491,7 @@ describe.each([true, false])("SearchWallet uses fiat value = %s", (showConverted
 	});
 
 	it("should filter wallets by alias", async () => {
-		vi.useFakeTimers();
+		vi.useFakeTimers({ shouldAdvanceTime: true });
 
 		render(
 			<Route path="/profiles/:profileId/dashboard">
@@ -542,7 +527,8 @@ describe.each([true, false])("SearchWallet uses fiat value = %s", (showConverted
 		const searchInput = within(screen.getByTestId("HeaderSearchBar__input")).getByTestId("Input");
 		await waitFor(() => expect(searchInput).toBeInTheDocument());
 
-		userEvent.paste(searchInput, walletAlias);
+		await userEvent.clear(searchInput);
+		await userEvent.type(searchInput, walletAlias);
 
 		act(() => {
 			vi.advanceTimersByTime(100);
@@ -554,7 +540,7 @@ describe.each([true, false])("SearchWallet uses fiat value = %s", (showConverted
 	});
 
 	it("should reset wallet search", async () => {
-		vi.useFakeTimers();
+		vi.useFakeTimers({ shouldAdvanceTime: true });
 
 		render(
 			<Route path="/profiles/:profileId/dashboard">
@@ -591,7 +577,8 @@ describe.each([true, false])("SearchWallet uses fiat value = %s", (showConverted
 		await waitFor(() => expect(searchInput).toBeInTheDocument());
 
 		// Search by wallet alias
-		userEvent.paste(searchInput, walletAlias);
+		await userEvent.clear(searchInput);
+		await userEvent.type(searchInput, walletAlias);
 
 		act(() => {
 			vi.advanceTimersByTime(100);
@@ -609,7 +596,7 @@ describe.each([true, false])("SearchWallet uses fiat value = %s", (showConverted
 	});
 
 	it("should not find search wallet and show empty results screen", async () => {
-		vi.useFakeTimers();
+		vi.useFakeTimers({ shouldAdvanceTime: true });
 
 		render(
 			<Route path="/profiles/:profileId/dashboard">
@@ -645,7 +632,8 @@ describe.each([true, false])("SearchWallet uses fiat value = %s", (showConverted
 		const searchInput = within(screen.getByTestId("HeaderSearchBar__input")).getByTestId("Input");
 		await waitFor(() => expect(searchInput).toBeInTheDocument());
 
-		userEvent.paste(screen.getByTestId("Input"), "non existent wallet name");
+		await userEvent.clear(screen.getByTestId("Input"));
+		await userEvent.type(screen.getByTestId("Input"), "non existent wallet name");
 
 		act(() => {
 			vi.advanceTimersByTime(100);

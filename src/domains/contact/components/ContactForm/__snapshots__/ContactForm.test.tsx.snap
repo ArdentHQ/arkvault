@@ -3,28 +3,28 @@
 exports[`ContactForm > should render responsive 1`] = `
 <DocumentFragment>
   <form
-    class="space-y-5"
+    class="space-y-0"
     data-testid="contact-form"
   >
     <fieldset
       class="flex min-w-0 flex-col css-1bcidjh"
     >
       <label
-        class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+        class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
         data-testid="FormLabel"
         for="name"
       >
         Name
       </label>
       <div
-        class=" css-n1b0kl"
+        class=" css-14zfvme"
       >
         <div
           class="relative flex h-full flex-1"
         >
           <input
             autocomplete="off"
-            class="no-ligatures w-full border-none css-1vs1awz"
+            class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
             data-testid="contact-form__name-input"
             name="name"
             type="text"
@@ -34,13 +34,13 @@ exports[`ContactForm > should render responsive 1`] = `
       </div>
     </fieldset>
     <div
-      class="css-1t71j9b"
+      class="!-mx-4 !mt-4 !p-4 css-1mwq138"
     >
       <fieldset
         class="flex min-w-0 flex-col css-1bcidjh"
       >
         <label
-          class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+          class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
           data-testid="FormLabel"
           for="network"
         >
@@ -51,14 +51,14 @@ exports[`ContactForm > should render responsive 1`] = `
           data-testid="SelectDropdown"
         >
           <div
-            class="sr-only css-n1b0kl"
+            class="sr-only css-14zfvme"
           >
             <div
               class="relative flex h-full flex-1"
             >
               <input
                 autocomplete="off"
-                class="no-ligatures w-full border-none css-1vs1awz"
+                class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
                 data-testid="select-list__input"
                 name="network"
                 readonly=""
@@ -83,7 +83,7 @@ exports[`ContactForm > should render responsive 1`] = `
                   id="downshift-0-label"
                 />
                 <div
-                  class="css-n1b0kl"
+                  class="css-14zfvme"
                 >
                   <div
                     class="relative flex h-full flex-1"
@@ -93,7 +93,7 @@ exports[`ContactForm > should render responsive 1`] = `
                       aria-controls="downshift-0-menu"
                       aria-labelledby="downshift-0-label"
                       autocomplete="off"
-                      class="no-ligatures w-full border-none cursor-default css-1vs1awz"
+                      class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base cursor-default css-1937ogs"
                       data-testid="SelectDropdown__input"
                       id="downshift-0-input"
                       name="network"
@@ -113,7 +113,7 @@ exports[`ContactForm > should render responsive 1`] = `
                         class="flex items-center"
                       >
                         <div
-                          class="flex items-center justify-center px-1 py-2"
+                          class="flex items-center justify-center"
                           data-testid="SelectDropdown__caret"
                         >
                           <div
@@ -125,7 +125,7 @@ exports[`ContactForm > should render responsive 1`] = `
                             width="10"
                           >
                             <svg
-                              id="caret-down"
+                              id="chevron-down-small"
                               viewBox="0 0 10 10"
                               x="0"
                               xml:space="preserve"
@@ -133,8 +133,12 @@ exports[`ContactForm > should render responsive 1`] = `
                               y="0"
                             >
                               <path
-                                d="M9.093 1.5H.907c-.754 0-1.178.859-.714 1.447l4.108 5.208a.91.91 0 0 0 1.43-.002l4.078-5.208c.46-.589.037-1.445-.716-1.445z"
-                                fill="currentColor"
+                                d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
                               />
                             </svg>
                           </div>
@@ -158,21 +162,21 @@ exports[`ContactForm > should render responsive 1`] = `
         data-testid="ContactForm__address"
       >
         <label
-          class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+          class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
           data-testid="FormLabel"
           for="address"
         >
           Address
         </label>
         <div
-          class="css-n1b0kl"
+          class="css-14zfvme"
         >
           <div
             class="relative flex h-full flex-1"
           >
             <input
               autocomplete="off"
-              class="no-ligatures w-full border-none css-1vs1awz"
+              class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
               data-testid="contact-form__address-input"
               name="address"
               type="text"
@@ -185,7 +189,7 @@ exports[`ContactForm > should render responsive 1`] = `
         class="mt-4"
       >
         <button
-          class="w-full css-qrwjsp"
+          class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 w-full"
           data-testid="contact-form__add-address-btn"
           disabled=""
           type="button"
@@ -199,13 +203,13 @@ exports[`ContactForm > should render responsive 1`] = `
       </div>
     </div>
     <div
-      class="flex w-full border-0 border-theme-secondary-300 dark:border-theme-secondary-800 sm:border-t justify-end"
+      class="flex w-full border-0 border-theme-secondary-300 dark:border-theme-secondary-800 justify-end"
     >
       <div
-        class="css-gu3ikl"
+        class="css-145pihz"
       >
         <button
-          class="css-6419sw"
+          class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-700"
           data-testid="contact-form__cancel-btn"
           type="button"
         >
@@ -216,7 +220,7 @@ exports[`ContactForm > should render responsive 1`] = `
           </div>
         </button>
         <button
-          class="css-qrwjsp"
+          class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700"
           data-testid="contact-form__save-btn"
           disabled=""
           type="submit"
@@ -236,28 +240,28 @@ exports[`ContactForm > should render responsive 1`] = `
 exports[`ContactForm > should render responsive 2`] = `
 <DocumentFragment>
   <form
-    class="space-y-5"
+    class="space-y-0"
     data-testid="contact-form"
   >
     <fieldset
       class="flex min-w-0 flex-col css-1bcidjh"
     >
       <label
-        class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+        class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
         data-testid="FormLabel"
         for="name"
       >
         Name
       </label>
       <div
-        class=" css-n1b0kl"
+        class=" css-14zfvme"
       >
         <div
           class="relative flex h-full flex-1"
         >
           <input
             autocomplete="off"
-            class="no-ligatures w-full border-none css-1vs1awz"
+            class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
             data-testid="contact-form__name-input"
             name="name"
             type="text"
@@ -267,13 +271,13 @@ exports[`ContactForm > should render responsive 2`] = `
       </div>
     </fieldset>
     <div
-      class="css-1t71j9b"
+      class="!-mx-4 !mt-4 !p-4 css-1mwq138"
     >
       <fieldset
         class="flex min-w-0 flex-col css-1bcidjh"
       >
         <label
-          class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+          class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
           data-testid="FormLabel"
           for="network"
         >
@@ -284,14 +288,14 @@ exports[`ContactForm > should render responsive 2`] = `
           data-testid="SelectDropdown"
         >
           <div
-            class="sr-only css-n1b0kl"
+            class="sr-only css-14zfvme"
           >
             <div
               class="relative flex h-full flex-1"
             >
               <input
                 autocomplete="off"
-                class="no-ligatures w-full border-none css-1vs1awz"
+                class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
                 data-testid="select-list__input"
                 name="network"
                 readonly=""
@@ -307,28 +311,28 @@ exports[`ContactForm > should render responsive 2`] = `
             <div
               aria-expanded="false"
               aria-haspopup="listbox"
-              aria-owns="downshift-2-menu"
+              aria-owns="downshift-3-menu"
               role="combobox"
             >
               <div>
                 <label
-                  for="downshift-2-input"
-                  id="downshift-2-label"
+                  for="downshift-3-input"
+                  id="downshift-3-label"
                 />
                 <div
-                  class="css-n1b0kl"
+                  class="css-14zfvme"
                 >
                   <div
                     class="relative flex h-full flex-1"
                   >
                     <input
                       aria-autocomplete="list"
-                      aria-controls="downshift-2-menu"
-                      aria-labelledby="downshift-2-label"
+                      aria-controls="downshift-3-menu"
+                      aria-labelledby="downshift-3-label"
                       autocomplete="off"
-                      class="no-ligatures w-full border-none cursor-default css-1vs1awz"
+                      class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base cursor-default css-1937ogs"
                       data-testid="SelectDropdown__input"
-                      id="downshift-2-input"
+                      id="downshift-3-input"
                       name="network"
                       placeholder="Enter a cryptoasset name"
                       type="text"
@@ -346,7 +350,7 @@ exports[`ContactForm > should render responsive 2`] = `
                         class="flex items-center"
                       >
                         <div
-                          class="flex items-center justify-center px-1 py-2"
+                          class="flex items-center justify-center"
                           data-testid="SelectDropdown__caret"
                         >
                           <div
@@ -358,7 +362,7 @@ exports[`ContactForm > should render responsive 2`] = `
                             width="10"
                           >
                             <svg
-                              id="caret-down"
+                              id="chevron-down-small"
                               viewBox="0 0 10 10"
                               x="0"
                               xml:space="preserve"
@@ -366,8 +370,12 @@ exports[`ContactForm > should render responsive 2`] = `
                               y="0"
                             >
                               <path
-                                d="M9.093 1.5H.907c-.754 0-1.178.859-.714 1.447l4.108 5.208a.91.91 0 0 0 1.43-.002l4.078-5.208c.46-.589.037-1.445-.716-1.445z"
-                                fill="currentColor"
+                                d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
                               />
                             </svg>
                           </div>
@@ -378,8 +386,8 @@ exports[`ContactForm > should render responsive 2`] = `
                 </div>
               </div>
               <div
-                aria-labelledby="downshift-2-label"
-                id="downshift-2-menu"
+                aria-labelledby="downshift-3-label"
+                id="downshift-3-menu"
                 role="listbox"
               />
             </div>
@@ -391,21 +399,21 @@ exports[`ContactForm > should render responsive 2`] = `
         data-testid="ContactForm__address"
       >
         <label
-          class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+          class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
           data-testid="FormLabel"
           for="address"
         >
           Address
         </label>
         <div
-          class="css-n1b0kl"
+          class="css-14zfvme"
         >
           <div
             class="relative flex h-full flex-1"
           >
             <input
               autocomplete="off"
-              class="no-ligatures w-full border-none css-1vs1awz"
+              class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
               data-testid="contact-form__address-input"
               name="address"
               type="text"
@@ -418,7 +426,7 @@ exports[`ContactForm > should render responsive 2`] = `
         class="mt-4"
       >
         <button
-          class="w-full css-qrwjsp"
+          class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 w-full"
           data-testid="contact-form__add-address-btn"
           disabled=""
           type="button"
@@ -432,13 +440,13 @@ exports[`ContactForm > should render responsive 2`] = `
       </div>
     </div>
     <div
-      class="flex w-full border-0 border-theme-secondary-300 dark:border-theme-secondary-800 sm:border-t justify-end"
+      class="flex w-full border-0 border-theme-secondary-300 dark:border-theme-secondary-800 justify-end"
     >
       <div
-        class="css-gu3ikl"
+        class="css-145pihz"
       >
         <button
-          class="css-6419sw"
+          class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-700"
           data-testid="contact-form__cancel-btn"
           type="button"
         >
@@ -449,288 +457,7 @@ exports[`ContactForm > should render responsive 2`] = `
           </div>
         </button>
         <button
-          class="css-qrwjsp"
-          data-testid="contact-form__save-btn"
-          disabled=""
-          type="submit"
-        >
-          <div
-            class="flex items-center space-x-2"
-          >
-            Save
-          </div>
-        </button>
-      </div>
-    </div>
-  </form>
-</DocumentFragment>
-`;
-
-exports[`ContactForm > should render with errors 1`] = `
-<DocumentFragment>
-  <form
-    class="space-y-5"
-    data-testid="contact-form"
-  >
-    <fieldset
-      class="flex min-w-0 flex-col css-5kz4tk"
-    >
-      <label
-        class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
-        data-testid="FormLabel"
-        for="name"
-      >
-        Name
-      </label>
-      <div
-        class=" css-12mz4i6"
-      >
-        <div
-          class="relative flex h-full flex-1"
-        >
-          <input
-            aria-invalid="true"
-            autocomplete="off"
-            class="no-ligatures w-full border-none css-1vs1awz"
-            data-testid="contact-form__name-input"
-            name="name"
-            type="text"
-            value=""
-          />
-        </div>
-        <div
-          class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-danger-500"
-          data-testid="Input__addon-end"
-        >
-          <span
-            data-errortext="Contact name error"
-            data-testid="Input__error"
-          >
-            <div
-              class="text-theme-danger-500 css-1i4b0eq"
-              height="20"
-              width="20"
-            >
-              <svg
-                id="circle-exclamation-mark"
-                viewBox="0 0 20 20"
-                x="0"
-                xml:space="preserve"
-                xmlns="http://www.w3.org/2000/svg"
-                y="0"
-              >
-                <g
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                >
-                  <circle
-                    cx="10"
-                    cy="10"
-                    r="9"
-                    stroke-miterlimit="10"
-                  />
-                  <path
-                    d="M10 10.5v-5"
-                    stroke-linecap="round"
-                    stroke-miterlimit="10"
-                  />
-                  <path
-                    d="M10 14h0"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </g>
-              </svg>
-            </div>
-          </span>
-        </div>
-      </div>
-    </fieldset>
-    <div
-      class="css-1t71j9b"
-    >
-      <fieldset
-        class="flex min-w-0 flex-col css-1bcidjh"
-      >
-        <label
-          class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
-          data-testid="FormLabel"
-          for="network"
-        >
-          Cryptoasset
-        </label>
-        <div
-          class="relative w-full"
-          data-testid="SelectDropdown"
-        >
-          <div
-            class="sr-only css-n1b0kl"
-          >
-            <div
-              class="relative flex h-full flex-1"
-            >
-              <input
-                autocomplete="off"
-                class="no-ligatures w-full border-none css-1vs1awz"
-                data-testid="select-list__input"
-                name="network"
-                readonly=""
-                tabindex="-1"
-                type="text"
-                value=""
-              />
-            </div>
-          </div>
-          <div
-            class="w-full"
-          >
-            <div
-              aria-expanded="false"
-              aria-haspopup="listbox"
-              aria-owns="downshift-4-menu"
-              role="combobox"
-            >
-              <div>
-                <label
-                  for="downshift-4-input"
-                  id="downshift-4-label"
-                />
-                <div
-                  class="css-n1b0kl"
-                >
-                  <div
-                    class="relative flex h-full flex-1"
-                  >
-                    <input
-                      aria-autocomplete="list"
-                      aria-controls="downshift-4-menu"
-                      aria-labelledby="downshift-4-label"
-                      autocomplete="off"
-                      class="no-ligatures w-full border-none cursor-default css-1vs1awz"
-                      data-testid="SelectDropdown__input"
-                      id="downshift-4-input"
-                      name="network"
-                      placeholder="Enter a cryptoasset name"
-                      type="text"
-                      value=""
-                    />
-                  </div>
-                  <div
-                    class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-primary-300 dark:text-theme-secondary-600"
-                    data-testid="Input__addon-end"
-                  >
-                    <div
-                      class=""
-                    >
-                      <div
-                        class="flex items-center"
-                      >
-                        <div
-                          class="flex items-center justify-center px-1 py-2"
-                          data-testid="SelectDropdown__caret"
-                        >
-                          <div
-                            class="absolute inset-0 block cursor-pointer md:hidden"
-                          />
-                          <div
-                            class="transition-transform text-theme-secondary-500 css-15txs7d"
-                            height="10"
-                            width="10"
-                          >
-                            <svg
-                              id="caret-down"
-                              viewBox="0 0 10 10"
-                              x="0"
-                              xml:space="preserve"
-                              xmlns="http://www.w3.org/2000/svg"
-                              y="0"
-                            >
-                              <path
-                                d="M9.093 1.5H.907c-.754 0-1.178.859-.714 1.447l4.108 5.208a.91.91 0 0 0 1.43-.002l4.078-5.208c.46-.589.037-1.445-.716-1.445z"
-                                fill="currentColor"
-                              />
-                            </svg>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div
-                aria-labelledby="downshift-4-label"
-                id="downshift-4-menu"
-                role="listbox"
-              />
-            </div>
-          </div>
-        </div>
-      </fieldset>
-      <fieldset
-        class="flex min-w-0 flex-col css-1bcidjh"
-        data-testid="ContactForm__address"
-      >
-        <label
-          class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
-          data-testid="FormLabel"
-          for="address"
-        >
-          Address
-        </label>
-        <div
-          class="css-n1b0kl"
-        >
-          <div
-            class="relative flex h-full flex-1"
-          >
-            <input
-              autocomplete="off"
-              class="no-ligatures w-full border-none css-1vs1awz"
-              data-testid="contact-form__address-input"
-              name="address"
-              type="text"
-              value=""
-            />
-          </div>
-        </div>
-      </fieldset>
-      <div
-        class="mt-4"
-      >
-        <button
-          class="w-full css-qrwjsp"
-          data-testid="contact-form__add-address-btn"
-          disabled=""
-          type="button"
-        >
-          <div
-            class="flex items-center space-x-2"
-          >
-            Add Address
-          </div>
-        </button>
-      </div>
-    </div>
-    <div
-      class="flex w-full border-0 border-theme-secondary-300 dark:border-theme-secondary-800 sm:border-t justify-end"
-    >
-      <div
-        class="css-gu3ikl"
-      >
-        <button
-          class="css-6419sw"
-          data-testid="contact-form__cancel-btn"
-          type="button"
-        >
-          <div
-            class="flex items-center space-x-2"
-          >
-            Cancel
-          </div>
-        </button>
-        <button
-          class="css-qrwjsp"
+          class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700"
           data-testid="contact-form__save-btn"
           disabled=""
           type="submit"

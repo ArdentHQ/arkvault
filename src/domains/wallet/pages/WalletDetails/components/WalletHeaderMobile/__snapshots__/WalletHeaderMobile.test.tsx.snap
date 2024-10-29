@@ -3,7 +3,7 @@
 exports[`WalletHeaderMobile > should render 1`] = `
 <DocumentFragment>
   <div
-    class="h-13 -mx-8 -mt-8 flex items-center justify-between bg-black px-8 py-4"
+    class="h-13 flex items-center justify-between bg-black px-6 py-4"
   >
     <div
       class="flex items-center space-x-2"
@@ -34,26 +34,12 @@ exports[`WalletHeaderMobile > should render 1`] = `
           </svg>
         </div>
       </div>
-      <div
-        class="shrink-0 css-1i0wxh3"
-        data-testid="Avatar"
-      >
-        <div
-          class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
-        >
-          <img
-            alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-            src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
-            title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-          />
-        </div>
-      </div>
     </div>
     <div
-      class="flex items-center"
+      class="flex items-center gap-3"
     >
       <div
-        class="mr-2 flex items-center space-x-1 border-r border-theme-secondary-800 pr-2 empty:border-0"
+        class="flex items-center space-x-1 border-r border-theme-secondary-800 pr-3 empty:border-0"
       />
       <button
         class="p-1 css-33wsq3"
@@ -86,7 +72,7 @@ exports[`WalletHeaderMobile > should render 1`] = `
     </div>
   </div>
   <div
-    class="flex flex-col items-center pt-4 text-white"
+    class="flex flex-col items-center px-6 pt-4 text-white"
   >
     <div
       class="mx-auto flex w-full items-center justify-center space-x-2"
@@ -98,7 +84,7 @@ exports[`WalletHeaderMobile > should render 1`] = `
           class="flex overflow-hidden whitespace-nowrap items-center space-x-2 min-w-0"
         >
           <span
-            class="font-semibold text-base text-theme-secondary-200"
+            class="font-semibold text-base text-theme-secondary-200 text-sm leading-[17px]"
             data-testid="Address__alias"
           >
             <span
@@ -108,12 +94,19 @@ exports[`WalletHeaderMobile > should render 1`] = `
               ARK Wallet 1
             </span>
           </span>
-          <span
-            class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-            data-testid="Address__address"
+          <div
+            class="relative grow leading-[17px] sm:leading-5 text-left"
           >
-            D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-          </span>
+            <span
+              class="no-ligatures min-w-0 overflow-hidden text-sm text-theme-secondary-600 leading-[17px] font-semibold text-base absolute w-full"
+              data-testid="Address__address"
+            >
+              D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+            </span>
+            <span>
+               
+            </span>
+          </div>
         </div>
       </div>
       <div
@@ -127,6 +120,7 @@ exports[`WalletHeaderMobile > should render 1`] = `
         >
           <div
             class="hover:text-theme-secondary-500 css-v0ob3f"
+            data-testid="Copy__icon"
             height="16"
             width="16"
           >
@@ -188,17 +182,17 @@ exports[`WalletHeaderMobile > should render 1`] = `
       </div>
     </div>
     <span
-      class="whitespace-nowrap mt-4 text-xl font-semibold leading-6 text-white"
+      class="whitespace-nowrap mt-4 text-xl font-semibold leading-6 text-theme-secondary-200"
       data-testid="Amount"
     >
       33.75089801 DARK
     </span>
   </div>
   <div
-    class="mt-6 flex items-center space-x-3"
+    class="mt-6 flex items-center space-x-3 px-6"
   >
     <button
-      class="bg-theme-dark-500 my-auto flex-1 css-fl4fi0"
+      class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded text-white bg-theme-primary-600 hover:bg-theme-primary-700 my-auto flex-1"
       data-testid="WalletHeaderMobile__send-button"
       type="button"
     >
@@ -213,59 +207,57 @@ exports[`WalletHeaderMobile > should render 1`] = `
       data-testid="WalletHeaderMobile__more-button"
     >
       <div
-        class="static sm:relative"
+        aria-expanded="false"
+        aria-haspopup="dialog"
+        data-testid="dropdown__toggle"
       >
-        <span
-          data-testid="dropdown__toggle"
+        <button
+          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none bg-theme-secondary-800 text-white hover:bg-theme-primary-700"
+          type="button"
         >
-          <button
-            class="bg-theme-secondary-800 text-white hover:bg-theme-primary-700 css-1hei9vx"
-            type="button"
+          <div
+            class="flex items-center space-x-2"
           >
             <div
-              class="flex items-center space-x-2"
+              class="css-1i4b0eq"
+              height="20"
+              width="20"
             >
-              <div
-                class="css-1i4b0eq"
-                height="20"
-                width="20"
+              <svg
+                id="ellipsis-vertical"
+                viewBox="0 0 20 20"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
               >
-                <svg
-                  id="ellipsis-vertical"
-                  viewBox="0 0 20 20"
-                  x="0"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
-                  y="0"
+                <g
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
                 >
-                  <g
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                  >
-                    <circle
-                      cx="10"
-                      cy="16.994"
-                      r="2.006"
-                    />
-                    <circle
-                      cx="10"
-                      cy="3"
-                      r="2"
-                    />
-                    <circle
-                      cx="10"
-                      cy="10"
-                      r="2"
-                    />
-                  </g>
-                </svg>
-              </div>
+                  <circle
+                    cx="10"
+                    cy="16.994"
+                    r="2.006"
+                  />
+                  <circle
+                    cx="10"
+                    cy="3"
+                    r="2"
+                  />
+                  <circle
+                    cx="10"
+                    cy="10"
+                    r="2"
+                  />
+                </g>
+              </svg>
             </div>
-          </button>
-        </span>
+          </div>
+        </button>
       </div>
     </div>
   </div>

@@ -22,7 +22,7 @@ const component = ({
 			<FormStep wallet={wallet} profile={profile} />
 		</TabPanel>
 		<TabPanel tabId={2}>
-			<ReviewStep wallet={wallet} />
+			<ReviewStep wallet={wallet} profile={profile} />
 		</TabPanel>
 	</Tabs>
 );

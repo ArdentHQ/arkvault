@@ -14,7 +14,7 @@ const preSteps = {
 		await importWallet(t, MNEMONICS[0]);
 		await t.click(Selector('[data-testid="WalletHeader__more-button"]'));
 		await t.click(
-			Selector('[data-testid="WalletHeader__more-button"] li').withText(
+			Selector('[data-testid="dropdown__options"] li').withText(
 				translations.WALLETS.PAGE_WALLET_DETAILS.OPTIONS.STORE_HASH,
 			),
 		);
@@ -37,7 +37,7 @@ cucumber(
 		},
 		"Then the transaction is sent successfully": async (t: TestController) => {
 			await t
-				.expect(Selector("h1").withText(translations.TRANSACTION.SUCCESS.TITLE).exists)
+				.expect(Selector("h1").withText(translations.TRANSACTION.SUCCESS.CONFIRMED).exists)
 				.ok({ timeout: 60_000 });
 		},
 	},
@@ -50,7 +50,7 @@ cucumber(
 			{
 				data: {
 					accept: ["transaction-id"],
-					broadcast: ["transaction-id"],
+					broadcast: [],
 					excess: [],
 					invalid: [],
 				},

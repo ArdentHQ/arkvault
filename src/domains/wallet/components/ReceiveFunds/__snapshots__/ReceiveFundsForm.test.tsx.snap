@@ -6,13 +6,13 @@ exports[`ReceiveFundsForm > should emit amount onChange event 1`] = `
     data-testid="ReceiveFundsForm"
   >
     <div
-      class="mt-8 space-y-5"
+      class="mt-4 space-y-4"
     >
       <fieldset
         class="flex min-w-0 flex-col css-1bcidjh"
       >
         <label
-          class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+          class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
           data-testid="FormLabel"
           for="amount"
         >
@@ -28,14 +28,14 @@ exports[`ReceiveFundsForm > should emit amount onChange event 1`] = `
           class="relative"
         >
           <div
-            class="pr-20 css-n1b0kl"
+            class="pr-20 css-14zfvme"
           >
             <div
               class="relative flex h-full flex-1"
             >
               <input
                 autocomplete="off"
-                class="no-ligatures w-full border-none css-1vs1awz"
+                class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
                 data-testid="ReceiveFundsForm__amount"
                 name="amount"
                 placeholder="Amount"
@@ -50,7 +50,7 @@ exports[`ReceiveFundsForm > should emit amount onChange event 1`] = `
         class="flex min-w-0 flex-col css-1bcidjh"
       >
         <label
-          class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+          class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
           data-testid="FormLabel"
           for="memo"
         >
@@ -63,14 +63,14 @@ exports[`ReceiveFundsForm > should emit amount onChange event 1`] = `
           </span>
         </label>
         <div
-          class="css-n1b0kl"
+          class="css-14zfvme"
         >
           <div
             class="relative flex h-full flex-1"
           >
             <input
               autocomplete="off"
-              class="no-ligatures w-full border-none css-1vs1awz"
+              class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
               data-testid="ReceiveFundsForm__memo"
               name="memo"
               type="text"
@@ -105,13 +105,13 @@ exports[`ReceiveFundsForm > should emit memo onChange event 1`] = `
     data-testid="ReceiveFundsForm"
   >
     <div
-      class="mt-8 space-y-5"
+      class="mt-4 space-y-4"
     >
       <fieldset
         class="flex min-w-0 flex-col css-1bcidjh"
       >
         <label
-          class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+          class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
           data-testid="FormLabel"
           for="amount"
         >
@@ -127,14 +127,14 @@ exports[`ReceiveFundsForm > should emit memo onChange event 1`] = `
           class="relative"
         >
           <div
-            class="pr-20 css-n1b0kl"
+            class="pr-20 css-14zfvme"
           >
             <div
               class="relative flex h-full flex-1"
             >
               <input
                 autocomplete="off"
-                class="no-ligatures w-full border-none css-1vs1awz"
+                class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
                 data-testid="ReceiveFundsForm__amount"
                 name="amount"
                 placeholder="Amount"
@@ -149,7 +149,7 @@ exports[`ReceiveFundsForm > should emit memo onChange event 1`] = `
         class="flex min-w-0 flex-col css-1bcidjh"
       >
         <label
-          class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+          class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
           data-testid="FormLabel"
           for="memo"
         >
@@ -162,14 +162,14 @@ exports[`ReceiveFundsForm > should emit memo onChange event 1`] = `
           </span>
         </label>
         <div
-          class="css-n1b0kl"
+          class="css-14zfvme"
         >
           <div
             class="relative flex h-full flex-1"
           >
             <input
               autocomplete="off"
-              class="no-ligatures w-full border-none css-1vs1awz"
+              class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
               data-testid="ReceiveFundsForm__memo"
               name="memo"
               type="text"
@@ -204,13 +204,13 @@ exports[`ReceiveFundsForm > should not show memo if is not supported by network 
     data-testid="ReceiveFundsForm"
   >
     <div
-      class="mt-8 space-y-5"
+      class="mt-4 space-y-4"
     >
       <fieldset
         class="flex min-w-0 flex-col css-1bcidjh"
       >
         <label
-          class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+          class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
           data-testid="FormLabel"
           for="amount"
         >
@@ -226,14 +226,14 @@ exports[`ReceiveFundsForm > should not show memo if is not supported by network 
           class="relative"
         >
           <div
-            class="pr-20 css-n1b0kl"
+            class="pr-20 css-14zfvme"
           >
             <div
               class="relative flex h-full flex-1"
             >
               <input
                 autocomplete="off"
-                class="no-ligatures w-full border-none css-1vs1awz"
+                class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
                 data-testid="ReceiveFundsForm__amount"
                 name="amount"
                 placeholder="Amount"
@@ -255,13 +255,13 @@ exports[`ReceiveFundsForm > should render 1`] = `
     data-testid="ReceiveFundsForm"
   >
     <div
-      class="mt-8 space-y-5"
+      class="mt-4 space-y-4"
     >
       <fieldset
         class="flex min-w-0 flex-col css-1bcidjh"
       >
         <label
-          class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+          class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
           data-testid="FormLabel"
           for="amount"
         >
@@ -277,14 +277,14 @@ exports[`ReceiveFundsForm > should render 1`] = `
           class="relative"
         >
           <div
-            class="pr-20 css-n1b0kl"
+            class="pr-20 css-14zfvme"
           >
             <div
               class="relative flex h-full flex-1"
             >
               <input
                 autocomplete="off"
-                class="no-ligatures w-full border-none css-1vs1awz"
+                class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
                 data-testid="ReceiveFundsForm__amount"
                 name="amount"
                 placeholder="Amount"
@@ -299,7 +299,7 @@ exports[`ReceiveFundsForm > should render 1`] = `
         class="flex min-w-0 flex-col css-1bcidjh"
       >
         <label
-          class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+          class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
           data-testid="FormLabel"
           for="memo"
         >
@@ -312,14 +312,14 @@ exports[`ReceiveFundsForm > should render 1`] = `
           </span>
         </label>
         <div
-          class="css-n1b0kl"
+          class="css-14zfvme"
         >
           <div
             class="relative flex h-full flex-1"
           >
             <input
               autocomplete="off"
-              class="no-ligatures w-full border-none css-1vs1awz"
+              class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
               data-testid="ReceiveFundsForm__memo"
               name="memo"
               type="text"

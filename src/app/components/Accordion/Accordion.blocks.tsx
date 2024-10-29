@@ -8,6 +8,7 @@ import {
 	AccordionHeaderSkeletonWrapperProperties,
 } from "@/app/components/Accordion";
 import { Icon } from "@/app/components/Icon";
+import { twMerge } from "tailwind-merge";
 
 export const AccordionWrapper = styled.div<{ isInactive?: boolean; isCollapsed?: boolean }>`
 	${tw`
@@ -44,12 +45,10 @@ export const AccordionHeader: React.VFC<AccordionHeaderProperties> = ({
 }) => {
 	const { isDarkMode } = useTheme();
 
-	const wrapperClassName = cn(
+	const wrapperClassName = twMerge(
 		"md:h-20 py-6 px-8 md:p-4 flex flex-row items-center border-theme-secondary-300 dark:border-theme-secondary-800",
-		{
-			"bg-transparent": isDarkMode,
-			"md:border-b": isExpanded,
-		},
+		isDarkMode && "bg-transparent",
+		isExpanded && "md:border-b",
 		className,
 	);
 
@@ -94,7 +93,11 @@ export const AccordionHeader: React.VFC<AccordionHeaderProperties> = ({
 };
 
 export const AccordionContent: React.VFC<AccordionContentProperties> = ({ children, className, ...properties }) => (
-	<div data-testid="AccordionContent" className={cn("px-8 pb-6 md:px-4 md:pb-0 md:pt-6", className)} {...properties}>
+	<div
+		data-testid="AccordionContent"
+		className={twMerge("px-8 pb-6 md:px-4 md:pb-0 md:pt-6", className)}
+		{...properties}
+	>
 		{children}
 	</div>
 );
@@ -108,7 +111,7 @@ const AccordionToggleWrapper = styled.div`
 
 	${css`
 		@media not all and (hover: none) {
-			${tw`hover:ring-theme-primary-400 dark:hover:ring-theme-primary-500`}}
+			${tw`hover:ring-theme-primary-600 hover:bg-theme-primary-600 hover:text-white transition-colors duration-100 ease-linear`}}
 		}
 	`}
 `;

@@ -3,7 +3,7 @@
 exports[`Link > should do nothing on click when disabled 1`] = `
 <DocumentFragment>
   <a
-    class="ring-focus group inline-block css-1flyqpm"
+    class="ring-focus group/inner inline-block css-1flyqpm"
     data-ring-focus-margin="-m-1"
     data-testid="Link"
     href="https://app.arkvault.io/"
@@ -45,14 +45,14 @@ exports[`Link > should do nothing on click when disabled 1`] = `
 exports[`Link > should open an external link 1`] = `
 <DocumentFragment>
   <a
-    class="ring-focus group inline-block css-7nwwrh"
+    class="ring-focus group/inner inline-block css-7nwwrh"
     data-ring-focus-margin="-m-1"
     data-testid="Link"
     href="https://app.arkvault.io/"
     rel="noopener noreferrer"
   >
     <span
-      class="css-170792"
+      class="css-bxx244"
     />
     <div
       class="mb-[3px] shrink-0 align-middle duration-200 css-v0ob3f"
@@ -85,13 +85,13 @@ exports[`Link > should open an external link 1`] = `
 exports[`Link > should render 1`] = `
 <DocumentFragment>
   <a
-    class="ring-focus group inline-block css-7nwwrh"
+    class="ring-focus group/inner inline-block css-7nwwrh"
     data-ring-focus-margin="-m-1"
     data-testid="Link"
     href="#/test"
   >
     <span
-      class="css-170792"
+      class="css-1dlnsgk"
     >
       Test
     </span>
@@ -102,14 +102,14 @@ exports[`Link > should render 1`] = `
 exports[`Link > should render external without children 1`] = `
 <DocumentFragment>
   <a
-    class="ring-focus group inline-block css-7nwwrh"
+    class="ring-focus group/inner inline-block css-7nwwrh"
     data-ring-focus-margin="-m-1"
     data-testid="Link"
     href="https://app.arkvault.io"
     rel="noopener noreferrer"
   >
     <span
-      class="css-170792"
+      class="css-bxx244"
     />
     <div
       class="mb-[3px] shrink-0 align-middle duration-200 css-v0ob3f"
@@ -142,13 +142,13 @@ exports[`Link > should render external without children 1`] = `
 exports[`Link > should render with tooltip 1`] = `
 <DocumentFragment>
   <a
-    class="ring-focus group inline-block css-7nwwrh"
+    class="ring-focus group/inner inline-block css-7nwwrh"
     data-ring-focus-margin="-m-1"
     data-testid="Link"
     href="#/test"
   >
     <span
-      class="css-170792"
+      class="css-1dlnsgk"
     >
       Test
     </span>
@@ -159,14 +159,14 @@ exports[`Link > should render with tooltip 1`] = `
 exports[`Link > should show a toast when trying to open an invalid external link 1`] = `
 <DocumentFragment>
   <a
-    class="ring-focus group inline-block css-7nwwrh"
+    class="ring-focus group/inner inline-block css-7nwwrh"
     data-ring-focus-margin="-m-1"
     data-testid="Link"
     href="invalid-url"
     rel="noopener noreferrer"
   >
     <span
-      class="css-170792"
+      class="css-bxx244"
     />
     <div
       class="mb-[3px] shrink-0 align-middle duration-200 css-v0ob3f"

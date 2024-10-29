@@ -16,6 +16,7 @@ import { Tooltip } from "@/app/components/Tooltip";
 import { OptionsValue, useImportOptions } from "@/domains/wallet/hooks/use-import-options";
 import { assertNetwork, assertString } from "@/utils/assertions";
 import { Alert } from "@/app/components/Alert";
+import { ThemeIcon } from "@/app/components/Icon";
 
 const validateAddress = async ({
 	findAddress,
@@ -331,11 +332,14 @@ export const MethodStep = ({ profile }: { profile: Contracts.IProfile }) => {
 		<section data-testid="ImportWallet__method-step">
 			<Header
 				title={t("WALLETS.PAGE_IMPORT_WALLET.METHOD_STEP.TITLE")}
+				titleIcon={
+					<ThemeIcon dimensions={[24, 24]} lightIcon="ImportWalletLight" darkIcon="ImportWalletDark" />
+				}
 				subtitle={t("WALLETS.PAGE_IMPORT_WALLET.METHOD_STEP.SUBTITLE")}
 				className="hidden sm:block"
 			/>
 
-			<div className="mt-8 space-y-6">
+			<div className="mt-4 space-y-4">
 				<FormField name="">
 					<FormLabel>{t("WALLETS.PAGE_IMPORT_WALLET.METHOD_STEP.TYPE")}</FormLabel>
 					<Select

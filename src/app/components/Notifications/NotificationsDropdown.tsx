@@ -8,7 +8,6 @@ import { Icon } from "@/app/components/Icon";
 import { NavigationButtonWrapper } from "@/app/components/NavigationBar/NavigationBar.blocks";
 import { Notifications, useNotifications } from "@/app/components/Notifications";
 import { TransactionDetailModal } from "@/domains/transaction/components/TransactionDetailModal";
-import { useBreakpoint } from "@/app/hooks";
 
 export const NotificationsDropdown = ({ profile }: { profile: Contracts.IProfile }) => {
 	const [transactionModalItem, setTransactionModalItem] = useState<DTO.ExtendedConfirmedTransactionData | undefined>(
@@ -16,13 +15,10 @@ export const NotificationsDropdown = ({ profile }: { profile: Contracts.IProfile
 	);
 
 	const { hasUnread } = useNotifications({ profile });
-	const { isSm, isMd } = useBreakpoint();
 
 	return (
 		<div>
 			<Dropdown
-				position={isSm || isMd ? "top-center" : "right"}
-				dropdownClass="mt-8 mx-4 sm:mx-0 border-none"
 				toggleContent={
 					<NavigationButtonWrapper className="group">
 						<Button variant="transparent" size="icon" data-testid="NavigationBar__buttons--notifications">
@@ -32,9 +28,7 @@ export const NotificationsDropdown = ({ profile }: { profile: Contracts.IProfile
 					</NavigationButtonWrapper>
 				}
 			>
-				<div className="mt-2">
-					<Notifications profile={profile} onTransactionClick={setTransactionModalItem} />
-				</div>
+				<Notifications profile={profile} onTransactionClick={setTransactionModalItem} />
 			</Dropdown>
 
 			{transactionModalItem && (

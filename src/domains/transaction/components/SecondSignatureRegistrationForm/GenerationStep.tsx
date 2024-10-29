@@ -8,9 +8,10 @@ import { Alert } from "@/app/components/Alert";
 import { FormField, FormLabel } from "@/app/components/Form";
 import { useValidation } from "@/app/hooks";
 import { FeeField } from "@/domains/transaction/components/FeeField";
-import { TransactionSender } from "@/domains/transaction/components/TransactionDetail";
+import { TransactionAddresses } from "@/domains/transaction/components/TransactionDetail";
 import { FormStepProperties } from "@/domains/transaction/pages/SendRegistration/SendRegistration.contracts";
 import { StepHeader } from "@/app/components/StepHeader";
+import { ThemeIcon } from "@/app/components/Icon";
 
 export const GenerationStep = ({ wallet, profile }: FormStepProperties) => {
 	const { t } = useTranslation();
@@ -43,18 +44,31 @@ export const GenerationStep = ({ wallet, profile }: FormStepProperties) => {
 	}, [profile, setValue, wallet, secondMnemonic]);
 
 	return (
-		<section data-testid="SecondSignatureRegistrationForm__generation-step">
+		<section
+			data-testid="SecondSignatureRegistrationForm__generation-step"
+			className="space-y-6 pt-6 sm:space-y-4 sm:pt-4"
+		>
 			<StepHeader
 				title={t("TRANSACTION.PAGE_SECOND_SIGNATURE.GENERATION_STEP.TITLE")}
 				subtitle={t("TRANSACTION.PAGE_SECOND_SIGNATURE.GENERATION_STEP.DESCRIPTION")}
+				titleIcon={
+					<ThemeIcon dimensions={[24, 24]} lightIcon="SendTransactionLight" darkIcon="SendTransactionDark" />
+				}
 			/>
 
-			<Alert className="mt-6">{t("TRANSACTION.PAGE_SECOND_SIGNATURE.GENERATION_STEP.WARNING")}</Alert>
+			<Alert>{t("TRANSACTION.PAGE_SECOND_SIGNATURE.GENERATION_STEP.WARNING")}</Alert>
 
-			<TransactionSender address={wallet.address()} network={wallet.network()} borderPosition="bottom" />
+			<FormField name="senderAddress">
+				<TransactionAddresses
+					senderAddress={wallet.address()}
+					network={wallet.network()}
+					recipients={[]}
+					profile={profile}
+				/>
+			</FormField>
 
-			<div className="pt-6">
-				<FormField name="fee">
+			<div>
+				<FormField name="fee" className="-mt-3 sm:mt-0">
 					<FormLabel label={t("TRANSACTION.TRANSACTION_FEE")} />
 					<FeeField type="secondSignature" data={feeTransactionData} network={network} profile={profile} />
 				</FormField>

@@ -8,6 +8,7 @@ import { Spinner } from "@/app/components/Spinner";
 import { QRFileUpload } from "@/app/components/QRFileUpload";
 import { FormButtons } from "@/app/components/Form";
 import { toasts } from "@/app/services";
+import { useBreakpoint } from "@/app/hooks";
 
 interface QRError {
 	title?: string;
@@ -49,10 +50,6 @@ const ViewFinder = ({ error, isLoading }: { error?: QRError; isLoading: boolean 
 				{error && (
 					<>
 						<Image className="w-22" name="ErrorSmall" useAccentColor={false} />
-
-						<Alert title={error.title} variant="danger" className="mx-5 mt-8">
-							{error.message}
-						</Alert>
 					</>
 				)}
 
@@ -63,6 +60,7 @@ const ViewFinder = ({ error, isLoading }: { error?: QRError; isLoading: boolean 
 );
 
 export const QRModal = ({ isOpen, onCancel, onRead }: QRModalProperties) => {
+	const { isSmAndAbove } = useBreakpoint();
 	const [error, setError] = useState<QRError | undefined>(undefined);
 	const [ready, setReady] = useState(false);
 
@@ -131,15 +129,26 @@ export const QRModal = ({ isOpen, onCancel, onRead }: QRModalProperties) => {
 			description={t("TRANSACTION.MODAL_QR_CODE.DESCRIPTION")}
 			size="4xl"
 			noButtons
+			contentClassName="px-4 pt-4 md:pt-8 md:px-8"
 			onClose={() => onCancel()}
 		>
-			<div className="relative -mx-10 -mb-10 mt-8 flex min-h-full flex-1 items-center justify-center overflow-hidden bg-black">
+			<div className="relative -mx-10 -mb-10 mt-4 flex min-h-full flex-1 items-center justify-center overflow-hidden bg-black">
 				<div className="absolute inset-0 z-10">
 					<QRCameraReader onError={handleError} onRead={handleRead} onReady={handleReady} />
 				</div>
 
-				<div className="flex h-full flex-col items-center justify-center space-y-8 py-8">
+				<div className="flex h-full flex-col items-center justify-center py-8">
 					<ViewFinder error={error} isLoading={!ready} />
+					{error && (
+						<Alert
+							title={error.title}
+							variant="danger-dark"
+							className="z-10 mt-6 w-full max-w-[300px] sm:max-w-[531px]"
+							collapsible={!isSmAndAbove}
+						>
+							{error.message}
+						</Alert>
+					)}
 
 					<div className="z-10">
 						<FormButtons>

@@ -594,7 +594,7 @@ exports[`PortfolioBreakdown > should render loading when syncing exchange rates 
 exports[`PortfolioBreakdown > should render when some wallets are cold 1`] = `
 <DocumentFragment>
   <div
-    class="-mx-8 flex flex-col bg-theme-secondary-100 px-8 py-4 dark:bg-black sm:mx-0 sm:rounded-xl sm:px-4 lg:flex-row"
+    class="-mx-6 flex flex-col bg-theme-secondary-100 px-6 py-4 dark:bg-black sm:mx-0 sm:rounded-xl lg:flex-row"
     data-testid="PortfolioBreakdown"
   >
     <div
@@ -875,7 +875,7 @@ exports[`PortfolioBreakdown > should render when some wallets are cold 1`] = `
 exports[`PortfolioBreakdown > should render with dark mode = false 1`] = `
 <DocumentFragment>
   <div
-    class="-mx-8 flex flex-col bg-theme-secondary-100 px-8 py-4 dark:bg-black sm:mx-0 sm:rounded-xl sm:px-4 lg:flex-row"
+    class="-mx-6 flex flex-col bg-theme-secondary-100 px-6 py-4 dark:bg-black sm:mx-0 sm:rounded-xl lg:flex-row"
     data-testid="PortfolioBreakdown"
   >
     <div
@@ -1156,7 +1156,7 @@ exports[`PortfolioBreakdown > should render with dark mode = false 1`] = `
 exports[`PortfolioBreakdown > should render with dark mode = true 1`] = `
 <DocumentFragment>
   <div
-    class="-mx-8 flex flex-col bg-theme-secondary-100 px-8 py-4 dark:bg-black sm:mx-0 sm:rounded-xl sm:px-4 lg:flex-row"
+    class="-mx-6 flex flex-col bg-theme-secondary-100 px-6 py-4 dark:bg-black sm:mx-0 sm:rounded-xl lg:flex-row"
     data-testid="PortfolioBreakdown"
   >
     <div
@@ -1437,7 +1437,7 @@ exports[`PortfolioBreakdown > should render with dark mode = true 1`] = `
 exports[`PortfolioBreakdown > should render zero balance state with dark mode = false 1`] = `
 <DocumentFragment>
   <div
-    class="-mx-8 flex flex-col bg-theme-secondary-100 px-8 py-4 dark:bg-black sm:mx-0 sm:rounded-xl sm:px-4 lg:flex-row"
+    class="-mx-6 flex flex-col bg-theme-secondary-100 px-6 py-4 dark:bg-black sm:mx-0 sm:rounded-xl lg:flex-row"
     data-testid="PortfolioBreakdown"
   >
     <div
@@ -1542,7 +1542,7 @@ exports[`PortfolioBreakdown > should render zero balance state with dark mode = 
 exports[`PortfolioBreakdown > should render zero balance state with dark mode = true 1`] = `
 <DocumentFragment>
   <div
-    class="-mx-8 flex flex-col bg-theme-secondary-100 px-8 py-4 dark:bg-black sm:mx-0 sm:rounded-xl sm:px-4 lg:flex-row"
+    class="-mx-6 flex flex-col bg-theme-secondary-100 px-6 py-4 dark:bg-black sm:mx-0 sm:rounded-xl lg:flex-row"
     data-testid="PortfolioBreakdown"
   >
     <div

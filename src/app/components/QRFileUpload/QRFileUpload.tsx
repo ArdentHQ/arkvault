@@ -38,8 +38,7 @@ export const QRFileUpload = ({ onError, onRead }: QRFileUploadProperties) => {
 	return (
 		<Button
 			variant="secondary"
-			theme="dark"
-			className="z-20 space-x-2"
+			className="z-20 space-x-2 sm:bg-theme-secondary-800 sm:text-theme-secondary-200"
 			onClick={handeQRFileScan}
 			data-testid="QRFileUpload__upload"
 		>

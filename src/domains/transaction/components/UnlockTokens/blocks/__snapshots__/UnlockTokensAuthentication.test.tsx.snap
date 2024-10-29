@@ -3,23 +3,27 @@
 exports[`UnlockTokensAuthentication > should render 1`] = `
 <DocumentFragment>
   <div
-    class="space-y-6"
+    class="space-y-4"
     data-testid="AuthenticationStep"
   >
     <div
       class="flex items-end justify-between bg-theme-background"
     >
       <div
-        class="space-y-4"
+        class="space-y-2"
       >
-        <h1
-          class="mb-0 text-2xl"
-          data-testid="header__title"
-        >
-          Authenticate
-        </h1>
         <div
-          class="flex items-center text-theme-secondary-text"
+          class="flex items-center gap-3"
+        >
+          <h1
+            class="mb-0 text-2xl leading-[29px]"
+            data-testid="header__title"
+          >
+            Authenticate
+          </h1>
+        </div>
+        <div
+          class="flex items-center leading-5 text-theme-secondary-text"
           data-testid="header__subtitle"
         >
           Enter your mnemonic passphrase to authenticate the transaction.
@@ -30,21 +34,21 @@ exports[`UnlockTokensAuthentication > should render 1`] = `
       class="flex min-w-0 flex-col css-1bcidjh"
     >
       <label
-        class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+        class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
         data-testid="FormLabel"
         for="mnemonic"
       >
         Mnemonic
       </label>
       <div
-        class="css-n1b0kl"
+        class="css-14zfvme"
       >
         <div
           class="relative flex h-full flex-1"
         >
           <input
             autocomplete="off"
-            class="no-ligatures w-full border-none css-1vs1awz"
+            class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
             data-testid="AuthenticationStep__mnemonic"
             name="mnemonic"
             type="password"
@@ -103,7 +107,7 @@ exports[`UnlockTokensAuthentication > should render 1`] = `
     class="flex justify-end space-x-3 pt-3"
   >
     <button
-      class="css-6419sw"
+      class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-700"
       type="button"
     >
       <div
@@ -113,8 +117,9 @@ exports[`UnlockTokensAuthentication > should render 1`] = `
       </div>
     </button>
     <button
-      class="css-fl4fi0"
+      class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700"
       data-testid="UnlockTokensAuthentication__send"
+      disabled=""
       type="submit"
     >
       <div

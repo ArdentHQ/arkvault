@@ -1,6 +1,5 @@
-/* eslint-disable @typescript-eslint/require-await */
 import { Contracts } from "@ardenthq/sdk-profiles";
-import { renderHook } from "@testing-library/react-hooks";
+import { renderHook } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import React from "react";
 import { FormProvider, useForm } from "react-hook-form";
@@ -40,10 +39,9 @@ describe("SuccessStep", () => {
 		expect(screen.getByTestId("CreateWallet__SuccessStep")).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
 
-		expect(screen.getAllByText("ARK Devnet")[0]).toBeInTheDocument();
 		expect(screen.getAllByText(wallet.address())[0]).toBeInTheDocument();
 
-		userEvent.click(screen.getByTestId("CreateWallet__edit-alias"));
+		await userEvent.click(screen.getByTestId("CreateWallet__edit-alias"));
 
 		expect(onClickEditAlias).toHaveBeenCalledTimes(1);
 	});

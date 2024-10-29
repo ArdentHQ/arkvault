@@ -22,7 +22,7 @@ describe("useAutoSignOut", () => {
 
 	it("should redirect to home when idle", async () => {
 		process.env.IDLE_TIME_THRESHOLD = "0";
-		vi.useFakeTimers();
+		vi.useFakeTimers({ shouldAdvanceTime: true });
 
 		const dashboardURL = `/profiles/${getDefaultProfileId()}/dashboard`;
 		history.push(dashboardURL);
@@ -47,7 +47,7 @@ describe("useAutoSignOut", () => {
 
 		expect(history.location.pathname).toBe(`/profiles/${profile.id()}/dashboard`);
 
-		userEvent.click(screen.getByTestId("StartIdleTimer"));
+		await userEvent.click(screen.getByTestId("StartIdleTimer"));
 
 		act(() => {
 			vi.advanceTimersByTime(1000);
@@ -60,9 +60,9 @@ describe("useAutoSignOut", () => {
 		vi.useRealTimers();
 	});
 
-	it("should not redirect if already in home", () => {
+	it("should not redirect if already in home", async () => {
 		process.env.IDLE_TIME_THRESHOLD = "0";
-		vi.useFakeTimers();
+		vi.useFakeTimers({ shouldAdvanceTime: true });
 
 		const profile = env.profiles().findById(getDefaultProfileId());
 
@@ -83,7 +83,7 @@ describe("useAutoSignOut", () => {
 
 		expect(history.location.pathname).toBe("/");
 
-		userEvent.click(screen.getByTestId("StartIdleTimer"));
+		await userEvent.click(screen.getByTestId("StartIdleTimer"));
 
 		act(() => {
 			vi.advanceTimersByTime(1000);

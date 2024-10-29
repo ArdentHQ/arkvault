@@ -129,7 +129,9 @@ describe("WalletDetails", () => {
 
 		await expect(screen.findByTestId("PendingTransactions")).resolves.toBeVisible();
 
-		userEvent.click(within(screen.getByTestId("PendingTransactions")).getAllByTestId("TableRow")[0]);
+		await userEvent.click(
+			within(screen.getByTestId("PendingTransactions")).getAllByTestId("TransactionRow__transaction-id")[0],
+		);
 
 		await expect(screen.findByTestId("Modal__inner")).resolves.toBeVisible();
 
@@ -187,7 +189,8 @@ describe("WalletDetails", () => {
 
 		expect(screen.getByTestId("DeleteResource__submit-button")).toBeDisabled();
 
-		userEvent.paste(screen.getByTestId("AuthenticationStep__mnemonic"), getDefaultWalletMnemonic());
+		await userEvent.clear(screen.getByTestId("AuthenticationStep__mnemonic"));
+		await userEvent.type(screen.getByTestId("AuthenticationStep__mnemonic"), getDefaultWalletMnemonic());
 
 		await waitFor(() => {
 			expect(screen.getByTestId("DeleteResource__submit-button")).toBeEnabled();

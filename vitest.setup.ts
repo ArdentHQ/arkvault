@@ -5,6 +5,7 @@ import { env } from "@/utils/testing-library";
 import "cross-fetch/polyfill";
 import Tippy from "@tippyjs/react";
 import crypto from "crypto";
+import "jest-styled-components";
 
 import { server } from "./src/tests/mocks/server";
 
@@ -14,6 +15,15 @@ expect.extend(matchers);
 vi.mock("@/utils/debounce", () => ({
 	debounceAsync: (promise) => promise,
 }));
+
+// Mocking @konforti/react-truncate to return a fixed truncated value.
+// Umocked, it errors with: "ReferenceError: regeneratorRuntime is not defined" in tests only.
+vi.mock("@konforti/react-truncate", () => {
+	const truncateMiddle = (str) => (str.length > 10 ? str.slice(0, 5) + "..." + str.slice(-5) : str);
+	return {
+		default: ({ children }) => truncateMiddle(children),
+	};
+});
 
 vi.mock(
 	"virtual:pwa-register/react",

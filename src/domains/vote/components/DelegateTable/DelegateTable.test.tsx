@@ -7,7 +7,7 @@ import { VoteDelegateProperties } from "./DelegateTable.contracts";
 import * as useRandomNumberHook from "@/app/hooks/use-random-number";
 import { translations } from "@/app/i18n/common/i18n";
 import { data } from "@/tests/fixtures/coins/ark/devnet/delegates.json";
-import { env, getDefaultProfileId, render, screen, waitFor } from "@/utils/testing-library";
+import { env, getDefaultProfileId, render, renderResponsive, screen, waitFor } from "@/utils/testing-library";
 
 let useRandomNumberSpy: vi.SpyInstance;
 
@@ -15,10 +15,10 @@ let wallet: Contracts.IReadWriteWallet;
 let delegates: Contracts.IReadOnlyWallet[];
 let votes: Contracts.VoteRegistryItem[];
 
-const pressingContinueButton = () => userEvent.click(screen.getByTestId("DelegateTable__continue-button"));
+const pressingContinueButton = async () => await userEvent.click(screen.getByTestId("DelegateTable__continue-button"));
 const firstDelegateVoteButton = () => screen.getByTestId("DelegateRow__toggle-0");
-const footerUnvotes = () => screen.getByTestId("DelegateTable__footer--unvote");
-const footerVotes = () => screen.getByTestId("DelegateTable__footer--vote");
+const footerUnvotes = () => screen.getByTestId("DelegateTable__footer--unvotes");
+const footerVotes = () => screen.getByTestId("DelegateTable__footer--votes");
 
 describe("DelegateTable", () => {
 	beforeAll(() => {
@@ -66,6 +66,22 @@ describe("DelegateTable", () => {
 
 		expect(container).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
+	});
+
+	it("should render mobile view in XS screen", () => {
+		renderResponsive(
+			<DelegateTable
+				delegates={delegates}
+				votes={[]}
+				voteDelegates={[]}
+				unvoteDelegates={[]}
+				selectedWallet={wallet}
+				maxVotes={wallet.network().maximumVotesPerTransaction()}
+			/>,
+			"xs",
+		);
+
+		expect(screen.getAllByTestId("DelegateRowMobile")[0]).toBeInTheDocument();
 	});
 
 	it("should render vote amount column", () => {
@@ -148,7 +164,7 @@ describe("DelegateTable", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it("should select a delegate to vote", () => {
+	it("should select a delegate to vote", async () => {
 		const { asFragment } = render(
 			<DelegateTable
 				delegates={delegates}
@@ -160,18 +176,18 @@ describe("DelegateTable", () => {
 			/>,
 		);
 
-		userEvent.click(firstDelegateVoteButton());
+		await userEvent.click(firstDelegateVoteButton());
 
 		expect(screen.getByTestId("DelegateTable__footer")).toBeInTheDocument();
 		expect(footerVotes()).toHaveTextContent("1");
 
-		userEvent.click(firstDelegateVoteButton());
+		await userEvent.click(firstDelegateVoteButton());
 
 		expect(firstDelegateVoteButton()).toHaveTextContent(translations.SELECT);
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it("should unselect a delegate to vote", () => {
+	it("should unselect a delegate to vote", async () => {
 		const { asFragment } = render(
 			<DelegateTable
 				delegates={delegates}
@@ -184,18 +200,18 @@ describe("DelegateTable", () => {
 		);
 		const selectButton = screen.getByTestId("DelegateRow__toggle-1");
 
-		userEvent.click(selectButton);
+		await userEvent.click(selectButton);
 
 		expect(screen.getByTestId("DelegateTable__footer")).toBeInTheDocument();
 		expect(footerVotes()).toHaveTextContent("1");
 
-		userEvent.click(selectButton);
+		await userEvent.click(selectButton);
 
 		expect(selectButton).toHaveTextContent(translations.SELECTED);
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it("should select a delegate to unvote", () => {
+	it("should select a delegate to unvote", async () => {
 		const { asFragment } = render(
 			<DelegateTable
 				delegates={delegates}
@@ -207,18 +223,18 @@ describe("DelegateTable", () => {
 			/>,
 		);
 
-		userEvent.click(firstDelegateVoteButton());
+		await userEvent.click(firstDelegateVoteButton());
 
 		expect(screen.getByTestId("DelegateTable__footer")).toBeInTheDocument();
 		expect(footerUnvotes()).toHaveTextContent("1");
 
-		userEvent.click(firstDelegateVoteButton());
+		await userEvent.click(firstDelegateVoteButton());
 
 		expect(firstDelegateVoteButton()).toHaveTextContent(translations.CURRENT);
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it("should select a delegate with vote amount and make it unvote", () => {
+	it("should select a delegate with vote amount and make it unvote", async () => {
 		const votesAmountMinimumMock = vi.spyOn(wallet.network(), "votesAmountMinimum").mockReturnValue(10);
 
 		const votes: Contracts.VoteRegistryItem[] = [
@@ -239,12 +255,12 @@ describe("DelegateTable", () => {
 			/>,
 		);
 
-		userEvent.click(firstDelegateVoteButton());
+		await userEvent.click(firstDelegateVoteButton());
 
 		expect(screen.getByTestId("DelegateTable__footer")).toBeInTheDocument();
 		expect(footerUnvotes()).toHaveTextContent("1");
 
-		userEvent.click(firstDelegateVoteButton());
+		await userEvent.click(firstDelegateVoteButton());
 
 		expect(firstDelegateVoteButton()).toHaveTextContent(translations.CURRENT);
 		expect(asFragment()).toMatchSnapshot();
@@ -277,8 +293,8 @@ describe("DelegateTable", () => {
 		const { asFragment, rerender } = render(<Table />);
 		const amountField = screen.getAllByTestId("InputCurrency")[0];
 
-		userEvent.clear(amountField);
-		userEvent.paste(amountField, "30");
+		await userEvent.clear(amountField);
+		await userEvent.type(amountField, "30");
 
 		expect(screen.getByTestId("DelegateTable__footer")).toBeInTheDocument();
 
@@ -288,20 +304,20 @@ describe("DelegateTable", () => {
 
 		expect(firstDelegateVoteButton()).toHaveTextContent(translations.CHANGED);
 
-		userEvent.click(firstDelegateVoteButton());
+		await userEvent.click(firstDelegateVoteButton());
 
 		expect(screen.getByTestId("DelegateTable__footer")).toBeInTheDocument();
 		expect(footerUnvotes()).toHaveTextContent("1");
 
-		userEvent.click(firstDelegateVoteButton());
+		await userEvent.click(firstDelegateVoteButton());
 
 		expect(firstDelegateVoteButton()).toHaveTextContent(translations.CURRENT);
 		expect(amountField).toHaveValue("20");
 
 		rerender(<Table />);
 
-		userEvent.clear(amountField);
-		userEvent.paste(amountField, "10");
+		await userEvent.clear(amountField);
+		await userEvent.type(amountField, "10");
 
 		await waitFor(() => {
 			expect(footerUnvotes()).toHaveTextContent("1");
@@ -309,12 +325,12 @@ describe("DelegateTable", () => {
 
 		expect(firstDelegateVoteButton()).toHaveTextContent(translations.CHANGED);
 
-		userEvent.click(firstDelegateVoteButton());
+		await userEvent.click(firstDelegateVoteButton());
 
 		expect(screen.getByTestId("DelegateTable__footer")).toBeInTheDocument();
 		expect(footerUnvotes()).toHaveTextContent("1");
 
-		userEvent.click(firstDelegateVoteButton());
+		await userEvent.click(firstDelegateVoteButton());
 
 		expect(firstDelegateVoteButton()).toHaveTextContent(translations.CURRENT);
 		expect(amountField).toHaveValue("20");
@@ -324,7 +340,7 @@ describe("DelegateTable", () => {
 		votesAmountStepMock.mockRestore();
 	});
 
-	it("should unselect a delegate to unvote", () => {
+	it("should unselect a delegate to unvote", async () => {
 		const { asFragment } = render(
 			<DelegateTable
 				delegates={delegates}
@@ -337,22 +353,22 @@ describe("DelegateTable", () => {
 		);
 		const selectVoteButton = screen.getByTestId("DelegateRow__toggle-1");
 
-		userEvent.click(firstDelegateVoteButton());
+		await userEvent.click(firstDelegateVoteButton());
 
-		userEvent.click(selectVoteButton);
+		await userEvent.click(selectVoteButton);
 
 		expect(screen.getByTestId("DelegateTable__footer")).toBeInTheDocument();
 		expect(footerUnvotes()).toHaveTextContent("1");
 		expect(footerVotes()).toHaveTextContent("1");
 
-		userEvent.click(firstDelegateVoteButton());
+		await userEvent.click(firstDelegateVoteButton());
 
 		expect(firstDelegateVoteButton()).toHaveTextContent(translations.CURRENT);
 		expect(selectVoteButton).toHaveTextContent(translations.SELECTED);
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it("should select a delegate to unvote/vote", () => {
+	it("should select a delegate to unvote/vote", async () => {
 		const { asFragment } = render(
 			<DelegateTable
 				delegates={delegates}
@@ -365,8 +381,8 @@ describe("DelegateTable", () => {
 		);
 		const selectVoteButton = screen.getByTestId("DelegateRow__toggle-1");
 
-		userEvent.click(firstDelegateVoteButton());
-		userEvent.click(selectVoteButton);
+		await userEvent.click(firstDelegateVoteButton());
+		await userEvent.click(selectVoteButton);
 
 		expect(screen.getByTestId("DelegateTable__footer")).toBeInTheDocument();
 		expect(footerUnvotes()).toHaveTextContent("1");
@@ -377,7 +393,7 @@ describe("DelegateTable", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it("should select multiple delegates to unvote/vote", () => {
+	it("should select multiple delegates to unvote/vote", async () => {
 		const { asFragment } = render(
 			<DelegateTable
 				delegates={delegates}
@@ -390,9 +406,9 @@ describe("DelegateTable", () => {
 		);
 		const selectButtons = [0, 1, 2].map((index) => screen.getByTestId(`DelegateRow__toggle-${index}`));
 
-		userEvent.click(selectButtons[0]);
-		userEvent.click(selectButtons[1]);
-		userEvent.click(selectButtons[2]);
+		await userEvent.click(selectButtons[0]);
+		await userEvent.click(selectButtons[1]);
+		await userEvent.click(selectButtons[2]);
 
 		expect(screen.getByTestId("DelegateTable__footer")).toBeInTheDocument();
 		expect(footerVotes()).toHaveTextContent("2");
@@ -400,7 +416,7 @@ describe("DelegateTable", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it("should emit action on continue button to vote", () => {
+	it("should emit action on continue button to vote", async () => {
 		const voteDelegates: VoteDelegateProperties[] = [
 			{
 				amount: 0,
@@ -421,11 +437,11 @@ describe("DelegateTable", () => {
 			/>,
 		);
 
-		userEvent.click(firstDelegateVoteButton());
+		await userEvent.click(firstDelegateVoteButton());
 
 		expect(screen.getByTestId("DelegateTable__footer")).toBeInTheDocument();
 
-		pressingContinueButton();
+		await pressingContinueButton();
 
 		expect(container).toBeInTheDocument();
 		expect(onContinue).toHaveBeenCalledWith([], voteDelegates);
@@ -480,7 +496,7 @@ describe("DelegateTable", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it("should render with a delegate to vote", () => {
+	it("should render with a delegate to vote", async () => {
 		const voteDelegates: VoteDelegateProperties[] = [
 			{
 				amount: 0,
@@ -503,14 +519,14 @@ describe("DelegateTable", () => {
 
 		expect(screen.getByTestId("DelegateTable__footer")).toBeInTheDocument();
 
-		pressingContinueButton();
+		await pressingContinueButton();
 
 		expect(container).toBeInTheDocument();
 		expect(onContinue).toHaveBeenCalledWith([], voteDelegates);
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it("should render with a delegate to unvote", () => {
+	it("should render with a delegate to unvote", async () => {
 		const unvoteDelegates: VoteDelegateProperties[] = [
 			{
 				amount: 0,
@@ -533,14 +549,14 @@ describe("DelegateTable", () => {
 
 		expect(screen.getByTestId("DelegateTable__footer")).toBeInTheDocument();
 
-		pressingContinueButton();
+		await pressingContinueButton();
 
 		expect(container).toBeInTheDocument();
 		expect(onContinue).toHaveBeenCalledWith(unvoteDelegates, []);
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it("should render with a delegate to unvote/vote", () => {
+	it("should render with a delegate to unvote/vote", async () => {
 		const unvoteDelegates: VoteDelegateProperties[] = [
 			{
 				amount: 0,
@@ -571,14 +587,14 @@ describe("DelegateTable", () => {
 		expect(footerUnvotes()).toHaveTextContent("1");
 		expect(footerVotes()).toHaveTextContent("1");
 
-		pressingContinueButton();
+		await pressingContinueButton();
 
 		expect(container).toBeInTheDocument();
 		expect(onContinue).toHaveBeenCalledWith(unvoteDelegates, voteDelegates);
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it("should emit action on continue button to unvote", () => {
+	it("should emit action on continue button to unvote", async () => {
 		const voteDelegates: VoteDelegateProperties[] = [
 			{
 				amount: 0,
@@ -599,18 +615,18 @@ describe("DelegateTable", () => {
 			/>,
 		);
 
-		userEvent.click(firstDelegateVoteButton());
+		await userEvent.click(firstDelegateVoteButton());
 
 		expect(screen.getByTestId("DelegateTable__footer")).toBeInTheDocument();
 
-		pressingContinueButton();
+		await pressingContinueButton();
 
 		expect(container).toBeInTheDocument();
 		expect(onContinue).toHaveBeenCalledWith(voteDelegates, []);
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it("should navigate to the next and previous pages according", () => {
+	it("should navigate to the next and previous pages according", async () => {
 		const delegatesList = Array.from({ length: 52 }).fill(delegates[0]) as Contracts.IReadOnlyWallet[];
 
 		render(
@@ -628,16 +644,16 @@ describe("DelegateTable", () => {
 
 		expect(screen.queryByTestId("DelegateRow__toggle-51")).not.toBeInTheDocument();
 
-		userEvent.click(screen.getByTestId("Pagination__next"));
+		await userEvent.click(screen.getByTestId("Pagination__next"));
 
 		expect(screen.getByTestId("DelegateRow__toggle-51")).toBeInTheDocument();
 
-		userEvent.click(screen.getByTestId("Pagination__previous"));
+		await userEvent.click(screen.getByTestId("Pagination__previous"));
 
 		expect(firstDelegateVoteButton()).toBeInTheDocument();
 	});
 
-	it("should change pagination size from network delegate count", () => {
+	it("should change pagination size from network delegate count", async () => {
 		const delegateCountSpy = vi.spyOn(wallet.network(), "delegateCount").mockReturnValue(10);
 
 		const delegatesList = Array.from({ length: 12 }).fill(delegates[0]) as Contracts.IReadOnlyWallet[];
@@ -657,11 +673,11 @@ describe("DelegateTable", () => {
 
 		expect(screen.queryByTestId("DelegateRow__toggle-11")).not.toBeInTheDocument();
 
-		userEvent.click(screen.getByTestId("Pagination__next"));
+		await userEvent.click(screen.getByTestId("Pagination__next"));
 
 		expect(screen.getByTestId("DelegateRow__toggle-11")).toBeInTheDocument();
 
-		userEvent.click(screen.getByTestId("Pagination__previous"));
+		await userEvent.click(screen.getByTestId("Pagination__previous"));
 
 		expect(firstDelegateVoteButton()).toBeInTheDocument();
 

@@ -6,11 +6,12 @@ exports[`Notifications > should render in xs 1`] = `
     <tbody>
       <div>
         <tr
-          class="group css-155s9if"
+          class="group css-1d424e8"
           data-testid="TableRow"
         >
           <td
-            class="flex-col space-y-4 py-4"
+            class="flex-col space-y-4 px-6 py-4"
+            data-testid="NotificationTransactionItemMobile"
           >
             <div
               class="flex items-center justify-between space-x-4"
@@ -18,38 +19,31 @@ exports[`Notifications > should render in xs 1`] = `
               <div
                 class="text-md group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
               >
-                Sender
+                Address
               </div>
               <div
-                class="flex w-full items-center space-x-0 text-right"
+                class="w-2/3"
               >
                 <div
-                  class="w-0 flex-1 pr-2"
+                  class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                 >
-                  <div
-                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
+                  <span
+                    class="font-semibold text-base text-theme-text"
+                    data-testid="Address__alias"
                   >
                     <span
-                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-                      data-testid="Address__address"
+                      class="no-ligatures css-9nx3be"
+                      data-testid="TruncateEnd"
                     >
-                      DK1f5frUPTNqhFxoyDUHwN7VC2B4Uzhpmy
+                      ARK Wallet 1
                     </span>
-                  </div>
-                </div>
-                <div
-                  class="shrink-0 css-1i0wxh3"
-                  data-testid="Avatar"
-                >
-                  <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                  </span>
+                  <span
+                    class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                    data-testid="Address__address"
                   >
-                    <img
-                      alt="DK1f5frUPTNqhFxoyDUHwN7VC2B4Uzhpmy"
-                      src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(255, 193, 7)" width="100" height="100"/><circle r="40" cx="40" cy="60" fill="rgb(205, 220, 57)"/><circle r="45" cx="70" cy="50" fill="rgb(33, 150, 243)"/><circle r="35" cx="0" cy="40" fill="rgb(156, 39, 176)"/></svg>"
-                      title="DK1f5frUPTNqhFxoyDUHwN7VC2B4Uzhpmy"
-                    />
-                  </div>
+                    DK1f5frUPTNqhFxoyDUHwN7VC2B4Uzhpmy
+                  </span>
                 </div>
               </div>
             </div>
@@ -62,14 +56,15 @@ exports[`Notifications > should render in xs 1`] = `
                 Amount
               </div>
               <div
-                class="css-1v19423"
-                color="success"
+                class="flex h-full items-center justify-center rounded px-1.5 css-1jspzfx"
+                color="success-bg"
+                data-testid="AmountLabel__wrapper"
               >
                 <div
-                  class="flex space-x-1 items-stretch"
+                  class="flex h-full items-center space-x-1"
                 >
                   <span
-                    class="whitespace-nowrap"
+                    class="whitespace-nowrap text-sm"
                     data-testid="Amount"
                   >
                     + 20 DARK
@@ -91,11 +86,12 @@ exports[`Notifications > should render in xs 2`] = `
     <tbody>
       <div>
         <tr
-          class="group css-155s9if"
+          class="group css-1d424e8"
           data-testid="TableRow"
         >
           <td
-            class="flex-col space-y-4 py-4"
+            class="flex-col space-y-4 px-6 py-4"
+            data-testid="NotificationTransactionItemMobile"
           >
             <div
               class="flex items-center justify-between space-x-4"
@@ -103,38 +99,31 @@ exports[`Notifications > should render in xs 2`] = `
               <div
                 class="text-md group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
               >
-                Sender
+                Address
               </div>
               <div
-                class="flex w-full items-center space-x-0 text-right"
+                class="w-2/3"
               >
                 <div
-                  class="w-0 flex-1 pr-2"
+                  class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                 >
-                  <div
-                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
+                  <span
+                    class="font-semibold text-base text-theme-text"
+                    data-testid="Address__alias"
                   >
                     <span
-                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-                      data-testid="Address__address"
+                      class="no-ligatures css-9nx3be"
+                      data-testid="TruncateEnd"
                     >
-                      DK1f5frUPTNqhFxoyDUHwN7VC2B4Uzhpmy
+                      ARK Wallet 1
                     </span>
-                  </div>
-                </div>
-                <div
-                  class="shrink-0 css-1i0wxh3"
-                  data-testid="Avatar"
-                >
-                  <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                  </span>
+                  <span
+                    class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                    data-testid="Address__address"
                   >
-                    <img
-                      alt="DK1f5frUPTNqhFxoyDUHwN7VC2B4Uzhpmy"
-                      src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(255, 193, 7)" width="100" height="100"/><circle r="40" cx="40" cy="60" fill="rgb(205, 220, 57)"/><circle r="45" cx="70" cy="50" fill="rgb(33, 150, 243)"/><circle r="35" cx="0" cy="40" fill="rgb(156, 39, 176)"/></svg>"
-                      title="DK1f5frUPTNqhFxoyDUHwN7VC2B4Uzhpmy"
-                    />
-                  </div>
+                    DK1f5frUPTNqhFxoyDUHwN7VC2B4Uzhpmy
+                  </span>
                 </div>
               </div>
             </div>
@@ -147,14 +136,15 @@ exports[`Notifications > should render in xs 2`] = `
                 Amount
               </div>
               <div
-                class="css-1v19423"
-                color="success"
+                class="flex h-full items-center justify-center rounded px-1.5 css-1jspzfx"
+                color="success-bg"
+                data-testid="AmountLabel__wrapper"
               >
                 <div
-                  class="flex space-x-1 items-stretch"
+                  class="flex h-full items-center space-x-1"
                 >
                   <span
-                    class="whitespace-nowrap"
+                    class="whitespace-nowrap text-sm"
                     data-testid="Amount"
                   >
                     + 20 DARK
@@ -176,64 +166,25 @@ exports[`Notifications > should render in xs 3`] = `
     <tbody>
       <div>
         <tr
-          class="group css-155s9if"
+          class="group relative css-1d424e8"
           data-testid="TableRow"
         >
           <td
-            class="w-3/5"
+            class="w-2/5"
           >
             <div
-              class="flex space-x-3 css-bgc8eo"
+              class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 rounded-l pl-8 static"
             >
               <div
-                class="flex items-center -space-x-1"
-                data-testid="TransactionRowMode"
+                class="absolute bottom-0 left-4 top-0 flex items-center"
               >
                 <div
-                  class="ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background duration-100 css-1nqcsx"
-                >
-                  <div
-                    class="css-1i4b0eq"
-                    height="20"
-                    width="20"
-                  >
-                    <svg
-                      id="received"
-                      viewBox="0 0 20 20"
-                      x="0"
-                      xml:space="preserve"
-                      xmlns="http://www.w3.org/2000/svg"
-                      y="0"
-                    >
-                      <g
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                      >
-                        <path
-                          d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
-                        />
-                      </g>
-                    </svg>
-                  </div>
-                </div>
-                <div
-                  class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-1n9jllj"
-                  data-testid="Avatar"
-                >
-                  <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
-                  >
-                    <img
-                      alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                      src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
-                      title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                    />
-                  </div>
-                </div>
+                  class="h-2 w-2 rounded-full bg-theme-danger-400"
+                />
               </div>
+              <div
+                class="absolute -bottom-px left-0 h-px w-8 bg-white dark:bg-theme-secondary-900"
+              />
               <div
                 class="w-20 flex-1"
               >
@@ -263,22 +214,41 @@ exports[`Notifications > should render in xs 3`] = `
           </td>
           <td>
             <div
-              class="justify-end css-10gefem"
+              class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold justify-end whitespace-nowrap"
+            >
+              <span
+                data-testid="TimeAgo"
+              >
+                2 months ago
+              </span>
+            </div>
+          </td>
+          <td>
+            <div
+              class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 justify-end pr-8 static"
             >
               <div
-                class="css-1v19423"
-                color="success"
+                class="h-5"
               >
                 <div
-                  class="flex space-x-1 items-stretch"
+                  class="flex h-full items-center justify-center rounded px-1.5 css-1jspzfx"
+                  color="success-bg"
+                  data-testid="AmountLabel__wrapper"
                 >
-                  <span
-                    class="whitespace-nowrap"
-                    data-testid="Amount"
+                  <div
+                    class="flex h-full items-center space-x-1"
                   >
-                    + 20 DARK
-                  </span>
+                    <span
+                      class="whitespace-nowrap text-sm"
+                      data-testid="Amount"
+                    >
+                      + 20 DARK
+                    </span>
+                  </div>
                 </div>
+                <div
+                  class="absolute -bottom-px right-0 h-px w-8 bg-white dark:bg-theme-secondary-900"
+                />
               </div>
             </div>
           </td>
@@ -295,64 +265,25 @@ exports[`Notifications > should render in xs 4`] = `
     <tbody>
       <div>
         <tr
-          class="group css-155s9if"
+          class="group relative css-1d424e8"
           data-testid="TableRow"
         >
           <td
-            class="w-3/5"
+            class="w-2/5"
           >
             <div
-              class="flex space-x-3 css-bgc8eo"
+              class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 rounded-l pl-8 static"
             >
               <div
-                class="flex items-center -space-x-1"
-                data-testid="TransactionRowMode"
+                class="absolute bottom-0 left-4 top-0 flex items-center"
               >
                 <div
-                  class="ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background duration-100 css-1nqcsx"
-                >
-                  <div
-                    class="css-1i4b0eq"
-                    height="20"
-                    width="20"
-                  >
-                    <svg
-                      id="received"
-                      viewBox="0 0 20 20"
-                      x="0"
-                      xml:space="preserve"
-                      xmlns="http://www.w3.org/2000/svg"
-                      y="0"
-                    >
-                      <g
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                      >
-                        <path
-                          d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
-                        />
-                      </g>
-                    </svg>
-                  </div>
-                </div>
-                <div
-                  class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-1n9jllj"
-                  data-testid="Avatar"
-                >
-                  <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
-                  >
-                    <img
-                      alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                      src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
-                      title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                    />
-                  </div>
-                </div>
+                  class="h-2 w-2 rounded-full bg-theme-danger-400"
+                />
               </div>
+              <div
+                class="absolute -bottom-px left-0 h-px w-8 bg-white dark:bg-theme-secondary-900"
+              />
               <div
                 class="w-20 flex-1"
               >
@@ -382,22 +313,41 @@ exports[`Notifications > should render in xs 4`] = `
           </td>
           <td>
             <div
-              class="justify-end css-10gefem"
+              class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold justify-end whitespace-nowrap"
+            >
+              <span
+                data-testid="TimeAgo"
+              >
+                2 months ago
+              </span>
+            </div>
+          </td>
+          <td>
+            <div
+              class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 justify-end pr-8 static"
             >
               <div
-                class="css-1v19423"
-                color="success"
+                class="h-5"
               >
                 <div
-                  class="flex space-x-1 items-stretch"
+                  class="flex h-full items-center justify-center rounded px-1.5 css-1jspzfx"
+                  color="success-bg"
+                  data-testid="AmountLabel__wrapper"
                 >
-                  <span
-                    class="whitespace-nowrap"
-                    data-testid="Amount"
+                  <div
+                    class="flex h-full items-center space-x-1"
                   >
-                    + 20 DARK
-                  </span>
+                    <span
+                      class="whitespace-nowrap text-sm"
+                      data-testid="Amount"
+                    >
+                      + 20 DARK
+                    </span>
+                  </div>
                 </div>
+                <div
+                  class="absolute -bottom-px right-0 h-px w-8 bg-white dark:bg-theme-secondary-900"
+                />
               </div>
             </div>
           </td>
@@ -414,64 +364,25 @@ exports[`Notifications > should render in xs 5`] = `
     <tbody>
       <div>
         <tr
-          class="group css-155s9if"
+          class="group relative css-1d424e8"
           data-testid="TableRow"
         >
           <td
-            class="w-3/5"
+            class="w-2/5"
           >
             <div
-              class="flex space-x-3 css-bgc8eo"
+              class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 rounded-l pl-8 static"
             >
               <div
-                class="flex items-center -space-x-1"
-                data-testid="TransactionRowMode"
+                class="absolute bottom-0 left-4 top-0 flex items-center"
               >
                 <div
-                  class="ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background duration-100 css-1nqcsx"
-                >
-                  <div
-                    class="css-1i4b0eq"
-                    height="20"
-                    width="20"
-                  >
-                    <svg
-                      id="received"
-                      viewBox="0 0 20 20"
-                      x="0"
-                      xml:space="preserve"
-                      xmlns="http://www.w3.org/2000/svg"
-                      y="0"
-                    >
-                      <g
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                      >
-                        <path
-                          d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
-                        />
-                      </g>
-                    </svg>
-                  </div>
-                </div>
-                <div
-                  class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-1n9jllj"
-                  data-testid="Avatar"
-                >
-                  <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
-                  >
-                    <img
-                      alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                      src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
-                      title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                    />
-                  </div>
-                </div>
+                  class="h-2 w-2 rounded-full bg-theme-danger-400"
+                />
               </div>
+              <div
+                class="absolute -bottom-px left-0 h-px w-8 bg-white dark:bg-theme-secondary-900"
+              />
               <div
                 class="w-20 flex-1"
               >
@@ -501,22 +412,41 @@ exports[`Notifications > should render in xs 5`] = `
           </td>
           <td>
             <div
-              class="justify-end css-10gefem"
+              class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold justify-end whitespace-nowrap"
+            >
+              <span
+                data-testid="TimeAgo"
+              >
+                2 months ago
+              </span>
+            </div>
+          </td>
+          <td>
+            <div
+              class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 justify-end pr-8 static"
             >
               <div
-                class="css-1v19423"
-                color="success"
+                class="h-5"
               >
                 <div
-                  class="flex space-x-1 items-stretch"
+                  class="flex h-full items-center justify-center rounded px-1.5 css-1jspzfx"
+                  color="success-bg"
+                  data-testid="AmountLabel__wrapper"
                 >
-                  <span
-                    class="whitespace-nowrap"
-                    data-testid="Amount"
+                  <div
+                    class="flex h-full items-center space-x-1"
                   >
-                    + 20 DARK
-                  </span>
+                    <span
+                      class="whitespace-nowrap text-sm"
+                      data-testid="Amount"
+                    >
+                      + 20 DARK
+                    </span>
+                  </div>
                 </div>
+                <div
+                  class="absolute -bottom-px right-0 h-px w-8 bg-white dark:bg-theme-secondary-900"
+                />
               </div>
             </div>
           </td>
@@ -533,64 +463,25 @@ exports[`Notifications > should render notification item 1`] = `
     <tbody>
       <div>
         <tr
-          class="group css-155s9if"
+          class="group relative css-1d424e8"
           data-testid="TableRow"
         >
           <td
-            class="w-3/5"
+            class="w-2/5"
           >
             <div
-              class="flex space-x-3 css-bgc8eo"
+              class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 rounded-l pl-8 static"
             >
               <div
-                class="flex items-center -space-x-1"
-                data-testid="TransactionRowMode"
+                class="absolute bottom-0 left-4 top-0 flex items-center"
               >
                 <div
-                  class="ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background duration-100 css-1nqcsx"
-                >
-                  <div
-                    class="css-1i4b0eq"
-                    height="20"
-                    width="20"
-                  >
-                    <svg
-                      id="received"
-                      viewBox="0 0 20 20"
-                      x="0"
-                      xml:space="preserve"
-                      xmlns="http://www.w3.org/2000/svg"
-                      y="0"
-                    >
-                      <g
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                      >
-                        <path
-                          d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
-                        />
-                      </g>
-                    </svg>
-                  </div>
-                </div>
-                <div
-                  class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-1n9jllj"
-                  data-testid="Avatar"
-                >
-                  <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
-                  >
-                    <img
-                      alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                      src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
-                      title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                    />
-                  </div>
-                </div>
+                  class="h-2 w-2 rounded-full bg-theme-danger-400"
+                />
               </div>
+              <div
+                class="absolute -bottom-px left-0 h-px w-8 bg-white dark:bg-theme-secondary-900"
+              />
               <div
                 class="w-20 flex-1"
               >
@@ -620,22 +511,41 @@ exports[`Notifications > should render notification item 1`] = `
           </td>
           <td>
             <div
-              class="justify-end css-10gefem"
+              class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold justify-end whitespace-nowrap"
+            >
+              <span
+                data-testid="TimeAgo"
+              >
+                2 months ago
+              </span>
+            </div>
+          </td>
+          <td>
+            <div
+              class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 justify-end pr-8 static"
             >
               <div
-                class="css-1v19423"
-                color="success"
+                class="h-5"
               >
                 <div
-                  class="flex space-x-1 items-stretch"
+                  class="flex h-full items-center justify-center rounded px-1.5 css-1jspzfx"
+                  color="success-bg"
+                  data-testid="AmountLabel__wrapper"
                 >
-                  <span
-                    class="whitespace-nowrap"
-                    data-testid="Amount"
+                  <div
+                    class="flex h-full items-center space-x-1"
                   >
-                    + 20 DARK
-                  </span>
+                    <span
+                      class="whitespace-nowrap text-sm"
+                      data-testid="Amount"
+                    >
+                      + 20 DARK
+                    </span>
+                  </div>
                 </div>
+                <div
+                  class="absolute -bottom-px right-0 h-px w-8 bg-white dark:bg-theme-secondary-900"
+                />
               </div>
             </div>
           </td>

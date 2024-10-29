@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/require-await */
-import { renderHook } from "@testing-library/react-hooks";
+import { renderHook } from "@testing-library/react";
 import { useTranslation } from "react-i18next";
 
 import { password } from "./password";

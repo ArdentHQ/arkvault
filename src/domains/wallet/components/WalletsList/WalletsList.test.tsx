@@ -18,6 +18,7 @@ import {
 	within,
 } from "@/utils/testing-library";
 import { server, requestMock } from "@/tests/mocks/server";
+import { waitFor } from "@testing-library/react";
 const dashboardURL = `/profiles/${getDefaultProfileId()}/dashboard`;
 const history = createHashHistory();
 
@@ -54,7 +55,7 @@ describe("WalletsList", () => {
 	it("should render", () => {
 		const { asFragment } = render(
 			<Route path="/profiles/:profileId/dashboard">
-				<WalletsList wallets={wallets} />
+				<WalletsList wallets={wallets} itemsPerPage={10} />
 			</Route>,
 			{
 				history,
@@ -67,14 +68,14 @@ describe("WalletsList", () => {
 	});
 
 	it("should render responsive", () => {
-		const { asFragment } = renderResponsive(<WalletsList wallets={wallets} />, "xs");
+		const { asFragment } = renderResponsive(<WalletsList itemsPerPage={10} wallets={wallets} />, "xs");
 
 		expect(screen.getByTestId("WalletsList")).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should render empty skeleton block", () => {
-		const { asFragment } = renderResponsive(<WalletsList wallets={[]} />, "lg");
+		const { asFragment } = renderResponsive(<WalletsList itemsPerPage={10} wallets={[]} />, "lg");
 
 		expect(screen.getByTestId("WalletsList")).toBeInTheDocument();
 		expect(screen.getAllByTestId("TableRow")).toHaveLength(3);
@@ -82,32 +83,32 @@ describe("WalletsList", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it("should group starred wallets at the top", () => {
+	it("should group starred wallets at the top", async () => {
 		// Mark second wallet as starred
 		wallets[1].toggleStarred();
 
-		const { asFragment } = renderResponsive(<WalletsList wallets={wallets} />, "lg");
+		const { asFragment } = renderResponsive(<WalletsList itemsPerPage={10} wallets={wallets} />, "lg");
 
-		expect(starredButton().querySelector("svg#star-filled")).toBeInTheDocument();
+		// Initial state checks
+		await waitFor(() => expect(starredButton().querySelector("svg#star-filled")).toBeInTheDocument());
 
+		// Check initial wallet order
 		expect(screen.getAllByTestId("TableCell_Wallet")[0]).toHaveTextContent(wallets[1].displayName());
-
 		expect(screen.getAllByTestId("TableCell_Wallet")[1]).toHaveTextContent(wallets[0].displayName());
 
 		userEvent.click(starredButton());
 
-		expect(starredButton().querySelector("svg#star")).toBeInTheDocument();
+		// Add more debug after clicking
+		await waitFor(() => expect(starredButton().querySelector("svg#star")).toBeInTheDocument());
 
 		expect(screen.getAllByTestId("TableCell_Wallet")[0]).toHaveTextContent(wallets[0].displayName());
-
 		expect(screen.getAllByTestId("TableCell_Wallet")[1]).toHaveTextContent(wallets[1].displayName());
 
 		userEvent.click(starredButton());
 
-		expect(starredButton().querySelector("svg#star-filled")).toBeInTheDocument();
+		await waitFor(() => expect(starredButton().querySelector("svg#star-filled")).toBeInTheDocument());
 
 		expect(screen.getAllByTestId("TableCell_Wallet")[0]).toHaveTextContent(wallets[1].displayName());
-
 		expect(screen.getAllByTestId("TableCell_Wallet")[1]).toHaveTextContent(wallets[0].displayName());
 
 		expect(asFragment()).toMatchSnapshot();
@@ -116,25 +117,21 @@ describe("WalletsList", () => {
 		wallets[1].toggleStarred();
 	});
 
-	it("should keep the original sort method when grouping starred wallets at the top", () => {
-		renderResponsive(<WalletsList wallets={wallets} />, "lg");
+	it("should keep the original sort method when grouping starred wallets at the top", async () => {
+		renderResponsive(<WalletsList itemsPerPage={10} wallets={wallets} />, "lg");
 
-		expect(starredButton().querySelector("svg#star-filled")).toBeInTheDocument();
-
-		expect(otherButton().querySelector("svg#chevron-down-small")).toBeInTheDocument();
+		await waitFor(() => expect(starredButton().querySelector("svg#star-filled")).toBeInTheDocument());
+		await waitFor(() => expect(otherButton().querySelector("svg#chevron-down-small")).toBeInTheDocument());
 
 		userEvent.click(starredButton());
 
-		expect(starredButton().querySelector("svg#star")).toBeInTheDocument();
-
-		expect(otherButton().querySelector("svg#chevron-down-small")).toBeInTheDocument();
+		await waitFor(() => expect(starredButton().querySelector("svg#star")).toBeInTheDocument());
+		await waitFor(() => expect(otherButton().querySelector("svg#chevron-down-small")).toBeInTheDocument());
 
 		userEvent.click(otherButton());
-
 		userEvent.click(starredButton());
 
-		expect(otherButton().querySelector("svg#chevron-down-small")).toBeInTheDocument();
-
-		expect(starredButton().querySelector("svg#star-filled")).toBeInTheDocument();
+		await waitFor(() => expect(otherButton().querySelector("svg#chevron-down-small")).toBeInTheDocument());
+		await waitFor(() => expect(starredButton().querySelector("svg#star-filled")).toBeInTheDocument());
 	});
 });

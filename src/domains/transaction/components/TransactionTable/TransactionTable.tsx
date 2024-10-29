@@ -7,6 +7,7 @@ import { TransactionTableProperties } from "./TransactionTable.contracts";
 import { Table } from "@/app/components/Table";
 import { useTransactionTableColumns } from "@/domains/transaction/components/TransactionTable/TransactionTable.helpers";
 import { useBreakpoint } from "@/app/hooks";
+import cn from "classnames";
 
 export const TransactionTable: FC<TransactionTableProperties> = ({
 	transactions,
@@ -16,9 +17,10 @@ export const TransactionTable: FC<TransactionTableProperties> = ({
 	skeletonRowsLimit = 8,
 	onRowClick,
 	profile,
+	coinName,
 }) => {
-	const { isXs, isSm } = useBreakpoint();
-	const columns = useTransactionTableColumns(exchangeCurrency);
+	const { isXs, isSm, isMdAndAbove } = useBreakpoint();
+	const columns = useTransactionTableColumns({ coin: coinName });
 	const initialState = useMemo<Partial<TableState<DTO.ExtendedConfirmedTransactionData>>>(
 		() => ({
 			sortBy: [
@@ -56,7 +58,13 @@ export const TransactionTable: FC<TransactionTableProperties> = ({
 
 	return (
 		<div data-testid="TransactionTable" className="relative">
-			<Table hideHeader={isSm || isXs || hideHeader} columns={columns} data={data} initialState={initialState}>
+			<Table
+				hideHeader={isSm || isXs || hideHeader}
+				columns={columns}
+				data={data}
+				initialState={initialState}
+				className={cn({ "with-x-padding": isMdAndAbove })}
+			>
 				{renderTableRow}
 			</Table>
 		</div>

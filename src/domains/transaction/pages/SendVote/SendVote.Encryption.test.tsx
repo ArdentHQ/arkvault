@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/require-await */
 /* eslint-disable testing-library/no-unnecessary-act */ // @TODO remove and fix test
 import { Contracts } from "@ardenthq/sdk-profiles";
-import { renderHook } from "@testing-library/react-hooks";
+import { renderHook } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import React from "react";
 import { FormProvider, useForm } from "react-hook-form";
@@ -26,6 +26,8 @@ import {
 	mockProfileWithPublicAndTestNetworks,
 } from "@/utils/testing-library";
 import { server, requestMock } from "@/tests/mocks/server";
+import { BigNumber } from "@ardenthq/sdk-helpers";
+import { DateTime } from "@ardenthq/sdk-intl";
 
 const fixtureProfileId = getDefaultProfileId();
 
@@ -33,15 +35,31 @@ const createVoteTransactionMock = (wallet: Contracts.IReadWriteWallet) =>
 	// @ts-ignore
 	vi.spyOn(wallet.transaction(), "transaction").mockReturnValue({
 		amount: () => voteFixture.data.amount / 1e8,
+		blockId: () => "1",
+		convertedAmount: () => BigNumber.make(10),
 		data: () => ({ data: () => voteFixture.data }),
 		explorerLink: () => `https://test.arkscan.io/transaction/${voteFixture.data.id}`,
+		explorerLinkForBlock: () => `https://test.arkscan.io/block/${voteFixture.data.id}`,
 		fee: () => voteFixture.data.fee / 1e8,
 		id: () => voteFixture.data.id,
+		isConfirmed: () => true,
+		isDelegateRegistration: () => false,
+		isDelegateResignation: () => false,
+		isIpfs: () => false,
+		isMultiPayment: () => false,
 		isMultiSignatureRegistration: () => false,
+		isSent: () => true,
+		isTransfer: () => false,
+		isUnvote: () => false,
+		isVote: () => true,
+		isVoteCombination: () => false,
+		memo: () => null,
 		recipient: () => voteFixture.data.recipient,
 		sender: () => voteFixture.data.sender,
+		timestamp: () => DateTime.make(),
 		type: () => "vote",
 		usesMultiSignature: () => false,
+		wallet: () => wallet,
 	});
 
 const passphrase = getDefaultWalletMnemonic();
@@ -167,12 +185,12 @@ describe("SendVote", () => {
 		await waitFor(() => expect(screen.getByTestId(formStepID)).toHaveTextContent(delegateData[0].username));
 
 		await waitFor(() => expect(continueButton()).not.toBeDisabled());
-		userEvent.click(continueButton());
+		await userEvent.click(continueButton());
 
 		// Review Step
 		expect(screen.getByTestId(reviewStepID)).toBeInTheDocument();
 
-		userEvent.click(continueButton());
+		await userEvent.click(continueButton());
 
 		// AuthenticationStep
 		expect(screen.getByTestId("AuthenticationStep")).toBeInTheDocument();
@@ -188,17 +206,18 @@ describe("SendVote", () => {
 		const transactionMock = createVoteTransactionMock(wallet);
 
 		const passwordInput = screen.getByTestId("AuthenticationStep__encryption-password");
-		userEvent.paste(passwordInput, "password");
+		await userEvent.clear(passwordInput);
+		await userEvent.type(passwordInput, "password");
 
 		await waitFor(() => expect(passwordInput).toHaveValue("password"));
 
 		await waitFor(() => expect(sendButton()).not.toBeDisabled());
 
 		await act(async () => {
-			userEvent.click(sendButton());
+			await userEvent.click(sendButton());
 		});
 
-		await expect(screen.findByTestId("TransactionSuccessful", undefined, { timeout: 4000 })).resolves.toBeVisible();
+		await expect(screen.findByText("Unvote", undefined, { timeout: 4000 })).resolves.toBeVisible();
 
 		signMock.mockRestore();
 		broadcastMock.mockRestore();

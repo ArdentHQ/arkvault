@@ -22,7 +22,7 @@ cucumber(
 		...preSteps,
 		"When she attempts to vote for a delegate with multisig wallet": async (t: TestController) => {
 			await t.click(Selector('[data-testid="AddressRow__select-2"]').withText(translations.COMMON.VOTE));
-			await t.expect(Selector("h2").withText(translations.VOTE.DELEGATE_TABLE.TITLE).exists).ok();
+			await t.expect(Selector("h1").withText(translations.VOTE.DELEGATE_TABLE.TITLE).exists).ok();
 			await t.click(Selector('[data-testid="DelegateRow__toggle-0"]').withText(translations.COMMON.SELECT));
 			await t.expect(Selector("[data-testid=DelegateTable__footer]").exists).ok();
 			await t.click(
@@ -48,6 +48,46 @@ cucumber(
 					broadcast: ["transaction-id"],
 					excess: [],
 					invalid: [],
+				},
+			},
+		),
+		mockRequest(
+			{
+				method: "GET",
+				url: "https://ark-test.arkvault.io/api/wallets/DRKHfdPvVqhKVj7VNWusrJW3unBhQtvjDK",
+			},
+			{
+				data: {
+					address: "DRKHfdPvVqhKVj7VNWusrJW3unBhQtvjDK",
+					publicKey: "0366edb698bf3abce4da6304f84775ed696ef30f4fe5a2359449f3d974a5b52744",
+					balance: "19632023",
+					nonce: "48",
+					attributes: {
+						delegate: {
+							username: "ragnar",
+							voteBalance: "0",
+							forgedFees: "0",
+							forgedRewards: "0",
+							producedBlocks: 0,
+							rank: 388,
+						},
+						vote: "03d7a20b3d39b7526a5057a9b486f0200bc57543e69e5fa61d9ce0bdd7784162c3",
+					},
+				},
+			},
+		),
+		mockRequest(
+			{
+				method: "GET",
+				url: "https://ark-test.arkvault.io/api/wallets/DMtTMLtKEtxpPreRdPk5bGCmGUza52wUqp",
+			},
+			{
+				data: {
+					address: "DMtTMLtKEtxpPreRdPk5bGCmGUza52wUqp",
+					publicKey: "03930920dcb10b8e8a2aa271866ac9dcac2a16e007380eb52e2c3ab71679533305",
+					balance: "1000000000",
+					nonce: "1",
+					attributes: {},
 				},
 			},
 		),

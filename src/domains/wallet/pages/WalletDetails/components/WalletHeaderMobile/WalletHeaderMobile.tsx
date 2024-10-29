@@ -5,7 +5,6 @@ import tw, { styled } from "twin.macro";
 import { t } from "i18next";
 import { WalletHeaderProperties } from "@/domains/wallet/pages/WalletDetails/components/WalletHeader/WalletHeader.contracts";
 import { NetworkIcon } from "@/domains/network/components/NetworkIcon";
-import { Avatar } from "@/app/components/Avatar";
 import { WalletIcons } from "@/app/components/WalletIcons";
 import { Icon } from "@/app/components/Icon";
 import { useWalletActions } from "@/domains/wallet/hooks";
@@ -18,6 +17,7 @@ import { Button } from "@/app/components/Button";
 import { Dropdown } from "@/app/components/Dropdown";
 import { useWalletOptions } from "@/domains/wallet/pages/WalletDetails/hooks/use-wallet-options";
 import { WalletActionsModals } from "@/domains/wallet/components/WalletActionsModals/WalletActionsModals";
+import { Copy } from "@/app/components/Copy";
 
 const WalletHeaderButtonMobile = styled.button`
 	${tw`inline-flex items-center justify-center w-6 h-6 transition-all duration-100 ease-linear rounded outline-none focus:(outline-none ring-2 ring-theme-primary-400) text-theme-secondary-text disabled:text-theme-secondary-800`}
@@ -39,7 +39,7 @@ export const WalletHeaderMobile: React.FC<WalletHeaderProperties> = ({ profile, 
 
 	return (
 		<>
-			<div className="h-13 -mx-8 -mt-8 flex items-center justify-between bg-black px-8 py-4">
+			<div className="h-13 flex items-center justify-between bg-black px-6 py-4">
 				<div className="flex items-center space-x-2">
 					<NetworkIcon
 						network={wallet.network()}
@@ -49,11 +49,10 @@ export const WalletHeaderMobile: React.FC<WalletHeaderProperties> = ({ profile, 
 						noShadow
 						tooltipDarkTheme
 					/>
-					<Avatar size="xs" address={wallet.address()} noShadow />
 				</div>
 
-				<div className="flex items-center">
-					<div className="mr-2 flex items-center space-x-1 border-r border-theme-secondary-800 pr-2 empty:border-0">
+				<div className="flex items-center gap-3">
+					<div className="flex items-center space-x-1 border-r border-theme-secondary-800 pr-3 empty:border-0">
 						<WalletIcons
 							wallet={wallet}
 							iconColor="text-theme-secondary-text"
@@ -72,26 +71,21 @@ export const WalletHeaderMobile: React.FC<WalletHeaderProperties> = ({ profile, 
 				</div>
 			</div>
 
-			<div className="flex flex-col items-center pt-4 text-white">
+			<div className="flex flex-col items-center px-6 pt-4 text-white">
 				<div className="mx-auto flex w-full items-center justify-center space-x-2">
 					<div className="w-full">
 						<Address
 							alignment="center"
 							address={wallet.address()}
 							walletName={alias}
-							walletNameClass="text-theme-secondary-200"
+							truncateOnTable
+							addressClass="text-sm text-theme-secondary-600 leading-[17px]"
+							walletNameClass="text-theme-secondary-200 text-sm leading-[17px]"
 						/>
 					</div>
 
 					<div className="flex items-center space-x-3 text-theme-secondary-text">
-						<Clipboard
-							variant="icon"
-							data={wallet.address()}
-							tooltip={t("WALLETS.PAGE_WALLET_DETAILS.COPY_ADDRESS")}
-							tooltipDarkTheme
-						>
-							<Icon name="Copy" className="hover:text-theme-secondary-500" />
-						</Clipboard>
+						<Copy address={wallet.address()} />
 
 						{!!wallet.publicKey() && (
 							<Clipboard
@@ -107,7 +101,7 @@ export const WalletHeaderMobile: React.FC<WalletHeaderProperties> = ({ profile, 
 				</div>
 
 				<Amount
-					className="mt-4 text-xl font-semibold leading-6 text-white"
+					className="mt-4 text-xl font-semibold leading-6 text-theme-secondary-200"
 					ticker={wallet.currency()}
 					value={wallet.balance()}
 				/>
@@ -123,14 +117,15 @@ export const WalletHeaderMobile: React.FC<WalletHeaderProperties> = ({ profile, 
 				)}
 			</div>
 
-			<div className="mt-6 flex items-center space-x-3">
+			<div className="mt-6 flex items-center space-x-3 px-6">
 				<Button
 					data-testid="WalletHeaderMobile__send-button"
-					className="bg-theme-dark-500 my-auto flex-1"
+					className="my-auto flex-1"
 					disabled={
 						wallet.balance() === 0 || !wallet.hasBeenFullyRestored() || !wallet.hasSyncedWithNetwork()
 					}
 					theme="dark"
+					variant="primary"
 					onClick={handleSend}
 				>
 					<>{t("COMMON.SEND")}</>
@@ -138,7 +133,6 @@ export const WalletHeaderMobile: React.FC<WalletHeaderProperties> = ({ profile, 
 
 				<div data-testid="WalletHeaderMobile__more-button" className="my-auto ml-3">
 					<Dropdown
-						dropdownClass="mx-4"
 						options={[primaryOptions, registrationOptions, additionalOptions, secondaryOptions]}
 						toggleContent={
 							<Button

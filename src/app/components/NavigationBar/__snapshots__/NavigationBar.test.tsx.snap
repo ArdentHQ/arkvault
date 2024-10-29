@@ -10,7 +10,7 @@ exports[`NavigationBar > should not render with title if variant is full 1`] = `
       class="flex h-14 items-center justify-center space-x-4"
     >
       <button
-        class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1hei9vx"
+        class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-theme-secondary-700 dark:text-theme-secondary-600"
         data-testid="NavigationBar__buttons__mobile--receive"
         type="button"
       >
@@ -50,7 +50,7 @@ exports[`NavigationBar > should not render with title if variant is full 1`] = `
         type="vertical"
       />
       <button
-        class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1hei9vx"
+        class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-theme-secondary-700 dark:text-theme-secondary-600"
         data-testid="NavigationBar__buttons__mobile--home"
         type="button"
       >
@@ -87,7 +87,7 @@ exports[`NavigationBar > should not render with title if variant is full 1`] = `
         type="vertical"
       />
       <button
-        class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1hei9vx"
+        class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-theme-secondary-700 dark:text-theme-secondary-600"
         data-testid="NavigationBar__buttons__mobile--send"
         type="button"
       >
@@ -126,7 +126,7 @@ exports[`NavigationBar > should not render with title if variant is full 1`] = `
     class="css-1jzy9qi"
   >
     <div
-      class="relative flex h-21"
+      class="relative flex h-14 sm:h-21"
     >
       <div
         class="hidden w-12 sm:flex"
@@ -160,13 +160,13 @@ exports[`NavigationBar > should not render with title if variant is full 1`] = `
         </button>
       </div>
       <div
-        class="flex flex-1 items-center px-8"
+        class="flex flex-1 items-center px-6 sm:px-8"
       >
         <div
           class="my-auto flex items-center"
         >
           <button
-            class="my-auto mr-4 flex h-11 w-11 cursor-pointer items-center justify-center rounded-xl bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400"
+            class="my-auto mr-2 flex h-8 w-8 cursor-pointer items-center justify-center rounded bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 sm:mr-4 sm:h-11 sm:w-11 sm:rounded-xl"
             data-testid="NavigationBarLogo--button"
             type="button"
           >
@@ -192,7 +192,7 @@ exports[`NavigationBar > should not render with title if variant is full 1`] = `
           </button>
         </div>
         <ul
-          class="ml-4 mr-auto hidden h-21 space-x-8 lg:flex"
+          class="ml-4 mr-auto hidden h-14 space-x-8 sm:h-21 lg:flex"
           data-testid="NavigationBar__menu"
         >
           <li
@@ -225,37 +225,35 @@ exports[`NavigationBar > should not render with title if variant is full 1`] = `
           data-testid="NavigationBar__menu-toggle"
         >
           <div
-            class="static sm:relative"
+            aria-expanded="false"
+            aria-haspopup="dialog"
+            data-testid="dropdown__toggle"
           >
-            <span
-              data-testid="dropdown__toggle"
+            <button
+              class="cursor-pointer rounded p-2 focus:outline-none focus:ring-2 focus:ring-theme-primary-400"
+              type="button"
             >
-              <button
-                class="cursor-pointer rounded p-2 focus:outline-none focus:ring-2 focus:ring-theme-primary-400"
-                type="button"
+              <div
+                class="css-1i4b0eq"
+                height="20"
+                width="20"
               >
-                <div
-                  class="css-1i4b0eq"
-                  height="20"
-                  width="20"
+                <svg
+                  viewBox="0 0 20 20"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
                 >
-                  <svg
-                    viewBox="0 0 20 20"
-                    xml:space="preserve"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M1 15.5h18M1 10h18M1 4.5h18"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                    />
-                  </svg>
-                </div>
-              </button>
-            </span>
+                  <path
+                    d="M1 15.5h18M1 10h18M1 4.5h18"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  />
+                </svg>
+              </div>
+            </button>
           </div>
         </div>
         <div
@@ -263,52 +261,50 @@ exports[`NavigationBar > should not render with title if variant is full 1`] = `
         >
           <div>
             <div
-              class="static sm:relative"
+              aria-expanded="false"
+              aria-haspopup="dialog"
+              data-testid="dropdown__toggle"
             >
-              <span
-                data-testid="dropdown__toggle"
+              <div
+                class="group css-c93wvv"
               >
-                <div
-                  class="group css-c93wvv"
+                <button
+                  class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none"
+                  data-testid="NavigationBar__buttons--server-status"
+                  type="button"
                 >
-                  <button
-                    class="css-1hei9vx"
-                    data-testid="NavigationBar__buttons--server-status"
-                    type="button"
+                  <div
+                    class="flex items-center space-x-2"
                   >
                     <div
-                      class="flex items-center space-x-2"
+                      class="p-1 css-1i4b0eq"
+                      height="20"
+                      width="20"
+                    >
+                      <svg
+                        fill="none"
+                        viewBox="0 0 20 15"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M6.595 6.285c.618-3.372 3.654-5.664 6.932-5.233 3.279.43 5.67 3.435 5.46 6.86-.21 3.426-2.948 6.092-6.252 6.088H4.912c-1.606.003-3.05-1.017-3.64-2.569-.589-1.552-.203-3.32.972-4.457a3.795 3.795 0 0 1 4.35-.69zm0 0C6.5 7 6.6 7.8 7 9"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
+                      </svg>
+                    </div>
+                    <div
+                      class="absolute right-1 top-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
                     >
                       <div
-                        class="p-1 css-1i4b0eq"
-                        height="20"
-                        width="20"
-                      >
-                        <svg
-                          fill="none"
-                          viewBox="0 0 20 15"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M6.595 6.285c.618-3.372 3.654-5.664 6.932-5.233 3.279.43 5.67 3.435 5.46 6.86-.21 3.426-2.948 6.092-6.252 6.088H4.912c-1.606.003-3.05-1.017-3.64-2.569-.589-1.552-.203-3.32.972-4.457a3.795 3.795 0 0 1 4.35-.69zm0 0C6.5 7 6.6 7.8 7 9"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                          />
-                        </svg>
-                      </div>
-                      <div
-                        class="absolute right-1 top-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
-                      >
-                        <div
-                          class="h-2 w-2 rounded-full bg-theme-success-700"
-                        />
-                      </div>
+                        class="h-2 w-2 rounded-full bg-theme-success-700"
+                      />
                     </div>
-                  </button>
-                </div>
-              </span>
+                  </div>
+                </button>
+              </div>
             </div>
           </div>
           <div
@@ -316,59 +312,57 @@ exports[`NavigationBar > should not render with title if variant is full 1`] = `
           />
           <div>
             <div
-              class="static sm:relative"
+              aria-expanded="false"
+              aria-haspopup="dialog"
+              data-testid="dropdown__toggle"
             >
-              <span
-                data-testid="dropdown__toggle"
+              <div
+                class="group css-c93wvv"
               >
-                <div
-                  class="group css-c93wvv"
+                <button
+                  class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none"
+                  data-testid="NavigationBar__buttons--notifications"
+                  type="button"
                 >
-                  <button
-                    class="css-1hei9vx"
-                    data-testid="NavigationBar__buttons--notifications"
-                    type="button"
+                  <div
+                    class="flex items-center space-x-2"
                   >
                     <div
-                      class="flex items-center space-x-2"
+                      class="p-1 css-1i4b0eq"
+                      height="20"
+                      width="20"
+                    >
+                      <svg
+                        id="bell"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M8.4 17.8c.3.9 1.2 1.4 2.1 1.1.5-.2 1-.6 1.1-1.1M10 2.8V1M10 2.8c3.3 0 6 2.7 6 6h0c0 5.6 1.2 6.6 1.2 6.6H2.8S4 13.9 4 8.8c0-3.3 2.7-6 6-6z"
+                          />
+                        </g>
+                      </svg>
+                    </div>
+                    <div
+                      class="absolute right-1 top-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
                     >
                       <div
-                        class="p-1 css-1i4b0eq"
-                        height="20"
-                        width="20"
-                      >
-                        <svg
-                          id="bell"
-                          viewBox="0 0 20 20"
-                          x="0"
-                          xml:space="preserve"
-                          xmlns="http://www.w3.org/2000/svg"
-                          y="0"
-                        >
-                          <g
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                          >
-                            <path
-                              d="M8.4 17.8c.3.9 1.2 1.4 2.1 1.1.5-.2 1-.6 1.1-1.1M10 2.8V1M10 2.8c3.3 0 6 2.7 6 6h0c0 5.6 1.2 6.6 1.2 6.6H2.8S4 13.9 4 8.8c0-3.3 2.7-6 6-6z"
-                            />
-                          </g>
-                        </svg>
-                      </div>
-                      <div
-                        class="absolute right-1 top-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
-                      >
-                        <div
-                          class="h-2 w-2 rounded-full bg-theme-danger-500"
-                        />
-                      </div>
+                        class="h-2 w-2 rounded-full bg-theme-danger-500"
+                      />
                     </div>
-                  </button>
-                </div>
-              </span>
+                  </div>
+                </button>
+              </div>
             </div>
           </div>
           <div
@@ -384,7 +378,7 @@ exports[`NavigationBar > should not render with title if variant is full 1`] = `
                 class="css-c93wvv"
               >
                 <button
-                  class="css-1hei9vx"
+                  class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none"
                   data-testid="NavigationBar__buttons--receive"
                   type="button"
                 >
@@ -431,7 +425,7 @@ exports[`NavigationBar > should not render with title if variant is full 1`] = `
                 class="css-c93wvv"
               >
                 <button
-                  class="css-1hei9vx"
+                  class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none"
                   data-testid="NavigationBar__buttons--send"
                   type="button"
                 >
@@ -475,7 +469,7 @@ exports[`NavigationBar > should not render with title if variant is full 1`] = `
           data-testid="NavigationBar__balance"
         >
           <div
-            class="-mt-3 flex flex-row items-center justify-center space-x-2 bg-theme-secondary-100 px-8 py-2.5 dark:bg-black md:m-0 md:flex-col md:items-start md:justify-start md:space-x-0 md:bg-transparent md:p-0 md:text-right md:dark:bg-transparent"
+            class="flex flex-row items-center justify-center space-x-2 bg-theme-secondary-100 px-8 py-2.5 dark:bg-black md:m-0 md:flex-col md:items-start md:justify-start md:space-x-0 md:bg-transparent md:p-0 md:text-right md:dark:bg-transparent"
           >
             <div
               class="whitespace-nowrap text-theme-secondary-700 dark:text-theme-secondary-500 md:text-xs md:font-semibold md:text-theme-secondary-500"
@@ -496,35 +490,33 @@ exports[`NavigationBar > should not render with title if variant is full 1`] = `
           </div>
         </div>
         <div
-          class="static sm:relative"
+          aria-expanded="false"
+          aria-haspopup="dialog"
+          data-testid="dropdown__toggle"
         >
-          <span
-            data-testid="dropdown__toggle"
+          <div
+            class="relative cursor-pointer items-center justify-center rounded-full align-middle"
+            data-testid="UserMenu"
           >
             <div
-              class="relative cursor-pointer items-center justify-center rounded-full align-middle"
-              data-testid="UserMenu"
+              class="shrink-0 css-1n9jllj"
+              data-testid="Avatar"
             >
               <div
-                class="shrink-0 css-1n9jllj"
-                data-testid="Avatar"
+                class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
               >
-                <div
-                  class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                <img
+                  alt="Profile Avatar"
+                  src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(233, 30, 99)" width="100" height="100"/><circle r="45" cx="80" cy="30" fill="rgb(76, 175, 80)"/><circle r="55" cx="0" cy="60" fill="rgb(255, 152, 0)"/><circle r="40" cx="50" cy="50" fill="rgb(3, 169, 244)"/></svg>"
+                />
+                <span
+                  class="absolute text-sm font-semibold text-theme-background dark:text-theme-text"
                 >
-                  <img
-                    alt="Profile Avatar"
-                    src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(233, 30, 99)" width="100" height="100"/><circle r="45" cx="80" cy="30" fill="rgb(76, 175, 80)"/><circle r="55" cx="0" cy="60" fill="rgb(255, 152, 0)"/><circle r="40" cx="50" cy="50" fill="rgb(3, 169, 244)"/></svg>"
-                  />
-                  <span
-                    class="absolute text-sm font-semibold text-theme-background dark:text-theme-text"
-                  >
-                    JO
-                  </span>
-                </div>
+                  JO
+                </span>
               </div>
             </div>
-          </span>
+          </div>
         </div>
       </div>
     </div>
@@ -539,16 +531,16 @@ exports[`NavigationBar > should render as logo-only variant 1`] = `
     class="css-1pyu5ft"
   >
     <div
-      class="relative flex h-21"
+      class="relative flex h-14 sm:h-21"
     >
       <div
-        class="flex flex-1 px-8 sm:ml-12"
+        class="flex flex-1 px-6 md:px-10"
       >
         <div
           class="my-auto flex items-center"
         >
           <button
-            class="my-auto mr-4 flex h-11 w-11 cursor-pointer items-center justify-center rounded-xl bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400"
+            class="my-auto mr-2 flex h-8 w-8 cursor-pointer items-center justify-center rounded bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 sm:mr-4 sm:h-11 sm:w-11 sm:rounded-xl"
             data-testid="NavigationBarLogo--button"
             type="button"
           >
@@ -589,7 +581,7 @@ exports[`NavigationBar > should render full variant when profile restored is fal
       class="flex h-14 items-center justify-center space-x-4"
     >
       <button
-        class="cursor-not-allowed text-theme-secondary-500 css-5e9bdv"
+        class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 cursor-not-allowed text-theme-secondary-500"
         data-testid="NavigationBar__buttons__mobile--receive"
         disabled=""
         type="button"
@@ -630,7 +622,7 @@ exports[`NavigationBar > should render full variant when profile restored is fal
         type="vertical"
       />
       <button
-        class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1hei9vx"
+        class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-theme-secondary-700 dark:text-theme-secondary-600"
         data-testid="NavigationBar__buttons__mobile--home"
         type="button"
       >
@@ -667,7 +659,7 @@ exports[`NavigationBar > should render full variant when profile restored is fal
         type="vertical"
       />
       <button
-        class="cursor-not-allowed text-theme-secondary-500 css-5e9bdv"
+        class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 cursor-not-allowed text-theme-secondary-500"
         data-testid="NavigationBar__buttons__mobile--send"
         disabled=""
         type="button"
@@ -707,7 +699,7 @@ exports[`NavigationBar > should render full variant when profile restored is fal
     class="css-1jzy9qi"
   >
     <div
-      class="relative flex h-21"
+      class="relative flex h-14 sm:h-21"
     >
       <div
         class="hidden w-12 sm:flex"
@@ -741,13 +733,13 @@ exports[`NavigationBar > should render full variant when profile restored is fal
         </button>
       </div>
       <div
-        class="flex flex-1 items-center px-8"
+        class="flex flex-1 items-center px-6 sm:px-8"
       >
         <div
           class="my-auto flex items-center"
         >
           <button
-            class="my-auto mr-4 flex h-11 w-11 cursor-pointer items-center justify-center rounded-xl bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400"
+            class="my-auto mr-2 flex h-8 w-8 cursor-pointer items-center justify-center rounded bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 sm:mr-4 sm:h-11 sm:w-11 sm:rounded-xl"
             data-testid="NavigationBarLogo--button"
             type="button"
           >
@@ -773,7 +765,7 @@ exports[`NavigationBar > should render full variant when profile restored is fal
           </button>
         </div>
         <ul
-          class="ml-4 mr-auto hidden h-21 space-x-8 lg:flex"
+          class="ml-4 mr-auto hidden h-14 space-x-8 sm:h-21 lg:flex"
           data-testid="NavigationBar__menu"
         >
           <li
@@ -806,37 +798,35 @@ exports[`NavigationBar > should render full variant when profile restored is fal
           data-testid="NavigationBar__menu-toggle"
         >
           <div
-            class="static sm:relative"
+            aria-expanded="false"
+            aria-haspopup="dialog"
+            data-testid="dropdown__toggle"
           >
-            <span
-              data-testid="dropdown__toggle"
+            <button
+              class="cursor-pointer rounded p-2 focus:outline-none focus:ring-2 focus:ring-theme-primary-400"
+              type="button"
             >
-              <button
-                class="cursor-pointer rounded p-2 focus:outline-none focus:ring-2 focus:ring-theme-primary-400"
-                type="button"
+              <div
+                class="css-1i4b0eq"
+                height="20"
+                width="20"
               >
-                <div
-                  class="css-1i4b0eq"
-                  height="20"
-                  width="20"
+                <svg
+                  viewBox="0 0 20 20"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
                 >
-                  <svg
-                    viewBox="0 0 20 20"
-                    xml:space="preserve"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M1 15.5h18M1 10h18M1 4.5h18"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                    />
-                  </svg>
-                </div>
-              </button>
-            </span>
+                  <path
+                    d="M1 15.5h18M1 10h18M1 4.5h18"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  />
+                </svg>
+              </div>
+            </button>
           </div>
         </div>
         <div
@@ -844,52 +834,50 @@ exports[`NavigationBar > should render full variant when profile restored is fal
         >
           <div>
             <div
-              class="static sm:relative"
+              aria-expanded="false"
+              aria-haspopup="dialog"
+              data-testid="dropdown__toggle"
             >
-              <span
-                data-testid="dropdown__toggle"
+              <div
+                class="group css-c93wvv"
               >
-                <div
-                  class="group css-c93wvv"
+                <button
+                  class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none"
+                  data-testid="NavigationBar__buttons--server-status"
+                  type="button"
                 >
-                  <button
-                    class="css-1hei9vx"
-                    data-testid="NavigationBar__buttons--server-status"
-                    type="button"
+                  <div
+                    class="flex items-center space-x-2"
                   >
                     <div
-                      class="flex items-center space-x-2"
+                      class="p-1 css-1i4b0eq"
+                      height="20"
+                      width="20"
+                    >
+                      <svg
+                        fill="none"
+                        viewBox="0 0 20 15"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M6.595 6.285c.618-3.372 3.654-5.664 6.932-5.233 3.279.43 5.67 3.435 5.46 6.86-.21 3.426-2.948 6.092-6.252 6.088H4.912c-1.606.003-3.05-1.017-3.64-2.569-.589-1.552-.203-3.32.972-4.457a3.795 3.795 0 0 1 4.35-.69zm0 0C6.5 7 6.6 7.8 7 9"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
+                      </svg>
+                    </div>
+                    <div
+                      class="absolute right-1 top-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
                     >
                       <div
-                        class="p-1 css-1i4b0eq"
-                        height="20"
-                        width="20"
-                      >
-                        <svg
-                          fill="none"
-                          viewBox="0 0 20 15"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M6.595 6.285c.618-3.372 3.654-5.664 6.932-5.233 3.279.43 5.67 3.435 5.46 6.86-.21 3.426-2.948 6.092-6.252 6.088H4.912c-1.606.003-3.05-1.017-3.64-2.569-.589-1.552-.203-3.32.972-4.457a3.795 3.795 0 0 1 4.35-.69zm0 0C6.5 7 6.6 7.8 7 9"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                          />
-                        </svg>
-                      </div>
-                      <div
-                        class="absolute right-1 top-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
-                      >
-                        <div
-                          class="h-2 w-2 rounded-full bg-theme-success-700"
-                        />
-                      </div>
+                        class="h-2 w-2 rounded-full bg-theme-success-700"
+                      />
                     </div>
-                  </button>
-                </div>
-              </span>
+                  </div>
+                </button>
+              </div>
             </div>
           </div>
           <div
@@ -897,59 +885,57 @@ exports[`NavigationBar > should render full variant when profile restored is fal
           />
           <div>
             <div
-              class="static sm:relative"
+              aria-expanded="false"
+              aria-haspopup="dialog"
+              data-testid="dropdown__toggle"
             >
-              <span
-                data-testid="dropdown__toggle"
+              <div
+                class="group css-c93wvv"
               >
-                <div
-                  class="group css-c93wvv"
+                <button
+                  class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none"
+                  data-testid="NavigationBar__buttons--notifications"
+                  type="button"
                 >
-                  <button
-                    class="css-1hei9vx"
-                    data-testid="NavigationBar__buttons--notifications"
-                    type="button"
+                  <div
+                    class="flex items-center space-x-2"
                   >
                     <div
-                      class="flex items-center space-x-2"
+                      class="p-1 css-1i4b0eq"
+                      height="20"
+                      width="20"
+                    >
+                      <svg
+                        id="bell"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M8.4 17.8c.3.9 1.2 1.4 2.1 1.1.5-.2 1-.6 1.1-1.1M10 2.8V1M10 2.8c3.3 0 6 2.7 6 6h0c0 5.6 1.2 6.6 1.2 6.6H2.8S4 13.9 4 8.8c0-3.3 2.7-6 6-6z"
+                          />
+                        </g>
+                      </svg>
+                    </div>
+                    <div
+                      class="absolute right-1 top-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
                     >
                       <div
-                        class="p-1 css-1i4b0eq"
-                        height="20"
-                        width="20"
-                      >
-                        <svg
-                          id="bell"
-                          viewBox="0 0 20 20"
-                          x="0"
-                          xml:space="preserve"
-                          xmlns="http://www.w3.org/2000/svg"
-                          y="0"
-                        >
-                          <g
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                          >
-                            <path
-                              d="M8.4 17.8c.3.9 1.2 1.4 2.1 1.1.5-.2 1-.6 1.1-1.1M10 2.8V1M10 2.8c3.3 0 6 2.7 6 6h0c0 5.6 1.2 6.6 1.2 6.6H2.8S4 13.9 4 8.8c0-3.3 2.7-6 6-6z"
-                            />
-                          </g>
-                        </svg>
-                      </div>
-                      <div
-                        class="absolute right-1 top-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
-                      >
-                        <div
-                          class="h-2 w-2 rounded-full bg-theme-danger-500"
-                        />
-                      </div>
+                        class="h-2 w-2 rounded-full bg-theme-danger-500"
+                      />
                     </div>
-                  </button>
-                </div>
-              </span>
+                  </div>
+                </button>
+              </div>
             </div>
           </div>
           <div
@@ -965,7 +951,7 @@ exports[`NavigationBar > should render full variant when profile restored is fal
                 class="css-c93wvv"
               >
                 <button
-                  class="css-5e9bdv"
+                  class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700"
                   data-testid="NavigationBar__buttons--receive"
                   disabled=""
                   type="button"
@@ -1013,7 +999,7 @@ exports[`NavigationBar > should render full variant when profile restored is fal
                 class="css-c93wvv"
               >
                 <button
-                  class="css-5e9bdv"
+                  class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700"
                   data-testid="NavigationBar__buttons--send"
                   disabled=""
                   type="button"
@@ -1085,33 +1071,31 @@ exports[`NavigationBar > should render full variant when profile restored is fal
           </div>
         </div>
         <div
-          class="static sm:relative"
+          aria-expanded="false"
+          aria-haspopup="dialog"
+          data-testid="dropdown__toggle"
         >
-          <span
-            data-testid="dropdown__toggle"
+          <div
+            class="relative cursor-pointer items-center justify-center rounded-full align-middle"
+            data-testid="UserMenu"
           >
             <div
-              class="relative cursor-pointer items-center justify-center rounded-full align-middle"
-              data-testid="UserMenu"
+              class="shrink-0 css-1n9jllj"
+              data-testid="Avatar"
             >
               <div
-                class="shrink-0 css-1n9jllj"
-                data-testid="Avatar"
+                class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
               >
-                <div
-                  class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
-                >
-                  <img
-                    alt="Profile Avatar"
-                    src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(233, 30, 99)" width="100" height="100"/><circle r="45" cx="80" cy="30" fill="rgb(76, 175, 80)"/><circle r="55" cx="0" cy="60" fill="rgb(255, 152, 0)"/><circle r="40" cx="50" cy="50" fill="rgb(3, 169, 244)"/></svg>"
-                  />
-                  <span
-                    class="absolute text-sm font-semibold text-theme-background dark:text-theme-text"
-                  />
-                </div>
+                <img
+                  alt="Profile Avatar"
+                  src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(233, 30, 99)" width="100" height="100"/><circle r="45" cx="80" cy="30" fill="rgb(76, 175, 80)"/><circle r="55" cx="0" cy="60" fill="rgb(255, 152, 0)"/><circle r="40" cx="50" cy="50" fill="rgb(3, 169, 244)"/></svg>"
+                />
+                <span
+                  class="absolute text-sm font-semibold text-theme-background dark:text-theme-text"
+                />
               </div>
             </div>
-          </span>
+          </div>
         </div>
       </div>
     </div>
@@ -1129,7 +1113,7 @@ exports[`NavigationBar > should render full variant when profile restored is tru
       class="flex h-14 items-center justify-center space-x-4"
     >
       <button
-        class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1hei9vx"
+        class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-theme-secondary-700 dark:text-theme-secondary-600"
         data-testid="NavigationBar__buttons__mobile--receive"
         type="button"
       >
@@ -1169,7 +1153,7 @@ exports[`NavigationBar > should render full variant when profile restored is tru
         type="vertical"
       />
       <button
-        class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1hei9vx"
+        class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-theme-secondary-700 dark:text-theme-secondary-600"
         data-testid="NavigationBar__buttons__mobile--home"
         type="button"
       >
@@ -1206,7 +1190,7 @@ exports[`NavigationBar > should render full variant when profile restored is tru
         type="vertical"
       />
       <button
-        class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1hei9vx"
+        class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-theme-secondary-700 dark:text-theme-secondary-600"
         data-testid="NavigationBar__buttons__mobile--send"
         type="button"
       >
@@ -1245,7 +1229,7 @@ exports[`NavigationBar > should render full variant when profile restored is tru
     class="css-1jzy9qi"
   >
     <div
-      class="relative flex h-21"
+      class="relative flex h-14 sm:h-21"
     >
       <div
         class="hidden w-12 sm:flex"
@@ -1279,13 +1263,13 @@ exports[`NavigationBar > should render full variant when profile restored is tru
         </button>
       </div>
       <div
-        class="flex flex-1 items-center px-8"
+        class="flex flex-1 items-center px-6 sm:px-8"
       >
         <div
           class="my-auto flex items-center"
         >
           <button
-            class="my-auto mr-4 flex h-11 w-11 cursor-pointer items-center justify-center rounded-xl bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400"
+            class="my-auto mr-2 flex h-8 w-8 cursor-pointer items-center justify-center rounded bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 sm:mr-4 sm:h-11 sm:w-11 sm:rounded-xl"
             data-testid="NavigationBarLogo--button"
             type="button"
           >
@@ -1311,7 +1295,7 @@ exports[`NavigationBar > should render full variant when profile restored is tru
           </button>
         </div>
         <ul
-          class="ml-4 mr-auto hidden h-21 space-x-8 lg:flex"
+          class="ml-4 mr-auto hidden h-14 space-x-8 sm:h-21 lg:flex"
           data-testid="NavigationBar__menu"
         >
           <li
@@ -1344,37 +1328,35 @@ exports[`NavigationBar > should render full variant when profile restored is tru
           data-testid="NavigationBar__menu-toggle"
         >
           <div
-            class="static sm:relative"
+            aria-expanded="false"
+            aria-haspopup="dialog"
+            data-testid="dropdown__toggle"
           >
-            <span
-              data-testid="dropdown__toggle"
+            <button
+              class="cursor-pointer rounded p-2 focus:outline-none focus:ring-2 focus:ring-theme-primary-400"
+              type="button"
             >
-              <button
-                class="cursor-pointer rounded p-2 focus:outline-none focus:ring-2 focus:ring-theme-primary-400"
-                type="button"
+              <div
+                class="css-1i4b0eq"
+                height="20"
+                width="20"
               >
-                <div
-                  class="css-1i4b0eq"
-                  height="20"
-                  width="20"
+                <svg
+                  viewBox="0 0 20 20"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
                 >
-                  <svg
-                    viewBox="0 0 20 20"
-                    xml:space="preserve"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M1 15.5h18M1 10h18M1 4.5h18"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                    />
-                  </svg>
-                </div>
-              </button>
-            </span>
+                  <path
+                    d="M1 15.5h18M1 10h18M1 4.5h18"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  />
+                </svg>
+              </div>
+            </button>
           </div>
         </div>
         <div
@@ -1382,52 +1364,50 @@ exports[`NavigationBar > should render full variant when profile restored is tru
         >
           <div>
             <div
-              class="static sm:relative"
+              aria-expanded="false"
+              aria-haspopup="dialog"
+              data-testid="dropdown__toggle"
             >
-              <span
-                data-testid="dropdown__toggle"
+              <div
+                class="group css-c93wvv"
               >
-                <div
-                  class="group css-c93wvv"
+                <button
+                  class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none"
+                  data-testid="NavigationBar__buttons--server-status"
+                  type="button"
                 >
-                  <button
-                    class="css-1hei9vx"
-                    data-testid="NavigationBar__buttons--server-status"
-                    type="button"
+                  <div
+                    class="flex items-center space-x-2"
                   >
                     <div
-                      class="flex items-center space-x-2"
+                      class="p-1 css-1i4b0eq"
+                      height="20"
+                      width="20"
+                    >
+                      <svg
+                        fill="none"
+                        viewBox="0 0 20 15"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M6.595 6.285c.618-3.372 3.654-5.664 6.932-5.233 3.279.43 5.67 3.435 5.46 6.86-.21 3.426-2.948 6.092-6.252 6.088H4.912c-1.606.003-3.05-1.017-3.64-2.569-.589-1.552-.203-3.32.972-4.457a3.795 3.795 0 0 1 4.35-.69zm0 0C6.5 7 6.6 7.8 7 9"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
+                      </svg>
+                    </div>
+                    <div
+                      class="absolute right-1 top-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
                     >
                       <div
-                        class="p-1 css-1i4b0eq"
-                        height="20"
-                        width="20"
-                      >
-                        <svg
-                          fill="none"
-                          viewBox="0 0 20 15"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M6.595 6.285c.618-3.372 3.654-5.664 6.932-5.233 3.279.43 5.67 3.435 5.46 6.86-.21 3.426-2.948 6.092-6.252 6.088H4.912c-1.606.003-3.05-1.017-3.64-2.569-.589-1.552-.203-3.32.972-4.457a3.795 3.795 0 0 1 4.35-.69zm0 0C6.5 7 6.6 7.8 7 9"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                          />
-                        </svg>
-                      </div>
-                      <div
-                        class="absolute right-1 top-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
-                      >
-                        <div
-                          class="h-2 w-2 rounded-full bg-theme-success-700"
-                        />
-                      </div>
+                        class="h-2 w-2 rounded-full bg-theme-success-700"
+                      />
                     </div>
-                  </button>
-                </div>
-              </span>
+                  </div>
+                </button>
+              </div>
             </div>
           </div>
           <div
@@ -1435,59 +1415,57 @@ exports[`NavigationBar > should render full variant when profile restored is tru
           />
           <div>
             <div
-              class="static sm:relative"
+              aria-expanded="false"
+              aria-haspopup="dialog"
+              data-testid="dropdown__toggle"
             >
-              <span
-                data-testid="dropdown__toggle"
+              <div
+                class="group css-c93wvv"
               >
-                <div
-                  class="group css-c93wvv"
+                <button
+                  class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none"
+                  data-testid="NavigationBar__buttons--notifications"
+                  type="button"
                 >
-                  <button
-                    class="css-1hei9vx"
-                    data-testid="NavigationBar__buttons--notifications"
-                    type="button"
+                  <div
+                    class="flex items-center space-x-2"
                   >
                     <div
-                      class="flex items-center space-x-2"
+                      class="p-1 css-1i4b0eq"
+                      height="20"
+                      width="20"
+                    >
+                      <svg
+                        id="bell"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M8.4 17.8c.3.9 1.2 1.4 2.1 1.1.5-.2 1-.6 1.1-1.1M10 2.8V1M10 2.8c3.3 0 6 2.7 6 6h0c0 5.6 1.2 6.6 1.2 6.6H2.8S4 13.9 4 8.8c0-3.3 2.7-6 6-6z"
+                          />
+                        </g>
+                      </svg>
+                    </div>
+                    <div
+                      class="absolute right-1 top-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
                     >
                       <div
-                        class="p-1 css-1i4b0eq"
-                        height="20"
-                        width="20"
-                      >
-                        <svg
-                          id="bell"
-                          viewBox="0 0 20 20"
-                          x="0"
-                          xml:space="preserve"
-                          xmlns="http://www.w3.org/2000/svg"
-                          y="0"
-                        >
-                          <g
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                          >
-                            <path
-                              d="M8.4 17.8c.3.9 1.2 1.4 2.1 1.1.5-.2 1-.6 1.1-1.1M10 2.8V1M10 2.8c3.3 0 6 2.7 6 6h0c0 5.6 1.2 6.6 1.2 6.6H2.8S4 13.9 4 8.8c0-3.3 2.7-6 6-6z"
-                            />
-                          </g>
-                        </svg>
-                      </div>
-                      <div
-                        class="absolute right-1 top-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
-                      >
-                        <div
-                          class="h-2 w-2 rounded-full bg-theme-danger-500"
-                        />
-                      </div>
+                        class="h-2 w-2 rounded-full bg-theme-danger-500"
+                      />
                     </div>
-                  </button>
-                </div>
-              </span>
+                  </div>
+                </button>
+              </div>
             </div>
           </div>
           <div
@@ -1503,7 +1481,7 @@ exports[`NavigationBar > should render full variant when profile restored is tru
                 class="css-c93wvv"
               >
                 <button
-                  class="css-1hei9vx"
+                  class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none"
                   data-testid="NavigationBar__buttons--receive"
                   type="button"
                 >
@@ -1550,7 +1528,7 @@ exports[`NavigationBar > should render full variant when profile restored is tru
                 class="css-c93wvv"
               >
                 <button
-                  class="css-1hei9vx"
+                  class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none"
                   data-testid="NavigationBar__buttons--send"
                   type="button"
                 >
@@ -1594,7 +1572,7 @@ exports[`NavigationBar > should render full variant when profile restored is tru
           data-testid="NavigationBar__balance"
         >
           <div
-            class="-mt-3 flex flex-row items-center justify-center space-x-2 bg-theme-secondary-100 px-8 py-2.5 dark:bg-black md:m-0 md:flex-col md:items-start md:justify-start md:space-x-0 md:bg-transparent md:p-0 md:text-right md:dark:bg-transparent"
+            class="flex flex-row items-center justify-center space-x-2 bg-theme-secondary-100 px-8 py-2.5 dark:bg-black md:m-0 md:flex-col md:items-start md:justify-start md:space-x-0 md:bg-transparent md:p-0 md:text-right md:dark:bg-transparent"
           >
             <div
               class="whitespace-nowrap text-theme-secondary-700 dark:text-theme-secondary-500 md:text-xs md:font-semibold md:text-theme-secondary-500"
@@ -1615,35 +1593,33 @@ exports[`NavigationBar > should render full variant when profile restored is tru
           </div>
         </div>
         <div
-          class="static sm:relative"
+          aria-expanded="false"
+          aria-haspopup="dialog"
+          data-testid="dropdown__toggle"
         >
-          <span
-            data-testid="dropdown__toggle"
+          <div
+            class="relative cursor-pointer items-center justify-center rounded-full align-middle"
+            data-testid="UserMenu"
           >
             <div
-              class="relative cursor-pointer items-center justify-center rounded-full align-middle"
-              data-testid="UserMenu"
+              class="shrink-0 css-1n9jllj"
+              data-testid="Avatar"
             >
               <div
-                class="shrink-0 css-1n9jllj"
-                data-testid="Avatar"
+                class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
               >
-                <div
-                  class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                <img
+                  alt="Profile Avatar"
+                  src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(233, 30, 99)" width="100" height="100"/><circle r="45" cx="80" cy="30" fill="rgb(76, 175, 80)"/><circle r="55" cx="0" cy="60" fill="rgb(255, 152, 0)"/><circle r="40" cx="50" cy="50" fill="rgb(3, 169, 244)"/></svg>"
+                />
+                <span
+                  class="absolute text-sm font-semibold text-theme-background dark:text-theme-text"
                 >
-                  <img
-                    alt="Profile Avatar"
-                    src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(233, 30, 99)" width="100" height="100"/><circle r="45" cx="80" cy="30" fill="rgb(76, 175, 80)"/><circle r="55" cx="0" cy="60" fill="rgb(255, 152, 0)"/><circle r="40" cx="50" cy="50" fill="rgb(3, 169, 244)"/></svg>"
-                  />
-                  <span
-                    class="absolute text-sm font-semibold text-theme-background dark:text-theme-text"
-                  >
-                    JO
-                  </span>
-                </div>
+                  JO
+                </span>
               </div>
             </div>
-          </span>
+          </div>
         </div>
       </div>
     </div>
@@ -1661,7 +1637,7 @@ exports[`NavigationBar > should render in lg 1`] = `
       class="flex h-14 items-center justify-center space-x-4"
     >
       <button
-        class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1hei9vx"
+        class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-theme-secondary-700 dark:text-theme-secondary-600"
         data-testid="NavigationBar__buttons__mobile--receive"
         type="button"
       >
@@ -1701,7 +1677,7 @@ exports[`NavigationBar > should render in lg 1`] = `
         type="vertical"
       />
       <button
-        class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1hei9vx"
+        class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-theme-secondary-700 dark:text-theme-secondary-600"
         data-testid="NavigationBar__buttons__mobile--home"
         type="button"
       >
@@ -1738,7 +1714,7 @@ exports[`NavigationBar > should render in lg 1`] = `
         type="vertical"
       />
       <button
-        class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1hei9vx"
+        class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-theme-secondary-700 dark:text-theme-secondary-600"
         data-testid="NavigationBar__buttons__mobile--send"
         type="button"
       >
@@ -1777,7 +1753,7 @@ exports[`NavigationBar > should render in lg 1`] = `
     class="css-1jzy9qi"
   >
     <div
-      class="relative flex h-21"
+      class="relative flex h-14 sm:h-21"
     >
       <div
         class="hidden w-12 sm:flex"
@@ -1811,13 +1787,13 @@ exports[`NavigationBar > should render in lg 1`] = `
         </button>
       </div>
       <div
-        class="flex flex-1 items-center px-8"
+        class="flex flex-1 items-center px-6 sm:px-8"
       >
         <div
           class="my-auto flex items-center"
         >
           <button
-            class="my-auto mr-4 flex h-11 w-11 cursor-pointer items-center justify-center rounded-xl bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400"
+            class="my-auto mr-2 flex h-8 w-8 cursor-pointer items-center justify-center rounded bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 sm:mr-4 sm:h-11 sm:w-11 sm:rounded-xl"
             data-testid="NavigationBarLogo--button"
             type="button"
           >
@@ -1843,7 +1819,7 @@ exports[`NavigationBar > should render in lg 1`] = `
           </button>
         </div>
         <ul
-          class="ml-4 mr-auto hidden h-21 space-x-8 lg:flex"
+          class="ml-4 mr-auto hidden h-14 space-x-8 sm:h-21 lg:flex"
           data-testid="NavigationBar__menu"
         >
           <li
@@ -1876,37 +1852,35 @@ exports[`NavigationBar > should render in lg 1`] = `
           data-testid="NavigationBar__menu-toggle"
         >
           <div
-            class="static sm:relative"
+            aria-expanded="false"
+            aria-haspopup="dialog"
+            data-testid="dropdown__toggle"
           >
-            <span
-              data-testid="dropdown__toggle"
+            <button
+              class="cursor-pointer rounded p-2 focus:outline-none focus:ring-2 focus:ring-theme-primary-400"
+              type="button"
             >
-              <button
-                class="cursor-pointer rounded p-2 focus:outline-none focus:ring-2 focus:ring-theme-primary-400"
-                type="button"
+              <div
+                class="css-1i4b0eq"
+                height="20"
+                width="20"
               >
-                <div
-                  class="css-1i4b0eq"
-                  height="20"
-                  width="20"
+                <svg
+                  viewBox="0 0 20 20"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
                 >
-                  <svg
-                    viewBox="0 0 20 20"
-                    xml:space="preserve"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M1 15.5h18M1 10h18M1 4.5h18"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                    />
-                  </svg>
-                </div>
-              </button>
-            </span>
+                  <path
+                    d="M1 15.5h18M1 10h18M1 4.5h18"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  />
+                </svg>
+              </div>
+            </button>
           </div>
         </div>
         <div
@@ -1914,52 +1888,50 @@ exports[`NavigationBar > should render in lg 1`] = `
         >
           <div>
             <div
-              class="static sm:relative"
+              aria-expanded="false"
+              aria-haspopup="dialog"
+              data-testid="dropdown__toggle"
             >
-              <span
-                data-testid="dropdown__toggle"
+              <div
+                class="group css-c93wvv"
               >
-                <div
-                  class="group css-c93wvv"
+                <button
+                  class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none"
+                  data-testid="NavigationBar__buttons--server-status"
+                  type="button"
                 >
-                  <button
-                    class="css-1hei9vx"
-                    data-testid="NavigationBar__buttons--server-status"
-                    type="button"
+                  <div
+                    class="flex items-center space-x-2"
                   >
                     <div
-                      class="flex items-center space-x-2"
+                      class="p-1 css-1i4b0eq"
+                      height="20"
+                      width="20"
+                    >
+                      <svg
+                        fill="none"
+                        viewBox="0 0 20 15"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M6.595 6.285c.618-3.372 3.654-5.664 6.932-5.233 3.279.43 5.67 3.435 5.46 6.86-.21 3.426-2.948 6.092-6.252 6.088H4.912c-1.606.003-3.05-1.017-3.64-2.569-.589-1.552-.203-3.32.972-4.457a3.795 3.795 0 0 1 4.35-.69zm0 0C6.5 7 6.6 7.8 7 9"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
+                      </svg>
+                    </div>
+                    <div
+                      class="absolute right-1 top-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
                     >
                       <div
-                        class="p-1 css-1i4b0eq"
-                        height="20"
-                        width="20"
-                      >
-                        <svg
-                          fill="none"
-                          viewBox="0 0 20 15"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M6.595 6.285c.618-3.372 3.654-5.664 6.932-5.233 3.279.43 5.67 3.435 5.46 6.86-.21 3.426-2.948 6.092-6.252 6.088H4.912c-1.606.003-3.05-1.017-3.64-2.569-.589-1.552-.203-3.32.972-4.457a3.795 3.795 0 0 1 4.35-.69zm0 0C6.5 7 6.6 7.8 7 9"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                          />
-                        </svg>
-                      </div>
-                      <div
-                        class="absolute right-1 top-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
-                      >
-                        <div
-                          class="h-2 w-2 rounded-full bg-theme-success-700"
-                        />
-                      </div>
+                        class="h-2 w-2 rounded-full bg-theme-success-700"
+                      />
                     </div>
-                  </button>
-                </div>
-              </span>
+                  </div>
+                </button>
+              </div>
             </div>
           </div>
           <div
@@ -1967,59 +1939,57 @@ exports[`NavigationBar > should render in lg 1`] = `
           />
           <div>
             <div
-              class="static sm:relative"
+              aria-expanded="false"
+              aria-haspopup="dialog"
+              data-testid="dropdown__toggle"
             >
-              <span
-                data-testid="dropdown__toggle"
+              <div
+                class="group css-c93wvv"
               >
-                <div
-                  class="group css-c93wvv"
+                <button
+                  class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none"
+                  data-testid="NavigationBar__buttons--notifications"
+                  type="button"
                 >
-                  <button
-                    class="css-1hei9vx"
-                    data-testid="NavigationBar__buttons--notifications"
-                    type="button"
+                  <div
+                    class="flex items-center space-x-2"
                   >
                     <div
-                      class="flex items-center space-x-2"
+                      class="p-1 css-1i4b0eq"
+                      height="20"
+                      width="20"
+                    >
+                      <svg
+                        id="bell"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M8.4 17.8c.3.9 1.2 1.4 2.1 1.1.5-.2 1-.6 1.1-1.1M10 2.8V1M10 2.8c3.3 0 6 2.7 6 6h0c0 5.6 1.2 6.6 1.2 6.6H2.8S4 13.9 4 8.8c0-3.3 2.7-6 6-6z"
+                          />
+                        </g>
+                      </svg>
+                    </div>
+                    <div
+                      class="absolute right-1 top-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
                     >
                       <div
-                        class="p-1 css-1i4b0eq"
-                        height="20"
-                        width="20"
-                      >
-                        <svg
-                          id="bell"
-                          viewBox="0 0 20 20"
-                          x="0"
-                          xml:space="preserve"
-                          xmlns="http://www.w3.org/2000/svg"
-                          y="0"
-                        >
-                          <g
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                          >
-                            <path
-                              d="M8.4 17.8c.3.9 1.2 1.4 2.1 1.1.5-.2 1-.6 1.1-1.1M10 2.8V1M10 2.8c3.3 0 6 2.7 6 6h0c0 5.6 1.2 6.6 1.2 6.6H2.8S4 13.9 4 8.8c0-3.3 2.7-6 6-6z"
-                            />
-                          </g>
-                        </svg>
-                      </div>
-                      <div
-                        class="absolute right-1 top-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
-                      >
-                        <div
-                          class="h-2 w-2 rounded-full bg-theme-danger-500"
-                        />
-                      </div>
+                        class="h-2 w-2 rounded-full bg-theme-danger-500"
+                      />
                     </div>
-                  </button>
-                </div>
-              </span>
+                  </div>
+                </button>
+              </div>
             </div>
           </div>
           <div
@@ -2035,7 +2005,7 @@ exports[`NavigationBar > should render in lg 1`] = `
                 class="css-c93wvv"
               >
                 <button
-                  class="css-1hei9vx"
+                  class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none"
                   data-testid="NavigationBar__buttons--receive"
                   type="button"
                 >
@@ -2082,7 +2052,7 @@ exports[`NavigationBar > should render in lg 1`] = `
                 class="css-c93wvv"
               >
                 <button
-                  class="css-1hei9vx"
+                  class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none"
                   data-testid="NavigationBar__buttons--send"
                   type="button"
                 >
@@ -2126,7 +2096,7 @@ exports[`NavigationBar > should render in lg 1`] = `
           data-testid="NavigationBar__balance"
         >
           <div
-            class="-mt-3 flex flex-row items-center justify-center space-x-2 bg-theme-secondary-100 px-8 py-2.5 dark:bg-black md:m-0 md:flex-col md:items-start md:justify-start md:space-x-0 md:bg-transparent md:p-0 md:text-right md:dark:bg-transparent"
+            class="flex flex-row items-center justify-center space-x-2 bg-theme-secondary-100 px-8 py-2.5 dark:bg-black md:m-0 md:flex-col md:items-start md:justify-start md:space-x-0 md:bg-transparent md:p-0 md:text-right md:dark:bg-transparent"
           >
             <div
               class="whitespace-nowrap text-theme-secondary-700 dark:text-theme-secondary-500 md:text-xs md:font-semibold md:text-theme-secondary-500"
@@ -2147,35 +2117,33 @@ exports[`NavigationBar > should render in lg 1`] = `
           </div>
         </div>
         <div
-          class="static sm:relative"
+          aria-expanded="false"
+          aria-haspopup="dialog"
+          data-testid="dropdown__toggle"
         >
-          <span
-            data-testid="dropdown__toggle"
+          <div
+            class="relative cursor-pointer items-center justify-center rounded-full align-middle"
+            data-testid="UserMenu"
           >
             <div
-              class="relative cursor-pointer items-center justify-center rounded-full align-middle"
-              data-testid="UserMenu"
+              class="shrink-0 css-1n9jllj"
+              data-testid="Avatar"
             >
               <div
-                class="shrink-0 css-1n9jllj"
-                data-testid="Avatar"
+                class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
               >
-                <div
-                  class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                <img
+                  alt="Profile Avatar"
+                  src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(233, 30, 99)" width="100" height="100"/><circle r="45" cx="80" cy="30" fill="rgb(76, 175, 80)"/><circle r="55" cx="0" cy="60" fill="rgb(255, 152, 0)"/><circle r="40" cx="50" cy="50" fill="rgb(3, 169, 244)"/></svg>"
+                />
+                <span
+                  class="absolute text-sm font-semibold text-theme-background dark:text-theme-text"
                 >
-                  <img
-                    alt="Profile Avatar"
-                    src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(233, 30, 99)" width="100" height="100"/><circle r="45" cx="80" cy="30" fill="rgb(76, 175, 80)"/><circle r="55" cx="0" cy="60" fill="rgb(255, 152, 0)"/><circle r="40" cx="50" cy="50" fill="rgb(3, 169, 244)"/></svg>"
-                  />
-                  <span
-                    class="absolute text-sm font-semibold text-theme-background dark:text-theme-text"
-                  >
-                    JO
-                  </span>
-                </div>
+                  JO
+                </span>
               </div>
             </div>
-          </span>
+          </div>
         </div>
       </div>
     </div>
@@ -2193,7 +2161,7 @@ exports[`NavigationBar > should render in md 1`] = `
       class="flex h-14 items-center justify-center space-x-4"
     >
       <button
-        class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1hei9vx"
+        class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-theme-secondary-700 dark:text-theme-secondary-600"
         data-testid="NavigationBar__buttons__mobile--receive"
         type="button"
       >
@@ -2233,7 +2201,7 @@ exports[`NavigationBar > should render in md 1`] = `
         type="vertical"
       />
       <button
-        class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1hei9vx"
+        class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-theme-secondary-700 dark:text-theme-secondary-600"
         data-testid="NavigationBar__buttons__mobile--home"
         type="button"
       >
@@ -2270,7 +2238,7 @@ exports[`NavigationBar > should render in md 1`] = `
         type="vertical"
       />
       <button
-        class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1hei9vx"
+        class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-theme-secondary-700 dark:text-theme-secondary-600"
         data-testid="NavigationBar__buttons__mobile--send"
         type="button"
       >
@@ -2309,7 +2277,7 @@ exports[`NavigationBar > should render in md 1`] = `
     class="css-1jzy9qi"
   >
     <div
-      class="relative flex h-21"
+      class="relative flex h-14 sm:h-21"
     >
       <div
         class="hidden w-12 sm:flex"
@@ -2343,13 +2311,13 @@ exports[`NavigationBar > should render in md 1`] = `
         </button>
       </div>
       <div
-        class="flex flex-1 items-center px-8"
+        class="flex flex-1 items-center px-6 sm:px-8"
       >
         <div
           class="my-auto flex items-center"
         >
           <button
-            class="my-auto mr-4 flex h-11 w-11 cursor-pointer items-center justify-center rounded-xl bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400"
+            class="my-auto mr-2 flex h-8 w-8 cursor-pointer items-center justify-center rounded bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 sm:mr-4 sm:h-11 sm:w-11 sm:rounded-xl"
             data-testid="NavigationBarLogo--button"
             type="button"
           >
@@ -2375,7 +2343,7 @@ exports[`NavigationBar > should render in md 1`] = `
           </button>
         </div>
         <ul
-          class="ml-4 mr-auto hidden h-21 space-x-8 lg:flex"
+          class="ml-4 mr-auto hidden h-14 space-x-8 sm:h-21 lg:flex"
           data-testid="NavigationBar__menu"
         >
           <li
@@ -2408,37 +2376,35 @@ exports[`NavigationBar > should render in md 1`] = `
           data-testid="NavigationBar__menu-toggle"
         >
           <div
-            class="static sm:relative"
+            aria-expanded="false"
+            aria-haspopup="dialog"
+            data-testid="dropdown__toggle"
           >
-            <span
-              data-testid="dropdown__toggle"
+            <button
+              class="cursor-pointer rounded p-2 focus:outline-none focus:ring-2 focus:ring-theme-primary-400"
+              type="button"
             >
-              <button
-                class="cursor-pointer rounded p-2 focus:outline-none focus:ring-2 focus:ring-theme-primary-400"
-                type="button"
+              <div
+                class="css-1i4b0eq"
+                height="20"
+                width="20"
               >
-                <div
-                  class="css-1i4b0eq"
-                  height="20"
-                  width="20"
+                <svg
+                  viewBox="0 0 20 20"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
                 >
-                  <svg
-                    viewBox="0 0 20 20"
-                    xml:space="preserve"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M1 15.5h18M1 10h18M1 4.5h18"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                    />
-                  </svg>
-                </div>
-              </button>
-            </span>
+                  <path
+                    d="M1 15.5h18M1 10h18M1 4.5h18"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  />
+                </svg>
+              </div>
+            </button>
           </div>
         </div>
         <div
@@ -2446,52 +2412,50 @@ exports[`NavigationBar > should render in md 1`] = `
         >
           <div>
             <div
-              class="static sm:relative"
+              aria-expanded="false"
+              aria-haspopup="dialog"
+              data-testid="dropdown__toggle"
             >
-              <span
-                data-testid="dropdown__toggle"
+              <div
+                class="group css-c93wvv"
               >
-                <div
-                  class="group css-c93wvv"
+                <button
+                  class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none"
+                  data-testid="NavigationBar__buttons--server-status"
+                  type="button"
                 >
-                  <button
-                    class="css-1hei9vx"
-                    data-testid="NavigationBar__buttons--server-status"
-                    type="button"
+                  <div
+                    class="flex items-center space-x-2"
                   >
                     <div
-                      class="flex items-center space-x-2"
+                      class="p-1 css-1i4b0eq"
+                      height="20"
+                      width="20"
+                    >
+                      <svg
+                        fill="none"
+                        viewBox="0 0 20 15"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M6.595 6.285c.618-3.372 3.654-5.664 6.932-5.233 3.279.43 5.67 3.435 5.46 6.86-.21 3.426-2.948 6.092-6.252 6.088H4.912c-1.606.003-3.05-1.017-3.64-2.569-.589-1.552-.203-3.32.972-4.457a3.795 3.795 0 0 1 4.35-.69zm0 0C6.5 7 6.6 7.8 7 9"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
+                      </svg>
+                    </div>
+                    <div
+                      class="absolute right-1 top-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
                     >
                       <div
-                        class="p-1 css-1i4b0eq"
-                        height="20"
-                        width="20"
-                      >
-                        <svg
-                          fill="none"
-                          viewBox="0 0 20 15"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M6.595 6.285c.618-3.372 3.654-5.664 6.932-5.233 3.279.43 5.67 3.435 5.46 6.86-.21 3.426-2.948 6.092-6.252 6.088H4.912c-1.606.003-3.05-1.017-3.64-2.569-.589-1.552-.203-3.32.972-4.457a3.795 3.795 0 0 1 4.35-.69zm0 0C6.5 7 6.6 7.8 7 9"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                          />
-                        </svg>
-                      </div>
-                      <div
-                        class="absolute right-1 top-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
-                      >
-                        <div
-                          class="h-2 w-2 rounded-full bg-theme-success-700"
-                        />
-                      </div>
+                        class="h-2 w-2 rounded-full bg-theme-success-700"
+                      />
                     </div>
-                  </button>
-                </div>
-              </span>
+                  </div>
+                </button>
+              </div>
             </div>
           </div>
           <div
@@ -2499,59 +2463,57 @@ exports[`NavigationBar > should render in md 1`] = `
           />
           <div>
             <div
-              class="static sm:relative"
+              aria-expanded="false"
+              aria-haspopup="dialog"
+              data-testid="dropdown__toggle"
             >
-              <span
-                data-testid="dropdown__toggle"
+              <div
+                class="group css-c93wvv"
               >
-                <div
-                  class="group css-c93wvv"
+                <button
+                  class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none"
+                  data-testid="NavigationBar__buttons--notifications"
+                  type="button"
                 >
-                  <button
-                    class="css-1hei9vx"
-                    data-testid="NavigationBar__buttons--notifications"
-                    type="button"
+                  <div
+                    class="flex items-center space-x-2"
                   >
                     <div
-                      class="flex items-center space-x-2"
+                      class="p-1 css-1i4b0eq"
+                      height="20"
+                      width="20"
+                    >
+                      <svg
+                        id="bell"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M8.4 17.8c.3.9 1.2 1.4 2.1 1.1.5-.2 1-.6 1.1-1.1M10 2.8V1M10 2.8c3.3 0 6 2.7 6 6h0c0 5.6 1.2 6.6 1.2 6.6H2.8S4 13.9 4 8.8c0-3.3 2.7-6 6-6z"
+                          />
+                        </g>
+                      </svg>
+                    </div>
+                    <div
+                      class="absolute right-1 top-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
                     >
                       <div
-                        class="p-1 css-1i4b0eq"
-                        height="20"
-                        width="20"
-                      >
-                        <svg
-                          id="bell"
-                          viewBox="0 0 20 20"
-                          x="0"
-                          xml:space="preserve"
-                          xmlns="http://www.w3.org/2000/svg"
-                          y="0"
-                        >
-                          <g
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                          >
-                            <path
-                              d="M8.4 17.8c.3.9 1.2 1.4 2.1 1.1.5-.2 1-.6 1.1-1.1M10 2.8V1M10 2.8c3.3 0 6 2.7 6 6h0c0 5.6 1.2 6.6 1.2 6.6H2.8S4 13.9 4 8.8c0-3.3 2.7-6 6-6z"
-                            />
-                          </g>
-                        </svg>
-                      </div>
-                      <div
-                        class="absolute right-1 top-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
-                      >
-                        <div
-                          class="h-2 w-2 rounded-full bg-theme-danger-500"
-                        />
-                      </div>
+                        class="h-2 w-2 rounded-full bg-theme-danger-500"
+                      />
                     </div>
-                  </button>
-                </div>
-              </span>
+                  </div>
+                </button>
+              </div>
             </div>
           </div>
           <div
@@ -2567,7 +2529,7 @@ exports[`NavigationBar > should render in md 1`] = `
                 class="css-c93wvv"
               >
                 <button
-                  class="css-1hei9vx"
+                  class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none"
                   data-testid="NavigationBar__buttons--receive"
                   type="button"
                 >
@@ -2614,7 +2576,7 @@ exports[`NavigationBar > should render in md 1`] = `
                 class="css-c93wvv"
               >
                 <button
-                  class="css-1hei9vx"
+                  class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none"
                   data-testid="NavigationBar__buttons--send"
                   type="button"
                 >
@@ -2658,7 +2620,7 @@ exports[`NavigationBar > should render in md 1`] = `
           data-testid="NavigationBar__balance"
         >
           <div
-            class="-mt-3 flex flex-row items-center justify-center space-x-2 bg-theme-secondary-100 px-8 py-2.5 dark:bg-black md:m-0 md:flex-col md:items-start md:justify-start md:space-x-0 md:bg-transparent md:p-0 md:text-right md:dark:bg-transparent"
+            class="flex flex-row items-center justify-center space-x-2 bg-theme-secondary-100 px-8 py-2.5 dark:bg-black md:m-0 md:flex-col md:items-start md:justify-start md:space-x-0 md:bg-transparent md:p-0 md:text-right md:dark:bg-transparent"
           >
             <div
               class="whitespace-nowrap text-theme-secondary-700 dark:text-theme-secondary-500 md:text-xs md:font-semibold md:text-theme-secondary-500"
@@ -2679,35 +2641,33 @@ exports[`NavigationBar > should render in md 1`] = `
           </div>
         </div>
         <div
-          class="static sm:relative"
+          aria-expanded="false"
+          aria-haspopup="dialog"
+          data-testid="dropdown__toggle"
         >
-          <span
-            data-testid="dropdown__toggle"
+          <div
+            class="relative cursor-pointer items-center justify-center rounded-full align-middle"
+            data-testid="UserMenu"
           >
             <div
-              class="relative cursor-pointer items-center justify-center rounded-full align-middle"
-              data-testid="UserMenu"
+              class="shrink-0 css-1n9jllj"
+              data-testid="Avatar"
             >
               <div
-                class="shrink-0 css-1n9jllj"
-                data-testid="Avatar"
+                class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
               >
-                <div
-                  class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                <img
+                  alt="Profile Avatar"
+                  src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(233, 30, 99)" width="100" height="100"/><circle r="45" cx="80" cy="30" fill="rgb(76, 175, 80)"/><circle r="55" cx="0" cy="60" fill="rgb(255, 152, 0)"/><circle r="40" cx="50" cy="50" fill="rgb(3, 169, 244)"/></svg>"
+                />
+                <span
+                  class="absolute text-sm font-semibold text-theme-background dark:text-theme-text"
                 >
-                  <img
-                    alt="Profile Avatar"
-                    src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(233, 30, 99)" width="100" height="100"/><circle r="45" cx="80" cy="30" fill="rgb(76, 175, 80)"/><circle r="55" cx="0" cy="60" fill="rgb(255, 152, 0)"/><circle r="40" cx="50" cy="50" fill="rgb(3, 169, 244)"/></svg>"
-                  />
-                  <span
-                    class="absolute text-sm font-semibold text-theme-background dark:text-theme-text"
-                  >
-                    JO
-                  </span>
-                </div>
+                  JO
+                </span>
               </div>
             </div>
-          </span>
+          </div>
         </div>
       </div>
     </div>
@@ -2725,7 +2685,7 @@ exports[`NavigationBar > should render in sm 1`] = `
       class="flex h-14 items-center justify-center space-x-4"
     >
       <button
-        class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1hei9vx"
+        class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-theme-secondary-700 dark:text-theme-secondary-600"
         data-testid="NavigationBar__buttons__mobile--receive"
         type="button"
       >
@@ -2765,7 +2725,7 @@ exports[`NavigationBar > should render in sm 1`] = `
         type="vertical"
       />
       <button
-        class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1hei9vx"
+        class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-theme-secondary-700 dark:text-theme-secondary-600"
         data-testid="NavigationBar__buttons__mobile--home"
         type="button"
       >
@@ -2802,7 +2762,7 @@ exports[`NavigationBar > should render in sm 1`] = `
         type="vertical"
       />
       <button
-        class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1hei9vx"
+        class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-theme-secondary-700 dark:text-theme-secondary-600"
         data-testid="NavigationBar__buttons__mobile--send"
         type="button"
       >
@@ -2841,7 +2801,7 @@ exports[`NavigationBar > should render in sm 1`] = `
     class="css-1jzy9qi"
   >
     <div
-      class="relative flex h-21"
+      class="relative flex h-14 sm:h-21"
     >
       <div
         class="hidden w-12 sm:flex"
@@ -2875,13 +2835,13 @@ exports[`NavigationBar > should render in sm 1`] = `
         </button>
       </div>
       <div
-        class="flex flex-1 items-center px-8"
+        class="flex flex-1 items-center px-6 sm:px-8"
       >
         <div
           class="my-auto flex items-center"
         >
           <button
-            class="my-auto mr-4 flex h-11 w-11 cursor-pointer items-center justify-center rounded-xl bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400"
+            class="my-auto mr-2 flex h-8 w-8 cursor-pointer items-center justify-center rounded bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 sm:mr-4 sm:h-11 sm:w-11 sm:rounded-xl"
             data-testid="NavigationBarLogo--button"
             type="button"
           >
@@ -2907,7 +2867,7 @@ exports[`NavigationBar > should render in sm 1`] = `
           </button>
         </div>
         <ul
-          class="ml-4 mr-auto hidden h-21 space-x-8 lg:flex"
+          class="ml-4 mr-auto hidden h-14 space-x-8 sm:h-21 lg:flex"
           data-testid="NavigationBar__menu"
         >
           <li
@@ -2940,37 +2900,35 @@ exports[`NavigationBar > should render in sm 1`] = `
           data-testid="NavigationBar__menu-toggle"
         >
           <div
-            class="static sm:relative"
+            aria-expanded="false"
+            aria-haspopup="dialog"
+            data-testid="dropdown__toggle"
           >
-            <span
-              data-testid="dropdown__toggle"
+            <button
+              class="cursor-pointer rounded p-2 focus:outline-none focus:ring-2 focus:ring-theme-primary-400"
+              type="button"
             >
-              <button
-                class="cursor-pointer rounded p-2 focus:outline-none focus:ring-2 focus:ring-theme-primary-400"
-                type="button"
+              <div
+                class="css-1i4b0eq"
+                height="20"
+                width="20"
               >
-                <div
-                  class="css-1i4b0eq"
-                  height="20"
-                  width="20"
+                <svg
+                  viewBox="0 0 20 20"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
                 >
-                  <svg
-                    viewBox="0 0 20 20"
-                    xml:space="preserve"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M1 15.5h18M1 10h18M1 4.5h18"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                    />
-                  </svg>
-                </div>
-              </button>
-            </span>
+                  <path
+                    d="M1 15.5h18M1 10h18M1 4.5h18"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  />
+                </svg>
+              </div>
+            </button>
           </div>
         </div>
         <div
@@ -2978,52 +2936,50 @@ exports[`NavigationBar > should render in sm 1`] = `
         >
           <div>
             <div
-              class="static sm:relative"
+              aria-expanded="false"
+              aria-haspopup="dialog"
+              data-testid="dropdown__toggle"
             >
-              <span
-                data-testid="dropdown__toggle"
+              <div
+                class="group css-c93wvv"
               >
-                <div
-                  class="group css-c93wvv"
+                <button
+                  class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none"
+                  data-testid="NavigationBar__buttons--server-status"
+                  type="button"
                 >
-                  <button
-                    class="css-1hei9vx"
-                    data-testid="NavigationBar__buttons--server-status"
-                    type="button"
+                  <div
+                    class="flex items-center space-x-2"
                   >
                     <div
-                      class="flex items-center space-x-2"
+                      class="p-1 css-1i4b0eq"
+                      height="20"
+                      width="20"
+                    >
+                      <svg
+                        fill="none"
+                        viewBox="0 0 20 15"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M6.595 6.285c.618-3.372 3.654-5.664 6.932-5.233 3.279.43 5.67 3.435 5.46 6.86-.21 3.426-2.948 6.092-6.252 6.088H4.912c-1.606.003-3.05-1.017-3.64-2.569-.589-1.552-.203-3.32.972-4.457a3.795 3.795 0 0 1 4.35-.69zm0 0C6.5 7 6.6 7.8 7 9"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
+                      </svg>
+                    </div>
+                    <div
+                      class="absolute right-1 top-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
                     >
                       <div
-                        class="p-1 css-1i4b0eq"
-                        height="20"
-                        width="20"
-                      >
-                        <svg
-                          fill="none"
-                          viewBox="0 0 20 15"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M6.595 6.285c.618-3.372 3.654-5.664 6.932-5.233 3.279.43 5.67 3.435 5.46 6.86-.21 3.426-2.948 6.092-6.252 6.088H4.912c-1.606.003-3.05-1.017-3.64-2.569-.589-1.552-.203-3.32.972-4.457a3.795 3.795 0 0 1 4.35-.69zm0 0C6.5 7 6.6 7.8 7 9"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                          />
-                        </svg>
-                      </div>
-                      <div
-                        class="absolute right-1 top-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
-                      >
-                        <div
-                          class="h-2 w-2 rounded-full bg-theme-success-700"
-                        />
-                      </div>
+                        class="h-2 w-2 rounded-full bg-theme-success-700"
+                      />
                     </div>
-                  </button>
-                </div>
-              </span>
+                  </div>
+                </button>
+              </div>
             </div>
           </div>
           <div
@@ -3031,59 +2987,57 @@ exports[`NavigationBar > should render in sm 1`] = `
           />
           <div>
             <div
-              class="static sm:relative"
+              aria-expanded="false"
+              aria-haspopup="dialog"
+              data-testid="dropdown__toggle"
             >
-              <span
-                data-testid="dropdown__toggle"
+              <div
+                class="group css-c93wvv"
               >
-                <div
-                  class="group css-c93wvv"
+                <button
+                  class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none"
+                  data-testid="NavigationBar__buttons--notifications"
+                  type="button"
                 >
-                  <button
-                    class="css-1hei9vx"
-                    data-testid="NavigationBar__buttons--notifications"
-                    type="button"
+                  <div
+                    class="flex items-center space-x-2"
                   >
                     <div
-                      class="flex items-center space-x-2"
+                      class="p-1 css-1i4b0eq"
+                      height="20"
+                      width="20"
+                    >
+                      <svg
+                        id="bell"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M8.4 17.8c.3.9 1.2 1.4 2.1 1.1.5-.2 1-.6 1.1-1.1M10 2.8V1M10 2.8c3.3 0 6 2.7 6 6h0c0 5.6 1.2 6.6 1.2 6.6H2.8S4 13.9 4 8.8c0-3.3 2.7-6 6-6z"
+                          />
+                        </g>
+                      </svg>
+                    </div>
+                    <div
+                      class="absolute right-1 top-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
                     >
                       <div
-                        class="p-1 css-1i4b0eq"
-                        height="20"
-                        width="20"
-                      >
-                        <svg
-                          id="bell"
-                          viewBox="0 0 20 20"
-                          x="0"
-                          xml:space="preserve"
-                          xmlns="http://www.w3.org/2000/svg"
-                          y="0"
-                        >
-                          <g
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                          >
-                            <path
-                              d="M8.4 17.8c.3.9 1.2 1.4 2.1 1.1.5-.2 1-.6 1.1-1.1M10 2.8V1M10 2.8c3.3 0 6 2.7 6 6h0c0 5.6 1.2 6.6 1.2 6.6H2.8S4 13.9 4 8.8c0-3.3 2.7-6 6-6z"
-                            />
-                          </g>
-                        </svg>
-                      </div>
-                      <div
-                        class="absolute right-1 top-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
-                      >
-                        <div
-                          class="h-2 w-2 rounded-full bg-theme-danger-500"
-                        />
-                      </div>
+                        class="h-2 w-2 rounded-full bg-theme-danger-500"
+                      />
                     </div>
-                  </button>
-                </div>
-              </span>
+                  </div>
+                </button>
+              </div>
             </div>
           </div>
           <div
@@ -3099,7 +3053,7 @@ exports[`NavigationBar > should render in sm 1`] = `
                 class="css-c93wvv"
               >
                 <button
-                  class="css-1hei9vx"
+                  class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none"
                   data-testid="NavigationBar__buttons--receive"
                   type="button"
                 >
@@ -3146,7 +3100,7 @@ exports[`NavigationBar > should render in sm 1`] = `
                 class="css-c93wvv"
               >
                 <button
-                  class="css-1hei9vx"
+                  class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none"
                   data-testid="NavigationBar__buttons--send"
                   type="button"
                 >
@@ -3190,7 +3144,7 @@ exports[`NavigationBar > should render in sm 1`] = `
           data-testid="NavigationBar__balance"
         >
           <div
-            class="-mt-3 flex flex-row items-center justify-center space-x-2 bg-theme-secondary-100 px-8 py-2.5 dark:bg-black md:m-0 md:flex-col md:items-start md:justify-start md:space-x-0 md:bg-transparent md:p-0 md:text-right md:dark:bg-transparent"
+            class="flex flex-row items-center justify-center space-x-2 bg-theme-secondary-100 px-8 py-2.5 dark:bg-black md:m-0 md:flex-col md:items-start md:justify-start md:space-x-0 md:bg-transparent md:p-0 md:text-right md:dark:bg-transparent"
           >
             <div
               class="whitespace-nowrap text-theme-secondary-700 dark:text-theme-secondary-500 md:text-xs md:font-semibold md:text-theme-secondary-500"
@@ -3211,35 +3165,33 @@ exports[`NavigationBar > should render in sm 1`] = `
           </div>
         </div>
         <div
-          class="static sm:relative"
+          aria-expanded="false"
+          aria-haspopup="dialog"
+          data-testid="dropdown__toggle"
         >
-          <span
-            data-testid="dropdown__toggle"
+          <div
+            class="relative cursor-pointer items-center justify-center rounded-full align-middle"
+            data-testid="UserMenu"
           >
             <div
-              class="relative cursor-pointer items-center justify-center rounded-full align-middle"
-              data-testid="UserMenu"
+              class="shrink-0 css-1n9jllj"
+              data-testid="Avatar"
             >
               <div
-                class="shrink-0 css-1n9jllj"
-                data-testid="Avatar"
+                class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
               >
-                <div
-                  class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                <img
+                  alt="Profile Avatar"
+                  src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(233, 30, 99)" width="100" height="100"/><circle r="45" cx="80" cy="30" fill="rgb(76, 175, 80)"/><circle r="55" cx="0" cy="60" fill="rgb(255, 152, 0)"/><circle r="40" cx="50" cy="50" fill="rgb(3, 169, 244)"/></svg>"
+                />
+                <span
+                  class="absolute text-sm font-semibold text-theme-background dark:text-theme-text"
                 >
-                  <img
-                    alt="Profile Avatar"
-                    src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(233, 30, 99)" width="100" height="100"/><circle r="45" cx="80" cy="30" fill="rgb(76, 175, 80)"/><circle r="55" cx="0" cy="60" fill="rgb(255, 152, 0)"/><circle r="40" cx="50" cy="50" fill="rgb(3, 169, 244)"/></svg>"
-                  />
-                  <span
-                    class="absolute text-sm font-semibold text-theme-background dark:text-theme-text"
-                  >
-                    JO
-                  </span>
-                </div>
+                  JO
+                </span>
               </div>
             </div>
-          </span>
+          </div>
         </div>
       </div>
     </div>
@@ -3257,7 +3209,7 @@ exports[`NavigationBar > should render in small screen variant 1`] = `
       class="flex h-14 items-center justify-center space-x-4"
     >
       <button
-        class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1hei9vx"
+        class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-theme-secondary-700 dark:text-theme-secondary-600"
         data-testid="NavigationBar__buttons__mobile--receive"
         type="button"
       >
@@ -3297,7 +3249,7 @@ exports[`NavigationBar > should render in small screen variant 1`] = `
         type="vertical"
       />
       <button
-        class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1hei9vx"
+        class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-theme-secondary-700 dark:text-theme-secondary-600"
         data-testid="NavigationBar__buttons__mobile--home"
         type="button"
       >
@@ -3334,7 +3286,7 @@ exports[`NavigationBar > should render in small screen variant 1`] = `
         type="vertical"
       />
       <button
-        class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1hei9vx"
+        class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-theme-secondary-700 dark:text-theme-secondary-600"
         data-testid="NavigationBar__buttons__mobile--send"
         type="button"
       >
@@ -3373,7 +3325,7 @@ exports[`NavigationBar > should render in small screen variant 1`] = `
     class="css-1jzy9qi"
   >
     <div
-      class="relative flex h-21"
+      class="relative flex h-14 sm:h-21"
     >
       <div
         class="hidden w-12 sm:flex"
@@ -3407,13 +3359,13 @@ exports[`NavigationBar > should render in small screen variant 1`] = `
         </button>
       </div>
       <div
-        class="flex flex-1 items-center px-8"
+        class="flex flex-1 items-center px-6 sm:px-8"
       >
         <div
           class="my-auto flex items-center"
         >
           <button
-            class="my-auto mr-4 flex h-11 w-11 cursor-pointer items-center justify-center rounded-xl bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400"
+            class="my-auto mr-2 flex h-8 w-8 cursor-pointer items-center justify-center rounded bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 sm:mr-4 sm:h-11 sm:w-11 sm:rounded-xl"
             data-testid="NavigationBarLogo--button"
             type="button"
           >
@@ -3439,7 +3391,7 @@ exports[`NavigationBar > should render in small screen variant 1`] = `
           </button>
         </div>
         <ul
-          class="ml-4 mr-auto hidden h-21 space-x-8 lg:flex"
+          class="ml-4 mr-auto hidden h-14 space-x-8 sm:h-21 lg:flex"
           data-testid="NavigationBar__menu"
         >
           <li
@@ -3472,37 +3424,35 @@ exports[`NavigationBar > should render in small screen variant 1`] = `
           data-testid="NavigationBar__menu-toggle"
         >
           <div
-            class="static sm:relative"
+            aria-expanded="false"
+            aria-haspopup="dialog"
+            data-testid="dropdown__toggle"
           >
-            <span
-              data-testid="dropdown__toggle"
+            <button
+              class="cursor-pointer rounded p-2 focus:outline-none focus:ring-2 focus:ring-theme-primary-400"
+              type="button"
             >
-              <button
-                class="cursor-pointer rounded p-2 focus:outline-none focus:ring-2 focus:ring-theme-primary-400"
-                type="button"
+              <div
+                class="css-1i4b0eq"
+                height="20"
+                width="20"
               >
-                <div
-                  class="css-1i4b0eq"
-                  height="20"
-                  width="20"
+                <svg
+                  viewBox="0 0 20 20"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
                 >
-                  <svg
-                    viewBox="0 0 20 20"
-                    xml:space="preserve"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M1 15.5h18M1 10h18M1 4.5h18"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                    />
-                  </svg>
-                </div>
-              </button>
-            </span>
+                  <path
+                    d="M1 15.5h18M1 10h18M1 4.5h18"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  />
+                </svg>
+              </div>
+            </button>
           </div>
         </div>
         <div
@@ -3510,52 +3460,50 @@ exports[`NavigationBar > should render in small screen variant 1`] = `
         >
           <div>
             <div
-              class="static sm:relative"
+              aria-expanded="false"
+              aria-haspopup="dialog"
+              data-testid="dropdown__toggle"
             >
-              <span
-                data-testid="dropdown__toggle"
+              <div
+                class="group css-c93wvv"
               >
-                <div
-                  class="group css-c93wvv"
+                <button
+                  class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none"
+                  data-testid="NavigationBar__buttons--server-status"
+                  type="button"
                 >
-                  <button
-                    class="css-1hei9vx"
-                    data-testid="NavigationBar__buttons--server-status"
-                    type="button"
+                  <div
+                    class="flex items-center space-x-2"
                   >
                     <div
-                      class="flex items-center space-x-2"
+                      class="p-1 css-1i4b0eq"
+                      height="20"
+                      width="20"
+                    >
+                      <svg
+                        fill="none"
+                        viewBox="0 0 20 15"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M6.595 6.285c.618-3.372 3.654-5.664 6.932-5.233 3.279.43 5.67 3.435 5.46 6.86-.21 3.426-2.948 6.092-6.252 6.088H4.912c-1.606.003-3.05-1.017-3.64-2.569-.589-1.552-.203-3.32.972-4.457a3.795 3.795 0 0 1 4.35-.69zm0 0C6.5 7 6.6 7.8 7 9"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
+                      </svg>
+                    </div>
+                    <div
+                      class="absolute right-1 top-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
                     >
                       <div
-                        class="p-1 css-1i4b0eq"
-                        height="20"
-                        width="20"
-                      >
-                        <svg
-                          fill="none"
-                          viewBox="0 0 20 15"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M6.595 6.285c.618-3.372 3.654-5.664 6.932-5.233 3.279.43 5.67 3.435 5.46 6.86-.21 3.426-2.948 6.092-6.252 6.088H4.912c-1.606.003-3.05-1.017-3.64-2.569-.589-1.552-.203-3.32.972-4.457a3.795 3.795 0 0 1 4.35-.69zm0 0C6.5 7 6.6 7.8 7 9"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                          />
-                        </svg>
-                      </div>
-                      <div
-                        class="absolute right-1 top-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
-                      >
-                        <div
-                          class="h-2 w-2 rounded-full bg-theme-success-700"
-                        />
-                      </div>
+                        class="h-2 w-2 rounded-full bg-theme-success-700"
+                      />
                     </div>
-                  </button>
-                </div>
-              </span>
+                  </div>
+                </button>
+              </div>
             </div>
           </div>
           <div
@@ -3563,59 +3511,57 @@ exports[`NavigationBar > should render in small screen variant 1`] = `
           />
           <div>
             <div
-              class="static sm:relative"
+              aria-expanded="false"
+              aria-haspopup="dialog"
+              data-testid="dropdown__toggle"
             >
-              <span
-                data-testid="dropdown__toggle"
+              <div
+                class="group css-c93wvv"
               >
-                <div
-                  class="group css-c93wvv"
+                <button
+                  class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none"
+                  data-testid="NavigationBar__buttons--notifications"
+                  type="button"
                 >
-                  <button
-                    class="css-1hei9vx"
-                    data-testid="NavigationBar__buttons--notifications"
-                    type="button"
+                  <div
+                    class="flex items-center space-x-2"
                   >
                     <div
-                      class="flex items-center space-x-2"
+                      class="p-1 css-1i4b0eq"
+                      height="20"
+                      width="20"
+                    >
+                      <svg
+                        id="bell"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M8.4 17.8c.3.9 1.2 1.4 2.1 1.1.5-.2 1-.6 1.1-1.1M10 2.8V1M10 2.8c3.3 0 6 2.7 6 6h0c0 5.6 1.2 6.6 1.2 6.6H2.8S4 13.9 4 8.8c0-3.3 2.7-6 6-6z"
+                          />
+                        </g>
+                      </svg>
+                    </div>
+                    <div
+                      class="absolute right-1 top-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
                     >
                       <div
-                        class="p-1 css-1i4b0eq"
-                        height="20"
-                        width="20"
-                      >
-                        <svg
-                          id="bell"
-                          viewBox="0 0 20 20"
-                          x="0"
-                          xml:space="preserve"
-                          xmlns="http://www.w3.org/2000/svg"
-                          y="0"
-                        >
-                          <g
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                          >
-                            <path
-                              d="M8.4 17.8c.3.9 1.2 1.4 2.1 1.1.5-.2 1-.6 1.1-1.1M10 2.8V1M10 2.8c3.3 0 6 2.7 6 6h0c0 5.6 1.2 6.6 1.2 6.6H2.8S4 13.9 4 8.8c0-3.3 2.7-6 6-6z"
-                            />
-                          </g>
-                        </svg>
-                      </div>
-                      <div
-                        class="absolute right-1 top-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
-                      >
-                        <div
-                          class="h-2 w-2 rounded-full bg-theme-danger-500"
-                        />
-                      </div>
+                        class="h-2 w-2 rounded-full bg-theme-danger-500"
+                      />
                     </div>
-                  </button>
-                </div>
-              </span>
+                  </div>
+                </button>
+              </div>
             </div>
           </div>
           <div
@@ -3631,7 +3577,7 @@ exports[`NavigationBar > should render in small screen variant 1`] = `
                 class="css-c93wvv"
               >
                 <button
-                  class="css-1hei9vx"
+                  class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none"
                   data-testid="NavigationBar__buttons--receive"
                   type="button"
                 >
@@ -3678,7 +3624,7 @@ exports[`NavigationBar > should render in small screen variant 1`] = `
                 class="css-c93wvv"
               >
                 <button
-                  class="css-1hei9vx"
+                  class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none"
                   data-testid="NavigationBar__buttons--send"
                   type="button"
                 >
@@ -3722,7 +3668,7 @@ exports[`NavigationBar > should render in small screen variant 1`] = `
           data-testid="NavigationBar__balance"
         >
           <div
-            class="-mt-3 flex flex-row items-center justify-center space-x-2 bg-theme-secondary-100 px-8 py-2.5 dark:bg-black md:m-0 md:flex-col md:items-start md:justify-start md:space-x-0 md:bg-transparent md:p-0 md:text-right md:dark:bg-transparent"
+            class="flex flex-row items-center justify-center space-x-2 bg-theme-secondary-100 px-8 py-2.5 dark:bg-black md:m-0 md:flex-col md:items-start md:justify-start md:space-x-0 md:bg-transparent md:p-0 md:text-right md:dark:bg-transparent"
           >
             <div
               class="whitespace-nowrap text-theme-secondary-700 dark:text-theme-secondary-500 md:text-xs md:font-semibold md:text-theme-secondary-500"
@@ -3743,35 +3689,33 @@ exports[`NavigationBar > should render in small screen variant 1`] = `
           </div>
         </div>
         <div
-          class="static sm:relative"
+          aria-expanded="false"
+          aria-haspopup="dialog"
+          data-testid="dropdown__toggle"
         >
-          <span
-            data-testid="dropdown__toggle"
+          <div
+            class="relative cursor-pointer items-center justify-center rounded-full align-middle"
+            data-testid="UserMenu"
           >
             <div
-              class="relative cursor-pointer items-center justify-center rounded-full align-middle"
-              data-testid="UserMenu"
+              class="shrink-0 css-1n9jllj"
+              data-testid="Avatar"
             >
               <div
-                class="shrink-0 css-1n9jllj"
-                data-testid="Avatar"
+                class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
               >
-                <div
-                  class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                <img
+                  alt="Profile Avatar"
+                  src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(233, 30, 99)" width="100" height="100"/><circle r="45" cx="80" cy="30" fill="rgb(76, 175, 80)"/><circle r="55" cx="0" cy="60" fill="rgb(255, 152, 0)"/><circle r="40" cx="50" cy="50" fill="rgb(3, 169, 244)"/></svg>"
+                />
+                <span
+                  class="absolute text-sm font-semibold text-theme-background dark:text-theme-text"
                 >
-                  <img
-                    alt="Profile Avatar"
-                    src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(233, 30, 99)" width="100" height="100"/><circle r="45" cx="80" cy="30" fill="rgb(76, 175, 80)"/><circle r="55" cx="0" cy="60" fill="rgb(255, 152, 0)"/><circle r="40" cx="50" cy="50" fill="rgb(3, 169, 244)"/></svg>"
-                  />
-                  <span
-                    class="absolute text-sm font-semibold text-theme-background dark:text-theme-text"
-                  >
-                    JO
-                  </span>
-                </div>
+                  JO
+                </span>
               </div>
             </div>
-          </span>
+          </div>
         </div>
       </div>
     </div>
@@ -3789,7 +3733,7 @@ exports[`NavigationBar > should render in xs 1`] = `
       class="flex h-14 items-center justify-center space-x-4"
     >
       <button
-        class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1hei9vx"
+        class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-theme-secondary-700 dark:text-theme-secondary-600"
         data-testid="NavigationBar__buttons__mobile--receive"
         type="button"
       >
@@ -3829,7 +3773,7 @@ exports[`NavigationBar > should render in xs 1`] = `
         type="vertical"
       />
       <button
-        class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1hei9vx"
+        class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-theme-secondary-700 dark:text-theme-secondary-600"
         data-testid="NavigationBar__buttons__mobile--home"
         type="button"
       >
@@ -3866,7 +3810,7 @@ exports[`NavigationBar > should render in xs 1`] = `
         type="vertical"
       />
       <button
-        class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1hei9vx"
+        class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-theme-secondary-700 dark:text-theme-secondary-600"
         data-testid="NavigationBar__buttons__mobile--send"
         type="button"
       >
@@ -3905,7 +3849,7 @@ exports[`NavigationBar > should render in xs 1`] = `
     class="css-1jzy9qi"
   >
     <div
-      class="relative flex h-21"
+      class="relative flex h-14 sm:h-21"
     >
       <div
         class="hidden w-12 sm:flex"
@@ -3939,13 +3883,13 @@ exports[`NavigationBar > should render in xs 1`] = `
         </button>
       </div>
       <div
-        class="flex flex-1 items-center px-8"
+        class="flex flex-1 items-center px-6 sm:px-8"
       >
         <div
           class="my-auto flex items-center"
         >
           <button
-            class="my-auto mr-4 flex h-11 w-11 cursor-pointer items-center justify-center rounded-xl bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400"
+            class="my-auto mr-2 flex h-8 w-8 cursor-pointer items-center justify-center rounded bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 sm:mr-4 sm:h-11 sm:w-11 sm:rounded-xl"
             data-testid="NavigationBarLogo--button"
             type="button"
           >
@@ -3954,7 +3898,7 @@ exports[`NavigationBar > should render in xs 1`] = `
             >
               <svg
                 fill="none"
-                height="28"
+                height="22"
                 viewBox="0 0 363 363"
                 xmlns="http://www.w3.org/2000/svg"
               >
@@ -3971,7 +3915,7 @@ exports[`NavigationBar > should render in xs 1`] = `
           </button>
         </div>
         <ul
-          class="ml-4 mr-auto hidden h-21 space-x-8 lg:flex"
+          class="ml-4 mr-auto hidden h-14 space-x-8 sm:h-21 lg:flex"
           data-testid="NavigationBar__menu"
         >
           <li
@@ -4004,37 +3948,35 @@ exports[`NavigationBar > should render in xs 1`] = `
           data-testid="NavigationBar__menu-toggle"
         >
           <div
-            class="static sm:relative"
+            aria-expanded="false"
+            aria-haspopup="dialog"
+            data-testid="dropdown__toggle"
           >
-            <span
-              data-testid="dropdown__toggle"
+            <button
+              class="cursor-pointer rounded p-2 focus:outline-none focus:ring-2 focus:ring-theme-primary-400"
+              type="button"
             >
-              <button
-                class="cursor-pointer rounded p-2 focus:outline-none focus:ring-2 focus:ring-theme-primary-400"
-                type="button"
+              <div
+                class="css-1i4b0eq"
+                height="20"
+                width="20"
               >
-                <div
-                  class="css-1i4b0eq"
-                  height="20"
-                  width="20"
+                <svg
+                  viewBox="0 0 20 20"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
                 >
-                  <svg
-                    viewBox="0 0 20 20"
-                    xml:space="preserve"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M1 15.5h18M1 10h18M1 4.5h18"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                    />
-                  </svg>
-                </div>
-              </button>
-            </span>
+                  <path
+                    d="M1 15.5h18M1 10h18M1 4.5h18"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  />
+                </svg>
+              </div>
+            </button>
           </div>
         </div>
         <div
@@ -4042,52 +3984,50 @@ exports[`NavigationBar > should render in xs 1`] = `
         >
           <div>
             <div
-              class="static sm:relative"
+              aria-expanded="false"
+              aria-haspopup="dialog"
+              data-testid="dropdown__toggle"
             >
-              <span
-                data-testid="dropdown__toggle"
+              <div
+                class="group css-c93wvv"
               >
-                <div
-                  class="group css-c93wvv"
+                <button
+                  class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none"
+                  data-testid="NavigationBar__buttons--server-status"
+                  type="button"
                 >
-                  <button
-                    class="css-1hei9vx"
-                    data-testid="NavigationBar__buttons--server-status"
-                    type="button"
+                  <div
+                    class="flex items-center space-x-2"
                   >
                     <div
-                      class="flex items-center space-x-2"
+                      class="p-1 css-1i4b0eq"
+                      height="20"
+                      width="20"
+                    >
+                      <svg
+                        fill="none"
+                        viewBox="0 0 20 15"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M6.595 6.285c.618-3.372 3.654-5.664 6.932-5.233 3.279.43 5.67 3.435 5.46 6.86-.21 3.426-2.948 6.092-6.252 6.088H4.912c-1.606.003-3.05-1.017-3.64-2.569-.589-1.552-.203-3.32.972-4.457a3.795 3.795 0 0 1 4.35-.69zm0 0C6.5 7 6.6 7.8 7 9"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
+                      </svg>
+                    </div>
+                    <div
+                      class="absolute right-1 top-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
                     >
                       <div
-                        class="p-1 css-1i4b0eq"
-                        height="20"
-                        width="20"
-                      >
-                        <svg
-                          fill="none"
-                          viewBox="0 0 20 15"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M6.595 6.285c.618-3.372 3.654-5.664 6.932-5.233 3.279.43 5.67 3.435 5.46 6.86-.21 3.426-2.948 6.092-6.252 6.088H4.912c-1.606.003-3.05-1.017-3.64-2.569-.589-1.552-.203-3.32.972-4.457a3.795 3.795 0 0 1 4.35-.69zm0 0C6.5 7 6.6 7.8 7 9"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                          />
-                        </svg>
-                      </div>
-                      <div
-                        class="absolute right-1 top-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
-                      >
-                        <div
-                          class="h-2 w-2 rounded-full bg-theme-success-700"
-                        />
-                      </div>
+                        class="h-2 w-2 rounded-full bg-theme-success-700"
+                      />
                     </div>
-                  </button>
-                </div>
-              </span>
+                  </div>
+                </button>
+              </div>
             </div>
           </div>
           <div
@@ -4095,59 +4035,57 @@ exports[`NavigationBar > should render in xs 1`] = `
           />
           <div>
             <div
-              class="static sm:relative"
+              aria-expanded="false"
+              aria-haspopup="dialog"
+              data-testid="dropdown__toggle"
             >
-              <span
-                data-testid="dropdown__toggle"
+              <div
+                class="group css-c93wvv"
               >
-                <div
-                  class="group css-c93wvv"
+                <button
+                  class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none"
+                  data-testid="NavigationBar__buttons--notifications"
+                  type="button"
                 >
-                  <button
-                    class="css-1hei9vx"
-                    data-testid="NavigationBar__buttons--notifications"
-                    type="button"
+                  <div
+                    class="flex items-center space-x-2"
                   >
                     <div
-                      class="flex items-center space-x-2"
+                      class="p-1 css-1i4b0eq"
+                      height="20"
+                      width="20"
+                    >
+                      <svg
+                        id="bell"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M8.4 17.8c.3.9 1.2 1.4 2.1 1.1.5-.2 1-.6 1.1-1.1M10 2.8V1M10 2.8c3.3 0 6 2.7 6 6h0c0 5.6 1.2 6.6 1.2 6.6H2.8S4 13.9 4 8.8c0-3.3 2.7-6 6-6z"
+                          />
+                        </g>
+                      </svg>
+                    </div>
+                    <div
+                      class="absolute right-1 top-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
                     >
                       <div
-                        class="p-1 css-1i4b0eq"
-                        height="20"
-                        width="20"
-                      >
-                        <svg
-                          id="bell"
-                          viewBox="0 0 20 20"
-                          x="0"
-                          xml:space="preserve"
-                          xmlns="http://www.w3.org/2000/svg"
-                          y="0"
-                        >
-                          <g
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                          >
-                            <path
-                              d="M8.4 17.8c.3.9 1.2 1.4 2.1 1.1.5-.2 1-.6 1.1-1.1M10 2.8V1M10 2.8c3.3 0 6 2.7 6 6h0c0 5.6 1.2 6.6 1.2 6.6H2.8S4 13.9 4 8.8c0-3.3 2.7-6 6-6z"
-                            />
-                          </g>
-                        </svg>
-                      </div>
-                      <div
-                        class="absolute right-1 top-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
-                      >
-                        <div
-                          class="h-2 w-2 rounded-full bg-theme-danger-500"
-                        />
-                      </div>
+                        class="h-2 w-2 rounded-full bg-theme-danger-500"
+                      />
                     </div>
-                  </button>
-                </div>
-              </span>
+                  </div>
+                </button>
+              </div>
             </div>
           </div>
           <div
@@ -4163,7 +4101,7 @@ exports[`NavigationBar > should render in xs 1`] = `
                 class="css-c93wvv"
               >
                 <button
-                  class="css-1hei9vx"
+                  class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none"
                   data-testid="NavigationBar__buttons--receive"
                   type="button"
                 >
@@ -4210,7 +4148,7 @@ exports[`NavigationBar > should render in xs 1`] = `
                 class="css-c93wvv"
               >
                 <button
-                  class="css-1hei9vx"
+                  class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none"
                   data-testid="NavigationBar__buttons--send"
                   type="button"
                 >
@@ -4254,7 +4192,7 @@ exports[`NavigationBar > should render in xs 1`] = `
           data-testid="NavigationBar__balance"
         >
           <div
-            class="-mt-3 flex flex-row items-center justify-center space-x-2 bg-theme-secondary-100 px-8 py-2.5 dark:bg-black md:m-0 md:flex-col md:items-start md:justify-start md:space-x-0 md:bg-transparent md:p-0 md:text-right md:dark:bg-transparent"
+            class="flex flex-row items-center justify-center space-x-2 bg-theme-secondary-100 px-8 py-2.5 dark:bg-black md:m-0 md:flex-col md:items-start md:justify-start md:space-x-0 md:bg-transparent md:p-0 md:text-right md:dark:bg-transparent"
           >
             <div
               class="whitespace-nowrap text-theme-secondary-700 dark:text-theme-secondary-500 md:text-xs md:font-semibold md:text-theme-secondary-500"
@@ -4275,35 +4213,33 @@ exports[`NavigationBar > should render in xs 1`] = `
           </div>
         </div>
         <div
-          class="static sm:relative"
+          aria-expanded="false"
+          aria-haspopup="dialog"
+          data-testid="dropdown__toggle"
         >
-          <span
-            data-testid="dropdown__toggle"
+          <div
+            class="relative cursor-pointer items-center justify-center rounded-full align-middle"
+            data-testid="UserMenu"
           >
             <div
-              class="relative cursor-pointer items-center justify-center rounded-full align-middle"
-              data-testid="UserMenu"
+              class="shrink-0 css-1ha4taj"
+              data-testid="Avatar"
             >
               <div
-                class="shrink-0 css-1n9jllj"
-                data-testid="Avatar"
+                class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
               >
-                <div
-                  class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                <img
+                  alt="Profile Avatar"
+                  src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(233, 30, 99)" width="100" height="100"/><circle r="45" cx="80" cy="30" fill="rgb(76, 175, 80)"/><circle r="55" cx="0" cy="60" fill="rgb(255, 152, 0)"/><circle r="40" cx="50" cy="50" fill="rgb(3, 169, 244)"/></svg>"
+                />
+                <span
+                  class="absolute text-sm font-semibold text-theme-background dark:text-theme-text"
                 >
-                  <img
-                    alt="Profile Avatar"
-                    src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(233, 30, 99)" width="100" height="100"/><circle r="45" cx="80" cy="30" fill="rgb(76, 175, 80)"/><circle r="55" cx="0" cy="60" fill="rgb(255, 152, 0)"/><circle r="40" cx="50" cy="50" fill="rgb(3, 169, 244)"/></svg>"
-                  />
-                  <span
-                    class="absolute text-sm font-semibold text-theme-background dark:text-theme-text"
-                  >
-                    JO
-                  </span>
-                </div>
+                  JO
+                </span>
               </div>
             </div>
-          </span>
+          </div>
         </div>
       </div>
     </div>
@@ -4321,7 +4257,7 @@ exports[`NavigationBar > should render with custom menu 1`] = `
       class="flex h-14 items-center justify-center space-x-4"
     >
       <button
-        class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1hei9vx"
+        class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-theme-secondary-700 dark:text-theme-secondary-600"
         data-testid="NavigationBar__buttons__mobile--receive"
         type="button"
       >
@@ -4361,7 +4297,7 @@ exports[`NavigationBar > should render with custom menu 1`] = `
         type="vertical"
       />
       <button
-        class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1hei9vx"
+        class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-theme-secondary-700 dark:text-theme-secondary-600"
         data-testid="NavigationBar__buttons__mobile--home"
         type="button"
       >
@@ -4398,7 +4334,7 @@ exports[`NavigationBar > should render with custom menu 1`] = `
         type="vertical"
       />
       <button
-        class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1hei9vx"
+        class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-theme-secondary-700 dark:text-theme-secondary-600"
         data-testid="NavigationBar__buttons__mobile--send"
         type="button"
       >
@@ -4437,7 +4373,7 @@ exports[`NavigationBar > should render with custom menu 1`] = `
     class="css-1jzy9qi"
   >
     <div
-      class="relative flex h-21"
+      class="relative flex h-14 sm:h-21"
     >
       <div
         class="hidden w-12 sm:flex"
@@ -4471,13 +4407,13 @@ exports[`NavigationBar > should render with custom menu 1`] = `
         </button>
       </div>
       <div
-        class="flex flex-1 items-center px-8"
+        class="flex flex-1 items-center px-6 sm:px-8"
       >
         <div
           class="my-auto flex items-center"
         >
           <button
-            class="my-auto mr-4 flex h-11 w-11 cursor-pointer items-center justify-center rounded-xl bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400"
+            class="my-auto mr-2 flex h-8 w-8 cursor-pointer items-center justify-center rounded bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 sm:mr-4 sm:h-11 sm:w-11 sm:rounded-xl"
             data-testid="NavigationBarLogo--button"
             type="button"
           >
@@ -4503,7 +4439,7 @@ exports[`NavigationBar > should render with custom menu 1`] = `
           </button>
         </div>
         <ul
-          class="ml-4 mr-auto hidden h-21 space-x-8 lg:flex"
+          class="ml-4 mr-auto hidden h-14 space-x-8 sm:h-21 lg:flex"
           data-testid="NavigationBar__menu"
         >
           <li
@@ -4536,37 +4472,35 @@ exports[`NavigationBar > should render with custom menu 1`] = `
           data-testid="NavigationBar__menu-toggle"
         >
           <div
-            class="static sm:relative"
+            aria-expanded="false"
+            aria-haspopup="dialog"
+            data-testid="dropdown__toggle"
           >
-            <span
-              data-testid="dropdown__toggle"
+            <button
+              class="cursor-pointer rounded p-2 focus:outline-none focus:ring-2 focus:ring-theme-primary-400"
+              type="button"
             >
-              <button
-                class="cursor-pointer rounded p-2 focus:outline-none focus:ring-2 focus:ring-theme-primary-400"
-                type="button"
+              <div
+                class="css-1i4b0eq"
+                height="20"
+                width="20"
               >
-                <div
-                  class="css-1i4b0eq"
-                  height="20"
-                  width="20"
+                <svg
+                  viewBox="0 0 20 20"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
                 >
-                  <svg
-                    viewBox="0 0 20 20"
-                    xml:space="preserve"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M1 15.5h18M1 10h18M1 4.5h18"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                    />
-                  </svg>
-                </div>
-              </button>
-            </span>
+                  <path
+                    d="M1 15.5h18M1 10h18M1 4.5h18"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  />
+                </svg>
+              </div>
+            </button>
           </div>
         </div>
         <div
@@ -4574,52 +4508,50 @@ exports[`NavigationBar > should render with custom menu 1`] = `
         >
           <div>
             <div
-              class="static sm:relative"
+              aria-expanded="false"
+              aria-haspopup="dialog"
+              data-testid="dropdown__toggle"
             >
-              <span
-                data-testid="dropdown__toggle"
+              <div
+                class="group css-c93wvv"
               >
-                <div
-                  class="group css-c93wvv"
+                <button
+                  class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none"
+                  data-testid="NavigationBar__buttons--server-status"
+                  type="button"
                 >
-                  <button
-                    class="css-1hei9vx"
-                    data-testid="NavigationBar__buttons--server-status"
-                    type="button"
+                  <div
+                    class="flex items-center space-x-2"
                   >
                     <div
-                      class="flex items-center space-x-2"
+                      class="p-1 css-1i4b0eq"
+                      height="20"
+                      width="20"
+                    >
+                      <svg
+                        fill="none"
+                        viewBox="0 0 20 15"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M6.595 6.285c.618-3.372 3.654-5.664 6.932-5.233 3.279.43 5.67 3.435 5.46 6.86-.21 3.426-2.948 6.092-6.252 6.088H4.912c-1.606.003-3.05-1.017-3.64-2.569-.589-1.552-.203-3.32.972-4.457a3.795 3.795 0 0 1 4.35-.69zm0 0C6.5 7 6.6 7.8 7 9"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
+                      </svg>
+                    </div>
+                    <div
+                      class="absolute right-1 top-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
                     >
                       <div
-                        class="p-1 css-1i4b0eq"
-                        height="20"
-                        width="20"
-                      >
-                        <svg
-                          fill="none"
-                          viewBox="0 0 20 15"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M6.595 6.285c.618-3.372 3.654-5.664 6.932-5.233 3.279.43 5.67 3.435 5.46 6.86-.21 3.426-2.948 6.092-6.252 6.088H4.912c-1.606.003-3.05-1.017-3.64-2.569-.589-1.552-.203-3.32.972-4.457a3.795 3.795 0 0 1 4.35-.69zm0 0C6.5 7 6.6 7.8 7 9"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                          />
-                        </svg>
-                      </div>
-                      <div
-                        class="absolute right-1 top-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
-                      >
-                        <div
-                          class="h-2 w-2 rounded-full bg-theme-success-700"
-                        />
-                      </div>
+                        class="h-2 w-2 rounded-full bg-theme-success-700"
+                      />
                     </div>
-                  </button>
-                </div>
-              </span>
+                  </div>
+                </button>
+              </div>
             </div>
           </div>
           <div
@@ -4627,59 +4559,57 @@ exports[`NavigationBar > should render with custom menu 1`] = `
           />
           <div>
             <div
-              class="static sm:relative"
+              aria-expanded="false"
+              aria-haspopup="dialog"
+              data-testid="dropdown__toggle"
             >
-              <span
-                data-testid="dropdown__toggle"
+              <div
+                class="group css-c93wvv"
               >
-                <div
-                  class="group css-c93wvv"
+                <button
+                  class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none"
+                  data-testid="NavigationBar__buttons--notifications"
+                  type="button"
                 >
-                  <button
-                    class="css-1hei9vx"
-                    data-testid="NavigationBar__buttons--notifications"
-                    type="button"
+                  <div
+                    class="flex items-center space-x-2"
                   >
                     <div
-                      class="flex items-center space-x-2"
+                      class="p-1 css-1i4b0eq"
+                      height="20"
+                      width="20"
+                    >
+                      <svg
+                        id="bell"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M8.4 17.8c.3.9 1.2 1.4 2.1 1.1.5-.2 1-.6 1.1-1.1M10 2.8V1M10 2.8c3.3 0 6 2.7 6 6h0c0 5.6 1.2 6.6 1.2 6.6H2.8S4 13.9 4 8.8c0-3.3 2.7-6 6-6z"
+                          />
+                        </g>
+                      </svg>
+                    </div>
+                    <div
+                      class="absolute right-1 top-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
                     >
                       <div
-                        class="p-1 css-1i4b0eq"
-                        height="20"
-                        width="20"
-                      >
-                        <svg
-                          id="bell"
-                          viewBox="0 0 20 20"
-                          x="0"
-                          xml:space="preserve"
-                          xmlns="http://www.w3.org/2000/svg"
-                          y="0"
-                        >
-                          <g
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                          >
-                            <path
-                              d="M8.4 17.8c.3.9 1.2 1.4 2.1 1.1.5-.2 1-.6 1.1-1.1M10 2.8V1M10 2.8c3.3 0 6 2.7 6 6h0c0 5.6 1.2 6.6 1.2 6.6H2.8S4 13.9 4 8.8c0-3.3 2.7-6 6-6z"
-                            />
-                          </g>
-                        </svg>
-                      </div>
-                      <div
-                        class="absolute right-1 top-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
-                      >
-                        <div
-                          class="h-2 w-2 rounded-full bg-theme-danger-500"
-                        />
-                      </div>
+                        class="h-2 w-2 rounded-full bg-theme-danger-500"
+                      />
                     </div>
-                  </button>
-                </div>
-              </span>
+                  </div>
+                </button>
+              </div>
             </div>
           </div>
           <div
@@ -4695,7 +4625,7 @@ exports[`NavigationBar > should render with custom menu 1`] = `
                 class="css-c93wvv"
               >
                 <button
-                  class="css-1hei9vx"
+                  class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none"
                   data-testid="NavigationBar__buttons--receive"
                   type="button"
                 >
@@ -4742,7 +4672,7 @@ exports[`NavigationBar > should render with custom menu 1`] = `
                 class="css-c93wvv"
               >
                 <button
-                  class="css-1hei9vx"
+                  class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none"
                   data-testid="NavigationBar__buttons--send"
                   type="button"
                 >
@@ -4786,7 +4716,7 @@ exports[`NavigationBar > should render with custom menu 1`] = `
           data-testid="NavigationBar__balance"
         >
           <div
-            class="-mt-3 flex flex-row items-center justify-center space-x-2 bg-theme-secondary-100 px-8 py-2.5 dark:bg-black md:m-0 md:flex-col md:items-start md:justify-start md:space-x-0 md:bg-transparent md:p-0 md:text-right md:dark:bg-transparent"
+            class="flex flex-row items-center justify-center space-x-2 bg-theme-secondary-100 px-8 py-2.5 dark:bg-black md:m-0 md:flex-col md:items-start md:justify-start md:space-x-0 md:bg-transparent md:p-0 md:text-right md:dark:bg-transparent"
           >
             <div
               class="whitespace-nowrap text-theme-secondary-700 dark:text-theme-secondary-500 md:text-xs md:font-semibold md:text-theme-secondary-500"
@@ -4807,35 +4737,33 @@ exports[`NavigationBar > should render with custom menu 1`] = `
           </div>
         </div>
         <div
-          class="static sm:relative"
+          aria-expanded="false"
+          aria-haspopup="dialog"
+          data-testid="dropdown__toggle"
         >
-          <span
-            data-testid="dropdown__toggle"
+          <div
+            class="relative cursor-pointer items-center justify-center rounded-full align-middle"
+            data-testid="UserMenu"
           >
             <div
-              class="relative cursor-pointer items-center justify-center rounded-full align-middle"
-              data-testid="UserMenu"
+              class="shrink-0 css-1n9jllj"
+              data-testid="Avatar"
             >
               <div
-                class="shrink-0 css-1n9jllj"
-                data-testid="Avatar"
+                class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
               >
-                <div
-                  class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                <img
+                  alt="Profile Avatar"
+                  src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(233, 30, 99)" width="100" height="100"/><circle r="45" cx="80" cy="30" fill="rgb(76, 175, 80)"/><circle r="55" cx="0" cy="60" fill="rgb(255, 152, 0)"/><circle r="40" cx="50" cy="50" fill="rgb(3, 169, 244)"/></svg>"
+                />
+                <span
+                  class="absolute text-sm font-semibold text-theme-background dark:text-theme-text"
                 >
-                  <img
-                    alt="Profile Avatar"
-                    src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(233, 30, 99)" width="100" height="100"/><circle r="45" cx="80" cy="30" fill="rgb(76, 175, 80)"/><circle r="55" cx="0" cy="60" fill="rgb(255, 152, 0)"/><circle r="40" cx="50" cy="50" fill="rgb(3, 169, 244)"/></svg>"
-                  />
-                  <span
-                    class="absolute text-sm font-semibold text-theme-background dark:text-theme-text"
-                  >
-                    JO
-                  </span>
-                </div>
+                  JO
+                </span>
               </div>
             </div>
-          </span>
+          </div>
         </div>
       </div>
     </div>
@@ -4853,7 +4781,7 @@ exports[`NavigationBar > should render with shadow if there is a scroll 1`] = `
       class="flex h-14 items-center justify-center space-x-4"
     >
       <button
-        class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1hei9vx"
+        class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-theme-secondary-700 dark:text-theme-secondary-600"
         data-testid="NavigationBar__buttons__mobile--receive"
         type="button"
       >
@@ -4893,7 +4821,7 @@ exports[`NavigationBar > should render with shadow if there is a scroll 1`] = `
         type="vertical"
       />
       <button
-        class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1hei9vx"
+        class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-theme-secondary-700 dark:text-theme-secondary-600"
         data-testid="NavigationBar__buttons__mobile--home"
         type="button"
       >
@@ -4930,7 +4858,7 @@ exports[`NavigationBar > should render with shadow if there is a scroll 1`] = `
         type="vertical"
       />
       <button
-        class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1hei9vx"
+        class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-theme-secondary-700 dark:text-theme-secondary-600"
         data-testid="NavigationBar__buttons__mobile--send"
         type="button"
       >
@@ -4969,7 +4897,7 @@ exports[`NavigationBar > should render with shadow if there is a scroll 1`] = `
     class="css-19etq0o"
   >
     <div
-      class="relative flex h-21"
+      class="relative flex h-14 sm:h-21"
     >
       <div
         class="hidden w-12 sm:flex"
@@ -5003,13 +4931,13 @@ exports[`NavigationBar > should render with shadow if there is a scroll 1`] = `
         </button>
       </div>
       <div
-        class="flex flex-1 items-center px-8"
+        class="flex flex-1 items-center px-6 sm:px-8"
       >
         <div
           class="my-auto flex items-center"
         >
           <button
-            class="my-auto mr-4 flex h-11 w-11 cursor-pointer items-center justify-center rounded-xl bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400"
+            class="my-auto mr-2 flex h-8 w-8 cursor-pointer items-center justify-center rounded bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 sm:mr-4 sm:h-11 sm:w-11 sm:rounded-xl"
             data-testid="NavigationBarLogo--button"
             type="button"
           >
@@ -5035,7 +4963,7 @@ exports[`NavigationBar > should render with shadow if there is a scroll 1`] = `
           </button>
         </div>
         <ul
-          class="ml-4 mr-auto hidden h-21 space-x-8 lg:flex"
+          class="ml-4 mr-auto hidden h-14 space-x-8 sm:h-21 lg:flex"
           data-testid="NavigationBar__menu"
         >
           <li
@@ -5068,37 +4996,35 @@ exports[`NavigationBar > should render with shadow if there is a scroll 1`] = `
           data-testid="NavigationBar__menu-toggle"
         >
           <div
-            class="static sm:relative"
+            aria-expanded="false"
+            aria-haspopup="dialog"
+            data-testid="dropdown__toggle"
           >
-            <span
-              data-testid="dropdown__toggle"
+            <button
+              class="cursor-pointer rounded p-2 focus:outline-none focus:ring-2 focus:ring-theme-primary-400"
+              type="button"
             >
-              <button
-                class="cursor-pointer rounded p-2 focus:outline-none focus:ring-2 focus:ring-theme-primary-400"
-                type="button"
+              <div
+                class="css-1i4b0eq"
+                height="20"
+                width="20"
               >
-                <div
-                  class="css-1i4b0eq"
-                  height="20"
-                  width="20"
+                <svg
+                  viewBox="0 0 20 20"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
                 >
-                  <svg
-                    viewBox="0 0 20 20"
-                    xml:space="preserve"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M1 15.5h18M1 10h18M1 4.5h18"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                    />
-                  </svg>
-                </div>
-              </button>
-            </span>
+                  <path
+                    d="M1 15.5h18M1 10h18M1 4.5h18"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  />
+                </svg>
+              </div>
+            </button>
           </div>
         </div>
         <div
@@ -5106,52 +5032,50 @@ exports[`NavigationBar > should render with shadow if there is a scroll 1`] = `
         >
           <div>
             <div
-              class="static sm:relative"
+              aria-expanded="false"
+              aria-haspopup="dialog"
+              data-testid="dropdown__toggle"
             >
-              <span
-                data-testid="dropdown__toggle"
+              <div
+                class="group css-c93wvv"
               >
-                <div
-                  class="group css-c93wvv"
+                <button
+                  class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none"
+                  data-testid="NavigationBar__buttons--server-status"
+                  type="button"
                 >
-                  <button
-                    class="css-1hei9vx"
-                    data-testid="NavigationBar__buttons--server-status"
-                    type="button"
+                  <div
+                    class="flex items-center space-x-2"
                   >
                     <div
-                      class="flex items-center space-x-2"
+                      class="p-1 css-1i4b0eq"
+                      height="20"
+                      width="20"
+                    >
+                      <svg
+                        fill="none"
+                        viewBox="0 0 20 15"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M6.595 6.285c.618-3.372 3.654-5.664 6.932-5.233 3.279.43 5.67 3.435 5.46 6.86-.21 3.426-2.948 6.092-6.252 6.088H4.912c-1.606.003-3.05-1.017-3.64-2.569-.589-1.552-.203-3.32.972-4.457a3.795 3.795 0 0 1 4.35-.69zm0 0C6.5 7 6.6 7.8 7 9"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
+                      </svg>
+                    </div>
+                    <div
+                      class="absolute right-1 top-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
                     >
                       <div
-                        class="p-1 css-1i4b0eq"
-                        height="20"
-                        width="20"
-                      >
-                        <svg
-                          fill="none"
-                          viewBox="0 0 20 15"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M6.595 6.285c.618-3.372 3.654-5.664 6.932-5.233 3.279.43 5.67 3.435 5.46 6.86-.21 3.426-2.948 6.092-6.252 6.088H4.912c-1.606.003-3.05-1.017-3.64-2.569-.589-1.552-.203-3.32.972-4.457a3.795 3.795 0 0 1 4.35-.69zm0 0C6.5 7 6.6 7.8 7 9"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                          />
-                        </svg>
-                      </div>
-                      <div
-                        class="absolute right-1 top-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
-                      >
-                        <div
-                          class="h-2 w-2 rounded-full bg-theme-success-700"
-                        />
-                      </div>
+                        class="h-2 w-2 rounded-full bg-theme-success-700"
+                      />
                     </div>
-                  </button>
-                </div>
-              </span>
+                  </div>
+                </button>
+              </div>
             </div>
           </div>
           <div
@@ -5159,59 +5083,57 @@ exports[`NavigationBar > should render with shadow if there is a scroll 1`] = `
           />
           <div>
             <div
-              class="static sm:relative"
+              aria-expanded="false"
+              aria-haspopup="dialog"
+              data-testid="dropdown__toggle"
             >
-              <span
-                data-testid="dropdown__toggle"
+              <div
+                class="group css-c93wvv"
               >
-                <div
-                  class="group css-c93wvv"
+                <button
+                  class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none"
+                  data-testid="NavigationBar__buttons--notifications"
+                  type="button"
                 >
-                  <button
-                    class="css-1hei9vx"
-                    data-testid="NavigationBar__buttons--notifications"
-                    type="button"
+                  <div
+                    class="flex items-center space-x-2"
                   >
                     <div
-                      class="flex items-center space-x-2"
+                      class="p-1 css-1i4b0eq"
+                      height="20"
+                      width="20"
+                    >
+                      <svg
+                        id="bell"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M8.4 17.8c.3.9 1.2 1.4 2.1 1.1.5-.2 1-.6 1.1-1.1M10 2.8V1M10 2.8c3.3 0 6 2.7 6 6h0c0 5.6 1.2 6.6 1.2 6.6H2.8S4 13.9 4 8.8c0-3.3 2.7-6 6-6z"
+                          />
+                        </g>
+                      </svg>
+                    </div>
+                    <div
+                      class="absolute right-1 top-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
                     >
                       <div
-                        class="p-1 css-1i4b0eq"
-                        height="20"
-                        width="20"
-                      >
-                        <svg
-                          id="bell"
-                          viewBox="0 0 20 20"
-                          x="0"
-                          xml:space="preserve"
-                          xmlns="http://www.w3.org/2000/svg"
-                          y="0"
-                        >
-                          <g
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                          >
-                            <path
-                              d="M8.4 17.8c.3.9 1.2 1.4 2.1 1.1.5-.2 1-.6 1.1-1.1M10 2.8V1M10 2.8c3.3 0 6 2.7 6 6h0c0 5.6 1.2 6.6 1.2 6.6H2.8S4 13.9 4 8.8c0-3.3 2.7-6 6-6z"
-                            />
-                          </g>
-                        </svg>
-                      </div>
-                      <div
-                        class="absolute right-1 top-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
-                      >
-                        <div
-                          class="h-2 w-2 rounded-full bg-theme-danger-500"
-                        />
-                      </div>
+                        class="h-2 w-2 rounded-full bg-theme-danger-500"
+                      />
                     </div>
-                  </button>
-                </div>
-              </span>
+                  </div>
+                </button>
+              </div>
             </div>
           </div>
           <div
@@ -5227,7 +5149,7 @@ exports[`NavigationBar > should render with shadow if there is a scroll 1`] = `
                 class="css-c93wvv"
               >
                 <button
-                  class="css-1hei9vx"
+                  class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none"
                   data-testid="NavigationBar__buttons--receive"
                   type="button"
                 >
@@ -5274,7 +5196,7 @@ exports[`NavigationBar > should render with shadow if there is a scroll 1`] = `
                 class="css-c93wvv"
               >
                 <button
-                  class="css-1hei9vx"
+                  class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none"
                   data-testid="NavigationBar__buttons--send"
                   type="button"
                 >
@@ -5318,7 +5240,7 @@ exports[`NavigationBar > should render with shadow if there is a scroll 1`] = `
           data-testid="NavigationBar__balance"
         >
           <div
-            class="-mt-3 flex flex-row items-center justify-center space-x-2 bg-theme-secondary-100 px-8 py-2.5 dark:bg-black md:m-0 md:flex-col md:items-start md:justify-start md:space-x-0 md:bg-transparent md:p-0 md:text-right md:dark:bg-transparent"
+            class="flex flex-row items-center justify-center space-x-2 bg-theme-secondary-100 px-8 py-2.5 dark:bg-black md:m-0 md:flex-col md:items-start md:justify-start md:space-x-0 md:bg-transparent md:p-0 md:text-right md:dark:bg-transparent"
           >
             <div
               class="whitespace-nowrap text-theme-secondary-700 dark:text-theme-secondary-500 md:text-xs md:font-semibold md:text-theme-secondary-500"
@@ -5339,35 +5261,33 @@ exports[`NavigationBar > should render with shadow if there is a scroll 1`] = `
           </div>
         </div>
         <div
-          class="static sm:relative"
+          aria-expanded="false"
+          aria-haspopup="dialog"
+          data-testid="dropdown__toggle"
         >
-          <span
-            data-testid="dropdown__toggle"
+          <div
+            class="relative cursor-pointer items-center justify-center rounded-full align-middle"
+            data-testid="UserMenu"
           >
             <div
-              class="relative cursor-pointer items-center justify-center rounded-full align-middle"
-              data-testid="UserMenu"
+              class="shrink-0 css-1n9jllj"
+              data-testid="Avatar"
             >
               <div
-                class="shrink-0 css-1n9jllj"
-                data-testid="Avatar"
+                class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
               >
-                <div
-                  class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                <img
+                  alt="Profile Avatar"
+                  src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(233, 30, 99)" width="100" height="100"/><circle r="45" cx="80" cy="30" fill="rgb(76, 175, 80)"/><circle r="55" cx="0" cy="60" fill="rgb(255, 152, 0)"/><circle r="40" cx="50" cy="50" fill="rgb(3, 169, 244)"/></svg>"
+                />
+                <span
+                  class="absolute text-sm font-semibold text-theme-background dark:text-theme-text"
                 >
-                  <img
-                    alt="Profile Avatar"
-                    src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(233, 30, 99)" width="100" height="100"/><circle r="45" cx="80" cy="30" fill="rgb(76, 175, 80)"/><circle r="55" cx="0" cy="60" fill="rgb(255, 152, 0)"/><circle r="40" cx="50" cy="50" fill="rgb(3, 169, 244)"/></svg>"
-                  />
-                  <span
-                    class="absolute text-sm font-semibold text-theme-background dark:text-theme-text"
-                  >
-                    JO
-                  </span>
-                </div>
+                  JO
+                </span>
               </div>
             </div>
-          </span>
+          </div>
         </div>
       </div>
     </div>
@@ -5382,16 +5302,16 @@ exports[`NavigationBar > should render with title if variant is logo-only 1`] = 
     class="css-1pyu5ft"
   >
     <div
-      class="relative flex h-21"
+      class="relative flex h-14 sm:h-21"
     >
       <div
-        class="flex flex-1 px-8 sm:ml-12"
+        class="flex flex-1 px-6 md:px-10"
       >
         <div
           class="my-auto flex items-center"
         >
           <button
-            class="my-auto mr-4 flex h-11 w-11 cursor-pointer items-center justify-center rounded-xl bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400"
+            class="my-auto mr-2 flex h-8 w-8 cursor-pointer items-center justify-center rounded bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 sm:mr-4 sm:h-11 sm:w-11 sm:rounded-xl"
             data-testid="NavigationBarLogo--button"
             type="button"
           >

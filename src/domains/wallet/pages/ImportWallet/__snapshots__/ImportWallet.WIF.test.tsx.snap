@@ -9,16 +9,83 @@ exports[`ImportWallet WIF > should import with invalid wif 1`] = `
       class="flex items-end justify-between bg-theme-background hidden sm:block"
     >
       <div
-        class="space-y-4"
+        class="space-y-2"
       >
-        <h1
-          class="mb-0 text-2xl"
-          data-testid="header__title"
-        >
-          Import Wallet
-        </h1>
         <div
-          class="flex items-center text-theme-secondary-text"
+          class="flex items-center gap-3"
+        >
+          <div
+            class="css-h1kfx5"
+            data-testid="icon-ImportWalletLight"
+            height="24"
+            width="24"
+          >
+            <svg
+              fill="none"
+              viewBox="0 0 24 25"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                clip-rule="evenodd"
+                d="M18.5648 5.99235L16.6582 2.1791C16.5126 1.88766 16.2571 1.66604 15.948 1.56302C15.639 1.45999 15.3016 1.48401 15.0103 1.62979L6.28516 5.99235"
+                fill="#E6EFF9"
+                fill-rule="evenodd"
+              />
+              <path
+                d="M18.5648 5.99235L16.6582 2.1791C16.5126 1.88766 16.2571 1.66604 15.948 1.56302C15.639 1.45999 15.3016 1.48401 15.0103 1.62979L6.28516 5.99235"
+                stroke="#235B95"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
+              <path
+                d="M21.0216 15.8159V17.0439C21.0216 18.4003 19.9221 19.4998 18.5657 19.4998H12.4258M21.0216 9.67609V8.44812C21.0216 7.09175 19.9221 5.99219 18.5657 5.99219H6.28601C4.92964 5.99219 3.83008 7.09175 3.83008 8.44812V10.746"
+                stroke="#235B95"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
+              <path
+                clip-rule="evenodd"
+                d="M21.0226 15.8166C21.7008 15.8166 22.2506 15.2668 22.2506 14.5886V10.9047C22.2506 10.2265 21.7008 9.67676 21.0226 9.67676H17.9527C16.2573 9.67676 14.8828 11.0512 14.8828 12.7467C14.8828 14.4421 16.2573 15.8166 17.9527 15.8166H21.0226Z"
+                fill-rule="evenodd"
+                stroke="#235B95"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
+              <path
+                d="M17.9515 12.4395C18.1211 12.4395 18.2585 12.5769 18.2585 12.7464C18.2585 12.916 18.1211 13.0534 17.9515 13.0534C17.782 13.0534 17.6445 12.916 17.6445 12.7464C17.6445 12.5769 17.782 12.4395 17.9515 12.4395"
+                stroke="#235B95"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
+              <path
+                d="M1 20L4 23L7 20"
+                stroke="#235B95"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
+              <path
+                d="M4 23L4 20C4 16.7345 6.08702 13.9564 9 12.9268"
+                stroke="#235B95"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
+            </svg>
+          </div>
+          <h1
+            class="mb-0 text-2xl leading-[29px]"
+            data-testid="header__title"
+          >
+            Import Wallet
+          </h1>
+        </div>
+        <div
+          class="flex items-center leading-5 text-theme-secondary-text"
           data-testid="header__subtitle"
         >
           Select the import method by which you want to import the address to your Profile.
@@ -26,13 +93,13 @@ exports[`ImportWallet WIF > should import with invalid wif 1`] = `
       </div>
     </div>
     <div
-      class="mt-8 space-y-6"
+      class="mt-4 space-y-4"
     >
       <fieldset
         class="flex min-w-0 flex-col css-1bcidjh"
       >
         <label
-          class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+          class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
           data-testid="FormLabel"
           for=""
         >
@@ -43,14 +110,14 @@ exports[`ImportWallet WIF > should import with invalid wif 1`] = `
           data-testid="SelectDropdown"
         >
           <div
-            class="sr-only css-n1b0kl"
+            class="sr-only css-14zfvme"
           >
             <div
               class="relative flex h-full flex-1"
             >
               <input
                 autocomplete="off"
-                class="no-ligatures w-full border-none css-1vs1awz"
+                class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
                 data-testid="select-list__input"
                 name=""
                 readonly=""
@@ -81,7 +148,7 @@ exports[`ImportWallet WIF > should import with invalid wif 1`] = `
                   …
                 </div>
                 <div
-                  class="css-n1b0kl"
+                  class="css-14zfvme"
                 >
                   <div
                     class="relative flex h-full flex-1"
@@ -91,7 +158,7 @@ exports[`ImportWallet WIF > should import with invalid wif 1`] = `
                       aria-controls="ImportWallet__select-menu"
                       aria-labelledby="ImportWallet__select-label"
                       autocomplete="off"
-                      class="no-ligatures w-full border-none css-1vs1awz"
+                      class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
                       data-testid="SelectDropdown__input"
                       id="ImportWallet__select-input"
                       name=""
@@ -100,7 +167,7 @@ exports[`ImportWallet WIF > should import with invalid wif 1`] = `
                       value="WIF"
                     />
                     <span
-                      class="pointer-events-none absolute inset-y-0 flex w-full items-center font-normal opacity-50"
+                      class="pointer-events-none absolute inset-y-0 flex w-full items-center text-sm font-normal opacity-50 sm:text-base"
                       data-testid="Input__suggestion"
                     >
                       <span
@@ -121,7 +188,7 @@ exports[`ImportWallet WIF > should import with invalid wif 1`] = `
                         class="flex items-center"
                       >
                         <div
-                          class="flex items-center justify-center px-1 py-2"
+                          class="flex items-center justify-center"
                           data-testid="SelectDropdown__caret"
                         >
                           <div
@@ -133,7 +200,7 @@ exports[`ImportWallet WIF > should import with invalid wif 1`] = `
                             width="10"
                           >
                             <svg
-                              id="caret-down"
+                              id="chevron-down-small"
                               viewBox="0 0 10 10"
                               x="0"
                               xml:space="preserve"
@@ -141,8 +208,12 @@ exports[`ImportWallet WIF > should import with invalid wif 1`] = `
                               y="0"
                             >
                               <path
-                                d="M9.093 1.5H.907c-.754 0-1.178.859-.714 1.447l4.108 5.208a.91.91 0 0 0 1.43-.002l4.078-5.208c.46-.589.037-1.445-.716-1.445z"
-                                fill="currentColor"
+                                d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
                               />
                             </svg>
                           </div>
@@ -165,21 +236,21 @@ exports[`ImportWallet WIF > should import with invalid wif 1`] = `
         class="flex min-w-0 flex-col css-1bcidjh"
       >
         <label
-          class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+          class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
           data-testid="FormLabel"
           for="value"
         >
           WIF
         </label>
         <div
-          class="css-n1b0kl"
+          class="css-14zfvme"
         >
           <div
             class="relative flex h-full flex-1"
           >
             <input
               autocomplete="off"
-              class="no-ligatures w-full border-none css-1vs1awz"
+              class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
               data-testid="ImportWallet__wif-input"
               name="value"
               type="password"
@@ -234,7 +305,7 @@ exports[`ImportWallet WIF > should import with invalid wif 1`] = `
         </div>
       </fieldset>
       <div
-        class="border-theme-secondary-300 dark:border-theme-secondary-800 css-pvb4ee"
+        class="border-theme-secondary-300 dark:border-theme-secondary-800 css-ppmbkz"
         type="horizontal"
       />
       <div
@@ -289,16 +360,83 @@ exports[`ImportWallet WIF > should import with valid wif 1`] = `
       class="flex items-end justify-between bg-theme-background hidden sm:block"
     >
       <div
-        class="space-y-4"
+        class="space-y-2"
       >
-        <h1
-          class="mb-0 text-2xl"
-          data-testid="header__title"
-        >
-          Import Wallet
-        </h1>
         <div
-          class="flex items-center text-theme-secondary-text"
+          class="flex items-center gap-3"
+        >
+          <div
+            class="css-h1kfx5"
+            data-testid="icon-ImportWalletLight"
+            height="24"
+            width="24"
+          >
+            <svg
+              fill="none"
+              viewBox="0 0 24 25"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                clip-rule="evenodd"
+                d="M18.5648 5.99235L16.6582 2.1791C16.5126 1.88766 16.2571 1.66604 15.948 1.56302C15.639 1.45999 15.3016 1.48401 15.0103 1.62979L6.28516 5.99235"
+                fill="#E6EFF9"
+                fill-rule="evenodd"
+              />
+              <path
+                d="M18.5648 5.99235L16.6582 2.1791C16.5126 1.88766 16.2571 1.66604 15.948 1.56302C15.639 1.45999 15.3016 1.48401 15.0103 1.62979L6.28516 5.99235"
+                stroke="#235B95"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
+              <path
+                d="M21.0216 15.8159V17.0439C21.0216 18.4003 19.9221 19.4998 18.5657 19.4998H12.4258M21.0216 9.67609V8.44812C21.0216 7.09175 19.9221 5.99219 18.5657 5.99219H6.28601C4.92964 5.99219 3.83008 7.09175 3.83008 8.44812V10.746"
+                stroke="#235B95"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
+              <path
+                clip-rule="evenodd"
+                d="M21.0226 15.8166C21.7008 15.8166 22.2506 15.2668 22.2506 14.5886V10.9047C22.2506 10.2265 21.7008 9.67676 21.0226 9.67676H17.9527C16.2573 9.67676 14.8828 11.0512 14.8828 12.7467C14.8828 14.4421 16.2573 15.8166 17.9527 15.8166H21.0226Z"
+                fill-rule="evenodd"
+                stroke="#235B95"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
+              <path
+                d="M17.9515 12.4395C18.1211 12.4395 18.2585 12.5769 18.2585 12.7464C18.2585 12.916 18.1211 13.0534 17.9515 13.0534C17.782 13.0534 17.6445 12.916 17.6445 12.7464C17.6445 12.5769 17.782 12.4395 17.9515 12.4395"
+                stroke="#235B95"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
+              <path
+                d="M1 20L4 23L7 20"
+                stroke="#235B95"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
+              <path
+                d="M4 23L4 20C4 16.7345 6.08702 13.9564 9 12.9268"
+                stroke="#235B95"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
+            </svg>
+          </div>
+          <h1
+            class="mb-0 text-2xl leading-[29px]"
+            data-testid="header__title"
+          >
+            Import Wallet
+          </h1>
+        </div>
+        <div
+          class="flex items-center leading-5 text-theme-secondary-text"
           data-testid="header__subtitle"
         >
           Select the import method by which you want to import the address to your Profile.
@@ -306,13 +444,13 @@ exports[`ImportWallet WIF > should import with valid wif 1`] = `
       </div>
     </div>
     <div
-      class="mt-8 space-y-6"
+      class="mt-4 space-y-4"
     >
       <fieldset
         class="flex min-w-0 flex-col css-1bcidjh"
       >
         <label
-          class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+          class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
           data-testid="FormLabel"
           for=""
         >
@@ -323,14 +461,14 @@ exports[`ImportWallet WIF > should import with valid wif 1`] = `
           data-testid="SelectDropdown"
         >
           <div
-            class="sr-only css-n1b0kl"
+            class="sr-only css-14zfvme"
           >
             <div
               class="relative flex h-full flex-1"
             >
               <input
                 autocomplete="off"
-                class="no-ligatures w-full border-none css-1vs1awz"
+                class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
                 data-testid="select-list__input"
                 name=""
                 readonly=""
@@ -361,7 +499,7 @@ exports[`ImportWallet WIF > should import with valid wif 1`] = `
                   …
                 </div>
                 <div
-                  class="css-n1b0kl"
+                  class="css-14zfvme"
                 >
                   <div
                     class="relative flex h-full flex-1"
@@ -371,7 +509,7 @@ exports[`ImportWallet WIF > should import with valid wif 1`] = `
                       aria-controls="ImportWallet__select-menu"
                       aria-labelledby="ImportWallet__select-label"
                       autocomplete="off"
-                      class="no-ligatures w-full border-none css-1vs1awz"
+                      class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
                       data-testid="SelectDropdown__input"
                       id="ImportWallet__select-input"
                       name=""
@@ -380,7 +518,7 @@ exports[`ImportWallet WIF > should import with valid wif 1`] = `
                       value="WIF"
                     />
                     <span
-                      class="pointer-events-none absolute inset-y-0 flex w-full items-center font-normal opacity-50"
+                      class="pointer-events-none absolute inset-y-0 flex w-full items-center text-sm font-normal opacity-50 sm:text-base"
                       data-testid="Input__suggestion"
                     >
                       <span
@@ -401,7 +539,7 @@ exports[`ImportWallet WIF > should import with valid wif 1`] = `
                         class="flex items-center"
                       >
                         <div
-                          class="flex items-center justify-center px-1 py-2"
+                          class="flex items-center justify-center"
                           data-testid="SelectDropdown__caret"
                         >
                           <div
@@ -413,7 +551,7 @@ exports[`ImportWallet WIF > should import with valid wif 1`] = `
                             width="10"
                           >
                             <svg
-                              id="caret-down"
+                              id="chevron-down-small"
                               viewBox="0 0 10 10"
                               x="0"
                               xml:space="preserve"
@@ -421,8 +559,12 @@ exports[`ImportWallet WIF > should import with valid wif 1`] = `
                               y="0"
                             >
                               <path
-                                d="M9.093 1.5H.907c-.754 0-1.178.859-.714 1.447l4.108 5.208a.91.91 0 0 0 1.43-.002l4.078-5.208c.46-.589.037-1.445-.716-1.445z"
-                                fill="currentColor"
+                                d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
                               />
                             </svg>
                           </div>
@@ -445,21 +587,21 @@ exports[`ImportWallet WIF > should import with valid wif 1`] = `
         class="flex min-w-0 flex-col css-1bcidjh"
       >
         <label
-          class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+          class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
           data-testid="FormLabel"
           for="value"
         >
           WIF
         </label>
         <div
-          class="css-n1b0kl"
+          class="css-14zfvme"
         >
           <div
             class="relative flex h-full flex-1"
           >
             <input
               autocomplete="off"
-              class="no-ligatures w-full border-none css-1vs1awz"
+              class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
               data-testid="ImportWallet__wif-input"
               name="value"
               type="password"
@@ -514,7 +656,7 @@ exports[`ImportWallet WIF > should import with valid wif 1`] = `
         </div>
       </fieldset>
       <div
-        class="border-theme-secondary-300 dark:border-theme-secondary-800 css-pvb4ee"
+        class="border-theme-secondary-300 dark:border-theme-secondary-800 css-ppmbkz"
         type="horizontal"
       />
       <div

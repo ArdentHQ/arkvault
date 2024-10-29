@@ -7,18 +7,17 @@ import { Icon } from "@/app/components/Icon";
 import { Skeleton } from "@/app/components/Skeleton";
 import { Tooltip } from "@/app/components/Tooltip";
 import { TotalAmountBox } from "@/domains/transaction/components/TotalAmountBox";
-import {
-	TransactionDetail,
-	TransactionMemo,
-	TransactionRecipients,
-} from "@/domains/transaction/components/TransactionDetail";
+import { TransactionAddresses } from "@/domains/transaction/components/TransactionDetail";
+import { DetailWrapper } from "@/app/components/DetailWrapper";
 
 export const TransferLedgerReview = ({
 	wallet,
 	estimatedExpiration,
+	profile,
 }: {
 	wallet: Contracts.IReadWriteWallet;
 	estimatedExpiration?: number;
+	profile: Contracts.IProfile;
 }) => {
 	const { t } = useTranslation();
 	const { getValues } = useFormContext();
@@ -50,12 +49,21 @@ export const TransferLedgerReview = ({
 	};
 
 	return (
-		<>
-			<TransactionRecipients currency={wallet.currency()} recipients={recipients} border={false} />
+		<div className="space-y-3 sm:space-y-4">
+			<TransactionAddresses
+				senderAddress={wallet.address()}
+				recipients={recipients}
+				profile={profile}
+				network={wallet.network()}
+			/>
 
-			{memo && <TransactionMemo memo={memo} />}
+			{memo && (
+				<DetailWrapper label={t("COMMON.MEMO_SMARTBRIDGE")}>
+					<p data-testid="TransactionMemo">{memo}</p>
+				</DetailWrapper>
+			)}
 
-			<TransactionDetail
+			<DetailWrapper
 				label={
 					<div data-testid="LedgerReview__expiration" className="flex items-center space-x-2">
 						<span>{t("COMMON.EXPIRATION")}</span>
@@ -69,11 +77,11 @@ export const TransferLedgerReview = ({
 				}
 			>
 				{renderExpiration()}
-			</TransactionDetail>
+			</DetailWrapper>
 
 			<div className="mt-2">
 				<TotalAmountBox amount={amount} fee={fee} ticker={wallet.currency()} />
 			</div>
-		</>
+		</div>
 	);
 };

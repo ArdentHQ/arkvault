@@ -14,7 +14,6 @@ export interface SearchRecipientListItemProperties {
 	recipient: RecipientProperties;
 	onAction: (address: string) => void;
 	selectedAddress?: string;
-	isCompact?: boolean;
 }
 export interface SearchRecipientListItemResponsiveProperties {
 	index: number;

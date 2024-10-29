@@ -3,11 +3,11 @@
 exports[`WalletsGroup > should handle list wallet click 1`] = `
 <DocumentFragment>
   <div
-    class="-mx-8 -mt-8 flex items-center justify-between border-b border-theme-secondary-300 bg-theme-secondary-100 px-8 py-4 dark:border-theme-secondary-800 dark:bg-black sm:mx-0 sm:mb-6 sm:mt-0 sm:border-b-0 sm:bg-transparent sm:px-0 sm:py-0 sm:dark:bg-transparent"
+    class="-mx-6 -mt-8 flex items-center justify-between border-b border-theme-secondary-300 bg-theme-secondary-100 px-6 py-1.5 dark:border-theme-secondary-800 dark:bg-black sm:mx-0 sm:mb-6 sm:mt-0 sm:border-b-0 sm:bg-transparent sm:px-0 sm:py-0 sm:dark:bg-transparent"
     data-testid="Portfolio__Header"
   >
     <div
-      class="text-lg font-bold sm:text-2xl"
+      class="text-lg font-bold leading-5 sm:text-2xl"
     >
       Portfolio
     </div>
@@ -22,51 +22,49 @@ exports[`WalletsGroup > should handle list wallet click 1`] = `
           class="static mr-0 flex items-center border-theme-secondary-300 pr-0 text-theme-primary-300 dark:border-theme-secondary-800 dark:text-theme-secondary-600 sm:mr-8 sm:border-r sm:pr-5 md:relative"
         >
           <div
-            class="static sm:relative"
+            aria-expanded="false"
+            aria-haspopup="dialog"
+            data-testid="dropdown__toggle"
           >
-            <span
-              data-testid="dropdown__toggle"
-            >
-              <span>
-                <div
-                  class="group"
+            <span>
+              <div
+                class="group"
+              >
+                <button
+                  class="ring-focus css-14zm422"
                 >
-                  <button
-                    class="ring-focus css-14zm422"
+                  <div
+                    class="flex h-5 w-5 items-center justify-center"
                   >
                     <div
-                      class="flex h-5 w-5 items-center justify-center"
+                      class="css-1i4b0eq"
+                      height="20"
+                      width="20"
                     >
-                      <div
-                        class="css-1i4b0eq"
-                        height="20"
-                        width="20"
+                      <svg
+                        id="sliders-vertical"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
                       >
-                        <svg
-                          id="sliders-vertical"
-                          viewBox="0 0 20 20"
-                          x="0"
-                          xml:space="preserve"
-                          xmlns="http://www.w3.org/2000/svg"
-                          y="0"
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
                         >
-                          <g
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                          >
-                            <path
-                              d="M15 9V1M15 19v-4M18 12c0 1.7-1.4 3-3 3-1.7 0-3-1.4-3-3s1.2-3 3-3h0c1.7 0 3 1.3 3 3h0zM5 7.1V19M8 4c0-1.7-1.4-3-3-3S2 2.4 2 4c0 1.7 1.4 3 3 3s3-1.3 3-3c0 .1 0 0 0 0z"
-                            />
-                          </g>
-                        </svg>
-                      </div>
+                          <path
+                            d="M15 9V1M15 19v-4M18 12c0 1.7-1.4 3-3 3-1.7 0-3-1.4-3-3s1.2-3 3-3h0c1.7 0 3 1.3 3 3h0zM5 7.1V19M8 4c0-1.7-1.4-3-3-3S2 2.4 2 4c0 1.7 1.4 3 3 3s3-1.3 3-3c0 .1 0 0 0 0z"
+                          />
+                        </g>
+                      </svg>
                     </div>
-                  </button>
-                </div>
-              </span>
+                  </div>
+                </button>
+              </div>
             </span>
           </div>
         </div>
@@ -83,7 +81,7 @@ exports[`WalletsGroup > should handle list wallet click 1`] = `
         >
           <div>
             <button
-              class="css-wqh5n3"
+              class="px-5 py-3 space-x-3 text-base relative items-center justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-700 hidden md:inline-flex"
               data-testid="WalletControls__import-ledger"
               type="button"
             >
@@ -122,7 +120,7 @@ exports[`WalletsGroup > should handle list wallet click 1`] = `
             </button>
           </div>
           <button
-            class="css-6419sw"
+            class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-700"
             data-testid="WalletControls__import-wallet"
             type="button"
           >
@@ -168,7 +166,7 @@ exports[`WalletsGroup > should handle list wallet click 1`] = `
             </div>
           </button>
           <button
-            class="css-fl4fi0"
+            class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded text-white bg-theme-primary-600 hover:bg-theme-primary-700"
             data-testid="WalletControls__create-wallet"
             type="button"
           >
@@ -215,41 +213,39 @@ exports[`WalletsGroup > should handle list wallet click 1`] = `
           class="flex items-center sm:hidden"
         >
           <div
-            class="static sm:relative"
+            aria-expanded="false"
+            aria-haspopup="dialog"
+            data-testid="dropdown__toggle"
           >
             <span
-              data-testid="dropdown__toggle"
+              class="-mx-1 flex items-center px-5 py-3 text-theme-primary-300 dark:text-theme-secondary-600"
             >
-              <span
-                class="-mx-1 flex items-center px-5 py-3 text-theme-primary-300 dark:text-theme-secondary-600"
+              <div
+                class="css-v0ob3f"
+                height="16"
+                width="16"
               >
-                <div
-                  class="css-v0ob3f"
-                  height="16"
-                  width="16"
+                <svg
+                  id="plus"
+                  viewBox="0 0 20 20"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
                 >
-                  <svg
-                    id="plus"
-                    viewBox="0 0 20 20"
-                    x="0"
-                    xml:space="preserve"
-                    xmlns="http://www.w3.org/2000/svg"
-                    y="0"
+                  <g
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
                   >
-                    <g
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                    >
-                      <path
-                        d="M1 10h18M10 1v18"
-                      />
-                    </g>
-                  </svg>
-                </div>
-              </span>
+                    <path
+                      d="M1 10h18M10 1v18"
+                    />
+                  </g>
+                </svg>
+              </div>
             </span>
           </div>
         </div>
@@ -260,22 +256,22 @@ exports[`WalletsGroup > should handle list wallet click 1`] = `
     data-testid="NetworkWalletsGroupList"
   >
     <div
-      class="css-13o3tsw"
+      class="md:!mb-3 css-13o3tsw"
       data-testid="WalletsGroup"
     >
       <div
-        class="select-none cursor-pointer group md:h-20 py-6 px-8 md:p-4 flex flex-row items-center border-theme-secondary-300 dark:border-theme-secondary-800"
+        class="select-none cursor-pointer group md:h-20 md:p-4 flex flex-row items-center border-theme-secondary-300 dark:border-theme-secondary-800 px-6 py-4"
         data-testid="WalletsGroupHeader"
       >
         <div
           class="flex flex-grow flex-row items-center"
         >
           <div
-            class="css-18ateh5"
+            class="css-7dz1f2"
           >
             <div
               aria-label="ARK"
-              class="inline-flex h-5 w-5 items-center justify-center text-theme-primary-600 border-theme-primary-100 dark:border-theme-primary-600"
+              class="inline-flex h-5 w-5 items-center justify-center text-theme-navy-600"
               data-testid="NetworkIcon-ARK-ark.mainnet"
             >
               <div
@@ -338,7 +334,7 @@ exports[`WalletsGroup > should handle list wallet click 1`] = `
               </div>
             </span>
             <span
-              class="text-xs text-theme-secondary-500 dark:text-theme-secondary-700"
+              class="text-xs text-theme-secondary-500"
             >
               <div
                 class="flex items-center justify-end sm:h-6 h-4"
@@ -360,7 +356,7 @@ exports[`WalletsGroup > should handle list wallet click 1`] = `
             </span>
           </div>
           <div
-            class="hidden flex-initial space-x-4 sm:flex css-rqn1nb-GroupNetworkTotal"
+            class="hidden flex-initial space-x-4 sm:flex css-1imdohp"
           >
             <span
               class="hidden"
@@ -369,7 +365,7 @@ exports[`WalletsGroup > should handle list wallet click 1`] = `
               class="flex flex-col space-y-1 border-r border-theme-secondary-300 pr-4 text-right font-semibold dark:border-theme-secondary-800"
             >
               <span
-                class="whitespace-nowrap text-sm text-theme-secondary-500 dark:text-theme-secondary-700"
+                class="whitespace-nowrap text-sm text-theme-secondary-700 dark:text-theme-secondary-500"
               >
                 Wallets
               </span>
@@ -399,7 +395,7 @@ exports[`WalletsGroup > should handle list wallet click 1`] = `
               class="flex flex-col space-y-1 border-r border-theme-secondary-300 pr-4 text-right font-semibold dark:border-theme-secondary-800"
             >
               <span
-                class="whitespace-nowrap text-sm text-theme-secondary-500 dark:text-theme-secondary-700"
+                class="whitespace-nowrap text-sm text-theme-secondary-700 dark:text-theme-secondary-500"
               >
                 Total Balance
               </span>
@@ -429,7 +425,7 @@ exports[`WalletsGroup > should handle list wallet click 1`] = `
               class="flex flex-col space-y-1 border-r border-theme-secondary-300 pr-4 text-right font-semibold dark:border-theme-secondary-800 hidden lg:flex"
             >
               <span
-                class="whitespace-nowrap text-sm text-theme-secondary-500 dark:text-theme-secondary-700"
+                class="whitespace-nowrap text-sm text-theme-secondary-700 dark:text-theme-secondary-500"
               >
                 Total Currency
               </span>
@@ -458,10 +454,10 @@ exports[`WalletsGroup > should handle list wallet click 1`] = `
           </div>
         </div>
         <div
-          class="ml-4 flex flex-shrink-0 items-center self-stretch transition-all duration-100 css-qr226j-AccordionHeader"
+          class="ml-4 flex flex-shrink-0 items-center self-stretch transition-all duration-100 css-o6tyc"
         >
           <div
-            class="css-1j7gziz"
+            class="css-cp3doq"
             data-testid="Accordion__toggle"
           >
             <div
@@ -492,22 +488,22 @@ exports[`WalletsGroup > should handle list wallet click 1`] = `
       </div>
     </div>
     <div
-      class="css-13o3tsw"
+      class="md:!mb-3 css-13o3tsw"
       data-testid="WalletsGroup"
     >
       <div
-        class="select-none cursor-pointer group md:h-20 py-6 px-8 md:p-4 flex flex-row items-center border-theme-secondary-300 dark:border-theme-secondary-800"
+        class="select-none cursor-pointer group md:h-20 md:p-4 flex flex-row items-center border-theme-secondary-300 dark:border-theme-secondary-800 px-6 py-4"
         data-testid="WalletsGroupHeader"
       >
         <div
           class="flex flex-grow flex-row items-center"
         >
           <div
-            class="css-18ateh5"
+            class="css-7dz1f2"
           >
             <div
               aria-label="ARK Devnet"
-              class="inline-flex h-5 w-5 items-center justify-center text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700"
+              class="inline-flex h-5 w-5 items-center justify-center text-theme-navy-600"
               data-testid="NetworkIcon-ARK-ark.devnet"
             >
               <div
@@ -634,7 +630,7 @@ exports[`WalletsGroup > should handle list wallet click 1`] = `
               </div>
             </span>
             <span
-              class="text-xs text-theme-secondary-500 dark:text-theme-secondary-700"
+              class="text-xs text-theme-secondary-500"
             >
               <span
                 class="text-theme-secondary-500 dark:text-theme-secondary-700"
@@ -644,7 +640,7 @@ exports[`WalletsGroup > should handle list wallet click 1`] = `
             </span>
           </div>
           <div
-            class="hidden flex-initial space-x-4 sm:flex css-rqn1nb-GroupNetworkTotal"
+            class="hidden flex-initial space-x-4 sm:flex css-1imdohp"
           >
             <span
               class="hidden"
@@ -653,7 +649,7 @@ exports[`WalletsGroup > should handle list wallet click 1`] = `
               class="flex flex-col space-y-1 border-r border-theme-secondary-300 pr-4 text-right font-semibold dark:border-theme-secondary-800"
             >
               <span
-                class="whitespace-nowrap text-sm text-theme-secondary-500 dark:text-theme-secondary-700"
+                class="whitespace-nowrap text-sm text-theme-secondary-700 dark:text-theme-secondary-500"
               >
                 Wallets
               </span>
@@ -683,7 +679,7 @@ exports[`WalletsGroup > should handle list wallet click 1`] = `
               class="flex flex-col space-y-1 border-r border-theme-secondary-300 pr-4 text-right font-semibold dark:border-theme-secondary-800"
             >
               <span
-                class="whitespace-nowrap text-sm text-theme-secondary-500 dark:text-theme-secondary-700"
+                class="whitespace-nowrap text-sm text-theme-secondary-700 dark:text-theme-secondary-500"
               >
                 Total Balance
               </span>
@@ -713,7 +709,7 @@ exports[`WalletsGroup > should handle list wallet click 1`] = `
               class="flex flex-col space-y-1 border-r border-theme-secondary-300 pr-4 text-right font-semibold dark:border-theme-secondary-800 hidden lg:flex"
             >
               <span
-                class="whitespace-nowrap text-sm text-theme-secondary-500 dark:text-theme-secondary-700"
+                class="whitespace-nowrap text-sm text-theme-secondary-700 dark:text-theme-secondary-500"
               >
                 Total Currency
               </span>
@@ -730,10 +726,10 @@ exports[`WalletsGroup > should handle list wallet click 1`] = `
           </div>
         </div>
         <div
-          class="ml-4 flex flex-shrink-0 items-center self-stretch transition-all duration-100 css-qr226j-AccordionHeader"
+          class="ml-4 flex flex-shrink-0 items-center self-stretch transition-all duration-100 css-o6tyc"
         >
           <div
-            class="css-1j7gziz"
+            class="css-cp3doq"
             data-testid="Accordion__toggle"
           >
             <div
@@ -783,7 +779,7 @@ exports[`WalletsGroup > should render GroupNetworkTotal with amounts 1`] = `
       </span>
     </span>
     <span
-      class="text-xs text-theme-secondary-500 dark:text-theme-secondary-700"
+      class="text-xs text-theme-secondary-500"
     >
       <span
         class="text-theme-secondary-500 dark:text-theme-secondary-700"
@@ -793,7 +789,7 @@ exports[`WalletsGroup > should render GroupNetworkTotal with amounts 1`] = `
     </span>
   </div>
   <div
-    class="hidden flex-initial space-x-4 sm:flex css-rqn1nb-GroupNetworkTotal"
+    class="hidden flex-initial space-x-4 sm:flex css-1imdohp"
   >
     <span
       class="hidden"
@@ -802,7 +798,7 @@ exports[`WalletsGroup > should render GroupNetworkTotal with amounts 1`] = `
       class="flex flex-col space-y-1 border-r border-theme-secondary-300 pr-4 text-right font-semibold dark:border-theme-secondary-800"
     >
       <span
-        class="whitespace-nowrap text-sm text-theme-secondary-500 dark:text-theme-secondary-700"
+        class="whitespace-nowrap text-sm text-theme-secondary-700 dark:text-theme-secondary-500"
       >
         Wallets
       </span>
@@ -816,7 +812,7 @@ exports[`WalletsGroup > should render GroupNetworkTotal with amounts 1`] = `
       class="flex flex-col space-y-1 border-r border-theme-secondary-300 pr-4 text-right font-semibold dark:border-theme-secondary-800"
     >
       <span
-        class="whitespace-nowrap text-sm text-theme-secondary-500 dark:text-theme-secondary-700"
+        class="whitespace-nowrap text-sm text-theme-secondary-700 dark:text-theme-secondary-500"
       >
         Total Balance
       </span>
@@ -835,7 +831,7 @@ exports[`WalletsGroup > should render GroupNetworkTotal with amounts 1`] = `
       class="flex flex-col space-y-1 border-r border-theme-secondary-300 pr-4 text-right font-semibold dark:border-theme-secondary-800 hidden lg:flex"
     >
       <span
-        class="whitespace-nowrap text-sm text-theme-secondary-500 dark:text-theme-secondary-700"
+        class="whitespace-nowrap text-sm text-theme-secondary-700 dark:text-theme-secondary-500"
       >
         Total Currency
       </span>
@@ -864,7 +860,7 @@ exports[`WalletsGroup > should render GroupNetworkTotal with amounts 1`] = `
       </span>
     </span>
     <span
-      class="text-xs text-theme-secondary-500 dark:text-theme-secondary-700"
+      class="text-xs text-theme-secondary-500"
     >
       <span
         class="whitespace-nowrap"
@@ -875,7 +871,7 @@ exports[`WalletsGroup > should render GroupNetworkTotal with amounts 1`] = `
     </span>
   </div>
   <div
-    class="hidden flex-initial space-x-4 sm:flex css-rqn1nb-GroupNetworkTotal"
+    class="hidden flex-initial space-x-4 sm:flex css-1imdohp"
   >
     <span
       class="hidden"
@@ -884,7 +880,7 @@ exports[`WalletsGroup > should render GroupNetworkTotal with amounts 1`] = `
       class="flex flex-col space-y-1 border-r border-theme-secondary-300 pr-4 text-right font-semibold dark:border-theme-secondary-800"
     >
       <span
-        class="whitespace-nowrap text-sm text-theme-secondary-500 dark:text-theme-secondary-700"
+        class="whitespace-nowrap text-sm text-theme-secondary-700 dark:text-theme-secondary-500"
       >
         Wallets
       </span>
@@ -898,7 +894,7 @@ exports[`WalletsGroup > should render GroupNetworkTotal with amounts 1`] = `
       class="flex flex-col space-y-1 border-r border-theme-secondary-300 pr-4 text-right font-semibold dark:border-theme-secondary-800"
     >
       <span
-        class="whitespace-nowrap text-sm text-theme-secondary-500 dark:text-theme-secondary-700"
+        class="whitespace-nowrap text-sm text-theme-secondary-700 dark:text-theme-secondary-500"
       >
         Total Balance
       </span>
@@ -917,7 +913,7 @@ exports[`WalletsGroup > should render GroupNetworkTotal with amounts 1`] = `
       class="flex flex-col space-y-1 border-r border-theme-secondary-300 pr-4 text-right font-semibold dark:border-theme-secondary-800 hidden lg:flex"
     >
       <span
-        class="whitespace-nowrap text-sm text-theme-secondary-500 dark:text-theme-secondary-700"
+        class="whitespace-nowrap text-sm text-theme-secondary-700 dark:text-theme-secondary-500"
       >
         Total Currency
       </span>
@@ -939,22 +935,22 @@ exports[`WalletsGroup > should render GroupNetworkTotal with amounts 1`] = `
 exports[`WalletsGroup > should render group with different widths 1`] = `
 <DocumentFragment>
   <div
-    class="css-13o3tsw"
+    class="md:!mb-3 css-13o3tsw"
     data-testid="WalletsGroup"
   >
     <div
-      class="select-none cursor-pointer group md:h-20 py-6 px-8 md:p-4 flex flex-row items-center border-theme-secondary-300 dark:border-theme-secondary-800"
+      class="select-none cursor-pointer group md:h-20 md:p-4 flex flex-row items-center border-theme-secondary-300 dark:border-theme-secondary-800 px-6 py-4"
       data-testid="WalletsGroupHeader"
     >
       <div
         class="flex flex-grow flex-row items-center"
       >
         <div
-          class="css-18ateh5"
+          class="css-7dz1f2"
         >
           <div
             aria-label="ARK"
-            class="inline-flex h-5 w-5 items-center justify-center text-theme-primary-600 border-theme-primary-100 dark:border-theme-primary-600"
+            class="inline-flex h-5 w-5 items-center justify-center text-theme-navy-600"
             data-testid="NetworkIcon-ARK-ark.mainnet"
           >
             <div
@@ -1017,7 +1013,7 @@ exports[`WalletsGroup > should render group with different widths 1`] = `
             </div>
           </span>
           <span
-            class="text-xs text-theme-secondary-500 dark:text-theme-secondary-700"
+            class="text-xs text-theme-secondary-500"
           >
             <div
               class="flex items-center justify-end sm:h-6 h-4"
@@ -1039,7 +1035,7 @@ exports[`WalletsGroup > should render group with different widths 1`] = `
           </span>
         </div>
         <div
-          class="hidden flex-initial space-x-4 sm:flex css-rqn1nb-GroupNetworkTotal"
+          class="hidden flex-initial space-x-4 sm:flex css-1imdohp"
         >
           <span
             class="hidden"
@@ -1048,7 +1044,7 @@ exports[`WalletsGroup > should render group with different widths 1`] = `
             class="flex flex-col space-y-1 border-r border-theme-secondary-300 pr-4 text-right font-semibold dark:border-theme-secondary-800"
           >
             <span
-              class="whitespace-nowrap text-sm text-theme-secondary-500 dark:text-theme-secondary-700"
+              class="whitespace-nowrap text-sm text-theme-secondary-700 dark:text-theme-secondary-500"
             >
               Wallets
             </span>
@@ -1078,7 +1074,7 @@ exports[`WalletsGroup > should render group with different widths 1`] = `
             class="flex flex-col space-y-1 border-r border-theme-secondary-300 pr-4 text-right font-semibold dark:border-theme-secondary-800"
           >
             <span
-              class="whitespace-nowrap text-sm text-theme-secondary-500 dark:text-theme-secondary-700"
+              class="whitespace-nowrap text-sm text-theme-secondary-700 dark:text-theme-secondary-500"
             >
               Total Balance
             </span>
@@ -1108,7 +1104,7 @@ exports[`WalletsGroup > should render group with different widths 1`] = `
             class="flex flex-col space-y-1 border-r border-theme-secondary-300 pr-4 text-right font-semibold dark:border-theme-secondary-800 hidden lg:flex"
           >
             <span
-              class="whitespace-nowrap text-sm text-theme-secondary-500 dark:text-theme-secondary-700"
+              class="whitespace-nowrap text-sm text-theme-secondary-700 dark:text-theme-secondary-500"
             >
               Total Currency
             </span>
@@ -1137,10 +1133,10 @@ exports[`WalletsGroup > should render group with different widths 1`] = `
         </div>
       </div>
       <div
-        class="ml-4 flex flex-shrink-0 items-center self-stretch transition-all duration-100 css-qr226j-AccordionHeader"
+        class="ml-4 flex flex-shrink-0 items-center self-stretch transition-all duration-100 css-o6tyc"
       >
         <div
-          class="css-1j7gziz"
+          class="css-cp3doq"
           data-testid="Accordion__toggle"
         >
           <div
@@ -1176,22 +1172,22 @@ exports[`WalletsGroup > should render group with different widths 1`] = `
 exports[`WalletsGroup > should render group with different widths 2`] = `
 <DocumentFragment>
   <div
-    class="css-13o3tsw"
+    class="md:!mb-3 css-13o3tsw"
     data-testid="WalletsGroup"
   >
     <div
-      class="select-none cursor-pointer group md:h-20 py-6 px-8 md:p-4 flex flex-row items-center border-theme-secondary-300 dark:border-theme-secondary-800"
+      class="select-none cursor-pointer group md:h-20 md:p-4 flex flex-row items-center border-theme-secondary-300 dark:border-theme-secondary-800 px-6 py-4"
       data-testid="WalletsGroupHeader"
     >
       <div
         class="flex flex-grow flex-row items-center"
       >
         <div
-          class="css-18ateh5"
+          class="css-7dz1f2"
         >
           <div
             aria-label="ARK"
-            class="inline-flex h-5 w-5 items-center justify-center text-theme-primary-600 border-theme-primary-100 dark:border-theme-primary-600"
+            class="inline-flex h-5 w-5 items-center justify-center text-theme-navy-600"
             data-testid="NetworkIcon-ARK-ark.mainnet"
           >
             <div
@@ -1254,7 +1250,7 @@ exports[`WalletsGroup > should render group with different widths 2`] = `
             </div>
           </span>
           <span
-            class="text-xs text-theme-secondary-500 dark:text-theme-secondary-700"
+            class="text-xs text-theme-secondary-500"
           >
             <div
               class="flex items-center justify-end sm:h-6 h-4"
@@ -1276,7 +1272,7 @@ exports[`WalletsGroup > should render group with different widths 2`] = `
           </span>
         </div>
         <div
-          class="hidden flex-initial space-x-4 sm:flex css-rqn1nb-GroupNetworkTotal"
+          class="hidden flex-initial space-x-4 sm:flex css-1imdohp"
         >
           <span
             class="hidden"
@@ -1285,7 +1281,7 @@ exports[`WalletsGroup > should render group with different widths 2`] = `
             class="flex flex-col space-y-1 border-r border-theme-secondary-300 pr-4 text-right font-semibold dark:border-theme-secondary-800"
           >
             <span
-              class="whitespace-nowrap text-sm text-theme-secondary-500 dark:text-theme-secondary-700"
+              class="whitespace-nowrap text-sm text-theme-secondary-700 dark:text-theme-secondary-500"
             >
               Wallets
             </span>
@@ -1315,7 +1311,7 @@ exports[`WalletsGroup > should render group with different widths 2`] = `
             class="flex flex-col space-y-1 border-r border-theme-secondary-300 pr-4 text-right font-semibold dark:border-theme-secondary-800"
           >
             <span
-              class="whitespace-nowrap text-sm text-theme-secondary-500 dark:text-theme-secondary-700"
+              class="whitespace-nowrap text-sm text-theme-secondary-700 dark:text-theme-secondary-500"
             >
               Total Balance
             </span>
@@ -1345,7 +1341,7 @@ exports[`WalletsGroup > should render group with different widths 2`] = `
             class="flex flex-col space-y-1 border-r border-theme-secondary-300 pr-4 text-right font-semibold dark:border-theme-secondary-800 hidden lg:flex"
           >
             <span
-              class="whitespace-nowrap text-sm text-theme-secondary-500 dark:text-theme-secondary-700"
+              class="whitespace-nowrap text-sm text-theme-secondary-700 dark:text-theme-secondary-500"
             >
               Total Currency
             </span>
@@ -1374,10 +1370,10 @@ exports[`WalletsGroup > should render group with different widths 2`] = `
         </div>
       </div>
       <div
-        class="ml-4 flex flex-shrink-0 items-center self-stretch transition-all duration-100 css-qr226j-AccordionHeader"
+        class="ml-4 flex flex-shrink-0 items-center self-stretch transition-all duration-100 css-o6tyc"
       >
         <div
-          class="css-1j7gziz"
+          class="css-cp3doq"
           data-testid="Accordion__toggle"
         >
           <div
@@ -1413,22 +1409,22 @@ exports[`WalletsGroup > should render group with different widths 2`] = `
 exports[`WalletsGroup > should render group with different widths 3`] = `
 <DocumentFragment>
   <div
-    class="css-13o3tsw"
+    class="md:!mb-3 css-13o3tsw"
     data-testid="WalletsGroup"
   >
     <div
-      class="select-none cursor-pointer group md:h-20 py-6 px-8 md:p-4 flex flex-row items-center border-theme-secondary-300 dark:border-theme-secondary-800"
+      class="select-none cursor-pointer group md:h-20 md:p-4 flex flex-row items-center border-theme-secondary-300 dark:border-theme-secondary-800 px-6 py-4"
       data-testid="WalletsGroupHeader"
     >
       <div
         class="flex flex-grow flex-row items-center"
       >
         <div
-          class="css-18ateh5"
+          class="css-7dz1f2"
         >
           <div
             aria-label="ARK"
-            class="inline-flex h-5 w-5 items-center justify-center text-theme-primary-600 border-theme-primary-100 dark:border-theme-primary-600"
+            class="inline-flex h-5 w-5 items-center justify-center text-theme-navy-600"
             data-testid="NetworkIcon-ARK-ark.mainnet"
           >
             <div
@@ -1491,7 +1487,7 @@ exports[`WalletsGroup > should render group with different widths 3`] = `
             </div>
           </span>
           <span
-            class="text-xs text-theme-secondary-500 dark:text-theme-secondary-700"
+            class="text-xs text-theme-secondary-500"
           >
             <div
               class="flex items-center justify-end sm:h-6 h-4"
@@ -1513,7 +1509,7 @@ exports[`WalletsGroup > should render group with different widths 3`] = `
           </span>
         </div>
         <div
-          class="hidden flex-initial space-x-4 sm:flex css-rqn1nb-GroupNetworkTotal"
+          class="hidden flex-initial space-x-4 sm:flex css-1imdohp"
         >
           <span
             class="hidden"
@@ -1522,7 +1518,7 @@ exports[`WalletsGroup > should render group with different widths 3`] = `
             class="flex flex-col space-y-1 border-r border-theme-secondary-300 pr-4 text-right font-semibold dark:border-theme-secondary-800"
           >
             <span
-              class="whitespace-nowrap text-sm text-theme-secondary-500 dark:text-theme-secondary-700"
+              class="whitespace-nowrap text-sm text-theme-secondary-700 dark:text-theme-secondary-500"
             >
               Wallets
             </span>
@@ -1553,7 +1549,7 @@ exports[`WalletsGroup > should render group with different widths 3`] = `
             style="width: 500px;"
           >
             <span
-              class="whitespace-nowrap text-sm text-theme-secondary-500 dark:text-theme-secondary-700"
+              class="whitespace-nowrap text-sm text-theme-secondary-700 dark:text-theme-secondary-500"
             >
               Total Balance
             </span>
@@ -1584,7 +1580,7 @@ exports[`WalletsGroup > should render group with different widths 3`] = `
             style="width: 500px;"
           >
             <span
-              class="whitespace-nowrap text-sm text-theme-secondary-500 dark:text-theme-secondary-700"
+              class="whitespace-nowrap text-sm text-theme-secondary-700 dark:text-theme-secondary-500"
             >
               Total Currency
             </span>
@@ -1613,10 +1609,10 @@ exports[`WalletsGroup > should render group with different widths 3`] = `
         </div>
       </div>
       <div
-        class="ml-4 flex flex-shrink-0 items-center self-stretch transition-all duration-100 css-qr226j-AccordionHeader"
+        class="ml-4 flex flex-shrink-0 items-center self-stretch transition-all duration-100 css-o6tyc"
       >
         <div
-          class="css-1j7gziz"
+          class="css-cp3doq"
           data-testid="Accordion__toggle"
         >
           <div
@@ -1655,22 +1651,22 @@ exports[`WalletsGroup > should render with dark mode = false 1`] = `
     data-testid="NetworkWalletsGroupList"
   >
     <div
-      class="css-13o3tsw"
+      class="md:!mb-3 css-13o3tsw"
       data-testid="WalletsGroup"
     >
       <div
-        class="select-none cursor-pointer group md:h-20 py-6 px-8 md:p-4 flex flex-row items-center border-theme-secondary-300 dark:border-theme-secondary-800"
+        class="select-none cursor-pointer group md:h-20 md:p-4 flex flex-row items-center border-theme-secondary-300 dark:border-theme-secondary-800 px-6 py-4"
         data-testid="WalletsGroupHeader"
       >
         <div
           class="flex flex-grow flex-row items-center"
         >
           <div
-            class="css-18ateh5"
+            class="css-7dz1f2"
           >
             <div
               aria-label="ARK"
-              class="inline-flex h-5 w-5 items-center justify-center text-theme-primary-600 border-theme-primary-100 dark:border-theme-primary-600"
+              class="inline-flex h-5 w-5 items-center justify-center text-theme-navy-600"
               data-testid="NetworkIcon-ARK-ark.mainnet"
             >
               <div
@@ -1733,7 +1729,7 @@ exports[`WalletsGroup > should render with dark mode = false 1`] = `
               </div>
             </span>
             <span
-              class="text-xs text-theme-secondary-500 dark:text-theme-secondary-700"
+              class="text-xs text-theme-secondary-500"
             >
               <div
                 class="flex items-center justify-end sm:h-6 h-4"
@@ -1755,7 +1751,7 @@ exports[`WalletsGroup > should render with dark mode = false 1`] = `
             </span>
           </div>
           <div
-            class="hidden flex-initial space-x-4 sm:flex css-rqn1nb-GroupNetworkTotal"
+            class="hidden flex-initial space-x-4 sm:flex css-1imdohp"
           >
             <span
               class="hidden"
@@ -1764,7 +1760,7 @@ exports[`WalletsGroup > should render with dark mode = false 1`] = `
               class="flex flex-col space-y-1 border-r border-theme-secondary-300 pr-4 text-right font-semibold dark:border-theme-secondary-800"
             >
               <span
-                class="whitespace-nowrap text-sm text-theme-secondary-500 dark:text-theme-secondary-700"
+                class="whitespace-nowrap text-sm text-theme-secondary-700 dark:text-theme-secondary-500"
               >
                 Wallets
               </span>
@@ -1794,7 +1790,7 @@ exports[`WalletsGroup > should render with dark mode = false 1`] = `
               class="flex flex-col space-y-1 border-r border-theme-secondary-300 pr-4 text-right font-semibold dark:border-theme-secondary-800"
             >
               <span
-                class="whitespace-nowrap text-sm text-theme-secondary-500 dark:text-theme-secondary-700"
+                class="whitespace-nowrap text-sm text-theme-secondary-700 dark:text-theme-secondary-500"
               >
                 Total Balance
               </span>
@@ -1824,7 +1820,7 @@ exports[`WalletsGroup > should render with dark mode = false 1`] = `
               class="flex flex-col space-y-1 border-r border-theme-secondary-300 pr-4 text-right font-semibold dark:border-theme-secondary-800 hidden lg:flex"
             >
               <span
-                class="whitespace-nowrap text-sm text-theme-secondary-500 dark:text-theme-secondary-700"
+                class="whitespace-nowrap text-sm text-theme-secondary-700 dark:text-theme-secondary-500"
               >
                 Total Currency
               </span>
@@ -1853,10 +1849,10 @@ exports[`WalletsGroup > should render with dark mode = false 1`] = `
           </div>
         </div>
         <div
-          class="ml-4 flex flex-shrink-0 items-center self-stretch transition-all duration-100 css-qr226j-AccordionHeader"
+          class="ml-4 flex flex-shrink-0 items-center self-stretch transition-all duration-100 css-o6tyc"
         >
           <div
-            class="css-1j7gziz"
+            class="css-cp3doq"
             data-testid="Accordion__toggle"
           >
             <div
@@ -1887,22 +1883,22 @@ exports[`WalletsGroup > should render with dark mode = false 1`] = `
       </div>
     </div>
     <div
-      class="css-13o3tsw"
+      class="md:!mb-3 css-13o3tsw"
       data-testid="WalletsGroup"
     >
       <div
-        class="select-none cursor-pointer group md:h-20 py-6 px-8 md:p-4 flex flex-row items-center border-theme-secondary-300 dark:border-theme-secondary-800"
+        class="select-none cursor-pointer group md:h-20 md:p-4 flex flex-row items-center border-theme-secondary-300 dark:border-theme-secondary-800 px-6 py-4"
         data-testid="WalletsGroupHeader"
       >
         <div
           class="flex flex-grow flex-row items-center"
         >
           <div
-            class="css-18ateh5"
+            class="css-7dz1f2"
           >
             <div
               aria-label="ARK Devnet"
-              class="inline-flex h-5 w-5 items-center justify-center text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700"
+              class="inline-flex h-5 w-5 items-center justify-center text-theme-navy-600"
               data-testid="NetworkIcon-ARK-ark.devnet"
             >
               <div
@@ -2029,7 +2025,7 @@ exports[`WalletsGroup > should render with dark mode = false 1`] = `
               </div>
             </span>
             <span
-              class="text-xs text-theme-secondary-500 dark:text-theme-secondary-700"
+              class="text-xs text-theme-secondary-500"
             >
               <span
                 class="text-theme-secondary-500 dark:text-theme-secondary-700"
@@ -2039,7 +2035,7 @@ exports[`WalletsGroup > should render with dark mode = false 1`] = `
             </span>
           </div>
           <div
-            class="hidden flex-initial space-x-4 sm:flex css-rqn1nb-GroupNetworkTotal"
+            class="hidden flex-initial space-x-4 sm:flex css-1imdohp"
           >
             <span
               class="hidden"
@@ -2048,7 +2044,7 @@ exports[`WalletsGroup > should render with dark mode = false 1`] = `
               class="flex flex-col space-y-1 border-r border-theme-secondary-300 pr-4 text-right font-semibold dark:border-theme-secondary-800"
             >
               <span
-                class="whitespace-nowrap text-sm text-theme-secondary-500 dark:text-theme-secondary-700"
+                class="whitespace-nowrap text-sm text-theme-secondary-700 dark:text-theme-secondary-500"
               >
                 Wallets
               </span>
@@ -2078,7 +2074,7 @@ exports[`WalletsGroup > should render with dark mode = false 1`] = `
               class="flex flex-col space-y-1 border-r border-theme-secondary-300 pr-4 text-right font-semibold dark:border-theme-secondary-800"
             >
               <span
-                class="whitespace-nowrap text-sm text-theme-secondary-500 dark:text-theme-secondary-700"
+                class="whitespace-nowrap text-sm text-theme-secondary-700 dark:text-theme-secondary-500"
               >
                 Total Balance
               </span>
@@ -2108,7 +2104,7 @@ exports[`WalletsGroup > should render with dark mode = false 1`] = `
               class="flex flex-col space-y-1 border-r border-theme-secondary-300 pr-4 text-right font-semibold dark:border-theme-secondary-800 hidden lg:flex"
             >
               <span
-                class="whitespace-nowrap text-sm text-theme-secondary-500 dark:text-theme-secondary-700"
+                class="whitespace-nowrap text-sm text-theme-secondary-700 dark:text-theme-secondary-500"
               >
                 Total Currency
               </span>
@@ -2125,10 +2121,10 @@ exports[`WalletsGroup > should render with dark mode = false 1`] = `
           </div>
         </div>
         <div
-          class="ml-4 flex flex-shrink-0 items-center self-stretch transition-all duration-100 css-qr226j-AccordionHeader"
+          class="ml-4 flex flex-shrink-0 items-center self-stretch transition-all duration-100 css-o6tyc"
         >
           <div
-            class="css-1j7gziz"
+            class="css-cp3doq"
             data-testid="Accordion__toggle"
           >
             <div
@@ -2168,11 +2164,11 @@ exports[`WalletsGroup > should render with dark mode = true 1`] = `
     data-testid="NetworkWalletsGroupList"
   >
     <div
-      class="css-13o3tsw"
+      class="md:!mb-3 css-13o3tsw"
       data-testid="WalletsGroup"
     >
       <div
-        class="select-none cursor-pointer group md:h-20 py-6 px-8 md:p-4 flex flex-row items-center border-theme-secondary-300 dark:border-theme-secondary-800 bg-transparent"
+        class="select-none cursor-pointer group md:h-20 md:p-4 flex flex-row items-center border-theme-secondary-300 dark:border-theme-secondary-800 bg-transparent px-6 py-4"
         data-testid="WalletsGroupHeader"
       >
         <div
@@ -2183,7 +2179,7 @@ exports[`WalletsGroup > should render with dark mode = true 1`] = `
           >
             <div
               aria-label="ARK"
-              class="inline-flex h-5 w-5 items-center justify-center text-theme-primary-600 border-theme-primary-100 dark:border-theme-primary-600"
+              class="inline-flex h-5 w-5 items-center justify-center text-theme-navy-600"
               data-testid="NetworkIcon-ARK-ark.mainnet"
             >
               <div
@@ -2246,7 +2242,7 @@ exports[`WalletsGroup > should render with dark mode = true 1`] = `
               </div>
             </span>
             <span
-              class="text-xs text-theme-secondary-500 dark:text-theme-secondary-700"
+              class="text-xs text-theme-secondary-500"
             >
               <div
                 class="flex items-center justify-end sm:h-6 h-4"
@@ -2268,7 +2264,7 @@ exports[`WalletsGroup > should render with dark mode = true 1`] = `
             </span>
           </div>
           <div
-            class="hidden flex-initial space-x-4 sm:flex css-rqn1nb-GroupNetworkTotal"
+            class="hidden flex-initial space-x-4 sm:flex css-1imdohp"
           >
             <span
               class="hidden"
@@ -2277,7 +2273,7 @@ exports[`WalletsGroup > should render with dark mode = true 1`] = `
               class="flex flex-col space-y-1 border-r border-theme-secondary-300 pr-4 text-right font-semibold dark:border-theme-secondary-800"
             >
               <span
-                class="whitespace-nowrap text-sm text-theme-secondary-500 dark:text-theme-secondary-700"
+                class="whitespace-nowrap text-sm text-theme-secondary-700 dark:text-theme-secondary-500"
               >
                 Wallets
               </span>
@@ -2307,7 +2303,7 @@ exports[`WalletsGroup > should render with dark mode = true 1`] = `
               class="flex flex-col space-y-1 border-r border-theme-secondary-300 pr-4 text-right font-semibold dark:border-theme-secondary-800"
             >
               <span
-                class="whitespace-nowrap text-sm text-theme-secondary-500 dark:text-theme-secondary-700"
+                class="whitespace-nowrap text-sm text-theme-secondary-700 dark:text-theme-secondary-500"
               >
                 Total Balance
               </span>
@@ -2337,7 +2333,7 @@ exports[`WalletsGroup > should render with dark mode = true 1`] = `
               class="flex flex-col space-y-1 border-r border-theme-secondary-300 pr-4 text-right font-semibold dark:border-theme-secondary-800 hidden lg:flex"
             >
               <span
-                class="whitespace-nowrap text-sm text-theme-secondary-500 dark:text-theme-secondary-700"
+                class="whitespace-nowrap text-sm text-theme-secondary-700 dark:text-theme-secondary-500"
               >
                 Total Currency
               </span>
@@ -2366,10 +2362,10 @@ exports[`WalletsGroup > should render with dark mode = true 1`] = `
           </div>
         </div>
         <div
-          class="ml-4 flex flex-shrink-0 items-center self-stretch transition-all duration-100 css-qr226j-AccordionHeader"
+          class="ml-4 flex flex-shrink-0 items-center self-stretch transition-all duration-100 css-o6tyc"
         >
           <div
-            class="css-1j7gziz"
+            class="css-cp3doq"
             data-testid="Accordion__toggle"
           >
             <div
@@ -2400,11 +2396,11 @@ exports[`WalletsGroup > should render with dark mode = true 1`] = `
       </div>
     </div>
     <div
-      class="css-13o3tsw"
+      class="md:!mb-3 css-13o3tsw"
       data-testid="WalletsGroup"
     >
       <div
-        class="select-none cursor-pointer group md:h-20 py-6 px-8 md:p-4 flex flex-row items-center border-theme-secondary-300 dark:border-theme-secondary-800 bg-transparent"
+        class="select-none cursor-pointer group md:h-20 md:p-4 flex flex-row items-center border-theme-secondary-300 dark:border-theme-secondary-800 bg-transparent px-6 py-4"
         data-testid="WalletsGroupHeader"
       >
         <div
@@ -2415,7 +2411,7 @@ exports[`WalletsGroup > should render with dark mode = true 1`] = `
           >
             <div
               aria-label="ARK Devnet"
-              class="inline-flex h-5 w-5 items-center justify-center text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700"
+              class="inline-flex h-5 w-5 items-center justify-center text-theme-navy-600"
               data-testid="NetworkIcon-ARK-ark.devnet"
             >
               <div
@@ -2542,7 +2538,7 @@ exports[`WalletsGroup > should render with dark mode = true 1`] = `
               </div>
             </span>
             <span
-              class="text-xs text-theme-secondary-500 dark:text-theme-secondary-700"
+              class="text-xs text-theme-secondary-500"
             >
               <span
                 class="text-theme-secondary-500 dark:text-theme-secondary-700"
@@ -2552,7 +2548,7 @@ exports[`WalletsGroup > should render with dark mode = true 1`] = `
             </span>
           </div>
           <div
-            class="hidden flex-initial space-x-4 sm:flex css-rqn1nb-GroupNetworkTotal"
+            class="hidden flex-initial space-x-4 sm:flex css-1imdohp"
           >
             <span
               class="hidden"
@@ -2561,7 +2557,7 @@ exports[`WalletsGroup > should render with dark mode = true 1`] = `
               class="flex flex-col space-y-1 border-r border-theme-secondary-300 pr-4 text-right font-semibold dark:border-theme-secondary-800"
             >
               <span
-                class="whitespace-nowrap text-sm text-theme-secondary-500 dark:text-theme-secondary-700"
+                class="whitespace-nowrap text-sm text-theme-secondary-700 dark:text-theme-secondary-500"
               >
                 Wallets
               </span>
@@ -2591,7 +2587,7 @@ exports[`WalletsGroup > should render with dark mode = true 1`] = `
               class="flex flex-col space-y-1 border-r border-theme-secondary-300 pr-4 text-right font-semibold dark:border-theme-secondary-800"
             >
               <span
-                class="whitespace-nowrap text-sm text-theme-secondary-500 dark:text-theme-secondary-700"
+                class="whitespace-nowrap text-sm text-theme-secondary-700 dark:text-theme-secondary-500"
               >
                 Total Balance
               </span>
@@ -2621,7 +2617,7 @@ exports[`WalletsGroup > should render with dark mode = true 1`] = `
               class="flex flex-col space-y-1 border-r border-theme-secondary-300 pr-4 text-right font-semibold dark:border-theme-secondary-800 hidden lg:flex"
             >
               <span
-                class="whitespace-nowrap text-sm text-theme-secondary-500 dark:text-theme-secondary-700"
+                class="whitespace-nowrap text-sm text-theme-secondary-700 dark:text-theme-secondary-500"
               >
                 Total Currency
               </span>
@@ -2638,10 +2634,10 @@ exports[`WalletsGroup > should render with dark mode = true 1`] = `
           </div>
         </div>
         <div
-          class="ml-4 flex flex-shrink-0 items-center self-stretch transition-all duration-100 css-qr226j-AccordionHeader"
+          class="ml-4 flex flex-shrink-0 items-center self-stretch transition-all duration-100 css-o6tyc"
         >
           <div
-            class="css-1j7gziz"
+            class="css-cp3doq"
             data-testid="Accordion__toggle"
           >
             <div
@@ -2675,30 +2671,28 @@ exports[`WalletsGroup > should render with dark mode = true 1`] = `
 </DocumentFragment>
 `;
 
-exports[`WalletsGroup > should render with show all button 1`] = `<DocumentFragment />`;
-
 exports[`WalletsGroup > should show skeleton when syncing exchange rates 1`] = `
 <DocumentFragment>
   <div
     data-testid="NetworkWalletsGroupList"
   >
     <div
-      class="css-fvpuky"
+      class="md:!mb-3 css-fvpuky"
       data-testid="WalletsGroup"
     >
       <div
-        class="select-none cursor-pointer md:h-20 py-6 px-8 md:p-4 flex flex-row items-center border-theme-secondary-300 dark:border-theme-secondary-800 md:border-b"
+        class="select-none cursor-pointer md:h-20 md:p-4 flex flex-row items-center border-theme-secondary-300 dark:border-theme-secondary-800 md:border-b px-6 py-4"
         data-testid="WalletsGroupHeader"
       >
         <div
           class="flex flex-grow flex-row items-center"
         >
           <div
-            class="css-h9d8wn"
+            class="css-11kah4i"
           >
             <div
               aria-label="ARK"
-              class="inline-flex h-5 w-5 items-center justify-center text-theme-primary-600 border-theme-primary-100 dark:border-theme-primary-600"
+              class="inline-flex h-5 w-5 items-center justify-center text-theme-navy-600"
               data-testid="NetworkIcon-ARK-ark.mainnet"
             >
               <div
@@ -2750,7 +2744,7 @@ exports[`WalletsGroup > should show skeleton when syncing exchange rates 1`] = `
               </span>
             </span>
             <span
-              class="text-xs text-theme-secondary-500 dark:text-theme-secondary-700"
+              class="text-xs text-theme-secondary-500"
             >
               <div
                 class="flex items-center justify-end sm:h-6 h-4"
@@ -2772,7 +2766,7 @@ exports[`WalletsGroup > should show skeleton when syncing exchange rates 1`] = `
             </span>
           </div>
           <div
-            class="hidden flex-initial space-x-4 sm:flex css-rqn1nb-GroupNetworkTotal"
+            class="hidden flex-initial space-x-4 sm:flex css-1imdohp"
           >
             <span
               class="hidden"
@@ -2781,7 +2775,7 @@ exports[`WalletsGroup > should show skeleton when syncing exchange rates 1`] = `
               class="flex flex-col space-y-1 border-r border-theme-secondary-300 pr-4 text-right font-semibold dark:border-theme-secondary-800"
             >
               <span
-                class="whitespace-nowrap text-sm text-theme-secondary-500 dark:text-theme-secondary-700"
+                class="whitespace-nowrap text-sm text-theme-secondary-700 dark:text-theme-secondary-500"
               >
                 Wallets
               </span>
@@ -2795,7 +2789,7 @@ exports[`WalletsGroup > should show skeleton when syncing exchange rates 1`] = `
               class="flex flex-col space-y-1 border-r border-theme-secondary-300 pr-4 text-right font-semibold dark:border-theme-secondary-800"
             >
               <span
-                class="whitespace-nowrap text-sm text-theme-secondary-500 dark:text-theme-secondary-700"
+                class="whitespace-nowrap text-sm text-theme-secondary-700 dark:text-theme-secondary-500"
               >
                 Total Balance
               </span>
@@ -2814,7 +2808,7 @@ exports[`WalletsGroup > should show skeleton when syncing exchange rates 1`] = `
               class="flex flex-col space-y-1 border-r border-theme-secondary-300 pr-4 text-right font-semibold dark:border-theme-secondary-800 hidden lg:flex"
             >
               <span
-                class="whitespace-nowrap text-sm text-theme-secondary-500 dark:text-theme-secondary-700"
+                class="whitespace-nowrap text-sm text-theme-secondary-700 dark:text-theme-secondary-500"
               >
                 Total Currency
               </span>
@@ -2843,10 +2837,10 @@ exports[`WalletsGroup > should show skeleton when syncing exchange rates 1`] = `
           </div>
         </div>
         <div
-          class="ml-4 flex flex-shrink-0 items-center self-stretch css-qr226j-AccordionHeader"
+          class="ml-4 flex flex-shrink-0 items-center self-stretch css-o6tyc"
         >
           <div
-            class="css-1j7gziz"
+            class="css-cp3doq"
             data-testid="Accordion__toggle"
           >
             <div
@@ -2876,27 +2870,26 @@ exports[`WalletsGroup > should show skeleton when syncing exchange rates 1`] = `
         </div>
       </div>
       <div
-        class="px-8 pb-6 md:px-4 md:pb-0 md:pt-6"
+        class="px-6 pb-4 md:p-0"
         data-testid="WalletsList"
       >
         <div
           data-testid="WalletTable"
         >
           <div
-            class="-mt-3 css-1m6rt2i"
+            class="with-x-padding after:mx-[0.15rem] after:block after:h-[5px] after:rounded-b-lg after:bg-theme-primary-100 after:content-[''] after:dark:bg-theme-secondary-800 css-1m6rt2i"
             role="table"
           >
             <table
               cellpadding="0"
-              class="table-auto"
+              class="w-full table-auto"
             >
               <thead>
                 <tr
-                  class="border-b border-theme-secondary-300 dark:border-theme-secondary-800"
                   role="row"
                 >
                   <th
-                    class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold w-1 min-w-1"
+                    class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 no-border first:pl-4 md:first:pl-6 w-1 min-w-1"
                     colspan="1"
                     data-testid="table__th--0"
                     role="columnheader"
@@ -2908,7 +2901,7 @@ exports[`WalletsGroup > should show skeleton when syncing exchange rates 1`] = `
                         class=""
                       >
                         <div
-                          class="border-r border-theme-secondary-300 py-0.5 pr-3 dark:border-theme-secondary-800"
+                          class="py-0.5 pr-3"
                         >
                           <button
                             class="flex shrink-0 cursor-pointer items-center justify-center rounded ring-theme-primary-400 ring-offset-theme-background focus:outline-none focus:ring-2 focus:ring-offset-8"
@@ -2944,7 +2937,7 @@ exports[`WalletsGroup > should show skeleton when syncing exchange rates 1`] = `
                     </div>
                   </th>
                   <th
-                    class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold no-border"
+                    class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 no-border hidden lg:table-cell first:rounded-tl-xl last:rounded-tr-xl"
                     colspan="1"
                     data-testid="table__th--1"
                     role="columnheader"
@@ -2957,7 +2950,53 @@ exports[`WalletsGroup > should show skeleton when syncing exchange rates 1`] = `
                       <div
                         class=""
                       >
-                        Wallet
+                        Name
+                      </div>
+                      <div
+                        class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
+                      >
+                        <div
+                          class="transition-transform rotate-180 css-15txs7d"
+                          height="10"
+                          role="img"
+                          width="10"
+                        >
+                          <svg
+                            id="chevron-down-small"
+                            viewBox="0 0 10 10"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
+                          >
+                            <path
+                              d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            />
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                  </th>
+                  <th
+                    class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 no-border first:rounded-tl-xl last:rounded-tr-xl"
+                    colspan="1"
+                    data-testid="table__th--2"
+                    role="columnheader"
+                    style="cursor: pointer;"
+                    title="Toggle SortBy"
+                  >
+                    <div
+                      class="flex flex-inline align-top -ml-3"
+                    >
+                      <div
+                        class=""
+                      >
+                        Address
                       </div>
                       <div
                         class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity ml-2"
@@ -2990,9 +3029,9 @@ exports[`WalletsGroup > should show skeleton when syncing exchange rates 1`] = `
                     </div>
                   </th>
                   <th
-                    class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold w-36 min-w-36"
+                    class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 no-border first:rounded-tl-xl last:rounded-tr-xl w-36 min-w-36"
                     colspan="1"
-                    data-testid="table__th--2"
+                    data-testid="table__th--3"
                     role="columnheader"
                   >
                     <div
@@ -3006,9 +3045,9 @@ exports[`WalletsGroup > should show skeleton when syncing exchange rates 1`] = `
                     </div>
                   </th>
                   <th
-                    class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold w-40 min-w-40"
+                    class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 no-border first:rounded-tl-xl last:rounded-tr-xl w-40 min-w-40"
                     colspan="1"
-                    data-testid="table__th--3"
+                    data-testid="table__th--4"
                     role="columnheader"
                     style="cursor: pointer;"
                     title="Toggle SortBy"
@@ -3052,9 +3091,9 @@ exports[`WalletsGroup > should show skeleton when syncing exchange rates 1`] = `
                     </div>
                   </th>
                   <th
-                    class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold hidden lg:table-cell w-32 min-w-32"
+                    class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 hidden lg:table-cell no-border first:rounded-tl-xl last:rounded-tr-xl w-32 min-w-32"
                     colspan="1"
-                    data-testid="table__th--4"
+                    data-testid="table__th--5"
                     role="columnheader"
                     style="cursor: pointer;"
                     title="Toggle SortBy"
@@ -3098,9 +3137,9 @@ exports[`WalletsGroup > should show skeleton when syncing exchange rates 1`] = `
                     </div>
                   </th>
                   <th
-                    class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold no-border w-1"
+                    class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 no-border w-1"
                     colspan="1"
-                    data-testid="table__th--5"
+                    data-testid="table__th--6"
                     role="columnheader"
                   >
                     <div
@@ -3119,17 +3158,17 @@ exports[`WalletsGroup > should show skeleton when syncing exchange rates 1`] = `
                 role="rowgroup"
               >
                 <tr
-                  class="group css-155s9if"
+                  class="group relative css-1d424e8"
                   data-testid="TableRow"
                 >
                   <td
                     data-testid="TableCell_Starred"
                   >
                     <div
-                      class="space-x-3 css-f2t2np"
+                      class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 rounded-l space-x-3 pl-6 ml-0"
                     >
                       <div
-                        class="flex items-center border-r border-theme-secondary-300 pr-3 dark:border-theme-secondary-800 h-5"
+                        class="flex h-5 items-center pr-3 dark:border-theme-secondary-800"
                       >
                         <div
                           class="flex shrink-0 items-center justify-center"
@@ -3163,37 +3202,46 @@ exports[`WalletsGroup > should show skeleton when syncing exchange rates 1`] = `
                     </div>
                   </td>
                   <td
+                    class="hidden lg:table-cell"
+                  >
+                    <div
+                      class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 -ml-3 space-x-3"
+                    >
+                      <div
+                        class="w-24 flex-1 overflow-hidden"
+                      >
+                        <div
+                          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                        >
+                          <span
+                            class="font-semibold text-base text-sm leading-[17px]"
+                            data-testid="Address__alias"
+                          >
+                            <span
+                              class="no-ligatures css-9nx3be"
+                              data-testid="TruncateEnd"
+                            >
+                              New Name
+                            </span>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                  <td
                     data-testid="TableCell_Wallet"
                   >
                     <div
-                      class="-ml-3 space-x-3 css-12appi5"
+                      class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 -ml-3 space-x-3"
                     >
                       <div
-                        class="flex shrink-0 items-center"
+                        class="w-full max-w-64 flex-1 overflow-hidden md:max-w-40 lg:max-w-48 xl:max-w-full"
                       >
                         <div
-                          class="ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-1ixj94m"
-                          data-testid="Avatar"
-                        >
-                          <div
-                            class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
-                          >
-                            <img
-                              alt="AdVSe37niA3uFUPgCgMUH2tMsHF4LpLoiX"
-                              src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(156, 39, 176)" width="100" height="100"/><circle r="40" cx="10" cy="40" fill="rgb(0, 150, 136)"/><circle r="45" cx="70" cy="60" fill="rgb(33, 150, 243)"/><circle r="60" cx="0" cy="70" fill="rgb(3, 169, 244)"/></svg>"
-                              title="AdVSe37niA3uFUPgCgMUH2tMsHF4LpLoiX"
-                            />
-                          </div>
-                        </div>
-                      </div>
-                      <div
-                        class="w-20 flex-1 overflow-hidden"
-                      >
-                        <div
-                          class="flex overflow-hidden whitespace-nowrap flex-col items-start w-full"
+                          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-between"
                         >
                           <span
-                            class="font-semibold text-base text-sm text-theme-text group-hover:text-theme-primary-700 w-full truncate"
+                            class="font-semibold text-base lg:hidden text-sm text-theme-text group-hover:text-theme-primary-700"
                             data-testid="Address__alias"
                           >
                             <span
@@ -3204,44 +3252,103 @@ exports[`WalletsGroup > should show skeleton when syncing exchange rates 1`] = `
                             </span>
                           </span>
                           <span
-                            class="no-ligatures min-w-0 overflow-hidden text-xs text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                            class="no-ligatures min-w-0 overflow-hidden text-sm text-theme-secondary-700 dark:text-theme-secondary-500 lg:!ml-0 font-semibold text-base"
                             data-testid="Address__address"
                           >
                             AdVSe37niA3uFUPgCgMUH2tMsHF4LpLoiX
                           </span>
+                          <button
+                            class="ring-focus relative focus:outline-none"
+                            data-ring-focus-margin="-m-1"
+                            data-testid="clipboard-icon__wrapper"
+                            type="button"
+                          >
+                            <div
+                              class="text-theme-primary-400 dark:text-theme-secondary-700 dark:hover:text-theme-secondary-500 css-v0ob3f"
+                              height="16"
+                              width="16"
+                            >
+                              <svg
+                                id="copy"
+                                viewBox="0 0 20 20"
+                                x="0"
+                                xml:space="preserve"
+                                xmlns="http://www.w3.org/2000/svg"
+                                y="0"
+                              >
+                                <g
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="2"
+                                >
+                                  <path
+                                    d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                                  />
+                                  <path
+                                    d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                                  />
+                                </g>
+                              </svg>
+                            </div>
+                          </button>
                         </div>
                       </div>
                     </div>
                   </td>
                   <td>
                     <div
-                      class="justify-center text-sm font-bold text-center align-middle css-12appi5"
+                      class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 justify-center text-sm font-bold text-center align-middle"
                     >
                       <div
                         class="inline-flex items-center space-x-1"
                       >
-                        <span
-                          aria-busy="true"
-                          aria-live="polite"
-                          class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                        <div
+                          class="inline-block p-1 text-theme-secondary-700"
+                          data-testid="WalletIcon__SecondSignature"
                         >
-                          <span
-                            class="react-loading-skeleton"
-                            style="width: 54px; height: 20px;"
+                          <div
+                            class="css-1i4b0eq"
+                            height="20"
+                            width="20"
                           >
-                            ‌
-                          </span>
-                          <br />
-                        </span>
+                            <svg
+                              id="second-signature"
+                              viewBox="0 0 20 20"
+                              x="0"
+                              xml:space="preserve"
+                              xmlns="http://www.w3.org/2000/svg"
+                              y="0"
+                            >
+                              <g
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-width="2"
+                                transform="translate(482.484 177)"
+                              >
+                                <path
+                                  d="M-473.4-166.7l4.1 3.9-2.2 2.2 2.2 2.1 2.2-2.2 1 1 2.2-2.2-5.4-5.3"
+                                />
+                                <circle
+                                  cx="-476.5"
+                                  cy="-170.9"
+                                  r="5"
+                                />
+                              </g>
+                            </svg>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </td>
                   <td>
                     <div
-                      class="font-semibold justify-end css-12appi5"
+                      class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 font-semibold justify-end"
                     >
                       <span
-                        class="whitespace-nowrap"
+                        class="whitespace-nowrap dark:text-theme-white text-theme-secondary-700 dark:md:text-theme-secondary-500"
                         data-testid="Amount"
                       >
                         50,114.21127898 ARK
@@ -3253,7 +3360,7 @@ exports[`WalletsGroup > should show skeleton when syncing exchange rates 1`] = `
                     data-testid="CurrencyCell"
                   >
                     <div
-                      class="justify-end css-12appi5"
+                      class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 justify-end"
                     >
                       <span
                         aria-busy="true"
@@ -3272,79 +3379,75 @@ exports[`WalletsGroup > should show skeleton when syncing exchange rates 1`] = `
                   </td>
                   <td>
                     <div
-                      class="justify-end text-theme-secondary-text css-opqlbz"
+                      class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 -mr-2 rounded-r justify-end text-theme-secondary-text pr-6"
                     >
                       <div>
                         <button
-                          class="text-theme-primary-600 hover:text-theme-primary-700 css-1hei9vx"
+                          class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none pr-0 text-sm text-theme-primary-600 hover:text-theme-primary-700"
                           data-testid="WalletListItem__send-button"
                           type="button"
                         >
                           <div
                             class="flex items-center space-x-2"
                           >
-                            Send
+                            <div
+                              class="border-r border-theme-secondary-300 pr-3 dark:border-theme-secondary-800"
+                            >
+                              Send
+                            </div>
                           </div>
                         </button>
                       </div>
                       <div
-                        class=""
                         data-testid="WalletListItem__more-button"
                       >
                         <div
-                          class="static sm:relative"
+                          aria-expanded="false"
+                          aria-haspopup="dialog"
+                          data-testid="dropdown__toggle"
                         >
-                          <span
-                            data-testid="dropdown__toggle"
+                          <button
+                            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-theme-gray-700 -mr-1.5 hover:text-theme-primary-600"
+                            type="button"
                           >
-                            <button
-                              class="-mr-1.5 text-theme-primary-300 hover:text-theme-primary-600 css-1hei9vx"
-                              type="button"
+                            <div
+                              class="flex items-center space-x-2"
                             >
                               <div
-                                class="flex items-center space-x-2"
+                                class="css-1i4b0eq"
+                                height="20"
+                                width="20"
                               >
-                                <div
-                                  class="css-1i4b0eq"
-                                  height="20"
-                                  width="20"
+                                <svg
+                                  fill="none"
+                                  viewBox="0 0 20 20"
+                                  xmlns="http://www.w3.org/2000/svg"
                                 >
-                                  <svg
-                                    id="ellipsis-vertical"
-                                    viewBox="0 0 20 20"
-                                    x="0"
-                                    xml:space="preserve"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    y="0"
-                                  >
-                                    <g
-                                      fill="none"
-                                      stroke="currentColor"
-                                      stroke-linecap="round"
-                                      stroke-linejoin="round"
-                                      stroke-width="2"
-                                    >
-                                      <circle
-                                        cx="10"
-                                        cy="16.994"
-                                        r="2.006"
-                                      />
-                                      <circle
-                                        cx="10"
-                                        cy="3"
-                                        r="2"
-                                      />
-                                      <circle
-                                        cx="10"
-                                        cy="10"
-                                        r="2"
-                                      />
-                                    </g>
-                                  </svg>
-                                </div>
+                                  <circle
+                                    cx="10.002"
+                                    cy="2.99609"
+                                    fill="currentColor"
+                                    r="2"
+                                    transform="rotate(90 10.002 2.99609)"
+                                  />
+                                  <circle
+                                    cx="10.002"
+                                    cy="9.99805"
+                                    fill="currentColor"
+                                    r="2"
+                                    transform="rotate(90 10.002 9.99805)"
+                                  />
+                                  <circle
+                                    cx="10.002"
+                                    cy="17"
+                                    fill="currentColor"
+                                    r="2"
+                                    transform="rotate(90 10.002 17)"
+                                  />
+                                </svg>
                               </div>
-                            </button>
-                          </span>
+                            </div>
+                          </button>
                         </div>
                       </div>
                     </div>
@@ -3357,22 +3460,22 @@ exports[`WalletsGroup > should show skeleton when syncing exchange rates 1`] = `
       </div>
     </div>
     <div
-      class="css-13o3tsw"
+      class="md:!mb-3 css-13o3tsw"
       data-testid="WalletsGroup"
     >
       <div
-        class="select-none cursor-pointer group md:h-20 py-6 px-8 md:p-4 flex flex-row items-center border-theme-secondary-300 dark:border-theme-secondary-800"
+        class="select-none cursor-pointer group md:h-20 md:p-4 flex flex-row items-center border-theme-secondary-300 dark:border-theme-secondary-800 px-6 py-4"
         data-testid="WalletsGroupHeader"
       >
         <div
           class="flex flex-grow flex-row items-center"
         >
           <div
-            class="css-18ateh5"
+            class="css-7dz1f2"
           >
             <div
               aria-label="ARK Devnet"
-              class="inline-flex h-5 w-5 items-center justify-center text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700"
+              class="inline-flex h-5 w-5 items-center justify-center text-theme-navy-600"
               data-testid="NetworkIcon-ARK-ark.devnet"
             >
               <div
@@ -3488,7 +3591,7 @@ exports[`WalletsGroup > should show skeleton when syncing exchange rates 1`] = `
               </span>
             </span>
             <span
-              class="text-xs text-theme-secondary-500 dark:text-theme-secondary-700"
+              class="text-xs text-theme-secondary-500"
             >
               <span
                 class="text-theme-secondary-500 dark:text-theme-secondary-700"
@@ -3498,7 +3601,7 @@ exports[`WalletsGroup > should show skeleton when syncing exchange rates 1`] = `
             </span>
           </div>
           <div
-            class="hidden flex-initial space-x-4 sm:flex css-rqn1nb-GroupNetworkTotal"
+            class="hidden flex-initial space-x-4 sm:flex css-1imdohp"
           >
             <span
               class="hidden"
@@ -3507,7 +3610,7 @@ exports[`WalletsGroup > should show skeleton when syncing exchange rates 1`] = `
               class="flex flex-col space-y-1 border-r border-theme-secondary-300 pr-4 text-right font-semibold dark:border-theme-secondary-800"
             >
               <span
-                class="whitespace-nowrap text-sm text-theme-secondary-500 dark:text-theme-secondary-700"
+                class="whitespace-nowrap text-sm text-theme-secondary-700 dark:text-theme-secondary-500"
               >
                 Wallets
               </span>
@@ -3521,7 +3624,7 @@ exports[`WalletsGroup > should show skeleton when syncing exchange rates 1`] = `
               class="flex flex-col space-y-1 border-r border-theme-secondary-300 pr-4 text-right font-semibold dark:border-theme-secondary-800"
             >
               <span
-                class="whitespace-nowrap text-sm text-theme-secondary-500 dark:text-theme-secondary-700"
+                class="whitespace-nowrap text-sm text-theme-secondary-700 dark:text-theme-secondary-500"
               >
                 Total Balance
               </span>
@@ -3540,7 +3643,7 @@ exports[`WalletsGroup > should show skeleton when syncing exchange rates 1`] = `
               class="flex flex-col space-y-1 border-r border-theme-secondary-300 pr-4 text-right font-semibold dark:border-theme-secondary-800 hidden lg:flex"
             >
               <span
-                class="whitespace-nowrap text-sm text-theme-secondary-500 dark:text-theme-secondary-700"
+                class="whitespace-nowrap text-sm text-theme-secondary-700 dark:text-theme-secondary-500"
               >
                 Total Currency
               </span>
@@ -3557,10 +3660,10 @@ exports[`WalletsGroup > should show skeleton when syncing exchange rates 1`] = `
           </div>
         </div>
         <div
-          class="ml-4 flex flex-shrink-0 items-center self-stretch transition-all duration-100 css-qr226j-AccordionHeader"
+          class="ml-4 flex flex-shrink-0 items-center self-stretch transition-all duration-100 css-o6tyc"
         >
           <div
-            class="css-1j7gziz"
+            class="css-cp3doq"
             data-testid="Accordion__toggle"
           >
             <div

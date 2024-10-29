@@ -6,14 +6,18 @@ exports[`Header > should render an header 1`] = `
     class="flex items-end justify-between bg-theme-background"
   >
     <div
-      class="space-y-4"
+      class="space-y-2"
     >
-      <h1
-        class="mb-0 text-2xl"
-        data-testid="header__title"
+      <div
+        class="flex items-center gap-3"
       >
-        Header test
-      </h1>
+        <h1
+          class="mb-0 text-2xl leading-[29px]"
+          data-testid="header__title"
+        >
+          Header test
+        </h1>
+      </div>
     </div>
   </div>
 </DocumentFragment>
@@ -25,16 +29,20 @@ exports[`Header > should render an header with a subtitle 1`] = `
     class="flex items-end justify-between bg-theme-background"
   >
     <div
-      class="space-y-4"
+      class="space-y-2"
     >
-      <h1
-        class="mb-0 text-2xl"
-        data-testid="header__title"
-      >
-        Header test
-      </h1>
       <div
-        class="flex items-center text-theme-secondary-text"
+        class="flex items-center gap-3"
+      >
+        <h1
+          class="mb-0 text-2xl leading-[29px]"
+          data-testid="header__title"
+        >
+          Header test
+        </h1>
+      </div>
+      <div
+        class="flex items-center leading-5 text-theme-secondary-text"
         data-testid="header__subtitle"
       >
         Subtitle test
@@ -50,16 +58,20 @@ exports[`Header > should render an header with extra 1`] = `
     class="flex items-end justify-between bg-theme-background"
   >
     <div
-      class="space-y-4"
+      class="space-y-2"
     >
-      <h1
-        class="mb-0 text-2xl"
-        data-testid="header__title"
-      >
-        Header test
-      </h1>
       <div
-        class="flex items-center text-theme-secondary-text"
+        class="flex items-center gap-3"
+      >
+        <h1
+          class="mb-0 text-2xl leading-[29px]"
+          data-testid="header__title"
+        >
+          Header test
+        </h1>
+      </div>
+      <div
+        class="flex items-center leading-5 text-theme-secondary-text"
         data-testid="header__subtitle"
       >
         Subtitle test
@@ -70,7 +82,7 @@ exports[`Header > should render an header with extra 1`] = `
         class="flex justify-end space-x-3"
       >
         <button
-          class="css-fl4fi0"
+          class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded text-white bg-theme-primary-600 hover:bg-theme-primary-700"
           data-testid="header__extra"
           type="button"
         >
@@ -81,7 +93,7 @@ exports[`Header > should render an header with extra 1`] = `
           </div>
         </button>
         <button
-          class="css-fl4fi0"
+          class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded text-white bg-theme-primary-600 hover:bg-theme-primary-700"
           data-testid="header__extra"
           type="button"
         >
@@ -103,19 +115,23 @@ exports[`Header > should render with title suffix 1`] = `
     class="flex items-end justify-between bg-theme-background"
   >
     <div
-      class="space-y-4"
+      class="space-y-2"
     >
-      <h1
-        class="mb-0 text-2xl"
-        data-testid="header__title"
-      >
-        Header test
-        <span>
-           suffix
-        </span>
-      </h1>
       <div
-        class="flex items-center text-theme-secondary-text"
+        class="flex items-center gap-3"
+      >
+        <h1
+          class="mb-0 text-2xl leading-[29px]"
+          data-testid="header__title"
+        >
+          Header test
+          <span>
+             suffix
+          </span>
+        </h1>
+      </div>
+      <div
+        class="flex items-center leading-5 text-theme-secondary-text"
         data-testid="header__subtitle"
       >
         Subtitle test
@@ -128,28 +144,32 @@ exports[`Header > should render with title suffix 1`] = `
 exports[`PageHeader > should render responsive (md) 1`] = `
 <DocumentFragment>
   <div
-    class=" css-ycib48"
+    class="w-full py-4 first:pt-8 last:pb-8 css-9mualq"
   >
     <div
-      class="mx-auto px-8 lg:container md:px-10"
+      class="mx-auto px-6 lg:container md:px-10"
     >
       <div
         class="flex items-end justify-between bg-theme-background"
       >
         <div
-          class="space-y-4"
+          class="space-y-2"
         >
-          <h1
-            class="mb-0 text-2xl"
-            data-testid="header__title"
-          >
-            Header test
-            <span>
-               suffix
-            </span>
-          </h1>
           <div
-            class="flex items-center text-theme-secondary-text"
+            class="flex items-center gap-3"
+          >
+            <h1
+              class="mb-0 text-2xl leading-[29px]"
+              data-testid="header__title"
+            >
+              Header test
+              <span>
+                 suffix
+              </span>
+            </h1>
+          </div>
+          <div
+            class="flex items-center leading-5 text-theme-secondary-text"
             data-testid="header__subtitle"
           >
             Subtitle test

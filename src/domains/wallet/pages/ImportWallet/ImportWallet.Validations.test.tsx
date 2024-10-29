@@ -1,5 +1,3 @@
-/* eslint-disable @typescript-eslint/await-thenable */
-/* eslint-disable @typescript-eslint/require-await */
 import { Contracts } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import React from "react";
@@ -28,12 +26,12 @@ const randomAddress = "D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib";
 
 const route = `/profiles/${fixtureProfileId}/wallets/import`;
 
-const enableEncryptionToggle = () => userEvent.click(screen.getByTestId("ImportWallet__encryption-toggle"));
 const continueButton = () => screen.getByTestId("ImportWallet__continue-button");
 const mnemonicInput = () => screen.getByTestId("ImportWallet__mnemonic-input");
 const addressInput = () => screen.findByTestId("ImportWallet__address-input");
 const successStep = () => screen.getByTestId("ImportWallet__success-step");
 const methodStep = () => screen.getByTestId("ImportWallet__method-step");
+const enableEncryptionToggle = async () => await userEvent.click(screen.getByTestId("ImportWallet__encryption-toggle"));
 
 const secretInputID = "ImportWallet__secret-input";
 const errorText = "data-errortext";
@@ -60,6 +58,50 @@ describe("ImportWallet Validations", () => {
 		resetProfileNetworksMock();
 	});
 
+	it("should error if address cannot be created", async () => {
+		const coin = profile.coins().get("ARK", testNetwork);
+		const coinMock = vi.spyOn(coin.address(), "fromSecret").mockImplementationOnce(() => {
+			throw new Error("test");
+		});
+
+		render(
+			<Route path="/profiles/:profileId/wallets/import">
+				<ImportWallet />
+			</Route>,
+			{
+				route: route,
+			},
+		);
+
+		await expect(screen.findByTestId("NetworkStep")).resolves.toBeVisible();
+
+		await userEvent.click(screen.getAllByTestId("NetworkOption")[1]);
+
+		await waitFor(() => expect(continueButton()).toBeEnabled());
+		await userEvent.click(continueButton());
+
+		await waitFor(() => expect(() => methodStep()).not.toThrow());
+
+		await userEvent.click(screen.getByTestId("SelectDropdown__caret"));
+
+		await expect(screen.findByText(commonTranslations.SECRET)).resolves.toBeVisible();
+
+		await userEvent.click(screen.getByText(commonTranslations.SECRET));
+
+		expect(methodStep()).toBeInTheDocument();
+
+		await expect(screen.findByTestId(secretInputID)).resolves.toBeVisible();
+		const passphraseInput = screen.getByTestId(secretInputID);
+
+		expect(passphraseInput).toBeInTheDocument();
+
+		await userEvent.clear(passphraseInput);
+		await userEvent.type(passphraseInput, MNEMONICS[0]);
+
+		await waitFor(() => expect(continueButton()).not.toBeEnabled());
+		coinMock.mockRestore();
+	});
+
 	it("should prompt for mnemonic if user enters bip39 compliant secret", async () => {
 		render(
 			<Route path="/profiles/:profileId/wallets/import">
@@ -72,26 +114,28 @@ describe("ImportWallet Validations", () => {
 
 		await expect(screen.findByTestId("NetworkStep")).resolves.toBeVisible();
 
-		userEvent.click(screen.getAllByTestId("NetworkOption")[1]);
+		await userEvent.click(screen.getAllByTestId("NetworkOption")[1]);
 
 		await waitFor(() => expect(continueButton()).toBeEnabled());
-		userEvent.click(continueButton());
+		await userEvent.click(continueButton());
 
 		await waitFor(() => expect(() => methodStep()).not.toThrow());
 
-		userEvent.click(screen.getByTestId("SelectDropdown__caret"));
+		await userEvent.click(screen.getByTestId("SelectDropdown__caret"));
 
 		await expect(screen.findByText(commonTranslations.SECRET)).resolves.toBeVisible();
 
-		userEvent.click(screen.getByText(commonTranslations.SECRET));
+		await userEvent.click(screen.getByText(commonTranslations.SECRET));
 
 		expect(methodStep()).toBeInTheDocument();
 
+		await expect(screen.findByTestId(secretInputID)).resolves.toBeVisible();
 		const passphraseInput = screen.getByTestId(secretInputID);
 
 		expect(passphraseInput).toBeInTheDocument();
 
-		userEvent.paste(passphraseInput, MNEMONICS[0]);
+		await userEvent.clear(passphraseInput);
+		await userEvent.type(passphraseInput, MNEMONICS[0]);
 
 		await waitFor(() => expect(continueButton()).not.toBeEnabled());
 	});
@@ -101,6 +145,7 @@ describe("ImportWallet Validations", () => {
 			.wallets()
 			.findByAddressWithNetwork("DNTwQTSp999ezQ425utBsWetcmzDuCn2pN", testNetwork)
 			?.id();
+
 		if (walletId) {
 			profile.wallets().forget(walletId);
 		}
@@ -122,32 +167,39 @@ describe("ImportWallet Validations", () => {
 
 		await expect(screen.findByTestId("NetworkStep")).resolves.toBeVisible();
 
-		userEvent.click(screen.getAllByTestId("NetworkOption")[1]);
+		await userEvent.click(screen.getAllByTestId("NetworkOption")[1]);
 
 		await waitFor(() => expect(continueButton()).toBeEnabled());
-		userEvent.click(continueButton());
+		await userEvent.click(continueButton());
 
 		await waitFor(() => expect(() => methodStep()).not.toThrow());
 
-		userEvent.click(screen.getByTestId("SelectDropdown__caret"));
+		await userEvent.click(screen.getByTestId("SelectDropdown__caret"));
 
 		await expect(screen.findByText(commonTranslations.SECRET)).resolves.toBeVisible();
 
-		userEvent.click(screen.getByText(commonTranslations.SECRET));
+		await userEvent.click(screen.getByText(commonTranslations.SECRET));
 
 		expect(methodStep()).toBeInTheDocument();
+
+		await expect(screen.findByTestId(secretInputID)).resolves.toBeVisible();
 
 		const passphraseInput = screen.getByTestId(secretInputID);
 
 		expect(passphraseInput).toBeInTheDocument();
 
-		userEvent.paste(passphraseInput, "abc");
+		await userEvent.clear(passphraseInput);
+		await userEvent.type(passphraseInput, "abc");
+
+		await waitFor(() => {
+			expect(passphraseInput).toHaveValue("abc");
+		});
 
 		await waitFor(() => expect(continueButton()).toBeEnabled());
 
-		enableEncryptionToggle();
+		await enableEncryptionToggle();
 
-		userEvent.click(continueButton());
+		await userEvent.click(continueButton());
 
 		await waitFor(() => {
 			expect(screen.getByTestId("EncryptPassword")).toBeInTheDocument();
@@ -157,14 +209,11 @@ describe("ImportWallet Validations", () => {
 			throw new Error("test");
 		});
 
-		userEvent.paste(screen.getByTestId("EncryptPassword__second-secret"), "invalid second secret");
+		await userEvent.clear(screen.getByTestId("EncryptPassword__second-secret"));
+		await userEvent.type(screen.getByTestId("EncryptPassword__second-secret"), "invalid second secret");
 
-		await waitFor(() => {
-			expect(screen.getAllByTestId("Input__error")[0]).toHaveAttribute(
-				errorText,
-				walletTranslations.PAGE_IMPORT_WALLET.VALIDATION.INVALID_SECRET,
-			);
-		});
+		expect(screen.getByTestId("EncryptPassword__second-secret")).toHaveValue("invalid second secret");
+		expect(screen.getByTestId("PasswordValidation__encryptionPassword")).toHaveAttribute("aria-invalid");
 
 		fromSecretMock.mockRestore();
 	});
@@ -188,10 +237,10 @@ describe("ImportWallet Validations", () => {
 
 		await expect(screen.findByTestId("NetworkStep")).resolves.toBeVisible();
 
-		userEvent.click(screen.getAllByTestId("NetworkOption")[1]);
+		await userEvent.click(screen.getAllByTestId("NetworkOption")[1]);
 
 		await waitFor(() => expect(continueButton()).toBeEnabled());
-		userEvent.click(continueButton());
+		await userEvent.click(continueButton());
 
 		await waitFor(() => expect(() => methodStep()).not.toThrow());
 
@@ -199,7 +248,8 @@ describe("ImportWallet Validations", () => {
 
 		expect(mnemonicInput()).toBeInTheDocument();
 
-		userEvent.paste(mnemonicInput(), generated.mnemonic);
+		await userEvent.clear(mnemonicInput());
+		await userEvent.type(mnemonicInput(), generated.mnemonic);
 
 		await waitFor(() => {
 			expect(screen.getByTestId("Input__error")).toHaveAttribute(
@@ -226,24 +276,25 @@ describe("ImportWallet Validations", () => {
 
 		await expect(screen.findByTestId("NetworkStep")).resolves.toBeVisible();
 
-		userEvent.click(screen.getAllByTestId("NetworkOption")[1]);
+		await userEvent.click(screen.getAllByTestId("NetworkOption")[1]);
 
 		await waitFor(() => expect(continueButton()).toBeEnabled());
-		userEvent.click(continueButton());
+		await userEvent.click(continueButton());
 
 		await waitFor(() => expect(() => methodStep()).not.toThrow());
 
 		expect(methodStep()).toBeInTheDocument();
 
-		userEvent.click(screen.getByTestId("SelectDropdown__caret"));
+		await userEvent.click(screen.getByTestId("SelectDropdown__caret"));
 
 		await expect(screen.findByText(commonTranslations.ADDRESS)).resolves.toBeVisible();
 
-		userEvent.click(screen.getByText(commonTranslations.ADDRESS));
+		await userEvent.click(screen.getByText(commonTranslations.ADDRESS));
 
 		await expect(addressInput()).resolves.toBeVisible();
 
-		userEvent.paste(await addressInput(), profile.wallets().first().address());
+		await userEvent.clear(await addressInput());
+		await userEvent.type(await addressInput(), profile.wallets().first().address());
 
 		await waitFor(() => {
 			expect(screen.getByTestId("Input__error")).toHaveAttribute(
@@ -270,24 +321,25 @@ describe("ImportWallet Validations", () => {
 
 		await expect(screen.findByTestId("NetworkStep")).resolves.toBeVisible();
 
-		userEvent.click(screen.getAllByTestId("NetworkOption")[1]);
+		await userEvent.click(screen.getAllByTestId("NetworkOption")[1]);
 
 		await waitFor(() => expect(continueButton()).toBeEnabled());
-		userEvent.click(continueButton());
+		await userEvent.click(continueButton());
 
 		await waitFor(() => expect(() => methodStep()).not.toThrow());
 
 		expect(methodStep()).toBeInTheDocument();
 
-		userEvent.click(screen.getByTestId("SelectDropdown__caret"));
+		await userEvent.click(screen.getByTestId("SelectDropdown__caret"));
 
 		await expect(screen.findByText(commonTranslations.ADDRESS)).resolves.toBeVisible();
 
-		userEvent.click(screen.getByText(commonTranslations.ADDRESS));
+		await userEvent.click(screen.getByText(commonTranslations.ADDRESS));
 
 		await expect(addressInput()).resolves.toBeVisible();
 
-		userEvent.paste(await addressInput(), "123");
+		await userEvent.clear(await addressInput());
+		await userEvent.type(await addressInput(), "123");
 
 		await waitFor(() => {
 			expect(screen.getByTestId("Input__error")).toHaveAttribute(
@@ -328,27 +380,28 @@ describe("ImportWallet Validations", () => {
 
 		await expect(screen.findByTestId("NetworkStep")).resolves.toBeVisible();
 
-		userEvent.click(screen.getAllByTestId("NetworkOption")[1]);
+		await userEvent.click(screen.getAllByTestId("NetworkOption")[1]);
 
 		await waitFor(() => expect(continueButton()).toBeEnabled());
-		userEvent.click(continueButton());
+		await userEvent.click(continueButton());
 
 		await waitFor(() => expect(() => methodStep()).not.toThrow());
 
 		expect(methodStep()).toBeInTheDocument();
 
-		userEvent.click(screen.getByTestId("SelectDropdown__caret"));
+		await userEvent.click(screen.getByTestId("SelectDropdown__caret"));
 
 		await expect(screen.findByText(commonTranslations.ADDRESS)).resolves.toBeVisible();
 
-		userEvent.click(screen.getByText(commonTranslations.ADDRESS));
+		await userEvent.click(screen.getByText(commonTranslations.ADDRESS));
 
 		await expect(addressInput()).resolves.toBeVisible();
 
-		userEvent.paste(await addressInput(), randomNewAddress);
+		await userEvent.clear(await addressInput());
+		await userEvent.type(await addressInput(), randomNewAddress);
 
 		await waitFor(() => expect(continueButton()).toBeEnabled());
-		userEvent.click(continueButton());
+		await userEvent.click(continueButton());
 
 		await waitFor(() => {
 			expect(successStep()).toBeInTheDocument();
@@ -356,20 +409,22 @@ describe("ImportWallet Validations", () => {
 
 		const alias = "My Wallet";
 
-		userEvent.click(screen.getByTestId("ImportWallet__edit-alias"));
+		await userEvent.click(screen.getByTestId("ImportWallet__edit-alias"));
 
 		await expect(screen.findByTestId("UpdateWalletName__input")).resolves.toBeVisible();
 
 		// Test cancel button
-		userEvent.click(screen.getByTestId("UpdateWalletName__cancel"));
-
-		expect(screen.queryByTestId("UpdateWalletName__input")).toBeNull();
+		await userEvent.click(screen.getByTestId("UpdateWalletName__cancel"));
+		await waitFor(() => {
+			expect(screen.queryByTestId("UpdateWalletName__input")).toBeNull();
+		});
 
 		// Try to edit name again
-		userEvent.click(screen.getByTestId("ImportWallet__edit-alias"));
+		await userEvent.click(screen.getByTestId("ImportWallet__edit-alias"));
+		await expect(screen.findByTestId("UpdateWalletName__input")).resolves.toBeVisible();
 
-		userEvent.clear(screen.getByTestId("UpdateWalletName__input"));
-		userEvent.paste(screen.getByTestId("UpdateWalletName__input"), alias);
+		await userEvent.clear(screen.getByTestId("UpdateWalletName__input"));
+		await userEvent.type(screen.getByTestId("UpdateWalletName__input"), alias);
 
 		await waitFor(() => {
 			expect(screen.getByTestId("Input__error")).toHaveAttribute(
@@ -396,7 +451,7 @@ describe("ImportWallet Validations", () => {
 
 		await expect(screen.findByTestId("NetworkStep")).resolves.toBeVisible();
 
-		userEvent.click(screen.getAllByTestId("NetworkOption")[1]);
+		await userEvent.click(screen.getAllByTestId("NetworkOption")[1]);
 
 		const coin = profile.coins().get("ARK", testNetwork);
 		const coinMock = vi.spyOn(coin, "__construct").mockImplementationOnce(() => {
@@ -404,12 +459,12 @@ describe("ImportWallet Validations", () => {
 		});
 
 		await waitFor(() => expect(continueButton()).toBeEnabled());
-		userEvent.click(continueButton());
+		await userEvent.click(continueButton());
 
 		await expect(screen.findByTestId("SyncErrorMessage__retry")).resolves.toBeVisible();
 
 		const toastDismissMock = vi.spyOn(toasts, "dismiss").mockResolvedValue(undefined);
-		userEvent.click(within(screen.getByTestId("SyncErrorMessage__retry")).getByRole("link"));
+		await userEvent.click(within(screen.getByTestId("SyncErrorMessage__retry")).getByRole("link"));
 
 		await expect(screen.findByTestId("SyncErrorMessage__retry")).resolves.toBeVisible();
 

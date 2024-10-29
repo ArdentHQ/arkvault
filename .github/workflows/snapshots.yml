@@ -1,0 +1,52 @@
+name: Snapshots
+
+on:
+    workflow_dispatch:
+
+jobs:
+    snapshots:
+        runs-on: ubuntu-latest
+
+        strategy:
+            matrix:
+                node-version: [20.12.2]
+
+        concurrency:
+            group: ${{ github.head_ref }}-snapshots
+            cancel-in-progress: true
+
+        steps:
+            - uses: actions/checkout@v4
+              with:
+                  ref: ${{ github.head_ref }}
+                  token: ${{ secrets.GH_TOKEN }}
+
+            - uses: pnpm/action-setup@v4
+              with:
+                  version: 9
+
+            - uses: actions/setup-node@v4
+              with:
+                  node-version: ${{ matrix.node-version }}
+                  cache: pnpm
+
+            - name: Update System
+              run: sudo apt-get update
+
+            - name: Install (Ledger Requirements)
+              run: sudo apt-get install libudev-dev libusb-1.0-0-dev
+
+            - name: Install (pnpm)
+              run: pnpm install --frozen-lockfile
+
+            - name: Rebuild
+              run: pnpm rebuild
+
+            - name: Update Snapshots
+              continue-on-error: true # Continue on error to allow the commit action to run
+              run: pnpm test
+
+            - uses: stefanzweifel/git-auto-commit-action@v4
+              with:
+                commit_message: "chore: update snapshots"
+                branch: ${{ github.head_ref }}

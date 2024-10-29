@@ -25,22 +25,41 @@ import { server, requestMock } from "@/tests/mocks/server";
 
 import unvoteFixture from "@/tests/fixtures/coins/ark/devnet/transactions/unvote.json";
 import voteFixture from "@/tests/fixtures/coins/ark/devnet/transactions/vote.json";
+import { BigNumber } from "@ardenthq/sdk-helpers";
+import { DateTime } from "@ardenthq/sdk-intl";
 
 const fixtureProfileId = getDefaultProfileId();
 
 const createVoteTransactionMock = (wallet: Contracts.IReadWriteWallet) =>
 	// @ts-ignore
 	vi.spyOn(wallet.transaction(), "transaction").mockReturnValue({
+		// get: (attribute: string) => { if (attribute === "multiSignature") { return { min: 2, publicKeys: ["03df6cd794a7d404db4f1b25816d8976d0e72c5177d17ac9b19a92703b62cdbbbc", "034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192",], }; } },
 		amount: () => voteFixture.data.amount / 1e8,
+		blockId: () => "1",
+		convertedAmount: () => BigNumber.make(10),
 		data: () => ({ data: () => voteFixture.data }),
 		explorerLink: () => `https://test.arkscan.io/transaction/${voteFixture.data.id}`,
+		explorerLinkForBlock: () => `https://test.arkscan.io/block/${voteFixture.data.id}`,
 		fee: () => voteFixture.data.fee / 1e8,
 		id: () => voteFixture.data.id,
+		isConfirmed: () => true,
+		isDelegateRegistration: () => false,
+		isDelegateResignation: () => false,
+		isIpfs: () => false,
+		isMultiPayment: () => false,
 		isMultiSignatureRegistration: () => false,
+		isSent: () => true,
+		isTransfer: () => false,
+		isUnvote: () => true,
+		isVote: () => true,
+		isVoteCombination: () => true,
+		memo: () => null,
 		recipient: () => voteFixture.data.recipient,
 		sender: () => voteFixture.data.sender,
+		timestamp: () => DateTime.make(),
 		type: () => "vote",
 		usesMultiSignature: () => false,
+		wallet: () => wallet,
 	});
 
 const passphrase = getDefaultWalletMnemonic();
@@ -104,7 +123,7 @@ describe("SendVote Combined", () => {
 			requestMock("https://ark-test-musig.arkvault.io/", { result: [] }, { method: "post" }),
 		);
 
-		vi.useFakeTimers();
+		vi.useFakeTimers({ shouldAdvanceTime: true });
 		resetProfileNetworksMock = mockProfileWithPublicAndTestNetworks(profile);
 	});
 
@@ -164,12 +183,12 @@ describe("SendVote Combined", () => {
 		});
 
 		await waitFor(() => expect(continueButton()).not.toBeDisabled());
-		userEvent.click(continueButton());
+		await userEvent.click(continueButton());
 
 		// Review Step
 		expect(screen.getByTestId(reviewStepID)).toBeInTheDocument();
 
-		userEvent.click(continueButton());
+		await userEvent.click(continueButton());
 
 		// AuthenticationStep
 		expect(screen.getByTestId("AuthenticationStep")).toBeInTheDocument();
@@ -195,14 +214,15 @@ describe("SendVote Combined", () => {
 		const transactionVoteMock = createVoteTransactionMock(wallet);
 
 		const passwordInput = screen.getByTestId("AuthenticationStep__mnemonic");
-		userEvent.paste(passwordInput, passphrase);
+		await userEvent.clear(passwordInput);
+		await userEvent.type(passwordInput, passphrase);
 
 		expect(passwordInput).toHaveValue(passphrase);
 
 		await waitFor(() => expect(sendButton()).not.toBeDisabled());
 
 		await act(async () => {
-			userEvent.click(sendButton());
+			await userEvent.click(sendButton());
 		});
 
 		act(() => {
@@ -222,7 +242,7 @@ describe("SendVote Combined", () => {
 		const historySpy = vi.spyOn(history, "push");
 
 		// Go back to wallet
-		userEvent.click(screen.getByTestId("StepNavigation__back-to-wallet-button"));
+		await userEvent.click(screen.getByTestId("StepNavigation__back-to-wallet-button"));
 
 		expect(historySpy).toHaveBeenCalledWith(`/profiles/${profile.id()}/wallets/${wallet.id()}`);
 

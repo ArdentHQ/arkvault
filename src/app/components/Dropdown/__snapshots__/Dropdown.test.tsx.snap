@@ -3,21 +3,19 @@
 exports[`Dropdown > should render 1`] = `
 <div>
   <div
-    class="static sm:relative"
+    aria-expanded="false"
+    aria-haspopup="dialog"
+    data-testid="dropdown__toggle"
   >
-    <span
-      data-testid="dropdown__toggle"
+    <div
+      class="cursor-pointer outline-none focus:outline-none"
     >
       <div
-        class="cursor-pointer outline-none focus:outline-none"
-      >
-        <div
-          class="css-v0ob3f"
-          height="16"
-          width="16"
-        />
-      </div>
-    </span>
+        class="css-v0ob3f"
+        height="16"
+        width="16"
+      />
+    </div>
   </div>
 </div>
 `;
@@ -25,57 +23,19 @@ exports[`Dropdown > should render 1`] = `
 exports[`Dropdown > should render a bottom position 1`] = `
 <div>
   <div
-    class="static sm:relative"
+    aria-controls=":r1h:"
+    aria-expanded="true"
+    aria-haspopup="dialog"
+    data-testid="dropdown__toggle"
   >
-    <span
-      data-testid="dropdown__toggle"
+    <div
+      class="cursor-pointer outline-none focus:outline-none"
     >
       <div
-        class="cursor-pointer outline-none focus:outline-none"
-      >
-        <div
-          class="css-v0ob3f"
-          height="16"
-          width="16"
-        />
-      </div>
-    </span>
-    <div
-      class="opacity-0 mt-3 py-3 absolute z-10 bg-theme-background rounded-xl shadow-xl css-1ohtxdh"
-      data-testid="dropdown__content"
-      style="opacity: 1; height: -30px; overflow-y: scroll;"
-    >
-      <ul
-        data-testid="dropdown__options"
-      >
-        <li
-          class="css-8ahleb"
-          data-testid="dropdown__option--0"
-          tabindex="0"
-        >
-          <span>
-            Option 1
-          </span>
-        </li>
-        <li
-          class="css-8ahleb"
-          data-testid="dropdown__option--1"
-          tabindex="0"
-        >
-          <span>
-            Option 2
-          </span>
-        </li>
-        <li
-          class="css-8ahleb"
-          data-testid="dropdown__option--2"
-          tabindex="0"
-        >
-          <span>
-            Option 3
-          </span>
-        </li>
-      </ul>
+        class="css-v0ob3f"
+        height="16"
+        width="16"
+      />
     </div>
   </div>
 </div>
@@ -84,57 +44,19 @@ exports[`Dropdown > should render a bottom position 1`] = `
 exports[`Dropdown > should render a bottom-left position 1`] = `
 <div>
   <div
-    class="static sm:relative"
+    aria-controls=":r1k:"
+    aria-expanded="true"
+    aria-haspopup="dialog"
+    data-testid="dropdown__toggle"
   >
-    <span
-      data-testid="dropdown__toggle"
+    <div
+      class="cursor-pointer outline-none focus:outline-none"
     >
       <div
-        class="cursor-pointer outline-none focus:outline-none"
-      >
-        <div
-          class="css-v0ob3f"
-          height="16"
-          width="16"
-        />
-      </div>
-    </span>
-    <div
-      class="opacity-0 mt-3 py-3 absolute z-10 bg-theme-background rounded-xl shadow-xl css-1y54g05"
-      data-testid="dropdown__content"
-      style="opacity: 1; height: -30px; overflow-y: scroll;"
-    >
-      <ul
-        data-testid="dropdown__options"
-      >
-        <li
-          class="css-8ahleb"
-          data-testid="dropdown__option--0"
-          tabindex="0"
-        >
-          <span>
-            Option 1
-          </span>
-        </li>
-        <li
-          class="css-8ahleb"
-          data-testid="dropdown__option--1"
-          tabindex="0"
-        >
-          <span>
-            Option 2
-          </span>
-        </li>
-        <li
-          class="css-8ahleb"
-          data-testid="dropdown__option--2"
-          tabindex="0"
-        >
-          <span>
-            Option 3
-          </span>
-        </li>
-      </ul>
+        class="css-v0ob3f"
+        height="16"
+        width="16"
+      />
     </div>
   </div>
 </div>
@@ -143,21 +65,19 @@ exports[`Dropdown > should render a bottom-left position 1`] = `
 exports[`Dropdown > should render a large one 1`] = `
 <div>
   <div
-    class="static sm:relative"
+    aria-expanded="false"
+    aria-haspopup="dialog"
+    data-testid="dropdown__toggle"
   >
-    <span
-      data-testid="dropdown__toggle"
+    <div
+      class="cursor-pointer outline-none focus:outline-none"
     >
       <div
-        class="cursor-pointer outline-none focus:outline-none"
-      >
-        <div
-          class="css-1i4b0eq"
-          height="20"
-          width="20"
-        />
-      </div>
-    </span>
+        class="css-1i4b0eq"
+        height="20"
+        width="20"
+      />
+    </div>
   </div>
 </div>
 `;
@@ -165,57 +85,19 @@ exports[`Dropdown > should render a large one 1`] = `
 exports[`Dropdown > should render a left position 1`] = `
 <div>
   <div
-    class="static sm:relative"
+    aria-controls=":r1n:"
+    aria-expanded="true"
+    aria-haspopup="dialog"
+    data-testid="dropdown__toggle"
   >
-    <span
-      data-testid="dropdown__toggle"
+    <div
+      class="cursor-pointer outline-none focus:outline-none"
     >
       <div
-        class="cursor-pointer outline-none focus:outline-none"
-      >
-        <div
-          class="css-v0ob3f"
-          height="16"
-          width="16"
-        />
-      </div>
-    </span>
-    <div
-      class="opacity-0 mt-3 py-3 absolute z-10 bg-theme-background rounded-xl shadow-xl css-1dcvzf"
-      data-testid="dropdown__content"
-      style="opacity: 1; height: -30px; overflow-y: scroll;"
-    >
-      <ul
-        data-testid="dropdown__options"
-      >
-        <li
-          class="css-8ahleb"
-          data-testid="dropdown__option--0"
-          tabindex="0"
-        >
-          <span>
-            Option 1
-          </span>
-        </li>
-        <li
-          class="css-8ahleb"
-          data-testid="dropdown__option--1"
-          tabindex="0"
-        >
-          <span>
-            Option 2
-          </span>
-        </li>
-        <li
-          class="css-8ahleb"
-          data-testid="dropdown__option--2"
-          tabindex="0"
-        >
-          <span>
-            Option 3
-          </span>
-        </li>
-      </ul>
+        class="css-v0ob3f"
+        height="16"
+        width="16"
+      />
     </div>
   </div>
 </div>
@@ -224,21 +106,19 @@ exports[`Dropdown > should render a left position 1`] = `
 exports[`Dropdown > should render a small one 1`] = `
 <div>
   <div
-    class="static sm:relative"
+    aria-expanded="false"
+    aria-haspopup="dialog"
+    data-testid="dropdown__toggle"
   >
-    <span
-      data-testid="dropdown__toggle"
+    <div
+      class="cursor-pointer outline-none focus:outline-none"
     >
       <div
-        class="cursor-pointer outline-none focus:outline-none"
-      >
-        <div
-          class="css-15txs7d"
-          height="10"
-          width="10"
-        />
-      </div>
-    </span>
+        class="css-15txs7d"
+        height="10"
+        width="10"
+      />
+    </div>
   </div>
 </div>
 `;
@@ -246,57 +126,19 @@ exports[`Dropdown > should render a small one 1`] = `
 exports[`Dropdown > should render a top 1`] = `
 <div>
   <div
-    class="static sm:relative"
+    aria-controls=":r1t:"
+    aria-expanded="true"
+    aria-haspopup="dialog"
+    data-testid="dropdown__toggle"
   >
-    <span
-      data-testid="dropdown__toggle"
+    <div
+      class="cursor-pointer outline-none focus:outline-none"
     >
       <div
-        class="cursor-pointer outline-none focus:outline-none"
-      >
-        <div
-          class="css-v0ob3f"
-          height="16"
-          width="16"
-        />
-      </div>
-    </span>
-    <div
-      class="opacity-0 mt-3 py-3 absolute z-10 bg-theme-background rounded-xl shadow-xl css-b3so3g"
-      data-testid="dropdown__content"
-      style="opacity: 1; height: -30px; overflow-y: scroll;"
-    >
-      <ul
-        data-testid="dropdown__options"
-      >
-        <li
-          class="css-8ahleb"
-          data-testid="dropdown__option--0"
-          tabindex="0"
-        >
-          <span>
-            Option 1
-          </span>
-        </li>
-        <li
-          class="css-8ahleb"
-          data-testid="dropdown__option--1"
-          tabindex="0"
-        >
-          <span>
-            Option 2
-          </span>
-        </li>
-        <li
-          class="css-8ahleb"
-          data-testid="dropdown__option--2"
-          tabindex="0"
-        >
-          <span>
-            Option 3
-          </span>
-        </li>
-      </ul>
+        class="css-v0ob3f"
+        height="16"
+        width="16"
+      />
     </div>
   </div>
 </div>
@@ -305,57 +147,19 @@ exports[`Dropdown > should render a top 1`] = `
 exports[`Dropdown > should render a top-left position 1`] = `
 <div>
   <div
-    class="static sm:relative"
+    aria-controls=":r1q:"
+    aria-expanded="true"
+    aria-haspopup="dialog"
+    data-testid="dropdown__toggle"
   >
-    <span
-      data-testid="dropdown__toggle"
+    <div
+      class="cursor-pointer outline-none focus:outline-none"
     >
       <div
-        class="cursor-pointer outline-none focus:outline-none"
-      >
-        <div
-          class="css-v0ob3f"
-          height="16"
-          width="16"
-        />
-      </div>
-    </span>
-    <div
-      class="opacity-0 mt-3 py-3 absolute z-10 bg-theme-background rounded-xl shadow-xl css-1va1uar"
-      data-testid="dropdown__content"
-      style="opacity: 1; height: -30px; overflow-y: scroll;"
-    >
-      <ul
-        data-testid="dropdown__options"
-      >
-        <li
-          class="css-8ahleb"
-          data-testid="dropdown__option--0"
-          tabindex="0"
-        >
-          <span>
-            Option 1
-          </span>
-        </li>
-        <li
-          class="css-8ahleb"
-          data-testid="dropdown__option--1"
-          tabindex="0"
-        >
-          <span>
-            Option 2
-          </span>
-        </li>
-        <li
-          class="css-8ahleb"
-          data-testid="dropdown__option--2"
-          tabindex="0"
-        >
-          <span>
-            Option 3
-          </span>
-        </li>
-      </ul>
+        class="css-v0ob3f"
+        height="16"
+        width="16"
+      />
     </div>
   </div>
 </div>
@@ -364,57 +168,19 @@ exports[`Dropdown > should render a top-left position 1`] = `
 exports[`Dropdown > should render a top-right 1`] = `
 <div>
   <div
-    class="static sm:relative"
+    aria-controls=":r20:"
+    aria-expanded="true"
+    aria-haspopup="dialog"
+    data-testid="dropdown__toggle"
   >
-    <span
-      data-testid="dropdown__toggle"
+    <div
+      class="cursor-pointer outline-none focus:outline-none"
     >
       <div
-        class="cursor-pointer outline-none focus:outline-none"
-      >
-        <div
-          class="css-v0ob3f"
-          height="16"
-          width="16"
-        />
-      </div>
-    </span>
-    <div
-      class="opacity-0 mt-3 py-3 absolute z-10 bg-theme-background rounded-xl shadow-xl css-sqwbmz"
-      data-testid="dropdown__content"
-      style="opacity: 1; height: -30px; overflow-y: scroll;"
-    >
-      <ul
-        data-testid="dropdown__options"
-      >
-        <li
-          class="css-8ahleb"
-          data-testid="dropdown__option--0"
-          tabindex="0"
-        >
-          <span>
-            Option 1
-          </span>
-        </li>
-        <li
-          class="css-8ahleb"
-          data-testid="dropdown__option--1"
-          tabindex="0"
-        >
-          <span>
-            Option 2
-          </span>
-        </li>
-        <li
-          class="css-8ahleb"
-          data-testid="dropdown__option--2"
-          tabindex="0"
-        >
-          <span>
-            Option 3
-          </span>
-        </li>
-      </ul>
+        class="css-v0ob3f"
+        height="16"
+        width="16"
+      />
     </div>
   </div>
 </div>
@@ -423,114 +189,19 @@ exports[`Dropdown > should render a top-right 1`] = `
 exports[`Dropdown > should render dropdown group options with divider, icon and secondary label 1`] = `
 <div>
   <div
-    class="static sm:relative"
+    aria-controls=":r23:"
+    aria-expanded="true"
+    aria-haspopup="dialog"
+    data-testid="dropdown__toggle"
   >
-    <span
-      data-testid="dropdown__toggle"
-    >
-      <div
-        class="cursor-pointer outline-none focus:outline-none"
-      >
-        <div
-          class="css-v0ob3f"
-          height="16"
-          width="16"
-        />
-      </div>
-    </span>
     <div
-      class="opacity-0 mt-3 py-3 absolute z-10 bg-theme-background rounded-xl shadow-xl css-sqwbmz"
-      data-testid="dropdown__content"
-      style="opacity: 1; height: -30px; overflow-y: scroll;"
+      class="cursor-pointer outline-none focus:outline-none"
     >
       <div
-        class="py-1"
-      >
-        <div
-          class="mt-4"
-        >
-          <ul>
-            <li
-              class="block whitespace-nowrap px-8 text-left text-xs font-bold uppercase text-theme-secondary-500 dark:text-theme-secondary-600"
-            >
-              Primary Options 1
-            </li>
-            <ul
-              data-testid="dropdown__options"
-            >
-              <li
-                class="css-8ahleb"
-                data-testid="dropdown__option--primary-0"
-                tabindex="0"
-              >
-                <span>
-                  Primary Options 1.1
-                </span>
-              </li>
-              <li
-                class="css-8ahleb"
-                data-testid="dropdown__option--primary-1"
-                tabindex="0"
-              >
-                <span>
-                  Primary Options 1.2
-                </span>
-              </li>
-            </ul>
-          </ul>
-        </div>
-        <div
-          class="mt-4"
-        >
-          <div
-            class="-my-2 mx-8"
-          >
-            <div
-              class="border-theme-secondary-300 dark:border-theme-secondary-600 css-t0fqin"
-              type="horizontal"
-            />
-          </div>
-          <ul>
-            <ul
-              data-testid="dropdown__options"
-            >
-              <li
-                class="css-8ahleb"
-                data-testid="dropdown__option--secondary-0"
-                tabindex="0"
-              >
-                <span>
-                  Secondary Options 1.1
-                </span>
-                <div
-                  class="dark:text-theme-secondary-600 css-v0ob3f"
-                  height="16"
-                  width="16"
-                />
-              </li>
-              <li
-                class="css-8ahleb"
-                data-testid="dropdown__option--secondary-1"
-                tabindex="0"
-              >
-                <div
-                  class="dark:text-theme-secondary-600 css-v0ob3f"
-                  height="16"
-                  width="16"
-                />
-                <span>
-                  Secondary Options 1.2
-                  <span
-                    class="ml-1 text-theme-secondary-500 dark:text-theme-secondary-600"
-                  >
-                    secondary label
-                  </span>
-                </span>
-              </li>
-            </ul>
-          </ul>
-        </div>
-      </div>
+        class="css-v0ob3f"
+        height="16"
+        width="16"
+      />
     </div>
   </div>
 </div>
@@ -539,21 +210,19 @@ exports[`Dropdown > should render dropdown group options with divider, icon and 
 exports[`Dropdown > should render toggle icon 1`] = `
 <div>
   <div
-    class="static sm:relative"
+    aria-expanded="false"
+    aria-haspopup="dialog"
+    data-testid="dropdown__toggle"
   >
-    <span
-      data-testid="dropdown__toggle"
+    <div
+      class="cursor-pointer outline-none focus:outline-none"
     >
       <div
-        class="cursor-pointer outline-none focus:outline-none"
-      >
-        <div
-          class="css-v0ob3f"
-          height="16"
-          width="16"
-        />
-      </div>
-    </span>
+        class="css-v0ob3f"
+        height="16"
+        width="16"
+      />
+    </div>
   </div>
 </div>
 `;
@@ -561,15 +230,13 @@ exports[`Dropdown > should render toggle icon 1`] = `
 exports[`Dropdown > should render with custom toggle content as function 1`] = `
 <div>
   <div
-    class="static sm:relative"
+    aria-expanded="false"
+    aria-haspopup="dialog"
+    data-testid="dropdown__toggle"
   >
-    <span
-      data-testid="dropdown__toggle"
-    >
-      <div>
-        Dropdown is open: 
-      </div>
-    </span>
+    <div>
+      Dropdown is open: 
+    </div>
   </div>
 </div>
 `;
@@ -577,15 +244,13 @@ exports[`Dropdown > should render with custom toggle content as function 1`] = `
 exports[`Dropdown > should render with custom toggle content as react element 1`] = `
 <div>
   <div
-    class="static sm:relative"
+    aria-expanded="false"
+    aria-haspopup="dialog"
+    data-testid="dropdown__toggle"
   >
-    <span
-      data-testid="dropdown__toggle"
-    >
-      <div>
-        custom toggle
-      </div>
-    </span>
+    <div>
+      custom toggle
+    </div>
   </div>
 </div>
 `;
@@ -593,21 +258,19 @@ exports[`Dropdown > should render with custom toggle content as react element 1`
 exports[`Dropdown > should render with options 1`] = `
 <div>
   <div
-    class="static sm:relative"
+    aria-expanded="false"
+    aria-haspopup="dialog"
+    data-testid="dropdown__toggle"
   >
-    <span
-      data-testid="dropdown__toggle"
+    <div
+      class="cursor-pointer outline-none focus:outline-none"
     >
       <div
-        class="cursor-pointer outline-none focus:outline-none"
-      >
-        <div
-          class="css-v0ob3f"
-          height="16"
-          width="16"
-        />
-      </div>
-    </span>
+        class="css-v0ob3f"
+        height="16"
+        width="16"
+      />
+    </div>
   </div>
 </div>
 `;
@@ -615,28 +278,18 @@ exports[`Dropdown > should render with options 1`] = `
 exports[`Dropdown > should render without options one 1`] = `
 <div>
   <div
-    class="static sm:relative"
+    aria-controls=":r26:"
+    aria-expanded="true"
+    aria-haspopup="dialog"
+    data-testid="dropdown__toggle"
   >
-    <span
-      data-testid="dropdown__toggle"
-    >
-      <div
-        class="cursor-pointer outline-none focus:outline-none"
-      >
-        <div
-          class="css-v0ob3f"
-          height="16"
-          width="16"
-        />
-      </div>
-    </span>
     <div
-      class="opacity-0 mt-3 py-3 absolute z-10 bg-theme-background rounded-xl shadow-xl css-sqwbmz"
-      data-testid="dropdown__content"
-      style="opacity: 1; height: -30px; overflow-y: scroll;"
+      class="cursor-pointer outline-none focus:outline-none"
     >
       <div
-        class="py-1"
+        class="css-v0ob3f"
+        height="16"
+        width="16"
       />
     </div>
   </div>

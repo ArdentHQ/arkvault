@@ -2,7 +2,7 @@ import tw, { styled } from "twin.macro";
 
 export const SelectOptionsList = styled.ul`
 	& {
-		${tw`top-full py-6 overflow-y-auto max-h-64`};
+		${tw`top-full py-2.5 sm:py-6 overflow-y-auto max-h-64`};
 		${tw`bg-theme-background dark:bg-theme-secondary-800`};
 		${tw`rounded-lg shadow-xl outline-none`};
 	}
@@ -13,7 +13,7 @@ export const SelectOptionsList = styled.ul`
 
 	.select-list-option-head,
 	.select-list-option {
-		${tw`relative px-10 border-0`};
+		${tw`relative px-4 sm:px-10 border-0`};
 	}
 
 	.select-list-option-head {

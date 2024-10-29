@@ -58,7 +58,7 @@ const TransferType = ({ isSingle, disableMultiple, onChange, maxRecipients }: To
 };
 
 const InputButtonStyled = styled.button(() => [
-	tw`flex items-center h-full px-5 font-semibold text-theme-secondary-700`,
+	tw`flex items-center h-full px-5 font-semibold text-theme-navy-600`,
 	tw`border-2 rounded border-theme-primary-100`,
 	tw`transition-colors duration-300`,
 	tw`dark:(border-theme-secondary-800 text-theme-secondary-200)`,
@@ -326,13 +326,14 @@ export const AddRecipient: VFC<AddRecipientProperties> = ({
 			</div>
 
 			<SubForm data-testid="AddRecipient__form-wrapper" noBackground={isSingle} noPadding={isSingle}>
-				<div className="space-y-5">
+				<div className="space-y-4">
 					<FormField name="recipientAddress">
 						{!isSingle && (
 							<FormLabel label={t("COMMON.RECIPIENT_#", { count: addedRecipients.length + 1 })} />
 						)}
 
 						<SelectRecipient
+							showWalletAvatar={false}
 							network={network}
 							disabled={!isSenderFilled}
 							address={recipientAddress}
@@ -351,16 +352,35 @@ export const AddRecipient: VFC<AddRecipientProperties> = ({
 
 					<FormField name="amount">
 						<FormLabel>
-							<span>{t("COMMON.AMOUNT")}</span>
-							{isSenderFilled && !!remainingNetBalance && (
-								<span
-									data-testid="AddRecipient__available"
-									className="ml-1 text-theme-secondary-500 dark:text-theme-secondary-700"
-								>
-									({t("COMMON.AVAILABLE")}{" "}
-									<Amount value={+remainingNetBalance} ticker={ticker} showTicker={false} />)
+							<span className="items-centers flex w-full justify-between">
+								<span>
+									<span>{t("COMMON.AMOUNT")}</span>
+									{isSenderFilled && !!remainingNetBalance && (
+										<span
+											data-testid="AddRecipient__available"
+											className="ml-1 text-theme-secondary-500"
+										>
+											(<Amount value={+remainingNetBalance} ticker={ticker} showTicker={false} />)
+										</span>
+									)}
 								</span>
-							)}
+								{isSingle && (
+									<span className="inline-flex sm:hidden">
+										<Button
+											type="button"
+											variant="transparent"
+											disabled={!isSenderFilled}
+											className="p-0 text-sm text-theme-navy-600"
+											onClick={() => {
+												setValue("isSendAllSelected", !getValues("isSendAllSelected"));
+											}}
+											data-testid="AddRecipient__send-all_mobile"
+										>
+											{t("TRANSACTION.SEND_ALL")}
+										</Button>
+									</span>
+								)}
+							</span>
 						</FormLabel>
 
 						<div className="flex space-x-2">
@@ -384,11 +404,13 @@ export const AddRecipient: VFC<AddRecipientProperties> = ({
 							</div>
 
 							{isSingle && (
-								<div className="inline-flex">
+								<div className="hidden sm:inline-flex">
 									<InputButtonStyled
 										type="button"
 										disabled={!isSenderFilled}
-										className={cn({ active: getValues("isSendAllSelected") })}
+										className={cn("text-theme-navy-600 dark:text-theme-secondary-700", {
+											active: getValues("isSendAllSelected"),
+										})}
 										onClick={() => {
 											setValue("isSendAllSelected", !getValues("isSendAllSelected"));
 										}}
@@ -400,40 +422,41 @@ export const AddRecipient: VFC<AddRecipientProperties> = ({
 							)}
 						</div>
 					</FormField>
+					{!isSingle && (
+						<Button
+							disabled={
+								!!errors.amount ||
+								!!errors.recipientAddress ||
+								!getValues("amount") ||
+								!getValues("recipientAddress") ||
+								addedRecipients.length >= maxRecipients
+							}
+							data-testid="AddRecipient__add-button"
+							variant="secondary"
+							className="mt-4 w-full"
+							onClick={handleAddRecipient}
+						>
+							{t("TRANSACTION.ADD_RECIPIENT")}
+						</Button>
+					)}
+
+					{!isSingle && addedRecipients.length > 0 && (
+						<div>
+							{addedRecipients.map((recipient, index) => (
+								<AddRecipientItem
+									index={index}
+									key={`${index}-${recipient.address}`}
+									recipient={recipient}
+									onDelete={handleRemoveRecipient}
+									ticker={ticker}
+									exchangeTicker={exchangeTicker}
+									showExchangeAmount={network.isLive()}
+								/>
+							))}
+						</div>
+					)}
 				</div>
-
-				{!isSingle && (
-					<Button
-						disabled={
-							!!errors.amount ||
-							!!errors.recipientAddress ||
-							!getValues("amount") ||
-							!getValues("recipientAddress") ||
-							addedRecipients.length >= maxRecipients
-						}
-						data-testid="AddRecipient__add-button"
-						variant="secondary"
-						className="mt-4 w-full"
-						onClick={handleAddRecipient}
-					>
-						{t("TRANSACTION.ADD_RECIPIENT")}
-					</Button>
-				)}
 			</SubForm>
-
-			{!isSingle &&
-				addedRecipients.length > 0 &&
-				addedRecipients.map((recipient, index) => (
-					<AddRecipientItem
-						index={index}
-						key={`${index}-${recipient.address}`}
-						recipient={recipient}
-						onDelete={handleRemoveRecipient}
-						ticker={ticker}
-						exchangeTicker={exchangeTicker}
-						showExchangeAmount={network.isLive()}
-					/>
-				))}
 		</AddRecipientWrapper>
 	);
 };

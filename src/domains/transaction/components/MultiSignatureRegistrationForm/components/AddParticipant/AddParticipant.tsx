@@ -151,7 +151,7 @@ export const AddParticipant = ({
 	);
 
 	return (
-		<div>
+		<div className="-mt-2 sm:mt-0">
 			<FormProvider {...form}>
 				<SubForm>
 					<FormField name="address">
@@ -160,6 +160,7 @@ export const AddParticipant = ({
 							contactSearchTitle={t("TRANSACTION.MULTISIGNATURE.SELECT_PARTICIPANT_TITLE")}
 							contactSearchDescription={t("TRANSACTION.MULTISIGNATURE.SELECT_PARTICIPANT_DESCRIPTION")}
 							exceptMultiSignature
+							showWalletAvatar={false}
 							network={wallet.network()}
 							address={address}
 							profile={profile}
@@ -180,18 +181,20 @@ export const AddParticipant = ({
 					>
 						{t("TRANSACTION.MULTISIGNATURE.ADD_PARTICIPANT")}
 					</Button>
+
+					<div>
+						{participants.map((participant, index) => (
+							<AddParticipantItem
+								key={participant.address}
+								participant={participant}
+								wallet={wallet}
+								index={index}
+								onDelete={removeParticipant}
+							/>
+						))}
+					</div>
 				</SubForm>
 			</FormProvider>
-
-			{participants.map((participant, index) => (
-				<AddParticipantItem
-					key={participant.address}
-					participant={participant}
-					wallet={wallet}
-					index={index}
-					onDelete={removeParticipant}
-				/>
-			))}
 		</div>
 	);
 };

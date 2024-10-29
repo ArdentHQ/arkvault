@@ -3,6 +3,7 @@ import tw, { styled } from "twin.macro";
 
 import { TabContext, TabId, useTab } from "./useTab";
 import { useTheme } from "@/app/hooks";
+import { twMerge } from "tailwind-merge";
 
 interface TabsProperties {
 	id?: string;
@@ -39,6 +40,7 @@ interface TabProperties {
 	children: React.ReactNode;
 	tabId: string | number;
 	count?: number;
+	className?: string;
 }
 
 const TabButton = styled("button", { target: "tab-button" })``;
@@ -116,7 +118,10 @@ export const Tab = React.forwardRef<HTMLButtonElement, TabProperties>((propertie
 			data-testid={`tabs__tab-button-${properties.tabId}`}
 			role="tab"
 			type="button"
-			className="ring-focus"
+			className={twMerge(
+				"ring-focus mx-6 before:bg-theme-secondary-300 before:dark:bg-theme-secondary-800",
+				properties.className,
+			)}
 			ref={reference}
 			aria-selected={isActive}
 			tabIndex={isActive ? 0 : -1}
@@ -159,7 +164,7 @@ export const TabList = styled.div<{ noBackground?: boolean }>`
 	}}
 
 	& > ${TabButton} {
-		${tw`relative mx-6 font-semibold border-t-2 border-b-2 border-transparent text-theme-secondary-text transition-colors ease-in-out duration-300 focus:(outline-none text-theme-text) hover:text-theme-text`}
+		${tw`relative font-semibold border-t-2 border-b-2 border-transparent text-theme-secondary-text transition-colors ease-in-out duration-300 focus:(outline-none text-theme-text) hover:text-theme-text`}
 
 		&[aria-selected="true"] {
 			border-bottom-color: var(--theme-color-primary-600);
@@ -167,7 +172,7 @@ export const TabList = styled.div<{ noBackground?: boolean }>`
 		}
 
 		& + ${TabButton}:before {
-			${tw`content h-4 w-px bg-theme-secondary-300 dark:bg-theme-secondary-800 absolute -left-6 top-1/2 -translate-y-1/2 block`};
+			${tw`content h-4 w-px absolute -left-6 top-1/2 -translate-y-1/2 block`};
 		}
 	}
 `;

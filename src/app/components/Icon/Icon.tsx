@@ -4,6 +4,7 @@ import { styled } from "twin.macro";
 
 import { SvgCollection } from "@/app/assets/svg";
 import { Size } from "@/types";
+import { useTheme } from "@/app/hooks/use-theme";
 
 type IconProperties = {
 	name: string;
@@ -51,4 +52,16 @@ export const Icon: React.VFC<IconProperties> = ({ name, fallback, size, dimensio
 			{Svg ? <Svg /> : fallback}
 		</Wrapper>
 	);
+};
+
+type ThemeIconProperties = {
+	darkIcon: string;
+	lightIcon: string;
+} & Omit<IconProperties, "name">;
+
+export const ThemeIcon = ({ darkIcon, lightIcon, ...properties }: ThemeIconProperties): JSX.Element => {
+	const { isDarkMode } = useTheme();
+	const icon = isDarkMode ? darkIcon : lightIcon;
+
+	return <Icon name={icon} data-testid={`icon-${icon}`} {...properties} />;
 };

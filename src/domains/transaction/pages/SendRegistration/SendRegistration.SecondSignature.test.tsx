@@ -25,6 +25,8 @@ import {
 	mockNanoXTransport,
 } from "@/utils/testing-library";
 import { server, requestMock } from "@/tests/mocks/server";
+import { BigNumber } from "@ardenthq/sdk-helpers";
+import { DateTime } from "@ardenthq/sdk-intl";
 
 let profile: Contracts.IProfile;
 let wallet: Contracts.IReadWriteWallet;
@@ -66,15 +68,30 @@ const renderPage = async (wallet: Contracts.IReadWriteWallet, type = "delegateRe
 const createSecondSignatureRegistrationMock = (wallet: Contracts.IReadWriteWallet) =>
 	vi.spyOn(wallet.transaction(), "transaction").mockReturnValue({
 		amount: () => 0,
+		blockId: () => "1",
+		convertedAmount: () => BigNumber.make(10),
 		data: () => ({ data: () => SecondSignatureRegistrationFixture.data }),
 		explorerLink: () => `https://test.arkscan.io/transaction/${SecondSignatureRegistrationFixture.data.id}`,
+		explorerLinkForBlock: () => `https://test.arkscan.io/block/${SecondSignatureRegistrationFixture.data.id}`,
 		fee: () => +SecondSignatureRegistrationFixture.data.fee / 1e8,
 		id: () => SecondSignatureRegistrationFixture.data.id,
+		isConfirmed: () => true,
+		isDelegateRegistration: () => false,
+		isDelegateResignation: () => false,
+		isIpfs: () => false,
+		isMultiPayment: () => false,
 		isMultiSignatureRegistration: () => false,
+		isTransfer: () => false,
+		isUnvote: () => false,
+		isVote: () => false,
+		isVoteCombination: () => false,
+		memo: () => null,
 		recipient: () => SecondSignatureRegistrationFixture.data.recipient,
 		sender: () => SecondSignatureRegistrationFixture.data.sender,
+		timestamp: () => DateTime.make(),
 		type: () => "secondSignature",
 		usesMultiSignature: () => false,
+		wallet: () => wallet,
 	} as any);
 
 const continueButton = () => screen.getByTestId("StepNavigation__continue-button");
@@ -151,38 +168,40 @@ describe("Second Signature Registration", () => {
 		});
 
 		const fees = within(screen.getByTestId("InputFee")).getAllByTestId("ButtonGroupOption");
-		userEvent.click(fees[1]);
+		await userEvent.click(fees[1]);
 
-		userEvent.click(
+		await userEvent.click(
 			within(screen.getByTestId("InputFee")).getByText(transactionTranslations.INPUT_FEE_VIEW_TYPE.ADVANCED),
 		);
 
 		await waitFor(() => expect(screen.getByTestId("InputCurrency")).not.toHaveValue("0"));
 
-		userEvent.click(continueButton());
+		await userEvent.click(continueButton());
 
 		await expect(screen.findByTestId("SecondSignatureRegistrationForm__backup-step")).resolves.toBeVisible();
 
-		userEvent.click(continueButton());
+		await userEvent.click(continueButton());
 
 		await expect(screen.findByTestId("SecondSignatureRegistrationForm__verification-step")).resolves.toBeVisible();
 
 		const [firstInput, secondInput, thirdInput] = screen.getAllByTestId("MnemonicVerificationInput__input");
-		userEvent.paste(firstInput, "master");
-		userEvent.paste(secondInput, "dizzy");
-		userEvent.paste(thirdInput, "era");
+		await userEvent.type(firstInput, "master");
+		await userEvent.type(secondInput, "dizzy");
+		await userEvent.type(thirdInput, "era");
+
+		await userEvent.click(screen.getByTestId("SecondSignature__passphraseDisclaimer"));
 
 		await waitFor(() => expect(continueButton()).not.toBeDisabled());
 
-		userEvent.click(continueButton());
+		await userEvent.click(continueButton());
 
 		await expect(screen.findByTestId("SecondSignatureRegistrationForm__review-step")).resolves.toBeVisible();
 
-		userEvent.click(continueButton());
+		await userEvent.click(continueButton());
 
 		await expect(screen.findByTestId("AuthenticationStep")).resolves.toBeVisible();
 
-		userEvent.paste(screen.getByTestId("AuthenticationStep__mnemonic"), passphrase);
+		await userEvent.type(screen.getByTestId("AuthenticationStep__mnemonic"), passphrase);
 		await waitFor(() => expect(screen.getByTestId("AuthenticationStep__mnemonic")).toHaveValue(passphrase));
 
 		await waitFor(() => expect(sendButton()).toBeEnabled());
@@ -205,7 +224,7 @@ describe("Second Signature Registration", () => {
 			.spyOn(wallet.coin().address(), "fromMnemonic")
 			.mockResolvedValue({ address: wallet.address() });
 
-		userEvent.click(sendButton());
+		await userEvent.click(sendButton());
 
 		await waitFor(() =>
 			expect(signMock).toHaveBeenCalledWith({

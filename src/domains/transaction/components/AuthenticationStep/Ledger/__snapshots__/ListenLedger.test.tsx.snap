@@ -10,14 +10,18 @@ exports[`ListenLedger > should emit event on device available 1`] = `
       class="flex items-end justify-between bg-theme-background"
     >
       <div
-        class="space-y-4"
+        class="space-y-2"
       >
-        <h1
-          class="mb-0 text-2xl"
-          data-testid="header__title"
+        <div
+          class="flex items-center gap-3"
         >
-          Connect and Authorize Ledger Device
-        </h1>
+          <h1
+            class="mb-0 text-2xl leading-[29px]"
+            data-testid="header__title"
+          >
+            Connect and Authorize Ledger Device
+          </h1>
+        </div>
       </div>
     </div>
     <svg
@@ -187,14 +191,18 @@ exports[`ListenLedger > should emit event on device not available 1`] = `
       class="flex items-end justify-between bg-theme-background"
     >
       <div
-        class="space-y-4"
+        class="space-y-2"
       >
-        <h1
-          class="mb-0 text-2xl"
-          data-testid="header__title"
+        <div
+          class="flex items-center gap-3"
         >
-          Connect and Authorize Ledger Device
-        </h1>
+          <h1
+            class="mb-0 text-2xl leading-[29px]"
+            data-testid="header__title"
+          >
+            Connect and Authorize Ledger Device
+          </h1>
+        </div>
       </div>
     </div>
     <svg

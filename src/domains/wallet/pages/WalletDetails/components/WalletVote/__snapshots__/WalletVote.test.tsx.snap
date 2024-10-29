@@ -138,9 +138,11 @@ exports[`WalletVote > multi vote networks > should render a vote for multiple ac
         </div>
       </div>
     </div>
-    <div>
+    <div
+      class="w-full sm:w-auto sm:max-md:self-end"
+    >
       <button
-        class="mt-4 w-full space-x-2 md:mt-0 md:w-auto css-6419sw"
+        class="px-5 py-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-700 mt-4 w-full space-x-2 md:mt-0 md:w-auto"
         data-testid="WalletVote__button"
         type="button"
       >
@@ -324,9 +326,11 @@ exports[`WalletVote > multi vote networks > should render a vote for multiple ac
         </div>
       </div>
     </div>
-    <div>
+    <div
+      class="w-full sm:w-auto sm:max-md:self-end"
+    >
       <button
-        class="mt-4 w-full space-x-2 md:mt-0 md:w-auto css-6419sw"
+        class="px-5 py-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-700 mt-4 w-full space-x-2 md:mt-0 md:w-auto"
         data-testid="WalletVote__button"
         type="button"
       >
@@ -515,9 +519,11 @@ exports[`WalletVote > multi vote networks > should render a vote for multiple ac
         </div>
       </div>
     </div>
-    <div>
+    <div
+      class="w-full sm:w-auto sm:max-md:self-end"
+    >
       <button
-        class="mt-4 w-full space-x-2 md:mt-0 md:w-auto css-6419sw"
+        class="px-5 py-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-700 mt-4 w-full space-x-2 md:mt-0 md:w-auto"
         data-testid="WalletVote__button"
         type="button"
       >
@@ -705,9 +711,11 @@ exports[`WalletVote > multi vote networks > should render a vote for multiple st
         </div>
       </div>
     </div>
-    <div>
+    <div
+      class="w-full sm:w-auto sm:max-md:self-end"
+    >
       <button
-        class="mt-4 w-full space-x-2 md:mt-0 md:w-auto css-6419sw"
+        class="px-5 py-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-700 mt-4 w-full space-x-2 md:mt-0 md:w-auto"
         data-testid="WalletVote__button"
         type="button"
       >
@@ -846,16 +854,18 @@ exports[`WalletVote > multi vote networks > should render votes when all delegat
           class="flex items-center justify-end space-x-2"
         >
           <span
-            class="font-semibold text-theme-success-600"
+            class="font-semibold text-theme-primary-600"
           >
             All Active
           </span>
         </div>
       </div>
     </div>
-    <div>
+    <div
+      class="w-full sm:w-auto sm:max-md:self-end"
+    >
       <button
-        class="mt-4 w-full space-x-2 md:mt-0 md:w-auto css-6419sw"
+        class="px-5 py-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-700 mt-4 w-full space-x-2 md:mt-0 md:w-auto"
         data-testid="WalletVote__button"
         type="button"
       >
@@ -1034,9 +1044,11 @@ exports[`WalletVote > multi vote networks > should render votes when all delegat
         </div>
       </div>
     </div>
-    <div>
+    <div
+      class="w-full sm:w-auto sm:max-md:self-end"
+    >
       <button
-        class="mt-4 w-full space-x-2 md:mt-0 md:w-auto css-6419sw"
+        class="px-5 py-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-700 mt-4 w-full space-x-2 md:mt-0 md:w-auto"
         data-testid="WalletVote__button"
         type="button"
       >
@@ -1150,14 +1162,14 @@ exports[`WalletVote > should disable vote button when balance is less than votes
             You have not voted for a Delegate yet.
           </span>
           <a
-            class="ring-focus group inline-block css-7nwwrh"
+            class="ring-focus group/inner inline-block css-7nwwrh"
             data-ring-focus-margin="-m-1"
             data-testid="Link"
             href="https://arkvault.io/docs/transactions/vote"
             rel="noopener noreferrer"
           >
             <span
-              class="css-170792"
+              class="css-bxx244"
             >
               <span
                 class="text-sm"
@@ -1227,9 +1239,11 @@ exports[`WalletVote > should disable vote button when balance is less than votes
         </div>
       </div>
     </div>
-    <div>
+    <div
+      class="w-full sm:w-auto sm:max-md:self-end"
+    >
       <button
-        class="mt-4 w-full space-x-2 md:mt-0 md:w-auto css-qrwjsp"
+        class="px-5 py-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 mt-4 w-full space-x-2 md:mt-0 md:w-auto"
         data-testid="WalletVote__button"
         disabled=""
         type="button"
@@ -1344,14 +1358,14 @@ exports[`WalletVote > should render 1`] = `
             You have not voted for a Delegate yet.
           </span>
           <a
-            class="ring-focus group inline-block css-7nwwrh"
+            class="ring-focus group/inner inline-block css-7nwwrh"
             data-ring-focus-margin="-m-1"
             data-testid="Link"
             href="https://arkvault.io/docs/transactions/vote"
             rel="noopener noreferrer"
           >
             <span
-              class="css-170792"
+              class="css-bxx244"
             >
               <span
                 class="text-sm"
@@ -1387,9 +1401,11 @@ exports[`WalletVote > should render 1`] = `
         </span>
       </div>
     </div>
-    <div>
+    <div
+      class="w-full sm:w-auto sm:max-md:self-end"
+    >
       <button
-        class="mt-4 w-full space-x-2 md:mt-0 md:w-auto css-6419sw"
+        class="px-5 py-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-700 mt-4 w-full space-x-2 md:mt-0 md:w-auto"
         data-testid="WalletVote__button"
         type="button"
       >
@@ -1556,16 +1572,18 @@ exports[`WalletVote > should render as all resigned 1`] = `
             </div>
           </span>
           <span
-            class="font-semibold text-theme-danger-600"
+            class="font-semibold text-theme-danger-400"
           >
             All Resigned
           </span>
         </div>
       </div>
     </div>
-    <div>
+    <div
+      class="w-full sm:w-auto sm:max-md:self-end"
+    >
       <button
-        class="mt-4 w-full space-x-2 md:mt-0 md:w-auto css-6419sw"
+        class="px-5 py-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-700 mt-4 w-full space-x-2 md:mt-0 md:w-auto"
         data-testid="WalletVote__button"
         type="button"
       >
@@ -1679,14 +1697,14 @@ exports[`WalletVote > should render disabled vote button 1`] = `
             You have not voted for a Delegate yet.
           </span>
           <a
-            class="ring-focus group inline-block css-7nwwrh"
+            class="ring-focus group/inner inline-block css-7nwwrh"
             data-ring-focus-margin="-m-1"
             data-testid="Link"
             href="https://arkvault.io/docs/transactions/vote"
             rel="noopener noreferrer"
           >
             <span
-              class="css-170792"
+              class="css-bxx244"
             >
               <span
                 class="text-sm"
@@ -1722,9 +1740,11 @@ exports[`WalletVote > should render disabled vote button 1`] = `
         </span>
       </div>
     </div>
-    <div>
+    <div
+      class="w-full sm:w-auto sm:max-md:self-end"
+    >
       <button
-        class="mt-4 w-full space-x-2 md:mt-0 md:w-auto css-qrwjsp"
+        class="px-5 py-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 mt-4 w-full space-x-2 md:mt-0 md:w-auto"
         data-testid="WalletVote__button"
         disabled=""
         type="button"
@@ -1839,14 +1859,14 @@ exports[`WalletVote > should render ledger for incompatible ledger wallet 1`] = 
             You have not voted for a Delegate yet.
           </span>
           <a
-            class="ring-focus group inline-block css-7nwwrh"
+            class="ring-focus group/inner inline-block css-7nwwrh"
             data-ring-focus-margin="-m-1"
             data-testid="Link"
             href="https://arkvault.io/docs/transactions/vote"
             rel="noopener noreferrer"
           >
             <span
-              class="css-170792"
+              class="css-bxx244"
             >
               <span
                 class="text-sm"
@@ -1882,9 +1902,11 @@ exports[`WalletVote > should render ledger for incompatible ledger wallet 1`] = 
         </span>
       </div>
     </div>
-    <div>
+    <div
+      class="w-full sm:w-auto sm:max-md:self-end"
+    >
       <button
-        class="mt-4 w-full space-x-2 md:mt-0 md:w-auto css-qrwjsp"
+        class="px-5 py-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 mt-4 w-full space-x-2 md:mt-0 md:w-auto"
         data-testid="WalletVote__button"
         disabled=""
         type="button"
@@ -2111,14 +2133,14 @@ exports[`WalletVote > should render the maximum votes 1`] = `
             You have not voted for a Delegate yet.
           </span>
           <a
-            class="ring-focus group inline-block css-7nwwrh"
+            class="ring-focus group/inner inline-block css-7nwwrh"
             data-ring-focus-margin="-m-1"
             data-testid="Link"
             href="https://arkvault.io/docs/transactions/vote"
             rel="noopener noreferrer"
           >
             <span
-              class="css-170792"
+              class="css-bxx244"
             >
               <span
                 class="text-sm"
@@ -2154,9 +2176,11 @@ exports[`WalletVote > should render the maximum votes 1`] = `
         </span>
       </div>
     </div>
-    <div>
+    <div
+      class="w-full sm:w-auto sm:max-md:self-end"
+    >
       <button
-        class="mt-4 w-full space-x-2 md:mt-0 md:w-auto css-6419sw"
+        class="px-5 py-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-700 mt-4 w-full space-x-2 md:mt-0 md:w-auto"
         data-testid="WalletVote__button"
         type="button"
       >
@@ -2270,14 +2294,14 @@ exports[`WalletVote > should render without votes 1`] = `
             You have not voted for a Delegate yet.
           </span>
           <a
-            class="ring-focus group inline-block css-7nwwrh"
+            class="ring-focus group/inner inline-block css-7nwwrh"
             data-ring-focus-margin="-m-1"
             data-testid="Link"
             href="https://arkvault.io/docs/transactions/vote"
             rel="noopener noreferrer"
           >
             <span
-              class="css-170792"
+              class="css-bxx244"
             >
               <span
                 class="text-sm"
@@ -2313,9 +2337,11 @@ exports[`WalletVote > should render without votes 1`] = `
         </span>
       </div>
     </div>
-    <div>
+    <div
+      class="w-full sm:w-auto sm:max-md:self-end"
+    >
       <button
-        class="mt-4 w-full space-x-2 md:mt-0 md:w-auto css-6419sw"
+        class="px-5 py-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-700 mt-4 w-full space-x-2 md:mt-0 md:w-auto"
         data-testid="WalletVote__button"
         type="button"
       >
@@ -2487,9 +2513,11 @@ exports[`WalletVote > single vote networks > should render a vote for a delegate
         </div>
       </div>
     </div>
-    <div>
+    <div
+      class="w-full sm:w-auto sm:max-md:self-end"
+    >
       <button
-        class="mt-4 w-full space-x-2 md:mt-0 md:w-auto css-6419sw"
+        class="px-5 py-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-700 mt-4 w-full space-x-2 md:mt-0 md:w-auto"
         data-testid="WalletVote__button"
         type="button"
       >
@@ -2661,9 +2689,11 @@ exports[`WalletVote > single vote networks > should render a vote for a standby 
         </div>
       </div>
     </div>
-    <div>
+    <div
+      class="w-full sm:w-auto sm:max-md:self-end"
+    >
       <button
-        class="mt-4 w-full space-x-2 md:mt-0 md:w-auto css-6419sw"
+        class="px-5 py-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-700 mt-4 w-full space-x-2 md:mt-0 md:w-auto"
         data-testid="WalletVote__button"
         type="button"
       >
@@ -2795,16 +2825,18 @@ exports[`WalletVote > single vote networks > should render a vote for an active 
           class="flex items-center justify-end space-x-2"
         >
           <span
-            class="font-semibold text-theme-success-600"
+            class="font-semibold text-theme-primary-600"
           >
             Active
           </span>
         </div>
       </div>
     </div>
-    <div>
+    <div
+      class="w-full sm:w-auto sm:max-md:self-end"
+    >
       <button
-        class="mt-4 w-full space-x-2 md:mt-0 md:w-auto css-6419sw"
+        class="px-5 py-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-700 mt-4 w-full space-x-2 md:mt-0 md:w-auto"
         data-testid="WalletVote__button"
         type="button"
       >

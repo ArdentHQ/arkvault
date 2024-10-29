@@ -9,7 +9,6 @@ import { getFeeType } from "./utils";
 import { FormField, FormLabel } from "@/app/components/Form";
 import { InputCounter } from "@/app/components/Input";
 import { useBreakpoint } from "@/app/hooks";
-import { SelectNetworkDropdown } from "@/app/components/SelectNetworkDropdown";
 import { SelectAddress } from "@/domains/profile/components/SelectAddress";
 import { AddRecipient } from "@/domains/transaction/components/AddRecipient";
 import { FeeField } from "@/domains/transaction/components/FeeField";
@@ -17,7 +16,8 @@ import { RecipientItem } from "@/domains/transaction/components/RecipientList/Re
 import { buildTransferData } from "@/domains/transaction/pages/SendTransfer/SendTransfer.helpers";
 import { assertNetwork } from "@/utils/assertions";
 import { StepHeader } from "@/app/components/StepHeader";
-import { Icon } from "@/app/components/Icon";
+import { ThemeIcon, Icon } from "@/app/components/Icon";
+import { Button } from "@/app/components/Button";
 
 const QRCodeButton = styled.button`
 	${tw`mt-auto flex w-full items-center space-x-2 rounded py-3 px-5 transition-colors duration-300 sm:w-auto sm:py-5`}
@@ -128,41 +128,53 @@ export const FormStep = ({
 		<section data-testid="SendTransfer__form-step">
 			<StepHeader
 				title={t("TRANSACTION.PAGE_TRANSACTION_SEND.FORM_STEP.TITLE", { ticker: network?.ticker() })}
+				titleIcon={
+					<ThemeIcon dimensions={[24, 24]} lightIcon="SendTransactionLight" darkIcon="SendTransactionDark" />
+				}
 				subtitle={t("TRANSACTION.PAGE_TRANSACTION_SEND.FORM_STEP.DESCRIPTION")}
 				extra={
-					<div className="flex h-full align-bottom">
-						<QRCodeButton className="group" type="button" onClick={onScan} data-testid="QRCodeModalButton">
-							<Icon
-								size="lg"
-								name="QRCode"
-								className="text-theme-secondary-700 transition-colors group-hover:text-white dark:text-theme-secondary-600"
-							/>
-							<span className="font-semibold text-theme-secondary-700 transition-colors group-hover:text-white dark:text-theme-secondary-200">
-								{isXs
-									? t("TRANSACTION.PAGE_TRANSACTION_SEND.FORM_STEP.SCAN_FULL")
-									: t("TRANSACTION.PAGE_TRANSACTION_SEND.FORM_STEP.SCAN")}
-							</span>
-						</QRCodeButton>
-					</div>
+					!isXs && (
+						<div className="hidden sm:flex sm:h-full sm:align-bottom">
+							<QRCodeButton
+								className="group"
+								type="button"
+								onClick={onScan}
+								data-testid="QRCodeModalButton"
+							>
+								<Icon
+									size="lg"
+									name="QRCode"
+									className="text-theme-navy-600 transition-colors group-hover:text-white dark:text-theme-secondary-600"
+								/>
+								<span className="text-base font-semibold leading-5 text-theme-navy-600 transition-colors group-hover:text-white dark:text-theme-secondary-200">
+									{t("TRANSACTION.PAGE_TRANSACTION_SEND.FORM_STEP.SCAN")}
+								</span>
+							</QRCodeButton>
+						</div>
+					)
 				}
 			/>
 
-			<div className="space-y-6 pt-6">
-				<FormField name="network">
-					<FormLabel label={t("COMMON.CRYPTOASSET")} />
-					<SelectNetworkDropdown
-						profile={profile}
-						networks={[network]}
-						selectedNetwork={network}
-						isDisabled
-					/>
-				</FormField>
-
+			<div className="space-y-4 pt-4">
 				<FormField name="senderAddress">
-					<FormLabel label={t("TRANSACTION.SENDER")} />
-
 					<div data-testid="sender-address">
+						<div className="mb-2 flex items-center justify-between">
+							<FormLabel
+								label={t("TRANSACTION.SENDER")}
+								className="mb-0 text-sm font-semibold leading-[17px] text-theme-secondary-text"
+							/>
+							<Button
+								type="button"
+								variant="transparent"
+								className="block p-0 text-sm text-theme-navy-600 sm:hidden"
+								onClick={onScan}
+							>
+								{t("TRANSACTION.PAGE_TRANSACTION_SEND.FORM_STEP.SCAN_FULL")}
+							</Button>
+						</div>
+
 						<SelectAddress
+							showWalletAvatar={false}
 							wallet={
 								senderWallet
 									? {

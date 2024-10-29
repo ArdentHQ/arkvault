@@ -7,18 +7,19 @@ import {
 	WalletCell,
 	Starred,
 	WalletListItemMobile,
-	WalletItemAvatar,
-	WalletItemDetails,
 	WalletItemExtraDetails,
 	WalletItemBalance,
+	WalletItemDetails,
 } from "@/app/components/WalletListItem/WalletListItem.blocks";
 import { WalletListItemProperties } from "@/app/components/WalletListItem/WalletListItem.contracts";
 import { WalletActionsModals } from "@/domains/wallet/components/WalletActionsModals/WalletActionsModals";
 import { useWalletActions } from "@/domains/wallet/hooks/use-wallet-actions";
-import { TableRow } from "@/app/components/Table";
+import { TableCell, TableRow } from "@/app/components/Table";
 import { isFullySynced } from "@/domains/wallet/utils/is-fully-synced";
+import { Address } from "@/app/components/Address";
+import { useActiveProfile, useWalletAlias } from "@/app/hooks";
 
-export const WalletListItem: React.VFC<WalletListItemProperties> = ({ wallet, isCompact, isLargeScreen = true }) => {
+export const WalletListItem: React.VFC<WalletListItemProperties> = ({ wallet, isLargeScreen = true }) => {
 	const isSynced = isFullySynced(wallet);
 
 	const { handleToggleStar, handleOpen, handleSelectOption, handleSend, activeModal, setActiveModal } =
@@ -27,21 +28,30 @@ export const WalletListItem: React.VFC<WalletListItemProperties> = ({ wallet, is
 	const isRestoring = !wallet.hasBeenFullyRestored();
 	const isButtonDisabled = wallet.balance() === 0 || isRestoring || !wallet.hasSyncedWithNetwork();
 
+	const profile = useActiveProfile();
+	const { getWalletAlias } = useWalletAlias();
+
+	const { alias } = getWalletAlias({
+		address: wallet.address(),
+		network: wallet.network(),
+		profile: profile,
+	});
+
 	if (isLargeScreen) {
 		return (
 			<>
-				<TableRow onClick={isSynced ? handleOpen : undefined}>
-					<Starred onToggleStar={handleToggleStar} isCompact={isCompact} wallet={wallet} />
-					<WalletCell isCompact={isCompact} wallet={wallet} />
-					<Info isCompact={isCompact} wallet={wallet} />
-					<Balance wallet={wallet} isCompact={isCompact} isSynced={isSynced} />
-					<Currency wallet={wallet} isCompact={isCompact} isSynced={isSynced} />
-					<ButtonsCell
-						wallet={wallet}
-						isCompact={isCompact}
-						onSelectOption={handleSelectOption}
-						onSend={handleSend}
-					/>
+				<TableRow onClick={isSynced ? handleOpen : undefined} className="relative">
+					<Starred onToggleStar={handleToggleStar} wallet={wallet} />
+					<TableCell size="sm" innerClassName="-ml-3 space-x-3" className="hidden lg:table-cell">
+						<div className="w-24 flex-1 overflow-hidden">
+							<Address walletName={alias} walletNameClass="text-sm leading-[17px]" />
+						</div>
+					</TableCell>
+					<WalletCell wallet={wallet} />
+					<Info wallet={wallet} />
+					<Balance wallet={wallet} isSynced={isSynced} />
+					<Currency wallet={wallet} isSynced={isSynced} />
+					<ButtonsCell wallet={wallet} onSelectOption={handleSelectOption} onSend={handleSend} />
 				</TableRow>
 				{activeModal && (
 					<tr>
@@ -63,10 +73,9 @@ export const WalletListItem: React.VFC<WalletListItemProperties> = ({ wallet, is
 			isButtonDisabled={isButtonDisabled}
 			onClick={isSynced ? handleOpen : undefined}
 			onButtonClick={handleSend}
-			avatar={<WalletItemAvatar wallet={wallet} />}
 			details={<WalletItemDetails wallet={wallet} />}
-			extraDetails={<WalletItemExtraDetails wallet={wallet} isCompact={isCompact} />}
-			balance={<WalletItemBalance wallet={wallet} isCompact={isCompact} isSynced={isSynced} />}
+			extraDetails={<WalletItemExtraDetails wallet={wallet} />}
+			balance={<WalletItemBalance wallet={wallet} isSynced={isSynced} />}
 		/>
 	);
 };

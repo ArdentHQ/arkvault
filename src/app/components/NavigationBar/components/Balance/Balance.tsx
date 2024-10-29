@@ -37,7 +37,7 @@ export const Balance: React.FC<BalanceProperties> = ({ profile, isLoading }: Bal
 	assertString(ticker);
 
 	return (
-		<div className="-mt-3 flex flex-row items-center justify-center space-x-2 bg-theme-secondary-100 px-8 py-2.5 dark:bg-black md:m-0 md:flex-col md:items-start md:justify-start md:space-x-0 md:bg-transparent md:p-0 md:text-right md:dark:bg-transparent">
+		<div className="flex flex-row items-center justify-center space-x-2 bg-theme-secondary-100 px-8 py-2.5 dark:bg-black md:m-0 md:flex-col md:items-start md:justify-start md:space-x-0 md:bg-transparent md:p-0 md:text-right md:dark:bg-transparent">
 			<div className="whitespace-nowrap text-theme-secondary-700 dark:text-theme-secondary-500 md:text-xs md:font-semibold md:text-theme-secondary-500">
 				{t("COMMON.YOUR_BALANCE")}
 			</div>

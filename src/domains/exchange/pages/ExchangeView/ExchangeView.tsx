@@ -14,11 +14,20 @@ export const ExchangeView = () => {
 
 	const [logoUrl, setLogoUrl] = useState<string>();
 	const [isReady, setIsReady] = useState<boolean>(false);
+	const [resetKey, setResetKey] = useState<number>(0);
 
 	const { provider: exchangeProvider, exchangeProviders, setProvider, fetchProviders } = useExchangeContext();
 
 	const exchangeId = queryParameters.get("exchangeId");
-	const orderId = queryParameters.get("orderId") || undefined;
+
+	const queryOrderId = queryParameters.get("orderId");
+
+	// use `orderId` from query string on the very first render
+	const orderId = queryOrderId && resetKey === 0 ? queryOrderId : undefined;
+
+	const reset = () => {
+		setResetKey(resetKey + 1);
+	};
 
 	useEffect(() => {
 		if (!exchangeProviders) {
@@ -59,7 +68,7 @@ export const ExchangeView = () => {
 
 	const renderExchange = () => (
 		<>
-			<div className="mx-auto mb-8 w-24">
+			<div className="mx-auto mb-2 w-24 sm:mb-8">
 				{logoUrl && (
 					<img
 						src={logoUrl}
@@ -69,13 +78,15 @@ export const ExchangeView = () => {
 				)}
 			</div>
 
-			{!!exchangeProvider && <ExchangeForm orderId={orderId} onReady={() => setIsReady(true)} />}
+			{!!exchangeProvider && (
+				<ExchangeForm key={resetKey} resetForm={reset} orderId={orderId} onReady={() => setIsReady(true)} />
+			)}
 		</>
 	);
 
 	return (
 		<Page pageTitle={exchangeProvider?.name}>
-			<div className="relative flex h-full w-full flex-1 flex-col items-center justify-center py-10 md:py-20">
+			<div className="relative flex h-full w-full flex-1 flex-col items-center justify-center md:py-20">
 				<div className="absolute inset-0 hidden items-center bg-[#3f4455] sm:flex sm:p-32">
 					<Image name="WorldMap" className="h-full w-full" />
 				</div>
@@ -84,7 +95,7 @@ export const ExchangeView = () => {
 
 				<div
 					className={cn(
-						"relative w-full grow flex-col bg-theme-background p-10 sm:max-w-xl sm:grow-0 sm:rounded-2.5xl sm:shadow-2xl lg:max-w-2xl",
+						"relative w-full grow flex-col bg-theme-background p-6 sm:max-w-xl sm:grow-0 sm:rounded-2.5xl sm:p-10 sm:shadow-2xl lg:max-w-2xl",
 						isReady ? "flex" : "hidden",
 					)}
 				>

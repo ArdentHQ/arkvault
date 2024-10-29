@@ -18,16 +18,19 @@ describe("ApplicationError", () => {
 		expect(container).toBeInTheDocument();
 		expect(screen.getByTestId("ApplicationError__text")).toHaveTextContent(translations.APPLICATION.TITLE);
 		expect(screen.getByTestId("ApplicationError__text")).toHaveTextContent(translations.APPLICATION.DESCRIPTION);
+		expect(screen.getByTestId("ApplicationError__text")).not.toHaveTextContent(translations.APPLICATION.HELP_TEXT);
 
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it("should render with error message and reload", () => {
+	it("should render with error message and reload", async () => {
 		const { asFragment, container } = render(<ApplicationError error={{ message: "some error", name: "error" }} />);
 
 		expect(container).toBeInTheDocument();
 		expect(screen.getByTestId("ApplicationError__text")).toHaveTextContent(translations.APPLICATION.TITLE);
 		expect(screen.getByTestId("ApplicationError__text")).toHaveTextContent(translations.APPLICATION.DESCRIPTION);
+		expect(screen.getByTestId("ApplicationError__text")).toHaveTextContent(translations.APPLICATION.HELP_TEXT);
+		expect(screen.getByTestId("clipboard-button__wrapper")).toBeInTheDocument();
 
 		Object.defineProperty(window, "location", {
 			value: {
@@ -37,7 +40,7 @@ describe("ApplicationError", () => {
 
 		const { reload: mockedReload } = window.location;
 
-		userEvent.click(screen.getByTestId("ApplicationError__button--reload"));
+		await userEvent.click(screen.getByTestId("ApplicationError__button--reload"));
 
 		expect(mockedReload).toHaveBeenCalledWith();
 

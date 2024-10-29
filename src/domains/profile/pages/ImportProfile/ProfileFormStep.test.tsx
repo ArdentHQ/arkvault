@@ -7,8 +7,9 @@ import * as browserAccess from "browser-fs-access";
 
 import { EnvironmentProvider } from "@/app/contexts";
 import { ImportProfileForm } from "@/domains/profile/pages/ImportProfile/ProfileFormStep";
-import * as themeUtils from "@/utils/theme";
-import { act, env, fireEvent, render, screen, waitFor } from "@/utils/testing-library";
+import { env, render, screen, waitFor } from "@/utils/testing-library";
+import { renderHook } from "@testing-library/react";
+import { useTranslation } from "react-i18next";
 let profile: Contracts.IProfile;
 
 let browserAccessMock: vi.SpyInstance;
@@ -38,7 +39,7 @@ describe("Import Profile - Profile Form Step", () => {
 		const history = createHashHistory();
 		history.push("/profiles/import");
 
-		const { container } = render(
+		render(
 			<EnvironmentProvider env={env}>
 				<ImportProfileForm
 					env={env}
@@ -52,7 +53,8 @@ describe("Import Profile - Profile Form Step", () => {
 
 		await waitFor(() => expect(submitButton()).toBeDisabled());
 
-		expect(container).toMatchSnapshot();
+		expect(screen.getByTestId("ProfileFormStep")).toBeInTheDocument();
+		expect(screen.getAllByTestId("Input")[0]).toHaveValue(profile.name());
 	});
 
 	it("should render profile form with empty profile", async () => {
@@ -60,7 +62,7 @@ describe("Import Profile - Profile Form Step", () => {
 		const emptyProfile = await env.profiles().create("test2");
 		history.push("/profiles/import");
 
-		const { container } = render(
+		render(
 			<EnvironmentProvider env={env}>
 				<ImportProfileForm
 					env={env}
@@ -74,12 +76,13 @@ describe("Import Profile - Profile Form Step", () => {
 
 		await waitFor(() => expect(submitButton()).toBeDisabled());
 
-		expect(container).toMatchSnapshot();
+		expect(screen.getByTestId("ProfileFormStep")).toBeInTheDocument();
+		expect(screen.getAllByTestId("Input")[0]).toHaveValue("test2");
 	});
 
 	it("should store profile", async () => {
 		const emptyProfile = await env.profiles().create("test3");
-		const { asFragment } = render(
+		render(
 			<EnvironmentProvider env={env}>
 				<ImportProfileForm
 					env={env}
@@ -93,49 +96,48 @@ describe("Import Profile - Profile Form Step", () => {
 
 		await waitFor(() => expect(submitButton()).toBeDisabled());
 
-		// Upload avatar image
-		userEvent.click(screen.getByTestId("SelectProfileImage__upload-button"));
-
-		expect(browserAccessMock).toHaveBeenCalledWith({ extensions: [".png", ".jpg", ".jpeg", ".bmp"] });
-
 		const inputElement: HTMLInputElement = screen.getAllByTestId("Input")[0];
 
 		inputElement.select();
-		userEvent.paste(inputElement, "test profile 1");
+		await userEvent.clear(inputElement);
+		await userEvent.type(inputElement, "test profile 1");
 
-		userEvent.click(screen.getByRole("checkbox"));
+		await userEvent.click(screen.getByRole("checkbox"));
 
-		userEvent.click(screen.getByTestId("SelectDropdown__caret"));
-		userEvent.click(screen.getByTestId("SelectDropdown__option--0"));
+		await userEvent.click(screen.getByTestId("SelectDropdown__caret"));
+		await userEvent.click(screen.getByTestId("SelectDropdown__option--0"));
 
 		await waitFor(() => {
 			expect(submitButton()).toBeEnabled();
 		});
 
-		userEvent.click(submitButton());
+		await userEvent.click(submitButton());
 
 		expect(emptyProfile.usesPassword()).toBe(false);
 
 		inputElement.select();
-		userEvent.paste(inputElement, "test profile 2");
+		await userEvent.clear(inputElement);
+		await userEvent.type(inputElement, "test profile 2");
 
 		await waitFor(() => {
 			expect(submitButton()).toBeEnabled();
 		});
 
-		userEvent.click(submitButton());
+		await userEvent.click(submitButton());
 
 		const newProfile = env.profiles().findById(emptyProfile.id());
 
 		await waitFor(() => expect(newProfile.name()).toBe("test profile 2"));
 
 		expect(newProfile.usesPassword()).toBe(false);
-		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should fail password confirmation", async () => {
+		const { result } = renderHook(() => useTranslation());
+		const { t } = result.current;
+
 		const emptyProfile = await env.profiles().create("test4");
-		const { asFragment } = render(
+		render(
 			<EnvironmentProvider env={env}>
 				<ImportProfileForm
 					env={env}
@@ -147,121 +149,38 @@ describe("Import Profile - Profile Form Step", () => {
 			</EnvironmentProvider>,
 		);
 
-		userEvent.paste(screen.getAllByTestId("Input")[0], "asdasdas");
+		await userEvent.type(screen.getAllByTestId("Input")[0], "asdasdas");
 
-		userEvent.click(screen.getByTestId("SelectDropdown__caret"));
-		userEvent.click(screen.getByTestId("SelectDropdown__option--0"));
-		userEvent.click(screen.getByRole("checkbox"));
+		await userEvent.click(screen.getByTestId("SelectDropdown__caret"));
+		await userEvent.click(screen.getByTestId("SelectDropdown__option--0"));
+		await userEvent.click(screen.getByRole("checkbox"));
 
-		userEvent.paste(passwordInput(), "S3cUrePa$sword.test");
-		userEvent.paste(passwordConfirmationInput(), "S3cUrePa$sword.wrong");
+		await userEvent.type(passwordInput(), "S3cUrePa$sword.test");
+		await userEvent.type(passwordConfirmationInput(), "S3cUrePa$sword.wrong");
 
 		await waitFor(() => expect(submitButton()).toBeDisabled());
 
 		passwordInput().select();
-		userEvent.paste(passwordInput(), "S3cUrePa$sword");
+		await userEvent.clear(passwordInput());
+		await userEvent.type(passwordInput(), "S3cUrePa$sword");
 
 		passwordConfirmationInput().select();
-		userEvent.paste(passwordConfirmationInput(), "S3cUrePa$sword");
+		await userEvent.clear(passwordConfirmationInput());
+		await userEvent.type(passwordConfirmationInput(), "S3cUrePa$sword");
 
 		await waitFor(() => expect(submitButton()).toBeEnabled());
 
 		passwordConfirmationInput().select();
-		userEvent.paste(passwordConfirmationInput(), "S3cUrePa$sword.test");
+		await userEvent.clear(passwordConfirmationInput());
+		await userEvent.type(passwordConfirmationInput(), "S3cUrePa$sword.test");
 
 		passwordInput().select();
-		userEvent.paste(passwordInput(), "S3cUrePa$sword.wrong");
+		await userEvent.clear(passwordInput());
+		await userEvent.type(passwordInput(), "S3cUrePa$sword.wrong");
 
 		await waitFor(() => expect(submitButton()).toBeDisabled());
 
 		expect(screen.getByTestId("Input__error")).toBeVisible();
-
-		expect(asFragment()).toMatchSnapshot();
-	});
-
-	it("should update the avatar when removing focus from name input", async () => {
-		const emptyProfile = await env.profiles().create("test6");
-		const shouldUseDarkColorsSpy = vi.spyOn(themeUtils, "shouldUseDarkColors").mockReturnValue(false);
-
-		const { asFragment } = render(
-			<EnvironmentProvider env={env}>
-				<ImportProfileForm
-					env={env}
-					profile={emptyProfile}
-					onSubmit={vi.fn()}
-					shouldValidate={true}
-					onBack={vi.fn()}
-				/>
-			</EnvironmentProvider>,
-		);
-
-		await waitFor(() => expect(submitButton()).toBeDisabled());
-
-		const inputElement: HTMLInputElement = screen.getAllByTestId("Input")[0] as HTMLInputElement;
-
-		act(() => inputElement.focus());
-
-		fireEvent.blur(inputElement);
-
-		inputElement.select();
-		userEvent.paste(inputElement, "t");
-
-		act(() => passwordConfirmationInput().focus());
-
-		expect(screen.getByTestId("SelectProfileImage__avatar-identicon")).toBeInTheDocument();
-
-		inputElement.select();
-		userEvent.paste(inputElement, "te");
-
-		act(() => passwordInput().focus());
-
-		expect(screen.getByTestId("SelectProfileImage__avatar-identicon")).toBeInTheDocument();
-
-		act(() => inputElement.focus());
-
-		inputElement.select();
-		userEvent.paste(inputElement, "test profile");
-
-		await waitFor(() => {
-			expect(inputElement).toHaveValue("test profile");
-		});
-
-		act(() => passwordInput().focus());
-
-		expect(screen.getByTestId("SelectProfileImage__avatar-identicon")).toBeInTheDocument();
-
-		expect(asFragment()).toMatchSnapshot();
-
-		act(() => inputElement.focus());
-
-		userEvent.clear(inputElement);
-
-		await waitFor(() => {
-			expect(inputElement).not.toHaveValue();
-		});
-
-		act(() => passwordInput().focus());
-
-		expect(screen.queryByTestId("SelectProfileImage__avatar")).not.toBeInTheDocument();
-
-		// Upload avatar image
-		userEvent.click(screen.getByTestId("SelectProfileImage__upload-button"));
-
-		expect(() => screen.getByTestId("SelectProfileImage__avatar")).toBeTruthy();
-
-		act(() => inputElement.focus());
-
-		inputElement.select();
-		userEvent.paste(inputElement, "t");
-
-		await waitFor(() => {
-			expect(inputElement).toHaveValue("t");
-		});
-
-		fireEvent.blur(inputElement);
-
-		expect(asFragment()).toMatchSnapshot();
-
-		shouldUseDarkColorsSpy.mockRestore();
+		expect(screen.getByTestId("Input__error").dataset.errortext).toBe(t("COMMON.VALIDATION.PASSWORD_MISMATCH"));
 	});
 });

@@ -64,19 +64,19 @@ describe("Table", () => {
 		expect(container).toMatchSnapshot();
 	});
 
-	it("should change sort order on th click", () => {
+	it("should change sort order on th click", async () => {
 		render(<Table columns={columns} data={data} />);
 
 		const th = screen.getAllByRole("columnheader")[0];
 
-		userEvent.click(th);
+		await userEvent.click(th);
 
 		// eslint-disable-next-line testing-library/no-node-access
 		expect(th.querySelector("svg#chevron-down-small")).toBeInTheDocument();
 
 		expect(within(th).getByRole("img")).toHaveClass("rotate-180");
 
-		userEvent.click(th);
+		await userEvent.click(th);
 
 		expect(within(th).getByRole("img")).not.toHaveClass("rotate-180");
 	});
@@ -115,5 +115,36 @@ describe("Table", () => {
 		const { container } = render(<Table columns={columns} data={data} rowsPerPage={-1} />);
 
 		expect(container).toMatchSnapshot();
+	});
+
+	it("should not render rounded borders if noRoundedBorders is set", () => {
+		render(
+			<Table
+				columns={[
+					{
+						Header: "Header 1",
+						noRoundedBorders: true,
+					},
+				]}
+				data={data}
+			/>,
+		);
+
+		expect(screen.getByTestId("table__th--0")).not.toHaveClass("first:rounded-tl-xl");
+	});
+
+	it("should render rounded borders if noRoundedBorders is not set", () => {
+		render(
+			<Table
+				columns={[
+					{
+						Header: "Header 1",
+					},
+				]}
+				data={data}
+			/>,
+		);
+
+		expect(screen.getByTestId("table__th--0")).toHaveClass("first:rounded-tl-xl");
 	});
 });

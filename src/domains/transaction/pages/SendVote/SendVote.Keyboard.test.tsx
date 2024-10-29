@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/require-await */
 /* eslint-disable testing-library/no-unnecessary-act */ // @TODO remove and fix test
 import { Contracts } from "@ardenthq/sdk-profiles";
-import { renderHook } from "@testing-library/react-hooks";
+import { renderHook } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import React from "react";
 import { FormProvider, useForm } from "react-hook-form";
@@ -29,6 +29,8 @@ import { server, requestMock } from "@/tests/mocks/server";
 
 import unvoteFixture from "@/tests/fixtures/coins/ark/devnet/transactions/unvote.json";
 import voteFixture from "@/tests/fixtures/coins/ark/devnet/transactions/vote.json";
+import { DateTime } from "@ardenthq/sdk-intl";
+import { BigNumber } from "@ardenthq/sdk-helpers";
 
 const fixtureProfileId = getDefaultProfileId();
 
@@ -36,15 +38,31 @@ const createVoteTransactionMock = (wallet: Contracts.IReadWriteWallet) =>
 	// @ts-ignore
 	vi.spyOn(wallet.transaction(), "transaction").mockReturnValue({
 		amount: () => voteFixture.data.amount / 1e8,
+		blockId: () => "1",
+		convertedAmount: () => BigNumber.make(10),
 		data: () => ({ data: () => voteFixture.data }),
 		explorerLink: () => `https://test.arkscan.io/transaction/${voteFixture.data.id}`,
+		explorerLinkForBlock: () => `https://test.arkscan.io/block/${voteFixture.data.id}`,
 		fee: () => voteFixture.data.fee / 1e8,
 		id: () => voteFixture.data.id,
+		isConfirmed: () => true,
+		isDelegateRegistration: () => false,
+		isDelegateResignation: () => false,
+		isIpfs: () => false,
+		isMultiPayment: () => false,
 		isMultiSignatureRegistration: () => false,
+		isSent: () => true,
+		isTransfer: () => false,
+		isUnvote: () => false,
+		isVote: () => true,
+		isVoteCombination: () => false,
+		memo: () => null,
 		recipient: () => voteFixture.data.recipient,
 		sender: () => voteFixture.data.sender,
+		timestamp: () => DateTime.make(),
 		type: () => "vote",
 		usesMultiSignature: () => false,
+		wallet: () => wallet,
 	});
 
 const passphrase = getDefaultWalletMnemonic();
@@ -100,7 +118,7 @@ describe("SendVote", () => {
 			requestMock("https://ark-test-musig.arkvault.io/", { result: [] }, { method: "post" }),
 		);
 
-		vi.useFakeTimers();
+		vi.useFakeTimers({ shouldAdvanceTime: true });
 		resetProfileNetworksMock = mockProfileWithPublicAndTestNetworks(profile);
 	});
 
@@ -162,28 +180,28 @@ describe("SendVote", () => {
 			expect(screen.getAllByRole("radio")[1]).toBeChecked();
 		});
 
-		userEvent.click(within(screen.getAllByTestId("InputFee")[0]).getAllByRole("radio")[2]);
+		await userEvent.click(within(screen.getAllByTestId("InputFee")[0]).getAllByRole("radio")[2]);
 
 		expect(screen.getAllByRole("radio")[2]).toBeChecked();
 
 		// remove focus from fee button
-		userEvent.click(document.body);
+		await userEvent.click(document.body);
 
 		await waitFor(() => expect(continueButton()).not.toBeDisabled(), { timeout: 3000 });
 
 		if (inputMethod === "with keyboard") {
-			userEvent.keyboard("{enter}");
+			await userEvent.keyboard("{enter}");
 		} else {
-			userEvent.click(continueButton());
+			await userEvent.click(continueButton());
 		}
 
 		// Review Step
 		expect(screen.getByTestId(reviewStepID)).toBeInTheDocument();
 
 		if (inputMethod === "with keyboard") {
-			userEvent.keyboard("{enter}");
+			await userEvent.keyboard("{enter}");
 		} else {
-			userEvent.click(continueButton());
+			await userEvent.click(continueButton());
 		}
 
 		// AuthenticationStep
@@ -200,7 +218,7 @@ describe("SendVote", () => {
 		const transactionMock = createVoteTransactionMock(wallet);
 
 		const passwordInput = screen.getByTestId("AuthenticationStep__mnemonic");
-		userEvent.paste(passwordInput, passphrase);
+		await userEvent.type(passwordInput, passphrase);
 
 		await waitFor(() => {
 			expect(passwordInput).toHaveValue(passphrase);
@@ -214,9 +232,9 @@ describe("SendVote", () => {
 
 		await act(async () => {
 			if (inputMethod === "with keyboard") {
-				userEvent.keyboard("{enter}");
+				await userEvent.keyboard("{enter}");
 			} else {
-				userEvent.click(sendButton());
+				await userEvent.click(sendButton());
 			}
 		});
 
@@ -224,7 +242,7 @@ describe("SendVote", () => {
 
 		await act(() => vi.runOnlyPendingTimers());
 
-		await expect(screen.findByTestId("TransactionSuccessful")).resolves.toBeVisible();
+		await expect(screen.findByText("Unvote")).resolves.toBeVisible();
 
 		signMock.mockRestore();
 		broadcastMock.mockRestore();

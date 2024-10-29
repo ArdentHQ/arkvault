@@ -81,8 +81,9 @@ describe("ImportWallet", () => {
 
 		const selectNetworkInput = screen.getByTestId("SelectDropdown__input");
 
-		userEvent.paste(selectNetworkInput, "ARK D");
-		userEvent.keyboard("{enter}");
+		await userEvent.clear(selectNetworkInput);
+		await userEvent.type(selectNetworkInput, "ARK D");
+		await userEvent.keyboard("{Enter}");
 
 		expect(selectNetworkInput).toHaveValue(ARKDevnet);
 	});
@@ -131,7 +132,8 @@ describe("ImportWallet", () => {
 
 		expect(mnemonicInput()).toBeInTheDocument();
 
-		userEvent.paste(mnemonicInput(), mnemonic);
+		await userEvent.clear(mnemonicInput());
+		await userEvent.type(mnemonicInput(), mnemonic);
 
 		await waitFor(() => {
 			expect(form.getValues()).toMatchObject({
@@ -195,17 +197,20 @@ describe("ImportWallet", () => {
 
 		const selectDropdown = screen.getByTestId("SelectDropdown__input");
 
-		userEvent.paste(selectDropdown, "test");
+		await userEvent.clear(selectDropdown);
+		await userEvent.type(selectDropdown, "test");
 
 		await waitFor(() => expect(screen.queryByTestId("SelectDropdown__option--0")).not.toBeInTheDocument());
 
-		userEvent.paste(selectDropdown, "addr");
+		await userEvent.clear(selectDropdown);
+		await userEvent.type(selectDropdown, "addr");
 
 		await expect(screen.findByTestId("SelectDropdown__option--0")).resolves.toBeVisible();
 
 		userEvent.click(screen.getByTestId("SelectDropdown__option--0"));
 
-		expect(screen.getByTestId("select-list__input")).toHaveValue("address");
+		// Ensure the value is set
+		await waitFor(() => expect(screen.getByTestId("SelectDropdown__input")).toHaveValue("Address"));
 
 		await expect(addressInput()).resolves.toBeVisible();
 	});
@@ -234,10 +239,9 @@ describe("ImportWallet", () => {
 		expect(successStep()).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
 
-		expect(screen.getAllByText(ARKDevnet)[0]).toBeInTheDocument();
 		expect(screen.getAllByText(importedWallet.address())[0]).toBeInTheDocument();
 
-		userEvent.click(screen.getByTestId("ImportWallet__edit-alias"));
+		await userEvent.click(screen.getByTestId("ImportWallet__edit-alias"));
 
 		expect(onClickEditAlias).toHaveBeenCalledWith(expect.objectContaining({ nativeEvent: expect.any(MouseEvent) }));
 	});
@@ -260,7 +264,7 @@ describe("ImportWallet", () => {
 		await expect(screen.findByTestId("NetworkStep")).resolves.toBeVisible();
 
 		await waitFor(() => expect(backButton()).toBeEnabled());
-		userEvent.click(backButton());
+		await userEvent.click(backButton());
 
 		expect(historySpy).toHaveBeenCalledWith(`/profiles/${fixtureProfileId}/dashboard`);
 
@@ -287,9 +291,8 @@ describe("ImportWallet", () => {
 		);
 
 		await expect(screen.findByTestId("ImportWallet__method-step")).resolves.toBeVisible();
-
 		await waitFor(() => expect(backButton()).toBeEnabled());
-		userEvent.click(backButton());
+		await userEvent.click(backButton());
 
 		expect(historySpy).toHaveBeenCalledWith(`/profiles/${fixtureProfileId}/dashboard`);
 
@@ -337,16 +340,16 @@ describe("ImportWallet", () => {
 
 		await expect(screen.findByTestId("NetworkStep")).resolves.toBeVisible();
 
-		userEvent.click(screen.getAllByTestId("NetworkOption")[1]);
+		await userEvent.click(screen.getAllByTestId("NetworkOption")[1]);
 
 		await waitFor(() => expect(continueButton()).toBeEnabled());
-		userEvent.click(continueButton());
+		await userEvent.click(continueButton());
 
 		await waitFor(() => expect(() => methodStep()).not.toThrow());
 
 		expect(methodStep()).toBeInTheDocument();
 
-		userEvent.click(screen.getByTestId("SelectDropdown__caret"));
+		await userEvent.click(screen.getByTestId("SelectDropdown__caret"));
 
 		expect(screen.getAllByText(commonTranslations.MNEMONIC_TYPE.BIP39)).toHaveLength(3);
 
@@ -402,33 +405,34 @@ describe("ImportWallet", () => {
 
 		await expect(screen.findByTestId("NetworkStep")).resolves.toBeVisible();
 
-		userEvent.click(screen.getAllByTestId("NetworkOption")[1]);
+		await userEvent.click(screen.getAllByTestId("NetworkOption")[1]);
 
 		await waitFor(() => expect(continueButton()).toBeEnabled());
-		userEvent.click(continueButton());
+		await userEvent.click(continueButton());
 
 		await waitFor(() => expect(() => methodStep()).not.toThrow());
 
 		expect(methodStep()).toBeInTheDocument();
 
-		userEvent.click(screen.getByTestId("SelectDropdown__caret"));
+		await userEvent.click(screen.getByTestId("SelectDropdown__caret"));
 
 		await expect(screen.findByText(commonTranslations.ADDRESS)).resolves.toBeVisible();
 
-		userEvent.click(screen.getByText(commonTranslations.ADDRESS));
+		await userEvent.click(screen.getByText(commonTranslations.ADDRESS));
 
 		await expect(addressInput()).resolves.toBeVisible();
 
-		userEvent.paste(await addressInput(), randomNewAddress);
+		await userEvent.clear(await addressInput());
+		await userEvent.type(await addressInput(), randomNewAddress);
 
 		await waitFor(() => expect(continueButton()).toBeEnabled());
-		userEvent.click(continueButton());
+		await userEvent.click(continueButton());
 
 		await waitFor(() => {
 			expect(successStep()).toBeInTheDocument();
 		});
 
-		userEvent.click(finishButton());
+		await userEvent.click(finishButton());
 
 		await waitFor(() => {
 			expect(historySpy).toHaveBeenCalledWith(expect.stringContaining(`/profiles/${profile.id()}/wallets/`));
@@ -506,7 +510,8 @@ describe("ImportWallet", () => {
 
 			await waitFor(() => expect(privateKeyInput()));
 
-			userEvent.paste(privateKeyInput(), privateKey);
+			await userEvent.clear(privateKeyInput());
+			await userEvent.type(privateKeyInput(), privateKey);
 
 			await testFormValues(form);
 
@@ -537,7 +542,8 @@ describe("ImportWallet", () => {
 
 			await waitFor(() => expect(privateKeyInput()));
 
-			userEvent.paste(privateKeyInput(), privateKey);
+			await userEvent.clear(privateKeyInput());
+			await userEvent.type(privateKeyInput(), privateKey);
 
 			await testFormValues(form);
 
@@ -617,7 +623,8 @@ describe("ImportWallet", () => {
 
 			await waitFor(() => expect(wifInput()));
 
-			userEvent.paste(wifInput(), wif);
+			await userEvent.clear(wifInput());
+			await userEvent.type(wifInput(), wif);
 
 			await testFormValues(form);
 
@@ -653,7 +660,8 @@ describe("ImportWallet", () => {
 
 			await waitFor(() => expect(wifInput()));
 
-			userEvent.paste(wifInput(), wif);
+			await userEvent.clear(wifInput());
+			await userEvent.type(wifInput(), wif);
 
 			await testFormValues(form);
 
@@ -717,9 +725,11 @@ describe("ImportWallet", () => {
 
 		await waitFor(() => expect(encryptedWifInput()));
 
-		userEvent.paste(encryptedWifInput(), wif);
+		await userEvent.clear(encryptedWifInput());
+		await userEvent.type(encryptedWifInput(), wif);
 
-		userEvent.paste(screen.getByTestId("ImportWallet__encryptedWif__password-input"), wifPassword);
+		await userEvent.clear(screen.getByTestId("ImportWallet__encryptedWif__password-input"));
+		await userEvent.type(screen.getByTestId("ImportWallet__encryptedWif__password-input"), wifPassword);
 
 		await waitFor(() => {
 			expect(encryptedWifInput()).toHaveValue(wif);

@@ -8,7 +8,6 @@ import { useHistory } from "react-router-dom";
 import { FormStep } from "./FormStep";
 import { IpfsLedgerReview } from "./LedgerReview";
 import { ReviewStep } from "./ReviewStep";
-import { SummaryStep } from "./SummaryStep";
 import { Form } from "@/app/components/Form";
 import { Page, Section } from "@/app/components/Layout";
 import { StepNavigation } from "@/app/components/StepNavigation";
@@ -22,6 +21,8 @@ import { FeeWarning } from "@/domains/transaction/components/FeeWarning";
 import { useFeeConfirmation, useTransactionBuilder } from "@/domains/transaction/hooks";
 import { handleBroadcastError } from "@/domains/transaction/utils";
 import { assertWallet } from "@/utils/assertions";
+import { TransactionSuccessful } from "@/domains/transaction/components/TransactionSuccessful";
+import { useIpfsStubTransaction } from "@/domains/transaction/hooks/use-stub-transaction";
 
 enum Step {
 	FormStep = 1,
@@ -51,10 +52,12 @@ export const SendIpfs = () => {
 	const { clearErrors, formState, getValues, handleSubmit, register, setValue, watch } = form;
 	const { isDirty, isValid, isSubmitting } = formState;
 
-	const { fee, fees } = watch();
+	const { fee, fees, hash } = watch();
 
 	const abortReference = useRef(new AbortController());
 	const transactionBuilder = useTransactionBuilder();
+
+	const { ipfsStubTransaction } = useIpfsStubTransaction({ fee, hash, wallet: activeWallet });
 
 	useEffect(() => {
 		register("network", sendIpfs.network());
@@ -193,7 +196,9 @@ export const SendIpfs = () => {
 							</TabPanel>
 
 							<TabPanel tabId={Step.ReviewStep}>
-								<ReviewStep wallet={activeWallet} />
+								{ipfsStubTransaction && (
+									<ReviewStep wallet={activeWallet} transaction={ipfsStubTransaction} />
+								)}
 							</TabPanel>
 
 							<TabPanel tabId={Step.AuthenticationStep}>
@@ -206,7 +211,7 @@ export const SendIpfs = () => {
 							</TabPanel>
 
 							<TabPanel tabId={Step.SummaryStep}>
-								<SummaryStep transaction={transaction} senderWallet={activeWallet} />
+								<TransactionSuccessful transaction={transaction} senderWallet={activeWallet} />
 							</TabPanel>
 
 							<TabPanel tabId={Step.ErrorStep}>

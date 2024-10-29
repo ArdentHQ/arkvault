@@ -137,11 +137,14 @@ export const translations = {
 		},
 
 		LEDGER_SCAN_STEP: {
+			ACCOUNTS: "Accounts",
 			ADD_NEW_ADDRESS: "Add New Address",
 			LOADED_SINGLE_WALLET: "Loaded <strong>1</strong> Wallet",
 			LOADED_WALLETS: "Loaded <strong>{{count}}</strong> Wallets",
+			LOADING_WALLETS: "Loading <strong>{{count}}</strong> Wallets",
+			SHOW_ALL: "Show All ({{count}})",
 			SUBTITLE: "Select the addresses that you want to import.",
-			TITLE: "Accounts",
+			TITLE: "Addresses",
 		},
 
 		METHOD_STEP: {

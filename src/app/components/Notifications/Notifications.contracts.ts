@@ -24,11 +24,11 @@ export interface NotificationTransactionItemProperties {
 	containmentRef?: any;
 	onVisibilityChange?: (isVisible: boolean) => void;
 	onTransactionClick?: (item?: DTO.ExtendedConfirmedTransactionData) => void;
-	isCompact: boolean;
 }
 
 export interface NotificationsProperties {
 	profile: Contracts.IProfile;
 	onNotificationAction?: (id: string) => void;
+	hideDropdown?: () => void;
 	onTransactionClick?: (item?: DTO.ExtendedConfirmedTransactionData) => void;
 }

@@ -83,7 +83,7 @@ const TransactionRowAmount = ({
 	transaction,
 	exchangeCurrency,
 	exchangeTooltip,
-	isCompact,
+	isCompact = true,
 }: {
 	transaction: DTO.ExtendedConfirmedTransactionData;
 	exchangeCurrency?: string;

@@ -9,14 +9,14 @@ exports[`SelectAddress > should render disabled 1`] = `
     type="button"
   >
     <span
-      class="absolute inset-y-0 left-14 flex items-center border border-transparent right-13"
+      class="absolute inset-y-0 left-14 flex items-center border border-transparent right-13 left-14"
     >
       <div
         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
       />
     </span>
     <div
-      class="css-xk5t3v"
+      class="css-4lfin5"
       disabled=""
     >
       <div
@@ -27,7 +27,7 @@ exports[`SelectAddress > should render disabled 1`] = `
       >
         <input
           autocomplete="off"
-          class="no-ligatures w-full border-none text-theme-secondary-text css-1vs1awz"
+          class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base text-theme-secondary-text css-1937ogs"
           data-testid="SelectAddress__input"
           disabled=""
           readonly=""
@@ -92,14 +92,14 @@ exports[`SelectAddress > should render empty 1`] = `
     type="button"
   >
     <span
-      class="absolute inset-y-0 left-14 flex items-center border border-transparent right-13"
+      class="absolute inset-y-0 left-14 flex items-center border border-transparent right-13 left-14"
     >
       <div
         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
       />
     </span>
     <div
-      class="css-n1b0kl"
+      class="css-14zfvme"
     >
       <div
         class="border-theme-secondary-200 bg-theme-secondary-200 dark:border-theme-secondary-700 dark:bg-theme-secondary-700 ring-theme-background duration-100 css-cm9d5u"
@@ -109,7 +109,7 @@ exports[`SelectAddress > should render empty 1`] = `
       >
         <input
           autocomplete="off"
-          class="no-ligatures w-full border-none css-1vs1awz"
+          class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
           data-testid="SelectAddress__input"
           readonly=""
           type="text"
@@ -173,14 +173,14 @@ exports[`SelectAddress > should render invalid 1`] = `
     type="button"
   >
     <span
-      class="absolute inset-y-0 left-14 flex items-center border border-transparent right-13 right-24"
+      class="absolute inset-y-0 left-14 flex items-center border border-transparent right-13 left-14 right-24"
     >
       <div
         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
       />
     </span>
     <div
-      class="css-12mz4i6"
+      class="css-1njetft"
     >
       <div
         class="border-theme-secondary-200 bg-theme-secondary-200 dark:border-theme-secondary-700 dark:bg-theme-secondary-700 ring-theme-background duration-100 css-cm9d5u"
@@ -191,7 +191,7 @@ exports[`SelectAddress > should render invalid 1`] = `
         <input
           aria-invalid="true"
           autocomplete="off"
-          class="no-ligatures w-full border-none css-1vs1awz"
+          class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
           data-testid="SelectAddress__input"
           readonly=""
           type="text"
@@ -296,13 +296,13 @@ exports[`SelectAddress > should render with preselected address 1`] = `
     type="button"
   >
     <span
-      class="absolute inset-y-0 left-14 flex items-center border border-transparent right-13"
+      class="absolute inset-y-0 left-14 flex items-center border border-transparent right-13 left-14"
     >
       <div
         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
       >
         <span
-          class="font-semibold text-base text-theme-text"
+          class="font-semibold text-base text-sm sm:text-base"
           data-testid="Address__alias"
         >
           <span
@@ -313,7 +313,7 @@ exports[`SelectAddress > should render with preselected address 1`] = `
           </span>
         </span>
         <span
-          class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+          class="no-ligatures min-w-0 overflow-hidden text-sm sm:text-base text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
           data-testid="Address__address"
         >
           DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr
@@ -321,14 +321,14 @@ exports[`SelectAddress > should render with preselected address 1`] = `
       </div>
     </span>
     <div
-      class="css-n1b0kl"
+      class="css-14zfvme"
     >
       <div
         class="shrink-0 css-1p5jpah"
         data-testid="Avatar"
       >
         <div
-          class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+          class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
         >
           <img
             alt="DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr"
@@ -342,7 +342,7 @@ exports[`SelectAddress > should render with preselected address 1`] = `
       >
         <input
           autocomplete="off"
-          class="no-ligatures w-full border-none css-1vs1awz"
+          class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
           data-testid="SelectAddress__input"
           readonly=""
           type="text"
@@ -406,14 +406,14 @@ exports[`SelectAddress > should render without user icon 1`] = `
     type="button"
   >
     <span
-      class="absolute inset-y-0 left-14 flex items-center border border-transparent right-4"
+      class="absolute inset-y-0 left-14 flex items-center border border-transparent right-4 left-14"
     >
       <div
         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
       />
     </span>
     <div
-      class="css-n1b0kl"
+      class="css-14zfvme"
     >
       <div
         class="border-theme-secondary-200 bg-theme-secondary-200 dark:border-theme-secondary-700 dark:bg-theme-secondary-700 ring-theme-background duration-100 css-cm9d5u"
@@ -423,7 +423,7 @@ exports[`SelectAddress > should render without user icon 1`] = `
       >
         <input
           autocomplete="off"
-          class="no-ligatures w-full border-none css-1vs1awz"
+          class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
           data-testid="SelectAddress__input"
           readonly=""
           type="text"

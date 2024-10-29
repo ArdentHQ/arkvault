@@ -1,13 +1,16 @@
 import { Contracts, DTO } from "@ardenthq/sdk-profiles";
-import { renderHook } from "@testing-library/react-hooks";
+import { renderHook } from "@testing-library/react";
 
 import { useMultiSignatureStatus } from "./use-multisignature-status";
 import { env, getDefaultProfileId } from "@/utils/testing-library";
+import { BigNumber } from "@ardenthq/sdk-helpers";
 
 describe("Use MultiSignature Status Hook", () => {
 	let profile: Contracts.IProfile;
 	let wallet: Contracts.IReadWriteWallet;
 	let transaction: DTO.ExtendedSignedTransactionData;
+	let isConfirmedMock = vi.SpyInstance;
+	let transactionExistsMock = vi.SpyInstance;
 
 	beforeAll(async () => {
 		profile = env.profiles().findById(getDefaultProfileId());
@@ -35,6 +38,9 @@ describe("Use MultiSignature Status Hook", () => {
 				}),
 			wallet,
 		);
+
+		isConfirmedMock = vi.spyOn(transaction, "isConfirmed").mockReturnValue(false);
+		transactionExistsMock = vi.spyOn(wallet.transaction(), "transaction").mockReturnValue(transaction);
 	});
 
 	it("should await our signature", () => {
@@ -133,6 +139,50 @@ describe("Use MultiSignature Status Hook", () => {
 
 		expect(result.current.status.value).toBe("isMultiSignatureReady");
 
+		vi.clearAllMocks();
+	});
+
+	it("should return broadcasted status if transaction is confirmed", () => {
+		isConfirmedMock.mockRestore();
+		transactionExistsMock.mockRestore();
+
+		const { result } = renderHook(() => useMultiSignatureStatus({ transaction, wallet }));
+
+		expect(result.current.status.value).toBe("isBroadcasted");
+
+		vi.clearAllMocks();
+	});
+
+	it("should handle exception on canBeBroadcasted", () => {
+		vi.spyOn(wallet.transaction(), "canBeBroadcasted").mockImplementation(() => {
+			throw new Error("error");
+		});
+
+		const { result } = renderHook(() => useMultiSignatureStatus({ transaction, wallet }));
+
+		expect(result.current.status.value).toBe("isBroadcasted");
+		vi.clearAllMocks();
+	});
+
+	it("should return isBroadcasted if transaction is confirmed", () => {
+		vi.spyOn(transaction, "isConfirmed").mockReturnValue(true);
+
+		const { result } = renderHook(() => useMultiSignatureStatus({ transaction, wallet }));
+
+		expect(result.current.status.value).toBe("isBroadcasted");
+		vi.clearAllMocks();
+	});
+
+	it("should handle exception on hasBeenBroadcasted", () => {
+		vi.spyOn(transaction, "isConfirmed").mockReturnValue(false);
+		vi.spyOn(transaction, "confirmations").mockReturnValue(BigNumber.ZERO);
+		vi.spyOn(wallet.transaction(), "hasBeenBroadcasted").mockImplementation(() => {
+			throw new Error("error");
+		});
+
+		const { result } = renderHook(() => useMultiSignatureStatus({ transaction, wallet }));
+
+		expect(result.current.status.value).toBe("isBroadcasted");
 		vi.clearAllMocks();
 	});
 });

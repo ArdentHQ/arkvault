@@ -3,14 +3,14 @@
 exports[`ContactListMobile > should render 1`] = `
 <DocumentFragment>
   <div
-    class="mt-8"
+    class="mt-4 sm:mt-6"
     data-testid="ContactListMobile"
   >
     <div
       class="css-fvpuky"
     >
       <div
-        class="select-none cursor-pointer group md:h-20 py-6 px-8 md:p-4 flex flex-row items-center border-theme-secondary-300 dark:border-theme-secondary-800"
+        class="select-none cursor-pointer group md:h-20 md:p-4 flex flex-row items-center border-theme-secondary-300 dark:border-theme-secondary-800 px-6 py-4"
         data-testid="AccordionHeader"
       >
         <div
@@ -20,7 +20,7 @@ exports[`ContactListMobile > should render 1`] = `
             class="flex w-0 flex-grow items-center justify-between space-x-3"
           >
             <span
-              class="truncate text-lg font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
+              class="truncate font-semibold leading-[20px] text-theme-secondary-900 dark:text-theme-secondary-200"
             >
               Brian
             </span>
@@ -28,55 +28,48 @@ exports[`ContactListMobile > should render 1`] = `
               class="ml-5 flex items-center space-x-3"
             >
               <div
-                class="static sm:relative"
+                aria-expanded="false"
+                aria-haspopup="dialog"
+                data-testid="dropdown__toggle"
               >
-                <span
-                  data-testid="dropdown__toggle"
+                <button
+                  class="flex text-theme-secondary-700"
+                  type="button"
                 >
-                  <button
-                    class="flex text-theme-primary-300 dark:text-theme-secondary-500"
-                    type="button"
+                  <div
+                    class="css-1i4b0eq"
+                    height="20"
+                    width="20"
                   >
-                    <div
-                      class="css-v0ob3f"
-                      height="16"
-                      width="16"
+                    <svg
+                      fill="none"
+                      viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg"
                     >
-                      <svg
-                        id="ellipsis-vertical"
-                        viewBox="0 0 20 20"
-                        x="0"
-                        xml:space="preserve"
-                        xmlns="http://www.w3.org/2000/svg"
-                        y="0"
-                      >
-                        <g
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                        >
-                          <circle
-                            cx="10"
-                            cy="16.994"
-                            r="2.006"
-                          />
-                          <circle
-                            cx="10"
-                            cy="3"
-                            r="2"
-                          />
-                          <circle
-                            cx="10"
-                            cy="10"
-                            r="2"
-                          />
-                        </g>
-                      </svg>
-                    </div>
-                  </button>
-                </span>
+                      <circle
+                        cx="10.002"
+                        cy="2.99609"
+                        fill="currentColor"
+                        r="2"
+                        transform="rotate(90 10.002 2.99609)"
+                      />
+                      <circle
+                        cx="10.002"
+                        cy="9.99805"
+                        fill="currentColor"
+                        r="2"
+                        transform="rotate(90 10.002 9.99805)"
+                      />
+                      <circle
+                        cx="10.002"
+                        cy="17"
+                        fill="currentColor"
+                        r="2"
+                        transform="rotate(90 10.002 17)"
+                      />
+                    </svg>
+                  </div>
+                </button>
               </div>
               <div
                 class="border-theme-secondary-300 dark:border-theme-secondary-800 css-3y8nng"
@@ -86,10 +79,10 @@ exports[`ContactListMobile > should render 1`] = `
           </div>
         </div>
         <div
-          class="ml-4 flex flex-shrink-0 items-center self-stretch transition-all duration-100 css-qr226j-AccordionHeader"
+          class="ml-4 flex flex-shrink-0 items-center self-stretch transition-all duration-100 css-o6tyc"
         >
           <div
-            class="css-1j7gziz"
+            class="css-cp3doq"
             data-testid="Accordion__toggle"
           >
             <div

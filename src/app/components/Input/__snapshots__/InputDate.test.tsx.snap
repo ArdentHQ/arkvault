@@ -12,14 +12,14 @@ exports[`InputDate > should render 1`] = `
         class="react-datepicker__input-container"
       >
         <div
-          class="react-datepicker-ignore-onclickoutside css-n1b0kl"
+          class="react-datepicker-ignore-onclickoutside css-14zfvme"
         >
           <div
             class="relative flex h-full flex-1"
           >
             <input
               autocomplete="off"
-              class="no-ligatures w-full border-none css-1vs1awz"
+              class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
               data-testid="InputDate"
               type="text"
               value=""
@@ -81,7 +81,7 @@ exports[`InputDate > should render 1`] = `
       <div
         class="react-datepicker-popper"
         data-placement="bottom-start"
-        style="position: absolute; left: 0px; top: 0px; transform: translate(0px, 0px);"
+        style="position: absolute; left: 0px; top: 0px; transform: translate(0px, 10px);"
       >
         <div
           style="display: contents;"
@@ -589,7 +589,7 @@ exports[`InputDate > should render 1`] = `
           class="react-datepicker__triangle"
           fill="currentColor"
           height="16"
-          style="position: absolute; pointer-events: none; bottom: 100%; transform: rotate(180deg)translateY(-1px);"
+          style="position: absolute; pointer-events: none; bottom: 100%; transform: rotate(180deg) translateY(-1px); left: 0px;"
           viewBox="0 0 16 16"
           width="18"
         >

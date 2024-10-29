@@ -7,7 +7,8 @@ export const useBreakpoint = () => {
 	const isLg = useMediaQuery({ maxWidth: 1279, minWidth: 1024 });
 	const isXl = useMediaQuery({ minWidth: 1280 });
 
-	const isMdAndAbove = !isXs && !isSm;
+	const isSmAndAbove = !isXs;
+	const isMdAndAbove = isSmAndAbove && !isSm;
 	const isLgAndAbove = isMdAndAbove && !isMd;
 
 	return {
@@ -16,6 +17,7 @@ export const useBreakpoint = () => {
 		isMd,
 		isMdAndAbove,
 		isSm,
+		isSmAndAbove,
 		isXl,
 		isXs,
 	};

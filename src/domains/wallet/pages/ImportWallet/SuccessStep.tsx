@@ -6,11 +6,10 @@ import { Amount } from "@/app/components/Amount";
 import { Button } from "@/app/components/Button";
 import { Header } from "@/app/components/Header";
 import { Icon } from "@/app/components/Icon";
-import { WalletDetail } from "@/domains/wallet/components/WalletDetail";
-import { WalletDetailAddress } from "@/domains/wallet/components/WalletDetailAddress";
-import { WalletDetailNetwork } from "@/domains/wallet/components/WalletDetailNetwork";
 import { assertWallet } from "@/utils/assertions";
-import { useBreakpoint } from "@/app/hooks";
+import { Address } from "@/app/components/Address";
+import { Divider } from "@/app/components/Divider";
+import { DetailTitle, DetailWrapper } from "@/app/components/DetailWrapper";
 
 export const SuccessStep = ({
 	importedWallet,
@@ -22,7 +21,6 @@ export const SuccessStep = ({
 	assertWallet(importedWallet);
 
 	const { t } = useTranslation();
-	const { isXs } = useBreakpoint();
 
 	const network = importedWallet.network();
 
@@ -30,35 +28,71 @@ export const SuccessStep = ({
 		<section data-testid="ImportWallet__success-step">
 			<Header
 				title={t("WALLETS.PAGE_IMPORT_WALLET.SUCCESS_STEP.TITLE")}
+				titleIcon={
+					<Icon
+						className="text-theme-success-100 dark:text-theme-success-900"
+						dimensions={[24, 24]}
+						name="Completed"
+						data-testid="icon-Completed"
+					/>
+				}
 				subtitle={t("WALLETS.PAGE_IMPORT_WALLET.SUCCESS_STEP.SUBTITLE")}
 				className="hidden sm:block"
 			/>
 
-			<WalletDetailNetwork network={network} className="mt-2" border={false} />
+			<div className="mt-4 space-y-4">
+				<DetailWrapper label={t("COMMON.IMPORTED")}>
+					<div className="mb-3 flex w-full items-center justify-between leading-5 sm:mb-0 sm:justify-start">
+						<DetailTitle> {t("COMMON.ADDRESS")} </DetailTitle>
+						<Address
+							address={importedWallet.address()}
+							addressClass="leading-[17px] sm:leading-5"
+							wrapperClass="!w-max sm:!w-full"
+							showCopyButton
+						/>
+					</div>
 
-			<WalletDetailAddress address={importedWallet.address()} />
+					<div className="hidden h-8 w-full items-center sm:flex">
+						<Divider dashed />
+					</div>
 
-			<WalletDetail label={t("COMMON.BALANCE")}>
-				<Amount value={importedWallet.balance()} ticker={network.ticker()} />
-			</WalletDetail>
+					<div className="flex w-full items-center justify-between leading-[17px] sm:justify-start sm:leading-5">
+						<DetailTitle> {t("COMMON.BALANCE")}</DetailTitle>
+						<div className="font-semibold">
+							<Amount value={importedWallet.balance()} ticker={network.ticker()} />
+						</div>
+					</div>
+				</DetailWrapper>
 
-			<WalletDetail
-				label={t("WALLETS.WALLET_NAME")}
-				borderPosition={isXs ? "top" : "both"}
-				extra={
-					<Button
-						size="xs"
-						data-testid="ImportWallet__edit-alias"
-						type="button"
-						variant="secondary"
-						onClick={onClickEditAlias}
-					>
-						<Icon name="Pencil" />
-					</Button>
-				}
-			>
-				{importedWallet.alias()}
-			</WalletDetail>
+				<DetailWrapper label={t("WALLETS.WALLET_NAME")}>
+					<div className="flex w-full items-center justify-between sm:justify-start">
+						<DetailTitle> {t("COMMON.NAME")}</DetailTitle>
+						<div className="flex w-full min-w-0 items-center justify-end font-semibold leading-[17px] sm:justify-between sm:leading-5">
+							<div className="max-w-[calc(100%_-_80px)] flex-shrink-0 truncate sm:max-w-none">
+								{" "}
+								{importedWallet.alias()}{" "}
+							</div>
+
+							<div className="flex h-5 items-center sm:hidden">
+								<Divider type="vertical" size="md" />
+							</div>
+
+							<Button
+								size="xs"
+								data-testid="ImportWallet__edit-alias"
+								type="button"
+								variant="transparent"
+								className="text-theme-navy-600"
+								sizeClassName="py-0"
+								onClick={onClickEditAlias}
+							>
+								<Icon name="Pencil" />
+								<span className="leading-[17px] sm:leading-5">{t("COMMON.EDIT")}</span>
+							</Button>
+						</div>
+					</div>
+				</DetailWrapper>
+			</div>
 		</section>
 	);
 };

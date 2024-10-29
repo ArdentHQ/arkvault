@@ -18,11 +18,11 @@ export const FilterWallets = ({ networks, walletsDisplayType, onChange }: Filter
 
 	return (
 		<div className="flex flex-col text-left" data-testid="FilterWallets">
-			<div className="mb-5">
+			<div className="mb-6">
 				<div className="font-semibold text-theme-secondary-text">
 					{t("DASHBOARD.FILTER_WALLETS.CRYPTOASSET.TITLE")}
 				</div>
-				<div className="mt-1 text-sm text-theme-secondary-500">
+				<div className="mt-1 text-sm font-semibold text-theme-secondary-500">
 					{t("DASHBOARD.FILTER_WALLETS.CRYPTOASSET.DESCRIPTION")}
 				</div>
 			</div>
@@ -37,16 +37,21 @@ export const FilterWallets = ({ networks, walletsDisplayType, onChange }: Filter
 				}}
 			/>
 
-			<div className="mb-8 mt-6 border-t border-dotted border-theme-secondary-300 dark:border-theme-secondary-800" />
+			<div className="mb-6 mt-2 border-t border-dotted border-theme-secondary-300 dark:border-theme-secondary-800" />
 
 			<div className="flex flex-col">
 				<div className="flex items-center justify-between">
-					<div className="font-semibold text-theme-secondary-text">
-						{t("DASHBOARD.FILTER_WALLETS.WALLETS.TITLE")}
+					<div>
+						<div className="font-semibold text-theme-secondary-text">
+							{t("DASHBOARD.FILTER_WALLETS.WALLETS.TITLE")}
+						</div>
+
+						<div className="mt-2 pr-12 text-sm font-semibold text-theme-secondary-500">
+							{t("DASHBOARD.FILTER_WALLETS.WALLETS.DESCRIPTION")}
+						</div>
 					</div>
 
 					<Dropdown
-						dropdownClass="mx-4 sm:mx-0"
 						toggleIcon="ChevronDownSmall"
 						toggleSize="sm"
 						options={walletDisplayOptions}
@@ -67,10 +72,6 @@ export const FilterWallets = ({ networks, walletsDisplayType, onChange }: Filter
 							</div>
 						)}
 					/>
-				</div>
-
-				<div className="mt-1 pr-12 text-sm text-theme-secondary-500">
-					{t("DASHBOARD.FILTER_WALLETS.WALLETS.DESCRIPTION")}
 				</div>
 			</div>
 		</div>

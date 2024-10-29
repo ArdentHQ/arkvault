@@ -35,45 +35,43 @@ describe("Import Profile - Processing import", () => {
 	});
 
 	it("should not run import process if file is not provided", () => {
-		const { container } = render(<ProcessingImport env={env} />);
+		render(<ProcessingImport env={env} />);
 
-		expect(container).toMatchSnapshot();
+		expect(screen.queryByTestId("FilePreviewPlain")).not.toBeInTheDocument();
 	});
 
 	it("should successfully import wwe profile", async () => {
 		const onSuccess = vi.fn();
-		const { container } = render(<ProcessingImport env={env} file={wwe} onSuccess={onSuccess} />);
+		render(<ProcessingImport env={env} file={wwe} onSuccess={onSuccess} />);
 		await waitFor(() => expect(onSuccess).toHaveBeenCalledWith(expect.any(Profile)));
 
-		expect(container).toMatchSnapshot();
+		expect(screen.queryByTestId("FilePreviewPlain__Success")).not.toBeInTheDocument();
 	});
 
 	it("should successfully import json profile", async () => {
 		const onSuccess = vi.fn();
-		const { container } = render(<ProcessingImport env={env} file={json} onSuccess={onSuccess} />);
+		render(<ProcessingImport env={env} file={json} onSuccess={onSuccess} />);
 		await waitFor(() => expect(onSuccess).toHaveBeenCalledWith(expect.any(Profile)));
 
-		expect(container).toMatchSnapshot();
+		expect(screen.queryByTestId("FilePreviewPlain__Success")).not.toBeInTheDocument();
 	});
 
 	it("should require password for password-protected profile import", async () => {
 		const onPasswordChange = vi.fn();
 
-		const { container } = render(
-			<ProcessingImport env={env} file={passwordProtectedWwe} onPasswordChange={onPasswordChange} />,
-		);
+		render(<ProcessingImport env={env} file={passwordProtectedWwe} onPasswordChange={onPasswordChange} />);
 
 		await expect(screen.findByTestId("Modal__inner")).resolves.toBeVisible();
 
-		userEvent.type(screen.getByTestId("PasswordModal__input"), "S3cUrePa$sword");
+		await userEvent.type(screen.getByTestId("PasswordModal__input"), "S3cUrePa$sword");
 
 		await expect(screen.findByTestId(submitID)).resolves.toBeVisible();
 
-		userEvent.click(screen.getByTestId(submitID));
+		await userEvent.click(screen.getByTestId(submitID));
 
 		await waitFor(() => expect(onPasswordChange).toHaveBeenCalledWith("S3cUrePa$sword"));
 
-		expect(container).toMatchSnapshot();
+		expect(screen.queryByTestId("FilePreviewPlain__Success")).not.toBeInTheDocument();
 	});
 
 	it("should emit onBack when password modal is closed", async () => {
@@ -91,7 +89,7 @@ describe("Import Profile - Processing import", () => {
 
 		await expect(screen.findByTestId("Modal__inner")).resolves.toBeVisible();
 
-		userEvent.click(screen.getByTestId("Modal__close-button"));
+		await userEvent.click(screen.getByTestId("Modal__close-button"));
 
 		await waitFor(() => expect(onBack).toHaveBeenCalledWith());
 
@@ -113,17 +111,17 @@ describe("Import Profile - Processing import", () => {
 
 		await expect(screen.findByTestId("Modal__inner")).resolves.toBeVisible();
 
-		userEvent.paste(screen.getByTestId("PasswordModal__input"), "invalid");
+		await userEvent.type(screen.getByTestId("PasswordModal__input"), "invalid");
 
 		await expect(screen.findByTestId(submitID)).resolves.toBeVisible();
 
-		userEvent.click(screen.getByTestId(submitID));
+		await userEvent.click(screen.getByTestId(submitID));
 
 		await waitFor(() => expect(screen.queryByTestId("Modal__inner")).not.toBeInTheDocument());
 
-		await waitFor(() => expect(onPasswordChange).not.toHaveBeenCalledWith("testtest2"));
-
-		expect(container).toMatchSnapshot();
+		await waitFor(() => {
+			expect(container).toHaveTextContent(translations.IMPORT.PROCESSING_IMPORT_STEP.ERROR);
+		});
 	});
 
 	it("should show error if json import has an error", async () => {
@@ -132,8 +130,6 @@ describe("Import Profile - Processing import", () => {
 		await waitFor(() => {
 			expect(container).toHaveTextContent(translations.IMPORT.PROCESSING_IMPORT_STEP.ERROR);
 		});
-
-		expect(container).toMatchSnapshot();
 	});
 
 	it("should handle import error", async () => {
@@ -148,7 +144,5 @@ describe("Import Profile - Processing import", () => {
 		await waitFor(() => {
 			expect(container).toHaveTextContent(translations.IMPORT.PROCESSING_IMPORT_STEP.ERROR);
 		});
-
-		expect(container).toMatchSnapshot();
 	});
 });

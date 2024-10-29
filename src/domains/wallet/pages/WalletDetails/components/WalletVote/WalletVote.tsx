@@ -37,7 +37,7 @@ export const WalletVote = ({ wallet, onButtonClick, votes, isLoadingVotes }: Wal
 			{renderVotes()}
 
 			<Tooltip content={isLedgerWalletCompatible(wallet) ? "" : t("COMMON.LEDGER_COMPATIBILITY_ERROR")}>
-				<div>
+				<div className="w-full sm:w-auto sm:max-md:self-end">
 					<Button
 						data-testid="WalletVote__button"
 						disabled={

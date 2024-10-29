@@ -74,8 +74,7 @@ export const VotesHeader = ({
 					{!selectedAddress && (
 						<div data-testid="Votes__FilterWallets">
 							<Dropdown
-								position="right"
-								dropdownClass="mx-4 sm:mx-0"
+								placement="bottom-end"
 								toggleContent={
 									<ControlButton
 										className={cn({ "-mr-2.5 px-2.5": !isMdAndAbove })}
@@ -86,7 +85,7 @@ export const VotesHeader = ({
 									</ControlButton>
 								}
 							>
-								<div className="w-full px-10 py-7 sm:w-96 md:w-128">
+								<div className="w-full px-8 py-5 sm:w-96 md:w-128">
 									<FilterWallets {...filterProperties} />
 								</div>
 							</Dropdown>
@@ -98,12 +97,19 @@ export const VotesHeader = ({
 	};
 
 	const headerTitle = useMemo(() => {
-		if (!isMdAndAbove && isSelectDelegateStep) {
+		if (isSelectDelegateStep) {
 			return t("VOTE.DELEGATE_TABLE.TITLE");
 		}
 
 		return t("VOTE.VOTES_PAGE.TITLE");
 	}, [t, isMdAndAbove, isSelectDelegateStep]);
 
-	return <PageHeader title={headerTitle} subtitle={t("VOTE.VOTES_PAGE.SUBTITLE")} extra={headerExtra()} border />;
+	return (
+		<PageHeader
+			title={headerTitle}
+			subtitle={isSelectDelegateStep ? undefined : t("VOTE.VOTES_PAGE.SUBTITLE")}
+			extra={headerExtra()}
+			border
+		/>
+	);
 };

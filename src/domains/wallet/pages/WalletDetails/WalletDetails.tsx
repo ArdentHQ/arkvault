@@ -28,7 +28,7 @@ export const WalletDetails = () => {
 
 	const history = useHistory();
 	const { t } = useTranslation();
-	const { isXs, isMd } = useBreakpoint();
+	const { isXs } = useBreakpoint();
 
 	const { env } = useEnvironmentContext();
 	const activeProfile = useActiveProfile();
@@ -63,11 +63,6 @@ export const WalletDetails = () => {
 		await syncPending();
 		toasts.success(t("TRANSACTION.TRANSACTION_REMOVED"));
 	}, [syncPending, t]);
-
-	const useCompactTables = useMemo(
-		() => !activeProfile.appearance().get("useExpandedTables") || isMd,
-		[activeProfile, isMd],
-	);
 
 	const [mobileActiveTab, setMobileActiveTab] = useState<TabId>("transactions");
 
@@ -107,9 +102,10 @@ export const WalletDetails = () => {
 			<Page pageTitle={activeWallet.address()}>
 				{isXs && (
 					<Section
-						className={cn({
+						className={cn("first:pt-0 last:pb-6", {
 							"border-b border-transparent dark:border-theme-secondary-800": !networkAllowsVoting,
 						})}
+						innerClassName="p-0"
 						backgroundClassName="bg-theme-secondary-900"
 					>
 						<WalletHeaderMobile
@@ -122,7 +118,7 @@ export const WalletDetails = () => {
 
 				{!isXs && (
 					<Section
-						className={cn({
+						className={cn("!pb-8 first:pt-8 last:pb-8", {
 							"border-b border-transparent dark:border-theme-secondary-800": !networkAllowsVoting,
 						})}
 						backgroundClassName="bg-theme-secondary-900"
@@ -138,7 +134,7 @@ export const WalletDetails = () => {
 
 				<Tabs className="md:hidden" activeId={mobileActiveTab} onChange={setMobileActiveTab}>
 					<TabScroll>
-						<TabList className="h-15">
+						<TabList className="h-[52px]">
 							<Tab tabId="transactions">
 								<span className="whitespace-nowrap">{t("COMMON.TRANSACTION_HISTORY")}</span>
 							</Tab>
@@ -185,7 +181,7 @@ export const WalletDetails = () => {
 					</Section>
 				)}
 
-				<Section className="flex-1">
+				<Section className="flex-1 pt-6">
 					{hasPendingTransactions && (
 						<div
 							className={cn("md:mb-8", {
@@ -194,7 +190,6 @@ export const WalletDetails = () => {
 						>
 							<PendingTransactions
 								profile={activeProfile}
-								isCompact={useCompactTables}
 								pendingTransactions={pendingTransactions}
 								wallet={activeWallet}
 								onPendingTransactionClick={setTransactionModalItem}

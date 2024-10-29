@@ -1,16 +1,10 @@
-import cn from "classnames";
 import { Contracts } from "@ardenthq/sdk-profiles";
 import React, { FC, useCallback, useMemo } from "react";
 import { useTranslation } from "react-i18next";
 import { Column } from "react-table";
-import {
-	SearchWalletListItemProperties,
-	SearchWalletListItemResponsiveProperties,
-	SearchWalletProperties,
-} from "./SearchWallet.contracts";
+import { SearchWalletListItemProperties, SearchWalletProperties } from "./SearchWallet.contracts";
 import { Address } from "@/app/components/Address";
 import { Amount } from "@/app/components/Amount";
-import { Avatar } from "@/app/components/Avatar";
 import { Button } from "@/app/components/Button";
 import { EmptyResults } from "@/app/components/EmptyResults";
 import { HeaderSearchBar } from "@/app/components/Header/HeaderSearchBar";
@@ -18,16 +12,14 @@ import { Modal } from "@/app/components/Modal";
 import { Table, TableCell, TableRow } from "@/app/components/Table";
 import { useBreakpoint, useWalletAlias } from "@/app/hooks";
 import { useSearchWallet } from "@/app/hooks/use-search-wallet";
-import { NetworkIcon } from "@/domains/network/components/NetworkIcon";
 import { HeaderSearchInput } from "@/app/components/Header/HeaderSearchInput";
 import { isFullySynced } from "@/domains/wallet/utils/is-fully-synced";
-import {
-	Balance,
-	WalletListItemMobile,
-	WalletItemDetails,
-} from "@/app/components/WalletListItem/WalletListItem.blocks";
+import { Balance, ReceiverItemMobile } from "@/app/components/WalletListItem/WalletListItem.blocks";
 import { Tooltip } from "@/app/components/Tooltip";
 import { isLedgerWalletCompatible } from "@/utils/wallet-utils";
+import { TruncateMiddleDynamic } from "@/app/components/TruncateMiddleDynamic";
+import { TableWrapper } from "@/app/components/Table/TableWrapper";
+import cn from "classnames";
 
 const SearchWalletListItem = ({
 	index,
@@ -36,11 +28,8 @@ const SearchWalletListItem = ({
 	wallet,
 	exchangeCurrency,
 	showConvertedValue,
-	showNetwork,
 	onAction,
 	selectedAddress,
-	isCompact,
-	profile,
 }: SearchWalletListItemProperties) => {
 	const { t } = useTranslation();
 
@@ -49,10 +38,10 @@ const SearchWalletListItem = ({
 			return (
 				<Button
 					data-testid={`SearchWalletListItem__selected-${index}`}
-					size={isCompact ? "icon" : undefined}
-					variant={isCompact ? "transparent" : "reverse"}
+					size="icon"
+					variant="transparent"
 					onClick={() => onAction({ address: wallet.address(), name: alias, network: wallet.network() })}
-					className={cn("text-theme-primary-reverse-600", { "-mr-3": isCompact })}
+					className="-mr-3 text-sm leading-[17px] text-theme-primary-reverse-600"
 				>
 					{t("COMMON.SELECTED")}
 				</Button>
@@ -65,9 +54,9 @@ const SearchWalletListItem = ({
 					<Button
 						data-testid={`SearchWalletListItem__select-${index}`}
 						disabled={disabled || !isLedgerWalletCompatible(wallet)}
-						size={isCompact ? "icon" : undefined}
-						variant={isCompact ? "transparent" : "secondary"}
-						className={cn("text-theme-primary-600", { "-mr-3": isCompact })}
+						size="icon"
+						variant="transparent"
+						className="-mr-3 text-sm leading-[17px] text-theme-primary-600"
 						onClick={() => onAction({ address: wallet.address(), name: alias, network: wallet.network() })}
 					>
 						{t("COMMON.SELECT")}
@@ -78,96 +67,39 @@ const SearchWalletListItem = ({
 	};
 
 	return (
-		<TableRow>
-			<TableCell isCompact={isCompact} variant="start" innerClassName="space-x-4" className="w-full">
-				<SearchWalletAvatar wallet={wallet} isCompact={isCompact} showNetwork={showNetwork} profile={profile} />
-
-				{/* avatarShadowClassName="ring-theme-success-100 dark:ring-theme-secondary-900" */}
-				<Address walletName={alias} address={wallet.address()} truncateOnTable />
+		<TableRow className="relative">
+			<TableCell variant="start" innerClassName="space-x-4" className="w-full">
+				<Address
+					walletName={alias}
+					address={wallet.address()}
+					walletNameClass="text-sm leading-[17px]"
+					addressClass="leading-[17px] text-sm text-theme-secondary-500 dark:text-theme-secondary-700"
+				/>
 			</TableCell>
 
-			<TableCell isCompact={isCompact} innerClassName="font-semibold justify-end">
-				<Amount value={wallet.balance()} ticker={wallet.currency()} />
+			<TableCell innerClassName="font-semibold justify-end">
+				<Amount value={wallet.balance()} ticker={wallet.currency()} className="text-sm leading-[17px]" />
 			</TableCell>
 
 			{showConvertedValue && (
-				<TableCell
-					isCompact={isCompact}
-					innerClassName="text-theme-secondary-text justify-end"
-					className="hidden xl:table-cell"
-				>
-					<Amount value={wallet.convertedBalance()} ticker={exchangeCurrency} />
+				<TableCell innerClassName="text-theme-secondary-text justify-end" className="hidden xl:table-cell">
+					<Amount
+						value={wallet.convertedBalance()}
+						ticker={exchangeCurrency}
+						className="text-sm leading-[17px]"
+					/>
 				</TableCell>
 			)}
 
-			<TableCell isCompact={isCompact} variant="end" innerClassName="justify-end">
+			<TableCell variant="end" innerClassName="justify-end">
 				{renderButton()}
 			</TableCell>
 		</TableRow>
 	);
 };
 
-const SearchWalletAvatar = ({
-	wallet,
-	isCompact,
-	showNetwork,
-	avatarShadowClassName,
-	networkIconShadowClassName,
-	networkIconClassName,
-	profile,
-}: {
-	wallet: Contracts.IReadWriteWallet;
-	isCompact: boolean;
-	showNetwork?: boolean;
-	avatarShadowClassName?: string;
-	networkIconShadowClassName?: string;
-	networkIconClassName?: string;
-	profile: Contracts.IProfile;
-}) => {
-	const network = useMemo(
-		() => profile.availableNetworks().find((network) => network.id() === wallet?.networkId()),
-		[wallet, profile],
-	);
-
-	if (isCompact) {
-		return (
-			<div data-testid="SearchWalletAvatar--compact" className="flex shrink-0 space-x-3">
-				{showNetwork && (
-					<NetworkIcon
-						size="xs"
-						network={network}
-						className="border-transparent dark:border-transparent"
-						shadowClassName={networkIconShadowClassName}
-					/>
-				)}
-				<Avatar shadowClassName={avatarShadowClassName} size="xs" address={wallet.address()} />
-			</div>
-		);
-	}
-
-	return (
-		<div className="flex shrink-0 -space-x-1">
-			{showNetwork && (
-				<NetworkIcon
-					size="lg"
-					network={wallet.network()}
-					shadowClassName={networkIconShadowClassName}
-					className={networkIconClassName}
-				/>
-			)}
-			<Avatar shadowClassName={avatarShadowClassName} size="lg" address={wallet.address()} />
-		</div>
-	);
-};
-
-const SearchWalletListItemResponsive = ({
-	alias,
-	wallet,
-	onAction,
-	selectedAddress,
-	showNetwork,
-	profile,
-}: SearchWalletListItemResponsiveProperties) => {
+const SearchSenderWalletItemResponsive = ({ alias, wallet, onAction, selectedAddress }) => {
+	const { isSmAndAbove } = useBreakpoint();
 	const handleButtonClick = useCallback(
 		() => onAction({ address: wallet.address(), name: alias, network: wallet.network() }),
 		[alias, wallet],
@@ -178,32 +110,27 @@ const SearchWalletListItemResponsive = ({
 	const isSynced = isFullySynced(wallet);
 
 	return (
-		<tr data-testid="SearchWalletListItemResponsive--item">
+		<tr data-testid="SenderWalletItemResponsive--item">
 			<td className="pt-3">
-				<WalletListItemMobile
-					avatar={
-						<SearchWalletAvatar
-							wallet={wallet}
-							isCompact={false}
-							showNetwork={showNetwork}
-							avatarShadowClassName="ring-theme-success-100 dark:ring-theme-secondary-900"
-							networkIconClassName="text-theme-primary-300 dark:text-theme-secondary-800"
-							networkIconShadowClassName="ring-theme-success-100 dark:ring-theme-secondary-900"
-							profile={profile}
-						/>
-					}
-					details={<WalletItemDetails wallet={wallet} />}
+				<ReceiverItemMobile
 					balance={
 						<Balance
 							className="text-sm text-white"
 							wallet={wallet}
-							isCompact={false}
 							isSynced={isSynced}
 							isLargeScreen={false}
 						/>
 					}
 					selected={isSelected}
 					onClick={handleButtonClick}
+					address={
+						<TruncateMiddleDynamic
+							data-testid="SenderWalletItemResponsive__address"
+							value={wallet.address()}
+							availableWidth={isSmAndAbove ? undefined : 100}
+						/>
+					}
+					name={alias}
 				/>
 			</td>
 		</tr>
@@ -229,24 +156,22 @@ export const SearchWallet: FC<SearchWalletProperties> = ({
 
 	const { t } = useTranslation();
 
-	const { isXs, isSm, isLgAndAbove } = useBreakpoint();
+	const { isXs, isSm, isMdAndAbove } = useBreakpoint();
 
-	const isCompact = useMemo<boolean>(
-		() => !isLgAndAbove || !profile.appearance().get("useExpandedTables"),
-		[isLgAndAbove, profile],
-	);
 	const useResponsive = useMemo<boolean>(() => isXs || isSm, [isXs, isSm]);
 
 	const columns = useMemo<Column<Contracts.IReadWriteWallet>[]>(() => {
 		const commonColumns: Column<Contracts.IReadWriteWallet>[] = [
 			{
-				Header: t("COMMON.WALLET_ADDRESS"),
+				Header: t("COMMON.ADDRESS"),
 				accessor: (wallet: Contracts.IReadWriteWallet) => wallet.alias(),
+				headerClassName: "no-border",
 			},
 			{
 				Header: t("COMMON.BALANCE"),
 				accessor: (wallet: Contracts.IReadWriteWallet) => wallet.balance().toFixed(0),
 				className: "justify-end",
+				headerClassName: "no-border",
 			},
 		];
 
@@ -264,11 +189,12 @@ export const SearchWallet: FC<SearchWalletProperties> = ({
 					Header: (
 						<HeaderSearchBar
 							placeholder={searchPlaceholder}
-							offsetClassName="top-1/3 -translate-y-16 -translate-x-6"
+							offsetClassName="top-1/3 -translate-y-8 -translate-x-6"
 							onSearch={setSearchKeyword}
 							onReset={() => setSearchKeyword("")}
 							debounceTimeout={100}
 							noToggleBorder
+							alwaysDisplayClearButton
 						/>
 					),
 					accessor: "search",
@@ -284,16 +210,18 @@ export const SearchWallet: FC<SearchWalletProperties> = ({
 				Header: (
 					<HeaderSearchBar
 						placeholder={searchPlaceholder}
-						offsetClassName="top-1/3 -translate-y-16 -translate-x-6"
+						offsetClassName="top-1/3 -translate-y-8 -translate-x-6"
 						onSearch={setSearchKeyword}
 						onReset={() => setSearchKeyword("")}
 						debounceTimeout={100}
 						noToggleBorder
+						alwaysDisplayClearButton
 					/>
 				),
 				accessor: "search",
 				className: "justify-end",
 				disableSortBy: true,
+				headerClassName: "no-border",
 			},
 		] as Column<Contracts.IReadWriteWallet>[];
 	}, [searchPlaceholder, setSearchKeyword, showConvertedValue, t]);
@@ -319,13 +247,11 @@ export const SearchWallet: FC<SearchWalletProperties> = ({
 
 			if (useResponsive) {
 				return (
-					<SearchWalletListItemResponsive
+					<SearchSenderWalletItemResponsive
 						wallet={wallet}
 						alias={alias}
-						showNetwork={showNetwork}
 						onAction={onSelectWallet}
 						selectedAddress={selectedAddress}
-						profile={profile}
 					/>
 				);
 			}
@@ -344,26 +270,16 @@ export const SearchWallet: FC<SearchWalletProperties> = ({
 					showNetwork={showNetwork}
 					onAction={onSelectWallet}
 					selectedAddress={selectedAddress}
-					isCompact={isCompact}
 					profile={profile}
 				/>
 			);
 		},
-		[
-			profile,
-			disableAction,
-			showConvertedValue,
-			showNetwork,
-			onSelectWallet,
-			selectedAddress,
-			isCompact,
-			useResponsive,
-		],
+		[profile, disableAction, showConvertedValue, showNetwork, onSelectWallet, selectedAddress, useResponsive],
 	);
 
 	return (
 		<Modal title={title} description={description} isOpen={isOpen} size={size} onClose={onClose} noButtons>
-			<div className="mt-8">
+			<div className="mt-4">
 				{useResponsive && (
 					<HeaderSearchInput
 						placeholder={searchPlaceholder}
@@ -373,21 +289,24 @@ export const SearchWallet: FC<SearchWalletProperties> = ({
 					/>
 				)}
 
-				<Table
-					columns={columns}
-					data={filteredWallets as Contracts.IReadWriteWallet[]}
-					hideHeader={useResponsive}
-				>
-					{renderTableRow}
-				</Table>
+				<TableWrapper>
+					<Table
+						columns={columns}
+						data={filteredWallets as Contracts.IReadWriteWallet[]}
+						hideHeader={useResponsive}
+						className={cn({ "with-x-padding": isMdAndAbove })}
+					>
+						{renderTableRow}
+					</Table>
 
-				{isEmptyResults && (
-					<EmptyResults
-						className="mt-10"
-						title={t("COMMON.EMPTY_RESULTS.TITLE")}
-						subtitle={t("COMMON.EMPTY_RESULTS.SUBTITLE")}
-					/>
-				)}
+					{isEmptyResults && (
+						<EmptyResults
+							className="mt-10"
+							title={t("COMMON.EMPTY_RESULTS.TITLE")}
+							subtitle={t("COMMON.EMPTY_RESULTS.SUBTITLE")}
+						/>
+					)}
+				</TableWrapper>
 			</div>
 		</Modal>
 	);

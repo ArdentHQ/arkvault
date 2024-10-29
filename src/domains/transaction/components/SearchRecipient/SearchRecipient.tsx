@@ -1,4 +1,3 @@
-import cn from "classnames";
 import React, { FC, useCallback, useMemo } from "react";
 import { useTranslation } from "react-i18next";
 import { Column } from "react-table";
@@ -10,7 +9,6 @@ import {
 	SearchRecipientProperties,
 } from "./SearchRecipient.contracts";
 import { Address } from "@/app/components/Address";
-import { Avatar } from "@/app/components/Avatar";
 import { Button } from "@/app/components/Button";
 import { EmptyResults } from "@/app/components/EmptyResults";
 import { HeaderSearchBar } from "@/app/components/Header/HeaderSearchBar";
@@ -19,14 +17,15 @@ import { Table, TableCell, TableRow } from "@/app/components/Table";
 import { useSearchWallet } from "@/app/hooks/use-search-wallet";
 import { useBreakpoint } from "@/app/hooks";
 import { HeaderSearchInput } from "@/app/components/Header/HeaderSearchInput";
-import { WalletListItemMobile } from "@/app/components/WalletListItem/WalletListItem.blocks";
+import { RecipientItemMobile } from "@/app/components/WalletListItem/WalletListItem.blocks";
+import { TruncateMiddleDynamic } from "@/app/components/TruncateMiddleDynamic";
+import { TableWrapper } from "@/app/components/Table/TableWrapper";
 
 const SearchRecipientListItem: FC<SearchRecipientListItemProperties> = ({
 	index,
 	recipient,
 	onAction,
 	selectedAddress,
-	isCompact,
 }) => {
 	const { t } = useTranslation();
 
@@ -35,10 +34,10 @@ const SearchRecipientListItem: FC<SearchRecipientListItemProperties> = ({
 			return (
 				<Button
 					data-testid={`RecipientListItem__selected-button-${index}`}
-					size={isCompact ? "icon" : undefined}
-					variant={isCompact ? "transparent" : "reverse"}
+					size="icon"
+					variant="transparent"
 					onClick={() => onAction(recipient.address)}
-					className={cn("text-theme-primary-reverse-600", { "-mr-3": isCompact })}
+					className="-mr-3 text-sm font-semibold leading-[17px] text-theme-primary-reverse-600"
 				>
 					{t("COMMON.SELECTED")}
 				</Button>
@@ -48,10 +47,10 @@ const SearchRecipientListItem: FC<SearchRecipientListItemProperties> = ({
 		return (
 			<Button
 				data-testid={`RecipientListItem__select-button-${index}`}
-				size={isCompact ? "icon" : undefined}
-				variant={isCompact ? "transparent" : "secondary"}
+				size="icon"
+				variant="transparent"
 				onClick={() => onAction(recipient.address)}
-				className={cn("text-theme-primary-600", { "-mr-3": isCompact })}
+				className="-mr-3 text-sm font-semibold leading-[17px] text-theme-primary-600"
 			>
 				{t("COMMON.SELECT")}
 			</Button>
@@ -59,20 +58,27 @@ const SearchRecipientListItem: FC<SearchRecipientListItemProperties> = ({
 	};
 
 	return (
-		<TableRow key={recipient.id} border>
-			<TableCell isCompact={isCompact} variant="start" innerClassName="space-x-4">
-				<Avatar size={isCompact ? "xs" : "lg"} address={recipient.address} />
-
-				<Address walletName={recipient.alias} address={recipient.address} truncateOnTable />
+		<TableRow key={recipient.id} border className="relative">
+			<TableCell variant="start" innerClassName="space-x-4 pl-6">
+				<Address
+					walletName={recipient.alias}
+					address={recipient.address}
+					truncateOnTable
+					walletNameClass="text-sm text-theme-secondary-900 dark:text-theme-secondary-200 leading-[17px]"
+					addressClass="text-sm text-theme-secondary-700 dark:text-theme-secondary-500 leading-[17px] flex items-center h-5"
+				/>
 			</TableCell>
 
-			<TableCell isCompact={isCompact}>
-				<span data-testid="RecipientListItem__type" className="whitespace-nowrap">
+			<TableCell>
+				<span
+					data-testid="RecipientListItem__type"
+					className="whitespace-nowrap text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500"
+				>
 					{recipient.type === "wallet" ? t("COMMON.MY_WALLET") : t("COMMON.CONTACT")}
 				</span>
 			</TableCell>
 
-			<TableCell isCompact={isCompact} variant="end" innerClassName="justify-end">
+			<TableCell variant="end" innerClassName="justify-end">
 				{renderButton()}
 			</TableCell>
 		</TableRow>
@@ -86,7 +92,7 @@ const SearchRecipientListItemResponsive: FC<SearchRecipientListItemResponsivePro
 	selectedAddress,
 }) => {
 	const { t } = useTranslation();
-
+	const { isSmAndAbove } = useBreakpoint();
 	const handleClick = useCallback(() => onAction(recipient.address), [recipient]);
 
 	const isSelected = useMemo(() => selectedAddress === recipient.address, [selectedAddress, recipient]);
@@ -94,30 +100,17 @@ const SearchRecipientListItemResponsive: FC<SearchRecipientListItemResponsivePro
 	return (
 		<tr data-testid={`SearchRecipientListItemResponsive--item-${index}`}>
 			<td className="pt-3">
-				<WalletListItemMobile
-					avatar={
-						<Avatar
-							shadowClassName="ring-transparent dark:ring-transparent"
-							size="lg"
-							address={recipient.address}
+				<RecipientItemMobile
+					address={
+						<TruncateMiddleDynamic
+							data-testid="Address__address_condensed"
+							value={recipient.address}
+							availableWidth={isSmAndAbove ? undefined : 100}
+							className="text-xs font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
 						/>
 					}
-					details={
-						<Address
-							address={recipient.address}
-							addressClass="text-xs text-theme-secondary-500 dark:text-theme-secondary-700"
-							walletName={recipient.alias}
-							walletNameClass="text-sm text-theme-text"
-							wrapperClass="space-y-1"
-							maxNameChars={0}
-							orientation="vertical"
-						/>
-					}
-					extraDetails={
-						<span className="mt-0.5 text-sm font-semibold text-theme-secondary-500">
-							{recipient.type === "wallet" ? t("COMMON.MY_WALLET") : t("COMMON.CONTACT")}
-						</span>
-					}
+					type={recipient.type === "wallet" ? t("COMMON.MY_WALLET") : t("COMMON.CONTACT")}
+					name={recipient.alias || ""}
 					selected={isSelected}
 					onClick={handleClick}
 				/>
@@ -134,7 +127,6 @@ export const SearchRecipient: FC<SearchRecipientProperties> = ({
 	onAction,
 	recipients,
 	selectedAddress,
-	profile,
 }) => {
 	const {
 		setSearchKeyword,
@@ -147,32 +139,31 @@ export const SearchRecipient: FC<SearchRecipientProperties> = ({
 	const { t } = useTranslation();
 
 	const { isXs, isSm, isLgAndAbove } = useBreakpoint();
-	const isCompact = useMemo<boolean>(
-		() => !isLgAndAbove || !profile.appearance().get("useExpandedTables"),
-		[isLgAndAbove, profile],
-	);
+
 	const useResponsive = useMemo<boolean>(() => isXs || isSm, [isXs, isSm]);
 
 	const columns = useMemo<Column<RecipientProperties>[]>(
 		() => [
 			{
-				Header: t("COMMON.WALLET_ADDRESS"),
+				Header: t("COMMON.ADDRESS"),
 				accessor: "alias",
 			},
 			{
 				Header: t("COMMON.TYPE"),
 				accessor: "type",
+				headerClassName: "no-border",
 				minimumWidth: true,
 			},
 			{
 				Header: (
 					<HeaderSearchBar
 						placeholder={t("TRANSACTION.MODAL_SEARCH_RECIPIENT.SEARCH_PLACEHOLDER")}
-						offsetClassName="top-1/3 -translate-y-16 -translate-x-6"
+						offsetClassName="top-1/3 -translate-y-8 -translate-x-8"
 						onSearch={setSearchKeyword}
 						onReset={() => setSearchKeyword("")}
 						debounceTimeout={100}
 						noToggleBorder
+						alwaysDisplayClearButton
 					/>
 				),
 				accessor: "id",
@@ -204,11 +195,10 @@ export const SearchRecipient: FC<SearchRecipientProperties> = ({
 					selectedAddress={selectedAddress}
 					recipient={recipient}
 					onAction={onAction}
-					isCompact={isCompact}
 				/>
 			);
 		},
-		[selectedAddress, onAction, isCompact, useResponsive],
+		[selectedAddress, onAction, useResponsive],
 	);
 
 	return (
@@ -220,7 +210,7 @@ export const SearchRecipient: FC<SearchRecipientProperties> = ({
 			onClose={onClose}
 			noButtons
 		>
-			<div className="mt-8">
+			<div className="mt-4">
 				{useResponsive && (
 					<HeaderSearchInput
 						placeholder={t("TRANSACTION.MODAL_SEARCH_RECIPIENT.SEARCH_PLACEHOLDER")}
@@ -230,17 +220,23 @@ export const SearchRecipient: FC<SearchRecipientProperties> = ({
 					/>
 				)}
 
-				<Table columns={columns} data={filteredRecipients as RecipientProperties[]} hideHeader={useResponsive}>
-					{renderTableRow}
-				</Table>
+				<TableWrapper>
+					<Table
+						columns={columns}
+						data={filteredRecipients as RecipientProperties[]}
+						hideHeader={useResponsive}
+					>
+						{renderTableRow}
+					</Table>
 
-				{isEmptyResults && (
-					<EmptyResults
-						className="mt-10"
-						title={t("COMMON.EMPTY_RESULTS.TITLE")}
-						subtitle={t("COMMON.EMPTY_RESULTS.SUBTITLE")}
-					/>
-				)}
+					{isEmptyResults && (
+						<EmptyResults
+							className="mt-10 rounded-xl"
+							title={t("COMMON.EMPTY_RESULTS.TITLE")}
+							subtitle={t("COMMON.EMPTY_RESULTS.SUBTITLE")}
+						/>
+					)}
+				</TableWrapper>
 			</div>
 		</Modal>
 	);

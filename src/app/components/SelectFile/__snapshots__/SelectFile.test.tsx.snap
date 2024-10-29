@@ -3,55 +3,30 @@
 exports[`SelectFile > should render with json file format 1`] = `
 <div>
   <div
-    class="relative mt-6 h-52 rounded-lg border-2 border-dashed border-theme-secondary-300 p-2 dark:border-theme-secondary-800 sm:mt-8"
+    class="relative mt-4 h-52 rounded-xl border-2 border-dashed border-theme-secondary-300 p-1.5 dark:border-theme-secondary-800"
     data-testid="SelectFile"
   >
     <div
-      class="flex h-full flex-col items-center justify-center rounded-lg transition-colors duration-200 bg-theme-primary-50 dark:bg-theme-secondary-800"
+      class="flex h-full flex-col items-center justify-center rounded-lg transition-colors duration-200 bg-theme-primary-50 dark:bg-black"
       data-testid="SelectFile__drop-zone"
     >
       <div
         class="css-1atxdzc"
+        data-testid="icon-ExtensionJsonLight"
         height="40"
         width="40"
-      >
-        <svg
-          id="extension-json"
-          viewBox="0 0 40 40"
-          x="0"
-          xml:space="preserve"
-          xmlns="http://www.w3.org/2000/svg"
-          y="0"
-        >
-          <path
-            d="M15 29v8a2 2 0 0 1-2 2h-2m12-10h-2.002a1.999 1.999 0 0 0-1.997 2c0 3 3.995 3 3.995 6 0 1.105-.894 2-1.998 2H19m10-10c-1.104 0-1.999.899-2 2.009v6.021A2.005 2.005 0 0 0 29.039 39 2.005 2.005 0 0 0 31 37.03v-6.025A2.004 2.004 0 0 0 29 29zm6 10V29l4 10V29"
-            fill="none"
-            stroke="currentColor"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-          />
-          <path
-            d="M7.757 37H3.598C2.17 37 1 35.898 1 34.55V3.45C1 2.101 2.17 1 3.469 1h17.929c.78 0 1.298.245 1.818.735l10.004 9.428c.52.49.78 1.102.78 1.715v7.347"
-            fill="none"
-            stroke="#289548"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-          />
-        </svg>
-      </div>
+      />
       <div
-        class="mt-8"
+        class="mt-4"
       >
         <span
-          class="mr-px hidden font-semibold sm:inline"
+          class="mr-px hidden text-lg font-semibold leading-[21px] sm:inline"
         >
           Drag & Drop or
            
         </span>
         <button
-          class="link ring-focus relative cursor-pointer font-semibold focus:outline-none"
+          class="link ring-focus relative cursor-pointer text-lg font-semibold leading-[21px] focus:outline-none"
           data-ring-focus-margin="-m-1"
           data-testid="SelectFile__browse-files"
           title="Click here to upload"
@@ -73,64 +48,89 @@ exports[`SelectFile > should render with json file format 1`] = `
 exports[`SelectFile > should render with wwe file format 1`] = `
 <div>
   <div
-    class="relative mt-6 h-52 rounded-lg border-2 border-dashed border-theme-secondary-300 p-2 dark:border-theme-secondary-800 sm:mt-8"
+    class="relative mt-4 h-52 rounded-xl border-2 border-dashed border-theme-secondary-300 p-1.5 dark:border-theme-secondary-800"
     data-testid="SelectFile"
   >
     <div
-      class="flex h-full flex-col items-center justify-center rounded-lg transition-colors duration-200 bg-theme-primary-50 dark:bg-theme-secondary-800"
+      class="flex h-full flex-col items-center justify-center rounded-lg transition-colors duration-200 bg-theme-primary-50 dark:bg-black"
       data-testid="SelectFile__drop-zone"
     >
       <div
         class="css-1atxdzc"
+        data-testid="icon-ExtensionWweLight"
         height="40"
         width="40"
       >
         <svg
-          id="extension-wwe"
+          fill="none"
           viewBox="0 0 40 40"
-          x="0"
-          xml:space="preserve"
           xmlns="http://www.w3.org/2000/svg"
-          y="0"
         >
-          <path
-            d="M7.757 37H3.598C2.17 37 1 35.898 1 34.55V3.45C1 2.101 2.17 1 3.469 1h17.929c.78 0 1.298.245 1.818.735l10.004 9.428c.52.49.78 1.102.78 1.715v7.347"
-            fill="none"
-            stroke="#289548"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-          />
           <g
-            fill="none"
-            stroke="currentColor"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
+            id="WWE"
           >
-            <path
-              d="M22 29v3.396c0 2.35.696 4.648 2 6.604 1.31-1.978 2.004-3.664 2-6"
-            />
-            <path
-              d="M26 33c0 2.35.697 4.044 2 5.999 1.304-1.956 2-4.253 2-6.604V29m7 10h-2a2.002 2.002 0 0 1-2-2.001v-6A2 2 0 0 1 35 29h2m-4 6h4m-26-6v3.396c0 2.35.696 4.648 2 6.604 1.31-1.978 2.004-3.664 2-6"
-            />
-            <path
-              d="M15 33c0 2.35.697 4.044 2 5.999 1.304-1.956 2-4.254 2-6.604V29"
-            />
+            <g
+              id="Group"
+            >
+              <path
+                d="M7.58667 38.1133H6.53333C5.14 38.1133 4 36.9733 4 35.58V3.53333C4 2.14 5.14 1 6.40667 1H24.0133C24.7733 1 25.28 1.25333 25.7867 1.76L35.4133 11.3867C35.92 11.8933 36.1733 12.5267 36.1733 13.16V22.76"
+                id="Vector"
+                stroke="#235B95"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
+              <path
+                d="M30.0011 28V31.7513C30.0011 34.3236 29.2508 36.6815 27.8575 38.8251C26.4642 36.6815 25.7139 34.3236 25.7139 31.7513C25.7139 34.3236 24.9637 36.6815 23.5703 38.8251C22.177 36.6815 21.4268 34.3236 21.4268 31.7513V28"
+                id="Vector_2"
+                stroke="#212225"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
+              <path
+                d="M18.1554 28V31.7513C18.1554 34.3236 17.4051 36.6815 16.0118 38.8251C14.6185 36.6815 13.8682 34.3236 13.8682 31.7513C13.8682 34.3236 13.118 36.6815 11.7246 38.8251C10.3313 36.6815 9.58105 34.3236 9.58105 31.7513V28"
+                id="Vector_3"
+                stroke="#212225"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
+              <g
+                id="Group 2254"
+              >
+                <path
+                  d="M37.4172 38.9996H35.1256C33.86 38.9996 32.834 38.0147 32.834 36.7997V30.1999C32.834 28.9849 33.86 28 35.1256 28H37.4172"
+                  id="Shape"
+                  stroke="#212225"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                />
+                <path
+                  d="M32.834 34.4164H37.4172"
+                  id="Shape_2"
+                  stroke="#212225"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                />
+              </g>
+            </g>
           </g>
         </svg>
       </div>
       <div
-        class="mt-8"
+        class="mt-4"
       >
         <span
-          class="mr-px hidden font-semibold sm:inline"
+          class="mr-px hidden text-lg font-semibold leading-[21px] sm:inline"
         >
           Drag & Drop or
            
         </span>
         <button
-          class="link ring-focus relative cursor-pointer font-semibold focus:outline-none"
+          class="link ring-focus relative cursor-pointer text-lg font-semibold leading-[21px] focus:outline-none"
           data-ring-focus-margin="-m-1"
           data-testid="SelectFile__browse-files"
           title="Click here to upload"

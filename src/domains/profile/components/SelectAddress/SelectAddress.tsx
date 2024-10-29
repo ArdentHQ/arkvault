@@ -23,7 +23,9 @@ type SelectAddressProperties = {
 	title?: string;
 	description?: string;
 	showWalletName?: boolean;
+	showWalletAvatar?: boolean;
 	disableAction?: (wallet: Contracts.IReadWriteWallet) => boolean;
+	inputClassName?: string;
 	onChange?: (address: string) => void;
 } & Omit<React.InputHTMLAttributes<any>, "onChange">;
 
@@ -48,8 +50,10 @@ export const SelectAddress = React.forwardRef<HTMLInputElement, SelectAddressPro
 			profile,
 			disabled,
 			isInvalid,
+			showWalletAvatar = true,
 			showUserIcon = true,
 			showWalletName = true,
+			inputClassName,
 			onChange,
 			title,
 			description,
@@ -78,14 +82,38 @@ export const SelectAddress = React.forwardRef<HTMLInputElement, SelectAddressPro
 
 		const { getWalletAlias } = useWalletAlias();
 
-		const { alias } = useMemo(
-			() =>
-				getWalletAlias({
-					...selectedWallet,
-					profile,
-				}),
-			[getWalletAlias, profile, selectedWallet],
-		);
+		const alias = useMemo(() => {
+			if (!selectedWallet) {
+				return;
+			}
+
+			return getWalletAlias({
+				...selectedWallet,
+				profile,
+			}).alias;
+		}, [getWalletAlias, profile, selectedWallet]);
+
+		const inputAddons = () => {
+			const addons = {} as Record<string, any>;
+
+			if (showUserIcon) {
+				addons.end = {
+					content: (
+						<div className="flex items-center space-x-3 text-theme-primary-300 dark:text-theme-secondary-600">
+							<Icon name="User" size="lg" />
+						</div>
+					),
+				};
+			}
+
+			if (showWalletAvatar) {
+				addons.start = {
+					content: <WalletAvatar address={selectedWallet?.address} />,
+				};
+			}
+
+			return addons;
+		};
 
 		return (
 			<>
@@ -103,16 +131,23 @@ export const SelectAddress = React.forwardRef<HTMLInputElement, SelectAddressPro
 						className={cn(
 							"absolute inset-y-0 left-14 flex items-center border border-transparent",
 							showUserIcon ? "right-13" : "right-4",
+							showWalletAvatar ? "left-14" : "left-4",
 							{
 								"right-13": !showUserIcon && isInvalidField,
 								"right-24": showUserIcon && isInvalidField,
 							},
 						)}
 					>
-						<Address address={selectedWallet?.address} walletName={showWalletName ? alias : undefined} />
+						<Address
+							address={selectedWallet?.address}
+							walletName={showWalletName ? alias : undefined}
+							addressClass="text-sm sm:text-base text-theme-secondary-500 dark:text-theme-secondary-700"
+							walletNameClass="text-sm sm:text-base"
+						/>
 					</span>
 
 					<Input
+						className={inputClassName}
 						data-testid="SelectAddress__input"
 						ref={reference}
 						value={selectedWallet?.address || ""}
@@ -120,26 +155,7 @@ export const SelectAddress = React.forwardRef<HTMLInputElement, SelectAddressPro
 						readOnly
 						disabled={disabled}
 						isInvalid={isInvalidField}
-						addons={
-							showUserIcon
-								? {
-										end: {
-											content: (
-												<div className="flex items-center space-x-3 text-theme-primary-300 dark:text-theme-secondary-600">
-													<Icon name="User" size="lg" />
-												</div>
-											),
-										},
-										start: {
-											content: <WalletAvatar address={selectedWallet?.address} />,
-										},
-									}
-								: {
-										start: {
-											content: <WalletAvatar address={selectedWallet?.address} />,
-										},
-									}
-						}
+						addons={inputAddons()}
 					/>
 				</button>
 

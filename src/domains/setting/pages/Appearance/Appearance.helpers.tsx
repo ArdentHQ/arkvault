@@ -7,13 +7,12 @@ import { AppearanceAccentColor } from "./blocks/AppearanceAccentColor";
 import { AppearanceToggle } from "./blocks/AppearanceToggle";
 import { AppearanceViewingMode } from "./blocks/AppearanceViewingMode";
 import { ListDividedItemProperties } from "@/app/components/ListDivided/ListDivided.contracts";
-import { AccentColorType, ViewingModeType, useBreakpoint } from "@/app/hooks";
+import { AccentColorType, ViewingModeType } from "@/app/hooks";
 
 export const useAppearanceItems = (): ListDividedItemProperties[] => {
 	const { t } = useTranslation();
-	const { isXs, isSm } = useBreakpoint();
 
-	const options = [
+	return [
 		{
 			itemValueClass: "ml-5",
 			label: `${t("SETTINGS.APPEARANCE.OPTIONS.ACCENT_COLOR.TITLE")}`,
@@ -41,17 +40,6 @@ export const useAppearanceItems = (): ListDividedItemProperties[] => {
 			wrapperClass: "pt-6 sm:pb-6",
 		},
 	];
-
-	if (!isXs && !isSm) {
-		options.push({
-			label: t("SETTINGS.APPEARANCE.OPTIONS.EXPANDED_TABLES.TITLE"),
-			labelAddon: <AppearanceToggle name="useExpandedTables" />,
-			labelDescription: t("SETTINGS.APPEARANCE.OPTIONS.EXPANDED_TABLES.DESCRIPTION"),
-			wrapperClass: "pt-6 sm:pb-6",
-		});
-	}
-
-	return options;
 };
 
 export const useAppearanceSettings = (profile: Contracts.IProfile): UseAppearanceSettings => ({
@@ -66,7 +54,6 @@ export const useAppearanceSettings = (profile: Contracts.IProfile): UseAppearanc
 			return accentColor as AccentColorType;
 		})(),
 		dashboardTransactionHistory: profile.appearance().get("dashboardTransactionHistory"),
-		useExpandedTables: profile.appearance().get("useExpandedTables"),
 		useNetworkWalletNames: profile.appearance().get("useNetworkWalletNames"),
 		viewingMode: profile.appearance().get("theme") as ViewingModeType,
 	}),
@@ -75,7 +62,6 @@ export const useAppearanceSettings = (profile: Contracts.IProfile): UseAppearanc
 		profile
 			.settings()
 			.set(Contracts.ProfileSetting.DashboardTransactionHistory, values.dashboardTransactionHistory);
-		profile.settings().set(Contracts.ProfileSetting.UseExpandedTables, values.useExpandedTables);
 		profile.settings().set(Contracts.ProfileSetting.Theme, values.viewingMode);
 		profile.settings().set(Contracts.ProfileSetting.UseNetworkWalletNames, values.useNetworkWalletNames);
 	},

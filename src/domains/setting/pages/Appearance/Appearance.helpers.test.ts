@@ -1,5 +1,5 @@
 import { Contracts } from "@ardenthq/sdk-profiles";
-import { renderHook } from "@testing-library/react-hooks";
+import { renderHook } from "@testing-library/react";
 
 import { AppearanceSettingsState } from "./Appearance.contracts";
 import { useAppearanceItems, useAppearanceSettings } from "./Appearance.helpers";
@@ -11,13 +11,12 @@ describe("Appearance.helpers", () => {
 		it("should return items to render in the form", () => {
 			const { result } = renderHook(() => useAppearanceItems());
 
-			expect(result.current).toHaveLength(5);
+			expect(result.current).toHaveLength(4);
 
 			expect(result.current[0].label).toBe(translations.APPEARANCE.OPTIONS.ACCENT_COLOR.TITLE);
 			expect(result.current[1].label).toBe(translations.APPEARANCE.OPTIONS.VIEWING_MODE.TITLE);
 			expect(result.current[2].label).toBe(translations.APPEARANCE.OPTIONS.LATEST_TRANSACTIONS.TITLE);
 			expect(result.current[3].label).toBe(translations.APPEARANCE.OPTIONS.WALLET_NAMING.TITLE);
-			expect(result.current[4].label).toBe(translations.APPEARANCE.OPTIONS.EXPANDED_TABLES.TITLE);
 		});
 	});
 
@@ -33,7 +32,6 @@ describe("Appearance.helpers", () => {
 			const testValues: AppearanceSettingsState = {
 				accentColor: "green",
 				dashboardTransactionHistory: false,
-				useExpandedTables: false,
 				useNetworkWalletNames: false,
 				viewingMode: "light",
 			};

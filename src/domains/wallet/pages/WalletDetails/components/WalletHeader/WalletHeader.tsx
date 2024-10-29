@@ -28,7 +28,7 @@ export const WalletHeader: React.VFC<WalletHeaderProperties> = ({
 
 				<div className="my-6 self-stretch border-t border-theme-secondary-800 lg:my-0 lg:border-r" />
 
-				<div className="h-13 flex w-full items-center lg:w-1/2 lg:pl-12">
+				<div className="h-13 flex w-full items-center lg:w-full lg:pl-6">
 					<WalletBalance profile={profile} wallet={wallet} currencyDelta={currencyDelta} />
 
 					<WalletActions
@@ -41,6 +41,7 @@ export const WalletHeader: React.VFC<WalletHeaderProperties> = ({
 
 					<div data-testid="WalletHeader__more-button" className="my-auto ml-3">
 						<Dropdown
+							placement="bottom-end"
 							toggleContent={
 								<Button
 									variant="transparent"

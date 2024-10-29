@@ -14,10 +14,8 @@ const preSteps = {
 		await visitWelcomeScreen(t);
 	},
 	"And she clicks create": async (t: TestController) => {
-		await t
-			.expect(Selector('[data-testid="Card"]').withExactText(translations.COMMON.CREATE).exists)
-			.ok({ timeout: 60_000 });
-		await t.click(Selector('[data-testid="Card"]').withExactText(translations.COMMON.CREATE));
+		await t.expect(Selector('[data-testid="CreateProfile"]').exists).ok({ timeout: 60_000 });
+		await t.click(Selector('[data-testid="CreateProfile"]'));
 		await t.expect(getLocation()).contains("/profiles/create");
 	},
 };
@@ -34,8 +32,8 @@ const formStep = {
 const welcomeScreenStep = {
 	"Then she will see the welcome screen": async (t: TestController) => {
 		await t.expect(getLocation()).notContains("/profiles/create");
-		await t.expect(Selector("button").withText("John Doe").exists).ok();
-		await t.expect(Selector("button").withText("Anne Doe").exists).ok();
+		await t.expect(Selector("span").withText("John Doe").exists).ok();
+		await t.expect(Selector("span").withText("Anne Doe").exists).ok();
 	},
 };
 

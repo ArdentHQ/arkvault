@@ -9,36 +9,27 @@ describe("TableRemoveButton", () => {
 		const { container } = render(<TableRemoveButton onClick={vi.fn()} />);
 
 		// eslint-disable-next-line testing-library/no-node-access
-		expect(screen.getByTestId("TableRemoveButton").querySelector("svg#trash")).toBeInTheDocument();
-
-		expect(container).toMatchSnapshot();
-	});
-
-	it("should render compact", () => {
-		const { container } = render(<TableRemoveButton onClick={vi.fn()} isCompact />);
-
-		// eslint-disable-next-line testing-library/no-node-access
 		expect(screen.getByTestId("TableRemoveButton--compact").querySelector("svg#trash")).toBeInTheDocument();
 
 		expect(container).toMatchSnapshot();
 	});
 
-	it("should execute onClick callback", () => {
+	it("should execute onClick callback", async () => {
 		const onClick = vi.fn();
 
 		render(<TableRemoveButton onClick={onClick} />);
 
-		userEvent.click(screen.getByTestId("TableRemoveButton"));
+		await userEvent.click(screen.getByTestId("TableRemoveButton--compact"));
 
 		expect(onClick).toHaveBeenCalledWith(expect.objectContaining({ nativeEvent: expect.any(MouseEvent) }));
 	});
 
-	it("should not execute onClick callback if disabled", () => {
+	it("should not execute onClick callback if disabled", async () => {
 		const onClick = vi.fn();
 
 		render(<TableRemoveButton onClick={onClick} isDisabled />);
 
-		userEvent.click(screen.getByTestId("TableRemoveButton"));
+		await userEvent.click(screen.getByTestId("TableRemoveButton--compact"));
 
 		expect(onClick).not.toHaveBeenCalled();
 	});

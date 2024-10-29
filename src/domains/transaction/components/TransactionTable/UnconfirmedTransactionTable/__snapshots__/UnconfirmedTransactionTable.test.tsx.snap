@@ -7,20 +7,19 @@ exports[`Unconfirmed transaction table > should not render in lg 1`] = `
     data-testid="TransactionTable"
   >
     <div
-      class="-mt-3 css-1m6rt2i"
+      class="css-1m6rt2i"
       role="table"
     >
       <table
         cellpadding="0"
-        class="table-auto"
+        class="w-full table-auto"
       >
         <thead>
           <tr
-            class="border-b border-theme-secondary-300 dark:border-theme-secondary-800"
             role="row"
           >
             <th
-              class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold"
+              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
               colspan="1"
               data-testid="table__th--0"
               role="columnheader"
@@ -66,7 +65,7 @@ exports[`Unconfirmed transaction table > should not render in lg 1`] = `
               </div>
             </th>
             <th
-              class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold w-96 min-w-96"
+              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl w-96 min-w-96"
               colspan="1"
               data-testid="table__th--1"
               role="columnheader"
@@ -82,7 +81,7 @@ exports[`Unconfirmed transaction table > should not render in lg 1`] = `
               </div>
             </th>
             <th
-              class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold"
+              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
               colspan="1"
               data-testid="table__th--2"
               role="columnheader"
@@ -133,12 +132,12 @@ exports[`Unconfirmed transaction table > should not render in lg 1`] = `
           role="rowgroup"
         >
           <tr
-            class=" css-16ynu5g"
+            class=" css-1x4z4cy"
             data-testid="TableRow"
           >
             <td>
               <div
-                class="space-x-3 text-theme-secondary-500 whitespace-nowrap css-hhd44j"
+                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l space-x-3 text-theme-secondary-500 whitespace-nowrap"
               >
                 <span
                   data-testid="TimeAgo"
@@ -149,14 +148,14 @@ exports[`Unconfirmed transaction table > should not render in lg 1`] = `
             </td>
             <td>
               <div
-                class="space-x-4 css-12appi5"
+                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
               >
                 <div
                   class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-1i0wxh3"
                   data-testid="Avatar"
                 >
                   <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                   >
                     <img
                       alt="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
@@ -194,17 +193,18 @@ exports[`Unconfirmed transaction table > should not render in lg 1`] = `
             </td>
             <td>
               <div
-                class="justify-end css-yf8cy4"
+                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
               >
                 <div
-                  class="css-41vn9a"
-                  color="danger"
+                  class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
+                  color="danger-bg"
+                  data-testid="AmountLabel__wrapper"
                 >
                   <div
-                    class="flex space-x-1 items-center"
+                    class="flex h-full items-center space-x-1"
                   >
                     <span
-                      class="whitespace-nowrap"
+                      class="whitespace-nowrap text-sm"
                       data-testid="Amount"
                     >
                       - 1 DARK
@@ -215,12 +215,12 @@ exports[`Unconfirmed transaction table > should not render in lg 1`] = `
             </td>
           </tr>
           <tr
-            class=" css-16ynu5g"
+            class=" css-1x4z4cy"
             data-testid="TableRow"
           >
             <td>
               <div
-                class="space-x-3 text-theme-secondary-500 whitespace-nowrap css-hhd44j"
+                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l space-x-3 text-theme-secondary-500 whitespace-nowrap"
               >
                 <span
                   data-testid="TimeAgo"
@@ -231,7 +231,7 @@ exports[`Unconfirmed transaction table > should not render in lg 1`] = `
             </td>
             <td>
               <div
-                class="space-x-4 css-12appi5"
+                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
               >
                 <span
                   class="flex h-5 w-5 items-center justify-center text-theme-text dark:text-theme-secondary-600"
@@ -309,17 +309,18 @@ exports[`Unconfirmed transaction table > should not render in lg 1`] = `
             </td>
             <td>
               <div
-                class="justify-end css-yf8cy4"
+                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
               >
                 <div
-                  class="css-41vn9a"
-                  color="danger"
+                  class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
+                  color="danger-bg"
+                  data-testid="AmountLabel__wrapper"
                 >
                   <div
-                    class="flex space-x-1 items-center"
+                    class="flex h-full items-center space-x-1"
                   >
                     <span
-                      class="whitespace-nowrap"
+                      class="whitespace-nowrap text-sm"
                       data-testid="Amount"
                     >
                       - 1 DARK
@@ -343,20 +344,19 @@ exports[`Unconfirmed transaction table > should not render in md 1`] = `
     data-testid="TransactionTable"
   >
     <div
-      class="-mt-3 css-1m6rt2i"
+      class="css-1m6rt2i"
       role="table"
     >
       <table
         cellpadding="0"
-        class="table-auto"
+        class="w-full table-auto"
       >
         <thead>
           <tr
-            class="border-b border-theme-secondary-300 dark:border-theme-secondary-800"
             role="row"
           >
             <th
-              class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold"
+              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
               colspan="1"
               data-testid="table__th--0"
               role="columnheader"
@@ -402,7 +402,7 @@ exports[`Unconfirmed transaction table > should not render in md 1`] = `
               </div>
             </th>
             <th
-              class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold w-96 min-w-96"
+              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl w-96 min-w-96"
               colspan="1"
               data-testid="table__th--1"
               role="columnheader"
@@ -418,7 +418,7 @@ exports[`Unconfirmed transaction table > should not render in md 1`] = `
               </div>
             </th>
             <th
-              class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold"
+              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
               colspan="1"
               data-testid="table__th--2"
               role="columnheader"
@@ -469,12 +469,12 @@ exports[`Unconfirmed transaction table > should not render in md 1`] = `
           role="rowgroup"
         >
           <tr
-            class=" css-16ynu5g"
+            class=" css-1x4z4cy"
             data-testid="TableRow"
           >
             <td>
               <div
-                class="space-x-3 text-theme-secondary-500 whitespace-nowrap css-hhd44j"
+                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l space-x-3 text-theme-secondary-500 whitespace-nowrap"
               >
                 <span
                   data-testid="TimeAgo"
@@ -485,14 +485,14 @@ exports[`Unconfirmed transaction table > should not render in md 1`] = `
             </td>
             <td>
               <div
-                class="space-x-4 css-12appi5"
+                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
               >
                 <div
                   class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-1i0wxh3"
                   data-testid="Avatar"
                 >
                   <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                   >
                     <img
                       alt="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
@@ -530,17 +530,18 @@ exports[`Unconfirmed transaction table > should not render in md 1`] = `
             </td>
             <td>
               <div
-                class="justify-end css-yf8cy4"
+                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
               >
                 <div
-                  class="css-41vn9a"
-                  color="danger"
+                  class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
+                  color="danger-bg"
+                  data-testid="AmountLabel__wrapper"
                 >
                   <div
-                    class="flex space-x-1 items-center"
+                    class="flex h-full items-center space-x-1"
                   >
                     <span
-                      class="whitespace-nowrap"
+                      class="whitespace-nowrap text-sm"
                       data-testid="Amount"
                     >
                       - 1 DARK
@@ -551,12 +552,12 @@ exports[`Unconfirmed transaction table > should not render in md 1`] = `
             </td>
           </tr>
           <tr
-            class=" css-16ynu5g"
+            class=" css-1x4z4cy"
             data-testid="TableRow"
           >
             <td>
               <div
-                class="space-x-3 text-theme-secondary-500 whitespace-nowrap css-hhd44j"
+                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l space-x-3 text-theme-secondary-500 whitespace-nowrap"
               >
                 <span
                   data-testid="TimeAgo"
@@ -567,7 +568,7 @@ exports[`Unconfirmed transaction table > should not render in md 1`] = `
             </td>
             <td>
               <div
-                class="space-x-4 css-12appi5"
+                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
               >
                 <span
                   class="flex h-5 w-5 items-center justify-center text-theme-text dark:text-theme-secondary-600"
@@ -645,17 +646,18 @@ exports[`Unconfirmed transaction table > should not render in md 1`] = `
             </td>
             <td>
               <div
-                class="justify-end css-yf8cy4"
+                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
               >
                 <div
-                  class="css-41vn9a"
-                  color="danger"
+                  class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
+                  color="danger-bg"
+                  data-testid="AmountLabel__wrapper"
                 >
                   <div
-                    class="flex space-x-1 items-center"
+                    class="flex h-full items-center space-x-1"
                   >
                     <span
-                      class="whitespace-nowrap"
+                      class="whitespace-nowrap text-sm"
                       data-testid="Amount"
                     >
                       - 1 DARK
@@ -679,18 +681,18 @@ exports[`Unconfirmed transaction table > should not render in sm 1`] = `
     data-testid="TransactionTable"
   >
     <div
-      class=" css-1m6rt2i"
+      class="css-1m6rt2i"
       role="table"
     >
       <table
         cellpadding="0"
-        class="table-auto"
+        class="w-full table-auto"
       >
         <tbody
           role="rowgroup"
         >
           <tr
-            class=" css-16ynu5g"
+            class=" css-1x4z4cy"
             data-testid="TableRow"
           >
             <td
@@ -713,7 +715,7 @@ exports[`Unconfirmed transaction table > should not render in sm 1`] = `
                     data-testid="Avatar"
                   >
                     <div
-                      class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                      class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                     >
                       <img
                         alt="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
@@ -776,14 +778,15 @@ exports[`Unconfirmed transaction table > should not render in sm 1`] = `
                   Amount
                 </div>
                 <div
-                  class="css-148b4hi"
-                  color="danger"
+                  class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
+                  color="danger-bg"
+                  data-testid="AmountLabel__wrapper"
                 >
                   <div
-                    class="flex space-x-1 items-stretch"
+                    class="flex h-full items-center space-x-1"
                   >
                     <span
-                      class="whitespace-nowrap"
+                      class="whitespace-nowrap text-sm"
                       data-testid="Amount"
                     >
                       - 1 DARK
@@ -794,7 +797,7 @@ exports[`Unconfirmed transaction table > should not render in sm 1`] = `
             </td>
           </tr>
           <tr
-            class=" css-16ynu5g"
+            class=" css-1x4z4cy"
             data-testid="TableRow"
           >
             <td
@@ -913,14 +916,15 @@ exports[`Unconfirmed transaction table > should not render in sm 1`] = `
                   Amount
                 </div>
                 <div
-                  class="css-148b4hi"
-                  color="danger"
+                  class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
+                  color="danger-bg"
+                  data-testid="AmountLabel__wrapper"
                 >
                   <div
-                    class="flex space-x-1 items-stretch"
+                    class="flex h-full items-center space-x-1"
                   >
                     <span
-                      class="whitespace-nowrap"
+                      class="whitespace-nowrap text-sm"
                       data-testid="Amount"
                     >
                       - 1 DARK
@@ -944,20 +948,19 @@ exports[`Unconfirmed transaction table > should not render in xl 1`] = `
     data-testid="TransactionTable"
   >
     <div
-      class="-mt-3 css-1m6rt2i"
+      class="css-1m6rt2i"
       role="table"
     >
       <table
         cellpadding="0"
-        class="table-auto"
+        class="w-full table-auto"
       >
         <thead>
           <tr
-            class="border-b border-theme-secondary-300 dark:border-theme-secondary-800"
             role="row"
           >
             <th
-              class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold"
+              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
               colspan="1"
               data-testid="table__th--0"
               role="columnheader"
@@ -1003,7 +1006,7 @@ exports[`Unconfirmed transaction table > should not render in xl 1`] = `
               </div>
             </th>
             <th
-              class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold w-96 min-w-96"
+              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl w-96 min-w-96"
               colspan="1"
               data-testid="table__th--1"
               role="columnheader"
@@ -1019,7 +1022,7 @@ exports[`Unconfirmed transaction table > should not render in xl 1`] = `
               </div>
             </th>
             <th
-              class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold"
+              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
               colspan="1"
               data-testid="table__th--2"
               role="columnheader"
@@ -1070,12 +1073,12 @@ exports[`Unconfirmed transaction table > should not render in xl 1`] = `
           role="rowgroup"
         >
           <tr
-            class=" css-16ynu5g"
+            class=" css-1x4z4cy"
             data-testid="TableRow"
           >
             <td>
               <div
-                class="space-x-3 text-theme-secondary-500 whitespace-nowrap css-hhd44j"
+                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l space-x-3 text-theme-secondary-500 whitespace-nowrap"
               >
                 <span
                   data-testid="TimeAgo"
@@ -1086,14 +1089,14 @@ exports[`Unconfirmed transaction table > should not render in xl 1`] = `
             </td>
             <td>
               <div
-                class="space-x-4 css-12appi5"
+                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
               >
                 <div
                   class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-1i0wxh3"
                   data-testid="Avatar"
                 >
                   <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                   >
                     <img
                       alt="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
@@ -1131,17 +1134,18 @@ exports[`Unconfirmed transaction table > should not render in xl 1`] = `
             </td>
             <td>
               <div
-                class="justify-end css-yf8cy4"
+                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
               >
                 <div
-                  class="css-41vn9a"
-                  color="danger"
+                  class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
+                  color="danger-bg"
+                  data-testid="AmountLabel__wrapper"
                 >
                   <div
-                    class="flex space-x-1 items-center"
+                    class="flex h-full items-center space-x-1"
                   >
                     <span
-                      class="whitespace-nowrap"
+                      class="whitespace-nowrap text-sm"
                       data-testid="Amount"
                     >
                       - 1 DARK
@@ -1152,12 +1156,12 @@ exports[`Unconfirmed transaction table > should not render in xl 1`] = `
             </td>
           </tr>
           <tr
-            class=" css-16ynu5g"
+            class=" css-1x4z4cy"
             data-testid="TableRow"
           >
             <td>
               <div
-                class="space-x-3 text-theme-secondary-500 whitespace-nowrap css-hhd44j"
+                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l space-x-3 text-theme-secondary-500 whitespace-nowrap"
               >
                 <span
                   data-testid="TimeAgo"
@@ -1168,7 +1172,7 @@ exports[`Unconfirmed transaction table > should not render in xl 1`] = `
             </td>
             <td>
               <div
-                class="space-x-4 css-12appi5"
+                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
               >
                 <span
                   class="flex h-5 w-5 items-center justify-center text-theme-text dark:text-theme-secondary-600"
@@ -1246,17 +1250,18 @@ exports[`Unconfirmed transaction table > should not render in xl 1`] = `
             </td>
             <td>
               <div
-                class="justify-end css-yf8cy4"
+                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
               >
                 <div
-                  class="css-41vn9a"
-                  color="danger"
+                  class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
+                  color="danger-bg"
+                  data-testid="AmountLabel__wrapper"
                 >
                   <div
-                    class="flex space-x-1 items-center"
+                    class="flex h-full items-center space-x-1"
                   >
                     <span
-                      class="whitespace-nowrap"
+                      class="whitespace-nowrap text-sm"
                       data-testid="Amount"
                     >
                       - 1 DARK
@@ -1280,18 +1285,18 @@ exports[`Unconfirmed transaction table > should not render in xs 1`] = `
     data-testid="TransactionTable"
   >
     <div
-      class=" css-1m6rt2i"
+      class="css-1m6rt2i"
       role="table"
     >
       <table
         cellpadding="0"
-        class="table-auto"
+        class="w-full table-auto"
       >
         <tbody
           role="rowgroup"
         >
           <tr
-            class=" css-16ynu5g"
+            class=" css-1x4z4cy"
             data-testid="TableRow"
           >
             <td
@@ -1314,7 +1319,7 @@ exports[`Unconfirmed transaction table > should not render in xs 1`] = `
                     data-testid="Avatar"
                   >
                     <div
-                      class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                      class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                     >
                       <img
                         alt="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
@@ -1377,14 +1382,15 @@ exports[`Unconfirmed transaction table > should not render in xs 1`] = `
                   Amount
                 </div>
                 <div
-                  class="css-148b4hi"
-                  color="danger"
+                  class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
+                  color="danger-bg"
+                  data-testid="AmountLabel__wrapper"
                 >
                   <div
-                    class="flex space-x-1 items-stretch"
+                    class="flex h-full items-center space-x-1"
                   >
                     <span
-                      class="whitespace-nowrap"
+                      class="whitespace-nowrap text-sm"
                       data-testid="Amount"
                     >
                       - 1 DARK
@@ -1395,7 +1401,7 @@ exports[`Unconfirmed transaction table > should not render in xs 1`] = `
             </td>
           </tr>
           <tr
-            class=" css-16ynu5g"
+            class=" css-1x4z4cy"
             data-testid="TableRow"
           >
             <td
@@ -1514,14 +1520,15 @@ exports[`Unconfirmed transaction table > should not render in xs 1`] = `
                   Amount
                 </div>
                 <div
-                  class="css-148b4hi"
-                  color="danger"
+                  class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
+                  color="danger-bg"
+                  data-testid="AmountLabel__wrapper"
                 >
                   <div
-                    class="flex space-x-1 items-stretch"
+                    class="flex h-full items-center space-x-1"
                   >
                     <span
-                      class="whitespace-nowrap"
+                      class="whitespace-nowrap text-sm"
                       data-testid="Amount"
                     >
                       - 1 DARK

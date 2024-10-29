@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/require-await */
 import { Contracts } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import { createHashHistory } from "history";
@@ -22,6 +21,8 @@ import {
 	mockNanoXTransport,
 } from "@/utils/testing-library";
 import { server, requestMock } from "@/tests/mocks/server";
+import { DateTime } from "@ardenthq/sdk-intl";
+import { BigNumber } from "@ardenthq/sdk-helpers";
 
 let profile: Contracts.IProfile;
 let wallet: Contracts.IReadWriteWallet;
@@ -73,8 +74,14 @@ const renderPage = async (wallet: Contracts.IReadWriteWallet, type = "delegateRe
 const createMultiSignatureRegistrationMock = (wallet: Contracts.IReadWriteWallet) =>
 	vi.spyOn(wallet.transaction(), "transaction").mockReturnValue({
 		amount: () => 0,
-		data: () => ({ toSignedData: () => MultisignatureRegistrationFixture.data }),
+		blockId: () => "1",
+		convertedAmount: () => BigNumber.make(10),
+		data: () => ({
+			data: MultisignatureRegistrationFixture.data,
+			toSignedData: () => MultisignatureRegistrationFixture.data,
+		}),
 		explorerLink: () => `https://test.arkscan.io/transaction/${MultisignatureRegistrationFixture.data.id}`,
+		explorerLinkForBlock: () => `https://test.arkscan.io/block/${MultisignatureRegistrationFixture.data.id}`,
 		fee: () => +MultisignatureRegistrationFixture.data.fee / 1e8,
 		get: (attribute: string) => {
 			if (attribute === "multiSignature") {
@@ -88,11 +95,24 @@ const createMultiSignatureRegistrationMock = (wallet: Contracts.IReadWriteWallet
 			}
 		},
 		id: () => MultisignatureRegistrationFixture.data.id,
+		isConfirmed: () => true,
+		isDelegateRegistration: () => false,
+		isDelegateResignation: () => false,
+		isIpfs: () => false,
+		isMultiPayment: () => false,
 		isMultiSignatureRegistration: () => true,
+		isSent: () => true,
+		isTransfer: () => false,
+		isUnvote: () => false,
+		isVote: () => false,
+		isVoteCombination: () => false,
+		memo: () => null,
 		recipient: () => MultisignatureRegistrationFixture.data.recipient,
 		sender: () => MultisignatureRegistrationFixture.data.sender,
+		timestamp: () => DateTime.make(),
 		type: () => "multiSignature",
 		usesMultiSignature: () => false,
+		wallet: () => wallet,
 	} as any);
 
 const continueButton = () => screen.getByTestId("StepNavigation__continue-button");
@@ -174,15 +194,16 @@ describe("Multisignature Registration", () => {
 
 		await waitFor(() => expect(screen.getByTestId("header__title")).toHaveTextContent(multisignatureTitle));
 
-		userEvent.paste(screen.getByTestId("SelectDropdown__input"), wallet2.address());
+		await userEvent.clear(screen.getByTestId("SelectDropdown__input"));
+		await userEvent.type(screen.getByTestId("SelectDropdown__input"), wallet2.address());
 
-		userEvent.click(screen.getByText(transactionTranslations.MULTISIGNATURE.ADD_PARTICIPANT));
+		await userEvent.click(screen.getByText(transactionTranslations.MULTISIGNATURE.ADD_PARTICIPANT));
 
 		await waitFor(() => expect(screen.getAllByTestId("AddParticipantItem")).toHaveLength(2));
 		await waitFor(() => expect(continueButton()).toBeEnabled());
 
 		// Step 2
-		userEvent.click(continueButton());
+		await userEvent.click(continueButton());
 
 		// Review step
 		await waitFor(() => expect(continueButton()).not.toBeDisabled());
@@ -200,16 +221,17 @@ describe("Multisignature Registration", () => {
 		const signatoryMock = vi.spyOn(wallet.signatoryFactory(), "make").mockResolvedValue(signatory);
 		const transactionSyncMock = vi.spyOn(wallet.transaction(), "sync").mockResolvedValue(undefined);
 
-		userEvent.type(mnemonic, passphrase);
+		await userEvent.clear(mnemonic);
+		await userEvent.type(mnemonic, passphrase);
 		await waitFor(() => expect(screen.getByTestId("AuthenticationStep__mnemonic")).toHaveValue(passphrase));
 
 		await waitFor(() => {
 			expect(sendButton()).toBeEnabled();
 		});
 
-		userEvent.click(sendButton());
+		await userEvent.click(sendButton());
 
-		await expect(screen.findByTestId("TransactionSuccessful")).resolves.toBeVisible();
+		await expect(screen.findByText("Multisignature")).resolves.toBeVisible();
 
 		signTransactionMock.mockRestore();
 		multiSignatureRegistrationMock.mockRestore();

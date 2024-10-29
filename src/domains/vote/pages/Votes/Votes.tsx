@@ -128,8 +128,6 @@ export const Votes: FC = () => {
 
 	const isSelectDelegateStep = !!selectedAddress;
 
-	const useCompactTables = !activeProfile.appearance().get("useExpandedTables");
-
 	return (
 		<Page pageTitle={isSelectDelegateStep ? t("VOTE.DELEGATE_TABLE.TITLE") : t("VOTE.VOTES_PAGE.TITLE")}>
 			<VotesHeader
@@ -158,13 +156,12 @@ export const Votes: FC = () => {
 					showEmptyResults={hasEmptyResults}
 					walletsByCoin={filteredWalletsByCoin}
 					onSelectAddress={handleSelectAddress}
-					isCompact={useCompactTables}
 					profile={activeProfile}
 				/>
 			)}
 
 			{isSelectDelegateStep && (
-				<Section innerClassName="lg:pb-28 md:pb-18 sm:pb-16 pb-18">
+				<Section innerClassName="lg:pb-28 sm:pt-2 md:pb-18 sm:pb-16 pb-18">
 					<DelegateTable
 						searchQuery={searchQuery}
 						delegates={filteredDelegates}
@@ -176,10 +173,9 @@ export const Votes: FC = () => {
 						voteDelegates={voteDelegates}
 						selectedWallet={selectedWallet!}
 						onContinue={navigateToSendVote}
-						isCompact={useCompactTables}
 						subtitle={
 							resignedDelegateVotes.length > 0 ? (
-								<Alert className="mb-6">
+								<Alert className="mb-4">
 									<div data-testid="Votes__resigned-vote">
 										<Trans
 											i18nKey="VOTE.VOTES_PAGE.RESIGNED_VOTE"

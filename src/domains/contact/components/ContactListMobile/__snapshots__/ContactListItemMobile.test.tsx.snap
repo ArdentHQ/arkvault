@@ -6,7 +6,7 @@ exports[`ContactListItemMobile > should render 1`] = `
     class="css-fvpuky"
   >
     <div
-      class="select-none cursor-pointer group md:h-20 py-6 px-8 md:p-4 flex flex-row items-center border-theme-secondary-300 dark:border-theme-secondary-800"
+      class="select-none cursor-pointer group md:h-20 md:p-4 flex flex-row items-center border-theme-secondary-300 dark:border-theme-secondary-800 px-6 py-4"
       data-testid="AccordionHeader"
     >
       <div
@@ -16,7 +16,7 @@ exports[`ContactListItemMobile > should render 1`] = `
           class="flex w-0 flex-grow items-center justify-between space-x-3"
         >
           <span
-            class="truncate text-lg font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
+            class="truncate font-semibold leading-[20px] text-theme-secondary-900 dark:text-theme-secondary-200"
           >
             Brian
           </span>
@@ -24,55 +24,48 @@ exports[`ContactListItemMobile > should render 1`] = `
             class="ml-5 flex items-center space-x-3"
           >
             <div
-              class="static sm:relative"
+              aria-expanded="false"
+              aria-haspopup="dialog"
+              data-testid="dropdown__toggle"
             >
-              <span
-                data-testid="dropdown__toggle"
+              <button
+                class="flex text-theme-secondary-700"
+                type="button"
               >
-                <button
-                  class="flex text-theme-primary-300 dark:text-theme-secondary-500"
-                  type="button"
+                <div
+                  class="css-1i4b0eq"
+                  height="20"
+                  width="20"
                 >
-                  <div
-                    class="css-v0ob3f"
-                    height="16"
-                    width="16"
+                  <svg
+                    fill="none"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
                   >
-                    <svg
-                      id="ellipsis-vertical"
-                      viewBox="0 0 20 20"
-                      x="0"
-                      xml:space="preserve"
-                      xmlns="http://www.w3.org/2000/svg"
-                      y="0"
-                    >
-                      <g
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                      >
-                        <circle
-                          cx="10"
-                          cy="16.994"
-                          r="2.006"
-                        />
-                        <circle
-                          cx="10"
-                          cy="3"
-                          r="2"
-                        />
-                        <circle
-                          cx="10"
-                          cy="10"
-                          r="2"
-                        />
-                      </g>
-                    </svg>
-                  </div>
-                </button>
-              </span>
+                    <circle
+                      cx="10.002"
+                      cy="2.99609"
+                      fill="currentColor"
+                      r="2"
+                      transform="rotate(90 10.002 2.99609)"
+                    />
+                    <circle
+                      cx="10.002"
+                      cy="9.99805"
+                      fill="currentColor"
+                      r="2"
+                      transform="rotate(90 10.002 9.99805)"
+                    />
+                    <circle
+                      cx="10.002"
+                      cy="17"
+                      fill="currentColor"
+                      r="2"
+                      transform="rotate(90 10.002 17)"
+                    />
+                  </svg>
+                </div>
+              </button>
             </div>
             <div
               class="border-theme-secondary-300 dark:border-theme-secondary-800 css-3y8nng"
@@ -82,10 +75,10 @@ exports[`ContactListItemMobile > should render 1`] = `
         </div>
       </div>
       <div
-        class="ml-4 flex flex-shrink-0 items-center self-stretch transition-all duration-100 css-qr226j-AccordionHeader"
+        class="ml-4 flex flex-shrink-0 items-center self-stretch transition-all duration-100 css-o6tyc"
       >
         <div
-          class="css-1j7gziz"
+          class="css-cp3doq"
           data-testid="Accordion__toggle"
         >
           <div
@@ -124,7 +117,7 @@ exports[`ContactListItemMobile > should render addresses 1`] = `
     class="css-fvpuky"
   >
     <div
-      class="select-none cursor-pointer md:h-20 py-6 px-8 md:p-4 flex flex-row items-center border-theme-secondary-300 dark:border-theme-secondary-800 md:border-b"
+      class="select-none cursor-pointer md:h-20 py-6 md:p-4 flex flex-row items-center border-theme-secondary-300 dark:border-theme-secondary-800 md:border-b px-6 pb-3 pt-4"
       data-testid="AccordionHeader"
     >
       <div
@@ -134,7 +127,7 @@ exports[`ContactListItemMobile > should render addresses 1`] = `
           class="flex w-0 flex-grow items-center justify-between space-x-3"
         >
           <span
-            class="truncate text-lg font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
+            class="truncate font-semibold leading-[20px] text-theme-secondary-900 dark:text-theme-secondary-200"
           >
             Brian
           </span>
@@ -142,55 +135,48 @@ exports[`ContactListItemMobile > should render addresses 1`] = `
             class="ml-5 flex items-center space-x-3"
           >
             <div
-              class="static sm:relative"
+              aria-expanded="false"
+              aria-haspopup="dialog"
+              data-testid="dropdown__toggle"
             >
-              <span
-                data-testid="dropdown__toggle"
+              <button
+                class="flex text-theme-secondary-700"
+                type="button"
               >
-                <button
-                  class="flex text-theme-primary-300 dark:text-theme-secondary-500"
-                  type="button"
+                <div
+                  class="css-1i4b0eq"
+                  height="20"
+                  width="20"
                 >
-                  <div
-                    class="css-v0ob3f"
-                    height="16"
-                    width="16"
+                  <svg
+                    fill="none"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
                   >
-                    <svg
-                      id="ellipsis-vertical"
-                      viewBox="0 0 20 20"
-                      x="0"
-                      xml:space="preserve"
-                      xmlns="http://www.w3.org/2000/svg"
-                      y="0"
-                    >
-                      <g
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                      >
-                        <circle
-                          cx="10"
-                          cy="16.994"
-                          r="2.006"
-                        />
-                        <circle
-                          cx="10"
-                          cy="3"
-                          r="2"
-                        />
-                        <circle
-                          cx="10"
-                          cy="10"
-                          r="2"
-                        />
-                      </g>
-                    </svg>
-                  </div>
-                </button>
-              </span>
+                    <circle
+                      cx="10.002"
+                      cy="2.99609"
+                      fill="currentColor"
+                      r="2"
+                      transform="rotate(90 10.002 2.99609)"
+                    />
+                    <circle
+                      cx="10.002"
+                      cy="9.99805"
+                      fill="currentColor"
+                      r="2"
+                      transform="rotate(90 10.002 9.99805)"
+                    />
+                    <circle
+                      cx="10.002"
+                      cy="17"
+                      fill="currentColor"
+                      r="2"
+                      transform="rotate(90 10.002 17)"
+                    />
+                  </svg>
+                </div>
+              </button>
             </div>
             <div
               class="border-theme-secondary-300 dark:border-theme-secondary-800 css-3y8nng"
@@ -200,10 +186,10 @@ exports[`ContactListItemMobile > should render addresses 1`] = `
         </div>
       </div>
       <div
-        class="ml-4 flex flex-shrink-0 items-center self-stretch css-qr226j-AccordionHeader"
+        class="ml-4 flex flex-shrink-0 items-center self-stretch css-o6tyc"
       >
         <div
-          class="css-1j7gziz"
+          class="css-cp3doq"
           data-testid="Accordion__toggle"
         >
           <div
@@ -233,7 +219,7 @@ exports[`ContactListItemMobile > should render addresses 1`] = `
       </div>
     </div>
     <div
-      class="px-8 pb-6 md:px-4 md:pb-0 md:pt-6"
+      class="md:px-4 md:pb-0 md:pt-6 px-6 pb-4"
       data-testid="AccordionContent"
     >
       <div
@@ -241,33 +227,19 @@ exports[`ContactListItemMobile > should render addresses 1`] = `
         data-testid="ContactListItemMobile__addresses"
       >
         <div
-          class="flex h-20 items-center justify-between overflow-hidden"
+          class="flex h-18 items-center justify-between overflow-hidden rounded-xl dark:border-2 dark:border-theme-secondary-800"
         >
           <div
-            class="flex h-full flex-1 flex-col justify-center overflow-hidden rounded-l-xl px-6 dark:border-2 dark:border-r-0 dark:border-theme-secondary-800 dark:bg-theme-secondary-900 bg-theme-secondary-100"
+            class="flex h-full flex-1 flex-col justify-center overflow-hidden px-6 dark:bg-theme-secondary-900 bg-theme-secondary-100"
           >
             <div
-              class="mb-2 text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+              class="mb-2 text-xs font-semibold leading-[15px] text-theme-secondary-700 dark:text-theme-secondary-700"
             >
               ARK Devnet
             </div>
             <div
-              class="flex items-center space-x-3 overflow-hidden"
+              class="flex items-center overflow-hidden"
             >
-              <div
-                class="shrink-0 css-1i0wxh3"
-                data-testid="Avatar"
-              >
-                <div
-                  class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
-                >
-                  <img
-                    alt="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
-                    src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(233, 30, 99)" width="100" height="100"/><circle r="50" cx="60" cy="40" fill="rgb(139, 195, 74)"/><circle r="45" cx="0" cy="30" fill="rgb(0, 188, 212)"/><circle r="40" cx="90" cy="50" fill="rgb(255, 193, 7)"/></svg>"
-                    title="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
-                  />
-                </div>
-              </div>
               <div
                 class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
@@ -277,18 +249,14 @@ exports[`ContactListItemMobile > should render addresses 1`] = `
                 >
                   D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib
                 </span>
-              </div>
-              <button
-                class="ring-focus relative focus:outline-none"
-                data-ring-focus-margin="-m-1"
-                data-testid="clipboard-icon__wrapper"
-                type="button"
-              >
-                <div
-                  class="text-theme-primary-300 dark:text-theme-secondary-700"
+                <button
+                  class="ring-focus relative focus:outline-none"
+                  data-ring-focus-margin="-m-1"
+                  data-testid="clipboard-icon__wrapper"
+                  type="button"
                 >
                   <div
-                    class="css-v0ob3f"
+                    class="text-theme-primary-400 dark:text-theme-secondary-700 dark:hover:text-theme-secondary-500 css-v0ob3f"
                     height="16"
                     width="16"
                   >
@@ -316,15 +284,15 @@ exports[`ContactListItemMobile > should render addresses 1`] = `
                       </g>
                     </svg>
                   </div>
-                </div>
-              </button>
+                </button>
+              </div>
             </div>
           </div>
           <div
             class="flex h-full"
           >
             <button
-              class="flex h-full items-center justify-center rounded-r-xl px-3 bg-theme-secondary-200 text-theme-secondary-500 dark:bg-theme-secondary-800 dark:text-theme-secondary-700"
+              class="flex h-full items-center justify-center bg-theme-primary-100 px-3 dark:bg-theme-secondary-900 text-theme-secondary-500 dark:text-theme-secondary-800"
               data-testid="ContactListItemMobileAddress__send-button"
               disabled=""
               type="button"

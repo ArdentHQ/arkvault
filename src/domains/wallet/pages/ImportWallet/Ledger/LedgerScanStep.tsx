@@ -1,4 +1,3 @@
-import cn from "classnames";
 import { Networks, Contracts } from "@ardenthq/sdk";
 import { Contracts as ProfilesContracts } from "@ardenthq/sdk-profiles";
 import Tippy from "@tippyjs/react";
@@ -12,32 +11,17 @@ import { toasts } from "@/app/services";
 import { Address } from "@/app/components/Address";
 import { Alert } from "@/app/components/Alert";
 import { Amount } from "@/app/components/Amount";
-import { Avatar } from "@/app/components/Avatar";
 import { Checkbox } from "@/app/components/Checkbox";
-import { FormField, FormLabel } from "@/app/components/Form";
 import { Header } from "@/app/components/Header";
 import { Skeleton } from "@/app/components/Skeleton";
 import { Table, TableCell, TableRow } from "@/app/components/Table";
 import { useLedgerContext } from "@/app/contexts";
 import { LedgerData, useLedgerScanner } from "@/app/contexts/Ledger";
-import { useBreakpoint, useRandomNumber } from "@/app/hooks";
-import { SelectNetwork } from "@/domains/network/components/SelectNetwork";
 import { LedgerCancelling } from "@/domains/wallet/pages/ImportWallet/Ledger/LedgerCancelling";
 import { Button } from "@/app/components/Button";
-const AmountWrapper = ({ isLoading, children }: { isLoading: boolean; children?: React.ReactNode }) => {
-	const amountWidth = useRandomNumber(100, 130);
-
-	if (isLoading) {
-		return (
-			<span data-testid="LedgerScanStep__amount-skeleton" className="flex items-center space-x-1">
-				<Skeleton height={16} width={amountWidth} />
-				<Skeleton height={16} width={35} />
-			</span>
-		);
-	}
-
-	return <div>{children}</div>;
-};
+import { Icon } from "@/app/components/Icon";
+import cn from "classnames";
+import { AmountWrapper, LedgerLoaderOverlay, LedgerMobileItem } from "./LedgerScanStep.blocks";
 
 export const LedgerTable: FC<LedgerTableProperties> = ({
 	network,
@@ -45,12 +29,12 @@ export const LedgerTable: FC<LedgerTableProperties> = ({
 	selectedWallets,
 	toggleSelect,
 	toggleSelectAll,
-	isCompact,
 	isScanning,
 	isScanningMore,
 	isSelected,
 	scanMore,
 }) => {
+	const [showAll, setShowAll] = useState<boolean>(false);
 	const { t } = useTranslation();
 
 	const isAllSelected = !isScanning && wallets.length > 0 && selectedWallets.length === wallets.length;
@@ -75,11 +59,13 @@ export const LedgerTable: FC<LedgerTableProperties> = ({
 			{
 				Header: t("COMMON.ADDRESS"),
 				accessor: "address",
+				headerClassName: "no-border",
 			},
 			{
 				Header: t("COMMON.BALANCE"),
 				accessor: "balance",
 				className: "justify-end",
+				headerClassName: "no-border",
 			},
 		],
 		[t, isAllSelected, isScanning, toggleSelectAll],
@@ -90,8 +76,9 @@ export const LedgerTable: FC<LedgerTableProperties> = ({
 	/* istanbul ignore next -- @preserve */
 	const showSkeleton = (isScanning || (isBusy && wallets.length === 0)) && !isScanningMore;
 
+	const length = 5;
 	const data = useMemo(() => {
-		const skeletonRows = Array.from<LedgerData>({ length: 5 }).fill({} as LedgerData);
+		const skeletonRows = Array.from<LedgerData>({ length }).fill({} as LedgerData);
 		return showSkeleton ? skeletonRows : wallets;
 	}, [wallets, showSkeleton]);
 
@@ -99,17 +86,17 @@ export const LedgerTable: FC<LedgerTableProperties> = ({
 		(wallet: LedgerData) => {
 			if (showSkeleton) {
 				return (
-					<TableRow>
-						<TableCell variant="start" isCompact={isCompact}>
+					<TableRow className="relative">
+						<TableCell variant="start">
 							<Skeleton height={20} width={20} />
 						</TableCell>
 
-						<TableCell className="w-2/5" innerClassName="space-x-4" isCompact={isCompact}>
-							<Skeleton circle height={isCompact ? 20 : 44} width={isCompact ? 20 : 44} />
+						<TableCell className="w-2/5" innerClassName="space-x-4">
+							<Skeleton circle height={20} width={20} />
 							<Skeleton height={16} width={120} />
 						</TableCell>
 
-						<TableCell variant="end" innerClassName="justify-end" isCompact={isCompact}>
+						<TableCell variant="end" innerClassName="justify-end">
 							<AmountWrapper isLoading={true} />
 						</TableCell>
 					</TableRow>
@@ -117,20 +104,23 @@ export const LedgerTable: FC<LedgerTableProperties> = ({
 			}
 
 			return (
-				<TableRow isSelected={isSelected(wallet.path)}>
-					<TableCell variant="start" innerClassName="justify-center" isCompact={isCompact}>
-						<Checkbox checked={isSelected(wallet.path)} onChange={() => toggleSelect(wallet.path)} />
+				<TableRow isSelected={isSelected(wallet.path)} className="relative">
+					<TableCell variant="start" innerClassName="justify-center">
+						<Checkbox
+							checked={isSelected(wallet.path)}
+							onChange={() => toggleSelect(wallet.path)}
+							data-testid="LedgerScanStep__checkbox-row"
+						/>
 					</TableCell>
 
-					<TableCell className="w-2/5" innerClassName="space-x-4" isCompact={isCompact}>
-						<Avatar address={wallet.address} size={isCompact ? "xs" : "lg"} noShadow />
+					<TableCell className="w-2/5" innerClassName="space-x-4">
 						<div className="flex w-32 flex-1">
-							<Address address={wallet.address} />
+							<Address address={wallet.address} showCopyButton />
 						</div>
 						<span className="hidden">{wallet.path}</span>
 					</TableCell>
 
-					<TableCell variant="end" innerClassName="justify-end font-semibold" isCompact={isCompact}>
+					<TableCell variant="end" innerClassName="justify-end font-semibold">
 						<AmountWrapper isLoading={false}>
 							<Amount value={wallet.balance!} ticker={network.ticker()} />
 						</AmountWrapper>
@@ -141,18 +131,114 @@ export const LedgerTable: FC<LedgerTableProperties> = ({
 		[toggleSelect, showSkeleton, isSelected, network],
 	);
 
+	const showMore = useCallback(() => {
+		setShowAll(true);
+	}, [setShowAll]);
+
 	return (
 		<div>
-			<div className={cn({ "-mb-6": showSkeleton })}>
-				<Table columns={columns} data={data}>
-					{renderTableRow}
-				</Table>
+			<div className="relative hidden rounded-xl border border-transparent sm:block md:border-theme-secondary-300 dark:md:border-theme-secondary-800">
+				<div>
+					<Table columns={columns} data={showAll ? data : data.slice(0, 6)} className="with-x-padding">
+						{renderTableRow}
+					</Table>
+				</div>
+
+				{!showSkeleton && (
+					<div className="flex flex-col gap-3 px-6 pb-4">
+						<Button
+							data-testid="LedgerScanStep__scan-more"
+							isLoading={isScanningMore}
+							disabled={isScanningMore}
+							variant={isScanningMore ? "primary" : "secondary"}
+							icon="Plus"
+							iconPosition="left"
+							className="w-full"
+							onClick={scanMore}
+						>
+							<span className="pl-1">
+								<Trans i18nKey="WALLETS.PAGE_IMPORT_WALLET.LEDGER_SCAN_STEP.ADD_NEW_ADDRESS" />
+							</span>
+						</Button>
+
+						{data.length > 6 && !showAll && (
+							<Button
+								data-testid="LedgerScanStep__load-more"
+								isLoading={isScanningMore}
+								disabled={isScanningMore}
+								variant={isScanningMore ? "primary" : "secondary"}
+								className="w-full"
+								onClick={showMore}
+							>
+								<Trans
+									i18nKey="WALLETS.PAGE_IMPORT_WALLET.LEDGER_SCAN_STEP.SHOW_ALL"
+									count={data.length}
+								/>
+							</Button>
+						)}
+					</div>
+				)}
+
+				{isScanning && (
+					<LedgerLoaderOverlay className="rounded-xl">
+						<Trans
+							i18nKey="WALLETS.PAGE_IMPORT_WALLET.LEDGER_SCAN_STEP.LOADING_WALLETS"
+							values={{ count: length }}
+						/>
+					</LedgerLoaderOverlay>
+				)}
 			</div>
 
-			{!showSkeleton && (
-				<div className="border-b border-theme-secondary-300 pb-8 pt-2 dark:border-theme-secondary-800">
+			<div className="sm:hidden">
+				<div className="mb-3 flex h-9 w-full flex-row items-center justify-between border-l-2 border-l-theme-primary-400 bg-theme-primary-100 px-3 dark:border-l-theme-primary-300 dark:bg-theme-secondary-800">
+					<span className="text-base font-semibold text-theme-secondary-700 dark:text-theme-secondary-500">
+						{t("COMMON.ADDRESS")}
+					</span>
+					<label
+						className={cn("flex flex-row items-center gap-2", {
+							"text-theme-secondary-500 dark:text-theme-secondary-700": isScanning,
+							"text-theme-secondary-700 dark:text-theme-secondary-500": !isScanning,
+						})}
+					>
+						<Checkbox
+							disabled={isScanning}
+							data-testid="LedgerScanStep__select-all-mobile"
+							onChange={() => toggleSelectAll()}
+							checked={isAllSelected}
+						/>
+						<span>{t("COMMON.SELECT_ALL")}</span>
+					</label>
+				</div>
+
+				<div className="flex flex-col gap-2 px-1">
+					{!showSkeleton &&
+						data.map((wallet) => (
+							<LedgerMobileItem
+								key={wallet.path}
+								isLoading={showSkeleton}
+								address={wallet.address}
+								balance={wallet.balance}
+								coin={network.ticker()}
+								handleClick={() => toggleSelect(wallet.path)}
+								isSelected={isSelected(wallet.path)}
+							/>
+						))}
+
+					{showSkeleton &&
+						Array.from({ length: 4 }).map((_, index) => (
+							<LedgerMobileItem
+								index={index}
+								key={index}
+								isLoading
+								address=""
+								coin=""
+								handleClick={() => {}}
+								isSelected={false}
+							/>
+						))}
+
 					<Button
-						data-testid="LedgerScanStep__scan-more"
+						data-testid="LedgerScanStep__scan-more-mobile"
 						isLoading={isScanningMore}
 						disabled={isScanningMore}
 						variant={isScanningMore ? "primary" : "secondary"}
@@ -166,7 +252,7 @@ export const LedgerTable: FC<LedgerTableProperties> = ({
 						</span>
 					</Button>
 				</div>
-			)}
+			</div>
 		</div>
 	);
 };
@@ -194,13 +280,6 @@ export const LedgerScanStep = ({
 	setRetryFn?: (function_?: () => void) => void;
 }) => {
 	const { t } = useTranslation();
-
-	const { isLgAndAbove } = useBreakpoint();
-
-	const isCompact = useMemo<boolean>(
-		() => !isLgAndAbove || !profile.appearance().get("useExpandedTables"),
-		[isLgAndAbove, profile],
-	);
 
 	const { watch, register, unregister, setValue } = useFormContext();
 	const [network] = useState<Networks.Network>(() => watch("network"));
@@ -293,29 +372,20 @@ export const LedgerScanStep = ({
 	}
 
 	return (
-		<section data-testid="LedgerScanStep" className="space-y-8">
+		<section data-testid="LedgerScanStep" className="space-y-4">
 			<Header
 				title={t("WALLETS.PAGE_IMPORT_WALLET.LEDGER_SCAN_STEP.TITLE")}
 				subtitle={t("WALLETS.PAGE_IMPORT_WALLET.LEDGER_SCAN_STEP.SUBTITLE")}
+				titleIcon={<Icon name="NoteCheck" dimensions={[22, 22]} className="text-theme-primary-600" />}
+				className="hidden sm:block"
 			/>
-
-			<FormField name="network">
-				<FormLabel label={t("COMMON.CRYPTOASSET")} />
-				<SelectNetwork
-					id="ImportWallet__network"
-					networks={[network, network, network]}
-					selectedNetwork={network}
-					isDisabled
-					profile={profile}
-				/>
-			</FormField>
 
 			{error ? (
 				<Alert variant="danger">
 					<span data-testid="LedgerScanStep__error">{error}</span>
 				</Alert>
 			) : (
-				<LedgerTable network={network} isCompact={isCompact} {...ledgerScanner} scanMore={scanMore} />
+				<LedgerTable network={network} {...ledgerScanner} scanMore={scanMore} />
 			)}
 		</section>
 	);

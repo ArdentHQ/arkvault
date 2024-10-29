@@ -10,14 +10,18 @@ exports[`MultiSignatureSuccessful > should handle empty wallet and transation pr
       class="flex items-end justify-between bg-theme-background"
     >
       <div
-        class="space-y-4"
+        class="space-y-2"
       >
-        <h1
-          class="mb-0 text-2xl"
-          data-testid="header__title"
+        <div
+          class="flex items-center gap-3"
         >
-          Transaction Created
-        </h1>
+          <h1
+            class="mb-0 text-2xl leading-[29px]"
+            data-testid="header__title"
+          >
+            Transaction Created
+          </h1>
+        </div>
       </div>
     </div>
     <svg
@@ -186,14 +190,18 @@ exports[`MultiSignatureSuccessful > should render in lg 1`] = `
       class="flex items-end justify-between bg-theme-background"
     >
       <div
-        class="space-y-4"
+        class="space-y-2"
       >
-        <h1
-          class="mb-0 text-2xl"
-          data-testid="header__title"
+        <div
+          class="flex items-center gap-3"
         >
-          Transaction Created
-        </h1>
+          <h1
+            class="mb-0 text-2xl leading-[29px]"
+            data-testid="header__title"
+          >
+            Transaction Created
+          </h1>
+        </div>
       </div>
     </div>
     <svg
@@ -456,51 +464,41 @@ exports[`MultiSignatureSuccessful > should render in lg 1`] = `
         </div>
       </div>
       <div
-        class="no-ligatures css-qu17s6"
         data-testid="TransactionType"
       >
         <div
-          class="w-40 flex-1 space-y-2 whitespace-nowrap"
-          data-testid="TransactionDetail--desktop"
+          data-testid="DetailWrapper"
         >
           <div
-            class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+            class="border-l-2 border-x-theme-primary-400 bg-theme-secondary-100 px-3 py-2 dark:bg-black sm:border-none sm:bg-transparent sm:p-0 dark:sm:bg-transparent"
+            data-testid="DetailLabel"
           >
-            Transaction Type
-          </div>
-          <div
-            class="flex items-center font-semibold"
-          >
-            Transfer
-          </div>
-        </div>
-        <div
-          class="border-theme-text text-theme-text dark:border-theme-secondary-600 dark:text-theme-secondary-600 ring-theme-background duration-100 css-1nqcsx"
-        >
-          <div
-            class="css-1i4b0eq"
-            height="20"
-            width="20"
-          >
-            <svg
-              id="transfer"
-              viewBox="0 0 20 20"
-              x="0"
-              xml:space="preserve"
-              xmlns="http://www.w3.org/2000/svg"
-              y="0"
+            <div
+              class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+              data-testid="DetailLabelText"
             >
-              <g
-                fill="none"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-width="2"
+              Transaction Type
+            </div>
+          </div>
+          <div
+            class="w-full break-words rounded-lg border-theme-secondary-300 p-3 dark:border-theme-secondary-800 sm:border sm:px-6 sm:py-5 [.condensed_&]:sm:py-4 mt-0 sm:mt-2"
+          >
+            <div
+              class="flex w-full justify-between sm:justify-start"
+            >
+              <div
+                class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                data-testid="DetailLabelText"
               >
-                <path
-                  d="M6.75 2.85v14.3M1.05 2.85h11.4M12.45 8.65l6.5 8.1M18.95 8.65l-6.5 8.1"
-                />
-              </g>
-            </svg>
+                Category
+              </div>
+              <div
+                class="css-1chzvd4"
+                color="neutral"
+              >
+                Transfer
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -668,7 +666,7 @@ exports[`MultiSignatureSuccessful > should render in lg 1`] = `
             data-testid="Avatar"
           >
             <div
-              class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+              class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
             >
               <img
                 alt="DNzn2Rg6jCg3RCZnUyYjhbhvAgSWGwaMbH"
@@ -719,7 +717,7 @@ exports[`MultiSignatureSuccessful > should render in lg 1`] = `
             data-testid="Avatar"
           >
             <div
-              class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+              class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
             >
               <img
                 alt="DNzn2Rg6jCg3RCZnUyYjhbhvAgSWGwaMbH"
@@ -750,20 +748,19 @@ exports[`MultiSignatureSuccessful > should render in lg 1`] = `
               class="css-1sfei0c"
             >
               <div
-                class="-mt-3 css-1m6rt2i"
+                class="css-1m6rt2i"
                 role="table"
               >
                 <table
                   cellpadding="0"
-                  class="table-auto"
+                  class="w-full table-auto"
                 >
                   <thead>
                     <tr
-                      class="border-b border-theme-secondary-300 dark:border-theme-secondary-800"
                       role="row"
                     >
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
                         colspan="1"
                         data-testid="table__th--0"
                         role="columnheader"
@@ -779,7 +776,7 @@ exports[`MultiSignatureSuccessful > should render in lg 1`] = `
                         </div>
                       </th>
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
                         colspan="1"
                         data-testid="table__th--1"
                         role="columnheader"
@@ -795,7 +792,7 @@ exports[`MultiSignatureSuccessful > should render in lg 1`] = `
                         </div>
                       </th>
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
                         colspan="1"
                         data-testid="table__th--2"
                         role="columnheader"
@@ -830,7 +827,7 @@ exports[`MultiSignatureSuccessful > should render in lg 1`] = `
                           data-testid="Avatar"
                         >
                           <div
-                            class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                           >
                             <img
                               alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -862,7 +859,7 @@ exports[`MultiSignatureSuccessful > should render in lg 1`] = `
                           data-testid="Avatar"
                         >
                           <div
-                            class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                           >
                             <img
                               alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -891,7 +888,7 @@ exports[`MultiSignatureSuccessful > should render in lg 1`] = `
                           data-testid="Avatar"
                         >
                           <div
-                            class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                           >
                             <img
                               alt="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
@@ -923,7 +920,7 @@ exports[`MultiSignatureSuccessful > should render in lg 1`] = `
                           data-testid="Avatar"
                         >
                           <div
-                            class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                           >
                             <img
                               alt="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
@@ -993,14 +990,15 @@ exports[`MultiSignatureSuccessful > should render in lg 1`] = `
             class="flex items-center font-semibold"
           >
             <div
-              class="css-148b4hi"
-              color="danger"
+              class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
+              color="danger-bg"
+              data-testid="AmountLabel__wrapper"
             >
               <div
-                class="flex space-x-1 items-stretch"
+                class="flex h-full items-center space-x-1"
               >
                 <span
-                  class="whitespace-nowrap"
+                  class="whitespace-nowrap text-sm"
                   data-testid="Amount"
                 >
                   - 100 DARK
@@ -1053,14 +1051,18 @@ exports[`MultiSignatureSuccessful > should render in md 1`] = `
       class="flex items-end justify-between bg-theme-background"
     >
       <div
-        class="space-y-4"
+        class="space-y-2"
       >
-        <h1
-          class="mb-0 text-2xl"
-          data-testid="header__title"
+        <div
+          class="flex items-center gap-3"
         >
-          Transaction Created
-        </h1>
+          <h1
+            class="mb-0 text-2xl leading-[29px]"
+            data-testid="header__title"
+          >
+            Transaction Created
+          </h1>
+        </div>
       </div>
     </div>
     <svg
@@ -1323,51 +1325,41 @@ exports[`MultiSignatureSuccessful > should render in md 1`] = `
         </div>
       </div>
       <div
-        class="no-ligatures css-qu17s6"
         data-testid="TransactionType"
       >
         <div
-          class="w-40 flex-1 space-y-2 whitespace-nowrap"
-          data-testid="TransactionDetail--desktop"
+          data-testid="DetailWrapper"
         >
           <div
-            class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+            class="border-l-2 border-x-theme-primary-400 bg-theme-secondary-100 px-3 py-2 dark:bg-black sm:border-none sm:bg-transparent sm:p-0 dark:sm:bg-transparent"
+            data-testid="DetailLabel"
           >
-            Transaction Type
-          </div>
-          <div
-            class="flex items-center font-semibold"
-          >
-            Transfer
-          </div>
-        </div>
-        <div
-          class="border-theme-text text-theme-text dark:border-theme-secondary-600 dark:text-theme-secondary-600 ring-theme-background duration-100 css-1nqcsx"
-        >
-          <div
-            class="css-1i4b0eq"
-            height="20"
-            width="20"
-          >
-            <svg
-              id="transfer"
-              viewBox="0 0 20 20"
-              x="0"
-              xml:space="preserve"
-              xmlns="http://www.w3.org/2000/svg"
-              y="0"
+            <div
+              class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+              data-testid="DetailLabelText"
             >
-              <g
-                fill="none"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-width="2"
+              Transaction Type
+            </div>
+          </div>
+          <div
+            class="w-full break-words rounded-lg border-theme-secondary-300 p-3 dark:border-theme-secondary-800 sm:border sm:px-6 sm:py-5 [.condensed_&]:sm:py-4 mt-0 sm:mt-2"
+          >
+            <div
+              class="flex w-full justify-between sm:justify-start"
+            >
+              <div
+                class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                data-testid="DetailLabelText"
               >
-                <path
-                  d="M6.75 2.85v14.3M1.05 2.85h11.4M12.45 8.65l6.5 8.1M18.95 8.65l-6.5 8.1"
-                />
-              </g>
-            </svg>
+                Category
+              </div>
+              <div
+                class="css-1chzvd4"
+                color="neutral"
+              >
+                Transfer
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -1535,7 +1527,7 @@ exports[`MultiSignatureSuccessful > should render in md 1`] = `
             data-testid="Avatar"
           >
             <div
-              class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+              class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
             >
               <img
                 alt="DNzn2Rg6jCg3RCZnUyYjhbhvAgSWGwaMbH"
@@ -1586,7 +1578,7 @@ exports[`MultiSignatureSuccessful > should render in md 1`] = `
             data-testid="Avatar"
           >
             <div
-              class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+              class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
             >
               <img
                 alt="DNzn2Rg6jCg3RCZnUyYjhbhvAgSWGwaMbH"
@@ -1617,20 +1609,19 @@ exports[`MultiSignatureSuccessful > should render in md 1`] = `
               class="css-1sfei0c"
             >
               <div
-                class="-mt-3 css-1m6rt2i"
+                class="css-1m6rt2i"
                 role="table"
               >
                 <table
                   cellpadding="0"
-                  class="table-auto"
+                  class="w-full table-auto"
                 >
                   <thead>
                     <tr
-                      class="border-b border-theme-secondary-300 dark:border-theme-secondary-800"
                       role="row"
                     >
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
                         colspan="1"
                         data-testid="table__th--0"
                         role="columnheader"
@@ -1646,7 +1637,7 @@ exports[`MultiSignatureSuccessful > should render in md 1`] = `
                         </div>
                       </th>
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
                         colspan="1"
                         data-testid="table__th--1"
                         role="columnheader"
@@ -1662,7 +1653,7 @@ exports[`MultiSignatureSuccessful > should render in md 1`] = `
                         </div>
                       </th>
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
                         colspan="1"
                         data-testid="table__th--2"
                         role="columnheader"
@@ -1697,7 +1688,7 @@ exports[`MultiSignatureSuccessful > should render in md 1`] = `
                           data-testid="Avatar"
                         >
                           <div
-                            class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                           >
                             <img
                               alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -1729,7 +1720,7 @@ exports[`MultiSignatureSuccessful > should render in md 1`] = `
                           data-testid="Avatar"
                         >
                           <div
-                            class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                           >
                             <img
                               alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -1758,7 +1749,7 @@ exports[`MultiSignatureSuccessful > should render in md 1`] = `
                           data-testid="Avatar"
                         >
                           <div
-                            class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                           >
                             <img
                               alt="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
@@ -1790,7 +1781,7 @@ exports[`MultiSignatureSuccessful > should render in md 1`] = `
                           data-testid="Avatar"
                         >
                           <div
-                            class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                           >
                             <img
                               alt="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
@@ -1860,14 +1851,15 @@ exports[`MultiSignatureSuccessful > should render in md 1`] = `
             class="flex items-center font-semibold"
           >
             <div
-              class="css-148b4hi"
-              color="danger"
+              class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
+              color="danger-bg"
+              data-testid="AmountLabel__wrapper"
             >
               <div
-                class="flex space-x-1 items-stretch"
+                class="flex h-full items-center space-x-1"
               >
                 <span
-                  class="whitespace-nowrap"
+                  class="whitespace-nowrap text-sm"
                   data-testid="Amount"
                 >
                   - 100 DARK
@@ -1920,14 +1912,18 @@ exports[`MultiSignatureSuccessful > should render in sm 1`] = `
       class="flex items-end justify-between bg-theme-background"
     >
       <div
-        class="space-y-4"
+        class="space-y-2"
       >
-        <h1
-          class="mb-0 text-2xl"
-          data-testid="header__title"
+        <div
+          class="flex items-center gap-3"
         >
-          Transaction Created
-        </h1>
+          <h1
+            class="mb-0 text-2xl leading-[29px]"
+            data-testid="header__title"
+          >
+            Transaction Created
+          </h1>
+        </div>
       </div>
     </div>
     <svg
@@ -2194,55 +2190,41 @@ exports[`MultiSignatureSuccessful > should render in sm 1`] = `
         </div>
       </div>
       <div
-        class="no-ligatures css-qu17s6"
         data-testid="TransactionType"
       >
         <div
-          class="items-top flex w-full justify-between space-x-4 md:items-center"
-          data-testid="TransactionDetail--mobile"
+          data-testid="DetailWrapper"
         >
           <div
-            class="text-md md:theme-text group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
-          >
-            Transaction Type
-          </div>
-          <div
-            class="flex min-w-0 grow items-center justify-end space-x-4"
+            class="border-l-2 border-x-theme-primary-400 bg-theme-secondary-100 px-3 py-2 dark:bg-black sm:border-none sm:bg-transparent sm:p-0 dark:sm:bg-transparent"
+            data-testid="DetailLabel"
           >
             <div
-              class="md:theme-text flex w-full justify-end text-theme-secondary-700 dark:text-theme-secondary-500"
+              class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+              data-testid="DetailLabelText"
             >
-              Transfer
+              Transaction Type
             </div>
-            <span
-              class="text-theme-text dark:text-theme-secondary-600"
+          </div>
+          <div
+            class="w-full break-words rounded-lg border-theme-secondary-300 p-3 dark:border-theme-secondary-800 sm:border sm:px-6 sm:py-5 [.condensed_&]:sm:py-4 mt-0 sm:mt-2"
+          >
+            <div
+              class="flex w-full justify-between sm:justify-start"
             >
               <div
-                class="css-v0ob3f"
-                height="16"
-                width="16"
+                class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                data-testid="DetailLabelText"
               >
-                <svg
-                  id="transfer"
-                  viewBox="0 0 20 20"
-                  x="0"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
-                  y="0"
-                >
-                  <g
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-width="2"
-                  >
-                    <path
-                      d="M6.75 2.85v14.3M1.05 2.85h11.4M12.45 8.65l6.5 8.1M18.95 8.65l-6.5 8.1"
-                    />
-                  </g>
-                </svg>
+                Category
               </div>
-            </span>
+              <div
+                class="css-1chzvd4"
+                color="neutral"
+              >
+                Transfer
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -2416,7 +2398,7 @@ exports[`MultiSignatureSuccessful > should render in sm 1`] = `
                 data-testid="Avatar"
               >
                 <div
-                  class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                  class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                 >
                   <img
                     alt="DNzn2Rg6jCg3RCZnUyYjhbhvAgSWGwaMbH"
@@ -2471,7 +2453,7 @@ exports[`MultiSignatureSuccessful > should render in sm 1`] = `
                 data-testid="Avatar"
               >
                 <div
-                  class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                  class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                 >
                   <img
                     alt="DNzn2Rg6jCg3RCZnUyYjhbhvAgSWGwaMbH"
@@ -2544,7 +2526,7 @@ exports[`MultiSignatureSuccessful > should render in sm 1`] = `
                       data-testid="Avatar"
                     >
                       <div
-                        class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                        class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                       >
                         <img
                           alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -2611,7 +2593,7 @@ exports[`MultiSignatureSuccessful > should render in sm 1`] = `
                       data-testid="Avatar"
                     >
                       <div
-                        class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                        class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                       >
                         <img
                           alt="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
@@ -2683,14 +2665,15 @@ exports[`MultiSignatureSuccessful > should render in sm 1`] = `
               class="md:theme-text flex w-full justify-end text-theme-secondary-700 dark:text-theme-secondary-500"
             >
               <div
-                class="css-148b4hi"
-                color="danger"
+                class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
+                color="danger-bg"
+                data-testid="AmountLabel__wrapper"
               >
                 <div
-                  class="flex space-x-1 items-stretch"
+                  class="flex h-full items-center space-x-1"
                 >
                   <span
-                    class="whitespace-nowrap"
+                    class="whitespace-nowrap text-sm"
                     data-testid="Amount"
                   >
                     - 100 DARK
@@ -2717,14 +2700,18 @@ exports[`MultiSignatureSuccessful > should render in xl 1`] = `
       class="flex items-end justify-between bg-theme-background"
     >
       <div
-        class="space-y-4"
+        class="space-y-2"
       >
-        <h1
-          class="mb-0 text-2xl"
-          data-testid="header__title"
+        <div
+          class="flex items-center gap-3"
         >
-          Transaction Created
-        </h1>
+          <h1
+            class="mb-0 text-2xl leading-[29px]"
+            data-testid="header__title"
+          >
+            Transaction Created
+          </h1>
+        </div>
       </div>
     </div>
     <svg
@@ -2987,51 +2974,41 @@ exports[`MultiSignatureSuccessful > should render in xl 1`] = `
         </div>
       </div>
       <div
-        class="no-ligatures css-qu17s6"
         data-testid="TransactionType"
       >
         <div
-          class="w-40 flex-1 space-y-2 whitespace-nowrap"
-          data-testid="TransactionDetail--desktop"
+          data-testid="DetailWrapper"
         >
           <div
-            class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+            class="border-l-2 border-x-theme-primary-400 bg-theme-secondary-100 px-3 py-2 dark:bg-black sm:border-none sm:bg-transparent sm:p-0 dark:sm:bg-transparent"
+            data-testid="DetailLabel"
           >
-            Transaction Type
-          </div>
-          <div
-            class="flex items-center font-semibold"
-          >
-            Transfer
-          </div>
-        </div>
-        <div
-          class="border-theme-text text-theme-text dark:border-theme-secondary-600 dark:text-theme-secondary-600 ring-theme-background duration-100 css-1nqcsx"
-        >
-          <div
-            class="css-1i4b0eq"
-            height="20"
-            width="20"
-          >
-            <svg
-              id="transfer"
-              viewBox="0 0 20 20"
-              x="0"
-              xml:space="preserve"
-              xmlns="http://www.w3.org/2000/svg"
-              y="0"
+            <div
+              class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+              data-testid="DetailLabelText"
             >
-              <g
-                fill="none"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-width="2"
+              Transaction Type
+            </div>
+          </div>
+          <div
+            class="w-full break-words rounded-lg border-theme-secondary-300 p-3 dark:border-theme-secondary-800 sm:border sm:px-6 sm:py-5 [.condensed_&]:sm:py-4 mt-0 sm:mt-2"
+          >
+            <div
+              class="flex w-full justify-between sm:justify-start"
+            >
+              <div
+                class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                data-testid="DetailLabelText"
               >
-                <path
-                  d="M6.75 2.85v14.3M1.05 2.85h11.4M12.45 8.65l6.5 8.1M18.95 8.65l-6.5 8.1"
-                />
-              </g>
-            </svg>
+                Category
+              </div>
+              <div
+                class="css-1chzvd4"
+                color="neutral"
+              >
+                Transfer
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -3199,7 +3176,7 @@ exports[`MultiSignatureSuccessful > should render in xl 1`] = `
             data-testid="Avatar"
           >
             <div
-              class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+              class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
             >
               <img
                 alt="DNzn2Rg6jCg3RCZnUyYjhbhvAgSWGwaMbH"
@@ -3250,7 +3227,7 @@ exports[`MultiSignatureSuccessful > should render in xl 1`] = `
             data-testid="Avatar"
           >
             <div
-              class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+              class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
             >
               <img
                 alt="DNzn2Rg6jCg3RCZnUyYjhbhvAgSWGwaMbH"
@@ -3281,20 +3258,19 @@ exports[`MultiSignatureSuccessful > should render in xl 1`] = `
               class="css-1sfei0c"
             >
               <div
-                class="-mt-3 css-1m6rt2i"
+                class="css-1m6rt2i"
                 role="table"
               >
                 <table
                   cellpadding="0"
-                  class="table-auto"
+                  class="w-full table-auto"
                 >
                   <thead>
                     <tr
-                      class="border-b border-theme-secondary-300 dark:border-theme-secondary-800"
                       role="row"
                     >
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
                         colspan="1"
                         data-testid="table__th--0"
                         role="columnheader"
@@ -3310,7 +3286,7 @@ exports[`MultiSignatureSuccessful > should render in xl 1`] = `
                         </div>
                       </th>
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
                         colspan="1"
                         data-testid="table__th--1"
                         role="columnheader"
@@ -3326,7 +3302,7 @@ exports[`MultiSignatureSuccessful > should render in xl 1`] = `
                         </div>
                       </th>
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
                         colspan="1"
                         data-testid="table__th--2"
                         role="columnheader"
@@ -3361,7 +3337,7 @@ exports[`MultiSignatureSuccessful > should render in xl 1`] = `
                           data-testid="Avatar"
                         >
                           <div
-                            class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                           >
                             <img
                               alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -3393,7 +3369,7 @@ exports[`MultiSignatureSuccessful > should render in xl 1`] = `
                           data-testid="Avatar"
                         >
                           <div
-                            class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                           >
                             <img
                               alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -3422,7 +3398,7 @@ exports[`MultiSignatureSuccessful > should render in xl 1`] = `
                           data-testid="Avatar"
                         >
                           <div
-                            class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                           >
                             <img
                               alt="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
@@ -3454,7 +3430,7 @@ exports[`MultiSignatureSuccessful > should render in xl 1`] = `
                           data-testid="Avatar"
                         >
                           <div
-                            class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                           >
                             <img
                               alt="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
@@ -3524,14 +3500,15 @@ exports[`MultiSignatureSuccessful > should render in xl 1`] = `
             class="flex items-center font-semibold"
           >
             <div
-              class="css-148b4hi"
-              color="danger"
+              class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
+              color="danger-bg"
+              data-testid="AmountLabel__wrapper"
             >
               <div
-                class="flex space-x-1 items-stretch"
+                class="flex h-full items-center space-x-1"
               >
                 <span
-                  class="whitespace-nowrap"
+                  class="whitespace-nowrap text-sm"
                   data-testid="Amount"
                 >
                   - 100 DARK
@@ -3584,14 +3561,18 @@ exports[`MultiSignatureSuccessful > should render in xs 1`] = `
       class="flex items-end justify-between bg-theme-background"
     >
       <div
-        class="space-y-4"
+        class="space-y-2"
       >
-        <h1
-          class="mb-0 text-2xl"
-          data-testid="header__title"
+        <div
+          class="flex items-center gap-3"
         >
-          Transaction Created
-        </h1>
+          <h1
+            class="mb-0 text-2xl leading-[29px]"
+            data-testid="header__title"
+          >
+            Transaction Created
+          </h1>
+        </div>
       </div>
     </div>
     <svg
@@ -3858,55 +3839,41 @@ exports[`MultiSignatureSuccessful > should render in xs 1`] = `
         </div>
       </div>
       <div
-        class="no-ligatures css-qu17s6"
         data-testid="TransactionType"
       >
         <div
-          class="items-top flex w-full justify-between space-x-4 md:items-center"
-          data-testid="TransactionDetail--mobile"
+          data-testid="DetailWrapper"
         >
           <div
-            class="text-md md:theme-text group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
-          >
-            Transaction Type
-          </div>
-          <div
-            class="flex min-w-0 grow items-center justify-end space-x-4"
+            class="border-l-2 border-x-theme-primary-400 bg-theme-secondary-100 px-3 py-2 dark:bg-black sm:border-none sm:bg-transparent sm:p-0 dark:sm:bg-transparent"
+            data-testid="DetailLabel"
           >
             <div
-              class="md:theme-text flex w-full justify-end text-theme-secondary-700 dark:text-theme-secondary-500"
+              class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+              data-testid="DetailLabelText"
             >
-              Transfer
+              Transaction Type
             </div>
-            <span
-              class="text-theme-text dark:text-theme-secondary-600"
+          </div>
+          <div
+            class="w-full break-words rounded-lg border-theme-secondary-300 p-3 dark:border-theme-secondary-800 sm:border sm:px-6 sm:py-5 [.condensed_&]:sm:py-4 mt-0 sm:mt-2"
+          >
+            <div
+              class="flex w-full justify-between sm:justify-start"
             >
               <div
-                class="css-v0ob3f"
-                height="16"
-                width="16"
+                class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                data-testid="DetailLabelText"
               >
-                <svg
-                  id="transfer"
-                  viewBox="0 0 20 20"
-                  x="0"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
-                  y="0"
-                >
-                  <g
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-width="2"
-                  >
-                    <path
-                      d="M6.75 2.85v14.3M1.05 2.85h11.4M12.45 8.65l6.5 8.1M18.95 8.65l-6.5 8.1"
-                    />
-                  </g>
-                </svg>
+                Category
               </div>
-            </span>
+              <div
+                class="css-1chzvd4"
+                color="neutral"
+              >
+                Transfer
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -4080,7 +4047,7 @@ exports[`MultiSignatureSuccessful > should render in xs 1`] = `
                 data-testid="Avatar"
               >
                 <div
-                  class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                  class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                 >
                   <img
                     alt="DNzn2Rg6jCg3RCZnUyYjhbhvAgSWGwaMbH"
@@ -4135,7 +4102,7 @@ exports[`MultiSignatureSuccessful > should render in xs 1`] = `
                 data-testid="Avatar"
               >
                 <div
-                  class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                  class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                 >
                   <img
                     alt="DNzn2Rg6jCg3RCZnUyYjhbhvAgSWGwaMbH"
@@ -4208,7 +4175,7 @@ exports[`MultiSignatureSuccessful > should render in xs 1`] = `
                       data-testid="Avatar"
                     >
                       <div
-                        class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                        class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                       >
                         <img
                           alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -4275,7 +4242,7 @@ exports[`MultiSignatureSuccessful > should render in xs 1`] = `
                       data-testid="Avatar"
                     >
                       <div
-                        class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                        class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                       >
                         <img
                           alt="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
@@ -4347,14 +4314,15 @@ exports[`MultiSignatureSuccessful > should render in xs 1`] = `
               class="md:theme-text flex w-full justify-end text-theme-secondary-700 dark:text-theme-secondary-500"
             >
               <div
-                class="css-148b4hi"
-                color="danger"
+                class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
+                color="danger-bg"
+                data-testid="AmountLabel__wrapper"
               >
                 <div
-                  class="flex space-x-1 items-stretch"
+                  class="flex h-full items-center space-x-1"
                 >
                   <span
-                    class="whitespace-nowrap"
+                    class="whitespace-nowrap text-sm"
                     data-testid="Amount"
                   >
                     - 100 DARK
@@ -4381,14 +4349,18 @@ exports[`MultiSignatureSuccessful > should render with delegate sender wallet 1`
       class="flex items-end justify-between bg-theme-background"
     >
       <div
-        class="space-y-4"
+        class="space-y-2"
       >
-        <h1
-          class="mb-0 text-2xl"
-          data-testid="header__title"
+        <div
+          class="flex items-center gap-3"
         >
-          Transaction Created
-        </h1>
+          <h1
+            class="mb-0 text-2xl leading-[29px]"
+            data-testid="header__title"
+          >
+            Transaction Created
+          </h1>
+        </div>
       </div>
     </div>
     <svg
@@ -4651,51 +4623,41 @@ exports[`MultiSignatureSuccessful > should render with delegate sender wallet 1`
         </div>
       </div>
       <div
-        class="no-ligatures css-qu17s6"
         data-testid="TransactionType"
       >
         <div
-          class="w-40 flex-1 space-y-2 whitespace-nowrap"
-          data-testid="TransactionDetail--desktop"
+          data-testid="DetailWrapper"
         >
           <div
-            class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+            class="border-l-2 border-x-theme-primary-400 bg-theme-secondary-100 px-3 py-2 dark:bg-black sm:border-none sm:bg-transparent sm:p-0 dark:sm:bg-transparent"
+            data-testid="DetailLabel"
           >
-            Transaction Type
-          </div>
-          <div
-            class="flex items-center font-semibold"
-          >
-            Transfer
-          </div>
-        </div>
-        <div
-          class="border-theme-text text-theme-text dark:border-theme-secondary-600 dark:text-theme-secondary-600 ring-theme-background duration-100 css-1nqcsx"
-        >
-          <div
-            class="css-1i4b0eq"
-            height="20"
-            width="20"
-          >
-            <svg
-              id="transfer"
-              viewBox="0 0 20 20"
-              x="0"
-              xml:space="preserve"
-              xmlns="http://www.w3.org/2000/svg"
-              y="0"
+            <div
+              class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+              data-testid="DetailLabelText"
             >
-              <g
-                fill="none"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-width="2"
+              Transaction Type
+            </div>
+          </div>
+          <div
+            class="w-full break-words rounded-lg border-theme-secondary-300 p-3 dark:border-theme-secondary-800 sm:border sm:px-6 sm:py-5 [.condensed_&]:sm:py-4 mt-0 sm:mt-2"
+          >
+            <div
+              class="flex w-full justify-between sm:justify-start"
+            >
+              <div
+                class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                data-testid="DetailLabelText"
               >
-                <path
-                  d="M6.75 2.85v14.3M1.05 2.85h11.4M12.45 8.65l6.5 8.1M18.95 8.65l-6.5 8.1"
-                />
-              </g>
-            </svg>
+                Category
+              </div>
+              <div
+                class="css-1chzvd4"
+                color="neutral"
+              >
+                Transfer
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -4863,7 +4825,7 @@ exports[`MultiSignatureSuccessful > should render with delegate sender wallet 1`
             data-testid="Avatar"
           >
             <div
-              class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+              class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
             >
               <img
                 alt="DNzn2Rg6jCg3RCZnUyYjhbhvAgSWGwaMbH"
@@ -4914,7 +4876,7 @@ exports[`MultiSignatureSuccessful > should render with delegate sender wallet 1`
             data-testid="Avatar"
           >
             <div
-              class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+              class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
             >
               <img
                 alt="DNzn2Rg6jCg3RCZnUyYjhbhvAgSWGwaMbH"
@@ -4945,20 +4907,19 @@ exports[`MultiSignatureSuccessful > should render with delegate sender wallet 1`
               class="css-1sfei0c"
             >
               <div
-                class="-mt-3 css-1m6rt2i"
+                class="css-1m6rt2i"
                 role="table"
               >
                 <table
                   cellpadding="0"
-                  class="table-auto"
+                  class="w-full table-auto"
                 >
                   <thead>
                     <tr
-                      class="border-b border-theme-secondary-300 dark:border-theme-secondary-800"
                       role="row"
                     >
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
                         colspan="1"
                         data-testid="table__th--0"
                         role="columnheader"
@@ -4974,7 +4935,7 @@ exports[`MultiSignatureSuccessful > should render with delegate sender wallet 1`
                         </div>
                       </th>
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
                         colspan="1"
                         data-testid="table__th--1"
                         role="columnheader"
@@ -4990,7 +4951,7 @@ exports[`MultiSignatureSuccessful > should render with delegate sender wallet 1`
                         </div>
                       </th>
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
                         colspan="1"
                         data-testid="table__th--2"
                         role="columnheader"
@@ -5025,7 +4986,7 @@ exports[`MultiSignatureSuccessful > should render with delegate sender wallet 1`
                           data-testid="Avatar"
                         >
                           <div
-                            class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                           >
                             <img
                               alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -5057,7 +5018,7 @@ exports[`MultiSignatureSuccessful > should render with delegate sender wallet 1`
                           data-testid="Avatar"
                         >
                           <div
-                            class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                           >
                             <img
                               alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -5086,7 +5047,7 @@ exports[`MultiSignatureSuccessful > should render with delegate sender wallet 1`
                           data-testid="Avatar"
                         >
                           <div
-                            class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                           >
                             <img
                               alt="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
@@ -5118,7 +5079,7 @@ exports[`MultiSignatureSuccessful > should render with delegate sender wallet 1`
                           data-testid="Avatar"
                         >
                           <div
-                            class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                           >
                             <img
                               alt="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
@@ -5188,14 +5149,15 @@ exports[`MultiSignatureSuccessful > should render with delegate sender wallet 1`
             class="flex items-center font-semibold"
           >
             <div
-              class="css-148b4hi"
-              color="danger"
+              class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
+              color="danger-bg"
+              data-testid="AmountLabel__wrapper"
             >
               <div
-                class="flex space-x-1 items-stretch"
+                class="flex h-full items-center space-x-1"
               >
                 <span
-                  class="whitespace-nowrap"
+                  class="whitespace-nowrap text-sm"
                   data-testid="Amount"
                 >
                   - 100 DARK
@@ -5248,14 +5210,18 @@ exports[`MultiSignatureSuccessful > should render with ledger sender wallet 1`] 
       class="flex items-end justify-between bg-theme-background"
     >
       <div
-        class="space-y-4"
+        class="space-y-2"
       >
-        <h1
-          class="mb-0 text-2xl"
-          data-testid="header__title"
+        <div
+          class="flex items-center gap-3"
         >
-          Transaction Created
-        </h1>
+          <h1
+            class="mb-0 text-2xl leading-[29px]"
+            data-testid="header__title"
+          >
+            Transaction Created
+          </h1>
+        </div>
       </div>
     </div>
     <svg
@@ -5518,51 +5484,41 @@ exports[`MultiSignatureSuccessful > should render with ledger sender wallet 1`] 
         </div>
       </div>
       <div
-        class="no-ligatures css-qu17s6"
         data-testid="TransactionType"
       >
         <div
-          class="w-40 flex-1 space-y-2 whitespace-nowrap"
-          data-testid="TransactionDetail--desktop"
+          data-testid="DetailWrapper"
         >
           <div
-            class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+            class="border-l-2 border-x-theme-primary-400 bg-theme-secondary-100 px-3 py-2 dark:bg-black sm:border-none sm:bg-transparent sm:p-0 dark:sm:bg-transparent"
+            data-testid="DetailLabel"
           >
-            Transaction Type
-          </div>
-          <div
-            class="flex items-center font-semibold"
-          >
-            Transfer
-          </div>
-        </div>
-        <div
-          class="border-theme-text text-theme-text dark:border-theme-secondary-600 dark:text-theme-secondary-600 ring-theme-background duration-100 css-1nqcsx"
-        >
-          <div
-            class="css-1i4b0eq"
-            height="20"
-            width="20"
-          >
-            <svg
-              id="transfer"
-              viewBox="0 0 20 20"
-              x="0"
-              xml:space="preserve"
-              xmlns="http://www.w3.org/2000/svg"
-              y="0"
+            <div
+              class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+              data-testid="DetailLabelText"
             >
-              <g
-                fill="none"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-width="2"
+              Transaction Type
+            </div>
+          </div>
+          <div
+            class="w-full break-words rounded-lg border-theme-secondary-300 p-3 dark:border-theme-secondary-800 sm:border sm:px-6 sm:py-5 [.condensed_&]:sm:py-4 mt-0 sm:mt-2"
+          >
+            <div
+              class="flex w-full justify-between sm:justify-start"
+            >
+              <div
+                class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                data-testid="DetailLabelText"
               >
-                <path
-                  d="M6.75 2.85v14.3M1.05 2.85h11.4M12.45 8.65l6.5 8.1M18.95 8.65l-6.5 8.1"
-                />
-              </g>
-            </svg>
+                Category
+              </div>
+              <div
+                class="css-1chzvd4"
+                color="neutral"
+              >
+                Transfer
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -5632,20 +5588,19 @@ exports[`MultiSignatureSuccessful > should render with ledger sender wallet 1`] 
               class="css-1sfei0c"
             >
               <div
-                class="-mt-3 css-1m6rt2i"
+                class="css-1m6rt2i"
                 role="table"
               >
                 <table
                   cellpadding="0"
-                  class="table-auto"
+                  class="w-full table-auto"
                 >
                   <thead>
                     <tr
-                      class="border-b border-theme-secondary-300 dark:border-theme-secondary-800"
                       role="row"
                     >
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
                         colspan="1"
                         data-testid="table__th--0"
                         role="columnheader"
@@ -5661,7 +5616,7 @@ exports[`MultiSignatureSuccessful > should render with ledger sender wallet 1`] 
                         </div>
                       </th>
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
                         colspan="1"
                         data-testid="table__th--1"
                         role="columnheader"
@@ -5677,7 +5632,7 @@ exports[`MultiSignatureSuccessful > should render with ledger sender wallet 1`] 
                         </div>
                       </th>
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
                         colspan="1"
                         data-testid="table__th--2"
                         role="columnheader"
@@ -5712,7 +5667,7 @@ exports[`MultiSignatureSuccessful > should render with ledger sender wallet 1`] 
                           data-testid="Avatar"
                         >
                           <div
-                            class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                           >
                             <img
                               alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -5744,7 +5699,7 @@ exports[`MultiSignatureSuccessful > should render with ledger sender wallet 1`] 
                           data-testid="Avatar"
                         >
                           <div
-                            class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                           >
                             <img
                               alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -5773,7 +5728,7 @@ exports[`MultiSignatureSuccessful > should render with ledger sender wallet 1`] 
                           data-testid="Avatar"
                         >
                           <div
-                            class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                           >
                             <img
                               alt="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
@@ -5805,7 +5760,7 @@ exports[`MultiSignatureSuccessful > should render with ledger sender wallet 1`] 
                           data-testid="Avatar"
                         >
                           <div
-                            class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                           >
                             <img
                               alt="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
@@ -5875,14 +5830,15 @@ exports[`MultiSignatureSuccessful > should render with ledger sender wallet 1`] 
             class="flex items-center font-semibold"
           >
             <div
-              class="css-148b4hi"
-              color="danger"
+              class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
+              color="danger-bg"
+              data-testid="AmountLabel__wrapper"
             >
               <div
-                class="flex space-x-1 items-stretch"
+                class="flex h-full items-center space-x-1"
               >
                 <span
-                  class="whitespace-nowrap"
+                  class="whitespace-nowrap text-sm"
                   data-testid="Amount"
                 >
                   - 100 DARK
@@ -5935,14 +5891,18 @@ exports[`MultiSignatureSuccessful > should render without generated address 1`] 
       class="flex items-end justify-between bg-theme-background"
     >
       <div
-        class="space-y-4"
+        class="space-y-2"
       >
-        <h1
-          class="mb-0 text-2xl"
-          data-testid="header__title"
+        <div
+          class="flex items-center gap-3"
         >
-          Transaction Created
-        </h1>
+          <h1
+            class="mb-0 text-2xl leading-[29px]"
+            data-testid="header__title"
+          >
+            Transaction Created
+          </h1>
+        </div>
       </div>
     </div>
     <svg
@@ -6205,51 +6165,41 @@ exports[`MultiSignatureSuccessful > should render without generated address 1`] 
         </div>
       </div>
       <div
-        class="no-ligatures css-qu17s6"
         data-testid="TransactionType"
       >
         <div
-          class="w-40 flex-1 space-y-2 whitespace-nowrap"
-          data-testid="TransactionDetail--desktop"
+          data-testid="DetailWrapper"
         >
           <div
-            class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+            class="border-l-2 border-x-theme-primary-400 bg-theme-secondary-100 px-3 py-2 dark:bg-black sm:border-none sm:bg-transparent sm:p-0 dark:sm:bg-transparent"
+            data-testid="DetailLabel"
           >
-            Transaction Type
-          </div>
-          <div
-            class="flex items-center font-semibold"
-          >
-            Transfer
-          </div>
-        </div>
-        <div
-          class="border-theme-text text-theme-text dark:border-theme-secondary-600 dark:text-theme-secondary-600 ring-theme-background duration-100 css-1nqcsx"
-        >
-          <div
-            class="css-1i4b0eq"
-            height="20"
-            width="20"
-          >
-            <svg
-              id="transfer"
-              viewBox="0 0 20 20"
-              x="0"
-              xml:space="preserve"
-              xmlns="http://www.w3.org/2000/svg"
-              y="0"
+            <div
+              class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+              data-testid="DetailLabelText"
             >
-              <g
-                fill="none"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-width="2"
+              Transaction Type
+            </div>
+          </div>
+          <div
+            class="w-full break-words rounded-lg border-theme-secondary-300 p-3 dark:border-theme-secondary-800 sm:border sm:px-6 sm:py-5 [.condensed_&]:sm:py-4 mt-0 sm:mt-2"
+          >
+            <div
+              class="flex w-full justify-between sm:justify-start"
+            >
+              <div
+                class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                data-testid="DetailLabelText"
               >
-                <path
-                  d="M6.75 2.85v14.3M1.05 2.85h11.4M12.45 8.65l6.5 8.1M18.95 8.65l-6.5 8.1"
-                />
-              </g>
-            </svg>
+                Category
+              </div>
+              <div
+                class="css-1chzvd4"
+                color="neutral"
+              >
+                Transfer
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -6319,20 +6269,19 @@ exports[`MultiSignatureSuccessful > should render without generated address 1`] 
               class="css-1sfei0c"
             >
               <div
-                class="-mt-3 css-1m6rt2i"
+                class="css-1m6rt2i"
                 role="table"
               >
                 <table
                   cellpadding="0"
-                  class="table-auto"
+                  class="w-full table-auto"
                 >
                   <thead>
                     <tr
-                      class="border-b border-theme-secondary-300 dark:border-theme-secondary-800"
                       role="row"
                     >
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
                         colspan="1"
                         data-testid="table__th--0"
                         role="columnheader"
@@ -6348,7 +6297,7 @@ exports[`MultiSignatureSuccessful > should render without generated address 1`] 
                         </div>
                       </th>
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
                         colspan="1"
                         data-testid="table__th--1"
                         role="columnheader"
@@ -6364,7 +6313,7 @@ exports[`MultiSignatureSuccessful > should render without generated address 1`] 
                         </div>
                       </th>
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
                         colspan="1"
                         data-testid="table__th--2"
                         role="columnheader"
@@ -6399,7 +6348,7 @@ exports[`MultiSignatureSuccessful > should render without generated address 1`] 
                           data-testid="Avatar"
                         >
                           <div
-                            class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                           >
                             <img
                               alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -6431,7 +6380,7 @@ exports[`MultiSignatureSuccessful > should render without generated address 1`] 
                           data-testid="Avatar"
                         >
                           <div
-                            class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                           >
                             <img
                               alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -6460,7 +6409,7 @@ exports[`MultiSignatureSuccessful > should render without generated address 1`] 
                           data-testid="Avatar"
                         >
                           <div
-                            class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                           >
                             <img
                               alt="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
@@ -6492,7 +6441,7 @@ exports[`MultiSignatureSuccessful > should render without generated address 1`] 
                           data-testid="Avatar"
                         >
                           <div
-                            class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                           >
                             <img
                               alt="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
@@ -6562,14 +6511,15 @@ exports[`MultiSignatureSuccessful > should render without generated address 1`] 
             class="flex items-center font-semibold"
           >
             <div
-              class="css-148b4hi"
-              color="danger"
+              class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
+              color="danger-bg"
+              data-testid="AmountLabel__wrapper"
             >
               <div
-                class="flex space-x-1 items-stretch"
+                class="flex h-full items-center space-x-1"
               >
                 <span
-                  class="whitespace-nowrap"
+                  class="whitespace-nowrap text-sm"
                   data-testid="Amount"
                 >
                   - 100 DARK

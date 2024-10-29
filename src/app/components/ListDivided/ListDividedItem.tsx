@@ -16,7 +16,7 @@ export const ListDividedItem: React.VFC<ListDividedItemProperties> = ({
 	contentClass,
 	wrapperClass,
 }) => (
-	<li className={`flex w-full flex-col ${wrapperClass || ""}`} data-testid="list-divided-item__wrapper">
+	<li className={cn("flex w-full flex-col", wrapperClass)} data-testid="list-divided-item__wrapper">
 		{label && (
 			<div
 				className={cn({

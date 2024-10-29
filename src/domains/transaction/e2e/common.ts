@@ -34,7 +34,7 @@ export const goToRegistrationPage = async (t: any) => {
 export const goToDelegateRegistrationPage = async (t: any) => {
 	await t.click(Selector('[data-testid="WalletHeader__more-button"]'));
 	await t.click(
-		Selector('[data-testid="WalletHeader__more-button"] li').withText(
+		Selector('[data-testid="dropdown__options"] li').withText(
 			translations.WALLETS.PAGE_WALLET_DETAILS.OPTIONS.REGISTER_DELEGATE,
 		),
 	);
@@ -47,7 +47,7 @@ export const goToDelegateRegistrationPage = async (t: any) => {
 export const goToDelegateResignationPage = async (t: any) => {
 	await t.click(Selector('[data-testid="WalletHeader__more-button"]'));
 	await t.click(
-		Selector('[data-testid="WalletHeader__more-button"] li').withText(
+		Selector('[data-testid="dropdown__options"] li').withText(
 			translations.WALLETS.PAGE_WALLET_DETAILS.OPTIONS.RESIGN_DELEGATE,
 		),
 	);

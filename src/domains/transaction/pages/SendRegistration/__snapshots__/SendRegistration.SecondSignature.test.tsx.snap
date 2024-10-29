@@ -10,7 +10,7 @@ exports[`Second Signature Registration > should register second signature 1`] = 
       class="css-1jzy9qi"
     >
       <div
-        class="relative flex h-21"
+        class="relative flex h-14 sm:h-21"
       >
         <div
           class="hidden w-12 sm:flex"
@@ -44,13 +44,13 @@ exports[`Second Signature Registration > should register second signature 1`] = 
           </button>
         </div>
         <div
-          class="flex flex-1 items-center px-8"
+          class="flex flex-1 items-center px-6 sm:px-8"
         >
           <div
             class="my-auto flex items-center"
           >
             <button
-              class="my-auto mr-4 flex h-11 w-11 cursor-pointer items-center justify-center rounded-xl bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400"
+              class="my-auto mr-2 flex h-8 w-8 cursor-pointer items-center justify-center rounded bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 sm:mr-4 sm:h-11 sm:w-11 sm:rounded-xl"
               data-testid="NavigationBarLogo--button"
               type="button"
             >
@@ -76,7 +76,7 @@ exports[`Second Signature Registration > should register second signature 1`] = 
             </button>
           </div>
           <ul
-            class="ml-4 mr-auto hidden h-21 space-x-8 lg:flex"
+            class="ml-4 mr-auto hidden h-14 space-x-8 sm:h-21 lg:flex"
             data-testid="NavigationBar__menu"
           >
             <li
@@ -133,37 +133,35 @@ exports[`Second Signature Registration > should register second signature 1`] = 
             data-testid="NavigationBar__menu-toggle"
           >
             <div
-              class="static sm:relative"
+              aria-expanded="false"
+              aria-haspopup="dialog"
+              data-testid="dropdown__toggle"
             >
-              <span
-                data-testid="dropdown__toggle"
+              <button
+                class="cursor-pointer rounded p-2 focus:outline-none focus:ring-2 focus:ring-theme-primary-400"
+                type="button"
               >
-                <button
-                  class="cursor-pointer rounded p-2 focus:outline-none focus:ring-2 focus:ring-theme-primary-400"
-                  type="button"
+                <div
+                  class="css-1i4b0eq"
+                  height="20"
+                  width="20"
                 >
-                  <div
-                    class="css-1i4b0eq"
-                    height="20"
-                    width="20"
+                  <svg
+                    viewBox="0 0 20 20"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
                   >
-                    <svg
-                      viewBox="0 0 20 20"
-                      xml:space="preserve"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M1 15.5h18M1 10h18M1 4.5h18"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                      />
-                    </svg>
-                  </div>
-                </button>
-              </span>
+                    <path
+                      d="M1 15.5h18M1 10h18M1 4.5h18"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    />
+                  </svg>
+                </div>
+              </button>
             </div>
           </div>
           <div
@@ -171,52 +169,50 @@ exports[`Second Signature Registration > should register second signature 1`] = 
           >
             <div>
               <div
-                class="static sm:relative"
+                aria-expanded="false"
+                aria-haspopup="dialog"
+                data-testid="dropdown__toggle"
               >
-                <span
-                  data-testid="dropdown__toggle"
+                <div
+                  class="group css-c93wvv"
                 >
-                  <div
-                    class="group css-c93wvv"
+                  <button
+                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none"
+                    data-testid="NavigationBar__buttons--server-status"
+                    type="button"
                   >
-                    <button
-                      class="css-1hei9vx"
-                      data-testid="NavigationBar__buttons--server-status"
-                      type="button"
+                    <div
+                      class="flex items-center space-x-2"
                     >
                       <div
-                        class="flex items-center space-x-2"
+                        class="p-1 css-1i4b0eq"
+                        height="20"
+                        width="20"
+                      >
+                        <svg
+                          fill="none"
+                          viewBox="0 0 20 15"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M6.595 6.285c.618-3.372 3.654-5.664 6.932-5.233 3.279.43 5.67 3.435 5.46 6.86-.21 3.426-2.948 6.092-6.252 6.088H4.912c-1.606.003-3.05-1.017-3.64-2.569-.589-1.552-.203-3.32.972-4.457a3.795 3.795 0 0 1 4.35-.69zm0 0C6.5 7 6.6 7.8 7 9"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          />
+                        </svg>
+                      </div>
+                      <div
+                        class="absolute right-1 top-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
                       >
                         <div
-                          class="p-1 css-1i4b0eq"
-                          height="20"
-                          width="20"
-                        >
-                          <svg
-                            fill="none"
-                            viewBox="0 0 20 15"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M6.595 6.285c.618-3.372 3.654-5.664 6.932-5.233 3.279.43 5.67 3.435 5.46 6.86-.21 3.426-2.948 6.092-6.252 6.088H4.912c-1.606.003-3.05-1.017-3.64-2.569-.589-1.552-.203-3.32.972-4.457a3.795 3.795 0 0 1 4.35-.69zm0 0C6.5 7 6.6 7.8 7 9"
-                              stroke="currentColor"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              stroke-width="2"
-                            />
-                          </svg>
-                        </div>
-                        <div
-                          class="absolute right-1 top-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
-                        >
-                          <div
-                            class="h-2 w-2 rounded-full bg-theme-success-700"
-                          />
-                        </div>
+                          class="h-2 w-2 rounded-full bg-theme-success-700"
+                        />
                       </div>
-                    </button>
-                  </div>
-                </span>
+                    </div>
+                  </button>
+                </div>
               </div>
             </div>
             <div
@@ -224,59 +220,57 @@ exports[`Second Signature Registration > should register second signature 1`] = 
             />
             <div>
               <div
-                class="static sm:relative"
+                aria-expanded="false"
+                aria-haspopup="dialog"
+                data-testid="dropdown__toggle"
               >
-                <span
-                  data-testid="dropdown__toggle"
+                <div
+                  class="group css-c93wvv"
                 >
-                  <div
-                    class="group css-c93wvv"
+                  <button
+                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none"
+                    data-testid="NavigationBar__buttons--notifications"
+                    type="button"
                   >
-                    <button
-                      class="css-1hei9vx"
-                      data-testid="NavigationBar__buttons--notifications"
-                      type="button"
+                    <div
+                      class="flex items-center space-x-2"
                     >
                       <div
-                        class="flex items-center space-x-2"
+                        class="p-1 css-1i4b0eq"
+                        height="20"
+                        width="20"
+                      >
+                        <svg
+                          id="bell"
+                          viewBox="0 0 20 20"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
+                        >
+                          <g
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          >
+                            <path
+                              d="M8.4 17.8c.3.9 1.2 1.4 2.1 1.1.5-.2 1-.6 1.1-1.1M10 2.8V1M10 2.8c3.3 0 6 2.7 6 6h0c0 5.6 1.2 6.6 1.2 6.6H2.8S4 13.9 4 8.8c0-3.3 2.7-6 6-6z"
+                            />
+                          </g>
+                        </svg>
+                      </div>
+                      <div
+                        class="absolute right-1 top-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
                       >
                         <div
-                          class="p-1 css-1i4b0eq"
-                          height="20"
-                          width="20"
-                        >
-                          <svg
-                            id="bell"
-                            viewBox="0 0 20 20"
-                            x="0"
-                            xml:space="preserve"
-                            xmlns="http://www.w3.org/2000/svg"
-                            y="0"
-                          >
-                            <g
-                              fill="none"
-                              stroke="currentColor"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              stroke-width="2"
-                            >
-                              <path
-                                d="M8.4 17.8c.3.9 1.2 1.4 2.1 1.1.5-.2 1-.6 1.1-1.1M10 2.8V1M10 2.8c3.3 0 6 2.7 6 6h0c0 5.6 1.2 6.6 1.2 6.6H2.8S4 13.9 4 8.8c0-3.3 2.7-6 6-6z"
-                              />
-                            </g>
-                          </svg>
-                        </div>
-                        <div
-                          class="absolute right-1 top-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
-                        >
-                          <div
-                            class="h-2 w-2 rounded-full bg-theme-danger-500"
-                          />
-                        </div>
+                          class="h-2 w-2 rounded-full bg-theme-danger-500"
+                        />
                       </div>
-                    </button>
-                  </div>
-                </span>
+                    </div>
+                  </button>
+                </div>
               </div>
             </div>
             <div
@@ -292,7 +286,7 @@ exports[`Second Signature Registration > should register second signature 1`] = 
                   class="css-c93wvv"
                 >
                   <button
-                    class="css-5e9bdv"
+                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700"
                     data-testid="NavigationBar__buttons--receive"
                     disabled=""
                     type="button"
@@ -340,7 +334,7 @@ exports[`Second Signature Registration > should register second signature 1`] = 
                   class="css-c93wvv"
                 >
                   <button
-                    class="css-5e9bdv"
+                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700"
                     data-testid="NavigationBar__buttons--send"
                     disabled=""
                     type="button"
@@ -385,7 +379,7 @@ exports[`Second Signature Registration > should register second signature 1`] = 
             data-testid="NavigationBar__balance"
           >
             <div
-              class="-mt-3 flex flex-row items-center justify-center space-x-2 bg-theme-secondary-100 px-8 py-2.5 dark:bg-black md:m-0 md:flex-col md:items-start md:justify-start md:space-x-0 md:bg-transparent md:p-0 md:text-right md:dark:bg-transparent"
+              class="flex flex-row items-center justify-center space-x-2 bg-theme-secondary-100 px-8 py-2.5 dark:bg-black md:m-0 md:flex-col md:items-start md:justify-start md:space-x-0 md:bg-transparent md:p-0 md:text-right md:dark:bg-transparent"
             >
               <div
                 class="whitespace-nowrap text-theme-secondary-700 dark:text-theme-secondary-500 md:text-xs md:font-semibold md:text-theme-secondary-500"
@@ -406,35 +400,33 @@ exports[`Second Signature Registration > should register second signature 1`] = 
             </div>
           </div>
           <div
-            class="static sm:relative"
+            aria-expanded="false"
+            aria-haspopup="dialog"
+            data-testid="dropdown__toggle"
           >
-            <span
-              data-testid="dropdown__toggle"
+            <div
+              class="relative cursor-pointer items-center justify-center rounded-full align-middle"
+              data-testid="UserMenu"
             >
               <div
-                class="relative cursor-pointer items-center justify-center rounded-full align-middle"
-                data-testid="UserMenu"
+                class="shrink-0 css-1n9jllj"
+                data-testid="Avatar"
               >
                 <div
-                  class="shrink-0 css-1n9jllj"
-                  data-testid="Avatar"
+                  class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                 >
-                  <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                  <img
+                    alt="Profile Avatar"
+                    src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(233, 30, 99)" width="100" height="100"/><circle r="45" cx="80" cy="30" fill="rgb(76, 175, 80)"/><circle r="55" cx="0" cy="60" fill="rgb(255, 152, 0)"/><circle r="40" cx="50" cy="50" fill="rgb(3, 169, 244)"/></svg>"
+                  />
+                  <span
+                    class="absolute text-sm font-semibold text-theme-background dark:text-theme-text"
                   >
-                    <img
-                      alt="Profile Avatar"
-                      src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(233, 30, 99)" width="100" height="100"/><circle r="45" cx="80" cy="30" fill="rgb(76, 175, 80)"/><circle r="55" cx="0" cy="60" fill="rgb(255, 152, 0)"/><circle r="40" cx="50" cy="50" fill="rgb(3, 169, 244)"/></svg>"
-                    />
-                    <span
-                      class="absolute text-sm font-semibold text-theme-background dark:text-theme-text"
-                    >
-                      JO
-                    </span>
-                  </div>
+                    JO
+                  </span>
                 </div>
               </div>
-            </span>
+            </div>
           </div>
         </div>
       </div>
@@ -443,10 +435,10 @@ exports[`Second Signature Registration > should register second signature 1`] = 
       class="flex flex-1 flex-col"
     >
       <div
-        class="flex-1 css-ycib48"
+        class="w-full py-4 first:pt-8 last:pb-8 flex-1 css-9mualq"
       >
         <div
-          class="mx-auto px-8 lg:container md:px-10"
+          class="mx-auto px-6 lg:container md:px-10"
         >
           <form
             class="mx-auto max-w-xl"
@@ -458,11 +450,11 @@ exports[`Second Signature Registration > should register second signature 1`] = 
                 data-testid="tab-pabel__active-panel"
               >
                 <div
-                  class="space-y-6"
+                  class="space-y-4"
                   data-testid="AuthenticationStep"
                 >
                   <div
-                    class="sm:mt-8"
+                    class="w-full sm:mt-8"
                   >
                     <div
                       class="flex flex-col"
@@ -499,19 +491,96 @@ exports[`Second Signature Registration > should register second signature 1`] = 
                       class="flex flex-col justify-between sm:flex-row"
                     >
                       <div
-                        class="flex items-end justify-between bg-theme-background mt-6 hidden sm:block"
+                        class="flex items-end justify-between bg-theme-background mt-8 hidden sm:block"
                       >
                         <div
-                          class="space-y-4"
+                          class="space-y-2"
                         >
-                          <h1
-                            class="mb-0 text-2xl"
-                            data-testid="header__title"
-                          >
-                            Authenticate
-                          </h1>
                           <div
-                            class="flex items-center text-theme-secondary-text"
+                            class="flex items-center gap-3"
+                          >
+                            <div
+                              class="text-theme-primary-600 css-h1kfx5"
+                              data-testid="icon-mnemonic"
+                              height="24"
+                              width="24"
+                            >
+                              <svg
+                                fill="none"
+                                viewBox="0 0 25 25"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <g
+                                  clip-path="url(#clip0_13420_137872)"
+                                >
+                                  <path
+                                    d="M18.0078 14.9033H20.9411"
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                  />
+                                  <path
+                                    clip-rule="evenodd"
+                                    d="M1.875 6.57031C1.875 6.01803 2.32272 5.57031 2.875 5.57031H22.875C23.4273 5.57031 23.875 6.01803 23.875 6.57031V18.837C23.875 19.3893 23.4273 19.837 22.875 19.837H2.875C2.32272 19.837 1.875 19.3893 1.875 18.837V6.57031Z"
+                                    fill-rule="evenodd"
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                  />
+                                  <path
+                                    d="M8.47526 11.2373L4.80859 14.904"
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                  />
+                                  <path
+                                    d="M8.47526 14.904L4.80859 11.2373"
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                  />
+                                  <path
+                                    d="M15.0729 11.2373L11.4062 14.904"
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                  />
+                                  <path
+                                    d="M15.0729 14.904L11.4062 11.2373"
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                  />
+                                </g>
+                                <defs>
+                                  <clippath
+                                    id="clip0_13420_137872"
+                                  >
+                                    <rect
+                                      fill="white"
+                                      height="24"
+                                      transform="translate(24.875 24.5) rotate(-180)"
+                                      width="24"
+                                    />
+                                  </clippath>
+                                </defs>
+                              </svg>
+                            </div>
+                            <h1
+                              class="mb-0 text-2xl leading-[29px]"
+                              data-testid="header__title"
+                            >
+                              Authenticate
+                            </h1>
+                          </div>
+                          <div
+                            class="flex items-center leading-5 text-theme-secondary-text"
                             data-testid="header__subtitle"
                           >
                             Enter your mnemonic passphrase to authenticate the transaction.
@@ -524,21 +593,21 @@ exports[`Second Signature Registration > should register second signature 1`] = 
                     class="flex min-w-0 flex-col css-1bcidjh"
                   >
                     <label
-                      class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+                      class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
                       data-testid="FormLabel"
                       for="mnemonic"
                     >
                       Mnemonic
                     </label>
                     <div
-                      class="css-n1b0kl"
+                      class="css-14zfvme"
                     >
                       <div
                         class="relative flex h-full flex-1"
                       >
                         <input
                           autocomplete="off"
-                          class="no-ligatures w-full border-none css-1vs1awz"
+                          class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
                           data-testid="AuthenticationStep__mnemonic"
                           name="mnemonic"
                           type="password"
@@ -595,10 +664,10 @@ exports[`Second Signature Registration > should register second signature 1`] = 
                 </div>
               </div>
               <div
-                class="css-gu3ikl"
+                class="css-145pihz"
               >
                 <button
-                  class="css-6419sw"
+                  class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-700"
                   data-testid="StepNavigation__back-button"
                   type="button"
                 >
@@ -609,7 +678,7 @@ exports[`Second Signature Registration > should register second signature 1`] = 
                   </div>
                 </button>
                 <button
-                  class="css-fl4fi0"
+                  class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded text-white bg-theme-primary-600 hover:bg-theme-primary-700"
                   data-testid="StepNavigation__send-button"
                   type="submit"
                 >

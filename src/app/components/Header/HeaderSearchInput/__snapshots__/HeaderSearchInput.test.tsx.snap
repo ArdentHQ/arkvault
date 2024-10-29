@@ -7,7 +7,7 @@ exports[`HeaderSearchInput > should render 1`] = `
     data-testid="HeaderSearchInput"
   >
     <div
-      class="flex items-center overflow-hidden rounded-lg border border-theme-secondary-400 bg-theme-background px-4 text-base dark:border-theme-secondary-700 css-e93eg4"
+      class="flex items-center overflow-hidden rounded-lg border border-theme-secondary-400 bg-theme-background px-4 text-base dark:border-theme-secondary-700 css-1ltrfa0"
       data-testid="HeaderSearchInput__input"
     >
       <button
@@ -46,14 +46,14 @@ exports[`HeaderSearchInput > should render 1`] = `
         class="flex-1"
       >
         <div
-          class="-ml-4 css-jq6j0b"
+          class="-ml-4 css-1sdc56v"
         >
           <div
             class="relative flex h-full flex-1"
           >
             <input
               autocomplete="off"
-              class="no-ligatures w-full border-none css-1vs1awz"
+              class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
               data-testid="HeaderSearchInput__input__input"
               placeholder="Search..."
               type="text"
@@ -68,24 +68,46 @@ exports[`HeaderSearchInput > should render 1`] = `
         width="20"
       >
         <svg
-          id="magnifying-glass"
-          viewBox="0 0 20 20"
-          x="0"
-          xml:space="preserve"
+          fill="none"
+          viewBox="0 0 16 16"
           xmlns="http://www.w3.org/2000/svg"
-          y="0"
         >
           <g
-            fill="none"
-            stroke="currentColor"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
+            clip-path="url(#clip0_13375_36442)"
+            id="Vertical container"
           >
-            <path
-              d="M12.1 16.4c4.1-1.7 6-6.5 4.3-10.5C14.7 1.8 9.9 0 5.9 1.6s-6 6.5-4.3 10.5h0c1.8 4.1 6.4 6 10.5 4.3h0zM14.7 14.7L19 19"
-            />
+            <g
+              id="Vertical container_2"
+            >
+              <path
+                d="M10.5038 13.9035C13.7838 12.5435 15.3038 8.70355 13.9438 5.50355C12.5838 2.22355 8.74379 0.783547 5.54379 2.06355C2.34379 3.34355 0.743788 7.26355 2.10379 10.4635C3.54379 13.7435 7.22379 15.2635 10.5038 13.9035Z"
+                id="Vector"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.6"
+              />
+              <path
+                d="M12.8281 12.7832L14.4281 14.3832"
+                id="Vector_2"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.6"
+              />
+            </g>
           </g>
+          <defs>
+            <clippath
+              id="clip0_13375_36442"
+            >
+              <rect
+                fill="transparent"
+                height="16"
+                width="16"
+              />
+            </clippath>
+          </defs>
         </svg>
       </div>
     </div>

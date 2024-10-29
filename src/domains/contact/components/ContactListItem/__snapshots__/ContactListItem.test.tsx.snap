@@ -5,34 +5,15 @@ exports[`ContactListItem > should render 1`] = `
   <table>
     <tbody>
       <tr
-        class=" css-16ynu5g"
+        class="relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-1x4z4cy"
         data-testid="TableRow"
       >
         <td>
           <div
-            class="space-x-4 whitespace-nowrap css-bgc8eo"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l space-x-4 whitespace-nowrap"
           >
-            <div
-              class="shrink-0 css-1px82g5"
-              data-testid="Avatar"
-            >
-              <div
-                class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
-              >
-                <img
-                  alt="Brian"
-                  src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 188, 212)" width="100" height="100"/><circle r="60" cx="0" cy="50" fill="rgb(139, 195, 74)"/><circle r="45" cx="30" cy="70" fill="rgb(255, 193, 7)"/><circle r="40" cx="60" cy="30" fill="rgb(233, 30, 99)"/></svg>"
-                  title="Brian"
-                />
-                <span
-                  class="absolute text-sm font-semibold text-theme-background"
-                >
-                  BR
-                </span>
-              </div>
-            </div>
             <span
-              class="font-semibold"
+              class="text-sm font-semibold leading-[17px]"
               data-testid="ContactListItem__name"
             >
               <span
@@ -48,34 +29,13 @@ exports[`ContactListItem > should render 1`] = `
           class=""
         >
           <div
-            class="justify-center css-o5w6qc"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11"
           >
-            <div
-              aria-label="ARK Devnet"
-              class="text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background duration-100 css-qrfosa"
-              data-testid="NetworkIcon-ARK-ark.devnet"
+            <span
+              class="whitespace-nowrap text-sm font-semibold leading-[17px] text-theme-text"
             >
-              <div
-                class="css-1i4b0eq"
-                data-testid="NetworkIcon__icon"
-                height="20"
-                width="20"
-              >
-                <svg
-                  id="ark"
-                  viewBox="0 0 36.3 30.6"
-                  x="0"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
-                  y="0"
-                >
-                  <path
-                    d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
-                    fill="currentColor"
-                  />
-                </svg>
-              </div>
-            </div>
+              ARK Devnet
+            </span>
           </div>
         </td>
         <td
@@ -83,22 +43,8 @@ exports[`ContactListItem > should render 1`] = `
           data-testid="ContactListItem__address"
         >
           <div
-            class="space-x-4 css-o5w6qc"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
           >
-            <div
-              class="shrink-0 css-1px82g5"
-              data-testid="Avatar"
-            >
-              <div
-                class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
-              >
-                <img
-                  alt="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
-                  src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(233, 30, 99)" width="100" height="100"/><circle r="50" cx="60" cy="40" fill="rgb(139, 195, 74)"/><circle r="45" cx="0" cy="30" fill="rgb(0, 188, 212)"/><circle r="40" cx="90" cy="50" fill="rgb(255, 193, 7)"/></svg>"
-                  title="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
-                />
-              </div>
-            </div>
             <div
               class="w-0 flex-1"
             >
@@ -106,10 +52,10 @@ exports[`ContactListItem > should render 1`] = `
                 class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
                 <div
-                  class="relative grow text-left"
+                  class="relative grow leading-[17px] sm:leading-5 text-left"
                 >
                   <span
-                    class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base absolute w-full"
+                    class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] font-semibold text-base absolute w-full"
                     data-testid="Address__address"
                   >
                     D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib
@@ -126,7 +72,7 @@ exports[`ContactListItem > should render 1`] = `
           class=""
         >
           <div
-            class="space-x-4 justify-center css-o5w6qc"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4 justify-center"
           >
             <button
               class="ring-focus relative focus:outline-none"
@@ -135,7 +81,7 @@ exports[`ContactListItem > should render 1`] = `
               type="button"
             >
               <div
-                class="text-theme-primary-300 dark:text-theme-secondary-700"
+                class="text-theme-primary-400 dark:text-theme-secondary-600"
               >
                 <div
                   class="css-v0ob3f"
@@ -174,16 +120,16 @@ exports[`ContactListItem > should render 1`] = `
           class=""
         >
           <div
-            class="justify-end css-10gefem"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
           >
             <div
-              class="flex items-center space-x-2"
+              class="-mr-3 flex items-center"
             >
               <div
                 data-testid="ContactListItem__send-button-wrapper"
               >
                 <button
-                  class="css-6419sw"
+                  class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-sm leading-[17px] text-theme-primary-600 hover:text-theme-primary-700"
                   data-testid="ContactListItem__send-button"
                   type="button"
                 >
@@ -195,62 +141,59 @@ exports[`ContactListItem > should render 1`] = `
                 </button>
               </div>
               <div
+                class="height-[17px] !m-0 border-theme-secondary-300 dark:border-theme-secondary-800 css-1aie31u"
+                type="vertical"
+              />
+              <div
                 class="visible"
               >
                 <div
-                  class="static sm:relative"
+                  aria-expanded="false"
+                  aria-haspopup="dialog"
+                  data-testid="dropdown__toggle"
                 >
-                  <span
-                    data-testid="dropdown__toggle"
+                  <button
+                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-theme-primary-300 hover:text-theme-primary-600"
+                    type="button"
                   >
-                    <button
-                      class="flex-1 css-1vly8o8"
-                      type="button"
+                    <div
+                      class="flex items-center space-x-2"
                     >
                       <div
-                        class="flex items-center space-x-2"
+                        class="text-theme-secondary-700 css-1i4b0eq"
+                        height="20"
+                        width="20"
                       >
-                        <div
-                          class="css-1i4b0eq"
-                          height="20"
-                          width="20"
+                        <svg
+                          fill="none"
+                          viewBox="0 0 20 20"
+                          xmlns="http://www.w3.org/2000/svg"
                         >
-                          <svg
-                            id="ellipsis-vertical"
-                            viewBox="0 0 20 20"
-                            x="0"
-                            xml:space="preserve"
-                            xmlns="http://www.w3.org/2000/svg"
-                            y="0"
-                          >
-                            <g
-                              fill="none"
-                              stroke="currentColor"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              stroke-width="2"
-                            >
-                              <circle
-                                cx="10"
-                                cy="16.994"
-                                r="2.006"
-                              />
-                              <circle
-                                cx="10"
-                                cy="3"
-                                r="2"
-                              />
-                              <circle
-                                cx="10"
-                                cy="10"
-                                r="2"
-                              />
-                            </g>
-                          </svg>
-                        </div>
+                          <circle
+                            cx="10.002"
+                            cy="2.99609"
+                            fill="currentColor"
+                            r="2"
+                            transform="rotate(90 10.002 2.99609)"
+                          />
+                          <circle
+                            cx="10.002"
+                            cy="9.99805"
+                            fill="currentColor"
+                            r="2"
+                            transform="rotate(90 10.002 9.99805)"
+                          />
+                          <circle
+                            cx="10.002"
+                            cy="17"
+                            fill="currentColor"
+                            r="2"
+                            transform="rotate(90 10.002 17)"
+                          />
+                        </svg>
                       </div>
-                    </button>
-                  </span>
+                    </div>
+                  </button>
                 </div>
               </div>
             </div>
@@ -267,34 +210,15 @@ exports[`ContactListItem > should render as delegate 1`] = `
   <table>
     <tbody>
       <tr
-        class=" css-16ynu5g"
+        class="relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-1x4z4cy"
         data-testid="TableRow"
       >
         <td>
           <div
-            class="space-x-4 whitespace-nowrap css-bgc8eo"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l space-x-4 whitespace-nowrap"
           >
-            <div
-              class="shrink-0 css-1px82g5"
-              data-testid="Avatar"
-            >
-              <div
-                class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
-              >
-                <img
-                  alt="Caio"
-                  src="data:image/svg+xml;utf8,data:image/png;base64,avatarImage"
-                  title="Caio"
-                />
-                <span
-                  class="absolute text-sm font-semibold text-theme-background"
-                >
-                  CA
-                </span>
-              </div>
-            </div>
             <span
-              class="font-semibold"
+              class="text-sm font-semibold leading-[17px]"
               data-testid="ContactListItem__name"
             >
               <span
@@ -310,34 +234,13 @@ exports[`ContactListItem > should render as delegate 1`] = `
           class=""
         >
           <div
-            class="justify-center css-o5w6qc"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11"
           >
-            <div
-              aria-label="ARK Devnet"
-              class="text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background duration-100 css-qrfosa"
-              data-testid="NetworkIcon-ARK-ark.devnet"
+            <span
+              class="whitespace-nowrap text-sm font-semibold leading-[17px] text-theme-text"
             >
-              <div
-                class="css-1i4b0eq"
-                data-testid="NetworkIcon__icon"
-                height="20"
-                width="20"
-              >
-                <svg
-                  id="ark"
-                  viewBox="0 0 36.3 30.6"
-                  x="0"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
-                  y="0"
-                >
-                  <path
-                    d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
-                    fill="currentColor"
-                  />
-                </svg>
-              </div>
-            </div>
+              ARK Devnet
+            </span>
           </div>
         </td>
         <td
@@ -345,22 +248,8 @@ exports[`ContactListItem > should render as delegate 1`] = `
           data-testid="ContactListItem__address"
         >
           <div
-            class="space-x-4 css-o5w6qc"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
           >
-            <div
-              class="shrink-0 css-1px82g5"
-              data-testid="Avatar"
-            >
-              <div
-                class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
-              >
-                <img
-                  alt="id5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
-                  src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(139, 195, 74)" width="100" height="100"/><circle r="40" cx="0" cy="70" fill="rgb(76, 175, 80)"/><circle r="45" cx="30" cy="40" fill="rgb(255, 152, 0)"/><circle r="55" cx="20" cy="50" fill="rgb(33, 150, 243)"/></svg>"
-                  title="id5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
-                />
-              </div>
-            </div>
             <div
               class="w-0 flex-1"
             >
@@ -368,10 +257,10 @@ exports[`ContactListItem > should render as delegate 1`] = `
                 class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
                 <div
-                  class="relative grow text-left"
+                  class="relative grow leading-[17px] sm:leading-5 text-left"
                 >
                   <span
-                    class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base absolute w-full"
+                    class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] font-semibold text-base absolute w-full"
                     data-testid="Address__address"
                   >
                     id5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
@@ -388,7 +277,7 @@ exports[`ContactListItem > should render as delegate 1`] = `
           class=""
         >
           <div
-            class="space-x-4 justify-center css-o5w6qc"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4 justify-center"
           >
             <button
               class="ring-focus relative focus:outline-none"
@@ -397,7 +286,7 @@ exports[`ContactListItem > should render as delegate 1`] = `
               type="button"
             >
               <div
-                class="text-theme-primary-300 dark:text-theme-secondary-700"
+                class="text-theme-primary-400 dark:text-theme-secondary-600"
               >
                 <div
                   class="css-v0ob3f"
@@ -436,16 +325,16 @@ exports[`ContactListItem > should render as delegate 1`] = `
           class=""
         >
           <div
-            class="justify-end css-10gefem"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
           >
             <div
-              class="flex items-center space-x-2"
+              class="-mr-3 flex items-center"
             >
               <div
                 data-testid="ContactListItem__send-button-wrapper"
               >
                 <button
-                  class="css-6419sw"
+                  class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-sm leading-[17px] text-theme-primary-600 hover:text-theme-primary-700"
                   data-testid="ContactListItem__send-button"
                   type="button"
                 >
@@ -457,62 +346,59 @@ exports[`ContactListItem > should render as delegate 1`] = `
                 </button>
               </div>
               <div
+                class="height-[17px] !m-0 border-theme-secondary-300 dark:border-theme-secondary-800 css-1aie31u"
+                type="vertical"
+              />
+              <div
                 class="visible"
               >
                 <div
-                  class="static sm:relative"
+                  aria-expanded="false"
+                  aria-haspopup="dialog"
+                  data-testid="dropdown__toggle"
                 >
-                  <span
-                    data-testid="dropdown__toggle"
+                  <button
+                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-theme-primary-300 hover:text-theme-primary-600"
+                    type="button"
                   >
-                    <button
-                      class="flex-1 css-1vly8o8"
-                      type="button"
+                    <div
+                      class="flex items-center space-x-2"
                     >
                       <div
-                        class="flex items-center space-x-2"
+                        class="text-theme-secondary-700 css-1i4b0eq"
+                        height="20"
+                        width="20"
                       >
-                        <div
-                          class="css-1i4b0eq"
-                          height="20"
-                          width="20"
+                        <svg
+                          fill="none"
+                          viewBox="0 0 20 20"
+                          xmlns="http://www.w3.org/2000/svg"
                         >
-                          <svg
-                            id="ellipsis-vertical"
-                            viewBox="0 0 20 20"
-                            x="0"
-                            xml:space="preserve"
-                            xmlns="http://www.w3.org/2000/svg"
-                            y="0"
-                          >
-                            <g
-                              fill="none"
-                              stroke="currentColor"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              stroke-width="2"
-                            >
-                              <circle
-                                cx="10"
-                                cy="16.994"
-                                r="2.006"
-                              />
-                              <circle
-                                cx="10"
-                                cy="3"
-                                r="2"
-                              />
-                              <circle
-                                cx="10"
-                                cy="10"
-                                r="2"
-                              />
-                            </g>
-                          </svg>
-                        </div>
+                          <circle
+                            cx="10.002"
+                            cy="2.99609"
+                            fill="currentColor"
+                            r="2"
+                            transform="rotate(90 10.002 2.99609)"
+                          />
+                          <circle
+                            cx="10.002"
+                            cy="9.99805"
+                            fill="currentColor"
+                            r="2"
+                            transform="rotate(90 10.002 9.99805)"
+                          />
+                          <circle
+                            cx="10.002"
+                            cy="17"
+                            fill="currentColor"
+                            r="2"
+                            transform="rotate(90 10.002 17)"
+                          />
+                        </svg>
                       </div>
-                    </button>
-                  </span>
+                    </div>
+                  </button>
                 </div>
               </div>
             </div>
@@ -529,34 +415,15 @@ exports[`ContactListItem > should render options 1`] = `
   <table>
     <tbody>
       <tr
-        class=" css-epvetr"
+        class="relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-zmf0ow"
         data-testid="TableRow"
       >
         <td>
           <div
-            class="space-x-4 whitespace-nowrap css-bgc8eo"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l space-x-4 whitespace-nowrap"
           >
-            <div
-              class="shrink-0 css-1px82g5"
-              data-testid="Avatar"
-            >
-              <div
-                class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
-              >
-                <img
-                  alt="Brian"
-                  src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 188, 212)" width="100" height="100"/><circle r="60" cx="0" cy="50" fill="rgb(139, 195, 74)"/><circle r="45" cx="30" cy="70" fill="rgb(255, 193, 7)"/><circle r="40" cx="60" cy="30" fill="rgb(233, 30, 99)"/></svg>"
-                  title="Brian"
-                />
-                <span
-                  class="absolute text-sm font-semibold text-theme-background"
-                >
-                  BR
-                </span>
-              </div>
-            </div>
             <span
-              class="font-semibold"
+              class="text-sm font-semibold leading-[17px]"
               data-testid="ContactListItem__name"
             >
               <span
@@ -572,34 +439,13 @@ exports[`ContactListItem > should render options 1`] = `
           class="border-b border-dashed border-theme-secondary-300 dark:border-theme-secondary-800"
         >
           <div
-            class="justify-center css-o5w6qc"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11"
           >
-            <div
-              aria-label="ARK Devnet"
-              class="text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background duration-100 css-qrfosa"
-              data-testid="NetworkIcon-ARK-ark.devnet"
+            <span
+              class="whitespace-nowrap text-sm font-semibold leading-[17px] text-theme-text"
             >
-              <div
-                class="css-1i4b0eq"
-                data-testid="NetworkIcon__icon"
-                height="20"
-                width="20"
-              >
-                <svg
-                  id="ark"
-                  viewBox="0 0 36.3 30.6"
-                  x="0"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
-                  y="0"
-                >
-                  <path
-                    d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
-                    fill="currentColor"
-                  />
-                </svg>
-              </div>
-            </div>
+              ARK Devnet
+            </span>
           </div>
         </td>
         <td
@@ -607,22 +453,8 @@ exports[`ContactListItem > should render options 1`] = `
           data-testid="ContactListItem__address"
         >
           <div
-            class="space-x-4 css-o5w6qc"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
           >
-            <div
-              class="shrink-0 css-1px82g5"
-              data-testid="Avatar"
-            >
-              <div
-                class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
-              >
-                <img
-                  alt="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
-                  src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(233, 30, 99)" width="100" height="100"/><circle r="50" cx="60" cy="40" fill="rgb(139, 195, 74)"/><circle r="45" cx="0" cy="30" fill="rgb(0, 188, 212)"/><circle r="40" cx="90" cy="50" fill="rgb(255, 193, 7)"/></svg>"
-                  title="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
-                />
-              </div>
-            </div>
             <div
               class="w-0 flex-1"
             >
@@ -630,10 +462,10 @@ exports[`ContactListItem > should render options 1`] = `
                 class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
                 <div
-                  class="relative grow text-left"
+                  class="relative grow leading-[17px] sm:leading-5 text-left"
                 >
                   <span
-                    class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base absolute w-full"
+                    class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] font-semibold text-base absolute w-full"
                     data-testid="Address__address"
                   >
                     D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib
@@ -650,7 +482,7 @@ exports[`ContactListItem > should render options 1`] = `
           class="border-b border-dashed border-theme-secondary-300 dark:border-theme-secondary-800"
         >
           <div
-            class="space-x-4 justify-center css-o5w6qc"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4 justify-center"
           >
             <button
               class="ring-focus relative focus:outline-none"
@@ -659,7 +491,7 @@ exports[`ContactListItem > should render options 1`] = `
               type="button"
             >
               <div
-                class="text-theme-primary-300 dark:text-theme-secondary-700"
+                class="text-theme-primary-400 dark:text-theme-secondary-600"
               >
                 <div
                   class="css-v0ob3f"
@@ -698,16 +530,16 @@ exports[`ContactListItem > should render options 1`] = `
           class="border-b border-dashed border-theme-secondary-300 dark:border-theme-secondary-800"
         >
           <div
-            class="justify-end css-10gefem"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
           >
             <div
-              class="flex items-center space-x-2"
+              class="-mr-3 flex items-center"
             >
               <div
                 data-testid="ContactListItem__send-button-wrapper"
               >
                 <button
-                  class="css-6419sw"
+                  class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-sm leading-[17px] text-theme-primary-600 hover:text-theme-primary-700"
                   data-testid="ContactListItem__send-button"
                   type="button"
                 >
@@ -719,62 +551,59 @@ exports[`ContactListItem > should render options 1`] = `
                 </button>
               </div>
               <div
+                class="height-[17px] !m-0 border-theme-secondary-300 dark:border-theme-secondary-800 css-1aie31u"
+                type="vertical"
+              />
+              <div
                 class="visible"
               >
                 <div
-                  class="static sm:relative"
+                  aria-expanded="false"
+                  aria-haspopup="dialog"
+                  data-testid="dropdown__toggle"
                 >
-                  <span
-                    data-testid="dropdown__toggle"
+                  <button
+                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-theme-primary-300 hover:text-theme-primary-600"
+                    type="button"
                   >
-                    <button
-                      class="flex-1 css-1vly8o8"
-                      type="button"
+                    <div
+                      class="flex items-center space-x-2"
                     >
                       <div
-                        class="flex items-center space-x-2"
+                        class="text-theme-secondary-700 css-1i4b0eq"
+                        height="20"
+                        width="20"
                       >
-                        <div
-                          class="css-1i4b0eq"
-                          height="20"
-                          width="20"
+                        <svg
+                          fill="none"
+                          viewBox="0 0 20 20"
+                          xmlns="http://www.w3.org/2000/svg"
                         >
-                          <svg
-                            id="ellipsis-vertical"
-                            viewBox="0 0 20 20"
-                            x="0"
-                            xml:space="preserve"
-                            xmlns="http://www.w3.org/2000/svg"
-                            y="0"
-                          >
-                            <g
-                              fill="none"
-                              stroke="currentColor"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              stroke-width="2"
-                            >
-                              <circle
-                                cx="10"
-                                cy="16.994"
-                                r="2.006"
-                              />
-                              <circle
-                                cx="10"
-                                cy="3"
-                                r="2"
-                              />
-                              <circle
-                                cx="10"
-                                cy="10"
-                                r="2"
-                              />
-                            </g>
-                          </svg>
-                        </div>
+                          <circle
+                            cx="10.002"
+                            cy="2.99609"
+                            fill="currentColor"
+                            r="2"
+                            transform="rotate(90 10.002 2.99609)"
+                          />
+                          <circle
+                            cx="10.002"
+                            cy="9.99805"
+                            fill="currentColor"
+                            r="2"
+                            transform="rotate(90 10.002 9.99805)"
+                          />
+                          <circle
+                            cx="10.002"
+                            cy="17"
+                            fill="currentColor"
+                            r="2"
+                            transform="rotate(90 10.002 17)"
+                          />
+                        </svg>
                       </div>
-                    </button>
-                  </span>
+                    </div>
+                  </button>
                 </div>
               </div>
             </div>
@@ -782,46 +611,25 @@ exports[`ContactListItem > should render options 1`] = `
         </td>
       </tr>
       <tr
-        class=" css-epvetr"
+        class="relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-zmf0ow"
         data-testid="TableRow"
       >
         <td>
           <div
-            class="space-x-4 whitespace-nowrap css-bgc8eo"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l space-x-4 whitespace-nowrap"
           />
         </td>
         <td
           class="border-b border-dashed border-theme-secondary-300 dark:border-theme-secondary-800"
         >
           <div
-            class="justify-center css-o5w6qc"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11"
           >
-            <div
-              aria-label="ARK Devnet"
-              class="text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background duration-100 css-qrfosa"
-              data-testid="NetworkIcon-ARK-ark.devnet"
+            <span
+              class="whitespace-nowrap text-sm font-semibold leading-[17px] text-theme-text"
             >
-              <div
-                class="css-1i4b0eq"
-                data-testid="NetworkIcon__icon"
-                height="20"
-                width="20"
-              >
-                <svg
-                  id="ark"
-                  viewBox="0 0 36.3 30.6"
-                  x="0"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
-                  y="0"
-                >
-                  <path
-                    d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
-                    fill="currentColor"
-                  />
-                </svg>
-              </div>
-            </div>
+              ARK Devnet
+            </span>
           </div>
         </td>
         <td
@@ -829,22 +637,8 @@ exports[`ContactListItem > should render options 1`] = `
           data-testid="ContactListItem__address"
         >
           <div
-            class="space-x-4 css-o5w6qc"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
           >
-            <div
-              class="shrink-0 css-1px82g5"
-              data-testid="Avatar"
-            >
-              <div
-                class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
-              >
-                <img
-                  alt="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
-                  src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(233, 30, 99)" width="100" height="100"/><circle r="50" cx="60" cy="40" fill="rgb(139, 195, 74)"/><circle r="45" cx="0" cy="30" fill="rgb(0, 188, 212)"/><circle r="40" cx="90" cy="50" fill="rgb(255, 193, 7)"/></svg>"
-                  title="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
-                />
-              </div>
-            </div>
             <div
               class="w-0 flex-1"
             >
@@ -852,10 +646,10 @@ exports[`ContactListItem > should render options 1`] = `
                 class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
                 <div
-                  class="relative grow text-left"
+                  class="relative grow leading-[17px] sm:leading-5 text-left"
                 >
                   <span
-                    class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base absolute w-full"
+                    class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] font-semibold text-base absolute w-full"
                     data-testid="Address__address"
                   >
                     D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib
@@ -872,7 +666,7 @@ exports[`ContactListItem > should render options 1`] = `
           class="border-b border-dashed border-theme-secondary-300 dark:border-theme-secondary-800"
         >
           <div
-            class="space-x-4 justify-center css-o5w6qc"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4 justify-center"
           >
             <button
               class="ring-focus relative focus:outline-none"
@@ -881,7 +675,7 @@ exports[`ContactListItem > should render options 1`] = `
               type="button"
             >
               <div
-                class="text-theme-primary-300 dark:text-theme-secondary-700"
+                class="text-theme-primary-400 dark:text-theme-secondary-600"
               >
                 <div
                   class="css-v0ob3f"
@@ -920,16 +714,16 @@ exports[`ContactListItem > should render options 1`] = `
           class="border-b border-dashed border-theme-secondary-300 dark:border-theme-secondary-800"
         >
           <div
-            class="justify-end css-10gefem"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
           >
             <div
-              class="flex items-center space-x-2"
+              class="-mr-3 flex items-center"
             >
               <div
                 data-testid="ContactListItem__send-button-wrapper"
               >
                 <button
-                  class="css-6419sw"
+                  class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-sm leading-[17px] text-theme-primary-600 hover:text-theme-primary-700"
                   data-testid="ContactListItem__send-button"
                   type="button"
                 >
@@ -944,59 +738,52 @@ exports[`ContactListItem > should render options 1`] = `
                 class="invisible"
               >
                 <div
-                  class="static sm:relative"
+                  aria-expanded="false"
+                  aria-haspopup="dialog"
+                  data-testid="dropdown__toggle"
                 >
-                  <span
-                    data-testid="dropdown__toggle"
+                  <button
+                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-theme-primary-300 hover:text-theme-primary-600"
+                    type="button"
                   >
-                    <button
-                      class="flex-1 css-1vly8o8"
-                      type="button"
+                    <div
+                      class="flex items-center space-x-2"
                     >
                       <div
-                        class="flex items-center space-x-2"
+                        class="text-theme-secondary-700 css-1i4b0eq"
+                        height="20"
+                        width="20"
                       >
-                        <div
-                          class="css-1i4b0eq"
-                          height="20"
-                          width="20"
+                        <svg
+                          fill="none"
+                          viewBox="0 0 20 20"
+                          xmlns="http://www.w3.org/2000/svg"
                         >
-                          <svg
-                            id="ellipsis-vertical"
-                            viewBox="0 0 20 20"
-                            x="0"
-                            xml:space="preserve"
-                            xmlns="http://www.w3.org/2000/svg"
-                            y="0"
-                          >
-                            <g
-                              fill="none"
-                              stroke="currentColor"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              stroke-width="2"
-                            >
-                              <circle
-                                cx="10"
-                                cy="16.994"
-                                r="2.006"
-                              />
-                              <circle
-                                cx="10"
-                                cy="3"
-                                r="2"
-                              />
-                              <circle
-                                cx="10"
-                                cy="10"
-                                r="2"
-                              />
-                            </g>
-                          </svg>
-                        </div>
+                          <circle
+                            cx="10.002"
+                            cy="2.99609"
+                            fill="currentColor"
+                            r="2"
+                            transform="rotate(90 10.002 2.99609)"
+                          />
+                          <circle
+                            cx="10.002"
+                            cy="9.99805"
+                            fill="currentColor"
+                            r="2"
+                            transform="rotate(90 10.002 9.99805)"
+                          />
+                          <circle
+                            cx="10.002"
+                            cy="17"
+                            fill="currentColor"
+                            r="2"
+                            transform="rotate(90 10.002 17)"
+                          />
+                        </svg>
                       </div>
-                    </button>
-                  </span>
+                    </div>
+                  </button>
                 </div>
               </div>
             </div>
@@ -1004,46 +791,25 @@ exports[`ContactListItem > should render options 1`] = `
         </td>
       </tr>
       <tr
-        class=" css-16ynu5g"
+        class="relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-1x4z4cy"
         data-testid="TableRow"
       >
         <td>
           <div
-            class="space-x-4 whitespace-nowrap css-bgc8eo"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l space-x-4 whitespace-nowrap"
           />
         </td>
         <td
           class=""
         >
           <div
-            class="justify-center css-o5w6qc"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11"
           >
-            <div
-              aria-label="ARK Devnet"
-              class="text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background duration-100 css-qrfosa"
-              data-testid="NetworkIcon-ARK-ark.devnet"
+            <span
+              class="whitespace-nowrap text-sm font-semibold leading-[17px] text-theme-text"
             >
-              <div
-                class="css-1i4b0eq"
-                data-testid="NetworkIcon__icon"
-                height="20"
-                width="20"
-              >
-                <svg
-                  id="ark"
-                  viewBox="0 0 36.3 30.6"
-                  x="0"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
-                  y="0"
-                >
-                  <path
-                    d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
-                    fill="currentColor"
-                  />
-                </svg>
-              </div>
-            </div>
+              ARK Devnet
+            </span>
           </div>
         </td>
         <td
@@ -1051,22 +817,8 @@ exports[`ContactListItem > should render options 1`] = `
           data-testid="ContactListItem__address"
         >
           <div
-            class="space-x-4 css-o5w6qc"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
           >
-            <div
-              class="shrink-0 css-1px82g5"
-              data-testid="Avatar"
-            >
-              <div
-                class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
-              >
-                <img
-                  alt="DKrACQw7ytoU2gjppy3qKeE2dQhZjfXYqu"
-                  src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(3, 169, 244)" width="100" height="100"/><circle r="60" cx="50" cy="30" fill="rgb(139, 195, 74)"/><circle r="40" cx="20" cy="70" fill="rgb(244, 67, 54)"/><circle r="50" cx="0" cy="40" fill="rgb(255, 152, 0)"/></svg>"
-                  title="DKrACQw7ytoU2gjppy3qKeE2dQhZjfXYqu"
-                />
-              </div>
-            </div>
             <div
               class="w-0 flex-1"
             >
@@ -1074,10 +826,10 @@ exports[`ContactListItem > should render options 1`] = `
                 class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
                 <div
-                  class="relative grow text-left"
+                  class="relative grow leading-[17px] sm:leading-5 text-left"
                 >
                   <span
-                    class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base absolute w-full"
+                    class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] font-semibold text-base absolute w-full"
                     data-testid="Address__address"
                   >
                     DKrACQw7ytoU2gjppy3qKeE2dQhZjfXYqu
@@ -1094,7 +846,7 @@ exports[`ContactListItem > should render options 1`] = `
           class=""
         >
           <div
-            class="space-x-4 justify-center css-o5w6qc"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4 justify-center"
           >
             <button
               class="ring-focus relative focus:outline-none"
@@ -1103,7 +855,7 @@ exports[`ContactListItem > should render options 1`] = `
               type="button"
             >
               <div
-                class="text-theme-primary-300 dark:text-theme-secondary-700"
+                class="text-theme-primary-400 dark:text-theme-secondary-600"
               >
                 <div
                   class="css-v0ob3f"
@@ -1142,16 +894,16 @@ exports[`ContactListItem > should render options 1`] = `
           class=""
         >
           <div
-            class="justify-end css-10gefem"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
           >
             <div
-              class="flex items-center space-x-2"
+              class="-mr-3 flex items-center"
             >
               <div
                 data-testid="ContactListItem__send-button-wrapper"
               >
                 <button
-                  class="css-6419sw"
+                  class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-sm leading-[17px] text-theme-primary-600 hover:text-theme-primary-700"
                   data-testid="ContactListItem__send-button"
                   type="button"
                 >
@@ -1166,59 +918,52 @@ exports[`ContactListItem > should render options 1`] = `
                 class="invisible"
               >
                 <div
-                  class="static sm:relative"
+                  aria-expanded="false"
+                  aria-haspopup="dialog"
+                  data-testid="dropdown__toggle"
                 >
-                  <span
-                    data-testid="dropdown__toggle"
+                  <button
+                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-theme-primary-300 hover:text-theme-primary-600"
+                    type="button"
                   >
-                    <button
-                      class="flex-1 css-1vly8o8"
-                      type="button"
+                    <div
+                      class="flex items-center space-x-2"
                     >
                       <div
-                        class="flex items-center space-x-2"
+                        class="text-theme-secondary-700 css-1i4b0eq"
+                        height="20"
+                        width="20"
                       >
-                        <div
-                          class="css-1i4b0eq"
-                          height="20"
-                          width="20"
+                        <svg
+                          fill="none"
+                          viewBox="0 0 20 20"
+                          xmlns="http://www.w3.org/2000/svg"
                         >
-                          <svg
-                            id="ellipsis-vertical"
-                            viewBox="0 0 20 20"
-                            x="0"
-                            xml:space="preserve"
-                            xmlns="http://www.w3.org/2000/svg"
-                            y="0"
-                          >
-                            <g
-                              fill="none"
-                              stroke="currentColor"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              stroke-width="2"
-                            >
-                              <circle
-                                cx="10"
-                                cy="16.994"
-                                r="2.006"
-                              />
-                              <circle
-                                cx="10"
-                                cy="3"
-                                r="2"
-                              />
-                              <circle
-                                cx="10"
-                                cy="10"
-                                r="2"
-                              />
-                            </g>
-                          </svg>
-                        </div>
+                          <circle
+                            cx="10.002"
+                            cy="2.99609"
+                            fill="currentColor"
+                            r="2"
+                            transform="rotate(90 10.002 2.99609)"
+                          />
+                          <circle
+                            cx="10.002"
+                            cy="9.99805"
+                            fill="currentColor"
+                            r="2"
+                            transform="rotate(90 10.002 9.99805)"
+                          />
+                          <circle
+                            cx="10.002"
+                            cy="17"
+                            fill="currentColor"
+                            r="2"
+                            transform="rotate(90 10.002 17)"
+                          />
+                        </svg>
                       </div>
-                    </button>
-                  </span>
+                    </div>
+                  </button>
                 </div>
               </div>
             </div>
@@ -1235,34 +980,15 @@ exports[`ContactListItem > should render with multiple addresses 1`] = `
   <table>
     <tbody>
       <tr
-        class=" css-epvetr"
+        class="relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-zmf0ow"
         data-testid="TableRow"
       >
         <td>
           <div
-            class="space-x-4 whitespace-nowrap css-bgc8eo"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l space-x-4 whitespace-nowrap"
           >
-            <div
-              class="shrink-0 css-1px82g5"
-              data-testid="Avatar"
-            >
-              <div
-                class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
-              >
-                <img
-                  alt="Brian"
-                  src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 188, 212)" width="100" height="100"/><circle r="60" cx="0" cy="50" fill="rgb(139, 195, 74)"/><circle r="45" cx="30" cy="70" fill="rgb(255, 193, 7)"/><circle r="40" cx="60" cy="30" fill="rgb(233, 30, 99)"/></svg>"
-                  title="Brian"
-                />
-                <span
-                  class="absolute text-sm font-semibold text-theme-background"
-                >
-                  BR
-                </span>
-              </div>
-            </div>
             <span
-              class="font-semibold"
+              class="text-sm font-semibold leading-[17px]"
               data-testid="ContactListItem__name"
             >
               <span
@@ -1278,34 +1004,13 @@ exports[`ContactListItem > should render with multiple addresses 1`] = `
           class="border-b border-dashed border-theme-secondary-300 dark:border-theme-secondary-800"
         >
           <div
-            class="justify-center css-o5w6qc"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11"
           >
-            <div
-              aria-label="ARK Devnet"
-              class="text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background duration-100 css-qrfosa"
-              data-testid="NetworkIcon-ARK-ark.devnet"
+            <span
+              class="whitespace-nowrap text-sm font-semibold leading-[17px] text-theme-text"
             >
-              <div
-                class="css-1i4b0eq"
-                data-testid="NetworkIcon__icon"
-                height="20"
-                width="20"
-              >
-                <svg
-                  id="ark"
-                  viewBox="0 0 36.3 30.6"
-                  x="0"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
-                  y="0"
-                >
-                  <path
-                    d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
-                    fill="currentColor"
-                  />
-                </svg>
-              </div>
-            </div>
+              ARK Devnet
+            </span>
           </div>
         </td>
         <td
@@ -1313,22 +1018,8 @@ exports[`ContactListItem > should render with multiple addresses 1`] = `
           data-testid="ContactListItem__address"
         >
           <div
-            class="space-x-4 css-o5w6qc"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
           >
-            <div
-              class="shrink-0 css-1px82g5"
-              data-testid="Avatar"
-            >
-              <div
-                class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
-              >
-                <img
-                  alt="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
-                  src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(233, 30, 99)" width="100" height="100"/><circle r="50" cx="60" cy="40" fill="rgb(139, 195, 74)"/><circle r="45" cx="0" cy="30" fill="rgb(0, 188, 212)"/><circle r="40" cx="90" cy="50" fill="rgb(255, 193, 7)"/></svg>"
-                  title="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
-                />
-              </div>
-            </div>
             <div
               class="w-0 flex-1"
             >
@@ -1336,10 +1027,10 @@ exports[`ContactListItem > should render with multiple addresses 1`] = `
                 class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
                 <div
-                  class="relative grow text-left"
+                  class="relative grow leading-[17px] sm:leading-5 text-left"
                 >
                   <span
-                    class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base absolute w-full"
+                    class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] font-semibold text-base absolute w-full"
                     data-testid="Address__address"
                   >
                     D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib
@@ -1356,7 +1047,7 @@ exports[`ContactListItem > should render with multiple addresses 1`] = `
           class="border-b border-dashed border-theme-secondary-300 dark:border-theme-secondary-800"
         >
           <div
-            class="space-x-4 justify-center css-o5w6qc"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4 justify-center"
           >
             <button
               class="ring-focus relative focus:outline-none"
@@ -1365,7 +1056,7 @@ exports[`ContactListItem > should render with multiple addresses 1`] = `
               type="button"
             >
               <div
-                class="text-theme-primary-300 dark:text-theme-secondary-700"
+                class="text-theme-primary-400 dark:text-theme-secondary-600"
               >
                 <div
                   class="css-v0ob3f"
@@ -1404,16 +1095,16 @@ exports[`ContactListItem > should render with multiple addresses 1`] = `
           class="border-b border-dashed border-theme-secondary-300 dark:border-theme-secondary-800"
         >
           <div
-            class="justify-end css-10gefem"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
           >
             <div
-              class="flex items-center space-x-2"
+              class="-mr-3 flex items-center"
             >
               <div
                 data-testid="ContactListItem__send-button-wrapper"
               >
                 <button
-                  class="css-6419sw"
+                  class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-sm leading-[17px] text-theme-primary-600 hover:text-theme-primary-700"
                   data-testid="ContactListItem__send-button"
                   type="button"
                 >
@@ -1425,62 +1116,59 @@ exports[`ContactListItem > should render with multiple addresses 1`] = `
                 </button>
               </div>
               <div
+                class="height-[17px] !m-0 border-theme-secondary-300 dark:border-theme-secondary-800 css-1aie31u"
+                type="vertical"
+              />
+              <div
                 class="visible"
               >
                 <div
-                  class="static sm:relative"
+                  aria-expanded="false"
+                  aria-haspopup="dialog"
+                  data-testid="dropdown__toggle"
                 >
-                  <span
-                    data-testid="dropdown__toggle"
+                  <button
+                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-theme-primary-300 hover:text-theme-primary-600"
+                    type="button"
                   >
-                    <button
-                      class="flex-1 css-1vly8o8"
-                      type="button"
+                    <div
+                      class="flex items-center space-x-2"
                     >
                       <div
-                        class="flex items-center space-x-2"
+                        class="text-theme-secondary-700 css-1i4b0eq"
+                        height="20"
+                        width="20"
                       >
-                        <div
-                          class="css-1i4b0eq"
-                          height="20"
-                          width="20"
+                        <svg
+                          fill="none"
+                          viewBox="0 0 20 20"
+                          xmlns="http://www.w3.org/2000/svg"
                         >
-                          <svg
-                            id="ellipsis-vertical"
-                            viewBox="0 0 20 20"
-                            x="0"
-                            xml:space="preserve"
-                            xmlns="http://www.w3.org/2000/svg"
-                            y="0"
-                          >
-                            <g
-                              fill="none"
-                              stroke="currentColor"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              stroke-width="2"
-                            >
-                              <circle
-                                cx="10"
-                                cy="16.994"
-                                r="2.006"
-                              />
-                              <circle
-                                cx="10"
-                                cy="3"
-                                r="2"
-                              />
-                              <circle
-                                cx="10"
-                                cy="10"
-                                r="2"
-                              />
-                            </g>
-                          </svg>
-                        </div>
+                          <circle
+                            cx="10.002"
+                            cy="2.99609"
+                            fill="currentColor"
+                            r="2"
+                            transform="rotate(90 10.002 2.99609)"
+                          />
+                          <circle
+                            cx="10.002"
+                            cy="9.99805"
+                            fill="currentColor"
+                            r="2"
+                            transform="rotate(90 10.002 9.99805)"
+                          />
+                          <circle
+                            cx="10.002"
+                            cy="17"
+                            fill="currentColor"
+                            r="2"
+                            transform="rotate(90 10.002 17)"
+                          />
+                        </svg>
                       </div>
-                    </button>
-                  </span>
+                    </div>
+                  </button>
                 </div>
               </div>
             </div>
@@ -1488,46 +1176,25 @@ exports[`ContactListItem > should render with multiple addresses 1`] = `
         </td>
       </tr>
       <tr
-        class=" css-epvetr"
+        class="relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-zmf0ow"
         data-testid="TableRow"
       >
         <td>
           <div
-            class="space-x-4 whitespace-nowrap css-bgc8eo"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l space-x-4 whitespace-nowrap"
           />
         </td>
         <td
           class="border-b border-dashed border-theme-secondary-300 dark:border-theme-secondary-800"
         >
           <div
-            class="justify-center css-o5w6qc"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11"
           >
-            <div
-              aria-label="ARK Devnet"
-              class="text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background duration-100 css-qrfosa"
-              data-testid="NetworkIcon-ARK-ark.devnet"
+            <span
+              class="whitespace-nowrap text-sm font-semibold leading-[17px] text-theme-text"
             >
-              <div
-                class="css-1i4b0eq"
-                data-testid="NetworkIcon__icon"
-                height="20"
-                width="20"
-              >
-                <svg
-                  id="ark"
-                  viewBox="0 0 36.3 30.6"
-                  x="0"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
-                  y="0"
-                >
-                  <path
-                    d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
-                    fill="currentColor"
-                  />
-                </svg>
-              </div>
-            </div>
+              ARK Devnet
+            </span>
           </div>
         </td>
         <td
@@ -1535,22 +1202,8 @@ exports[`ContactListItem > should render with multiple addresses 1`] = `
           data-testid="ContactListItem__address"
         >
           <div
-            class="space-x-4 css-o5w6qc"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
           >
-            <div
-              class="shrink-0 css-1px82g5"
-              data-testid="Avatar"
-            >
-              <div
-                class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
-              >
-                <img
-                  alt="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
-                  src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(233, 30, 99)" width="100" height="100"/><circle r="50" cx="60" cy="40" fill="rgb(139, 195, 74)"/><circle r="45" cx="0" cy="30" fill="rgb(0, 188, 212)"/><circle r="40" cx="90" cy="50" fill="rgb(255, 193, 7)"/></svg>"
-                  title="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
-                />
-              </div>
-            </div>
             <div
               class="w-0 flex-1"
             >
@@ -1558,10 +1211,10 @@ exports[`ContactListItem > should render with multiple addresses 1`] = `
                 class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
                 <div
-                  class="relative grow text-left"
+                  class="relative grow leading-[17px] sm:leading-5 text-left"
                 >
                   <span
-                    class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base absolute w-full"
+                    class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] font-semibold text-base absolute w-full"
                     data-testid="Address__address"
                   >
                     D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib
@@ -1578,7 +1231,7 @@ exports[`ContactListItem > should render with multiple addresses 1`] = `
           class="border-b border-dashed border-theme-secondary-300 dark:border-theme-secondary-800"
         >
           <div
-            class="space-x-4 justify-center css-o5w6qc"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4 justify-center"
           >
             <button
               class="ring-focus relative focus:outline-none"
@@ -1587,7 +1240,7 @@ exports[`ContactListItem > should render with multiple addresses 1`] = `
               type="button"
             >
               <div
-                class="text-theme-primary-300 dark:text-theme-secondary-700"
+                class="text-theme-primary-400 dark:text-theme-secondary-600"
               >
                 <div
                   class="css-v0ob3f"
@@ -1626,16 +1279,16 @@ exports[`ContactListItem > should render with multiple addresses 1`] = `
           class="border-b border-dashed border-theme-secondary-300 dark:border-theme-secondary-800"
         >
           <div
-            class="justify-end css-10gefem"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
           >
             <div
-              class="flex items-center space-x-2"
+              class="-mr-3 flex items-center"
             >
               <div
                 data-testid="ContactListItem__send-button-wrapper"
               >
                 <button
-                  class="css-6419sw"
+                  class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-sm leading-[17px] text-theme-primary-600 hover:text-theme-primary-700"
                   data-testid="ContactListItem__send-button"
                   type="button"
                 >
@@ -1650,59 +1303,52 @@ exports[`ContactListItem > should render with multiple addresses 1`] = `
                 class="invisible"
               >
                 <div
-                  class="static sm:relative"
+                  aria-expanded="false"
+                  aria-haspopup="dialog"
+                  data-testid="dropdown__toggle"
                 >
-                  <span
-                    data-testid="dropdown__toggle"
+                  <button
+                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-theme-primary-300 hover:text-theme-primary-600"
+                    type="button"
                   >
-                    <button
-                      class="flex-1 css-1vly8o8"
-                      type="button"
+                    <div
+                      class="flex items-center space-x-2"
                     >
                       <div
-                        class="flex items-center space-x-2"
+                        class="text-theme-secondary-700 css-1i4b0eq"
+                        height="20"
+                        width="20"
                       >
-                        <div
-                          class="css-1i4b0eq"
-                          height="20"
-                          width="20"
+                        <svg
+                          fill="none"
+                          viewBox="0 0 20 20"
+                          xmlns="http://www.w3.org/2000/svg"
                         >
-                          <svg
-                            id="ellipsis-vertical"
-                            viewBox="0 0 20 20"
-                            x="0"
-                            xml:space="preserve"
-                            xmlns="http://www.w3.org/2000/svg"
-                            y="0"
-                          >
-                            <g
-                              fill="none"
-                              stroke="currentColor"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              stroke-width="2"
-                            >
-                              <circle
-                                cx="10"
-                                cy="16.994"
-                                r="2.006"
-                              />
-                              <circle
-                                cx="10"
-                                cy="3"
-                                r="2"
-                              />
-                              <circle
-                                cx="10"
-                                cy="10"
-                                r="2"
-                              />
-                            </g>
-                          </svg>
-                        </div>
+                          <circle
+                            cx="10.002"
+                            cy="2.99609"
+                            fill="currentColor"
+                            r="2"
+                            transform="rotate(90 10.002 2.99609)"
+                          />
+                          <circle
+                            cx="10.002"
+                            cy="9.99805"
+                            fill="currentColor"
+                            r="2"
+                            transform="rotate(90 10.002 9.99805)"
+                          />
+                          <circle
+                            cx="10.002"
+                            cy="17"
+                            fill="currentColor"
+                            r="2"
+                            transform="rotate(90 10.002 17)"
+                          />
+                        </svg>
                       </div>
-                    </button>
-                  </span>
+                    </div>
+                  </button>
                 </div>
               </div>
             </div>
@@ -1710,46 +1356,25 @@ exports[`ContactListItem > should render with multiple addresses 1`] = `
         </td>
       </tr>
       <tr
-        class=" css-16ynu5g"
+        class="relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-1x4z4cy"
         data-testid="TableRow"
       >
         <td>
           <div
-            class="space-x-4 whitespace-nowrap css-bgc8eo"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l space-x-4 whitespace-nowrap"
           />
         </td>
         <td
           class=""
         >
           <div
-            class="justify-center css-o5w6qc"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11"
           >
-            <div
-              aria-label="ARK Devnet"
-              class="text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background duration-100 css-qrfosa"
-              data-testid="NetworkIcon-ARK-ark.devnet"
+            <span
+              class="whitespace-nowrap text-sm font-semibold leading-[17px] text-theme-text"
             >
-              <div
-                class="css-1i4b0eq"
-                data-testid="NetworkIcon__icon"
-                height="20"
-                width="20"
-              >
-                <svg
-                  id="ark"
-                  viewBox="0 0 36.3 30.6"
-                  x="0"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
-                  y="0"
-                >
-                  <path
-                    d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
-                    fill="currentColor"
-                  />
-                </svg>
-              </div>
-            </div>
+              ARK Devnet
+            </span>
           </div>
         </td>
         <td
@@ -1757,22 +1382,8 @@ exports[`ContactListItem > should render with multiple addresses 1`] = `
           data-testid="ContactListItem__address"
         >
           <div
-            class="space-x-4 css-o5w6qc"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
           >
-            <div
-              class="shrink-0 css-1px82g5"
-              data-testid="Avatar"
-            >
-              <div
-                class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
-              >
-                <img
-                  alt="DKrACQw7ytoU2gjppy3qKeE2dQhZjfXYqu"
-                  src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(3, 169, 244)" width="100" height="100"/><circle r="60" cx="50" cy="30" fill="rgb(139, 195, 74)"/><circle r="40" cx="20" cy="70" fill="rgb(244, 67, 54)"/><circle r="50" cx="0" cy="40" fill="rgb(255, 152, 0)"/></svg>"
-                  title="DKrACQw7ytoU2gjppy3qKeE2dQhZjfXYqu"
-                />
-              </div>
-            </div>
             <div
               class="w-0 flex-1"
             >
@@ -1780,10 +1391,10 @@ exports[`ContactListItem > should render with multiple addresses 1`] = `
                 class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
                 <div
-                  class="relative grow text-left"
+                  class="relative grow leading-[17px] sm:leading-5 text-left"
                 >
                   <span
-                    class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base absolute w-full"
+                    class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] font-semibold text-base absolute w-full"
                     data-testid="Address__address"
                   >
                     DKrACQw7ytoU2gjppy3qKeE2dQhZjfXYqu
@@ -1800,7 +1411,7 @@ exports[`ContactListItem > should render with multiple addresses 1`] = `
           class=""
         >
           <div
-            class="space-x-4 justify-center css-o5w6qc"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4 justify-center"
           >
             <button
               class="ring-focus relative focus:outline-none"
@@ -1809,7 +1420,7 @@ exports[`ContactListItem > should render with multiple addresses 1`] = `
               type="button"
             >
               <div
-                class="text-theme-primary-300 dark:text-theme-secondary-700"
+                class="text-theme-primary-400 dark:text-theme-secondary-600"
               >
                 <div
                   class="css-v0ob3f"
@@ -1848,16 +1459,16 @@ exports[`ContactListItem > should render with multiple addresses 1`] = `
           class=""
         >
           <div
-            class="justify-end css-10gefem"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
           >
             <div
-              class="flex items-center space-x-2"
+              class="-mr-3 flex items-center"
             >
               <div
                 data-testid="ContactListItem__send-button-wrapper"
               >
                 <button
-                  class="css-6419sw"
+                  class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-sm leading-[17px] text-theme-primary-600 hover:text-theme-primary-700"
                   data-testid="ContactListItem__send-button"
                   type="button"
                 >
@@ -1872,59 +1483,52 @@ exports[`ContactListItem > should render with multiple addresses 1`] = `
                 class="invisible"
               >
                 <div
-                  class="static sm:relative"
+                  aria-expanded="false"
+                  aria-haspopup="dialog"
+                  data-testid="dropdown__toggle"
                 >
-                  <span
-                    data-testid="dropdown__toggle"
+                  <button
+                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-theme-primary-300 hover:text-theme-primary-600"
+                    type="button"
                   >
-                    <button
-                      class="flex-1 css-1vly8o8"
-                      type="button"
+                    <div
+                      class="flex items-center space-x-2"
                     >
                       <div
-                        class="flex items-center space-x-2"
+                        class="text-theme-secondary-700 css-1i4b0eq"
+                        height="20"
+                        width="20"
                       >
-                        <div
-                          class="css-1i4b0eq"
-                          height="20"
-                          width="20"
+                        <svg
+                          fill="none"
+                          viewBox="0 0 20 20"
+                          xmlns="http://www.w3.org/2000/svg"
                         >
-                          <svg
-                            id="ellipsis-vertical"
-                            viewBox="0 0 20 20"
-                            x="0"
-                            xml:space="preserve"
-                            xmlns="http://www.w3.org/2000/svg"
-                            y="0"
-                          >
-                            <g
-                              fill="none"
-                              stroke="currentColor"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              stroke-width="2"
-                            >
-                              <circle
-                                cx="10"
-                                cy="16.994"
-                                r="2.006"
-                              />
-                              <circle
-                                cx="10"
-                                cy="3"
-                                r="2"
-                              />
-                              <circle
-                                cx="10"
-                                cy="10"
-                                r="2"
-                              />
-                            </g>
-                          </svg>
-                        </div>
+                          <circle
+                            cx="10.002"
+                            cy="2.99609"
+                            fill="currentColor"
+                            r="2"
+                            transform="rotate(90 10.002 2.99609)"
+                          />
+                          <circle
+                            cx="10.002"
+                            cy="9.99805"
+                            fill="currentColor"
+                            r="2"
+                            transform="rotate(90 10.002 9.99805)"
+                          />
+                          <circle
+                            cx="10.002"
+                            cy="17"
+                            fill="currentColor"
+                            r="2"
+                            transform="rotate(90 10.002 17)"
+                          />
+                        </svg>
                       </div>
-                    </button>
-                  </span>
+                    </div>
+                  </button>
                 </div>
               </div>
             </div>

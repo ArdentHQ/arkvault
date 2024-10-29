@@ -10,51 +10,49 @@ exports[`WalletsControls > should render 1`] = `
       class="static mr-0 flex items-center border-theme-secondary-300 pr-0 text-theme-primary-300 dark:border-theme-secondary-800 dark:text-theme-secondary-600 sm:mr-8 sm:border-r sm:pr-5 md:relative"
     >
       <div
-        class="static sm:relative"
+        aria-expanded="false"
+        aria-haspopup="dialog"
+        data-testid="dropdown__toggle"
       >
-        <span
-          data-testid="dropdown__toggle"
-        >
-          <span>
-            <div
-              class="group"
+        <span>
+          <div
+            class="group"
+          >
+            <button
+              class="ring-focus css-14zm422"
             >
-              <button
-                class="ring-focus css-14zm422"
+              <div
+                class="flex h-5 w-5 items-center justify-center"
               >
                 <div
-                  class="flex h-5 w-5 items-center justify-center"
+                  class="css-1i4b0eq"
+                  height="20"
+                  width="20"
                 >
-                  <div
-                    class="css-1i4b0eq"
-                    height="20"
-                    width="20"
+                  <svg
+                    id="sliders-vertical"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
                   >
-                    <svg
-                      id="sliders-vertical"
-                      viewBox="0 0 20 20"
-                      x="0"
-                      xml:space="preserve"
-                      xmlns="http://www.w3.org/2000/svg"
-                      y="0"
+                    <g
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
                     >
-                      <g
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                      >
-                        <path
-                          d="M15 9V1M15 19v-4M18 12c0 1.7-1.4 3-3 3-1.7 0-3-1.4-3-3s1.2-3 3-3h0c1.7 0 3 1.3 3 3h0zM5 7.1V19M8 4c0-1.7-1.4-3-3-3S2 2.4 2 4c0 1.7 1.4 3 3 3s3-1.3 3-3c0 .1 0 0 0 0z"
-                        />
-                      </g>
-                    </svg>
-                  </div>
+                      <path
+                        d="M15 9V1M15 19v-4M18 12c0 1.7-1.4 3-3 3-1.7 0-3-1.4-3-3s1.2-3 3-3h0c1.7 0 3 1.3 3 3h0zM5 7.1V19M8 4c0-1.7-1.4-3-3-3S2 2.4 2 4c0 1.7 1.4 3 3 3s3-1.3 3-3c0 .1 0 0 0 0z"
+                      />
+                    </g>
+                  </svg>
                 </div>
-              </button>
-            </div>
-          </span>
+              </div>
+            </button>
+          </div>
         </span>
       </div>
     </div>
@@ -71,7 +69,7 @@ exports[`WalletsControls > should render 1`] = `
     >
       <div>
         <button
-          class="css-wqh5n3"
+          class="px-5 py-3 space-x-3 text-base relative items-center justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-700 hidden md:inline-flex"
           data-testid="WalletControls__import-ledger"
           type="button"
         >
@@ -110,7 +108,7 @@ exports[`WalletsControls > should render 1`] = `
         </button>
       </div>
       <button
-        class="css-6419sw"
+        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-700"
         data-testid="WalletControls__import-wallet"
         type="button"
       >
@@ -156,7 +154,7 @@ exports[`WalletsControls > should render 1`] = `
         </div>
       </button>
       <button
-        class="css-fl4fi0"
+        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded text-white bg-theme-primary-600 hover:bg-theme-primary-700"
         data-testid="WalletControls__create-wallet"
         type="button"
       >
@@ -203,41 +201,39 @@ exports[`WalletsControls > should render 1`] = `
       class="flex items-center sm:hidden"
     >
       <div
-        class="static sm:relative"
+        aria-expanded="false"
+        aria-haspopup="dialog"
+        data-testid="dropdown__toggle"
       >
         <span
-          data-testid="dropdown__toggle"
+          class="-mx-1 flex items-center px-5 py-3 text-theme-primary-300 dark:text-theme-secondary-600"
         >
-          <span
-            class="-mx-1 flex items-center px-5 py-3 text-theme-primary-300 dark:text-theme-secondary-600"
+          <div
+            class="css-v0ob3f"
+            height="16"
+            width="16"
           >
-            <div
-              class="css-v0ob3f"
-              height="16"
-              width="16"
+            <svg
+              id="plus"
+              viewBox="0 0 20 20"
+              x="0"
+              xml:space="preserve"
+              xmlns="http://www.w3.org/2000/svg"
+              y="0"
             >
-              <svg
-                id="plus"
-                viewBox="0 0 20 20"
-                x="0"
-                xml:space="preserve"
-                xmlns="http://www.w3.org/2000/svg"
-                y="0"
+              <g
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
               >
-                <g
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                >
-                  <path
-                    d="M1 10h18M10 1v18"
-                  />
-                </g>
-              </svg>
-            </div>
-          </span>
+                <path
+                  d="M1 10h18M10 1v18"
+                />
+              </g>
+            </svg>
+          </div>
         </span>
       </div>
     </div>
@@ -255,51 +251,49 @@ exports[`WalletsControls > should render for incompatible ledger wallet 1`] = `
       class="static mr-0 flex items-center border-theme-secondary-300 pr-0 text-theme-primary-300 dark:border-theme-secondary-800 dark:text-theme-secondary-600 sm:mr-8 sm:border-r sm:pr-5 md:relative"
     >
       <div
-        class="static sm:relative"
+        aria-expanded="false"
+        aria-haspopup="dialog"
+        data-testid="dropdown__toggle"
       >
-        <span
-          data-testid="dropdown__toggle"
-        >
-          <span>
-            <div
-              class="group"
+        <span>
+          <div
+            class="group"
+          >
+            <button
+              class="ring-focus css-14zm422"
             >
-              <button
-                class="ring-focus css-14zm422"
+              <div
+                class="flex h-5 w-5 items-center justify-center"
               >
                 <div
-                  class="flex h-5 w-5 items-center justify-center"
+                  class="css-1i4b0eq"
+                  height="20"
+                  width="20"
                 >
-                  <div
-                    class="css-1i4b0eq"
-                    height="20"
-                    width="20"
+                  <svg
+                    id="sliders-vertical"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
                   >
-                    <svg
-                      id="sliders-vertical"
-                      viewBox="0 0 20 20"
-                      x="0"
-                      xml:space="preserve"
-                      xmlns="http://www.w3.org/2000/svg"
-                      y="0"
+                    <g
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
                     >
-                      <g
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                      >
-                        <path
-                          d="M15 9V1M15 19v-4M18 12c0 1.7-1.4 3-3 3-1.7 0-3-1.4-3-3s1.2-3 3-3h0c1.7 0 3 1.3 3 3h0zM5 7.1V19M8 4c0-1.7-1.4-3-3-3S2 2.4 2 4c0 1.7 1.4 3 3 3s3-1.3 3-3c0 .1 0 0 0 0z"
-                        />
-                      </g>
-                    </svg>
-                  </div>
+                      <path
+                        d="M15 9V1M15 19v-4M18 12c0 1.7-1.4 3-3 3-1.7 0-3-1.4-3-3s1.2-3 3-3h0c1.7 0 3 1.3 3 3h0zM5 7.1V19M8 4c0-1.7-1.4-3-3-3S2 2.4 2 4c0 1.7 1.4 3 3 3s3-1.3 3-3c0 .1 0 0 0 0z"
+                      />
+                    </g>
+                  </svg>
                 </div>
-              </button>
-            </div>
-          </span>
+              </div>
+            </button>
+          </div>
         </span>
       </div>
     </div>
@@ -316,7 +310,7 @@ exports[`WalletsControls > should render for incompatible ledger wallet 1`] = `
     >
       <div>
         <button
-          class="css-3n2xcp"
+          class="px-5 py-3 space-x-3 text-base relative items-center justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 hidden md:inline-flex"
           data-testid="WalletControls__import-ledger"
           disabled=""
           type="button"
@@ -356,7 +350,7 @@ exports[`WalletsControls > should render for incompatible ledger wallet 1`] = `
         </button>
       </div>
       <button
-        class="css-6419sw"
+        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-700"
         data-testid="WalletControls__import-wallet"
         type="button"
       >
@@ -402,7 +396,7 @@ exports[`WalletsControls > should render for incompatible ledger wallet 1`] = `
         </div>
       </button>
       <button
-        class="css-fl4fi0"
+        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded text-white bg-theme-primary-600 hover:bg-theme-primary-700"
         data-testid="WalletControls__create-wallet"
         type="button"
       >
@@ -449,41 +443,39 @@ exports[`WalletsControls > should render for incompatible ledger wallet 1`] = `
       class="flex items-center sm:hidden"
     >
       <div
-        class="static sm:relative"
+        aria-expanded="false"
+        aria-haspopup="dialog"
+        data-testid="dropdown__toggle"
       >
         <span
-          data-testid="dropdown__toggle"
+          class="-mx-1 flex items-center px-5 py-3 text-theme-primary-300 dark:text-theme-secondary-600"
         >
-          <span
-            class="-mx-1 flex items-center px-5 py-3 text-theme-primary-300 dark:text-theme-secondary-600"
+          <div
+            class="css-v0ob3f"
+            height="16"
+            width="16"
           >
-            <div
-              class="css-v0ob3f"
-              height="16"
-              width="16"
+            <svg
+              id="plus"
+              viewBox="0 0 20 20"
+              x="0"
+              xml:space="preserve"
+              xmlns="http://www.w3.org/2000/svg"
+              y="0"
             >
-              <svg
-                id="plus"
-                viewBox="0 0 20 20"
-                x="0"
-                xml:space="preserve"
-                xmlns="http://www.w3.org/2000/svg"
-                y="0"
+              <g
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
               >
-                <g
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                >
-                  <path
-                    d="M1 10h18M10 1v18"
-                  />
-                </g>
-              </svg>
-            </div>
-          </span>
+                <path
+                  d="M1 10h18M10 1v18"
+                />
+              </g>
+            </svg>
+          </div>
         </span>
       </div>
     </div>
@@ -501,51 +493,49 @@ exports[`WalletsControls > should render responsive 1`] = `
       class="static mr-0 flex items-center border-theme-secondary-300 pr-0 text-theme-primary-300 dark:border-theme-secondary-800 dark:text-theme-secondary-600 sm:mr-8 sm:border-r sm:pr-5 md:relative"
     >
       <div
-        class="static sm:relative"
+        aria-expanded="false"
+        aria-haspopup="dialog"
+        data-testid="dropdown__toggle"
       >
-        <span
-          data-testid="dropdown__toggle"
-        >
-          <span>
-            <div
-              class="group"
+        <span>
+          <div
+            class="group"
+          >
+            <button
+              class="ring-focus css-14zm422"
             >
-              <button
-                class="ring-focus css-14zm422"
+              <div
+                class="flex h-5 w-5 items-center justify-center"
               >
                 <div
-                  class="flex h-5 w-5 items-center justify-center"
+                  class="css-1i4b0eq"
+                  height="20"
+                  width="20"
                 >
-                  <div
-                    class="css-1i4b0eq"
-                    height="20"
-                    width="20"
+                  <svg
+                    id="sliders-vertical"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
                   >
-                    <svg
-                      id="sliders-vertical"
-                      viewBox="0 0 20 20"
-                      x="0"
-                      xml:space="preserve"
-                      xmlns="http://www.w3.org/2000/svg"
-                      y="0"
+                    <g
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
                     >
-                      <g
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                      >
-                        <path
-                          d="M15 9V1M15 19v-4M18 12c0 1.7-1.4 3-3 3-1.7 0-3-1.4-3-3s1.2-3 3-3h0c1.7 0 3 1.3 3 3h0zM5 7.1V19M8 4c0-1.7-1.4-3-3-3S2 2.4 2 4c0 1.7 1.4 3 3 3s3-1.3 3-3c0 .1 0 0 0 0z"
-                        />
-                      </g>
-                    </svg>
-                  </div>
+                      <path
+                        d="M15 9V1M15 19v-4M18 12c0 1.7-1.4 3-3 3-1.7 0-3-1.4-3-3s1.2-3 3-3h0c1.7 0 3 1.3 3 3h0zM5 7.1V19M8 4c0-1.7-1.4-3-3-3S2 2.4 2 4c0 1.7 1.4 3 3 3s3-1.3 3-3c0 .1 0 0 0 0z"
+                      />
+                    </g>
+                  </svg>
                 </div>
-              </button>
-            </div>
-          </span>
+              </div>
+            </button>
+          </div>
         </span>
       </div>
     </div>
@@ -562,7 +552,7 @@ exports[`WalletsControls > should render responsive 1`] = `
     >
       <div>
         <button
-          class="css-3n2xcp"
+          class="px-5 py-3 space-x-3 text-base relative items-center justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 hidden md:inline-flex"
           data-testid="WalletControls__import-ledger"
           disabled=""
           type="button"
@@ -602,7 +592,7 @@ exports[`WalletsControls > should render responsive 1`] = `
         </button>
       </div>
       <button
-        class="css-6419sw"
+        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-700"
         data-testid="WalletControls__import-wallet"
         type="button"
       >
@@ -648,7 +638,7 @@ exports[`WalletsControls > should render responsive 1`] = `
         </div>
       </button>
       <button
-        class="css-fl4fi0"
+        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded text-white bg-theme-primary-600 hover:bg-theme-primary-700"
         data-testid="WalletControls__create-wallet"
         type="button"
       >
@@ -695,41 +685,39 @@ exports[`WalletsControls > should render responsive 1`] = `
       class="flex items-center sm:hidden"
     >
       <div
-        class="static sm:relative"
+        aria-expanded="false"
+        aria-haspopup="dialog"
+        data-testid="dropdown__toggle"
       >
         <span
-          data-testid="dropdown__toggle"
+          class="-mx-1 flex items-center px-5 py-3 text-theme-primary-300 dark:text-theme-secondary-600"
         >
-          <span
-            class="-mx-1 flex items-center px-5 py-3 text-theme-primary-300 dark:text-theme-secondary-600"
+          <div
+            class="css-v0ob3f"
+            height="16"
+            width="16"
           >
-            <div
-              class="css-v0ob3f"
-              height="16"
-              width="16"
+            <svg
+              id="plus"
+              viewBox="0 0 20 20"
+              x="0"
+              xml:space="preserve"
+              xmlns="http://www.w3.org/2000/svg"
+              y="0"
             >
-              <svg
-                id="plus"
-                viewBox="0 0 20 20"
-                x="0"
-                xml:space="preserve"
-                xmlns="http://www.w3.org/2000/svg"
-                y="0"
+              <g
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
               >
-                <g
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                >
-                  <path
-                    d="M1 10h18M10 1v18"
-                  />
-                </g>
-              </svg>
-            </div>
-          </span>
+                <path
+                  d="M1 10h18M10 1v18"
+                />
+              </g>
+            </svg>
+          </div>
         </span>
       </div>
     </div>
@@ -747,51 +735,49 @@ exports[`WalletsControls > should render responsive 2`] = `
       class="static mr-0 flex items-center border-theme-secondary-300 pr-0 text-theme-primary-300 dark:border-theme-secondary-800 dark:text-theme-secondary-600 sm:mr-8 sm:border-r sm:pr-5 md:relative"
     >
       <div
-        class="static sm:relative"
+        aria-expanded="false"
+        aria-haspopup="dialog"
+        data-testid="dropdown__toggle"
       >
-        <span
-          data-testid="dropdown__toggle"
-        >
-          <span>
-            <div
-              class="group"
+        <span>
+          <div
+            class="group"
+          >
+            <button
+              class="ring-focus css-14zm422"
             >
-              <button
-                class="ring-focus css-14zm422"
+              <div
+                class="flex h-5 w-5 items-center justify-center"
               >
                 <div
-                  class="flex h-5 w-5 items-center justify-center"
+                  class="css-1i4b0eq"
+                  height="20"
+                  width="20"
                 >
-                  <div
-                    class="css-1i4b0eq"
-                    height="20"
-                    width="20"
+                  <svg
+                    id="sliders-vertical"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
                   >
-                    <svg
-                      id="sliders-vertical"
-                      viewBox="0 0 20 20"
-                      x="0"
-                      xml:space="preserve"
-                      xmlns="http://www.w3.org/2000/svg"
-                      y="0"
+                    <g
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
                     >
-                      <g
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                      >
-                        <path
-                          d="M15 9V1M15 19v-4M18 12c0 1.7-1.4 3-3 3-1.7 0-3-1.4-3-3s1.2-3 3-3h0c1.7 0 3 1.3 3 3h0zM5 7.1V19M8 4c0-1.7-1.4-3-3-3S2 2.4 2 4c0 1.7 1.4 3 3 3s3-1.3 3-3c0 .1 0 0 0 0z"
-                        />
-                      </g>
-                    </svg>
-                  </div>
+                      <path
+                        d="M15 9V1M15 19v-4M18 12c0 1.7-1.4 3-3 3-1.7 0-3-1.4-3-3s1.2-3 3-3h0c1.7 0 3 1.3 3 3h0zM5 7.1V19M8 4c0-1.7-1.4-3-3-3S2 2.4 2 4c0 1.7 1.4 3 3 3s3-1.3 3-3c0 .1 0 0 0 0z"
+                      />
+                    </g>
+                  </svg>
                 </div>
-              </button>
-            </div>
-          </span>
+              </div>
+            </button>
+          </div>
         </span>
       </div>
     </div>
@@ -808,7 +794,7 @@ exports[`WalletsControls > should render responsive 2`] = `
     >
       <div>
         <button
-          class="css-3n2xcp"
+          class="px-5 py-3 space-x-3 text-base relative items-center justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 hidden md:inline-flex"
           data-testid="WalletControls__import-ledger"
           disabled=""
           type="button"
@@ -848,7 +834,7 @@ exports[`WalletsControls > should render responsive 2`] = `
         </button>
       </div>
       <button
-        class="css-6419sw"
+        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-700"
         data-testid="WalletControls__import-wallet"
         type="button"
       >
@@ -894,7 +880,7 @@ exports[`WalletsControls > should render responsive 2`] = `
         </div>
       </button>
       <button
-        class="css-fl4fi0"
+        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded text-white bg-theme-primary-600 hover:bg-theme-primary-700"
         data-testid="WalletControls__create-wallet"
         type="button"
       >
@@ -941,41 +927,39 @@ exports[`WalletsControls > should render responsive 2`] = `
       class="flex items-center sm:hidden"
     >
       <div
-        class="static sm:relative"
+        aria-expanded="false"
+        aria-haspopup="dialog"
+        data-testid="dropdown__toggle"
       >
         <span
-          data-testid="dropdown__toggle"
+          class="-mx-1 flex items-center px-5 py-3 text-theme-primary-300 dark:text-theme-secondary-600"
         >
-          <span
-            class="-mx-1 flex items-center px-5 py-3 text-theme-primary-300 dark:text-theme-secondary-600"
+          <div
+            class="css-v0ob3f"
+            height="16"
+            width="16"
           >
-            <div
-              class="css-v0ob3f"
-              height="16"
-              width="16"
+            <svg
+              id="plus"
+              viewBox="0 0 20 20"
+              x="0"
+              xml:space="preserve"
+              xmlns="http://www.w3.org/2000/svg"
+              y="0"
             >
-              <svg
-                id="plus"
-                viewBox="0 0 20 20"
-                x="0"
-                xml:space="preserve"
-                xmlns="http://www.w3.org/2000/svg"
-                y="0"
+              <g
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
               >
-                <g
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                >
-                  <path
-                    d="M1 10h18M10 1v18"
-                  />
-                </g>
-              </svg>
-            </div>
-          </span>
+                <path
+                  d="M1 10h18M10 1v18"
+                />
+              </g>
+            </svg>
+          </div>
         </span>
       </div>
     </div>
@@ -993,51 +977,49 @@ exports[`WalletsControls > should render responsive 3`] = `
       class="static mr-0 flex items-center border-theme-secondary-300 pr-0 text-theme-primary-300 dark:border-theme-secondary-800 dark:text-theme-secondary-600 sm:mr-8 sm:border-r sm:pr-5 md:relative"
     >
       <div
-        class="static sm:relative"
+        aria-expanded="false"
+        aria-haspopup="dialog"
+        data-testid="dropdown__toggle"
       >
-        <span
-          data-testid="dropdown__toggle"
-        >
-          <span>
-            <div
-              class="group"
+        <span>
+          <div
+            class="group"
+          >
+            <button
+              class="ring-focus css-14zm422"
             >
-              <button
-                class="ring-focus css-14zm422"
+              <div
+                class="flex h-5 w-5 items-center justify-center"
               >
                 <div
-                  class="flex h-5 w-5 items-center justify-center"
+                  class="css-1i4b0eq"
+                  height="20"
+                  width="20"
                 >
-                  <div
-                    class="css-1i4b0eq"
-                    height="20"
-                    width="20"
+                  <svg
+                    id="sliders-vertical"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
                   >
-                    <svg
-                      id="sliders-vertical"
-                      viewBox="0 0 20 20"
-                      x="0"
-                      xml:space="preserve"
-                      xmlns="http://www.w3.org/2000/svg"
-                      y="0"
+                    <g
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
                     >
-                      <g
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                      >
-                        <path
-                          d="M15 9V1M15 19v-4M18 12c0 1.7-1.4 3-3 3-1.7 0-3-1.4-3-3s1.2-3 3-3h0c1.7 0 3 1.3 3 3h0zM5 7.1V19M8 4c0-1.7-1.4-3-3-3S2 2.4 2 4c0 1.7 1.4 3 3 3s3-1.3 3-3c0 .1 0 0 0 0z"
-                        />
-                      </g>
-                    </svg>
-                  </div>
+                      <path
+                        d="M15 9V1M15 19v-4M18 12c0 1.7-1.4 3-3 3-1.7 0-3-1.4-3-3s1.2-3 3-3h0c1.7 0 3 1.3 3 3h0zM5 7.1V19M8 4c0-1.7-1.4-3-3-3S2 2.4 2 4c0 1.7 1.4 3 3 3s3-1.3 3-3c0 .1 0 0 0 0z"
+                      />
+                    </g>
+                  </svg>
                 </div>
-              </button>
-            </div>
-          </span>
+              </div>
+            </button>
+          </div>
         </span>
       </div>
     </div>
@@ -1054,7 +1036,7 @@ exports[`WalletsControls > should render responsive 3`] = `
     >
       <div>
         <button
-          class="css-3n2xcp"
+          class="px-5 py-3 space-x-3 text-base relative items-center justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 hidden md:inline-flex"
           data-testid="WalletControls__import-ledger"
           disabled=""
           type="button"
@@ -1094,7 +1076,7 @@ exports[`WalletsControls > should render responsive 3`] = `
         </button>
       </div>
       <button
-        class="css-6419sw"
+        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-700"
         data-testid="WalletControls__import-wallet"
         type="button"
       >
@@ -1140,7 +1122,7 @@ exports[`WalletsControls > should render responsive 3`] = `
         </div>
       </button>
       <button
-        class="css-fl4fi0"
+        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded text-white bg-theme-primary-600 hover:bg-theme-primary-700"
         data-testid="WalletControls__create-wallet"
         type="button"
       >
@@ -1187,41 +1169,39 @@ exports[`WalletsControls > should render responsive 3`] = `
       class="flex items-center sm:hidden"
     >
       <div
-        class="static sm:relative"
+        aria-expanded="false"
+        aria-haspopup="dialog"
+        data-testid="dropdown__toggle"
       >
         <span
-          data-testid="dropdown__toggle"
+          class="-mx-1 flex items-center px-5 py-3 text-theme-primary-300 dark:text-theme-secondary-600"
         >
-          <span
-            class="-mx-1 flex items-center px-5 py-3 text-theme-primary-300 dark:text-theme-secondary-600"
+          <div
+            class="css-v0ob3f"
+            height="16"
+            width="16"
           >
-            <div
-              class="css-v0ob3f"
-              height="16"
-              width="16"
+            <svg
+              id="plus"
+              viewBox="0 0 20 20"
+              x="0"
+              xml:space="preserve"
+              xmlns="http://www.w3.org/2000/svg"
+              y="0"
             >
-              <svg
-                id="plus"
-                viewBox="0 0 20 20"
-                x="0"
-                xml:space="preserve"
-                xmlns="http://www.w3.org/2000/svg"
-                y="0"
+              <g
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
               >
-                <g
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                >
-                  <path
-                    d="M1 10h18M10 1v18"
-                  />
-                </g>
-              </svg>
-            </div>
-          </span>
+                <path
+                  d="M1 10h18M10 1v18"
+                />
+              </g>
+            </svg>
+          </div>
         </span>
       </div>
     </div>
@@ -1239,51 +1219,49 @@ exports[`WalletsControls > should render responsive 4`] = `
       class="static mr-0 flex items-center border-theme-secondary-300 pr-0 text-theme-primary-300 dark:border-theme-secondary-800 dark:text-theme-secondary-600 sm:mr-8 sm:border-r sm:pr-5 md:relative"
     >
       <div
-        class="static sm:relative"
+        aria-expanded="false"
+        aria-haspopup="dialog"
+        data-testid="dropdown__toggle"
       >
-        <span
-          data-testid="dropdown__toggle"
-        >
-          <span>
-            <div
-              class="group"
+        <span>
+          <div
+            class="group"
+          >
+            <button
+              class="ring-focus css-14zm422"
             >
-              <button
-                class="ring-focus css-14zm422"
+              <div
+                class="flex h-5 w-5 items-center justify-center"
               >
                 <div
-                  class="flex h-5 w-5 items-center justify-center"
+                  class="css-1i4b0eq"
+                  height="20"
+                  width="20"
                 >
-                  <div
-                    class="css-1i4b0eq"
-                    height="20"
-                    width="20"
+                  <svg
+                    id="sliders-vertical"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
                   >
-                    <svg
-                      id="sliders-vertical"
-                      viewBox="0 0 20 20"
-                      x="0"
-                      xml:space="preserve"
-                      xmlns="http://www.w3.org/2000/svg"
-                      y="0"
+                    <g
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
                     >
-                      <g
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                      >
-                        <path
-                          d="M15 9V1M15 19v-4M18 12c0 1.7-1.4 3-3 3-1.7 0-3-1.4-3-3s1.2-3 3-3h0c1.7 0 3 1.3 3 3h0zM5 7.1V19M8 4c0-1.7-1.4-3-3-3S2 2.4 2 4c0 1.7 1.4 3 3 3s3-1.3 3-3c0 .1 0 0 0 0z"
-                        />
-                      </g>
-                    </svg>
-                  </div>
+                      <path
+                        d="M15 9V1M15 19v-4M18 12c0 1.7-1.4 3-3 3-1.7 0-3-1.4-3-3s1.2-3 3-3h0c1.7 0 3 1.3 3 3h0zM5 7.1V19M8 4c0-1.7-1.4-3-3-3S2 2.4 2 4c0 1.7 1.4 3 3 3s3-1.3 3-3c0 .1 0 0 0 0z"
+                      />
+                    </g>
+                  </svg>
                 </div>
-              </button>
-            </div>
-          </span>
+              </div>
+            </button>
+          </div>
         </span>
       </div>
     </div>
@@ -1300,7 +1278,7 @@ exports[`WalletsControls > should render responsive 4`] = `
     >
       <div>
         <button
-          class="css-3n2xcp"
+          class="px-5 py-3 space-x-3 text-base relative items-center justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 hidden md:inline-flex"
           data-testid="WalletControls__import-ledger"
           disabled=""
           type="button"
@@ -1340,7 +1318,7 @@ exports[`WalletsControls > should render responsive 4`] = `
         </button>
       </div>
       <button
-        class="css-6419sw"
+        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-700"
         data-testid="WalletControls__import-wallet"
         type="button"
       >
@@ -1386,7 +1364,7 @@ exports[`WalletsControls > should render responsive 4`] = `
         </div>
       </button>
       <button
-        class="css-fl4fi0"
+        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded text-white bg-theme-primary-600 hover:bg-theme-primary-700"
         data-testid="WalletControls__create-wallet"
         type="button"
       >
@@ -1433,41 +1411,39 @@ exports[`WalletsControls > should render responsive 4`] = `
       class="flex items-center sm:hidden"
     >
       <div
-        class="static sm:relative"
+        aria-expanded="false"
+        aria-haspopup="dialog"
+        data-testid="dropdown__toggle"
       >
         <span
-          data-testid="dropdown__toggle"
+          class="-mx-1 flex items-center px-5 py-3 text-theme-primary-300 dark:text-theme-secondary-600"
         >
-          <span
-            class="-mx-1 flex items-center px-5 py-3 text-theme-primary-300 dark:text-theme-secondary-600"
+          <div
+            class="css-v0ob3f"
+            height="16"
+            width="16"
           >
-            <div
-              class="css-v0ob3f"
-              height="16"
-              width="16"
+            <svg
+              id="plus"
+              viewBox="0 0 20 20"
+              x="0"
+              xml:space="preserve"
+              xmlns="http://www.w3.org/2000/svg"
+              y="0"
             >
-              <svg
-                id="plus"
-                viewBox="0 0 20 20"
-                x="0"
-                xml:space="preserve"
-                xmlns="http://www.w3.org/2000/svg"
-                y="0"
+              <g
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
               >
-                <g
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                >
-                  <path
-                    d="M1 10h18M10 1v18"
-                  />
-                </g>
-              </svg>
-            </div>
-          </span>
+                <path
+                  d="M1 10h18M10 1v18"
+                />
+              </g>
+            </svg>
+          </div>
         </span>
       </div>
     </div>
@@ -1485,51 +1461,49 @@ exports[`WalletsControls > should render responsive 5`] = `
       class="static mr-0 flex items-center border-theme-secondary-300 pr-0 text-theme-primary-300 dark:border-theme-secondary-800 dark:text-theme-secondary-600 sm:mr-8 sm:border-r sm:pr-5 md:relative"
     >
       <div
-        class="static sm:relative"
+        aria-expanded="false"
+        aria-haspopup="dialog"
+        data-testid="dropdown__toggle"
       >
-        <span
-          data-testid="dropdown__toggle"
-        >
-          <span>
-            <div
-              class="group"
+        <span>
+          <div
+            class="group"
+          >
+            <button
+              class="ring-focus css-14zm422"
             >
-              <button
-                class="ring-focus css-14zm422"
+              <div
+                class="flex h-5 w-5 items-center justify-center"
               >
                 <div
-                  class="flex h-5 w-5 items-center justify-center"
+                  class="css-1i4b0eq"
+                  height="20"
+                  width="20"
                 >
-                  <div
-                    class="css-1i4b0eq"
-                    height="20"
-                    width="20"
+                  <svg
+                    id="sliders-vertical"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
                   >
-                    <svg
-                      id="sliders-vertical"
-                      viewBox="0 0 20 20"
-                      x="0"
-                      xml:space="preserve"
-                      xmlns="http://www.w3.org/2000/svg"
-                      y="0"
+                    <g
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
                     >
-                      <g
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                      >
-                        <path
-                          d="M15 9V1M15 19v-4M18 12c0 1.7-1.4 3-3 3-1.7 0-3-1.4-3-3s1.2-3 3-3h0c1.7 0 3 1.3 3 3h0zM5 7.1V19M8 4c0-1.7-1.4-3-3-3S2 2.4 2 4c0 1.7 1.4 3 3 3s3-1.3 3-3c0 .1 0 0 0 0z"
-                        />
-                      </g>
-                    </svg>
-                  </div>
+                      <path
+                        d="M15 9V1M15 19v-4M18 12c0 1.7-1.4 3-3 3-1.7 0-3-1.4-3-3s1.2-3 3-3h0c1.7 0 3 1.3 3 3h0zM5 7.1V19M8 4c0-1.7-1.4-3-3-3S2 2.4 2 4c0 1.7 1.4 3 3 3s3-1.3 3-3c0 .1 0 0 0 0z"
+                      />
+                    </g>
+                  </svg>
                 </div>
-              </button>
-            </div>
-          </span>
+              </div>
+            </button>
+          </div>
         </span>
       </div>
     </div>
@@ -1546,7 +1520,7 @@ exports[`WalletsControls > should render responsive 5`] = `
     >
       <div>
         <button
-          class="css-3n2xcp"
+          class="px-5 py-3 space-x-3 text-base relative items-center justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 hidden md:inline-flex"
           data-testid="WalletControls__import-ledger"
           disabled=""
           type="button"
@@ -1586,7 +1560,7 @@ exports[`WalletsControls > should render responsive 5`] = `
         </button>
       </div>
       <button
-        class="css-6419sw"
+        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-700"
         data-testid="WalletControls__import-wallet"
         type="button"
       >
@@ -1632,7 +1606,7 @@ exports[`WalletsControls > should render responsive 5`] = `
         </div>
       </button>
       <button
-        class="css-fl4fi0"
+        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded text-white bg-theme-primary-600 hover:bg-theme-primary-700"
         data-testid="WalletControls__create-wallet"
         type="button"
       >
@@ -1679,41 +1653,39 @@ exports[`WalletsControls > should render responsive 5`] = `
       class="flex items-center sm:hidden"
     >
       <div
-        class="static sm:relative"
+        aria-expanded="false"
+        aria-haspopup="dialog"
+        data-testid="dropdown__toggle"
       >
         <span
-          data-testid="dropdown__toggle"
+          class="-mx-1 flex items-center px-5 py-3 text-theme-primary-300 dark:text-theme-secondary-600"
         >
-          <span
-            class="-mx-1 flex items-center px-5 py-3 text-theme-primary-300 dark:text-theme-secondary-600"
+          <div
+            class="css-v0ob3f"
+            height="16"
+            width="16"
           >
-            <div
-              class="css-v0ob3f"
-              height="16"
-              width="16"
+            <svg
+              id="plus"
+              viewBox="0 0 20 20"
+              x="0"
+              xml:space="preserve"
+              xmlns="http://www.w3.org/2000/svg"
+              y="0"
             >
-              <svg
-                id="plus"
-                viewBox="0 0 20 20"
-                x="0"
-                xml:space="preserve"
-                xmlns="http://www.w3.org/2000/svg"
-                y="0"
+              <g
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
               >
-                <g
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                >
-                  <path
-                    d="M1 10h18M10 1v18"
-                  />
-                </g>
-              </svg>
-            </div>
-          </span>
+                <path
+                  d="M1 10h18M10 1v18"
+                />
+              </g>
+            </svg>
+          </div>
         </span>
       </div>
     </div>
@@ -1731,51 +1703,49 @@ exports[`WalletsControls > should render with networks selection 1`] = `
       class="static mr-0 flex items-center border-theme-secondary-300 pr-0 text-theme-primary-300 dark:border-theme-secondary-800 dark:text-theme-secondary-600 sm:mr-8 sm:border-r sm:pr-5 md:relative"
     >
       <div
-        class="static sm:relative"
+        aria-expanded="false"
+        aria-haspopup="dialog"
+        data-testid="dropdown__toggle"
       >
-        <span
-          data-testid="dropdown__toggle"
-        >
-          <span>
-            <div
-              class="group"
+        <span>
+          <div
+            class="group"
+          >
+            <button
+              class="ring-focus css-14zm422"
             >
-              <button
-                class="ring-focus css-14zm422"
+              <div
+                class="flex h-5 w-5 items-center justify-center"
               >
                 <div
-                  class="flex h-5 w-5 items-center justify-center"
+                  class="css-1i4b0eq"
+                  height="20"
+                  width="20"
                 >
-                  <div
-                    class="css-1i4b0eq"
-                    height="20"
-                    width="20"
+                  <svg
+                    id="sliders-vertical"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
                   >
-                    <svg
-                      id="sliders-vertical"
-                      viewBox="0 0 20 20"
-                      x="0"
-                      xml:space="preserve"
-                      xmlns="http://www.w3.org/2000/svg"
-                      y="0"
+                    <g
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
                     >
-                      <g
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                      >
-                        <path
-                          d="M15 9V1M15 19v-4M18 12c0 1.7-1.4 3-3 3-1.7 0-3-1.4-3-3s1.2-3 3-3h0c1.7 0 3 1.3 3 3h0zM5 7.1V19M8 4c0-1.7-1.4-3-3-3S2 2.4 2 4c0 1.7 1.4 3 3 3s3-1.3 3-3c0 .1 0 0 0 0z"
-                        />
-                      </g>
-                    </svg>
-                  </div>
+                      <path
+                        d="M15 9V1M15 19v-4M18 12c0 1.7-1.4 3-3 3-1.7 0-3-1.4-3-3s1.2-3 3-3h0c1.7 0 3 1.3 3 3h0zM5 7.1V19M8 4c0-1.7-1.4-3-3-3S2 2.4 2 4c0 1.7 1.4 3 3 3s3-1.3 3-3c0 .1 0 0 0 0z"
+                      />
+                    </g>
+                  </svg>
                 </div>
-              </button>
-            </div>
-          </span>
+              </div>
+            </button>
+          </div>
         </span>
       </div>
     </div>
@@ -1792,7 +1762,7 @@ exports[`WalletsControls > should render with networks selection 1`] = `
     >
       <div>
         <button
-          class="css-3n2xcp"
+          class="px-5 py-3 space-x-3 text-base relative items-center justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 hidden md:inline-flex"
           data-testid="WalletControls__import-ledger"
           disabled=""
           type="button"
@@ -1832,7 +1802,7 @@ exports[`WalletsControls > should render with networks selection 1`] = `
         </button>
       </div>
       <button
-        class="css-6419sw"
+        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-700"
         data-testid="WalletControls__import-wallet"
         type="button"
       >
@@ -1878,7 +1848,7 @@ exports[`WalletsControls > should render with networks selection 1`] = `
         </div>
       </button>
       <button
-        class="css-fl4fi0"
+        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded text-white bg-theme-primary-600 hover:bg-theme-primary-700"
         data-testid="WalletControls__create-wallet"
         type="button"
       >
@@ -1925,41 +1895,39 @@ exports[`WalletsControls > should render with networks selection 1`] = `
       class="flex items-center sm:hidden"
     >
       <div
-        class="static sm:relative"
+        aria-expanded="false"
+        aria-haspopup="dialog"
+        data-testid="dropdown__toggle"
       >
         <span
-          data-testid="dropdown__toggle"
+          class="-mx-1 flex items-center px-5 py-3 text-theme-primary-300 dark:text-theme-secondary-600"
         >
-          <span
-            class="-mx-1 flex items-center px-5 py-3 text-theme-primary-300 dark:text-theme-secondary-600"
+          <div
+            class="css-v0ob3f"
+            height="16"
+            width="16"
           >
-            <div
-              class="css-v0ob3f"
-              height="16"
-              width="16"
+            <svg
+              id="plus"
+              viewBox="0 0 20 20"
+              x="0"
+              xml:space="preserve"
+              xmlns="http://www.w3.org/2000/svg"
+              y="0"
             >
-              <svg
-                id="plus"
-                viewBox="0 0 20 20"
-                x="0"
-                xml:space="preserve"
-                xmlns="http://www.w3.org/2000/svg"
-                y="0"
+              <g
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
               >
-                <g
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                >
-                  <path
-                    d="M1 10h18M10 1v18"
-                  />
-                </g>
-              </svg>
-            </div>
-          </span>
+                <path
+                  d="M1 10h18M10 1v18"
+                />
+              </g>
+            </svg>
+          </div>
         </span>
       </div>
     </div>

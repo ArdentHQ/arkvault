@@ -4,7 +4,7 @@ import { SerializedStyles } from "@emotion/react";
 
 type TableRowFunction = (event: React.MouseEvent<HTMLTableRowElement, MouseEvent>) => void;
 
-const baseStyle = tw`transition-colors duration-100`;
+const baseStyle = tw`transition-colors duration-100 bg-theme-background`;
 
 const getCursorStyles = (onClick?: TableRowFunction) => onClick && tw`cursor-pointer`;
 
@@ -20,8 +20,18 @@ const getBorderStyles = (border?: boolean, dotted?: boolean) => {
 };
 
 const getHoverStyles = (isSelected?: boolean): SerializedStyles => css`
-	&:hover td > div {
+	&:hover td {
 		${isSelected ? tw`bg-theme-success-100 dark:bg-theme-success-900` : tw`bg-theme-secondary-100 dark:bg-black`}
+	}
+
+	&:last-of-type {
+		td:first-child {
+			${tw`rounded-bl-sm`}
+		}
+
+		td:last-child {
+			${tw`rounded-br-sm`}
+		}
 	}
 `;
 

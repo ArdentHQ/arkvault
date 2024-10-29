@@ -5,6 +5,10 @@ import { useResizeDetector } from "react-resize-detector";
 import { TruncateEnd } from "@/app/components/TruncateEnd";
 import { TruncateMiddleDynamic } from "@/app/components/TruncateMiddleDynamic";
 import { Size } from "@/types";
+import { Clipboard } from "@/app/components/Clipboard";
+import { useTranslation } from "react-i18next";
+import { Icon } from "@/app/components/Icon";
+import { useTheme } from "@/app/hooks";
 
 interface Properties {
 	walletName?: string;
@@ -18,6 +22,7 @@ interface Properties {
 	fontWeight?: "normal";
 	truncateOnTable?: boolean;
 	orientation?: "horizontal" | "vertical";
+	showCopyButton?: boolean;
 }
 
 const AddressWrapper = ({
@@ -30,7 +35,7 @@ const AddressWrapper = ({
 	truncateOnTable?: boolean;
 }) =>
 	truncateOnTable ? (
-		<div className={cn("relative grow", { "text-left": alignment !== "right" })}>
+		<div className={cn("relative grow leading-[17px] sm:leading-5", { "text-left": alignment !== "right" })}>
 			{children}
 			{/* The workaround used to make the truncating work on tables means
 			wrapping the address on a DIV with an absolute position that doesn't
@@ -67,8 +72,12 @@ export const Address = ({
 	size,
 	truncateOnTable,
 	orientation = "horizontal",
+	showCopyButton,
 }: Properties) => {
 	const aliasReference = useRef<HTMLSpanElement>(null);
+	const { t } = useTranslation();
+
+	const { isDarkMode } = useTheme();
 
 	const { ref, width } = useResizeDetector<HTMLDivElement>({ handleHeight: false });
 
@@ -76,7 +85,11 @@ export const Address = ({
 		if (width) {
 			if (orientation === "horizontal") {
 				/* istanbul ignore next -- @preserve */
-				return width - (aliasReference?.current ? aliasReference.current.getBoundingClientRect().width + 8 : 0);
+				return (
+					width -
+					(aliasReference.current ? aliasReference.current.getBoundingClientRect().width + 8 : 0) -
+					(showCopyButton ? 22 : 0)
+				);
 			} else {
 				return width;
 			}
@@ -114,22 +127,37 @@ export const Address = ({
 				</span>
 			)}
 			{address && (
-				<AddressWrapper alignment={alignment} truncateOnTable={truncateOnTable}>
-					<TruncateMiddleDynamic
-						data-testid="Address__address"
-						value={address}
-						availableWidth={availableWidth}
-						className={cn(
-							addressClass ||
-								(walletName
-									? "text-theme-secondary-500 dark:text-theme-secondary-700"
-									: "text-theme-text"),
-							getFontWeight(fontWeight),
-							getFontSize(size),
-							{ "absolute w-full": truncateOnTable },
-						)}
-					/>
-				</AddressWrapper>
+				<>
+					<AddressWrapper alignment={alignment} truncateOnTable={truncateOnTable}>
+						<TruncateMiddleDynamic
+							data-testid="Address__address"
+							value={address}
+							availableWidth={availableWidth}
+							className={cn(
+								addressClass ||
+									(walletName
+										? "text-theme-secondary-500 dark:text-theme-secondary-700"
+										: "text-theme-text"),
+								getFontWeight(fontWeight),
+								getFontSize(size),
+								{ "absolute w-full": truncateOnTable },
+							)}
+						/>
+					</AddressWrapper>
+					{showCopyButton && (
+						<Clipboard
+							variant="icon"
+							data={address}
+							tooltip={t("COMMON.COPY_ADDRESS")}
+							tooltipDarkTheme={isDarkMode}
+						>
+							<Icon
+								name="Copy"
+								className="text-theme-primary-400 dark:text-theme-secondary-700 dark:hover:text-theme-secondary-500"
+							/>
+						</Clipboard>
+					)}
+				</>
 			)}
 		</div>
 	);

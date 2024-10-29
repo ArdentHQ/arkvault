@@ -1,17 +1,19 @@
 import { Contracts, DTO } from "@ardenthq/sdk-profiles";
 import React, { memo, useCallback, useEffect, useMemo, useState } from "react";
+import { Tab, TabList, Tabs } from "@/app/components/Tabs";
 import { Trans, useTranslation } from "react-i18next";
 
 import { Button } from "@/app/components/Button";
+import { Dropdown } from "@/app/components/Dropdown";
 import { EmptyBlock } from "@/app/components/EmptyBlock";
-import { Tab, TabList, Tabs } from "@/app/components/Tabs";
 import { FilterTransactions } from "@/domains/transaction/components/FilterTransactions";
+import { Icon } from "@/app/components/Icon";
+import { TabId } from "@/app/components/Tabs/useTab";
+import { TableWrapper } from "@/app/components/Table/TableWrapper";
 import { TransactionDetailModal } from "@/domains/transaction/components/TransactionDetailModal";
 import { TransactionTable } from "@/domains/transaction/components/TransactionTable";
+import cn from "classnames";
 import { useProfileTransactions } from "@/domains/transaction/hooks/use-profile-transactions";
-import { Dropdown } from "@/app/components/Dropdown";
-import { TabId } from "@/app/components/Tabs/useTab";
-import { Icon } from "@/app/components/Icon";
 
 interface TransactionsProperties {
 	emptyText?: string;
@@ -52,7 +54,7 @@ export const Transactions = memo(function Transactions({
 		fetchMore,
 		hasEmptyResults,
 		hasMore,
-	} = useProfileTransactions({ profile, wallets });
+	} = useProfileTransactions({ limit: 30, profile, wallets });
 
 	useEffect(() => {
 		if (isLoading) {
@@ -78,7 +80,7 @@ export const Transactions = memo(function Transactions({
 	const filterOptions = [
 		{
 			active: activeMode === "all",
-			label: t("TRANSACTION.ALL"),
+			label: t("TRANSACTION.ALL_HISTORY"),
 			value: "all",
 		},
 		{
@@ -142,28 +144,19 @@ export const Transactions = memo(function Transactions({
 		<>
 			{title && (
 				<div className="relative hidden justify-between md:flex">
-					<h2 className="mb-6 text-2xl font-bold">{title}</h2>
+					<h2 className="mb-3 text-2xl font-bold">{title}</h2>
 				</div>
 			)}
 
 			{showTabs && (
 				<>
-					<Tabs className="mb-8 hidden md:block" activeId={activeMode} onChange={activeModeChangeHandler}>
-						<TabList className="h-15 w-full">
+					<Tabs className="mb-3 hidden md:block" activeId={activeMode} onChange={activeModeChangeHandler}>
+						<TabList className="h-14 px-6 py-4">
 							{filterOptions.map((option) => (
-								<Tab tabId={option.value} key={option.value}>
+								<Tab tabId={option.value} key={option.value} className="pb-9 before:!top-1/3">
 									{option.label}
 								</Tab>
 							))}
-
-							<div className="flex flex-1" />
-
-							<FilterTransactions
-								className="my-auto mr-6"
-								wallets={wallets}
-								onSelect={filterChangeHandler}
-								isDisabled={wallets.length === 0 || isLoadingTransactions}
-							/>
 						</TabList>
 					</Tabs>
 
@@ -172,20 +165,20 @@ export const Transactions = memo(function Transactions({
 							<Dropdown
 								data-testid="Transactions--filter-dropdown"
 								disableToggle={wallets.length === 0 || isLoadingTransactions}
-								dropdownClass="mx-4 sm:w-full sm:mx-0"
 								options={filterOptions}
 								onSelect={({ value }) => activeModeChangeHandler(value)}
 								toggleContent={(isOpen) => (
-									<div className="flex cursor-pointer items-center space-x-4 overflow-hidden rounded-xl border border-theme-primary-100 p-3 dark:border-theme-secondary-800 sm:p-6">
-										<Icon size="lg" name={isOpen ? "MenuOpen" : "Menu"} />
-
-										<span className="font-semibold leading-tight">{selectedFilterLabel}</span>
+									<div className="flex h-11 w-full cursor-pointer items-center justify-between space-x-4 overflow-hidden rounded-xl border border-theme-primary-100 p-3 dark:border-theme-secondary-800 sm:px-4 sm:py-3">
+										<span className="text-base font-semibold leading-tight">
+											{selectedFilterLabel}
+										</span>
+										<Icon size="xs" name={isOpen ? "ChevronUpSmall" : "ChevronDownSmall"} />
 									</div>
 								)}
 							/>
 						</div>
 
-						<div className="flex-1">
+						<div className="hidden flex-1">
 							<FilterTransactions
 								data-testid="FilterTransactions--Mobile"
 								wallets={wallets}
@@ -216,7 +209,18 @@ export const Transactions = memo(function Transactions({
 					)}
 				</>
 			) : (
-				<>
+				<TableWrapper className={cn({ "!rounded-b-none border-none": hasMore })}>
+					<div className="flex w-full flex-col items-start justify-between gap-3 border-b-0 border-b-theme-secondary-300 pb-4 pt-3 dark:border-b-theme-secondary-800 sm:flex-row md:items-center md:border-b md:px-6 md:py-4">
+						<span className="text-base font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500">
+							{t("COMMON.SHOWING_RESULTS", { count: transactions.length })}
+						</span>
+						<FilterTransactions
+							className="w-full sm:w-fit md:my-auto"
+							wallets={wallets}
+							onSelect={filterChangeHandler}
+							isDisabled={wallets.length === 0 || isLoadingTransactions}
+						/>
+					</div>
 					<TransactionTable
 						transactions={transactions}
 						exchangeCurrency={profile.settings().get<string>(Contracts.ProfileSetting.ExchangeCurrency)}
@@ -225,6 +229,7 @@ export const Transactions = memo(function Transactions({
 						skeletonRowsLimit={8}
 						onRowClick={setTransactionModalItem}
 						profile={profile}
+						coinName={wallets.at(0)?.currency()}
 					/>
 
 					{transactionModalItem && (
@@ -235,19 +240,21 @@ export const Transactions = memo(function Transactions({
 							onClose={() => setTransactionModalItem(undefined)}
 						/>
 					)}
-				</>
+				</TableWrapper>
 			)}
 
 			{hasMore && (
-				<Button
-					data-testid="transactions__fetch-more-button"
-					variant="secondary"
-					className="mb-5 mt-10 w-full"
-					disabled={isLoadingMore}
-					onClick={() => fetchMore()}
-				>
-					{isLoadingMore ? t("COMMON.LOADING") : t("COMMON.VIEW_MORE")}
-				</Button>
+				<div className="-mx-6 -mt-1 rounded-b-xl border-t border-theme-secondary-300 px-6 py-4 dark:border-theme-secondary-800 md:-mx-px md:mt-0 md:border md:border-t-0">
+					<Button
+						data-testid="transactions__fetch-more-button"
+						variant="secondary"
+						className="w-full py-1.5 leading-5"
+						disabled={isLoadingMore}
+						onClick={() => fetchMore()}
+					>
+						{isLoadingMore ? t("COMMON.LOADING") : t("COMMON.LOAD_MORE")}
+					</Button>
+				</div>
 			)}
 		</>
 	);

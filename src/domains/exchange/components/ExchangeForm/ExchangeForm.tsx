@@ -26,6 +26,8 @@ import {
 	isInvalidRefundAddressError,
 } from "@/domains/exchange/utils";
 import { delay } from "@/utils/delay";
+import { SendExchangeTransfer } from "@/domains/exchange/components/SendExchangeTransfer";
+import cn from "classnames";
 
 enum Step {
 	FormStep = 1,
@@ -34,10 +36,20 @@ enum Step {
 	ConfirmationStep,
 }
 
-const ExchangeForm = ({ orderId, onReady }: { orderId?: string; onReady: () => void }) => {
+const ExchangeForm = ({
+	orderId,
+	onReady,
+	resetForm,
+}: {
+	orderId?: string;
+	onReady: () => void;
+	resetForm?: () => void;
+}) => {
 	const { t } = useTranslation();
 
 	const [isFinished, setIsFinished] = useState(false);
+
+	const [showTransferModal, setShowTransferModal] = useState(false);
 
 	const activeProfile = useActiveProfile();
 	const { persist } = useEnvironmentContext();
@@ -48,6 +60,7 @@ const ExchangeForm = ({ orderId, onReady }: { orderId?: string; onReady: () => v
 	assertExchangeService(exchangeService);
 
 	const [exchangeTransaction, setExchangeTransaction] = useState<Contracts.IExchangeTransaction | undefined>();
+	const [transferTransactionId, setTransferTransactionId] = useState<string | undefined>();
 	const [activeTab, setActiveTab] = useState<Step>(Step.FormStep);
 
 	const form = useForm<ExchangeFormState>({ mode: "onChange" });
@@ -176,6 +189,9 @@ const ExchangeForm = ({ orderId, onReady }: { orderId?: string; onReady: () => v
 		trigger,
 	]);
 
+	const arkMainnetNetwork = activeProfile.availableNetworks().find((network) => network.id() === "ark.mainnet");
+	const withSignStep = arkMainnetNetwork && fromCurrency?.coin.toLowerCase() === "ark";
+
 	const submitForm = useCallback(async () => {
 		const { fromCurrency, toCurrency, recipientWallet, refundWallet, payinAmount, externalId, refundExternalId } =
 			getValues();
@@ -230,34 +246,42 @@ const ExchangeForm = ({ orderId, onReady }: { orderId?: string; onReady: () => v
 		setActiveTab((previous) => previous - 1);
 	};
 
-	const handleNext = useCallback(async () => {
-		const newIndex = activeTab + 1;
+	const handleNext = useCallback(
+		async ({ bypassSignStep = false }: { bypassSignStep?: boolean } = {}) => {
+			const newIndex = activeTab + 1;
 
-		if (newIndex === Step.StatusStep) {
-			try {
-				await handleSubmit(submitForm)();
-				setActiveTab(newIndex);
-			} catch (error) {
-				if (isInvalidAddressError(error)) {
-					return toasts.error(
-						t("EXCHANGE.ERROR.INVALID_ADDRESS", { ticker: toCurrency?.coin.toUpperCase() }),
-					);
+			if (newIndex === Step.StatusStep) {
+				try {
+					await handleSubmit(submitForm)();
+
+					if (withSignStep && !bypassSignStep) {
+						setShowTransferModal(true);
+					} else {
+						setActiveTab(newIndex);
+					}
+				} catch (error) {
+					if (isInvalidAddressError(error)) {
+						return toasts.error(
+							t("EXCHANGE.ERROR.INVALID_ADDRESS", { ticker: toCurrency?.coin.toUpperCase() }),
+						);
+					}
+
+					if (isInvalidRefundAddressError(error)) {
+						return toasts.error(
+							t("EXCHANGE.ERROR.INVALID_REFUND_ADDRESS", { ticker: fromCurrency?.coin.toUpperCase() }),
+						);
+					}
+
+					toasts.error(t("EXCHANGE.ERROR.GENERIC"));
 				}
 
-				if (isInvalidRefundAddressError(error)) {
-					return toasts.error(
-						t("EXCHANGE.ERROR.INVALID_REFUND_ADDRESS", { ticker: fromCurrency?.coin.toUpperCase() }),
-					);
-				}
-
-				toasts.error(t("EXCHANGE.ERROR.GENERIC"));
+				return;
 			}
 
-			return;
-		}
-
-		setActiveTab(newIndex);
-	}, [activeTab, fromCurrency, handleSubmit, submitForm, t, toCurrency]);
+			setActiveTab(newIndex);
+		},
+		[withSignStep, activeTab, fromCurrency, handleSubmit, submitForm, t, toCurrency],
+	);
 
 	const handleStatusUpdate = useCallback(
 		(id: string, parameters: any) => {
@@ -285,6 +309,8 @@ const ExchangeForm = ({ orderId, onReady }: { orderId?: string; onReady: () => v
 		[activeTab],
 	);
 
+	const showSignButtons = activeTab === Step.ReviewStep && withSignStep;
+
 	const { setHasFixedFormButtons } = useNavigationContext();
 
 	useEffect(() => {
@@ -292,64 +318,113 @@ const ExchangeForm = ({ orderId, onReady }: { orderId?: string; onReady: () => v
 	}, [showFormButtons]);
 
 	return (
-		<Form data-testid="ExchangeForm" context={form as any} onSubmit={submitForm}>
-			<Tabs activeId={activeTab}>
-				<StepIndicator steps={Array.from({ length: 4 })} activeIndex={activeTab} />
+		<>
+			<Form data-testid="ExchangeForm" context={form as any} onSubmit={submitForm}>
+				<Tabs activeId={activeTab}>
+					<StepIndicator steps={Array.from({ length: 4 })} activeIndex={activeTab} />
 
-				<div className="mt-8">
-					<TabPanel tabId={1}>
-						<FormStep profile={activeProfile} />
-					</TabPanel>
+					<div className="mb-24 mt-6 sm:mb-0 sm:mt-8">
+						<TabPanel tabId={1}>
+							<FormStep profile={activeProfile} />
+						</TabPanel>
 
-					<TabPanel tabId={2}>
-						<ReviewStep />
-					</TabPanel>
+						<TabPanel tabId={2}>
+							<ReviewStep />
+						</TabPanel>
 
-					<TabPanel tabId={3}>
-						<StatusStep exchangeTransaction={exchangeTransaction!} onUpdate={handleStatusUpdate} />
-					</TabPanel>
+						<TabPanel tabId={3}>
+							<StatusStep
+								exchangeTransaction={exchangeTransaction!}
+								onUpdate={handleStatusUpdate}
+								transferTransactionId={transferTransactionId}
+							/>
+						</TabPanel>
 
-					<TabPanel tabId={4}>
-						<ConfirmationStep exchangeTransaction={exchangeTransaction} />
-					</TabPanel>
+						<TabPanel tabId={4}>
+							<ConfirmationStep exchangeTransaction={exchangeTransaction} />
+						</TabPanel>
 
-					{showFormButtons && (
-						<FormButtons>
-							{activeTab < Step.StatusStep && (
-								<>
-									<Button
-										data-testid="ExchangeForm__back-button"
-										disabled={isSubmitting}
-										variant="secondary"
-										onClick={handleBack}
-									>
-										{t("COMMON.BACK")}
-									</Button>
+						{showFormButtons && (
+							<div
+								className={cn({
+									"flex items-center justify-between": activeTab === Step.ReviewStep && withSignStep,
+								})}
+							>
+								{activeTab === Step.ReviewStep && withSignStep && (
+									<div className="manual-transfer-button fixed bottom-[calc(env(safe-area-inset-bottom)_+_8.5rem)] left-1/2 -translate-x-1/2 sm:static sm:mt-5 sm:translate-x-0">
+										<Button
+											variant="transparent"
+											data-testid="ExchangeForm__manual_transfer"
+											onClick={() => handleNext({ bypassSignStep: true })}
+											disabled={isSubmitting || !isValid}
+											className="text-sm leading-[17px] text-theme-primary-600 sm:pl-0"
+										>
+											{t("EXCHANGE.MANUAL_TRANSFER")}
+										</Button>
+									</div>
+								)}
 
-									<Button
-										data-testid="ExchangeForm__continue-button"
-										disabled={isSubmitting || (isDirty ? !isValid : true)}
-										isLoading={isSubmitting}
-										onClick={handleNext}
-									>
-										{t("COMMON.CONTINUE")}
-									</Button>
-								</>
-							)}
+								<FormButtons>
+									{activeTab < Step.StatusStep && (
+										<>
+											<Button
+												data-testid="ExchangeForm__back-button"
+												disabled={isSubmitting}
+												variant="secondary"
+												onClick={handleBack}
+											>
+												{t("COMMON.BACK")}
+											</Button>
 
-							{activeTab === Step.ConfirmationStep && (
-								<Button
-									data-testid="ExchangeForm__finish-button"
-									onClick={() => history.push(`/profiles/${activeProfile.id()}/dashboard`)}
-								>
-									{t("COMMON.GO_TO_PORTFOLIO")}
-								</Button>
-							)}
-						</FormButtons>
-					)}
-				</div>
-			</Tabs>
-		</Form>
+											<Button
+												data-testid="ExchangeForm__continue-button"
+												disabled={isSubmitting || (isDirty ? !isValid : true)}
+												isLoading={isSubmitting}
+												onClick={() => handleNext()}
+											>
+												{showSignButtons ? t("COMMON.SIGN") : t("COMMON.CONTINUE")}
+											</Button>
+										</>
+									)}
+
+									{activeTab === Step.ConfirmationStep && (
+										<div className="flex w-full flex-col gap-3 sm:flex-row-reverse">
+											<Button
+												data-testid="ExchangeForm__finish-button"
+												onClick={() =>
+													history.push(`/profiles/${activeProfile.id()}/dashboard`)
+												}
+											>
+												{t("COMMON.GO_TO_PORTFOLIO")}
+											</Button>
+											<Button
+												data-testid="ExchangeForm__new-exchange"
+												variant="secondary"
+												onClick={() => resetForm?.()}
+											>
+												{t("EXCHANGE.NEW_EXCHANGE")}
+											</Button>
+										</div>
+									)}
+								</FormButtons>
+							</div>
+						)}
+					</div>
+				</Tabs>
+			</Form>
+			{showTransferModal && exchangeTransaction && arkMainnetNetwork && (
+				<SendExchangeTransfer
+					profile={activeProfile}
+					network={arkMainnetNetwork}
+					exchangeTransaction={exchangeTransaction}
+					onSuccess={(txId: string) => {
+						setTransferTransactionId(txId);
+						setActiveTab(activeTab + 1);
+					}}
+					onClose={() => setShowTransferModal(false)}
+				/>
+			)}
+		</>
 	);
 };
 
