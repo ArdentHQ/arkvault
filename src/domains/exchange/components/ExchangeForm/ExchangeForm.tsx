@@ -297,12 +297,12 @@ const ExchangeForm = ({
 	useEffect(() => {
 		let timeout: NodeJS.Timeout;
 
-		if (isFinished) {
+		if (isFinished && activeTab !== Step.ConfirmationStep) {
 			timeout = delay(handleNext, 5000);
 		}
 
 		return () => clearTimeout(timeout);
-	}, [handleNext, isFinished]);
+	}, [handleNext, isFinished, activeTab]);
 
 	const showFormButtons = useMemo(
 		() => activeTab < Step.StatusStep || activeTab === Step.ConfirmationStep,
