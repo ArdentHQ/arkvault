@@ -2497,11 +2497,11 @@ exports[`Signed Transaction Table > should render different status > should show
                     data-testid="TransactionRowAddressing__vote"
                   >
                     <div
-                      class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-6yoktf"
-                      color="success-bg"
+                      class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-1qplu6d"
+                      color="danger-bg"
                       data-testid="TransactionRowAddressing__label"
                     >
-                      From
+                      To
                     </div>
                     <span
                       class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
@@ -3116,11 +3116,11 @@ exports[`Signed Transaction Table > should render different status > should show
                     data-testid="TransactionRowAddressing__vote"
                   >
                     <div
-                      class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-6yoktf"
-                      color="success-bg"
+                      class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-1qplu6d"
+                      color="danger-bg"
                       data-testid="TransactionRowAddressing__label"
                     >
-                      From
+                      To
                     </div>
                     <span
                       class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
@@ -5249,11 +5249,11 @@ exports[`Signed Transaction Table > should show as awaiting confirmations 1`] = 
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-6yoktf"
-                      color="success-bg"
+                      class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-1qplu6d"
+                      color="danger-bg"
                       data-testid="TransactionRowAddressing__label"
                     >
-                      From
+                      To
                     </div>
                     <div
                       class="w-50 sm:w-30"
@@ -5269,7 +5269,7 @@ exports[`Signed Transaction Table > should show as awaiting confirmations 1`] = 
                             class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
                             data-testid="Address__address"
                           >
-                            DNzn2Rg6jCg3RCZnUyYjhbhvAgSWGwaMbH
+                            D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
                           </span>
                           <span>
                              

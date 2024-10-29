@@ -20,11 +20,19 @@ export const extractVotingData = ({ transaction }: { transaction: DTO.RawTransac
 
 const signedTransactionVotingData = ({ transaction }: { transaction: ProfilesDTO.ExtendedSignedTransactionData }) => {
 	const data = transaction.data().data();
-	const votes = data?.asset?.votes ?? [];
-	const unvotes = data?.asset?.unvotes ?? [];
+	const votes: string[] = [];
+	const unvotes: string[] = [];
+
+	// array of publicKeys
+	const rawVotes: string[] = data?.asset?.votes ?? [];
+
+	for (const publicKey of rawVotes) {
+		const destination = publicKey.startsWith("-") ? unvotes : votes;
+		destination.push(publicKey.replace(/^[+-]+/, ""));
+	}
 
 	return {
-		unvotes: unvotes.map((publicKey: string) => publicKey.replace(/^[+-]+/, "")),
-		votes: votes.map((publicKey: string) => publicKey.replace(/^[+-]+/, "")),
+		unvotes,
+		votes,
 	};
 };

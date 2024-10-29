@@ -108,6 +108,11 @@ export const SignedTransactionRow = ({
 		onRemovePendingTransaction?.(transaction);
 	};
 
+	const isMusigTransfer = [transaction.usesMultiSignature(), !transaction.isMultiSignatureRegistration()].every(
+		Boolean,
+	);
+	const isNegative = [isMusigTransfer, transaction.isSent()].some(Boolean);
+
 	return (
 		<TableRow className="relative">
 			<TableCell variant="start" innerClassName="items-start my-0 py-3 xl:min-h-0">
@@ -165,7 +170,7 @@ export const SignedTransactionRow = ({
 				<div className="flex flex-col items-end gap-1">
 					<AmountLabel
 						value={transaction.amount() + transaction.fee()}
-						isNegative={transaction.isSent()}
+						isNegative={isNegative}
 						ticker={wallet.currency()}
 						isCompact
 					/>

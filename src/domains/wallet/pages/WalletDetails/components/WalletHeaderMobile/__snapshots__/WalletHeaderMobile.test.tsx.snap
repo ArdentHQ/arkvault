@@ -84,7 +84,7 @@ exports[`WalletHeaderMobile > should render 1`] = `
           class="flex overflow-hidden whitespace-nowrap items-center space-x-2 min-w-0"
         >
           <span
-            class="font-semibold text-base text-theme-secondary-200 text-sm"
+            class="font-semibold text-base text-theme-secondary-200 text-sm leading-[17px]"
             data-testid="Address__alias"
           >
             <span
@@ -94,12 +94,19 @@ exports[`WalletHeaderMobile > should render 1`] = `
               ARK Wallet 1
             </span>
           </span>
-          <span
-            class="no-ligatures min-w-0 overflow-hidden text-sm max-w-32 text-theme-secondary-600 font-semibold text-base"
-            data-testid="Address__address"
+          <div
+            class="relative grow leading-[17px] sm:leading-5 text-left"
           >
-            D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-          </span>
+            <span
+              class="no-ligatures min-w-0 overflow-hidden text-sm text-theme-secondary-600 leading-[17px] font-semibold text-base absolute w-full"
+              data-testid="Address__address"
+            >
+              D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+            </span>
+            <span>
+               
+            </span>
+          </div>
         </div>
       </div>
       <div

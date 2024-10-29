@@ -122,7 +122,7 @@ jobs:
                   path: ${{ github.workspace }}/screenshots/**/*
 
     e2e-transaction:
-        needs: build-and-upload
+        needs: e2e-vote
 
         runs-on: ubuntu-latest
 
@@ -188,7 +188,7 @@ jobs:
                   path: ${{ github.workspace }}/screenshots/**/*
 
     e2e-contact:
-        needs: build-and-upload
+        needs: e2e-transaction
 
         runs-on: ubuntu-latest
 
@@ -254,7 +254,7 @@ jobs:
                   path: ${{ github.workspace }}/screenshots/**/*
 
     e2e-dashboard:
-        needs: build-and-upload
+        needs: e2e-contact
 
         runs-on: ubuntu-latest
 
@@ -320,7 +320,7 @@ jobs:
                   path: ${{ github.workspace }}/screenshots/**/*
 
     e2e-profile:
-        needs: build-and-upload
+        needs: e2e-dashboard
 
         runs-on: ubuntu-latest
 
@@ -386,7 +386,7 @@ jobs:
                   path: ${{ github.workspace }}/screenshots/**/*
 
     e2e-message:
-        needs: build-and-upload
+        needs: e2e-profile
 
         runs-on: ubuntu-latest
 
@@ -452,7 +452,7 @@ jobs:
                   path: ${{ github.workspace }}/screenshots/**/*
 
     e2e-wallet:
-        needs: build-and-upload
+        needs: e2e-message
 
         runs-on: ubuntu-latest
 
@@ -518,7 +518,7 @@ jobs:
                   path: ${{ github.workspace }}/screenshots/**/*
 
     e2e-settings:
-        needs: build-and-upload
+        needs: e2e-wallet
 
         runs-on: ubuntu-latest
 

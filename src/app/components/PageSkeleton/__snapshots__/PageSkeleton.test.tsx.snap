@@ -368,7 +368,7 @@ exports[`PageSkeleton > should render without profile 1`] = `
                 class="min-w-0 basis-1/2 rounded-xl border-theme-navy-100 dark:border-theme-secondary-800 sm:border sm:p-6"
               >
                 <div
-                  class="mx-auto flex h-full max-w-[400px] flex-col"
+                  class="mx-auto flex h-[calc(100vh_-_160px)] max-w-[400px] flex-col sm:h-full"
                 >
                   <div
                     class="flex flex-1 flex-col items-center justify-center"
