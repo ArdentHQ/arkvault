@@ -2597,7 +2597,7 @@ exports[`SendTransfer > should render form step (lg) 1`] = `
               Sender
             </label>
             <button
-              class="space-x-3 relative items-center justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none block p-0 text-sm text-theme-navy-600 sm:hidden"
+              class="space-x-3 relative items-center justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none block p-0 text-sm text-theme-navy-600 sm:hidden"
               type="button"
             >
               <div
@@ -3297,7 +3297,7 @@ exports[`SendTransfer > should render form step (xs) 1`] = `
               Sender
             </label>
             <button
-              class="space-x-3 relative items-center justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none block p-0 text-sm text-theme-navy-600 sm:hidden"
+              class="space-x-3 relative items-center justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none block p-0 text-sm text-theme-navy-600 sm:hidden"
               type="button"
             >
               <div
@@ -5754,7 +5754,7 @@ exports[`SendTransfer > should render review step with multiple recipients (with
                 />
               </div>
               <button
-                class="space-x-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none p-0 text-sm leading-[17px] text-theme-navy-600 underline decoration-theme-navy-600 decoration-dashed decoration-1 underline-offset-4 sm:text-base sm:leading-5"
+                class="space-x-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-0 text-sm leading-[17px] text-theme-navy-600 underline decoration-theme-navy-600 decoration-dashed decoration-1 underline-offset-4 sm:text-base sm:leading-5"
                 data-testid="TransactionRecipientsModal--ShowList"
                 type="button"
               >
@@ -6174,7 +6174,7 @@ exports[`SendTransfer > should render review step with multiple recipients (with
                 />
               </div>
               <button
-                class="space-x-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none p-0 text-sm leading-[17px] text-theme-navy-600 underline decoration-theme-navy-600 decoration-dashed decoration-1 underline-offset-4 sm:text-base sm:leading-5"
+                class="space-x-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-0 text-sm leading-[17px] text-theme-navy-600 underline decoration-theme-navy-600 decoration-dashed decoration-1 underline-offset-4 sm:text-base sm:leading-5"
                 data-testid="TransactionRecipientsModal--ShowList"
                 type="button"
               >
