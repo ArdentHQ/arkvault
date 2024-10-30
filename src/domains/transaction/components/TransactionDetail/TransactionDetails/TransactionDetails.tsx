@@ -17,6 +17,7 @@ export const TransactionDetails = ({
 	const format = useTimeFormat();
 
 	const timestamp = transaction.timestamp();
+	const data = transaction.data();
 	const { blockHeight } = useBlockHeight({
 		blockId: transaction.blockId(),
 		network: transaction.wallet().network(),
@@ -24,8 +25,10 @@ export const TransactionDetails = ({
 
 	const nonce = useCallback(() => {
 		try {
-			const data = transaction.data();
-			return typeof data.data === "object" ? data.data.nonce : data.data().nonce;
+			const data = transaction.data().data;
+			const nonceValue = typeof data === 'function' ? data().nonce : data?.nonce;
+	
+			return typeof nonceValue === 'string' ? nonceValue : '';
 		} catch (error) {
 			return '';
 		}
@@ -66,13 +69,27 @@ export const TransactionDetails = ({
 
 				<div className="flex w-full justify-between sm:justify-start">
 					<DetailLabelText className={labelClassName}>{t("COMMON.NONCE")}</DetailLabelText>
-					{nonce() ? (
-						<div className="text-sm font-semibold leading-[17px] sm:text-base sm:leading-5">{nonce()}</div>
-					) : (
+					{
+						nonce() ? (
+							<div className="text-sm font-semibold leading-[17px] sm:text-base sm:leading-5">
+								{nonce()}
+							</div>
+						) : (
+							<p className="text-sm leading-[17px] text-theme-secondary-500 sm:text-base sm:leading-5">
+								{t("COMMON.NOT_AVAILABLE")}
+							</p>
+						)
+					}
+					{/* {data.nonce && (
+						<div className="text-sm font-semibold leading-[17px] sm:text-base sm:leading-5">
+							{data.nonce}
+						</div>
+					)}
+					{!data.nonce && (
 						<p className="text-sm leading-[17px] text-theme-secondary-500 sm:text-base sm:leading-5">
 							{t("COMMON.NOT_AVAILABLE")}
 						</p>
-					)}
+					)} */}
 				</div>
 			</div>
 		</DetailWrapper>
