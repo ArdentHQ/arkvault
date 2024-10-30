@@ -1456,7 +1456,7 @@ exports[`SearchWallet uses fiat value = false > should render responsive item 1`
                               class="flex flex-col gap-2 pl-2 pt-2"
                             >
                               <span
-                                class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200 truncate max-w-48 xs:max-w-80 sm:max-w-128 w-full"
+                                class="w-full max-w-48 truncate text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200 xs:max-w-80 sm:max-w-128"
                               >
                                 Sample Wallet
                               </span>
@@ -1508,7 +1508,7 @@ exports[`SearchWallet uses fiat value = false > should render responsive item 1`
                               class="flex flex-col gap-2 pl-2 pt-2"
                             >
                               <span
-                                class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200 truncate max-w-48 xs:max-w-80 sm:max-w-128 w-full"
+                                class="w-full max-w-48 truncate text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200 xs:max-w-80 sm:max-w-128"
                               >
                                 ARK Wallet 2
                               </span>
@@ -1771,7 +1771,7 @@ exports[`SearchWallet uses fiat value = false > should render responsive item 2`
                               class="flex flex-col gap-2 pl-2 pt-2"
                             >
                               <span
-                                class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200 truncate max-w-48 xs:max-w-80 sm:max-w-128 w-full"
+                                class="w-full max-w-48 truncate text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200 xs:max-w-80 sm:max-w-128"
                               >
                                 Sample Wallet
                               </span>
@@ -1823,7 +1823,7 @@ exports[`SearchWallet uses fiat value = false > should render responsive item 2`
                               class="flex flex-col gap-2 pl-2 pt-2"
                             >
                               <span
-                                class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200 truncate max-w-48 xs:max-w-80 sm:max-w-128 w-full"
+                                class="w-full max-w-48 truncate text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200 xs:max-w-80 sm:max-w-128"
                               >
                                 ARK Wallet 2
                               </span>
@@ -2086,7 +2086,7 @@ exports[`SearchWallet uses fiat value = false > should render responsive with se
                               class="flex flex-col gap-2 pl-2 pt-2"
                             >
                               <span
-                                class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200 truncate max-w-48 xs:max-w-80 sm:max-w-128 w-full"
+                                class="w-full max-w-48 truncate text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200 xs:max-w-80 sm:max-w-128"
                               >
                                 Sample Wallet
                               </span>
@@ -2138,7 +2138,7 @@ exports[`SearchWallet uses fiat value = false > should render responsive with se
                               class="flex flex-col gap-2 pl-2 pt-2"
                             >
                               <span
-                                class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200 truncate max-w-48 xs:max-w-80 sm:max-w-128 w-full"
+                                class="w-full max-w-48 truncate text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200 xs:max-w-80 sm:max-w-128"
                               >
                                 ARK Wallet 2
                               </span>
@@ -5034,7 +5034,7 @@ exports[`SearchWallet uses fiat value = true > should render responsive item 1`]
                               class="flex flex-col gap-2 pl-2 pt-2"
                             >
                               <span
-                                class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200 truncate max-w-48 xs:max-w-80 sm:max-w-128 w-full"
+                                class="w-full max-w-48 truncate text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200 xs:max-w-80 sm:max-w-128"
                               >
                                 Sample Wallet
                               </span>
@@ -5086,7 +5086,7 @@ exports[`SearchWallet uses fiat value = true > should render responsive item 1`]
                               class="flex flex-col gap-2 pl-2 pt-2"
                             >
                               <span
-                                class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200 truncate max-w-48 xs:max-w-80 sm:max-w-128 w-full"
+                                class="w-full max-w-48 truncate text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200 xs:max-w-80 sm:max-w-128"
                               >
                                 ARK Wallet 2
                               </span>
@@ -5349,7 +5349,7 @@ exports[`SearchWallet uses fiat value = true > should render responsive item 2`]
                               class="flex flex-col gap-2 pl-2 pt-2"
                             >
                               <span
-                                class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200 truncate max-w-48 xs:max-w-80 sm:max-w-128 w-full"
+                                class="w-full max-w-48 truncate text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200 xs:max-w-80 sm:max-w-128"
                               >
                                 Sample Wallet
                               </span>
@@ -5401,7 +5401,7 @@ exports[`SearchWallet uses fiat value = true > should render responsive item 2`]
                               class="flex flex-col gap-2 pl-2 pt-2"
                             >
                               <span
-                                class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200 truncate max-w-48 xs:max-w-80 sm:max-w-128 w-full"
+                                class="w-full max-w-48 truncate text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200 xs:max-w-80 sm:max-w-128"
                               >
                                 ARK Wallet 2
                               </span>
@@ -5664,7 +5664,7 @@ exports[`SearchWallet uses fiat value = true > should render responsive with sel
                               class="flex flex-col gap-2 pl-2 pt-2"
                             >
                               <span
-                                class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200 truncate max-w-48 xs:max-w-80 sm:max-w-128 w-full"
+                                class="w-full max-w-48 truncate text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200 xs:max-w-80 sm:max-w-128"
                               >
                                 Sample Wallet
                               </span>
@@ -5716,7 +5716,7 @@ exports[`SearchWallet uses fiat value = true > should render responsive with sel
                               class="flex flex-col gap-2 pl-2 pt-2"
                             >
                               <span
-                                class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200 truncate max-w-48 xs:max-w-80 sm:max-w-128 w-full"
+                                class="w-full max-w-48 truncate text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200 xs:max-w-80 sm:max-w-128"
                               >
                                 ARK Wallet 2
                               </span>
