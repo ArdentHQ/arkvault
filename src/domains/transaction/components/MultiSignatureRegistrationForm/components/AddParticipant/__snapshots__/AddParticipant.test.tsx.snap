@@ -874,6 +874,16 @@ exports[`Add Participant > should fail with a duplicate address 1`] = `
                       class="css-1njetft"
                     >
                       <div
+                        class="flex items-center"
+                      >
+                        <span
+                          class="no-ligatures font-semibold css-9nx3be"
+                          data-testid="TruncateEnd"
+                        >
+                          ARK Wallet 1
+                        </span>
+                      </div>
+                      <div
                         class="relative flex h-full flex-1"
                       >
                         <input
