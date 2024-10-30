@@ -28,7 +28,7 @@ export const TransactionDetails = ({
 			const data = transaction.data().data;
 			return typeof data === 'function' ? data().nonce : data.nonce || '';
 		} catch {
-			return '';
+			return "";
 		}
 	}, [transaction]);
 
