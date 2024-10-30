@@ -17,7 +17,7 @@ export const TransactionDetails = ({
 	const format = useTimeFormat();
 
 	const timestamp = transaction.timestamp();
-console.log(transaction.blockId, transaction.blockId())
+	console.log(transaction.blockId, transaction.blockId());
 	const { blockHeight } = useBlockHeight({
 		blockId: transaction.blockId(),
 		network: transaction.wallet().network(),
@@ -27,12 +27,11 @@ console.log(transaction.blockId, transaction.blockId())
 		try {
 			const data = transaction.data().data;
 			const nonceValue = (data instanceof Function ? data() : data)?.nonce;
-			return nonceValue || '';
+			return nonceValue || "";
 		} catch {
-			return '';
+			return "";
 		}
 	}, [transaction]);
-	
 
 	return (
 		<DetailWrapper label={t("TRANSACTION.TRANSACTION_DETAILS")}>
