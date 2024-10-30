@@ -135,7 +135,7 @@ exports[`TransactionRow > should omit the currency for transactions from test ne
                     class="whitespace-nowrap text-sm"
                     data-testid="Amount"
                   >
-                    21 BTC
+                    121 BTC
                   </span>
                 </div>
               </div>
@@ -1073,7 +1073,7 @@ exports[`TransactionRow > should render with currency 1`] = `
                     class="whitespace-nowrap text-sm"
                     data-testid="Amount"
                   >
-                    21 BTC
+                    121 BTC
                   </span>
                 </div>
               </div>
