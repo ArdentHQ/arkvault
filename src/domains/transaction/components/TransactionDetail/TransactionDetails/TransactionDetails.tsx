@@ -24,12 +24,12 @@ export const TransactionDetails = ({
 	});
 
 	const nonce = useCallback(() => {
-        try {
-            return transaction.data().data().nonce || '';
-        } catch {
-            return '';
-        }
-    }, [transaction]);
+		try {
+			return transaction.data().data().nonce || "";
+		} catch {
+			return "";
+		}
+	}, [transaction]);
 
 	return (
 		<DetailWrapper label={t("TRANSACTION.TRANSACTION_DETAILS")}>
@@ -67,14 +67,12 @@ export const TransactionDetails = ({
 				<div className="flex w-full justify-between sm:justify-start">
 					<DetailLabelText className={labelClassName}>{t("COMMON.NONCE")}</DetailLabelText>
 					{nonce() ? (
-                        <div className="text-sm font-semibold leading-[17px] sm:text-base sm:leading-5">
-                            {nonce()}
-                        </div>
-                    ) : (
-                        <p className="text-sm leading-[17px] text-theme-secondary-500 sm:text-base sm:leading-5">
-                            {t("COMMON.NOT_AVAILABLE")}
-                        </p>
-                    )}
+						<div className="text-sm font-semibold leading-[17px] sm:text-base sm:leading-5">{nonce()}</div>
+					) : (
+						<p className="text-sm leading-[17px] text-theme-secondary-500 sm:text-base sm:leading-5">
+							{t("COMMON.NOT_AVAILABLE")}
+						</p>
+					)}
 				</div>
 			</div>
 		</DetailWrapper>
