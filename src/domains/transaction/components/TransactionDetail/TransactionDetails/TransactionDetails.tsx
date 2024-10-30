@@ -1,4 +1,4 @@
-import React, { ReactElement } from "react";
+import React, { ReactElement, useCallback, useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { DTO } from "@ardenthq/sdk";
 import { DetailDivider, DetailLabelText, DetailWrapper } from "@/app/components/DetailWrapper";
@@ -17,12 +17,19 @@ export const TransactionDetails = ({
 	const format = useTimeFormat();
 
 	const timestamp = transaction.timestamp();
-	const data = transaction.data().data;
 
 	const { blockHeight } = useBlockHeight({
 		blockId: transaction.blockId(),
 		network: transaction.wallet().network(),
 	});
+
+	const nonce = useCallback(() => {
+        try {
+            return transaction.data().data().nonce || '';
+        } catch {
+            return '';
+        }
+    }, [transaction]);
 
 	return (
 		<DetailWrapper label={t("TRANSACTION.TRANSACTION_DETAILS")}>
@@ -59,16 +66,15 @@ export const TransactionDetails = ({
 
 				<div className="flex w-full justify-between sm:justify-start">
 					<DetailLabelText className={labelClassName}>{t("COMMON.NONCE")}</DetailLabelText>
-					{data.nonce && (
-						<div className="text-sm font-semibold leading-[17px] sm:text-base sm:leading-5">
-							{data.nonce}
-						</div>
-					)}
-					{!data.nonce && (
-						<p className="text-sm leading-[17px] text-theme-secondary-500 sm:text-base sm:leading-5">
-							{t("COMMON.NOT_AVAILABLE")}
-						</p>
-					)}
+					{nonce() ? (
+                        <div className="text-sm font-semibold leading-[17px] sm:text-base sm:leading-5">
+                            {nonce()}
+                        </div>
+                    ) : (
+                        <p className="text-sm leading-[17px] text-theme-secondary-500 sm:text-base sm:leading-5">
+                            {t("COMMON.NOT_AVAILABLE")}
+                        </p>
+                    )}
 				</div>
 			</div>
 		</DetailWrapper>
