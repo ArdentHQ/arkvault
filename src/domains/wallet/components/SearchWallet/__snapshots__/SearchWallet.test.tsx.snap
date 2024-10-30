@@ -277,7 +277,7 @@ exports[`SearchWallet uses fiat value = false > should render 1`] = `
                         data-testid="TableRow"
                       >
                         <td
-                          class="w-full"
+                          class="w-full max-w-28"
                         >
                           <div
                             class="flex px-3 items-center transition-colors duration-100 min-h-11 pl-6 rounded-l space-x-4 my-0.5"
@@ -342,7 +342,7 @@ exports[`SearchWallet uses fiat value = false > should render 1`] = `
                         data-testid="TableRow"
                       >
                         <td
-                          class="w-full"
+                          class="w-full max-w-28"
                         >
                           <div
                             class="flex px-3 items-center transition-colors duration-100 min-h-11 pl-6 rounded-l space-x-4 my-0.5"
@@ -692,7 +692,7 @@ exports[`SearchWallet uses fiat value = false > should render compact on md scre
                         data-testid="TableRow"
                       >
                         <td
-                          class="w-full"
+                          class="w-full max-w-28"
                         >
                           <div
                             class="flex px-3 items-center transition-colors duration-100 min-h-11 pl-6 rounded-l space-x-4 my-0.5"
@@ -757,7 +757,7 @@ exports[`SearchWallet uses fiat value = false > should render compact on md scre
                         data-testid="TableRow"
                       >
                         <td
-                          class="w-full"
+                          class="w-full max-w-28"
                         >
                           <div
                             class="flex px-3 items-center transition-colors duration-100 min-h-11 pl-6 rounded-l space-x-4 my-0.5"
@@ -1107,7 +1107,7 @@ exports[`SearchWallet uses fiat value = false > should render compact with selec
                         data-testid="TableRow"
                       >
                         <td
-                          class="w-full"
+                          class="w-full max-w-28"
                         >
                           <div
                             class="flex px-3 items-center transition-colors duration-100 min-h-11 pl-3 ml-3 bg-theme-success-100 rounded-l dark:bg-transparent dark:border-y-2 dark:border-l-2 dark:border-theme-success-600 space-x-4 my-0.5"
@@ -1170,7 +1170,7 @@ exports[`SearchWallet uses fiat value = false > should render compact with selec
                         data-testid="TableRow"
                       >
                         <td
-                          class="w-full"
+                          class="w-full max-w-28"
                         >
                           <div
                             class="flex px-3 items-center transition-colors duration-100 min-h-11 pl-6 rounded-l space-x-4 my-0.5"
@@ -1456,7 +1456,7 @@ exports[`SearchWallet uses fiat value = false > should render responsive item 1`
                               class="flex flex-col gap-2 pl-2 pt-2"
                             >
                               <span
-                                class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
+                                class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200 truncate max-w-48 xs:max-w-80 sm:max-w-128 w-full"
                               >
                                 Sample Wallet
                               </span>
@@ -1508,7 +1508,7 @@ exports[`SearchWallet uses fiat value = false > should render responsive item 1`
                               class="flex flex-col gap-2 pl-2 pt-2"
                             >
                               <span
-                                class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
+                                class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200 truncate max-w-48 xs:max-w-80 sm:max-w-128 w-full"
                               >
                                 ARK Wallet 2
                               </span>
@@ -1771,7 +1771,7 @@ exports[`SearchWallet uses fiat value = false > should render responsive item 2`
                               class="flex flex-col gap-2 pl-2 pt-2"
                             >
                               <span
-                                class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
+                                class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200 truncate max-w-48 xs:max-w-80 sm:max-w-128 w-full"
                               >
                                 Sample Wallet
                               </span>
@@ -1823,7 +1823,7 @@ exports[`SearchWallet uses fiat value = false > should render responsive item 2`
                               class="flex flex-col gap-2 pl-2 pt-2"
                             >
                               <span
-                                class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
+                                class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200 truncate max-w-48 xs:max-w-80 sm:max-w-128 w-full"
                               >
                                 ARK Wallet 2
                               </span>
@@ -2086,7 +2086,7 @@ exports[`SearchWallet uses fiat value = false > should render responsive with se
                               class="flex flex-col gap-2 pl-2 pt-2"
                             >
                               <span
-                                class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
+                                class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200 truncate max-w-48 xs:max-w-80 sm:max-w-128 w-full"
                               >
                                 Sample Wallet
                               </span>
@@ -2138,7 +2138,7 @@ exports[`SearchWallet uses fiat value = false > should render responsive with se
                               class="flex flex-col gap-2 pl-2 pt-2"
                             >
                               <span
-                                class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
+                                class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200 truncate max-w-48 xs:max-w-80 sm:max-w-128 w-full"
                               >
                                 ARK Wallet 2
                               </span>
@@ -2465,7 +2465,7 @@ exports[`SearchWallet uses fiat value = false > should render with incompatible 
                         data-testid="TableRow"
                       >
                         <td
-                          class="w-full"
+                          class="w-full max-w-28"
                         >
                           <div
                             class="flex px-3 items-center transition-colors duration-100 min-h-11 pl-6 rounded-l space-x-4 my-0.5"
@@ -2805,7 +2805,7 @@ exports[`SearchWallet uses fiat value = false > should render with selected addr
                         data-testid="TableRow"
                       >
                         <td
-                          class="w-full"
+                          class="w-full max-w-28"
                         >
                           <div
                             class="flex px-3 items-center transition-colors duration-100 min-h-11 pl-3 ml-3 bg-theme-success-100 rounded-l dark:bg-transparent dark:border-y-2 dark:border-l-2 dark:border-theme-success-600 space-x-4 my-0.5"
@@ -2868,7 +2868,7 @@ exports[`SearchWallet uses fiat value = false > should render with selected addr
                         data-testid="TableRow"
                       >
                         <td
-                          class="w-full"
+                          class="w-full max-w-28"
                         >
                           <div
                             class="flex px-3 items-center transition-colors duration-100 min-h-11 pl-6 rounded-l space-x-4 my-0.5"
@@ -3218,7 +3218,7 @@ exports[`SearchWallet uses fiat value = false > should render with the default e
                         data-testid="TableRow"
                       >
                         <td
-                          class="w-full"
+                          class="w-full max-w-28"
                         >
                           <div
                             class="flex px-3 items-center transition-colors duration-100 min-h-11 pl-6 rounded-l space-x-4 my-0.5"
@@ -3283,7 +3283,7 @@ exports[`SearchWallet uses fiat value = false > should render with the default e
                         data-testid="TableRow"
                       >
                         <td
-                          class="w-full"
+                          class="w-full max-w-28"
                         >
                           <div
                             class="flex px-3 items-center transition-colors duration-100 min-h-11 pl-6 rounded-l space-x-4 my-0.5"
@@ -3679,7 +3679,7 @@ exports[`SearchWallet uses fiat value = true > should render 1`] = `
                         data-testid="TableRow"
                       >
                         <td
-                          class="w-full"
+                          class="w-full max-w-28"
                         >
                           <div
                             class="flex px-3 items-center transition-colors duration-100 min-h-11 pl-6 rounded-l space-x-4 my-0.5"
@@ -3758,7 +3758,7 @@ exports[`SearchWallet uses fiat value = true > should render 1`] = `
                         data-testid="TableRow"
                       >
                         <td
-                          class="w-full"
+                          class="w-full max-w-28"
                         >
                           <div
                             class="flex px-3 items-center transition-colors duration-100 min-h-11 pl-6 rounded-l space-x-4 my-0.5"
@@ -4168,7 +4168,7 @@ exports[`SearchWallet uses fiat value = true > should render compact on md scree
                         data-testid="TableRow"
                       >
                         <td
-                          class="w-full"
+                          class="w-full max-w-28"
                         >
                           <div
                             class="flex px-3 items-center transition-colors duration-100 min-h-11 pl-6 rounded-l space-x-4 my-0.5"
@@ -4247,7 +4247,7 @@ exports[`SearchWallet uses fiat value = true > should render compact on md scree
                         data-testid="TableRow"
                       >
                         <td
-                          class="w-full"
+                          class="w-full max-w-28"
                         >
                           <div
                             class="flex px-3 items-center transition-colors duration-100 min-h-11 pl-6 rounded-l space-x-4 my-0.5"
@@ -4657,7 +4657,7 @@ exports[`SearchWallet uses fiat value = true > should render compact with select
                         data-testid="TableRow"
                       >
                         <td
-                          class="w-full"
+                          class="w-full max-w-28"
                         >
                           <div
                             class="flex px-3 items-center transition-colors duration-100 min-h-11 pl-3 ml-3 bg-theme-success-100 rounded-l dark:bg-transparent dark:border-y-2 dark:border-l-2 dark:border-theme-success-600 space-x-4 my-0.5"
@@ -4734,7 +4734,7 @@ exports[`SearchWallet uses fiat value = true > should render compact with select
                         data-testid="TableRow"
                       >
                         <td
-                          class="w-full"
+                          class="w-full max-w-28"
                         >
                           <div
                             class="flex px-3 items-center transition-colors duration-100 min-h-11 pl-6 rounded-l space-x-4 my-0.5"
@@ -5034,7 +5034,7 @@ exports[`SearchWallet uses fiat value = true > should render responsive item 1`]
                               class="flex flex-col gap-2 pl-2 pt-2"
                             >
                               <span
-                                class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
+                                class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200 truncate max-w-48 xs:max-w-80 sm:max-w-128 w-full"
                               >
                                 Sample Wallet
                               </span>
@@ -5086,7 +5086,7 @@ exports[`SearchWallet uses fiat value = true > should render responsive item 1`]
                               class="flex flex-col gap-2 pl-2 pt-2"
                             >
                               <span
-                                class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
+                                class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200 truncate max-w-48 xs:max-w-80 sm:max-w-128 w-full"
                               >
                                 ARK Wallet 2
                               </span>
@@ -5349,7 +5349,7 @@ exports[`SearchWallet uses fiat value = true > should render responsive item 2`]
                               class="flex flex-col gap-2 pl-2 pt-2"
                             >
                               <span
-                                class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
+                                class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200 truncate max-w-48 xs:max-w-80 sm:max-w-128 w-full"
                               >
                                 Sample Wallet
                               </span>
@@ -5401,7 +5401,7 @@ exports[`SearchWallet uses fiat value = true > should render responsive item 2`]
                               class="flex flex-col gap-2 pl-2 pt-2"
                             >
                               <span
-                                class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
+                                class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200 truncate max-w-48 xs:max-w-80 sm:max-w-128 w-full"
                               >
                                 ARK Wallet 2
                               </span>
@@ -5664,7 +5664,7 @@ exports[`SearchWallet uses fiat value = true > should render responsive with sel
                               class="flex flex-col gap-2 pl-2 pt-2"
                             >
                               <span
-                                class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
+                                class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200 truncate max-w-48 xs:max-w-80 sm:max-w-128 w-full"
                               >
                                 Sample Wallet
                               </span>
@@ -5716,7 +5716,7 @@ exports[`SearchWallet uses fiat value = true > should render responsive with sel
                               class="flex flex-col gap-2 pl-2 pt-2"
                             >
                               <span
-                                class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
+                                class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200 truncate max-w-48 xs:max-w-80 sm:max-w-128 w-full"
                               >
                                 ARK Wallet 2
                               </span>
@@ -6089,7 +6089,7 @@ exports[`SearchWallet uses fiat value = true > should render with incompatible l
                         data-testid="TableRow"
                       >
                         <td
-                          class="w-full"
+                          class="w-full max-w-28"
                         >
                           <div
                             class="flex px-3 items-center transition-colors duration-100 min-h-11 pl-6 rounded-l space-x-4 my-0.5"
@@ -6489,7 +6489,7 @@ exports[`SearchWallet uses fiat value = true > should render with selected addre
                         data-testid="TableRow"
                       >
                         <td
-                          class="w-full"
+                          class="w-full max-w-28"
                         >
                           <div
                             class="flex px-3 items-center transition-colors duration-100 min-h-11 pl-3 ml-3 bg-theme-success-100 rounded-l dark:bg-transparent dark:border-y-2 dark:border-l-2 dark:border-theme-success-600 space-x-4 my-0.5"
@@ -6566,7 +6566,7 @@ exports[`SearchWallet uses fiat value = true > should render with selected addre
                         data-testid="TableRow"
                       >
                         <td
-                          class="w-full"
+                          class="w-full max-w-28"
                         >
                           <div
                             class="flex px-3 items-center transition-colors duration-100 min-h-11 pl-6 rounded-l space-x-4 my-0.5"
@@ -6976,7 +6976,7 @@ exports[`SearchWallet uses fiat value = true > should render with the default ex
                         data-testid="TableRow"
                       >
                         <td
-                          class="w-full"
+                          class="w-full max-w-28"
                         >
                           <div
                             class="flex px-3 items-center transition-colors duration-100 min-h-11 pl-6 rounded-l space-x-4 my-0.5"
@@ -7055,7 +7055,7 @@ exports[`SearchWallet uses fiat value = true > should render with the default ex
                         data-testid="TableRow"
                       >
                         <td
-                          class="w-full"
+                          class="w-full max-w-28"
                         >
                           <div
                             class="flex px-3 items-center transition-colors duration-100 min-h-11 pl-6 rounded-l space-x-4 my-0.5"
