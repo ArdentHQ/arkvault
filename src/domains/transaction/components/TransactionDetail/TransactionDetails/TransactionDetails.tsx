@@ -24,12 +24,13 @@ export const TransactionDetails = ({
 	});
 
 	const nonce = useCallback(() => {
-        try {
-            return transaction.data().data().nonce || '';
-        } catch {
-            return '';
-        }
-    }, [transaction]);
+		try {
+			const data = transaction.data().data();
+			return typeof data === 'function' ? data().nonce : data.nonce || '';
+		} catch {
+			return '';
+		}
+	}, [transaction]);
 
 	return (
 		<DetailWrapper label={t("TRANSACTION.TRANSACTION_DETAILS")}>
