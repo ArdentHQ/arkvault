@@ -102,7 +102,7 @@ export const TransactionRow = memo(
 				<TableCell innerClassName="justify-end items-start xl:min-h-0 my-0 py-3">
 					<div className="flex flex-col items-end gap-1">
 						<AmountLabel
-							value={transaction.amount() + transaction.fee()}
+							value={transaction.total()}
 							isNegative={transaction.isSent()}
 							ticker={transaction.wallet().currency()}
 							isCompact
