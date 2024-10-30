@@ -77,16 +77,6 @@ export const TransactionDetails = ({
 							{t("COMMON.NOT_AVAILABLE")}
 						</p>
 					)}
-					{/* {data.nonce && (
-						<div className="text-sm font-semibold leading-[17px] sm:text-base sm:leading-5">
-							{data.nonce}
-						</div>
-					)}
-					{!data.nonce && (
-						<p className="text-sm leading-[17px] text-theme-secondary-500 sm:text-base sm:leading-5">
-							{t("COMMON.NOT_AVAILABLE")}
-						</p>
-					)} */}
 				</div>
 			</div>
 		</DetailWrapper>
