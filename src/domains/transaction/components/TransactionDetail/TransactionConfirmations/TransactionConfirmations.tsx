@@ -19,10 +19,6 @@ export const TransactionConfirmations = ({
 	const { t } = useTranslation();
 	const { status } = useMultiSignatureStatus({ transaction, wallet: transaction.wallet() });
 
-	if(isConfirmed) {
-		console.log('YES!', transaction.blockId())
-	}
-
 	return (
 		<div className="mt-3 sm:mt-2">
 			{!isConfirmed && (
