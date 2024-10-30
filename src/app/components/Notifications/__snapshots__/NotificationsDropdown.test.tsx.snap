@@ -747,11 +747,11 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                               >
                                 Nonce
                               </div>
-                              <p
-                                class="text-sm leading-[17px] text-theme-secondary-500 sm:text-base sm:leading-5"
+                              <div
+                                class="text-sm font-semibold leading-[17px] sm:text-base sm:leading-5"
                               >
-                                N/A
-                              </p>
+                                15
+                              </div>
                             </div>
                           </div>
                         </div>

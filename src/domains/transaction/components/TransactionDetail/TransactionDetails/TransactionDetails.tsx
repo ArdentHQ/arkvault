@@ -17,7 +17,7 @@ export const TransactionDetails = ({
 	const format = useTimeFormat();
 
 	const timestamp = transaction.timestamp();
-
+console.log(transaction.blockId, transaction.blockId())
 	const { blockHeight } = useBlockHeight({
 		blockId: transaction.blockId(),
 		network: transaction.wallet().network(),
@@ -26,11 +26,13 @@ export const TransactionDetails = ({
 	const nonce = useCallback(() => {
 		try {
 			const data = transaction.data().data;
-			return typeof data === 'function' ? data().nonce : data.nonce || '';
+			const nonceValue = (data instanceof Function ? data() : data)?.nonce;
+			return nonceValue || '';
 		} catch {
-			return "";
+			return '';
 		}
 	}, [transaction]);
+	
 
 	return (
 		<DetailWrapper label={t("TRANSACTION.TRANSACTION_DETAILS")}>
