@@ -105,8 +105,9 @@ export const TransactionRow = memo(
 							value={transaction.amount() + transaction.fee()}
 							isNegative={transaction.isSent()}
 							ticker={transaction.wallet().currency()}
+							hideSign={transaction.isTransfer() && transaction.sender() === transaction.recipient()}
 							isCompact
-							className="h-[21px]"
+							className="h-[21px] rounded px-1 dark:border"
 						/>
 						<span
 							className="text-xs font-semibold text-theme-secondary-700 lg:hidden"
