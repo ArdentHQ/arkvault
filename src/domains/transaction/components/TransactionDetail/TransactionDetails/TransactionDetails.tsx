@@ -1,4 +1,4 @@
-import React, { ReactElement, useCallback, useEffect, useState } from "react";
+import React, { ReactElement, useCallback } from "react";
 import { useTranslation } from "react-i18next";
 import { DTO } from "@ardenthq/sdk";
 import { DetailDivider, DetailLabelText, DetailWrapper } from "@/app/components/DetailWrapper";
