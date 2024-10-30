@@ -17,7 +17,6 @@ export const TransactionDetails = ({
 	const format = useTimeFormat();
 
 	const timestamp = transaction.timestamp();
-	const data = transaction.data();
 	const { blockHeight } = useBlockHeight({
 		blockId: transaction.blockId(),
 		network: transaction.wallet().network(),
