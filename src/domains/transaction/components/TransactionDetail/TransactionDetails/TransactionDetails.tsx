@@ -26,9 +26,9 @@ export const TransactionDetails = ({
 	const nonce = useCallback(() => {
 		try {
 			const data = transaction.data().data();
-			return typeof data === 'function' ? data().nonce : data.nonce || '';
+			return typeof data === "function" ? data().nonce : data.nonce || "";
 		} catch {
-			return '';
+			return "";
 		}
 	}, [transaction]);
 
