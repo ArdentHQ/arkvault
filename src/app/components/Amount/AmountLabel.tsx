@@ -38,9 +38,10 @@ interface AmountLabelProperties {
 	size?: Size;
 	className?: string;
 	textClassName?: string;
+	hideSign?: boolean;
 }
 
-export const AmountLabel: React.VFC<AmountLabelProperties> = ({
+export const AmountLabel: React.FC<AmountLabelProperties> = ({
 	value,
 	ticker,
 	isCompact,
@@ -49,6 +50,7 @@ export const AmountLabel: React.VFC<AmountLabelProperties> = ({
 	size,
 	className,
 	textClassName,
+	hideSign,
 }) => {
 	let labelColor = "success-bg";
 	let hintClassName =
@@ -59,8 +61,8 @@ export const AmountLabel: React.VFC<AmountLabelProperties> = ({
 		hintClassName = "bg-theme-danger-info-border text-theme-danger-info-text dark:text-white/70";
 	}
 
-	if (value === 0) {
-		labelColor = "neutral";
+	if (value === 0 || hideSign) {
+		labelColor = "secondary";
 		hintClassName = "";
 	}
 
@@ -81,7 +83,7 @@ export const AmountLabel: React.VFC<AmountLabelProperties> = ({
 			<div className={cn("flex h-full items-center space-x-1")}>
 				{hint && <AmountLabelHint tooltipContent={hint} className={hintClassName} isCompact={isCompact} />}
 				<Amount
-					showSign={value !== 0}
+					showSign={!hideSign && value !== 0}
 					ticker={ticker}
 					value={value}
 					isNegative={isNegative}

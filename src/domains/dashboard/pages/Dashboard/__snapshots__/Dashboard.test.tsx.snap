@@ -1617,7 +1617,7 @@ exports[`Dashboard > should render 1`] = `
                             data-testid="TransactionRowAddressing__container"
                           >
                             <div
-                              class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-6yoktf"
+                              class="!flex h-[21px] w-12 items-center justify-center rounded px-1 py-[3px] dark:border css-6yoktf"
                               color="success-bg"
                               data-testid="TransactionRowAddressing__label"
                             >
@@ -1656,7 +1656,7 @@ exports[`Dashboard > should render 1`] = `
                             class="flex flex-col items-end gap-1"
                           >
                             <div
-                              class="flex items-center justify-center rounded px-1.5 h-[21px] css-1jspzfx"
+                              class="flex items-center justify-center h-[21px] rounded px-1 dark:border css-1jspzfx"
                               color="success-bg"
                               data-testid="AmountLabel__wrapper"
                             >
@@ -1781,7 +1781,7 @@ exports[`Dashboard > should render 1`] = `
                             data-testid="TransactionRowAddressing__container"
                           >
                             <div
-                              class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-6yoktf"
+                              class="!flex h-[21px] w-12 items-center justify-center rounded px-1 py-[3px] dark:border css-6yoktf"
                               color="success-bg"
                               data-testid="TransactionRowAddressing__label"
                             >
@@ -1820,7 +1820,7 @@ exports[`Dashboard > should render 1`] = `
                             class="flex flex-col items-end gap-1"
                           >
                             <div
-                              class="flex items-center justify-center rounded px-1.5 h-[21px] css-1jspzfx"
+                              class="flex items-center justify-center h-[21px] rounded px-1 dark:border css-1jspzfx"
                               color="success-bg"
                               data-testid="AmountLabel__wrapper"
                             >
@@ -1945,7 +1945,7 @@ exports[`Dashboard > should render 1`] = `
                             data-testid="TransactionRowAddressing__container"
                           >
                             <div
-                              class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-6yoktf"
+                              class="!flex h-[21px] w-12 items-center justify-center rounded px-1 py-[3px] dark:border css-6yoktf"
                               color="success-bg"
                               data-testid="TransactionRowAddressing__label"
                             >
@@ -1984,7 +1984,7 @@ exports[`Dashboard > should render 1`] = `
                             class="flex flex-col items-end gap-1"
                           >
                             <div
-                              class="flex items-center justify-center rounded px-1.5 h-[21px] css-1jspzfx"
+                              class="flex items-center justify-center h-[21px] rounded px-1 dark:border css-1jspzfx"
                               color="success-bg"
                               data-testid="AmountLabel__wrapper"
                             >
@@ -2109,7 +2109,7 @@ exports[`Dashboard > should render 1`] = `
                             data-testid="TransactionRowAddressing__container"
                           >
                             <div
-                              class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-6yoktf"
+                              class="!flex h-[21px] w-12 items-center justify-center rounded px-1 py-[3px] dark:border css-6yoktf"
                               color="success-bg"
                               data-testid="TransactionRowAddressing__label"
                             >
@@ -2148,7 +2148,7 @@ exports[`Dashboard > should render 1`] = `
                             class="flex flex-col items-end gap-1"
                           >
                             <div
-                              class="flex items-center justify-center rounded px-1.5 h-[21px] css-1jspzfx"
+                              class="flex items-center justify-center h-[21px] rounded px-1 dark:border css-1jspzfx"
                               color="success-bg"
                               data-testid="AmountLabel__wrapper"
                             >
