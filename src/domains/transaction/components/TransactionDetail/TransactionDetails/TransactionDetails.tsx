@@ -25,11 +25,11 @@ export const TransactionDetails = ({
 	const nonce = useCallback(() => {
 		try {
 			const data = transaction.data().data;
-			const nonceValue = typeof data === 'function' ? data().nonce : data?.nonce;
-	
-			return typeof nonceValue === 'string' ? nonceValue : '';
-		} catch (error) {
-			return '';
+			const nonceValue = typeof data === "function" ? data().nonce : data?.nonce;
+
+			return typeof nonceValue === "string" ? nonceValue : "";
+		} catch {
+			return "";
 		}
 	}, [transaction]);
 
@@ -68,17 +68,13 @@ export const TransactionDetails = ({
 
 				<div className="flex w-full justify-between sm:justify-start">
 					<DetailLabelText className={labelClassName}>{t("COMMON.NONCE")}</DetailLabelText>
-					{
-						nonce() ? (
-							<div className="text-sm font-semibold leading-[17px] sm:text-base sm:leading-5">
-								{nonce()}
-							</div>
-						) : (
-							<p className="text-sm leading-[17px] text-theme-secondary-500 sm:text-base sm:leading-5">
-								{t("COMMON.NOT_AVAILABLE")}
-							</p>
-						)
-					}
+					{nonce() ? (
+						<div className="text-sm font-semibold leading-[17px] sm:text-base sm:leading-5">{nonce()}</div>
+					) : (
+						<p className="text-sm leading-[17px] text-theme-secondary-500 sm:text-base sm:leading-5">
+							{t("COMMON.NOT_AVAILABLE")}
+						</p>
+					)}
 					{/* {data.nonce && (
 						<div className="text-sm font-semibold leading-[17px] sm:text-base sm:leading-5">
 							{data.nonce}
