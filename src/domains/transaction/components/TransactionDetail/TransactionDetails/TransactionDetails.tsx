@@ -25,13 +25,15 @@ export const TransactionDetails = ({
 	const nonce = useCallback(() => {
 		try {
 			const data = transaction.data().data;
-			const nonceValue = typeof data === "function" ? data().nonce : data?.nonce;
-
+			const nonceValue = typeof data === "function" 
+				? transaction.data().data().nonce 
+				: data?.nonce;
+			
 			return typeof nonceValue === "string" ? nonceValue : "";
 		} catch {
 			return "";
 		}
-	}, [transaction]);
+	}, [transaction]);	
 
 	return (
 		<DetailWrapper label={t("TRANSACTION.TRANSACTION_DETAILS")}>

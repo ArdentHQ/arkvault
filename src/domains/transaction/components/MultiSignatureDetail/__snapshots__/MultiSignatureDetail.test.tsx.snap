@@ -682,11 +682,11 @@ exports[`MultiSignatureDetail > should not broadcast if wallet is not ready to d
                                     >
                                       Nonce
                                     </div>
-                                    <p
-                                      class="text-sm leading-[17px] text-theme-secondary-500 sm:text-base sm:leading-5"
+                                    <div
+                                      class="text-sm font-semibold leading-[17px] sm:text-base sm:leading-5"
                                     >
-                                      N/A
-                                    </p>
+                                      1
+                                    </div>
                                   </div>
                                 </div>
                               </div>
