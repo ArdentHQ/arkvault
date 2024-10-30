@@ -25,10 +25,9 @@ console.log(transaction.blockId, transaction.blockId())
 
 	const nonce = useCallback(() => {
 		try {
-			const data = transaction.data().data;
-			const nonceValue = (data instanceof Function ? data() : data)?.nonce;
-			return nonceValue || '';
-		} catch {
+			const data = transaction.data();
+			return typeof data.data === "object" ? data.data.nonce : data.data().nonce;
+		} catch (error) {
 			return '';
 		}
 	}, [transaction]);
