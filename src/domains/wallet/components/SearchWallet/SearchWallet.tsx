@@ -70,7 +70,12 @@ const SearchWalletListItem = ({
 
 	return (
 		<TableRow className="relative">
-			<TableCell variant="start" innerClassName="space-x-4 my-0.5" className="w-full max-w-28" isSelected={isSelected}>
+			<TableCell
+				variant="start"
+				innerClassName="space-x-4 my-0.5"
+				className="w-full max-w-28"
+				isSelected={isSelected}
+			>
 				<Address
 					walletName={alias}
 					address={wallet.address()}
