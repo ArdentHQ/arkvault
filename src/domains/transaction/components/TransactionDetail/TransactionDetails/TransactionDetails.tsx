@@ -25,7 +25,7 @@ export const TransactionDetails = ({
 
 	const nonce = useCallback(() => {
         try {
-            return transaction.data().data().nonce || '';
+            return transaction.data().data().nonce || transaction.data().data.nonce || '';
         } catch {
             return '';
         }
