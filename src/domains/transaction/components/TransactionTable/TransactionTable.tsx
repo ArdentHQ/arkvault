@@ -49,7 +49,7 @@ export const TransactionTable: FC<TransactionTableProperties> = ({
 				isLoading={showSkeleton}
 				onClick={() => onRowClick?.(row)}
 				transaction={row}
-				exchangeCurrency={exchangeCurrency as string}
+				exchangeCurrency={exchangeCurrency}
 				profile={profile}
 			/>
 		),

@@ -73,7 +73,7 @@ export const Dashboard: React.VFC = () => {
 							<>
 								<TransactionTable
 									transactions={latestTransactions}
-									exchangeCurrency={exchangeCurrency}
+									exchangeCurrency={exchangeCurrency ?? 'ARK'}
 									hideHeader={!isLoadingTransactions && latestTransactions.length === 0}
 									isLoading={isLoadingTransactions && latestTransactions.length === 0}
 									skeletonRowsLimit={8}
