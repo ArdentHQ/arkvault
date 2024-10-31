@@ -1,4 +1,4 @@
-import React, { memo } from "react";
+import React, {memo, useMemo} from "react";
 import { useTranslation } from "react-i18next";
 
 import { TransactionRowSkeleton } from "./TransactionRowSkeleton";
@@ -29,7 +29,30 @@ export const TransactionRow = memo(
 		const { getLabel } = useTransactionTypes();
 		const { isXs, isSm } = useBreakpoint();
 		const { t } = useTranslation();
-		const timeStamp = transaction?.timestamp ? transaction.timestamp() : undefined;
+
+		const isTransactionReady = !isLoading && transaction?.timestamp;
+
+		const timeStamp = isTransactionReady ? transaction.timestamp() : undefined;
+
+		const returnedAmount = useMemo(() => {
+			let returnedAmount = 0;
+			const isMultiPaymentTx = isTransactionReady ? transaction.isMultiPayment() : false;
+
+			if (!isMultiPaymentTx) {
+				return returnedAmount;
+			}
+
+			for (const recipient of transaction.recipients().values()) {
+				if (transaction.isReturn() && transaction.sender() === recipient.address) {
+					returnedAmount += recipient.amount;
+				}
+			}
+
+			return returnedAmount;
+		}, [transaction, isTransactionReady]);
+
+		const currency = isTransactionReady ? transaction.wallet().currency() : undefined;
+		const hint = returnedAmount ? t("TRANSACTION.HINT_AMOUNT", { amount: returnedAmount, currency }) : undefined;
 
 		if (isXs || isSm) {
 			return (
@@ -39,6 +62,7 @@ export const TransactionRow = memo(
 					transaction={transaction}
 					exchangeCurrency={exchangeCurrency}
 					profile={profile}
+					hint={hint}
 				/>
 			);
 		}
@@ -107,7 +131,8 @@ export const TransactionRow = memo(
 							ticker={transaction.wallet().currency()}
 							hideSign={transaction.isTransfer() && transaction.sender() === transaction.recipient()}
 							isCompact
-							className="h-[21px] rounded px-1 dark:border"
+							hint={hint}
+							className="h-[21px] rounded dark:border"
 						/>
 						<span
 							className="text-xs font-semibold text-theme-secondary-700 lg:hidden"

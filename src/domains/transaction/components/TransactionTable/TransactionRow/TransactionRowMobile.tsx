@@ -15,7 +15,7 @@ import { Amount, AmountLabel } from "@/app/components/Amount";
 import { useTransactionTypes } from "@/domains/transaction/hooks/use-transaction-types";
 
 export const TransactionRowMobile = memo(
-	({ className, transaction, onClick, isLoading = false, profile, ...properties }: TransactionRowProperties) => {
+	({ className, transaction, onClick, isLoading = false, profile, hint, ...properties }: TransactionRowProperties) => {
 		const { t } = useTranslation();
 		const { getLabel } = useTransactionTypes();
 		const timeStamp = transaction.timestamp ? transaction.timestamp() : undefined;
@@ -75,11 +75,12 @@ export const TransactionRowMobile = memo(
 									value={transaction.amount() + transaction.fee()}
 									isNegative={true}
 									ticker={transaction.wallet().currency()}
+									hint={hint}
 									hideSign={
 										transaction.isTransfer() && transaction.sender() === transaction.recipient()
 									}
 									isCompact
-									className="h-[21px] px-1 dark:border"
+									className="h-[21px] dark:border"
 								/>
 							</MobileSection>
 
