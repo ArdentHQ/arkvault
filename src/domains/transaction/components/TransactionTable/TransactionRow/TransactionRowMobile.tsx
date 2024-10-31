@@ -11,10 +11,8 @@ import { DateTime } from "@ardenthq/sdk-intl";
 import { TimeAgo } from "@/app/components/TimeAgo";
 import { MobileSection } from "@/app/components/Table/Mobile/MobileSection";
 import { TransactionRowAddressing } from "./TransactionRowAddressing";
-import { Amount, AmountLabel } from "@/app/components/Amount";
 import { useTransactionTypes } from "@/domains/transaction/hooks/use-transaction-types";
-import { useExchangeRate } from "@/app/hooks/use-exchange-rate";
-import { calculateReturnedAmount } from "./TransactionRow";
+import { TransactionAmountLabel, TransactionFiatAmount } from "./TransactionAmount.blocks";
 
 export const TransactionRowMobile = memo(
 	({
@@ -29,17 +27,11 @@ export const TransactionRowMobile = memo(
 		const { t } = useTranslation();
 		const { getLabel } = useTransactionTypes();
 
-		const currency = transaction.wallet ? transaction.wallet().currency() : undefined;
-
-		const { convert } = useExchangeRate({ exchangeTicker: exchangeCurrency, ticker: currency });
-
 		if (isLoading) {
 			return <TransactionRowMobileSkeleton />;
 		}
 
 		const timeStamp = transaction.timestamp();
-		const returnedAmount = calculateReturnedAmount(transaction);
-		const amount = transaction.total() - returnedAmount;
 
 		return (
 			<TableRow onClick={onClick} className={cn("group !border-b-0", className)} {...properties}>
@@ -88,28 +80,11 @@ export const TransactionRowMobile = memo(
 								title={`${t("COMMON.VALUE")} (${transaction.wallet().currency()})`}
 								className="w-full"
 							>
-								<AmountLabel
-									value={amount}
-									isNegative={true}
-									ticker={transaction.wallet().currency()}
-									hint={
-										returnedAmount
-											? t("TRANSACTION.HINT_AMOUNT_EXCLUDING", {
-													amount: returnedAmount,
-													currency,
-												})
-											: undefined
-									}
-									hideSign={
-										transaction.isTransfer() && transaction.sender() === transaction.recipient()
-									}
-									isCompact
-									className="h-[21px] dark:border"
-								/>
+								<TransactionAmountLabel transaction={transaction} />
 							</MobileSection>
 
 							<MobileSection title={t("COMMON.FIAT_VALUE")} className="w-full">
-								<Amount value={convert(amount)} ticker={exchangeCurrency || ""} />
+								<TransactionFiatAmount transaction={transaction} exchangeCurrency={exchangeCurrency} />
 							</MobileSection>
 						</div>
 					</MobileCard>
