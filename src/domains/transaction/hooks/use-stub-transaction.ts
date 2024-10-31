@@ -82,7 +82,6 @@ export const useMusigRegistrationStubTransaction = ({
 		if (!musigRegistrationStubTransaction) {
 			createStub({ wallet });
 		}
-
 	}, [fee, wallet, publicKeys, min]);
 
 	return {
