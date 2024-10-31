@@ -61,12 +61,7 @@ describe("TransactionTable", () => {
 
 		it("should render", () => {
 			const { asFragment } = render(
-				<TransactionTable
-					transactions={[]}
-					isLoading
-					skeletonRowsLimit={5}
-					profile={profile}
-				/>,
+				<TransactionTable transactions={[]} isLoading skeletonRowsLimit={5} profile={profile} />,
 			);
 
 			expect(screen.getAllByTestId("TableRow")).toHaveLength(5);
@@ -93,13 +88,7 @@ describe("TransactionTable", () => {
 		const onClick = vi.fn();
 		const sortedByDateDesc = sortByDesc(transactions, (transaction) => transaction.timestamp());
 
-		render(
-			<TransactionTable
-				transactions={sortedByDateDesc}
-				onRowClick={onClick}
-				profile={profile}
-			/>,
-		);
+		render(<TransactionTable transactions={sortedByDateDesc} onRowClick={onClick} profile={profile} />);
 
 		await userEvent.click(screen.getAllByTestId("TableRow")[0]);
 
