@@ -33,7 +33,7 @@ describe.each(["xs", "sm"])("TransactionRowMobile", (breakpoint) => {
 		const { asFragment } = render(
 			<table>
 				<tbody>
-					<TransactionRowMobile transaction={fixture as any} profile={profile}  />
+					<TransactionRowMobile transaction={fixture as any} profile={profile} />
 				</tbody>
 			</table>,
 		);
@@ -106,10 +106,7 @@ describe.each(["xs", "sm"])("TransactionRowMobile", (breakpoint) => {
 		render(
 			<table>
 				<tbody>
-					<TransactionRowMobile
-						transaction={{ ...fixture, timestamp: () => {} } as any}
-						profile={profile}
-					/>
+					<TransactionRowMobile transaction={{ ...fixture, timestamp: () => {} } as any} profile={profile} />
 				</tbody>
 			</table>,
 		);
