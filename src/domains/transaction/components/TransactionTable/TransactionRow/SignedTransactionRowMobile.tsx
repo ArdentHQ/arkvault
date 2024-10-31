@@ -15,9 +15,7 @@ import { TableRemoveButton } from "@/app/components/TableRemoveButton";
 import { TimeAgo } from "@/app/components/TimeAgo";
 import { DateTime } from "@ardenthq/sdk-intl";
 import { TransactionRowAddressing } from "./TransactionRowAddressing";
-import {
-	TransactionAmountLabel, TransactionFiatAmount
-} from "./TransactionAmount.blocks";
+import { TransactionAmountLabel, TransactionFiatAmount } from "./TransactionAmount.blocks";
 
 interface SignedTransactionRowMobileProperties {
 	transaction: DTO.ExtendedSignedTransactionData;
@@ -120,11 +118,11 @@ export const SignedTransactionRowMobile = ({
 						</MobileSection>
 
 						<MobileSection title={`${t("COMMON.VALUE")} (${transaction.wallet().network().coinName()})`}>
-							<TransactionAmountLabel transaction={transaction}/>
+							<TransactionAmountLabel transaction={transaction} />
 						</MobileSection>
 
 						<MobileSection title={t("COMMON.FIAT_VALUE")}>
-							<TransactionFiatAmount transaction={transaction}/>
+							<TransactionFiatAmount transaction={transaction} />
 						</MobileSection>
 
 						<MobileSection title={t("COMMON.AGE")} className="sm:hidden">

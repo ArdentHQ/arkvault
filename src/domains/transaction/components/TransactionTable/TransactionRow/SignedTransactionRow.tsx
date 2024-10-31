@@ -16,10 +16,7 @@ import { Label } from "@/app/components/Label";
 import { Divider } from "@/app/components/Divider";
 import { Icon } from "@/app/components/Icon";
 import { TransactionRowAddressing } from "./TransactionRowAddressing";
-import {
-	TransactionAmountLabel,
-	TransactionFiatAmount,
-} from "./TransactionAmount.blocks";
+import { TransactionAmountLabel, TransactionFiatAmount } from "./TransactionAmount.blocks";
 
 interface SignedTransactionRowProperties {
 	transaction: DTO.ExtendedSignedTransactionData;
