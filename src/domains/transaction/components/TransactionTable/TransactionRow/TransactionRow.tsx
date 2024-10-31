@@ -15,6 +15,24 @@ import { Label } from "@/app/components/Label";
 import { useTransactionTypes } from "@/domains/transaction/hooks/use-transaction-types";
 import { TransactionRowAddressing } from "./TransactionRowAddressing";
 import { Amount, AmountLabel } from "@/app/components/Amount";
+import {DTO} from "@ardenthq/sdk-profiles";
+import {useExchangeRate} from "@/app/hooks/use-exchange-rate";
+
+export const calculateReturnedAmount = function (transaction: DTO.ExtendedConfirmedTransactionData): number {
+	let returnedAmount = 0;
+
+	if (!transaction.isMultiPayment()) {
+		return returnedAmount;
+	}
+
+	for (const recipient of transaction.recipients().values()) {
+		if (transaction.isReturn() && transaction.sender() === recipient.address) {
+			returnedAmount += recipient.amount;
+		}
+	}
+
+	return returnedAmount;
+}
 
 export const TransactionRow = memo(
 	({
@@ -30,29 +48,8 @@ export const TransactionRow = memo(
 		const { isXs, isSm } = useBreakpoint();
 		const { t } = useTranslation();
 
-		const isTransactionReady = !isLoading && transaction?.timestamp;
-
-		const timeStamp = isTransactionReady ? transaction.timestamp() : undefined;
-
-		const returnedAmount = useMemo(() => {
-			let returnedAmount = 0;
-			const isMultiPaymentTx = isTransactionReady ? transaction.isMultiPayment() : false;
-
-			if (!isMultiPaymentTx) {
-				return returnedAmount;
-			}
-
-			for (const recipient of transaction.recipients().values()) {
-				if (transaction.isReturn() && transaction.sender() === recipient.address) {
-					returnedAmount += recipient.amount;
-				}
-			}
-
-			return returnedAmount;
-		}, [transaction, isTransactionReady]);
-
-		const currency = isTransactionReady ? transaction.wallet().currency() : undefined;
-		const hint = returnedAmount ? t("TRANSACTION.HINT_AMOUNT", { amount: returnedAmount, currency }) : undefined;
+		const currency = transaction.wallet ? transaction.wallet().currency() : undefined;
+		const { convert } = useExchangeRate({ exchangeTicker: exchangeCurrency, ticker: currency });
 
 		if (isXs || isSm) {
 			return (
@@ -62,7 +59,6 @@ export const TransactionRow = memo(
 					transaction={transaction}
 					exchangeCurrency={exchangeCurrency}
 					profile={profile}
-					hint={hint}
 				/>
 			);
 		}
@@ -70,6 +66,14 @@ export const TransactionRow = memo(
 		if (isLoading) {
 			return <TransactionRowSkeleton />;
 		}
+
+		const timeStamp = transaction.timestamp();
+
+		const returnedAmount = calculateReturnedAmount(transaction);
+
+		const hint = returnedAmount ? t("TRANSACTION.HINT_AMOUNT_EXCLUDING", { amount: returnedAmount, currency }) : undefined;
+
+		const amount = transaction.total() - returnedAmount;
 
 		return (
 			<TableRow onClick={onClick} className={twMerge("relative", className)} {...properties}>
@@ -126,7 +130,7 @@ export const TransactionRow = memo(
 				<TableCell innerClassName="justify-end items-start xl:min-h-0 my-0 py-3">
 					<div className="flex flex-col items-end gap-1">
 						<AmountLabel
-							value={transaction.total()}
+							value={amount}
 							isNegative={transaction.isSent()}
 							ticker={transaction.wallet().currency()}
 							hideSign={transaction.isTransfer() && transaction.sender() === transaction.recipient()}
@@ -138,7 +142,7 @@ export const TransactionRow = memo(
 							className="text-xs font-semibold text-theme-secondary-700 lg:hidden"
 							data-testid="TransactionRow__exchange-currency"
 						>
-							<Amount value={transaction.convertedTotal()} ticker={exchangeCurrency || ""} />
+							<Amount value={convert(amount)} ticker={exchangeCurrency || ""} />
 						</span>
 					</div>
 				</TableCell>

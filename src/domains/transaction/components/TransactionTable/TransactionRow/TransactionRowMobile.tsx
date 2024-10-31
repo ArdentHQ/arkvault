@@ -13,16 +13,31 @@ import { MobileSection } from "@/app/components/Table/Mobile/MobileSection";
 import { TransactionRowAddressing } from "./TransactionRowAddressing";
 import { Amount, AmountLabel } from "@/app/components/Amount";
 import { useTransactionTypes } from "@/domains/transaction/hooks/use-transaction-types";
+import {useExchangeRate} from "@/app/hooks/use-exchange-rate";
+import {calculateReturnedAmount} from "./TransactionRow";
 
 export const TransactionRowMobile = memo(
-	({ className, transaction, onClick, isLoading = false, profile, hint, ...properties }: TransactionRowProperties) => {
+	({ className, transaction, onClick, isLoading = false, profile, exchangeCurrency, ...properties }: TransactionRowProperties) => {
 		const { t } = useTranslation();
 		const { getLabel } = useTransactionTypes();
-		const timeStamp = transaction.timestamp ? transaction.timestamp() : undefined;
+
+		const currency= transaction.wallet ? transaction.wallet().currency() : undefined;
+
+		const { convert } = useExchangeRate({ exchangeTicker: exchangeCurrency, ticker: currency });
 
 		if (isLoading) {
 			return <TransactionRowMobileSkeleton />;
 		}
+
+		const timeStamp =  transaction.timestamp();
+
+		const returnedAmount = calculateReturnedAmount(transaction);
+
+		const hint = returnedAmount
+			? t("TRANSACTION.HINT_AMOUNT_EXCLUDING", { amount: returnedAmount, currency })
+			: undefined;
+
+		const amount = transaction.total() - returnedAmount;
 
 		return (
 			<TableRow onClick={onClick} className={cn("group !border-b-0", className)} {...properties}>
@@ -72,7 +87,7 @@ export const TransactionRowMobile = memo(
 								className="w-full"
 							>
 								<AmountLabel
-									value={transaction.amount() + transaction.fee()}
+									value={amount}
 									isNegative={true}
 									ticker={transaction.wallet().currency()}
 									hint={hint}
@@ -86,8 +101,8 @@ export const TransactionRowMobile = memo(
 
 							<MobileSection title={t("COMMON.FIAT_VALUE")} className="w-full">
 								<Amount
-									value={transaction.convertedTotal()}
-									ticker={transaction.wallet().exchangeCurrency()}
+									value={convert(amount)}
+									ticker={exchangeCurrency as string}
 								/>
 							</MobileSection>
 						</div>
