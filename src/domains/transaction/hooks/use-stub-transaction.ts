@@ -74,8 +74,7 @@ export const useMusigRegistrationStubTransaction = ({
 					});
 
 				setMusigRegistrationStubTransaction(stub);
-			} catch (error) {
-				console.log({ error });
+			} catch {
 				//
 			}
 		};
