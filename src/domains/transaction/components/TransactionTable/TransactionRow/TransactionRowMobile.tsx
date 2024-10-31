@@ -75,8 +75,11 @@ export const TransactionRowMobile = memo(
 									value={transaction.amount() + transaction.fee()}
 									isNegative={true}
 									ticker={transaction.wallet().currency()}
+									hideSign={
+										transaction.isTransfer() && transaction.sender() === transaction.recipient()
+									}
 									isCompact
-									className="h-[21px]"
+									className="h-[21px] px-1 dark:border"
 								/>
 							</MobileSection>
 

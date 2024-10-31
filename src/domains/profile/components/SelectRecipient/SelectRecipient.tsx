@@ -72,12 +72,12 @@ const OptionLabel = ({
 				address={address}
 				walletName={alias}
 				truncateOnTable
-				addressClass={cn("leading-[17px] sm:leading-5", {
+				addressClass={cn("leading-[17px] sm:leading-5 text-sm sm:text-base", {
 					"text-theme-primary-600": !alias && option.isSelected,
 					"text-theme-secondary-500 dark:text-theme-secondary-700": alias,
 					"text-theme-text": !alias,
 				})}
-				walletNameClass={cn("leading-[17px] sm:leading-5 text-theme-text", {
+				walletNameClass={cn("leading-[17px] sm:leading-5 text-theme-text text-sm sm:text-base", {
 					"text-theme-primary-600": option.isSelected,
 				})}
 			/>
@@ -217,22 +217,25 @@ export const SelectRecipient = React.forwardRef<HTMLInputElement, SelectRecipien
 										),
 									}
 								: undefined,
-							start: showWalletAvatar
-								? {
-										content: (
-											<div className="flex items-center">
-												<ProfileAvatar address={selectedAddress} />
-												{!!selectedAddressAlias?.alias && (
-													<TruncateEnd
-														className="ml-2 font-semibold"
-														text={selectedAddressAlias.alias}
-														showTooltip
-													/>
-												)}
-											</div>
-										),
-									}
-								: undefined,
+							start:
+								selectedAddressAlias?.alias || showWalletAvatar
+									? {
+											content: (
+												<div className="flex items-center">
+													{showWalletAvatar && <ProfileAvatar address={selectedAddress} />}
+													{selectedAddressAlias?.alias && (
+														<TruncateEnd
+															className={cn("font-semibold", {
+																"ml-2": showWalletAvatar,
+															})}
+															text={selectedAddressAlias.alias}
+															showTooltip
+														/>
+													)}
+												</div>
+											),
+										}
+									: undefined,
 						}}
 						renderLabel={(option) => <OptionLabel option={option} network={network} profile={profile} />}
 					/>

@@ -13,7 +13,7 @@ exports[`TransferLedgerReview > should render 1`] = `
         data-testid="DetailLabel"
       >
         <div
-          class="no-ligatures text-md min-w-24 font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500"
+          class="no-ligatures min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-md leading-5"
           data-testid="DetailLabelText"
         >
           Addressing
@@ -105,7 +105,7 @@ exports[`TransferLedgerReview > should render 1`] = `
         data-testid="DetailLabel"
       >
         <div
-          class="no-ligatures text-md min-w-24 font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500"
+          class="no-ligatures min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-md leading-5"
           data-testid="DetailLabelText"
         >
           <div
@@ -266,7 +266,7 @@ exports[`TransferLedgerReview > should render skeleton while loading expiration 
         data-testid="DetailLabel"
       >
         <div
-          class="no-ligatures text-md min-w-24 font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500"
+          class="no-ligatures min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-md leading-5"
           data-testid="DetailLabelText"
         >
           Addressing
@@ -358,7 +358,7 @@ exports[`TransferLedgerReview > should render skeleton while loading expiration 
         data-testid="DetailLabel"
       >
         <div
-          class="no-ligatures text-md min-w-24 font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500"
+          class="no-ligatures min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-md leading-5"
           data-testid="DetailLabelText"
         >
           <div
@@ -536,7 +536,7 @@ exports[`TransferLedgerReview > should render with memo 1`] = `
         data-testid="DetailLabel"
       >
         <div
-          class="no-ligatures text-md min-w-24 font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500"
+          class="no-ligatures min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-md leading-5"
           data-testid="DetailLabelText"
         >
           Addressing
@@ -628,7 +628,7 @@ exports[`TransferLedgerReview > should render with memo 1`] = `
         data-testid="DetailLabel"
       >
         <div
-          class="no-ligatures text-md min-w-24 font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500"
+          class="no-ligatures min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-md leading-5"
           data-testid="DetailLabelText"
         >
           Memo (SmartBridge)
@@ -652,7 +652,7 @@ exports[`TransferLedgerReview > should render with memo 1`] = `
         data-testid="DetailLabel"
       >
         <div
-          class="no-ligatures text-md min-w-24 font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500"
+          class="no-ligatures min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-md leading-5"
           data-testid="DetailLabelText"
         >
           <div

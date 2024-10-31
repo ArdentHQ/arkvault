@@ -1,6 +1,6 @@
 {
 	"name": "arkvault",
-	"version": "1.15.0",
+	"version": "1.17.0",
 	"engines": {
 		"node": ">=20.12.2"
 	},
@@ -31,14 +31,14 @@
 		"lint": "eslint '*/**/*.{js,ts,tsx}' --quiet --fix",
 		"prettier": "prettier --write \"./*.{ts,tsx,js,json,md}\" \"./**/*.{ts,tsx,js,json,md}\"",
 		"qa": "pnpm install && pnpm build && pnpm serve",
-		"serve": "vite preview --port 5000 --host=0.0.0.0",
-		"serve:https": "vite preview --port 5000 --https",
+		"serve": "vite preview --port 5001 --host=0.0.0.0",
+		"serve:https": "vite preview --port 5001 --https",
 		"test": "LC_ALL=en_US.UTF-8 vitest --update",
 		"test:coverage": "LC_ALL=en_US.UTF-8 vitest run --coverage",
-		"test:e2e": "E2E_HOST='http://localhost:5000' gherkin-testcafe chrome --config-file=.testcaferc.json",
-		"test:e2e:ci": "E2E_HOST='http://localhost:5000' gherkin-testcafe --config-file=.testcaferc.json chrome:headless -q attemptLimit=3,successThreshold=1",
-		"test:e2e:ci:firefox": "E2E_HOST='http://localhost:5000' gherkin-testcafe --config-file=.testcaferc.json firefox:headless -q attemptLimit=3,successThreshold=1",
-		"test:e2e:ci:edge": "E2E_HOST='http://localhost:5000' gherkin-testcafe --config-file=.testcaferc.json edge:headless -q attemptLimit=3,successThreshold=1",
+		"test:e2e": "E2E_HOST='http://localhost:5001' gherkin-testcafe chrome --config-file=.testcaferc.json",
+		"test:e2e:ci": "E2E_HOST='http://localhost:5001' gherkin-testcafe --config-file=.testcaferc.json chrome:headless -q attemptLimit=3,successThreshold=1",
+		"test:e2e:ci:firefox": "E2E_HOST='http://localhost:5001' gherkin-testcafe --config-file=.testcaferc.json firefox:headless -q attemptLimit=3,successThreshold=1",
+		"test:e2e:ci:edge": "E2E_HOST='http://localhost:5001' gherkin-testcafe --config-file=.testcaferc.json edge:headless -q attemptLimit=3,successThreshold=1",
 		"sdk:install-local": "node scripts/install-local-sdk.js",
 		"sdk:check-updates": "npx npm-check-updates \"/^@ardenthq.*$/\" -u"
 	},
