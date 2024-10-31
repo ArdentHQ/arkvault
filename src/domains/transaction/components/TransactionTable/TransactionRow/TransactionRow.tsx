@@ -48,7 +48,7 @@ export const TransactionRow = memo(
 		const { isXs, isSm } = useBreakpoint();
 		const { t } = useTranslation();
 
-		const currency = transaction.wallet ? transaction.wallet().currency() : undefined;
+		const currency = transaction?.wallet ? transaction.wallet().currency() : undefined;
 		const { convert } = useExchangeRate({ exchangeTicker: exchangeCurrency, ticker: currency });
 
 		if (isXs || isSm) {
