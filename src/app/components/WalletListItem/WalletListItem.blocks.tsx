@@ -405,7 +405,7 @@ export const ReceiverItemMobile: React.FC<ReceiverItemMobileProperties> = ({
 			onClick={onClick}
 		>
 			<div className="flex flex-col gap-2 pl-2 pt-2">
-				<span className="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200">
+				<span className="w-full max-w-48 truncate text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200 xs:max-w-80 sm:max-w-128">
 					{name}
 				</span>
 				<span className="text-xs font-semibold text-theme-secondary-700 dark:text-theme-secondary-500">
