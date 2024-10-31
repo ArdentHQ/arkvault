@@ -12,6 +12,8 @@ import multiSignatureFixture from "@/tests/fixtures/coins/ark/devnet/transaction
 import { TransactionFees } from "@/types";
 import { env, getDefaultProfileId, render, RenderResult, screen, syncFees, waitFor } from "@/utils/testing-library";
 
+const truncatedAddress = (address) => address.slice(0, 5) + "..." + address.slice(-5);
+
 describe("MultiSignature Registration Form", () => {
 	let profile: ProfilesContracts.IProfile;
 	let wallet: ProfilesContracts.IReadWriteWallet;
@@ -219,7 +221,6 @@ describe("MultiSignature Registration Form", () => {
 		});
 
 		expect(screen.getByText(wallet.address())).toBeInTheDocument()
-		const truncatedAddress = (address) => address.slice(0, 5) + "..." + address.slice(-5);
 
 		await waitFor(() => {
 			expect(screen.getAllByText(truncatedAddress(wallet2.address()))).toHaveLength(1)
