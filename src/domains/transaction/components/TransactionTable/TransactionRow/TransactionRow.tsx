@@ -15,8 +15,8 @@ import { Label } from "@/app/components/Label";
 import { useTransactionTypes } from "@/domains/transaction/hooks/use-transaction-types";
 import { TransactionRowAddressing } from "./TransactionRowAddressing";
 import { Amount, AmountLabel } from "@/app/components/Amount";
-import {DTO} from "@ardenthq/sdk-profiles";
-import {useExchangeRate} from "@/app/hooks/use-exchange-rate";
+import { DTO } from "@ardenthq/sdk-profiles";
+import { useExchangeRate } from "@/app/hooks/use-exchange-rate";
 
 export const calculateReturnedAmount = function (transaction: DTO.ExtendedConfirmedTransactionData): number {
 	let returnedAmount = 0;
@@ -32,7 +32,7 @@ export const calculateReturnedAmount = function (transaction: DTO.ExtendedConfir
 	}
 
 	return returnedAmount;
-}
+};
 
 export const TransactionRow = memo(
 	({
@@ -131,7 +131,11 @@ export const TransactionRow = memo(
 							ticker={transaction.wallet().currency()}
 							hideSign={transaction.isTransfer() && transaction.sender() === transaction.recipient()}
 							isCompact
-							hint={returnedAmount ? t("TRANSACTION.HINT_AMOUNT_EXCLUDING", { amount: returnedAmount, currency }) : undefined}
+							hint={
+								returnedAmount
+									? t("TRANSACTION.HINT_AMOUNT_EXCLUDING", { amount: returnedAmount, currency })
+									: undefined
+							}
 							className="h-[21px] rounded dark:border"
 						/>
 						<span
