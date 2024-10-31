@@ -54,10 +54,8 @@ export const useMusigRegistrationStubTransaction = ({
 }) => {
 	const [musigRegistrationStubTransaction, setMusigRegistrationStubTransaction] = useState<DTO.RawTransactionData>();
 
-	const publicKeysLength = publicKeys.length
 	useEffect(() => {
 		const createStub = async ({ wallet }: { wallet: Contracts.IReadWriteWallet }) => {
-			console.log({ publicKeys1: publicKeys })
 			try {
 				const stub = await wallet
 					.coin()
@@ -66,10 +64,17 @@ export const useMusigRegistrationStubTransaction = ({
 						data: {
 							min,
 							publicKeys,
+							senderPublicKey: wallet.publicKey()
 						},
 						fee,
 						nonce: "1",
-						signatory: await wallet.signatory().secret("123"),
+						signatory: await wallet
+							.coin()
+							.signatory()
+							.multiSignature({
+								min,
+								publicKeys,
+							}),
 					});
 
 				setMusigRegistrationStubTransaction(stub);
@@ -79,8 +84,12 @@ export const useMusigRegistrationStubTransaction = ({
 			}
 		};
 
+		if (musigRegistrationStubTransaction) {
+			return
+		}
+
 		createStub({ wallet });
-	}, [fee, wallet, publicKeysLength, min]);
+	}, [fee, wallet, publicKeys, min]);
 
 
 	return {

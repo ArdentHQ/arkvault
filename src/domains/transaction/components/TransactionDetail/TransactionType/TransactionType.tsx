@@ -85,7 +85,7 @@ export const TransactionType = ({
 
 					{transaction.isMultiSignatureRegistration() && (
 						<>
-							{transaction.wallet() && (
+							{transaction.wallet?.() && (
 								<>
 									<DetailDivider />
 
