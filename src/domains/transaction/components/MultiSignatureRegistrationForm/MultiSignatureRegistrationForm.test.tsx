@@ -196,7 +196,7 @@ describe("MultiSignature Registration Form", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it("should show name of wallets in review step", () => {
+	it("should show name of wallets in review step", async () => {
 		renderComponent({
 			activeTab: 2,
 			defaultValues: {
@@ -218,8 +218,16 @@ describe("MultiSignature Registration Form", () => {
 			},
 		});
 
-		expect(screen.getAllByTestId("Address__address")[1]).toHaveTextContent(wallet.address());
-		expect(screen.getAllByTestId("Address__address")[2]).toHaveTextContent(wallet2.address());
+		expect(screen.getByText(wallet.address())).toBeInTheDocument()
+		const truncatedAddress = (address) => address.slice(0, 5) + "..." + address.slice(-5);
+
+		await waitFor(() => {
+			expect(screen.getAllByText(truncatedAddress(wallet2.address()))).toHaveLength(1)
+		})
+
+		await waitFor(() => {
+			expect(screen.getAllByText(truncatedAddress(wallet.address()))).toHaveLength(1)
+		})
 	});
 
 	it("should render transaction details", async () => {
