@@ -124,7 +124,7 @@ exports[`TransactionRow > should omit the currency for transactions from test ne
               class="flex flex-col items-end gap-1"
             >
               <div
-                class="flex items-center justify-center h-[21px] rounded px-1 dark:border css-1vn5kd9"
+                class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-1vn5kd9"
                 color="secondary"
                 data-testid="AmountLabel__wrapper"
               >
@@ -308,7 +308,7 @@ exports[`TransactionRow > should render 1`] = `
               class="flex flex-col items-end gap-1"
             >
               <div
-                class="flex items-center justify-center h-[21px] rounded px-1 dark:border css-1vn5kd9"
+                class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-1vn5kd9"
                 color="secondary"
                 data-testid="AmountLabel__wrapper"
               >
@@ -481,7 +481,7 @@ exports[`TransactionRow > should render responsive 1`] = `
                   class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                 >
                   <div
-                    class="flex items-center justify-center rounded h-[21px] px-1 dark:border css-1vn5kd9"
+                    class="flex items-center justify-center rounded px-1.5 h-[21px] dark:border css-1vn5kd9"
                     color="secondary"
                     data-testid="AmountLabel__wrapper"
                   >
@@ -513,7 +513,7 @@ exports[`TransactionRow > should render responsive 1`] = `
                     class="whitespace-nowrap"
                     data-testid="Amount"
                   >
-                    0 BTC
+                    $0.00
                   </span>
                 </div>
               </div>
@@ -650,7 +650,7 @@ exports[`TransactionRow > should render responsive 2`] = `
                   class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                 >
                   <div
-                    class="flex items-center justify-center rounded h-[21px] px-1 dark:border css-1vn5kd9"
+                    class="flex items-center justify-center rounded px-1.5 h-[21px] dark:border css-1vn5kd9"
                     color="secondary"
                     data-testid="AmountLabel__wrapper"
                   >
@@ -682,252 +682,9 @@ exports[`TransactionRow > should render responsive 2`] = `
                     class="whitespace-nowrap"
                     data-testid="Amount"
                   >
-                    0 BTC
+                    $0.00
                   </span>
                 </div>
-              </div>
-            </div>
-          </div>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-</DocumentFragment>
-`;
-
-exports[`TransactionRow > should render skeleton 1`] = `
-<DocumentFragment>
-  <table>
-    <tbody>
-      <tr
-        class="max-xl:h-[4.25rem] css-1x4z4cy"
-        data-testid="TableRow"
-      >
-        <td>
-          <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l"
-          >
-            <div
-              class="hidden xl:block"
-            >
-              <span
-                aria-busy="true"
-                aria-live="polite"
-                class="flex w-auto max-w-full items-center overflow-hidden leading-none"
-              >
-                <span
-                  class="react-loading-skeleton"
-                  style="width: 90px; height: 17px;"
-                >
-                  ‌
-                </span>
-                <br />
-              </span>
-            </div>
-            <div
-              class="flex flex-col max-xl:pt-2 xl:hidden"
-            >
-              <span
-                aria-busy="true"
-                aria-live="polite"
-                class="flex w-auto max-w-full items-center overflow-hidden leading-none"
-              >
-                <span
-                  class="react-loading-skeleton"
-                  style="width: 90px; height: 13px;"
-                >
-                  ‌
-                </span>
-                <br />
-              </span>
-              <div
-                class="mt-1"
-              >
-                <span
-                  aria-busy="true"
-                  aria-live="polite"
-                  class="flex w-auto max-w-full items-center overflow-hidden leading-none"
-                >
-                  <span
-                    class="react-loading-skeleton"
-                    style="width: 68px; height: 10px;"
-                  >
-                    ‌
-                  </span>
-                  <br />
-                </span>
-              </div>
-            </div>
-          </div>
-        </td>
-        <td
-          class="table-cell sm:hidden xl:table-cell"
-        >
-          <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11"
-          >
-            <span
-              aria-busy="true"
-              aria-live="polite"
-              class="flex w-auto max-w-full items-center overflow-hidden leading-none"
-            >
-              <span
-                class="react-loading-skeleton"
-                style="width: 70px; height: 16px;"
-              >
-                ‌
-              </span>
-              <br />
-            </span>
-          </div>
-        </td>
-        <td>
-          <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11"
-          >
-            <div
-              class="flex items-center"
-            >
-              <span
-                aria-busy="true"
-                aria-live="polite"
-                class="flex w-auto max-w-full items-center overflow-hidden leading-none"
-              >
-                <span
-                  class="react-loading-skeleton"
-                  style="width: 80px; height: 16px;"
-                >
-                  ‌
-                </span>
-                <br />
-              </span>
-            </div>
-          </div>
-        </td>
-        <td>
-          <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11"
-          >
-            <div
-              class="mr-2"
-            >
-              <div
-                class="rounded border border-theme-secondary-300 p-[2px] dark:border-theme-secondary-800"
-              >
-                <span
-                  aria-busy="true"
-                  aria-live="polite"
-                  class="flex w-auto max-w-full items-center overflow-hidden leading-none"
-                >
-                  <span
-                    class="react-loading-skeleton"
-                    style="width: 37px; height: 13px;"
-                  >
-                    ‌
-                  </span>
-                  <br />
-                </span>
-              </div>
-            </div>
-            <span
-              aria-busy="true"
-              aria-live="polite"
-              class="flex w-auto max-w-full items-center overflow-hidden leading-none"
-            >
-              <span
-                class="react-loading-skeleton"
-                style="width: 1px; height: 17px;"
-              >
-                ‌
-              </span>
-              <br />
-            </span>
-          </div>
-        </td>
-        <td
-          class="table-cell sm:hidden lg:table-cell"
-        >
-          <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 justify-end"
-          >
-            <div
-              class="rounded border border-theme-secondary-300 p-1 px-2 dark:border-theme-secondary-800"
-            >
-              <span
-                aria-busy="true"
-                aria-live="polite"
-                class="flex w-auto max-w-full items-center overflow-hidden leading-none"
-              >
-                <span
-                  class="react-loading-skeleton"
-                  style="width: 1px; height: 14px;"
-                >
-                  ‌
-                </span>
-                <br />
-              </span>
-            </div>
-          </div>
-        </td>
-        <td
-          class="hidden md:table-cell"
-        >
-          <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
-          >
-            <div
-              class="hidden lg:block"
-            >
-              <span
-                aria-busy="true"
-                aria-live="polite"
-                class="flex w-auto max-w-full items-center overflow-hidden leading-none"
-              >
-                <span
-                  class="react-loading-skeleton"
-                  style="width: 0px; height: 17px;"
-                >
-                  ‌
-                </span>
-                <br />
-              </span>
-            </div>
-            <div
-              class="-mr-3 flex flex-col items-end pt-px lg:hidden"
-            >
-              <div
-                class="rounded border border-theme-secondary-300 p-[2px] dark:border-theme-secondary-800"
-              >
-                <span
-                  aria-busy="true"
-                  aria-live="polite"
-                  class="flex w-auto max-w-full items-center overflow-hidden leading-none"
-                >
-                  <span
-                    class="react-loading-skeleton"
-                    style="width: 1px; height: 15px;"
-                  >
-                    ‌
-                  </span>
-                  <br />
-                </span>
-              </div>
-              <div
-                class="mt-px"
-              >
-                <span
-                  aria-busy="true"
-                  aria-live="polite"
-                  class="flex w-auto max-w-full items-center overflow-hidden leading-none"
-                >
-                  <span
-                    class="react-loading-skeleton"
-                    style="width: 50px; height: 9px;"
-                  >
-                    ‌
-                  </span>
-                  <br />
-                </span>
               </div>
             </div>
           </div>
@@ -1062,7 +819,7 @@ exports[`TransactionRow > should render with currency 1`] = `
               class="flex flex-col items-end gap-1"
             >
               <div
-                class="flex items-center justify-center h-[21px] rounded px-1 dark:border css-1vn5kd9"
+                class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-1vn5kd9"
                 color="secondary"
                 data-testid="AmountLabel__wrapper"
               >
