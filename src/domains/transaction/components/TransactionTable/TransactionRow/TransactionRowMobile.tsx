@@ -96,7 +96,7 @@ export const TransactionRowMobile = memo(
 							<MobileSection title={t("COMMON.FIAT_VALUE")} className="w-full">
 								<Amount
 									value={convert(amount)}
-									ticker={exchangeCurrency as string}
+									ticker={exchangeCurrency}
 								/>
 							</MobileSection>
 						</div>
