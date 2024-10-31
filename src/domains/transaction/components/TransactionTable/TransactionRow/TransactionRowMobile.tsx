@@ -15,7 +15,15 @@ import { Amount, AmountLabel } from "@/app/components/Amount";
 import { useTransactionTypes } from "@/domains/transaction/hooks/use-transaction-types";
 
 export const TransactionRowMobile = memo(
-	({ className, transaction, onClick, isLoading = false, profile, hint, ...properties }: TransactionRowProperties) => {
+	({
+		className,
+		transaction,
+		onClick,
+		isLoading = false,
+		profile,
+		hint,
+		...properties
+	}: TransactionRowProperties) => {
 		const { t } = useTranslation();
 		const { getLabel } = useTransactionTypes();
 		const timeStamp = transaction.timestamp ? transaction.timestamp() : undefined;
