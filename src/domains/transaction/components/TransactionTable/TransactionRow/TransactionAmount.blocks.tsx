@@ -31,10 +31,16 @@ export const TransactionAmountLabel = ({ transaction }: { transaction: ExtendedT
 	const returnedAmount = calculateReturnedAmount(transaction);
 	const amount = transaction.total() - returnedAmount;
 
+	const isMusigTransfer = [transaction?.usesMultiSignature(), !transaction.isMultiSignatureRegistration()].every(
+		Boolean,
+	);
+
+	const isNegative = [isMusigTransfer, transaction.isSent()].some(Boolean);
+
 	return (
 		<AmountLabel
 			value={amount}
-			isNegative={transaction.isSent()}
+			isNegative={isNegative}
 			ticker={transaction.wallet().currency()}
 			hideSign={transaction.isTransfer() && transaction.sender() === transaction.recipient()}
 			isCompact
