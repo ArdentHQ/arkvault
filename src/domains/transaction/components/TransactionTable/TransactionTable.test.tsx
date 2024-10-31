@@ -34,7 +34,7 @@ describe("TransactionTable", () => {
 
 	it.each(["xs", "sm", "md", "lg", "xl"])("should render responsive", (breakpoint) => {
 		const { asFragment } = renderResponsive(
-			<TransactionTable transactions={transactions} profile={profile} exchangeCurrency="DARK" />,
+			<TransactionTable transactions={transactions} profile={profile} />,
 			breakpoint,
 		);
 
@@ -66,7 +66,6 @@ describe("TransactionTable", () => {
 					isLoading
 					skeletonRowsLimit={5}
 					profile={profile}
-					exchangeCurrency="DARK"
 				/>,
 			);
 
@@ -99,7 +98,6 @@ describe("TransactionTable", () => {
 				transactions={sortedByDateDesc}
 				onRowClick={onClick}
 				profile={profile}
-				exchangeCurrency="DARK"
 			/>,
 		);
 
@@ -117,7 +115,6 @@ describe("TransactionTable", () => {
 				onRowClick={onClick}
 				profile={profile}
 				coinName={wallet.currency()}
-				exchangeCurrency="DARK"
 			/>,
 		);
 
