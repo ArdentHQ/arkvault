@@ -43,9 +43,7 @@ describe("TransactionTable", () => {
 	});
 
 	it("should render with currency", () => {
-		render(
-			<TransactionTable transactions={transactions} exchangeCurrency="BTC" profile={profile} />,
-		);
+		render(<TransactionTable transactions={transactions} exchangeCurrency="BTC" profile={profile} />);
 
 		expect(screen.getAllByTestId("TransactionRow__exchange-currency")).toHaveLength(transactions.length);
 	});
@@ -97,7 +95,12 @@ describe("TransactionTable", () => {
 		const sortedByDateDesc = sortByDesc(transactions, (transaction) => transaction.timestamp());
 
 		render(
-			<TransactionTable transactions={sortedByDateDesc} onRowClick={onClick} profile={profile} exchangeCurrency="DARK" />,
+			<TransactionTable
+				transactions={sortedByDateDesc}
+				onRowClick={onClick}
+				profile={profile}
+				exchangeCurrency="DARK"
+			/>,
 		);
 
 		await userEvent.click(screen.getAllByTestId("TableRow")[0]);
