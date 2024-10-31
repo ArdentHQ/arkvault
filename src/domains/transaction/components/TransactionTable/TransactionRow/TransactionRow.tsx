@@ -68,11 +68,7 @@ export const TransactionRow = memo(
 		}
 
 		const timeStamp = transaction.timestamp();
-
 		const returnedAmount = calculateReturnedAmount(transaction);
-
-		const hint = returnedAmount ? t("TRANSACTION.HINT_AMOUNT_EXCLUDING", { amount: returnedAmount, currency }) : undefined;
-
 		const amount = transaction.total() - returnedAmount;
 
 		return (
@@ -135,7 +131,7 @@ export const TransactionRow = memo(
 							ticker={transaction.wallet().currency()}
 							hideSign={transaction.isTransfer() && transaction.sender() === transaction.recipient()}
 							isCompact
-							hint={hint}
+							hint={returnedAmount ? t("TRANSACTION.HINT_AMOUNT_EXCLUDING", { amount: returnedAmount, currency }) : undefined}
 							className="h-[21px] rounded dark:border"
 						/>
 						<span

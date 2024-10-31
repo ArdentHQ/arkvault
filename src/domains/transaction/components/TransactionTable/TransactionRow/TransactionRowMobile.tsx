@@ -30,13 +30,7 @@ export const TransactionRowMobile = memo(
 		}
 
 		const timeStamp =  transaction.timestamp();
-
 		const returnedAmount = calculateReturnedAmount(transaction);
-
-		const hint = returnedAmount
-			? t("TRANSACTION.HINT_AMOUNT_EXCLUDING", { amount: returnedAmount, currency })
-			: undefined;
-
 		const amount = transaction.total() - returnedAmount;
 
 		return (
@@ -90,7 +84,7 @@ export const TransactionRowMobile = memo(
 									value={amount}
 									isNegative={true}
 									ticker={transaction.wallet().currency()}
-									hint={hint}
+									hint={returnedAmount ? t("TRANSACTION.HINT_AMOUNT_EXCLUDING", { amount: returnedAmount, currency }) : undefined}
 									hideSign={
 										transaction.isTransfer() && transaction.sender() === transaction.recipient()
 									}
