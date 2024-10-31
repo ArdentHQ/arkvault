@@ -8,7 +8,7 @@ import { TransactionAddresses, TransactionMusigParticipants, TransactionType } f
 import { StepHeader } from "@/app/components/StepHeader";
 import { ThemeIcon } from "@/app/components/Icon";
 import { FormField } from "@/app/components/Form";
-import { DetailDivider, DetailLabel, DetailTitle } from "@/app/components/DetailWrapper";
+import { DetailLabel } from "@/app/components/DetailWrapper";
 import { useMusigRegistrationStubTransaction } from "@/domains/transaction/hooks/use-stub-transaction";
 import { transactionPublicKeys } from "@/domains/transaction/components/MultiSignatureDetail/MultiSignatureDetail.helpers";
 
