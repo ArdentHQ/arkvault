@@ -4,7 +4,11 @@ import { useFormContext } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 
 import { TotalAmountBox } from "@/domains/transaction/components/TotalAmountBox";
-import { TransactionAddresses, TransactionMusigParticipants, TransactionType } from "@/domains/transaction/components/TransactionDetail";
+import {
+	TransactionAddresses,
+	TransactionMusigParticipants,
+	TransactionType,
+} from "@/domains/transaction/components/TransactionDetail";
 import { StepHeader } from "@/app/components/StepHeader";
 import { ThemeIcon } from "@/app/components/Icon";
 import { FormField } from "@/app/components/Form";
@@ -27,7 +31,12 @@ export const ReviewStep = ({
 		unregister("mnemonic");
 	}, [unregister]);
 
-	const { musigRegistrationStubTransaction } = useMusigRegistrationStubTransaction({ fee, min, publicKeys: participants.map((participant) => participant.publicKey), wallet })
+	const { musigRegistrationStubTransaction } = useMusigRegistrationStubTransaction({
+		fee,
+		min,
+		publicKeys: participants.map((participant) => participant.publicKey),
+		wallet,
+	});
 
 	return (
 		<section data-testid="MultiSignature__review-step">

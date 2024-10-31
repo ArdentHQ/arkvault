@@ -40,12 +40,11 @@ export const useIpfsStubTransaction = ({
 	};
 };
 
-
 export const useMusigRegistrationStubTransaction = ({
 	fee,
 	wallet,
 	min,
-	publicKeys = []
+	publicKeys = [],
 }: {
 	fee: number;
 	min: number;
@@ -64,36 +63,31 @@ export const useMusigRegistrationStubTransaction = ({
 						data: {
 							min,
 							publicKeys,
-							senderPublicKey: wallet.publicKey()
+							senderPublicKey: wallet.publicKey(),
 						},
 						fee,
 						nonce: "1",
-						signatory: await wallet
-							.coin()
-							.signatory()
-							.multiSignature({
-								min,
-								publicKeys,
-							}),
+						signatory: await wallet.coin().signatory().multiSignature({
+							min,
+							publicKeys,
+						}),
 					});
 
 				setMusigRegistrationStubTransaction(stub);
 			} catch (error) {
-				console.log({ error })
+				console.log({ error });
 				//
 			}
 		};
 
 		if (musigRegistrationStubTransaction) {
-			return
+			return;
 		}
 
 		createStub({ wallet });
 	}, [fee, wallet, publicKeys, min]);
 
-
 	return {
 		musigRegistrationStubTransaction,
 	};
 };
-
