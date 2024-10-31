@@ -108,7 +108,7 @@ describe.each(["xs", "sm"])("TransactionRowMobile", (breakpoint) => {
 			<table>
 				<tbody>
 					<TransactionRowMobile
-						transaction={{ ...fixture, timestamp: () => {}} as any}
+						transaction={{ ...fixture, timestamp: () => {} } as any}
 						profile={profile}
 						exchangeCurrency="DARK"
 					/>
@@ -123,11 +123,7 @@ describe.each(["xs", "sm"])("TransactionRowMobile", (breakpoint) => {
 		render(
 			<table>
 				<tbody>
-					<TransactionRowMobile
-						transaction={fixture as any}
-						profile={profile}
-						exchangeCurrency="DARK"
-					/>
+					<TransactionRowMobile transaction={fixture as any} profile={profile} exchangeCurrency="DARK" />
 				</tbody>
 			</table>,
 		);

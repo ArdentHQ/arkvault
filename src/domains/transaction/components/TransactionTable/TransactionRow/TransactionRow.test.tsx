@@ -169,7 +169,7 @@ describe("TransactionRow", () => {
 			<table>
 				<tbody>
 					<TransactionRow
-						transaction={{ ...fixture, timestamp: () => {}} as any}
+						transaction={{ ...fixture, timestamp: () => {} } as any}
 						profile={profile}
 						exchangeCurrency="USD"
 						onClick={() => {}}
