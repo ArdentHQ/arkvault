@@ -6,6 +6,9 @@ import * as useRandomNumberHook from "@/app/hooks/use-random-number";
 import { translations as commonTranslations } from "@/app/i18n/common/i18n";
 import { TransactionFixture } from "@/tests/fixtures/transactions";
 import { env, getDefaultProfileId, screen, renderResponsive } from "@/utils/testing-library";
+import {renderHook} from "@testing-library/react";
+import {useTranslation} from "react-i18next";
+import userEvent from "@testing-library/user-event";
 let profile: Contracts.IProfile;
 
 describe.each(["xs", "sm"])("TransactionRowMobile", (breakpoint) => {
@@ -125,5 +128,45 @@ describe.each(["xs", "sm"])("TransactionRowMobile", (breakpoint) => {
 
 		expect(screen.getByTestId("TransactionRow__timestamp")).toBeInTheDocument();
 		expect(screen.getByText("A few seconds ago")).toBeInTheDocument();
+	});
+
+	it('should handle sent to self with multiPayment transaction', async () => {
+		const { result } = renderHook(() => useTranslation());
+		const { t } = result.current;
+
+		render(
+			<table>
+				<tbody>
+				<TransactionRowMobile
+					transaction={{
+						...fixture,
+						fee: () => 5,
+						isMultiPayment: () => true,
+						isReturn: () => true,
+						recipients: () => [
+							{address: "address-1", amount: 10},
+							{address: "address-2", amount: 20},
+							{address: fixture.wallet().address(), amount: 30},
+						],
+						total: () => 65,
+					}}
+					exchangeCurrency="USD"
+					profile={profile}
+				/>
+				</tbody>
+			</table>,
+		);
+
+		// should have a label
+		expect(screen.getByTestId("AmountLabel__hint")).toBeInTheDocument();
+
+		await userEvent.hover(screen.getByTestId("AmountLabel__hint"));
+
+		const hintText = t("TRANSACTION.HINT_AMOUNT_EXCLUDING", { amount: 30, currency: "DARK" })
+
+		expect(screen.getByText(hintText)).toBeInTheDocument();
+
+		// should have an amount without returned amount
+		expect(screen.getByText(/35 DARK/)).toBeInTheDocument();
 	});
 });
