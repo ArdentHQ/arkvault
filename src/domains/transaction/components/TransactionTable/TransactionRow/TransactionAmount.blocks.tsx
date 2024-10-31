@@ -12,7 +12,6 @@ const calculateReturnedAmount = function (transaction: ExtendedTransactionData):
 	if (!transaction.isMultiPayment()) {
 		return returnedAmount;
 	}
-	console.log(transaction.recipients(), transaction.id(), transaction.isReturn());
 
 	for (const recipient of transaction.recipients().values()) {
 		if (transaction.isReturn() && transaction.sender() === recipient.address) {
