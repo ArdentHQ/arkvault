@@ -220,15 +220,15 @@ describe("MultiSignature Registration Form", () => {
 			},
 		});
 
-		expect(screen.getByText(wallet.address())).toBeInTheDocument()
+		expect(screen.getByText(wallet.address())).toBeInTheDocument();
 
 		await waitFor(() => {
-			expect(screen.getAllByText(truncatedAddress(wallet2.address()))).toHaveLength(1)
-		})
+			expect(screen.getAllByText(truncatedAddress(wallet2.address()))).toHaveLength(1);
+		});
 
 		await waitFor(() => {
-			expect(screen.getAllByText(truncatedAddress(wallet.address()))).toHaveLength(1)
-		})
+			expect(screen.getAllByText(truncatedAddress(wallet.address()))).toHaveLength(1);
+		});
 	});
 
 	it("should render transaction details", async () => {
