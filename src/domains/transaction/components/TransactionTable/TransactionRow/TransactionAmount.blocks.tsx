@@ -32,9 +32,7 @@ export const TransactionAmountLabel = ({ transaction }: { transaction: ExtendedT
 	const amount = transaction.total() - returnedAmount;
 
 	const usesMultiSignature = transaction?.usesMultiSignature ? transaction.usesMultiSignature() : false;
-	const isMusigTransfer = [usesMultiSignature, !transaction.isMultiSignatureRegistration()].every(
-		Boolean,
-	);
+	const isMusigTransfer = [usesMultiSignature, !transaction.isMultiSignatureRegistration()].every(Boolean);
 
 	const isNegative = [isMusigTransfer, transaction.isSent()].some(Boolean);
 
