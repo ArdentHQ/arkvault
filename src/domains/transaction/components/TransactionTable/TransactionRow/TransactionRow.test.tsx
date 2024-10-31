@@ -1,4 +1,4 @@
-import {Contracts, DTO} from "@ardenthq/sdk-profiles";
+import {Contracts} from "@ardenthq/sdk-profiles";
 import React from "react";
 
 import { TransactionRow } from "./TransactionRow";
@@ -9,7 +9,6 @@ import { env, getDefaultProfileId, render, screen, renderResponsive } from "@/ut
 import {renderHook} from "@testing-library/react";
 import {useTranslation} from "react-i18next";
 import userEvent from "@testing-library/user-event";
-import {ExtendedTransactionRecipient} from "@ardenthq/sdk-profiles/distribution/esm/transaction.dto";
 let profile: Contracts.IProfile;
 
 describe("TransactionRow", () => {
