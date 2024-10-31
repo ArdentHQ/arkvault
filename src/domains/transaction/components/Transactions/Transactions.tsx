@@ -223,7 +223,7 @@ export const Transactions = memo(function Transactions({
 					</div>
 					<TransactionTable
 						transactions={transactions}
-						exchangeCurrency={profile.settings().get<string>(Contracts.ProfileSetting.ExchangeCurrency) ?? 'ARK'}
+						exchangeCurrency={profile.settings().get<string>(Contracts.ProfileSetting.ExchangeCurrency)}
 						hideHeader={hasEmptyResults}
 						isLoading={isLoadingTransactions}
 						skeletonRowsLimit={8}

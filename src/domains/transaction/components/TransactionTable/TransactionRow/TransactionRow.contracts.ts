@@ -3,7 +3,7 @@ import { Contracts, DTO } from "@ardenthq/sdk-profiles";
 
 export type TransactionRowProperties = {
 	transaction: DTO.ExtendedConfirmedTransactionData;
-	exchangeCurrency: string;
+	exchangeCurrency?: string;
 	onClick?: () => void;
 	isLoading?: boolean;
 	profile: Contracts.IProfile;
