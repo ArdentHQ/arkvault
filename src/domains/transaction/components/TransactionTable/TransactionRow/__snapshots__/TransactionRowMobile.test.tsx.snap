@@ -124,7 +124,7 @@ exports[`TransactionRowMobile > should render 1`] = `
                   class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                 >
                   <div
-                    class="flex items-center justify-center rounded h-[21px] px-1 dark:border css-1vn5kd9"
+                    class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-1vn5kd9"
                     color="secondary"
                     data-testid="AmountLabel__wrapper"
                   >
@@ -156,7 +156,7 @@ exports[`TransactionRowMobile > should render 1`] = `
                     class="whitespace-nowrap"
                     data-testid="Amount"
                   >
-                    0 BTC
+                    0
                   </span>
                 </div>
               </div>
@@ -293,7 +293,7 @@ exports[`TransactionRowMobile > should render 2`] = `
                   class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                 >
                   <div
-                    class="flex items-center justify-center rounded h-[21px] px-1 dark:border css-1vn5kd9"
+                    class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-1vn5kd9"
                     color="secondary"
                     data-testid="AmountLabel__wrapper"
                   >
@@ -325,7 +325,7 @@ exports[`TransactionRowMobile > should render 2`] = `
                     class="whitespace-nowrap"
                     data-testid="Amount"
                   >
-                    0 BTC
+                    0
                   </span>
                 </div>
               </div>
@@ -743,7 +743,7 @@ exports[`TransactionRowMobile > should render with currency 1`] = `
                   class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                 >
                   <div
-                    class="flex items-center justify-center rounded h-[21px] px-1 dark:border css-1vn5kd9"
+                    class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-1vn5kd9"
                     color="secondary"
                     data-testid="AmountLabel__wrapper"
                   >
@@ -901,7 +901,7 @@ exports[`TransactionRowMobile > should render with currency 2`] = `
                   class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                 >
                   <div
-                    class="flex items-center justify-center rounded h-[21px] px-1 dark:border css-1vn5kd9"
+                    class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-1vn5kd9"
                     color="secondary"
                     data-testid="AmountLabel__wrapper"
                   >

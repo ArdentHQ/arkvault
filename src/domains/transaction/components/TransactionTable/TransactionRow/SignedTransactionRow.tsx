@@ -13,10 +13,10 @@ import { DateTime } from "@ardenthq/sdk-intl";
 import { TruncateMiddle } from "@/app/components/TruncateMiddle";
 import { useTransactionTypes } from "@/domains/transaction/hooks/use-transaction-types";
 import { Label } from "@/app/components/Label";
-import { Amount, AmountLabel } from "@/app/components/Amount";
 import { Divider } from "@/app/components/Divider";
 import { Icon } from "@/app/components/Icon";
 import { TransactionRowAddressing } from "./TransactionRowAddressing";
+import { TransactionAmountLabel, TransactionFiatAmount } from "./TransactionAmount.blocks";
 
 interface SignedTransactionRowProperties {
 	transaction: DTO.ExtendedSignedTransactionData;
@@ -108,11 +108,6 @@ export const SignedTransactionRow = ({
 		onRemovePendingTransaction?.(transaction);
 	};
 
-	const isMusigTransfer = [transaction.usesMultiSignature(), !transaction.isMultiSignatureRegistration()].every(
-		Boolean,
-	);
-	const isNegative = [isMusigTransfer, transaction.isSent()].some(Boolean);
-
 	return (
 		<TableRow className="relative">
 			<TableCell variant="start" innerClassName="items-start my-0 py-3 xl:min-h-0">
@@ -168,14 +163,9 @@ export const SignedTransactionRow = ({
 
 			<TableCell innerClassName="justify-end items-start xl:min-h-0">
 				<div className="flex flex-col items-end gap-1">
-					<AmountLabel
-						value={transaction.amount() + transaction.fee()}
-						isNegative={isNegative}
-						ticker={wallet.currency()}
-						isCompact
-					/>
+					<TransactionAmountLabel transaction={transaction} />
 					<span className="text-xs font-semibold text-theme-secondary-700 lg:hidden">
-						<Amount value={wallet.convertedBalance()} ticker={wallet.exchangeCurrency()} />
+						<TransactionFiatAmount transaction={transaction} exchangeCurrency={wallet.exchangeCurrency()} />
 					</span>
 				</div>
 			</TableCell>
@@ -184,7 +174,7 @@ export const SignedTransactionRow = ({
 				className="hidden lg:table-cell"
 				innerClassName="justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0"
 			>
-				<Amount value={wallet.convertedBalance()} ticker={wallet.exchangeCurrency()} />
+				<TransactionFiatAmount transaction={transaction} exchangeCurrency={wallet.exchangeCurrency()} />
 			</TableCell>
 
 			<TableCell variant="end" innerClassName="justify-end items-start text-sm xl:min-h-0">
