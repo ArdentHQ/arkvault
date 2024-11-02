@@ -12,10 +12,10 @@ import { Tooltip } from "@/app/components/Tooltip";
 import { assertString } from "@/utils/assertions";
 import { getMultiSignatureInfo } from "@/domains/transaction/components/MultiSignatureDetail/MultiSignatureDetail.helpers";
 import { TableRemoveButton } from "@/app/components/TableRemoveButton";
-import { Amount, AmountLabel } from "@/app/components/Amount";
 import { TimeAgo } from "@/app/components/TimeAgo";
 import { DateTime } from "@ardenthq/sdk-intl";
 import { TransactionRowAddressing } from "./TransactionRowAddressing";
+import { TransactionAmountLabel, TransactionFiatAmount } from "./TransactionAmount.blocks";
 
 interface SignedTransactionRowMobileProperties {
 	transaction: DTO.ExtendedSignedTransactionData;
@@ -118,17 +118,11 @@ export const SignedTransactionRowMobile = ({
 						</MobileSection>
 
 						<MobileSection title={`${t("COMMON.VALUE")} (${transaction.wallet().network().coinName()})`}>
-							<AmountLabel
-								value={transaction.amount() + transaction.fee()}
-								isNegative={transaction.isSent()}
-								ticker={transaction.wallet().currency()}
-								isCompact
-								className="h-[21px]"
-							/>
+							<TransactionAmountLabel transaction={transaction} />
 						</MobileSection>
 
 						<MobileSection title={t("COMMON.FIAT_VALUE")}>
-							<Amount value={wallet.convertedBalance()} ticker={wallet.exchangeCurrency()} />
+							<TransactionFiatAmount transaction={transaction} />
 						</MobileSection>
 
 						<MobileSection title={t("COMMON.AGE")} className="sm:hidden">

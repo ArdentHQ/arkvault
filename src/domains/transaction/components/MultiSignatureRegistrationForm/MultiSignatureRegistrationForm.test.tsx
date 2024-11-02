@@ -12,6 +12,8 @@ import multiSignatureFixture from "@/tests/fixtures/coins/ark/devnet/transaction
 import { TransactionFees } from "@/types";
 import { env, getDefaultProfileId, render, RenderResult, screen, syncFees, waitFor } from "@/utils/testing-library";
 
+const truncatedAddress = (address) => address.slice(0, 5) + "..." + address.slice(-5);
+
 describe("MultiSignature Registration Form", () => {
 	let profile: ProfilesContracts.IProfile;
 	let wallet: ProfilesContracts.IReadWriteWallet;
@@ -196,7 +198,7 @@ describe("MultiSignature Registration Form", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it("should show name of wallets in review step", () => {
+	it("should show name of wallets in review step", async () => {
 		renderComponent({
 			activeTab: 2,
 			defaultValues: {
@@ -218,8 +220,15 @@ describe("MultiSignature Registration Form", () => {
 			},
 		});
 
-		expect(screen.getAllByTestId("Address__address")[1]).toHaveTextContent(wallet.address());
-		expect(screen.getAllByTestId("Address__address")[2]).toHaveTextContent(wallet2.address());
+		expect(screen.getByText(wallet.address())).toBeInTheDocument();
+
+		await waitFor(() => {
+			expect(screen.getAllByText(truncatedAddress(wallet2.address()))).toHaveLength(1);
+		});
+
+		await waitFor(() => {
+			expect(screen.getAllByText(truncatedAddress(wallet.address()))).toHaveLength(1);
+		});
 	});
 
 	it("should render transaction details", async () => {

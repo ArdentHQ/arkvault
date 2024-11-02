@@ -546,7 +546,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="flex items-center justify-center h-[21px] rounded px-1 dark:border css-1vn5kd9"
+                      class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-1vn5kd9"
                       color="secondary"
                       data-testid="AmountLabel__wrapper"
                     >
@@ -698,7 +698,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="flex items-center justify-center h-[21px] rounded px-1 dark:border css-xqt0aw"
+                      class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-xqt0aw"
                       color="danger-bg"
                       data-testid="AmountLabel__wrapper"
                     >
@@ -850,7 +850,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="flex items-center justify-center h-[21px] rounded px-1 dark:border css-1vn5kd9"
+                      class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-1vn5kd9"
                       color="secondary"
                       data-testid="AmountLabel__wrapper"
                     >
@@ -1002,7 +1002,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="flex items-center justify-center h-[21px] rounded px-1 dark:border css-xqt0aw"
+                      class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-xqt0aw"
                       color="danger-bg"
                       data-testid="AmountLabel__wrapper"
                     >
@@ -1154,7 +1154,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="flex items-center justify-center h-[21px] rounded px-1 dark:border css-1vn5kd9"
+                      class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-1vn5kd9"
                       color="secondary"
                       data-testid="AmountLabel__wrapper"
                     >
@@ -1306,7 +1306,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="flex items-center justify-center h-[21px] rounded px-1 dark:border css-xqt0aw"
+                      class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-xqt0aw"
                       color="danger-bg"
                       data-testid="AmountLabel__wrapper"
                     >
@@ -1458,7 +1458,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="flex items-center justify-center h-[21px] rounded px-1 dark:border css-1vn5kd9"
+                      class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-1vn5kd9"
                       color="secondary"
                       data-testid="AmountLabel__wrapper"
                     >
@@ -1610,7 +1610,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="flex items-center justify-center h-[21px] rounded px-1 dark:border css-xqt0aw"
+                      class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-xqt0aw"
                       color="danger-bg"
                       data-testid="AmountLabel__wrapper"
                     >
@@ -1757,7 +1757,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="flex items-center justify-center h-[21px] rounded px-1 dark:border css-xqt0aw"
+                      class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-xqt0aw"
                       color="danger-bg"
                       data-testid="AmountLabel__wrapper"
                     >
@@ -1904,7 +1904,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="flex items-center justify-center h-[21px] rounded px-1 dark:border css-1vn5kd9"
+                      class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-1vn5kd9"
                       color="secondary"
                       data-testid="AmountLabel__wrapper"
                     >
@@ -2051,7 +2051,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="flex items-center justify-center h-[21px] rounded px-1 dark:border css-xqt0aw"
+                      class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-xqt0aw"
                       color="danger-bg"
                       data-testid="AmountLabel__wrapper"
                     >
@@ -2198,7 +2198,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="flex items-center justify-center h-[21px] rounded px-1 dark:border css-1vn5kd9"
+                      class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-1vn5kd9"
                       color="secondary"
                       data-testid="AmountLabel__wrapper"
                     >
@@ -2362,7 +2362,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="flex items-center justify-center h-[21px] rounded px-1 dark:border css-1jspzfx"
+                      class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-1jspzfx"
                       color="success-bg"
                       data-testid="AmountLabel__wrapper"
                     >
@@ -2526,7 +2526,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="flex items-center justify-center h-[21px] rounded px-1 dark:border css-1jspzfx"
+                      class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-1jspzfx"
                       color="success-bg"
                       data-testid="AmountLabel__wrapper"
                     >
@@ -2690,7 +2690,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="flex items-center justify-center h-[21px] rounded px-1 dark:border css-1jspzfx"
+                      class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-1jspzfx"
                       color="success-bg"
                       data-testid="AmountLabel__wrapper"
                     >
@@ -2854,7 +2854,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="flex items-center justify-center h-[21px] rounded px-1 dark:border css-1jspzfx"
+                      class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-1jspzfx"
                       color="success-bg"
                       data-testid="AmountLabel__wrapper"
                     >
@@ -3018,7 +3018,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="flex items-center justify-center h-[21px] rounded px-1 dark:border css-1jspzfx"
+                      class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-1jspzfx"
                       color="success-bg"
                       data-testid="AmountLabel__wrapper"
                     >
@@ -3182,7 +3182,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="flex items-center justify-center h-[21px] rounded px-1 dark:border css-1jspzfx"
+                      class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-1jspzfx"
                       color="success-bg"
                       data-testid="AmountLabel__wrapper"
                     >
@@ -3346,7 +3346,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="flex items-center justify-center h-[21px] rounded px-1 dark:border css-1jspzfx"
+                      class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-1jspzfx"
                       color="success-bg"
                       data-testid="AmountLabel__wrapper"
                     >
@@ -3510,7 +3510,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="flex items-center justify-center h-[21px] rounded px-1 dark:border css-1jspzfx"
+                      class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-1jspzfx"
                       color="success-bg"
                       data-testid="AmountLabel__wrapper"
                     >
@@ -3674,7 +3674,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="flex items-center justify-center h-[21px] rounded px-1 dark:border css-1jspzfx"
+                      class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-1jspzfx"
                       color="success-bg"
                       data-testid="AmountLabel__wrapper"
                     >
@@ -3838,7 +3838,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="flex items-center justify-center h-[21px] rounded px-1 dark:border css-1jspzfx"
+                      class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-1jspzfx"
                       color="success-bg"
                       data-testid="AmountLabel__wrapper"
                     >
@@ -4002,7 +4002,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="flex items-center justify-center h-[21px] rounded px-1 dark:border css-1jspzfx"
+                      class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-1jspzfx"
                       color="success-bg"
                       data-testid="AmountLabel__wrapper"
                     >
@@ -4166,7 +4166,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="flex items-center justify-center h-[21px] rounded px-1 dark:border css-1jspzfx"
+                      class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-1jspzfx"
                       color="success-bg"
                       data-testid="AmountLabel__wrapper"
                     >
@@ -4330,7 +4330,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="flex items-center justify-center h-[21px] rounded px-1 dark:border css-1jspzfx"
+                      class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-1jspzfx"
                       color="success-bg"
                       data-testid="AmountLabel__wrapper"
                     >
@@ -4494,7 +4494,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="flex items-center justify-center h-[21px] rounded px-1 dark:border css-1jspzfx"
+                      class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-1jspzfx"
                       color="success-bg"
                       data-testid="AmountLabel__wrapper"
                     >
@@ -4658,7 +4658,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="flex items-center justify-center h-[21px] rounded px-1 dark:border css-1jspzfx"
+                      class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-1jspzfx"
                       color="success-bg"
                       data-testid="AmountLabel__wrapper"
                     >
@@ -4822,7 +4822,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="flex items-center justify-center h-[21px] rounded px-1 dark:border css-1jspzfx"
+                      class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-1jspzfx"
                       color="success-bg"
                       data-testid="AmountLabel__wrapper"
                     >
@@ -4986,7 +4986,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="flex items-center justify-center h-[21px] rounded px-1 dark:border css-1jspzfx"
+                      class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-1jspzfx"
                       color="success-bg"
                       data-testid="AmountLabel__wrapper"
                     >
@@ -5150,7 +5150,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="flex items-center justify-center h-[21px] rounded px-1 dark:border css-1jspzfx"
+                      class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-1jspzfx"
                       color="success-bg"
                       data-testid="AmountLabel__wrapper"
                     >
@@ -5314,7 +5314,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="flex items-center justify-center h-[21px] rounded px-1 dark:border css-1jspzfx"
+                      class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-1jspzfx"
                       color="success-bg"
                       data-testid="AmountLabel__wrapper"
                     >
@@ -5478,7 +5478,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="flex items-center justify-center h-[21px] rounded px-1 dark:border css-1jspzfx"
+                      class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-1jspzfx"
                       color="success-bg"
                       data-testid="AmountLabel__wrapper"
                     >
@@ -5642,7 +5642,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="flex items-center justify-center h-[21px] rounded px-1 dark:border css-1jspzfx"
+                      class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-1jspzfx"
                       color="success-bg"
                       data-testid="AmountLabel__wrapper"
                     >
@@ -5806,7 +5806,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="flex items-center justify-center h-[21px] rounded px-1 dark:border css-1jspzfx"
+                      class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-1jspzfx"
                       color="success-bg"
                       data-testid="AmountLabel__wrapper"
                     >
@@ -5970,7 +5970,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="flex items-center justify-center h-[21px] rounded px-1 dark:border css-1jspzfx"
+                      class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-1jspzfx"
                       color="success-bg"
                       data-testid="AmountLabel__wrapper"
                     >
@@ -6134,7 +6134,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="flex items-center justify-center h-[21px] rounded px-1 dark:border css-1jspzfx"
+                      class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-1jspzfx"
                       color="success-bg"
                       data-testid="AmountLabel__wrapper"
                     >
@@ -6298,7 +6298,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="flex items-center justify-center h-[21px] rounded px-1 dark:border css-1vn5kd9"
+                      class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-1vn5kd9"
                       color="secondary"
                       data-testid="AmountLabel__wrapper"
                     >
@@ -6462,7 +6462,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="flex items-center justify-center h-[21px] rounded px-1 dark:border css-1vn5kd9"
+                      class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-1vn5kd9"
                       color="secondary"
                       data-testid="AmountLabel__wrapper"
                     >
@@ -6626,7 +6626,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="flex items-center justify-center h-[21px] rounded px-1 dark:border css-1vn5kd9"
+                      class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-1vn5kd9"
                       color="secondary"
                       data-testid="AmountLabel__wrapper"
                     >
@@ -6790,7 +6790,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="flex items-center justify-center h-[21px] rounded px-1 dark:border css-1vn5kd9"
+                      class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-1vn5kd9"
                       color="secondary"
                       data-testid="AmountLabel__wrapper"
                     >
@@ -6954,7 +6954,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="flex items-center justify-center h-[21px] rounded px-1 dark:border css-1jspzfx"
+                      class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-1jspzfx"
                       color="success-bg"
                       data-testid="AmountLabel__wrapper"
                     >
@@ -7118,7 +7118,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="flex items-center justify-center h-[21px] rounded px-1 dark:border css-1jspzfx"
+                      class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-1jspzfx"
                       color="success-bg"
                       data-testid="AmountLabel__wrapper"
                     >
@@ -7282,7 +7282,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="flex items-center justify-center h-[21px] rounded px-1 dark:border css-1jspzfx"
+                      class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-1jspzfx"
                       color="success-bg"
                       data-testid="AmountLabel__wrapper"
                     >
@@ -7446,7 +7446,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="flex items-center justify-center h-[21px] rounded px-1 dark:border css-1jspzfx"
+                      class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-1jspzfx"
                       color="success-bg"
                       data-testid="AmountLabel__wrapper"
                     >
@@ -7610,7 +7610,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="flex items-center justify-center h-[21px] rounded px-1 dark:border css-1vn5kd9"
+                      class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-1vn5kd9"
                       color="secondary"
                       data-testid="AmountLabel__wrapper"
                     >
@@ -7774,7 +7774,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="flex items-center justify-center h-[21px] rounded px-1 dark:border css-1vn5kd9"
+                      class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-1vn5kd9"
                       color="secondary"
                       data-testid="AmountLabel__wrapper"
                     >
@@ -7938,7 +7938,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="flex items-center justify-center h-[21px] rounded px-1 dark:border css-1vn5kd9"
+                      class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-1vn5kd9"
                       color="secondary"
                       data-testid="AmountLabel__wrapper"
                     >
@@ -8102,7 +8102,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="flex items-center justify-center h-[21px] rounded px-1 dark:border css-1vn5kd9"
+                      class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-1vn5kd9"
                       color="secondary"
                       data-testid="AmountLabel__wrapper"
                     >
@@ -8266,7 +8266,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="flex items-center justify-center h-[21px] rounded px-1 dark:border css-1jspzfx"
+                      class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-1jspzfx"
                       color="success-bg"
                       data-testid="AmountLabel__wrapper"
                     >
@@ -8430,7 +8430,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="flex items-center justify-center h-[21px] rounded px-1 dark:border css-1jspzfx"
+                      class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-1jspzfx"
                       color="success-bg"
                       data-testid="AmountLabel__wrapper"
                     >
@@ -8594,7 +8594,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="flex items-center justify-center h-[21px] rounded px-1 dark:border css-1jspzfx"
+                      class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-1jspzfx"
                       color="success-bg"
                       data-testid="AmountLabel__wrapper"
                     >
@@ -8758,7 +8758,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="flex items-center justify-center h-[21px] rounded px-1 dark:border css-1jspzfx"
+                      class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-1jspzfx"
                       color="success-bg"
                       data-testid="AmountLabel__wrapper"
                     >
@@ -8910,7 +8910,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="flex items-center justify-center h-[21px] rounded px-1 dark:border css-1vn5kd9"
+                      class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-1vn5kd9"
                       color="secondary"
                       data-testid="AmountLabel__wrapper"
                     >
@@ -9062,7 +9062,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="flex items-center justify-center h-[21px] rounded px-1 dark:border css-1vn5kd9"
+                      class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-1vn5kd9"
                       color="secondary"
                       data-testid="AmountLabel__wrapper"
                     >
@@ -9214,7 +9214,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="flex items-center justify-center h-[21px] rounded px-1 dark:border css-1vn5kd9"
+                      class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-1vn5kd9"
                       color="secondary"
                       data-testid="AmountLabel__wrapper"
                     >
@@ -9366,7 +9366,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="flex items-center justify-center h-[21px] rounded px-1 dark:border css-1vn5kd9"
+                      class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-1vn5kd9"
                       color="secondary"
                       data-testid="AmountLabel__wrapper"
                     >
@@ -9530,7 +9530,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="flex items-center justify-center h-[21px] rounded px-1 dark:border css-1jspzfx"
+                      class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-1jspzfx"
                       color="success-bg"
                       data-testid="AmountLabel__wrapper"
                     >
@@ -9694,7 +9694,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="flex items-center justify-center h-[21px] rounded px-1 dark:border css-1jspzfx"
+                      class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-1jspzfx"
                       color="success-bg"
                       data-testid="AmountLabel__wrapper"
                     >
@@ -9858,7 +9858,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="flex items-center justify-center h-[21px] rounded px-1 dark:border css-1jspzfx"
+                      class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-1jspzfx"
                       color="success-bg"
                       data-testid="AmountLabel__wrapper"
                     >
@@ -10022,7 +10022,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="flex items-center justify-center h-[21px] rounded px-1 dark:border css-1jspzfx"
+                      class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-1jspzfx"
                       color="success-bg"
                       data-testid="AmountLabel__wrapper"
                     >
@@ -10635,7 +10635,7 @@ exports[`Transactions > should hide view more button when there are no next page
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="flex items-center justify-center h-[21px] rounded px-1 dark:border css-1vn5kd9"
+                      class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-1vn5kd9"
                       color="secondary"
                       data-testid="AmountLabel__wrapper"
                     >
@@ -10787,7 +10787,7 @@ exports[`Transactions > should hide view more button when there are no next page
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="flex items-center justify-center h-[21px] rounded px-1 dark:border css-xqt0aw"
+                      class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-xqt0aw"
                       color="danger-bg"
                       data-testid="AmountLabel__wrapper"
                     >
@@ -10939,7 +10939,7 @@ exports[`Transactions > should hide view more button when there are no next page
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="flex items-center justify-center h-[21px] rounded px-1 dark:border css-1vn5kd9"
+                      class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-1vn5kd9"
                       color="secondary"
                       data-testid="AmountLabel__wrapper"
                     >
@@ -11091,7 +11091,7 @@ exports[`Transactions > should hide view more button when there are no next page
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="flex items-center justify-center h-[21px] rounded px-1 dark:border css-xqt0aw"
+                      class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-xqt0aw"
                       color="danger-bg"
                       data-testid="AmountLabel__wrapper"
                     >
@@ -11238,7 +11238,7 @@ exports[`Transactions > should hide view more button when there are no next page
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="flex items-center justify-center h-[21px] rounded px-1 dark:border css-xqt0aw"
+                      class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-xqt0aw"
                       color="danger-bg"
                       data-testid="AmountLabel__wrapper"
                     >
@@ -11385,7 +11385,7 @@ exports[`Transactions > should hide view more button when there are no next page
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="flex items-center justify-center h-[21px] rounded px-1 dark:border css-1vn5kd9"
+                      class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-1vn5kd9"
                       color="secondary"
                       data-testid="AmountLabel__wrapper"
                     >
@@ -11549,7 +11549,7 @@ exports[`Transactions > should hide view more button when there are no next page
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="flex items-center justify-center h-[21px] rounded px-1 dark:border css-1jspzfx"
+                      class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-1jspzfx"
                       color="success-bg"
                       data-testid="AmountLabel__wrapper"
                     >
@@ -11713,7 +11713,7 @@ exports[`Transactions > should hide view more button when there are no next page
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="flex items-center justify-center h-[21px] rounded px-1 dark:border css-1jspzfx"
+                      class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-1jspzfx"
                       color="success-bg"
                       data-testid="AmountLabel__wrapper"
                     >
@@ -11877,7 +11877,7 @@ exports[`Transactions > should hide view more button when there are no next page
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="flex items-center justify-center h-[21px] rounded px-1 dark:border css-1jspzfx"
+                      class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-1jspzfx"
                       color="success-bg"
                       data-testid="AmountLabel__wrapper"
                     >
@@ -12041,7 +12041,7 @@ exports[`Transactions > should hide view more button when there are no next page
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="flex items-center justify-center h-[21px] rounded px-1 dark:border css-1jspzfx"
+                      class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-1jspzfx"
                       color="success-bg"
                       data-testid="AmountLabel__wrapper"
                     >
@@ -12205,7 +12205,7 @@ exports[`Transactions > should hide view more button when there are no next page
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="flex items-center justify-center h-[21px] rounded px-1 dark:border css-1jspzfx"
+                      class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-1jspzfx"
                       color="success-bg"
                       data-testid="AmountLabel__wrapper"
                     >
@@ -12369,7 +12369,7 @@ exports[`Transactions > should hide view more button when there are no next page
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="flex items-center justify-center h-[21px] rounded px-1 dark:border css-1jspzfx"
+                      class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-1jspzfx"
                       color="success-bg"
                       data-testid="AmountLabel__wrapper"
                     >
@@ -12533,7 +12533,7 @@ exports[`Transactions > should hide view more button when there are no next page
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="flex items-center justify-center h-[21px] rounded px-1 dark:border css-1jspzfx"
+                      class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-1jspzfx"
                       color="success-bg"
                       data-testid="AmountLabel__wrapper"
                     >
@@ -12697,7 +12697,7 @@ exports[`Transactions > should hide view more button when there are no next page
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="flex items-center justify-center h-[21px] rounded px-1 dark:border css-1jspzfx"
+                      class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-1jspzfx"
                       color="success-bg"
                       data-testid="AmountLabel__wrapper"
                     >
@@ -12861,7 +12861,7 @@ exports[`Transactions > should hide view more button when there are no next page
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="flex items-center justify-center h-[21px] rounded px-1 dark:border css-1jspzfx"
+                      class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-1jspzfx"
                       color="success-bg"
                       data-testid="AmountLabel__wrapper"
                     >
@@ -13025,7 +13025,7 @@ exports[`Transactions > should hide view more button when there are no next page
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="flex items-center justify-center h-[21px] rounded px-1 dark:border css-1jspzfx"
+                      class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-1jspzfx"
                       color="success-bg"
                       data-testid="AmountLabel__wrapper"
                     >
@@ -13189,7 +13189,7 @@ exports[`Transactions > should hide view more button when there are no next page
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="flex items-center justify-center h-[21px] rounded px-1 dark:border css-1jspzfx"
+                      class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-1jspzfx"
                       color="success-bg"
                       data-testid="AmountLabel__wrapper"
                     >
@@ -13353,7 +13353,7 @@ exports[`Transactions > should hide view more button when there are no next page
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="flex items-center justify-center h-[21px] rounded px-1 dark:border css-1jspzfx"
+                      class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-1jspzfx"
                       color="success-bg"
                       data-testid="AmountLabel__wrapper"
                     >
@@ -13517,7 +13517,7 @@ exports[`Transactions > should hide view more button when there are no next page
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="flex items-center justify-center h-[21px] rounded px-1 dark:border css-1vn5kd9"
+                      class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-1vn5kd9"
                       color="secondary"
                       data-testid="AmountLabel__wrapper"
                     >
@@ -13681,7 +13681,7 @@ exports[`Transactions > should hide view more button when there are no next page
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="flex items-center justify-center h-[21px] rounded px-1 dark:border css-1vn5kd9"
+                      class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-1vn5kd9"
                       color="secondary"
                       data-testid="AmountLabel__wrapper"
                     >
@@ -13845,7 +13845,7 @@ exports[`Transactions > should hide view more button when there are no next page
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="flex items-center justify-center h-[21px] rounded px-1 dark:border css-1jspzfx"
+                      class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-1jspzfx"
                       color="success-bg"
                       data-testid="AmountLabel__wrapper"
                     >
@@ -14009,7 +14009,7 @@ exports[`Transactions > should hide view more button when there are no next page
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="flex items-center justify-center h-[21px] rounded px-1 dark:border css-1jspzfx"
+                      class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-1jspzfx"
                       color="success-bg"
                       data-testid="AmountLabel__wrapper"
                     >
@@ -14173,7 +14173,7 @@ exports[`Transactions > should hide view more button when there are no next page
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="flex items-center justify-center h-[21px] rounded px-1 dark:border css-1vn5kd9"
+                      class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-1vn5kd9"
                       color="secondary"
                       data-testid="AmountLabel__wrapper"
                     >
@@ -14337,7 +14337,7 @@ exports[`Transactions > should hide view more button when there are no next page
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="flex items-center justify-center h-[21px] rounded px-1 dark:border css-1vn5kd9"
+                      class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-1vn5kd9"
                       color="secondary"
                       data-testid="AmountLabel__wrapper"
                     >
@@ -14501,7 +14501,7 @@ exports[`Transactions > should hide view more button when there are no next page
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="flex items-center justify-center h-[21px] rounded px-1 dark:border css-1jspzfx"
+                      class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-1jspzfx"
                       color="success-bg"
                       data-testid="AmountLabel__wrapper"
                     >
@@ -14665,7 +14665,7 @@ exports[`Transactions > should hide view more button when there are no next page
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="flex items-center justify-center h-[21px] rounded px-1 dark:border css-1jspzfx"
+                      class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-1jspzfx"
                       color="success-bg"
                       data-testid="AmountLabel__wrapper"
                     >
@@ -14817,7 +14817,7 @@ exports[`Transactions > should hide view more button when there are no next page
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="flex items-center justify-center h-[21px] rounded px-1 dark:border css-1vn5kd9"
+                      class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-1vn5kd9"
                       color="secondary"
                       data-testid="AmountLabel__wrapper"
                     >
@@ -14969,7 +14969,7 @@ exports[`Transactions > should hide view more button when there are no next page
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="flex items-center justify-center h-[21px] rounded px-1 dark:border css-1vn5kd9"
+                      class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-1vn5kd9"
                       color="secondary"
                       data-testid="AmountLabel__wrapper"
                     >
@@ -15133,7 +15133,7 @@ exports[`Transactions > should hide view more button when there are no next page
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="flex items-center justify-center h-[21px] rounded px-1 dark:border css-1jspzfx"
+                      class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-1jspzfx"
                       color="success-bg"
                       data-testid="AmountLabel__wrapper"
                     >
@@ -15297,7 +15297,7 @@ exports[`Transactions > should hide view more button when there are no next page
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="flex items-center justify-center h-[21px] rounded px-1 dark:border css-1jspzfx"
+                      class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-1jspzfx"
                       color="success-bg"
                       data-testid="AmountLabel__wrapper"
                     >
@@ -15910,7 +15910,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="flex items-center justify-center h-[21px] rounded px-1 dark:border css-1vn5kd9"
+                      class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-1vn5kd9"
                       color="secondary"
                       data-testid="AmountLabel__wrapper"
                     >
@@ -16062,7 +16062,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="flex items-center justify-center h-[21px] rounded px-1 dark:border css-xqt0aw"
+                      class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-xqt0aw"
                       color="danger-bg"
                       data-testid="AmountLabel__wrapper"
                     >
@@ -16214,7 +16214,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="flex items-center justify-center h-[21px] rounded px-1 dark:border css-1vn5kd9"
+                      class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-1vn5kd9"
                       color="secondary"
                       data-testid="AmountLabel__wrapper"
                     >
@@ -16366,7 +16366,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="flex items-center justify-center h-[21px] rounded px-1 dark:border css-xqt0aw"
+                      class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-xqt0aw"
                       color="danger-bg"
                       data-testid="AmountLabel__wrapper"
                     >
@@ -16513,7 +16513,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="flex items-center justify-center h-[21px] rounded px-1 dark:border css-xqt0aw"
+                      class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-xqt0aw"
                       color="danger-bg"
                       data-testid="AmountLabel__wrapper"
                     >
@@ -16660,7 +16660,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="flex items-center justify-center h-[21px] rounded px-1 dark:border css-1vn5kd9"
+                      class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-1vn5kd9"
                       color="secondary"
                       data-testid="AmountLabel__wrapper"
                     >
@@ -16824,7 +16824,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="flex items-center justify-center h-[21px] rounded px-1 dark:border css-1jspzfx"
+                      class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-1jspzfx"
                       color="success-bg"
                       data-testid="AmountLabel__wrapper"
                     >
@@ -16988,7 +16988,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="flex items-center justify-center h-[21px] rounded px-1 dark:border css-1jspzfx"
+                      class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-1jspzfx"
                       color="success-bg"
                       data-testid="AmountLabel__wrapper"
                     >
@@ -17152,7 +17152,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="flex items-center justify-center h-[21px] rounded px-1 dark:border css-1jspzfx"
+                      class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-1jspzfx"
                       color="success-bg"
                       data-testid="AmountLabel__wrapper"
                     >
@@ -17316,7 +17316,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="flex items-center justify-center h-[21px] rounded px-1 dark:border css-1jspzfx"
+                      class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-1jspzfx"
                       color="success-bg"
                       data-testid="AmountLabel__wrapper"
                     >
@@ -17480,7 +17480,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="flex items-center justify-center h-[21px] rounded px-1 dark:border css-1jspzfx"
+                      class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-1jspzfx"
                       color="success-bg"
                       data-testid="AmountLabel__wrapper"
                     >
@@ -17644,7 +17644,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="flex items-center justify-center h-[21px] rounded px-1 dark:border css-1jspzfx"
+                      class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-1jspzfx"
                       color="success-bg"
                       data-testid="AmountLabel__wrapper"
                     >
@@ -17808,7 +17808,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="flex items-center justify-center h-[21px] rounded px-1 dark:border css-1jspzfx"
+                      class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-1jspzfx"
                       color="success-bg"
                       data-testid="AmountLabel__wrapper"
                     >
@@ -17972,7 +17972,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="flex items-center justify-center h-[21px] rounded px-1 dark:border css-1jspzfx"
+                      class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-1jspzfx"
                       color="success-bg"
                       data-testid="AmountLabel__wrapper"
                     >
@@ -18136,7 +18136,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="flex items-center justify-center h-[21px] rounded px-1 dark:border css-1jspzfx"
+                      class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-1jspzfx"
                       color="success-bg"
                       data-testid="AmountLabel__wrapper"
                     >
@@ -18300,7 +18300,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="flex items-center justify-center h-[21px] rounded px-1 dark:border css-1jspzfx"
+                      class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-1jspzfx"
                       color="success-bg"
                       data-testid="AmountLabel__wrapper"
                     >
@@ -18464,7 +18464,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="flex items-center justify-center h-[21px] rounded px-1 dark:border css-1jspzfx"
+                      class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-1jspzfx"
                       color="success-bg"
                       data-testid="AmountLabel__wrapper"
                     >
@@ -18628,7 +18628,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="flex items-center justify-center h-[21px] rounded px-1 dark:border css-1jspzfx"
+                      class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-1jspzfx"
                       color="success-bg"
                       data-testid="AmountLabel__wrapper"
                     >
@@ -18792,7 +18792,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="flex items-center justify-center h-[21px] rounded px-1 dark:border css-1vn5kd9"
+                      class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-1vn5kd9"
                       color="secondary"
                       data-testid="AmountLabel__wrapper"
                     >
@@ -18956,7 +18956,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="flex items-center justify-center h-[21px] rounded px-1 dark:border css-1vn5kd9"
+                      class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-1vn5kd9"
                       color="secondary"
                       data-testid="AmountLabel__wrapper"
                     >
@@ -19120,7 +19120,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="flex items-center justify-center h-[21px] rounded px-1 dark:border css-1jspzfx"
+                      class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-1jspzfx"
                       color="success-bg"
                       data-testid="AmountLabel__wrapper"
                     >
@@ -19284,7 +19284,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="flex items-center justify-center h-[21px] rounded px-1 dark:border css-1jspzfx"
+                      class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-1jspzfx"
                       color="success-bg"
                       data-testid="AmountLabel__wrapper"
                     >
@@ -19448,7 +19448,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="flex items-center justify-center h-[21px] rounded px-1 dark:border css-1vn5kd9"
+                      class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-1vn5kd9"
                       color="secondary"
                       data-testid="AmountLabel__wrapper"
                     >
@@ -19612,7 +19612,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="flex items-center justify-center h-[21px] rounded px-1 dark:border css-1vn5kd9"
+                      class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-1vn5kd9"
                       color="secondary"
                       data-testid="AmountLabel__wrapper"
                     >
@@ -19776,7 +19776,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="flex items-center justify-center h-[21px] rounded px-1 dark:border css-1jspzfx"
+                      class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-1jspzfx"
                       color="success-bg"
                       data-testid="AmountLabel__wrapper"
                     >
@@ -19940,7 +19940,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="flex items-center justify-center h-[21px] rounded px-1 dark:border css-1jspzfx"
+                      class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-1jspzfx"
                       color="success-bg"
                       data-testid="AmountLabel__wrapper"
                     >
@@ -20092,7 +20092,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="flex items-center justify-center h-[21px] rounded px-1 dark:border css-1vn5kd9"
+                      class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-1vn5kd9"
                       color="secondary"
                       data-testid="AmountLabel__wrapper"
                     >
@@ -20244,7 +20244,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="flex items-center justify-center h-[21px] rounded px-1 dark:border css-1vn5kd9"
+                      class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-1vn5kd9"
                       color="secondary"
                       data-testid="AmountLabel__wrapper"
                     >
@@ -20408,7 +20408,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="flex items-center justify-center h-[21px] rounded px-1 dark:border css-1jspzfx"
+                      class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-1jspzfx"
                       color="success-bg"
                       data-testid="AmountLabel__wrapper"
                     >
@@ -20572,7 +20572,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="flex items-center justify-center h-[21px] rounded px-1 dark:border css-1jspzfx"
+                      class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-1jspzfx"
                       color="success-bg"
                       data-testid="AmountLabel__wrapper"
                     >

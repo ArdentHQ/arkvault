@@ -912,7 +912,7 @@ exports[`Multisignature Detail Sent Step > should render sent step %s 1`] = `
               class="mt-2"
             >
               <div
-                class="rounded-xl border-transparent pb-2 outline outline-1 outline-transparent md:border-b-[5px] md:border-b-theme-secondary-200 md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800"
+                class="rounded-xl border-transparent pb-2 outline outline-1 outline-transparent md:border-b-[5px] md:border-b-theme-secondary-200 md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800 sm:border-none"
                 data-testid="TableWrapper"
               >
                 <div
