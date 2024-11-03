@@ -48,7 +48,7 @@ const getVariant = (variant?: ButtonVariant, theme?: Theme, disabled?: boolean, 
 		danger: () => `
 			bg-theme-danger-100 text-theme-danger-400
 			dark:bg-theme-danger-400 dark:text-white
-			hover:bg-theme-danger-400 hover:text-white dark:hover:bg-theme-danger-500
+			hover:bg-theme-danger-400 hover:text-white dark:hover:bg-theme-danger-300
 			focus:ring-theme-danger-300
 		`,
 		default: () => `border-none`,
@@ -71,7 +71,7 @@ const getVariant = (variant?: ButtonVariant, theme?: Theme, disabled?: boolean, 
 					dark:hover:bg-theme-primary-500
 				`,
 		"secondary-icon": () => `text-theme-secondary-700 bg-transparent
-		dark:text-theme-secondary-600 dark:bg-transparent`,
+		dark:text-theme-secondary-600 dark:bg-transparent hover:text-theme-primary-700 hover:bg-theme-primary-200 dark:hover:text-white dark:hover:text-theme-secondary-800`,
 		warning: () => `
 			bg-theme-warning-100 text-theme-warning-700
 			dark:bg-theme-warning-600 dark:text-white
