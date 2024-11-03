@@ -58,7 +58,7 @@ const getVariant = (variant?: ButtonVariant, theme?: Theme, disabled?: boolean, 
 			hover:bg-theme-info-700 hover:text-white
 			focus:ring-theme-info-300
 		`,
-		primary: () => `text-white bg-theme-primary-600 hover:bg-theme-primary-700`,
+		primary: () => `text-white bg-theme-primary-600 green:hover:bg-theme-primary-700 navy:hover:bg-theme-primary-800 dark:hover:bg-theme-primary-500`,
 		reverse: () => `
 					bg-theme-primary-reverse-100 text-theme-primary-reverse-600
 					dark:bg-theme-primary-reverse-600 dark:text-white
@@ -67,8 +67,8 @@ const getVariant = (variant?: ButtonVariant, theme?: Theme, disabled?: boolean, 
 				`,
 		secondary: () => `dark:bg-theme-secondary-800 dark:text-theme-secondary-200
 					bg-theme-primary-100 text-theme-primary-600
-					hover:bg-theme-primary-700 hover:text-white
-					dark:hover:bg-theme-primary-700
+					hover:bg-theme-primary-800 green:hover:bg-theme-primary-700 hover:text-white
+					dark:hover:bg-theme-primary-500
 				`,
 		"secondary-icon": () => `text-theme-secondary-700 bg-transparent
 		dark:text-theme-secondary-600 dark:bg-transparent`,
