@@ -99,7 +99,7 @@ export const SelectAddress = React.forwardRef<HTMLInputElement, SelectAddressPro
 			if (showUserIcon) {
 				addons.end = {
 					content: (
-						<div className="flex items-center space-x-3 text-theme-primary-300 dark:text-theme-secondary-600">
+						<div className="flex items-center space-x-3 bg-transparent text-theme-secondary-700 hover:text-theme-primary-700 dark:text-theme-secondary-600 p-1 rounded hover:bg-theme-primary-100 dark:hover:text-white dark:hover:bg-theme-secondary-700 transition-colors">
 							<Icon name="User" size="lg" />
 						</div>
 					),
