@@ -469,7 +469,7 @@ export const ButtonsCell: React.VFC<ButtonsCellProperties> = ({ wallet, onSend, 
 							variant="transparent"
 							size="icon"
 							disabled={isRestoring}
-							className="text-theme-gray-700 ml-3 hover:text-theme-primary-700 h-6 w-6 rounded-[4px] bg-transparent hover:bg-theme-primary-200 dark:hover:text-white dark:hover:bg-theme-secondary-800"
+							className="text-theme-gray-700 ml-3 hover:text-theme-primary-700 h-6 w-6 rounded bg-transparent hover:bg-theme-primary-200 dark:hover:text-white dark:hover:bg-theme-secondary-800"
 						>
 							<Icon name="EllipsisVerticalFilled" size="md" />
 						</Button>
