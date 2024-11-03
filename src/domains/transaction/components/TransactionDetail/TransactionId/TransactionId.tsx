@@ -55,7 +55,7 @@ export const TransactionId = ({ transaction, isConfirmed }: Properties): ReactEl
 					icon="ArrowExternal"
 					variant="secondary"
 					size="icon"
-					className="border border-theme-secondary-300 bg-transparent p-2 hover:border-transparent dark:border-transparent dark:bg-theme-secondary-800"
+					className="border border-theme-secondary-300 bg-transparent p-2 hover:border-transparent dark:border-theme-secondary-800 dark:bg-transparent h-8 w-8 dark:hover:border-theme-primary-500"
 					disabled={[!isConfirmed, !transaction.isConfirmed()].every(Boolean)}
 					onClick={() => {
 						openExternal(transaction.explorerLink());
