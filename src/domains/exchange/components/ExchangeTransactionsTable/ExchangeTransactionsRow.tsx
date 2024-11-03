@@ -202,7 +202,7 @@ export const ExchangeTransactionsRow = ({
 				variant="end"
 				innerClassName="items-start xl:items-center justify-end text-theme-secondary-text my-3 xl:my-0"
 			>
-				<TableRemoveButton onClick={handleRemove} css={tw`pt-0 xl:pt-3`} />
+				<TableRemoveButton onClick={handleRemove} css={tw`mt-0 p-1`} />
 			</TableCell>
 		</TableRow>
 	);
