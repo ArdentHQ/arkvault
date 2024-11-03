@@ -277,7 +277,10 @@ export const DelegateRow = ({
 
 			<TableCell
 				className="hidden sm:table-cell"
-				innerClassName={cn("justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0", rowColor)}
+				innerClassName={cn(
+					"justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0",
+					rowColor,
+				)}
 			>
 				{isActive ? (
 					<Tooltip content={t("VOTE.DELEGATE_TABLE.TOOLTIP.DELEGATE_IN_FORGING_POSITION")}>
@@ -305,7 +308,7 @@ export const DelegateRow = ({
 					to={delegate.explorerLink()}
 					tooltip={t("COMMON.OPEN_IN_EXPLORER")}
 					isExternal
-					className="w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700 group"
+					className="group w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700"
 				>
 					<span className="group-hover:underline">{t("COMMON.VIEW")}</span>
 				</Link>
@@ -331,7 +334,10 @@ export const DelegateRow = ({
 			<TableCell
 				variant="end"
 				className="w-30 min-w-32"
-				innerClassName={cn("justify-end pr-3 mr-3 border-2 border-l-0 border-transparent h-9 min-h-9", rowColor)}
+				innerClassName={cn(
+					"justify-end pr-3 mr-3 border-2 border-l-0 border-transparent h-9 min-h-9",
+					rowColor,
+				)}
 			>
 				<div className="-mr-0.5 leading-[17px]">{renderButton()}</div>
 			</TableCell>

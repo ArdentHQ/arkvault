@@ -29,9 +29,9 @@ const StarredHeader = ({ active, onClick }: { active: boolean; onClick: () => vo
 					onClick={onClick}
 				>
 					<Icon
-						className={cn("transition-all ease-in-out duration-300",{
+						className={cn("transition-all duration-300 ease-in-out", {
 							"fill-theme-warning-400 stroke-theme-warning-400 text-theme-warning-400": active,
-							"fill-transparent hover:fill-theme-warning-200 stroke-theme-warning-400": !active,
+							"fill-transparent stroke-theme-warning-400 hover:fill-theme-warning-200": !active,
 						})}
 						name={"StarFilled"}
 						dimensions={[18, 18]}

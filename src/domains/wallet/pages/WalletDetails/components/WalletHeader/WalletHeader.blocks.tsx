@@ -244,7 +244,7 @@ export const WalletActions: VFC<WalletActionsProperties> = ({
 					>
 						<Icon
 							name="ArrowRotateLeft"
-							className={cn("hover:text-theme-secondary-200",{ "animate-spin": isSyncing })}
+							className={cn("hover:text-theme-secondary-200", { "animate-spin": isSyncing })}
 							style={{ animationDirection: "reverse" }}
 						/>
 					</WalletHeaderButton>
@@ -264,9 +264,10 @@ export const WalletActions: VFC<WalletActionsProperties> = ({
 						onClick={handleToggleStar}
 					>
 						<Icon
-							className={cn("transition-all ease-in-out duration-300",{
+							className={cn("transition-all duration-300 ease-in-out", {
 								"fill-theme-warning-400 stroke-theme-warning-400": wallet.isStarred(),
-								"fill-transparent stroke-theme-secondary-700 dark:stroke-theme-secondary-600 hover:fill-theme-warning-200 hover:stroke-theme-warning-400 dark:hover:stroke-theme-warning-400": !wallet.isStarred(),
+								"fill-transparent stroke-theme-secondary-700 hover:fill-theme-warning-200 hover:stroke-theme-warning-400 dark:stroke-theme-secondary-600 dark:hover:stroke-theme-warning-400":
+									!wallet.isStarred(),
 							})}
 							name={"StarFilled"}
 						/>

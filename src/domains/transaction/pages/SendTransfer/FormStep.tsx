@@ -142,10 +142,7 @@ export const FormStep = ({
 								onClick={onScan}
 								data-testid="QRCodeModalButton"
 							>
-								<Icon
-									size="lg"
-									name="QRCode"
-								/>
+								<Icon size="lg" name="QRCode" />
 								<span className="text-base font-semibold leading-5">
 									{t("TRANSACTION.PAGE_TRANSACTION_SEND.FORM_STEP.SCAN")}
 								</span>

@@ -9,7 +9,6 @@ import { Icon } from "@/app/components/Icon";
 import { useLink } from "@/app/hooks/use-link";
 import { AddressLabel } from "@/app/components/Address";
 import { getStyles } from "@/app/components/Button/Button.styles";
-import cn from "classnames";
 import { twMerge } from "tailwind-merge";
 
 interface Properties {
@@ -55,7 +54,7 @@ export const TransactionId = ({ transaction, isConfirmed }: Properties): ReactEl
 					icon="ArrowExternal"
 					variant="secondary"
 					size="icon"
-					className="border border-theme-secondary-300 bg-transparent p-2 hover:border-transparent dark:border-theme-secondary-800 dark:bg-transparent h-8 w-8 dark:hover:border-theme-primary-500"
+					className="h-8 w-8 border border-theme-secondary-300 bg-transparent p-2 hover:border-transparent dark:border-theme-secondary-800 dark:bg-transparent dark:hover:border-theme-primary-500"
 					disabled={[!isConfirmed, !transaction.isConfirmed()].every(Boolean)}
 					onClick={() => {
 						openExternal(transaction.explorerLink());

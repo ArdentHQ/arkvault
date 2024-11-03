@@ -44,9 +44,9 @@ export const Starred: React.VFC<StarredProperties> = ({ wallet, onToggleStar, is
 				className="flex shrink-0 items-center justify-center"
 			>
 				<Icon
-					className={cn("transition-all ease-in-out duration-300",{
+					className={cn("transition-all duration-300 ease-in-out", {
 						"fill-theme-warning-400 stroke-theme-warning-400": wallet.isStarred(),
-						"fill-transparent hover:fill-theme-warning-200 stroke-theme-warning-400": !wallet.isStarred(),
+						"fill-transparent stroke-theme-warning-400 hover:fill-theme-warning-200": !wallet.isStarred(),
 					})}
 					name={"StarFilled"}
 					dimensions={starIconDimensions}
@@ -71,9 +71,10 @@ export const Starred: React.VFC<StarredProperties> = ({ wallet, onToggleStar, is
 						className="flex shrink-0 items-center justify-center"
 					>
 						<Icon
-							className={cn("transition-all ease-in-out duration-300",{
+							className={cn("transition-all duration-300 ease-in-out", {
 								"fill-theme-warning-400 stroke-theme-warning-400": wallet.isStarred(),
-								"fill-transparent hover:fill-theme-warning-200 stroke-theme-warning-400": !wallet.isStarred(),
+								"fill-transparent stroke-theme-warning-400 hover:fill-theme-warning-200":
+									!wallet.isStarred(),
 							})}
 							name={"StarFilled"}
 							dimensions={starIconDimensions}
@@ -454,13 +455,11 @@ export const ButtonsCell: React.VFC<ButtonsCellProperties> = ({ wallet, onSend, 
 						className="pr-0 text-sm text-theme-primary-600 hover:text-theme-primary-700 hover:underline dark:hover:text-theme-primary-500"
 						onClick={onSend}
 					>
-						<div className="pr-3">
-							{t("COMMON.SEND")}
-						</div>
+						<div className="pr-3">{t("COMMON.SEND")}</div>
 					</Button>
 				</div>
 			</Tooltip>
-			<div className="w-px h-4 bg-theme-secondary-300 dark:bg-theme-secondary-800"></div>
+			<div className="h-4 w-px bg-theme-secondary-300 dark:bg-theme-secondary-800" />
 			<div data-testid="WalletListItem__more-button">
 				<Dropdown
 					placement="bottom-end"
@@ -469,7 +468,7 @@ export const ButtonsCell: React.VFC<ButtonsCellProperties> = ({ wallet, onSend, 
 							variant="transparent"
 							size="icon"
 							disabled={isRestoring}
-							className="text-theme-gray-700 ml-3 hover:text-theme-primary-700 h-6 w-6 rounded bg-transparent hover:bg-theme-primary-200 dark:hover:text-white dark:hover:bg-theme-secondary-800"
+							className="text-theme-gray-700 ml-3 h-6 w-6 rounded bg-transparent hover:bg-theme-primary-200 hover:text-theme-primary-700 dark:hover:bg-theme-secondary-800 dark:hover:text-white"
 						>
 							<Icon name="EllipsisVerticalFilled" size="md" />
 						</Button>
