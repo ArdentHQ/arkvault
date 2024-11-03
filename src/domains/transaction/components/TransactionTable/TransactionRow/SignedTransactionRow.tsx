@@ -71,7 +71,7 @@ export const SignButton = ({
 			size="sm"
 			data-testid="TransactionRow__sign"
 			variant="transparent"
-			className={`p-0 text-theme-primary-600 hover:text-theme-primary-700 ${className}`}
+			className={`p-0 text-theme-primary-600 hover:text-theme-primary-500 hover:underline ${className}`}
 			onClick={onClick}
 		>
 			<ButtonContent />
@@ -197,7 +197,7 @@ export const SignedTransactionRow = ({
 						}
 					>
 						<div className="flex items-center">
-							<TableRemoveButton isDisabled={!canBeDeleted} onClick={handleRemove} className="m-0 p-0" />
+							<TableRemoveButton isDisabled={!canBeDeleted} onClick={handleRemove} className="m-0 p-1" />
 						</div>
 					</Tooltip>
 				</div>
