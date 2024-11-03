@@ -209,7 +209,7 @@ export const SelectRecipient = React.forwardRef<HTMLInputElement, SelectRecipien
 										content: (
 											<div
 												data-testid="SelectRecipient__select-recipient"
-												className={cn("flex items-center", { "cursor-pointer": !disabled })}
+												className={cn("flex items-center", { "cursor-pointer bg-transparent text-theme-secondary-700 hover:text-theme-primary-700 dark:text-theme-secondary-600 p-1 rounded hover:bg-theme-primary-100 dark:hover:text-white dark:hover:bg-theme-secondary-700 transition-colors": !disabled })}
 												onClick={openRecipients}
 											>
 												<Icon name="User" size="lg" />
