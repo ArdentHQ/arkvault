@@ -21,7 +21,7 @@ const AnchorStyled = styled.a<{ isDisabled?: boolean }>(({ isDisabled }) => {
 	if (isDisabled) {
 		styles.push(tw`text-theme-secondary-text cursor-not-allowed`);
 	} else {
-		styles.push(tw`text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400`);
+		styles.push(tw`text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500`);
 	}
 
 	return styles;
@@ -76,6 +76,7 @@ const Anchor = React.forwardRef<HTMLAnchorElement, AnchorProperties>(
 				<Icon
 					data-testid="Link__external"
 					name="ArrowExternal"
+					dimensions={[12,12]}
 					className={cn("mb-[3px] shrink-0 align-middle duration-200", { "inline-block text-sm": children })}
 				/>
 			)}
