@@ -4,7 +4,7 @@ import { SerializedStyles } from "@emotion/react";
 
 type TableRowFunction = (event: React.MouseEvent<HTMLTableRowElement, MouseEvent>) => void;
 
-const baseStyle = tw`transition-colors duration-100 bg-theme-background`;
+const baseStyle = tw`transition-colors duration-100`;
 
 const getCursorStyles = (onClick?: TableRowFunction) => onClick && tw`cursor-pointer`;
 
