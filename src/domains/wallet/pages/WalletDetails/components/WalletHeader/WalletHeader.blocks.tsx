@@ -283,7 +283,7 @@ export const WalletActions: VFC<WalletActionsProperties> = ({
 							!wallet.hasSyncedWithNetwork() ||
 							!isLedgerWalletCompatible(wallet)
 						}
-						className="my-auto ml-3"
+						className="my-auto ml-3 hover:bg-theme-primary-500"
 						theme="dark"
 						onClick={handleSend}
 					>
