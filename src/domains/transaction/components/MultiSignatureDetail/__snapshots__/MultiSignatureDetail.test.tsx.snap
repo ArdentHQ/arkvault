@@ -15,7 +15,7 @@ exports[`MultiSignatureDetail > should not broadcast if wallet is not ready to d
         data-testid="Modal__inner"
       >
         <div
-          class="absolute right-0 top-0 z-10 mr-6 mt-4 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 md:mr-8 md:mt-8"
+          class="absolute right-0 top-0 z-10 mr-6 mt-4 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-800 hover:text-white green:hover:bg-theme-primary-700 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 dark:hover:text-white md:mr-8 md:mt-8"
         >
           <button
             class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-8 w-8"
@@ -115,11 +115,7 @@ exports[`MultiSignatureDetail > should not broadcast if wallet is not ready to d
                             class="mt-4 flex items-center space-x-2 sm:mr-4 sm:mt-0"
                           >
                             <button
-                              class="ring-focus relative focus:outline-none p-2 space-x-0 px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200
-					bg-theme-primary-100 text-theme-primary-600
-					hover:bg-theme-primary-700 hover:text-white
-					dark:hover:bg-theme-primary-700
-				"
+                              class="ring-focus relative focus:outline-none text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 green:hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-500 space-x-0 p-2"
                               data-ring-focus-margin="-m-1"
                               data-testid="clipboard-icon__wrapper"
                               type="button"
@@ -160,7 +156,7 @@ exports[`MultiSignatureDetail > should not broadcast if wallet is not ready to d
                               </span>
                             </button>
                             <button
-                              class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 border border-theme-secondary-300 bg-transparent p-2 hover:border-transparent dark:border-transparent dark:bg-theme-secondary-800"
+                              class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 h-8 w-8 border border-theme-secondary-300 bg-transparent p-2 hover:border-transparent dark:border-theme-secondary-800 dark:bg-transparent dark:hover:border-theme-primary-500"
                               data-testid="explorer-link"
                               disabled=""
                               type="button"
@@ -267,7 +263,7 @@ exports[`MultiSignatureDetail > should not broadcast if wallet is not ready to d
                                       type="button"
                                     >
                                       <div
-                                        class="text-theme-primary-400 dark:text-theme-secondary-700 dark:hover:text-theme-secondary-500 css-v0ob3f"
+                                        class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white css-v0ob3f"
                                         height="16"
                                         width="16"
                                       >
@@ -352,7 +348,7 @@ exports[`MultiSignatureDetail > should not broadcast if wallet is not ready to d
                                       type="button"
                                     >
                                       <div
-                                        class="text-theme-primary-400 dark:text-theme-secondary-700 dark:hover:text-theme-secondary-500 css-v0ob3f"
+                                        class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white css-v0ob3f"
                                         height="16"
                                         width="16"
                                       >
@@ -887,12 +883,12 @@ exports[`MultiSignatureDetail > should not broadcast if wallet is not ready to d
                                       role="rowgroup"
                                     >
                                       <tr
-                                        class="group relative max-md:!border-transparent css-1x4z4cy"
+                                        class="group relative max-md:!border-transparent css-16ynu5g"
                                         data-testid="TableRow"
                                       >
                                         <td>
                                           <div
-                                            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l text-sm font-semibold justify-between sm:justify-start max-sm:bg-theme-secondary-100 max-sm:dark:bg-black max-sm:m-3 max-sm:mb-0 max-sm:px-4 max-sm:py-3 max-sm:border max-sm:rounded-md max-sm:border-theme-secondary-300 max-sm:dark:border-theme-secondary-800"
+                                            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l dark:group-hover:bg-black text-sm font-semibold justify-between sm:justify-start max-sm:bg-theme-secondary-100 max-sm:dark:bg-black max-sm:m-3 max-sm:mb-0 max-sm:px-4 max-sm:py-3 max-sm:border max-sm:rounded-md max-sm:border-theme-secondary-300 max-sm:dark:border-theme-secondary-800"
                                           >
                                             <div
                                               class="flex w-full space-x-2"
@@ -991,7 +987,7 @@ exports[`MultiSignatureDetail > should not broadcast if wallet is not ready to d
                                         </td>
                                         <td>
                                           <div
-                                            class="px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r flex justify-end max-sm:hidden"
+                                            class="px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r dark:group-hover:bg-black flex justify-end max-sm:hidden"
                                           >
                                             <div
                                               class="relative"
@@ -1037,12 +1033,12 @@ exports[`MultiSignatureDetail > should not broadcast if wallet is not ready to d
                                         </td>
                                       </tr>
                                       <tr
-                                        class="group relative max-md:!border-transparent css-1x4z4cy"
+                                        class="group relative max-md:!border-transparent css-16ynu5g"
                                         data-testid="TableRow"
                                       >
                                         <td>
                                           <div
-                                            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l text-sm font-semibold justify-between sm:justify-start max-sm:bg-theme-secondary-100 max-sm:dark:bg-black max-sm:m-3 max-sm:mb-0 max-sm:px-4 max-sm:py-3 max-sm:border max-sm:rounded-md max-sm:border-theme-secondary-300 max-sm:dark:border-theme-secondary-800"
+                                            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l dark:group-hover:bg-black text-sm font-semibold justify-between sm:justify-start max-sm:bg-theme-secondary-100 max-sm:dark:bg-black max-sm:m-3 max-sm:mb-0 max-sm:px-4 max-sm:py-3 max-sm:border max-sm:rounded-md max-sm:border-theme-secondary-300 max-sm:dark:border-theme-secondary-800"
                                           >
                                             <div
                                               class="flex w-full space-x-2"
@@ -1141,7 +1137,7 @@ exports[`MultiSignatureDetail > should not broadcast if wallet is not ready to d
                                         </td>
                                         <td>
                                           <div
-                                            class="px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r flex justify-end max-sm:hidden"
+                                            class="px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r dark:group-hover:bg-black flex justify-end max-sm:hidden"
                                           >
                                             <div
                                               class="relative"
@@ -1201,7 +1197,7 @@ exports[`MultiSignatureDetail > should not broadcast if wallet is not ready to d
                   class="mt-8 flex justify-end space-x-3"
                 >
                   <button
-                    class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-700"
+                    class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 green:hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-500"
                     data-testid="Paginator__cancel"
                     type="button"
                   >
@@ -1212,7 +1208,7 @@ exports[`MultiSignatureDetail > should not broadcast if wallet is not ready to d
                     </div>
                   </button>
                   <button
-                    class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 hover:bg-theme-primary-700"
+                    class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 green:hover:bg-theme-primary-700 navy:hover:bg-theme-primary-800 dark:hover:bg-theme-primary-500"
                     data-testid="MultiSignatureDetail__broadcast"
                     type="button"
                   >
@@ -1248,7 +1244,7 @@ exports[`MultiSignatureDetail > should show error screen for unsupported Nano S 
         data-testid="Modal__inner"
       >
         <div
-          class="absolute right-0 top-0 z-10 mr-6 mt-4 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 md:mr-8 md:mt-8"
+          class="absolute right-0 top-0 z-10 mr-6 mt-4 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-800 hover:text-white green:hover:bg-theme-primary-700 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 dark:hover:text-white md:mr-8 md:mt-8"
         >
           <button
             class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-8 w-8"
@@ -1507,7 +1503,7 @@ exports[`MultiSignatureDetail > should show error screen for unsupported Nano S 
                   class="mt-8 flex justify-end space-x-3"
                 >
                   <button
-                    class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-700"
+                    class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 green:hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-500"
                     data-testid="Paginator__back"
                     type="button"
                   >
@@ -1570,7 +1566,7 @@ exports[`MultiSignatureDetail > should sign transaction after authentication pag
         data-testid="Modal__inner"
       >
         <div
-          class="absolute right-0 top-0 z-10 mr-6 mt-4 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 md:mr-8 md:mt-8"
+          class="absolute right-0 top-0 z-10 mr-6 mt-4 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-800 hover:text-white green:hover:bg-theme-primary-700 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 dark:hover:text-white md:mr-8 md:mt-8"
         >
           <button
             class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-8 w-8"
@@ -1718,12 +1714,12 @@ exports[`MultiSignatureDetail > should sign transaction after authentication pag
                                 role="rowgroup"
                               >
                                 <tr
-                                  class="group relative max-md:!border-transparent css-1x4z4cy"
+                                  class="group relative max-md:!border-transparent css-16ynu5g"
                                   data-testid="TableRow"
                                 >
                                   <td>
                                     <div
-                                      class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l text-sm font-semibold justify-between sm:justify-start max-sm:bg-theme-secondary-100 max-sm:dark:bg-black max-sm:m-3 max-sm:mb-0 max-sm:px-4 max-sm:py-3 max-sm:border max-sm:rounded-md max-sm:border-theme-secondary-300 max-sm:dark:border-theme-secondary-800"
+                                      class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l dark:group-hover:bg-black text-sm font-semibold justify-between sm:justify-start max-sm:bg-theme-secondary-100 max-sm:dark:bg-black max-sm:m-3 max-sm:mb-0 max-sm:px-4 max-sm:py-3 max-sm:border max-sm:rounded-md max-sm:border-theme-secondary-300 max-sm:dark:border-theme-secondary-800"
                                     >
                                       <div
                                         class="flex w-full space-x-2"
@@ -1822,7 +1818,7 @@ exports[`MultiSignatureDetail > should sign transaction after authentication pag
                                   </td>
                                   <td>
                                     <div
-                                      class="px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r flex justify-end max-sm:hidden"
+                                      class="px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r dark:group-hover:bg-black flex justify-end max-sm:hidden"
                                     >
                                       <div
                                         class="relative"
@@ -1868,12 +1864,12 @@ exports[`MultiSignatureDetail > should sign transaction after authentication pag
                                   </td>
                                 </tr>
                                 <tr
-                                  class="group relative max-md:!border-transparent css-1x4z4cy"
+                                  class="group relative max-md:!border-transparent css-16ynu5g"
                                   data-testid="TableRow"
                                 >
                                   <td>
                                     <div
-                                      class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l text-sm font-semibold justify-between sm:justify-start max-sm:bg-theme-secondary-100 max-sm:dark:bg-black max-sm:m-3 max-sm:mb-0 max-sm:px-4 max-sm:py-3 max-sm:border max-sm:rounded-md max-sm:border-theme-secondary-300 max-sm:dark:border-theme-secondary-800"
+                                      class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l dark:group-hover:bg-black text-sm font-semibold justify-between sm:justify-start max-sm:bg-theme-secondary-100 max-sm:dark:bg-black max-sm:m-3 max-sm:mb-0 max-sm:px-4 max-sm:py-3 max-sm:border max-sm:rounded-md max-sm:border-theme-secondary-300 max-sm:dark:border-theme-secondary-800"
                                     >
                                       <div
                                         class="flex w-full space-x-2"
@@ -1972,7 +1968,7 @@ exports[`MultiSignatureDetail > should sign transaction after authentication pag
                                   </td>
                                   <td>
                                     <div
-                                      class="px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r flex justify-end max-sm:hidden"
+                                      class="px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r dark:group-hover:bg-black flex justify-end max-sm:hidden"
                                     >
                                       <div
                                         class="relative"
@@ -2050,7 +2046,7 @@ exports[`MultiSignatureDetail > should sign transaction with a ledger wallet 1`]
         data-testid="Modal__inner"
       >
         <div
-          class="absolute right-0 top-0 z-10 mr-6 mt-4 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 md:mr-8 md:mt-8"
+          class="absolute right-0 top-0 z-10 mr-6 mt-4 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-800 hover:text-white green:hover:bg-theme-primary-700 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 dark:hover:text-white md:mr-8 md:mt-8"
         >
           <button
             class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-8 w-8"
@@ -2198,12 +2194,12 @@ exports[`MultiSignatureDetail > should sign transaction with a ledger wallet 1`]
                                 role="rowgroup"
                               >
                                 <tr
-                                  class="group relative max-md:!border-transparent css-1x4z4cy"
+                                  class="group relative max-md:!border-transparent css-16ynu5g"
                                   data-testid="TableRow"
                                 >
                                   <td>
                                     <div
-                                      class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l text-sm font-semibold justify-between sm:justify-start max-sm:bg-theme-secondary-100 max-sm:dark:bg-black max-sm:m-3 max-sm:mb-0 max-sm:px-4 max-sm:py-3 max-sm:border max-sm:rounded-md max-sm:border-theme-secondary-300 max-sm:dark:border-theme-secondary-800"
+                                      class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l dark:group-hover:bg-black text-sm font-semibold justify-between sm:justify-start max-sm:bg-theme-secondary-100 max-sm:dark:bg-black max-sm:m-3 max-sm:mb-0 max-sm:px-4 max-sm:py-3 max-sm:border max-sm:rounded-md max-sm:border-theme-secondary-300 max-sm:dark:border-theme-secondary-800"
                                     >
                                       <div
                                         class="flex w-full space-x-2"
@@ -2302,7 +2298,7 @@ exports[`MultiSignatureDetail > should sign transaction with a ledger wallet 1`]
                                   </td>
                                   <td>
                                     <div
-                                      class="px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r flex justify-end max-sm:hidden"
+                                      class="px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r dark:group-hover:bg-black flex justify-end max-sm:hidden"
                                     >
                                       <div
                                         class="relative"
@@ -2348,12 +2344,12 @@ exports[`MultiSignatureDetail > should sign transaction with a ledger wallet 1`]
                                   </td>
                                 </tr>
                                 <tr
-                                  class="group relative max-md:!border-transparent css-1x4z4cy"
+                                  class="group relative max-md:!border-transparent css-16ynu5g"
                                   data-testid="TableRow"
                                 >
                                   <td>
                                     <div
-                                      class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l text-sm font-semibold justify-between sm:justify-start max-sm:bg-theme-secondary-100 max-sm:dark:bg-black max-sm:m-3 max-sm:mb-0 max-sm:px-4 max-sm:py-3 max-sm:border max-sm:rounded-md max-sm:border-theme-secondary-300 max-sm:dark:border-theme-secondary-800"
+                                      class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l dark:group-hover:bg-black text-sm font-semibold justify-between sm:justify-start max-sm:bg-theme-secondary-100 max-sm:dark:bg-black max-sm:m-3 max-sm:mb-0 max-sm:px-4 max-sm:py-3 max-sm:border max-sm:rounded-md max-sm:border-theme-secondary-300 max-sm:dark:border-theme-secondary-800"
                                     >
                                       <div
                                         class="flex w-full space-x-2"
@@ -2452,7 +2448,7 @@ exports[`MultiSignatureDetail > should sign transaction with a ledger wallet 1`]
                                   </td>
                                   <td>
                                     <div
-                                      class="px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r flex justify-end max-sm:hidden"
+                                      class="px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r dark:group-hover:bg-black flex justify-end max-sm:hidden"
                                     >
                                       <div
                                         class="relative"

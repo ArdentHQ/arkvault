@@ -1,1037 +1,5 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`WalletsList > should group starred wallets at the top 1`] = `
-<DocumentFragment>
-  <div
-    class="px-6 pb-4 md:p-0"
-    data-testid="WalletsList"
-  >
-    <div
-      data-testid="WalletTable"
-    >
-      <div
-        class="with-x-padding after:mx-[0.15rem] after:block after:h-[5px] after:rounded-b-lg after:bg-theme-primary-100 after:content-[''] after:dark:bg-theme-secondary-800 css-1m6rt2i"
-        role="table"
-      >
-        <table
-          cellpadding="0"
-          class="w-full table-auto"
-        >
-          <thead>
-            <tr
-              role="row"
-            >
-              <th
-                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 no-border first:pl-4 md:first:pl-6 w-1 min-w-1"
-                colspan="1"
-                data-testid="table__th--0"
-                role="columnheader"
-              >
-                <div
-                  class="flex flex-inline align-top"
-                >
-                  <div
-                    class=""
-                  >
-                    <div
-                      class="py-0.5 pr-3"
-                    >
-                      <button
-                        class="flex shrink-0 cursor-pointer items-center justify-center rounded ring-theme-primary-400 ring-offset-theme-background focus:outline-none focus:ring-2 focus:ring-offset-8"
-                        data-testid="WalletIcon__Starred__header"
-                        type="button"
-                      >
-                        <div
-                          class="text-theme-warning-400 css-tuuiwl"
-                          height="18"
-                          width="18"
-                        >
-                          <svg
-                            id="star-filled"
-                            viewBox="0 0 20 20"
-                            x="0"
-                            xml:space="preserve"
-                            xmlns="http://www.w3.org/2000/svg"
-                            y="0"
-                          >
-                            <path
-                              d="M10.558 1.411l2.711 5.273 5.12.497c.603.1.804.697.402 1.094l-4.217 4.179 1.607 5.67c.1.498-.402 1.094-1.004.796l-5.221-2.686-5.12 2.587c-.302.198-1.105-.1-.904-.796l1.606-5.77-4.317-3.98c-.3-.397-.401-.994.402-1.094l5.12-.497L9.454 1.41c.301-.597.803-.497 1.104 0h0z"
-                              fill="currentColor"
-                              stroke="currentColor"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              stroke-width="2"
-                            />
-                          </svg>
-                        </div>
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </th>
-              <th
-                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 no-border hidden lg:table-cell first:rounded-tl-xl last:rounded-tr-xl"
-                colspan="1"
-                data-testid="table__th--1"
-                role="columnheader"
-                style="cursor: pointer;"
-                title="Toggle SortBy"
-              >
-                <div
-                  class="flex flex-inline align-top -ml-3"
-                >
-                  <div
-                    class=""
-                  >
-                    Name
-                  </div>
-                  <div
-                    class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
-                  >
-                    <div
-                      class="transition-transform rotate-180 css-15txs7d"
-                      height="10"
-                      role="img"
-                      width="10"
-                    >
-                      <svg
-                        id="chevron-down-small"
-                        viewBox="0 0 10 10"
-                        x="0"
-                        xml:space="preserve"
-                        xmlns="http://www.w3.org/2000/svg"
-                        y="0"
-                      >
-                        <path
-                          d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                        />
-                      </svg>
-                    </div>
-                  </div>
-                </div>
-              </th>
-              <th
-                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 no-border first:rounded-tl-xl last:rounded-tr-xl"
-                colspan="1"
-                data-testid="table__th--2"
-                role="columnheader"
-                style="cursor: pointer;"
-                title="Toggle SortBy"
-              >
-                <div
-                  class="flex flex-inline align-top -ml-3"
-                >
-                  <div
-                    class=""
-                  >
-                    Address
-                  </div>
-                  <div
-                    class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity ml-2"
-                  >
-                    <div
-                      class="transition-transform rotate-180 css-15txs7d"
-                      height="10"
-                      role="img"
-                      width="10"
-                    >
-                      <svg
-                        id="chevron-down-small"
-                        viewBox="0 0 10 10"
-                        x="0"
-                        xml:space="preserve"
-                        xmlns="http://www.w3.org/2000/svg"
-                        y="0"
-                      >
-                        <path
-                          d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                        />
-                      </svg>
-                    </div>
-                  </div>
-                </div>
-              </th>
-              <th
-                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 no-border first:rounded-tl-xl last:rounded-tr-xl w-36 min-w-36"
-                colspan="1"
-                data-testid="table__th--3"
-                role="columnheader"
-              >
-                <div
-                  class="flex flex-inline align-top justify-center"
-                >
-                  <div
-                    class=""
-                  >
-                    Info
-                  </div>
-                </div>
-              </th>
-              <th
-                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 no-border first:rounded-tl-xl last:rounded-tr-xl w-40 min-w-40"
-                colspan="1"
-                data-testid="table__th--4"
-                role="columnheader"
-                style="cursor: pointer;"
-                title="Toggle SortBy"
-              >
-                <div
-                  class="flex flex-inline align-top flex-row-reverse justify-end flex-row-reverse"
-                >
-                  <div
-                    class=""
-                  >
-                    Balance
-                  </div>
-                  <div
-                    class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-auto mr-2"
-                  >
-                    <div
-                      class="transition-transform rotate-180 css-15txs7d"
-                      height="10"
-                      role="img"
-                      width="10"
-                    >
-                      <svg
-                        id="chevron-down-small"
-                        viewBox="0 0 10 10"
-                        x="0"
-                        xml:space="preserve"
-                        xmlns="http://www.w3.org/2000/svg"
-                        y="0"
-                      >
-                        <path
-                          d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                        />
-                      </svg>
-                    </div>
-                  </div>
-                </div>
-              </th>
-              <th
-                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 hidden lg:table-cell no-border first:rounded-tl-xl last:rounded-tr-xl w-32 min-w-32"
-                colspan="1"
-                data-testid="table__th--5"
-                role="columnheader"
-                style="cursor: pointer;"
-                title="Toggle SortBy"
-              >
-                <div
-                  class="flex flex-inline align-top justify-end flex-row-reverse"
-                >
-                  <div
-                    class=""
-                  >
-                    Currency
-                  </div>
-                  <div
-                    class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-auto mr-2"
-                  >
-                    <div
-                      class="transition-transform rotate-180 css-15txs7d"
-                      height="10"
-                      role="img"
-                      width="10"
-                    >
-                      <svg
-                        id="chevron-down-small"
-                        viewBox="0 0 10 10"
-                        x="0"
-                        xml:space="preserve"
-                        xmlns="http://www.w3.org/2000/svg"
-                        y="0"
-                      >
-                        <path
-                          d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                        />
-                      </svg>
-                    </div>
-                  </div>
-                </div>
-              </th>
-              <th
-                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 no-border w-1"
-                colspan="1"
-                data-testid="table__th--6"
-                role="columnheader"
-              >
-                <div
-                  class="flex flex-inline align-top hidden"
-                >
-                  <div
-                    class=""
-                  >
-                    Actions
-                  </div>
-                </div>
-              </th>
-            </tr>
-          </thead>
-          <tbody
-            role="rowgroup"
-          >
-            <tr
-              class="group relative css-1d424e8"
-              data-testid="TableRow"
-            >
-              <td
-                data-testid="TableCell_Starred"
-              >
-                <div
-                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 rounded-l space-x-3 pl-6 ml-0"
-                >
-                  <div
-                    class="flex h-5 items-center pr-3 dark:border-theme-secondary-800"
-                  >
-                    <div
-                      class="flex shrink-0 items-center justify-center"
-                      data-testid="WalletIcon__Starred"
-                    >
-                      <div
-                        class="text-theme-warning-400 css-tuuiwl"
-                        height="18"
-                        width="18"
-                      >
-                        <svg
-                          id="star-filled"
-                          viewBox="0 0 20 20"
-                          x="0"
-                          xml:space="preserve"
-                          xmlns="http://www.w3.org/2000/svg"
-                          y="0"
-                        >
-                          <path
-                            d="M10.558 1.411l2.711 5.273 5.12.497c.603.1.804.697.402 1.094l-4.217 4.179 1.607 5.67c.1.498-.402 1.094-1.004.796l-5.221-2.686-5.12 2.587c-.302.198-1.105-.1-.904-.796l1.606-5.77-4.317-3.98c-.3-.397-.401-.994.402-1.094l5.12-.497L9.454 1.41c.301-.597.803-.497 1.104 0h0z"
-                            fill="currentColor"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                          />
-                        </svg>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </td>
-              <td
-                class="hidden lg:table-cell"
-              >
-                <div
-                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 -ml-3 space-x-3"
-                >
-                  <div
-                    class="w-24 flex-1 overflow-hidden"
-                  >
-                    <div
-                      class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
-                    >
-                      <span
-                        class="font-semibold text-base text-sm leading-[17px]"
-                        data-testid="Address__alias"
-                      >
-                        <span
-                          class="no-ligatures css-9nx3be"
-                          data-testid="TruncateEnd"
-                        >
-                          ARK Wallet 2
-                        </span>
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              </td>
-              <td
-                data-testid="TableCell_Wallet"
-              >
-                <div
-                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 -ml-3 space-x-3"
-                >
-                  <div
-                    class="w-full max-w-64 flex-1 overflow-hidden md:max-w-40 lg:max-w-48 xl:max-w-full"
-                  >
-                    <div
-                      class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-between"
-                    >
-                      <span
-                        class="font-semibold text-base lg:hidden text-sm text-theme-text group-hover:text-theme-primary-700"
-                        data-testid="Address__alias"
-                      >
-                        <span
-                          class="no-ligatures css-9nx3be"
-                          data-testid="TruncateEnd"
-                        >
-                          ARK Wallet 2
-                        </span>
-                      </span>
-                      <span
-                        class="no-ligatures min-w-0 overflow-hidden text-sm text-theme-secondary-700 dark:text-theme-secondary-500 lg:!ml-0 font-semibold text-base"
-                        data-testid="Address__address"
-                      >
-                        D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
-                      </span>
-                      <button
-                        class="ring-focus relative focus:outline-none"
-                        data-ring-focus-margin="-m-1"
-                        data-testid="clipboard-icon__wrapper"
-                        type="button"
-                      >
-                        <div
-                          class="text-theme-primary-400 dark:text-theme-secondary-700 dark:hover:text-theme-secondary-500 css-v0ob3f"
-                          height="16"
-                          width="16"
-                        >
-                          <svg
-                            id="copy"
-                            viewBox="0 0 20 20"
-                            x="0"
-                            xml:space="preserve"
-                            xmlns="http://www.w3.org/2000/svg"
-                            y="0"
-                          >
-                            <g
-                              fill="none"
-                              stroke="currentColor"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              stroke-width="2"
-                            >
-                              <path
-                                d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
-                              />
-                              <path
-                                d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                              />
-                            </g>
-                          </svg>
-                        </div>
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </td>
-              <td>
-                <div
-                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 justify-center text-sm font-bold text-center align-middle"
-                >
-                  <div
-                    class="inline-flex items-center space-x-1"
-                  >
-                    <div
-                      class="inline-block p-1 text-theme-secondary-700"
-                      data-testid="WalletIcon__SecondSignature"
-                    >
-                      <div
-                        class="css-1i4b0eq"
-                        height="20"
-                        width="20"
-                      >
-                        <svg
-                          id="second-signature"
-                          viewBox="0 0 20 20"
-                          x="0"
-                          xml:space="preserve"
-                          xmlns="http://www.w3.org/2000/svg"
-                          y="0"
-                        >
-                          <g
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-width="2"
-                            transform="translate(482.484 177)"
-                          >
-                            <path
-                              d="M-473.4-166.7l4.1 3.9-2.2 2.2 2.2 2.1 2.2-2.2 1 1 2.2-2.2-5.4-5.3"
-                            />
-                            <circle
-                              cx="-476.5"
-                              cy="-170.9"
-                              r="5"
-                            />
-                          </g>
-                        </svg>
-                      </div>
-                    </div>
-                    <div
-                      class="inline-block p-1 text-theme-secondary-700"
-                      data-testid="WalletIcon__TestNetwork"
-                    >
-                      <div
-                        class="css-1i4b0eq"
-                        height="20"
-                        width="20"
-                      >
-                        <svg
-                          id="code"
-                          viewBox="0 0 20 20"
-                          x="0"
-                          xml:space="preserve"
-                          xmlns="http://www.w3.org/2000/svg"
-                          y="0"
-                        >
-                          <path
-                            d="M6 6L1 9.98 6 14m8-8l5 3.98L14 14M11 4L9 16"
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                          />
-                        </svg>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </td>
-              <td>
-                <div
-                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 font-semibold justify-end"
-                >
-                  <span
-                    class="whitespace-nowrap dark:text-theme-white text-theme-secondary-700 dark:md:text-theme-secondary-500"
-                    data-testid="Amount"
-                  >
-                    57.68 DARK
-                  </span>
-                </div>
-              </td>
-              <td
-                class="hidden lg:table-cell"
-                data-testid="CurrencyCell"
-              >
-                <div
-                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 justify-end"
-                >
-                  <span
-                    class="text-xs font-semibold text-theme-navy-200 md:text-base md:text-theme-secondary-500 dark:md:text-theme-secondary-700"
-                  >
-                    N/A
-                  </span>
-                </div>
-              </td>
-              <td>
-                <div
-                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 -mr-2 rounded-r justify-end text-theme-secondary-text pr-6"
-                >
-                  <div>
-                    <button
-                      class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none pr-0 text-sm text-theme-primary-600 hover:text-theme-primary-700"
-                      data-testid="WalletListItem__send-button"
-                      type="button"
-                    >
-                      <div
-                        class="flex items-center space-x-2"
-                      >
-                        <div
-                          class="border-r border-theme-secondary-300 pr-3 dark:border-theme-secondary-800"
-                        >
-                          Send
-                        </div>
-                      </div>
-                    </button>
-                  </div>
-                  <div
-                    data-testid="WalletListItem__more-button"
-                  >
-                    <div
-                      aria-expanded="false"
-                      aria-haspopup="dialog"
-                      data-testid="dropdown__toggle"
-                    >
-                      <button
-                        class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-gray-700 -mr-1.5 hover:text-theme-primary-600"
-                        type="button"
-                      >
-                        <div
-                          class="flex items-center space-x-2"
-                        >
-                          <div
-                            class="css-1i4b0eq"
-                            height="20"
-                            width="20"
-                          >
-                            <svg
-                              fill="none"
-                              viewBox="0 0 20 20"
-                              xmlns="http://www.w3.org/2000/svg"
-                            >
-                              <circle
-                                cx="10.002"
-                                cy="2.99609"
-                                fill="currentColor"
-                                r="2"
-                                transform="rotate(90 10.002 2.99609)"
-                              />
-                              <circle
-                                cx="10.002"
-                                cy="9.99805"
-                                fill="currentColor"
-                                r="2"
-                                transform="rotate(90 10.002 9.99805)"
-                              />
-                              <circle
-                                cx="10.002"
-                                cy="17"
-                                fill="currentColor"
-                                r="2"
-                                transform="rotate(90 10.002 17)"
-                              />
-                            </svg>
-                          </div>
-                        </div>
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </td>
-            </tr>
-            <tr
-              class="group relative css-1d424e8"
-              data-testid="TableRow"
-            >
-              <td
-                data-testid="TableCell_Starred"
-              >
-                <div
-                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 rounded-l space-x-3 pl-6 ml-0"
-                >
-                  <div
-                    class="flex h-5 items-center pr-3 dark:border-theme-secondary-800"
-                  >
-                    <div
-                      class="flex shrink-0 items-center justify-center"
-                      data-testid="WalletIcon__Starred"
-                    >
-                      <div
-                        class="text-theme-warning-400 css-tuuiwl"
-                        height="18"
-                        width="18"
-                      >
-                        <svg
-                          id="star"
-                          viewBox="0 0 20 20"
-                          x="0"
-                          xml:space="preserve"
-                          xmlns="http://www.w3.org/2000/svg"
-                          y="0"
-                        >
-                          <path
-                            d="M10.558 1.411l2.711 5.273 5.12.497c.603.1.804.697.402 1.094l-4.217 4.179 1.607 5.67c.1.498-.402 1.094-1.004.796l-5.221-2.686-5.12 2.587c-.302.198-1.105-.1-.904-.796l1.606-5.77-4.317-3.98c-.3-.397-.401-.994.402-1.094l5.12-.497L9.454 1.41c.301-.597.803-.497 1.104 0h0z"
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                          />
-                        </svg>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </td>
-              <td
-                class="hidden lg:table-cell"
-              >
-                <div
-                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 -ml-3 space-x-3"
-                >
-                  <div
-                    class="w-24 flex-1 overflow-hidden"
-                  >
-                    <div
-                      class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
-                    >
-                      <span
-                        class="font-semibold text-base text-sm leading-[17px]"
-                        data-testid="Address__alias"
-                      >
-                        <span
-                          class="no-ligatures css-9nx3be"
-                          data-testid="TruncateEnd"
-                        >
-                          ARK Wallet 1
-                        </span>
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              </td>
-              <td
-                data-testid="TableCell_Wallet"
-              >
-                <div
-                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 -ml-3 space-x-3"
-                >
-                  <div
-                    class="w-full max-w-64 flex-1 overflow-hidden md:max-w-40 lg:max-w-48 xl:max-w-full"
-                  >
-                    <div
-                      class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-between"
-                    >
-                      <span
-                        class="font-semibold text-base lg:hidden text-sm text-theme-text group-hover:text-theme-primary-700"
-                        data-testid="Address__alias"
-                      >
-                        <span
-                          class="no-ligatures css-9nx3be"
-                          data-testid="TruncateEnd"
-                        >
-                          ARK Wallet 1
-                        </span>
-                      </span>
-                      <span
-                        class="no-ligatures min-w-0 overflow-hidden text-sm text-theme-secondary-700 dark:text-theme-secondary-500 lg:!ml-0 font-semibold text-base"
-                        data-testid="Address__address"
-                      >
-                        D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                      </span>
-                      <button
-                        class="ring-focus relative focus:outline-none"
-                        data-ring-focus-margin="-m-1"
-                        data-testid="clipboard-icon__wrapper"
-                        type="button"
-                      >
-                        <div
-                          class="text-theme-primary-400 dark:text-theme-secondary-700 dark:hover:text-theme-secondary-500 css-v0ob3f"
-                          height="16"
-                          width="16"
-                        >
-                          <svg
-                            id="copy"
-                            viewBox="0 0 20 20"
-                            x="0"
-                            xml:space="preserve"
-                            xmlns="http://www.w3.org/2000/svg"
-                            y="0"
-                          >
-                            <g
-                              fill="none"
-                              stroke="currentColor"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              stroke-width="2"
-                            >
-                              <path
-                                d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
-                              />
-                              <path
-                                d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                              />
-                            </g>
-                          </svg>
-                        </div>
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </td>
-              <td>
-                <div
-                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 justify-center text-sm font-bold text-center align-middle"
-                >
-                  <div
-                    class="inline-flex items-center space-x-1"
-                  >
-                    <div
-                      class="inline-block p-1 text-theme-secondary-700"
-                      data-testid="WalletIcon__TestNetwork"
-                    >
-                      <div
-                        class="css-1i4b0eq"
-                        height="20"
-                        width="20"
-                      >
-                        <svg
-                          id="code"
-                          viewBox="0 0 20 20"
-                          x="0"
-                          xml:space="preserve"
-                          xmlns="http://www.w3.org/2000/svg"
-                          y="0"
-                        >
-                          <path
-                            d="M6 6L1 9.98 6 14m8-8l5 3.98L14 14M11 4L9 16"
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                          />
-                        </svg>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </td>
-              <td>
-                <div
-                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 font-semibold justify-end"
-                >
-                  <span
-                    class="whitespace-nowrap dark:text-theme-white text-theme-secondary-700 dark:md:text-theme-secondary-500"
-                    data-testid="Amount"
-                  >
-                    33.75089801 DARK
-                  </span>
-                </div>
-              </td>
-              <td
-                class="hidden lg:table-cell"
-                data-testid="CurrencyCell"
-              >
-                <div
-                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 justify-end"
-                >
-                  <span
-                    class="text-xs font-semibold text-theme-navy-200 md:text-base md:text-theme-secondary-500 dark:md:text-theme-secondary-700"
-                  >
-                    N/A
-                  </span>
-                </div>
-              </td>
-              <td>
-                <div
-                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 -mr-2 rounded-r justify-end text-theme-secondary-text pr-6"
-                >
-                  <div>
-                    <button
-                      class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none pr-0 text-sm text-theme-primary-600 hover:text-theme-primary-700"
-                      data-testid="WalletListItem__send-button"
-                      type="button"
-                    >
-                      <div
-                        class="flex items-center space-x-2"
-                      >
-                        <div
-                          class="border-r border-theme-secondary-300 pr-3 dark:border-theme-secondary-800"
-                        >
-                          Send
-                        </div>
-                      </div>
-                    </button>
-                  </div>
-                  <div
-                    data-testid="WalletListItem__more-button"
-                  >
-                    <div
-                      aria-expanded="false"
-                      aria-haspopup="dialog"
-                      data-testid="dropdown__toggle"
-                    >
-                      <button
-                        class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-gray-700 -mr-1.5 hover:text-theme-primary-600"
-                        type="button"
-                      >
-                        <div
-                          class="flex items-center space-x-2"
-                        >
-                          <div
-                            class="css-1i4b0eq"
-                            height="20"
-                            width="20"
-                          >
-                            <svg
-                              fill="none"
-                              viewBox="0 0 20 20"
-                              xmlns="http://www.w3.org/2000/svg"
-                            >
-                              <circle
-                                cx="10.002"
-                                cy="2.99609"
-                                fill="currentColor"
-                                r="2"
-                                transform="rotate(90 10.002 2.99609)"
-                              />
-                              <circle
-                                cx="10.002"
-                                cy="9.99805"
-                                fill="currentColor"
-                                r="2"
-                                transform="rotate(90 10.002 9.99805)"
-                              />
-                              <circle
-                                cx="10.002"
-                                cy="17"
-                                fill="currentColor"
-                                r="2"
-                                transform="rotate(90 10.002 17)"
-                              />
-                            </svg>
-                          </div>
-                        </div>
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-    <div
-      class="flex w-full flex-col gap-4 border-theme-secondary-300 pt-4 dark:border-theme-secondary-800 sm:flex-row sm:justify-between md:border-t md:px-6 md:pb-4"
-    >
-      <div
-        class="flex items-center justify-center gap-2 text-sm font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-200 sm:justify-start"
-      >
-        <span>
-          Show
-        </span>
-        <div
-          class="relative"
-          data-testid="SelectDropdown"
-        >
-          <div
-            class="sr-only css-14zfvme"
-          >
-            <div
-              class="relative flex h-full flex-1"
-            >
-              <input
-                autocomplete="off"
-                class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
-                data-testid="select-list__input"
-                readonly=""
-                tabindex="-1"
-                type="text"
-                value="10"
-              />
-            </div>
-          </div>
-          <div
-            class="w-full"
-          >
-            <div
-              aria-expanded="false"
-              aria-haspopup="listbox"
-              aria-owns="downshift-9-menu"
-              role="combobox"
-            >
-              <div>
-                <label
-                  for="downshift-9-input"
-                  id="downshift-9-label"
-                />
-                <div
-                  class="invisible fixed w-auto whitespace-nowrap"
-                >
-                  10…
-                </div>
-                <div
-                  class="!h-8 !w-[78px] !px-3 css-14zfvme"
-                >
-                  <div
-                    class="relative flex h-full flex-1"
-                  >
-                    <input
-                      aria-autocomplete="list"
-                      aria-controls="downshift-9-menu"
-                      aria-labelledby="downshift-9-label"
-                      autocomplete="off"
-                      class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
-                      data-testid="SelectDropdown__input"
-                      id="downshift-9-input"
-                      placeholder="Select option"
-                      readonly=""
-                      type="text"
-                      value="10"
-                    />
-                    <span
-                      class="pointer-events-none absolute inset-y-0 flex w-full items-center text-sm font-normal opacity-50 sm:text-base"
-                      data-testid="Input__suggestion"
-                    >
-                      <span
-                        class="truncate"
-                      >
-                        10
-                      </span>
-                    </span>
-                  </div>
-                  <div
-                    class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-primary-300 dark:text-theme-secondary-600"
-                    data-testid="Input__addon-end"
-                  >
-                    <div
-                      class=""
-                    >
-                      <div
-                        class="flex items-center"
-                      >
-                        <div
-                          class="flex items-center justify-center"
-                          data-testid="SelectDropdown__caret"
-                        >
-                          <div
-                            class="absolute inset-0 block cursor-pointer md:hidden"
-                          />
-                          <div
-                            class="transition-transform text-theme-secondary-500 css-15txs7d"
-                            height="10"
-                            width="10"
-                          >
-                            <svg
-                              id="chevron-down-small"
-                              viewBox="0 0 10 10"
-                              x="0"
-                              xml:space="preserve"
-                              xmlns="http://www.w3.org/2000/svg"
-                              y="0"
-                            >
-                              <path
-                                d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
-                                fill="none"
-                                stroke="currentColor"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="2"
-                              />
-                            </svg>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div
-                aria-labelledby="downshift-9-label"
-                id="downshift-9-menu"
-                role="listbox"
-              />
-            </div>
-          </div>
-        </div>
-        <span>
-          Records
-        </span>
-      </div>
-    </div>
-  </div>
-</DocumentFragment>
-`;
-
 exports[`WalletsList > should render 1`] = `
 <DocumentFragment>
   <div
@@ -1074,12 +42,15 @@ exports[`WalletsList > should render 1`] = `
                         type="button"
                       >
                         <div
-                          class="text-theme-warning-400 css-tuuiwl"
+                          class="transition-all duration-300 ease-in-out fill-theme-warning-400 stroke-theme-warning-400 text-theme-warning-400 css-tuuiwl"
                           height="18"
                           width="18"
                         >
                           <svg
                             id="star-filled"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
                             viewBox="0 0 20 20"
                             x="0"
                             xml:space="preserve"
@@ -1088,11 +59,6 @@ exports[`WalletsList > should render 1`] = `
                           >
                             <path
                               d="M10.558 1.411l2.711 5.273 5.12.497c.603.1.804.697.402 1.094l-4.217 4.179 1.607 5.67c.1.498-.402 1.094-1.004.796l-5.221-2.686-5.12 2.587c-.302.198-1.105-.1-.904-.796l1.606-5.77-4.317-3.98c-.3-.397-.401-.994.402-1.094l5.12-.497L9.454 1.41c.301-.597.803-.497 1.104 0h0z"
-                              fill="currentColor"
-                              stroke="currentColor"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              stroke-width="2"
                             />
                           </svg>
                         </div>
@@ -1323,7 +289,7 @@ exports[`WalletsList > should render 1`] = `
             role="rowgroup"
           >
             <tr
-              class="group relative css-1d424e8"
+              class="group relative css-1bp82wf"
               data-testid="TableRow"
             >
               <td
@@ -1340,12 +306,15 @@ exports[`WalletsList > should render 1`] = `
                       data-testid="WalletIcon__Starred"
                     >
                       <div
-                        class="text-theme-warning-400 css-tuuiwl"
+                        class="transition-all duration-300 ease-in-out fill-transparent stroke-theme-warning-400 hover:fill-theme-warning-200 css-tuuiwl"
                         height="18"
                         width="18"
                       >
                         <svg
-                          id="star"
+                          id="star-filled"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
                           viewBox="0 0 20 20"
                           x="0"
                           xml:space="preserve"
@@ -1354,11 +323,6 @@ exports[`WalletsList > should render 1`] = `
                         >
                           <path
                             d="M10.558 1.411l2.711 5.273 5.12.497c.603.1.804.697.402 1.094l-4.217 4.179 1.607 5.67c.1.498-.402 1.094-1.004.796l-5.221-2.686-5.12 2.587c-.302.198-1.105-.1-.904-.796l1.606-5.77-4.317-3.98c-.3-.397-.401-.994.402-1.094l5.12-.497L9.454 1.41c.301-.597.803-.497 1.104 0h0z"
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
                           />
                         </svg>
                       </div>
@@ -1370,7 +334,7 @@ exports[`WalletsList > should render 1`] = `
                 class="hidden lg:table-cell"
               >
                 <div
-                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 -ml-3 space-x-3"
+                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:hover:bg-black -ml-3 space-x-3"
                 >
                   <div
                     class="w-24 flex-1 overflow-hidden"
@@ -1397,7 +361,7 @@ exports[`WalletsList > should render 1`] = `
                 data-testid="TableCell_Wallet"
               >
                 <div
-                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 -ml-3 space-x-3"
+                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:hover:bg-black -ml-3 space-x-3"
                 >
                   <div
                     class="w-full max-w-64 flex-1 overflow-hidden md:max-w-40 lg:max-w-48 xl:max-w-full"
@@ -1429,7 +393,7 @@ exports[`WalletsList > should render 1`] = `
                         type="button"
                       >
                         <div
-                          class="text-theme-primary-400 dark:text-theme-secondary-700 dark:hover:text-theme-secondary-500 css-v0ob3f"
+                          class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white css-v0ob3f"
                           height="16"
                           width="16"
                         >
@@ -1464,7 +428,7 @@ exports[`WalletsList > should render 1`] = `
               </td>
               <td>
                 <div
-                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 justify-center text-sm font-bold text-center align-middle"
+                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:hover:bg-black justify-center text-sm font-bold text-center align-middle"
                 >
                   <div
                     class="inline-flex items-center space-x-1"
@@ -1487,7 +451,7 @@ exports[`WalletsList > should render 1`] = `
               </td>
               <td>
                 <div
-                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 font-semibold justify-end"
+                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:hover:bg-black font-semibold justify-end"
                 >
                   <span
                     class="whitespace-nowrap dark:text-theme-white text-theme-secondary-700 dark:md:text-theme-secondary-500"
@@ -1502,7 +466,7 @@ exports[`WalletsList > should render 1`] = `
                 data-testid="CurrencyCell"
               >
                 <div
-                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 justify-end"
+                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:hover:bg-black justify-end"
                 >
                   <span
                     class="text-xs font-semibold text-theme-navy-200 md:text-base md:text-theme-secondary-500 dark:md:text-theme-secondary-700"
@@ -1513,11 +477,11 @@ exports[`WalletsList > should render 1`] = `
               </td>
               <td>
                 <div
-                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 -mr-2 rounded-r justify-end text-theme-secondary-text pr-6"
+                  class="flex px-3 my-1 transition-colors duration-100 min-h-11 -mr-2 rounded-r justify-end text-theme-secondary-text pr-6 items-center"
                 >
                   <div>
                     <button
-                      class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none pr-0 text-sm text-theme-primary-600 hover:text-theme-primary-700"
+                      class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none pr-0 text-sm text-theme-primary-600 hover:text-theme-primary-700 hover:underline dark:hover:text-theme-primary-500"
                       data-testid="WalletListItem__send-button"
                       type="button"
                     >
@@ -1525,13 +489,16 @@ exports[`WalletsList > should render 1`] = `
                         class="flex items-center space-x-2"
                       >
                         <div
-                          class="border-r border-theme-secondary-300 pr-3 dark:border-theme-secondary-800"
+                          class="pr-3"
                         >
                           Send
                         </div>
                       </div>
                     </button>
                   </div>
+                  <div
+                    class="h-4 w-px bg-theme-secondary-300 dark:bg-theme-secondary-800"
+                  />
                   <div
                     data-testid="WalletListItem__more-button"
                   >
@@ -1541,16 +508,16 @@ exports[`WalletsList > should render 1`] = `
                       data-testid="dropdown__toggle"
                     >
                       <button
-                        class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-gray-700 -mr-1.5 hover:text-theme-primary-600"
+                        class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-gray-700 ml-3 h-6 w-6 rounded bg-transparent hover:bg-theme-primary-200 hover:text-theme-primary-700 dark:hover:bg-theme-secondary-800 dark:hover:text-white"
                         type="button"
                       >
                         <div
                           class="flex items-center space-x-2"
                         >
                           <div
-                            class="css-1i4b0eq"
-                            height="20"
-                            width="20"
+                            class="css-v0ob3f"
+                            height="16"
+                            width="16"
                           >
                             <svg
                               fill="none"
@@ -1588,7 +555,7 @@ exports[`WalletsList > should render 1`] = `
               </td>
             </tr>
             <tr
-              class="group relative css-1d424e8"
+              class="group relative css-1bp82wf"
               data-testid="TableRow"
             >
               <td
@@ -1605,12 +572,15 @@ exports[`WalletsList > should render 1`] = `
                       data-testid="WalletIcon__Starred"
                     >
                       <div
-                        class="text-theme-warning-400 css-tuuiwl"
+                        class="transition-all duration-300 ease-in-out fill-transparent stroke-theme-warning-400 hover:fill-theme-warning-200 css-tuuiwl"
                         height="18"
                         width="18"
                       >
                         <svg
-                          id="star"
+                          id="star-filled"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
                           viewBox="0 0 20 20"
                           x="0"
                           xml:space="preserve"
@@ -1619,11 +589,6 @@ exports[`WalletsList > should render 1`] = `
                         >
                           <path
                             d="M10.558 1.411l2.711 5.273 5.12.497c.603.1.804.697.402 1.094l-4.217 4.179 1.607 5.67c.1.498-.402 1.094-1.004.796l-5.221-2.686-5.12 2.587c-.302.198-1.105-.1-.904-.796l1.606-5.77-4.317-3.98c-.3-.397-.401-.994.402-1.094l5.12-.497L9.454 1.41c.301-.597.803-.497 1.104 0h0z"
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
                           />
                         </svg>
                       </div>
@@ -1635,7 +600,7 @@ exports[`WalletsList > should render 1`] = `
                 class="hidden lg:table-cell"
               >
                 <div
-                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 -ml-3 space-x-3"
+                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:hover:bg-black -ml-3 space-x-3"
                 >
                   <div
                     class="w-24 flex-1 overflow-hidden"
@@ -1662,7 +627,7 @@ exports[`WalletsList > should render 1`] = `
                 data-testid="TableCell_Wallet"
               >
                 <div
-                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 -ml-3 space-x-3"
+                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:hover:bg-black -ml-3 space-x-3"
                 >
                   <div
                     class="w-full max-w-64 flex-1 overflow-hidden md:max-w-40 lg:max-w-48 xl:max-w-full"
@@ -1694,7 +659,7 @@ exports[`WalletsList > should render 1`] = `
                         type="button"
                       >
                         <div
-                          class="text-theme-primary-400 dark:text-theme-secondary-700 dark:hover:text-theme-secondary-500 css-v0ob3f"
+                          class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white css-v0ob3f"
                           height="16"
                           width="16"
                         >
@@ -1729,7 +694,7 @@ exports[`WalletsList > should render 1`] = `
               </td>
               <td>
                 <div
-                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 justify-center text-sm font-bold text-center align-middle"
+                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:hover:bg-black justify-center text-sm font-bold text-center align-middle"
                 >
                   <div
                     class="inline-flex items-center space-x-1"
@@ -1752,7 +717,7 @@ exports[`WalletsList > should render 1`] = `
               </td>
               <td>
                 <div
-                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 font-semibold justify-end"
+                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:hover:bg-black font-semibold justify-end"
                 >
                   <span
                     class="whitespace-nowrap dark:text-theme-white text-theme-secondary-700 dark:md:text-theme-secondary-500"
@@ -1767,7 +732,7 @@ exports[`WalletsList > should render 1`] = `
                 data-testid="CurrencyCell"
               >
                 <div
-                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 justify-end"
+                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:hover:bg-black justify-end"
                 >
                   <span
                     class="text-xs font-semibold text-theme-navy-200 md:text-base md:text-theme-secondary-500 dark:md:text-theme-secondary-700"
@@ -1778,11 +743,11 @@ exports[`WalletsList > should render 1`] = `
               </td>
               <td>
                 <div
-                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 -mr-2 rounded-r justify-end text-theme-secondary-text pr-6"
+                  class="flex px-3 my-1 transition-colors duration-100 min-h-11 -mr-2 rounded-r justify-end text-theme-secondary-text pr-6 items-center"
                 >
                   <div>
                     <button
-                      class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none pr-0 text-sm text-theme-primary-600 hover:text-theme-primary-700"
+                      class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none pr-0 text-sm text-theme-primary-600 hover:text-theme-primary-700 hover:underline dark:hover:text-theme-primary-500"
                       data-testid="WalletListItem__send-button"
                       type="button"
                     >
@@ -1790,13 +755,16 @@ exports[`WalletsList > should render 1`] = `
                         class="flex items-center space-x-2"
                       >
                         <div
-                          class="border-r border-theme-secondary-300 pr-3 dark:border-theme-secondary-800"
+                          class="pr-3"
                         >
                           Send
                         </div>
                       </div>
                     </button>
                   </div>
+                  <div
+                    class="h-4 w-px bg-theme-secondary-300 dark:bg-theme-secondary-800"
+                  />
                   <div
                     data-testid="WalletListItem__more-button"
                   >
@@ -1806,16 +774,16 @@ exports[`WalletsList > should render 1`] = `
                       data-testid="dropdown__toggle"
                     >
                       <button
-                        class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-gray-700 -mr-1.5 hover:text-theme-primary-600"
+                        class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-gray-700 ml-3 h-6 w-6 rounded bg-transparent hover:bg-theme-primary-200 hover:text-theme-primary-700 dark:hover:bg-theme-secondary-800 dark:hover:text-white"
                         type="button"
                       >
                         <div
                           class="flex items-center space-x-2"
                         >
                           <div
-                            class="css-1i4b0eq"
-                            height="20"
-                            width="20"
+                            class="css-v0ob3f"
+                            height="16"
+                            width="16"
                           >
                             <svg
                               fill="none"
@@ -2040,12 +1008,15 @@ exports[`WalletsList > should render empty skeleton block 1`] = `
                         type="button"
                       >
                         <div
-                          class="text-theme-warning-400 css-tuuiwl"
+                          class="transition-all duration-300 ease-in-out fill-theme-warning-400 stroke-theme-warning-400 text-theme-warning-400 css-tuuiwl"
                           height="18"
                           width="18"
                         >
                           <svg
                             id="star-filled"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
                             viewBox="0 0 20 20"
                             x="0"
                             xml:space="preserve"
@@ -2054,11 +1025,6 @@ exports[`WalletsList > should render empty skeleton block 1`] = `
                           >
                             <path
                               d="M10.558 1.411l2.711 5.273 5.12.497c.603.1.804.697.402 1.094l-4.217 4.179 1.607 5.67c.1.498-.402 1.094-1.004.796l-5.221-2.686-5.12 2.587c-.302.198-1.105-.1-.904-.796l1.606-5.77-4.317-3.98c-.3-.397-.401-.994.402-1.094l5.12-.497L9.454 1.41c.301-.597.803-.497 1.104 0h0z"
-                              fill="currentColor"
-                              stroke="currentColor"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              stroke-width="2"
                             />
                           </svg>
                         </div>
@@ -2289,7 +1255,7 @@ exports[`WalletsList > should render empty skeleton block 1`] = `
             role="rowgroup"
           >
             <tr
-              class=" css-1x4z4cy"
+              class=" css-16ynu5g"
               data-testid="TableRow"
             >
               <td>
@@ -2317,7 +1283,7 @@ exports[`WalletsList > should render empty skeleton block 1`] = `
               </td>
               <td>
                 <div
-                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 -ml-3 space-x-3"
+                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:hover:bg-black -ml-3 space-x-3"
                 >
                   <span
                     aria-busy="true"
@@ -2363,12 +1329,12 @@ exports[`WalletsList > should render empty skeleton block 1`] = `
               </td>
               <td>
                 <div
-                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 justify-center"
+                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:hover:bg-black justify-center"
                 />
               </td>
               <td>
                 <div
-                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 justify-end"
+                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:hover:bg-black justify-end"
                 >
                   <span
                     aria-busy="true"
@@ -2387,7 +1353,7 @@ exports[`WalletsList > should render empty skeleton block 1`] = `
               </td>
               <td>
                 <div
-                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 justify-end"
+                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:hover:bg-black justify-end"
                 >
                   <span
                     aria-busy="true"
@@ -2477,7 +1443,7 @@ exports[`WalletsList > should render empty skeleton block 1`] = `
               </td>
             </tr>
             <tr
-              class=" css-1x4z4cy"
+              class=" css-16ynu5g"
               data-testid="TableRow"
             >
               <td>
@@ -2505,7 +1471,7 @@ exports[`WalletsList > should render empty skeleton block 1`] = `
               </td>
               <td>
                 <div
-                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 -ml-3 space-x-3"
+                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:hover:bg-black -ml-3 space-x-3"
                 >
                   <span
                     aria-busy="true"
@@ -2551,12 +1517,12 @@ exports[`WalletsList > should render empty skeleton block 1`] = `
               </td>
               <td>
                 <div
-                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 justify-center"
+                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:hover:bg-black justify-center"
                 />
               </td>
               <td>
                 <div
-                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 justify-end"
+                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:hover:bg-black justify-end"
                 >
                   <span
                     aria-busy="true"
@@ -2575,7 +1541,7 @@ exports[`WalletsList > should render empty skeleton block 1`] = `
               </td>
               <td>
                 <div
-                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 justify-end"
+                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:hover:bg-black justify-end"
                 >
                   <span
                     aria-busy="true"
@@ -2665,7 +1631,7 @@ exports[`WalletsList > should render empty skeleton block 1`] = `
               </td>
             </tr>
             <tr
-              class=" css-1x4z4cy"
+              class=" css-16ynu5g"
               data-testid="TableRow"
             >
               <td>
@@ -2693,7 +1659,7 @@ exports[`WalletsList > should render empty skeleton block 1`] = `
               </td>
               <td>
                 <div
-                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 -ml-3 space-x-3"
+                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:hover:bg-black -ml-3 space-x-3"
                 >
                   <span
                     aria-busy="true"
@@ -2739,12 +1705,12 @@ exports[`WalletsList > should render empty skeleton block 1`] = `
               </td>
               <td>
                 <div
-                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 justify-center"
+                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:hover:bg-black justify-center"
                 />
               </td>
               <td>
                 <div
-                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 justify-end"
+                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:hover:bg-black justify-end"
                 >
                   <span
                     aria-busy="true"
@@ -2763,7 +1729,7 @@ exports[`WalletsList > should render empty skeleton block 1`] = `
               </td>
               <td>
                 <div
-                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 justify-end"
+                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:hover:bg-black justify-end"
                 >
                   <span
                     aria-busy="true"
@@ -3048,7 +2014,7 @@ exports[`WalletsList > should render responsive 1`] = `
                   type="button"
                 >
                   <div
-                    class="text-theme-primary-400 dark:text-theme-secondary-700 dark:hover:text-theme-secondary-500 css-v0ob3f"
+                    class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white css-v0ob3f"
                     height="16"
                     width="16"
                   >
@@ -3104,12 +2070,15 @@ exports[`WalletsList > should render responsive 1`] = `
                 data-testid="WalletIcon__Starred"
               >
                 <div
-                  class="text-theme-warning-400 css-tuuiwl"
+                  class="transition-all duration-300 ease-in-out fill-transparent stroke-theme-warning-400 hover:fill-theme-warning-200 css-tuuiwl"
                   height="18"
                   width="18"
                 >
                   <svg
-                    id="star"
+                    id="star-filled"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
                     viewBox="0 0 20 20"
                     x="0"
                     xml:space="preserve"
@@ -3118,11 +2087,6 @@ exports[`WalletsList > should render responsive 1`] = `
                   >
                     <path
                       d="M10.558 1.411l2.711 5.273 5.12.497c.603.1.804.697.402 1.094l-4.217 4.179 1.607 5.67c.1.498-.402 1.094-1.004.796l-5.221-2.686-5.12 2.587c-.302.198-1.105-.1-.904-.796l1.606-5.77-4.317-3.98c-.3-.397-.401-.994.402-1.094l5.12-.497L9.454 1.41c.301-.597.803-.497 1.104 0h0z"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
                     />
                   </svg>
                 </div>
@@ -3220,7 +2184,7 @@ exports[`WalletsList > should render responsive 1`] = `
                   type="button"
                 >
                   <div
-                    class="text-theme-primary-400 dark:text-theme-secondary-700 dark:hover:text-theme-secondary-500 css-v0ob3f"
+                    class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white css-v0ob3f"
                     height="16"
                     width="16"
                   >
@@ -3276,12 +2240,15 @@ exports[`WalletsList > should render responsive 1`] = `
                 data-testid="WalletIcon__Starred"
               >
                 <div
-                  class="text-theme-warning-400 css-tuuiwl"
+                  class="transition-all duration-300 ease-in-out fill-transparent stroke-theme-warning-400 hover:fill-theme-warning-200 css-tuuiwl"
                   height="18"
                   width="18"
                 >
                   <svg
-                    id="star"
+                    id="star-filled"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
                     viewBox="0 0 20 20"
                     x="0"
                     xml:space="preserve"
@@ -3290,11 +2257,6 @@ exports[`WalletsList > should render responsive 1`] = `
                   >
                     <path
                       d="M10.558 1.411l2.711 5.273 5.12.497c.603.1.804.697.402 1.094l-4.217 4.179 1.607 5.67c.1.498-.402 1.094-1.004.796l-5.221-2.686-5.12 2.587c-.302.198-1.105-.1-.904-.796l1.606-5.77-4.317-3.98c-.3-.397-.401-.994.402-1.094l5.12-.497L9.454 1.41c.301-.597.803-.497 1.104 0h0z"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
                     />
                   </svg>
                 </div>

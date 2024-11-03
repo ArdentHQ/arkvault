@@ -581,7 +581,7 @@ exports[`InputFee > should keep different values for simple and advanced view ty
       <button
         aria-checked="false"
         aria-label="0.006"
-        class="css-1sbhrf0"
+        class="css-19daxkr"
         data-testid="ButtonGroupOption"
         role="radio"
         type="button"
@@ -603,7 +603,7 @@ exports[`InputFee > should keep different values for simple and advanced view ty
       <button
         aria-checked="true"
         aria-label="0.456"
-        class="css-1sbhrf0"
+        class="css-19daxkr"
         data-testid="ButtonGroupOption"
         role="radio"
         type="button"
@@ -625,7 +625,7 @@ exports[`InputFee > should keep different values for simple and advanced view ty
       <button
         aria-checked="false"
         aria-label="0.5"
-        class="css-1sbhrf0"
+        class="css-19daxkr"
         data-testid="ButtonGroupOption"
         role="radio"
         type="button"
@@ -1056,7 +1056,7 @@ exports[`InputFee > simple view type > should display converted values when on l
       <button
         aria-checked="false"
         aria-label="0.006"
-        class="css-1sbhrf0"
+        class="css-19daxkr"
         data-testid="ButtonGroupOption"
         role="radio"
         type="button"
@@ -1084,7 +1084,7 @@ exports[`InputFee > simple view type > should display converted values when on l
       <button
         aria-checked="true"
         aria-label="0.456"
-        class="css-1sbhrf0"
+        class="css-19daxkr"
         data-testid="ButtonGroupOption"
         role="radio"
         type="button"
@@ -1112,7 +1112,7 @@ exports[`InputFee > simple view type > should display converted values when on l
       <button
         aria-checked="false"
         aria-label="0.5"
-        class="css-1sbhrf0"
+        class="css-19daxkr"
         data-testid="ButtonGroupOption"
         role="radio"
         type="button"
@@ -1196,7 +1196,7 @@ exports[`InputFee > simple view type > should render loading state of simple vie
       <button
         aria-checked="false"
         aria-label="0.006"
-        class="css-1sbhrf0"
+        class="css-19daxkr"
         data-testid="ButtonGroupOption"
         role="radio"
         type="button"
@@ -1225,7 +1225,7 @@ exports[`InputFee > simple view type > should render loading state of simple vie
       <button
         aria-checked="true"
         aria-label="0.456"
-        class="css-1sbhrf0"
+        class="css-19daxkr"
         data-testid="ButtonGroupOption"
         role="radio"
         type="button"
@@ -1254,7 +1254,7 @@ exports[`InputFee > simple view type > should render loading state of simple vie
       <button
         aria-checked="false"
         aria-label="0.5"
-        class="css-1sbhrf0"
+        class="css-19daxkr"
         data-testid="ButtonGroupOption"
         role="radio"
         type="button"
@@ -1396,7 +1396,7 @@ exports[`InputFee > simple view type > should render simple view in lg 1`] = `
       <button
         aria-checked="false"
         aria-label="0.006"
-        class="css-1sbhrf0"
+        class="css-19daxkr"
         data-testid="ButtonGroupOption"
         role="radio"
         type="button"
@@ -1418,7 +1418,7 @@ exports[`InputFee > simple view type > should render simple view in lg 1`] = `
       <button
         aria-checked="true"
         aria-label="0.456"
-        class="css-1sbhrf0"
+        class="css-19daxkr"
         data-testid="ButtonGroupOption"
         role="radio"
         type="button"
@@ -1440,7 +1440,7 @@ exports[`InputFee > simple view type > should render simple view in lg 1`] = `
       <button
         aria-checked="false"
         aria-label="0.5"
-        class="css-1sbhrf0"
+        class="css-19daxkr"
         data-testid="ButtonGroupOption"
         role="radio"
         type="button"
@@ -1513,7 +1513,7 @@ exports[`InputFee > simple view type > should render simple view in md 1`] = `
       <button
         aria-checked="false"
         aria-label="0.006"
-        class="css-1sbhrf0"
+        class="css-19daxkr"
         data-testid="ButtonGroupOption"
         role="radio"
         type="button"
@@ -1535,7 +1535,7 @@ exports[`InputFee > simple view type > should render simple view in md 1`] = `
       <button
         aria-checked="true"
         aria-label="0.456"
-        class="css-1sbhrf0"
+        class="css-19daxkr"
         data-testid="ButtonGroupOption"
         role="radio"
         type="button"
@@ -1557,7 +1557,7 @@ exports[`InputFee > simple view type > should render simple view in md 1`] = `
       <button
         aria-checked="false"
         aria-label="0.5"
-        class="css-1sbhrf0"
+        class="css-19daxkr"
         data-testid="ButtonGroupOption"
         role="radio"
         type="button"
@@ -1630,7 +1630,7 @@ exports[`InputFee > simple view type > should render simple view in sm 1`] = `
       <button
         aria-checked="false"
         aria-label="0.006"
-        class="css-1sbhrf0"
+        class="css-19daxkr"
         data-testid="ButtonGroupOption"
         role="radio"
         type="button"
@@ -1652,7 +1652,7 @@ exports[`InputFee > simple view type > should render simple view in sm 1`] = `
       <button
         aria-checked="true"
         aria-label="0.456"
-        class="css-1sbhrf0"
+        class="css-19daxkr"
         data-testid="ButtonGroupOption"
         role="radio"
         type="button"
@@ -1674,7 +1674,7 @@ exports[`InputFee > simple view type > should render simple view in sm 1`] = `
       <button
         aria-checked="false"
         aria-label="0.5"
-        class="css-1sbhrf0"
+        class="css-19daxkr"
         data-testid="ButtonGroupOption"
         role="radio"
         type="button"
@@ -1747,7 +1747,7 @@ exports[`InputFee > simple view type > should render simple view in xl 1`] = `
       <button
         aria-checked="false"
         aria-label="0.006"
-        class="css-1sbhrf0"
+        class="css-19daxkr"
         data-testid="ButtonGroupOption"
         role="radio"
         type="button"
@@ -1769,7 +1769,7 @@ exports[`InputFee > simple view type > should render simple view in xl 1`] = `
       <button
         aria-checked="true"
         aria-label="0.456"
-        class="css-1sbhrf0"
+        class="css-19daxkr"
         data-testid="ButtonGroupOption"
         role="radio"
         type="button"
@@ -1791,7 +1791,7 @@ exports[`InputFee > simple view type > should render simple view in xl 1`] = `
       <button
         aria-checked="false"
         aria-label="0.5"
-        class="css-1sbhrf0"
+        class="css-19daxkr"
         data-testid="ButtonGroupOption"
         role="radio"
         type="button"
@@ -2038,7 +2038,7 @@ exports[`InputFee > simple view type > should render simple view with converted 
       <button
         aria-checked="false"
         aria-label="0.006"
-        class="css-1sbhrf0"
+        class="css-19daxkr"
         data-testid="ButtonGroupOption"
         role="radio"
         type="button"
@@ -2066,7 +2066,7 @@ exports[`InputFee > simple view type > should render simple view with converted 
       <button
         aria-checked="true"
         aria-label="0.456"
-        class="css-1sbhrf0"
+        class="css-19daxkr"
         data-testid="ButtonGroupOption"
         role="radio"
         type="button"
@@ -2094,7 +2094,7 @@ exports[`InputFee > simple view type > should render simple view with converted 
       <button
         aria-checked="false"
         aria-label="0.5"
-        class="css-1sbhrf0"
+        class="css-19daxkr"
         data-testid="ButtonGroupOption"
         role="radio"
         type="button"
@@ -2173,7 +2173,7 @@ exports[`InputFee > simple view type > should render simple view with converted 
       <button
         aria-checked="false"
         aria-label="0.006"
-        class="css-1sbhrf0"
+        class="css-19daxkr"
         data-testid="ButtonGroupOption"
         role="radio"
         type="button"
@@ -2201,7 +2201,7 @@ exports[`InputFee > simple view type > should render simple view with converted 
       <button
         aria-checked="true"
         aria-label="0.456"
-        class="css-1sbhrf0"
+        class="css-19daxkr"
         data-testid="ButtonGroupOption"
         role="radio"
         type="button"
@@ -2229,7 +2229,7 @@ exports[`InputFee > simple view type > should render simple view with converted 
       <button
         aria-checked="false"
         aria-label="0.5"
-        class="css-1sbhrf0"
+        class="css-19daxkr"
         data-testid="ButtonGroupOption"
         role="radio"
         type="button"
@@ -2308,7 +2308,7 @@ exports[`InputFee > simple view type > should render simple view with converted 
       <button
         aria-checked="false"
         aria-label="0.006"
-        class="css-1sbhrf0"
+        class="css-19daxkr"
         data-testid="ButtonGroupOption"
         role="radio"
         type="button"
@@ -2336,7 +2336,7 @@ exports[`InputFee > simple view type > should render simple view with converted 
       <button
         aria-checked="true"
         aria-label="0.456"
-        class="css-1sbhrf0"
+        class="css-19daxkr"
         data-testid="ButtonGroupOption"
         role="radio"
         type="button"
@@ -2364,7 +2364,7 @@ exports[`InputFee > simple view type > should render simple view with converted 
       <button
         aria-checked="false"
         aria-label="0.5"
-        class="css-1sbhrf0"
+        class="css-19daxkr"
         data-testid="ButtonGroupOption"
         role="radio"
         type="button"
@@ -2443,7 +2443,7 @@ exports[`InputFee > simple view type > should render simple view with converted 
       <button
         aria-checked="false"
         aria-label="0.006"
-        class="css-1sbhrf0"
+        class="css-19daxkr"
         data-testid="ButtonGroupOption"
         role="radio"
         type="button"
@@ -2471,7 +2471,7 @@ exports[`InputFee > simple view type > should render simple view with converted 
       <button
         aria-checked="true"
         aria-label="0.456"
-        class="css-1sbhrf0"
+        class="css-19daxkr"
         data-testid="ButtonGroupOption"
         role="radio"
         type="button"
@@ -2499,7 +2499,7 @@ exports[`InputFee > simple view type > should render simple view with converted 
       <button
         aria-checked="false"
         aria-label="0.5"
-        class="css-1sbhrf0"
+        class="css-19daxkr"
         data-testid="ButtonGroupOption"
         role="radio"
         type="button"
@@ -2762,7 +2762,7 @@ exports[`InputFee > simple view type > should update value when clicking button 
       <button
         aria-checked="false"
         aria-label="0.006"
-        class="css-1sbhrf0"
+        class="css-19daxkr"
         data-testid="ButtonGroupOption"
         role="radio"
         type="button"
@@ -2784,7 +2784,7 @@ exports[`InputFee > simple view type > should update value when clicking button 
       <button
         aria-checked="true"
         aria-label="0.456"
-        class="css-1sbhrf0"
+        class="css-19daxkr"
         data-testid="ButtonGroupOption"
         role="radio"
         type="button"
@@ -2806,7 +2806,7 @@ exports[`InputFee > simple view type > should update value when clicking button 
       <button
         aria-checked="false"
         aria-label="0.5"
-        class="css-1sbhrf0"
+        class="css-19daxkr"
         data-testid="ButtonGroupOption"
         role="radio"
         type="button"
@@ -2879,7 +2879,7 @@ exports[`InputFee > simple view type > should update value when clicking button 
       <button
         aria-checked="false"
         aria-label="0.006"
-        class="css-1sbhrf0"
+        class="css-19daxkr"
         data-testid="ButtonGroupOption"
         role="radio"
         type="button"
@@ -2901,7 +2901,7 @@ exports[`InputFee > simple view type > should update value when clicking button 
       <button
         aria-checked="false"
         aria-label="0.456"
-        class="css-1sbhrf0"
+        class="css-19daxkr"
         data-testid="ButtonGroupOption"
         role="radio"
         type="button"
@@ -2923,7 +2923,7 @@ exports[`InputFee > simple view type > should update value when clicking button 
       <button
         aria-checked="true"
         aria-label="0.5"
-        class="css-1sbhrf0"
+        class="css-19daxkr"
         data-testid="ButtonGroupOption"
         role="radio"
         type="button"
@@ -2996,7 +2996,7 @@ exports[`InputFee > simple view type > should update value when clicking button 
       <button
         aria-checked="true"
         aria-label="0.006"
-        class="css-1sbhrf0"
+        class="css-19daxkr"
         data-testid="ButtonGroupOption"
         role="radio"
         type="button"
@@ -3018,7 +3018,7 @@ exports[`InputFee > simple view type > should update value when clicking button 
       <button
         aria-checked="false"
         aria-label="0.456"
-        class="css-1sbhrf0"
+        class="css-19daxkr"
         data-testid="ButtonGroupOption"
         role="radio"
         type="button"
@@ -3040,7 +3040,7 @@ exports[`InputFee > simple view type > should update value when clicking button 
       <button
         aria-checked="false"
         aria-label="0.5"
-        class="css-1sbhrf0"
+        class="css-19daxkr"
         data-testid="ButtonGroupOption"
         role="radio"
         type="button"

@@ -2574,7 +2574,7 @@ exports[`ImportWallet > should render as ledger import 1`] = `
                 class="css-145pihz"
               >
                 <button
-                  class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-700"
+                  class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 green:hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-500"
                   data-testid="Paginator__back-button"
                   type="button"
                 >
@@ -2585,7 +2585,7 @@ exports[`ImportWallet > should render as ledger import 1`] = `
                   </div>
                 </button>
                 <button
-                  class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 hover:bg-theme-primary-700"
+                  class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 green:hover:bg-theme-primary-700 navy:hover:bg-theme-primary-800 dark:hover:bg-theme-primary-500"
                   data-testid="Paginator__continue-button"
                   type="button"
                 >
@@ -3396,7 +3396,7 @@ exports[`ImportWallet > should render success step (lg) 1`] = `
                 type="button"
               >
                 <div
-                  class="text-theme-primary-400 dark:text-theme-secondary-700 dark:hover:text-theme-secondary-500 css-v0ob3f"
+                  class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white css-v0ob3f"
                   height="16"
                   width="16"
                 >
@@ -3498,7 +3498,7 @@ exports[`ImportWallet > should render success step (lg) 1`] = `
                 />
               </div>
               <button
-                class="text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none space-x-0 px-0 py-0 text-theme-navy-600"
+                class="text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none space-x-0 px-2 py-1 text-theme-primary-700 hover:bg-theme-primary-100 dark:text-theme-primary-600 dark:hover:bg-theme-secondary-800 dark:hover:text-white"
                 data-testid="ImportWallet__edit-alias"
                 type="button"
               >
@@ -3660,7 +3660,7 @@ exports[`ImportWallet > should render success step (xs) 1`] = `
                 type="button"
               >
                 <div
-                  class="text-theme-primary-400 dark:text-theme-secondary-700 dark:hover:text-theme-secondary-500 css-v0ob3f"
+                  class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white css-v0ob3f"
                   height="16"
                   width="16"
                 >
@@ -3762,7 +3762,7 @@ exports[`ImportWallet > should render success step (xs) 1`] = `
                 />
               </div>
               <button
-                class="text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none space-x-0 px-0 py-0 text-theme-navy-600"
+                class="text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none space-x-0 px-2 py-1 text-theme-primary-700 hover:bg-theme-primary-100 dark:text-theme-primary-600 dark:hover:bg-theme-secondary-800 dark:hover:text-white"
                 data-testid="ImportWallet__edit-alias"
                 type="button"
               >

@@ -56,7 +56,7 @@ exports[`Signatures > should have all marked as signed if awaiting broadcast on 
           role="rowgroup"
         >
           <tr
-            class="group relative max-md:!border-transparent css-1x4z4cy"
+            class="group relative max-md:!border-transparent css-16ynu5g"
             data-testid="TableRow"
           >
             <td>
@@ -206,7 +206,7 @@ exports[`Signatures > should have all marked as signed if awaiting broadcast on 
             </td>
           </tr>
           <tr
-            class="group relative max-md:!border-transparent css-1x4z4cy"
+            class="group relative max-md:!border-transparent css-16ynu5g"
             data-testid="TableRow"
           >
             <td>
@@ -418,7 +418,7 @@ exports[`Signatures > should not require signature if waiting for final signatur
           role="rowgroup"
         >
           <tr
-            class="group relative max-md:!border-transparent css-1x4z4cy"
+            class="group relative max-md:!border-transparent css-16ynu5g"
             data-testid="TableRow"
           >
             <td>
@@ -568,7 +568,7 @@ exports[`Signatures > should not require signature if waiting for final signatur
             </td>
           </tr>
           <tr
-            class="group relative max-md:!border-transparent css-1x4z4cy"
+            class="group relative max-md:!border-transparent css-16ynu5g"
             data-testid="TableRow"
           >
             <td>
@@ -780,7 +780,7 @@ exports[`Signatures > should not require signature if waiting for final signatur
           role="rowgroup"
         >
           <tr
-            class="group relative max-md:!border-transparent css-1x4z4cy"
+            class="group relative max-md:!border-transparent css-16ynu5g"
             data-testid="TableRow"
           >
             <td>
@@ -932,7 +932,7 @@ exports[`Signatures > should not require signature if waiting for final signatur
             </td>
           </tr>
           <tr
-            class="group relative max-md:!border-transparent css-1x4z4cy"
+            class="group relative max-md:!border-transparent css-16ynu5g"
             data-testid="TableRow"
           >
             <td>
@@ -1144,7 +1144,7 @@ exports[`Signatures > should render 1`] = `
           role="rowgroup"
         >
           <tr
-            class="group relative max-md:!border-transparent css-1x4z4cy"
+            class="group relative max-md:!border-transparent css-16ynu5g"
             data-testid="TableRow"
           >
             <td>
@@ -1296,7 +1296,7 @@ exports[`Signatures > should render 1`] = `
             </td>
           </tr>
           <tr
-            class="group relative max-md:!border-transparent css-1x4z4cy"
+            class="group relative max-md:!border-transparent css-16ynu5g"
             data-testid="TableRow"
           >
             <td>
@@ -1508,7 +1508,7 @@ exports[`Signatures > should show all participants as signed when all signatures
           role="rowgroup"
         >
           <tr
-            class="group relative max-md:!border-transparent css-1x4z4cy"
+            class="group relative max-md:!border-transparent css-16ynu5g"
             data-testid="TableRow"
           >
             <td>
@@ -1658,7 +1658,7 @@ exports[`Signatures > should show all participants as signed when all signatures
             </td>
           </tr>
           <tr
-            class="group relative max-md:!border-transparent css-1x4z4cy"
+            class="group relative max-md:!border-transparent css-16ynu5g"
             data-testid="TableRow"
           >
             <td>

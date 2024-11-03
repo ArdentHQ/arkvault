@@ -305,12 +305,12 @@ exports[`ExchangeTransactionsTable > should render 1`] = `
             role="rowgroup"
           >
             <tr
-              class="relative css-1x4z4cy"
+              class="relative css-16ynu5g"
               data-testid="TableRow"
             >
               <td>
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 pl-6 rounded-l items-start my-0 py-3 xl:py-4 xl:min-h-0 flex-col gap-1"
+                  class="flex px-3 transition-colors duration-100 min-h-11 pl-6 rounded-l dark:group-hover:bg-black items-start my-0 py-3 xl:py-4 xl:min-h-0 flex-col gap-1"
                 >
                   <button
                     class="h-5 w-20 cursor-pointer truncate"
@@ -349,7 +349,7 @@ exports[`ExchangeTransactionsTable > should render 1`] = `
                 class="hidden text-sm xl:table-cell"
               >
                 <div
-                  class="flex px-3 my-1 transition-colors duration-100 min-h-11 items-start xl:items-center font-semibold"
+                  class="flex px-3 my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black items-start xl:items-center font-semibold"
                 >
                   <span
                     data-testid="TimeAgo"
@@ -360,14 +360,14 @@ exports[`ExchangeTransactionsTable > should render 1`] = `
               </td>
               <td>
                 <div
-                  class="flex px-3 my-1 transition-colors duration-100 min-h-11 font-semibold text-sm items-start xl:items-center mt-2 xl:mt-1"
+                  class="flex px-3 my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black font-semibold text-sm items-start xl:items-center mt-2 xl:mt-1"
                 />
               </td>
               <td
                 class="lg:hidden"
               >
                 <div
-                  class="px-3 transition-colors duration-100 min-h-11 items-end flex flex-col gap-1.5 my-3 xl:my-0"
+                  class="px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black items-end flex flex-col gap-1.5 my-3 xl:my-0"
                 >
                   <div
                     class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
@@ -441,7 +441,7 @@ exports[`ExchangeTransactionsTable > should render 1`] = `
                 class="hidden lg:table-cell"
               >
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 gap-3 justify-end items-start xl:items-center my-3 xl:my-0"
+                  class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black gap-3 justify-end items-start xl:items-center my-3 xl:my-0"
                 >
                   <div
                     class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
@@ -465,7 +465,7 @@ exports[`ExchangeTransactionsTable > should render 1`] = `
                 class="hidden lg:table-cell"
               >
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 gap-3 justify-end items-start xl:items-center my-3 xl:my-0"
+                  class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black gap-3 justify-end items-start xl:items-center my-3 xl:my-0"
                 >
                   <div
                     class="flex h-full items-center justify-center rounded pr-1.5 css-1jspzfx"
@@ -521,7 +521,7 @@ exports[`ExchangeTransactionsTable > should render 1`] = `
               </td>
               <td>
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 justify-center items-start xl:items-center my-3 xl:my-0"
+                  class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black justify-center items-start xl:items-center my-3 xl:my-0"
                 >
                   <span>
                     <div
@@ -562,10 +562,10 @@ exports[`ExchangeTransactionsTable > should render 1`] = `
               </td>
               <td>
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r items-start xl:items-center justify-end text-theme-secondary-text my-3 xl:my-0"
+                  class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r dark:group-hover:bg-black items-start xl:items-center justify-end text-theme-secondary-text my-3 xl:my-0"
                 >
                   <button
-                    class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent css-1sy20y6"
+                    class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent hover:text-theme-primary-700 hover:bg-theme-primary-200 dark:hover:bg-theme-secondary-800 dark:hover:text-white css-10jzzmw"
                     data-testid="TableRemoveButton--compact"
                     type="button"
                   >
@@ -573,9 +573,9 @@ exports[`ExchangeTransactionsTable > should render 1`] = `
                       class="flex items-center space-x-2"
                     >
                       <div
-                        class="css-1i4b0eq"
-                        height="20"
-                        width="20"
+                        class="css-v0ob3f"
+                        height="16"
+                        width="16"
                       >
                         <svg
                           id="trash"
@@ -604,12 +604,12 @@ exports[`ExchangeTransactionsTable > should render 1`] = `
               </td>
             </tr>
             <tr
-              class="relative css-1x4z4cy"
+              class="relative css-16ynu5g"
               data-testid="TableRow"
             >
               <td>
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 pl-6 rounded-l items-start my-0 py-3 xl:py-4 xl:min-h-0 flex-col gap-1"
+                  class="flex px-3 transition-colors duration-100 min-h-11 pl-6 rounded-l dark:group-hover:bg-black items-start my-0 py-3 xl:py-4 xl:min-h-0 flex-col gap-1"
                 >
                   <button
                     class="h-5 w-20 cursor-pointer truncate"
@@ -648,7 +648,7 @@ exports[`ExchangeTransactionsTable > should render 1`] = `
                 class="hidden text-sm xl:table-cell"
               >
                 <div
-                  class="flex px-3 my-1 transition-colors duration-100 min-h-11 items-start xl:items-center font-semibold"
+                  class="flex px-3 my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black items-start xl:items-center font-semibold"
                 >
                   <span
                     data-testid="TimeAgo"
@@ -659,14 +659,14 @@ exports[`ExchangeTransactionsTable > should render 1`] = `
               </td>
               <td>
                 <div
-                  class="flex px-3 my-1 transition-colors duration-100 min-h-11 font-semibold text-sm items-start xl:items-center mt-2 xl:mt-1"
+                  class="flex px-3 my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black font-semibold text-sm items-start xl:items-center mt-2 xl:mt-1"
                 />
               </td>
               <td
                 class="lg:hidden"
               >
                 <div
-                  class="px-3 transition-colors duration-100 min-h-11 items-end flex flex-col gap-1.5 my-3 xl:my-0"
+                  class="px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black items-end flex flex-col gap-1.5 my-3 xl:my-0"
                 >
                   <div
                     class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
@@ -740,7 +740,7 @@ exports[`ExchangeTransactionsTable > should render 1`] = `
                 class="hidden lg:table-cell"
               >
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 gap-3 justify-end items-start xl:items-center my-3 xl:my-0"
+                  class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black gap-3 justify-end items-start xl:items-center my-3 xl:my-0"
                 >
                   <div
                     class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
@@ -764,7 +764,7 @@ exports[`ExchangeTransactionsTable > should render 1`] = `
                 class="hidden lg:table-cell"
               >
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 gap-3 justify-end items-start xl:items-center my-3 xl:my-0"
+                  class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black gap-3 justify-end items-start xl:items-center my-3 xl:my-0"
                 >
                   <div
                     class="flex h-full items-center justify-center rounded pr-1.5 css-1jspzfx"
@@ -820,7 +820,7 @@ exports[`ExchangeTransactionsTable > should render 1`] = `
               </td>
               <td>
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 justify-center items-start xl:items-center my-3 xl:my-0"
+                  class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black justify-center items-start xl:items-center my-3 xl:my-0"
                 >
                   <span>
                     <div
@@ -861,10 +861,10 @@ exports[`ExchangeTransactionsTable > should render 1`] = `
               </td>
               <td>
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r items-start xl:items-center justify-end text-theme-secondary-text my-3 xl:my-0"
+                  class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r dark:group-hover:bg-black items-start xl:items-center justify-end text-theme-secondary-text my-3 xl:my-0"
                 >
                   <button
-                    class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent css-1sy20y6"
+                    class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent hover:text-theme-primary-700 hover:bg-theme-primary-200 dark:hover:bg-theme-secondary-800 dark:hover:text-white css-10jzzmw"
                     data-testid="TableRemoveButton--compact"
                     type="button"
                   >
@@ -872,9 +872,9 @@ exports[`ExchangeTransactionsTable > should render 1`] = `
                       class="flex items-center space-x-2"
                     >
                       <div
-                        class="css-1i4b0eq"
-                        height="20"
-                        width="20"
+                        class="css-v0ob3f"
+                        height="16"
+                        width="16"
                       >
                         <svg
                           id="trash"
@@ -903,12 +903,12 @@ exports[`ExchangeTransactionsTable > should render 1`] = `
               </td>
             </tr>
             <tr
-              class="relative css-1x4z4cy"
+              class="relative css-16ynu5g"
               data-testid="TableRow"
             >
               <td>
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 pl-6 rounded-l items-start my-0 py-3 xl:py-4 xl:min-h-0 flex-col gap-1"
+                  class="flex px-3 transition-colors duration-100 min-h-11 pl-6 rounded-l dark:group-hover:bg-black items-start my-0 py-3 xl:py-4 xl:min-h-0 flex-col gap-1"
                 >
                   <button
                     class="h-5 w-20 cursor-pointer truncate"
@@ -947,7 +947,7 @@ exports[`ExchangeTransactionsTable > should render 1`] = `
                 class="hidden text-sm xl:table-cell"
               >
                 <div
-                  class="flex px-3 my-1 transition-colors duration-100 min-h-11 items-start xl:items-center font-semibold"
+                  class="flex px-3 my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black items-start xl:items-center font-semibold"
                 >
                   <span
                     data-testid="TimeAgo"
@@ -958,14 +958,14 @@ exports[`ExchangeTransactionsTable > should render 1`] = `
               </td>
               <td>
                 <div
-                  class="flex px-3 my-1 transition-colors duration-100 min-h-11 font-semibold text-sm items-start xl:items-center mt-2 xl:mt-1"
+                  class="flex px-3 my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black font-semibold text-sm items-start xl:items-center mt-2 xl:mt-1"
                 />
               </td>
               <td
                 class="lg:hidden"
               >
                 <div
-                  class="px-3 transition-colors duration-100 min-h-11 items-end flex flex-col gap-1.5 my-3 xl:my-0"
+                  class="px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black items-end flex flex-col gap-1.5 my-3 xl:my-0"
                 >
                   <div
                     class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
@@ -1039,7 +1039,7 @@ exports[`ExchangeTransactionsTable > should render 1`] = `
                 class="hidden lg:table-cell"
               >
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 gap-3 justify-end items-start xl:items-center my-3 xl:my-0"
+                  class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black gap-3 justify-end items-start xl:items-center my-3 xl:my-0"
                 >
                   <div
                     class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
@@ -1063,7 +1063,7 @@ exports[`ExchangeTransactionsTable > should render 1`] = `
                 class="hidden lg:table-cell"
               >
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 gap-3 justify-end items-start xl:items-center my-3 xl:my-0"
+                  class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black gap-3 justify-end items-start xl:items-center my-3 xl:my-0"
                 >
                   <div
                     class="flex h-full items-center justify-center rounded pr-1.5 css-1jspzfx"
@@ -1119,7 +1119,7 @@ exports[`ExchangeTransactionsTable > should render 1`] = `
               </td>
               <td>
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 justify-center items-start xl:items-center my-3 xl:my-0"
+                  class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black justify-center items-start xl:items-center my-3 xl:my-0"
                 >
                   <span>
                     <div
@@ -1160,10 +1160,10 @@ exports[`ExchangeTransactionsTable > should render 1`] = `
               </td>
               <td>
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r items-start xl:items-center justify-end text-theme-secondary-text my-3 xl:my-0"
+                  class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r dark:group-hover:bg-black items-start xl:items-center justify-end text-theme-secondary-text my-3 xl:my-0"
                 >
                   <button
-                    class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent css-1sy20y6"
+                    class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent hover:text-theme-primary-700 hover:bg-theme-primary-200 dark:hover:bg-theme-secondary-800 dark:hover:text-white css-10jzzmw"
                     data-testid="TableRemoveButton--compact"
                     type="button"
                   >
@@ -1171,9 +1171,9 @@ exports[`ExchangeTransactionsTable > should render 1`] = `
                       class="flex items-center space-x-2"
                     >
                       <div
-                        class="css-1i4b0eq"
-                        height="20"
-                        width="20"
+                        class="css-v0ob3f"
+                        height="16"
+                        width="16"
                       >
                         <svg
                           id="trash"
@@ -1514,12 +1514,12 @@ exports[`ExchangeTransactionsTable > should render compact 1`] = `
             role="rowgroup"
           >
             <tr
-              class="relative css-1x4z4cy"
+              class="relative css-16ynu5g"
               data-testid="TableRow"
             >
               <td>
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 pl-6 rounded-l items-start my-0 py-3 xl:py-4 xl:min-h-0 flex-col gap-1"
+                  class="flex px-3 transition-colors duration-100 min-h-11 pl-6 rounded-l dark:group-hover:bg-black items-start my-0 py-3 xl:py-4 xl:min-h-0 flex-col gap-1"
                 >
                   <button
                     class="h-5 w-20 cursor-pointer truncate"
@@ -1558,7 +1558,7 @@ exports[`ExchangeTransactionsTable > should render compact 1`] = `
                 class="hidden text-sm xl:table-cell"
               >
                 <div
-                  class="flex px-3 my-1 transition-colors duration-100 min-h-11 items-start xl:items-center font-semibold"
+                  class="flex px-3 my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black items-start xl:items-center font-semibold"
                 >
                   <span
                     data-testid="TimeAgo"
@@ -1569,14 +1569,14 @@ exports[`ExchangeTransactionsTable > should render compact 1`] = `
               </td>
               <td>
                 <div
-                  class="flex px-3 my-1 transition-colors duration-100 min-h-11 font-semibold text-sm items-start xl:items-center mt-2 xl:mt-1"
+                  class="flex px-3 my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black font-semibold text-sm items-start xl:items-center mt-2 xl:mt-1"
                 />
               </td>
               <td
                 class="lg:hidden"
               >
                 <div
-                  class="px-3 transition-colors duration-100 min-h-11 items-end flex flex-col gap-1.5 my-3 xl:my-0"
+                  class="px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black items-end flex flex-col gap-1.5 my-3 xl:my-0"
                 >
                   <div
                     class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
@@ -1650,7 +1650,7 @@ exports[`ExchangeTransactionsTable > should render compact 1`] = `
                 class="hidden lg:table-cell"
               >
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 gap-3 justify-end items-start xl:items-center my-3 xl:my-0"
+                  class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black gap-3 justify-end items-start xl:items-center my-3 xl:my-0"
                 >
                   <div
                     class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
@@ -1674,7 +1674,7 @@ exports[`ExchangeTransactionsTable > should render compact 1`] = `
                 class="hidden lg:table-cell"
               >
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 gap-3 justify-end items-start xl:items-center my-3 xl:my-0"
+                  class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black gap-3 justify-end items-start xl:items-center my-3 xl:my-0"
                 >
                   <div
                     class="flex h-full items-center justify-center rounded pr-1.5 css-1jspzfx"
@@ -1730,7 +1730,7 @@ exports[`ExchangeTransactionsTable > should render compact 1`] = `
               </td>
               <td>
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 justify-center items-start xl:items-center my-3 xl:my-0"
+                  class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black justify-center items-start xl:items-center my-3 xl:my-0"
                 >
                   <span>
                     <div
@@ -1771,10 +1771,10 @@ exports[`ExchangeTransactionsTable > should render compact 1`] = `
               </td>
               <td>
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r items-start xl:items-center justify-end text-theme-secondary-text my-3 xl:my-0"
+                  class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r dark:group-hover:bg-black items-start xl:items-center justify-end text-theme-secondary-text my-3 xl:my-0"
                 >
                   <button
-                    class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent css-1sy20y6"
+                    class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent hover:text-theme-primary-700 hover:bg-theme-primary-200 dark:hover:bg-theme-secondary-800 dark:hover:text-white css-10jzzmw"
                     data-testid="TableRemoveButton--compact"
                     type="button"
                   >
@@ -1782,9 +1782,9 @@ exports[`ExchangeTransactionsTable > should render compact 1`] = `
                       class="flex items-center space-x-2"
                     >
                       <div
-                        class="css-1i4b0eq"
-                        height="20"
-                        width="20"
+                        class="css-v0ob3f"
+                        height="16"
+                        width="16"
                       >
                         <svg
                           id="trash"
@@ -1813,12 +1813,12 @@ exports[`ExchangeTransactionsTable > should render compact 1`] = `
               </td>
             </tr>
             <tr
-              class="relative css-1x4z4cy"
+              class="relative css-16ynu5g"
               data-testid="TableRow"
             >
               <td>
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 pl-6 rounded-l items-start my-0 py-3 xl:py-4 xl:min-h-0 flex-col gap-1"
+                  class="flex px-3 transition-colors duration-100 min-h-11 pl-6 rounded-l dark:group-hover:bg-black items-start my-0 py-3 xl:py-4 xl:min-h-0 flex-col gap-1"
                 >
                   <button
                     class="h-5 w-20 cursor-pointer truncate"
@@ -1857,7 +1857,7 @@ exports[`ExchangeTransactionsTable > should render compact 1`] = `
                 class="hidden text-sm xl:table-cell"
               >
                 <div
-                  class="flex px-3 my-1 transition-colors duration-100 min-h-11 items-start xl:items-center font-semibold"
+                  class="flex px-3 my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black items-start xl:items-center font-semibold"
                 >
                   <span
                     data-testid="TimeAgo"
@@ -1868,14 +1868,14 @@ exports[`ExchangeTransactionsTable > should render compact 1`] = `
               </td>
               <td>
                 <div
-                  class="flex px-3 my-1 transition-colors duration-100 min-h-11 font-semibold text-sm items-start xl:items-center mt-2 xl:mt-1"
+                  class="flex px-3 my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black font-semibold text-sm items-start xl:items-center mt-2 xl:mt-1"
                 />
               </td>
               <td
                 class="lg:hidden"
               >
                 <div
-                  class="px-3 transition-colors duration-100 min-h-11 items-end flex flex-col gap-1.5 my-3 xl:my-0"
+                  class="px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black items-end flex flex-col gap-1.5 my-3 xl:my-0"
                 >
                   <div
                     class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
@@ -1949,7 +1949,7 @@ exports[`ExchangeTransactionsTable > should render compact 1`] = `
                 class="hidden lg:table-cell"
               >
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 gap-3 justify-end items-start xl:items-center my-3 xl:my-0"
+                  class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black gap-3 justify-end items-start xl:items-center my-3 xl:my-0"
                 >
                   <div
                     class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
@@ -1973,7 +1973,7 @@ exports[`ExchangeTransactionsTable > should render compact 1`] = `
                 class="hidden lg:table-cell"
               >
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 gap-3 justify-end items-start xl:items-center my-3 xl:my-0"
+                  class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black gap-3 justify-end items-start xl:items-center my-3 xl:my-0"
                 >
                   <div
                     class="flex h-full items-center justify-center rounded pr-1.5 css-1jspzfx"
@@ -2029,7 +2029,7 @@ exports[`ExchangeTransactionsTable > should render compact 1`] = `
               </td>
               <td>
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 justify-center items-start xl:items-center my-3 xl:my-0"
+                  class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black justify-center items-start xl:items-center my-3 xl:my-0"
                 >
                   <span>
                     <div
@@ -2070,10 +2070,10 @@ exports[`ExchangeTransactionsTable > should render compact 1`] = `
               </td>
               <td>
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r items-start xl:items-center justify-end text-theme-secondary-text my-3 xl:my-0"
+                  class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r dark:group-hover:bg-black items-start xl:items-center justify-end text-theme-secondary-text my-3 xl:my-0"
                 >
                   <button
-                    class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent css-1sy20y6"
+                    class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent hover:text-theme-primary-700 hover:bg-theme-primary-200 dark:hover:bg-theme-secondary-800 dark:hover:text-white css-10jzzmw"
                     data-testid="TableRemoveButton--compact"
                     type="button"
                   >
@@ -2081,9 +2081,9 @@ exports[`ExchangeTransactionsTable > should render compact 1`] = `
                       class="flex items-center space-x-2"
                     >
                       <div
-                        class="css-1i4b0eq"
-                        height="20"
-                        width="20"
+                        class="css-v0ob3f"
+                        height="16"
+                        width="16"
                       >
                         <svg
                           id="trash"
@@ -2112,12 +2112,12 @@ exports[`ExchangeTransactionsTable > should render compact 1`] = `
               </td>
             </tr>
             <tr
-              class="relative css-1x4z4cy"
+              class="relative css-16ynu5g"
               data-testid="TableRow"
             >
               <td>
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 pl-6 rounded-l items-start my-0 py-3 xl:py-4 xl:min-h-0 flex-col gap-1"
+                  class="flex px-3 transition-colors duration-100 min-h-11 pl-6 rounded-l dark:group-hover:bg-black items-start my-0 py-3 xl:py-4 xl:min-h-0 flex-col gap-1"
                 >
                   <button
                     class="h-5 w-20 cursor-pointer truncate"
@@ -2156,7 +2156,7 @@ exports[`ExchangeTransactionsTable > should render compact 1`] = `
                 class="hidden text-sm xl:table-cell"
               >
                 <div
-                  class="flex px-3 my-1 transition-colors duration-100 min-h-11 items-start xl:items-center font-semibold"
+                  class="flex px-3 my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black items-start xl:items-center font-semibold"
                 >
                   <span
                     data-testid="TimeAgo"
@@ -2167,14 +2167,14 @@ exports[`ExchangeTransactionsTable > should render compact 1`] = `
               </td>
               <td>
                 <div
-                  class="flex px-3 my-1 transition-colors duration-100 min-h-11 font-semibold text-sm items-start xl:items-center mt-2 xl:mt-1"
+                  class="flex px-3 my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black font-semibold text-sm items-start xl:items-center mt-2 xl:mt-1"
                 />
               </td>
               <td
                 class="lg:hidden"
               >
                 <div
-                  class="px-3 transition-colors duration-100 min-h-11 items-end flex flex-col gap-1.5 my-3 xl:my-0"
+                  class="px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black items-end flex flex-col gap-1.5 my-3 xl:my-0"
                 >
                   <div
                     class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
@@ -2248,7 +2248,7 @@ exports[`ExchangeTransactionsTable > should render compact 1`] = `
                 class="hidden lg:table-cell"
               >
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 gap-3 justify-end items-start xl:items-center my-3 xl:my-0"
+                  class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black gap-3 justify-end items-start xl:items-center my-3 xl:my-0"
                 >
                   <div
                     class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
@@ -2272,7 +2272,7 @@ exports[`ExchangeTransactionsTable > should render compact 1`] = `
                 class="hidden lg:table-cell"
               >
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 gap-3 justify-end items-start xl:items-center my-3 xl:my-0"
+                  class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black gap-3 justify-end items-start xl:items-center my-3 xl:my-0"
                 >
                   <div
                     class="flex h-full items-center justify-center rounded pr-1.5 css-1jspzfx"
@@ -2328,7 +2328,7 @@ exports[`ExchangeTransactionsTable > should render compact 1`] = `
               </td>
               <td>
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 justify-center items-start xl:items-center my-3 xl:my-0"
+                  class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black justify-center items-start xl:items-center my-3 xl:my-0"
                 >
                   <span>
                     <div
@@ -2369,10 +2369,10 @@ exports[`ExchangeTransactionsTable > should render compact 1`] = `
               </td>
               <td>
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r items-start xl:items-center justify-end text-theme-secondary-text my-3 xl:my-0"
+                  class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r dark:group-hover:bg-black items-start xl:items-center justify-end text-theme-secondary-text my-3 xl:my-0"
                 >
                   <button
-                    class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent css-1sy20y6"
+                    class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent hover:text-theme-primary-700 hover:bg-theme-primary-200 dark:hover:bg-theme-secondary-800 dark:hover:text-white css-10jzzmw"
                     data-testid="TableRemoveButton--compact"
                     type="button"
                   >
@@ -2380,9 +2380,9 @@ exports[`ExchangeTransactionsTable > should render compact 1`] = `
                       class="flex items-center space-x-2"
                     >
                       <div
-                        class="css-1i4b0eq"
-                        height="20"
-                        width="20"
+                        class="css-v0ob3f"
+                        height="16"
+                        width="16"
                       >
                         <svg
                           id="trash"
@@ -2723,12 +2723,12 @@ exports[`ExchangeTransactionsTable > should render desktop 1`] = `
             role="rowgroup"
           >
             <tr
-              class="relative css-1x4z4cy"
+              class="relative css-16ynu5g"
               data-testid="TableRow"
             >
               <td>
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 pl-6 rounded-l items-start my-0 py-3 xl:py-4 xl:min-h-0 flex-col gap-1"
+                  class="flex px-3 transition-colors duration-100 min-h-11 pl-6 rounded-l dark:group-hover:bg-black items-start my-0 py-3 xl:py-4 xl:min-h-0 flex-col gap-1"
                 >
                   <button
                     class="h-5 w-20 cursor-pointer truncate"
@@ -2767,7 +2767,7 @@ exports[`ExchangeTransactionsTable > should render desktop 1`] = `
                 class="hidden text-sm xl:table-cell"
               >
                 <div
-                  class="flex px-3 my-1 transition-colors duration-100 min-h-11 items-start xl:items-center font-semibold"
+                  class="flex px-3 my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black items-start xl:items-center font-semibold"
                 >
                   <span
                     data-testid="TimeAgo"
@@ -2778,14 +2778,14 @@ exports[`ExchangeTransactionsTable > should render desktop 1`] = `
               </td>
               <td>
                 <div
-                  class="flex px-3 my-1 transition-colors duration-100 min-h-11 font-semibold text-sm items-start xl:items-center mt-2 xl:mt-1"
+                  class="flex px-3 my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black font-semibold text-sm items-start xl:items-center mt-2 xl:mt-1"
                 />
               </td>
               <td
                 class="lg:hidden"
               >
                 <div
-                  class="px-3 transition-colors duration-100 min-h-11 items-end flex flex-col gap-1.5 my-3 xl:my-0"
+                  class="px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black items-end flex flex-col gap-1.5 my-3 xl:my-0"
                 >
                   <div
                     class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
@@ -2859,7 +2859,7 @@ exports[`ExchangeTransactionsTable > should render desktop 1`] = `
                 class="hidden lg:table-cell"
               >
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 gap-3 justify-end items-start xl:items-center my-3 xl:my-0"
+                  class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black gap-3 justify-end items-start xl:items-center my-3 xl:my-0"
                 >
                   <div
                     class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
@@ -2883,7 +2883,7 @@ exports[`ExchangeTransactionsTable > should render desktop 1`] = `
                 class="hidden lg:table-cell"
               >
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 gap-3 justify-end items-start xl:items-center my-3 xl:my-0"
+                  class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black gap-3 justify-end items-start xl:items-center my-3 xl:my-0"
                 >
                   <div
                     class="flex h-full items-center justify-center rounded pr-1.5 css-1jspzfx"
@@ -2939,7 +2939,7 @@ exports[`ExchangeTransactionsTable > should render desktop 1`] = `
               </td>
               <td>
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 justify-center items-start xl:items-center my-3 xl:my-0"
+                  class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black justify-center items-start xl:items-center my-3 xl:my-0"
                 >
                   <span>
                     <div
@@ -2980,10 +2980,10 @@ exports[`ExchangeTransactionsTable > should render desktop 1`] = `
               </td>
               <td>
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r items-start xl:items-center justify-end text-theme-secondary-text my-3 xl:my-0"
+                  class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r dark:group-hover:bg-black items-start xl:items-center justify-end text-theme-secondary-text my-3 xl:my-0"
                 >
                   <button
-                    class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent css-1sy20y6"
+                    class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent hover:text-theme-primary-700 hover:bg-theme-primary-200 dark:hover:bg-theme-secondary-800 dark:hover:text-white css-10jzzmw"
                     data-testid="TableRemoveButton--compact"
                     type="button"
                   >
@@ -2991,9 +2991,9 @@ exports[`ExchangeTransactionsTable > should render desktop 1`] = `
                       class="flex items-center space-x-2"
                     >
                       <div
-                        class="css-1i4b0eq"
-                        height="20"
-                        width="20"
+                        class="css-v0ob3f"
+                        height="16"
+                        width="16"
                       >
                         <svg
                           id="trash"
@@ -3022,12 +3022,12 @@ exports[`ExchangeTransactionsTable > should render desktop 1`] = `
               </td>
             </tr>
             <tr
-              class="relative css-1x4z4cy"
+              class="relative css-16ynu5g"
               data-testid="TableRow"
             >
               <td>
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 pl-6 rounded-l items-start my-0 py-3 xl:py-4 xl:min-h-0 flex-col gap-1"
+                  class="flex px-3 transition-colors duration-100 min-h-11 pl-6 rounded-l dark:group-hover:bg-black items-start my-0 py-3 xl:py-4 xl:min-h-0 flex-col gap-1"
                 >
                   <button
                     class="h-5 w-20 cursor-pointer truncate"
@@ -3066,7 +3066,7 @@ exports[`ExchangeTransactionsTable > should render desktop 1`] = `
                 class="hidden text-sm xl:table-cell"
               >
                 <div
-                  class="flex px-3 my-1 transition-colors duration-100 min-h-11 items-start xl:items-center font-semibold"
+                  class="flex px-3 my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black items-start xl:items-center font-semibold"
                 >
                   <span
                     data-testid="TimeAgo"
@@ -3077,14 +3077,14 @@ exports[`ExchangeTransactionsTable > should render desktop 1`] = `
               </td>
               <td>
                 <div
-                  class="flex px-3 my-1 transition-colors duration-100 min-h-11 font-semibold text-sm items-start xl:items-center mt-2 xl:mt-1"
+                  class="flex px-3 my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black font-semibold text-sm items-start xl:items-center mt-2 xl:mt-1"
                 />
               </td>
               <td
                 class="lg:hidden"
               >
                 <div
-                  class="px-3 transition-colors duration-100 min-h-11 items-end flex flex-col gap-1.5 my-3 xl:my-0"
+                  class="px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black items-end flex flex-col gap-1.5 my-3 xl:my-0"
                 >
                   <div
                     class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
@@ -3158,7 +3158,7 @@ exports[`ExchangeTransactionsTable > should render desktop 1`] = `
                 class="hidden lg:table-cell"
               >
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 gap-3 justify-end items-start xl:items-center my-3 xl:my-0"
+                  class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black gap-3 justify-end items-start xl:items-center my-3 xl:my-0"
                 >
                   <div
                     class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
@@ -3182,7 +3182,7 @@ exports[`ExchangeTransactionsTable > should render desktop 1`] = `
                 class="hidden lg:table-cell"
               >
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 gap-3 justify-end items-start xl:items-center my-3 xl:my-0"
+                  class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black gap-3 justify-end items-start xl:items-center my-3 xl:my-0"
                 >
                   <div
                     class="flex h-full items-center justify-center rounded pr-1.5 css-1jspzfx"
@@ -3238,7 +3238,7 @@ exports[`ExchangeTransactionsTable > should render desktop 1`] = `
               </td>
               <td>
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 justify-center items-start xl:items-center my-3 xl:my-0"
+                  class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black justify-center items-start xl:items-center my-3 xl:my-0"
                 >
                   <span>
                     <div
@@ -3279,10 +3279,10 @@ exports[`ExchangeTransactionsTable > should render desktop 1`] = `
               </td>
               <td>
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r items-start xl:items-center justify-end text-theme-secondary-text my-3 xl:my-0"
+                  class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r dark:group-hover:bg-black items-start xl:items-center justify-end text-theme-secondary-text my-3 xl:my-0"
                 >
                   <button
-                    class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent css-1sy20y6"
+                    class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent hover:text-theme-primary-700 hover:bg-theme-primary-200 dark:hover:bg-theme-secondary-800 dark:hover:text-white css-10jzzmw"
                     data-testid="TableRemoveButton--compact"
                     type="button"
                   >
@@ -3290,9 +3290,9 @@ exports[`ExchangeTransactionsTable > should render desktop 1`] = `
                       class="flex items-center space-x-2"
                     >
                       <div
-                        class="css-1i4b0eq"
-                        height="20"
-                        width="20"
+                        class="css-v0ob3f"
+                        height="16"
+                        width="16"
                       >
                         <svg
                           id="trash"
@@ -3321,12 +3321,12 @@ exports[`ExchangeTransactionsTable > should render desktop 1`] = `
               </td>
             </tr>
             <tr
-              class="relative css-1x4z4cy"
+              class="relative css-16ynu5g"
               data-testid="TableRow"
             >
               <td>
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 pl-6 rounded-l items-start my-0 py-3 xl:py-4 xl:min-h-0 flex-col gap-1"
+                  class="flex px-3 transition-colors duration-100 min-h-11 pl-6 rounded-l dark:group-hover:bg-black items-start my-0 py-3 xl:py-4 xl:min-h-0 flex-col gap-1"
                 >
                   <button
                     class="h-5 w-20 cursor-pointer truncate"
@@ -3365,7 +3365,7 @@ exports[`ExchangeTransactionsTable > should render desktop 1`] = `
                 class="hidden text-sm xl:table-cell"
               >
                 <div
-                  class="flex px-3 my-1 transition-colors duration-100 min-h-11 items-start xl:items-center font-semibold"
+                  class="flex px-3 my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black items-start xl:items-center font-semibold"
                 >
                   <span
                     data-testid="TimeAgo"
@@ -3376,14 +3376,14 @@ exports[`ExchangeTransactionsTable > should render desktop 1`] = `
               </td>
               <td>
                 <div
-                  class="flex px-3 my-1 transition-colors duration-100 min-h-11 font-semibold text-sm items-start xl:items-center mt-2 xl:mt-1"
+                  class="flex px-3 my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black font-semibold text-sm items-start xl:items-center mt-2 xl:mt-1"
                 />
               </td>
               <td
                 class="lg:hidden"
               >
                 <div
-                  class="px-3 transition-colors duration-100 min-h-11 items-end flex flex-col gap-1.5 my-3 xl:my-0"
+                  class="px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black items-end flex flex-col gap-1.5 my-3 xl:my-0"
                 >
                   <div
                     class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
@@ -3457,7 +3457,7 @@ exports[`ExchangeTransactionsTable > should render desktop 1`] = `
                 class="hidden lg:table-cell"
               >
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 gap-3 justify-end items-start xl:items-center my-3 xl:my-0"
+                  class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black gap-3 justify-end items-start xl:items-center my-3 xl:my-0"
                 >
                   <div
                     class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
@@ -3481,7 +3481,7 @@ exports[`ExchangeTransactionsTable > should render desktop 1`] = `
                 class="hidden lg:table-cell"
               >
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 gap-3 justify-end items-start xl:items-center my-3 xl:my-0"
+                  class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black gap-3 justify-end items-start xl:items-center my-3 xl:my-0"
                 >
                   <div
                     class="flex h-full items-center justify-center rounded pr-1.5 css-1jspzfx"
@@ -3537,7 +3537,7 @@ exports[`ExchangeTransactionsTable > should render desktop 1`] = `
               </td>
               <td>
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 justify-center items-start xl:items-center my-3 xl:my-0"
+                  class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black justify-center items-start xl:items-center my-3 xl:my-0"
                 >
                   <span>
                     <div
@@ -3578,10 +3578,10 @@ exports[`ExchangeTransactionsTable > should render desktop 1`] = `
               </td>
               <td>
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r items-start xl:items-center justify-end text-theme-secondary-text my-3 xl:my-0"
+                  class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r dark:group-hover:bg-black items-start xl:items-center justify-end text-theme-secondary-text my-3 xl:my-0"
                 >
                   <button
-                    class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent css-1sy20y6"
+                    class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent hover:text-theme-primary-700 hover:bg-theme-primary-200 dark:hover:bg-theme-secondary-800 dark:hover:text-white css-10jzzmw"
                     data-testid="TableRemoveButton--compact"
                     type="button"
                   >
@@ -3589,9 +3589,9 @@ exports[`ExchangeTransactionsTable > should render desktop 1`] = `
                       class="flex items-center space-x-2"
                     >
                       <div
-                        class="css-1i4b0eq"
-                        height="20"
-                        width="20"
+                        class="css-v0ob3f"
+                        height="16"
+                        width="16"
                       >
                         <svg
                           id="trash"
@@ -3932,12 +3932,12 @@ exports[`ExchangeTransactionsTable > should render desktop 2`] = `
             role="rowgroup"
           >
             <tr
-              class="relative css-1x4z4cy"
+              class="relative css-16ynu5g"
               data-testid="TableRow"
             >
               <td>
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 pl-6 rounded-l items-start my-0 py-3 xl:py-4 xl:min-h-0 flex-col gap-1"
+                  class="flex px-3 transition-colors duration-100 min-h-11 pl-6 rounded-l dark:group-hover:bg-black items-start my-0 py-3 xl:py-4 xl:min-h-0 flex-col gap-1"
                 >
                   <button
                     class="h-5 w-20 cursor-pointer truncate"
@@ -3976,7 +3976,7 @@ exports[`ExchangeTransactionsTable > should render desktop 2`] = `
                 class="hidden text-sm xl:table-cell"
               >
                 <div
-                  class="flex px-3 my-1 transition-colors duration-100 min-h-11 items-start xl:items-center font-semibold"
+                  class="flex px-3 my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black items-start xl:items-center font-semibold"
                 >
                   <span
                     data-testid="TimeAgo"
@@ -3987,14 +3987,14 @@ exports[`ExchangeTransactionsTable > should render desktop 2`] = `
               </td>
               <td>
                 <div
-                  class="flex px-3 my-1 transition-colors duration-100 min-h-11 font-semibold text-sm items-start xl:items-center mt-2 xl:mt-1"
+                  class="flex px-3 my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black font-semibold text-sm items-start xl:items-center mt-2 xl:mt-1"
                 />
               </td>
               <td
                 class="lg:hidden"
               >
                 <div
-                  class="px-3 transition-colors duration-100 min-h-11 items-end flex flex-col gap-1.5 my-3 xl:my-0"
+                  class="px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black items-end flex flex-col gap-1.5 my-3 xl:my-0"
                 >
                   <div
                     class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
@@ -4068,7 +4068,7 @@ exports[`ExchangeTransactionsTable > should render desktop 2`] = `
                 class="hidden lg:table-cell"
               >
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 gap-3 justify-end items-start xl:items-center my-3 xl:my-0"
+                  class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black gap-3 justify-end items-start xl:items-center my-3 xl:my-0"
                 >
                   <div
                     class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
@@ -4092,7 +4092,7 @@ exports[`ExchangeTransactionsTable > should render desktop 2`] = `
                 class="hidden lg:table-cell"
               >
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 gap-3 justify-end items-start xl:items-center my-3 xl:my-0"
+                  class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black gap-3 justify-end items-start xl:items-center my-3 xl:my-0"
                 >
                   <div
                     class="flex h-full items-center justify-center rounded pr-1.5 css-1jspzfx"
@@ -4148,7 +4148,7 @@ exports[`ExchangeTransactionsTable > should render desktop 2`] = `
               </td>
               <td>
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 justify-center items-start xl:items-center my-3 xl:my-0"
+                  class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black justify-center items-start xl:items-center my-3 xl:my-0"
                 >
                   <span>
                     <div
@@ -4189,10 +4189,10 @@ exports[`ExchangeTransactionsTable > should render desktop 2`] = `
               </td>
               <td>
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r items-start xl:items-center justify-end text-theme-secondary-text my-3 xl:my-0"
+                  class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r dark:group-hover:bg-black items-start xl:items-center justify-end text-theme-secondary-text my-3 xl:my-0"
                 >
                   <button
-                    class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent css-1sy20y6"
+                    class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent hover:text-theme-primary-700 hover:bg-theme-primary-200 dark:hover:bg-theme-secondary-800 dark:hover:text-white css-10jzzmw"
                     data-testid="TableRemoveButton--compact"
                     type="button"
                   >
@@ -4200,9 +4200,9 @@ exports[`ExchangeTransactionsTable > should render desktop 2`] = `
                       class="flex items-center space-x-2"
                     >
                       <div
-                        class="css-1i4b0eq"
-                        height="20"
-                        width="20"
+                        class="css-v0ob3f"
+                        height="16"
+                        width="16"
                       >
                         <svg
                           id="trash"
@@ -4231,12 +4231,12 @@ exports[`ExchangeTransactionsTable > should render desktop 2`] = `
               </td>
             </tr>
             <tr
-              class="relative css-1x4z4cy"
+              class="relative css-16ynu5g"
               data-testid="TableRow"
             >
               <td>
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 pl-6 rounded-l items-start my-0 py-3 xl:py-4 xl:min-h-0 flex-col gap-1"
+                  class="flex px-3 transition-colors duration-100 min-h-11 pl-6 rounded-l dark:group-hover:bg-black items-start my-0 py-3 xl:py-4 xl:min-h-0 flex-col gap-1"
                 >
                   <button
                     class="h-5 w-20 cursor-pointer truncate"
@@ -4275,7 +4275,7 @@ exports[`ExchangeTransactionsTable > should render desktop 2`] = `
                 class="hidden text-sm xl:table-cell"
               >
                 <div
-                  class="flex px-3 my-1 transition-colors duration-100 min-h-11 items-start xl:items-center font-semibold"
+                  class="flex px-3 my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black items-start xl:items-center font-semibold"
                 >
                   <span
                     data-testid="TimeAgo"
@@ -4286,14 +4286,14 @@ exports[`ExchangeTransactionsTable > should render desktop 2`] = `
               </td>
               <td>
                 <div
-                  class="flex px-3 my-1 transition-colors duration-100 min-h-11 font-semibold text-sm items-start xl:items-center mt-2 xl:mt-1"
+                  class="flex px-3 my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black font-semibold text-sm items-start xl:items-center mt-2 xl:mt-1"
                 />
               </td>
               <td
                 class="lg:hidden"
               >
                 <div
-                  class="px-3 transition-colors duration-100 min-h-11 items-end flex flex-col gap-1.5 my-3 xl:my-0"
+                  class="px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black items-end flex flex-col gap-1.5 my-3 xl:my-0"
                 >
                   <div
                     class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
@@ -4367,7 +4367,7 @@ exports[`ExchangeTransactionsTable > should render desktop 2`] = `
                 class="hidden lg:table-cell"
               >
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 gap-3 justify-end items-start xl:items-center my-3 xl:my-0"
+                  class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black gap-3 justify-end items-start xl:items-center my-3 xl:my-0"
                 >
                   <div
                     class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
@@ -4391,7 +4391,7 @@ exports[`ExchangeTransactionsTable > should render desktop 2`] = `
                 class="hidden lg:table-cell"
               >
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 gap-3 justify-end items-start xl:items-center my-3 xl:my-0"
+                  class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black gap-3 justify-end items-start xl:items-center my-3 xl:my-0"
                 >
                   <div
                     class="flex h-full items-center justify-center rounded pr-1.5 css-1jspzfx"
@@ -4447,7 +4447,7 @@ exports[`ExchangeTransactionsTable > should render desktop 2`] = `
               </td>
               <td>
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 justify-center items-start xl:items-center my-3 xl:my-0"
+                  class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black justify-center items-start xl:items-center my-3 xl:my-0"
                 >
                   <span>
                     <div
@@ -4488,10 +4488,10 @@ exports[`ExchangeTransactionsTable > should render desktop 2`] = `
               </td>
               <td>
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r items-start xl:items-center justify-end text-theme-secondary-text my-3 xl:my-0"
+                  class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r dark:group-hover:bg-black items-start xl:items-center justify-end text-theme-secondary-text my-3 xl:my-0"
                 >
                   <button
-                    class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent css-1sy20y6"
+                    class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent hover:text-theme-primary-700 hover:bg-theme-primary-200 dark:hover:bg-theme-secondary-800 dark:hover:text-white css-10jzzmw"
                     data-testid="TableRemoveButton--compact"
                     type="button"
                   >
@@ -4499,9 +4499,9 @@ exports[`ExchangeTransactionsTable > should render desktop 2`] = `
                       class="flex items-center space-x-2"
                     >
                       <div
-                        class="css-1i4b0eq"
-                        height="20"
-                        width="20"
+                        class="css-v0ob3f"
+                        height="16"
+                        width="16"
                       >
                         <svg
                           id="trash"
@@ -4530,12 +4530,12 @@ exports[`ExchangeTransactionsTable > should render desktop 2`] = `
               </td>
             </tr>
             <tr
-              class="relative css-1x4z4cy"
+              class="relative css-16ynu5g"
               data-testid="TableRow"
             >
               <td>
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 pl-6 rounded-l items-start my-0 py-3 xl:py-4 xl:min-h-0 flex-col gap-1"
+                  class="flex px-3 transition-colors duration-100 min-h-11 pl-6 rounded-l dark:group-hover:bg-black items-start my-0 py-3 xl:py-4 xl:min-h-0 flex-col gap-1"
                 >
                   <button
                     class="h-5 w-20 cursor-pointer truncate"
@@ -4574,7 +4574,7 @@ exports[`ExchangeTransactionsTable > should render desktop 2`] = `
                 class="hidden text-sm xl:table-cell"
               >
                 <div
-                  class="flex px-3 my-1 transition-colors duration-100 min-h-11 items-start xl:items-center font-semibold"
+                  class="flex px-3 my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black items-start xl:items-center font-semibold"
                 >
                   <span
                     data-testid="TimeAgo"
@@ -4585,14 +4585,14 @@ exports[`ExchangeTransactionsTable > should render desktop 2`] = `
               </td>
               <td>
                 <div
-                  class="flex px-3 my-1 transition-colors duration-100 min-h-11 font-semibold text-sm items-start xl:items-center mt-2 xl:mt-1"
+                  class="flex px-3 my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black font-semibold text-sm items-start xl:items-center mt-2 xl:mt-1"
                 />
               </td>
               <td
                 class="lg:hidden"
               >
                 <div
-                  class="px-3 transition-colors duration-100 min-h-11 items-end flex flex-col gap-1.5 my-3 xl:my-0"
+                  class="px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black items-end flex flex-col gap-1.5 my-3 xl:my-0"
                 >
                   <div
                     class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
@@ -4666,7 +4666,7 @@ exports[`ExchangeTransactionsTable > should render desktop 2`] = `
                 class="hidden lg:table-cell"
               >
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 gap-3 justify-end items-start xl:items-center my-3 xl:my-0"
+                  class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black gap-3 justify-end items-start xl:items-center my-3 xl:my-0"
                 >
                   <div
                     class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
@@ -4690,7 +4690,7 @@ exports[`ExchangeTransactionsTable > should render desktop 2`] = `
                 class="hidden lg:table-cell"
               >
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 gap-3 justify-end items-start xl:items-center my-3 xl:my-0"
+                  class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black gap-3 justify-end items-start xl:items-center my-3 xl:my-0"
                 >
                   <div
                     class="flex h-full items-center justify-center rounded pr-1.5 css-1jspzfx"
@@ -4746,7 +4746,7 @@ exports[`ExchangeTransactionsTable > should render desktop 2`] = `
               </td>
               <td>
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 justify-center items-start xl:items-center my-3 xl:my-0"
+                  class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black justify-center items-start xl:items-center my-3 xl:my-0"
                 >
                   <span>
                     <div
@@ -4787,10 +4787,10 @@ exports[`ExchangeTransactionsTable > should render desktop 2`] = `
               </td>
               <td>
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r items-start xl:items-center justify-end text-theme-secondary-text my-3 xl:my-0"
+                  class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r dark:group-hover:bg-black items-start xl:items-center justify-end text-theme-secondary-text my-3 xl:my-0"
                 >
                   <button
-                    class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent css-1sy20y6"
+                    class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent hover:text-theme-primary-700 hover:bg-theme-primary-200 dark:hover:bg-theme-secondary-800 dark:hover:text-white css-10jzzmw"
                     data-testid="TableRemoveButton--compact"
                     type="button"
                   >
@@ -4798,9 +4798,9 @@ exports[`ExchangeTransactionsTable > should render desktop 2`] = `
                       class="flex items-center space-x-2"
                     >
                       <div
-                        class="css-1i4b0eq"
-                        height="20"
-                        width="20"
+                        class="css-v0ob3f"
+                        height="16"
+                        width="16"
                       >
                         <svg
                           id="trash"
@@ -5141,12 +5141,12 @@ exports[`ExchangeTransactionsTable > should render desktop 3`] = `
             role="rowgroup"
           >
             <tr
-              class="relative css-1x4z4cy"
+              class="relative css-16ynu5g"
               data-testid="TableRow"
             >
               <td>
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 pl-6 rounded-l items-start my-0 py-3 xl:py-4 xl:min-h-0 flex-col gap-1"
+                  class="flex px-3 transition-colors duration-100 min-h-11 pl-6 rounded-l dark:group-hover:bg-black items-start my-0 py-3 xl:py-4 xl:min-h-0 flex-col gap-1"
                 >
                   <button
                     class="h-5 w-20 cursor-pointer truncate"
@@ -5185,7 +5185,7 @@ exports[`ExchangeTransactionsTable > should render desktop 3`] = `
                 class="hidden text-sm xl:table-cell"
               >
                 <div
-                  class="flex px-3 my-1 transition-colors duration-100 min-h-11 items-start xl:items-center font-semibold"
+                  class="flex px-3 my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black items-start xl:items-center font-semibold"
                 >
                   <span
                     data-testid="TimeAgo"
@@ -5196,14 +5196,14 @@ exports[`ExchangeTransactionsTable > should render desktop 3`] = `
               </td>
               <td>
                 <div
-                  class="flex px-3 my-1 transition-colors duration-100 min-h-11 font-semibold text-sm items-start xl:items-center mt-2 xl:mt-1"
+                  class="flex px-3 my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black font-semibold text-sm items-start xl:items-center mt-2 xl:mt-1"
                 />
               </td>
               <td
                 class="lg:hidden"
               >
                 <div
-                  class="px-3 transition-colors duration-100 min-h-11 items-end flex flex-col gap-1.5 my-3 xl:my-0"
+                  class="px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black items-end flex flex-col gap-1.5 my-3 xl:my-0"
                 >
                   <div
                     class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
@@ -5277,7 +5277,7 @@ exports[`ExchangeTransactionsTable > should render desktop 3`] = `
                 class="hidden lg:table-cell"
               >
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 gap-3 justify-end items-start xl:items-center my-3 xl:my-0"
+                  class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black gap-3 justify-end items-start xl:items-center my-3 xl:my-0"
                 >
                   <div
                     class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
@@ -5301,7 +5301,7 @@ exports[`ExchangeTransactionsTable > should render desktop 3`] = `
                 class="hidden lg:table-cell"
               >
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 gap-3 justify-end items-start xl:items-center my-3 xl:my-0"
+                  class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black gap-3 justify-end items-start xl:items-center my-3 xl:my-0"
                 >
                   <div
                     class="flex h-full items-center justify-center rounded pr-1.5 css-1jspzfx"
@@ -5357,7 +5357,7 @@ exports[`ExchangeTransactionsTable > should render desktop 3`] = `
               </td>
               <td>
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 justify-center items-start xl:items-center my-3 xl:my-0"
+                  class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black justify-center items-start xl:items-center my-3 xl:my-0"
                 >
                   <span>
                     <div
@@ -5398,10 +5398,10 @@ exports[`ExchangeTransactionsTable > should render desktop 3`] = `
               </td>
               <td>
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r items-start xl:items-center justify-end text-theme-secondary-text my-3 xl:my-0"
+                  class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r dark:group-hover:bg-black items-start xl:items-center justify-end text-theme-secondary-text my-3 xl:my-0"
                 >
                   <button
-                    class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent css-1sy20y6"
+                    class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent hover:text-theme-primary-700 hover:bg-theme-primary-200 dark:hover:bg-theme-secondary-800 dark:hover:text-white css-10jzzmw"
                     data-testid="TableRemoveButton--compact"
                     type="button"
                   >
@@ -5409,9 +5409,9 @@ exports[`ExchangeTransactionsTable > should render desktop 3`] = `
                       class="flex items-center space-x-2"
                     >
                       <div
-                        class="css-1i4b0eq"
-                        height="20"
-                        width="20"
+                        class="css-v0ob3f"
+                        height="16"
+                        width="16"
                       >
                         <svg
                           id="trash"
@@ -5440,12 +5440,12 @@ exports[`ExchangeTransactionsTable > should render desktop 3`] = `
               </td>
             </tr>
             <tr
-              class="relative css-1x4z4cy"
+              class="relative css-16ynu5g"
               data-testid="TableRow"
             >
               <td>
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 pl-6 rounded-l items-start my-0 py-3 xl:py-4 xl:min-h-0 flex-col gap-1"
+                  class="flex px-3 transition-colors duration-100 min-h-11 pl-6 rounded-l dark:group-hover:bg-black items-start my-0 py-3 xl:py-4 xl:min-h-0 flex-col gap-1"
                 >
                   <button
                     class="h-5 w-20 cursor-pointer truncate"
@@ -5484,7 +5484,7 @@ exports[`ExchangeTransactionsTable > should render desktop 3`] = `
                 class="hidden text-sm xl:table-cell"
               >
                 <div
-                  class="flex px-3 my-1 transition-colors duration-100 min-h-11 items-start xl:items-center font-semibold"
+                  class="flex px-3 my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black items-start xl:items-center font-semibold"
                 >
                   <span
                     data-testid="TimeAgo"
@@ -5495,14 +5495,14 @@ exports[`ExchangeTransactionsTable > should render desktop 3`] = `
               </td>
               <td>
                 <div
-                  class="flex px-3 my-1 transition-colors duration-100 min-h-11 font-semibold text-sm items-start xl:items-center mt-2 xl:mt-1"
+                  class="flex px-3 my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black font-semibold text-sm items-start xl:items-center mt-2 xl:mt-1"
                 />
               </td>
               <td
                 class="lg:hidden"
               >
                 <div
-                  class="px-3 transition-colors duration-100 min-h-11 items-end flex flex-col gap-1.5 my-3 xl:my-0"
+                  class="px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black items-end flex flex-col gap-1.5 my-3 xl:my-0"
                 >
                   <div
                     class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
@@ -5576,7 +5576,7 @@ exports[`ExchangeTransactionsTable > should render desktop 3`] = `
                 class="hidden lg:table-cell"
               >
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 gap-3 justify-end items-start xl:items-center my-3 xl:my-0"
+                  class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black gap-3 justify-end items-start xl:items-center my-3 xl:my-0"
                 >
                   <div
                     class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
@@ -5600,7 +5600,7 @@ exports[`ExchangeTransactionsTable > should render desktop 3`] = `
                 class="hidden lg:table-cell"
               >
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 gap-3 justify-end items-start xl:items-center my-3 xl:my-0"
+                  class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black gap-3 justify-end items-start xl:items-center my-3 xl:my-0"
                 >
                   <div
                     class="flex h-full items-center justify-center rounded pr-1.5 css-1jspzfx"
@@ -5656,7 +5656,7 @@ exports[`ExchangeTransactionsTable > should render desktop 3`] = `
               </td>
               <td>
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 justify-center items-start xl:items-center my-3 xl:my-0"
+                  class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black justify-center items-start xl:items-center my-3 xl:my-0"
                 >
                   <span>
                     <div
@@ -5697,10 +5697,10 @@ exports[`ExchangeTransactionsTable > should render desktop 3`] = `
               </td>
               <td>
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r items-start xl:items-center justify-end text-theme-secondary-text my-3 xl:my-0"
+                  class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r dark:group-hover:bg-black items-start xl:items-center justify-end text-theme-secondary-text my-3 xl:my-0"
                 >
                   <button
-                    class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent css-1sy20y6"
+                    class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent hover:text-theme-primary-700 hover:bg-theme-primary-200 dark:hover:bg-theme-secondary-800 dark:hover:text-white css-10jzzmw"
                     data-testid="TableRemoveButton--compact"
                     type="button"
                   >
@@ -5708,9 +5708,9 @@ exports[`ExchangeTransactionsTable > should render desktop 3`] = `
                       class="flex items-center space-x-2"
                     >
                       <div
-                        class="css-1i4b0eq"
-                        height="20"
-                        width="20"
+                        class="css-v0ob3f"
+                        height="16"
+                        width="16"
                       >
                         <svg
                           id="trash"
@@ -5739,12 +5739,12 @@ exports[`ExchangeTransactionsTable > should render desktop 3`] = `
               </td>
             </tr>
             <tr
-              class="relative css-1x4z4cy"
+              class="relative css-16ynu5g"
               data-testid="TableRow"
             >
               <td>
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 pl-6 rounded-l items-start my-0 py-3 xl:py-4 xl:min-h-0 flex-col gap-1"
+                  class="flex px-3 transition-colors duration-100 min-h-11 pl-6 rounded-l dark:group-hover:bg-black items-start my-0 py-3 xl:py-4 xl:min-h-0 flex-col gap-1"
                 >
                   <button
                     class="h-5 w-20 cursor-pointer truncate"
@@ -5783,7 +5783,7 @@ exports[`ExchangeTransactionsTable > should render desktop 3`] = `
                 class="hidden text-sm xl:table-cell"
               >
                 <div
-                  class="flex px-3 my-1 transition-colors duration-100 min-h-11 items-start xl:items-center font-semibold"
+                  class="flex px-3 my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black items-start xl:items-center font-semibold"
                 >
                   <span
                     data-testid="TimeAgo"
@@ -5794,14 +5794,14 @@ exports[`ExchangeTransactionsTable > should render desktop 3`] = `
               </td>
               <td>
                 <div
-                  class="flex px-3 my-1 transition-colors duration-100 min-h-11 font-semibold text-sm items-start xl:items-center mt-2 xl:mt-1"
+                  class="flex px-3 my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black font-semibold text-sm items-start xl:items-center mt-2 xl:mt-1"
                 />
               </td>
               <td
                 class="lg:hidden"
               >
                 <div
-                  class="px-3 transition-colors duration-100 min-h-11 items-end flex flex-col gap-1.5 my-3 xl:my-0"
+                  class="px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black items-end flex flex-col gap-1.5 my-3 xl:my-0"
                 >
                   <div
                     class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
@@ -5875,7 +5875,7 @@ exports[`ExchangeTransactionsTable > should render desktop 3`] = `
                 class="hidden lg:table-cell"
               >
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 gap-3 justify-end items-start xl:items-center my-3 xl:my-0"
+                  class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black gap-3 justify-end items-start xl:items-center my-3 xl:my-0"
                 >
                   <div
                     class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
@@ -5899,7 +5899,7 @@ exports[`ExchangeTransactionsTable > should render desktop 3`] = `
                 class="hidden lg:table-cell"
               >
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 gap-3 justify-end items-start xl:items-center my-3 xl:my-0"
+                  class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black gap-3 justify-end items-start xl:items-center my-3 xl:my-0"
                 >
                   <div
                     class="flex h-full items-center justify-center rounded pr-1.5 css-1jspzfx"
@@ -5955,7 +5955,7 @@ exports[`ExchangeTransactionsTable > should render desktop 3`] = `
               </td>
               <td>
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 justify-center items-start xl:items-center my-3 xl:my-0"
+                  class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black justify-center items-start xl:items-center my-3 xl:my-0"
                 >
                   <span>
                     <div
@@ -5996,10 +5996,10 @@ exports[`ExchangeTransactionsTable > should render desktop 3`] = `
               </td>
               <td>
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r items-start xl:items-center justify-end text-theme-secondary-text my-3 xl:my-0"
+                  class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r dark:group-hover:bg-black items-start xl:items-center justify-end text-theme-secondary-text my-3 xl:my-0"
                 >
                   <button
-                    class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent css-1sy20y6"
+                    class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent hover:text-theme-primary-700 hover:bg-theme-primary-200 dark:hover:bg-theme-secondary-800 dark:hover:text-white css-10jzzmw"
                     data-testid="TableRemoveButton--compact"
                     type="button"
                   >
@@ -6007,9 +6007,9 @@ exports[`ExchangeTransactionsTable > should render desktop 3`] = `
                       class="flex items-center space-x-2"
                     >
                       <div
-                        class="css-1i4b0eq"
-                        height="20"
-                        width="20"
+                        class="css-v0ob3f"
+                        height="16"
+                        width="16"
                       >
                         <svg
                           id="trash"
@@ -6066,7 +6066,7 @@ exports[`ExchangeTransactionsTable > should render mobile 1`] = `
             role="rowgroup"
           >
             <tr
-              class="group css-pafq7q"
+              class="group css-16d37du"
               data-testid="TableRow"
             >
               <td>
@@ -6149,7 +6149,7 @@ exports[`ExchangeTransactionsTable > should render mobile 1`] = `
                         type="vertical"
                       />
                       <button
-                        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent cursor-pointer !p-0"
+                        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent hover:text-theme-primary-700 hover:bg-theme-primary-200 dark:hover:bg-theme-secondary-800 dark:hover:text-white cursor-pointer !p-0"
                         data-testid="TableRow__mobile-remove-button"
                         type="button"
                       >
@@ -6157,9 +6157,9 @@ exports[`ExchangeTransactionsTable > should render mobile 1`] = `
                           class="flex items-center space-x-2"
                         >
                           <div
-                            class="css-1i4b0eq"
-                            height="20"
-                            width="20"
+                            class="css-v0ob3f"
+                            height="16"
+                            width="16"
                           >
                             <svg
                               id="trash"
@@ -6316,7 +6316,7 @@ exports[`ExchangeTransactionsTable > should render mobile 1`] = `
               </td>
             </tr>
             <tr
-              class="group css-pafq7q"
+              class="group css-16d37du"
               data-testid="TableRow"
             >
               <td>
@@ -6399,7 +6399,7 @@ exports[`ExchangeTransactionsTable > should render mobile 1`] = `
                         type="vertical"
                       />
                       <button
-                        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent cursor-pointer !p-0"
+                        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent hover:text-theme-primary-700 hover:bg-theme-primary-200 dark:hover:bg-theme-secondary-800 dark:hover:text-white cursor-pointer !p-0"
                         data-testid="TableRow__mobile-remove-button"
                         type="button"
                       >
@@ -6407,9 +6407,9 @@ exports[`ExchangeTransactionsTable > should render mobile 1`] = `
                           class="flex items-center space-x-2"
                         >
                           <div
-                            class="css-1i4b0eq"
-                            height="20"
-                            width="20"
+                            class="css-v0ob3f"
+                            height="16"
+                            width="16"
                           >
                             <svg
                               id="trash"
@@ -6566,7 +6566,7 @@ exports[`ExchangeTransactionsTable > should render mobile 1`] = `
               </td>
             </tr>
             <tr
-              class="group css-pafq7q"
+              class="group css-16d37du"
               data-testid="TableRow"
             >
               <td>
@@ -6649,7 +6649,7 @@ exports[`ExchangeTransactionsTable > should render mobile 1`] = `
                         type="vertical"
                       />
                       <button
-                        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent cursor-pointer !p-0"
+                        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent hover:text-theme-primary-700 hover:bg-theme-primary-200 dark:hover:bg-theme-secondary-800 dark:hover:text-white cursor-pointer !p-0"
                         data-testid="TableRow__mobile-remove-button"
                         type="button"
                       >
@@ -6657,9 +6657,9 @@ exports[`ExchangeTransactionsTable > should render mobile 1`] = `
                           class="flex items-center space-x-2"
                         >
                           <div
-                            class="css-1i4b0eq"
-                            height="20"
-                            width="20"
+                            class="css-v0ob3f"
+                            height="16"
+                            width="16"
                           >
                             <svg
                               id="trash"
@@ -6844,7 +6844,7 @@ exports[`ExchangeTransactionsTable > should render mobile 2`] = `
             role="rowgroup"
           >
             <tr
-              class="group css-pafq7q"
+              class="group css-16d37du"
               data-testid="TableRow"
             >
               <td>
@@ -6927,7 +6927,7 @@ exports[`ExchangeTransactionsTable > should render mobile 2`] = `
                         type="vertical"
                       />
                       <button
-                        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent cursor-pointer !p-0"
+                        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent hover:text-theme-primary-700 hover:bg-theme-primary-200 dark:hover:bg-theme-secondary-800 dark:hover:text-white cursor-pointer !p-0"
                         data-testid="TableRow__mobile-remove-button"
                         type="button"
                       >
@@ -6935,9 +6935,9 @@ exports[`ExchangeTransactionsTable > should render mobile 2`] = `
                           class="flex items-center space-x-2"
                         >
                           <div
-                            class="css-1i4b0eq"
-                            height="20"
-                            width="20"
+                            class="css-v0ob3f"
+                            height="16"
+                            width="16"
                           >
                             <svg
                               id="trash"
@@ -7094,7 +7094,7 @@ exports[`ExchangeTransactionsTable > should render mobile 2`] = `
               </td>
             </tr>
             <tr
-              class="group css-pafq7q"
+              class="group css-16d37du"
               data-testid="TableRow"
             >
               <td>
@@ -7177,7 +7177,7 @@ exports[`ExchangeTransactionsTable > should render mobile 2`] = `
                         type="vertical"
                       />
                       <button
-                        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent cursor-pointer !p-0"
+                        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent hover:text-theme-primary-700 hover:bg-theme-primary-200 dark:hover:bg-theme-secondary-800 dark:hover:text-white cursor-pointer !p-0"
                         data-testid="TableRow__mobile-remove-button"
                         type="button"
                       >
@@ -7185,9 +7185,9 @@ exports[`ExchangeTransactionsTable > should render mobile 2`] = `
                           class="flex items-center space-x-2"
                         >
                           <div
-                            class="css-1i4b0eq"
-                            height="20"
-                            width="20"
+                            class="css-v0ob3f"
+                            height="16"
+                            width="16"
                           >
                             <svg
                               id="trash"
@@ -7344,7 +7344,7 @@ exports[`ExchangeTransactionsTable > should render mobile 2`] = `
               </td>
             </tr>
             <tr
-              class="group css-pafq7q"
+              class="group css-16d37du"
               data-testid="TableRow"
             >
               <td>
@@ -7427,7 +7427,7 @@ exports[`ExchangeTransactionsTable > should render mobile 2`] = `
                         type="vertical"
                       />
                       <button
-                        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent cursor-pointer !p-0"
+                        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent hover:text-theme-primary-700 hover:bg-theme-primary-200 dark:hover:bg-theme-secondary-800 dark:hover:text-white cursor-pointer !p-0"
                         data-testid="TableRow__mobile-remove-button"
                         type="button"
                       >
@@ -7435,9 +7435,9 @@ exports[`ExchangeTransactionsTable > should render mobile 2`] = `
                           class="flex items-center space-x-2"
                         >
                           <div
-                            class="css-1i4b0eq"
-                            height="20"
-                            width="20"
+                            class="css-v0ob3f"
+                            height="16"
+                            width="16"
                           >
                             <svg
                               id="trash"

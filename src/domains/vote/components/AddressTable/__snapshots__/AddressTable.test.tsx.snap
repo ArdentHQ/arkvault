@@ -260,14 +260,14 @@ exports[`AddressTable > should render 1`] = `
               role="rowgroup"
             >
               <tr
-                class="relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-1x4z4cy"
+                class="relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
                 data-testid="TableRow"
               >
                 <td
                   data-testid="AddressRow__wallet"
                 >
                   <div
-                    class="flex px-3 items-center my-1 min-h-11 pl-6 rounded-l cursor-pointer group transition duration-300 space-x-3"
+                    class="flex px-3 items-center my-1 min-h-11 pl-6 rounded-l dark:group-hover:bg-black cursor-pointer group transition duration-300 space-x-3"
                   >
                     <div
                       class="w-40 flex-1"
@@ -299,7 +299,7 @@ exports[`AddressTable > should render 1`] = `
                           type="button"
                         >
                           <div
-                            class="text-theme-primary-400 dark:text-theme-secondary-700 dark:hover:text-theme-secondary-500 css-v0ob3f"
+                            class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white css-v0ob3f"
                             height="16"
                             width="16"
                           >
@@ -336,7 +336,7 @@ exports[`AddressTable > should render 1`] = `
                   class="hidden xl:table-cell"
                 >
                   <div
-                    class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 justify-end font-semibold text-theme-secondary-text whitespace-nowrap"
+                    class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black justify-end font-semibold text-theme-secondary-text whitespace-nowrap"
                   >
                     <span
                       class="whitespace-nowrap"
@@ -348,13 +348,13 @@ exports[`AddressTable > should render 1`] = `
                 </td>
                 <td>
                   <div
-                    class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 font-semibold space-x-3"
+                    class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black font-semibold space-x-3"
                   >
                     <div
                       class="flex items-center space-x-3 overflow-hidden"
                     >
                       <a
-                        class="ring-focus group/inner inline-block w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700 css-7nwwrh"
+                        class="ring-focus group/inner inline-block w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700 css-167zzsv"
                         data-ring-focus-margin="-m-1"
                         data-testid="Link"
                         href="https://test.arkscan.io/wallets/D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
@@ -366,10 +366,10 @@ exports[`AddressTable > should render 1`] = `
                           arkx
                         </span>
                         <div
-                          class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-v0ob3f"
+                          class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-1fio4bh"
                           data-testid="Link__external"
-                          height="16"
-                          width="16"
+                          height="12"
+                          width="12"
                         >
                           <svg
                             id="arrow-external"
@@ -397,7 +397,7 @@ exports[`AddressTable > should render 1`] = `
                   class="hidden lg:table-cell"
                 >
                   <div
-                    class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 justify-center font-semibold text-theme-secondary-text"
+                    class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black justify-center font-semibold text-theme-secondary-text"
                   >
                     <span
                       class="text-theme-secondary-400"
@@ -408,7 +408,7 @@ exports[`AddressTable > should render 1`] = `
                 </td>
                 <td>
                   <div
-                    class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 justify-center"
+                    class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black justify-center"
                   >
                     <span>
                       <div
@@ -451,14 +451,14 @@ exports[`AddressTable > should render 1`] = `
                   class="hidden lg:table-cell"
                 >
                   <div
-                    class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 justify-center space-x-2"
+                    class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black justify-center space-x-2"
                   />
                 </td>
                 <td
                   class="pr-6"
                 >
                   <div
-                    class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end !pr-0"
+                    class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r dark:group-hover:bg-black justify-end !pr-0"
                   >
                     <div>
                       <button
@@ -729,14 +729,14 @@ exports[`AddressTable > should render when the maximum votes is greater than 1 1
               role="rowgroup"
             >
               <tr
-                class="relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-1x4z4cy"
+                class="relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
                 data-testid="TableRow"
               >
                 <td
                   data-testid="AddressRow__wallet"
                 >
                   <div
-                    class="flex px-3 items-center my-1 min-h-11 pl-6 rounded-l cursor-pointer group transition duration-300 space-x-3"
+                    class="flex px-3 items-center my-1 min-h-11 pl-6 rounded-l dark:group-hover:bg-black cursor-pointer group transition duration-300 space-x-3"
                   >
                     <div
                       class="w-40 flex-1"
@@ -768,7 +768,7 @@ exports[`AddressTable > should render when the maximum votes is greater than 1 1
                           type="button"
                         >
                           <div
-                            class="text-theme-primary-400 dark:text-theme-secondary-700 dark:hover:text-theme-secondary-500 css-v0ob3f"
+                            class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white css-v0ob3f"
                             height="16"
                             width="16"
                           >
@@ -805,7 +805,7 @@ exports[`AddressTable > should render when the maximum votes is greater than 1 1
                   class="hidden xl:table-cell"
                 >
                   <div
-                    class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 justify-end font-semibold text-theme-secondary-text whitespace-nowrap"
+                    class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black justify-end font-semibold text-theme-secondary-text whitespace-nowrap"
                   >
                     <span
                       class="whitespace-nowrap"
@@ -817,7 +817,7 @@ exports[`AddressTable > should render when the maximum votes is greater than 1 1
                 </td>
                 <td>
                   <div
-                    class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 font-semibold space-x-3"
+                    class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black font-semibold space-x-3"
                   >
                     <div
                       class="flex items-center space-x-3 overflow-hidden"
@@ -832,7 +832,7 @@ exports[`AddressTable > should render when the maximum votes is greater than 1 1
                         </span>
                       </div>
                       <a
-                        class="ring-focus group/inner inline-block w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700 css-7nwwrh"
+                        class="ring-focus group/inner inline-block w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700 css-167zzsv"
                         data-ring-focus-margin="-m-1"
                         data-testid="Link"
                         href="https://test.arkscan.io/wallets/D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
@@ -844,10 +844,10 @@ exports[`AddressTable > should render when the maximum votes is greater than 1 1
                           arkx
                         </span>
                         <div
-                          class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-v0ob3f"
+                          class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-1fio4bh"
                           data-testid="Link__external"
-                          height="16"
-                          width="16"
+                          height="12"
+                          width="12"
                         >
                           <svg
                             id="arrow-external"
@@ -873,7 +873,7 @@ exports[`AddressTable > should render when the maximum votes is greater than 1 1
                 </td>
                 <td>
                   <div
-                    class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 justify-center"
+                    class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black justify-center"
                   >
                     <div
                       class="font-semibold text-theme-secondary-400"
@@ -893,14 +893,14 @@ exports[`AddressTable > should render when the maximum votes is greater than 1 1
                   class="hidden lg:table-cell"
                 >
                   <div
-                    class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 justify-center space-x-2"
+                    class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black justify-center space-x-2"
                   />
                 </td>
                 <td
                   class="pr-6"
                 >
                   <div
-                    class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end !pr-0"
+                    class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r dark:group-hover:bg-black justify-end !pr-0"
                   >
                     <div>
                       <button
@@ -1187,14 +1187,14 @@ exports[`AddressTable > should render with voting delegates and handle exception
               role="rowgroup"
             >
               <tr
-                class="relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-1x4z4cy"
+                class="relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
                 data-testid="TableRow"
               >
                 <td
                   data-testid="AddressRow__wallet"
                 >
                   <div
-                    class="flex px-3 items-center my-1 min-h-11 pl-6 rounded-l cursor-pointer group transition duration-300 space-x-3"
+                    class="flex px-3 items-center my-1 min-h-11 pl-6 rounded-l dark:group-hover:bg-black cursor-pointer group transition duration-300 space-x-3"
                   >
                     <div
                       class="w-40 flex-1"
@@ -1226,7 +1226,7 @@ exports[`AddressTable > should render with voting delegates and handle exception
                           type="button"
                         >
                           <div
-                            class="text-theme-primary-400 dark:text-theme-secondary-700 dark:hover:text-theme-secondary-500 css-v0ob3f"
+                            class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white css-v0ob3f"
                             height="16"
                             width="16"
                           >
@@ -1263,7 +1263,7 @@ exports[`AddressTable > should render with voting delegates and handle exception
                   class="hidden xl:table-cell"
                 >
                   <div
-                    class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 justify-end font-semibold text-theme-secondary-text whitespace-nowrap"
+                    class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black justify-end font-semibold text-theme-secondary-text whitespace-nowrap"
                   >
                     <span
                       class="whitespace-nowrap"
@@ -1275,7 +1275,7 @@ exports[`AddressTable > should render with voting delegates and handle exception
                 </td>
                 <td>
                   <div
-                    class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 font-semibold space-x-3"
+                    class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black font-semibold space-x-3"
                   >
                     <span
                       class="text-theme-secondary-400"
@@ -1288,26 +1288,26 @@ exports[`AddressTable > should render with voting delegates and handle exception
                   class="hidden lg:table-cell"
                 >
                   <div
-                    class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 justify-center font-semibold text-theme-secondary-text"
+                    class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black justify-center font-semibold text-theme-secondary-text"
                   />
                 </td>
                 <td>
                   <div
-                    class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 justify-center"
+                    class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black justify-center"
                   />
                 </td>
                 <td
                   class="hidden lg:table-cell"
                 >
                   <div
-                    class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 justify-center space-x-2"
+                    class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black justify-center space-x-2"
                   />
                 </td>
                 <td
                   class="pr-6"
                 >
                   <div
-                    class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end !pr-0"
+                    class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r dark:group-hover:bg-black justify-end !pr-0"
                   >
                     <div>
                       <button

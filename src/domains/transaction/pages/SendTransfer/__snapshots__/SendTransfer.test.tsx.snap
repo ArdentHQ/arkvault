@@ -571,11 +571,7 @@ exports[`SendTransfer > should display unconfirmed transactions modal when submi
                           class="mt-4 flex items-center space-x-2 sm:mr-4 sm:mt-0"
                         >
                           <button
-                            class="ring-focus relative focus:outline-none p-2 space-x-0 px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200
-					bg-theme-primary-100 text-theme-primary-600
-					hover:bg-theme-primary-700 hover:text-white
-					dark:hover:bg-theme-primary-700
-				"
+                            class="ring-focus relative focus:outline-none text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 green:hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-500 space-x-0 p-2"
                             data-ring-focus-margin="-m-1"
                             data-testid="clipboard-icon__wrapper"
                             type="button"
@@ -616,7 +612,7 @@ exports[`SendTransfer > should display unconfirmed transactions modal when submi
                             </span>
                           </button>
                           <button
-                            class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:text-theme-secondary-200 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-700 border border-theme-secondary-300 bg-transparent p-2 hover:border-transparent dark:border-transparent dark:bg-theme-secondary-800"
+                            class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:text-theme-secondary-200 text-theme-primary-600 hover:bg-theme-primary-800 green:hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-500 h-8 w-8 border border-theme-secondary-300 bg-transparent p-2 hover:border-transparent dark:border-theme-secondary-800 dark:bg-transparent dark:hover:border-theme-primary-500"
                             data-testid="explorer-link"
                             type="button"
                           >
@@ -722,7 +718,7 @@ exports[`SendTransfer > should display unconfirmed transactions modal when submi
                                     type="button"
                                   >
                                     <div
-                                      class="text-theme-primary-400 dark:text-theme-secondary-700 dark:hover:text-theme-secondary-500 css-v0ob3f"
+                                      class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white css-v0ob3f"
                                       height="16"
                                       width="16"
                                     >
@@ -796,7 +792,7 @@ exports[`SendTransfer > should display unconfirmed transactions modal when submi
                                     type="button"
                                   >
                                     <div
-                                      class="text-theme-primary-400 dark:text-theme-secondary-700 dark:hover:text-theme-secondary-500 css-v0ob3f"
+                                      class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white css-v0ob3f"
                                       height="16"
                                       width="16"
                                     >
@@ -1100,7 +1096,7 @@ exports[`SendTransfer > should display unconfirmed transactions modal when submi
                                     Block
                                   </div>
                                   <a
-                                    class="ring-focus group/inner inline-block h-5 text-sm leading-[17px] sm:text-base sm:leading-5 css-7nwwrh"
+                                    class="ring-focus group/inner inline-block h-5 text-sm leading-[17px] sm:text-base sm:leading-5 css-167zzsv"
                                     data-ring-focus-margin="-m-1"
                                     data-testid="Link"
                                     href="https://test.arkscan.io/block/8f913b6b719e7767d49861c0aec79ced212767645cb793d75d2f1b89abb49877"
@@ -1110,10 +1106,10 @@ exports[`SendTransfer > should display unconfirmed transactions modal when submi
                                       class="css-bxx244"
                                     />
                                     <div
-                                      class="mb-[3px] shrink-0 align-middle duration-200 css-v0ob3f"
+                                      class="mb-[3px] shrink-0 align-middle duration-200 css-1fio4bh"
                                       data-testid="Link__external"
-                                      height="16"
-                                      width="16"
+                                      height="12"
+                                      width="12"
                                     >
                                       <svg
                                         id="arrow-external"
@@ -1321,7 +1317,7 @@ exports[`SendTransfer > should display unconfirmed transactions modal when submi
                 class="css-j6ajdm"
               >
                 <button
-                  class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-700"
+                  class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 green:hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-500"
                   data-testid="StepNavigation__back-to-wallet-button"
                   type="button"
                 >
@@ -1346,7 +1342,7 @@ exports[`SendTransfer > should display unconfirmed transactions modal when submi
                   data-testid="Modal__inner"
                 >
                   <div
-                    class="absolute right-0 top-0 z-10 mr-6 mt-4 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 md:mr-8 md:mt-8"
+                    class="absolute right-0 top-0 z-10 mr-6 mt-4 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-800 hover:text-white green:hover:bg-theme-primary-700 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 dark:hover:text-white md:mr-8 md:mt-8"
                   >
                     <button
                       class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-8 w-8"
@@ -1531,12 +1527,12 @@ exports[`SendTransfer > should display unconfirmed transactions modal when submi
                               role="rowgroup"
                             >
                               <tr
-                                class=" css-1x4z4cy"
+                                class=" css-16ynu5g"
                                 data-testid="TableRow"
                               >
                                 <td>
                                   <div
-                                    class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l space-x-3 text-theme-secondary-500 whitespace-nowrap"
+                                    class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l dark:group-hover:bg-black space-x-3 text-theme-secondary-500 whitespace-nowrap"
                                   >
                                     <span
                                       data-testid="TimeAgo"
@@ -1547,7 +1543,7 @@ exports[`SendTransfer > should display unconfirmed transactions modal when submi
                                 </td>
                                 <td>
                                   <div
-                                    class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 space-x-4"
+                                    class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black space-x-4"
                                   >
                                     <div
                                       class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-1i0wxh3"
@@ -1592,7 +1588,7 @@ exports[`SendTransfer > should display unconfirmed transactions modal when submi
                                 </td>
                                 <td>
                                   <div
-                                    class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
+                                    class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r dark:group-hover:bg-black justify-end"
                                   >
                                     <div
                                       class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
@@ -1621,7 +1617,7 @@ exports[`SendTransfer > should display unconfirmed transactions modal when submi
                         class="css-j6ajdm"
                       >
                         <button
-                          class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-700"
+                          class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 green:hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-500"
                           data-testid="ConfirmSendTransaction__cancel"
                           type="button"
                         >
@@ -1632,7 +1628,7 @@ exports[`SendTransfer > should display unconfirmed transactions modal when submi
                           </div>
                         </button>
                         <button
-                          class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 hover:bg-theme-primary-700"
+                          class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 green:hover:bg-theme-primary-700 navy:hover:bg-theme-primary-800 dark:hover:bg-theme-primary-500"
                           data-testid="ConfirmSendTransaction__confirm"
                           type="submit"
                         >
@@ -2357,7 +2353,7 @@ exports[`SendTransfer > should error if wrong mnemonic 1`] = `
                 class="css-145pihz"
               >
                 <button
-                  class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-700"
+                  class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 green:hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-500"
                   data-testid="StepNavigation__back-button"
                   type="button"
                 >
@@ -2540,12 +2536,12 @@ exports[`SendTransfer > should render form step (lg) 1`] = `
             class="hidden sm:flex sm:h-full sm:align-bottom"
           >
             <button
-              class="group css-1wfiwjx"
+              class="group css-10lw8nr"
               data-testid="QRCodeModalButton"
               type="button"
             >
               <div
-                class="text-theme-navy-600 transition-colors group-hover:text-white dark:text-theme-secondary-600 css-1i4b0eq"
+                class="css-1i4b0eq"
                 height="20"
                 width="20"
               >
@@ -2568,7 +2564,7 @@ exports[`SendTransfer > should render form step (lg) 1`] = `
                 </svg>
               </div>
               <span
-                class="text-base font-semibold leading-5 text-theme-navy-600 transition-colors group-hover:text-white dark:text-theme-secondary-200"
+                class="text-base font-semibold leading-5"
               >
                 Scan
               </span>
@@ -2643,7 +2639,7 @@ exports[`SendTransfer > should render form step (lg) 1`] = `
                   class=""
                 >
                   <div
-                    class="flex items-center space-x-3 text-theme-primary-300 dark:text-theme-secondary-600"
+                    class="flex items-center space-x-3 rounded bg-transparent p-1 text-theme-secondary-700 transition-colors hover:bg-theme-primary-100 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-white"
                   >
                     <div
                       class="css-1i4b0eq"
@@ -2965,7 +2961,7 @@ exports[`SendTransfer > should render form step (lg) 1`] = `
                     class="hidden sm:inline-flex"
                   >
                     <button
-                      class="text-theme-navy-600 dark:text-theme-secondary-700 css-1v4a3it"
+                      class=" css-15n2mow"
                       data-testid="AddRecipient__send-all"
                       disabled=""
                       type="button"
@@ -3085,7 +3081,7 @@ exports[`SendTransfer > should render form step (lg) 1`] = `
             <button
               aria-checked="false"
               aria-label="0.00357"
-              class="css-1sbhrf0"
+              class="css-19daxkr"
               data-testid="ButtonGroupOption"
               role="radio"
               type="button"
@@ -3107,7 +3103,7 @@ exports[`SendTransfer > should render form step (lg) 1`] = `
             <button
               aria-checked="true"
               aria-label="0.07320598"
-              class="css-1sbhrf0"
+              class="css-19daxkr"
               data-testid="ButtonGroupOption"
               role="radio"
               type="button"
@@ -3129,7 +3125,7 @@ exports[`SendTransfer > should render form step (lg) 1`] = `
             <button
               aria-checked="false"
               aria-label="0.1"
-              class="css-1sbhrf0"
+              class="css-19daxkr"
               data-testid="ButtonGroupOption"
               role="radio"
               type="button"
@@ -3343,7 +3339,7 @@ exports[`SendTransfer > should render form step (xs) 1`] = `
                   class=""
                 >
                   <div
-                    class="flex items-center space-x-3 text-theme-primary-300 dark:text-theme-secondary-600"
+                    class="flex items-center space-x-3 rounded bg-transparent p-1 text-theme-secondary-700 transition-colors hover:bg-theme-primary-100 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-white"
                   >
                     <div
                       class="css-1i4b0eq"
@@ -3665,7 +3661,7 @@ exports[`SendTransfer > should render form step (xs) 1`] = `
                     class="hidden sm:inline-flex"
                   >
                     <button
-                      class="text-theme-navy-600 dark:text-theme-secondary-700 css-1v4a3it"
+                      class=" css-15n2mow"
                       data-testid="AddRecipient__send-all"
                       disabled=""
                       type="button"
@@ -4615,7 +4611,7 @@ exports[`SendTransfer > should render network selection without selected wallet 
                 class="css-145pihz"
               >
                 <button
-                  class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-700"
+                  class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 green:hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-500"
                   data-testid="StepNavigation__back-button"
                   type="button"
                 >
@@ -5230,7 +5226,7 @@ exports[`SendTransfer > should render review step 1`] = `
                 type="button"
               >
                 <div
-                  class="text-theme-primary-400 dark:text-theme-secondary-700 dark:hover:text-theme-secondary-500 css-v0ob3f"
+                  class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white css-v0ob3f"
                   height="16"
                   width="16"
                 >
@@ -5315,7 +5311,7 @@ exports[`SendTransfer > should render review step 1`] = `
                 type="button"
               >
                 <div
-                  class="text-theme-primary-400 dark:text-theme-secondary-700 dark:hover:text-theme-secondary-500 css-v0ob3f"
+                  class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white css-v0ob3f"
                   height="16"
                   width="16"
                 >
@@ -5678,7 +5674,7 @@ exports[`SendTransfer > should render review step with multiple recipients (with
                 type="button"
               >
                 <div
-                  class="text-theme-primary-400 dark:text-theme-secondary-700 dark:hover:text-theme-secondary-500 css-v0ob3f"
+                  class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white css-v0ob3f"
                   height="16"
                   width="16"
                 >
@@ -6098,7 +6094,7 @@ exports[`SendTransfer > should render review step with multiple recipients (with
                 type="button"
               >
                 <div
-                  class="text-theme-primary-400 dark:text-theme-secondary-700 dark:hover:text-theme-secondary-500 css-v0ob3f"
+                  class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white css-v0ob3f"
                   height="16"
                   width="16"
                 >
@@ -6998,11 +6994,7 @@ exports[`SendTransfer > should send a single transfer and handle undefined expir
                           class="mt-4 flex items-center space-x-2 sm:mr-4 sm:mt-0"
                         >
                           <button
-                            class="ring-focus relative focus:outline-none p-2 space-x-0 px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200
-					bg-theme-primary-100 text-theme-primary-600
-					hover:bg-theme-primary-700 hover:text-white
-					dark:hover:bg-theme-primary-700
-				"
+                            class="ring-focus relative focus:outline-none text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 green:hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-500 space-x-0 p-2"
                             data-ring-focus-margin="-m-1"
                             data-testid="clipboard-icon__wrapper"
                             type="button"
@@ -7043,7 +7035,7 @@ exports[`SendTransfer > should send a single transfer and handle undefined expir
                             </span>
                           </button>
                           <button
-                            class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:text-theme-secondary-200 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-700 border border-theme-secondary-300 bg-transparent p-2 hover:border-transparent dark:border-transparent dark:bg-theme-secondary-800"
+                            class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:text-theme-secondary-200 text-theme-primary-600 hover:bg-theme-primary-800 green:hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-500 h-8 w-8 border border-theme-secondary-300 bg-transparent p-2 hover:border-transparent dark:border-theme-secondary-800 dark:bg-transparent dark:hover:border-theme-primary-500"
                             data-testid="explorer-link"
                             type="button"
                           >
@@ -7149,7 +7141,7 @@ exports[`SendTransfer > should send a single transfer and handle undefined expir
                                     type="button"
                                   >
                                     <div
-                                      class="text-theme-primary-400 dark:text-theme-secondary-700 dark:hover:text-theme-secondary-500 css-v0ob3f"
+                                      class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white css-v0ob3f"
                                       height="16"
                                       width="16"
                                     >
@@ -7223,7 +7215,7 @@ exports[`SendTransfer > should send a single transfer and handle undefined expir
                                     type="button"
                                   >
                                     <div
-                                      class="text-theme-primary-400 dark:text-theme-secondary-700 dark:hover:text-theme-secondary-500 css-v0ob3f"
+                                      class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white css-v0ob3f"
                                       height="16"
                                       width="16"
                                     >
@@ -7527,7 +7519,7 @@ exports[`SendTransfer > should send a single transfer and handle undefined expir
                                     Block
                                   </div>
                                   <a
-                                    class="ring-focus group/inner inline-block h-5 text-sm leading-[17px] sm:text-base sm:leading-5 css-7nwwrh"
+                                    class="ring-focus group/inner inline-block h-5 text-sm leading-[17px] sm:text-base sm:leading-5 css-167zzsv"
                                     data-ring-focus-margin="-m-1"
                                     data-testid="Link"
                                     href="https://test.arkscan.io/block/8f913b6b719e7767d49861c0aec79ced212767645cb793d75d2f1b89abb49877"
@@ -7537,10 +7529,10 @@ exports[`SendTransfer > should send a single transfer and handle undefined expir
                                       class="css-bxx244"
                                     />
                                     <div
-                                      class="mb-[3px] shrink-0 align-middle duration-200 css-v0ob3f"
+                                      class="mb-[3px] shrink-0 align-middle duration-200 css-1fio4bh"
                                       data-testid="Link__external"
-                                      height="16"
-                                      width="16"
+                                      height="12"
+                                      width="12"
                                     >
                                       <svg
                                         id="arrow-external"
@@ -7748,7 +7740,7 @@ exports[`SendTransfer > should send a single transfer and handle undefined expir
                 class="css-145pihz"
               >
                 <button
-                  class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-700"
+                  class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 green:hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-500"
                   data-testid="StepNavigation__back-to-wallet-button"
                   type="button"
                 >
@@ -8339,11 +8331,7 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
                           class="mt-4 flex items-center space-x-2 sm:mr-4 sm:mt-0"
                         >
                           <button
-                            class="ring-focus relative focus:outline-none p-2 space-x-0 px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200
-					bg-theme-primary-100 text-theme-primary-600
-					hover:bg-theme-primary-700 hover:text-white
-					dark:hover:bg-theme-primary-700
-				"
+                            class="ring-focus relative focus:outline-none text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 green:hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-500 space-x-0 p-2"
                             data-ring-focus-margin="-m-1"
                             data-testid="clipboard-icon__wrapper"
                             type="button"
@@ -8384,7 +8372,7 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
                             </span>
                           </button>
                           <button
-                            class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:text-theme-secondary-200 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-700 border border-theme-secondary-300 bg-transparent p-2 hover:border-transparent dark:border-transparent dark:bg-theme-secondary-800"
+                            class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:text-theme-secondary-200 text-theme-primary-600 hover:bg-theme-primary-800 green:hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-500 h-8 w-8 border border-theme-secondary-300 bg-transparent p-2 hover:border-transparent dark:border-theme-secondary-800 dark:bg-transparent dark:hover:border-theme-primary-500"
                             data-testid="explorer-link"
                             type="button"
                           >
@@ -8490,7 +8478,7 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
                                     type="button"
                                   >
                                     <div
-                                      class="text-theme-primary-400 dark:text-theme-secondary-700 dark:hover:text-theme-secondary-500 css-v0ob3f"
+                                      class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white css-v0ob3f"
                                       height="16"
                                       width="16"
                                     >
@@ -8564,7 +8552,7 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
                                     type="button"
                                   >
                                     <div
-                                      class="text-theme-primary-400 dark:text-theme-secondary-700 dark:hover:text-theme-secondary-500 css-v0ob3f"
+                                      class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white css-v0ob3f"
                                       height="16"
                                       width="16"
                                     >
@@ -8868,7 +8856,7 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
                                     Block
                                   </div>
                                   <a
-                                    class="ring-focus group/inner inline-block h-5 text-sm leading-[17px] sm:text-base sm:leading-5 css-7nwwrh"
+                                    class="ring-focus group/inner inline-block h-5 text-sm leading-[17px] sm:text-base sm:leading-5 css-167zzsv"
                                     data-ring-focus-margin="-m-1"
                                     data-testid="Link"
                                     href="https://test.arkscan.io/block/8f913b6b719e7767d49861c0aec79ced212767645cb793d75d2f1b89abb49877"
@@ -8878,10 +8866,10 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
                                       class="css-bxx244"
                                     />
                                     <div
-                                      class="mb-[3px] shrink-0 align-middle duration-200 css-v0ob3f"
+                                      class="mb-[3px] shrink-0 align-middle duration-200 css-1fio4bh"
                                       data-testid="Link__external"
-                                      height="16"
-                                      width="16"
+                                      height="12"
+                                      width="12"
                                     >
                                       <svg
                                         id="arrow-external"
@@ -9089,7 +9077,7 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
                 class="css-j6ajdm"
               >
                 <button
-                  class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-700"
+                  class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 green:hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-500"
                   data-testid="StepNavigation__back-to-wallet-button"
                   type="button"
                 >
@@ -9114,7 +9102,7 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
                   data-testid="Modal__inner"
                 >
                   <div
-                    class="absolute right-0 top-0 z-10 mr-6 mt-4 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 md:mr-8 md:mt-8"
+                    class="absolute right-0 top-0 z-10 mr-6 mt-4 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-800 hover:text-white green:hover:bg-theme-primary-700 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 dark:hover:text-white md:mr-8 md:mt-8"
                   >
                     <button
                       class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-8 w-8"
@@ -9299,12 +9287,12 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
                               role="rowgroup"
                             >
                               <tr
-                                class=" css-1x4z4cy"
+                                class=" css-16ynu5g"
                                 data-testid="TableRow"
                               >
                                 <td>
                                   <div
-                                    class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l space-x-3 text-theme-secondary-500 whitespace-nowrap"
+                                    class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l dark:group-hover:bg-black space-x-3 text-theme-secondary-500 whitespace-nowrap"
                                   >
                                     <span
                                       data-testid="TimeAgo"
@@ -9315,7 +9303,7 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
                                 </td>
                                 <td>
                                   <div
-                                    class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 space-x-4"
+                                    class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black space-x-4"
                                   >
                                     <div
                                       class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-1i0wxh3"
@@ -9360,7 +9348,7 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
                                 </td>
                                 <td>
                                   <div
-                                    class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
+                                    class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r dark:group-hover:bg-black justify-end"
                                   >
                                     <div
                                       class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
@@ -9382,12 +9370,12 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
                                 </td>
                               </tr>
                               <tr
-                                class=" css-1x4z4cy"
+                                class=" css-16ynu5g"
                                 data-testid="TableRow"
                               >
                                 <td>
                                   <div
-                                    class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l space-x-3 text-theme-secondary-500 whitespace-nowrap"
+                                    class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l dark:group-hover:bg-black space-x-3 text-theme-secondary-500 whitespace-nowrap"
                                   >
                                     <span
                                       data-testid="TimeAgo"
@@ -9398,7 +9386,7 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
                                 </td>
                                 <td>
                                   <div
-                                    class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 space-x-4"
+                                    class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black space-x-4"
                                   >
                                     <span
                                       class="flex h-5 w-5 items-center justify-center text-theme-text dark:text-theme-secondary-600"
@@ -9476,7 +9464,7 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
                                 </td>
                                 <td>
                                   <div
-                                    class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
+                                    class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r dark:group-hover:bg-black justify-end"
                                   >
                                     <div
                                       class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
@@ -9505,7 +9493,7 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
                         class="css-j6ajdm"
                       >
                         <button
-                          class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-700"
+                          class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 green:hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-500"
                           data-testid="ConfirmSendTransaction__cancel"
                           type="button"
                         >
@@ -9516,7 +9504,7 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
                           </div>
                         </button>
                         <button
-                          class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 hover:bg-theme-primary-700"
+                          class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 green:hover:bg-theme-primary-700 navy:hover:bg-theme-primary-800 dark:hover:bg-theme-primary-500"
                           data-testid="ConfirmSendTransaction__confirm"
                           type="submit"
                         >
@@ -10234,11 +10222,7 @@ exports[`SendTransfer > should send a single transfer using wallet with encrypti
                           class="mt-4 flex items-center space-x-2 sm:mr-4 sm:mt-0"
                         >
                           <button
-                            class="ring-focus relative focus:outline-none p-2 space-x-0 px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200
-					bg-theme-primary-100 text-theme-primary-600
-					hover:bg-theme-primary-700 hover:text-white
-					dark:hover:bg-theme-primary-700
-				"
+                            class="ring-focus relative focus:outline-none text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 green:hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-500 space-x-0 p-2"
                             data-ring-focus-margin="-m-1"
                             data-testid="clipboard-icon__wrapper"
                             type="button"
@@ -10279,7 +10263,7 @@ exports[`SendTransfer > should send a single transfer using wallet with encrypti
                             </span>
                           </button>
                           <button
-                            class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:text-theme-secondary-200 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-700 border border-theme-secondary-300 bg-transparent p-2 hover:border-transparent dark:border-transparent dark:bg-theme-secondary-800"
+                            class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:text-theme-secondary-200 text-theme-primary-600 hover:bg-theme-primary-800 green:hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-500 h-8 w-8 border border-theme-secondary-300 bg-transparent p-2 hover:border-transparent dark:border-theme-secondary-800 dark:bg-transparent dark:hover:border-theme-primary-500"
                             data-testid="explorer-link"
                             type="button"
                           >
@@ -10385,7 +10369,7 @@ exports[`SendTransfer > should send a single transfer using wallet with encrypti
                                     type="button"
                                   >
                                     <div
-                                      class="text-theme-primary-400 dark:text-theme-secondary-700 dark:hover:text-theme-secondary-500 css-v0ob3f"
+                                      class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white css-v0ob3f"
                                       height="16"
                                       width="16"
                                     >
@@ -10459,7 +10443,7 @@ exports[`SendTransfer > should send a single transfer using wallet with encrypti
                                     type="button"
                                   >
                                     <div
-                                      class="text-theme-primary-400 dark:text-theme-secondary-700 dark:hover:text-theme-secondary-500 css-v0ob3f"
+                                      class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white css-v0ob3f"
                                       height="16"
                                       width="16"
                                     >
@@ -10763,7 +10747,7 @@ exports[`SendTransfer > should send a single transfer using wallet with encrypti
                                     Block
                                   </div>
                                   <a
-                                    class="ring-focus group/inner inline-block h-5 text-sm leading-[17px] sm:text-base sm:leading-5 css-7nwwrh"
+                                    class="ring-focus group/inner inline-block h-5 text-sm leading-[17px] sm:text-base sm:leading-5 css-167zzsv"
                                     data-ring-focus-margin="-m-1"
                                     data-testid="Link"
                                     href="https://test.arkscan.io/block/8f913b6b719e7767d49861c0aec79ced212767645cb793d75d2f1b89abb49877"
@@ -10773,10 +10757,10 @@ exports[`SendTransfer > should send a single transfer using wallet with encrypti
                                       class="css-bxx244"
                                     />
                                     <div
-                                      class="mb-[3px] shrink-0 align-middle duration-200 css-v0ob3f"
+                                      class="mb-[3px] shrink-0 align-middle duration-200 css-1fio4bh"
                                       data-testid="Link__external"
-                                      height="16"
-                                      width="16"
+                                      height="12"
+                                      width="12"
                                     >
                                       <svg
                                         id="arrow-external"
@@ -10984,7 +10968,7 @@ exports[`SendTransfer > should send a single transfer using wallet with encrypti
                 class="css-145pihz"
               >
                 <button
-                  class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-700"
+                  class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 green:hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-500"
                   data-testid="StepNavigation__back-to-wallet-button"
                   type="button"
                 >
@@ -11575,11 +11559,7 @@ exports[`SendTransfer > should send a single transfer with keyboard 1`] = `
                           class="mt-4 flex items-center space-x-2 sm:mr-4 sm:mt-0"
                         >
                           <button
-                            class="ring-focus relative focus:outline-none p-2 space-x-0 px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200
-					bg-theme-primary-100 text-theme-primary-600
-					hover:bg-theme-primary-700 hover:text-white
-					dark:hover:bg-theme-primary-700
-				"
+                            class="ring-focus relative focus:outline-none text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 green:hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-500 space-x-0 p-2"
                             data-ring-focus-margin="-m-1"
                             data-testid="clipboard-icon__wrapper"
                             type="button"
@@ -11620,7 +11600,7 @@ exports[`SendTransfer > should send a single transfer with keyboard 1`] = `
                             </span>
                           </button>
                           <button
-                            class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:text-theme-secondary-200 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-700 border border-theme-secondary-300 bg-transparent p-2 hover:border-transparent dark:border-transparent dark:bg-theme-secondary-800"
+                            class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:text-theme-secondary-200 text-theme-primary-600 hover:bg-theme-primary-800 green:hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-500 h-8 w-8 border border-theme-secondary-300 bg-transparent p-2 hover:border-transparent dark:border-theme-secondary-800 dark:bg-transparent dark:hover:border-theme-primary-500"
                             data-testid="explorer-link"
                             type="button"
                           >
@@ -11726,7 +11706,7 @@ exports[`SendTransfer > should send a single transfer with keyboard 1`] = `
                                     type="button"
                                   >
                                     <div
-                                      class="text-theme-primary-400 dark:text-theme-secondary-700 dark:hover:text-theme-secondary-500 css-v0ob3f"
+                                      class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white css-v0ob3f"
                                       height="16"
                                       width="16"
                                     >
@@ -11800,7 +11780,7 @@ exports[`SendTransfer > should send a single transfer with keyboard 1`] = `
                                     type="button"
                                   >
                                     <div
-                                      class="text-theme-primary-400 dark:text-theme-secondary-700 dark:hover:text-theme-secondary-500 css-v0ob3f"
+                                      class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white css-v0ob3f"
                                       height="16"
                                       width="16"
                                     >
@@ -12104,7 +12084,7 @@ exports[`SendTransfer > should send a single transfer with keyboard 1`] = `
                                     Block
                                   </div>
                                   <a
-                                    class="ring-focus group/inner inline-block h-5 text-sm leading-[17px] sm:text-base sm:leading-5 css-7nwwrh"
+                                    class="ring-focus group/inner inline-block h-5 text-sm leading-[17px] sm:text-base sm:leading-5 css-167zzsv"
                                     data-ring-focus-margin="-m-1"
                                     data-testid="Link"
                                     href="https://test.arkscan.io/block/8f913b6b719e7767d49861c0aec79ced212767645cb793d75d2f1b89abb49877"
@@ -12114,10 +12094,10 @@ exports[`SendTransfer > should send a single transfer with keyboard 1`] = `
                                       class="css-bxx244"
                                     />
                                     <div
-                                      class="mb-[3px] shrink-0 align-middle duration-200 css-v0ob3f"
+                                      class="mb-[3px] shrink-0 align-middle duration-200 css-1fio4bh"
                                       data-testid="Link__external"
-                                      height="16"
-                                      width="16"
+                                      height="12"
+                                      width="12"
                                     >
                                       <svg
                                         id="arrow-external"
@@ -12325,7 +12305,7 @@ exports[`SendTransfer > should send a single transfer with keyboard 1`] = `
                 class="css-145pihz"
               >
                 <button
-                  class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-700"
+                  class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 green:hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-500"
                   data-testid="StepNavigation__back-to-wallet-button"
                   type="button"
                 >
@@ -12916,11 +12896,7 @@ exports[`SendTransfer > should send a single transfer without keyboard 1`] = `
                           class="mt-4 flex items-center space-x-2 sm:mr-4 sm:mt-0"
                         >
                           <button
-                            class="ring-focus relative focus:outline-none p-2 space-x-0 px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200
-					bg-theme-primary-100 text-theme-primary-600
-					hover:bg-theme-primary-700 hover:text-white
-					dark:hover:bg-theme-primary-700
-				"
+                            class="ring-focus relative focus:outline-none text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 green:hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-500 space-x-0 p-2"
                             data-ring-focus-margin="-m-1"
                             data-testid="clipboard-icon__wrapper"
                             type="button"
@@ -12961,7 +12937,7 @@ exports[`SendTransfer > should send a single transfer without keyboard 1`] = `
                             </span>
                           </button>
                           <button
-                            class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:text-theme-secondary-200 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-700 border border-theme-secondary-300 bg-transparent p-2 hover:border-transparent dark:border-transparent dark:bg-theme-secondary-800"
+                            class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:text-theme-secondary-200 text-theme-primary-600 hover:bg-theme-primary-800 green:hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-500 h-8 w-8 border border-theme-secondary-300 bg-transparent p-2 hover:border-transparent dark:border-theme-secondary-800 dark:bg-transparent dark:hover:border-theme-primary-500"
                             data-testid="explorer-link"
                             type="button"
                           >
@@ -13067,7 +13043,7 @@ exports[`SendTransfer > should send a single transfer without keyboard 1`] = `
                                     type="button"
                                   >
                                     <div
-                                      class="text-theme-primary-400 dark:text-theme-secondary-700 dark:hover:text-theme-secondary-500 css-v0ob3f"
+                                      class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white css-v0ob3f"
                                       height="16"
                                       width="16"
                                     >
@@ -13141,7 +13117,7 @@ exports[`SendTransfer > should send a single transfer without keyboard 1`] = `
                                     type="button"
                                   >
                                     <div
-                                      class="text-theme-primary-400 dark:text-theme-secondary-700 dark:hover:text-theme-secondary-500 css-v0ob3f"
+                                      class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white css-v0ob3f"
                                       height="16"
                                       width="16"
                                     >
@@ -13445,7 +13421,7 @@ exports[`SendTransfer > should send a single transfer without keyboard 1`] = `
                                     Block
                                   </div>
                                   <a
-                                    class="ring-focus group/inner inline-block h-5 text-sm leading-[17px] sm:text-base sm:leading-5 css-7nwwrh"
+                                    class="ring-focus group/inner inline-block h-5 text-sm leading-[17px] sm:text-base sm:leading-5 css-167zzsv"
                                     data-ring-focus-margin="-m-1"
                                     data-testid="Link"
                                     href="https://test.arkscan.io/block/8f913b6b719e7767d49861c0aec79ced212767645cb793d75d2f1b89abb49877"
@@ -13455,10 +13431,10 @@ exports[`SendTransfer > should send a single transfer without keyboard 1`] = `
                                       class="css-bxx244"
                                     />
                                     <div
-                                      class="mb-[3px] shrink-0 align-middle duration-200 css-v0ob3f"
+                                      class="mb-[3px] shrink-0 align-middle duration-200 css-1fio4bh"
                                       data-testid="Link__external"
-                                      height="16"
-                                      width="16"
+                                      height="12"
+                                      width="12"
                                     >
                                       <svg
                                         id="arrow-external"
@@ -13666,7 +13642,7 @@ exports[`SendTransfer > should send a single transfer without keyboard 1`] = `
                 class="css-145pihz"
               >
                 <button
-                  class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-700"
+                  class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 green:hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-500"
                   data-testid="StepNavigation__back-to-wallet-button"
                   type="button"
                 >

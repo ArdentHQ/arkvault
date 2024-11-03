@@ -669,7 +669,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
                   </span>
                 </div>
                 <button
-                  class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 hover:bg-theme-primary-700 ml-6"
+                  class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 green:hover:bg-theme-primary-700 navy:hover:bg-theme-primary-800 dark:hover:bg-theme-primary-500 ml-6"
                   data-testid="contacts__add-contact-btn"
                   type="button"
                 >
@@ -822,12 +822,12 @@ exports[`Contacts > should render compact on md screen 1`] = `
                   role="rowgroup"
                 >
                   <tr
-                    class="relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-1x4z4cy"
+                    class="relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
                     data-testid="TableRow"
                   >
                     <td>
                       <div
-                        class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l space-x-4 whitespace-nowrap"
+                        class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l dark:group-hover:bg-black space-x-4 whitespace-nowrap"
                       >
                         <span
                           class="text-sm font-semibold leading-[17px]"
@@ -846,7 +846,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
                       class=""
                     >
                       <div
-                        class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11"
+                        class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black"
                       >
                         <span
                           class="whitespace-nowrap text-sm font-semibold leading-[17px] text-theme-text"
@@ -860,7 +860,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
                       data-testid="ContactListItem__address"
                     >
                       <div
-                        class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 space-x-4"
+                        class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black space-x-4"
                       >
                         <div
                           class="w-0 flex-1"
@@ -889,7 +889,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
                       class=""
                     >
                       <div
-                        class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 space-x-4 justify-center"
+                        class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black space-x-4 justify-center"
                       >
                         <button
                           class="ring-focus relative focus:outline-none"
@@ -937,7 +937,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
                       class=""
                     >
                       <div
-                        class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
+                        class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r dark:group-hover:bg-black justify-end"
                       >
                         <div
                           class="-mr-3 flex items-center"
@@ -1018,12 +1018,12 @@ exports[`Contacts > should render compact on md screen 1`] = `
                     </td>
                   </tr>
                   <tr
-                    class="relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-zmf0ow"
+                    class="relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-epvetr"
                     data-testid="TableRow"
                   >
                     <td>
                       <div
-                        class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l space-x-4 whitespace-nowrap"
+                        class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l dark:group-hover:bg-black space-x-4 whitespace-nowrap"
                       >
                         <span
                           class="text-sm font-semibold leading-[17px]"
@@ -1042,7 +1042,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
                       class="border-b border-dashed border-theme-secondary-300 dark:border-theme-secondary-800"
                     >
                       <div
-                        class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11"
+                        class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black"
                       >
                         <span
                           class="whitespace-nowrap text-sm font-semibold leading-[17px] text-theme-text"
@@ -1056,7 +1056,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
                       data-testid="ContactListItem__address"
                     >
                       <div
-                        class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 space-x-4"
+                        class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black space-x-4"
                       >
                         <div
                           class="w-0 flex-1"
@@ -1085,7 +1085,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
                       class="border-b border-dashed border-theme-secondary-300 dark:border-theme-secondary-800"
                     >
                       <div
-                        class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 space-x-4 justify-center"
+                        class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black space-x-4 justify-center"
                       >
                         <button
                           class="ring-focus relative focus:outline-none"
@@ -1133,7 +1133,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
                       class="border-b border-dashed border-theme-secondary-300 dark:border-theme-secondary-800"
                     >
                       <div
-                        class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
+                        class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r dark:group-hover:bg-black justify-end"
                       >
                         <div
                           class="-mr-3 flex items-center"
@@ -1214,19 +1214,19 @@ exports[`Contacts > should render compact on md screen 1`] = `
                     </td>
                   </tr>
                   <tr
-                    class="relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-zmf0ow"
+                    class="relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-epvetr"
                     data-testid="TableRow"
                   >
                     <td>
                       <div
-                        class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l space-x-4 whitespace-nowrap"
+                        class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l dark:group-hover:bg-black space-x-4 whitespace-nowrap"
                       />
                     </td>
                     <td
                       class="border-b border-dashed border-theme-secondary-300 dark:border-theme-secondary-800"
                     >
                       <div
-                        class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11"
+                        class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black"
                       >
                         <span
                           class="whitespace-nowrap text-sm font-semibold leading-[17px] text-theme-text"
@@ -1240,7 +1240,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
                       data-testid="ContactListItem__address"
                     >
                       <div
-                        class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 space-x-4"
+                        class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black space-x-4"
                       >
                         <div
                           class="w-0 flex-1"
@@ -1269,7 +1269,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
                       class="border-b border-dashed border-theme-secondary-300 dark:border-theme-secondary-800"
                     >
                       <div
-                        class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 space-x-4 justify-center"
+                        class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black space-x-4 justify-center"
                       >
                         <button
                           class="ring-focus relative focus:outline-none"
@@ -1317,7 +1317,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
                       class="border-b border-dashed border-theme-secondary-300 dark:border-theme-secondary-800"
                     >
                       <div
-                        class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
+                        class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r dark:group-hover:bg-black justify-end"
                       >
                         <div
                           class="-mr-3 flex items-center"
@@ -1394,19 +1394,19 @@ exports[`Contacts > should render compact on md screen 1`] = `
                     </td>
                   </tr>
                   <tr
-                    class="relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-1x4z4cy"
+                    class="relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
                     data-testid="TableRow"
                   >
                     <td>
                       <div
-                        class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l space-x-4 whitespace-nowrap"
+                        class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l dark:group-hover:bg-black space-x-4 whitespace-nowrap"
                       />
                     </td>
                     <td
                       class=""
                     >
                       <div
-                        class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11"
+                        class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black"
                       >
                         <span
                           class="whitespace-nowrap text-sm font-semibold leading-[17px] text-theme-text"
@@ -1420,7 +1420,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
                       data-testid="ContactListItem__address"
                     >
                       <div
-                        class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 space-x-4"
+                        class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black space-x-4"
                       >
                         <div
                           class="w-0 flex-1"
@@ -1449,7 +1449,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
                       class=""
                     >
                       <div
-                        class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 space-x-4 justify-center"
+                        class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black space-x-4 justify-center"
                       >
                         <button
                           class="ring-focus relative focus:outline-none"
@@ -1497,7 +1497,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
                       class=""
                     >
                       <div
-                        class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
+                        class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r dark:group-hover:bg-black justify-end"
                       >
                         <div
                           class="-mr-3 flex items-center"
@@ -3154,7 +3154,7 @@ exports[`Contacts > should render with contacts 1`] = `
                   </span>
                 </div>
                 <button
-                  class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 hover:bg-theme-primary-700 ml-6"
+                  class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 green:hover:bg-theme-primary-700 navy:hover:bg-theme-primary-800 dark:hover:bg-theme-primary-500 ml-6"
                   data-testid="contacts__add-contact-btn"
                   type="button"
                 >
@@ -3307,12 +3307,12 @@ exports[`Contacts > should render with contacts 1`] = `
                   role="rowgroup"
                 >
                   <tr
-                    class="relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-1x4z4cy"
+                    class="relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
                     data-testid="TableRow"
                   >
                     <td>
                       <div
-                        class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l space-x-4 whitespace-nowrap"
+                        class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l dark:group-hover:bg-black space-x-4 whitespace-nowrap"
                       >
                         <span
                           class="text-sm font-semibold leading-[17px]"
@@ -3331,7 +3331,7 @@ exports[`Contacts > should render with contacts 1`] = `
                       class=""
                     >
                       <div
-                        class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11"
+                        class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black"
                       >
                         <span
                           class="whitespace-nowrap text-sm font-semibold leading-[17px] text-theme-text"
@@ -3345,7 +3345,7 @@ exports[`Contacts > should render with contacts 1`] = `
                       data-testid="ContactListItem__address"
                     >
                       <div
-                        class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 space-x-4"
+                        class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black space-x-4"
                       >
                         <div
                           class="w-0 flex-1"
@@ -3374,7 +3374,7 @@ exports[`Contacts > should render with contacts 1`] = `
                       class=""
                     >
                       <div
-                        class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 space-x-4 justify-center"
+                        class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black space-x-4 justify-center"
                       >
                         <button
                           class="ring-focus relative focus:outline-none"
@@ -3422,7 +3422,7 @@ exports[`Contacts > should render with contacts 1`] = `
                       class=""
                     >
                       <div
-                        class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
+                        class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r dark:group-hover:bg-black justify-end"
                       >
                         <div
                           class="-mr-3 flex items-center"
@@ -3503,12 +3503,12 @@ exports[`Contacts > should render with contacts 1`] = `
                     </td>
                   </tr>
                   <tr
-                    class="relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-zmf0ow"
+                    class="relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-epvetr"
                     data-testid="TableRow"
                   >
                     <td>
                       <div
-                        class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l space-x-4 whitespace-nowrap"
+                        class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l dark:group-hover:bg-black space-x-4 whitespace-nowrap"
                       >
                         <span
                           class="text-sm font-semibold leading-[17px]"
@@ -3527,7 +3527,7 @@ exports[`Contacts > should render with contacts 1`] = `
                       class="border-b border-dashed border-theme-secondary-300 dark:border-theme-secondary-800"
                     >
                       <div
-                        class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11"
+                        class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black"
                       >
                         <span
                           class="whitespace-nowrap text-sm font-semibold leading-[17px] text-theme-text"
@@ -3541,7 +3541,7 @@ exports[`Contacts > should render with contacts 1`] = `
                       data-testid="ContactListItem__address"
                     >
                       <div
-                        class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 space-x-4"
+                        class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black space-x-4"
                       >
                         <div
                           class="w-0 flex-1"
@@ -3570,7 +3570,7 @@ exports[`Contacts > should render with contacts 1`] = `
                       class="border-b border-dashed border-theme-secondary-300 dark:border-theme-secondary-800"
                     >
                       <div
-                        class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 space-x-4 justify-center"
+                        class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black space-x-4 justify-center"
                       >
                         <button
                           class="ring-focus relative focus:outline-none"
@@ -3618,7 +3618,7 @@ exports[`Contacts > should render with contacts 1`] = `
                       class="border-b border-dashed border-theme-secondary-300 dark:border-theme-secondary-800"
                     >
                       <div
-                        class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
+                        class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r dark:group-hover:bg-black justify-end"
                       >
                         <div
                           class="-mr-3 flex items-center"
@@ -3699,19 +3699,19 @@ exports[`Contacts > should render with contacts 1`] = `
                     </td>
                   </tr>
                   <tr
-                    class="relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-zmf0ow"
+                    class="relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-epvetr"
                     data-testid="TableRow"
                   >
                     <td>
                       <div
-                        class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l space-x-4 whitespace-nowrap"
+                        class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l dark:group-hover:bg-black space-x-4 whitespace-nowrap"
                       />
                     </td>
                     <td
                       class="border-b border-dashed border-theme-secondary-300 dark:border-theme-secondary-800"
                     >
                       <div
-                        class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11"
+                        class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black"
                       >
                         <span
                           class="whitespace-nowrap text-sm font-semibold leading-[17px] text-theme-text"
@@ -3725,7 +3725,7 @@ exports[`Contacts > should render with contacts 1`] = `
                       data-testid="ContactListItem__address"
                     >
                       <div
-                        class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 space-x-4"
+                        class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black space-x-4"
                       >
                         <div
                           class="w-0 flex-1"
@@ -3754,7 +3754,7 @@ exports[`Contacts > should render with contacts 1`] = `
                       class="border-b border-dashed border-theme-secondary-300 dark:border-theme-secondary-800"
                     >
                       <div
-                        class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 space-x-4 justify-center"
+                        class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black space-x-4 justify-center"
                       >
                         <button
                           class="ring-focus relative focus:outline-none"
@@ -3802,7 +3802,7 @@ exports[`Contacts > should render with contacts 1`] = `
                       class="border-b border-dashed border-theme-secondary-300 dark:border-theme-secondary-800"
                     >
                       <div
-                        class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
+                        class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r dark:group-hover:bg-black justify-end"
                       >
                         <div
                           class="-mr-3 flex items-center"
@@ -3879,19 +3879,19 @@ exports[`Contacts > should render with contacts 1`] = `
                     </td>
                   </tr>
                   <tr
-                    class="relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-1x4z4cy"
+                    class="relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
                     data-testid="TableRow"
                   >
                     <td>
                       <div
-                        class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l space-x-4 whitespace-nowrap"
+                        class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l dark:group-hover:bg-black space-x-4 whitespace-nowrap"
                       />
                     </td>
                     <td
                       class=""
                     >
                       <div
-                        class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11"
+                        class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black"
                       >
                         <span
                           class="whitespace-nowrap text-sm font-semibold leading-[17px] text-theme-text"
@@ -3905,7 +3905,7 @@ exports[`Contacts > should render with contacts 1`] = `
                       data-testid="ContactListItem__address"
                     >
                       <div
-                        class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 space-x-4"
+                        class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black space-x-4"
                       >
                         <div
                           class="w-0 flex-1"
@@ -3934,7 +3934,7 @@ exports[`Contacts > should render with contacts 1`] = `
                       class=""
                     >
                       <div
-                        class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 space-x-4 justify-center"
+                        class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black space-x-4 justify-center"
                       >
                         <button
                           class="ring-focus relative focus:outline-none"
@@ -3982,7 +3982,7 @@ exports[`Contacts > should render with contacts 1`] = `
                       class=""
                     >
                       <div
-                        class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
+                        class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r dark:group-hover:bg-black justify-end"
                       >
                         <div
                           class="-mr-3 flex items-center"
@@ -4655,7 +4655,7 @@ exports[`Contacts > should render without contacts 1`] = `
                 class="items-top flex justify-end"
               >
                 <button
-                  class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 hover:bg-theme-primary-700 ml-6"
+                  class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 green:hover:bg-theme-primary-700 navy:hover:bg-theme-primary-800 dark:hover:bg-theme-primary-500 ml-6"
                   data-testid="contacts__add-contact-btn"
                   type="button"
                 >

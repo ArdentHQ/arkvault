@@ -43,7 +43,7 @@ exports[`SelectAddress > should render disabled 1`] = `
           class=""
         >
           <div
-            class="flex items-center space-x-3 text-theme-primary-300 dark:text-theme-secondary-600"
+            class="flex items-center space-x-3 rounded bg-transparent p-1 text-theme-secondary-700 transition-colors hover:bg-theme-primary-100 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-white"
           >
             <div
               class="css-1i4b0eq"
@@ -124,7 +124,7 @@ exports[`SelectAddress > should render empty 1`] = `
           class=""
         >
           <div
-            class="flex items-center space-x-3 text-theme-primary-300 dark:text-theme-secondary-600"
+            class="flex items-center space-x-3 rounded bg-transparent p-1 text-theme-secondary-700 transition-colors hover:bg-theme-primary-100 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-white"
           >
             <div
               class="css-1i4b0eq"
@@ -247,7 +247,7 @@ exports[`SelectAddress > should render invalid 1`] = `
           class="pl-3"
         >
           <div
-            class="flex items-center space-x-3 text-theme-primary-300 dark:text-theme-secondary-600"
+            class="flex items-center space-x-3 rounded bg-transparent p-1 text-theme-secondary-700 transition-colors hover:bg-theme-primary-100 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-white"
           >
             <div
               class="css-1i4b0eq"
@@ -357,7 +357,7 @@ exports[`SelectAddress > should render with preselected address 1`] = `
           class=""
         >
           <div
-            class="flex items-center space-x-3 text-theme-primary-300 dark:text-theme-secondary-600"
+            class="flex items-center space-x-3 rounded bg-transparent p-1 text-theme-secondary-700 transition-colors hover:bg-theme-primary-100 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-white"
           >
             <div
               class="css-1i4b0eq"

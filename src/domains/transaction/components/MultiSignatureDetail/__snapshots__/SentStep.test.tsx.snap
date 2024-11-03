@@ -51,11 +51,7 @@ exports[`Multisignature Detail Sent Step > should render sent step %s 1`] = `
             class="mt-4 flex items-center space-x-2 sm:mr-4 sm:mt-0"
           >
             <button
-              class="ring-focus relative focus:outline-none p-2 space-x-0 px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200
-					bg-theme-primary-100 text-theme-primary-600
-					hover:bg-theme-primary-700 hover:text-white
-					dark:hover:bg-theme-primary-700
-				"
+              class="ring-focus relative focus:outline-none text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 green:hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-500 space-x-0 p-2"
               data-ring-focus-margin="-m-1"
               data-testid="clipboard-icon__wrapper"
               type="button"
@@ -96,7 +92,7 @@ exports[`Multisignature Detail Sent Step > should render sent step %s 1`] = `
               </span>
             </button>
             <button
-              class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 border border-theme-secondary-300 bg-transparent p-2 hover:border-transparent dark:border-transparent dark:bg-theme-secondary-800"
+              class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 h-8 w-8 border border-theme-secondary-300 bg-transparent p-2 hover:border-transparent dark:border-theme-secondary-800 dark:bg-transparent dark:hover:border-theme-primary-500"
               data-testid="explorer-link"
               disabled=""
               type="button"
@@ -214,7 +210,7 @@ exports[`Multisignature Detail Sent Step > should render sent step %s 1`] = `
                       type="button"
                     >
                       <div
-                        class="text-theme-primary-400 dark:text-theme-secondary-700 dark:hover:text-theme-secondary-500 css-v0ob3f"
+                        class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white css-v0ob3f"
                         height="16"
                         width="16"
                       >
@@ -299,7 +295,7 @@ exports[`Multisignature Detail Sent Step > should render sent step %s 1`] = `
                       type="button"
                     >
                       <div
-                        class="text-theme-primary-400 dark:text-theme-secondary-700 dark:hover:text-theme-secondary-500 css-v0ob3f"
+                        class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white css-v0ob3f"
                         height="16"
                         width="16"
                       >
@@ -704,7 +700,7 @@ exports[`Multisignature Detail Sent Step > should render sent step %s 1`] = `
                       Block
                     </div>
                     <a
-                      class="ring-focus group/inner inline-block h-5 text-sm leading-[17px] sm:text-base sm:leading-5 css-7nwwrh"
+                      class="ring-focus group/inner inline-block h-5 text-sm leading-[17px] sm:text-base sm:leading-5 css-167zzsv"
                       data-ring-focus-margin="-m-1"
                       data-testid="Link"
                       href="https://live.arkscan.io/blocks/71fd1a494ded5430586f4dd1c79c3ac77bf38120e868c8f8980972b8075d67e9"
@@ -714,10 +710,10 @@ exports[`Multisignature Detail Sent Step > should render sent step %s 1`] = `
                         class="css-bxx244"
                       />
                       <div
-                        class="mb-[3px] shrink-0 align-middle duration-200 css-v0ob3f"
+                        class="mb-[3px] shrink-0 align-middle duration-200 css-1fio4bh"
                         data-testid="Link__external"
-                        height="16"
-                        width="16"
+                        height="12"
+                        width="12"
                       >
                         <svg
                           id="arrow-external"
@@ -949,18 +945,18 @@ exports[`Multisignature Detail Sent Step > should render sent step %s 1`] = `
                       role="rowgroup"
                     >
                       <tr
-                        class="group relative max-md:!border-transparent css-1x4z4cy"
+                        class="group relative max-md:!border-transparent css-16ynu5g"
                         data-testid="TableRow"
                       >
                         <td>
                           <div
-                            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l space-x-2 text-sm font-semibold justify-between sm:justify-start max-sm:bg-theme-secondary-100 max-sm:dark:bg-black max-sm:m-3 max-sm:mb-0 max-sm:px-4 max-sm:py-3 max-sm:border max-sm:rounded-md max-sm:border-theme-secondary-300 max-sm:dark:border-theme-secondary-800"
+                            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l dark:group-hover:bg-black space-x-2 text-sm font-semibold justify-between sm:justify-start max-sm:bg-theme-secondary-100 max-sm:dark:bg-black max-sm:m-3 max-sm:mb-0 max-sm:px-4 max-sm:py-3 max-sm:border max-sm:rounded-md max-sm:border-theme-secondary-300 max-sm:dark:border-theme-secondary-800"
                           >
                             <div
                               class="w-3/5 sm:w-auto"
                             >
                               <a
-                                class="ring-focus group/inner inline-block css-7nwwrh"
+                                class="ring-focus group/inner inline-block css-167zzsv"
                                 data-ring-focus-margin="-m-1"
                                 data-testid="Link"
                                 href="https://test.arkscan.io/wallets/D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -1013,18 +1009,18 @@ exports[`Multisignature Detail Sent Step > should render sent step %s 1`] = `
                         </td>
                       </tr>
                       <tr
-                        class="group relative max-md:!border-transparent css-1x4z4cy"
+                        class="group relative max-md:!border-transparent css-16ynu5g"
                         data-testid="TableRow"
                       >
                         <td>
                           <div
-                            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l space-x-2 text-sm font-semibold justify-between sm:justify-start max-sm:bg-theme-secondary-100 max-sm:dark:bg-black max-sm:m-3 max-sm:mb-0 max-sm:px-4 max-sm:py-3 max-sm:border max-sm:rounded-md max-sm:border-theme-secondary-300 max-sm:dark:border-theme-secondary-800"
+                            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l dark:group-hover:bg-black space-x-2 text-sm font-semibold justify-between sm:justify-start max-sm:bg-theme-secondary-100 max-sm:dark:bg-black max-sm:m-3 max-sm:mb-0 max-sm:px-4 max-sm:py-3 max-sm:border max-sm:rounded-md max-sm:border-theme-secondary-300 max-sm:dark:border-theme-secondary-800"
                           >
                             <div
                               class="w-3/5 sm:w-auto"
                             >
                               <a
-                                class="ring-focus group/inner inline-block css-7nwwrh"
+                                class="ring-focus group/inner inline-block css-167zzsv"
                                 data-ring-focus-margin="-m-1"
                                 data-testid="Link"
                                 href="https://test.arkscan.io/wallets/D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"

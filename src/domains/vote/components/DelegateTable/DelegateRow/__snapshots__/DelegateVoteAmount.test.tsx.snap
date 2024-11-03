@@ -10,7 +10,7 @@ exports[`DelegateVoteAmount > should render when isCompact = false 1`] = `
           data-testid="DelegateVoteAmount"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 justify-center border-t-2 border-b-2 border-transparent"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black justify-center border-t-2 border-b-2 border-transparent"
           >
             <div
               class="relative flex-1 px-3"
@@ -117,7 +117,7 @@ exports[`DelegateVoteAmount > should render when isCompact = true 1`] = `
           data-testid="DelegateVoteAmount"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 justify-center border-t-2 border-b-2 border-transparent"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black justify-center border-t-2 border-b-2 border-transparent"
           >
             <div
               class="relative flex-1 px-3"
