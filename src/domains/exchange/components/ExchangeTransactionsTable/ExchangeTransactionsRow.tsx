@@ -130,7 +130,7 @@ export const ExchangeTransactionsRow = ({
 
 	return (
 		<TableRow className="relative">
-			<TableCell innerClassName="items-start my-0 py-3 xl:py-4 xl:min-h-0 flex-col gap-1" variant="start">
+			<TableCell innerClassName="items-start my-0 py-3 max-h-11 flex-col gap-1" variant="start">
 				<Tooltip content={exchangeTransaction.orderId()}>
 					<button
 						type="button"

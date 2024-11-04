@@ -56,7 +56,7 @@ export const Starred: React.VFC<StarredProperties> = ({ wallet, onToggleStar, is
 	}
 
 	return (
-		<TableCell variant="start" size="sm" innerClassName="space-x-3 pl-6 ml-0" data-testid="TableCell_Starred">
+		<TableCell variant="start" size="sm" innerClassName="space-x-3 pl-4 ml-2" data-testid="TableCell_Starred">
 			<div className="flex h-5 items-center pr-3 dark:border-theme-secondary-800">
 				<Tooltip
 					content={

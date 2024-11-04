@@ -184,7 +184,7 @@ export const AddressRow = ({ index, maxVotes, wallet, onSelect }: AddressRowProp
 					);
 				}}
 				variant="start"
-				innerClassName="cursor-pointer group transition duration-300 space-x-3"
+				innerClassName="cursor-pointer group space-x-3"
 			>
 				<div className="w-40 flex-1">
 					<Address
@@ -231,7 +231,7 @@ export const AddressRow = ({ index, maxVotes, wallet, onSelect }: AddressRowProp
 				<WalletIcons wallet={wallet} exclude={["isKnown", "isSecondSignature", "isTestNetwork"]} />
 			</TableCell>
 
-			<TableCell className="pr-6" variant="end" innerClassName="justify-end !pr-0">
+			<TableCell variant="end" innerClassName="justify-end">
 				<Tooltip content={isLedgerWalletCompatible(wallet) ? "" : t("COMMON.LEDGER_COMPATIBILITY_ERROR")}>
 					<div>
 						<Button
