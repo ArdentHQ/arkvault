@@ -24,7 +24,7 @@ const calculateReturnedAmount = function (transaction: ExtendedTransactionData):
 		}
 	}
 
-	if(transaction.id() === "4a8dddd4540f6f5f1005e780276c18e123cc49469ae2f07dd4acbf64e1f3cfea") {
+	if(transaction.id() === "b22574277ad0d83b3252483a2f47a1c80a7bfaee1adad6ee0119764ef8d949a2") {
 		console.log({
 			sender: transaction.sender(),
 			isReturn: transaction.isReturn(),
