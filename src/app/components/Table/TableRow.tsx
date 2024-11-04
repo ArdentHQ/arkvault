@@ -22,7 +22,7 @@ export const TableRow: React.FC<TableRowProperties> = ({
 }) => (
 	<TableRowStyled
 		data-testid={properties["data-testid"] || "TableRow"}
-		className={cn({ group: !!onClick }, className)}
+		className={cn("group", className)}
 		border={border}
 		dotted={dotted}
 		isSelected={isSelected}
