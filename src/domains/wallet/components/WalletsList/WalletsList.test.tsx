@@ -26,6 +26,8 @@ const starredButton = () => within(screen.getByTestId("table__th--0")).getByRole
 
 const otherButton = () => screen.getByTestId("table__th--1");
 
+const svgStarFilledIcon = "svg#star-filled"
+
 describe("WalletsList", () => {
 	let profile: Contracts.IProfile;
 	let wallets: Contracts.IReadWriteWallet[];
@@ -90,7 +92,7 @@ describe("WalletsList", () => {
 		const { asFragment } = renderResponsive(<WalletsList itemsPerPage={10} wallets={wallets} />, "lg");
 
 		// Initial state checks
-		await waitFor(() => expect(starredButton().querySelector("svg#star-filled")).toBeInTheDocument());
+		await waitFor(() => expect(starredButton().querySelector(svgStarFilledIcon).toBeInTheDocument());
 
 		// Check initial wallet order
 		expect(screen.getAllByTestId("TableCell_Wallet")[0]).toHaveTextContent(wallets[1].displayName());
@@ -99,14 +101,14 @@ describe("WalletsList", () => {
 		await userEvent.click(starredButton());
 
 		// Add more debug after clicking
-		await waitFor(() => expect(starredButton().querySelector("svg#star-filled")).toBeInTheDocument());
+		await waitFor(() => expect(starredButton().querySelector(svgStarFilledIcon)).toBeInTheDocument());
 
 		expect(screen.getAllByTestId("TableCell_Wallet")[0]).toHaveTextContent(wallets[0].displayName());
 		expect(screen.getAllByTestId("TableCell_Wallet")[1]).toHaveTextContent(wallets[1].displayName());
 
 		await userEvent.click(starredButton());
 
-		await waitFor(() => expect(starredButton().querySelector("svg#star-filled")).toBeInTheDocument());
+		await waitFor(() => expect(starredButton().querySelector(svgStarFilledIcon)).toBeInTheDocument());
 
 		expect(screen.getAllByTestId("TableCell_Wallet")[0]).toHaveTextContent(wallets[1].displayName());
 		expect(screen.getAllByTestId("TableCell_Wallet")[1]).toHaveTextContent(wallets[0].displayName());
@@ -120,18 +122,18 @@ describe("WalletsList", () => {
 	it("should keep the original sort method when grouping starred wallets at the top", async () => {
 		renderResponsive(<WalletsList itemsPerPage={10} wallets={wallets} />, "lg");
 
-		await waitFor(() => expect(starredButton().querySelector("svg#star-filled")).toBeInTheDocument());
+		await waitFor(() => expect(starredButton().querySelector(svgStarFilledIcon)).toBeInTheDocument());
 		await waitFor(() => expect(otherButton().querySelector("svg#chevron-down-small")).toBeInTheDocument());
 
 		await userEvent.click(starredButton());
 
-		await waitFor(() => expect(starredButton().querySelector("svg#star-filled")).toBeInTheDocument());
+		await waitFor(() => expect(starredButton().querySelector(svgStarFilledIcon)).toBeInTheDocument());
 		await waitFor(() => expect(otherButton().querySelector("svg#chevron-down-small")).toBeInTheDocument());
 
 		await userEvent.click(otherButton());
 		await userEvent.click(starredButton());
 
 		await waitFor(() => expect(otherButton().querySelector("svg#chevron-down-small")).toBeInTheDocument());
-		await waitFor(() => expect(starredButton().querySelector("svg#star-filled")).toBeInTheDocument());
+		await waitFor(() => expect(starredButton().querySelector(svgStarFilledIcon)).toBeInTheDocument());
 	});
 });
