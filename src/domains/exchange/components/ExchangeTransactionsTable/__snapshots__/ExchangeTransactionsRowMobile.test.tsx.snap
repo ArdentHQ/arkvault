@@ -96,7 +96,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Expired) 1`] = `
                   type="vertical"
                 />
                 <button
-                  class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent cursor-pointer !p-0"
+                  class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent cursor-pointer !p-0"
                   data-testid="TableRow__mobile-remove-button"
                   type="button"
                 >
@@ -320,7 +320,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Failed) 1`] = `
                   type="vertical"
                 />
                 <button
-                  class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent cursor-pointer !p-0"
+                  class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent cursor-pointer !p-0"
                   data-testid="TableRow__mobile-remove-button"
                   type="button"
                 >
@@ -544,7 +544,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Finished) 1`] = `
                   type="vertical"
                 />
                 <button
-                  class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent cursor-pointer !p-0"
+                  class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent cursor-pointer !p-0"
                   data-testid="TableRow__mobile-remove-button"
                   type="button"
                 >
@@ -769,7 +769,7 @@ exports[`ExchangeTransactionsRowMobile > should render (New) 1`] = `
                   type="vertical"
                 />
                 <button
-                  class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent cursor-pointer !p-0"
+                  class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent cursor-pointer !p-0"
                   data-testid="TableRow__mobile-remove-button"
                   type="button"
                 >
@@ -1032,7 +1032,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Refunded) 1`] = `
                   type="vertical"
                 />
                 <button
-                  class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent cursor-pointer !p-0"
+                  class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent cursor-pointer !p-0"
                   data-testid="TableRow__mobile-remove-button"
                   type="button"
                 >
@@ -1261,7 +1261,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Verifying) 1`] = `
                   type="vertical"
                 />
                 <button
-                  class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent cursor-pointer !p-0"
+                  class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent cursor-pointer !p-0"
                   data-testid="TableRow__mobile-remove-button"
                   type="button"
                 >
@@ -1482,7 +1482,7 @@ exports[`ExchangeTransactionsRowMobile > should render N/A if no orderId 1`] = `
               type="vertical"
             />
             <button
-              class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent cursor-pointer !p-0"
+              class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent cursor-pointer !p-0"
               data-testid="TableRow__mobile-remove-button"
               type="button"
             >
@@ -1702,7 +1702,7 @@ exports[`ExchangeTransactionsRowMobile > should render transaction provider 1`] 
               type="vertical"
             />
             <button
-              class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent cursor-pointer !p-0"
+              class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent cursor-pointer !p-0"
               data-testid="TableRow__mobile-remove-button"
               type="button"
             >
