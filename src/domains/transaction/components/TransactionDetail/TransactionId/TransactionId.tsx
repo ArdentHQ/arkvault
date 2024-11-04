@@ -9,7 +9,6 @@ import { Icon } from "@/app/components/Icon";
 import { useLink } from "@/app/hooks/use-link";
 import { AddressLabel } from "@/app/components/Address";
 import { getStyles } from "@/app/components/Button/Button.styles";
-import cn from "classnames";
 import { twMerge } from "tailwind-merge";
 
 interface Properties {
