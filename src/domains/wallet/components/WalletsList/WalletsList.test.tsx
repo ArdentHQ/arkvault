@@ -26,7 +26,7 @@ const starredButton = () => within(screen.getByTestId("table__th--0")).getByRole
 
 const otherButton = () => screen.getByTestId("table__th--1");
 
-const svgStarFilledIcon = "svg#star-filled"
+const svgStarFilledIcon = "svg#star-filled";
 
 describe("WalletsList", () => {
 	let profile: Contracts.IProfile;
@@ -92,7 +92,7 @@ describe("WalletsList", () => {
 		const { asFragment } = renderResponsive(<WalletsList itemsPerPage={10} wallets={wallets} />, "lg");
 
 		// Initial state checks
-		await waitFor(() => expect(starredButton().querySelector(svgStarFilledIcon).toBeInTheDocument());
+		await waitFor(() => expect(starredButton().querySelector(svgStarFilledIcon).toBeInTheDocument()));
 
 		// Check initial wallet order
 		expect(screen.getAllByTestId("TableCell_Wallet")[0]).toHaveTextContent(wallets[1].displayName());
