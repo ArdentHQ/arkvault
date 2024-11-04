@@ -96,15 +96,15 @@ describe("WalletsList", () => {
 		expect(screen.getAllByTestId("TableCell_Wallet")[0]).toHaveTextContent(wallets[1].displayName());
 		expect(screen.getAllByTestId("TableCell_Wallet")[1]).toHaveTextContent(wallets[0].displayName());
 
-		userEvent.click(starredButton());
+		await userEvent.click(starredButton());
 
 		// Add more debug after clicking
-		await waitFor(() => expect(starredButton().querySelector("svg#star")).toBeInTheDocument());
+		await waitFor(() => expect(starredButton().querySelector("svg#star-filled")).toBeInTheDocument());
 
 		expect(screen.getAllByTestId("TableCell_Wallet")[0]).toHaveTextContent(wallets[0].displayName());
 		expect(screen.getAllByTestId("TableCell_Wallet")[1]).toHaveTextContent(wallets[1].displayName());
 
-		userEvent.click(starredButton());
+		await userEvent.click(starredButton());
 
 		await waitFor(() => expect(starredButton().querySelector("svg#star-filled")).toBeInTheDocument());
 
@@ -123,13 +123,13 @@ describe("WalletsList", () => {
 		await waitFor(() => expect(starredButton().querySelector("svg#star-filled")).toBeInTheDocument());
 		await waitFor(() => expect(otherButton().querySelector("svg#chevron-down-small")).toBeInTheDocument());
 
-		userEvent.click(starredButton());
+		await userEvent.click(starredButton());
 
-		await waitFor(() => expect(starredButton().querySelector("svg#star")).toBeInTheDocument());
+		await waitFor(() => expect(starredButton().querySelector("svg#star-filled")).toBeInTheDocument());
 		await waitFor(() => expect(otherButton().querySelector("svg#chevron-down-small")).toBeInTheDocument());
 
-		userEvent.click(otherButton());
-		userEvent.click(starredButton());
+		await userEvent.click(otherButton());
+		await userEvent.click(starredButton());
 
 		await waitFor(() => expect(otherButton().querySelector("svg#chevron-down-small")).toBeInTheDocument());
 		await waitFor(() => expect(starredButton().querySelector("svg#star-filled")).toBeInTheDocument());
