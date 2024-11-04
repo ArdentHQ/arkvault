@@ -92,7 +92,7 @@ describe("WalletsList", () => {
 		const { asFragment } = renderResponsive(<WalletsList itemsPerPage={10} wallets={wallets} />, "lg");
 
 		// Initial state checks
-		await waitFor(() => expect(starredButton().querySelector(svgStarFilledIcon).toBeInTheDocument()));
+		await waitFor(() => expect(starredButton().querySelector(svgStarFilledIcon)).toBeInTheDocument());
 
 		// Check initial wallet order
 		expect(screen.getAllByTestId("TableCell_Wallet")[0]).toHaveTextContent(wallets[1].displayName());
