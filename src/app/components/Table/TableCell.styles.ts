@@ -23,7 +23,9 @@ const getVariant = (isSelected: boolean, variant: "start" | "middle" | "end", si
 		return variants[size as keyof typeof variants] || variants.base;
 	}
 
-	return isSelected ? "bg-theme-success-100 dark:bg-transparent dark:border-y-2 dark:border-theme-success-600" : "dark:group-hover:bg-black group-hover:bg-theme-secondary-200";
+	return isSelected
+		? "bg-theme-success-100 dark:bg-transparent dark:border-y-2 dark:border-theme-success-600"
+		: "dark:group-hover:bg-black group-hover:bg-theme-secondary-200";
 };
 
 export const getStyles = ({ variant, size, isSelected }: any) =>
