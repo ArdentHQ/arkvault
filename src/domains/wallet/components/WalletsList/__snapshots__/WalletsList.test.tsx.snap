@@ -289,7 +289,7 @@ exports[`WalletsList > should render 1`] = `
             role="rowgroup"
           >
             <tr
-              class="group relative css-1iwt3v2"
+              class="group relative css-1tl8buz"
               data-testid="TableRow"
             >
               <td
@@ -555,7 +555,7 @@ exports[`WalletsList > should render 1`] = `
               </td>
             </tr>
             <tr
-              class="group relative css-1iwt3v2"
+              class="group relative css-1tl8buz"
               data-testid="TableRow"
             >
               <td
