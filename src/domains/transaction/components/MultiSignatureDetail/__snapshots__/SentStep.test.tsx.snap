@@ -945,12 +945,12 @@ exports[`Multisignature Detail Sent Step > should render sent step %s 1`] = `
                       role="rowgroup"
                     >
                       <tr
-                        class="group relative max-md:!border-transparent css-16ynu5g"
+                        class="group group relative max-md:!border-transparent css-16ynu5g"
                         data-testid="TableRow"
                       >
                         <td>
                           <div
-                            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l dark:group-hover:bg-black space-x-2 text-sm font-semibold justify-between sm:justify-start max-sm:bg-theme-secondary-100 max-sm:dark:bg-black max-sm:m-3 max-sm:mb-0 max-sm:px-4 max-sm:py-3 max-sm:border max-sm:rounded-md max-sm:border-theme-secondary-300 max-sm:dark:border-theme-secondary-800"
+                            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 space-x-2 text-sm font-semibold justify-between sm:justify-start max-sm:bg-theme-secondary-100 max-sm:dark:bg-black max-sm:m-3 max-sm:mb-0 max-sm:px-4 max-sm:py-3 max-sm:border max-sm:rounded-md max-sm:border-theme-secondary-300 max-sm:dark:border-theme-secondary-800"
                           >
                             <div
                               class="w-3/5 sm:w-auto"
@@ -1009,12 +1009,12 @@ exports[`Multisignature Detail Sent Step > should render sent step %s 1`] = `
                         </td>
                       </tr>
                       <tr
-                        class="group relative max-md:!border-transparent css-16ynu5g"
+                        class="group group relative max-md:!border-transparent css-16ynu5g"
                         data-testid="TableRow"
                       >
                         <td>
                           <div
-                            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l dark:group-hover:bg-black space-x-2 text-sm font-semibold justify-between sm:justify-start max-sm:bg-theme-secondary-100 max-sm:dark:bg-black max-sm:m-3 max-sm:mb-0 max-sm:px-4 max-sm:py-3 max-sm:border max-sm:rounded-md max-sm:border-theme-secondary-300 max-sm:dark:border-theme-secondary-800"
+                            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 space-x-2 text-sm font-semibold justify-between sm:justify-start max-sm:bg-theme-secondary-100 max-sm:dark:bg-black max-sm:m-3 max-sm:mb-0 max-sm:px-4 max-sm:py-3 max-sm:border max-sm:rounded-md max-sm:border-theme-secondary-300 max-sm:dark:border-theme-secondary-800"
                           >
                             <div
                               class="w-3/5 sm:w-auto"

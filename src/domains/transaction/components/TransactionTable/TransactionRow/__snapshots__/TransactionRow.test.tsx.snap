@@ -5,12 +5,12 @@ exports[`TransactionRow > should omit the currency for transactions from test ne
   <table>
     <tbody>
       <tr
-        class="group relative css-1bp82wf"
+        class="group relative css-1tl8buz"
         data-testid="TableRow"
       >
         <td>
           <div
-            class="flex px-3 transition-colors duration-100 min-h-11 pl-6 rounded-l items-start my-0 py-3 xl:min-h-0"
+            class="flex px-3 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start my-0 py-3 xl:min-h-0 max-h-11"
           >
             <div
               class="flex flex-col gap-1 font-semibold"
@@ -54,7 +54,7 @@ exports[`TransactionRow > should omit the currency for transactions from test ne
           data-testid="TransactionRow__timestamp"
         >
           <div
-            class="flex px-3 transition-colors duration-100 min-h-11 dark:hover:bg-black dark:hover:border-y-2 dark:hover:border-black text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold items-start xl:min-h-0 my-0 py-3"
+            class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold items-start xl:min-h-0 my-0 py-3"
           >
             <span
               data-testid="TimeAgo"
@@ -65,7 +65,7 @@ exports[`TransactionRow > should omit the currency for transactions from test ne
         </td>
         <td>
           <div
-            class="flex px-3 transition-colors duration-100 min-h-11 dark:hover:bg-black dark:hover:border-y-2 dark:hover:border-black items-start xl:min-h-0 my-0 py-3"
+            class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start xl:min-h-11 my-0 py-3"
           >
             <div
               class="rounded px-1 dark:border css-1kocbuc"
@@ -78,7 +78,7 @@ exports[`TransactionRow > should omit the currency for transactions from test ne
         </td>
         <td>
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:hover:bg-black dark:hover:border-y-2 dark:hover:border-black space-x-4"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 space-x-4"
           >
             <div
               class="flex flex-row gap-2"
@@ -118,7 +118,7 @@ exports[`TransactionRow > should omit the currency for transactions from test ne
         </td>
         <td>
           <div
-            class="flex px-3 transition-colors duration-100 min-h-11 dark:hover:bg-black dark:hover:border-y-2 dark:hover:border-black justify-end items-start xl:min-h-0 my-0 py-3"
+            class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end items-start md:max-h-11 my-0 py-3"
           >
             <div
               class="flex flex-col items-end gap-1"
@@ -157,7 +157,7 @@ exports[`TransactionRow > should omit the currency for transactions from test ne
           class="hidden lg:table-cell"
         >
           <div
-            class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+            class="flex px-3 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
           >
             <span
               class="whitespace-nowrap"
@@ -178,12 +178,12 @@ exports[`TransactionRow > should render 1`] = `
   <table>
     <tbody>
       <tr
-        class="group relative css-1bp82wf"
+        class="group relative css-1tl8buz"
         data-testid="TableRow"
       >
         <td>
           <div
-            class="flex px-3 transition-colors duration-100 min-h-11 pl-6 rounded-l items-start my-0 py-3 xl:min-h-0"
+            class="flex px-3 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start my-0 py-3 xl:min-h-0 max-h-11"
           >
             <div
               class="flex flex-col gap-1 font-semibold"
@@ -227,7 +227,7 @@ exports[`TransactionRow > should render 1`] = `
           data-testid="TransactionRow__timestamp"
         >
           <div
-            class="flex px-3 transition-colors duration-100 min-h-11 dark:hover:bg-black dark:hover:border-y-2 dark:hover:border-black text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold items-start xl:min-h-0 my-0 py-3"
+            class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold items-start xl:min-h-0 my-0 py-3"
           >
             <span
               data-testid="TimeAgo"
@@ -238,7 +238,7 @@ exports[`TransactionRow > should render 1`] = `
         </td>
         <td>
           <div
-            class="flex px-3 transition-colors duration-100 min-h-11 dark:hover:bg-black dark:hover:border-y-2 dark:hover:border-black items-start xl:min-h-0 my-0 py-3"
+            class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start xl:min-h-11 my-0 py-3"
           >
             <div
               class="rounded px-1 dark:border css-1kocbuc"
@@ -251,7 +251,7 @@ exports[`TransactionRow > should render 1`] = `
         </td>
         <td>
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:hover:bg-black dark:hover:border-y-2 dark:hover:border-black space-x-4"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 space-x-4"
           >
             <div
               class="flex flex-row gap-2"
@@ -302,7 +302,7 @@ exports[`TransactionRow > should render 1`] = `
         </td>
         <td>
           <div
-            class="flex px-3 transition-colors duration-100 min-h-11 dark:hover:bg-black dark:hover:border-y-2 dark:hover:border-black justify-end items-start xl:min-h-0 my-0 py-3"
+            class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end items-start md:max-h-11 my-0 py-3"
           >
             <div
               class="flex flex-col items-end gap-1"
@@ -341,7 +341,7 @@ exports[`TransactionRow > should render 1`] = `
           class="hidden lg:table-cell"
         >
           <div
-            class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+            class="flex px-3 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
           >
             <span
               class="whitespace-nowrap"
@@ -362,7 +362,7 @@ exports[`TransactionRow > should render responsive 1`] = `
   <table>
     <tbody>
       <tr
-        class="group group !border-b-0 css-1bp82wf"
+        class="group group !border-b-0 css-1tl8buz"
         data-testid="TableRow"
       >
         <td
@@ -531,7 +531,7 @@ exports[`TransactionRow > should render responsive 2`] = `
   <table>
     <tbody>
       <tr
-        class="group group !border-b-0 css-1bp82wf"
+        class="group group !border-b-0 css-1tl8buz"
         data-testid="TableRow"
       >
         <td
@@ -700,12 +700,12 @@ exports[`TransactionRow > should render skeleton 1`] = `
   <table>
     <tbody>
       <tr
-        class="max-xl:h-[4.25rem] css-16ynu5g"
+        class="group max-xl:h-[4.25rem] css-16ynu5g"
         data-testid="TableRow"
       >
         <td>
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200"
           >
             <div
               class="hidden xl:block"
@@ -764,7 +764,7 @@ exports[`TransactionRow > should render skeleton 1`] = `
           class="table-cell sm:hidden xl:table-cell"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:hover:bg-black dark:hover:border-y-2 dark:hover:border-black"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200"
           >
             <span
               aria-busy="true"
@@ -783,7 +783,7 @@ exports[`TransactionRow > should render skeleton 1`] = `
         </td>
         <td>
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:hover:bg-black dark:hover:border-y-2 dark:hover:border-black"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200"
           >
             <div
               class="flex items-center"
@@ -806,7 +806,7 @@ exports[`TransactionRow > should render skeleton 1`] = `
         </td>
         <td>
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:hover:bg-black dark:hover:border-y-2 dark:hover:border-black"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200"
           >
             <div
               class="mr-2"
@@ -848,7 +848,7 @@ exports[`TransactionRow > should render skeleton 1`] = `
           class="table-cell sm:hidden lg:table-cell"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:hover:bg-black dark:hover:border-y-2 dark:hover:border-black justify-end"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end"
           >
             <div
               class="rounded border border-theme-secondary-300 p-1 px-2 dark:border-theme-secondary-800"
@@ -873,7 +873,7 @@ exports[`TransactionRow > should render skeleton 1`] = `
           class="hidden md:table-cell"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end"
           >
             <div
               class="hidden lg:block"
@@ -943,12 +943,12 @@ exports[`TransactionRow > should render with currency 1`] = `
   <table>
     <tbody>
       <tr
-        class="group relative css-1bp82wf"
+        class="group relative css-1tl8buz"
         data-testid="TableRow"
       >
         <td>
           <div
-            class="flex px-3 transition-colors duration-100 min-h-11 pl-6 rounded-l items-start my-0 py-3 xl:min-h-0"
+            class="flex px-3 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start my-0 py-3 xl:min-h-0 max-h-11"
           >
             <div
               class="flex flex-col gap-1 font-semibold"
@@ -992,7 +992,7 @@ exports[`TransactionRow > should render with currency 1`] = `
           data-testid="TransactionRow__timestamp"
         >
           <div
-            class="flex px-3 transition-colors duration-100 min-h-11 dark:hover:bg-black dark:hover:border-y-2 dark:hover:border-black text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold items-start xl:min-h-0 my-0 py-3"
+            class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold items-start xl:min-h-0 my-0 py-3"
           >
             <span
               data-testid="TimeAgo"
@@ -1003,7 +1003,7 @@ exports[`TransactionRow > should render with currency 1`] = `
         </td>
         <td>
           <div
-            class="flex px-3 transition-colors duration-100 min-h-11 dark:hover:bg-black dark:hover:border-y-2 dark:hover:border-black items-start xl:min-h-0 my-0 py-3"
+            class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start xl:min-h-11 my-0 py-3"
           >
             <div
               class="rounded px-1 dark:border css-1kocbuc"
@@ -1016,7 +1016,7 @@ exports[`TransactionRow > should render with currency 1`] = `
         </td>
         <td>
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:hover:bg-black dark:hover:border-y-2 dark:hover:border-black space-x-4"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 space-x-4"
           >
             <div
               class="flex flex-row gap-2"
@@ -1056,7 +1056,7 @@ exports[`TransactionRow > should render with currency 1`] = `
         </td>
         <td>
           <div
-            class="flex px-3 transition-colors duration-100 min-h-11 dark:hover:bg-black dark:hover:border-y-2 dark:hover:border-black justify-end items-start xl:min-h-0 my-0 py-3"
+            class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end items-start md:max-h-11 my-0 py-3"
           >
             <div
               class="flex flex-col items-end gap-1"
@@ -1095,7 +1095,7 @@ exports[`TransactionRow > should render with currency 1`] = `
           class="hidden lg:table-cell"
         >
           <div
-            class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+            class="flex px-3 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
           >
             <span
               class="whitespace-nowrap"

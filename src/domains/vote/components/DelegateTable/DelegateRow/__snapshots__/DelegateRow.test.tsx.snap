@@ -5,19 +5,19 @@ exports[`DelegateRow > should emit action on select button 1`] = `
   <table>
     <tbody>
       <tr
-        class="relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+        class="group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
         data-testid="TableRow"
       >
         <td>
           <div
-            class="flex px-3 items-center transition-colors duration-100 rounded-l ml-3 pl-3 text-sm leading-[17px] font-semibold border-2 border-r-0 border-transparent h-9 min-h-9 my-0"
+            class="flex px-3 items-center transition-colors duration-100 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 ml-3 pl-3 text-sm leading-[17px] font-semibold border-2 border-r-0 border-transparent h-9 min-h-9 my-0"
           >
             <span />
           </div>
         </td>
         <td>
           <div
-            class="flex px-3 items-center transition-colors duration-100 dark:bg-black dark:border-y-2 dark:border-black font-semibold border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0 space-x-3"
+            class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 font-semibold border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0 space-x-3"
           >
             <div
               class="relative h-[17px] grow"
@@ -38,7 +38,7 @@ exports[`DelegateRow > should emit action on select button 1`] = `
           class="hidden sm:table-cell"
         >
           <div
-            class="flex px-3 items-center transition-colors duration-100 dark:bg-black dark:border-y-2 dark:border-black justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0"
+            class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0"
           >
             <div>
               <div
@@ -76,7 +76,7 @@ exports[`DelegateRow > should emit action on select button 1`] = `
           class="hidden sm:table-cell"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 dark:bg-black dark:border-y-2 dark:border-black justify-center border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 !my-0"
+            class="flex px-3 items-center my-1 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 !my-0"
           >
             <a
               class="ring-focus group/inner inline-block group w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700 css-167zzsv"
@@ -125,7 +125,7 @@ exports[`DelegateRow > should emit action on select button 1`] = `
           class="w-30 min-w-32"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 rounded-r justify-end pr-3 mr-3 border-2 border-l-0 border-transparent h-9 min-h-9"
+            class="flex px-3 items-center my-1 transition-colors duration-100 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end pr-3 mr-3 border-2 border-l-0 border-transparent h-9 min-h-9"
           >
             <div
               class="-mr-0.5 leading-[17px]"
@@ -155,19 +155,19 @@ exports[`DelegateRow > should render 1`] = `
   <table>
     <tbody>
       <tr
-        class="relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+        class="group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
         data-testid="TableRow"
       >
         <td>
           <div
-            class="flex px-3 items-center transition-colors duration-100 rounded-l ml-3 pl-3 text-sm leading-[17px] font-semibold border-2 border-r-0 border-transparent h-9 min-h-9 my-0"
+            class="flex px-3 items-center transition-colors duration-100 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 ml-3 pl-3 text-sm leading-[17px] font-semibold border-2 border-r-0 border-transparent h-9 min-h-9 my-0"
           >
             <span />
           </div>
         </td>
         <td>
           <div
-            class="flex px-3 items-center transition-colors duration-100 dark:bg-black dark:border-y-2 dark:border-black font-semibold border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0 space-x-3"
+            class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 font-semibold border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0 space-x-3"
           >
             <div
               class="relative h-[17px] grow"
@@ -188,7 +188,7 @@ exports[`DelegateRow > should render 1`] = `
           class="hidden sm:table-cell"
         >
           <div
-            class="flex px-3 items-center transition-colors duration-100 dark:bg-black dark:border-y-2 dark:border-black justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0"
+            class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0"
           >
             <div>
               <div
@@ -226,7 +226,7 @@ exports[`DelegateRow > should render 1`] = `
           class="hidden sm:table-cell"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 dark:bg-black dark:border-y-2 dark:border-black justify-center border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 !my-0"
+            class="flex px-3 items-center my-1 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 !my-0"
           >
             <a
               class="ring-focus group/inner inline-block group w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700 css-167zzsv"
@@ -275,7 +275,7 @@ exports[`DelegateRow > should render 1`] = `
           class="w-30 min-w-32"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 rounded-r justify-end pr-3 mr-3 border-2 border-l-0 border-transparent h-9 min-h-9"
+            class="flex px-3 items-center my-1 transition-colors duration-100 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end pr-3 mr-3 border-2 border-l-0 border-transparent h-9 min-h-9"
           >
             <div
               class="-mr-0.5 leading-[17px]"
@@ -305,19 +305,19 @@ exports[`DelegateRow > should render changed style when network requires vote am
   <table>
     <tbody>
       <tr
-        class="relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+        class="group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
         data-testid="TableRow"
       >
         <td>
           <div
-            class="flex px-3 items-center transition-colors duration-100 rounded-l ml-3 pl-3 text-sm leading-[17px] font-semibold border-2 border-r-0 border-transparent h-9 min-h-9 my-0 bg-theme-warning-50 dark:bg-theme-background dark:border-theme-warning-600"
+            class="flex px-3 items-center transition-colors duration-100 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 ml-3 pl-3 text-sm leading-[17px] font-semibold border-2 border-r-0 border-transparent h-9 min-h-9 my-0 bg-theme-warning-50 dark:bg-theme-background dark:border-theme-warning-600"
           >
             <span />
           </div>
         </td>
         <td>
           <div
-            class="flex px-3 items-center transition-colors duration-100 dark:border-y-2 font-semibold border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0 space-x-3 bg-theme-warning-50 dark:bg-theme-background dark:border-theme-warning-600"
+            class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 font-semibold border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0 space-x-3 bg-theme-warning-50 dark:bg-theme-background dark:border-theme-warning-600"
           >
             <div
               class="relative h-[17px] grow"
@@ -338,7 +338,7 @@ exports[`DelegateRow > should render changed style when network requires vote am
           class="hidden sm:table-cell"
         >
           <div
-            class="flex px-3 items-center transition-colors duration-100 dark:border-y-2 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0 bg-theme-warning-50 dark:bg-theme-background dark:border-theme-warning-600"
+            class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0 bg-theme-warning-50 dark:bg-theme-background dark:border-theme-warning-600"
           >
             <div>
               <div
@@ -376,7 +376,7 @@ exports[`DelegateRow > should render changed style when network requires vote am
           class="hidden sm:table-cell"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 dark:border-y-2 justify-center border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 !my-0 bg-theme-warning-50 dark:bg-theme-background dark:border-theme-warning-600"
+            class="flex px-3 items-center my-1 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 !my-0 bg-theme-warning-50 dark:bg-theme-background dark:border-theme-warning-600"
           >
             <a
               class="ring-focus group/inner inline-block group w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700 css-167zzsv"
@@ -426,7 +426,7 @@ exports[`DelegateRow > should render changed style when network requires vote am
           data-testid="DelegateVoteAmount"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:border-y-2 justify-center border-t-2 border-b-2 border-transparent bg-theme-warning-50 dark:bg-theme-background dark:border-theme-warning-600"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent bg-theme-warning-50 dark:bg-theme-background dark:border-theme-warning-600"
           >
             <div
               class="relative flex-1 px-3"
@@ -470,7 +470,7 @@ exports[`DelegateRow > should render changed style when network requires vote am
           class="w-30 min-w-32"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 rounded-r justify-end pr-3 mr-3 border-2 border-l-0 border-transparent h-9 min-h-9 bg-theme-warning-50 dark:bg-theme-background dark:border-theme-warning-600"
+            class="flex px-3 items-center my-1 transition-colors duration-100 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end pr-3 mr-3 border-2 border-l-0 border-transparent h-9 min-h-9 bg-theme-warning-50 dark:bg-theme-background dark:border-theme-warning-600"
           >
             <div
               class="-mr-0.5 leading-[17px]"
@@ -500,19 +500,19 @@ exports[`DelegateRow > should render the selected delegate 1`] = `
   <table>
     <tbody>
       <tr
-        class="relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+        class="group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
         data-testid="TableRow"
       >
         <td>
           <div
-            class="flex px-3 items-center transition-colors duration-100 rounded-l ml-3 pl-3 text-sm leading-[17px] font-semibold border-2 border-r-0 border-transparent h-9 min-h-9 my-0 bg-theme-success-100 dark:bg-theme-background dark:border-theme-success-600"
+            class="flex px-3 items-center transition-colors duration-100 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 ml-3 pl-3 text-sm leading-[17px] font-semibold border-2 border-r-0 border-transparent h-9 min-h-9 my-0 bg-theme-success-100 dark:bg-theme-background dark:border-theme-success-600"
           >
             <span />
           </div>
         </td>
         <td>
           <div
-            class="flex px-3 items-center transition-colors duration-100 dark:border-y-2 font-semibold border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0 space-x-3 bg-theme-success-100 dark:bg-theme-background dark:border-theme-success-600"
+            class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 font-semibold border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0 space-x-3 bg-theme-success-100 dark:bg-theme-background dark:border-theme-success-600"
           >
             <div
               class="relative h-[17px] grow"
@@ -533,7 +533,7 @@ exports[`DelegateRow > should render the selected delegate 1`] = `
           class="hidden sm:table-cell"
         >
           <div
-            class="flex px-3 items-center transition-colors duration-100 dark:border-y-2 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0 bg-theme-success-100 dark:bg-theme-background dark:border-theme-success-600"
+            class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0 bg-theme-success-100 dark:bg-theme-background dark:border-theme-success-600"
           >
             <div>
               <div
@@ -571,7 +571,7 @@ exports[`DelegateRow > should render the selected delegate 1`] = `
           class="hidden sm:table-cell"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 dark:border-y-2 justify-center border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 !my-0 bg-theme-success-100 dark:bg-theme-background dark:border-theme-success-600"
+            class="flex px-3 items-center my-1 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 !my-0 bg-theme-success-100 dark:bg-theme-background dark:border-theme-success-600"
           >
             <a
               class="ring-focus group/inner inline-block group w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700 css-167zzsv"
@@ -620,7 +620,7 @@ exports[`DelegateRow > should render the selected delegate 1`] = `
           class="w-30 min-w-32"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 rounded-r justify-end pr-3 mr-3 border-2 border-l-0 border-transparent h-9 min-h-9 bg-theme-success-100 dark:bg-theme-background dark:border-theme-success-600"
+            class="flex px-3 items-center my-1 transition-colors duration-100 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end pr-3 mr-3 border-2 border-l-0 border-transparent h-9 min-h-9 bg-theme-success-100 dark:bg-theme-background dark:border-theme-success-600"
           >
             <div
               class="-mr-0.5 leading-[17px]"
@@ -650,19 +650,19 @@ exports[`DelegateRow > should render the selected vote 1`] = `
   <table>
     <tbody>
       <tr
-        class="relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+        class="group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
         data-testid="TableRow"
       >
         <td>
           <div
-            class="flex px-3 items-center transition-colors duration-100 rounded-l ml-3 pl-3 text-sm leading-[17px] font-semibold border-2 border-r-0 border-transparent h-9 min-h-9 my-0 bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600"
+            class="flex px-3 items-center transition-colors duration-100 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 ml-3 pl-3 text-sm leading-[17px] font-semibold border-2 border-r-0 border-transparent h-9 min-h-9 my-0 bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600"
           >
             <span />
           </div>
         </td>
         <td>
           <div
-            class="flex px-3 items-center transition-colors duration-100 dark:border-y-2 font-semibold border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0 space-x-3 bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600"
+            class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 font-semibold border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0 space-x-3 bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600"
           >
             <div
               class="relative h-[17px] grow"
@@ -683,7 +683,7 @@ exports[`DelegateRow > should render the selected vote 1`] = `
           class="hidden sm:table-cell"
         >
           <div
-            class="flex px-3 items-center transition-colors duration-100 dark:border-y-2 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0 bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600"
+            class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0 bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600"
           >
             <div>
               <div
@@ -721,7 +721,7 @@ exports[`DelegateRow > should render the selected vote 1`] = `
           class="hidden sm:table-cell"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 dark:border-y-2 justify-center border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 !my-0 bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600"
+            class="flex px-3 items-center my-1 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 !my-0 bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600"
           >
             <a
               class="ring-focus group/inner inline-block group w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700 css-167zzsv"
@@ -770,7 +770,7 @@ exports[`DelegateRow > should render the selected vote 1`] = `
           class="w-30 min-w-32"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 rounded-r justify-end pr-3 mr-3 border-2 border-l-0 border-transparent h-9 min-h-9 bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600"
+            class="flex px-3 items-center my-1 transition-colors duration-100 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end pr-3 mr-3 border-2 border-l-0 border-transparent h-9 min-h-9 bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600"
           >
             <div
               class="-mr-0.5 leading-[17px]"
@@ -791,19 +791,19 @@ exports[`DelegateRow > should render the selected vote 1`] = `
         </td>
       </tr>
       <tr
-        class="relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+        class="group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
         data-testid="TableRow"
       >
         <td>
           <div
-            class="flex px-3 items-center transition-colors duration-100 rounded-l ml-3 pl-3 text-sm leading-[17px] font-semibold border-2 border-r-0 border-transparent h-9 min-h-9 my-0"
+            class="flex px-3 items-center transition-colors duration-100 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 ml-3 pl-3 text-sm leading-[17px] font-semibold border-2 border-r-0 border-transparent h-9 min-h-9 my-0"
           >
             <span />
           </div>
         </td>
         <td>
           <div
-            class="flex px-3 items-center transition-colors duration-100 dark:bg-black dark:border-y-2 dark:border-black font-semibold border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0 space-x-3"
+            class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 font-semibold border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0 space-x-3"
           >
             <div
               class="relative h-[17px] grow"
@@ -824,7 +824,7 @@ exports[`DelegateRow > should render the selected vote 1`] = `
           class="hidden sm:table-cell"
         >
           <div
-            class="flex px-3 items-center transition-colors duration-100 dark:bg-black dark:border-y-2 dark:border-black justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0"
+            class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0"
           >
             <div>
               <div
@@ -862,7 +862,7 @@ exports[`DelegateRow > should render the selected vote 1`] = `
           class="hidden sm:table-cell"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 dark:bg-black dark:border-y-2 dark:border-black justify-center border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 !my-0"
+            class="flex px-3 items-center my-1 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 !my-0"
           >
             <a
               class="ring-focus group/inner inline-block group w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700 css-167zzsv"
@@ -911,7 +911,7 @@ exports[`DelegateRow > should render the selected vote 1`] = `
           class="w-30 min-w-32"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 rounded-r justify-end pr-3 mr-3 border-2 border-l-0 border-transparent h-9 min-h-9"
+            class="flex px-3 items-center my-1 transition-colors duration-100 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end pr-3 mr-3 border-2 border-l-0 border-transparent h-9 min-h-9"
           >
             <div
               class="-mr-0.5 leading-[17px]"
@@ -932,19 +932,19 @@ exports[`DelegateRow > should render the selected vote 1`] = `
         </td>
       </tr>
       <tr
-        class="relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+        class="group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
         data-testid="TableRow"
       >
         <td>
           <div
-            class="flex px-3 items-center transition-colors duration-100 rounded-l ml-3 pl-3 text-sm leading-[17px] font-semibold border-2 border-r-0 border-transparent h-9 min-h-9 my-0"
+            class="flex px-3 items-center transition-colors duration-100 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 ml-3 pl-3 text-sm leading-[17px] font-semibold border-2 border-r-0 border-transparent h-9 min-h-9 my-0"
           >
             <span />
           </div>
         </td>
         <td>
           <div
-            class="flex px-3 items-center transition-colors duration-100 dark:bg-black dark:border-y-2 dark:border-black font-semibold border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0 space-x-3"
+            class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 font-semibold border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0 space-x-3"
           >
             <div
               class="relative h-[17px] grow"
@@ -965,7 +965,7 @@ exports[`DelegateRow > should render the selected vote 1`] = `
           class="hidden sm:table-cell"
         >
           <div
-            class="flex px-3 items-center transition-colors duration-100 dark:bg-black dark:border-y-2 dark:border-black justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0"
+            class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0"
           >
             <div>
               <div
@@ -1003,7 +1003,7 @@ exports[`DelegateRow > should render the selected vote 1`] = `
           class="hidden sm:table-cell"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 dark:bg-black dark:border-y-2 dark:border-black justify-center border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 !my-0"
+            class="flex px-3 items-center my-1 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 !my-0"
           >
             <a
               class="ring-focus group/inner inline-block group w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700 css-167zzsv"
@@ -1052,7 +1052,7 @@ exports[`DelegateRow > should render the selected vote 1`] = `
           class="w-30 min-w-32"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 rounded-r justify-end pr-3 mr-3 border-2 border-l-0 border-transparent h-9 min-h-9"
+            class="flex px-3 items-center my-1 transition-colors duration-100 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end pr-3 mr-3 border-2 border-l-0 border-transparent h-9 min-h-9"
           >
             <div
               class="-mr-0.5 leading-[17px]"
@@ -1087,19 +1087,19 @@ exports[`DelegateRow > should render the selected vote 2`] = `
   <table>
     <tbody>
       <tr
-        class="relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+        class="group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
         data-testid="TableRow"
       >
         <td>
           <div
-            class="flex px-3 items-center transition-colors duration-100 rounded-l ml-3 pl-3 text-sm leading-[17px] font-semibold border-2 border-r-0 border-transparent h-9 min-h-9 my-0 bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600"
+            class="flex px-3 items-center transition-colors duration-100 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 ml-3 pl-3 text-sm leading-[17px] font-semibold border-2 border-r-0 border-transparent h-9 min-h-9 my-0 bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600"
           >
             <span />
           </div>
         </td>
         <td>
           <div
-            class="flex px-3 items-center transition-colors duration-100 dark:border-y-2 font-semibold border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0 space-x-3 bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600"
+            class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 font-semibold border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0 space-x-3 bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600"
           >
             <div
               class="relative h-[17px] grow"
@@ -1120,7 +1120,7 @@ exports[`DelegateRow > should render the selected vote 2`] = `
           class="hidden sm:table-cell"
         >
           <div
-            class="flex px-3 items-center transition-colors duration-100 dark:border-y-2 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0 bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600"
+            class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0 bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600"
           >
             <div>
               <div
@@ -1158,7 +1158,7 @@ exports[`DelegateRow > should render the selected vote 2`] = `
           class="hidden sm:table-cell"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 dark:border-y-2 justify-center border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 !my-0 bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600"
+            class="flex px-3 items-center my-1 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 !my-0 bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600"
           >
             <a
               class="ring-focus group/inner inline-block group w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700 css-167zzsv"
@@ -1207,7 +1207,7 @@ exports[`DelegateRow > should render the selected vote 2`] = `
           class="w-30 min-w-32"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 rounded-r justify-end pr-3 mr-3 border-2 border-l-0 border-transparent h-9 min-h-9 bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600"
+            class="flex px-3 items-center my-1 transition-colors duration-100 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end pr-3 mr-3 border-2 border-l-0 border-transparent h-9 min-h-9 bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600"
           >
             <div
               class="-mr-0.5 leading-[17px]"
@@ -1228,19 +1228,19 @@ exports[`DelegateRow > should render the selected vote 2`] = `
         </td>
       </tr>
       <tr
-        class="relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+        class="group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
         data-testid="TableRow"
       >
         <td>
           <div
-            class="flex px-3 items-center transition-colors duration-100 rounded-l ml-3 pl-3 text-sm leading-[17px] font-semibold border-2 border-r-0 border-transparent h-9 min-h-9 my-0"
+            class="flex px-3 items-center transition-colors duration-100 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 ml-3 pl-3 text-sm leading-[17px] font-semibold border-2 border-r-0 border-transparent h-9 min-h-9 my-0"
           >
             <span />
           </div>
         </td>
         <td>
           <div
-            class="flex px-3 items-center transition-colors duration-100 dark:bg-black dark:border-y-2 dark:border-black font-semibold border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0 space-x-3"
+            class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 font-semibold border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0 space-x-3"
           >
             <div
               class="relative h-[17px] grow"
@@ -1261,7 +1261,7 @@ exports[`DelegateRow > should render the selected vote 2`] = `
           class="hidden sm:table-cell"
         >
           <div
-            class="flex px-3 items-center transition-colors duration-100 dark:bg-black dark:border-y-2 dark:border-black justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0"
+            class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0"
           >
             <div>
               <div
@@ -1299,7 +1299,7 @@ exports[`DelegateRow > should render the selected vote 2`] = `
           class="hidden sm:table-cell"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 dark:bg-black dark:border-y-2 dark:border-black justify-center border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 !my-0"
+            class="flex px-3 items-center my-1 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 !my-0"
           >
             <a
               class="ring-focus group/inner inline-block group w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700 css-167zzsv"
@@ -1348,7 +1348,7 @@ exports[`DelegateRow > should render the selected vote 2`] = `
           class="w-30 min-w-32"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 rounded-r justify-end pr-3 mr-3 border-2 border-l-0 border-transparent h-9 min-h-9"
+            class="flex px-3 items-center my-1 transition-colors duration-100 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end pr-3 mr-3 border-2 border-l-0 border-transparent h-9 min-h-9"
           >
             <div
               class="-mr-0.5 leading-[17px]"
@@ -1369,19 +1369,19 @@ exports[`DelegateRow > should render the selected vote 2`] = `
         </td>
       </tr>
       <tr
-        class="relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+        class="group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
         data-testid="TableRow"
       >
         <td>
           <div
-            class="flex px-3 items-center transition-colors duration-100 rounded-l ml-3 pl-3 text-sm leading-[17px] font-semibold border-2 border-r-0 border-transparent h-9 min-h-9 my-0"
+            class="flex px-3 items-center transition-colors duration-100 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 ml-3 pl-3 text-sm leading-[17px] font-semibold border-2 border-r-0 border-transparent h-9 min-h-9 my-0"
           >
             <span />
           </div>
         </td>
         <td>
           <div
-            class="flex px-3 items-center transition-colors duration-100 dark:bg-black dark:border-y-2 dark:border-black font-semibold border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0 space-x-3"
+            class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 font-semibold border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0 space-x-3"
           >
             <div
               class="relative h-[17px] grow"
@@ -1402,7 +1402,7 @@ exports[`DelegateRow > should render the selected vote 2`] = `
           class="hidden sm:table-cell"
         >
           <div
-            class="flex px-3 items-center transition-colors duration-100 dark:bg-black dark:border-y-2 dark:border-black justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0"
+            class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0"
           >
             <div>
               <div
@@ -1440,7 +1440,7 @@ exports[`DelegateRow > should render the selected vote 2`] = `
           class="hidden sm:table-cell"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 dark:bg-black dark:border-y-2 dark:border-black justify-center border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 !my-0"
+            class="flex px-3 items-center my-1 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 !my-0"
           >
             <a
               class="ring-focus group/inner inline-block group w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700 css-167zzsv"
@@ -1489,7 +1489,7 @@ exports[`DelegateRow > should render the selected vote 2`] = `
           class="w-30 min-w-32"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 rounded-r justify-end pr-3 mr-3 border-2 border-l-0 border-transparent h-9 min-h-9"
+            class="flex px-3 items-center my-1 transition-colors duration-100 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end pr-3 mr-3 border-2 border-l-0 border-transparent h-9 min-h-9"
           >
             <div
               class="-mr-0.5 leading-[17px]"
@@ -1524,19 +1524,19 @@ exports[`DelegateRow > should render the unselected vote 1`] = `
   <table>
     <tbody>
       <tr
-        class="relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+        class="group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
         data-testid="TableRow"
       >
         <td>
           <div
-            class="flex px-3 items-center transition-colors duration-100 rounded-l ml-3 pl-3 text-sm leading-[17px] font-semibold border-2 border-r-0 border-transparent h-9 min-h-9 my-0 bg-theme-danger-50 dark:bg-theme-background dark:border-theme-danger-400"
+            class="flex px-3 items-center transition-colors duration-100 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 ml-3 pl-3 text-sm leading-[17px] font-semibold border-2 border-r-0 border-transparent h-9 min-h-9 my-0 bg-theme-danger-50 dark:bg-theme-background dark:border-theme-danger-400"
           >
             <span />
           </div>
         </td>
         <td>
           <div
-            class="flex px-3 items-center transition-colors duration-100 dark:border-y-2 font-semibold border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0 space-x-3 bg-theme-danger-50 dark:bg-theme-background dark:border-theme-danger-400"
+            class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 font-semibold border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0 space-x-3 bg-theme-danger-50 dark:bg-theme-background dark:border-theme-danger-400"
           >
             <div
               class="relative h-[17px] grow"
@@ -1557,7 +1557,7 @@ exports[`DelegateRow > should render the unselected vote 1`] = `
           class="hidden sm:table-cell"
         >
           <div
-            class="flex px-3 items-center transition-colors duration-100 dark:border-y-2 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0 bg-theme-danger-50 dark:bg-theme-background dark:border-theme-danger-400"
+            class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0 bg-theme-danger-50 dark:bg-theme-background dark:border-theme-danger-400"
           >
             <div>
               <div
@@ -1595,7 +1595,7 @@ exports[`DelegateRow > should render the unselected vote 1`] = `
           class="hidden sm:table-cell"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 dark:border-y-2 justify-center border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 !my-0 bg-theme-danger-50 dark:bg-theme-background dark:border-theme-danger-400"
+            class="flex px-3 items-center my-1 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 !my-0 bg-theme-danger-50 dark:bg-theme-background dark:border-theme-danger-400"
           >
             <a
               class="ring-focus group/inner inline-block group w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700 css-167zzsv"
@@ -1644,7 +1644,7 @@ exports[`DelegateRow > should render the unselected vote 1`] = `
           class="w-30 min-w-32"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 rounded-r justify-end pr-3 mr-3 border-2 border-l-0 border-transparent h-9 min-h-9 bg-theme-danger-50 dark:bg-theme-background dark:border-theme-danger-400"
+            class="flex px-3 items-center my-1 transition-colors duration-100 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end pr-3 mr-3 border-2 border-l-0 border-transparent h-9 min-h-9 bg-theme-danger-50 dark:bg-theme-background dark:border-theme-danger-400"
           >
             <div
               class="-mr-0.5 leading-[17px]"
@@ -1674,19 +1674,19 @@ exports[`DelegateRow > should render when network requires vote amount 1`] = `
   <table>
     <tbody>
       <tr
-        class="relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+        class="group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
         data-testid="TableRow"
       >
         <td>
           <div
-            class="flex px-3 items-center transition-colors duration-100 rounded-l ml-3 pl-3 text-sm leading-[17px] font-semibold border-2 border-r-0 border-transparent h-9 min-h-9 my-0"
+            class="flex px-3 items-center transition-colors duration-100 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 ml-3 pl-3 text-sm leading-[17px] font-semibold border-2 border-r-0 border-transparent h-9 min-h-9 my-0"
           >
             <span />
           </div>
         </td>
         <td>
           <div
-            class="flex px-3 items-center transition-colors duration-100 dark:bg-black dark:border-y-2 dark:border-black font-semibold border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0 space-x-3"
+            class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 font-semibold border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0 space-x-3"
           >
             <div
               class="relative h-[17px] grow"
@@ -1707,7 +1707,7 @@ exports[`DelegateRow > should render when network requires vote amount 1`] = `
           class="hidden sm:table-cell"
         >
           <div
-            class="flex px-3 items-center transition-colors duration-100 dark:bg-black dark:border-y-2 dark:border-black justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0"
+            class="flex px-3 items-center transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0"
           >
             <div>
               <div
@@ -1745,7 +1745,7 @@ exports[`DelegateRow > should render when network requires vote amount 1`] = `
           class="hidden sm:table-cell"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 dark:bg-black dark:border-y-2 dark:border-black justify-center border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 !my-0"
+            class="flex px-3 items-center my-1 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 !my-0"
           >
             <a
               class="ring-focus group/inner inline-block group w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700 css-167zzsv"
@@ -1795,7 +1795,7 @@ exports[`DelegateRow > should render when network requires vote amount 1`] = `
           data-testid="DelegateVoteAmount"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:bg-black dark:border-y-2 dark:border-black justify-center border-t-2 border-b-2 border-transparent"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent"
           >
             <div
               class="relative flex-1 px-3"
@@ -1841,7 +1841,7 @@ exports[`DelegateRow > should render when network requires vote amount 1`] = `
           class="w-30 min-w-32"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 rounded-r justify-end pr-3 mr-3 border-2 border-l-0 border-transparent h-9 min-h-9"
+            class="flex px-3 items-center my-1 transition-colors duration-100 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end pr-3 mr-3 border-2 border-l-0 border-transparent h-9 min-h-9"
           >
             <div
               class="-mr-0.5 leading-[17px]"

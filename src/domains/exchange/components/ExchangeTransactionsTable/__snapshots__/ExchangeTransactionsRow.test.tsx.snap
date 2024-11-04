@@ -5,12 +5,12 @@ exports[`ExchangeTransactionsRow > should render (Expired) 1`] = `
   <table>
     <tbody>
       <tr
-        class="relative css-16ynu5g"
+        class="group relative css-16ynu5g"
         data-testid="TableRow"
       >
         <td>
           <div
-            class="flex px-3 transition-colors duration-100 min-h-11 pl-6 rounded-l dark:group-hover:bg-black items-start my-0 py-3 xl:py-4 xl:min-h-0 flex-col gap-1"
+            class="flex px-3 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start my-0 py-3 max-h-11 flex-col gap-1"
           >
             <button
               class="h-5 w-20 cursor-pointer truncate"
@@ -49,7 +49,7 @@ exports[`ExchangeTransactionsRow > should render (Expired) 1`] = `
           class="hidden text-sm xl:table-cell"
         >
           <div
-            class="flex px-3 my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black items-start xl:items-center font-semibold"
+            class="flex px-3 my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start xl:items-center font-semibold"
           >
             <span
               data-testid="TimeAgo"
@@ -60,14 +60,14 @@ exports[`ExchangeTransactionsRow > should render (Expired) 1`] = `
         </td>
         <td>
           <div
-            class="flex px-3 my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black font-semibold text-sm items-start xl:items-center mt-2 xl:mt-1"
+            class="flex px-3 my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 font-semibold text-sm items-start xl:items-center mt-2 xl:mt-1"
           />
         </td>
         <td
           class="lg:hidden"
         >
           <div
-            class="px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black items-end flex flex-col gap-1.5 my-3 xl:my-0"
+            class="px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-end flex flex-col gap-1.5 my-3 xl:my-0"
           >
             <div
               class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
@@ -107,7 +107,7 @@ exports[`ExchangeTransactionsRow > should render (Expired) 1`] = `
           class="hidden lg:table-cell"
         >
           <div
-            class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black gap-3 justify-end items-start xl:items-center my-3 xl:my-0"
+            class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 gap-3 justify-end items-start xl:items-center my-3 xl:my-0"
           >
             <div
               class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
@@ -131,7 +131,7 @@ exports[`ExchangeTransactionsRow > should render (Expired) 1`] = `
           class="hidden lg:table-cell"
         >
           <div
-            class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black gap-3 justify-end items-start xl:items-center my-3 xl:my-0"
+            class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 gap-3 justify-end items-start xl:items-center my-3 xl:my-0"
           >
             <div
               class="flex h-full items-center justify-center rounded px-1.5 css-1jspzfx"
@@ -153,7 +153,7 @@ exports[`ExchangeTransactionsRow > should render (Expired) 1`] = `
         </td>
         <td>
           <div
-            class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black justify-center items-start xl:items-center my-3 xl:my-0"
+            class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center items-start xl:items-center my-3 xl:my-0"
           >
             <span>
               <div
@@ -202,7 +202,7 @@ exports[`ExchangeTransactionsRow > should render (Expired) 1`] = `
         </td>
         <td>
           <div
-            class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r dark:group-hover:bg-black items-start xl:items-center justify-end text-theme-secondary-text my-3 xl:my-0"
+            class="flex px-3 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start xl:items-center justify-end text-theme-secondary-text my-3 xl:my-0"
           >
             <button
               class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent hover:text-theme-primary-700 hover:bg-theme-primary-200 dark:hover:bg-theme-secondary-800 dark:hover:text-white css-10jzzmw"
@@ -253,12 +253,12 @@ exports[`ExchangeTransactionsRow > should render (Failed) 1`] = `
   <table>
     <tbody>
       <tr
-        class="relative css-16ynu5g"
+        class="group relative css-16ynu5g"
         data-testid="TableRow"
       >
         <td>
           <div
-            class="flex px-3 transition-colors duration-100 min-h-11 pl-6 rounded-l dark:group-hover:bg-black items-start my-0 py-3 xl:py-4 xl:min-h-0 flex-col gap-1"
+            class="flex px-3 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start my-0 py-3 max-h-11 flex-col gap-1"
           >
             <button
               class="h-5 w-20 cursor-pointer truncate"
@@ -297,7 +297,7 @@ exports[`ExchangeTransactionsRow > should render (Failed) 1`] = `
           class="hidden text-sm xl:table-cell"
         >
           <div
-            class="flex px-3 my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black items-start xl:items-center font-semibold"
+            class="flex px-3 my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start xl:items-center font-semibold"
           >
             <span
               data-testid="TimeAgo"
@@ -308,14 +308,14 @@ exports[`ExchangeTransactionsRow > should render (Failed) 1`] = `
         </td>
         <td>
           <div
-            class="flex px-3 my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black font-semibold text-sm items-start xl:items-center mt-2 xl:mt-1"
+            class="flex px-3 my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 font-semibold text-sm items-start xl:items-center mt-2 xl:mt-1"
           />
         </td>
         <td
           class="lg:hidden"
         >
           <div
-            class="px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black items-end flex flex-col gap-1.5 my-3 xl:my-0"
+            class="px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-end flex flex-col gap-1.5 my-3 xl:my-0"
           >
             <div
               class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
@@ -355,7 +355,7 @@ exports[`ExchangeTransactionsRow > should render (Failed) 1`] = `
           class="hidden lg:table-cell"
         >
           <div
-            class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black gap-3 justify-end items-start xl:items-center my-3 xl:my-0"
+            class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 gap-3 justify-end items-start xl:items-center my-3 xl:my-0"
           >
             <div
               class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
@@ -379,7 +379,7 @@ exports[`ExchangeTransactionsRow > should render (Failed) 1`] = `
           class="hidden lg:table-cell"
         >
           <div
-            class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black gap-3 justify-end items-start xl:items-center my-3 xl:my-0"
+            class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 gap-3 justify-end items-start xl:items-center my-3 xl:my-0"
           >
             <div
               class="flex h-full items-center justify-center rounded px-1.5 css-1jspzfx"
@@ -401,7 +401,7 @@ exports[`ExchangeTransactionsRow > should render (Failed) 1`] = `
         </td>
         <td>
           <div
-            class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black justify-center items-start xl:items-center my-3 xl:my-0"
+            class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center items-start xl:items-center my-3 xl:my-0"
           >
             <span>
               <div
@@ -441,7 +441,7 @@ exports[`ExchangeTransactionsRow > should render (Failed) 1`] = `
         </td>
         <td>
           <div
-            class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r dark:group-hover:bg-black items-start xl:items-center justify-end text-theme-secondary-text my-3 xl:my-0"
+            class="flex px-3 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start xl:items-center justify-end text-theme-secondary-text my-3 xl:my-0"
           >
             <button
               class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent hover:text-theme-primary-700 hover:bg-theme-primary-200 dark:hover:bg-theme-secondary-800 dark:hover:text-white css-10jzzmw"
@@ -492,12 +492,12 @@ exports[`ExchangeTransactionsRow > should render (Finished) 1`] = `
   <table>
     <tbody>
       <tr
-        class="relative css-16ynu5g"
+        class="group relative css-16ynu5g"
         data-testid="TableRow"
       >
         <td>
           <div
-            class="flex px-3 transition-colors duration-100 min-h-11 pl-6 rounded-l dark:group-hover:bg-black items-start my-0 py-3 xl:py-4 xl:min-h-0 flex-col gap-1"
+            class="flex px-3 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start my-0 py-3 max-h-11 flex-col gap-1"
           >
             <button
               class="h-5 w-20 cursor-pointer truncate"
@@ -536,7 +536,7 @@ exports[`ExchangeTransactionsRow > should render (Finished) 1`] = `
           class="hidden text-sm xl:table-cell"
         >
           <div
-            class="flex px-3 my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black items-start xl:items-center font-semibold"
+            class="flex px-3 my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start xl:items-center font-semibold"
           >
             <span
               data-testid="TimeAgo"
@@ -547,14 +547,14 @@ exports[`ExchangeTransactionsRow > should render (Finished) 1`] = `
         </td>
         <td>
           <div
-            class="flex px-3 my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black font-semibold text-sm items-start xl:items-center mt-2 xl:mt-1"
+            class="flex px-3 my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 font-semibold text-sm items-start xl:items-center mt-2 xl:mt-1"
           />
         </td>
         <td
           class="lg:hidden"
         >
           <div
-            class="px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black items-end flex flex-col gap-1.5 my-3 xl:my-0"
+            class="px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-end flex flex-col gap-1.5 my-3 xl:my-0"
           >
             <div
               class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
@@ -594,7 +594,7 @@ exports[`ExchangeTransactionsRow > should render (Finished) 1`] = `
           class="hidden lg:table-cell"
         >
           <div
-            class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black gap-3 justify-end items-start xl:items-center my-3 xl:my-0"
+            class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 gap-3 justify-end items-start xl:items-center my-3 xl:my-0"
           >
             <div
               class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
@@ -618,7 +618,7 @@ exports[`ExchangeTransactionsRow > should render (Finished) 1`] = `
           class="hidden lg:table-cell"
         >
           <div
-            class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black gap-3 justify-end items-start xl:items-center my-3 xl:my-0"
+            class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 gap-3 justify-end items-start xl:items-center my-3 xl:my-0"
           >
             <div
               class="flex h-full items-center justify-center rounded px-1.5 css-1jspzfx"
@@ -640,7 +640,7 @@ exports[`ExchangeTransactionsRow > should render (Finished) 1`] = `
         </td>
         <td>
           <div
-            class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black justify-center items-start xl:items-center my-3 xl:my-0"
+            class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center items-start xl:items-center my-3 xl:my-0"
           >
             <span>
               <div
@@ -680,7 +680,7 @@ exports[`ExchangeTransactionsRow > should render (Finished) 1`] = `
         </td>
         <td>
           <div
-            class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r dark:group-hover:bg-black items-start xl:items-center justify-end text-theme-secondary-text my-3 xl:my-0"
+            class="flex px-3 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start xl:items-center justify-end text-theme-secondary-text my-3 xl:my-0"
           >
             <button
               class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent hover:text-theme-primary-700 hover:bg-theme-primary-200 dark:hover:bg-theme-secondary-800 dark:hover:text-white css-10jzzmw"
@@ -731,12 +731,12 @@ exports[`ExchangeTransactionsRow > should render (New) 1`] = `
   <table>
     <tbody>
       <tr
-        class="relative css-16ynu5g"
+        class="group relative css-16ynu5g"
         data-testid="TableRow"
       >
         <td>
           <div
-            class="flex px-3 transition-colors duration-100 min-h-11 pl-6 rounded-l dark:group-hover:bg-black items-start my-0 py-3 xl:py-4 xl:min-h-0 flex-col gap-1"
+            class="flex px-3 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start my-0 py-3 max-h-11 flex-col gap-1"
           >
             <button
               class="h-5 w-20 cursor-pointer truncate"
@@ -775,7 +775,7 @@ exports[`ExchangeTransactionsRow > should render (New) 1`] = `
           class="hidden text-sm xl:table-cell"
         >
           <div
-            class="flex px-3 my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black items-start xl:items-center font-semibold"
+            class="flex px-3 my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start xl:items-center font-semibold"
           >
             <span
               data-testid="TimeAgo"
@@ -786,14 +786,14 @@ exports[`ExchangeTransactionsRow > should render (New) 1`] = `
         </td>
         <td>
           <div
-            class="flex px-3 my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black font-semibold text-sm items-start xl:items-center mt-2 xl:mt-1"
+            class="flex px-3 my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 font-semibold text-sm items-start xl:items-center mt-2 xl:mt-1"
           />
         </td>
         <td
           class="lg:hidden"
         >
           <div
-            class="px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black items-end flex flex-col gap-1.5 my-3 xl:my-0"
+            class="px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-end flex flex-col gap-1.5 my-3 xl:my-0"
           >
             <div
               class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
@@ -867,7 +867,7 @@ exports[`ExchangeTransactionsRow > should render (New) 1`] = `
           class="hidden lg:table-cell"
         >
           <div
-            class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black gap-3 justify-end items-start xl:items-center my-3 xl:my-0"
+            class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 gap-3 justify-end items-start xl:items-center my-3 xl:my-0"
           >
             <div
               class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
@@ -891,7 +891,7 @@ exports[`ExchangeTransactionsRow > should render (New) 1`] = `
           class="hidden lg:table-cell"
         >
           <div
-            class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black gap-3 justify-end items-start xl:items-center my-3 xl:my-0"
+            class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 gap-3 justify-end items-start xl:items-center my-3 xl:my-0"
           >
             <div
               class="flex h-full items-center justify-center rounded pr-1.5 css-1jspzfx"
@@ -947,7 +947,7 @@ exports[`ExchangeTransactionsRow > should render (New) 1`] = `
         </td>
         <td>
           <div
-            class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black justify-center items-start xl:items-center my-3 xl:my-0"
+            class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center items-start xl:items-center my-3 xl:my-0"
           >
             <span>
               <div
@@ -988,7 +988,7 @@ exports[`ExchangeTransactionsRow > should render (New) 1`] = `
         </td>
         <td>
           <div
-            class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r dark:group-hover:bg-black items-start xl:items-center justify-end text-theme-secondary-text my-3 xl:my-0"
+            class="flex px-3 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start xl:items-center justify-end text-theme-secondary-text my-3 xl:my-0"
           >
             <button
               class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent hover:text-theme-primary-700 hover:bg-theme-primary-200 dark:hover:bg-theme-secondary-800 dark:hover:text-white css-10jzzmw"
@@ -1039,12 +1039,12 @@ exports[`ExchangeTransactionsRow > should render (Refunded) 1`] = `
   <table>
     <tbody>
       <tr
-        class="relative css-16ynu5g"
+        class="group relative css-16ynu5g"
         data-testid="TableRow"
       >
         <td>
           <div
-            class="flex px-3 transition-colors duration-100 min-h-11 pl-6 rounded-l dark:group-hover:bg-black items-start my-0 py-3 xl:py-4 xl:min-h-0 flex-col gap-1"
+            class="flex px-3 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start my-0 py-3 max-h-11 flex-col gap-1"
           >
             <button
               class="h-5 w-20 cursor-pointer truncate"
@@ -1083,7 +1083,7 @@ exports[`ExchangeTransactionsRow > should render (Refunded) 1`] = `
           class="hidden text-sm xl:table-cell"
         >
           <div
-            class="flex px-3 my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black items-start xl:items-center font-semibold"
+            class="flex px-3 my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start xl:items-center font-semibold"
           >
             <span
               data-testid="TimeAgo"
@@ -1094,14 +1094,14 @@ exports[`ExchangeTransactionsRow > should render (Refunded) 1`] = `
         </td>
         <td>
           <div
-            class="flex px-3 my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black font-semibold text-sm items-start xl:items-center mt-2 xl:mt-1"
+            class="flex px-3 my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 font-semibold text-sm items-start xl:items-center mt-2 xl:mt-1"
           />
         </td>
         <td
           class="lg:hidden"
         >
           <div
-            class="px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black items-end flex flex-col gap-1.5 my-3 xl:my-0"
+            class="px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-end flex flex-col gap-1.5 my-3 xl:my-0"
           >
             <div
               class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
@@ -1141,7 +1141,7 @@ exports[`ExchangeTransactionsRow > should render (Refunded) 1`] = `
           class="hidden lg:table-cell"
         >
           <div
-            class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black gap-3 justify-end items-start xl:items-center my-3 xl:my-0"
+            class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 gap-3 justify-end items-start xl:items-center my-3 xl:my-0"
           >
             <div
               class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
@@ -1165,7 +1165,7 @@ exports[`ExchangeTransactionsRow > should render (Refunded) 1`] = `
           class="hidden lg:table-cell"
         >
           <div
-            class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black gap-3 justify-end items-start xl:items-center my-3 xl:my-0"
+            class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 gap-3 justify-end items-start xl:items-center my-3 xl:my-0"
           >
             <div
               class="flex h-full items-center justify-center rounded px-1.5 css-1jspzfx"
@@ -1187,7 +1187,7 @@ exports[`ExchangeTransactionsRow > should render (Refunded) 1`] = `
         </td>
         <td>
           <div
-            class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black justify-center items-start xl:items-center my-3 xl:my-0"
+            class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center items-start xl:items-center my-3 xl:my-0"
           >
             <span>
               <div
@@ -1232,7 +1232,7 @@ exports[`ExchangeTransactionsRow > should render (Refunded) 1`] = `
         </td>
         <td>
           <div
-            class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r dark:group-hover:bg-black items-start xl:items-center justify-end text-theme-secondary-text my-3 xl:my-0"
+            class="flex px-3 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start xl:items-center justify-end text-theme-secondary-text my-3 xl:my-0"
           >
             <button
               class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent hover:text-theme-primary-700 hover:bg-theme-primary-200 dark:hover:bg-theme-secondary-800 dark:hover:text-white css-10jzzmw"
@@ -1283,12 +1283,12 @@ exports[`ExchangeTransactionsRow > should render (Verifying) 1`] = `
   <table>
     <tbody>
       <tr
-        class="relative css-16ynu5g"
+        class="group relative css-16ynu5g"
         data-testid="TableRow"
       >
         <td>
           <div
-            class="flex px-3 transition-colors duration-100 min-h-11 pl-6 rounded-l dark:group-hover:bg-black items-start my-0 py-3 xl:py-4 xl:min-h-0 flex-col gap-1"
+            class="flex px-3 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start my-0 py-3 max-h-11 flex-col gap-1"
           >
             <button
               class="h-5 w-20 cursor-pointer truncate"
@@ -1327,7 +1327,7 @@ exports[`ExchangeTransactionsRow > should render (Verifying) 1`] = `
           class="hidden text-sm xl:table-cell"
         >
           <div
-            class="flex px-3 my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black items-start xl:items-center font-semibold"
+            class="flex px-3 my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start xl:items-center font-semibold"
           >
             <span
               data-testid="TimeAgo"
@@ -1338,14 +1338,14 @@ exports[`ExchangeTransactionsRow > should render (Verifying) 1`] = `
         </td>
         <td>
           <div
-            class="flex px-3 my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black font-semibold text-sm items-start xl:items-center mt-2 xl:mt-1"
+            class="flex px-3 my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 font-semibold text-sm items-start xl:items-center mt-2 xl:mt-1"
           />
         </td>
         <td
           class="lg:hidden"
         >
           <div
-            class="px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black items-end flex flex-col gap-1.5 my-3 xl:my-0"
+            class="px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-end flex flex-col gap-1.5 my-3 xl:my-0"
           >
             <div
               class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
@@ -1385,7 +1385,7 @@ exports[`ExchangeTransactionsRow > should render (Verifying) 1`] = `
           class="hidden lg:table-cell"
         >
           <div
-            class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black gap-3 justify-end items-start xl:items-center my-3 xl:my-0"
+            class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 gap-3 justify-end items-start xl:items-center my-3 xl:my-0"
           >
             <div
               class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
@@ -1409,7 +1409,7 @@ exports[`ExchangeTransactionsRow > should render (Verifying) 1`] = `
           class="hidden lg:table-cell"
         >
           <div
-            class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black gap-3 justify-end items-start xl:items-center my-3 xl:my-0"
+            class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 gap-3 justify-end items-start xl:items-center my-3 xl:my-0"
           >
             <div
               class="flex h-full items-center justify-center rounded px-1.5 css-1jspzfx"
@@ -1431,7 +1431,7 @@ exports[`ExchangeTransactionsRow > should render (Verifying) 1`] = `
         </td>
         <td>
           <div
-            class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black justify-center items-start xl:items-center my-3 xl:my-0"
+            class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center items-start xl:items-center my-3 xl:my-0"
           >
             <span>
               <div
@@ -1476,7 +1476,7 @@ exports[`ExchangeTransactionsRow > should render (Verifying) 1`] = `
         </td>
         <td>
           <div
-            class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r dark:group-hover:bg-black items-start xl:items-center justify-end text-theme-secondary-text my-3 xl:my-0"
+            class="flex px-3 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start xl:items-center justify-end text-theme-secondary-text my-3 xl:my-0"
           >
             <button
               class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent hover:text-theme-primary-700 hover:bg-theme-primary-200 dark:hover:bg-theme-secondary-800 dark:hover:text-white css-10jzzmw"
@@ -1527,12 +1527,12 @@ exports[`ExchangeTransactionsRow > should render compact 1`] = `
   <table>
     <tbody>
       <tr
-        class="relative css-16ynu5g"
+        class="group relative css-16ynu5g"
         data-testid="TableRow"
       >
         <td>
           <div
-            class="flex px-3 transition-colors duration-100 min-h-11 pl-6 rounded-l dark:group-hover:bg-black items-start my-0 py-3 xl:py-4 xl:min-h-0 flex-col gap-1"
+            class="flex px-3 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start my-0 py-3 max-h-11 flex-col gap-1"
           >
             <button
               class="h-5 w-20 cursor-pointer truncate"
@@ -1571,7 +1571,7 @@ exports[`ExchangeTransactionsRow > should render compact 1`] = `
           class="hidden text-sm xl:table-cell"
         >
           <div
-            class="flex px-3 my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black items-start xl:items-center font-semibold"
+            class="flex px-3 my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start xl:items-center font-semibold"
           >
             <span
               data-testid="TimeAgo"
@@ -1582,14 +1582,14 @@ exports[`ExchangeTransactionsRow > should render compact 1`] = `
         </td>
         <td>
           <div
-            class="flex px-3 my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black font-semibold text-sm items-start xl:items-center mt-2 xl:mt-1"
+            class="flex px-3 my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 font-semibold text-sm items-start xl:items-center mt-2 xl:mt-1"
           />
         </td>
         <td
           class="lg:hidden"
         >
           <div
-            class="px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black items-end flex flex-col gap-1.5 my-3 xl:my-0"
+            class="px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-end flex flex-col gap-1.5 my-3 xl:my-0"
           >
             <div
               class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
@@ -1629,7 +1629,7 @@ exports[`ExchangeTransactionsRow > should render compact 1`] = `
           class="hidden lg:table-cell"
         >
           <div
-            class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black gap-3 justify-end items-start xl:items-center my-3 xl:my-0"
+            class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 gap-3 justify-end items-start xl:items-center my-3 xl:my-0"
           >
             <div
               class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
@@ -1653,7 +1653,7 @@ exports[`ExchangeTransactionsRow > should render compact 1`] = `
           class="hidden lg:table-cell"
         >
           <div
-            class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black gap-3 justify-end items-start xl:items-center my-3 xl:my-0"
+            class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 gap-3 justify-end items-start xl:items-center my-3 xl:my-0"
           >
             <div
               class="flex h-full items-center justify-center rounded px-1.5 css-1jspzfx"
@@ -1675,7 +1675,7 @@ exports[`ExchangeTransactionsRow > should render compact 1`] = `
         </td>
         <td>
           <div
-            class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black justify-center items-start xl:items-center my-3 xl:my-0"
+            class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center items-start xl:items-center my-3 xl:my-0"
           >
             <span>
               <div
@@ -1715,7 +1715,7 @@ exports[`ExchangeTransactionsRow > should render compact 1`] = `
         </td>
         <td>
           <div
-            class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r dark:group-hover:bg-black items-start xl:items-center justify-end text-theme-secondary-text my-3 xl:my-0"
+            class="flex px-3 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start xl:items-center justify-end text-theme-secondary-text my-3 xl:my-0"
           >
             <button
               class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent hover:text-theme-primary-700 hover:bg-theme-primary-200 dark:hover:bg-theme-secondary-800 dark:hover:text-white css-10jzzmw"

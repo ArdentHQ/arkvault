@@ -5,14 +5,14 @@ exports[`AddressRow > should emit action on select button 1`] = `
   <table>
     <tbody>
       <tr
-        class="relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+        class="group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
         data-testid="TableRow"
       >
         <td
           data-testid="AddressRow__wallet"
         >
           <div
-            class="flex px-3 items-center my-1 min-h-11 pl-6 rounded-l dark:group-hover:bg-black cursor-pointer group transition duration-300 space-x-3"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 cursor-pointer group space-x-3"
           >
             <div
               class="w-40 flex-1"
@@ -81,7 +81,7 @@ exports[`AddressRow > should emit action on select button 1`] = `
           class="hidden xl:table-cell"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black justify-end font-semibold text-theme-secondary-text whitespace-nowrap"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end font-semibold text-theme-secondary-text whitespace-nowrap"
           >
             <span
               class="whitespace-nowrap"
@@ -93,7 +93,7 @@ exports[`AddressRow > should emit action on select button 1`] = `
         </td>
         <td>
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black font-semibold space-x-3"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 font-semibold space-x-3"
           >
             <div
               class="flex items-center space-x-3 overflow-hidden"
@@ -142,7 +142,7 @@ exports[`AddressRow > should emit action on select button 1`] = `
           class="hidden lg:table-cell"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black justify-center font-semibold text-theme-secondary-text"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center font-semibold text-theme-secondary-text"
           >
             <span
               class="text-theme-secondary-400"
@@ -153,7 +153,7 @@ exports[`AddressRow > should emit action on select button 1`] = `
         </td>
         <td>
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black justify-center"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center"
           >
             <span>
               <div
@@ -196,7 +196,7 @@ exports[`AddressRow > should emit action on select button 1`] = `
           class="hidden lg:table-cell"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black justify-center space-x-2"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center space-x-2"
           >
             <div
               class="inline-block p-1 text-theme-secondary-700 dark:text-theme-secondary-600"
@@ -250,11 +250,9 @@ exports[`AddressRow > should emit action on select button 1`] = `
             </div>
           </div>
         </td>
-        <td
-          class="pr-6"
-        >
+        <td>
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r dark:group-hover:bg-black justify-end !pr-0"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end"
           >
             <div>
               <button
@@ -282,14 +280,14 @@ exports[`AddressRow > should render for a multisignature wallet 1`] = `
   <table>
     <tbody>
       <tr
-        class="relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+        class="group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
         data-testid="TableRow"
       >
         <td
           data-testid="AddressRow__wallet"
         >
           <div
-            class="flex px-3 items-center my-1 min-h-11 pl-6 rounded-l dark:group-hover:bg-black cursor-pointer group transition duration-300 space-x-3"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 cursor-pointer group space-x-3"
           >
             <div
               class="w-40 flex-1"
@@ -358,7 +356,7 @@ exports[`AddressRow > should render for a multisignature wallet 1`] = `
           class="hidden xl:table-cell"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black justify-end font-semibold text-theme-secondary-text whitespace-nowrap"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end font-semibold text-theme-secondary-text whitespace-nowrap"
           >
             <span
               class="whitespace-nowrap"
@@ -370,7 +368,7 @@ exports[`AddressRow > should render for a multisignature wallet 1`] = `
         </td>
         <td>
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black font-semibold space-x-3"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 font-semibold space-x-3"
           >
             <div
               class="flex items-center space-x-3 overflow-hidden"
@@ -419,7 +417,7 @@ exports[`AddressRow > should render for a multisignature wallet 1`] = `
           class="hidden lg:table-cell"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black justify-center font-semibold text-theme-secondary-text"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center font-semibold text-theme-secondary-text"
           >
             <span
               class="text-theme-secondary-400"
@@ -430,7 +428,7 @@ exports[`AddressRow > should render for a multisignature wallet 1`] = `
         </td>
         <td>
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black justify-center"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center"
           >
             <span>
               <div
@@ -473,7 +471,7 @@ exports[`AddressRow > should render for a multisignature wallet 1`] = `
           class="hidden lg:table-cell"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black justify-center space-x-2"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center space-x-2"
           >
             <div
               class="inline-block p-1 text-theme-secondary-700 dark:text-theme-secondary-600"
@@ -563,11 +561,9 @@ exports[`AddressRow > should render for a multisignature wallet 1`] = `
             </div>
           </div>
         </td>
-        <td
-          class="pr-6"
-        >
+        <td>
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r dark:group-hover:bg-black justify-end !pr-0"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end"
           >
             <div>
               <button
@@ -595,14 +591,14 @@ exports[`AddressRow > should render tooltip wallet when ledger and incompatible 
   <table>
     <tbody>
       <tr
-        class="relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+        class="group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
         data-testid="TableRow"
       >
         <td
           data-testid="AddressRow__wallet"
         >
           <div
-            class="flex px-3 items-center my-1 min-h-11 pl-6 rounded-l dark:group-hover:bg-black cursor-pointer group transition duration-300 space-x-3"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 cursor-pointer group space-x-3"
           >
             <div
               class="w-40 flex-1"
@@ -671,7 +667,7 @@ exports[`AddressRow > should render tooltip wallet when ledger and incompatible 
           class="hidden xl:table-cell"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black justify-end font-semibold text-theme-secondary-text whitespace-nowrap"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end font-semibold text-theme-secondary-text whitespace-nowrap"
           >
             <span
               class="whitespace-nowrap"
@@ -683,7 +679,7 @@ exports[`AddressRow > should render tooltip wallet when ledger and incompatible 
         </td>
         <td>
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black font-semibold space-x-3"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 font-semibold space-x-3"
           >
             <div
               class="flex items-center space-x-3 overflow-hidden"
@@ -732,7 +728,7 @@ exports[`AddressRow > should render tooltip wallet when ledger and incompatible 
           class="hidden lg:table-cell"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black justify-center font-semibold text-theme-secondary-text"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center font-semibold text-theme-secondary-text"
           >
             <span
               class="text-theme-secondary-400"
@@ -743,7 +739,7 @@ exports[`AddressRow > should render tooltip wallet when ledger and incompatible 
         </td>
         <td>
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black justify-center"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center"
           >
             <span>
               <div
@@ -786,7 +782,7 @@ exports[`AddressRow > should render tooltip wallet when ledger and incompatible 
           class="hidden lg:table-cell"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black justify-center space-x-2"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center space-x-2"
           >
             <div
               class="inline-block p-1 text-theme-secondary-700 dark:text-theme-secondary-600"
@@ -840,11 +836,9 @@ exports[`AddressRow > should render tooltip wallet when ledger and incompatible 
             </div>
           </div>
         </td>
-        <td
-          class="pr-6"
-        >
+        <td>
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r dark:group-hover:bg-black justify-end !pr-0"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end"
           >
             <div>
               <button
@@ -873,14 +867,14 @@ exports[`AddressRow > should render when isCompact = false 1`] = `
   <table>
     <tbody>
       <tr
-        class="relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+        class="group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
         data-testid="TableRow"
       >
         <td
           data-testid="AddressRow__wallet"
         >
           <div
-            class="flex px-3 items-center my-1 min-h-11 pl-6 rounded-l dark:group-hover:bg-black cursor-pointer group transition duration-300 space-x-3"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 cursor-pointer group space-x-3"
           >
             <div
               class="w-40 flex-1"
@@ -949,7 +943,7 @@ exports[`AddressRow > should render when isCompact = false 1`] = `
           class="hidden xl:table-cell"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black justify-end font-semibold text-theme-secondary-text whitespace-nowrap"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end font-semibold text-theme-secondary-text whitespace-nowrap"
           >
             <span
               class="whitespace-nowrap"
@@ -961,7 +955,7 @@ exports[`AddressRow > should render when isCompact = false 1`] = `
         </td>
         <td>
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black font-semibold space-x-3"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 font-semibold space-x-3"
           >
             <div
               class="flex items-center space-x-3 overflow-hidden"
@@ -1010,7 +1004,7 @@ exports[`AddressRow > should render when isCompact = false 1`] = `
           class="hidden lg:table-cell"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black justify-center font-semibold text-theme-secondary-text"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center font-semibold text-theme-secondary-text"
           >
             <span
               class="text-theme-secondary-400"
@@ -1021,7 +1015,7 @@ exports[`AddressRow > should render when isCompact = false 1`] = `
         </td>
         <td>
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black justify-center"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center"
           >
             <span>
               <div
@@ -1064,7 +1058,7 @@ exports[`AddressRow > should render when isCompact = false 1`] = `
           class="hidden lg:table-cell"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black justify-center space-x-2"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center space-x-2"
           >
             <div
               class="inline-block p-1 text-theme-secondary-700 dark:text-theme-secondary-600"
@@ -1118,11 +1112,9 @@ exports[`AddressRow > should render when isCompact = false 1`] = `
             </div>
           </div>
         </td>
-        <td
-          class="pr-6"
-        >
+        <td>
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r dark:group-hover:bg-black justify-end !pr-0"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end"
           >
             <div>
               <button
@@ -1150,14 +1142,14 @@ exports[`AddressRow > should render when isCompact = true 1`] = `
   <table>
     <tbody>
       <tr
-        class="relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+        class="group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
         data-testid="TableRow"
       >
         <td
           data-testid="AddressRow__wallet"
         >
           <div
-            class="flex px-3 items-center my-1 min-h-11 pl-6 rounded-l dark:group-hover:bg-black cursor-pointer group transition duration-300 space-x-3"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 cursor-pointer group space-x-3"
           >
             <div
               class="w-40 flex-1"
@@ -1226,7 +1218,7 @@ exports[`AddressRow > should render when isCompact = true 1`] = `
           class="hidden xl:table-cell"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black justify-end font-semibold text-theme-secondary-text whitespace-nowrap"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end font-semibold text-theme-secondary-text whitespace-nowrap"
           >
             <span
               class="whitespace-nowrap"
@@ -1238,7 +1230,7 @@ exports[`AddressRow > should render when isCompact = true 1`] = `
         </td>
         <td>
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black font-semibold space-x-3"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 font-semibold space-x-3"
           >
             <div
               class="flex items-center space-x-3 overflow-hidden"
@@ -1287,7 +1279,7 @@ exports[`AddressRow > should render when isCompact = true 1`] = `
           class="hidden lg:table-cell"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black justify-center font-semibold text-theme-secondary-text"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center font-semibold text-theme-secondary-text"
           >
             <span
               class="text-theme-secondary-400"
@@ -1298,7 +1290,7 @@ exports[`AddressRow > should render when isCompact = true 1`] = `
         </td>
         <td>
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black justify-center"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center"
           >
             <span>
               <div
@@ -1341,7 +1333,7 @@ exports[`AddressRow > should render when isCompact = true 1`] = `
           class="hidden lg:table-cell"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black justify-center space-x-2"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center space-x-2"
           >
             <div
               class="inline-block p-1 text-theme-secondary-700 dark:text-theme-secondary-600"
@@ -1395,11 +1387,9 @@ exports[`AddressRow > should render when isCompact = true 1`] = `
             </div>
           </div>
         </td>
-        <td
-          class="pr-6"
-        >
+        <td>
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r dark:group-hover:bg-black justify-end !pr-0"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end"
           >
             <div>
               <button
@@ -1427,14 +1417,14 @@ exports[`AddressRow > should render when wallet hasn't voted 1`] = `
   <table>
     <tbody>
       <tr
-        class="relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+        class="group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
         data-testid="TableRow"
       >
         <td
           data-testid="AddressRow__wallet"
         >
           <div
-            class="flex px-3 items-center my-1 min-h-11 pl-6 rounded-l dark:group-hover:bg-black cursor-pointer group transition duration-300 space-x-3"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 cursor-pointer group space-x-3"
           >
             <div
               class="w-40 flex-1"
@@ -1503,7 +1493,7 @@ exports[`AddressRow > should render when wallet hasn't voted 1`] = `
           class="hidden xl:table-cell"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black justify-end font-semibold text-theme-secondary-text whitespace-nowrap"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end font-semibold text-theme-secondary-text whitespace-nowrap"
           >
             <span
               class="whitespace-nowrap"
@@ -1515,7 +1505,7 @@ exports[`AddressRow > should render when wallet hasn't voted 1`] = `
         </td>
         <td>
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black font-semibold space-x-3"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 font-semibold space-x-3"
           >
             <div
               class="flex items-center space-x-3 overflow-hidden"
@@ -1564,7 +1554,7 @@ exports[`AddressRow > should render when wallet hasn't voted 1`] = `
           class="hidden lg:table-cell"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black justify-center font-semibold text-theme-secondary-text"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center font-semibold text-theme-secondary-text"
           >
             <span
               class="text-theme-secondary-400"
@@ -1575,7 +1565,7 @@ exports[`AddressRow > should render when wallet hasn't voted 1`] = `
         </td>
         <td>
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black justify-center"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center"
           >
             <span>
               <div
@@ -1618,7 +1608,7 @@ exports[`AddressRow > should render when wallet hasn't voted 1`] = `
           class="hidden lg:table-cell"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black justify-center space-x-2"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center space-x-2"
           >
             <div
               class="inline-block p-1 text-theme-secondary-700 dark:text-theme-secondary-600"
@@ -1672,11 +1662,9 @@ exports[`AddressRow > should render when wallet hasn't voted 1`] = `
             </div>
           </div>
         </td>
-        <td
-          class="pr-6"
-        >
+        <td>
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r dark:group-hover:bg-black justify-end !pr-0"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end"
           >
             <div>
               <button
@@ -1695,14 +1683,14 @@ exports[`AddressRow > should render when wallet hasn't voted 1`] = `
         </td>
       </tr>
       <tr
-        class="relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+        class="group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
         data-testid="TableRow"
       >
         <td
           data-testid="AddressRow__wallet"
         >
           <div
-            class="flex px-3 items-center my-1 min-h-11 pl-6 rounded-l dark:group-hover:bg-black cursor-pointer group transition duration-300 space-x-3"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 cursor-pointer group space-x-3"
           >
             <div
               class="w-40 flex-1"
@@ -1771,7 +1759,7 @@ exports[`AddressRow > should render when wallet hasn't voted 1`] = `
           class="hidden xl:table-cell"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black justify-end font-semibold text-theme-secondary-text whitespace-nowrap"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end font-semibold text-theme-secondary-text whitespace-nowrap"
           >
             <span
               class="whitespace-nowrap"
@@ -1783,7 +1771,7 @@ exports[`AddressRow > should render when wallet hasn't voted 1`] = `
         </td>
         <td>
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black font-semibold space-x-3"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 font-semibold space-x-3"
           >
             <span
               class="text-theme-secondary-400"
@@ -1796,26 +1784,24 @@ exports[`AddressRow > should render when wallet hasn't voted 1`] = `
           class="hidden lg:table-cell"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black justify-center font-semibold text-theme-secondary-text"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center font-semibold text-theme-secondary-text"
           />
         </td>
         <td>
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black justify-center"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center"
           />
         </td>
         <td
           class="hidden lg:table-cell"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black justify-center space-x-2"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center space-x-2"
           />
         </td>
-        <td
-          class="pr-6"
-        >
+        <td>
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r dark:group-hover:bg-black justify-end !pr-0"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end"
           >
             <div>
               <button
@@ -1843,14 +1829,14 @@ exports[`AddressRow > should render when wallet not found for votes 1`] = `
   <table>
     <tbody>
       <tr
-        class="relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+        class="group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
         data-testid="TableRow"
       >
         <td
           data-testid="AddressRow__wallet"
         >
           <div
-            class="flex px-3 items-center my-1 min-h-11 pl-6 rounded-l dark:group-hover:bg-black cursor-pointer group transition duration-300 space-x-3"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 cursor-pointer group space-x-3"
           >
             <div
               class="w-40 flex-1"
@@ -1919,7 +1905,7 @@ exports[`AddressRow > should render when wallet not found for votes 1`] = `
           class="hidden xl:table-cell"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black justify-end font-semibold text-theme-secondary-text whitespace-nowrap"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end font-semibold text-theme-secondary-text whitespace-nowrap"
           >
             <span
               class="whitespace-nowrap"
@@ -1931,7 +1917,7 @@ exports[`AddressRow > should render when wallet not found for votes 1`] = `
         </td>
         <td>
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black font-semibold space-x-3"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 font-semibold space-x-3"
           >
             <div
               class="flex items-center space-x-3 overflow-hidden"
@@ -1980,7 +1966,7 @@ exports[`AddressRow > should render when wallet not found for votes 1`] = `
           class="hidden lg:table-cell"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black justify-center font-semibold text-theme-secondary-text"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center font-semibold text-theme-secondary-text"
           >
             <span
               class="text-theme-secondary-400"
@@ -1991,7 +1977,7 @@ exports[`AddressRow > should render when wallet not found for votes 1`] = `
         </td>
         <td>
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black justify-center"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center"
           >
             <span>
               <div
@@ -2034,7 +2020,7 @@ exports[`AddressRow > should render when wallet not found for votes 1`] = `
           class="hidden lg:table-cell"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black justify-center space-x-2"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center space-x-2"
           >
             <div
               class="inline-block p-1 text-theme-secondary-700 dark:text-theme-secondary-600"
@@ -2088,11 +2074,9 @@ exports[`AddressRow > should render when wallet not found for votes 1`] = `
             </div>
           </div>
         </td>
-        <td
-          class="pr-6"
-        >
+        <td>
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r dark:group-hover:bg-black justify-end !pr-0"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end"
           >
             <div>
               <button
@@ -2111,14 +2095,14 @@ exports[`AddressRow > should render when wallet not found for votes 1`] = `
         </td>
       </tr>
       <tr
-        class="relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+        class="group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
         data-testid="TableRow"
       >
         <td
           data-testid="AddressRow__wallet"
         >
           <div
-            class="flex px-3 items-center my-1 min-h-11 pl-6 rounded-l dark:group-hover:bg-black cursor-pointer group transition duration-300 space-x-3"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 cursor-pointer group space-x-3"
           >
             <div
               class="w-40 flex-1"
@@ -2176,7 +2160,7 @@ exports[`AddressRow > should render when wallet not found for votes 1`] = `
           class="hidden xl:table-cell"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black justify-end font-semibold text-theme-secondary-text whitespace-nowrap"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end font-semibold text-theme-secondary-text whitespace-nowrap"
           >
             <span
               class="whitespace-nowrap"
@@ -2188,7 +2172,7 @@ exports[`AddressRow > should render when wallet not found for votes 1`] = `
         </td>
         <td>
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black font-semibold space-x-3"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 font-semibold space-x-3"
           >
             <span
               class="text-theme-secondary-400"
@@ -2201,26 +2185,24 @@ exports[`AddressRow > should render when wallet not found for votes 1`] = `
           class="hidden lg:table-cell"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black justify-center font-semibold text-theme-secondary-text"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center font-semibold text-theme-secondary-text"
           />
         </td>
         <td>
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black justify-center"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center"
           />
         </td>
         <td
           class="hidden lg:table-cell"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black justify-center space-x-2"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center space-x-2"
           />
         </td>
-        <td
-          class="pr-6"
-        >
+        <td>
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r dark:group-hover:bg-black justify-end !pr-0"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end"
           >
             <div>
               <button
@@ -2249,14 +2231,14 @@ exports[`AddressRow > should render with active delegate 1`] = `
   <table>
     <tbody>
       <tr
-        class="relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+        class="group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
         data-testid="TableRow"
       >
         <td
           data-testid="AddressRow__wallet"
         >
           <div
-            class="flex px-3 items-center my-1 min-h-11 pl-6 rounded-l dark:group-hover:bg-black cursor-pointer group transition duration-300 space-x-3"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 cursor-pointer group space-x-3"
           >
             <div
               class="w-40 flex-1"
@@ -2325,7 +2307,7 @@ exports[`AddressRow > should render with active delegate 1`] = `
           class="hidden xl:table-cell"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black justify-end font-semibold text-theme-secondary-text whitespace-nowrap"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end font-semibold text-theme-secondary-text whitespace-nowrap"
           >
             <span
               class="whitespace-nowrap"
@@ -2337,7 +2319,7 @@ exports[`AddressRow > should render with active delegate 1`] = `
         </td>
         <td>
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black font-semibold space-x-3"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 font-semibold space-x-3"
           >
             <div
               class="flex items-center space-x-3 overflow-hidden"
@@ -2386,7 +2368,7 @@ exports[`AddressRow > should render with active delegate 1`] = `
           class="hidden lg:table-cell"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black justify-center font-semibold text-theme-secondary-text"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center font-semibold text-theme-secondary-text"
           >
             <span>
               #1
@@ -2395,7 +2377,7 @@ exports[`AddressRow > should render with active delegate 1`] = `
         </td>
         <td>
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black justify-center"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center"
           >
             <span>
               <div
@@ -2438,7 +2420,7 @@ exports[`AddressRow > should render with active delegate 1`] = `
           class="hidden lg:table-cell"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black justify-center space-x-2"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center space-x-2"
           >
             <div
               class="inline-block p-1 text-theme-secondary-700 dark:text-theme-secondary-600"
@@ -2492,11 +2474,9 @@ exports[`AddressRow > should render with active delegate 1`] = `
             </div>
           </div>
         </td>
-        <td
-          class="pr-6"
-        >
+        <td>
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r dark:group-hover:bg-black justify-end !pr-0"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end"
           >
             <div>
               <button
@@ -2524,14 +2504,14 @@ exports[`AddressRow > should render with isCompact = false when the maximum vote
   <table>
     <tbody>
       <tr
-        class="relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+        class="group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
         data-testid="TableRow"
       >
         <td
           data-testid="AddressRow__wallet"
         >
           <div
-            class="flex px-3 items-center my-1 min-h-11 pl-6 rounded-l dark:group-hover:bg-black cursor-pointer group transition duration-300 space-x-3"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 cursor-pointer group space-x-3"
           >
             <div
               class="w-40 flex-1"
@@ -2600,7 +2580,7 @@ exports[`AddressRow > should render with isCompact = false when the maximum vote
           class="hidden xl:table-cell"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black justify-end font-semibold text-theme-secondary-text whitespace-nowrap"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end font-semibold text-theme-secondary-text whitespace-nowrap"
           >
             <span
               class="whitespace-nowrap"
@@ -2612,7 +2592,7 @@ exports[`AddressRow > should render with isCompact = false when the maximum vote
         </td>
         <td>
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black font-semibold space-x-3"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 font-semibold space-x-3"
           >
             <span
               class="text-theme-secondary-400"
@@ -2623,7 +2603,7 @@ exports[`AddressRow > should render with isCompact = false when the maximum vote
         </td>
         <td>
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black justify-center"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center"
           >
             <div
               class="font-semibold text-theme-secondary-400"
@@ -2643,7 +2623,7 @@ exports[`AddressRow > should render with isCompact = false when the maximum vote
           class="hidden lg:table-cell"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black justify-center space-x-2"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center space-x-2"
           >
             <div
               class="inline-block p-1 text-theme-secondary-700 dark:text-theme-secondary-600"
@@ -2697,11 +2677,9 @@ exports[`AddressRow > should render with isCompact = false when the maximum vote
             </div>
           </div>
         </td>
-        <td
-          class="pr-6"
-        >
+        <td>
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r dark:group-hover:bg-black justify-end !pr-0"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end"
           >
             <div>
               <button
@@ -2729,14 +2707,14 @@ exports[`AddressRow > should render with isCompact = false when the wallet has e
   <table>
     <tbody>
       <tr
-        class="relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+        class="group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
         data-testid="TableRow"
       >
         <td
           data-testid="AddressRow__wallet"
         >
           <div
-            class="flex px-3 items-center my-1 min-h-11 pl-6 rounded-l dark:group-hover:bg-black cursor-pointer group transition duration-300 space-x-3"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 cursor-pointer group space-x-3"
           >
             <div
               class="w-40 flex-1"
@@ -2805,7 +2783,7 @@ exports[`AddressRow > should render with isCompact = false when the wallet has e
           class="hidden xl:table-cell"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black justify-end font-semibold text-theme-secondary-text whitespace-nowrap"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end font-semibold text-theme-secondary-text whitespace-nowrap"
           >
             <span
               class="whitespace-nowrap"
@@ -2817,7 +2795,7 @@ exports[`AddressRow > should render with isCompact = false when the wallet has e
         </td>
         <td>
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black font-semibold space-x-3"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 font-semibold space-x-3"
           >
             <div
               class="flex items-center space-x-3 overflow-hidden"
@@ -2873,7 +2851,7 @@ exports[`AddressRow > should render with isCompact = false when the wallet has e
         </td>
         <td>
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black justify-center"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center"
           >
             <div
               class="font-semibold text-theme-secondary-400"
@@ -2893,7 +2871,7 @@ exports[`AddressRow > should render with isCompact = false when the wallet has e
           class="hidden lg:table-cell"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black justify-center space-x-2"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center space-x-2"
           >
             <div
               class="inline-block p-1 text-theme-secondary-700 dark:text-theme-secondary-600"
@@ -2947,11 +2925,9 @@ exports[`AddressRow > should render with isCompact = false when the wallet has e
             </div>
           </div>
         </td>
-        <td
-          class="pr-6"
-        >
+        <td>
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r dark:group-hover:bg-black justify-end !pr-0"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end"
           >
             <div>
               <button
@@ -2979,14 +2955,14 @@ exports[`AddressRow > should render with isCompact = false when the wallet has m
   <table>
     <tbody>
       <tr
-        class="relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+        class="group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
         data-testid="TableRow"
       >
         <td
           data-testid="AddressRow__wallet"
         >
           <div
-            class="flex px-3 items-center my-1 min-h-11 pl-6 rounded-l dark:group-hover:bg-black cursor-pointer group transition duration-300 space-x-3"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 cursor-pointer group space-x-3"
           >
             <div
               class="w-40 flex-1"
@@ -3055,7 +3031,7 @@ exports[`AddressRow > should render with isCompact = false when the wallet has m
           class="hidden xl:table-cell"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black justify-end font-semibold text-theme-secondary-text whitespace-nowrap"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end font-semibold text-theme-secondary-text whitespace-nowrap"
           >
             <span
               class="whitespace-nowrap"
@@ -3067,7 +3043,7 @@ exports[`AddressRow > should render with isCompact = false when the wallet has m
         </td>
         <td>
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black font-semibold space-x-3"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 font-semibold space-x-3"
           >
             <div
               class="flex items-center space-x-3 overflow-hidden"
@@ -3123,7 +3099,7 @@ exports[`AddressRow > should render with isCompact = false when the wallet has m
         </td>
         <td>
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black justify-center"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center"
           >
             <div
               class="font-semibold text-theme-secondary-400"
@@ -3143,7 +3119,7 @@ exports[`AddressRow > should render with isCompact = false when the wallet has m
           class="hidden lg:table-cell"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black justify-center space-x-2"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center space-x-2"
           >
             <div
               class="inline-block p-1 text-theme-secondary-700 dark:text-theme-secondary-600"
@@ -3197,11 +3173,9 @@ exports[`AddressRow > should render with isCompact = false when the wallet has m
             </div>
           </div>
         </td>
-        <td
-          class="pr-6"
-        >
+        <td>
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r dark:group-hover:bg-black justify-end !pr-0"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end"
           >
             <div>
               <button
@@ -3229,14 +3203,14 @@ exports[`AddressRow > should render with isCompact = true when the maximum votes
   <table>
     <tbody>
       <tr
-        class="relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+        class="group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
         data-testid="TableRow"
       >
         <td
           data-testid="AddressRow__wallet"
         >
           <div
-            class="flex px-3 items-center my-1 min-h-11 pl-6 rounded-l dark:group-hover:bg-black cursor-pointer group transition duration-300 space-x-3"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 cursor-pointer group space-x-3"
           >
             <div
               class="w-40 flex-1"
@@ -3305,7 +3279,7 @@ exports[`AddressRow > should render with isCompact = true when the maximum votes
           class="hidden xl:table-cell"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black justify-end font-semibold text-theme-secondary-text whitespace-nowrap"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end font-semibold text-theme-secondary-text whitespace-nowrap"
           >
             <span
               class="whitespace-nowrap"
@@ -3317,7 +3291,7 @@ exports[`AddressRow > should render with isCompact = true when the maximum votes
         </td>
         <td>
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black font-semibold space-x-3"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 font-semibold space-x-3"
           >
             <span
               class="text-theme-secondary-400"
@@ -3328,7 +3302,7 @@ exports[`AddressRow > should render with isCompact = true when the maximum votes
         </td>
         <td>
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black justify-center"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center"
           >
             <div
               class="font-semibold text-theme-secondary-400"
@@ -3348,7 +3322,7 @@ exports[`AddressRow > should render with isCompact = true when the maximum votes
           class="hidden lg:table-cell"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black justify-center space-x-2"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center space-x-2"
           >
             <div
               class="inline-block p-1 text-theme-secondary-700 dark:text-theme-secondary-600"
@@ -3402,11 +3376,9 @@ exports[`AddressRow > should render with isCompact = true when the maximum votes
             </div>
           </div>
         </td>
-        <td
-          class="pr-6"
-        >
+        <td>
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r dark:group-hover:bg-black justify-end !pr-0"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end"
           >
             <div>
               <button
@@ -3434,14 +3406,14 @@ exports[`AddressRow > should render with isCompact = true when the wallet has ex
   <table>
     <tbody>
       <tr
-        class="relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+        class="group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
         data-testid="TableRow"
       >
         <td
           data-testid="AddressRow__wallet"
         >
           <div
-            class="flex px-3 items-center my-1 min-h-11 pl-6 rounded-l dark:group-hover:bg-black cursor-pointer group transition duration-300 space-x-3"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 cursor-pointer group space-x-3"
           >
             <div
               class="w-40 flex-1"
@@ -3510,7 +3482,7 @@ exports[`AddressRow > should render with isCompact = true when the wallet has ex
           class="hidden xl:table-cell"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black justify-end font-semibold text-theme-secondary-text whitespace-nowrap"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end font-semibold text-theme-secondary-text whitespace-nowrap"
           >
             <span
               class="whitespace-nowrap"
@@ -3522,7 +3494,7 @@ exports[`AddressRow > should render with isCompact = true when the wallet has ex
         </td>
         <td>
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black font-semibold space-x-3"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 font-semibold space-x-3"
           >
             <div
               class="flex items-center space-x-3 overflow-hidden"
@@ -3578,7 +3550,7 @@ exports[`AddressRow > should render with isCompact = true when the wallet has ex
         </td>
         <td>
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black justify-center"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center"
           >
             <div
               class="font-semibold text-theme-secondary-400"
@@ -3598,7 +3570,7 @@ exports[`AddressRow > should render with isCompact = true when the wallet has ex
           class="hidden lg:table-cell"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black justify-center space-x-2"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center space-x-2"
           >
             <div
               class="inline-block p-1 text-theme-secondary-700 dark:text-theme-secondary-600"
@@ -3652,11 +3624,9 @@ exports[`AddressRow > should render with isCompact = true when the wallet has ex
             </div>
           </div>
         </td>
-        <td
-          class="pr-6"
-        >
+        <td>
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r dark:group-hover:bg-black justify-end !pr-0"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end"
           >
             <div>
               <button
@@ -3684,14 +3654,14 @@ exports[`AddressRow > should render with isCompact = true when the wallet has ma
   <table>
     <tbody>
       <tr
-        class="relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+        class="group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
         data-testid="TableRow"
       >
         <td
           data-testid="AddressRow__wallet"
         >
           <div
-            class="flex px-3 items-center my-1 min-h-11 pl-6 rounded-l dark:group-hover:bg-black cursor-pointer group transition duration-300 space-x-3"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 cursor-pointer group space-x-3"
           >
             <div
               class="w-40 flex-1"
@@ -3760,7 +3730,7 @@ exports[`AddressRow > should render with isCompact = true when the wallet has ma
           class="hidden xl:table-cell"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black justify-end font-semibold text-theme-secondary-text whitespace-nowrap"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end font-semibold text-theme-secondary-text whitespace-nowrap"
           >
             <span
               class="whitespace-nowrap"
@@ -3772,7 +3742,7 @@ exports[`AddressRow > should render with isCompact = true when the wallet has ma
         </td>
         <td>
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black font-semibold space-x-3"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 font-semibold space-x-3"
           >
             <div
               class="flex items-center space-x-3 overflow-hidden"
@@ -3828,7 +3798,7 @@ exports[`AddressRow > should render with isCompact = true when the wallet has ma
         </td>
         <td>
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black justify-center"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center"
           >
             <div
               class="font-semibold text-theme-secondary-400"
@@ -3848,7 +3818,7 @@ exports[`AddressRow > should render with isCompact = true when the wallet has ma
           class="hidden lg:table-cell"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black justify-center space-x-2"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center space-x-2"
           >
             <div
               class="inline-block p-1 text-theme-secondary-700 dark:text-theme-secondary-600"
@@ -3902,11 +3872,9 @@ exports[`AddressRow > should render with isCompact = true when the wallet has ma
             </div>
           </div>
         </td>
-        <td
-          class="pr-6"
-        >
+        <td>
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r dark:group-hover:bg-black justify-end !pr-0"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end"
           >
             <div>
               <button
@@ -3934,14 +3902,14 @@ exports[`AddressRow > should render with resigned delegate 1`] = `
   <table>
     <tbody>
       <tr
-        class="relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+        class="group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
         data-testid="TableRow"
       >
         <td
           data-testid="AddressRow__wallet"
         >
           <div
-            class="flex px-3 items-center my-1 min-h-11 pl-6 rounded-l dark:group-hover:bg-black cursor-pointer group transition duration-300 space-x-3"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 cursor-pointer group space-x-3"
           >
             <div
               class="w-40 flex-1"
@@ -4010,7 +3978,7 @@ exports[`AddressRow > should render with resigned delegate 1`] = `
           class="hidden xl:table-cell"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black justify-end font-semibold text-theme-secondary-text whitespace-nowrap"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end font-semibold text-theme-secondary-text whitespace-nowrap"
           >
             <span
               class="whitespace-nowrap"
@@ -4022,7 +3990,7 @@ exports[`AddressRow > should render with resigned delegate 1`] = `
         </td>
         <td>
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black font-semibold space-x-3"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 font-semibold space-x-3"
           >
             <div
               class="flex items-center space-x-3 overflow-hidden"
@@ -4071,7 +4039,7 @@ exports[`AddressRow > should render with resigned delegate 1`] = `
           class="hidden lg:table-cell"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black justify-center font-semibold text-theme-secondary-text"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center font-semibold text-theme-secondary-text"
           >
             <span
               class="text-theme-secondary-400"
@@ -4082,7 +4050,7 @@ exports[`AddressRow > should render with resigned delegate 1`] = `
         </td>
         <td>
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black justify-center"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center"
           >
             <span>
               <div
@@ -4125,7 +4093,7 @@ exports[`AddressRow > should render with resigned delegate 1`] = `
           class="hidden lg:table-cell"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black justify-center space-x-2"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center space-x-2"
           >
             <div
               class="inline-block p-1 text-theme-secondary-700 dark:text-theme-secondary-600"
@@ -4179,11 +4147,9 @@ exports[`AddressRow > should render with resigned delegate 1`] = `
             </div>
           </div>
         </td>
-        <td
-          class="pr-6"
-        >
+        <td>
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r dark:group-hover:bg-black justify-end !pr-0"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end"
           >
             <div>
               <button
@@ -4211,14 +4177,14 @@ exports[`AddressRow > should render with standby delegate 1`] = `
   <table>
     <tbody>
       <tr
-        class="relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+        class="group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
         data-testid="TableRow"
       >
         <td
           data-testid="AddressRow__wallet"
         >
           <div
-            class="flex px-3 items-center my-1 min-h-11 pl-6 rounded-l dark:group-hover:bg-black cursor-pointer group transition duration-300 space-x-3"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 cursor-pointer group space-x-3"
           >
             <div
               class="w-40 flex-1"
@@ -4287,7 +4253,7 @@ exports[`AddressRow > should render with standby delegate 1`] = `
           class="hidden xl:table-cell"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black justify-end font-semibold text-theme-secondary-text whitespace-nowrap"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end font-semibold text-theme-secondary-text whitespace-nowrap"
           >
             <span
               class="whitespace-nowrap"
@@ -4299,7 +4265,7 @@ exports[`AddressRow > should render with standby delegate 1`] = `
         </td>
         <td>
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black font-semibold space-x-3"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 font-semibold space-x-3"
           >
             <div
               class="flex items-center space-x-3 overflow-hidden"
@@ -4348,7 +4314,7 @@ exports[`AddressRow > should render with standby delegate 1`] = `
           class="hidden lg:table-cell"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black justify-center font-semibold text-theme-secondary-text"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center font-semibold text-theme-secondary-text"
           >
             <span>
               #100
@@ -4357,7 +4323,7 @@ exports[`AddressRow > should render with standby delegate 1`] = `
         </td>
         <td>
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black justify-center"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center"
           >
             <span>
               <div
@@ -4401,7 +4367,7 @@ exports[`AddressRow > should render with standby delegate 1`] = `
           class="hidden lg:table-cell"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black justify-center space-x-2"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center space-x-2"
           >
             <div
               class="inline-block p-1 text-theme-secondary-700 dark:text-theme-secondary-600"
@@ -4455,11 +4421,9 @@ exports[`AddressRow > should render with standby delegate 1`] = `
             </div>
           </div>
         </td>
-        <td
-          class="pr-6"
-        >
+        <td>
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r dark:group-hover:bg-black justify-end !pr-0"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end"
           >
             <div>
               <button

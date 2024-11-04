@@ -565,12 +565,12 @@ exports[`LedgerImportStep > should render with multiple import 2`] = `
               role="rowgroup"
             >
               <tr
-                class="relative css-16ynu5g"
+                class="group relative css-16ynu5g"
                 data-testid="TableRow"
               >
                 <td>
                   <div
-                    class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l dark:group-hover:bg-black justify-center"
+                    class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center"
                   >
                     <div
                       class="flex flex-1 flex-col py-2"
@@ -652,7 +652,7 @@ exports[`LedgerImportStep > should render with multiple import 2`] = `
                 </td>
                 <td>
                   <div
-                    class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r dark:group-hover:bg-black justify-end font-semibold"
+                    class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end font-semibold"
                   >
                     <button
                       class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 green:hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-500"
@@ -691,12 +691,12 @@ exports[`LedgerImportStep > should render with multiple import 2`] = `
                 </td>
               </tr>
               <tr
-                class="relative css-16ynu5g"
+                class="group relative css-16ynu5g"
                 data-testid="TableRow"
               >
                 <td>
                   <div
-                    class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l dark:group-hover:bg-black justify-center"
+                    class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center"
                   >
                     <div
                       class="flex flex-1 flex-col py-2"
@@ -778,7 +778,7 @@ exports[`LedgerImportStep > should render with multiple import 2`] = `
                 </td>
                 <td>
                   <div
-                    class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r dark:group-hover:bg-black justify-end font-semibold"
+                    class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end font-semibold"
                   >
                     <button
                       class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 green:hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-500"

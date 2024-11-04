@@ -5,7 +5,7 @@ exports[`TransactionRowMobile > should render 1`] = `
   <table>
     <tbody>
       <tr
-        class="group !border-b-0 css-1x4z4cy"
+        class="group group !border-b-0 css-16ynu5g"
         data-testid="TableRow"
       >
         <td
@@ -18,7 +18,7 @@ exports[`TransactionRowMobile > should render 1`] = `
               class="flex h-10 w-full items-center justify-between bg-theme-secondary-100 px-4 dark:bg-black"
             >
               <a
-                class="ring-focus group/inner inline-block text-sm font-semibold css-7nwwrh"
+                class="ring-focus group/inner inline-block text-sm font-semibold css-167zzsv"
                 data-ring-focus-margin="-m-1"
                 data-testid="Link"
                 href="https://live.arkscan.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
@@ -174,7 +174,7 @@ exports[`TransactionRowMobile > should render 2`] = `
   <table>
     <tbody>
       <tr
-        class="group !border-b-0 css-1x4z4cy"
+        class="group group !border-b-0 css-16ynu5g"
         data-testid="TableRow"
       >
         <td
@@ -187,7 +187,7 @@ exports[`TransactionRowMobile > should render 2`] = `
               class="flex h-10 w-full items-center justify-between bg-theme-secondary-100 px-4 dark:bg-black"
             >
               <a
-                class="ring-focus group/inner inline-block text-sm font-semibold css-7nwwrh"
+                class="ring-focus group/inner inline-block text-sm font-semibold css-167zzsv"
                 data-ring-focus-margin="-m-1"
                 data-testid="Link"
                 href="https://live.arkscan.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
@@ -343,7 +343,7 @@ exports[`TransactionRowMobile > should render skeleton responsive 1`] = `
   <table>
     <tbody>
       <tr
-        class="group !border-b-0 css-1x4z4cy"
+        class="group group !border-b-0 css-16ynu5g"
         data-testid="TableRow"
       >
         <td
@@ -489,7 +489,7 @@ exports[`TransactionRowMobile > should render skeleton responsive 2`] = `
   <table>
     <tbody>
       <tr
-        class="group !border-b-0 css-1x4z4cy"
+        class="group group !border-b-0 css-16ynu5g"
         data-testid="TableRow"
       >
         <td
@@ -635,7 +635,7 @@ exports[`TransactionRowMobile > should render with currency 1`] = `
   <table>
     <tbody>
       <tr
-        class="group !border-b-0 css-1x4z4cy"
+        class="group group !border-b-0 css-16ynu5g"
         data-testid="TableRow"
       >
         <td
@@ -648,7 +648,7 @@ exports[`TransactionRowMobile > should render with currency 1`] = `
               class="flex h-10 w-full items-center justify-between bg-theme-secondary-100 px-4 dark:bg-black"
             >
               <a
-                class="ring-focus group/inner inline-block text-sm font-semibold css-7nwwrh"
+                class="ring-focus group/inner inline-block text-sm font-semibold css-167zzsv"
                 data-ring-focus-margin="-m-1"
                 data-testid="Link"
                 href="https://live.arkscan.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
@@ -793,7 +793,7 @@ exports[`TransactionRowMobile > should render with currency 2`] = `
   <table>
     <tbody>
       <tr
-        class="group !border-b-0 css-1x4z4cy"
+        class="group group !border-b-0 css-16ynu5g"
         data-testid="TableRow"
       >
         <td
@@ -806,7 +806,7 @@ exports[`TransactionRowMobile > should render with currency 2`] = `
               class="flex h-10 w-full items-center justify-between bg-theme-secondary-100 px-4 dark:bg-black"
             >
               <a
-                class="ring-focus group/inner inline-block text-sm font-semibold css-7nwwrh"
+                class="ring-focus group/inner inline-block text-sm font-semibold css-167zzsv"
                 data-ring-focus-margin="-m-1"
                 data-testid="Link"
                 href="https://live.arkscan.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"

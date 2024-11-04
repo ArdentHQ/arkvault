@@ -289,14 +289,14 @@ exports[`WalletsList > should render 1`] = `
             role="rowgroup"
           >
             <tr
-              class="group relative css-1bp82wf"
+              class="group relative css-1iwt3v2"
               data-testid="TableRow"
             >
               <td
                 data-testid="TableCell_Starred"
               >
                 <div
-                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 rounded-l space-x-3 pl-6 ml-0"
+                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 space-x-3 pl-4 ml-2"
                 >
                   <div
                     class="flex h-5 items-center pr-3 dark:border-theme-secondary-800"
@@ -334,7 +334,7 @@ exports[`WalletsList > should render 1`] = `
                 class="hidden lg:table-cell"
               >
                 <div
-                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:hover:bg-black -ml-3 space-x-3"
+                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 -ml-3 space-x-3"
                 >
                   <div
                     class="w-24 flex-1 overflow-hidden"
@@ -361,7 +361,7 @@ exports[`WalletsList > should render 1`] = `
                 data-testid="TableCell_Wallet"
               >
                 <div
-                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:hover:bg-black -ml-3 space-x-3"
+                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 -ml-3 space-x-3"
                 >
                   <div
                     class="w-full max-w-64 flex-1 overflow-hidden md:max-w-40 lg:max-w-48 xl:max-w-full"
@@ -428,7 +428,7 @@ exports[`WalletsList > should render 1`] = `
               </td>
               <td>
                 <div
-                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:hover:bg-black justify-center text-sm font-bold text-center align-middle"
+                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center text-sm font-bold text-center align-middle"
                 >
                   <div
                     class="inline-flex items-center space-x-1"
@@ -451,7 +451,7 @@ exports[`WalletsList > should render 1`] = `
               </td>
               <td>
                 <div
-                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:hover:bg-black font-semibold justify-end"
+                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 font-semibold justify-end"
                 >
                   <span
                     class="whitespace-nowrap dark:text-theme-white text-theme-secondary-700 dark:md:text-theme-secondary-500"
@@ -466,7 +466,7 @@ exports[`WalletsList > should render 1`] = `
                 data-testid="CurrencyCell"
               >
                 <div
-                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:hover:bg-black justify-end"
+                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end"
                 >
                   <span
                     class="text-xs font-semibold text-theme-navy-200 md:text-base md:text-theme-secondary-500 dark:md:text-theme-secondary-700"
@@ -477,7 +477,7 @@ exports[`WalletsList > should render 1`] = `
               </td>
               <td>
                 <div
-                  class="flex px-3 my-1 transition-colors duration-100 min-h-11 -mr-2 rounded-r justify-end text-theme-secondary-text pr-6 items-center"
+                  class="flex px-3 my-1 transition-colors duration-100 min-h-11 mr-2 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end text-theme-secondary-text pr-6 items-center"
                 >
                   <div>
                     <button
@@ -555,14 +555,14 @@ exports[`WalletsList > should render 1`] = `
               </td>
             </tr>
             <tr
-              class="group relative css-1bp82wf"
+              class="group relative css-1iwt3v2"
               data-testid="TableRow"
             >
               <td
                 data-testid="TableCell_Starred"
               >
                 <div
-                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 rounded-l space-x-3 pl-6 ml-0"
+                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 space-x-3 pl-4 ml-2"
                 >
                   <div
                     class="flex h-5 items-center pr-3 dark:border-theme-secondary-800"
@@ -600,7 +600,7 @@ exports[`WalletsList > should render 1`] = `
                 class="hidden lg:table-cell"
               >
                 <div
-                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:hover:bg-black -ml-3 space-x-3"
+                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 -ml-3 space-x-3"
                 >
                   <div
                     class="w-24 flex-1 overflow-hidden"
@@ -627,7 +627,7 @@ exports[`WalletsList > should render 1`] = `
                 data-testid="TableCell_Wallet"
               >
                 <div
-                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:hover:bg-black -ml-3 space-x-3"
+                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 -ml-3 space-x-3"
                 >
                   <div
                     class="w-full max-w-64 flex-1 overflow-hidden md:max-w-40 lg:max-w-48 xl:max-w-full"
@@ -694,7 +694,7 @@ exports[`WalletsList > should render 1`] = `
               </td>
               <td>
                 <div
-                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:hover:bg-black justify-center text-sm font-bold text-center align-middle"
+                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center text-sm font-bold text-center align-middle"
                 >
                   <div
                     class="inline-flex items-center space-x-1"
@@ -717,7 +717,7 @@ exports[`WalletsList > should render 1`] = `
               </td>
               <td>
                 <div
-                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:hover:bg-black font-semibold justify-end"
+                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 font-semibold justify-end"
                 >
                   <span
                     class="whitespace-nowrap dark:text-theme-white text-theme-secondary-700 dark:md:text-theme-secondary-500"
@@ -732,7 +732,7 @@ exports[`WalletsList > should render 1`] = `
                 data-testid="CurrencyCell"
               >
                 <div
-                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:hover:bg-black justify-end"
+                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end"
                 >
                   <span
                     class="text-xs font-semibold text-theme-navy-200 md:text-base md:text-theme-secondary-500 dark:md:text-theme-secondary-700"
@@ -743,7 +743,7 @@ exports[`WalletsList > should render 1`] = `
               </td>
               <td>
                 <div
-                  class="flex px-3 my-1 transition-colors duration-100 min-h-11 -mr-2 rounded-r justify-end text-theme-secondary-text pr-6 items-center"
+                  class="flex px-3 my-1 transition-colors duration-100 min-h-11 mr-2 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end text-theme-secondary-text pr-6 items-center"
                 >
                   <div>
                     <button
@@ -1255,12 +1255,12 @@ exports[`WalletsList > should render empty skeleton block 1`] = `
             role="rowgroup"
           >
             <tr
-              class=" css-16ynu5g"
+              class="group css-16ynu5g"
               data-testid="TableRow"
             >
               <td>
                 <div
-                  class="px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-2 -ml-2 rounded-l flex shrink-0"
+                  class="px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-0 ml-2 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 flex shrink-0"
                 >
                   <div
                     class="flex h-5 items-center border-r border-theme-secondary-300 pr-3 dark:border-theme-secondary-800"
@@ -1283,7 +1283,7 @@ exports[`WalletsList > should render empty skeleton block 1`] = `
               </td>
               <td>
                 <div
-                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:hover:bg-black -ml-3 space-x-3"
+                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 -ml-3 space-x-3"
                 >
                   <span
                     aria-busy="true"
@@ -1329,12 +1329,12 @@ exports[`WalletsList > should render empty skeleton block 1`] = `
               </td>
               <td>
                 <div
-                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:hover:bg-black justify-center"
+                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center"
                 />
               </td>
               <td>
                 <div
-                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:hover:bg-black justify-end"
+                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end"
                 >
                   <span
                     aria-busy="true"
@@ -1353,7 +1353,7 @@ exports[`WalletsList > should render empty skeleton block 1`] = `
               </td>
               <td>
                 <div
-                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:hover:bg-black justify-end"
+                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end"
                 >
                   <span
                     aria-busy="true"
@@ -1372,7 +1372,7 @@ exports[`WalletsList > should render empty skeleton block 1`] = `
               </td>
               <td>
                 <div
-                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-2 -mr-2 rounded-r justify-end text-theme-secondary-text"
+                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-0 mr-2 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end text-theme-secondary-text"
                 >
                   <button
                     class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 -mr-3 text-theme-primary-600 hover:text-theme-primary-700"
@@ -1443,12 +1443,12 @@ exports[`WalletsList > should render empty skeleton block 1`] = `
               </td>
             </tr>
             <tr
-              class=" css-16ynu5g"
+              class="group css-16ynu5g"
               data-testid="TableRow"
             >
               <td>
                 <div
-                  class="px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-2 -ml-2 rounded-l flex shrink-0"
+                  class="px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-0 ml-2 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 flex shrink-0"
                 >
                   <div
                     class="flex h-5 items-center border-r border-theme-secondary-300 pr-3 dark:border-theme-secondary-800"
@@ -1471,7 +1471,7 @@ exports[`WalletsList > should render empty skeleton block 1`] = `
               </td>
               <td>
                 <div
-                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:hover:bg-black -ml-3 space-x-3"
+                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 -ml-3 space-x-3"
                 >
                   <span
                     aria-busy="true"
@@ -1517,12 +1517,12 @@ exports[`WalletsList > should render empty skeleton block 1`] = `
               </td>
               <td>
                 <div
-                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:hover:bg-black justify-center"
+                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center"
                 />
               </td>
               <td>
                 <div
-                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:hover:bg-black justify-end"
+                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end"
                 >
                   <span
                     aria-busy="true"
@@ -1541,7 +1541,7 @@ exports[`WalletsList > should render empty skeleton block 1`] = `
               </td>
               <td>
                 <div
-                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:hover:bg-black justify-end"
+                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end"
                 >
                   <span
                     aria-busy="true"
@@ -1560,7 +1560,7 @@ exports[`WalletsList > should render empty skeleton block 1`] = `
               </td>
               <td>
                 <div
-                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-2 -mr-2 rounded-r justify-end text-theme-secondary-text"
+                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-0 mr-2 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end text-theme-secondary-text"
                 >
                   <button
                     class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 -mr-3 text-theme-primary-600 hover:text-theme-primary-700"
@@ -1631,12 +1631,12 @@ exports[`WalletsList > should render empty skeleton block 1`] = `
               </td>
             </tr>
             <tr
-              class=" css-16ynu5g"
+              class="group css-16ynu5g"
               data-testid="TableRow"
             >
               <td>
                 <div
-                  class="px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-2 -ml-2 rounded-l flex shrink-0"
+                  class="px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-0 ml-2 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 flex shrink-0"
                 >
                   <div
                     class="flex h-5 items-center border-r border-theme-secondary-300 pr-3 dark:border-theme-secondary-800"
@@ -1659,7 +1659,7 @@ exports[`WalletsList > should render empty skeleton block 1`] = `
               </td>
               <td>
                 <div
-                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:hover:bg-black -ml-3 space-x-3"
+                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 -ml-3 space-x-3"
                 >
                   <span
                     aria-busy="true"
@@ -1705,12 +1705,12 @@ exports[`WalletsList > should render empty skeleton block 1`] = `
               </td>
               <td>
                 <div
-                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:hover:bg-black justify-center"
+                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center"
                 />
               </td>
               <td>
                 <div
-                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:hover:bg-black justify-end"
+                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end"
                 >
                   <span
                     aria-busy="true"
@@ -1729,7 +1729,7 @@ exports[`WalletsList > should render empty skeleton block 1`] = `
               </td>
               <td>
                 <div
-                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:hover:bg-black justify-end"
+                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end"
                 >
                   <span
                     aria-busy="true"
@@ -1748,7 +1748,7 @@ exports[`WalletsList > should render empty skeleton block 1`] = `
               </td>
               <td>
                 <div
-                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-2 -mr-2 rounded-r justify-end text-theme-secondary-text"
+                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-0 mr-2 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end text-theme-secondary-text"
                 >
                   <button
                     class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 -mr-3 text-theme-primary-600 hover:text-theme-primary-700"
