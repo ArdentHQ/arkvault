@@ -3,6 +3,7 @@ import React from "react";
 import { DTO } from "@ardenthq/sdk-profiles";
 import { useTranslation } from "react-i18next";
 import { useExchangeRate } from "@/app/hooks/use-exchange-rate";
+import { useActiveWallet } from "@/app/hooks";
 
 type ExtendedTransactionData = DTO.ExtendedConfirmedTransactionData | DTO.ExtendedSignedTransactionData;
 
@@ -18,16 +19,16 @@ const calculateReturnedAmount = function (transaction: ExtendedTransactionData):
 			returnedAmount += recipient.amount;
 		}
 	}
-
 	return returnedAmount;
 };
 
 export const TransactionAmountLabel = ({ transaction }: { transaction: ExtendedTransactionData }): JSX.Element => {
 	const { t } = useTranslation();
+	const activeWallet = useActiveWallet();
 
 	const currency = transaction.wallet().currency();
 
-	const returnedAmount = calculateReturnedAmount(transaction);
+	const returnedAmount = transaction.sender() === activeWallet.address() ? calculateReturnedAmount(transaction) : 0;
 	const amount = transaction.total() - returnedAmount;
 
 	const usesMultiSignature = "usesMultiSignature" in transaction ? transaction.usesMultiSignature() : false;
