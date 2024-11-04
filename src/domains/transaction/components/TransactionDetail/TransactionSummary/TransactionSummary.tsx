@@ -2,9 +2,10 @@ import React, { ReactElement } from "react";
 import { useTranslation } from "react-i18next";
 import { Contracts, DTO } from "@ardenthq/sdk-profiles";
 import { DetailDivider, DetailLabelText, DetailWrapper } from "@/app/components/DetailWrapper";
-import { Amount, AmountLabel } from "@/app/components/Amount";
+import { Amount } from "@/app/components/Amount";
 import { BigNumber } from "@ardenthq/sdk-helpers";
-import { TransactionAmountLabel } from "../../TransactionTable/TransactionRow/TransactionAmount.blocks";
+import { TransactionAmountLabel } from "@/domains/transaction/components/TransactionTable/TransactionRow/TransactionAmount.blocks";
+
 
 interface Properties {
 	transaction: DTO.ExtendedSignedTransactionData | DTO.ExtendedConfirmedTransactionData;

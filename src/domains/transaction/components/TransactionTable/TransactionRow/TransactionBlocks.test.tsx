@@ -113,7 +113,7 @@ describe("TransactionAmount.blocks", () => {
 		expect(screen.getByText(/35 DARK/)).toBeInTheDocument();
 	});
 
-	it("should not show hint if the active wallet is not the sender of the transaction", async () => {
+	it("should not show hint if the active wallet is not the sender of the transaction", () => {
 		const fixture = {
 			...TransactionFixture,
 			fee: () => 5,
