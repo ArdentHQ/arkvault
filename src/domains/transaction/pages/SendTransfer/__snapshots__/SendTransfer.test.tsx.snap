@@ -571,11 +571,7 @@ exports[`SendTransfer > should display unconfirmed transactions modal when submi
                           class="mt-4 flex items-center space-x-2 sm:mr-4 sm:mt-0"
                         >
                           <button
-                            class="ring-focus relative focus:outline-none p-2 space-x-0 px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200
-					bg-theme-primary-100 text-theme-primary-600
-					hover:bg-theme-primary-700 hover:text-white
-					dark:hover:bg-theme-primary-700
-				"
+                            class="ring-focus relative focus:outline-none text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-700 space-x-0 p-2"
                             data-ring-focus-margin="-m-1"
                             data-testid="clipboard-icon__wrapper"
                             type="button"
@@ -6998,11 +6994,7 @@ exports[`SendTransfer > should send a single transfer and handle undefined expir
                           class="mt-4 flex items-center space-x-2 sm:mr-4 sm:mt-0"
                         >
                           <button
-                            class="ring-focus relative focus:outline-none p-2 space-x-0 px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200
-					bg-theme-primary-100 text-theme-primary-600
-					hover:bg-theme-primary-700 hover:text-white
-					dark:hover:bg-theme-primary-700
-				"
+                            class="ring-focus relative focus:outline-none text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-700 space-x-0 p-2"
                             data-ring-focus-margin="-m-1"
                             data-testid="clipboard-icon__wrapper"
                             type="button"
@@ -8339,11 +8331,7 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
                           class="mt-4 flex items-center space-x-2 sm:mr-4 sm:mt-0"
                         >
                           <button
-                            class="ring-focus relative focus:outline-none p-2 space-x-0 px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200
-					bg-theme-primary-100 text-theme-primary-600
-					hover:bg-theme-primary-700 hover:text-white
-					dark:hover:bg-theme-primary-700
-				"
+                            class="ring-focus relative focus:outline-none text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-700 space-x-0 p-2"
                             data-ring-focus-margin="-m-1"
                             data-testid="clipboard-icon__wrapper"
                             type="button"
@@ -10234,11 +10222,7 @@ exports[`SendTransfer > should send a single transfer using wallet with encrypti
                           class="mt-4 flex items-center space-x-2 sm:mr-4 sm:mt-0"
                         >
                           <button
-                            class="ring-focus relative focus:outline-none p-2 space-x-0 px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200
-					bg-theme-primary-100 text-theme-primary-600
-					hover:bg-theme-primary-700 hover:text-white
-					dark:hover:bg-theme-primary-700
-				"
+                            class="ring-focus relative focus:outline-none text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-700 space-x-0 p-2"
                             data-ring-focus-margin="-m-1"
                             data-testid="clipboard-icon__wrapper"
                             type="button"
@@ -11575,11 +11559,7 @@ exports[`SendTransfer > should send a single transfer with keyboard 1`] = `
                           class="mt-4 flex items-center space-x-2 sm:mr-4 sm:mt-0"
                         >
                           <button
-                            class="ring-focus relative focus:outline-none p-2 space-x-0 px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200
-					bg-theme-primary-100 text-theme-primary-600
-					hover:bg-theme-primary-700 hover:text-white
-					dark:hover:bg-theme-primary-700
-				"
+                            class="ring-focus relative focus:outline-none text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-700 space-x-0 p-2"
                             data-ring-focus-margin="-m-1"
                             data-testid="clipboard-icon__wrapper"
                             type="button"
@@ -12916,11 +12896,7 @@ exports[`SendTransfer > should send a single transfer without keyboard 1`] = `
                           class="mt-4 flex items-center space-x-2 sm:mr-4 sm:mt-0"
                         >
                           <button
-                            class="ring-focus relative focus:outline-none p-2 space-x-0 px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200
-					bg-theme-primary-100 text-theme-primary-600
-					hover:bg-theme-primary-700 hover:text-white
-					dark:hover:bg-theme-primary-700
-				"
+                            class="ring-focus relative focus:outline-none text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-700 space-x-0 p-2"
                             data-ring-focus-margin="-m-1"
                             data-testid="clipboard-icon__wrapper"
                             type="button"
