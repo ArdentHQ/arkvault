@@ -56,6 +56,10 @@ export const TransactionRowAddressing = ({
 
 	let direction: Direction = isNegative ? "sent" : "received";
 
+	if(transaction.isReturn()) {
+		direction = "return";
+	}
+
 	const { env } = useEnvironmentContext();
 	const { t } = useTranslation();
 	const { getWalletAlias } = useWalletAlias();
@@ -157,10 +161,6 @@ export const TransactionRowAddressing = ({
 				</span>
 			</div>
 		);
-	}
-
-	if (transaction.sender() === transaction.recipient()) {
-		direction = "return";
 	}
 
 	return (

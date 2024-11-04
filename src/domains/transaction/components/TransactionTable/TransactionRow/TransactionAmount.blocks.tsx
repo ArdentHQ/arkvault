@@ -13,12 +13,27 @@ const calculateReturnedAmount = function (transaction: ExtendedTransactionData):
 		return returnedAmount;
 	}
 
+	// should return 0 as we don't want to show hint
+	if(transaction.isReturn()) {
+		return returnedAmount;
+	}
+
 	for (const recipient of transaction.recipients().values()) {
-		if (transaction.isReturn() && transaction.sender() === recipient.address) {
+		if (transaction.sender() === recipient.address) {
 			returnedAmount += recipient.amount;
 		}
 	}
 
+	if(transaction.id() === "4a8dddd4540f6f5f1005e780276c18e123cc49469ae2f07dd4acbf64e1f3cfea") {
+		console.log({
+			sender: transaction.sender(),
+			isReturn: transaction.isReturn(),
+			recipients: transaction.recipients(),
+			total: transaction.total(),
+			amount: transaction.amount(),
+			returnedAmount,
+		})
+	}
 	return returnedAmount;
 };
 
@@ -40,7 +55,7 @@ export const TransactionAmountLabel = ({ transaction }: { transaction: ExtendedT
 			value={amount}
 			isNegative={isNegative}
 			ticker={transaction.wallet().currency()}
-			hideSign={transaction.isTransfer() && transaction.sender() === transaction.recipient()}
+			hideSign={transaction.isReturn()}
 			isCompact
 			hint={
 				returnedAmount
