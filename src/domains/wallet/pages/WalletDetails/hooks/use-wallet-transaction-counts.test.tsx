@@ -1,4 +1,3 @@
-import { Enums } from "@ardenthq/sdk";
 import { Contracts } from "@ardenthq/sdk-profiles";
 
 import { renderHook } from "@testing-library/react";
