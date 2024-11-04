@@ -80,21 +80,21 @@ describe("Wallet transaction counts", () => {
 
 		await waitFor(() => {
 			expect(result.current.sent).toEqual(7);
-		})
+		});
 
 		await waitFor(() => {
 			expect(result.current.received).toEqual(7);
-		})
+		});
 	});
 
 	it("should return zero counts if requests are not fullfilled", async () => {
 		vi.spyOn(wallet.transactionIndex(), "sent").mockImplementation(() => {
-			throw new Error("error")
-		})
+			throw new Error("error");
+		});
 
 		vi.spyOn(wallet.transactionIndex(), "received").mockImplementation(() => {
-			throw new Error("error")
-		})
+			throw new Error("error");
+		});
 
 		const { result } = renderHook(() => useWalletTransactionCounts(wallet));
 
@@ -103,10 +103,10 @@ describe("Wallet transaction counts", () => {
 
 		await waitFor(() => {
 			expect(result.current.sent).toEqual(0);
-		})
+		});
 
 		await waitFor(() => {
 			expect(result.current.received).toEqual(0);
-		})
+		});
 	});
 });

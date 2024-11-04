@@ -78,7 +78,7 @@ export const Transactions = memo(function Transactions({
 		}
 	}, [isUpdatingWallet]); // eslint-disable-line react-hooks/exhaustive-deps
 
-	const { sent, received } = useWalletTransactionCounts(wallets[0])
+	const { sent, received } = useWalletTransactionCounts(wallets[0]);
 
 	const filterOptions = [
 		{
@@ -97,7 +97,7 @@ export const Transactions = memo(function Transactions({
 			active: activeMode === "sent",
 			count: sent,
 			label: t("TRANSACTION.OUTGOING"),
-			value: "sent"
+			value: "sent",
 		},
 	];
 
@@ -160,9 +160,13 @@ export const Transactions = memo(function Transactions({
 						<TabList className="h-14 px-6 py-4">
 							{filterOptions.map((option) => (
 								<Tab tabId={option.value} key={option.value} className="pb-9 before:!top-1/3">
-									<span className="flex space-x-2 items-center">
+									<span className="flex items-center space-x-2">
 										<span>{option.label}</span>
-										{!!option.count && <span className="text-theme-secondary-700 bg-theme-navy-100 dark:text-theme-secondary-500 dark:bg-theme-secondary-900 dark:border-theme-secondary-800 text-xs py-0.5 px-1.5 rounded leading-[17px]" >{option.count}</span>}
+										{!!option.count && (
+											<span className="rounded bg-theme-navy-100 px-1.5 py-0.5 text-xs leading-[17px] text-theme-secondary-700 dark:border-theme-secondary-800 dark:bg-theme-secondary-900 dark:text-theme-secondary-500">
+												{option.count}
+											</span>
+										)}
 									</span>
 								</Tab>
 							))}
