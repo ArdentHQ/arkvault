@@ -5,8 +5,8 @@ const getVariant = (isSelected: boolean, variant: "start" | "middle" | "end", si
 		const variants = {
 			base: isSelected
 				? "pl-3 ml-3 bg-theme-success-100 rounded-l dark:bg-transparent dark:bg-transparent dark:border-y-2 dark:border-l-2 dark:border-theme-success-600"
-				: "pl-6 rounded-l",
-			sm: "pl-2 -ml-2 rounded-l",
+				: "pl-3 ml-3 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200",
+			sm: "pl-0 ml-2 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200",
 		};
 
 		return variants[size as keyof typeof variants] || variants.base;
@@ -16,14 +16,14 @@ const getVariant = (isSelected: boolean, variant: "start" | "middle" | "end", si
 		const variants = {
 			base: isSelected
 				? "pr-3 mr-3 bg-theme-success-100 rounded-r dark:bg-transparent dark:border-y-2 dark:border-r-2 dark:border-theme-success-600"
-				: "pr-6 rounded-r",
-			sm: "pr-2 -mr-2 rounded-r",
+				: "pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200",
+			sm: "pr-0 mr-2 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200",
 		};
 
 		return variants[size as keyof typeof variants] || variants.base;
 	}
 
-	return isSelected ? "bg-theme-success-100 dark:bg-transparent dark:border-y-2 dark:border-theme-success-600" : "";
+	return isSelected ? "bg-theme-success-100 dark:bg-transparent dark:border-y-2 dark:border-theme-success-600" : "dark:group-hover:bg-black group-hover:bg-theme-secondary-200";
 };
 
 export const getStyles = ({ variant, size, isSelected }: any) =>
