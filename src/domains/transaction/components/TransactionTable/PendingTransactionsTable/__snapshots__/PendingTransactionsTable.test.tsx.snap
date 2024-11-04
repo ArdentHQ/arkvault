@@ -385,7 +385,7 @@ exports[`Signed Transaction Table > should handle the onRowClick function when t
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
+                      class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-xqt0aw"
                       color="danger-bg"
                       data-testid="AmountLabel__wrapper"
                     >
@@ -668,7 +668,7 @@ exports[`Signed Transaction Table > should render different status > should show
                         class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                       >
                         <div
-                          class="flex items-center justify-center rounded px-1.5 h-[21px] css-xqt0aw"
+                          class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-xqt0aw"
                           color="danger-bg"
                           data-testid="AmountLabel__wrapper"
                         >
@@ -700,7 +700,7 @@ exports[`Signed Transaction Table > should render different status > should show
                           class="whitespace-nowrap"
                           data-testid="Amount"
                         >
-                          0 BTC
+                          0
                         </span>
                       </div>
                     </div>
@@ -1109,7 +1109,7 @@ exports[`Signed Transaction Table > should render different status > should show
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
+                      class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-xqt0aw"
                       color="danger-bg"
                       data-testid="AmountLabel__wrapper"
                     >
@@ -1392,7 +1392,7 @@ exports[`Signed Transaction Table > should render different status > should show
                         class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                       >
                         <div
-                          class="flex items-center justify-center rounded px-1.5 h-[21px] css-xqt0aw"
+                          class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-xqt0aw"
                           color="danger-bg"
                           data-testid="AmountLabel__wrapper"
                         >
@@ -1424,7 +1424,7 @@ exports[`Signed Transaction Table > should render different status > should show
                           class="whitespace-nowrap"
                           data-testid="Amount"
                         >
-                          0 BTC
+                          0
                         </span>
                       </div>
                     </div>
@@ -1815,7 +1815,7 @@ exports[`Signed Transaction Table > should render different status > should show
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
+                      class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-xqt0aw"
                       color="danger-bg"
                       data-testid="AmountLabel__wrapper"
                     >
@@ -3336,7 +3336,7 @@ exports[`Signed Transaction Table > should render different status > should show
                         class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                       >
                         <div
-                          class="flex items-center justify-center rounded px-1.5 h-[21px] css-xqt0aw"
+                          class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-xqt0aw"
                           color="danger-bg"
                           data-testid="AmountLabel__wrapper"
                         >
@@ -3368,7 +3368,7 @@ exports[`Signed Transaction Table > should render different status > should show
                           class="whitespace-nowrap"
                           data-testid="Amount"
                         >
-                          0 BTC
+                          0
                         </span>
                       </div>
                     </div>
@@ -3787,7 +3787,7 @@ exports[`Signed Transaction Table > should render different status > should show
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
+                      class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-xqt0aw"
                       color="danger-bg"
                       data-testid="AmountLabel__wrapper"
                     >
@@ -4262,7 +4262,7 @@ exports[`Signed Transaction Table > should render ready to broadcast transaction
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
+                      class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-xqt0aw"
                       color="danger-bg"
                       data-testid="AmountLabel__wrapper"
                     >
@@ -4755,7 +4755,7 @@ exports[`Signed Transaction Table > should render signed transactions and handle
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
+                      class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-xqt0aw"
                       color="danger-bg"
                       data-testid="AmountLabel__wrapper"
                     >
@@ -5885,7 +5885,7 @@ exports[`Signed Transaction Table > should show the sign button with isCompact =
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
+                      class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-xqt0aw"
                       color="danger-bg"
                       data-testid="AmountLabel__wrapper"
                     >
@@ -6388,7 +6388,7 @@ exports[`Signed Transaction Table > should show the sign button with isCompact =
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
+                      class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-xqt0aw"
                       color="danger-bg"
                       data-testid="AmountLabel__wrapper"
                     >
