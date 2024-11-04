@@ -9,7 +9,7 @@ import { Icon } from "@/app/components/Icon";
 import { useLink } from "@/app/hooks/use-link";
 import { AddressLabel } from "@/app/components/Address";
 import { getStyles } from "@/app/components/Button/Button.styles";
-import cn from "classnames";
+import { twMerge } from "tailwind-merge";
 
 interface Properties {
 	transaction: DTO.ExtendedSignedTransactionData | DTO.ExtendedConfirmedTransactionData;
@@ -41,7 +41,7 @@ export const TransactionId = ({ transaction, isConfirmed }: Properties): ReactEl
 					data={transaction.id()}
 					tooltip={t("COMMON.COPY_ID")}
 					tooltipDarkTheme={isDarkMode}
-					iconButtonClassName={cn("p-2", getStyles({ sizeClassName: "p-2", variant: "secondary" }))}
+					iconButtonClassName={twMerge(getStyles({ variant: "secondary" }), "space-x-0 p-2")}
 					buttonClassName="h-8 grow"
 					wrapperClassName="flex w-full"
 				>

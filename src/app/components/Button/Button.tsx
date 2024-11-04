@@ -10,8 +10,6 @@ type ButtonProperties = {
 	variant?: ButtonVariant;
 	theme?: Theme;
 	size?: Size;
-	roundedClassName?: string;
-	sizeClassName?: string;
 	isLoading?: boolean;
 	icon?: string;
 	iconSize?: Size;
@@ -29,8 +27,6 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProperties>(
 			iconSize,
 			iconPosition = "left",
 			type = "button",
-			roundedClassName,
-			sizeClassName,
 			size,
 			theme,
 			isCompact,
@@ -70,21 +66,17 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProperties>(
 		const initialStyles = getStyles({
 			disabled,
 			isCompact,
-			roundedClassName,
 			size,
-			sizeClassName,
 			theme,
 			variant,
 		});
-
-		// const getClassName = () => [className, sizeClassName, roundedClassName].filter(Boolean).join(" ") || undefined;
 
 		return (
 			<button
 				type={type}
 				ref={reference}
 				disabled={disabled}
-				className={twMerge(initialStyles, sizeClassName, roundedClassName, className)}
+				className={twMerge(initialStyles, className)}
 				{...properties}
 			>
 				<div className="flex items-center space-x-2">{renderContent()}</div>

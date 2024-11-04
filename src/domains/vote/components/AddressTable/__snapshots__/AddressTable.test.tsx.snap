@@ -462,7 +462,7 @@ exports[`AddressTable > should render 1`] = `
                   >
                     <div>
                       <button
-                        class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none -mr-3 text-theme-primary-600 hover:text-theme-primary-700"
+                        class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 text-theme-primary-600 hover:text-theme-primary-700"
                         data-testid="AddressRow__select-0"
                         type="button"
                       >
@@ -904,7 +904,7 @@ exports[`AddressTable > should render when the maximum votes is greater than 1 1
                   >
                     <div>
                       <button
-                        class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none -mr-3 text-theme-primary-600 hover:text-theme-primary-700"
+                        class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 text-theme-primary-600 hover:text-theme-primary-700"
                         data-testid="AddressRow__select-0"
                         type="button"
                       >
@@ -1311,7 +1311,7 @@ exports[`AddressTable > should render with voting delegates and handle exception
                   >
                     <div>
                       <button
-                        class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none -mr-3 text-theme-primary-600 hover:text-theme-primary-700"
+                        class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 text-theme-primary-600 hover:text-theme-primary-700"
                         data-testid="AddressRow__select-0"
                         type="button"
                       >
