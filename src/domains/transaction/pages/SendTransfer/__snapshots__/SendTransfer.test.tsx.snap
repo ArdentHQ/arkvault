@@ -1152,11 +1152,11 @@ exports[`SendTransfer > should display unconfirmed transactions modal when submi
                                   >
                                     Nonce
                                   </div>
-                                  <p
-                                    class="text-sm leading-[17px] text-theme-secondary-500 sm:text-base sm:leading-5"
+                                  <div
+                                    class="text-sm font-semibold leading-[17px] sm:text-base sm:leading-5"
                                   >
-                                    N/A
-                                  </p>
+                                    276
+                                  </div>
                                 </div>
                               </div>
                             </div>
@@ -7575,11 +7575,11 @@ exports[`SendTransfer > should send a single transfer and handle undefined expir
                                   >
                                     Nonce
                                   </div>
-                                  <p
-                                    class="text-sm leading-[17px] text-theme-secondary-500 sm:text-base sm:leading-5"
+                                  <div
+                                    class="text-sm font-semibold leading-[17px] sm:text-base sm:leading-5"
                                   >
-                                    N/A
-                                  </p>
+                                    276
+                                  </div>
                                 </div>
                               </div>
                             </div>
@@ -8912,11 +8912,11 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
                                   >
                                     Nonce
                                   </div>
-                                  <p
-                                    class="text-sm leading-[17px] text-theme-secondary-500 sm:text-base sm:leading-5"
+                                  <div
+                                    class="text-sm font-semibold leading-[17px] sm:text-base sm:leading-5"
                                   >
-                                    N/A
-                                  </p>
+                                    276
+                                  </div>
                                 </div>
                               </div>
                             </div>
@@ -10803,11 +10803,11 @@ exports[`SendTransfer > should send a single transfer using wallet with encrypti
                                   >
                                     Nonce
                                   </div>
-                                  <p
-                                    class="text-sm leading-[17px] text-theme-secondary-500 sm:text-base sm:leading-5"
+                                  <div
+                                    class="text-sm font-semibold leading-[17px] sm:text-base sm:leading-5"
                                   >
-                                    N/A
-                                  </p>
+                                    276
+                                  </div>
                                 </div>
                               </div>
                             </div>
@@ -12140,11 +12140,11 @@ exports[`SendTransfer > should send a single transfer with keyboard 1`] = `
                                   >
                                     Nonce
                                   </div>
-                                  <p
-                                    class="text-sm leading-[17px] text-theme-secondary-500 sm:text-base sm:leading-5"
+                                  <div
+                                    class="text-sm font-semibold leading-[17px] sm:text-base sm:leading-5"
                                   >
-                                    N/A
-                                  </p>
+                                    276
+                                  </div>
                                 </div>
                               </div>
                             </div>
@@ -13477,11 +13477,11 @@ exports[`SendTransfer > should send a single transfer without keyboard 1`] = `
                                   >
                                     Nonce
                                   </div>
-                                  <p
-                                    class="text-sm leading-[17px] text-theme-secondary-500 sm:text-base sm:leading-5"
+                                  <div
+                                    class="text-sm font-semibold leading-[17px] sm:text-base sm:leading-5"
                                   >
-                                    N/A
-                                  </p>
+                                    276
+                                  </div>
                                 </div>
                               </div>
                             </div>

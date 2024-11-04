@@ -18,7 +18,13 @@ exports[`Transactions > should fetch more transactions 1`] = `
         type="button"
       >
         <span>
-          All History
+          <span
+            class="flex items-center space-x-2"
+          >
+            <span>
+              All History
+            </span>
+          </span>
         </span>
       </button>
       <button
@@ -31,7 +37,18 @@ exports[`Transactions > should fetch more transactions 1`] = `
         type="button"
       >
         <span>
-          Incoming
+          <span
+            class="flex items-center space-x-2"
+          >
+            <span>
+              Incoming
+            </span>
+            <span
+              class="rounded bg-theme-navy-100 px-1.5 py-0.5 text-xs leading-[17px] text-theme-secondary-700 dark:border-theme-secondary-800 dark:bg-theme-secondary-900 dark:text-theme-secondary-500"
+            >
+              7
+            </span>
+          </span>
         </span>
       </button>
       <button
@@ -44,7 +61,18 @@ exports[`Transactions > should fetch more transactions 1`] = `
         type="button"
       >
         <span>
-          Outgoing
+          <span
+            class="flex items-center space-x-2"
+          >
+            <span>
+              Outgoing
+            </span>
+            <span
+              class="rounded bg-theme-navy-100 px-1.5 py-0.5 text-xs leading-[17px] text-theme-secondary-700 dark:border-theme-secondary-800 dark:bg-theme-secondary-900 dark:text-theme-secondary-500"
+            >
+              7
+            </span>
+          </span>
         </span>
       </button>
     </div>
@@ -10107,7 +10135,13 @@ exports[`Transactions > should hide view more button when there are no next page
         type="button"
       >
         <span>
-          All History
+          <span
+            class="flex items-center space-x-2"
+          >
+            <span>
+              All History
+            </span>
+          </span>
         </span>
       </button>
       <button
@@ -10120,7 +10154,18 @@ exports[`Transactions > should hide view more button when there are no next page
         type="button"
       >
         <span>
-          Incoming
+          <span
+            class="flex items-center space-x-2"
+          >
+            <span>
+              Incoming
+            </span>
+            <span
+              class="rounded bg-theme-navy-100 px-1.5 py-0.5 text-xs leading-[17px] text-theme-secondary-700 dark:border-theme-secondary-800 dark:bg-theme-secondary-900 dark:text-theme-secondary-500"
+            >
+              7
+            </span>
+          </span>
         </span>
       </button>
       <button
@@ -10133,7 +10178,18 @@ exports[`Transactions > should hide view more button when there are no next page
         type="button"
       >
         <span>
-          Outgoing
+          <span
+            class="flex items-center space-x-2"
+          >
+            <span>
+              Outgoing
+            </span>
+            <span
+              class="rounded bg-theme-navy-100 px-1.5 py-0.5 text-xs leading-[17px] text-theme-secondary-700 dark:border-theme-secondary-800 dark:bg-theme-secondary-900 dark:text-theme-secondary-500"
+            >
+              7
+            </span>
+          </span>
         </span>
       </button>
     </div>
@@ -15382,7 +15438,13 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
         type="button"
       >
         <span>
-          All History
+          <span
+            class="flex items-center space-x-2"
+          >
+            <span>
+              All History
+            </span>
+          </span>
         </span>
       </button>
       <button
@@ -15395,7 +15457,18 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
         type="button"
       >
         <span>
-          Incoming
+          <span
+            class="flex items-center space-x-2"
+          >
+            <span>
+              Incoming
+            </span>
+            <span
+              class="rounded bg-theme-navy-100 px-1.5 py-0.5 text-xs leading-[17px] text-theme-secondary-700 dark:border-theme-secondary-800 dark:bg-theme-secondary-900 dark:text-theme-secondary-500"
+            >
+              7
+            </span>
+          </span>
         </span>
       </button>
       <button
@@ -15408,7 +15481,18 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
         type="button"
       >
         <span>
-          Outgoing
+          <span
+            class="flex items-center space-x-2"
+          >
+            <span>
+              Outgoing
+            </span>
+            <span
+              class="rounded bg-theme-navy-100 px-1.5 py-0.5 text-xs leading-[17px] text-theme-secondary-700 dark:border-theme-secondary-800 dark:bg-theme-secondary-900 dark:text-theme-secondary-500"
+            >
+              7
+            </span>
+          </span>
         </span>
       </button>
     </div>
