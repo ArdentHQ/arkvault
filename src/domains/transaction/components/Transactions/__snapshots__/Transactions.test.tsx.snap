@@ -19,7 +19,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
       >
         <span>
           <span
-            class="flex space-x-2 items-center"
+            class="flex items-center space-x-2"
           >
             <span>
               All History
@@ -38,13 +38,13 @@ exports[`Transactions > should fetch more transactions 1`] = `
       >
         <span>
           <span
-            class="flex space-x-2 items-center"
+            class="flex items-center space-x-2"
           >
             <span>
               Incoming
             </span>
             <span
-              class="text-theme-secondary-700 bg-theme-navy-100 dark:text-theme-secondary-500 dark:bg-theme-secondary-900 dark:border-theme-secondary-800 text-xs py-0.5 px-1.5 rounded leading-[17px]"
+              class="rounded bg-theme-navy-100 px-1.5 py-0.5 text-xs leading-[17px] text-theme-secondary-700 dark:border-theme-secondary-800 dark:bg-theme-secondary-900 dark:text-theme-secondary-500"
             >
               7
             </span>
@@ -62,13 +62,13 @@ exports[`Transactions > should fetch more transactions 1`] = `
       >
         <span>
           <span
-            class="flex space-x-2 items-center"
+            class="flex items-center space-x-2"
           >
             <span>
               Outgoing
             </span>
             <span
-              class="text-theme-secondary-700 bg-theme-navy-100 dark:text-theme-secondary-500 dark:bg-theme-secondary-900 dark:border-theme-secondary-800 text-xs py-0.5 px-1.5 rounded leading-[17px]"
+              class="rounded bg-theme-navy-100 px-1.5 py-0.5 text-xs leading-[17px] text-theme-secondary-700 dark:border-theme-secondary-800 dark:bg-theme-secondary-900 dark:text-theme-secondary-500"
             >
               7
             </span>
@@ -10136,7 +10136,7 @@ exports[`Transactions > should hide view more button when there are no next page
       >
         <span>
           <span
-            class="flex space-x-2 items-center"
+            class="flex items-center space-x-2"
           >
             <span>
               All History
@@ -10155,13 +10155,13 @@ exports[`Transactions > should hide view more button when there are no next page
       >
         <span>
           <span
-            class="flex space-x-2 items-center"
+            class="flex items-center space-x-2"
           >
             <span>
               Incoming
             </span>
             <span
-              class="text-theme-secondary-700 bg-theme-navy-100 dark:text-theme-secondary-500 dark:bg-theme-secondary-900 dark:border-theme-secondary-800 text-xs py-0.5 px-1.5 rounded leading-[17px]"
+              class="rounded bg-theme-navy-100 px-1.5 py-0.5 text-xs leading-[17px] text-theme-secondary-700 dark:border-theme-secondary-800 dark:bg-theme-secondary-900 dark:text-theme-secondary-500"
             >
               7
             </span>
@@ -10179,13 +10179,13 @@ exports[`Transactions > should hide view more button when there are no next page
       >
         <span>
           <span
-            class="flex space-x-2 items-center"
+            class="flex items-center space-x-2"
           >
             <span>
               Outgoing
             </span>
             <span
-              class="text-theme-secondary-700 bg-theme-navy-100 dark:text-theme-secondary-500 dark:bg-theme-secondary-900 dark:border-theme-secondary-800 text-xs py-0.5 px-1.5 rounded leading-[17px]"
+              class="rounded bg-theme-navy-100 px-1.5 py-0.5 text-xs leading-[17px] text-theme-secondary-700 dark:border-theme-secondary-800 dark:bg-theme-secondary-900 dark:text-theme-secondary-500"
             >
               7
             </span>
@@ -15439,7 +15439,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
       >
         <span>
           <span
-            class="flex space-x-2 items-center"
+            class="flex items-center space-x-2"
           >
             <span>
               All History
@@ -15458,13 +15458,13 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
       >
         <span>
           <span
-            class="flex space-x-2 items-center"
+            class="flex items-center space-x-2"
           >
             <span>
               Incoming
             </span>
             <span
-              class="text-theme-secondary-700 bg-theme-navy-100 dark:text-theme-secondary-500 dark:bg-theme-secondary-900 dark:border-theme-secondary-800 text-xs py-0.5 px-1.5 rounded leading-[17px]"
+              class="rounded bg-theme-navy-100 px-1.5 py-0.5 text-xs leading-[17px] text-theme-secondary-700 dark:border-theme-secondary-800 dark:bg-theme-secondary-900 dark:text-theme-secondary-500"
             >
               7
             </span>
@@ -15482,13 +15482,13 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
       >
         <span>
           <span
-            class="flex space-x-2 items-center"
+            class="flex items-center space-x-2"
           >
             <span>
               Outgoing
             </span>
             <span
-              class="text-theme-secondary-700 bg-theme-navy-100 dark:text-theme-secondary-500 dark:bg-theme-secondary-900 dark:border-theme-secondary-800 text-xs py-0.5 px-1.5 rounded leading-[17px]"
+              class="rounded bg-theme-navy-100 px-1.5 py-0.5 text-xs leading-[17px] text-theme-secondary-700 dark:border-theme-secondary-800 dark:bg-theme-secondary-900 dark:text-theme-secondary-500"
             >
               7
             </span>
