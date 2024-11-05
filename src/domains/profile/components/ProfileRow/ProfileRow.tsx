@@ -62,7 +62,7 @@ export const ProfileRow = ({ actions, className, profile, onClick, onSelect }: P
 						<Icon
 							name="EllipsisVerticalFilled"
 							className="text-theme-secondary-700 transition-colors duration-200 group-hover:text-theme-navy-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200"
-							size="lg"
+							size="md"
 						/>
 					</div>
 				}
@@ -80,7 +80,7 @@ export const ProfileRowSkeleton = () => (
 		<Icon
 			name="EllipsisVerticalFilled"
 			className="mr-1.5 pr-1.5 text-theme-secondary-200 dark:text-theme-secondary-800"
-			size="lg"
+			size="md"
 		/>
 	</div>
 );
