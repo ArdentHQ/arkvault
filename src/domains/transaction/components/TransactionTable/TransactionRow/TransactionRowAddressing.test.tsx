@@ -90,7 +90,7 @@ describe("TransactionRowAddressing", () => {
 
 		render(<TransactionRowAddressing transaction={aliasFixture as any} profile={profile} />);
 
-		expect(screen.getByTestId("TransactionRowAddressing__address-container")).toHaveClass("w-50 sm:w-40 lg:w-50");
+		expect(screen.getByTestId("TransactionRowAddressing__address-container")).toHaveClass("w-40 sm:w-40 md:w-32 lg:w-50");
 	});
 
 	it("should render label with the 'Return' prefix if transaction is sent to address itself", () => {
