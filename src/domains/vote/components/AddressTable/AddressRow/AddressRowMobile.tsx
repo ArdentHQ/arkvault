@@ -193,8 +193,7 @@ export const AddressRowMobile = ({ index, wallet, onSelect }: AddressRowMobilePr
 						<Button
 							disabled={!wallet.hasBeenFullyRestored() || !wallet.hasSyncedWithNetwork()}
 							variant="secondary"
-							sizeClassName="px-5 py-6"
-							roundedClassName="rounded-none"
+							className="space-x-0 rounded-none px-5 py-6"
 							onClick={(e) => {
 								e.stopPropagation();
 								onSelect?.(wallet.address(), wallet.networkId());

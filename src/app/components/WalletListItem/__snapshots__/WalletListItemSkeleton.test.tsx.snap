@@ -127,7 +127,7 @@ exports[`WalletListItemSkeleton > should render wallet list skeleton when isComp
             class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-2 -mr-2 rounded-r justify-end text-theme-secondary-text"
           >
             <button
-              class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 -mr-3 text-theme-primary-600 hover:text-theme-primary-700"
+              class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 -mr-3 text-theme-primary-600 hover:text-theme-primary-700"
               data-testid="WalletHeader__send-button"
               disabled=""
               type="button"
@@ -143,7 +143,7 @@ exports[`WalletListItemSkeleton > should render wallet list skeleton when isComp
               data-testid="WalletHeader__more-button"
             >
               <button
-                class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 -mr-1.5 text-theme-primary-300 hover:text-theme-primary-600"
+                class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 -mr-1.5 text-theme-primary-300 hover:text-theme-primary-600"
                 disabled=""
                 type="button"
               >
@@ -326,7 +326,7 @@ exports[`WalletListItemSkeleton > should render wallet list skeleton when isComp
             class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-2 -mr-2 rounded-r justify-end text-theme-secondary-text"
           >
             <button
-              class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 -mr-3 text-theme-primary-600 hover:text-theme-primary-700"
+              class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 -mr-3 text-theme-primary-600 hover:text-theme-primary-700"
               data-testid="WalletHeader__send-button"
               disabled=""
               type="button"
@@ -342,7 +342,7 @@ exports[`WalletListItemSkeleton > should render wallet list skeleton when isComp
               data-testid="WalletHeader__more-button"
             >
               <button
-                class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 -mr-1.5 text-theme-primary-300 hover:text-theme-primary-600"
+                class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 -mr-1.5 text-theme-primary-300 hover:text-theme-primary-600"
                 disabled=""
                 type="button"
               >
