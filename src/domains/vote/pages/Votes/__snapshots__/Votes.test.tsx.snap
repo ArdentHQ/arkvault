@@ -986,7 +986,7 @@ exports[`Votes > should filter current delegates 1`] = `
                         class="flex px-3 items-center my-1 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 !my-0 bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600"
                       >
                         <a
-                          class="ring-focus group/inner inline-block w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700 group/link css-167zzsv"
+                          class="ring-focus group/inner inline-block group/link w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700 css-167zzsv"
                           data-ring-focus-margin="-m-1"
                           data-testid="Link"
                           href=""
@@ -2209,7 +2209,7 @@ exports[`Votes > should render 1`] = `
                         class="flex px-3 items-center my-1 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 !my-0"
                       >
                         <a
-                          class="ring-focus group/inner inline-block w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700 group/link css-167zzsv"
+                          class="ring-focus group/inner inline-block group/link w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700 css-167zzsv"
                           data-ring-focus-margin="-m-1"
                           data-testid="Link"
                           href="https://test.arkscan.io/wallets/D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr"
@@ -2356,7 +2356,7 @@ exports[`Votes > should render 1`] = `
                         class="flex px-3 items-center my-1 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 !my-0"
                       >
                         <a
-                          class="ring-focus group/inner inline-block w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700 group/link css-167zzsv"
+                          class="ring-focus group/inner inline-block group/link w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700 css-167zzsv"
                           data-ring-focus-margin="-m-1"
                           data-testid="Link"
                           href="https://test.arkscan.io/wallets/DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES"
@@ -2503,7 +2503,7 @@ exports[`Votes > should render 1`] = `
                         class="flex px-3 items-center my-1 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 !my-0"
                       >
                         <a
-                          class="ring-focus group/inner inline-block w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700 group/link css-167zzsv"
+                          class="ring-focus group/inner inline-block group/link w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700 css-167zzsv"
                           data-ring-focus-margin="-m-1"
                           data-testid="Link"
                           href="https://test.arkscan.io/wallets/DBk4cPYpqp7EBcvkstVDpyX7RQJNHxpMg8"
@@ -3722,7 +3722,7 @@ exports[`Votes > should render and handle wallet current voting exception 1`] = 
                         class="flex px-3 items-center my-1 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 !my-0"
                       >
                         <a
-                          class="ring-focus group/inner inline-block w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700 group/link css-167zzsv"
+                          class="ring-focus group/inner inline-block group/link w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700 css-167zzsv"
                           data-ring-focus-margin="-m-1"
                           data-testid="Link"
                           href="https://test.arkscan.io/wallets/D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr"
@@ -3869,7 +3869,7 @@ exports[`Votes > should render and handle wallet current voting exception 1`] = 
                         class="flex px-3 items-center my-1 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 !my-0"
                       >
                         <a
-                          class="ring-focus group/inner inline-block w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700 group/link css-167zzsv"
+                          class="ring-focus group/inner inline-block group/link w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700 css-167zzsv"
                           data-ring-focus-margin="-m-1"
                           data-testid="Link"
                           href="https://test.arkscan.io/wallets/DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES"
@@ -4016,7 +4016,7 @@ exports[`Votes > should render and handle wallet current voting exception 1`] = 
                         class="flex px-3 items-center my-1 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 !my-0"
                       >
                         <a
-                          class="ring-focus group/inner inline-block w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700 group/link css-167zzsv"
+                          class="ring-focus group/inner inline-block group/link w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700 css-167zzsv"
                           data-ring-focus-margin="-m-1"
                           data-testid="Link"
                           href="https://test.arkscan.io/wallets/DBk4cPYpqp7EBcvkstVDpyX7RQJNHxpMg8"
@@ -5948,7 +5948,7 @@ exports[`Votes > should select a delegate 1`] = `
                         class="flex px-3 items-center my-1 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 !my-0 bg-theme-danger-50 dark:bg-theme-background dark:border-theme-danger-400"
                       >
                         <a
-                          class="ring-focus group/inner inline-block w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700 group/link css-167zzsv"
+                          class="ring-focus group/inner inline-block group/link w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700 css-167zzsv"
                           data-ring-focus-margin="-m-1"
                           data-testid="Link"
                           href="https://test.arkscan.io/wallets/D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr"
@@ -6095,7 +6095,7 @@ exports[`Votes > should select a delegate 1`] = `
                         class="flex px-3 items-center my-1 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 !my-0"
                       >
                         <a
-                          class="ring-focus group/inner inline-block w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700 group/link css-167zzsv"
+                          class="ring-focus group/inner inline-block group/link w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700 css-167zzsv"
                           data-ring-focus-margin="-m-1"
                           data-testid="Link"
                           href="https://test.arkscan.io/wallets/DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES"
@@ -6242,7 +6242,7 @@ exports[`Votes > should select a delegate 1`] = `
                         class="flex px-3 items-center my-1 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 !my-0"
                       >
                         <a
-                          class="ring-focus group/inner inline-block w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700 group/link css-167zzsv"
+                          class="ring-focus group/inner inline-block group/link w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700 css-167zzsv"
                           data-ring-focus-margin="-m-1"
                           data-testid="Link"
                           href="https://test.arkscan.io/wallets/DBk4cPYpqp7EBcvkstVDpyX7RQJNHxpMg8"
@@ -11391,7 +11391,7 @@ exports[`Votes > should trigger network connection warning 1`] = `
                         class="flex px-3 items-center my-1 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 !my-0 bg-theme-danger-50 dark:bg-theme-background dark:border-theme-danger-400"
                       >
                         <a
-                          class="ring-focus group/inner inline-block w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700 group/link css-167zzsv"
+                          class="ring-focus group/inner inline-block group/link w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700 css-167zzsv"
                           data-ring-focus-margin="-m-1"
                           data-testid="Link"
                           href="https://test.arkscan.io/wallets/D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr"
@@ -11538,7 +11538,7 @@ exports[`Votes > should trigger network connection warning 1`] = `
                         class="flex px-3 items-center my-1 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 !my-0"
                       >
                         <a
-                          class="ring-focus group/inner inline-block w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700 group/link css-167zzsv"
+                          class="ring-focus group/inner inline-block group/link w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700 css-167zzsv"
                           data-ring-focus-margin="-m-1"
                           data-testid="Link"
                           href="https://test.arkscan.io/wallets/DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES"
@@ -11685,7 +11685,7 @@ exports[`Votes > should trigger network connection warning 1`] = `
                         class="flex px-3 items-center my-1 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 !my-0"
                       >
                         <a
-                          class="ring-focus group/inner inline-block w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700 group/link css-167zzsv"
+                          class="ring-focus group/inner inline-block group/link w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700 css-167zzsv"
                           data-ring-focus-margin="-m-1"
                           data-testid="Link"
                           href="https://test.arkscan.io/wallets/DBk4cPYpqp7EBcvkstVDpyX7RQJNHxpMg8"

@@ -970,7 +970,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
                               data-testid="dropdown__toggle"
                             >
                               <button
-                                class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none hover:bg-theme-navy-200 dark:hover:bg-theme-secondary-700 p-1 mr-3"
+                                class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none mr-3 p-1 hover:bg-theme-navy-200 dark:hover:bg-theme-secondary-700"
                                 type="button"
                               >
                                 <div
@@ -1166,7 +1166,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
                               data-testid="dropdown__toggle"
                             >
                               <button
-                                class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none hover:bg-theme-navy-200 dark:hover:bg-theme-secondary-700 p-1 mr-3"
+                                class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none mr-3 p-1 hover:bg-theme-navy-200 dark:hover:bg-theme-secondary-700"
                                 type="button"
                               >
                                 <div
@@ -1346,7 +1346,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
                               data-testid="dropdown__toggle"
                             >
                               <button
-                                class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none hover:bg-theme-navy-200 dark:hover:bg-theme-secondary-700 p-1 mr-3"
+                                class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none mr-3 p-1 hover:bg-theme-navy-200 dark:hover:bg-theme-secondary-700"
                                 type="button"
                               >
                                 <div
@@ -1526,7 +1526,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
                               data-testid="dropdown__toggle"
                             >
                               <button
-                                class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none hover:bg-theme-navy-200 dark:hover:bg-theme-secondary-700 p-1 mr-3"
+                                class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none mr-3 p-1 hover:bg-theme-navy-200 dark:hover:bg-theme-secondary-700"
                                 type="button"
                               >
                                 <div
@@ -3455,7 +3455,7 @@ exports[`Contacts > should render with contacts 1`] = `
                               data-testid="dropdown__toggle"
                             >
                               <button
-                                class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none hover:bg-theme-navy-200 dark:hover:bg-theme-secondary-700 p-1 mr-3"
+                                class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none mr-3 p-1 hover:bg-theme-navy-200 dark:hover:bg-theme-secondary-700"
                                 type="button"
                               >
                                 <div
@@ -3651,7 +3651,7 @@ exports[`Contacts > should render with contacts 1`] = `
                               data-testid="dropdown__toggle"
                             >
                               <button
-                                class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none hover:bg-theme-navy-200 dark:hover:bg-theme-secondary-700 p-1 mr-3"
+                                class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none mr-3 p-1 hover:bg-theme-navy-200 dark:hover:bg-theme-secondary-700"
                                 type="button"
                               >
                                 <div
@@ -3831,7 +3831,7 @@ exports[`Contacts > should render with contacts 1`] = `
                               data-testid="dropdown__toggle"
                             >
                               <button
-                                class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none hover:bg-theme-navy-200 dark:hover:bg-theme-secondary-700 p-1 mr-3"
+                                class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none mr-3 p-1 hover:bg-theme-navy-200 dark:hover:bg-theme-secondary-700"
                                 type="button"
                               >
                                 <div
@@ -4011,7 +4011,7 @@ exports[`Contacts > should render with contacts 1`] = `
                               data-testid="dropdown__toggle"
                             >
                               <button
-                                class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none hover:bg-theme-navy-200 dark:hover:bg-theme-secondary-700 p-1 mr-3"
+                                class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none mr-3 p-1 hover:bg-theme-navy-200 dark:hover:bg-theme-secondary-700"
                                 type="button"
                               >
                                 <div
