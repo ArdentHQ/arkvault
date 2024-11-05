@@ -93,7 +93,7 @@ const ContactListItemAddress: FC<ContactListItemAddressProperties> = ({
 
 			<TableCell className={borderClasses()} innerClassName="space-x-4 justify-center">
 				<Clipboard variant="icon" data={address.address()}>
-					<div className="text-theme-primary-400 dark:text-theme-secondary-600">
+					<div className="link">
 						<Icon name="Copy" />
 					</div>
 				</Clipboard>
@@ -106,7 +106,7 @@ const ContactListItemAddress: FC<ContactListItemAddressProperties> = ({
 							<Button
 								size="icon"
 								variant="transparent"
-								className="text-sm leading-[17px] text-theme-primary-600 hover:text-theme-primary-700"
+								className="text-sm text-theme-primary-600 hover:text-theme-primary-700 hover:underline dark:hover:text-theme-primary-500"
 								data-testid="ContactListItem__send-button"
 								onClick={() => onSend(address)}
 								disabled={sendIsDisabled}
@@ -130,12 +130,12 @@ const ContactListItemAddress: FC<ContactListItemAddressProperties> = ({
 								<Button
 									size="icon"
 									variant="transparent"
-									className="text-theme-primary-300 hover:text-theme-primary-600"
+									className="hover:bg-theme-navy-200 dark:hover:bg-theme-secondary-700 p-1 mr-3"
 								>
 									<Icon
 										name="EllipsisVerticalFilled"
-										size="lg"
-										className="text-theme-secondary-700"
+										size="md"
+										className="text-theme-secondary-700 transition-colors duration-200 group-hover:text-theme-navy-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200"
 									/>
 								</Button>
 							}
