@@ -3011,7 +3011,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                           To
                         </div>
                         <div
-                          class="w-50 sm:w-40 lg:w-50"
+                          class="w-40 sm:w-40 md:w-32 lg:w-50"
                           data-testid="TransactionRowAddressing__address-container"
                         >
                           <div
@@ -4214,7 +4214,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                           To
                         </div>
                         <div
-                          class="w-50 sm:w-40 lg:w-50"
+                          class="w-40 sm:w-40 md:w-32 lg:w-50"
                           data-testid="TransactionRowAddressing__address-container"
                         >
                           <div
@@ -4547,7 +4547,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                           To
                         </div>
                         <div
-                          class="w-50 sm:w-40 lg:w-50"
+                          class="w-40 sm:w-40 md:w-32 lg:w-50"
                           data-testid="TransactionRowAddressing__address-container"
                         >
                           <div
@@ -5750,7 +5750,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                           To
                         </div>
                         <div
-                          class="w-50 sm:w-40 lg:w-50"
+                          class="w-40 sm:w-40 md:w-32 lg:w-50"
                           data-testid="TransactionRowAddressing__address-container"
                         >
                           <div
@@ -6305,7 +6305,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                     To
                   </div>
                   <div
-                    class="w-50 sm:w-40 lg:w-50"
+                    class="w-40 sm:w-40 md:w-32 lg:w-50"
                     data-testid="TransactionRowAddressing__address-container"
                   >
                     <div
@@ -7628,7 +7628,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                     To
                   </div>
                   <div
-                    class="w-50 sm:w-40 lg:w-50"
+                    class="w-40 sm:w-40 md:w-32 lg:w-50"
                     data-testid="TransactionRowAddressing__address-container"
                   >
                     <div
@@ -8183,7 +8183,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                     To
                   </div>
                   <div
-                    class="w-50 sm:w-40 lg:w-50"
+                    class="w-40 sm:w-40 md:w-32 lg:w-50"
                     data-testid="TransactionRowAddressing__address-container"
                   >
                     <div
@@ -9506,7 +9506,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                     To
                   </div>
                   <div
-                    class="w-50 sm:w-40 lg:w-50"
+                    class="w-40 sm:w-40 md:w-32 lg:w-50"
                     data-testid="TransactionRowAddressing__address-container"
                   >
                     <div
@@ -10061,7 +10061,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                     To
                   </div>
                   <div
-                    class="w-50 sm:w-40 lg:w-50"
+                    class="w-40 sm:w-40 md:w-32 lg:w-50"
                     data-testid="TransactionRowAddressing__address-container"
                   >
                     <div
@@ -11384,7 +11384,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                     To
                   </div>
                   <div
-                    class="w-50 sm:w-40 lg:w-50"
+                    class="w-40 sm:w-40 md:w-32 lg:w-50"
                     data-testid="TransactionRowAddressing__address-container"
                   >
                     <div

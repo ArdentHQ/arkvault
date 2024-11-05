@@ -24,7 +24,7 @@ exports[`ContactsHeader > should render responsive 1`] = `
             class="group"
           >
             <button
-              class="ring-focus css-14zm422"
+              class="ring-focus css-46sfhd"
               type="button"
             >
               <div
@@ -178,7 +178,7 @@ exports[`ContactsHeader > should render responsive 2`] = `
                   class="group"
                 >
                   <button
-                    class="ring-focus css-14zm422"
+                    class="ring-focus css-46sfhd"
                     type="button"
                   >
                     <div
@@ -245,7 +245,7 @@ exports[`ContactsHeader > should render responsive 2`] = `
                 class="mx-0.5 flex md:ml-3.5"
               >
                 <div
-                  class="border-theme-secondary-300 dark:border-theme-secondary-800 css-ya0jcf"
+                  class="border-theme-secondary-300 dark:border-theme-secondary-800 css-3y8nng"
                   type="vertical"
                 />
               </span>
@@ -285,7 +285,7 @@ exports[`ContactsHeaderExtra > should render responsive 1`] = `
           class="group"
         >
           <button
-            class="ring-focus css-14zm422"
+            class="ring-focus css-46sfhd"
             type="button"
           >
             <div
@@ -408,7 +408,7 @@ exports[`ContactsHeaderExtra > should render responsive 2`] = `
           class="group"
         >
           <button
-            class="ring-focus css-14zm422"
+            class="ring-focus css-46sfhd"
             type="button"
           >
             <div
@@ -475,7 +475,7 @@ exports[`ContactsHeaderExtra > should render responsive 2`] = `
         class="mx-0.5 flex md:ml-3.5"
       >
         <div
-          class="border-theme-secondary-300 dark:border-theme-secondary-800 css-ya0jcf"
+          class="border-theme-secondary-300 dark:border-theme-secondary-800 css-3y8nng"
           type="vertical"
         />
       </span>

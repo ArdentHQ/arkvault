@@ -201,7 +201,7 @@ exports[`SearchRecipient > should call onAction when no address is selected 1`] 
                                   class="group"
                                 >
                                   <button
-                                    class="ring-focus css-15d5iox"
+                                    class="ring-focus css-46sfhd"
                                     type="button"
                                   >
                                     <div
@@ -624,7 +624,7 @@ exports[`SearchRecipient > should render a modal 1`] = `
                                   class="group"
                                 >
                                   <button
-                                    class="ring-focus css-15d5iox"
+                                    class="ring-focus css-46sfhd"
                                     type="button"
                                   >
                                     <div
@@ -1045,7 +1045,7 @@ exports[`SearchRecipient > should render a modal with custom title and descripti
                                   class="group"
                                 >
                                   <button
-                                    class="ring-focus css-15d5iox"
+                                    class="ring-focus css-46sfhd"
                                     type="button"
                                   >
                                     <div
@@ -1466,7 +1466,7 @@ exports[`SearchRecipient > should render with contact on desktop 1`] = `
                                   class="group"
                                 >
                                   <button
-                                    class="ring-focus css-15d5iox"
+                                    class="ring-focus css-46sfhd"
                                     type="button"
                                   >
                                     <div
@@ -2111,7 +2111,7 @@ exports[`SearchRecipient > should render with my wallet on desktop 1`] = `
                                   class="group"
                                 >
                                   <button
-                                    class="ring-focus css-15d5iox"
+                                    class="ring-focus css-46sfhd"
                                     type="button"
                                   >
                                     <div
@@ -2756,7 +2756,7 @@ exports[`SearchRecipient > should render with no alias if the recipient address 
                                   class="group"
                                 >
                                   <button
-                                    class="ring-focus css-15d5iox"
+                                    class="ring-focus css-46sfhd"
                                     type="button"
                                   >
                                     <div
@@ -3098,7 +3098,7 @@ exports[`SearchRecipient > should render with selected address 1`] = `
                                   class="group"
                                 >
                                   <button
-                                    class="ring-focus css-15d5iox"
+                                    class="ring-focus css-46sfhd"
                                     type="button"
                                   >
                                     <div
@@ -3519,7 +3519,7 @@ exports[`SearchRecipient > should render with selected address on md screen 1`] 
                                   class="group"
                                 >
                                   <button
-                                    class="ring-focus css-15d5iox"
+                                    class="ring-focus css-46sfhd"
                                     type="button"
                                   >
                                     <div
