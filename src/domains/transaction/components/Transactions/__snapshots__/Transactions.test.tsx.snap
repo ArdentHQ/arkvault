@@ -18,7 +18,13 @@ exports[`Transactions > should fetch more transactions 1`] = `
         type="button"
       >
         <span>
-          All History
+          <span
+            class="flex items-center space-x-2"
+          >
+            <span>
+              All History
+            </span>
+          </span>
         </span>
       </button>
       <button
@@ -31,7 +37,18 @@ exports[`Transactions > should fetch more transactions 1`] = `
         type="button"
       >
         <span>
-          Incoming
+          <span
+            class="flex items-center space-x-2"
+          >
+            <span>
+              Incoming
+            </span>
+            <span
+              class="rounded bg-theme-navy-100 px-1.5 py-0.5 text-xs leading-[17px] text-theme-secondary-700 dark:border-theme-secondary-800 dark:bg-theme-secondary-900 dark:text-theme-secondary-500"
+            >
+              7
+            </span>
+          </span>
         </span>
       </button>
       <button
@@ -44,7 +61,18 @@ exports[`Transactions > should fetch more transactions 1`] = `
         type="button"
       >
         <span>
-          Outgoing
+          <span
+            class="flex items-center space-x-2"
+          >
+            <span>
+              Outgoing
+            </span>
+            <span
+              class="rounded bg-theme-navy-100 px-1.5 py-0.5 text-xs leading-[17px] text-theme-secondary-700 dark:border-theme-secondary-800 dark:bg-theme-secondary-900 dark:text-theme-secondary-500"
+            >
+              7
+            </span>
+          </span>
         </span>
       </button>
     </div>
@@ -106,7 +134,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
           data-testid="dropdown__toggle"
         >
           <button
-            class="space-x-2 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-700 w-full px-4 py-1.5 text-base sm:w-fit"
+            class="space-x-2 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-700 w-full px-4 py-1.5 text-base sm:w-fit"
             data-testid="CollapseToggleButton"
             type="button"
           >
@@ -180,7 +208,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
           data-testid="dropdown__toggle"
         >
           <button
-            class="space-x-2 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-700 w-full px-4 py-1.5 text-base sm:w-fit"
+            class="space-x-2 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-700 w-full px-4 py-1.5 text-base sm:w-fit"
             data-testid="CollapseToggleButton"
             type="button"
           >
@@ -10075,7 +10103,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
     class="-mx-6 -mt-1 rounded-b-xl border-t border-theme-secondary-300 px-6 py-4 dark:border-theme-secondary-800 md:-mx-px md:mt-0 md:border md:border-t-0"
   >
     <button
-      class="px-5 space-x-3 text-base relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-700 w-full py-1.5 leading-5"
+      class="px-5 space-x-3 text-base relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-700 w-full py-1.5 leading-5"
       data-testid="transactions__fetch-more-button"
       type="button"
     >
@@ -10107,7 +10135,13 @@ exports[`Transactions > should hide view more button when there are no next page
         type="button"
       >
         <span>
-          All History
+          <span
+            class="flex items-center space-x-2"
+          >
+            <span>
+              All History
+            </span>
+          </span>
         </span>
       </button>
       <button
@@ -10120,7 +10154,18 @@ exports[`Transactions > should hide view more button when there are no next page
         type="button"
       >
         <span>
-          Incoming
+          <span
+            class="flex items-center space-x-2"
+          >
+            <span>
+              Incoming
+            </span>
+            <span
+              class="rounded bg-theme-navy-100 px-1.5 py-0.5 text-xs leading-[17px] text-theme-secondary-700 dark:border-theme-secondary-800 dark:bg-theme-secondary-900 dark:text-theme-secondary-500"
+            >
+              7
+            </span>
+          </span>
         </span>
       </button>
       <button
@@ -10133,7 +10178,18 @@ exports[`Transactions > should hide view more button when there are no next page
         type="button"
       >
         <span>
-          Outgoing
+          <span
+            class="flex items-center space-x-2"
+          >
+            <span>
+              Outgoing
+            </span>
+            <span
+              class="rounded bg-theme-navy-100 px-1.5 py-0.5 text-xs leading-[17px] text-theme-secondary-700 dark:border-theme-secondary-800 dark:bg-theme-secondary-900 dark:text-theme-secondary-500"
+            >
+              7
+            </span>
+          </span>
         </span>
       </button>
     </div>
@@ -10195,7 +10251,7 @@ exports[`Transactions > should hide view more button when there are no next page
           data-testid="dropdown__toggle"
         >
           <button
-            class="space-x-2 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-700 w-full px-4 py-1.5 text-base sm:w-fit"
+            class="space-x-2 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-700 w-full px-4 py-1.5 text-base sm:w-fit"
             data-testid="CollapseToggleButton"
             type="button"
           >
@@ -10269,7 +10325,7 @@ exports[`Transactions > should hide view more button when there are no next page
           data-testid="dropdown__toggle"
         >
           <button
-            class="space-x-2 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-700 w-full px-4 py-1.5 text-base sm:w-fit"
+            class="space-x-2 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-700 w-full px-4 py-1.5 text-base sm:w-fit"
             data-testid="CollapseToggleButton"
             type="button"
           >
@@ -15350,7 +15406,7 @@ exports[`Transactions > should hide view more button when there are no next page
     class="-mx-6 -mt-1 rounded-b-xl border-t border-theme-secondary-300 px-6 py-4 dark:border-theme-secondary-800 md:-mx-px md:mt-0 md:border md:border-t-0"
   >
     <button
-      class="px-5 space-x-3 text-base relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-700 w-full py-1.5 leading-5"
+      class="px-5 space-x-3 text-base relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-700 w-full py-1.5 leading-5"
       data-testid="transactions__fetch-more-button"
       type="button"
     >
@@ -15382,7 +15438,13 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
         type="button"
       >
         <span>
-          All History
+          <span
+            class="flex items-center space-x-2"
+          >
+            <span>
+              All History
+            </span>
+          </span>
         </span>
       </button>
       <button
@@ -15395,7 +15457,18 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
         type="button"
       >
         <span>
-          Incoming
+          <span
+            class="flex items-center space-x-2"
+          >
+            <span>
+              Incoming
+            </span>
+            <span
+              class="rounded bg-theme-navy-100 px-1.5 py-0.5 text-xs leading-[17px] text-theme-secondary-700 dark:border-theme-secondary-800 dark:bg-theme-secondary-900 dark:text-theme-secondary-500"
+            >
+              7
+            </span>
+          </span>
         </span>
       </button>
       <button
@@ -15408,7 +15481,18 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
         type="button"
       >
         <span>
-          Outgoing
+          <span
+            class="flex items-center space-x-2"
+          >
+            <span>
+              Outgoing
+            </span>
+            <span
+              class="rounded bg-theme-navy-100 px-1.5 py-0.5 text-xs leading-[17px] text-theme-secondary-700 dark:border-theme-secondary-800 dark:bg-theme-secondary-900 dark:text-theme-secondary-500"
+            >
+              7
+            </span>
+          </span>
         </span>
       </button>
     </div>
@@ -15470,7 +15554,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
           data-testid="dropdown__toggle"
         >
           <button
-            class="space-x-2 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-700 w-full px-4 py-1.5 text-base sm:w-fit"
+            class="space-x-2 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-700 w-full px-4 py-1.5 text-base sm:w-fit"
             data-testid="CollapseToggleButton"
             type="button"
           >
@@ -15544,7 +15628,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
           data-testid="dropdown__toggle"
         >
           <button
-            class="space-x-2 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-700 w-full px-4 py-1.5 text-base sm:w-fit"
+            class="space-x-2 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-700 w-full px-4 py-1.5 text-base sm:w-fit"
             data-testid="CollapseToggleButton"
             type="button"
           >
@@ -20625,7 +20709,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
     class="-mx-6 -mt-1 rounded-b-xl border-t border-theme-secondary-300 px-6 py-4 dark:border-theme-secondary-800 md:-mx-px md:mt-0 md:border md:border-t-0"
   >
     <button
-      class="px-5 space-x-3 text-base relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-700 w-full py-1.5 leading-5"
+      class="px-5 space-x-3 text-base relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-700 w-full py-1.5 leading-5"
       data-testid="transactions__fetch-more-button"
       type="button"
     >
