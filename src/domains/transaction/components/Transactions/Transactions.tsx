@@ -203,37 +203,42 @@ export const Transactions = memo(function Transactions({
 				</>
 			)}
 
-			{hasEmptyResults ? (
-				<>
-					{activeTransactionType ? (
-						<EmptyBlock className="sm:text-left">
-							<Trans
-								i18nKey="DASHBOARD.LATEST_TRANSACTIONS.NO_RESULTS"
-								values={{
-									type: activeTransactionTypeLabel,
-								}}
-								components={{ bold: <strong /> }}
-							/>
-						</EmptyBlock>
-					) : (
-						<EmptyBlock className="sm:text-left">
-							{emptyText || t("DASHBOARD.LATEST_TRANSACTIONS.EMPTY_MESSAGE")}
-						</EmptyBlock>
-					)}
-				</>
-			) : (
-				<TableWrapper className={cn({ "!rounded-b-none border-none": hasMore })}>
-					<div className="flex w-full flex-col items-start justify-between gap-3 border-b-0 border-b-theme-secondary-300 pb-4 pt-3 dark:border-b-theme-secondary-800 sm:flex-row md:items-center md:border-b md:px-6 md:py-4">
-						<span className="text-base font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500">
-							{t("COMMON.SHOWING_RESULTS", { count: transactions.length })}
-						</span>
-						<FilterTransactions
-							className="w-full sm:w-fit md:my-auto"
-							wallets={wallets}
-							onSelect={filterChangeHandler}
-							isDisabled={wallets.length === 0 || isLoadingTransactions}
-						/>
-					</div>
+			<TableWrapper className={cn({ "!rounded-b-none border-none": hasMore })}>
+				<div className="flex w-full flex-col items-start justify-between gap-3 border-b-0 border-b-theme-secondary-300 pb-4 pt-3 dark:border-b-theme-secondary-800 sm:flex-row md:items-center md:border-b md:px-6 md:py-4">
+					<span className="text-base font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500">
+						{t("COMMON.SHOWING_RESULTS", { count: transactions.length })}
+					</span>
+					<FilterTransactions
+						className="w-full sm:w-fit md:my-auto"
+						wallets={wallets}
+						onSelect={filterChangeHandler}
+						isDisabled={wallets.length === 0 || isLoadingTransactions}
+						selectedTransactionTypes={activeTransactionType ? [activeTransactionType] : []}
+					/>
+				</div>
+
+				{hasEmptyResults && (
+					<>
+						{activeTransactionType ? (
+							<EmptyBlock className="sm:text-left border-none">
+								<Trans
+									i18nKey="DASHBOARD.LATEST_TRANSACTIONS.NO_RESULTS"
+									values={{
+										type: activeTransactionTypeLabel,
+									}}
+									components={{ bold: <strong /> }}
+								/>
+							</EmptyBlock>
+						) : (
+							<EmptyBlock className="sm:text-left">
+								{emptyText || t("DASHBOARD.LATEST_TRANSACTIONS.EMPTY_MESSAGE")}
+							</EmptyBlock>
+						)}
+					</>
+
+				)}
+
+				{!hasEmptyResults && (
 					<TransactionTable
 						transactions={transactions}
 						exchangeCurrency={profile.settings().get<string>(Contracts.ProfileSetting.ExchangeCurrency)}
@@ -244,17 +249,17 @@ export const Transactions = memo(function Transactions({
 						profile={profile}
 						coinName={wallets.at(0)?.currency()}
 					/>
+				)}
 
-					{transactionModalItem && (
-						<TransactionDetailModal
-							isOpen={!!transactionModalItem}
-							transactionItem={transactionModalItem}
-							profile={profile}
-							onClose={() => setTransactionModalItem(undefined)}
-						/>
-					)}
-				</TableWrapper>
-			)}
+				{transactionModalItem && (
+					<TransactionDetailModal
+						isOpen={!!transactionModalItem}
+						transactionItem={transactionModalItem}
+						profile={profile}
+						onClose={() => setTransactionModalItem(undefined)}
+					/>
+				)}
+			</TableWrapper>
 
 			{hasMore && (
 				<div className="-mx-6 -mt-1 rounded-b-xl border-t border-theme-secondary-300 px-6 py-4 dark:border-theme-secondary-800 md:-mx-px md:mt-0 md:border md:border-t-0">

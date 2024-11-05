@@ -47,4 +47,5 @@ export interface DropdownProperties extends JSX.IntrinsicAttributes {
 	toggleSize?: Size;
 	toggleContent?: React.ReactNode | ((isOpen: boolean) => React.ReactNode);
 	disableToggle?: boolean;
+	closeOnSelect?: boolean;
 }
