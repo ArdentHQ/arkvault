@@ -308,7 +308,7 @@ export const DelegateRow = ({
 					to={delegate.explorerLink()}
 					tooltip={t("COMMON.OPEN_IN_EXPLORER")}
 					isExternal
-					className="w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700 group/link"
+					className="group/link w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700"
 				>
 					<span className="group-hover/link:underline">{t("COMMON.VIEW")}</span>
 				</Link>
