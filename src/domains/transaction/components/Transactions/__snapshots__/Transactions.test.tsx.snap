@@ -276,7 +276,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
               role="row"
             >
               <th
-                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 no-border w-36 min-w-36 xl:w-48"
+                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border w-36 min-w-36 xl:w-48"
                 colspan="1"
                 data-testid="table__th--0"
                 role="columnheader"
@@ -292,7 +292,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                 </div>
               </th>
               <th
-                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 hidden xl:table-cell no-border first:rounded-tl-xl last:rounded-tr-xl w-48 min-w-48 xl:w-40"
+                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black hidden xl:table-cell no-border first:rounded-tl-xl last:rounded-tr-xl w-48 min-w-48 xl:w-40"
                 colspan="1"
                 data-testid="table__th--1"
                 role="columnheader"
@@ -338,7 +338,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                 </div>
               </th>
               <th
-                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 no-border first:rounded-tl-xl last:rounded-tr-xl w-32 min-w-32"
+                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border first:rounded-tl-xl last:rounded-tr-xl w-32 min-w-32"
                 colspan="1"
                 data-testid="table__th--2"
                 role="columnheader"
@@ -354,7 +354,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                 </div>
               </th>
               <th
-                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 no-border first:rounded-tl-xl last:rounded-tr-xl"
+                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border first:rounded-tl-xl last:rounded-tr-xl"
                 colspan="1"
                 data-testid="table__th--3"
                 role="columnheader"
@@ -370,7 +370,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                 </div>
               </th>
               <th
-                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 no-border first:rounded-tl-xl last:rounded-tr-xl"
+                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border first:rounded-tl-xl last:rounded-tr-xl"
                 colspan="1"
                 data-testid="table__th--4"
                 role="columnheader"
@@ -416,7 +416,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                 </div>
               </th>
               <th
-                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 no-border hidden lg:table-cell w-36 min-w-36"
+                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border hidden lg:table-cell w-36 min-w-36"
                 colspan="1"
                 data-testid="table__th--5"
                 role="columnheader"
@@ -10393,7 +10393,7 @@ exports[`Transactions > should hide view more button when there are no next page
               role="row"
             >
               <th
-                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 no-border w-36 min-w-36 xl:w-48"
+                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border w-36 min-w-36 xl:w-48"
                 colspan="1"
                 data-testid="table__th--0"
                 role="columnheader"
@@ -10409,7 +10409,7 @@ exports[`Transactions > should hide view more button when there are no next page
                 </div>
               </th>
               <th
-                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 hidden xl:table-cell no-border first:rounded-tl-xl last:rounded-tr-xl w-48 min-w-48 xl:w-40"
+                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black hidden xl:table-cell no-border first:rounded-tl-xl last:rounded-tr-xl w-48 min-w-48 xl:w-40"
                 colspan="1"
                 data-testid="table__th--1"
                 role="columnheader"
@@ -10455,7 +10455,7 @@ exports[`Transactions > should hide view more button when there are no next page
                 </div>
               </th>
               <th
-                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 no-border first:rounded-tl-xl last:rounded-tr-xl w-32 min-w-32"
+                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border first:rounded-tl-xl last:rounded-tr-xl w-32 min-w-32"
                 colspan="1"
                 data-testid="table__th--2"
                 role="columnheader"
@@ -10471,7 +10471,7 @@ exports[`Transactions > should hide view more button when there are no next page
                 </div>
               </th>
               <th
-                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 no-border first:rounded-tl-xl last:rounded-tr-xl"
+                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border first:rounded-tl-xl last:rounded-tr-xl"
                 colspan="1"
                 data-testid="table__th--3"
                 role="columnheader"
@@ -10487,7 +10487,7 @@ exports[`Transactions > should hide view more button when there are no next page
                 </div>
               </th>
               <th
-                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 no-border first:rounded-tl-xl last:rounded-tr-xl"
+                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border first:rounded-tl-xl last:rounded-tr-xl"
                 colspan="1"
                 data-testid="table__th--4"
                 role="columnheader"
@@ -10533,7 +10533,7 @@ exports[`Transactions > should hide view more button when there are no next page
                 </div>
               </th>
               <th
-                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 no-border hidden lg:table-cell w-36 min-w-36"
+                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border hidden lg:table-cell w-36 min-w-36"
                 colspan="1"
                 data-testid="table__th--5"
                 role="columnheader"
@@ -15696,7 +15696,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
               role="row"
             >
               <th
-                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 no-border w-36 min-w-36 xl:w-48"
+                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border w-36 min-w-36 xl:w-48"
                 colspan="1"
                 data-testid="table__th--0"
                 role="columnheader"
@@ -15712,7 +15712,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                 </div>
               </th>
               <th
-                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 hidden xl:table-cell no-border first:rounded-tl-xl last:rounded-tr-xl w-48 min-w-48 xl:w-40"
+                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black hidden xl:table-cell no-border first:rounded-tl-xl last:rounded-tr-xl w-48 min-w-48 xl:w-40"
                 colspan="1"
                 data-testid="table__th--1"
                 role="columnheader"
@@ -15758,7 +15758,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                 </div>
               </th>
               <th
-                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 no-border first:rounded-tl-xl last:rounded-tr-xl w-32 min-w-32"
+                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border first:rounded-tl-xl last:rounded-tr-xl w-32 min-w-32"
                 colspan="1"
                 data-testid="table__th--2"
                 role="columnheader"
@@ -15774,7 +15774,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                 </div>
               </th>
               <th
-                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 no-border first:rounded-tl-xl last:rounded-tr-xl"
+                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border first:rounded-tl-xl last:rounded-tr-xl"
                 colspan="1"
                 data-testid="table__th--3"
                 role="columnheader"
@@ -15790,7 +15790,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                 </div>
               </th>
               <th
-                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 no-border first:rounded-tl-xl last:rounded-tr-xl"
+                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border first:rounded-tl-xl last:rounded-tr-xl"
                 colspan="1"
                 data-testid="table__th--4"
                 role="columnheader"
@@ -15836,7 +15836,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                 </div>
               </th>
               <th
-                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 no-border hidden lg:table-cell w-36 min-w-36"
+                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border hidden lg:table-cell w-36 min-w-36"
                 colspan="1"
                 data-testid="table__th--5"
                 role="columnheader"

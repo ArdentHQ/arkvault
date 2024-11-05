@@ -1414,7 +1414,7 @@ exports[`SendTransfer > should display unconfirmed transactions modal when submi
                                 role="row"
                               >
                                 <th
-                                  class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
+                                  class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black first:rounded-tl-xl last:rounded-tr-xl"
                                   colspan="1"
                                   data-testid="table__th--0"
                                   role="columnheader"
@@ -1460,7 +1460,7 @@ exports[`SendTransfer > should display unconfirmed transactions modal when submi
                                   </div>
                                 </th>
                                 <th
-                                  class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl w-96 min-w-96"
+                                  class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black first:rounded-tl-xl last:rounded-tr-xl w-96 min-w-96"
                                   colspan="1"
                                   data-testid="table__th--1"
                                   role="columnheader"
@@ -1476,7 +1476,7 @@ exports[`SendTransfer > should display unconfirmed transactions modal when submi
                                   </div>
                                 </th>
                                 <th
-                                  class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
+                                  class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black first:rounded-tl-xl last:rounded-tr-xl"
                                   colspan="1"
                                   data-testid="table__th--2"
                                   role="columnheader"
@@ -9174,7 +9174,7 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
                                 role="row"
                               >
                                 <th
-                                  class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
+                                  class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black first:rounded-tl-xl last:rounded-tr-xl"
                                   colspan="1"
                                   data-testid="table__th--0"
                                   role="columnheader"
@@ -9220,7 +9220,7 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
                                   </div>
                                 </th>
                                 <th
-                                  class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl w-96 min-w-96"
+                                  class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black first:rounded-tl-xl last:rounded-tr-xl w-96 min-w-96"
                                   colspan="1"
                                   data-testid="table__th--1"
                                   role="columnheader"
@@ -9236,7 +9236,7 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
                                   </div>
                                 </th>
                                 <th
-                                  class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
+                                  class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black first:rounded-tl-xl last:rounded-tr-xl"
                                   colspan="1"
                                   data-testid="table__th--2"
                                   role="columnheader"

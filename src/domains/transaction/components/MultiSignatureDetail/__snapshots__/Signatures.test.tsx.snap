@@ -19,7 +19,7 @@ exports[`Signatures > should have all marked as signed if awaiting broadcast on 
             role="row"
           >
             <th
-              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 max-sm:hidden first:rounded-tl-xl last:rounded-tr-xl"
+              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black max-sm:hidden first:rounded-tl-xl last:rounded-tr-xl"
               colspan="1"
               data-testid="table__th--0"
               role="columnheader"
@@ -35,7 +35,7 @@ exports[`Signatures > should have all marked as signed if awaiting broadcast on 
               </div>
             </th>
             <th
-              class="group relative text-sm select-none text-theme-secondary-700 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 max-sm:hidden text-right w-8 border-theme-secondary-100 first:rounded-tl-xl last:rounded-tr-xl"
+              class="group relative text-sm select-none text-theme-secondary-700 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black max-sm:hidden text-right w-8 border-theme-secondary-100 first:rounded-tl-xl last:rounded-tr-xl"
               colspan="1"
               data-testid="table__th--1"
               role="columnheader"
@@ -381,7 +381,7 @@ exports[`Signatures > should not require signature if waiting for final signatur
             role="row"
           >
             <th
-              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 max-sm:hidden first:rounded-tl-xl last:rounded-tr-xl"
+              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black max-sm:hidden first:rounded-tl-xl last:rounded-tr-xl"
               colspan="1"
               data-testid="table__th--0"
               role="columnheader"
@@ -397,7 +397,7 @@ exports[`Signatures > should not require signature if waiting for final signatur
               </div>
             </th>
             <th
-              class="group relative text-sm select-none text-theme-secondary-700 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 max-sm:hidden text-right w-8 border-theme-secondary-100 first:rounded-tl-xl last:rounded-tr-xl"
+              class="group relative text-sm select-none text-theme-secondary-700 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black max-sm:hidden text-right w-8 border-theme-secondary-100 first:rounded-tl-xl last:rounded-tr-xl"
               colspan="1"
               data-testid="table__th--1"
               role="columnheader"
@@ -743,7 +743,7 @@ exports[`Signatures > should not require signature if waiting for final signatur
             role="row"
           >
             <th
-              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 max-sm:hidden first:rounded-tl-xl last:rounded-tr-xl"
+              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black max-sm:hidden first:rounded-tl-xl last:rounded-tr-xl"
               colspan="1"
               data-testid="table__th--0"
               role="columnheader"
@@ -759,7 +759,7 @@ exports[`Signatures > should not require signature if waiting for final signatur
               </div>
             </th>
             <th
-              class="group relative text-sm select-none text-theme-secondary-700 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 max-sm:hidden text-right w-8 border-theme-secondary-100 first:rounded-tl-xl last:rounded-tr-xl"
+              class="group relative text-sm select-none text-theme-secondary-700 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black max-sm:hidden text-right w-8 border-theme-secondary-100 first:rounded-tl-xl last:rounded-tr-xl"
               colspan="1"
               data-testid="table__th--1"
               role="columnheader"
@@ -1107,7 +1107,7 @@ exports[`Signatures > should render 1`] = `
             role="row"
           >
             <th
-              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 max-sm:hidden first:rounded-tl-xl last:rounded-tr-xl"
+              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black max-sm:hidden first:rounded-tl-xl last:rounded-tr-xl"
               colspan="1"
               data-testid="table__th--0"
               role="columnheader"
@@ -1123,7 +1123,7 @@ exports[`Signatures > should render 1`] = `
               </div>
             </th>
             <th
-              class="group relative text-sm select-none text-theme-secondary-700 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 max-sm:hidden text-right w-8 border-theme-secondary-100 first:rounded-tl-xl last:rounded-tr-xl"
+              class="group relative text-sm select-none text-theme-secondary-700 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black max-sm:hidden text-right w-8 border-theme-secondary-100 first:rounded-tl-xl last:rounded-tr-xl"
               colspan="1"
               data-testid="table__th--1"
               role="columnheader"
@@ -1471,7 +1471,7 @@ exports[`Signatures > should show all participants as signed when all signatures
             role="row"
           >
             <th
-              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 max-sm:hidden first:rounded-tl-xl last:rounded-tr-xl"
+              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black max-sm:hidden first:rounded-tl-xl last:rounded-tr-xl"
               colspan="1"
               data-testid="table__th--0"
               role="columnheader"
@@ -1487,7 +1487,7 @@ exports[`Signatures > should show all participants as signed when all signatures
               </div>
             </th>
             <th
-              class="group relative text-sm select-none text-theme-secondary-700 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 max-sm:hidden text-right w-8 border-theme-secondary-100 first:rounded-tl-xl last:rounded-tr-xl"
+              class="group relative text-sm select-none text-theme-secondary-700 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black max-sm:hidden text-right w-8 border-theme-secondary-100 first:rounded-tl-xl last:rounded-tr-xl"
               colspan="1"
               data-testid="table__th--1"
               role="columnheader"
