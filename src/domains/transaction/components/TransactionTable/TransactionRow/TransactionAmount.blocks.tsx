@@ -13,7 +13,7 @@ const calculateReturnedAmount = function (transaction: ExtendedTransactionData):
 		return returnedAmount;
 	}
 
-	// should return 0 as we don't want to show hint
+	// should return 0 as we don't want to show a hint
 	if(transaction.isReturn()) {
 		return returnedAmount;
 	}
@@ -24,16 +24,6 @@ const calculateReturnedAmount = function (transaction: ExtendedTransactionData):
 		}
 	}
 
-	if(transaction.id() === "b22574277ad0d83b3252483a2f47a1c80a7bfaee1adad6ee0119764ef8d949a2") {
-		console.log({
-			sender: transaction.sender(),
-			isReturn: transaction.isReturn(),
-			recipients: transaction.recipients(),
-			total: transaction.total(),
-			amount: transaction.amount(),
-			returnedAmount,
-		})
-	}
 	return returnedAmount;
 };
 
