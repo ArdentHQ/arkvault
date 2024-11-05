@@ -191,35 +191,36 @@ export const AddressRow = ({ index, maxVotes, wallet, onSelect }: AddressRowProp
 						address={wallet.address()}
 						walletName={alias}
 						showCopyButton
-						walletNameClass="text-theme-primary-700 hover:border-current border-b border-transparent transition-[color,border-color] duration-[200ms,350ms] delay-[0s,100ms] leading-tight"
+						addressClass="text-sm"
+						walletNameClass="text-theme-primary-700 hover:border-current border-b border-transparent transition-[color,border-color] duration-[200ms,350ms] delay-[0s,100ms] leading-tight text-sm"
 					/>
 				</div>
 			</TableCell>
 
 			<TableCell
 				className="hidden xl:table-cell"
-				innerClassName="justify-end font-semibold text-theme-secondary-text whitespace-nowrap"
+				innerClassName="text-sm justify-end font-semibold text-theme-secondary-text whitespace-nowrap"
 			>
 				<Amount value={wallet.balance()} ticker={wallet.network().ticker()} />
 			</TableCell>
 
-			<TableCell innerClassName="font-semibold space-x-3">{renderWalletVotes()}</TableCell>
+			<TableCell innerClassName="text-sm font-semibold space-x-3">{renderWalletVotes()}</TableCell>
 
 			{maxVotes === 1 ? (
 				<>
 					<TableCell
 						className="hidden lg:table-cell"
-						innerClassName="justify-center font-semibold text-theme-secondary-text"
+						innerClassName="text-sm justify-center font-semibold text-theme-secondary-text"
 					>
 						{renderRank(votes[0]?.wallet)}
 					</TableCell>
 
-					<TableCell innerClassName="justify-center">
+					<TableCell innerClassName="text-sm justify-center">
 						{renderDelegateStatus(votes[0]?.wallet, wallet.network().delegateCount())}
 					</TableCell>
 				</>
 			) : (
-				<TableCell innerClassName="justify-center">
+				<TableCell innerClassName="text-sm justify-center">
 					<div className="font-semibold text-theme-secondary-400">
 						<span className="text-theme-secondary-text">{hasVotes ? votes.length : "0"}</span>
 						<span>/{maxVotes}</span>
@@ -227,7 +228,7 @@ export const AddressRow = ({ index, maxVotes, wallet, onSelect }: AddressRowProp
 				</TableCell>
 			)}
 
-			<TableCell className="hidden lg:table-cell" innerClassName="justify-center space-x-2">
+			<TableCell className="hidden lg:table-cell" innerClassName="text-sm justify-center space-x-2">
 				<WalletIcons wallet={wallet} exclude={["isKnown", "isSecondSignature", "isTestNetwork"]} />
 			</TableCell>
 
@@ -238,7 +239,7 @@ export const AddressRow = ({ index, maxVotes, wallet, onSelect }: AddressRowProp
 							size="icon"
 							disabled={isButtonDisabled}
 							variant="transparent"
-							className="-mr-3 text-theme-primary-600 hover:text-theme-primary-700"
+							className="-mr-3 text-sm text-theme-primary-600 hover:text-theme-primary-700 hover:underline dark:hover:text-theme-primary-500"
 							onClick={() => onSelect?.(wallet.address(), wallet.networkId())}
 							data-testid={`AddressRow__select-${index}`}
 						>
