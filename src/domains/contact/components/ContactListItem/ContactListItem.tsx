@@ -130,7 +130,7 @@ const ContactListItemAddress: FC<ContactListItemAddressProperties> = ({
 								<Button
 									size="icon"
 									variant="transparent"
-									className="hover:bg-theme-navy-200 dark:hover:bg-theme-secondary-700 p-1 mr-3"
+									className="mr-3 p-1 hover:bg-theme-navy-200 dark:hover:bg-theme-secondary-700"
 								>
 									<Icon
 										name="EllipsisVerticalFilled"
