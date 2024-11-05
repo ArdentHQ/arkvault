@@ -11,10 +11,10 @@ const ControlButtonStyled = styled.button<{ noBorder?: boolean; disabled?: boole
 	${tw`disabled:(cursor-not-allowed text-theme-secondary-400 dark:text-theme-secondary-700)`}
 
 	${({ noBorder }) => {
-		if (!noBorder) {
-			return tw`px-2.5 mx-0.5`;
+		if (noBorder) {
+			return tw`px-2 py-1.5 rounded`;
 		} else {
-			return tw`px-2 py-1.5 rounded`
+			return tw`px-2.5 mx-0.5`;
 		}
 	}}
 
@@ -48,7 +48,7 @@ const ControlButtonStyled = styled.button<{ noBorder?: boolean; disabled?: boole
 				&:hover {
 					${tw`text-theme-primary-700 bg-theme-primary-100 dark:text-white dark:text-theme-secondary-800`}
 				}
-			`
+			`;
 		}
 	}}
 `;
