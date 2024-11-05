@@ -21,7 +21,7 @@ exports[`AddressRow > should emit action on select button 1`] = `
                 class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
                 <span
-                  class="font-semibold text-base text-theme-primary-700 hover:border-current border-b border-transparent transition-[color,border-color] duration-[200ms,350ms] delay-[0s,100ms] leading-tight"
+                  class="font-semibold text-base text-theme-primary-700 hover:border-current border-b border-transparent transition-[color,border-color] duration-[200ms,350ms] delay-[0s,100ms] leading-tight text-sm"
                   data-testid="Address__alias"
                 >
                   <span
@@ -32,7 +32,7 @@ exports[`AddressRow > should emit action on select button 1`] = `
                   </span>
                 </span>
                 <span
-                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                  class="no-ligatures min-w-0 overflow-hidden text-sm font-semibold text-base"
                   data-testid="Address__address"
                 >
                   D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -81,7 +81,7 @@ exports[`AddressRow > should emit action on select button 1`] = `
           class="hidden xl:table-cell"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end font-semibold text-theme-secondary-text whitespace-nowrap"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-sm justify-end font-semibold text-theme-secondary-text whitespace-nowrap"
           >
             <span
               class="whitespace-nowrap"
@@ -93,7 +93,7 @@ exports[`AddressRow > should emit action on select button 1`] = `
         </td>
         <td>
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 font-semibold space-x-3"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-sm font-semibold space-x-3"
           >
             <div
               class="flex items-center space-x-3 overflow-hidden"
@@ -142,7 +142,7 @@ exports[`AddressRow > should emit action on select button 1`] = `
           class="hidden lg:table-cell"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center font-semibold text-theme-secondary-text"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-sm justify-center font-semibold text-theme-secondary-text"
           >
             <span
               class="text-theme-secondary-400"
@@ -153,7 +153,7 @@ exports[`AddressRow > should emit action on select button 1`] = `
         </td>
         <td>
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-sm justify-center"
           >
             <span>
               <div
@@ -196,7 +196,7 @@ exports[`AddressRow > should emit action on select button 1`] = `
           class="hidden lg:table-cell"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center space-x-2"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-sm justify-center space-x-2"
           >
             <div
               class="inline-block p-1 text-theme-secondary-700 dark:text-theme-secondary-600"
@@ -256,7 +256,7 @@ exports[`AddressRow > should emit action on select button 1`] = `
           >
             <div>
               <button
-                class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 text-theme-primary-600 hover:text-theme-primary-700"
+                class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 text-sm text-theme-primary-600 hover:text-theme-primary-700 hover:underline dark:hover:text-theme-primary-500"
                 data-testid="AddressRow__select-0"
                 type="button"
               >
@@ -296,7 +296,7 @@ exports[`AddressRow > should render for a multisignature wallet 1`] = `
                 class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
                 <span
-                  class="font-semibold text-base text-theme-primary-700 hover:border-current border-b border-transparent transition-[color,border-color] duration-[200ms,350ms] delay-[0s,100ms] leading-tight"
+                  class="font-semibold text-base text-theme-primary-700 hover:border-current border-b border-transparent transition-[color,border-color] duration-[200ms,350ms] delay-[0s,100ms] leading-tight text-sm"
                   data-testid="Address__alias"
                 >
                   <span
@@ -307,7 +307,7 @@ exports[`AddressRow > should render for a multisignature wallet 1`] = `
                   </span>
                 </span>
                 <span
-                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                  class="no-ligatures min-w-0 overflow-hidden text-sm font-semibold text-base"
                   data-testid="Address__address"
                 >
                   D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -356,7 +356,7 @@ exports[`AddressRow > should render for a multisignature wallet 1`] = `
           class="hidden xl:table-cell"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end font-semibold text-theme-secondary-text whitespace-nowrap"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-sm justify-end font-semibold text-theme-secondary-text whitespace-nowrap"
           >
             <span
               class="whitespace-nowrap"
@@ -368,7 +368,7 @@ exports[`AddressRow > should render for a multisignature wallet 1`] = `
         </td>
         <td>
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 font-semibold space-x-3"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-sm font-semibold space-x-3"
           >
             <div
               class="flex items-center space-x-3 overflow-hidden"
@@ -417,7 +417,7 @@ exports[`AddressRow > should render for a multisignature wallet 1`] = `
           class="hidden lg:table-cell"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center font-semibold text-theme-secondary-text"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-sm justify-center font-semibold text-theme-secondary-text"
           >
             <span
               class="text-theme-secondary-400"
@@ -428,7 +428,7 @@ exports[`AddressRow > should render for a multisignature wallet 1`] = `
         </td>
         <td>
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-sm justify-center"
           >
             <span>
               <div
@@ -471,7 +471,7 @@ exports[`AddressRow > should render for a multisignature wallet 1`] = `
           class="hidden lg:table-cell"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center space-x-2"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-sm justify-center space-x-2"
           >
             <div
               class="inline-block p-1 text-theme-secondary-700 dark:text-theme-secondary-600"
@@ -567,7 +567,7 @@ exports[`AddressRow > should render for a multisignature wallet 1`] = `
           >
             <div>
               <button
-                class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 text-theme-primary-600 hover:text-theme-primary-700"
+                class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 text-sm text-theme-primary-600 hover:text-theme-primary-700 hover:underline dark:hover:text-theme-primary-500"
                 data-testid="AddressRow__select-0"
                 type="button"
               >
@@ -607,7 +607,7 @@ exports[`AddressRow > should render tooltip wallet when ledger and incompatible 
                 class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
                 <span
-                  class="font-semibold text-base text-theme-primary-700 hover:border-current border-b border-transparent transition-[color,border-color] duration-[200ms,350ms] delay-[0s,100ms] leading-tight"
+                  class="font-semibold text-base text-theme-primary-700 hover:border-current border-b border-transparent transition-[color,border-color] duration-[200ms,350ms] delay-[0s,100ms] leading-tight text-sm"
                   data-testid="Address__alias"
                 >
                   <span
@@ -618,7 +618,7 @@ exports[`AddressRow > should render tooltip wallet when ledger and incompatible 
                   </span>
                 </span>
                 <span
-                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                  class="no-ligatures min-w-0 overflow-hidden text-sm font-semibold text-base"
                   data-testid="Address__address"
                 >
                   D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -667,7 +667,7 @@ exports[`AddressRow > should render tooltip wallet when ledger and incompatible 
           class="hidden xl:table-cell"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end font-semibold text-theme-secondary-text whitespace-nowrap"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-sm justify-end font-semibold text-theme-secondary-text whitespace-nowrap"
           >
             <span
               class="whitespace-nowrap"
@@ -679,7 +679,7 @@ exports[`AddressRow > should render tooltip wallet when ledger and incompatible 
         </td>
         <td>
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 font-semibold space-x-3"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-sm font-semibold space-x-3"
           >
             <div
               class="flex items-center space-x-3 overflow-hidden"
@@ -728,7 +728,7 @@ exports[`AddressRow > should render tooltip wallet when ledger and incompatible 
           class="hidden lg:table-cell"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center font-semibold text-theme-secondary-text"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-sm justify-center font-semibold text-theme-secondary-text"
           >
             <span
               class="text-theme-secondary-400"
@@ -739,7 +739,7 @@ exports[`AddressRow > should render tooltip wallet when ledger and incompatible 
         </td>
         <td>
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-sm justify-center"
           >
             <span>
               <div
@@ -782,7 +782,7 @@ exports[`AddressRow > should render tooltip wallet when ledger and incompatible 
           class="hidden lg:table-cell"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center space-x-2"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-sm justify-center space-x-2"
           >
             <div
               class="inline-block p-1 text-theme-secondary-700 dark:text-theme-secondary-600"
@@ -842,7 +842,7 @@ exports[`AddressRow > should render tooltip wallet when ledger and incompatible 
           >
             <div>
               <button
-                class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 -mr-3 text-theme-primary-600 hover:text-theme-primary-700"
+                class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 -mr-3 text-sm text-theme-primary-600 hover:text-theme-primary-700 hover:underline dark:hover:text-theme-primary-500"
                 data-testid="AddressRow__select-0"
                 disabled=""
                 type="button"
@@ -883,7 +883,7 @@ exports[`AddressRow > should render when isCompact = false 1`] = `
                 class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
                 <span
-                  class="font-semibold text-base text-theme-primary-700 hover:border-current border-b border-transparent transition-[color,border-color] duration-[200ms,350ms] delay-[0s,100ms] leading-tight"
+                  class="font-semibold text-base text-theme-primary-700 hover:border-current border-b border-transparent transition-[color,border-color] duration-[200ms,350ms] delay-[0s,100ms] leading-tight text-sm"
                   data-testid="Address__alias"
                 >
                   <span
@@ -894,7 +894,7 @@ exports[`AddressRow > should render when isCompact = false 1`] = `
                   </span>
                 </span>
                 <span
-                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                  class="no-ligatures min-w-0 overflow-hidden text-sm font-semibold text-base"
                   data-testid="Address__address"
                 >
                   D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -943,7 +943,7 @@ exports[`AddressRow > should render when isCompact = false 1`] = `
           class="hidden xl:table-cell"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end font-semibold text-theme-secondary-text whitespace-nowrap"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-sm justify-end font-semibold text-theme-secondary-text whitespace-nowrap"
           >
             <span
               class="whitespace-nowrap"
@@ -955,7 +955,7 @@ exports[`AddressRow > should render when isCompact = false 1`] = `
         </td>
         <td>
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 font-semibold space-x-3"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-sm font-semibold space-x-3"
           >
             <div
               class="flex items-center space-x-3 overflow-hidden"
@@ -1004,7 +1004,7 @@ exports[`AddressRow > should render when isCompact = false 1`] = `
           class="hidden lg:table-cell"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center font-semibold text-theme-secondary-text"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-sm justify-center font-semibold text-theme-secondary-text"
           >
             <span
               class="text-theme-secondary-400"
@@ -1015,7 +1015,7 @@ exports[`AddressRow > should render when isCompact = false 1`] = `
         </td>
         <td>
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-sm justify-center"
           >
             <span>
               <div
@@ -1058,7 +1058,7 @@ exports[`AddressRow > should render when isCompact = false 1`] = `
           class="hidden lg:table-cell"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center space-x-2"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-sm justify-center space-x-2"
           >
             <div
               class="inline-block p-1 text-theme-secondary-700 dark:text-theme-secondary-600"
@@ -1118,7 +1118,7 @@ exports[`AddressRow > should render when isCompact = false 1`] = `
           >
             <div>
               <button
-                class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 text-theme-primary-600 hover:text-theme-primary-700"
+                class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 text-sm text-theme-primary-600 hover:text-theme-primary-700 hover:underline dark:hover:text-theme-primary-500"
                 data-testid="AddressRow__select-0"
                 type="button"
               >
@@ -1158,7 +1158,7 @@ exports[`AddressRow > should render when isCompact = true 1`] = `
                 class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
                 <span
-                  class="font-semibold text-base text-theme-primary-700 hover:border-current border-b border-transparent transition-[color,border-color] duration-[200ms,350ms] delay-[0s,100ms] leading-tight"
+                  class="font-semibold text-base text-theme-primary-700 hover:border-current border-b border-transparent transition-[color,border-color] duration-[200ms,350ms] delay-[0s,100ms] leading-tight text-sm"
                   data-testid="Address__alias"
                 >
                   <span
@@ -1169,7 +1169,7 @@ exports[`AddressRow > should render when isCompact = true 1`] = `
                   </span>
                 </span>
                 <span
-                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                  class="no-ligatures min-w-0 overflow-hidden text-sm font-semibold text-base"
                   data-testid="Address__address"
                 >
                   D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -1218,7 +1218,7 @@ exports[`AddressRow > should render when isCompact = true 1`] = `
           class="hidden xl:table-cell"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end font-semibold text-theme-secondary-text whitespace-nowrap"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-sm justify-end font-semibold text-theme-secondary-text whitespace-nowrap"
           >
             <span
               class="whitespace-nowrap"
@@ -1230,7 +1230,7 @@ exports[`AddressRow > should render when isCompact = true 1`] = `
         </td>
         <td>
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 font-semibold space-x-3"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-sm font-semibold space-x-3"
           >
             <div
               class="flex items-center space-x-3 overflow-hidden"
@@ -1279,7 +1279,7 @@ exports[`AddressRow > should render when isCompact = true 1`] = `
           class="hidden lg:table-cell"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center font-semibold text-theme-secondary-text"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-sm justify-center font-semibold text-theme-secondary-text"
           >
             <span
               class="text-theme-secondary-400"
@@ -1290,7 +1290,7 @@ exports[`AddressRow > should render when isCompact = true 1`] = `
         </td>
         <td>
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-sm justify-center"
           >
             <span>
               <div
@@ -1333,7 +1333,7 @@ exports[`AddressRow > should render when isCompact = true 1`] = `
           class="hidden lg:table-cell"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center space-x-2"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-sm justify-center space-x-2"
           >
             <div
               class="inline-block p-1 text-theme-secondary-700 dark:text-theme-secondary-600"
@@ -1393,7 +1393,7 @@ exports[`AddressRow > should render when isCompact = true 1`] = `
           >
             <div>
               <button
-                class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 text-theme-primary-600 hover:text-theme-primary-700"
+                class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 text-sm text-theme-primary-600 hover:text-theme-primary-700 hover:underline dark:hover:text-theme-primary-500"
                 data-testid="AddressRow__select-0"
                 type="button"
               >
@@ -1433,7 +1433,7 @@ exports[`AddressRow > should render when wallet hasn't voted 1`] = `
                 class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
                 <span
-                  class="font-semibold text-base text-theme-primary-700 hover:border-current border-b border-transparent transition-[color,border-color] duration-[200ms,350ms] delay-[0s,100ms] leading-tight"
+                  class="font-semibold text-base text-theme-primary-700 hover:border-current border-b border-transparent transition-[color,border-color] duration-[200ms,350ms] delay-[0s,100ms] leading-tight text-sm"
                   data-testid="Address__alias"
                 >
                   <span
@@ -1444,7 +1444,7 @@ exports[`AddressRow > should render when wallet hasn't voted 1`] = `
                   </span>
                 </span>
                 <span
-                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                  class="no-ligatures min-w-0 overflow-hidden text-sm font-semibold text-base"
                   data-testid="Address__address"
                 >
                   D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -1493,7 +1493,7 @@ exports[`AddressRow > should render when wallet hasn't voted 1`] = `
           class="hidden xl:table-cell"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end font-semibold text-theme-secondary-text whitespace-nowrap"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-sm justify-end font-semibold text-theme-secondary-text whitespace-nowrap"
           >
             <span
               class="whitespace-nowrap"
@@ -1505,7 +1505,7 @@ exports[`AddressRow > should render when wallet hasn't voted 1`] = `
         </td>
         <td>
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 font-semibold space-x-3"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-sm font-semibold space-x-3"
           >
             <div
               class="flex items-center space-x-3 overflow-hidden"
@@ -1554,7 +1554,7 @@ exports[`AddressRow > should render when wallet hasn't voted 1`] = `
           class="hidden lg:table-cell"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center font-semibold text-theme-secondary-text"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-sm justify-center font-semibold text-theme-secondary-text"
           >
             <span
               class="text-theme-secondary-400"
@@ -1565,7 +1565,7 @@ exports[`AddressRow > should render when wallet hasn't voted 1`] = `
         </td>
         <td>
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-sm justify-center"
           >
             <span>
               <div
@@ -1608,7 +1608,7 @@ exports[`AddressRow > should render when wallet hasn't voted 1`] = `
           class="hidden lg:table-cell"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center space-x-2"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-sm justify-center space-x-2"
           >
             <div
               class="inline-block p-1 text-theme-secondary-700 dark:text-theme-secondary-600"
@@ -1668,7 +1668,7 @@ exports[`AddressRow > should render when wallet hasn't voted 1`] = `
           >
             <div>
               <button
-                class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 text-theme-primary-600 hover:text-theme-primary-700"
+                class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 text-sm text-theme-primary-600 hover:text-theme-primary-700 hover:underline dark:hover:text-theme-primary-500"
                 data-testid="AddressRow__select-0"
                 type="button"
               >
@@ -1699,7 +1699,7 @@ exports[`AddressRow > should render when wallet hasn't voted 1`] = `
                 class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
                 <span
-                  class="font-semibold text-base text-theme-primary-700 hover:border-current border-b border-transparent transition-[color,border-color] duration-[200ms,350ms] delay-[0s,100ms] leading-tight"
+                  class="font-semibold text-base text-theme-primary-700 hover:border-current border-b border-transparent transition-[color,border-color] duration-[200ms,350ms] delay-[0s,100ms] leading-tight text-sm"
                   data-testid="Address__alias"
                 >
                   <span
@@ -1710,7 +1710,7 @@ exports[`AddressRow > should render when wallet hasn't voted 1`] = `
                   </span>
                 </span>
                 <span
-                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                  class="no-ligatures min-w-0 overflow-hidden text-sm font-semibold text-base"
                   data-testid="Address__address"
                 >
                   DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr
@@ -1759,7 +1759,7 @@ exports[`AddressRow > should render when wallet hasn't voted 1`] = `
           class="hidden xl:table-cell"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end font-semibold text-theme-secondary-text whitespace-nowrap"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-sm justify-end font-semibold text-theme-secondary-text whitespace-nowrap"
           >
             <span
               class="whitespace-nowrap"
@@ -1771,7 +1771,7 @@ exports[`AddressRow > should render when wallet hasn't voted 1`] = `
         </td>
         <td>
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 font-semibold space-x-3"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-sm font-semibold space-x-3"
           >
             <span
               class="text-theme-secondary-400"
@@ -1784,19 +1784,19 @@ exports[`AddressRow > should render when wallet hasn't voted 1`] = `
           class="hidden lg:table-cell"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center font-semibold text-theme-secondary-text"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-sm justify-center font-semibold text-theme-secondary-text"
           />
         </td>
         <td>
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-sm justify-center"
           />
         </td>
         <td
           class="hidden lg:table-cell"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center space-x-2"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-sm justify-center space-x-2"
           />
         </td>
         <td>
@@ -1805,7 +1805,7 @@ exports[`AddressRow > should render when wallet hasn't voted 1`] = `
           >
             <div>
               <button
-                class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 text-theme-primary-600 hover:text-theme-primary-700"
+                class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 text-sm text-theme-primary-600 hover:text-theme-primary-700 hover:underline dark:hover:text-theme-primary-500"
                 data-testid="AddressRow__select-1"
                 type="button"
               >
@@ -1845,7 +1845,7 @@ exports[`AddressRow > should render when wallet not found for votes 1`] = `
                 class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
                 <span
-                  class="font-semibold text-base text-theme-primary-700 hover:border-current border-b border-transparent transition-[color,border-color] duration-[200ms,350ms] delay-[0s,100ms] leading-tight"
+                  class="font-semibold text-base text-theme-primary-700 hover:border-current border-b border-transparent transition-[color,border-color] duration-[200ms,350ms] delay-[0s,100ms] leading-tight text-sm"
                   data-testid="Address__alias"
                 >
                   <span
@@ -1856,7 +1856,7 @@ exports[`AddressRow > should render when wallet not found for votes 1`] = `
                   </span>
                 </span>
                 <span
-                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                  class="no-ligatures min-w-0 overflow-hidden text-sm font-semibold text-base"
                   data-testid="Address__address"
                 >
                   D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -1905,7 +1905,7 @@ exports[`AddressRow > should render when wallet not found for votes 1`] = `
           class="hidden xl:table-cell"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end font-semibold text-theme-secondary-text whitespace-nowrap"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-sm justify-end font-semibold text-theme-secondary-text whitespace-nowrap"
           >
             <span
               class="whitespace-nowrap"
@@ -1917,7 +1917,7 @@ exports[`AddressRow > should render when wallet not found for votes 1`] = `
         </td>
         <td>
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 font-semibold space-x-3"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-sm font-semibold space-x-3"
           >
             <div
               class="flex items-center space-x-3 overflow-hidden"
@@ -1966,7 +1966,7 @@ exports[`AddressRow > should render when wallet not found for votes 1`] = `
           class="hidden lg:table-cell"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center font-semibold text-theme-secondary-text"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-sm justify-center font-semibold text-theme-secondary-text"
           >
             <span
               class="text-theme-secondary-400"
@@ -1977,7 +1977,7 @@ exports[`AddressRow > should render when wallet not found for votes 1`] = `
         </td>
         <td>
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-sm justify-center"
           >
             <span>
               <div
@@ -2020,7 +2020,7 @@ exports[`AddressRow > should render when wallet not found for votes 1`] = `
           class="hidden lg:table-cell"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center space-x-2"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-sm justify-center space-x-2"
           >
             <div
               class="inline-block p-1 text-theme-secondary-700 dark:text-theme-secondary-600"
@@ -2080,7 +2080,7 @@ exports[`AddressRow > should render when wallet not found for votes 1`] = `
           >
             <div>
               <button
-                class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 text-theme-primary-600 hover:text-theme-primary-700"
+                class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 text-sm text-theme-primary-600 hover:text-theme-primary-700 hover:underline dark:hover:text-theme-primary-500"
                 data-testid="AddressRow__select-0"
                 type="button"
               >
@@ -2111,7 +2111,7 @@ exports[`AddressRow > should render when wallet not found for votes 1`] = `
                 class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
                 <span
-                  class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                  class="no-ligatures min-w-0 overflow-hidden text-sm font-semibold text-base"
                   data-testid="Address__address"
                 >
                   DTLomV8hpJheFDPnBGB5EtrDCfDZJnG23z
@@ -2160,7 +2160,7 @@ exports[`AddressRow > should render when wallet not found for votes 1`] = `
           class="hidden xl:table-cell"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end font-semibold text-theme-secondary-text whitespace-nowrap"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-sm justify-end font-semibold text-theme-secondary-text whitespace-nowrap"
           >
             <span
               class="whitespace-nowrap"
@@ -2172,7 +2172,7 @@ exports[`AddressRow > should render when wallet not found for votes 1`] = `
         </td>
         <td>
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 font-semibold space-x-3"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-sm font-semibold space-x-3"
           >
             <span
               class="text-theme-secondary-400"
@@ -2185,19 +2185,19 @@ exports[`AddressRow > should render when wallet not found for votes 1`] = `
           class="hidden lg:table-cell"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center font-semibold text-theme-secondary-text"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-sm justify-center font-semibold text-theme-secondary-text"
           />
         </td>
         <td>
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-sm justify-center"
           />
         </td>
         <td
           class="hidden lg:table-cell"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center space-x-2"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-sm justify-center space-x-2"
           />
         </td>
         <td>
@@ -2206,7 +2206,7 @@ exports[`AddressRow > should render when wallet not found for votes 1`] = `
           >
             <div>
               <button
-                class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 -mr-3 text-theme-primary-600 hover:text-theme-primary-700"
+                class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 -mr-3 text-sm text-theme-primary-600 hover:text-theme-primary-700 hover:underline dark:hover:text-theme-primary-500"
                 data-testid="AddressRow__select-1"
                 disabled=""
                 type="button"
@@ -2247,7 +2247,7 @@ exports[`AddressRow > should render with active delegate 1`] = `
                 class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
                 <span
-                  class="font-semibold text-base text-theme-primary-700 hover:border-current border-b border-transparent transition-[color,border-color] duration-[200ms,350ms] delay-[0s,100ms] leading-tight"
+                  class="font-semibold text-base text-theme-primary-700 hover:border-current border-b border-transparent transition-[color,border-color] duration-[200ms,350ms] delay-[0s,100ms] leading-tight text-sm"
                   data-testid="Address__alias"
                 >
                   <span
@@ -2258,7 +2258,7 @@ exports[`AddressRow > should render with active delegate 1`] = `
                   </span>
                 </span>
                 <span
-                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                  class="no-ligatures min-w-0 overflow-hidden text-sm font-semibold text-base"
                   data-testid="Address__address"
                 >
                   D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -2307,7 +2307,7 @@ exports[`AddressRow > should render with active delegate 1`] = `
           class="hidden xl:table-cell"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end font-semibold text-theme-secondary-text whitespace-nowrap"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-sm justify-end font-semibold text-theme-secondary-text whitespace-nowrap"
           >
             <span
               class="whitespace-nowrap"
@@ -2319,7 +2319,7 @@ exports[`AddressRow > should render with active delegate 1`] = `
         </td>
         <td>
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 font-semibold space-x-3"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-sm font-semibold space-x-3"
           >
             <div
               class="flex items-center space-x-3 overflow-hidden"
@@ -2368,7 +2368,7 @@ exports[`AddressRow > should render with active delegate 1`] = `
           class="hidden lg:table-cell"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center font-semibold text-theme-secondary-text"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-sm justify-center font-semibold text-theme-secondary-text"
           >
             <span>
               #1
@@ -2377,7 +2377,7 @@ exports[`AddressRow > should render with active delegate 1`] = `
         </td>
         <td>
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-sm justify-center"
           >
             <span>
               <div
@@ -2420,7 +2420,7 @@ exports[`AddressRow > should render with active delegate 1`] = `
           class="hidden lg:table-cell"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center space-x-2"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-sm justify-center space-x-2"
           >
             <div
               class="inline-block p-1 text-theme-secondary-700 dark:text-theme-secondary-600"
@@ -2480,7 +2480,7 @@ exports[`AddressRow > should render with active delegate 1`] = `
           >
             <div>
               <button
-                class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 text-theme-primary-600 hover:text-theme-primary-700"
+                class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 text-sm text-theme-primary-600 hover:text-theme-primary-700 hover:underline dark:hover:text-theme-primary-500"
                 data-testid="AddressRow__select-0"
                 type="button"
               >
@@ -2520,7 +2520,7 @@ exports[`AddressRow > should render with isCompact = false when the maximum vote
                 class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
                 <span
-                  class="font-semibold text-base text-theme-primary-700 hover:border-current border-b border-transparent transition-[color,border-color] duration-[200ms,350ms] delay-[0s,100ms] leading-tight"
+                  class="font-semibold text-base text-theme-primary-700 hover:border-current border-b border-transparent transition-[color,border-color] duration-[200ms,350ms] delay-[0s,100ms] leading-tight text-sm"
                   data-testid="Address__alias"
                 >
                   <span
@@ -2531,7 +2531,7 @@ exports[`AddressRow > should render with isCompact = false when the maximum vote
                   </span>
                 </span>
                 <span
-                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                  class="no-ligatures min-w-0 overflow-hidden text-sm font-semibold text-base"
                   data-testid="Address__address"
                 >
                   D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -2580,7 +2580,7 @@ exports[`AddressRow > should render with isCompact = false when the maximum vote
           class="hidden xl:table-cell"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end font-semibold text-theme-secondary-text whitespace-nowrap"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-sm justify-end font-semibold text-theme-secondary-text whitespace-nowrap"
           >
             <span
               class="whitespace-nowrap"
@@ -2592,7 +2592,7 @@ exports[`AddressRow > should render with isCompact = false when the maximum vote
         </td>
         <td>
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 font-semibold space-x-3"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-sm font-semibold space-x-3"
           >
             <span
               class="text-theme-secondary-400"
@@ -2603,7 +2603,7 @@ exports[`AddressRow > should render with isCompact = false when the maximum vote
         </td>
         <td>
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-sm justify-center"
           >
             <div
               class="font-semibold text-theme-secondary-400"
@@ -2623,7 +2623,7 @@ exports[`AddressRow > should render with isCompact = false when the maximum vote
           class="hidden lg:table-cell"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center space-x-2"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-sm justify-center space-x-2"
           >
             <div
               class="inline-block p-1 text-theme-secondary-700 dark:text-theme-secondary-600"
@@ -2683,7 +2683,7 @@ exports[`AddressRow > should render with isCompact = false when the maximum vote
           >
             <div>
               <button
-                class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 text-theme-primary-600 hover:text-theme-primary-700"
+                class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 text-sm text-theme-primary-600 hover:text-theme-primary-700 hover:underline dark:hover:text-theme-primary-500"
                 data-testid="AddressRow__select-0"
                 type="button"
               >
@@ -2723,7 +2723,7 @@ exports[`AddressRow > should render with isCompact = false when the wallet has e
                 class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
                 <span
-                  class="font-semibold text-base text-theme-primary-700 hover:border-current border-b border-transparent transition-[color,border-color] duration-[200ms,350ms] delay-[0s,100ms] leading-tight"
+                  class="font-semibold text-base text-theme-primary-700 hover:border-current border-b border-transparent transition-[color,border-color] duration-[200ms,350ms] delay-[0s,100ms] leading-tight text-sm"
                   data-testid="Address__alias"
                 >
                   <span
@@ -2734,7 +2734,7 @@ exports[`AddressRow > should render with isCompact = false when the wallet has e
                   </span>
                 </span>
                 <span
-                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                  class="no-ligatures min-w-0 overflow-hidden text-sm font-semibold text-base"
                   data-testid="Address__address"
                 >
                   D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -2783,7 +2783,7 @@ exports[`AddressRow > should render with isCompact = false when the wallet has e
           class="hidden xl:table-cell"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end font-semibold text-theme-secondary-text whitespace-nowrap"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-sm justify-end font-semibold text-theme-secondary-text whitespace-nowrap"
           >
             <span
               class="whitespace-nowrap"
@@ -2795,7 +2795,7 @@ exports[`AddressRow > should render with isCompact = false when the wallet has e
         </td>
         <td>
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 font-semibold space-x-3"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-sm font-semibold space-x-3"
           >
             <div
               class="flex items-center space-x-3 overflow-hidden"
@@ -2851,7 +2851,7 @@ exports[`AddressRow > should render with isCompact = false when the wallet has e
         </td>
         <td>
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-sm justify-center"
           >
             <div
               class="font-semibold text-theme-secondary-400"
@@ -2871,7 +2871,7 @@ exports[`AddressRow > should render with isCompact = false when the wallet has e
           class="hidden lg:table-cell"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center space-x-2"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-sm justify-center space-x-2"
           >
             <div
               class="inline-block p-1 text-theme-secondary-700 dark:text-theme-secondary-600"
@@ -2931,7 +2931,7 @@ exports[`AddressRow > should render with isCompact = false when the wallet has e
           >
             <div>
               <button
-                class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 text-theme-primary-600 hover:text-theme-primary-700"
+                class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 text-sm text-theme-primary-600 hover:text-theme-primary-700 hover:underline dark:hover:text-theme-primary-500"
                 data-testid="AddressRow__select-0"
                 type="button"
               >
@@ -2971,7 +2971,7 @@ exports[`AddressRow > should render with isCompact = false when the wallet has m
                 class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
                 <span
-                  class="font-semibold text-base text-theme-primary-700 hover:border-current border-b border-transparent transition-[color,border-color] duration-[200ms,350ms] delay-[0s,100ms] leading-tight"
+                  class="font-semibold text-base text-theme-primary-700 hover:border-current border-b border-transparent transition-[color,border-color] duration-[200ms,350ms] delay-[0s,100ms] leading-tight text-sm"
                   data-testid="Address__alias"
                 >
                   <span
@@ -2982,7 +2982,7 @@ exports[`AddressRow > should render with isCompact = false when the wallet has m
                   </span>
                 </span>
                 <span
-                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                  class="no-ligatures min-w-0 overflow-hidden text-sm font-semibold text-base"
                   data-testid="Address__address"
                 >
                   D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -3031,7 +3031,7 @@ exports[`AddressRow > should render with isCompact = false when the wallet has m
           class="hidden xl:table-cell"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end font-semibold text-theme-secondary-text whitespace-nowrap"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-sm justify-end font-semibold text-theme-secondary-text whitespace-nowrap"
           >
             <span
               class="whitespace-nowrap"
@@ -3043,7 +3043,7 @@ exports[`AddressRow > should render with isCompact = false when the wallet has m
         </td>
         <td>
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 font-semibold space-x-3"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-sm font-semibold space-x-3"
           >
             <div
               class="flex items-center space-x-3 overflow-hidden"
@@ -3099,7 +3099,7 @@ exports[`AddressRow > should render with isCompact = false when the wallet has m
         </td>
         <td>
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-sm justify-center"
           >
             <div
               class="font-semibold text-theme-secondary-400"
@@ -3119,7 +3119,7 @@ exports[`AddressRow > should render with isCompact = false when the wallet has m
           class="hidden lg:table-cell"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center space-x-2"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-sm justify-center space-x-2"
           >
             <div
               class="inline-block p-1 text-theme-secondary-700 dark:text-theme-secondary-600"
@@ -3179,7 +3179,7 @@ exports[`AddressRow > should render with isCompact = false when the wallet has m
           >
             <div>
               <button
-                class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 text-theme-primary-600 hover:text-theme-primary-700"
+                class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 text-sm text-theme-primary-600 hover:text-theme-primary-700 hover:underline dark:hover:text-theme-primary-500"
                 data-testid="AddressRow__select-0"
                 type="button"
               >
@@ -3219,7 +3219,7 @@ exports[`AddressRow > should render with isCompact = true when the maximum votes
                 class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
                 <span
-                  class="font-semibold text-base text-theme-primary-700 hover:border-current border-b border-transparent transition-[color,border-color] duration-[200ms,350ms] delay-[0s,100ms] leading-tight"
+                  class="font-semibold text-base text-theme-primary-700 hover:border-current border-b border-transparent transition-[color,border-color] duration-[200ms,350ms] delay-[0s,100ms] leading-tight text-sm"
                   data-testid="Address__alias"
                 >
                   <span
@@ -3230,7 +3230,7 @@ exports[`AddressRow > should render with isCompact = true when the maximum votes
                   </span>
                 </span>
                 <span
-                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                  class="no-ligatures min-w-0 overflow-hidden text-sm font-semibold text-base"
                   data-testid="Address__address"
                 >
                   D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -3279,7 +3279,7 @@ exports[`AddressRow > should render with isCompact = true when the maximum votes
           class="hidden xl:table-cell"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end font-semibold text-theme-secondary-text whitespace-nowrap"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-sm justify-end font-semibold text-theme-secondary-text whitespace-nowrap"
           >
             <span
               class="whitespace-nowrap"
@@ -3291,7 +3291,7 @@ exports[`AddressRow > should render with isCompact = true when the maximum votes
         </td>
         <td>
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 font-semibold space-x-3"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-sm font-semibold space-x-3"
           >
             <span
               class="text-theme-secondary-400"
@@ -3302,7 +3302,7 @@ exports[`AddressRow > should render with isCompact = true when the maximum votes
         </td>
         <td>
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-sm justify-center"
           >
             <div
               class="font-semibold text-theme-secondary-400"
@@ -3322,7 +3322,7 @@ exports[`AddressRow > should render with isCompact = true when the maximum votes
           class="hidden lg:table-cell"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center space-x-2"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-sm justify-center space-x-2"
           >
             <div
               class="inline-block p-1 text-theme-secondary-700 dark:text-theme-secondary-600"
@@ -3382,7 +3382,7 @@ exports[`AddressRow > should render with isCompact = true when the maximum votes
           >
             <div>
               <button
-                class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 text-theme-primary-600 hover:text-theme-primary-700"
+                class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 text-sm text-theme-primary-600 hover:text-theme-primary-700 hover:underline dark:hover:text-theme-primary-500"
                 data-testid="AddressRow__select-0"
                 type="button"
               >
@@ -3422,7 +3422,7 @@ exports[`AddressRow > should render with isCompact = true when the wallet has ex
                 class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
                 <span
-                  class="font-semibold text-base text-theme-primary-700 hover:border-current border-b border-transparent transition-[color,border-color] duration-[200ms,350ms] delay-[0s,100ms] leading-tight"
+                  class="font-semibold text-base text-theme-primary-700 hover:border-current border-b border-transparent transition-[color,border-color] duration-[200ms,350ms] delay-[0s,100ms] leading-tight text-sm"
                   data-testid="Address__alias"
                 >
                   <span
@@ -3433,7 +3433,7 @@ exports[`AddressRow > should render with isCompact = true when the wallet has ex
                   </span>
                 </span>
                 <span
-                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                  class="no-ligatures min-w-0 overflow-hidden text-sm font-semibold text-base"
                   data-testid="Address__address"
                 >
                   D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -3482,7 +3482,7 @@ exports[`AddressRow > should render with isCompact = true when the wallet has ex
           class="hidden xl:table-cell"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end font-semibold text-theme-secondary-text whitespace-nowrap"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-sm justify-end font-semibold text-theme-secondary-text whitespace-nowrap"
           >
             <span
               class="whitespace-nowrap"
@@ -3494,7 +3494,7 @@ exports[`AddressRow > should render with isCompact = true when the wallet has ex
         </td>
         <td>
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 font-semibold space-x-3"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-sm font-semibold space-x-3"
           >
             <div
               class="flex items-center space-x-3 overflow-hidden"
@@ -3550,7 +3550,7 @@ exports[`AddressRow > should render with isCompact = true when the wallet has ex
         </td>
         <td>
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-sm justify-center"
           >
             <div
               class="font-semibold text-theme-secondary-400"
@@ -3570,7 +3570,7 @@ exports[`AddressRow > should render with isCompact = true when the wallet has ex
           class="hidden lg:table-cell"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center space-x-2"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-sm justify-center space-x-2"
           >
             <div
               class="inline-block p-1 text-theme-secondary-700 dark:text-theme-secondary-600"
@@ -3630,7 +3630,7 @@ exports[`AddressRow > should render with isCompact = true when the wallet has ex
           >
             <div>
               <button
-                class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 text-theme-primary-600 hover:text-theme-primary-700"
+                class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 text-sm text-theme-primary-600 hover:text-theme-primary-700 hover:underline dark:hover:text-theme-primary-500"
                 data-testid="AddressRow__select-0"
                 type="button"
               >
@@ -3670,7 +3670,7 @@ exports[`AddressRow > should render with isCompact = true when the wallet has ma
                 class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
                 <span
-                  class="font-semibold text-base text-theme-primary-700 hover:border-current border-b border-transparent transition-[color,border-color] duration-[200ms,350ms] delay-[0s,100ms] leading-tight"
+                  class="font-semibold text-base text-theme-primary-700 hover:border-current border-b border-transparent transition-[color,border-color] duration-[200ms,350ms] delay-[0s,100ms] leading-tight text-sm"
                   data-testid="Address__alias"
                 >
                   <span
@@ -3681,7 +3681,7 @@ exports[`AddressRow > should render with isCompact = true when the wallet has ma
                   </span>
                 </span>
                 <span
-                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                  class="no-ligatures min-w-0 overflow-hidden text-sm font-semibold text-base"
                   data-testid="Address__address"
                 >
                   D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -3730,7 +3730,7 @@ exports[`AddressRow > should render with isCompact = true when the wallet has ma
           class="hidden xl:table-cell"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end font-semibold text-theme-secondary-text whitespace-nowrap"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-sm justify-end font-semibold text-theme-secondary-text whitespace-nowrap"
           >
             <span
               class="whitespace-nowrap"
@@ -3742,7 +3742,7 @@ exports[`AddressRow > should render with isCompact = true when the wallet has ma
         </td>
         <td>
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 font-semibold space-x-3"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-sm font-semibold space-x-3"
           >
             <div
               class="flex items-center space-x-3 overflow-hidden"
@@ -3798,7 +3798,7 @@ exports[`AddressRow > should render with isCompact = true when the wallet has ma
         </td>
         <td>
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-sm justify-center"
           >
             <div
               class="font-semibold text-theme-secondary-400"
@@ -3818,7 +3818,7 @@ exports[`AddressRow > should render with isCompact = true when the wallet has ma
           class="hidden lg:table-cell"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center space-x-2"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-sm justify-center space-x-2"
           >
             <div
               class="inline-block p-1 text-theme-secondary-700 dark:text-theme-secondary-600"
@@ -3878,7 +3878,7 @@ exports[`AddressRow > should render with isCompact = true when the wallet has ma
           >
             <div>
               <button
-                class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 text-theme-primary-600 hover:text-theme-primary-700"
+                class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 text-sm text-theme-primary-600 hover:text-theme-primary-700 hover:underline dark:hover:text-theme-primary-500"
                 data-testid="AddressRow__select-0"
                 type="button"
               >
@@ -3918,7 +3918,7 @@ exports[`AddressRow > should render with resigned delegate 1`] = `
                 class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
                 <span
-                  class="font-semibold text-base text-theme-primary-700 hover:border-current border-b border-transparent transition-[color,border-color] duration-[200ms,350ms] delay-[0s,100ms] leading-tight"
+                  class="font-semibold text-base text-theme-primary-700 hover:border-current border-b border-transparent transition-[color,border-color] duration-[200ms,350ms] delay-[0s,100ms] leading-tight text-sm"
                   data-testid="Address__alias"
                 >
                   <span
@@ -3929,7 +3929,7 @@ exports[`AddressRow > should render with resigned delegate 1`] = `
                   </span>
                 </span>
                 <span
-                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                  class="no-ligatures min-w-0 overflow-hidden text-sm font-semibold text-base"
                   data-testid="Address__address"
                 >
                   D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -3978,7 +3978,7 @@ exports[`AddressRow > should render with resigned delegate 1`] = `
           class="hidden xl:table-cell"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end font-semibold text-theme-secondary-text whitespace-nowrap"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-sm justify-end font-semibold text-theme-secondary-text whitespace-nowrap"
           >
             <span
               class="whitespace-nowrap"
@@ -3990,7 +3990,7 @@ exports[`AddressRow > should render with resigned delegate 1`] = `
         </td>
         <td>
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 font-semibold space-x-3"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-sm font-semibold space-x-3"
           >
             <div
               class="flex items-center space-x-3 overflow-hidden"
@@ -4039,7 +4039,7 @@ exports[`AddressRow > should render with resigned delegate 1`] = `
           class="hidden lg:table-cell"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center font-semibold text-theme-secondary-text"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-sm justify-center font-semibold text-theme-secondary-text"
           >
             <span
               class="text-theme-secondary-400"
@@ -4050,7 +4050,7 @@ exports[`AddressRow > should render with resigned delegate 1`] = `
         </td>
         <td>
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-sm justify-center"
           >
             <span>
               <div
@@ -4093,7 +4093,7 @@ exports[`AddressRow > should render with resigned delegate 1`] = `
           class="hidden lg:table-cell"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center space-x-2"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-sm justify-center space-x-2"
           >
             <div
               class="inline-block p-1 text-theme-secondary-700 dark:text-theme-secondary-600"
@@ -4153,7 +4153,7 @@ exports[`AddressRow > should render with resigned delegate 1`] = `
           >
             <div>
               <button
-                class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 text-theme-primary-600 hover:text-theme-primary-700"
+                class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 text-sm text-theme-primary-600 hover:text-theme-primary-700 hover:underline dark:hover:text-theme-primary-500"
                 data-testid="AddressRow__select-0"
                 type="button"
               >
@@ -4193,7 +4193,7 @@ exports[`AddressRow > should render with standby delegate 1`] = `
                 class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
                 <span
-                  class="font-semibold text-base text-theme-primary-700 hover:border-current border-b border-transparent transition-[color,border-color] duration-[200ms,350ms] delay-[0s,100ms] leading-tight"
+                  class="font-semibold text-base text-theme-primary-700 hover:border-current border-b border-transparent transition-[color,border-color] duration-[200ms,350ms] delay-[0s,100ms] leading-tight text-sm"
                   data-testid="Address__alias"
                 >
                   <span
@@ -4204,7 +4204,7 @@ exports[`AddressRow > should render with standby delegate 1`] = `
                   </span>
                 </span>
                 <span
-                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                  class="no-ligatures min-w-0 overflow-hidden text-sm font-semibold text-base"
                   data-testid="Address__address"
                 >
                   D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -4253,7 +4253,7 @@ exports[`AddressRow > should render with standby delegate 1`] = `
           class="hidden xl:table-cell"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end font-semibold text-theme-secondary-text whitespace-nowrap"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-sm justify-end font-semibold text-theme-secondary-text whitespace-nowrap"
           >
             <span
               class="whitespace-nowrap"
@@ -4265,7 +4265,7 @@ exports[`AddressRow > should render with standby delegate 1`] = `
         </td>
         <td>
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 font-semibold space-x-3"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-sm font-semibold space-x-3"
           >
             <div
               class="flex items-center space-x-3 overflow-hidden"
@@ -4314,7 +4314,7 @@ exports[`AddressRow > should render with standby delegate 1`] = `
           class="hidden lg:table-cell"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center font-semibold text-theme-secondary-text"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-sm justify-center font-semibold text-theme-secondary-text"
           >
             <span>
               #100
@@ -4323,7 +4323,7 @@ exports[`AddressRow > should render with standby delegate 1`] = `
         </td>
         <td>
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-sm justify-center"
           >
             <span>
               <div
@@ -4367,7 +4367,7 @@ exports[`AddressRow > should render with standby delegate 1`] = `
           class="hidden lg:table-cell"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center space-x-2"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-sm justify-center space-x-2"
           >
             <div
               class="inline-block p-1 text-theme-secondary-700 dark:text-theme-secondary-600"
@@ -4427,7 +4427,7 @@ exports[`AddressRow > should render with standby delegate 1`] = `
           >
             <div>
               <button
-                class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 text-theme-primary-600 hover:text-theme-primary-700"
+                class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 text-sm text-theme-primary-600 hover:text-theme-primary-700 hover:underline dark:hover:text-theme-primary-500"
                 data-testid="AddressRow__select-0"
                 type="button"
               >

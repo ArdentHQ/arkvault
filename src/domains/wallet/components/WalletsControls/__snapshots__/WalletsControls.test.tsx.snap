@@ -19,7 +19,7 @@ exports[`WalletsControls > should render 1`] = `
             class="group"
           >
             <button
-              class="ring-focus css-14zm422"
+              class="ring-focus css-1mj8916"
             >
               <div
                 class="flex h-5 w-5 items-center justify-center"
@@ -260,7 +260,7 @@ exports[`WalletsControls > should render for incompatible ledger wallet 1`] = `
             class="group"
           >
             <button
-              class="ring-focus css-14zm422"
+              class="ring-focus css-1mj8916"
             >
               <div
                 class="flex h-5 w-5 items-center justify-center"
@@ -502,7 +502,7 @@ exports[`WalletsControls > should render responsive 1`] = `
             class="group"
           >
             <button
-              class="ring-focus css-14zm422"
+              class="ring-focus css-1mj8916"
             >
               <div
                 class="flex h-5 w-5 items-center justify-center"
@@ -744,7 +744,7 @@ exports[`WalletsControls > should render responsive 2`] = `
             class="group"
           >
             <button
-              class="ring-focus css-14zm422"
+              class="ring-focus css-1mj8916"
             >
               <div
                 class="flex h-5 w-5 items-center justify-center"
@@ -986,7 +986,7 @@ exports[`WalletsControls > should render responsive 3`] = `
             class="group"
           >
             <button
-              class="ring-focus css-14zm422"
+              class="ring-focus css-1mj8916"
             >
               <div
                 class="flex h-5 w-5 items-center justify-center"
@@ -1228,7 +1228,7 @@ exports[`WalletsControls > should render responsive 4`] = `
             class="group"
           >
             <button
-              class="ring-focus css-14zm422"
+              class="ring-focus css-1mj8916"
             >
               <div
                 class="flex h-5 w-5 items-center justify-center"
@@ -1470,7 +1470,7 @@ exports[`WalletsControls > should render responsive 5`] = `
             class="group"
           >
             <button
-              class="ring-focus css-14zm422"
+              class="ring-focus css-1mj8916"
             >
               <div
                 class="flex h-5 w-5 items-center justify-center"
@@ -1712,7 +1712,7 @@ exports[`WalletsControls > should render with networks selection 1`] = `
             class="group"
           >
             <button
-              class="ring-focus css-14zm422"
+              class="ring-focus css-1mj8916"
             >
               <div
                 class="flex h-5 w-5 items-center justify-center"

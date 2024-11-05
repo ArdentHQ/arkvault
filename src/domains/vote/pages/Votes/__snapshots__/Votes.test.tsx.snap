@@ -594,7 +594,7 @@ exports[`Votes > should filter current delegates 1`] = `
                     class="group"
                   >
                     <button
-                      class="ring-focus css-14zm422"
+                      class="ring-focus css-46sfhd"
                       type="button"
                     >
                       <div
@@ -661,7 +661,7 @@ exports[`Votes > should filter current delegates 1`] = `
                   class="mx-0.5 flex md:mx-3.5"
                 >
                   <div
-                    class="border-theme-secondary-300 dark:border-theme-secondary-800 css-ya0jcf"
+                    class="border-theme-secondary-300 dark:border-theme-secondary-800 css-3y8nng"
                     type="vertical"
                   />
                 </span>
@@ -676,10 +676,10 @@ exports[`Votes > should filter current delegates 1`] = `
                       class="group"
                     >
                       <button
-                        class="ring-focus css-14zm422"
+                        class="ring-focus css-46sfhd"
                       >
                         <div
-                          class="absolute right-1 top-0.5 flex h-3 w-3 items-center justify-center rounded-full bg-theme-background transition-all duration-100 ease-linear"
+                          class="absolute right-1 top-0.5 flex h-3 w-3 items-center justify-center rounded-full bg-theme-background transition-all duration-100 ease-linear -mr-2.5"
                         >
                           <div
                             class="h-2 w-2 rounded-full bg-theme-primary-500"
@@ -694,24 +694,34 @@ exports[`Votes > should filter current delegates 1`] = `
                             width="20"
                           >
                             <svg
-                              id="sliders-vertical"
-                              viewBox="0 0 20 20"
-                              x="0"
-                              xml:space="preserve"
+                              fill="none"
+                              height="16"
+                              viewBox="0 0 16 16"
+                              width="16"
                               xmlns="http://www.w3.org/2000/svg"
-                              y="0"
                             >
                               <g
-                                fill="none"
-                                stroke="currentColor"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="2"
+                                clip-path="url(#clip0_13768_41214)"
                               >
                                 <path
-                                  d="M15 9V1M15 19v-4M18 12c0 1.7-1.4 3-3 3-1.7 0-3-1.4-3-3s1.2-3 3-3h0c1.7 0 3 1.3 3 3h0zM5 7.1V19M8 4c0-1.7-1.4-3-3-3S2 2.4 2 4c0 1.7 1.4 3 3 3s3-1.3 3-3c0 .1 0 0 0 0z"
+                                  d="M9.75946 11.5209V8.00094L14.6395 3.12094C14.9595 2.80094 15.1195 2.24094 14.8795 1.76094C14.7195 1.28094 14.2395 0.960938 13.7595 0.960938H2.23946C1.75946 0.960938 1.27946 1.28094 1.11946 1.76094C0.879462 2.24094 1.03946 2.72094 1.35946 3.12094L6.23946 8.00094V15.0409L9.75946 11.5209Z"
+                                  stroke="currentColor"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="1.6"
                                 />
                               </g>
+                              <defs>
+                                <clippath
+                                  id="clip0_13768_41214"
+                                >
+                                  <rect
+                                    fill="white"
+                                    height="16"
+                                    width="16"
+                                  />
+                                </clippath>
+                              </defs>
                             </svg>
                           </div>
                         </div>
@@ -976,7 +986,7 @@ exports[`Votes > should filter current delegates 1`] = `
                         class="flex px-3 items-center my-1 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 !my-0 bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600"
                       >
                         <a
-                          class="ring-focus group/inner inline-block group w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700 css-167zzsv"
+                          class="ring-focus group/inner inline-block w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700 group/link css-167zzsv"
                           data-ring-focus-margin="-m-1"
                           data-testid="Link"
                           href=""
@@ -986,7 +996,7 @@ exports[`Votes > should filter current delegates 1`] = `
                             class="css-bxx244"
                           >
                             <span
-                              class="group-hover:underline"
+                              class="group-hover/link:underline"
                             >
                               View
                             </span>
@@ -1811,7 +1821,7 @@ exports[`Votes > should render 1`] = `
                     class="group"
                   >
                     <button
-                      class="ring-focus css-14zm422"
+                      class="ring-focus css-46sfhd"
                       type="button"
                     >
                       <div
@@ -1878,7 +1888,7 @@ exports[`Votes > should render 1`] = `
                   class="mx-0.5 flex md:mx-3.5"
                 >
                   <div
-                    class="border-theme-secondary-300 dark:border-theme-secondary-800 css-ya0jcf"
+                    class="border-theme-secondary-300 dark:border-theme-secondary-800 css-3y8nng"
                     type="vertical"
                   />
                 </span>
@@ -1892,7 +1902,7 @@ exports[`Votes > should render 1`] = `
                       class="group"
                     >
                       <button
-                        class="ring-focus css-14zm422"
+                        class="ring-focus css-46sfhd"
                       >
                         <div
                           class="flex h-5 w-5 items-center justify-center"
@@ -1903,24 +1913,34 @@ exports[`Votes > should render 1`] = `
                             width="20"
                           >
                             <svg
-                              id="sliders-vertical"
-                              viewBox="0 0 20 20"
-                              x="0"
-                              xml:space="preserve"
+                              fill="none"
+                              height="16"
+                              viewBox="0 0 16 16"
+                              width="16"
                               xmlns="http://www.w3.org/2000/svg"
-                              y="0"
                             >
                               <g
-                                fill="none"
-                                stroke="currentColor"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="2"
+                                clip-path="url(#clip0_13768_41214)"
                               >
                                 <path
-                                  d="M15 9V1M15 19v-4M18 12c0 1.7-1.4 3-3 3-1.7 0-3-1.4-3-3s1.2-3 3-3h0c1.7 0 3 1.3 3 3h0zM5 7.1V19M8 4c0-1.7-1.4-3-3-3S2 2.4 2 4c0 1.7 1.4 3 3 3s3-1.3 3-3c0 .1 0 0 0 0z"
+                                  d="M9.75946 11.5209V8.00094L14.6395 3.12094C14.9595 2.80094 15.1195 2.24094 14.8795 1.76094C14.7195 1.28094 14.2395 0.960938 13.7595 0.960938H2.23946C1.75946 0.960938 1.27946 1.28094 1.11946 1.76094C0.879462 2.24094 1.03946 2.72094 1.35946 3.12094L6.23946 8.00094V15.0409L9.75946 11.5209Z"
+                                  stroke="currentColor"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="1.6"
                                 />
                               </g>
+                              <defs>
+                                <clippath
+                                  id="clip0_13768_41214"
+                                >
+                                  <rect
+                                    fill="white"
+                                    height="16"
+                                    width="16"
+                                  />
+                                </clippath>
+                              </defs>
                             </svg>
                           </div>
                         </div>
@@ -2189,7 +2209,7 @@ exports[`Votes > should render 1`] = `
                         class="flex px-3 items-center my-1 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 !my-0"
                       >
                         <a
-                          class="ring-focus group/inner inline-block group w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700 css-167zzsv"
+                          class="ring-focus group/inner inline-block w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700 group/link css-167zzsv"
                           data-ring-focus-margin="-m-1"
                           data-testid="Link"
                           href="https://test.arkscan.io/wallets/D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr"
@@ -2199,7 +2219,7 @@ exports[`Votes > should render 1`] = `
                             class="css-bxx244"
                           >
                             <span
-                              class="group-hover:underline"
+                              class="group-hover/link:underline"
                             >
                               View
                             </span>
@@ -2336,7 +2356,7 @@ exports[`Votes > should render 1`] = `
                         class="flex px-3 items-center my-1 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 !my-0"
                       >
                         <a
-                          class="ring-focus group/inner inline-block group w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700 css-167zzsv"
+                          class="ring-focus group/inner inline-block w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700 group/link css-167zzsv"
                           data-ring-focus-margin="-m-1"
                           data-testid="Link"
                           href="https://test.arkscan.io/wallets/DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES"
@@ -2346,7 +2366,7 @@ exports[`Votes > should render 1`] = `
                             class="css-bxx244"
                           >
                             <span
-                              class="group-hover:underline"
+                              class="group-hover/link:underline"
                             >
                               View
                             </span>
@@ -2483,7 +2503,7 @@ exports[`Votes > should render 1`] = `
                         class="flex px-3 items-center my-1 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 !my-0"
                       >
                         <a
-                          class="ring-focus group/inner inline-block group w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700 css-167zzsv"
+                          class="ring-focus group/inner inline-block w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700 group/link css-167zzsv"
                           data-ring-focus-margin="-m-1"
                           data-testid="Link"
                           href="https://test.arkscan.io/wallets/DBk4cPYpqp7EBcvkstVDpyX7RQJNHxpMg8"
@@ -2493,7 +2513,7 @@ exports[`Votes > should render 1`] = `
                             class="css-bxx244"
                           >
                             <span
-                              class="group-hover:underline"
+                              class="group-hover/link:underline"
                             >
                               View
                             </span>
@@ -3314,7 +3334,7 @@ exports[`Votes > should render and handle wallet current voting exception 1`] = 
                     class="group"
                   >
                     <button
-                      class="ring-focus css-14zm422"
+                      class="ring-focus css-46sfhd"
                       type="button"
                     >
                       <div
@@ -3381,7 +3401,7 @@ exports[`Votes > should render and handle wallet current voting exception 1`] = 
                   class="mx-0.5 flex md:mx-3.5"
                 >
                   <div
-                    class="border-theme-secondary-300 dark:border-theme-secondary-800 css-ya0jcf"
+                    class="border-theme-secondary-300 dark:border-theme-secondary-800 css-3y8nng"
                     type="vertical"
                   />
                 </span>
@@ -3395,7 +3415,7 @@ exports[`Votes > should render and handle wallet current voting exception 1`] = 
                       class="group"
                     >
                       <button
-                        class="ring-focus css-14zm422"
+                        class="ring-focus css-46sfhd"
                       >
                         <div
                           class="flex h-5 w-5 items-center justify-center"
@@ -3406,24 +3426,34 @@ exports[`Votes > should render and handle wallet current voting exception 1`] = 
                             width="20"
                           >
                             <svg
-                              id="sliders-vertical"
-                              viewBox="0 0 20 20"
-                              x="0"
-                              xml:space="preserve"
+                              fill="none"
+                              height="16"
+                              viewBox="0 0 16 16"
+                              width="16"
                               xmlns="http://www.w3.org/2000/svg"
-                              y="0"
                             >
                               <g
-                                fill="none"
-                                stroke="currentColor"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="2"
+                                clip-path="url(#clip0_13768_41214)"
                               >
                                 <path
-                                  d="M15 9V1M15 19v-4M18 12c0 1.7-1.4 3-3 3-1.7 0-3-1.4-3-3s1.2-3 3-3h0c1.7 0 3 1.3 3 3h0zM5 7.1V19M8 4c0-1.7-1.4-3-3-3S2 2.4 2 4c0 1.7 1.4 3 3 3s3-1.3 3-3c0 .1 0 0 0 0z"
+                                  d="M9.75946 11.5209V8.00094L14.6395 3.12094C14.9595 2.80094 15.1195 2.24094 14.8795 1.76094C14.7195 1.28094 14.2395 0.960938 13.7595 0.960938H2.23946C1.75946 0.960938 1.27946 1.28094 1.11946 1.76094C0.879462 2.24094 1.03946 2.72094 1.35946 3.12094L6.23946 8.00094V15.0409L9.75946 11.5209Z"
+                                  stroke="currentColor"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="1.6"
                                 />
                               </g>
+                              <defs>
+                                <clippath
+                                  id="clip0_13768_41214"
+                                >
+                                  <rect
+                                    fill="white"
+                                    height="16"
+                                    width="16"
+                                  />
+                                </clippath>
+                              </defs>
                             </svg>
                           </div>
                         </div>
@@ -3692,7 +3722,7 @@ exports[`Votes > should render and handle wallet current voting exception 1`] = 
                         class="flex px-3 items-center my-1 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 !my-0"
                       >
                         <a
-                          class="ring-focus group/inner inline-block group w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700 css-167zzsv"
+                          class="ring-focus group/inner inline-block w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700 group/link css-167zzsv"
                           data-ring-focus-margin="-m-1"
                           data-testid="Link"
                           href="https://test.arkscan.io/wallets/D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr"
@@ -3702,7 +3732,7 @@ exports[`Votes > should render and handle wallet current voting exception 1`] = 
                             class="css-bxx244"
                           >
                             <span
-                              class="group-hover:underline"
+                              class="group-hover/link:underline"
                             >
                               View
                             </span>
@@ -3839,7 +3869,7 @@ exports[`Votes > should render and handle wallet current voting exception 1`] = 
                         class="flex px-3 items-center my-1 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 !my-0"
                       >
                         <a
-                          class="ring-focus group/inner inline-block group w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700 css-167zzsv"
+                          class="ring-focus group/inner inline-block w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700 group/link css-167zzsv"
                           data-ring-focus-margin="-m-1"
                           data-testid="Link"
                           href="https://test.arkscan.io/wallets/DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES"
@@ -3849,7 +3879,7 @@ exports[`Votes > should render and handle wallet current voting exception 1`] = 
                             class="css-bxx244"
                           >
                             <span
-                              class="group-hover:underline"
+                              class="group-hover/link:underline"
                             >
                               View
                             </span>
@@ -3986,7 +4016,7 @@ exports[`Votes > should render and handle wallet current voting exception 1`] = 
                         class="flex px-3 items-center my-1 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 !my-0"
                       >
                         <a
-                          class="ring-focus group/inner inline-block group w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700 css-167zzsv"
+                          class="ring-focus group/inner inline-block w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700 group/link css-167zzsv"
                           data-ring-focus-margin="-m-1"
                           data-testid="Link"
                           href="https://test.arkscan.io/wallets/DBk4cPYpqp7EBcvkstVDpyX7RQJNHxpMg8"
@@ -3996,7 +4026,7 @@ exports[`Votes > should render and handle wallet current voting exception 1`] = 
                             class="css-bxx244"
                           >
                             <span
-                              class="group-hover:underline"
+                              class="group-hover/link:underline"
                             >
                               View
                             </span>
@@ -5530,7 +5560,7 @@ exports[`Votes > should select a delegate 1`] = `
                     class="group"
                   >
                     <button
-                      class="ring-focus css-14zm422"
+                      class="ring-focus css-46sfhd"
                       type="button"
                     >
                       <div
@@ -5597,7 +5627,7 @@ exports[`Votes > should select a delegate 1`] = `
                   class="mx-0.5 flex md:mx-3.5"
                 >
                   <div
-                    class="border-theme-secondary-300 dark:border-theme-secondary-800 css-ya0jcf"
+                    class="border-theme-secondary-300 dark:border-theme-secondary-800 css-3y8nng"
                     type="vertical"
                   />
                 </span>
@@ -5611,7 +5641,7 @@ exports[`Votes > should select a delegate 1`] = `
                       class="group"
                     >
                       <button
-                        class="ring-focus css-14zm422"
+                        class="ring-focus css-46sfhd"
                       >
                         <div
                           class="flex h-5 w-5 items-center justify-center"
@@ -5622,24 +5652,34 @@ exports[`Votes > should select a delegate 1`] = `
                             width="20"
                           >
                             <svg
-                              id="sliders-vertical"
-                              viewBox="0 0 20 20"
-                              x="0"
-                              xml:space="preserve"
+                              fill="none"
+                              height="16"
+                              viewBox="0 0 16 16"
+                              width="16"
                               xmlns="http://www.w3.org/2000/svg"
-                              y="0"
                             >
                               <g
-                                fill="none"
-                                stroke="currentColor"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="2"
+                                clip-path="url(#clip0_13768_41214)"
                               >
                                 <path
-                                  d="M15 9V1M15 19v-4M18 12c0 1.7-1.4 3-3 3-1.7 0-3-1.4-3-3s1.2-3 3-3h0c1.7 0 3 1.3 3 3h0zM5 7.1V19M8 4c0-1.7-1.4-3-3-3S2 2.4 2 4c0 1.7 1.4 3 3 3s3-1.3 3-3c0 .1 0 0 0 0z"
+                                  d="M9.75946 11.5209V8.00094L14.6395 3.12094C14.9595 2.80094 15.1195 2.24094 14.8795 1.76094C14.7195 1.28094 14.2395 0.960938 13.7595 0.960938H2.23946C1.75946 0.960938 1.27946 1.28094 1.11946 1.76094C0.879462 2.24094 1.03946 2.72094 1.35946 3.12094L6.23946 8.00094V15.0409L9.75946 11.5209Z"
+                                  stroke="currentColor"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="1.6"
                                 />
                               </g>
+                              <defs>
+                                <clippath
+                                  id="clip0_13768_41214"
+                                >
+                                  <rect
+                                    fill="white"
+                                    height="16"
+                                    width="16"
+                                  />
+                                </clippath>
+                              </defs>
                             </svg>
                           </div>
                         </div>
@@ -5908,7 +5948,7 @@ exports[`Votes > should select a delegate 1`] = `
                         class="flex px-3 items-center my-1 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 !my-0 bg-theme-danger-50 dark:bg-theme-background dark:border-theme-danger-400"
                       >
                         <a
-                          class="ring-focus group/inner inline-block group w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700 css-167zzsv"
+                          class="ring-focus group/inner inline-block w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700 group/link css-167zzsv"
                           data-ring-focus-margin="-m-1"
                           data-testid="Link"
                           href="https://test.arkscan.io/wallets/D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr"
@@ -5918,7 +5958,7 @@ exports[`Votes > should select a delegate 1`] = `
                             class="css-bxx244"
                           >
                             <span
-                              class="group-hover:underline"
+                              class="group-hover/link:underline"
                             >
                               View
                             </span>
@@ -6055,7 +6095,7 @@ exports[`Votes > should select a delegate 1`] = `
                         class="flex px-3 items-center my-1 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 !my-0"
                       >
                         <a
-                          class="ring-focus group/inner inline-block group w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700 css-167zzsv"
+                          class="ring-focus group/inner inline-block w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700 group/link css-167zzsv"
                           data-ring-focus-margin="-m-1"
                           data-testid="Link"
                           href="https://test.arkscan.io/wallets/DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES"
@@ -6065,7 +6105,7 @@ exports[`Votes > should select a delegate 1`] = `
                             class="css-bxx244"
                           >
                             <span
-                              class="group-hover:underline"
+                              class="group-hover/link:underline"
                             >
                               View
                             </span>
@@ -6202,7 +6242,7 @@ exports[`Votes > should select a delegate 1`] = `
                         class="flex px-3 items-center my-1 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 !my-0"
                       >
                         <a
-                          class="ring-focus group/inner inline-block group w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700 css-167zzsv"
+                          class="ring-focus group/inner inline-block w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700 group/link css-167zzsv"
                           data-ring-focus-margin="-m-1"
                           data-testid="Link"
                           href="https://test.arkscan.io/wallets/DBk4cPYpqp7EBcvkstVDpyX7RQJNHxpMg8"
@@ -6212,7 +6252,7 @@ exports[`Votes > should select a delegate 1`] = `
                             class="css-bxx244"
                           >
                             <span
-                              class="group-hover:underline"
+                              class="group-hover/link:underline"
                             >
                               View
                             </span>
@@ -7036,7 +7076,7 @@ exports[`Votes > should select ledger option in the wallets display type 1`] = `
                     class="group"
                   >
                     <button
-                      class="ring-focus css-14zm422"
+                      class="ring-focus css-46sfhd"
                       type="button"
                     >
                       <div
@@ -7103,7 +7143,7 @@ exports[`Votes > should select ledger option in the wallets display type 1`] = `
                   class="mx-0.5 flex md:mx-3.5"
                 >
                   <div
-                    class="border-theme-secondary-300 dark:border-theme-secondary-800 css-ya0jcf"
+                    class="border-theme-secondary-300 dark:border-theme-secondary-800 css-3y8nng"
                     type="vertical"
                   />
                 </span>
@@ -7120,10 +7160,10 @@ exports[`Votes > should select ledger option in the wallets display type 1`] = `
                       class="group"
                     >
                       <button
-                        class="ring-focus css-14zm422"
+                        class="ring-focus css-46sfhd"
                       >
                         <div
-                          class="absolute right-1 top-0.5 flex h-3 w-3 items-center justify-center rounded-full bg-theme-background transition-all duration-100 ease-linear"
+                          class="absolute right-1 top-0.5 flex h-3 w-3 items-center justify-center rounded-full bg-theme-background transition-all duration-100 ease-linear -mr-2.5"
                         >
                           <div
                             class="h-2 w-2 rounded-full bg-theme-primary-500"
@@ -7135,24 +7175,34 @@ exports[`Votes > should select ledger option in the wallets display type 1`] = `
                           width="20"
                         >
                           <svg
-                            id="sliders-vertical"
-                            viewBox="0 0 20 20"
-                            x="0"
-                            xml:space="preserve"
+                            fill="none"
+                            height="16"
+                            viewBox="0 0 16 16"
+                            width="16"
                             xmlns="http://www.w3.org/2000/svg"
-                            y="0"
                           >
                             <g
-                              fill="none"
-                              stroke="currentColor"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              stroke-width="2"
+                              clip-path="url(#clip0_13768_41214)"
                             >
                               <path
-                                d="M15 9V1M15 19v-4M18 12c0 1.7-1.4 3-3 3-1.7 0-3-1.4-3-3s1.2-3 3-3h0c1.7 0 3 1.3 3 3h0zM5 7.1V19M8 4c0-1.7-1.4-3-3-3S2 2.4 2 4c0 1.7 1.4 3 3 3s3-1.3 3-3c0 .1 0 0 0 0z"
+                                d="M9.75946 11.5209V8.00094L14.6395 3.12094C14.9595 2.80094 15.1195 2.24094 14.8795 1.76094C14.7195 1.28094 14.2395 0.960938 13.7595 0.960938H2.23946C1.75946 0.960938 1.27946 1.28094 1.11946 1.76094C0.879462 2.24094 1.03946 2.72094 1.35946 3.12094L6.23946 8.00094V15.0409L9.75946 11.5209Z"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="1.6"
                               />
                             </g>
+                            <defs>
+                              <clippath
+                                id="clip0_13768_41214"
+                              >
+                                <rect
+                                  fill="white"
+                                  height="16"
+                                  width="16"
+                                />
+                              </clippath>
+                            </defs>
                           </svg>
                         </div>
                       </button>
@@ -8263,7 +8313,7 @@ exports[`Votes > should select starred option in the wallets display type 1`] = 
                     class="group"
                   >
                     <button
-                      class="ring-focus css-14zm422"
+                      class="ring-focus css-46sfhd"
                       type="button"
                     >
                       <div
@@ -8330,7 +8380,7 @@ exports[`Votes > should select starred option in the wallets display type 1`] = 
                   class="mx-0.5 flex md:mx-3.5"
                 >
                   <div
-                    class="border-theme-secondary-300 dark:border-theme-secondary-800 css-ya0jcf"
+                    class="border-theme-secondary-300 dark:border-theme-secondary-800 css-3y8nng"
                     type="vertical"
                   />
                 </span>
@@ -8347,10 +8397,10 @@ exports[`Votes > should select starred option in the wallets display type 1`] = 
                       class="group"
                     >
                       <button
-                        class="ring-focus css-14zm422"
+                        class="ring-focus css-46sfhd"
                       >
                         <div
-                          class="absolute right-1 top-0.5 flex h-3 w-3 items-center justify-center rounded-full bg-theme-background transition-all duration-100 ease-linear"
+                          class="absolute right-1 top-0.5 flex h-3 w-3 items-center justify-center rounded-full bg-theme-background transition-all duration-100 ease-linear -mr-2.5"
                         >
                           <div
                             class="h-2 w-2 rounded-full bg-theme-primary-500"
@@ -8362,24 +8412,34 @@ exports[`Votes > should select starred option in the wallets display type 1`] = 
                           width="20"
                         >
                           <svg
-                            id="sliders-vertical"
-                            viewBox="0 0 20 20"
-                            x="0"
-                            xml:space="preserve"
+                            fill="none"
+                            height="16"
+                            viewBox="0 0 16 16"
+                            width="16"
                             xmlns="http://www.w3.org/2000/svg"
-                            y="0"
                           >
                             <g
-                              fill="none"
-                              stroke="currentColor"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              stroke-width="2"
+                              clip-path="url(#clip0_13768_41214)"
                             >
                               <path
-                                d="M15 9V1M15 19v-4M18 12c0 1.7-1.4 3-3 3-1.7 0-3-1.4-3-3s1.2-3 3-3h0c1.7 0 3 1.3 3 3h0zM5 7.1V19M8 4c0-1.7-1.4-3-3-3S2 2.4 2 4c0 1.7 1.4 3 3 3s3-1.3 3-3c0 .1 0 0 0 0z"
+                                d="M9.75946 11.5209V8.00094L14.6395 3.12094C14.9595 2.80094 15.1195 2.24094 14.8795 1.76094C14.7195 1.28094 14.2395 0.960938 13.7595 0.960938H2.23946C1.75946 0.960938 1.27946 1.28094 1.11946 1.76094C0.879462 2.24094 1.03946 2.72094 1.35946 3.12094L6.23946 8.00094V15.0409L9.75946 11.5209Z"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="1.6"
                               />
                             </g>
+                            <defs>
+                              <clippath
+                                id="clip0_13768_41214"
+                              >
+                                <rect
+                                  fill="white"
+                                  height="16"
+                                  width="16"
+                                />
+                              </clippath>
+                            </defs>
                           </svg>
                         </div>
                       </button>
@@ -9490,7 +9550,7 @@ exports[`Votes > should toggle network selection from network filters 1`] = `
                     class="group"
                   >
                     <button
-                      class="ring-focus css-14zm422"
+                      class="ring-focus css-46sfhd"
                       type="button"
                     >
                       <div
@@ -9557,7 +9617,7 @@ exports[`Votes > should toggle network selection from network filters 1`] = `
                   class="mx-0.5 flex md:mx-3.5"
                 >
                   <div
-                    class="border-theme-secondary-300 dark:border-theme-secondary-800 css-ya0jcf"
+                    class="border-theme-secondary-300 dark:border-theme-secondary-800 css-3y8nng"
                     type="vertical"
                   />
                 </span>
@@ -9574,7 +9634,7 @@ exports[`Votes > should toggle network selection from network filters 1`] = `
                       class="group"
                     >
                       <button
-                        class="ring-focus css-14zm422"
+                        class="ring-focus css-46sfhd"
                       >
                         <div
                           class="css-1i4b0eq"
@@ -9582,24 +9642,34 @@ exports[`Votes > should toggle network selection from network filters 1`] = `
                           width="20"
                         >
                           <svg
-                            id="sliders-vertical"
-                            viewBox="0 0 20 20"
-                            x="0"
-                            xml:space="preserve"
+                            fill="none"
+                            height="16"
+                            viewBox="0 0 16 16"
+                            width="16"
                             xmlns="http://www.w3.org/2000/svg"
-                            y="0"
                           >
                             <g
-                              fill="none"
-                              stroke="currentColor"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              stroke-width="2"
+                              clip-path="url(#clip0_13768_41214)"
                             >
                               <path
-                                d="M15 9V1M15 19v-4M18 12c0 1.7-1.4 3-3 3-1.7 0-3-1.4-3-3s1.2-3 3-3h0c1.7 0 3 1.3 3 3h0zM5 7.1V19M8 4c0-1.7-1.4-3-3-3S2 2.4 2 4c0 1.7 1.4 3 3 3s3-1.3 3-3c0 .1 0 0 0 0z"
+                                d="M9.75946 11.5209V8.00094L14.6395 3.12094C14.9595 2.80094 15.1195 2.24094 14.8795 1.76094C14.7195 1.28094 14.2395 0.960938 13.7595 0.960938H2.23946C1.75946 0.960938 1.27946 1.28094 1.11946 1.76094C0.879462 2.24094 1.03946 2.72094 1.35946 3.12094L6.23946 8.00094V15.0409L9.75946 11.5209Z"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="1.6"
                               />
                             </g>
+                            <defs>
+                              <clippath
+                                id="clip0_13768_41214"
+                              >
+                                <rect
+                                  fill="white"
+                                  height="16"
+                                  width="16"
+                                />
+                              </clippath>
+                            </defs>
                           </svg>
                         </div>
                       </button>
@@ -9886,7 +9956,7 @@ exports[`Votes > should toggle network selection from network filters 1`] = `
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
                               <span
-                                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                                class="no-ligatures min-w-0 overflow-hidden text-sm font-semibold text-base"
                                 data-testid="Address__address"
                               >
                                 DTLomV8hpJheFDPnBGB5EtrDCfDZJnG23z
@@ -9935,7 +10005,7 @@ exports[`Votes > should toggle network selection from network filters 1`] = `
                         class="hidden xl:table-cell"
                       >
                         <div
-                          class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end font-semibold text-theme-secondary-text whitespace-nowrap"
+                          class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-sm justify-end font-semibold text-theme-secondary-text whitespace-nowrap"
                         >
                           <span
                             class="whitespace-nowrap"
@@ -9947,7 +10017,7 @@ exports[`Votes > should toggle network selection from network filters 1`] = `
                       </td>
                       <td>
                         <div
-                          class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 font-semibold space-x-3"
+                          class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-sm font-semibold space-x-3"
                         >
                           <span
                             class="text-theme-secondary-400"
@@ -9960,19 +10030,19 @@ exports[`Votes > should toggle network selection from network filters 1`] = `
                         class="hidden lg:table-cell"
                       >
                         <div
-                          class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center font-semibold text-theme-secondary-text"
+                          class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-sm justify-center font-semibold text-theme-secondary-text"
                         />
                       </td>
                       <td>
                         <div
-                          class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center"
+                          class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-sm justify-center"
                         />
                       </td>
                       <td
                         class="hidden lg:table-cell"
                       >
                         <div
-                          class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center space-x-2"
+                          class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-sm justify-center space-x-2"
                         />
                       </td>
                       <td>
@@ -9981,7 +10051,7 @@ exports[`Votes > should toggle network selection from network filters 1`] = `
                         >
                           <div>
                             <button
-                              class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 -mr-3 text-theme-primary-600 hover:text-theme-primary-700"
+                              class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 -mr-3 text-sm text-theme-primary-600 hover:text-theme-primary-700 hover:underline dark:hover:text-theme-primary-500"
                               data-testid="AddressRow__select-0"
                               disabled=""
                               type="button"
@@ -10013,7 +10083,7 @@ exports[`Votes > should toggle network selection from network filters 1`] = `
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
                               <span
-                                class="font-semibold text-base text-theme-primary-700 hover:border-current border-b border-transparent transition-[color,border-color] duration-[200ms,350ms] delay-[0s,100ms] leading-tight"
+                                class="font-semibold text-base text-theme-primary-700 hover:border-current border-b border-transparent transition-[color,border-color] duration-[200ms,350ms] delay-[0s,100ms] leading-tight text-sm"
                                 data-testid="Address__alias"
                               >
                                 <span
@@ -10024,7 +10094,7 @@ exports[`Votes > should toggle network selection from network filters 1`] = `
                                 </span>
                               </span>
                               <span
-                                class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                                class="no-ligatures min-w-0 overflow-hidden text-sm font-semibold text-base"
                                 data-testid="Address__address"
                               >
                                 D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -10073,7 +10143,7 @@ exports[`Votes > should toggle network selection from network filters 1`] = `
                         class="hidden xl:table-cell"
                       >
                         <div
-                          class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end font-semibold text-theme-secondary-text whitespace-nowrap"
+                          class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-sm justify-end font-semibold text-theme-secondary-text whitespace-nowrap"
                         >
                           <span
                             class="whitespace-nowrap"
@@ -10085,7 +10155,7 @@ exports[`Votes > should toggle network selection from network filters 1`] = `
                       </td>
                       <td>
                         <div
-                          class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 font-semibold space-x-3"
+                          class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-sm font-semibold space-x-3"
                         >
                           <span
                             class="text-theme-secondary-400"
@@ -10098,19 +10168,19 @@ exports[`Votes > should toggle network selection from network filters 1`] = `
                         class="hidden lg:table-cell"
                       >
                         <div
-                          class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center font-semibold text-theme-secondary-text"
+                          class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-sm justify-center font-semibold text-theme-secondary-text"
                         />
                       </td>
                       <td>
                         <div
-                          class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center"
+                          class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-sm justify-center"
                         />
                       </td>
                       <td
                         class="hidden lg:table-cell"
                       >
                         <div
-                          class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center space-x-2"
+                          class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-sm justify-center space-x-2"
                         />
                       </td>
                       <td>
@@ -10119,7 +10189,7 @@ exports[`Votes > should toggle network selection from network filters 1`] = `
                         >
                           <div>
                             <button
-                              class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 text-theme-primary-600 hover:text-theme-primary-700"
+                              class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 text-sm text-theme-primary-600 hover:text-theme-primary-700 hover:underline dark:hover:text-theme-primary-500"
                               data-testid="AddressRow__select-1"
                               type="button"
                             >
@@ -10150,7 +10220,7 @@ exports[`Votes > should toggle network selection from network filters 1`] = `
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
                               <span
-                                class="font-semibold text-base text-theme-primary-700 hover:border-current border-b border-transparent transition-[color,border-color] duration-[200ms,350ms] delay-[0s,100ms] leading-tight"
+                                class="font-semibold text-base text-theme-primary-700 hover:border-current border-b border-transparent transition-[color,border-color] duration-[200ms,350ms] delay-[0s,100ms] leading-tight text-sm"
                                 data-testid="Address__alias"
                               >
                                 <span
@@ -10161,7 +10231,7 @@ exports[`Votes > should toggle network selection from network filters 1`] = `
                                 </span>
                               </span>
                               <span
-                                class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                                class="no-ligatures min-w-0 overflow-hidden text-sm font-semibold text-base"
                                 data-testid="Address__address"
                               >
                                 D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
@@ -10210,7 +10280,7 @@ exports[`Votes > should toggle network selection from network filters 1`] = `
                         class="hidden xl:table-cell"
                       >
                         <div
-                          class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end font-semibold text-theme-secondary-text whitespace-nowrap"
+                          class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-sm justify-end font-semibold text-theme-secondary-text whitespace-nowrap"
                         >
                           <span
                             class="whitespace-nowrap"
@@ -10222,7 +10292,7 @@ exports[`Votes > should toggle network selection from network filters 1`] = `
                       </td>
                       <td>
                         <div
-                          class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 font-semibold space-x-3"
+                          class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-sm font-semibold space-x-3"
                         >
                           <span
                             class="text-theme-secondary-400"
@@ -10235,19 +10305,19 @@ exports[`Votes > should toggle network selection from network filters 1`] = `
                         class="hidden lg:table-cell"
                       >
                         <div
-                          class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center font-semibold text-theme-secondary-text"
+                          class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-sm justify-center font-semibold text-theme-secondary-text"
                         />
                       </td>
                       <td>
                         <div
-                          class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center"
+                          class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-sm justify-center"
                         />
                       </td>
                       <td
                         class="hidden lg:table-cell"
                       >
                         <div
-                          class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center space-x-2"
+                          class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-sm justify-center space-x-2"
                         />
                       </td>
                       <td>
@@ -10256,7 +10326,7 @@ exports[`Votes > should toggle network selection from network filters 1`] = `
                         >
                           <div>
                             <button
-                              class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 text-theme-primary-600 hover:text-theme-primary-700"
+                              class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 text-sm text-theme-primary-600 hover:text-theme-primary-700 hover:underline dark:hover:text-theme-primary-500"
                               data-testid="AddressRow__select-2"
                               type="button"
                             >
@@ -10872,7 +10942,7 @@ exports[`Votes > should trigger network connection warning 1`] = `
                     class="group"
                   >
                     <button
-                      class="ring-focus css-14zm422"
+                      class="ring-focus css-46sfhd"
                       type="button"
                     >
                       <div
@@ -10939,7 +11009,7 @@ exports[`Votes > should trigger network connection warning 1`] = `
                   class="mx-0.5 flex md:mx-3.5"
                 >
                   <div
-                    class="border-theme-secondary-300 dark:border-theme-secondary-800 css-ya0jcf"
+                    class="border-theme-secondary-300 dark:border-theme-secondary-800 css-3y8nng"
                     type="vertical"
                   />
                 </span>
@@ -10953,7 +11023,7 @@ exports[`Votes > should trigger network connection warning 1`] = `
                       class="group"
                     >
                       <button
-                        class="ring-focus css-14zm422"
+                        class="ring-focus css-46sfhd"
                       >
                         <div
                           class="flex h-5 w-5 items-center justify-center"
@@ -10964,24 +11034,34 @@ exports[`Votes > should trigger network connection warning 1`] = `
                             width="20"
                           >
                             <svg
-                              id="sliders-vertical"
-                              viewBox="0 0 20 20"
-                              x="0"
-                              xml:space="preserve"
+                              fill="none"
+                              height="16"
+                              viewBox="0 0 16 16"
+                              width="16"
                               xmlns="http://www.w3.org/2000/svg"
-                              y="0"
                             >
                               <g
-                                fill="none"
-                                stroke="currentColor"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="2"
+                                clip-path="url(#clip0_13768_41214)"
                               >
                                 <path
-                                  d="M15 9V1M15 19v-4M18 12c0 1.7-1.4 3-3 3-1.7 0-3-1.4-3-3s1.2-3 3-3h0c1.7 0 3 1.3 3 3h0zM5 7.1V19M8 4c0-1.7-1.4-3-3-3S2 2.4 2 4c0 1.7 1.4 3 3 3s3-1.3 3-3c0 .1 0 0 0 0z"
+                                  d="M9.75946 11.5209V8.00094L14.6395 3.12094C14.9595 2.80094 15.1195 2.24094 14.8795 1.76094C14.7195 1.28094 14.2395 0.960938 13.7595 0.960938H2.23946C1.75946 0.960938 1.27946 1.28094 1.11946 1.76094C0.879462 2.24094 1.03946 2.72094 1.35946 3.12094L6.23946 8.00094V15.0409L9.75946 11.5209Z"
+                                  stroke="currentColor"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="1.6"
                                 />
                               </g>
+                              <defs>
+                                <clippath
+                                  id="clip0_13768_41214"
+                                >
+                                  <rect
+                                    fill="white"
+                                    height="16"
+                                    width="16"
+                                  />
+                                </clippath>
+                              </defs>
                             </svg>
                           </div>
                         </div>
@@ -11311,7 +11391,7 @@ exports[`Votes > should trigger network connection warning 1`] = `
                         class="flex px-3 items-center my-1 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 !my-0 bg-theme-danger-50 dark:bg-theme-background dark:border-theme-danger-400"
                       >
                         <a
-                          class="ring-focus group/inner inline-block group w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700 css-167zzsv"
+                          class="ring-focus group/inner inline-block w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700 group/link css-167zzsv"
                           data-ring-focus-margin="-m-1"
                           data-testid="Link"
                           href="https://test.arkscan.io/wallets/D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr"
@@ -11321,7 +11401,7 @@ exports[`Votes > should trigger network connection warning 1`] = `
                             class="css-bxx244"
                           >
                             <span
-                              class="group-hover:underline"
+                              class="group-hover/link:underline"
                             >
                               View
                             </span>
@@ -11458,7 +11538,7 @@ exports[`Votes > should trigger network connection warning 1`] = `
                         class="flex px-3 items-center my-1 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 !my-0"
                       >
                         <a
-                          class="ring-focus group/inner inline-block group w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700 css-167zzsv"
+                          class="ring-focus group/inner inline-block w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700 group/link css-167zzsv"
                           data-ring-focus-margin="-m-1"
                           data-testid="Link"
                           href="https://test.arkscan.io/wallets/DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES"
@@ -11468,7 +11548,7 @@ exports[`Votes > should trigger network connection warning 1`] = `
                             class="css-bxx244"
                           >
                             <span
-                              class="group-hover:underline"
+                              class="group-hover/link:underline"
                             >
                               View
                             </span>
@@ -11605,7 +11685,7 @@ exports[`Votes > should trigger network connection warning 1`] = `
                         class="flex px-3 items-center my-1 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 !my-0"
                       >
                         <a
-                          class="ring-focus group/inner inline-block group w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700 css-167zzsv"
+                          class="ring-focus group/inner inline-block w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700 group/link css-167zzsv"
                           data-ring-focus-margin="-m-1"
                           data-testid="Link"
                           href="https://test.arkscan.io/wallets/DBk4cPYpqp7EBcvkstVDpyX7RQJNHxpMg8"
@@ -11615,7 +11695,7 @@ exports[`Votes > should trigger network connection warning 1`] = `
                             class="css-bxx244"
                           >
                             <span
-                              class="group-hover:underline"
+                              class="group-hover/link:underline"
                             >
                               View
                             </span>

@@ -77,7 +77,7 @@ exports[`TransactionRowMobile > should render 1`] = `
                       Return
                     </div>
                     <div
-                      class="w-50 sm:w-40 lg:w-50"
+                      class="w-40 sm:w-40 md:w-32 lg:w-50"
                       data-testid="TransactionRowAddressing__address-container"
                     >
                       <div
@@ -246,7 +246,7 @@ exports[`TransactionRowMobile > should render 2`] = `
                       Return
                     </div>
                     <div
-                      class="w-50 sm:w-40 lg:w-50"
+                      class="w-40 sm:w-40 md:w-32 lg:w-50"
                       data-testid="TransactionRowAddressing__address-container"
                     >
                       <div
