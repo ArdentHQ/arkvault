@@ -50,7 +50,7 @@ describe("TransactionAmount.blocks", () => {
 		expect(screen.queryByTestId("AmountLabel__hint")).not.toBeInTheDocument();
 	});
 
-	it('should calculate total as amount - fee for unconfirmed musig transactions', () => {
+	it('should calculate total as amount - fee for return unconfirmed musig transactions', () => {
 		const unconfirmedMusigTx = {
 			...fixture,
 			amount: () => 60,
@@ -66,7 +66,7 @@ describe("TransactionAmount.blocks", () => {
 
 		expect(screen.queryByTestId("AmountLabel__hint")).not.toBeInTheDocument();
 
-		// should have an amount without returned amount
+		// amount() - fee()
 		expect(screen.getByText(/55 DARK/)).toBeInTheDocument();
 	});
 
