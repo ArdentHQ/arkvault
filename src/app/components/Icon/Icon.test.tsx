@@ -3,6 +3,7 @@ import React from "react";
 import { Icon, ThemeIcon } from "./Icon";
 import { render, screen } from "@/utils/testing-library";
 import * as themeFns from "@/utils/theme";
+import { useAccentColor } from "@/app/hooks";
 
 describe("Icon", () => {
 	it("should render", () => {
@@ -41,6 +42,30 @@ describe("ThemeIcon", () => {
 		const shouldUseDarkColorsMock = vi.spyOn(themeFns, "shouldUseDarkColors").mockReturnValue(isDarkMode);
 
 		render(<ThemeIcon darkIcon="DarkIcon" lightIcon="LightIcon" />);
+
+		expect(screen.getByTestId(`icon-${testId}`)).toBeInTheDocument();
+
+		shouldUseDarkColorsMock.mockRestore();
+	});
+
+	// should render green icons for green theme
+	it.each([
+		[true, "GreenDarkIcon"],
+		[false, "GreenLightIcon"],
+	])("should render right icon for theme - isDark: %s", (isDarkMode, testId) => {
+		const { setAccentColor } = useAccentColor();
+		const shouldUseDarkColorsMock = vi.spyOn(themeFns, "shouldUseDarkColors").mockReturnValue(isDarkMode);
+
+		setAccentColor("green");
+
+		render(
+			<ThemeIcon
+				darkIcon="DarkIcon"
+				lightIcon="LightIcon"
+				greenDarkIcon="GreenDarkIcon"
+				greenLightIcon="GreenLightIcon"
+			/>,
+		);
 
 		expect(screen.getByTestId(`icon-${testId}`)).toBeInTheDocument();
 
