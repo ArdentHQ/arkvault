@@ -48,7 +48,6 @@ describe("ThemeIcon", () => {
 		shouldUseDarkColorsMock.mockRestore();
 	});
 
-	// should render green icons for green theme
 	it.each([
 		[true, "GreenDarkIcon"],
 		[false, "GreenLightIcon"],
