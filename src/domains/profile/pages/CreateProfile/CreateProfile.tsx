@@ -56,7 +56,15 @@ export const CreateProfile = () => {
 					<Header
 						title={t("PROFILE.PAGE_CREATE_PROFILE.TITLE")}
 						titleClassName="text-lg leading-[21px] sm:text-2xl sm:leading-[29px]"
-						titleIcon={<ThemeIcon darkIcon="PersonDark" lightIcon="PersonLight" dimensions={[24, 24]} />}
+						titleIcon={
+							<ThemeIcon
+								darkIcon="PersonDark"
+								lightIcon="PersonLight"
+								greenLightIcon="PersonLightGreen"
+								greenDarkIcon="PersonDarkGreen"
+								dimensions={[24, 24]}
+							/>
+						}
 						subtitle={t("PROFILE.PAGE_CREATE_PROFILE.DESCRIPTION")}
 						className="block"
 					/>
