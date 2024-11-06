@@ -30,6 +30,7 @@ interface FetchTransactionProperties {
 	flush?: boolean;
 	mode?: string;
 	transactionType?: any;
+	transactionTypes?: string[];
 	wallets: ProfileContracts.IReadWriteWallet[];
 	cursor?: number;
 }
@@ -52,7 +53,7 @@ interface TransactionAggregateIdentifiers {
 interface TransactionAggregateQueryParameters {
 	identifiers: TransactionAggregateIdentifiers[];
 	limit: number;
-	type?: string;
+	types?: string[];
 }
 
 const filterTransactions = ({ transactions }: FilterTransactionProperties) =>
