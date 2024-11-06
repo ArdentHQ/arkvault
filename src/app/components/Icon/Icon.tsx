@@ -5,6 +5,7 @@ import { styled } from "twin.macro";
 import { SvgCollection } from "@/app/assets/svg";
 import { Size } from "@/types";
 import { useTheme } from "@/app/hooks/use-theme";
+import { useAccentColor } from "@/app/hooks";
 
 type IconProperties = {
 	name: string;
@@ -57,11 +58,28 @@ export const Icon: React.VFC<IconProperties> = ({ name, fallback, size, dimensio
 type ThemeIconProperties = {
 	darkIcon: string;
 	lightIcon: string;
+	greenDarkIcon?: string;
+	greenLightIcon?: string;
 } & Omit<IconProperties, "name">;
 
-export const ThemeIcon = ({ darkIcon, lightIcon, ...properties }: ThemeIconProperties): JSX.Element => {
+export const ThemeIcon = ({
+	darkIcon,
+	lightIcon,
+	greenDarkIcon,
+	greenLightIcon,
+	...properties
+}: ThemeIconProperties): JSX.Element => {
 	const { isDarkMode } = useTheme();
-	const icon = isDarkMode ? darkIcon : lightIcon;
+	const { getCurrentAccentColor } = useAccentColor();
+	let icon = isDarkMode ? darkIcon : lightIcon;
+
+	if (greenDarkIcon && greenLightIcon) {
+		const accentColor = getCurrentAccentColor();
+
+		if (accentColor === "green") {
+			icon = isDarkMode ? greenDarkIcon : greenLightIcon;
+		}
+	}
 
 	return <Icon name={icon} data-testid={`icon-${icon}`} {...properties} />;
 };
