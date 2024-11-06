@@ -17,7 +17,7 @@ const isReturnUnconfirmedMusigTransaction = (transaction: ExtendedTransactionDat
 	].every(Boolean);
 
 	return isMusig ? transaction.sender() === transaction.recipient() : false;
-}
+};
 
 const calculateReturnedAmount = function (transaction: ExtendedTransactionData): number {
 	let returnedAmount = 0;
@@ -27,7 +27,7 @@ const calculateReturnedAmount = function (transaction: ExtendedTransactionData):
 	}
 
 	// should return 0 as we don't want to show a hint
-	if(transaction.isReturn() || isReturnUnconfirmedMusigTransaction(transaction)) {
+	if (transaction.isReturn() || isReturnUnconfirmedMusigTransaction(transaction)) {
 		return returnedAmount;
 	}
 
@@ -49,9 +49,7 @@ export const TransactionAmountLabel = ({ transaction }: { transaction: ExtendedT
 
 	const isReturnMusigTx = isReturnUnconfirmedMusigTransaction(transaction);
 
-	const amount = isReturnMusigTx
-		? transaction.amount() - transaction.fee()
-		: transaction.total() - returnedAmount;
+	const amount = isReturnMusigTx ? transaction.amount() - transaction.fee() : transaction.total() - returnedAmount;
 
 	const usesMultiSignature = "usesMultiSignature" in transaction ? transaction.usesMultiSignature() : false;
 	const isMusigTransfer = [usesMultiSignature, !transaction.isMultiSignatureRegistration()].every(Boolean);
