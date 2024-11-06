@@ -494,36 +494,34 @@ exports[`SendDelegateResignation > Delegate Resignation > should change fee 1`] 
                           >
                             <div
                               class="css-h1kfx5"
-                              data-testid="icon-SendTransactionLightGreen"
+                              data-testid="icon-SendTransactionLight"
                               height="24"
                               width="24"
                             >
                               <svg
                                 fill="none"
-                                height="25"
                                 viewBox="0 0 24 25"
-                                width="24"
                                 xmlns="http://www.w3.org/2000/svg"
                               >
                                 <g
-                                  clip-path="url(#clip0_18982_50179)"
+                                  clip-path="url(#clip0_13879_104416)"
                                 >
                                   <path
                                     clip-rule="evenodd"
                                     d="M18.8821 8.94457H13.7264C13.0146 8.94457 12.4375 8.3675 12.4375 7.65565V2.5"
-                                    fill="#E2F0E6"
+                                    fill="#E6EFF9"
                                     fill-rule="evenodd"
                                   />
                                   <path
                                     d="M18.8821 8.94457H13.7264C13.0146 8.94457 12.4375 8.3675 12.4375 7.65565V2.5"
-                                    stroke="#289548"
+                                    stroke="#235B95"
                                     stroke-linecap="round"
                                     stroke-linejoin="round"
                                     stroke-width="2"
                                   />
                                   <path
                                     d="M7.99174 21.8337H3.41391C2.70207 21.8337 2.125 21.2566 2.125 20.5448V3.78891C2.125 3.07707 2.70207 2.5 3.41391 2.5H12.5472C12.8891 2.49985 13.217 2.63554 13.4588 2.87722L18.5037 7.92289C18.7451 8.16452 18.8808 8.49212 18.8809 8.83372"
-                                    stroke="#289548"
+                                    stroke="#235B95"
                                     stroke-linecap="round"
                                     stroke-linejoin="round"
                                     stroke-width="2"
@@ -531,9 +529,9 @@ exports[`SendDelegateResignation > Delegate Resignation > should change fee 1`] 
                                   <path
                                     clip-rule="evenodd"
                                     d="M9.02802 17.1926C8.71518 17.1043 8.49639 16.8225 8.4885 16.4975C8.48061 16.1725 8.68545 15.8804 8.99364 15.7771L18.994 12.5155C19.1276 12.472 19.2743 12.5069 19.3739 12.606C19.4735 12.7051 19.5092 12.8516 19.4664 12.9854L16.2073 22.9907C16.1044 23.2995 15.812 23.5049 15.4867 23.4968C15.1613 23.4888 14.8793 23.2693 14.7918 22.9559L13.6727 18.3067L9.02802 17.1926Z"
-                                    fill="#E2F0E6"
+                                    fill="#E6EFF9"
                                     fill-rule="evenodd"
-                                    stroke="#289548"
+                                    stroke="#235B95"
                                     stroke-linecap="round"
                                     stroke-linejoin="round"
                                     stroke-width="2"
@@ -541,7 +539,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should change fee 1`] 
                                 </g>
                                 <defs>
                                   <clippath
-                                    id="clip0_18982_50179"
+                                    id="clip0_13879_104416"
                                   >
                                     <rect
                                       fill="white"
@@ -1588,36 +1586,34 @@ exports[`SendDelegateResignation > Delegate Resignation > should render 1st step
                           >
                             <div
                               class="css-h1kfx5"
-                              data-testid="icon-SendTransactionLightGreen"
+                              data-testid="icon-SendTransactionLight"
                               height="24"
                               width="24"
                             >
                               <svg
                                 fill="none"
-                                height="25"
                                 viewBox="0 0 24 25"
-                                width="24"
                                 xmlns="http://www.w3.org/2000/svg"
                               >
                                 <g
-                                  clip-path="url(#clip0_18982_50179)"
+                                  clip-path="url(#clip0_13879_104416)"
                                 >
                                   <path
                                     clip-rule="evenodd"
                                     d="M18.8821 8.94457H13.7264C13.0146 8.94457 12.4375 8.3675 12.4375 7.65565V2.5"
-                                    fill="#E2F0E6"
+                                    fill="#E6EFF9"
                                     fill-rule="evenodd"
                                   />
                                   <path
                                     d="M18.8821 8.94457H13.7264C13.0146 8.94457 12.4375 8.3675 12.4375 7.65565V2.5"
-                                    stroke="#289548"
+                                    stroke="#235B95"
                                     stroke-linecap="round"
                                     stroke-linejoin="round"
                                     stroke-width="2"
                                   />
                                   <path
                                     d="M7.99174 21.8337H3.41391C2.70207 21.8337 2.125 21.2566 2.125 20.5448V3.78891C2.125 3.07707 2.70207 2.5 3.41391 2.5H12.5472C12.8891 2.49985 13.217 2.63554 13.4588 2.87722L18.5037 7.92289C18.7451 8.16452 18.8808 8.49212 18.8809 8.83372"
-                                    stroke="#289548"
+                                    stroke="#235B95"
                                     stroke-linecap="round"
                                     stroke-linejoin="round"
                                     stroke-width="2"
@@ -1625,9 +1621,9 @@ exports[`SendDelegateResignation > Delegate Resignation > should render 1st step
                                   <path
                                     clip-rule="evenodd"
                                     d="M9.02802 17.1926C8.71518 17.1043 8.49639 16.8225 8.4885 16.4975C8.48061 16.1725 8.68545 15.8804 8.99364 15.7771L18.994 12.5155C19.1276 12.472 19.2743 12.5069 19.3739 12.606C19.4735 12.7051 19.5092 12.8516 19.4664 12.9854L16.2073 22.9907C16.1044 23.2995 15.812 23.5049 15.4867 23.4968C15.1613 23.4888 14.8793 23.2693 14.7918 22.9559L13.6727 18.3067L9.02802 17.1926Z"
-                                    fill="#E2F0E6"
+                                    fill="#E6EFF9"
                                     fill-rule="evenodd"
-                                    stroke="#289548"
+                                    stroke="#235B95"
                                     stroke-linecap="round"
                                     stroke-linejoin="round"
                                     stroke-width="2"
@@ -1635,7 +1631,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should render 1st step
                                 </g>
                                 <defs>
                                   <clippath
-                                    id="clip0_18982_50179"
+                                    id="clip0_13879_104416"
                                   >
                                     <rect
                                       fill="white"
@@ -2658,36 +2654,34 @@ exports[`SendDelegateResignation > Delegate Resignation > should render 2nd step
                           >
                             <div
                               class="css-h1kfx5"
-                              data-testid="icon-SendTransactionLightGreen"
+                              data-testid="icon-SendTransactionLight"
                               height="24"
                               width="24"
                             >
                               <svg
                                 fill="none"
-                                height="25"
                                 viewBox="0 0 24 25"
-                                width="24"
                                 xmlns="http://www.w3.org/2000/svg"
                               >
                                 <g
-                                  clip-path="url(#clip0_18982_50179)"
+                                  clip-path="url(#clip0_13879_104416)"
                                 >
                                   <path
                                     clip-rule="evenodd"
                                     d="M18.8821 8.94457H13.7264C13.0146 8.94457 12.4375 8.3675 12.4375 7.65565V2.5"
-                                    fill="#E2F0E6"
+                                    fill="#E6EFF9"
                                     fill-rule="evenodd"
                                   />
                                   <path
                                     d="M18.8821 8.94457H13.7264C13.0146 8.94457 12.4375 8.3675 12.4375 7.65565V2.5"
-                                    stroke="#289548"
+                                    stroke="#235B95"
                                     stroke-linecap="round"
                                     stroke-linejoin="round"
                                     stroke-width="2"
                                   />
                                   <path
                                     d="M7.99174 21.8337H3.41391C2.70207 21.8337 2.125 21.2566 2.125 20.5448V3.78891C2.125 3.07707 2.70207 2.5 3.41391 2.5H12.5472C12.8891 2.49985 13.217 2.63554 13.4588 2.87722L18.5037 7.92289C18.7451 8.16452 18.8808 8.49212 18.8809 8.83372"
-                                    stroke="#289548"
+                                    stroke="#235B95"
                                     stroke-linecap="round"
                                     stroke-linejoin="round"
                                     stroke-width="2"
@@ -2695,9 +2689,9 @@ exports[`SendDelegateResignation > Delegate Resignation > should render 2nd step
                                   <path
                                     clip-rule="evenodd"
                                     d="M9.02802 17.1926C8.71518 17.1043 8.49639 16.8225 8.4885 16.4975C8.48061 16.1725 8.68545 15.8804 8.99364 15.7771L18.994 12.5155C19.1276 12.472 19.2743 12.5069 19.3739 12.606C19.4735 12.7051 19.5092 12.8516 19.4664 12.9854L16.2073 22.9907C16.1044 23.2995 15.812 23.5049 15.4867 23.4968C15.1613 23.4888 14.8793 23.2693 14.7918 22.9559L13.6727 18.3067L9.02802 17.1926Z"
-                                    fill="#E2F0E6"
+                                    fill="#E6EFF9"
                                     fill-rule="evenodd"
-                                    stroke="#289548"
+                                    stroke="#235B95"
                                     stroke-linecap="round"
                                     stroke-linejoin="round"
                                     stroke-width="2"
@@ -2705,7 +2699,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should render 2nd step
                                 </g>
                                 <defs>
                                   <clippath
-                                    id="clip0_18982_50179"
+                                    id="clip0_13879_104416"
                                   >
                                     <rect
                                       fill="white"
@@ -4789,131 +4783,6 @@ exports[`SendDelegateResignation > Delegate Resignation > should show mnemonic a
   <div
     class="css-w3nefz"
   >
-    <div
-      class="css-sdeely"
-      data-testid="NavigationBarMobile"
-    >
-      <div
-        class="border-t border-theme-secondary-300 dark:border-theme-secondary-900"
-        data-testid="NavigationBar__buttons-separator"
-      />
-      <div
-        class="flex h-14 items-center justify-center space-x-4"
-      >
-        <button
-          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 cursor-not-allowed text-theme-secondary-500"
-          data-testid="NavigationBar__buttons__mobile--receive"
-          disabled=""
-          type="button"
-        >
-          <div
-            class="flex items-center space-x-2"
-          >
-            <div
-              class="css-1i4b0eq"
-              height="20"
-              width="20"
-            >
-              <svg
-                id="received"
-                viewBox="0 0 20 20"
-                x="0"
-                xml:space="preserve"
-                xmlns="http://www.w3.org/2000/svg"
-                y="0"
-              >
-                <g
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                >
-                  <path
-                    d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
-                  />
-                </g>
-              </svg>
-            </div>
-          </div>
-        </button>
-        <div
-          class="border-theme-secondary-300 dark:border-theme-secondary-800 css-3y8nng"
-          type="vertical"
-        />
-        <button
-          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600"
-          data-testid="NavigationBar__buttons__mobile--home"
-          type="button"
-        >
-          <div
-            class="flex items-center space-x-2"
-          >
-            <div
-              class="css-1i4b0eq"
-              height="20"
-              width="20"
-            >
-              <svg
-                fill="none"
-                viewBox="0 0 21 20"
-                x="0"
-                xml:space="preserve"
-                xmlns="http://www.w3.org/2000/svg"
-                y="0"
-              >
-                <path
-                  clip-rule="evenodd"
-                  d="M5.35 8.153a3.6 3.6 0 1 0 0-7.2 3.6 3.6 0 0 0 0 7.2zm0 10.797a3.6 3.6 0 1 0 0-7.2 3.6 3.6 0 0 0 0 7.2zM16.147 8.153a3.6 3.6 0 1 0 0-7.2 3.6 3.6 0 0 0 0 7.2zm0 10.797a3.6 3.6 0 1 0 0-7.2 3.6 3.6 0 0 0 0 7.2z"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                />
-              </svg>
-            </div>
-          </div>
-        </button>
-        <div
-          class="border-theme-secondary-300 dark:border-theme-secondary-800 css-3y8nng"
-          type="vertical"
-        />
-        <button
-          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 cursor-not-allowed text-theme-secondary-500"
-          data-testid="NavigationBar__buttons__mobile--send"
-          disabled=""
-          type="button"
-        >
-          <div
-            class="flex items-center space-x-2"
-          >
-            <div
-              class="css-1i4b0eq"
-              height="20"
-              width="20"
-            >
-              <svg
-                id="sent"
-                viewBox="0 0 20 20"
-                x="0"
-                xml:space="preserve"
-                xmlns="http://www.w3.org/2000/svg"
-                y="0"
-              >
-                <path
-                  d="M8 19v-4m0-4V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                />
-              </svg>
-            </div>
-          </div>
-        </button>
-      </div>
-    </div>
     <nav
       aria-labelledby="main menu"
       class="css-1jzy9qi"
