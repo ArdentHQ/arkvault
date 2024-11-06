@@ -853,6 +853,131 @@ exports[`Registration > should show mnemonic error 1`] = `
   <div
     class="css-w3nefz"
   >
+    <div
+      class="css-sdeely"
+      data-testid="NavigationBarMobile"
+    >
+      <div
+        class="border-t border-theme-secondary-300 dark:border-theme-secondary-900"
+        data-testid="NavigationBar__buttons-separator"
+      />
+      <div
+        class="flex h-14 items-center justify-center space-x-4"
+      >
+        <button
+          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 cursor-not-allowed text-theme-secondary-500"
+          data-testid="NavigationBar__buttons__mobile--receive"
+          disabled=""
+          type="button"
+        >
+          <div
+            class="flex items-center space-x-2"
+          >
+            <div
+              class="css-1i4b0eq"
+              height="20"
+              width="20"
+            >
+              <svg
+                id="received"
+                viewBox="0 0 20 20"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <g
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
+                  />
+                </g>
+              </svg>
+            </div>
+          </div>
+        </button>
+        <div
+          class="border-theme-secondary-300 dark:border-theme-secondary-800 css-3y8nng"
+          type="vertical"
+        />
+        <button
+          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600"
+          data-testid="NavigationBar__buttons__mobile--home"
+          type="button"
+        >
+          <div
+            class="flex items-center space-x-2"
+          >
+            <div
+              class="css-1i4b0eq"
+              height="20"
+              width="20"
+            >
+              <svg
+                fill="none"
+                viewBox="0 0 21 20"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M5.35 8.153a3.6 3.6 0 1 0 0-7.2 3.6 3.6 0 0 0 0 7.2zm0 10.797a3.6 3.6 0 1 0 0-7.2 3.6 3.6 0 0 0 0 7.2zM16.147 8.153a3.6 3.6 0 1 0 0-7.2 3.6 3.6 0 0 0 0 7.2zm0 10.797a3.6 3.6 0 1 0 0-7.2 3.6 3.6 0 0 0 0 7.2z"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                />
+              </svg>
+            </div>
+          </div>
+        </button>
+        <div
+          class="border-theme-secondary-300 dark:border-theme-secondary-800 css-3y8nng"
+          type="vertical"
+        />
+        <button
+          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 cursor-not-allowed text-theme-secondary-500"
+          data-testid="NavigationBar__buttons__mobile--send"
+          disabled=""
+          type="button"
+        >
+          <div
+            class="flex items-center space-x-2"
+          >
+            <div
+              class="css-1i4b0eq"
+              height="20"
+              width="20"
+            >
+              <svg
+                id="sent"
+                viewBox="0 0 20 20"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <path
+                  d="M8 19v-4m0-4V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                />
+              </svg>
+            </div>
+          </div>
+        </button>
+      </div>
+    </div>
     <nav
       aria-labelledby="main menu"
       class="css-1jzy9qi"
