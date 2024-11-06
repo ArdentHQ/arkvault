@@ -59,11 +59,7 @@ type ThemeIconProperties = {
 	lightIcon: string;
 } & Omit<IconProperties, "name">;
 
-export const ThemeIcon = ({
-	darkIcon,
-	lightIcon,
-	...properties
-}: ThemeIconProperties): JSX.Element => {
+export const ThemeIcon = ({ darkIcon, lightIcon, ...properties }: ThemeIconProperties): JSX.Element => {
 	const { isDarkMode } = useTheme();
 	const icon = isDarkMode ? darkIcon : lightIcon;
 
