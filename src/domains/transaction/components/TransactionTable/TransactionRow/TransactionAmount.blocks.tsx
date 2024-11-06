@@ -14,7 +14,7 @@ const calculateReturnedAmount = function (transaction: ExtendedTransactionData):
 	}
 
 	// should return 0 as we don't want to show a hint
-	if(transaction.isReturn()) {
+	if (transaction.isReturn()) {
 		return returnedAmount;
 	}
 
