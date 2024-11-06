@@ -1,4 +1,4 @@
-import React from "react";
+import React, { ReactElement } from "react";
 
 import { DefaultTReturn, TOptions } from "i18next";
 import { Size } from "@/types";
@@ -9,7 +9,7 @@ export interface DropdownOption {
 	iconPosition?: "start" | "end";
 	iconClassName?: string | ((option: DropdownOption) => string);
 	iconSize?: Size;
-	label: string;
+	label: string | ReactElement;
 	secondaryLabel?: string | Function | DefaultTReturn<TOptions>;
 	value: string | number;
 	active?: boolean;
