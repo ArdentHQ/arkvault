@@ -56,7 +56,7 @@ export const TransactionRowAddressing = ({
 
 	let direction: Direction = isNegative ? "sent" : "received";
 
-	const isReturn = transaction.isReturn() || (isMusigTransfer && transaction.sender () === transaction.recipient());
+	const isReturn = transaction.isReturn() || (isMusigTransfer && transaction.sender() === transaction.recipient());
 
 	if (isReturn) {
 		direction = "return";
