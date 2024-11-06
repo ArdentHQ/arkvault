@@ -85,11 +85,11 @@ exports[`TransactionRow > should omit the currency for transactions from test ne
               data-testid="TransactionRowAddressing__container"
             >
               <div
-                class="!flex h-[21px] w-12 items-center justify-center rounded px-1 py-[3px] dark:border css-1kocbuc"
-                color="secondary"
+                class="!flex h-[21px] w-12 items-center justify-center rounded px-1 py-[3px] dark:border css-1qplu6d"
+                color="danger-bg"
                 data-testid="TransactionRowAddressing__label"
               >
-                Return
+                To
               </div>
               <div
                 class="w-50 sm:w-30"
@@ -126,8 +126,8 @@ exports[`TransactionRow > should omit the currency for transactions from test ne
               class="flex flex-col items-end gap-1"
             >
               <div
-                class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-1vn5kd9"
-                color="secondary"
+                class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-xqt0aw"
+                color="danger-bg"
                 data-testid="AmountLabel__wrapper"
               >
                 <div
@@ -137,7 +137,7 @@ exports[`TransactionRow > should omit the currency for transactions from test ne
                     class="whitespace-nowrap text-sm"
                     data-testid="Amount"
                   >
-                    121 BTC
+                    - 121 BTC
                   </span>
                 </div>
               </div>
@@ -258,11 +258,11 @@ exports[`TransactionRow > should render 1`] = `
               data-testid="TransactionRowAddressing__container"
             >
               <div
-                class="!flex h-[21px] w-12 items-center justify-center rounded px-1 py-[3px] dark:border css-1kocbuc"
-                color="secondary"
+                class="!flex h-[21px] w-12 items-center justify-center rounded px-1 py-[3px] dark:border css-1qplu6d"
+                color="danger-bg"
                 data-testid="TransactionRowAddressing__label"
               >
-                Return
+                To
               </div>
               <div
                 class="w-40 sm:w-40 md:w-32 lg:w-50"
@@ -310,8 +310,8 @@ exports[`TransactionRow > should render 1`] = `
               class="flex flex-col items-end gap-1"
             >
               <div
-                class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-1vn5kd9"
-                color="secondary"
+                class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-xqt0aw"
+                color="danger-bg"
                 data-testid="AmountLabel__wrapper"
               >
                 <div
@@ -321,7 +321,7 @@ exports[`TransactionRow > should render 1`] = `
                     class="whitespace-nowrap text-sm"
                     data-testid="Amount"
                   >
-                    121 DARK
+                    - 121 DARK
                   </span>
                 </div>
               </div>
@@ -427,11 +427,11 @@ exports[`TransactionRow > should render responsive 1`] = `
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="!flex h-[21px] w-12 items-center justify-center rounded px-1 py-[3px] dark:border css-1kocbuc"
-                      color="secondary"
+                      class="!flex h-[21px] w-12 items-center justify-center rounded px-1 py-[3px] dark:border css-1qplu6d"
+                      color="danger-bg"
                       data-testid="TransactionRowAddressing__label"
                     >
-                      Return
+                      To
                     </div>
                     <div
                       class="w-40 sm:w-40 md:w-32 lg:w-50"
@@ -481,8 +481,8 @@ exports[`TransactionRow > should render responsive 1`] = `
                   class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                 >
                   <div
-                    class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-1vn5kd9"
-                    color="secondary"
+                    class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-xqt0aw"
+                    color="danger-bg"
                     data-testid="AmountLabel__wrapper"
                   >
                     <div
@@ -492,7 +492,7 @@ exports[`TransactionRow > should render responsive 1`] = `
                         class="whitespace-nowrap text-sm"
                         data-testid="Amount"
                       >
-                        121 DARK
+                        - 121 DARK
                       </span>
                     </div>
                   </div>
@@ -596,11 +596,11 @@ exports[`TransactionRow > should render responsive 2`] = `
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="!flex h-[21px] w-12 items-center justify-center rounded px-1 py-[3px] dark:border css-1kocbuc"
-                      color="secondary"
+                      class="!flex h-[21px] w-12 items-center justify-center rounded px-1 py-[3px] dark:border css-1qplu6d"
+                      color="danger-bg"
                       data-testid="TransactionRowAddressing__label"
                     >
-                      Return
+                      To
                     </div>
                     <div
                       class="w-40 sm:w-40 md:w-32 lg:w-50"
@@ -650,8 +650,8 @@ exports[`TransactionRow > should render responsive 2`] = `
                   class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                 >
                   <div
-                    class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-1vn5kd9"
-                    color="secondary"
+                    class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-xqt0aw"
+                    color="danger-bg"
                     data-testid="AmountLabel__wrapper"
                   >
                     <div
@@ -661,7 +661,7 @@ exports[`TransactionRow > should render responsive 2`] = `
                         class="whitespace-nowrap text-sm"
                         data-testid="Amount"
                       >
-                        121 DARK
+                        - 121 DARK
                       </span>
                     </div>
                   </div>
@@ -1023,11 +1023,11 @@ exports[`TransactionRow > should render with currency 1`] = `
               data-testid="TransactionRowAddressing__container"
             >
               <div
-                class="!flex h-[21px] w-12 items-center justify-center rounded px-1 py-[3px] dark:border css-1kocbuc"
-                color="secondary"
+                class="!flex h-[21px] w-12 items-center justify-center rounded px-1 py-[3px] dark:border css-1qplu6d"
+                color="danger-bg"
                 data-testid="TransactionRowAddressing__label"
               >
-                Return
+                To
               </div>
               <div
                 class="w-50 sm:w-30"
@@ -1064,8 +1064,8 @@ exports[`TransactionRow > should render with currency 1`] = `
               class="flex flex-col items-end gap-1"
             >
               <div
-                class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-1vn5kd9"
-                color="secondary"
+                class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-xqt0aw"
+                color="danger-bg"
                 data-testid="AmountLabel__wrapper"
               >
                 <div
@@ -1075,7 +1075,7 @@ exports[`TransactionRow > should render with currency 1`] = `
                     class="whitespace-nowrap text-sm"
                     data-testid="Amount"
                   >
-                    121 BTC
+                    - 121 BTC
                   </span>
                 </div>
               </div>

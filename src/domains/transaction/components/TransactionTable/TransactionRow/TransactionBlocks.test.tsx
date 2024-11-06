@@ -12,7 +12,7 @@ describe("TransactionAmount.blocks", () => {
 		...TransactionFixture,
 		fee: () => 5,
 		isMultiPayment: () => true,
-		isReturn: () => true,
+		isReturn: () => false,
 		recipients: () => [
 			{ address: "address-1", amount: 10 },
 			{ address: "address-2", amount: 20 },
@@ -42,6 +42,32 @@ describe("TransactionAmount.blocks", () => {
 
 		// should have an amount without returned amount
 		expect(screen.getByText(/35 DARK/)).toBeInTheDocument();
+	});
+
+	it("should not show a hint for a return transaction", () => {
+		render(<TransactionAmountLabel transaction={{ ...fixture, isReturn: () => true } as any} />);
+
+		expect(screen.queryByTestId("AmountLabel__hint")).not.toBeInTheDocument();
+	});
+
+	it("should calculate total as amount - fee for return unconfirmed musig transactions", () => {
+		const unconfirmedMusigTx = {
+			...fixture,
+			amount: () => 60,
+			fee: () => 5,
+			isConfirmed: () => false,
+			isMultiSignatureRegistration: () => false,
+			recipient: () => "D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD",
+			sender: () => "D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD",
+			usesMultiSignature: () => true,
+		};
+
+		render(<TransactionAmountLabel transaction={unconfirmedMusigTx as any} />);
+
+		expect(screen.queryByTestId("AmountLabel__hint")).not.toBeInTheDocument();
+
+		// amount() - fee()
+		expect(screen.getByText(/55 DARK/)).toBeInTheDocument();
 	});
 
 	it("should show fiat value for multiPayment transaction", () => {
