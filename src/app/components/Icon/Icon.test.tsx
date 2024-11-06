@@ -70,5 +70,6 @@ describe("ThemeIcon", () => {
 		expect(screen.getByTestId(`icon-${testId}`)).toBeInTheDocument();
 
 		shouldUseDarkColorsMock.mockRestore();
+		setAccentColor("navy");
 	});
 });
