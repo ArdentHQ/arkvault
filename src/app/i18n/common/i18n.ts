@@ -314,6 +314,7 @@ export const translations = {
 	RESIGN: "Resign",
 	RESIGNED: "Resigned",
 	RETRY: "Retry",
+	RETURN: "Return",
 	SAVE: "Save",
 	SAVE_FILE: {
 		ERROR: "Could not save file: {{error}}",

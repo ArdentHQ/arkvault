@@ -11,18 +11,27 @@ import { DateTime } from "@ardenthq/sdk-intl";
 import { TimeAgo } from "@/app/components/TimeAgo";
 import { MobileSection } from "@/app/components/Table/Mobile/MobileSection";
 import { TransactionRowAddressing } from "./TransactionRowAddressing";
-import { Amount, AmountLabel } from "@/app/components/Amount";
 import { useTransactionTypes } from "@/domains/transaction/hooks/use-transaction-types";
+import { TransactionAmountLabel, TransactionFiatAmount } from "./TransactionAmount.blocks";
 
 export const TransactionRowMobile = memo(
-	({ className, transaction, onClick, isLoading = false, profile, ...properties }: TransactionRowProperties) => {
+	({
+		className,
+		transaction,
+		onClick,
+		isLoading = false,
+		profile,
+		exchangeCurrency,
+		...properties
+	}: TransactionRowProperties) => {
 		const { t } = useTranslation();
 		const { getLabel } = useTransactionTypes();
-		const timeStamp = transaction.timestamp ? transaction.timestamp() : undefined;
 
 		if (isLoading) {
 			return <TransactionRowMobileSkeleton />;
 		}
+
+		const timeStamp = transaction.timestamp();
 
 		return (
 			<TableRow onClick={onClick} className={cn("group !border-b-0", className)} {...properties}>
@@ -71,20 +80,11 @@ export const TransactionRowMobile = memo(
 								title={`${t("COMMON.VALUE")} (${transaction.wallet().currency()})`}
 								className="w-full"
 							>
-								<AmountLabel
-									value={transaction.amount() + transaction.fee()}
-									isNegative={true}
-									ticker={transaction.wallet().currency()}
-									isCompact
-									className="h-[21px]"
-								/>
+								<TransactionAmountLabel transaction={transaction} />
 							</MobileSection>
 
 							<MobileSection title={t("COMMON.FIAT_VALUE")} className="w-full">
-								<Amount
-									value={transaction.convertedTotal()}
-									ticker={transaction.wallet().exchangeCurrency()}
-								/>
+								<TransactionFiatAmount transaction={transaction} exchangeCurrency={exchangeCurrency} />
 							</MobileSection>
 						</div>
 					</MobileCard>

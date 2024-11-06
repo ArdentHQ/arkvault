@@ -89,6 +89,7 @@ export const translations = {
 		SLOW: "Slow",
 	},
 	HINT_AMOUNT: "Including {{amount}} {{currency}} sent to itself",
+	HINT_AMOUNT_EXCLUDING: "Excluding {{amount}} {{currency}} sent to self",
 	ID: "ID",
 	INCOMING: "Incoming",
 	INPUT_FEE_VIEW_TYPE: {

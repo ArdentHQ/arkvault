@@ -14,7 +14,8 @@ import { DateTime } from "@ardenthq/sdk-intl";
 import { Label } from "@/app/components/Label";
 import { useTransactionTypes } from "@/domains/transaction/hooks/use-transaction-types";
 import { TransactionRowAddressing } from "./TransactionRowAddressing";
-import { Amount, AmountLabel } from "@/app/components/Amount";
+import { Amount } from "@/app/components/Amount";
+import { TransactionAmountLabel, TransactionFiatAmount } from "./TransactionAmount.blocks";
 
 export const TransactionRow = memo(
 	({
@@ -29,7 +30,6 @@ export const TransactionRow = memo(
 		const { getLabel } = useTransactionTypes();
 		const { isXs, isSm } = useBreakpoint();
 		const { t } = useTranslation();
-		const timeStamp = transaction?.timestamp ? transaction.timestamp() : undefined;
 
 		if (isXs || isSm) {
 			return (
@@ -46,6 +46,8 @@ export const TransactionRow = memo(
 		if (isLoading) {
 			return <TransactionRowSkeleton />;
 		}
+
+		const timeStamp = transaction.timestamp();
 
 		return (
 			<TableRow onClick={onClick} className={twMerge("relative", className)} {...properties}>
@@ -101,18 +103,12 @@ export const TransactionRow = memo(
 
 				<TableCell innerClassName="justify-end items-start xl:min-h-0 my-0 py-3">
 					<div className="flex flex-col items-end gap-1">
-						<AmountLabel
-							value={transaction.amount() + transaction.fee()}
-							isNegative={transaction.isSent()}
-							ticker={transaction.wallet().currency()}
-							isCompact
-							className="h-[21px]"
-						/>
+						<TransactionAmountLabel transaction={transaction} />
 						<span
 							className="text-xs font-semibold text-theme-secondary-700 lg:hidden"
 							data-testid="TransactionRow__exchange-currency"
 						>
-							<Amount value={transaction.convertedTotal()} ticker={exchangeCurrency || ""} />
+							<TransactionFiatAmount transaction={transaction} exchangeCurrency={exchangeCurrency} />
 						</span>
 					</div>
 				</TableCell>
