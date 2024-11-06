@@ -14,6 +14,7 @@ import { TransactionDetailModal } from "@/domains/transaction/components/Transac
 import { TransactionTable } from "@/domains/transaction/components/TransactionTable";
 import cn from "classnames";
 import { useProfileTransactions } from "@/domains/transaction/hooks/use-profile-transactions";
+import { useWalletTransactionCounts } from "@/domains/wallet/pages/WalletDetails/hooks/use-wallet-transaction-counts";
 
 interface TransactionsProperties {
 	emptyText?: string;
@@ -77,19 +78,24 @@ export const Transactions = memo(function Transactions({
 		}
 	}, [isUpdatingWallet]); // eslint-disable-line react-hooks/exhaustive-deps
 
+	const { sent, received } = useWalletTransactionCounts(wallets[0]);
+
 	const filterOptions = [
 		{
 			active: activeMode === "all",
+			count: undefined,
 			label: t("TRANSACTION.ALL_HISTORY"),
 			value: "all",
 		},
 		{
 			active: activeMode === "received",
+			count: received,
 			label: t("TRANSACTION.INCOMING"),
 			value: "received",
 		},
 		{
 			active: activeMode === "sent",
+			count: sent,
 			label: t("TRANSACTION.OUTGOING"),
 			value: "sent",
 		},
@@ -154,7 +160,14 @@ export const Transactions = memo(function Transactions({
 						<TabList className="h-14 px-6 py-4">
 							{filterOptions.map((option) => (
 								<Tab tabId={option.value} key={option.value} className="pb-9 before:!top-1/3">
-									{option.label}
+									<span className="flex items-center space-x-2">
+										<span>{option.label}</span>
+										{!!option.count && (
+											<span className="rounded bg-theme-navy-100 px-1.5 py-0.5 text-xs leading-[17px] text-theme-secondary-700 dark:border-theme-secondary-800 dark:bg-theme-secondary-900 dark:text-theme-secondary-500">
+												{option.count}
+											</span>
+										)}
+									</span>
 								</Tab>
 							))}
 						</TabList>
