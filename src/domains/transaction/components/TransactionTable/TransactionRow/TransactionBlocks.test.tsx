@@ -50,6 +50,26 @@ describe("TransactionAmount.blocks", () => {
 		expect(screen.queryByTestId("AmountLabel__hint")).not.toBeInTheDocument();
 	});
 
+	it("should calculate total as amount - fee for return unconfirmed musig transactions", () => {
+		const unconfirmedMusigTx = {
+			...fixture,
+			amount: () => 60,
+			fee: () => 5,
+			isConfirmed: () => false,
+			isMultiSignatureRegistration: () => false,
+			recipient: () => "D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD",
+			sender: () => "D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD",
+			usesMultiSignature: () => true,
+		};
+
+		render(<TransactionAmountLabel transaction={unconfirmedMusigTx as any} />);
+
+		expect(screen.queryByTestId("AmountLabel__hint")).not.toBeInTheDocument();
+
+		// amount() - fee()
+		expect(screen.getByText(/55 DARK/)).toBeInTheDocument();
+	});
+
 	it("should show fiat value for multiPayment transaction", () => {
 		const exchangeMock = vi.spyOn(env.exchangeRates(), "exchange").mockReturnValue(5);
 
