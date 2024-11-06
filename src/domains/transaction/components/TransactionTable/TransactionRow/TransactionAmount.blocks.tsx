@@ -10,8 +10,10 @@ type ExtendedTransactionData = DTO.ExtendedConfirmedTransactionData | DTO.Extend
 // It uses `sender()` and `recipient()` methods to do checks instead of using the active
 // wallet. It is because unconfirmed transactions should be reflected from the sender perspective.
 const isReturnUnconfirmedMusigTransaction = (transaction: ExtendedTransactionData): boolean => {
+	const usesMultiSignature = "usesMultiSignature" in transaction ? transaction.usesMultiSignature() : false;
+
 	const isMusig = [
-		!!transaction?.usesMultiSignature?.(),
+		usesMultiSignature,
 		!transaction.isConfirmed(),
 		!transaction.isMultiSignatureRegistration(),
 	].every(Boolean);
