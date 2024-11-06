@@ -6,6 +6,7 @@ import { Dropdown, DropdownOption, DropdownOptionGroup } from "@/app/components/
 import { useTransactionTypes } from "@/domains/transaction/hooks/use-transaction-types";
 import { Button } from "@/app/components/Button";
 import { Checkbox } from "@/app/components/Checkbox";
+import { uniq } from "@ardenthq/sdk-helpers";
 
 interface FilterTransactionsProperties extends JSX.IntrinsicAttributes {
 	className?: string;
@@ -27,19 +28,22 @@ const FilterOption = ({ label, isChecked, onChange }: { label: string, isChecked
 export const FilterTransactions = memo(
 	({ className, onSelect, wallets, isDisabled, selectedTransactionTypes = [], onDiselectAll, ...properties }: FilterTransactionsProperties) => {
 		const { t } = useTranslation();
-		const { types, getLabel, canViewMagistrate } = useTransactionTypes({ wallets });
+		const { types, getLabel } = useTransactionTypes({ wallets });
 		const allTypes = [...types.core, ...types.magistrate]
+		const otherTypes = ['delegateRegistration', 'delegateResignation', 'htlcClaim', 'htlcLock', 'htlcRefund', 'ipfs', 'magistrate', 'secondSignature', 'multiSignature']
 
 		const allOptions: DropdownOptionGroup[] = useMemo(() => {
 
 			const isAllSelected = [allTypes.every(type => selectedTransactionTypes.includes(type))].some(Boolean)
+			const isOtherSelected = [otherTypes.some(type => selectedTransactionTypes.includes(type))].some(Boolean)
 
 			const onToggleAll = (isChecked: boolean) => {
-				onSelect?.({ label: "", value: "" }, undefined, allTypes)
-
 				if (!isChecked) {
 					onSelect?.({ label: "", value: "" }, undefined, [])
+					return
 				}
+
+				onSelect?.({ label: "", value: "" }, undefined, allTypes)
 			}
 
 			const onToggle = (value: string, label: string) => (isChecked: boolean) => {
@@ -51,36 +55,61 @@ export const FilterTransactions = memo(
 				onSelect({ label, value }, undefined, [...selectedTransactionTypes, value])
 			}
 
+			const onToggleOther = (isChecked: boolean) => {
+				if (!isChecked) {
+					onSelect({ label: "", value: "" }, undefined, selectedTransactionTypes.filter(type => !otherTypes.includes(type)))
+					return
+				}
+
+				onSelect?.({ label: "", value: "" }, undefined, uniq([...selectedTransactionTypes, ...otherTypes]))
+			}
+
 			const options: DropdownOptionGroup[] = [
 				{
 					key: "all",
-					options: [{
-						label: <FilterOption label={t("COMMON.ALL")} isChecked={isAllSelected} onChange={() => onToggleAll(!isAllSelected)} />, value: "all"
-					}],
+					options: [
+						{
+							label: <FilterOption label={t("COMMON.SELECT_ALL")} isChecked={isAllSelected} onChange={() => onToggleAll(!isAllSelected)} />, value: "all"
+						},
+					],
 				},
 				{
 					hasDivider: true,
-					key: "core",
-					options: types.core.map((type) => ({ label: <FilterOption label={getLabel(type)} onChange={onToggle(type, getLabel(type))} isChecked={selectedTransactionTypes.includes(type)} />, value: type })),
-					title: t("TRANSACTION.CORE"),
+					key: "others",
+					options: [
+						{
+							label: <FilterOption
+								label={t("COMMON.TRANSFERS")}
+								isChecked={selectedTransactionTypes.includes("transfer")}
+								onChange={onToggle("transfer", t("COMMON.TRANSFERS"))} />,
+							value: "all"
+						},
+						{
+							label: <FilterOption
+								label={t("COMMON.VOTES")}
+								isChecked={selectedTransactionTypes.includes("vote")}
+								onChange={onToggle("vote", t("COMMON.VOTES"))} />,
+							value: "vote"
+						},
+						{
+							label: <FilterOption
+								label={t("COMMON.MULTIPAYMENTS")}
+								isChecked={selectedTransactionTypes.includes("multiPayment")}
+								onChange={onToggle("multiPayment", t("COMMON.MULTIPAYMENTS"))} />,
+							value: "transfer"
+						},
+						{
+							label: <FilterOption
+								label={t("COMMON.OTHERS")}
+								isChecked={isOtherSelected}
+								onChange={() => onToggleOther(!isOtherSelected)} />,
+							value: "transfer"
+						}],
 				},
 			];
 
-			if (canViewMagistrate) {
-				options.push({
-					hasDivider: true,
-					key: "magistrate",
-					options: [
-						{
-							label: <FilterOption label={t("TRANSACTION.MAGISTRATE")} isChecked={selectedTransactionTypes.includes("magistrate")} onChange={onToggle("magistrate", t("TRANSACTION.MAGISTRATE"))} />,
-							value: "magistrate",
-						},
-					],
-				});
-			}
-
 			return options;
-		}, [getLabel, types, t, canViewMagistrate, selectedTransactionTypes]);
+		}, [getLabel, types, t, selectedTransactionTypes]);
 
 		return (
 			<div className={className} data-testid="FilterTransactions" {...properties}>

@@ -186,13 +186,10 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 			};
 
 			const hasAllSelected = transactionTypes.length === allTransactionTypes.length
-			console.log({ hasAllSelected, transactionTypes })
 
 			if (transactionTypes.length > 0 && !hasAllSelected) {
 				queryParameters.types = transactionTypes;
 			}
-
-			console.log({ queryParameters })
 
 			// @ts-ignore
 			return profile.transactionAggregate()[mode](queryParameters);
