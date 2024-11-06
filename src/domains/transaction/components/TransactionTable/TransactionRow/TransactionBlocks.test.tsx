@@ -12,7 +12,7 @@ describe("TransactionAmount.blocks", () => {
 		...TransactionFixture,
 		fee: () => 5,
 		isMultiPayment: () => true,
-		isReturn: () => true,
+		isReturn: () => false,
 		recipients: () => [
 			{ address: "address-1", amount: 10 },
 			{ address: "address-2", amount: 20 },
