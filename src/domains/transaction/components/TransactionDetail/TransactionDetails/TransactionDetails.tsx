@@ -22,17 +22,6 @@ export const TransactionDetails = ({
 		network: transaction.wallet().network(),
 	});
 
-	const nonce = useCallback(() => {
-		try {
-			const data = transaction.data().data;
-			const nonceValue = typeof data === "function" ? transaction.data().data().nonce : data?.nonce;
-
-			return typeof nonceValue === "string" ? nonceValue : "";
-		} catch {
-			return "";
-		}
-	}, [transaction]);
-
 	return (
 		<DetailWrapper label={t("TRANSACTION.TRANSACTION_DETAILS")}>
 			<div className="space-y-3 sm:space-y-0">
@@ -68,13 +57,7 @@ export const TransactionDetails = ({
 
 				<div className="flex w-full justify-between sm:justify-start">
 					<DetailLabelText className={labelClassName}>{t("COMMON.NONCE")}</DetailLabelText>
-					{nonce() ? (
-						<div className="text-sm font-semibold leading-[17px] sm:text-base sm:leading-5">{nonce()}</div>
-					) : (
-						<p className="text-sm leading-[17px] text-theme-secondary-500 sm:text-base sm:leading-5">
-							{t("COMMON.NOT_AVAILABLE")}
-						</p>
-					)}
+					<div className="text-sm font-semibold leading-[17px] sm:text-base sm:leading-5">{transaction.nonce()}</div>
 				</div>
 			</div>
 		</DetailWrapper>
