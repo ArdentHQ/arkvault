@@ -11,9 +11,9 @@ interface FilterTransactionsProperties extends JSX.IntrinsicAttributes {
 	className?: string;
 	defaultSelected?: DropdownOption;
 	wallets?: Contracts.IReadWriteWallet[];
-	onSelect?: (selectedOption: DropdownOption, types: any) => void;
+	onSelect?: (selectedOption: DropdownOption, types: any, selectedTypes: string[]) => void;
 	isDisabled?: boolean;
-	selectedTransactionTypes: string[]
+	selectedTransactionTypes?: string[]
 	onDiselectAll?: () => void
 }
 
@@ -28,28 +28,27 @@ export const FilterTransactions = memo(
 	({ className, onSelect, wallets, isDisabled, selectedTransactionTypes = [], onDiselectAll, ...properties }: FilterTransactionsProperties) => {
 		const { t } = useTranslation();
 		const { types, getLabel, canViewMagistrate } = useTransactionTypes({ wallets });
-
-		const handleSelect = (selectedOption: DropdownOption) => {
-			onSelect?.(selectedOption, selectedOption.value);
-		};
+		const allTypes = [...types.core, ...types.magistrate]
 
 		const allOptions: DropdownOptionGroup[] = useMemo(() => {
 
-			const isAllSelected = [selectedTransactionTypes.length === 0, types.core.every(type => selectedTransactionTypes.includes(type))].some(Boolean)
+			const isAllSelected = [allTypes.every(type => selectedTransactionTypes.includes(type))].some(Boolean)
 
 			const onToggleAll = (isChecked: boolean) => {
-				// @TODO: trigger select all items.
-				onSelect?.({ label: "", value: "" }, undefined)
+				onSelect?.({ label: "", value: "" }, undefined, allTypes)
 
 				if (!isChecked) {
-					onDiselectAll?.()
+					onSelect?.({ label: "", value: "" }, undefined, [])
 				}
 			}
 
 			const onToggle = (value: string, label: string) => (isChecked: boolean) => {
-				console.log("on toggle")
-				console.log({ isChecked })
-				handleSelect({ label, value })
+				if (!isChecked) {
+					onSelect({ label, value }, undefined, selectedTransactionTypes.filter(type => type !== value))
+					return
+				}
+
+				onSelect({ label, value }, undefined, [...selectedTransactionTypes, value])
 			}
 
 			const options: DropdownOptionGroup[] = [
@@ -73,7 +72,7 @@ export const FilterTransactions = memo(
 					key: "magistrate",
 					options: [
 						{
-							label: <FilterOption label={t("TRANSACTION.MAGISTRATE")} isChecked={selectedTransactionTypes.includes("magistrate")} />,
+							label: <FilterOption label={t("TRANSACTION.MAGISTRATE")} isChecked={selectedTransactionTypes.includes("magistrate")} onChange={onToggle("magistrate", t("TRANSACTION.MAGISTRATE"))} />,
 							value: "magistrate",
 						},
 					],

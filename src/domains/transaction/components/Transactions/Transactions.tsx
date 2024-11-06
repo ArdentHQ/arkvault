@@ -52,6 +52,7 @@ export const Transactions = memo(function Transactions({
 		transactions,
 		activeMode,
 		activeTransactionType,
+		selectedTransactionTypes,
 		fetchMore,
 		hasEmptyResults,
 		hasMore,
@@ -65,6 +66,7 @@ export const Transactions = memo(function Transactions({
 		updateFilters({
 			activeMode: "all",
 			activeTransactionType: undefined,
+			selectedTransactionTypes,
 		});
 	}, [isLoading, wallets.length, updateFilters]);
 
@@ -74,7 +76,7 @@ export const Transactions = memo(function Transactions({
 
 	useEffect(() => {
 		if (isUpdatingWallet) {
-			updateFilters({ activeMode, activeTransactionType, timestamp: Date.now() });
+			updateFilters({ activeMode, activeTransactionType, selectedTransactionTypes, timestamp: Date.now() });
 		}
 	}, [isUpdatingWallet]); // eslint-disable-line react-hooks/exhaustive-deps
 
@@ -115,18 +117,20 @@ export const Transactions = memo(function Transactions({
 			updateFilters({
 				activeMode: activeTab as string,
 				activeTransactionType,
+				selectedTransactionTypes,
 			});
 		},
 		[isLoading, activeMode, activeTransactionType],
 	);
 
 	const filterChangeHandler = useCallback(
-		(option, type) => {
+		(option, type, selectedTransactionTypes) => {
 			setActiveTransactionTypeLabel(option.label);
 
 			updateFilters({
 				activeMode,
 				activeTransactionType: type,
+				selectedTransactionTypes,
 			});
 		},
 		[activeMode],
@@ -197,6 +201,7 @@ export const Transactions = memo(function Transactions({
 								wallets={wallets}
 								onSelect={filterChangeHandler}
 								isDisabled={wallets.length === 0 || isLoadingTransactions}
+								selectedTransactionTypes={selectedTransactionTypes}
 							/>
 						</div>
 					</div>
@@ -213,7 +218,7 @@ export const Transactions = memo(function Transactions({
 						wallets={wallets}
 						onSelect={filterChangeHandler}
 						isDisabled={wallets.length === 0 || isLoadingTransactions}
-						selectedTransactionTypes={activeTransactionType ? [activeTransactionType] : []}
+						selectedTransactionTypes={selectedTransactionTypes}
 					/>
 				</div>
 
