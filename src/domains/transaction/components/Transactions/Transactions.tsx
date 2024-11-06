@@ -225,7 +225,7 @@ export const Transactions = memo(function Transactions({
 				{hasEmptyResults && (
 					<>
 						{activeTransactionType ? (
-							<EmptyBlock className="sm:text-left border-none">
+							<EmptyBlock className="border-none sm:text-left">
 								<Trans
 									i18nKey="DASHBOARD.LATEST_TRANSACTIONS.NO_RESULTS"
 									values={{
@@ -240,7 +240,6 @@ export const Transactions = memo(function Transactions({
 							</EmptyBlock>
 						)}
 					</>
-
 				)}
 
 				{!hasEmptyResults && (

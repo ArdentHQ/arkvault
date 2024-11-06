@@ -6,7 +6,6 @@ import { useSynchronizer } from "@/app/hooks";
 import { isUnit } from "@/utils/test-helpers";
 import { delay } from "@/utils/delay";
 import { useTransactionTypes } from "./use-transaction-types";
-import { transaction } from "../images";
 
 interface TransactionsState {
 	transactions: DTO.ExtendedConfirmedTransactionData[];
@@ -71,10 +70,19 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 	const cursor = useRef(1);
 	const LIMIT = useMemo(() => (isUnit() ? 0 : limit), [limit]);
 	const { types } = useTransactionTypes({ wallets });
-	const allTransactionTypes = [...types.core, ...types.magistrate]
+	const allTransactionTypes = [...types.core, ...types.magistrate];
 
 	const [
-		{ transactions, activeMode, activeTransactionType, isLoadingTransactions, isLoadingMore, hasMore, timestamp, selectedTransactionTypes },
+		{
+			transactions,
+			activeMode,
+			activeTransactionType,
+			isLoadingTransactions,
+			isLoadingMore,
+			hasMore,
+			timestamp,
+			selectedTransactionTypes,
+		},
 		setState,
 		// @ts-ignore
 	] = useState<TransactionsState>({
@@ -169,7 +177,7 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 	);
 
 	const fetchTransactions = useCallback(
-		({ flush = false, mode = "all", transactionType, wallets = [], transactionTypes = [] }: FetchTransactionProperties) => {
+		({ flush = false, mode = "all", wallets = [], transactionTypes = [] }: FetchTransactionProperties) => {
 			if (wallets.length === 0) {
 				return { hasMorePages: () => false, items: () => [] };
 			}
@@ -186,7 +194,7 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 				limit: LIMIT,
 			};
 
-			const hasAllSelected = transactionTypes.length === allTransactionTypes.length
+			const hasAllSelected = transactionTypes.length === allTransactionTypes.length;
 
 			if (transactionTypes.length > 0 && !hasAllSelected) {
 				queryParameters.types = transactionTypes;

@@ -95,6 +95,7 @@ export const renderOptions = ({ options, key, onSelect }: OptionsProperties) => 
 				>
 					{option.iconPosition === "start" && renderIcon(option)}
 					<span>
+						{option.element}
 						{option.label}
 						{option.secondaryLabel && (
 							<span className="ml-1 text-theme-secondary-500 dark:text-theme-secondary-600">
