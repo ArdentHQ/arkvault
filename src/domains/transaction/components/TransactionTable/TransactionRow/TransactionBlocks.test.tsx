@@ -45,7 +45,7 @@ describe("TransactionAmount.blocks", () => {
 	});
 
 	it("should not show a hint for a return transaction", () => {
-		render(<TransactionAmountLabel transaction={{...fixture, isReturn: () => true} as any} />);
+		render(<TransactionAmountLabel transaction={{ ...fixture, isReturn: () => true } as any} />);
 
 		expect(screen.queryByTestId("AmountLabel__hint")).not.toBeInTheDocument();
 	});
