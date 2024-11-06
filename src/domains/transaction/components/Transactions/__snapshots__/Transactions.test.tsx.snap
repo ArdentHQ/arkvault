@@ -6287,11 +6287,11 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="!flex h-[21px] w-12 items-center justify-center rounded px-1 py-[3px] dark:border css-1kocbuc"
-                      color="secondary"
+                      class="!flex h-[21px] w-12 items-center justify-center rounded px-1 py-[3px] dark:border css-6yoktf"
+                      color="success-bg"
                       data-testid="TransactionRowAddressing__label"
                     >
-                      Return
+                      From
                     </div>
                     <div
                       class="w-50 sm:w-30"
@@ -6326,8 +6326,8 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-1vn5kd9"
-                      color="secondary"
+                      class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-1jspzfx"
+                      color="success-bg"
                       data-testid="AmountLabel__wrapper"
                     >
                       <div
@@ -6337,7 +6337,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="whitespace-nowrap text-sm"
                           data-testid="Amount"
                         >
-                          1 DARK
+                          + 1 DARK
                         </span>
                       </div>
                     </div>
@@ -6451,11 +6451,11 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="!flex h-[21px] w-12 items-center justify-center rounded px-1 py-[3px] dark:border css-1kocbuc"
-                      color="secondary"
+                      class="!flex h-[21px] w-12 items-center justify-center rounded px-1 py-[3px] dark:border css-6yoktf"
+                      color="success-bg"
                       data-testid="TransactionRowAddressing__label"
                     >
-                      Return
+                      From
                     </div>
                     <div
                       class="w-50 sm:w-30"
@@ -6490,8 +6490,8 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-1vn5kd9"
-                      color="secondary"
+                      class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-1jspzfx"
+                      color="success-bg"
                       data-testid="AmountLabel__wrapper"
                     >
                       <div
@@ -6501,7 +6501,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="whitespace-nowrap text-sm"
                           data-testid="Amount"
                         >
-                          1 DARK
+                          + 1 DARK
                         </span>
                       </div>
                     </div>
@@ -6615,11 +6615,11 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="!flex h-[21px] w-12 items-center justify-center rounded px-1 py-[3px] dark:border css-1kocbuc"
-                      color="secondary"
+                      class="!flex h-[21px] w-12 items-center justify-center rounded px-1 py-[3px] dark:border css-6yoktf"
+                      color="success-bg"
                       data-testid="TransactionRowAddressing__label"
                     >
-                      Return
+                      From
                     </div>
                     <div
                       class="w-50 sm:w-30"
@@ -6654,8 +6654,8 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-1vn5kd9"
-                      color="secondary"
+                      class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-1jspzfx"
+                      color="success-bg"
                       data-testid="AmountLabel__wrapper"
                     >
                       <div
@@ -6665,7 +6665,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="whitespace-nowrap text-sm"
                           data-testid="Amount"
                         >
-                          1 DARK
+                          + 1 DARK
                         </span>
                       </div>
                     </div>
@@ -6779,11 +6779,11 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="!flex h-[21px] w-12 items-center justify-center rounded px-1 py-[3px] dark:border css-1kocbuc"
-                      color="secondary"
+                      class="!flex h-[21px] w-12 items-center justify-center rounded px-1 py-[3px] dark:border css-6yoktf"
+                      color="success-bg"
                       data-testid="TransactionRowAddressing__label"
                     >
-                      Return
+                      From
                     </div>
                     <div
                       class="w-50 sm:w-30"
@@ -6818,8 +6818,8 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-1vn5kd9"
-                      color="secondary"
+                      class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-1jspzfx"
+                      color="success-bg"
                       data-testid="AmountLabel__wrapper"
                     >
                       <div
@@ -6829,7 +6829,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="whitespace-nowrap text-sm"
                           data-testid="Amount"
                         >
-                          1 DARK
+                          + 1 DARK
                         </span>
                       </div>
                     </div>
@@ -7599,11 +7599,11 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="!flex h-[21px] w-12 items-center justify-center rounded px-1 py-[3px] dark:border css-1kocbuc"
-                      color="secondary"
+                      class="!flex h-[21px] w-12 items-center justify-center rounded px-1 py-[3px] dark:border css-6yoktf"
+                      color="success-bg"
                       data-testid="TransactionRowAddressing__label"
                     >
-                      Return
+                      From
                     </div>
                     <div
                       class="w-50 sm:w-30"
@@ -7763,11 +7763,11 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="!flex h-[21px] w-12 items-center justify-center rounded px-1 py-[3px] dark:border css-1kocbuc"
-                      color="secondary"
+                      class="!flex h-[21px] w-12 items-center justify-center rounded px-1 py-[3px] dark:border css-6yoktf"
+                      color="success-bg"
                       data-testid="TransactionRowAddressing__label"
                     >
-                      Return
+                      From
                     </div>
                     <div
                       class="w-50 sm:w-30"
@@ -7927,11 +7927,11 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="!flex h-[21px] w-12 items-center justify-center rounded px-1 py-[3px] dark:border css-1kocbuc"
-                      color="secondary"
+                      class="!flex h-[21px] w-12 items-center justify-center rounded px-1 py-[3px] dark:border css-6yoktf"
+                      color="success-bg"
                       data-testid="TransactionRowAddressing__label"
                     >
-                      Return
+                      From
                     </div>
                     <div
                       class="w-50 sm:w-30"
@@ -8091,11 +8091,11 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="!flex h-[21px] w-12 items-center justify-center rounded px-1 py-[3px] dark:border css-1kocbuc"
-                      color="secondary"
+                      class="!flex h-[21px] w-12 items-center justify-center rounded px-1 py-[3px] dark:border css-6yoktf"
+                      color="success-bg"
                       data-testid="TransactionRowAddressing__label"
                     >
-                      Return
+                      From
                     </div>
                     <div
                       class="w-50 sm:w-30"
@@ -13534,11 +13534,11 @@ exports[`Transactions > should hide view more button when there are no next page
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="!flex h-[21px] w-12 items-center justify-center rounded px-1 py-[3px] dark:border css-1kocbuc"
-                      color="secondary"
+                      class="!flex h-[21px] w-12 items-center justify-center rounded px-1 py-[3px] dark:border css-6yoktf"
+                      color="success-bg"
                       data-testid="TransactionRowAddressing__label"
                     >
-                      Return
+                      From
                     </div>
                     <div
                       class="w-50 sm:w-30"
@@ -13573,8 +13573,8 @@ exports[`Transactions > should hide view more button when there are no next page
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-1vn5kd9"
-                      color="secondary"
+                      class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-1jspzfx"
+                      color="success-bg"
                       data-testid="AmountLabel__wrapper"
                     >
                       <div
@@ -13584,7 +13584,7 @@ exports[`Transactions > should hide view more button when there are no next page
                           class="whitespace-nowrap text-sm"
                           data-testid="Amount"
                         >
-                          1 DARK
+                          + 1 DARK
                         </span>
                       </div>
                     </div>
@@ -13698,11 +13698,11 @@ exports[`Transactions > should hide view more button when there are no next page
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="!flex h-[21px] w-12 items-center justify-center rounded px-1 py-[3px] dark:border css-1kocbuc"
-                      color="secondary"
+                      class="!flex h-[21px] w-12 items-center justify-center rounded px-1 py-[3px] dark:border css-6yoktf"
+                      color="success-bg"
                       data-testid="TransactionRowAddressing__label"
                     >
-                      Return
+                      From
                     </div>
                     <div
                       class="w-50 sm:w-30"
@@ -13737,8 +13737,8 @@ exports[`Transactions > should hide view more button when there are no next page
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-1vn5kd9"
-                      color="secondary"
+                      class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-1jspzfx"
+                      color="success-bg"
                       data-testid="AmountLabel__wrapper"
                     >
                       <div
@@ -13748,7 +13748,7 @@ exports[`Transactions > should hide view more button when there are no next page
                           class="whitespace-nowrap text-sm"
                           data-testid="Amount"
                         >
-                          1 DARK
+                          + 1 DARK
                         </span>
                       </div>
                     </div>
@@ -14190,11 +14190,11 @@ exports[`Transactions > should hide view more button when there are no next page
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="!flex h-[21px] w-12 items-center justify-center rounded px-1 py-[3px] dark:border css-1kocbuc"
-                      color="secondary"
+                      class="!flex h-[21px] w-12 items-center justify-center rounded px-1 py-[3px] dark:border css-6yoktf"
+                      color="success-bg"
                       data-testid="TransactionRowAddressing__label"
                     >
-                      Return
+                      From
                     </div>
                     <div
                       class="w-50 sm:w-30"
@@ -14354,11 +14354,11 @@ exports[`Transactions > should hide view more button when there are no next page
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="!flex h-[21px] w-12 items-center justify-center rounded px-1 py-[3px] dark:border css-1kocbuc"
-                      color="secondary"
+                      class="!flex h-[21px] w-12 items-center justify-center rounded px-1 py-[3px] dark:border css-6yoktf"
+                      color="success-bg"
                       data-testid="TransactionRowAddressing__label"
                     >
-                      Return
+                      From
                     </div>
                     <div
                       class="w-50 sm:w-30"
@@ -18837,11 +18837,11 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="!flex h-[21px] w-12 items-center justify-center rounded px-1 py-[3px] dark:border css-1kocbuc"
-                      color="secondary"
+                      class="!flex h-[21px] w-12 items-center justify-center rounded px-1 py-[3px] dark:border css-6yoktf"
+                      color="success-bg"
                       data-testid="TransactionRowAddressing__label"
                     >
-                      Return
+                      From
                     </div>
                     <div
                       class="w-50 sm:w-30"
@@ -18876,8 +18876,8 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-1vn5kd9"
-                      color="secondary"
+                      class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-1jspzfx"
+                      color="success-bg"
                       data-testid="AmountLabel__wrapper"
                     >
                       <div
@@ -18887,7 +18887,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                           class="whitespace-nowrap text-sm"
                           data-testid="Amount"
                         >
-                          1 DARK
+                          + 1 DARK
                         </span>
                       </div>
                     </div>
@@ -19001,11 +19001,11 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="!flex h-[21px] w-12 items-center justify-center rounded px-1 py-[3px] dark:border css-1kocbuc"
-                      color="secondary"
+                      class="!flex h-[21px] w-12 items-center justify-center rounded px-1 py-[3px] dark:border css-6yoktf"
+                      color="success-bg"
                       data-testid="TransactionRowAddressing__label"
                     >
-                      Return
+                      From
                     </div>
                     <div
                       class="w-50 sm:w-30"
@@ -19040,8 +19040,8 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-1vn5kd9"
-                      color="secondary"
+                      class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-1jspzfx"
+                      color="success-bg"
                       data-testid="AmountLabel__wrapper"
                     >
                       <div
@@ -19051,7 +19051,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                           class="whitespace-nowrap text-sm"
                           data-testid="Amount"
                         >
-                          1 DARK
+                          + 1 DARK
                         </span>
                       </div>
                     </div>
@@ -19493,11 +19493,11 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="!flex h-[21px] w-12 items-center justify-center rounded px-1 py-[3px] dark:border css-1kocbuc"
-                      color="secondary"
+                      class="!flex h-[21px] w-12 items-center justify-center rounded px-1 py-[3px] dark:border css-6yoktf"
+                      color="success-bg"
                       data-testid="TransactionRowAddressing__label"
                     >
-                      Return
+                      From
                     </div>
                     <div
                       class="w-50 sm:w-30"
@@ -19657,11 +19657,11 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="!flex h-[21px] w-12 items-center justify-center rounded px-1 py-[3px] dark:border css-1kocbuc"
-                      color="secondary"
+                      class="!flex h-[21px] w-12 items-center justify-center rounded px-1 py-[3px] dark:border css-6yoktf"
+                      color="success-bg"
                       data-testid="TransactionRowAddressing__label"
                     >
-                      Return
+                      From
                     </div>
                     <div
                       class="w-50 sm:w-30"

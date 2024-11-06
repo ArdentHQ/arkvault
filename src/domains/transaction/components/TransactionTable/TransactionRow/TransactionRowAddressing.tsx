@@ -8,7 +8,6 @@ import React, { useEffect, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
 import cn from "classnames";
 import { ColorType } from "@/app/components/Label/Label.styles";
-import { extractVotingData } from "@/domains/transaction/components/VoteTransactionType/helpers";
 
 type Direction = "sent" | "received" | "return";
 export const TransactionRowLabel = ({ direction }: { direction: Direction }) => {
@@ -56,6 +55,12 @@ export const TransactionRowAddressing = ({
 
 	let direction: Direction = isNegative ? "sent" : "received";
 
+	const isReturn = transaction.isReturn() || (isMusigTransfer && transaction.sender() === transaction.recipient());
+
+	if (isReturn) {
+		direction = "return";
+	}
+
 	const { env } = useEnvironmentContext();
 	const { t } = useTranslation();
 	const { getWalletAlias } = useWalletAlias();
@@ -79,11 +84,9 @@ export const TransactionRowAddressing = ({
 
 	useEffect(() => {
 		if (transaction.isVote() || transaction.isUnvote()) {
-			const { votes, unvotes } = extractVotingData({ transaction });
-
 			setDelegates({
-				unvotes: env.delegates().map(transaction.wallet(), unvotes),
-				votes: env.delegates().map(transaction.wallet(), votes),
+				unvotes: env.delegates().map(transaction.wallet(), transaction.unvotes()),
+				votes: env.delegates().map(transaction.wallet(), transaction.votes()),
 			});
 		}
 	}, [env, transaction]);
@@ -157,10 +160,6 @@ export const TransactionRowAddressing = ({
 				</span>
 			</div>
 		);
-	}
-
-	if (transaction.sender() === transaction.recipient()) {
-		direction = "return";
 	}
 
 	return (

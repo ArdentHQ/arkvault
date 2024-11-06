@@ -7,6 +7,19 @@ import { useActiveWallet } from "@/app/hooks";
 
 type ExtendedTransactionData = DTO.ExtendedConfirmedTransactionData | DTO.ExtendedSignedTransactionData;
 
+// This function determines if an unconfirmed musig transaction is a returning transaction.
+// It uses `sender()` and `recipient()` methods to do checks instead of using the active
+// wallet. It is because unconfirmed transactions should be reflected from the sender perspective.
+const isReturnUnconfirmedMusigTransaction = (transaction: ExtendedTransactionData): boolean => {
+	const usesMultiSignature = "usesMultiSignature" in transaction ? transaction.usesMultiSignature() : false;
+
+	const isMusig = [usesMultiSignature, !transaction.isConfirmed(), !transaction.isMultiSignatureRegistration()].every(
+		Boolean,
+	);
+
+	return isMusig ? transaction.sender() === transaction.recipient() : false;
+};
+
 const calculateReturnedAmount = function (transaction: ExtendedTransactionData): number {
 	let returnedAmount = 0;
 
@@ -14,8 +27,13 @@ const calculateReturnedAmount = function (transaction: ExtendedTransactionData):
 		return returnedAmount;
 	}
 
+	// should return 0 as we don't want to show a hint
+	if (transaction.isReturn() || isReturnUnconfirmedMusigTransaction(transaction)) {
+		return returnedAmount;
+	}
+
 	for (const recipient of transaction.recipients().values()) {
-		if (transaction.isReturn() && transaction.sender() === recipient.address) {
+		if (transaction.sender() === recipient.address) {
 			returnedAmount += recipient.amount;
 		}
 	}
@@ -28,8 +46,11 @@ export const TransactionAmountLabel = ({ transaction }: { transaction: ExtendedT
 
 	const currency = transaction.wallet().currency();
 
-	const returnedAmount = transaction.sender() === activeWallet.address() ? calculateReturnedAmount(transaction) : 0;
-	const amount = transaction.total() - returnedAmount;
+	const returnedAmount = calculateReturnedAmount(transaction);
+
+	const isReturnMusigTx = isReturnUnconfirmedMusigTransaction(transaction);
+
+	const amount = isReturnMusigTx ? transaction.amount() - transaction.fee() : transaction.total() - returnedAmount;
 
 	const usesMultiSignature = "usesMultiSignature" in transaction ? transaction.usesMultiSignature() : false;
 	const isMusigTransfer = [usesMultiSignature, !transaction.isMultiSignatureRegistration()].every(Boolean);
@@ -41,7 +62,7 @@ export const TransactionAmountLabel = ({ transaction }: { transaction: ExtendedT
 			value={amount}
 			isNegative={isNegative}
 			ticker={transaction.wallet().currency()}
-			hideSign={transaction.isTransfer() && transaction.sender() === transaction.recipient()}
+			hideSign={transaction.isReturn() || isReturnMusigTx}
 			isCompact
 			hint={
 				returnedAmount
