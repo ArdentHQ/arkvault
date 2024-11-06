@@ -44,6 +44,12 @@ describe("TransactionAmount.blocks", () => {
 		expect(screen.getByText(/35 DARK/)).toBeInTheDocument();
 	});
 
+	it("should not show a hint for a return transaction", () => {
+		render(<TransactionAmountLabel transaction={{...fixture, isReturn: () => true} as any} />);
+
+		expect(screen.queryByTestId("AmountLabel__hint")).not.toBeInTheDocument();
+	});
+
 	it("should show fiat value for multiPayment transaction", () => {
 		const exchangeMock = vi.spyOn(env.exchangeRates(), "exchange").mockReturnValue(5);
 
