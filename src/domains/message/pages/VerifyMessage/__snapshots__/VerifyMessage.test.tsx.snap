@@ -606,36 +606,34 @@ exports[`VerifyMessage > should render (lg) 1`] = `
                           >
                             <div
                               class="css-h1kfx5"
-                              data-testid="icon-SendTransactionLightGreen"
+                              data-testid="icon-SendTransactionLight"
                               height="24"
                               width="24"
                             >
                               <svg
                                 fill="none"
-                                height="25"
                                 viewBox="0 0 24 25"
-                                width="24"
                                 xmlns="http://www.w3.org/2000/svg"
                               >
                                 <g
-                                  clip-path="url(#clip0_18982_50179)"
+                                  clip-path="url(#clip0_13879_104416)"
                                 >
                                   <path
                                     clip-rule="evenodd"
                                     d="M18.8821 8.94457H13.7264C13.0146 8.94457 12.4375 8.3675 12.4375 7.65565V2.5"
-                                    fill="#E2F0E6"
+                                    fill="#E6EFF9"
                                     fill-rule="evenodd"
                                   />
                                   <path
                                     d="M18.8821 8.94457H13.7264C13.0146 8.94457 12.4375 8.3675 12.4375 7.65565V2.5"
-                                    stroke="#289548"
+                                    stroke="#235B95"
                                     stroke-linecap="round"
                                     stroke-linejoin="round"
                                     stroke-width="2"
                                   />
                                   <path
                                     d="M7.99174 21.8337H3.41391C2.70207 21.8337 2.125 21.2566 2.125 20.5448V3.78891C2.125 3.07707 2.70207 2.5 3.41391 2.5H12.5472C12.8891 2.49985 13.217 2.63554 13.4588 2.87722L18.5037 7.92289C18.7451 8.16452 18.8808 8.49212 18.8809 8.83372"
-                                    stroke="#289548"
+                                    stroke="#235B95"
                                     stroke-linecap="round"
                                     stroke-linejoin="round"
                                     stroke-width="2"
@@ -643,9 +641,9 @@ exports[`VerifyMessage > should render (lg) 1`] = `
                                   <path
                                     clip-rule="evenodd"
                                     d="M9.02802 17.1926C8.71518 17.1043 8.49639 16.8225 8.4885 16.4975C8.48061 16.1725 8.68545 15.8804 8.99364 15.7771L18.994 12.5155C19.1276 12.472 19.2743 12.5069 19.3739 12.606C19.4735 12.7051 19.5092 12.8516 19.4664 12.9854L16.2073 22.9907C16.1044 23.2995 15.812 23.5049 15.4867 23.4968C15.1613 23.4888 14.8793 23.2693 14.7918 22.9559L13.6727 18.3067L9.02802 17.1926Z"
-                                    fill="#E2F0E6"
+                                    fill="#E6EFF9"
                                     fill-rule="evenodd"
-                                    stroke="#289548"
+                                    stroke="#235B95"
                                     stroke-linecap="round"
                                     stroke-linejoin="round"
                                     stroke-width="2"
@@ -653,7 +651,7 @@ exports[`VerifyMessage > should render (lg) 1`] = `
                                 </g>
                                 <defs>
                                   <clippath
-                                    id="clip0_18982_50179"
+                                    id="clip0_13879_104416"
                                   >
                                     <rect
                                       fill="white"
@@ -1454,36 +1452,34 @@ exports[`VerifyMessage > should render (xs) 1`] = `
                           >
                             <div
                               class="css-h1kfx5"
-                              data-testid="icon-SendTransactionLightGreen"
+                              data-testid="icon-SendTransactionLight"
                               height="24"
                               width="24"
                             >
                               <svg
                                 fill="none"
-                                height="25"
                                 viewBox="0 0 24 25"
-                                width="24"
                                 xmlns="http://www.w3.org/2000/svg"
                               >
                                 <g
-                                  clip-path="url(#clip0_18982_50179)"
+                                  clip-path="url(#clip0_13879_104416)"
                                 >
                                   <path
                                     clip-rule="evenodd"
                                     d="M18.8821 8.94457H13.7264C13.0146 8.94457 12.4375 8.3675 12.4375 7.65565V2.5"
-                                    fill="#E2F0E6"
+                                    fill="#E6EFF9"
                                     fill-rule="evenodd"
                                   />
                                   <path
                                     d="M18.8821 8.94457H13.7264C13.0146 8.94457 12.4375 8.3675 12.4375 7.65565V2.5"
-                                    stroke="#289548"
+                                    stroke="#235B95"
                                     stroke-linecap="round"
                                     stroke-linejoin="round"
                                     stroke-width="2"
                                   />
                                   <path
                                     d="M7.99174 21.8337H3.41391C2.70207 21.8337 2.125 21.2566 2.125 20.5448V3.78891C2.125 3.07707 2.70207 2.5 3.41391 2.5H12.5472C12.8891 2.49985 13.217 2.63554 13.4588 2.87722L18.5037 7.92289C18.7451 8.16452 18.8808 8.49212 18.8809 8.83372"
-                                    stroke="#289548"
+                                    stroke="#235B95"
                                     stroke-linecap="round"
                                     stroke-linejoin="round"
                                     stroke-width="2"
@@ -1491,9 +1487,9 @@ exports[`VerifyMessage > should render (xs) 1`] = `
                                   <path
                                     clip-rule="evenodd"
                                     d="M9.02802 17.1926C8.71518 17.1043 8.49639 16.8225 8.4885 16.4975C8.48061 16.1725 8.68545 15.8804 8.99364 15.7771L18.994 12.5155C19.1276 12.472 19.2743 12.5069 19.3739 12.606C19.4735 12.7051 19.5092 12.8516 19.4664 12.9854L16.2073 22.9907C16.1044 23.2995 15.812 23.5049 15.4867 23.4968C15.1613 23.4888 14.8793 23.2693 14.7918 22.9559L13.6727 18.3067L9.02802 17.1926Z"
-                                    fill="#E2F0E6"
+                                    fill="#E6EFF9"
                                     fill-rule="evenodd"
-                                    stroke="#289548"
+                                    stroke="#235B95"
                                     stroke-linecap="round"
                                     stroke-linejoin="round"
                                     stroke-width="2"
@@ -1501,7 +1497,7 @@ exports[`VerifyMessage > should render (xs) 1`] = `
                                 </g>
                                 <defs>
                                   <clippath
-                                    id="clip0_18982_50179"
+                                    id="clip0_13879_104416"
                                   >
                                     <rect
                                       fill="white"
