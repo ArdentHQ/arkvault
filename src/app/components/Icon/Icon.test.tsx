@@ -68,7 +68,7 @@ describe("ThemeIcon", () => {
 		);
 
 		expect(screen.getByTestId(`icon-${testId}`)).toBeInTheDocument();
-		
+
 		setAccentColor("navy");
 
 		shouldUseDarkColorsMock.mockRestore();
