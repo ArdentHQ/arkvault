@@ -31,8 +31,6 @@ export const ReviewStep = ({ unvotes, votes, wallet }: SendVoteStepProperties) =
 						dimensions={[24, 24]}
 						lightIcon="SendTransactionLight"
 						darkIcon="SendTransactionDark"
-						greenDarkIcon="SendTransactionDarkGreen"
-						greenLightIcon="SendTransactionLightGreen"
 					/>
 				}
 				subtitle={t("TRANSACTION.REVIEW_STEP.DESCRIPTION")}

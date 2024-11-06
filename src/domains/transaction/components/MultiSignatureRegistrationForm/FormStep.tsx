@@ -63,8 +63,6 @@ export const FormStep = ({ profile, wallet }: FormStepProperties) => {
 						dimensions={[24, 24]}
 						lightIcon="SendTransactionLight"
 						darkIcon="SendTransactionDark"
-						greenDarkIcon="SendTransactionDarkGreen"
-						greenLightIcon="SendTransactionLightGreen"
 					/>
 				}
 			/>

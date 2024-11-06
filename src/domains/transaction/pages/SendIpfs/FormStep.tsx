@@ -53,8 +53,6 @@ const FormStep = ({ profile, wallet }: { profile: Contracts.IProfile; wallet: Co
 						dimensions={[24, 24]}
 						lightIcon="SendTransactionLight"
 						darkIcon="SendTransactionDark"
-						greenDarkIcon="SendTransactionDarkGreen"
-						greenLightIcon="SendTransactionLightGreen"
 					/>
 				}
 			/>

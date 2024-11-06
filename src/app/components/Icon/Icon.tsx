@@ -70,16 +70,7 @@ export const ThemeIcon = ({
 	...properties
 }: ThemeIconProperties): JSX.Element => {
 	const { isDarkMode } = useTheme();
-	const { getCurrentAccentColor } = useAccentColor();
-	let icon = isDarkMode ? darkIcon : lightIcon;
-
-	if (greenDarkIcon && greenLightIcon) {
-		const accentColor = getCurrentAccentColor();
-
-		if (accentColor === "green") {
-			icon = isDarkMode ? greenDarkIcon : greenLightIcon;
-		}
-	}
+	const icon = isDarkMode ? darkIcon : lightIcon;
 
 	return <Icon name={icon} data-testid={`icon-${icon}`} {...properties} />;
 };

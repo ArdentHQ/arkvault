@@ -47,27 +47,4 @@ describe("ThemeIcon", () => {
 
 		shouldUseDarkColorsMock.mockRestore();
 	});
-
-	it.each([
-		[true, "GreenDarkIcon"],
-		[false, "GreenLightIcon"],
-	])("should render right icon for theme - isDark: %s", (isDarkMode, testId) => {
-		const { setAccentColor } = useAccentColor();
-		const shouldUseDarkColorsMock = vi.spyOn(themeFns, "shouldUseDarkColors").mockReturnValue(isDarkMode);
-
-		setAccentColor("green");
-
-		render(
-			<ThemeIcon
-				darkIcon="DarkIcon"
-				lightIcon="LightIcon"
-				greenDarkIcon="GreenDarkIcon"
-				greenLightIcon="GreenLightIcon"
-			/>,
-		);
-
-		expect(screen.getByTestId(`icon-${testId}`)).toBeInTheDocument();
-
-		shouldUseDarkColorsMock.mockRestore();
-	});
 });
