@@ -11,7 +11,7 @@ type ExtendedTransactionData = DTO.ExtendedConfirmedTransactionData | DTO.Extend
 // wallet. It is because unconfirmed transactions should be reflected from the sender perspective.
 const isReturnUnconfirmedMusigTransaction = (transaction: ExtendedTransactionData): boolean => {
 	const isMusig = [
-		!!transaction.usesMultiSignature?.(),
+		!!transaction?.usesMultiSignature?.(),
 		!transaction.isConfirmed(),
 		!transaction.isMultiSignatureRegistration(),
 	].every(Boolean);
