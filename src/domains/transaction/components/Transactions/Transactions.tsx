@@ -224,7 +224,7 @@ export const Transactions = memo(function Transactions({
 
 				{hasEmptyResults && (
 					<>
-						{activeTransactionType ? (
+						{selectedTransactionTypes?.length ? (
 							<EmptyBlock className="border-none sm:text-left">
 								<Trans
 									i18nKey="DASHBOARD.LATEST_TRANSACTIONS.NO_RESULTS"
@@ -235,8 +235,8 @@ export const Transactions = memo(function Transactions({
 								/>
 							</EmptyBlock>
 						) : (
-							<EmptyBlock className="sm:text-left">
-								{emptyText || t("DASHBOARD.LATEST_TRANSACTIONS.EMPTY_MESSAGE")}
+							<EmptyBlock className="sm:text-left border-none">
+								{emptyText || t("TRANSACTION.NO_FILTERS_SELECTED")}
 							</EmptyBlock>
 						)}
 					</>

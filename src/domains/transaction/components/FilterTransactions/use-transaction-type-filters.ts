@@ -11,17 +11,7 @@ interface Properties extends JSX.IntrinsicAttributes {
 export const useTransactionTypeFilters = ({ wallets, selectedTransactionTypes, onSelect }: Properties) => {
 	const { types } = useTransactionTypes({ wallets });
 	const allTypes = [...types.core, ...types.magistrate];
-	const otherTypes = [
-		"delegateRegistration",
-		"delegateResignation",
-		"htlcClaim",
-		"htlcLock",
-		"htlcRefund",
-		"ipfs",
-		"magistrate",
-		"secondSignature",
-		"multiSignature",
-	];
+	const otherTypes = allTypes.filter(type => !["transfer", "multiPayment", "vote"].includes(type));
 
 	const isAllSelected = [allTypes.every((type) => selectedTransactionTypes.includes(type))].some(Boolean);
 	const isOtherSelected = [otherTypes.some((type) => selectedTransactionTypes.includes(type))].some(Boolean);
@@ -45,6 +35,15 @@ export const useTransactionTypeFilters = ({ wallets, selectedTransactionTypes, o
 	};
 
 	const isTypeSelected = (type: string) => selectedTransactionTypes.includes(type);
+
+	console.log({
+		allTypes,
+		isAllSelected,
+		isOtherSelected,
+		isTypeSelected,
+		otherTypes,
+		types,
+	})
 
 	return {
 		allTypes,
