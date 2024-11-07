@@ -178,7 +178,7 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 
 	const fetchTransactions = useCallback(
 		({ flush = false, mode = "all", wallets = [], transactionTypes = [] }: FetchTransactionProperties) => {
-			if (wallets.length === 0 || transactionTypes.length === 0) {
+			if (wallets.length === 0) {
 				return { hasMorePages: () => false, items: () => [] };
 			}
 
@@ -196,7 +196,7 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 
 			const hasAllSelected = transactionTypes.length === allTransactionTypes.length;
 
-			if (!hasAllSelected) {
+			if (transactionTypes.length > 0 && !hasAllSelected) {
 				queryParameters.types = transactionTypes;
 			}
 

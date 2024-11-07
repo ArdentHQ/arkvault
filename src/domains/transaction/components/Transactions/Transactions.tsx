@@ -58,6 +58,8 @@ export const Transactions = memo(function Transactions({
 		hasMore,
 	} = useProfileTransactions({ limit: 30, profile, wallets });
 
+	const showMore = selectedTransactionTypes.length > 0 && hasMore
+
 	useEffect(() => {
 		if (isLoading) {
 			return;
@@ -207,10 +209,10 @@ export const Transactions = memo(function Transactions({
 				</>
 			)}
 
-			<TableWrapper className={cn({ "!rounded-b-none border-none": hasMore })}>
+			<TableWrapper className={cn({ "!rounded-b-none border-none": showMore })}>
 				<div className="flex w-full flex-col items-start justify-between gap-3 border-b-0 border-b-theme-secondary-300 pb-4 pt-3 dark:border-b-theme-secondary-800 sm:flex-row md:items-center md:border-b md:px-6 md:py-4">
 					<span className="text-base font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500">
-						{t("COMMON.SHOWING_RESULTS", { count: transactions.length })}
+						{t("COMMON.SHOWING_RESULTS", { count: selectedTransactionTypes.length > 0 ? transactions.length : 0 })}
 					</span>
 					<FilterTransactions
 						className="w-full sm:w-fit md:my-auto"
@@ -263,7 +265,7 @@ export const Transactions = memo(function Transactions({
 				)}
 			</TableWrapper>
 
-			{hasMore && (
+			{showMore && (
 				<div className="-mx-6 -mt-1 rounded-b-xl border-t border-theme-secondary-300 px-6 py-4 dark:border-theme-secondary-800 md:-mx-px md:mt-0 md:border md:border-t-0">
 					<Button
 						data-testid="transactions__fetch-more-button"
