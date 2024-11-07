@@ -36,7 +36,7 @@ const renderOptionGroup = ({ key, hasDivider, title, options, onSelect }: Dropdo
 	return (
 		<div key={key} className={cn({ "mt-4": title || hasDivider })}>
 			{hasDivider && (
-				<div className="-my-2 mx-8">
+				<div className="-my-2">
 					<Divider className="border-theme-secondary-300 dark:border-theme-secondary-600" />
 				</div>
 			)}
@@ -95,6 +95,7 @@ export const renderOptions = ({ options, key, onSelect }: OptionsProperties) => 
 				>
 					{option.iconPosition === "start" && renderIcon(option)}
 					<span>
+						{option.element}
 						{option.label}
 						{option.secondaryLabel && (
 							<span className="ml-1 text-theme-secondary-500 dark:text-theme-secondary-600">

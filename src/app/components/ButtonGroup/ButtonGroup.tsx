@@ -17,16 +17,17 @@ const ButtonGroupOptionStyled = styled.button<{ variant: ButtonGroupOptionVarian
 		tw`flex items-center justify-center w-full h-full transition-colors duration-300`,
 		tw`p-3 font-semibold text-theme-secondary-700`,
 		tw`border-2 border-theme-primary-100`,
-		tw`dark:(border-theme-secondary-800 text-theme-secondary-200)`,
+		tw`dark:(border-theme-secondary-800 text-theme-secondary-500)`,
 		tw`focus:(outline-none ring-2 ring-theme-primary-400)`,
 		tw`disabled:(
 			border border-theme-secondary-300 text-theme-secondary-500 cursor-not-allowed
 			dark:(text-theme-secondary-700 border-theme-secondary-700)
 		)`,
-		tw`hover:(border-theme-primary-400 text-theme-text)`,
+		tw`hover:(border-theme-primary-100 text-theme-primary-700 bg-theme-primary-100)`,
+		tw`dark:hover:(border-theme-secondary-800 text-theme-secondary-200 bg-theme-secondary-800)`,
 		css`
 			&[aria-checked="true"] {
-				${tw`text-theme-text border-theme-primary-600 bg-theme-primary-50 dark:bg-theme-primary-900 cursor-default`}
+				${tw`text-theme-primary-700 border-theme-primary-600 bg-theme-primary-50 dark:bg-theme-primary-900 dark:text-theme-primary-50 cursor-default`}
 			}
 		`,
 	];

@@ -125,7 +125,7 @@ describe("WalletListItem.blocks", () => {
 		expect(screen.getByText(walletTranslations.PAGE_WALLET_DETAILS.STAR_WALLET)).toBeInTheDocument();
 
 		// eslint-disable-next-line testing-library/no-node-access
-		expect(document.querySelector("svg#star")).toBeInTheDocument();
+		expect(document.querySelector("svg#star-filled")).toBeInTheDocument();
 
 		expect(asFragment).toMatchSnapshot();
 

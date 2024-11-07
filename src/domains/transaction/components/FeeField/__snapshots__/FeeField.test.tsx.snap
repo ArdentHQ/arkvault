@@ -49,7 +49,7 @@ exports[`FeeField > should render 1`] = `
       <button
         aria-checked="false"
         aria-label="0.00357"
-        class="css-1sbhrf0"
+        class="css-19daxkr"
         data-testid="ButtonGroupOption"
         role="radio"
         type="button"
@@ -71,7 +71,7 @@ exports[`FeeField > should render 1`] = `
       <button
         aria-checked="true"
         aria-label="0.07320598"
-        class="css-1sbhrf0"
+        class="css-19daxkr"
         data-testid="ButtonGroupOption"
         role="radio"
         type="button"
@@ -93,7 +93,7 @@ exports[`FeeField > should render 1`] = `
       <button
         aria-checked="false"
         aria-label="0.1"
-        class="css-1sbhrf0"
+        class="css-19daxkr"
         data-testid="ButtonGroupOption"
         role="radio"
         type="button"

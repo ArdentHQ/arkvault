@@ -51,7 +51,7 @@ export const TransactionRow = memo(
 
 		return (
 			<TableRow onClick={onClick} className={twMerge("relative", className)} {...properties}>
-				<TableCell variant="start" innerClassName="items-start my-0 py-3 xl:min-h-0">
+				<TableCell variant="start" innerClassName="items-start my-0 py-3 xl:min-h-0 max-h-11">
 					<div className="flex flex-col gap-1 font-semibold">
 						<Link to={transaction.explorerLink()} showExternalIcon={false} isExternal>
 							<span className="text-sm">
@@ -85,7 +85,7 @@ export const TransactionRow = memo(
 					)}
 				</TableCell>
 
-				<TableCell innerClassName="items-start xl:min-h-0 my-0 py-3">
+				<TableCell innerClassName="items-start xl:min-h-11 my-0 py-3">
 					<Label
 						color="secondary"
 						size="xs"
@@ -101,7 +101,7 @@ export const TransactionRow = memo(
 					<TransactionRowAddressing transaction={transaction} profile={profile} />
 				</TableCell>
 
-				<TableCell innerClassName="justify-end items-start xl:min-h-0 my-0 py-3">
+				<TableCell innerClassName="justify-end items-start md:max-h-11 my-0 py-3">
 					<div className="flex flex-col items-end gap-1">
 						<TransactionAmountLabel transaction={transaction} />
 						<span

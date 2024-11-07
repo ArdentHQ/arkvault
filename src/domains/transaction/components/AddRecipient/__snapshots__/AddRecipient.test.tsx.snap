@@ -161,7 +161,7 @@ exports[`AddRecipient > should hide available balance if fee > balance 1`] = `
                             class=""
                           >
                             <div
-                              class="flex items-center cursor-pointer"
+                              class="flex items-center cursor-pointer rounded bg-transparent p-1 text-theme-secondary-700 transition-colors hover:bg-theme-primary-100 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-white"
                               data-testid="SelectRecipient__select-recipient"
                             >
                               <div
@@ -304,7 +304,7 @@ exports[`AddRecipient > should hide available balance if fee > balance 1`] = `
               class="hidden sm:inline-flex"
             >
               <button
-                class="text-theme-navy-600 dark:text-theme-secondary-700 css-1v4a3it"
+                class=" css-15n2mow"
                 data-testid="AddRecipient__send-all"
                 type="button"
               >
@@ -480,7 +480,7 @@ exports[`AddRecipient > should render 1`] = `
                             class=""
                           >
                             <div
-                              class="flex items-center cursor-pointer"
+                              class="flex items-center cursor-pointer rounded bg-transparent p-1 text-theme-secondary-700 transition-colors hover:bg-theme-primary-100 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-white"
                               data-testid="SelectRecipient__select-recipient"
                             >
                               <div
@@ -608,7 +608,7 @@ exports[`AddRecipient > should render 1`] = `
               class="hidden sm:inline-flex"
             >
               <button
-                class="text-theme-navy-600 dark:text-theme-secondary-700 css-1v4a3it"
+                class=" css-15n2mow"
                 data-testid="AddRecipient__send-all"
                 type="button"
               >
@@ -784,7 +784,7 @@ exports[`AddRecipient > should render with empty array of recipients as default 
                             class=""
                           >
                             <div
-                              class="flex items-center cursor-pointer"
+                              class="flex items-center cursor-pointer rounded bg-transparent p-1 text-theme-secondary-700 transition-colors hover:bg-theme-primary-100 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-white"
                               data-testid="SelectRecipient__select-recipient"
                             >
                               <div
@@ -912,7 +912,7 @@ exports[`AddRecipient > should render with empty array of recipients as default 
               class="hidden sm:inline-flex"
             >
               <button
-                class="text-theme-navy-600 dark:text-theme-secondary-700 css-1v4a3it"
+                class=" css-15n2mow"
                 data-testid="AddRecipient__send-all"
                 type="button"
               >
@@ -1088,7 +1088,7 @@ exports[`AddRecipient > should render with multiple recipients switch 1`] = `
                             class=""
                           >
                             <div
-                              class="flex items-center cursor-pointer"
+                              class="flex items-center cursor-pointer rounded bg-transparent p-1 text-theme-secondary-700 transition-colors hover:bg-theme-primary-100 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-white"
                               data-testid="SelectRecipient__select-recipient"
                             >
                               <div
@@ -1216,7 +1216,7 @@ exports[`AddRecipient > should render with multiple recipients switch 1`] = `
               class="hidden sm:inline-flex"
             >
               <button
-                class="text-theme-navy-600 dark:text-theme-secondary-700 css-1v4a3it"
+                class=" css-15n2mow"
                 data-testid="AddRecipient__send-all"
                 type="button"
               >
@@ -1392,7 +1392,7 @@ exports[`AddRecipient > should render with single recipient data 1`] = `
                             class=""
                           >
                             <div
-                              class="flex items-center cursor-pointer"
+                              class="flex items-center cursor-pointer rounded bg-transparent p-1 text-theme-secondary-700 transition-colors hover:bg-theme-primary-100 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-white"
                               data-testid="SelectRecipient__select-recipient"
                             >
                               <div
@@ -1520,7 +1520,7 @@ exports[`AddRecipient > should render with single recipient data 1`] = `
               class="hidden sm:inline-flex"
             >
               <button
-                class="text-theme-navy-600 dark:text-theme-secondary-700 css-1v4a3it"
+                class=" css-15n2mow"
                 data-testid="AddRecipient__send-all"
                 type="button"
               >
@@ -1629,7 +1629,7 @@ exports[`AddRecipient > should render without the single & multiple switch 1`] =
                             class=""
                           >
                             <div
-                              class="flex items-center cursor-pointer"
+                              class="flex items-center cursor-pointer rounded bg-transparent p-1 text-theme-secondary-700 transition-colors hover:bg-theme-primary-100 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-white"
                               data-testid="SelectRecipient__select-recipient"
                             >
                               <div
@@ -1757,7 +1757,7 @@ exports[`AddRecipient > should render without the single & multiple switch 1`] =
               class="hidden sm:inline-flex"
             >
               <button
-                class="text-theme-navy-600 dark:text-theme-secondary-700 css-1v4a3it"
+                class=" css-15n2mow"
                 data-testid="AddRecipient__send-all"
                 type="button"
               >
@@ -1933,7 +1933,7 @@ exports[`AddRecipient > should set available amount 1`] = `
                             class=""
                           >
                             <div
-                              class="flex items-center cursor-pointer"
+                              class="flex items-center cursor-pointer rounded bg-transparent p-1 text-theme-secondary-700 transition-colors hover:bg-theme-primary-100 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-white"
                               data-testid="SelectRecipient__select-recipient"
                             >
                               <div
@@ -2061,7 +2061,7 @@ exports[`AddRecipient > should set available amount 1`] = `
               class="hidden sm:inline-flex"
             >
               <button
-                class="text-theme-navy-600 dark:text-theme-secondary-700 active css-1v4a3it"
+                class="active css-15n2mow"
                 data-testid="AddRecipient__send-all"
                 type="button"
               >
@@ -2237,7 +2237,7 @@ exports[`AddRecipient > should show available balance after fee 1`] = `
                             class=""
                           >
                             <div
-                              class="flex items-center cursor-pointer"
+                              class="flex items-center cursor-pointer rounded bg-transparent p-1 text-theme-secondary-700 transition-colors hover:bg-theme-primary-100 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-white"
                               data-testid="SelectRecipient__select-recipient"
                             >
                               <div
@@ -2380,7 +2380,7 @@ exports[`AddRecipient > should show available balance after fee 1`] = `
               class="hidden sm:inline-flex"
             >
               <button
-                class="text-theme-navy-600 dark:text-theme-secondary-700 css-1v4a3it"
+                class=" css-15n2mow"
                 data-testid="AddRecipient__send-all"
                 type="button"
               >
@@ -2556,7 +2556,7 @@ exports[`AddRecipient > should show zero amount if wallet has zero or insufficie
                             class=""
                           >
                             <div
-                              class="flex items-center cursor-pointer"
+                              class="flex items-center cursor-pointer rounded bg-transparent p-1 text-theme-secondary-700 transition-colors hover:bg-theme-primary-100 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-white"
                               data-testid="SelectRecipient__select-recipient"
                             >
                               <div
@@ -2732,7 +2732,7 @@ exports[`AddRecipient > should show zero amount if wallet has zero or insufficie
               class="hidden sm:inline-flex"
             >
               <button
-                class="text-theme-navy-600 dark:text-theme-secondary-700 active css-1v4a3it"
+                class="active css-15n2mow"
                 data-testid="AddRecipient__send-all"
                 type="button"
               >

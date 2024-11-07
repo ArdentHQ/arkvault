@@ -1,4 +1,4 @@
-import React from "react";
+import React, { ReactElement } from "react";
 
 import { DefaultTReturn, TOptions } from "i18next";
 import { Size } from "@/types";
@@ -10,6 +10,7 @@ export interface DropdownOption {
 	iconClassName?: string | ((option: DropdownOption) => string);
 	iconSize?: Size;
 	label: string;
+	element?: ReactElement;
 	secondaryLabel?: string | Function | DefaultTReturn<TOptions>;
 	value: string | number;
 	active?: boolean;
@@ -47,4 +48,5 @@ export interface DropdownProperties extends JSX.IntrinsicAttributes {
 	toggleSize?: Size;
 	toggleContent?: React.ReactNode | ((isOpen: boolean) => React.ReactNode);
 	disableToggle?: boolean;
+	closeOnSelect?: boolean;
 }

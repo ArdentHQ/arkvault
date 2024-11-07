@@ -148,7 +148,7 @@ exports[`DelegateRegistrationForm > should error if username is too long 1`] = `
                     type="button"
                   >
                     <div
-                      class="text-theme-primary-400 dark:text-theme-secondary-700 dark:hover:text-theme-secondary-500 css-v0ob3f"
+                      class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white css-v0ob3f"
                       height="16"
                       width="16"
                     >
@@ -317,7 +317,7 @@ exports[`DelegateRegistrationForm > should error if username is too long 1`] = `
                 <button
                   aria-checked="false"
                   aria-label="0"
-                  class="css-1sbhrf0"
+                  class="css-19daxkr"
                   data-testid="ButtonGroupOption"
                   role="radio"
                   type="button"
@@ -339,7 +339,7 @@ exports[`DelegateRegistrationForm > should error if username is too long 1`] = `
                 <button
                   aria-checked="true"
                   aria-label="1.354"
-                  class="css-1sbhrf0"
+                  class="css-19daxkr"
                   data-testid="ButtonGroupOption"
                   role="radio"
                   type="button"
@@ -361,7 +361,7 @@ exports[`DelegateRegistrationForm > should error if username is too long 1`] = `
                 <button
                   aria-checked="false"
                   aria-label="10"
-                  class="css-1sbhrf0"
+                  class="css-19daxkr"
                   data-testid="ButtonGroupOption"
                   role="radio"
                   type="button"
@@ -538,7 +538,7 @@ exports[`DelegateRegistrationForm > should render form step 1`] = `
                     type="button"
                   >
                     <div
-                      class="text-theme-primary-400 dark:text-theme-secondary-700 dark:hover:text-theme-secondary-500 css-v0ob3f"
+                      class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white css-v0ob3f"
                       height="16"
                       width="16"
                     >
@@ -659,7 +659,7 @@ exports[`DelegateRegistrationForm > should render form step 1`] = `
                 <button
                   aria-checked="false"
                   aria-label="0"
-                  class="css-1sbhrf0"
+                  class="css-19daxkr"
                   data-testid="ButtonGroupOption"
                   role="radio"
                   type="button"
@@ -681,7 +681,7 @@ exports[`DelegateRegistrationForm > should render form step 1`] = `
                 <button
                   aria-checked="true"
                   aria-label="1.354"
-                  class="css-1sbhrf0"
+                  class="css-19daxkr"
                   data-testid="ButtonGroupOption"
                   role="radio"
                   type="button"
@@ -703,7 +703,7 @@ exports[`DelegateRegistrationForm > should render form step 1`] = `
                 <button
                   aria-checked="false"
                   aria-label="10"
-                  class="css-1sbhrf0"
+                  class="css-19daxkr"
                   data-testid="ButtonGroupOption"
                   role="radio"
                   type="button"
@@ -827,7 +827,7 @@ exports[`DelegateRegistrationForm > should render review step 1`] = `
                     type="button"
                   >
                     <div
-                      class="text-theme-primary-400 dark:text-theme-secondary-700 dark:hover:text-theme-secondary-500 css-v0ob3f"
+                      class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white css-v0ob3f"
                       height="16"
                       width="16"
                     >
@@ -1186,7 +1186,7 @@ exports[`DelegateRegistrationForm > should set fee 1`] = `
                     type="button"
                   >
                     <div
-                      class="text-theme-primary-400 dark:text-theme-secondary-700 dark:hover:text-theme-secondary-500 css-v0ob3f"
+                      class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white css-v0ob3f"
                       height="16"
                       width="16"
                     >
@@ -1551,7 +1551,7 @@ exports[`DelegateRegistrationForm > should show error if username already exists
                     type="button"
                   >
                     <div
-                      class="text-theme-primary-400 dark:text-theme-secondary-700 dark:hover:text-theme-secondary-500 css-v0ob3f"
+                      class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white css-v0ob3f"
                       height="16"
                       width="16"
                     >
@@ -1720,7 +1720,7 @@ exports[`DelegateRegistrationForm > should show error if username already exists
                 <button
                   aria-checked="false"
                   aria-label="0"
-                  class="css-1sbhrf0"
+                  class="css-19daxkr"
                   data-testid="ButtonGroupOption"
                   role="radio"
                   type="button"
@@ -1742,7 +1742,7 @@ exports[`DelegateRegistrationForm > should show error if username already exists
                 <button
                   aria-checked="true"
                   aria-label="1.354"
-                  class="css-1sbhrf0"
+                  class="css-19daxkr"
                   data-testid="ButtonGroupOption"
                   role="radio"
                   type="button"
@@ -1764,7 +1764,7 @@ exports[`DelegateRegistrationForm > should show error if username already exists
                 <button
                   aria-checked="false"
                   aria-label="10"
-                  class="css-1sbhrf0"
+                  class="css-19daxkr"
                   data-testid="ButtonGroupOption"
                   role="radio"
                   type="button"
@@ -1941,7 +1941,7 @@ exports[`DelegateRegistrationForm > should show error if username contains illeg
                     type="button"
                   >
                     <div
-                      class="text-theme-primary-400 dark:text-theme-secondary-700 dark:hover:text-theme-secondary-500 css-v0ob3f"
+                      class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white css-v0ob3f"
                       height="16"
                       width="16"
                     >
@@ -2110,7 +2110,7 @@ exports[`DelegateRegistrationForm > should show error if username contains illeg
                 <button
                   aria-checked="false"
                   aria-label="0"
-                  class="css-1sbhrf0"
+                  class="css-19daxkr"
                   data-testid="ButtonGroupOption"
                   role="radio"
                   type="button"
@@ -2132,7 +2132,7 @@ exports[`DelegateRegistrationForm > should show error if username contains illeg
                 <button
                   aria-checked="true"
                   aria-label="1.354"
-                  class="css-1sbhrf0"
+                  class="css-19daxkr"
                   data-testid="ButtonGroupOption"
                   role="radio"
                   type="button"
@@ -2154,7 +2154,7 @@ exports[`DelegateRegistrationForm > should show error if username contains illeg
                 <button
                   aria-checked="false"
                   aria-label="10"
-                  class="css-1sbhrf0"
+                  class="css-19daxkr"
                   data-testid="ButtonGroupOption"
                   role="radio"
                   type="button"

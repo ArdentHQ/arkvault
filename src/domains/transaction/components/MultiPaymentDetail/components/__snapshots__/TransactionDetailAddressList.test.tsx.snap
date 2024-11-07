@@ -28,7 +28,7 @@ exports[`TransactionDetailAddressList > should render addresses in xs 1`] = `
             />
           </div>
           <a
-            class="ring-focus group/inner inline-block hidden sm:block css-7nwwrh"
+            class="ring-focus group/inner inline-block hidden sm:block css-167zzsv"
             data-ring-focus-margin="-m-1"
             data-testid="Link"
             href="https://live.arkscan.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
@@ -40,10 +40,10 @@ exports[`TransactionDetailAddressList > should render addresses in xs 1`] = `
               View Full List
             </span>
             <div
-              class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-v0ob3f"
+              class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-1fio4bh"
               data-testid="Link__external"
-              height="16"
-              width="16"
+              height="12"
+              width="12"
             >
               <svg
                 id="arrow-external"
@@ -87,7 +87,7 @@ exports[`TransactionDetailAddressList > should render addresses in xs 1`] = `
             </div>
           </div>
           <a
-            class="ring-focus group/inner inline-block block w-32 sm:hidden css-7nwwrh"
+            class="ring-focus group/inner inline-block block w-32 sm:hidden css-167zzsv"
             data-ring-focus-margin="-m-1"
             data-testid="Link"
             href="https://live.arkscan.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
@@ -99,10 +99,10 @@ exports[`TransactionDetailAddressList > should render addresses in xs 1`] = `
               View Full List
             </span>
             <div
-              class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-v0ob3f"
+              class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-1fio4bh"
               data-testid="Link__external"
-              height="16"
-              width="16"
+              height="12"
+              width="12"
             >
               <svg
                 id="arrow-external"
@@ -176,7 +176,7 @@ exports[`TransactionDetailAddressList > should render addresses in xs 2`] = `
             />
           </div>
           <a
-            class="ring-focus group/inner inline-block hidden sm:block css-7nwwrh"
+            class="ring-focus group/inner inline-block hidden sm:block css-167zzsv"
             data-ring-focus-margin="-m-1"
             data-testid="Link"
             href="https://live.arkscan.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
@@ -188,10 +188,10 @@ exports[`TransactionDetailAddressList > should render addresses in xs 2`] = `
               View Full List
             </span>
             <div
-              class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-v0ob3f"
+              class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-1fio4bh"
               data-testid="Link__external"
-              height="16"
-              width="16"
+              height="12"
+              width="12"
             >
               <svg
                 id="arrow-external"
@@ -235,7 +235,7 @@ exports[`TransactionDetailAddressList > should render addresses in xs 2`] = `
             </div>
           </div>
           <a
-            class="ring-focus group/inner inline-block block w-32 sm:hidden css-7nwwrh"
+            class="ring-focus group/inner inline-block block w-32 sm:hidden css-167zzsv"
             data-ring-focus-margin="-m-1"
             data-testid="Link"
             href="https://live.arkscan.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
@@ -247,10 +247,10 @@ exports[`TransactionDetailAddressList > should render addresses in xs 2`] = `
               View Full List
             </span>
             <div
-              class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-v0ob3f"
+              class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-1fio4bh"
               data-testid="Link__external"
-              height="16"
-              width="16"
+              height="12"
+              width="12"
             >
               <svg
                 id="arrow-external"
@@ -324,7 +324,7 @@ exports[`TransactionDetailAddressList > should render addresses in xs 3`] = `
             />
           </div>
           <a
-            class="ring-focus group/inner inline-block hidden sm:block css-7nwwrh"
+            class="ring-focus group/inner inline-block hidden sm:block css-167zzsv"
             data-ring-focus-margin="-m-1"
             data-testid="Link"
             href="https://live.arkscan.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
@@ -336,10 +336,10 @@ exports[`TransactionDetailAddressList > should render addresses in xs 3`] = `
               View Full List
             </span>
             <div
-              class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-v0ob3f"
+              class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-1fio4bh"
               data-testid="Link__external"
-              height="16"
-              width="16"
+              height="12"
+              width="12"
             >
               <svg
                 id="arrow-external"
@@ -380,7 +380,7 @@ exports[`TransactionDetailAddressList > should render addresses in xs 3`] = `
           </div>
         </div>
         <a
-          class="ring-focus group/inner inline-block block w-32 sm:hidden css-7nwwrh"
+          class="ring-focus group/inner inline-block block w-32 sm:hidden css-167zzsv"
           data-ring-focus-margin="-m-1"
           data-testid="Link"
           href="https://live.arkscan.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
@@ -392,10 +392,10 @@ exports[`TransactionDetailAddressList > should render addresses in xs 3`] = `
             View Full List
           </span>
           <div
-            class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-v0ob3f"
+            class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-1fio4bh"
             data-testid="Link__external"
-            height="16"
-            width="16"
+            height="12"
+            width="12"
           >
             <svg
               id="arrow-external"
@@ -468,7 +468,7 @@ exports[`TransactionDetailAddressList > should render addresses in xs 4`] = `
             />
           </div>
           <a
-            class="ring-focus group/inner inline-block hidden sm:block css-7nwwrh"
+            class="ring-focus group/inner inline-block hidden sm:block css-167zzsv"
             data-ring-focus-margin="-m-1"
             data-testid="Link"
             href="https://live.arkscan.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
@@ -480,10 +480,10 @@ exports[`TransactionDetailAddressList > should render addresses in xs 4`] = `
               View Full List
             </span>
             <div
-              class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-v0ob3f"
+              class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-1fio4bh"
               data-testid="Link__external"
-              height="16"
-              width="16"
+              height="12"
+              width="12"
             >
               <svg
                 id="arrow-external"
@@ -524,7 +524,7 @@ exports[`TransactionDetailAddressList > should render addresses in xs 4`] = `
           </div>
         </div>
         <a
-          class="ring-focus group/inner inline-block block w-32 sm:hidden css-7nwwrh"
+          class="ring-focus group/inner inline-block block w-32 sm:hidden css-167zzsv"
           data-ring-focus-margin="-m-1"
           data-testid="Link"
           href="https://live.arkscan.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
@@ -536,10 +536,10 @@ exports[`TransactionDetailAddressList > should render addresses in xs 4`] = `
             View Full List
           </span>
           <div
-            class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-v0ob3f"
+            class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-1fio4bh"
             data-testid="Link__external"
-            height="16"
-            width="16"
+            height="12"
+            width="12"
           >
             <svg
               id="arrow-external"
@@ -612,7 +612,7 @@ exports[`TransactionDetailAddressList > should render addresses in xs 5`] = `
             />
           </div>
           <a
-            class="ring-focus group/inner inline-block hidden sm:block css-7nwwrh"
+            class="ring-focus group/inner inline-block hidden sm:block css-167zzsv"
             data-ring-focus-margin="-m-1"
             data-testid="Link"
             href="https://live.arkscan.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
@@ -624,10 +624,10 @@ exports[`TransactionDetailAddressList > should render addresses in xs 5`] = `
               View Full List
             </span>
             <div
-              class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-v0ob3f"
+              class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-1fio4bh"
               data-testid="Link__external"
-              height="16"
-              width="16"
+              height="12"
+              width="12"
             >
               <svg
                 id="arrow-external"
@@ -668,7 +668,7 @@ exports[`TransactionDetailAddressList > should render addresses in xs 5`] = `
           </div>
         </div>
         <a
-          class="ring-focus group/inner inline-block block w-32 sm:hidden css-7nwwrh"
+          class="ring-focus group/inner inline-block block w-32 sm:hidden css-167zzsv"
           data-ring-focus-margin="-m-1"
           data-testid="Link"
           href="https://live.arkscan.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
@@ -680,10 +680,10 @@ exports[`TransactionDetailAddressList > should render addresses in xs 5`] = `
             View Full List
           </span>
           <div
-            class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-v0ob3f"
+            class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-1fio4bh"
             data-testid="Link__external"
-            height="16"
-            width="16"
+            height="12"
+            width="12"
           >
             <svg
               id="arrow-external"

@@ -5,12 +5,12 @@ exports[`UnlockTokensRow > should render with isReady = false 1`] = `
   <table>
     <tbody>
       <tr
-        class=" css-1x4z4cy"
+        class="group css-16ynu5g"
         data-testid="TableRow"
       >
         <td>
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200"
           >
             <span
               class="whitespace-nowrap font-bold text-theme-secondary-900 dark:text-theme-secondary-200"
@@ -22,7 +22,7 @@ exports[`UnlockTokensRow > should render with isReady = false 1`] = `
         </td>
         <td>
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200"
           >
             <time
               class="text-theme-secondary-700"
@@ -34,7 +34,7 @@ exports[`UnlockTokensRow > should render with isReady = false 1`] = `
         </td>
         <td>
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end"
           >
             <div
               class="flex items-center"
@@ -95,12 +95,12 @@ exports[`UnlockTokensRow > should render with isReady = true 1`] = `
   <table>
     <tbody>
       <tr
-        class=" css-1x4z4cy"
+        class="group css-16ynu5g"
         data-testid="TableRow"
       >
         <td>
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200"
           >
             <span
               class="whitespace-nowrap font-bold text-theme-secondary-900 dark:text-theme-secondary-200"
@@ -112,7 +112,7 @@ exports[`UnlockTokensRow > should render with isReady = true 1`] = `
         </td>
         <td>
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200"
           >
             <time
               class="text-theme-secondary-700"
@@ -124,7 +124,7 @@ exports[`UnlockTokensRow > should render with isReady = true 1`] = `
         </td>
         <td>
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end"
           >
             <div
               class="flex items-center"

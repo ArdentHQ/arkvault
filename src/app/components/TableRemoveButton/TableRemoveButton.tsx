@@ -29,7 +29,7 @@ export const TableRemoveButton = ({ className, isDisabled, onClick, ...propertie
 			onClick={handleClick}
 			{...properties}
 		>
-			<Icon name="Trash" size="lg" />
+			<Icon name="Trash" size="md" />
 		</Button>
 	);
 };

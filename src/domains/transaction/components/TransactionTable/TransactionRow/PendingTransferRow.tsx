@@ -27,7 +27,7 @@ export const PendingTransferRow = ({
 
 	return (
 		<TableRow className="relative" onClick={() => onRowClick?.(transaction)}>
-			<TableCell variant="start" innerClassName="items-start my-0 py-3 xl:min-h-0">
+			<TableCell variant="start" innerClassName="items-start my-1 py-2 xl:py-3 xl:min-h-11">
 				<div className="flex flex-col gap-1 font-semibold">
 					<span className="text-sm">
 						<TruncateMiddle
@@ -50,7 +50,7 @@ export const PendingTransferRow = ({
 
 			<TableCell
 				className="hidden lg:table-cell"
-				innerClassName="text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold items-start xl:min-h-0 my-0 py-3"
+				innerClassName="text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold items-start my-1 pt-3 min-h-14 xl:min-h-11"
 			>
 				{timeStamp ? (
 					<TimeAgo date={DateTime.fromUnix(timeStamp.toUNIX()).toISOString()} />
@@ -59,13 +59,13 @@ export const PendingTransferRow = ({
 				)}
 			</TableCell>
 
-			<TableCell innerClassName="items-start xl:min-h-0 my-0 py-3">
+			<TableCell innerClassName="items-start xl:min-h-11 my-1 pt-3 min-h-14 xl:min-h-11">
 				<Label color="secondary" size="xs" noBorder className="rounded px-1 dark:border">
 					{getLabel(transaction.type())}
 				</Label>
 			</TableCell>
 
-			<TableCell innerClassName="space-x-2 items-start xl:min-h-0 my-0 py-3">
+			<TableCell innerClassName="space-x-2 items-start xl:min-h-11 my-1 pt-3 min-h-14 xl:min-h-11">
 				<Label color="danger-bg" size="xs" noBorder className="rounded px-[11px] py-1">
 					{t("COMMON.TO")}
 				</Label>
@@ -81,7 +81,7 @@ export const PendingTransferRow = ({
 
 			<TableCell
 				className="hidden w-16 lg:table-cell"
-				innerClassName="items-start justify-center truncate hidden lg:flex xl:min-h-0 my-0 py-3"
+				innerClassName="items-start justify-center truncate hidden lg:flex xl:min-h-11 my-0 py-3"
 			>
 				<Tooltip content={t("TRANSACTION.MULTISIGNATURE.AWAITING_CONFIRMATIONS")}>
 					<span className="text-theme-secondary-700">
@@ -90,19 +90,19 @@ export const PendingTransferRow = ({
 				</Tooltip>
 			</TableCell>
 
-			<TableCell innerClassName="justify-end items-start xl:min-h-0 my-0 py-3">
+			<TableCell innerClassName="justify-end items-start my-1 pt-3 min-h-14 xl:min-h-11">
 				<TransactionRowAddressing transaction={transaction} profile={transaction.wallet().profile()} />
 			</TableCell>
 
 			<TableCell
 				className="hidden lg:table-cell"
-				innerClassName="justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+				innerClassName="justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold my-1 pt-3 min-h-14 xl:min-h-11"
 			>
 				<Amount value={wallet.convertedBalance()} ticker={wallet.exchangeCurrency()} />
 			</TableCell>
 
 			<TableCell
-				innerClassName="items-start xl:min-h-0 my-0 py-3"
+				innerClassName="items-start my-1 pt-2 min-h-14 xl:min-h-11"
 				className="text-sm text-theme-secondary-500"
 				variant="end"
 			>
