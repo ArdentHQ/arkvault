@@ -44,7 +44,7 @@ export const TransactionRowAddressing = ({
 }: {
 	transaction: DTO.RawTransactionData;
 	profile: Contracts.IProfile;
-// eslint-disable-next-line sonarjs/cognitive-complexity
+	// eslint-disable-next-line sonarjs/cognitive-complexity
 }): JSX.Element => {
 	const isMusigTransfer = [
 		!!transaction.usesMultiSignature?.(),
@@ -103,16 +103,10 @@ export const TransactionRowAddressing = ({
 							<span className="text-theme-secondary-700 dark:text-theme-secondary-500">
 								({transaction.recipients().length})
 							</span>
-						</>)
-					}
+						</>
+					)}
 
-					{direction === "received" && (
-						<FormattedAddress
-							address={transaction.sender()}
-							alias={alias}
-						/>
-						)
-					}
+					{direction === "received" && <FormattedAddress address={transaction.sender()} alias={alias} />}
 				</span>
 			</div>
 		);
@@ -178,15 +172,12 @@ export const TransactionRowAddressing = ({
 	return (
 		<div className="flex flex-row gap-2" data-testid="TransactionRowAddressing__container">
 			<TransactionRowLabel direction={direction} />
-			<FormattedAddress
-				address={isNegative ? transaction.recipient() : transaction.sender()}
-				alias={alias}
-			/>
+			<FormattedAddress address={isNegative ? transaction.recipient() : transaction.sender()} alias={alias} />
 		</div>
 	);
 };
 
-const FormattedAddress = ({alias, address}: {alias?: string; address: string;}): JSX.Element => (
+const FormattedAddress = ({ alias, address }: { alias?: string; address: string }): JSX.Element => (
 	<div
 		className={cn({
 			"w-40 sm:w-40 md:w-32 lg:w-50": alias,
@@ -205,4 +196,4 @@ const FormattedAddress = ({alias, address}: {alias?: string; address: string;}):
 			size="sm"
 		/>
 	</div>
-)
+);
