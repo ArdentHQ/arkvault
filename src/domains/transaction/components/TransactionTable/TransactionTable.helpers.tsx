@@ -63,6 +63,7 @@ export const usePendingTransactionTableColumns = ({ coin }: { coin: string }) =>
 		() => [
 			{
 				Header: t("COMMON.TX_ID"),
+				cellWidth: "min-w-32",
 				headerClassName: "no-border",
 			},
 			{

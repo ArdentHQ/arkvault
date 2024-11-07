@@ -15,7 +15,7 @@ exports[`SearchWallet uses fiat value = false > should render 1`] = `
         data-testid="Modal__inner"
       >
         <div
-          class="absolute right-0 top-0 z-10 mr-6 mt-4 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 md:mr-8 md:mt-8"
+          class="absolute right-0 top-0 z-10 mr-6 mt-4 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-800 hover:text-white green:hover:bg-theme-primary-700 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 dark:hover:text-white md:mr-8 md:mt-8"
         >
           <button
             class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-8 w-8"
@@ -90,7 +90,7 @@ exports[`SearchWallet uses fiat value = false > should render 1`] = `
                         role="row"
                       >
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 no-border first:rounded-tl-xl last:rounded-tr-xl"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border first:rounded-tl-xl last:rounded-tr-xl"
                           colspan="1"
                           data-testid="table__th--0"
                           role="columnheader"
@@ -136,7 +136,7 @@ exports[`SearchWallet uses fiat value = false > should render 1`] = `
                           </div>
                         </th>
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 no-border first:rounded-tl-xl last:rounded-tr-xl"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border first:rounded-tl-xl last:rounded-tr-xl"
                           colspan="1"
                           data-testid="table__th--1"
                           role="columnheader"
@@ -182,7 +182,7 @@ exports[`SearchWallet uses fiat value = false > should render 1`] = `
                           </div>
                         </th>
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 no-border first:rounded-tl-xl last:rounded-tr-xl"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border first:rounded-tl-xl last:rounded-tr-xl"
                           colspan="1"
                           data-testid="table__th--2"
                           role="columnheader"
@@ -201,7 +201,7 @@ exports[`SearchWallet uses fiat value = false > should render 1`] = `
                                   class="group"
                                 >
                                   <button
-                                    class="ring-focus css-15d5iox"
+                                    class="ring-focus css-46sfhd"
                                     type="button"
                                   >
                                     <div
@@ -273,14 +273,14 @@ exports[`SearchWallet uses fiat value = false > should render 1`] = `
                       role="rowgroup"
                     >
                       <tr
-                        class="relative css-1x4z4cy"
+                        class="group relative css-16ynu5g"
                         data-testid="TableRow"
                       >
                         <td
                           class="w-full max-w-28"
                         >
                           <div
-                            class="flex px-3 items-center transition-colors duration-100 min-h-11 pl-6 rounded-l space-x-4 my-0.5"
+                            class="flex px-3 items-center transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 space-x-4 my-0.5"
                           >
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -307,7 +307,7 @@ exports[`SearchWallet uses fiat value = false > should render 1`] = `
                         </td>
                         <td>
                           <div
-                            class="flex px-3 items-center transition-colors duration-100 min-h-11 font-semibold justify-end my-0.5"
+                            class="flex px-3 items-center transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 font-semibold justify-end my-0.5"
                           >
                             <span
                               class="whitespace-nowrap text-sm leading-[17px]"
@@ -319,7 +319,7 @@ exports[`SearchWallet uses fiat value = false > should render 1`] = `
                         </td>
                         <td>
                           <div
-                            class="flex px-3 items-center transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end my-0.5"
+                            class="flex px-3 items-center transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end my-0.5"
                           >
                             <div>
                               <button
@@ -338,14 +338,14 @@ exports[`SearchWallet uses fiat value = false > should render 1`] = `
                         </td>
                       </tr>
                       <tr
-                        class="relative css-1x4z4cy"
+                        class="group relative css-16ynu5g"
                         data-testid="TableRow"
                       >
                         <td
                           class="w-full max-w-28"
                         >
                           <div
-                            class="flex px-3 items-center transition-colors duration-100 min-h-11 pl-6 rounded-l space-x-4 my-0.5"
+                            class="flex px-3 items-center transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 space-x-4 my-0.5"
                           >
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -372,7 +372,7 @@ exports[`SearchWallet uses fiat value = false > should render 1`] = `
                         </td>
                         <td>
                           <div
-                            class="flex px-3 items-center transition-colors duration-100 min-h-11 font-semibold justify-end my-0.5"
+                            class="flex px-3 items-center transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 font-semibold justify-end my-0.5"
                           >
                             <span
                               class="whitespace-nowrap text-sm leading-[17px]"
@@ -384,7 +384,7 @@ exports[`SearchWallet uses fiat value = false > should render 1`] = `
                         </td>
                         <td>
                           <div
-                            class="flex px-3 items-center transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end my-0.5"
+                            class="flex px-3 items-center transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end my-0.5"
                           >
                             <div>
                               <button
@@ -430,7 +430,7 @@ exports[`SearchWallet uses fiat value = false > should render compact on md scre
         data-testid="Modal__inner"
       >
         <div
-          class="absolute right-0 top-0 z-10 mr-6 mt-4 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 md:mr-8 md:mt-8"
+          class="absolute right-0 top-0 z-10 mr-6 mt-4 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-800 hover:text-white green:hover:bg-theme-primary-700 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 dark:hover:text-white md:mr-8 md:mt-8"
         >
           <button
             class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-8 w-8"
@@ -505,7 +505,7 @@ exports[`SearchWallet uses fiat value = false > should render compact on md scre
                         role="row"
                       >
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 no-border first:rounded-tl-xl last:rounded-tr-xl"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border first:rounded-tl-xl last:rounded-tr-xl"
                           colspan="1"
                           data-testid="table__th--0"
                           role="columnheader"
@@ -551,7 +551,7 @@ exports[`SearchWallet uses fiat value = false > should render compact on md scre
                           </div>
                         </th>
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 no-border first:rounded-tl-xl last:rounded-tr-xl"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border first:rounded-tl-xl last:rounded-tr-xl"
                           colspan="1"
                           data-testid="table__th--1"
                           role="columnheader"
@@ -597,7 +597,7 @@ exports[`SearchWallet uses fiat value = false > should render compact on md scre
                           </div>
                         </th>
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 no-border first:rounded-tl-xl last:rounded-tr-xl"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border first:rounded-tl-xl last:rounded-tr-xl"
                           colspan="1"
                           data-testid="table__th--2"
                           role="columnheader"
@@ -616,7 +616,7 @@ exports[`SearchWallet uses fiat value = false > should render compact on md scre
                                   class="group"
                                 >
                                   <button
-                                    class="ring-focus css-15d5iox"
+                                    class="ring-focus css-46sfhd"
                                     type="button"
                                   >
                                     <div
@@ -688,14 +688,14 @@ exports[`SearchWallet uses fiat value = false > should render compact on md scre
                       role="rowgroup"
                     >
                       <tr
-                        class="relative css-1x4z4cy"
+                        class="group relative css-16ynu5g"
                         data-testid="TableRow"
                       >
                         <td
                           class="w-full max-w-28"
                         >
                           <div
-                            class="flex px-3 items-center transition-colors duration-100 min-h-11 pl-6 rounded-l space-x-4 my-0.5"
+                            class="flex px-3 items-center transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 space-x-4 my-0.5"
                           >
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -722,7 +722,7 @@ exports[`SearchWallet uses fiat value = false > should render compact on md scre
                         </td>
                         <td>
                           <div
-                            class="flex px-3 items-center transition-colors duration-100 min-h-11 font-semibold justify-end my-0.5"
+                            class="flex px-3 items-center transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 font-semibold justify-end my-0.5"
                           >
                             <span
                               class="whitespace-nowrap text-sm leading-[17px]"
@@ -734,7 +734,7 @@ exports[`SearchWallet uses fiat value = false > should render compact on md scre
                         </td>
                         <td>
                           <div
-                            class="flex px-3 items-center transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end my-0.5"
+                            class="flex px-3 items-center transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end my-0.5"
                           >
                             <div>
                               <button
@@ -753,14 +753,14 @@ exports[`SearchWallet uses fiat value = false > should render compact on md scre
                         </td>
                       </tr>
                       <tr
-                        class="relative css-1x4z4cy"
+                        class="group relative css-16ynu5g"
                         data-testid="TableRow"
                       >
                         <td
                           class="w-full max-w-28"
                         >
                           <div
-                            class="flex px-3 items-center transition-colors duration-100 min-h-11 pl-6 rounded-l space-x-4 my-0.5"
+                            class="flex px-3 items-center transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 space-x-4 my-0.5"
                           >
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -787,7 +787,7 @@ exports[`SearchWallet uses fiat value = false > should render compact on md scre
                         </td>
                         <td>
                           <div
-                            class="flex px-3 items-center transition-colors duration-100 min-h-11 font-semibold justify-end my-0.5"
+                            class="flex px-3 items-center transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 font-semibold justify-end my-0.5"
                           >
                             <span
                               class="whitespace-nowrap text-sm leading-[17px]"
@@ -799,7 +799,7 @@ exports[`SearchWallet uses fiat value = false > should render compact on md scre
                         </td>
                         <td>
                           <div
-                            class="flex px-3 items-center transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end my-0.5"
+                            class="flex px-3 items-center transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end my-0.5"
                           >
                             <div>
                               <button
@@ -845,7 +845,7 @@ exports[`SearchWallet uses fiat value = false > should render compact with selec
         data-testid="Modal__inner"
       >
         <div
-          class="absolute right-0 top-0 z-10 mr-6 mt-4 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 md:mr-8 md:mt-8"
+          class="absolute right-0 top-0 z-10 mr-6 mt-4 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-800 hover:text-white green:hover:bg-theme-primary-700 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 dark:hover:text-white md:mr-8 md:mt-8"
         >
           <button
             class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-8 w-8"
@@ -920,7 +920,7 @@ exports[`SearchWallet uses fiat value = false > should render compact with selec
                         role="row"
                       >
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 no-border first:rounded-tl-xl last:rounded-tr-xl"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border first:rounded-tl-xl last:rounded-tr-xl"
                           colspan="1"
                           data-testid="table__th--0"
                           role="columnheader"
@@ -966,7 +966,7 @@ exports[`SearchWallet uses fiat value = false > should render compact with selec
                           </div>
                         </th>
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 no-border first:rounded-tl-xl last:rounded-tr-xl"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border first:rounded-tl-xl last:rounded-tr-xl"
                           colspan="1"
                           data-testid="table__th--1"
                           role="columnheader"
@@ -1012,7 +1012,7 @@ exports[`SearchWallet uses fiat value = false > should render compact with selec
                           </div>
                         </th>
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 no-border first:rounded-tl-xl last:rounded-tr-xl"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border first:rounded-tl-xl last:rounded-tr-xl"
                           colspan="1"
                           data-testid="table__th--2"
                           role="columnheader"
@@ -1031,7 +1031,7 @@ exports[`SearchWallet uses fiat value = false > should render compact with selec
                                   class="group"
                                 >
                                   <button
-                                    class="ring-focus css-15d5iox"
+                                    class="ring-focus css-46sfhd"
                                     type="button"
                                   >
                                     <div
@@ -1103,7 +1103,7 @@ exports[`SearchWallet uses fiat value = false > should render compact with selec
                       role="rowgroup"
                     >
                       <tr
-                        class="relative css-1x4z4cy"
+                        class="group relative css-16ynu5g"
                         data-testid="TableRow"
                       >
                         <td
@@ -1166,14 +1166,14 @@ exports[`SearchWallet uses fiat value = false > should render compact with selec
                         </td>
                       </tr>
                       <tr
-                        class="relative css-1x4z4cy"
+                        class="group relative css-16ynu5g"
                         data-testid="TableRow"
                       >
                         <td
                           class="w-full max-w-28"
                         >
                           <div
-                            class="flex px-3 items-center transition-colors duration-100 min-h-11 pl-6 rounded-l space-x-4 my-0.5"
+                            class="flex px-3 items-center transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 space-x-4 my-0.5"
                           >
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -1200,7 +1200,7 @@ exports[`SearchWallet uses fiat value = false > should render compact with selec
                         </td>
                         <td>
                           <div
-                            class="flex px-3 items-center transition-colors duration-100 min-h-11 font-semibold justify-end my-0.5"
+                            class="flex px-3 items-center transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 font-semibold justify-end my-0.5"
                           >
                             <span
                               class="whitespace-nowrap text-sm leading-[17px]"
@@ -1212,7 +1212,7 @@ exports[`SearchWallet uses fiat value = false > should render compact with selec
                         </td>
                         <td>
                           <div
-                            class="flex px-3 items-center transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end my-0.5"
+                            class="flex px-3 items-center transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end my-0.5"
                           >
                             <div>
                               <button
@@ -1258,7 +1258,7 @@ exports[`SearchWallet uses fiat value = false > should render responsive item 1`
         data-testid="Modal__inner"
       >
         <div
-          class="absolute right-0 top-0 z-10 mr-6 mt-4 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 md:mr-8 md:mt-8"
+          class="absolute right-0 top-0 z-10 mr-6 mt-4 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-800 hover:text-white green:hover:bg-theme-primary-700 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 dark:hover:text-white md:mr-8 md:mt-8"
         >
           <button
             class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-8 w-8"
@@ -1573,7 +1573,7 @@ exports[`SearchWallet uses fiat value = false > should render responsive item 2`
         data-testid="Modal__inner"
       >
         <div
-          class="absolute right-0 top-0 z-10 mr-6 mt-4 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 md:mr-8 md:mt-8"
+          class="absolute right-0 top-0 z-10 mr-6 mt-4 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-800 hover:text-white green:hover:bg-theme-primary-700 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 dark:hover:text-white md:mr-8 md:mt-8"
         >
           <button
             class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-8 w-8"
@@ -1888,7 +1888,7 @@ exports[`SearchWallet uses fiat value = false > should render responsive with se
         data-testid="Modal__inner"
       >
         <div
-          class="absolute right-0 top-0 z-10 mr-6 mt-4 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 md:mr-8 md:mt-8"
+          class="absolute right-0 top-0 z-10 mr-6 mt-4 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-800 hover:text-white green:hover:bg-theme-primary-700 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 dark:hover:text-white md:mr-8 md:mt-8"
         >
           <button
             class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-8 w-8"
@@ -2203,7 +2203,7 @@ exports[`SearchWallet uses fiat value = false > should render with incompatible 
         data-testid="Modal__inner"
       >
         <div
-          class="absolute right-0 top-0 z-10 mr-6 mt-4 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 md:mr-8 md:mt-8"
+          class="absolute right-0 top-0 z-10 mr-6 mt-4 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-800 hover:text-white green:hover:bg-theme-primary-700 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 dark:hover:text-white md:mr-8 md:mt-8"
         >
           <button
             class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-8 w-8"
@@ -2278,7 +2278,7 @@ exports[`SearchWallet uses fiat value = false > should render with incompatible 
                         role="row"
                       >
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 no-border first:rounded-tl-xl last:rounded-tr-xl"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border first:rounded-tl-xl last:rounded-tr-xl"
                           colspan="1"
                           data-testid="table__th--0"
                           role="columnheader"
@@ -2324,7 +2324,7 @@ exports[`SearchWallet uses fiat value = false > should render with incompatible 
                           </div>
                         </th>
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 no-border first:rounded-tl-xl last:rounded-tr-xl"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border first:rounded-tl-xl last:rounded-tr-xl"
                           colspan="1"
                           data-testid="table__th--1"
                           role="columnheader"
@@ -2370,7 +2370,7 @@ exports[`SearchWallet uses fiat value = false > should render with incompatible 
                           </div>
                         </th>
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 no-border first:rounded-tl-xl last:rounded-tr-xl"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border first:rounded-tl-xl last:rounded-tr-xl"
                           colspan="1"
                           data-testid="table__th--2"
                           role="columnheader"
@@ -2389,7 +2389,7 @@ exports[`SearchWallet uses fiat value = false > should render with incompatible 
                                   class="group"
                                 >
                                   <button
-                                    class="ring-focus css-15d5iox"
+                                    class="ring-focus css-46sfhd"
                                     type="button"
                                   >
                                     <div
@@ -2461,14 +2461,14 @@ exports[`SearchWallet uses fiat value = false > should render with incompatible 
                       role="rowgroup"
                     >
                       <tr
-                        class="relative css-1x4z4cy"
+                        class="group relative css-16ynu5g"
                         data-testid="TableRow"
                       >
                         <td
                           class="w-full max-w-28"
                         >
                           <div
-                            class="flex px-3 items-center transition-colors duration-100 min-h-11 pl-6 rounded-l space-x-4 my-0.5"
+                            class="flex px-3 items-center transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 space-x-4 my-0.5"
                           >
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -2484,7 +2484,7 @@ exports[`SearchWallet uses fiat value = false > should render with incompatible 
                         </td>
                         <td>
                           <div
-                            class="flex px-3 items-center transition-colors duration-100 min-h-11 font-semibold justify-end my-0.5"
+                            class="flex px-3 items-center transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 font-semibold justify-end my-0.5"
                           >
                             <span
                               class="whitespace-nowrap text-sm leading-[17px]"
@@ -2496,7 +2496,7 @@ exports[`SearchWallet uses fiat value = false > should render with incompatible 
                         </td>
                         <td>
                           <div
-                            class="flex px-3 items-center transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end my-0.5"
+                            class="flex px-3 items-center transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end my-0.5"
                           >
                             <div>
                               <button
@@ -2543,7 +2543,7 @@ exports[`SearchWallet uses fiat value = false > should render with selected addr
         data-testid="Modal__inner"
       >
         <div
-          class="absolute right-0 top-0 z-10 mr-6 mt-4 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 md:mr-8 md:mt-8"
+          class="absolute right-0 top-0 z-10 mr-6 mt-4 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-800 hover:text-white green:hover:bg-theme-primary-700 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 dark:hover:text-white md:mr-8 md:mt-8"
         >
           <button
             class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-8 w-8"
@@ -2618,7 +2618,7 @@ exports[`SearchWallet uses fiat value = false > should render with selected addr
                         role="row"
                       >
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 no-border first:rounded-tl-xl last:rounded-tr-xl"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border first:rounded-tl-xl last:rounded-tr-xl"
                           colspan="1"
                           data-testid="table__th--0"
                           role="columnheader"
@@ -2664,7 +2664,7 @@ exports[`SearchWallet uses fiat value = false > should render with selected addr
                           </div>
                         </th>
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 no-border first:rounded-tl-xl last:rounded-tr-xl"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border first:rounded-tl-xl last:rounded-tr-xl"
                           colspan="1"
                           data-testid="table__th--1"
                           role="columnheader"
@@ -2710,7 +2710,7 @@ exports[`SearchWallet uses fiat value = false > should render with selected addr
                           </div>
                         </th>
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 no-border first:rounded-tl-xl last:rounded-tr-xl"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border first:rounded-tl-xl last:rounded-tr-xl"
                           colspan="1"
                           data-testid="table__th--2"
                           role="columnheader"
@@ -2729,7 +2729,7 @@ exports[`SearchWallet uses fiat value = false > should render with selected addr
                                   class="group"
                                 >
                                   <button
-                                    class="ring-focus css-15d5iox"
+                                    class="ring-focus css-46sfhd"
                                     type="button"
                                   >
                                     <div
@@ -2801,7 +2801,7 @@ exports[`SearchWallet uses fiat value = false > should render with selected addr
                       role="rowgroup"
                     >
                       <tr
-                        class="relative css-1x4z4cy"
+                        class="group relative css-16ynu5g"
                         data-testid="TableRow"
                       >
                         <td
@@ -2864,14 +2864,14 @@ exports[`SearchWallet uses fiat value = false > should render with selected addr
                         </td>
                       </tr>
                       <tr
-                        class="relative css-1x4z4cy"
+                        class="group relative css-16ynu5g"
                         data-testid="TableRow"
                       >
                         <td
                           class="w-full max-w-28"
                         >
                           <div
-                            class="flex px-3 items-center transition-colors duration-100 min-h-11 pl-6 rounded-l space-x-4 my-0.5"
+                            class="flex px-3 items-center transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 space-x-4 my-0.5"
                           >
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -2898,7 +2898,7 @@ exports[`SearchWallet uses fiat value = false > should render with selected addr
                         </td>
                         <td>
                           <div
-                            class="flex px-3 items-center transition-colors duration-100 min-h-11 font-semibold justify-end my-0.5"
+                            class="flex px-3 items-center transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 font-semibold justify-end my-0.5"
                           >
                             <span
                               class="whitespace-nowrap text-sm leading-[17px]"
@@ -2910,7 +2910,7 @@ exports[`SearchWallet uses fiat value = false > should render with selected addr
                         </td>
                         <td>
                           <div
-                            class="flex px-3 items-center transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end my-0.5"
+                            class="flex px-3 items-center transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end my-0.5"
                           >
                             <div>
                               <button
@@ -2956,7 +2956,7 @@ exports[`SearchWallet uses fiat value = false > should render with the default e
         data-testid="Modal__inner"
       >
         <div
-          class="absolute right-0 top-0 z-10 mr-6 mt-4 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 md:mr-8 md:mt-8"
+          class="absolute right-0 top-0 z-10 mr-6 mt-4 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-800 hover:text-white green:hover:bg-theme-primary-700 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 dark:hover:text-white md:mr-8 md:mt-8"
         >
           <button
             class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-8 w-8"
@@ -3031,7 +3031,7 @@ exports[`SearchWallet uses fiat value = false > should render with the default e
                         role="row"
                       >
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 no-border first:rounded-tl-xl last:rounded-tr-xl"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border first:rounded-tl-xl last:rounded-tr-xl"
                           colspan="1"
                           data-testid="table__th--0"
                           role="columnheader"
@@ -3077,7 +3077,7 @@ exports[`SearchWallet uses fiat value = false > should render with the default e
                           </div>
                         </th>
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 no-border first:rounded-tl-xl last:rounded-tr-xl"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border first:rounded-tl-xl last:rounded-tr-xl"
                           colspan="1"
                           data-testid="table__th--1"
                           role="columnheader"
@@ -3123,7 +3123,7 @@ exports[`SearchWallet uses fiat value = false > should render with the default e
                           </div>
                         </th>
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 no-border first:rounded-tl-xl last:rounded-tr-xl"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border first:rounded-tl-xl last:rounded-tr-xl"
                           colspan="1"
                           data-testid="table__th--2"
                           role="columnheader"
@@ -3142,7 +3142,7 @@ exports[`SearchWallet uses fiat value = false > should render with the default e
                                   class="group"
                                 >
                                   <button
-                                    class="ring-focus css-15d5iox"
+                                    class="ring-focus css-46sfhd"
                                     type="button"
                                   >
                                     <div
@@ -3214,14 +3214,14 @@ exports[`SearchWallet uses fiat value = false > should render with the default e
                       role="rowgroup"
                     >
                       <tr
-                        class="relative css-1x4z4cy"
+                        class="group relative css-16ynu5g"
                         data-testid="TableRow"
                       >
                         <td
                           class="w-full max-w-28"
                         >
                           <div
-                            class="flex px-3 items-center transition-colors duration-100 min-h-11 pl-6 rounded-l space-x-4 my-0.5"
+                            class="flex px-3 items-center transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 space-x-4 my-0.5"
                           >
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -3248,7 +3248,7 @@ exports[`SearchWallet uses fiat value = false > should render with the default e
                         </td>
                         <td>
                           <div
-                            class="flex px-3 items-center transition-colors duration-100 min-h-11 font-semibold justify-end my-0.5"
+                            class="flex px-3 items-center transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 font-semibold justify-end my-0.5"
                           >
                             <span
                               class="whitespace-nowrap text-sm leading-[17px]"
@@ -3260,7 +3260,7 @@ exports[`SearchWallet uses fiat value = false > should render with the default e
                         </td>
                         <td>
                           <div
-                            class="flex px-3 items-center transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end my-0.5"
+                            class="flex px-3 items-center transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end my-0.5"
                           >
                             <div>
                               <button
@@ -3279,14 +3279,14 @@ exports[`SearchWallet uses fiat value = false > should render with the default e
                         </td>
                       </tr>
                       <tr
-                        class="relative css-1x4z4cy"
+                        class="group relative css-16ynu5g"
                         data-testid="TableRow"
                       >
                         <td
                           class="w-full max-w-28"
                         >
                           <div
-                            class="flex px-3 items-center transition-colors duration-100 min-h-11 pl-6 rounded-l space-x-4 my-0.5"
+                            class="flex px-3 items-center transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 space-x-4 my-0.5"
                           >
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -3313,7 +3313,7 @@ exports[`SearchWallet uses fiat value = false > should render with the default e
                         </td>
                         <td>
                           <div
-                            class="flex px-3 items-center transition-colors duration-100 min-h-11 font-semibold justify-end my-0.5"
+                            class="flex px-3 items-center transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 font-semibold justify-end my-0.5"
                           >
                             <span
                               class="whitespace-nowrap text-sm leading-[17px]"
@@ -3325,7 +3325,7 @@ exports[`SearchWallet uses fiat value = false > should render with the default e
                         </td>
                         <td>
                           <div
-                            class="flex px-3 items-center transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end my-0.5"
+                            class="flex px-3 items-center transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end my-0.5"
                           >
                             <div>
                               <button
@@ -3371,7 +3371,7 @@ exports[`SearchWallet uses fiat value = true > should render 1`] = `
         data-testid="Modal__inner"
       >
         <div
-          class="absolute right-0 top-0 z-10 mr-6 mt-4 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 md:mr-8 md:mt-8"
+          class="absolute right-0 top-0 z-10 mr-6 mt-4 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-800 hover:text-white green:hover:bg-theme-primary-700 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 dark:hover:text-white md:mr-8 md:mt-8"
         >
           <button
             class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-8 w-8"
@@ -3446,7 +3446,7 @@ exports[`SearchWallet uses fiat value = true > should render 1`] = `
                         role="row"
                       >
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 no-border first:rounded-tl-xl last:rounded-tr-xl"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border first:rounded-tl-xl last:rounded-tr-xl"
                           colspan="1"
                           data-testid="table__th--0"
                           role="columnheader"
@@ -3492,7 +3492,7 @@ exports[`SearchWallet uses fiat value = true > should render 1`] = `
                           </div>
                         </th>
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 no-border first:rounded-tl-xl last:rounded-tr-xl"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border first:rounded-tl-xl last:rounded-tr-xl"
                           colspan="1"
                           data-testid="table__th--1"
                           role="columnheader"
@@ -3538,7 +3538,7 @@ exports[`SearchWallet uses fiat value = true > should render 1`] = `
                           </div>
                         </th>
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 hidden xl:table-cell first:rounded-tl-xl last:rounded-tr-xl"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black hidden xl:table-cell first:rounded-tl-xl last:rounded-tr-xl"
                           colspan="1"
                           data-testid="table__th--2"
                           role="columnheader"
@@ -3584,7 +3584,7 @@ exports[`SearchWallet uses fiat value = true > should render 1`] = `
                           </div>
                         </th>
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black first:rounded-tl-xl last:rounded-tr-xl"
                           colspan="1"
                           data-testid="table__th--3"
                           role="columnheader"
@@ -3603,7 +3603,7 @@ exports[`SearchWallet uses fiat value = true > should render 1`] = `
                                   class="group"
                                 >
                                   <button
-                                    class="ring-focus css-15d5iox"
+                                    class="ring-focus css-46sfhd"
                                     type="button"
                                   >
                                     <div
@@ -3675,14 +3675,14 @@ exports[`SearchWallet uses fiat value = true > should render 1`] = `
                       role="rowgroup"
                     >
                       <tr
-                        class="relative css-1x4z4cy"
+                        class="group relative css-16ynu5g"
                         data-testid="TableRow"
                       >
                         <td
                           class="w-full max-w-28"
                         >
                           <div
-                            class="flex px-3 items-center transition-colors duration-100 min-h-11 pl-6 rounded-l space-x-4 my-0.5"
+                            class="flex px-3 items-center transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 space-x-4 my-0.5"
                           >
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -3709,7 +3709,7 @@ exports[`SearchWallet uses fiat value = true > should render 1`] = `
                         </td>
                         <td>
                           <div
-                            class="flex px-3 items-center transition-colors duration-100 min-h-11 font-semibold justify-end my-0.5"
+                            class="flex px-3 items-center transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 font-semibold justify-end my-0.5"
                           >
                             <span
                               class="whitespace-nowrap text-sm leading-[17px]"
@@ -3723,7 +3723,7 @@ exports[`SearchWallet uses fiat value = true > should render 1`] = `
                           class="hidden xl:table-cell"
                         >
                           <div
-                            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 text-theme-secondary-text justify-end"
+                            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-theme-secondary-text justify-end"
                           >
                             <span
                               class="whitespace-nowrap text-sm leading-[17px]"
@@ -3735,7 +3735,7 @@ exports[`SearchWallet uses fiat value = true > should render 1`] = `
                         </td>
                         <td>
                           <div
-                            class="flex px-3 items-center transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end my-0.5"
+                            class="flex px-3 items-center transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end my-0.5"
                           >
                             <div>
                               <button
@@ -3754,14 +3754,14 @@ exports[`SearchWallet uses fiat value = true > should render 1`] = `
                         </td>
                       </tr>
                       <tr
-                        class="relative css-1x4z4cy"
+                        class="group relative css-16ynu5g"
                         data-testid="TableRow"
                       >
                         <td
                           class="w-full max-w-28"
                         >
                           <div
-                            class="flex px-3 items-center transition-colors duration-100 min-h-11 pl-6 rounded-l space-x-4 my-0.5"
+                            class="flex px-3 items-center transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 space-x-4 my-0.5"
                           >
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -3788,7 +3788,7 @@ exports[`SearchWallet uses fiat value = true > should render 1`] = `
                         </td>
                         <td>
                           <div
-                            class="flex px-3 items-center transition-colors duration-100 min-h-11 font-semibold justify-end my-0.5"
+                            class="flex px-3 items-center transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 font-semibold justify-end my-0.5"
                           >
                             <span
                               class="whitespace-nowrap text-sm leading-[17px]"
@@ -3802,7 +3802,7 @@ exports[`SearchWallet uses fiat value = true > should render 1`] = `
                           class="hidden xl:table-cell"
                         >
                           <div
-                            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 text-theme-secondary-text justify-end"
+                            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-theme-secondary-text justify-end"
                           >
                             <span
                               class="whitespace-nowrap text-sm leading-[17px]"
@@ -3814,7 +3814,7 @@ exports[`SearchWallet uses fiat value = true > should render 1`] = `
                         </td>
                         <td>
                           <div
-                            class="flex px-3 items-center transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end my-0.5"
+                            class="flex px-3 items-center transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end my-0.5"
                           >
                             <div>
                               <button
@@ -3860,7 +3860,7 @@ exports[`SearchWallet uses fiat value = true > should render compact on md scree
         data-testid="Modal__inner"
       >
         <div
-          class="absolute right-0 top-0 z-10 mr-6 mt-4 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 md:mr-8 md:mt-8"
+          class="absolute right-0 top-0 z-10 mr-6 mt-4 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-800 hover:text-white green:hover:bg-theme-primary-700 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 dark:hover:text-white md:mr-8 md:mt-8"
         >
           <button
             class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-8 w-8"
@@ -3935,7 +3935,7 @@ exports[`SearchWallet uses fiat value = true > should render compact on md scree
                         role="row"
                       >
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 no-border first:rounded-tl-xl last:rounded-tr-xl"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border first:rounded-tl-xl last:rounded-tr-xl"
                           colspan="1"
                           data-testid="table__th--0"
                           role="columnheader"
@@ -3981,7 +3981,7 @@ exports[`SearchWallet uses fiat value = true > should render compact on md scree
                           </div>
                         </th>
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 no-border first:rounded-tl-xl last:rounded-tr-xl"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border first:rounded-tl-xl last:rounded-tr-xl"
                           colspan="1"
                           data-testid="table__th--1"
                           role="columnheader"
@@ -4027,7 +4027,7 @@ exports[`SearchWallet uses fiat value = true > should render compact on md scree
                           </div>
                         </th>
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 hidden xl:table-cell first:rounded-tl-xl last:rounded-tr-xl"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black hidden xl:table-cell first:rounded-tl-xl last:rounded-tr-xl"
                           colspan="1"
                           data-testid="table__th--2"
                           role="columnheader"
@@ -4073,7 +4073,7 @@ exports[`SearchWallet uses fiat value = true > should render compact on md scree
                           </div>
                         </th>
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black first:rounded-tl-xl last:rounded-tr-xl"
                           colspan="1"
                           data-testid="table__th--3"
                           role="columnheader"
@@ -4092,7 +4092,7 @@ exports[`SearchWallet uses fiat value = true > should render compact on md scree
                                   class="group"
                                 >
                                   <button
-                                    class="ring-focus css-15d5iox"
+                                    class="ring-focus css-46sfhd"
                                     type="button"
                                   >
                                     <div
@@ -4164,14 +4164,14 @@ exports[`SearchWallet uses fiat value = true > should render compact on md scree
                       role="rowgroup"
                     >
                       <tr
-                        class="relative css-1x4z4cy"
+                        class="group relative css-16ynu5g"
                         data-testid="TableRow"
                       >
                         <td
                           class="w-full max-w-28"
                         >
                           <div
-                            class="flex px-3 items-center transition-colors duration-100 min-h-11 pl-6 rounded-l space-x-4 my-0.5"
+                            class="flex px-3 items-center transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 space-x-4 my-0.5"
                           >
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -4198,7 +4198,7 @@ exports[`SearchWallet uses fiat value = true > should render compact on md scree
                         </td>
                         <td>
                           <div
-                            class="flex px-3 items-center transition-colors duration-100 min-h-11 font-semibold justify-end my-0.5"
+                            class="flex px-3 items-center transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 font-semibold justify-end my-0.5"
                           >
                             <span
                               class="whitespace-nowrap text-sm leading-[17px]"
@@ -4212,7 +4212,7 @@ exports[`SearchWallet uses fiat value = true > should render compact on md scree
                           class="hidden xl:table-cell"
                         >
                           <div
-                            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 text-theme-secondary-text justify-end"
+                            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-theme-secondary-text justify-end"
                           >
                             <span
                               class="whitespace-nowrap text-sm leading-[17px]"
@@ -4224,7 +4224,7 @@ exports[`SearchWallet uses fiat value = true > should render compact on md scree
                         </td>
                         <td>
                           <div
-                            class="flex px-3 items-center transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end my-0.5"
+                            class="flex px-3 items-center transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end my-0.5"
                           >
                             <div>
                               <button
@@ -4243,14 +4243,14 @@ exports[`SearchWallet uses fiat value = true > should render compact on md scree
                         </td>
                       </tr>
                       <tr
-                        class="relative css-1x4z4cy"
+                        class="group relative css-16ynu5g"
                         data-testid="TableRow"
                       >
                         <td
                           class="w-full max-w-28"
                         >
                           <div
-                            class="flex px-3 items-center transition-colors duration-100 min-h-11 pl-6 rounded-l space-x-4 my-0.5"
+                            class="flex px-3 items-center transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 space-x-4 my-0.5"
                           >
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -4277,7 +4277,7 @@ exports[`SearchWallet uses fiat value = true > should render compact on md scree
                         </td>
                         <td>
                           <div
-                            class="flex px-3 items-center transition-colors duration-100 min-h-11 font-semibold justify-end my-0.5"
+                            class="flex px-3 items-center transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 font-semibold justify-end my-0.5"
                           >
                             <span
                               class="whitespace-nowrap text-sm leading-[17px]"
@@ -4291,7 +4291,7 @@ exports[`SearchWallet uses fiat value = true > should render compact on md scree
                           class="hidden xl:table-cell"
                         >
                           <div
-                            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 text-theme-secondary-text justify-end"
+                            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-theme-secondary-text justify-end"
                           >
                             <span
                               class="whitespace-nowrap text-sm leading-[17px]"
@@ -4303,7 +4303,7 @@ exports[`SearchWallet uses fiat value = true > should render compact on md scree
                         </td>
                         <td>
                           <div
-                            class="flex px-3 items-center transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end my-0.5"
+                            class="flex px-3 items-center transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end my-0.5"
                           >
                             <div>
                               <button
@@ -4349,7 +4349,7 @@ exports[`SearchWallet uses fiat value = true > should render compact with select
         data-testid="Modal__inner"
       >
         <div
-          class="absolute right-0 top-0 z-10 mr-6 mt-4 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 md:mr-8 md:mt-8"
+          class="absolute right-0 top-0 z-10 mr-6 mt-4 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-800 hover:text-white green:hover:bg-theme-primary-700 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 dark:hover:text-white md:mr-8 md:mt-8"
         >
           <button
             class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-8 w-8"
@@ -4424,7 +4424,7 @@ exports[`SearchWallet uses fiat value = true > should render compact with select
                         role="row"
                       >
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 no-border first:rounded-tl-xl last:rounded-tr-xl"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border first:rounded-tl-xl last:rounded-tr-xl"
                           colspan="1"
                           data-testid="table__th--0"
                           role="columnheader"
@@ -4470,7 +4470,7 @@ exports[`SearchWallet uses fiat value = true > should render compact with select
                           </div>
                         </th>
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 no-border first:rounded-tl-xl last:rounded-tr-xl"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border first:rounded-tl-xl last:rounded-tr-xl"
                           colspan="1"
                           data-testid="table__th--1"
                           role="columnheader"
@@ -4516,7 +4516,7 @@ exports[`SearchWallet uses fiat value = true > should render compact with select
                           </div>
                         </th>
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 hidden xl:table-cell first:rounded-tl-xl last:rounded-tr-xl"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black hidden xl:table-cell first:rounded-tl-xl last:rounded-tr-xl"
                           colspan="1"
                           data-testid="table__th--2"
                           role="columnheader"
@@ -4562,7 +4562,7 @@ exports[`SearchWallet uses fiat value = true > should render compact with select
                           </div>
                         </th>
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black first:rounded-tl-xl last:rounded-tr-xl"
                           colspan="1"
                           data-testid="table__th--3"
                           role="columnheader"
@@ -4581,7 +4581,7 @@ exports[`SearchWallet uses fiat value = true > should render compact with select
                                   class="group"
                                 >
                                   <button
-                                    class="ring-focus css-15d5iox"
+                                    class="ring-focus css-46sfhd"
                                     type="button"
                                   >
                                     <div
@@ -4653,7 +4653,7 @@ exports[`SearchWallet uses fiat value = true > should render compact with select
                       role="rowgroup"
                     >
                       <tr
-                        class="relative css-1x4z4cy"
+                        class="group relative css-16ynu5g"
                         data-testid="TableRow"
                       >
                         <td
@@ -4730,14 +4730,14 @@ exports[`SearchWallet uses fiat value = true > should render compact with select
                         </td>
                       </tr>
                       <tr
-                        class="relative css-1x4z4cy"
+                        class="group relative css-16ynu5g"
                         data-testid="TableRow"
                       >
                         <td
                           class="w-full max-w-28"
                         >
                           <div
-                            class="flex px-3 items-center transition-colors duration-100 min-h-11 pl-6 rounded-l space-x-4 my-0.5"
+                            class="flex px-3 items-center transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 space-x-4 my-0.5"
                           >
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -4764,7 +4764,7 @@ exports[`SearchWallet uses fiat value = true > should render compact with select
                         </td>
                         <td>
                           <div
-                            class="flex px-3 items-center transition-colors duration-100 min-h-11 font-semibold justify-end my-0.5"
+                            class="flex px-3 items-center transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 font-semibold justify-end my-0.5"
                           >
                             <span
                               class="whitespace-nowrap text-sm leading-[17px]"
@@ -4778,7 +4778,7 @@ exports[`SearchWallet uses fiat value = true > should render compact with select
                           class="hidden xl:table-cell"
                         >
                           <div
-                            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 text-theme-secondary-text justify-end"
+                            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-theme-secondary-text justify-end"
                           >
                             <span
                               class="whitespace-nowrap text-sm leading-[17px]"
@@ -4790,7 +4790,7 @@ exports[`SearchWallet uses fiat value = true > should render compact with select
                         </td>
                         <td>
                           <div
-                            class="flex px-3 items-center transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end my-0.5"
+                            class="flex px-3 items-center transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end my-0.5"
                           >
                             <div>
                               <button
@@ -4836,7 +4836,7 @@ exports[`SearchWallet uses fiat value = true > should render responsive item 1`]
         data-testid="Modal__inner"
       >
         <div
-          class="absolute right-0 top-0 z-10 mr-6 mt-4 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 md:mr-8 md:mt-8"
+          class="absolute right-0 top-0 z-10 mr-6 mt-4 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-800 hover:text-white green:hover:bg-theme-primary-700 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 dark:hover:text-white md:mr-8 md:mt-8"
         >
           <button
             class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-8 w-8"
@@ -5151,7 +5151,7 @@ exports[`SearchWallet uses fiat value = true > should render responsive item 2`]
         data-testid="Modal__inner"
       >
         <div
-          class="absolute right-0 top-0 z-10 mr-6 mt-4 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 md:mr-8 md:mt-8"
+          class="absolute right-0 top-0 z-10 mr-6 mt-4 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-800 hover:text-white green:hover:bg-theme-primary-700 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 dark:hover:text-white md:mr-8 md:mt-8"
         >
           <button
             class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-8 w-8"
@@ -5466,7 +5466,7 @@ exports[`SearchWallet uses fiat value = true > should render responsive with sel
         data-testid="Modal__inner"
       >
         <div
-          class="absolute right-0 top-0 z-10 mr-6 mt-4 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 md:mr-8 md:mt-8"
+          class="absolute right-0 top-0 z-10 mr-6 mt-4 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-800 hover:text-white green:hover:bg-theme-primary-700 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 dark:hover:text-white md:mr-8 md:mt-8"
         >
           <button
             class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-8 w-8"
@@ -5781,7 +5781,7 @@ exports[`SearchWallet uses fiat value = true > should render with incompatible l
         data-testid="Modal__inner"
       >
         <div
-          class="absolute right-0 top-0 z-10 mr-6 mt-4 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 md:mr-8 md:mt-8"
+          class="absolute right-0 top-0 z-10 mr-6 mt-4 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-800 hover:text-white green:hover:bg-theme-primary-700 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 dark:hover:text-white md:mr-8 md:mt-8"
         >
           <button
             class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-8 w-8"
@@ -5856,7 +5856,7 @@ exports[`SearchWallet uses fiat value = true > should render with incompatible l
                         role="row"
                       >
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 no-border first:rounded-tl-xl last:rounded-tr-xl"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border first:rounded-tl-xl last:rounded-tr-xl"
                           colspan="1"
                           data-testid="table__th--0"
                           role="columnheader"
@@ -5902,7 +5902,7 @@ exports[`SearchWallet uses fiat value = true > should render with incompatible l
                           </div>
                         </th>
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 no-border first:rounded-tl-xl last:rounded-tr-xl"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border first:rounded-tl-xl last:rounded-tr-xl"
                           colspan="1"
                           data-testid="table__th--1"
                           role="columnheader"
@@ -5948,7 +5948,7 @@ exports[`SearchWallet uses fiat value = true > should render with incompatible l
                           </div>
                         </th>
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 hidden xl:table-cell first:rounded-tl-xl last:rounded-tr-xl"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black hidden xl:table-cell first:rounded-tl-xl last:rounded-tr-xl"
                           colspan="1"
                           data-testid="table__th--2"
                           role="columnheader"
@@ -5994,7 +5994,7 @@ exports[`SearchWallet uses fiat value = true > should render with incompatible l
                           </div>
                         </th>
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black first:rounded-tl-xl last:rounded-tr-xl"
                           colspan="1"
                           data-testid="table__th--3"
                           role="columnheader"
@@ -6013,7 +6013,7 @@ exports[`SearchWallet uses fiat value = true > should render with incompatible l
                                   class="group"
                                 >
                                   <button
-                                    class="ring-focus css-15d5iox"
+                                    class="ring-focus css-46sfhd"
                                     type="button"
                                   >
                                     <div
@@ -6085,14 +6085,14 @@ exports[`SearchWallet uses fiat value = true > should render with incompatible l
                       role="rowgroup"
                     >
                       <tr
-                        class="relative css-1x4z4cy"
+                        class="group relative css-16ynu5g"
                         data-testid="TableRow"
                       >
                         <td
                           class="w-full max-w-28"
                         >
                           <div
-                            class="flex px-3 items-center transition-colors duration-100 min-h-11 pl-6 rounded-l space-x-4 my-0.5"
+                            class="flex px-3 items-center transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 space-x-4 my-0.5"
                           >
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -6108,7 +6108,7 @@ exports[`SearchWallet uses fiat value = true > should render with incompatible l
                         </td>
                         <td>
                           <div
-                            class="flex px-3 items-center transition-colors duration-100 min-h-11 font-semibold justify-end my-0.5"
+                            class="flex px-3 items-center transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 font-semibold justify-end my-0.5"
                           >
                             <span
                               class="whitespace-nowrap text-sm leading-[17px]"
@@ -6122,7 +6122,7 @@ exports[`SearchWallet uses fiat value = true > should render with incompatible l
                           class="hidden xl:table-cell"
                         >
                           <div
-                            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 text-theme-secondary-text justify-end"
+                            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-theme-secondary-text justify-end"
                           >
                             <span
                               class="whitespace-nowrap text-sm leading-[17px]"
@@ -6134,7 +6134,7 @@ exports[`SearchWallet uses fiat value = true > should render with incompatible l
                         </td>
                         <td>
                           <div
-                            class="flex px-3 items-center transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end my-0.5"
+                            class="flex px-3 items-center transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end my-0.5"
                           >
                             <div>
                               <button
@@ -6181,7 +6181,7 @@ exports[`SearchWallet uses fiat value = true > should render with selected addre
         data-testid="Modal__inner"
       >
         <div
-          class="absolute right-0 top-0 z-10 mr-6 mt-4 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 md:mr-8 md:mt-8"
+          class="absolute right-0 top-0 z-10 mr-6 mt-4 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-800 hover:text-white green:hover:bg-theme-primary-700 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 dark:hover:text-white md:mr-8 md:mt-8"
         >
           <button
             class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-8 w-8"
@@ -6256,7 +6256,7 @@ exports[`SearchWallet uses fiat value = true > should render with selected addre
                         role="row"
                       >
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 no-border first:rounded-tl-xl last:rounded-tr-xl"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border first:rounded-tl-xl last:rounded-tr-xl"
                           colspan="1"
                           data-testid="table__th--0"
                           role="columnheader"
@@ -6302,7 +6302,7 @@ exports[`SearchWallet uses fiat value = true > should render with selected addre
                           </div>
                         </th>
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 no-border first:rounded-tl-xl last:rounded-tr-xl"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border first:rounded-tl-xl last:rounded-tr-xl"
                           colspan="1"
                           data-testid="table__th--1"
                           role="columnheader"
@@ -6348,7 +6348,7 @@ exports[`SearchWallet uses fiat value = true > should render with selected addre
                           </div>
                         </th>
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 hidden xl:table-cell first:rounded-tl-xl last:rounded-tr-xl"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black hidden xl:table-cell first:rounded-tl-xl last:rounded-tr-xl"
                           colspan="1"
                           data-testid="table__th--2"
                           role="columnheader"
@@ -6394,7 +6394,7 @@ exports[`SearchWallet uses fiat value = true > should render with selected addre
                           </div>
                         </th>
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black first:rounded-tl-xl last:rounded-tr-xl"
                           colspan="1"
                           data-testid="table__th--3"
                           role="columnheader"
@@ -6413,7 +6413,7 @@ exports[`SearchWallet uses fiat value = true > should render with selected addre
                                   class="group"
                                 >
                                   <button
-                                    class="ring-focus css-15d5iox"
+                                    class="ring-focus css-46sfhd"
                                     type="button"
                                   >
                                     <div
@@ -6485,7 +6485,7 @@ exports[`SearchWallet uses fiat value = true > should render with selected addre
                       role="rowgroup"
                     >
                       <tr
-                        class="relative css-1x4z4cy"
+                        class="group relative css-16ynu5g"
                         data-testid="TableRow"
                       >
                         <td
@@ -6562,14 +6562,14 @@ exports[`SearchWallet uses fiat value = true > should render with selected addre
                         </td>
                       </tr>
                       <tr
-                        class="relative css-1x4z4cy"
+                        class="group relative css-16ynu5g"
                         data-testid="TableRow"
                       >
                         <td
                           class="w-full max-w-28"
                         >
                           <div
-                            class="flex px-3 items-center transition-colors duration-100 min-h-11 pl-6 rounded-l space-x-4 my-0.5"
+                            class="flex px-3 items-center transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 space-x-4 my-0.5"
                           >
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -6596,7 +6596,7 @@ exports[`SearchWallet uses fiat value = true > should render with selected addre
                         </td>
                         <td>
                           <div
-                            class="flex px-3 items-center transition-colors duration-100 min-h-11 font-semibold justify-end my-0.5"
+                            class="flex px-3 items-center transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 font-semibold justify-end my-0.5"
                           >
                             <span
                               class="whitespace-nowrap text-sm leading-[17px]"
@@ -6610,7 +6610,7 @@ exports[`SearchWallet uses fiat value = true > should render with selected addre
                           class="hidden xl:table-cell"
                         >
                           <div
-                            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 text-theme-secondary-text justify-end"
+                            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-theme-secondary-text justify-end"
                           >
                             <span
                               class="whitespace-nowrap text-sm leading-[17px]"
@@ -6622,7 +6622,7 @@ exports[`SearchWallet uses fiat value = true > should render with selected addre
                         </td>
                         <td>
                           <div
-                            class="flex px-3 items-center transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end my-0.5"
+                            class="flex px-3 items-center transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end my-0.5"
                           >
                             <div>
                               <button
@@ -6668,7 +6668,7 @@ exports[`SearchWallet uses fiat value = true > should render with the default ex
         data-testid="Modal__inner"
       >
         <div
-          class="absolute right-0 top-0 z-10 mr-6 mt-4 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 md:mr-8 md:mt-8"
+          class="absolute right-0 top-0 z-10 mr-6 mt-4 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-800 hover:text-white green:hover:bg-theme-primary-700 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 dark:hover:text-white md:mr-8 md:mt-8"
         >
           <button
             class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-8 w-8"
@@ -6743,7 +6743,7 @@ exports[`SearchWallet uses fiat value = true > should render with the default ex
                         role="row"
                       >
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 no-border first:rounded-tl-xl last:rounded-tr-xl"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border first:rounded-tl-xl last:rounded-tr-xl"
                           colspan="1"
                           data-testid="table__th--0"
                           role="columnheader"
@@ -6789,7 +6789,7 @@ exports[`SearchWallet uses fiat value = true > should render with the default ex
                           </div>
                         </th>
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 no-border first:rounded-tl-xl last:rounded-tr-xl"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border first:rounded-tl-xl last:rounded-tr-xl"
                           colspan="1"
                           data-testid="table__th--1"
                           role="columnheader"
@@ -6835,7 +6835,7 @@ exports[`SearchWallet uses fiat value = true > should render with the default ex
                           </div>
                         </th>
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 hidden xl:table-cell first:rounded-tl-xl last:rounded-tr-xl"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black hidden xl:table-cell first:rounded-tl-xl last:rounded-tr-xl"
                           colspan="1"
                           data-testid="table__th--2"
                           role="columnheader"
@@ -6881,7 +6881,7 @@ exports[`SearchWallet uses fiat value = true > should render with the default ex
                           </div>
                         </th>
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black first:rounded-tl-xl last:rounded-tr-xl"
                           colspan="1"
                           data-testid="table__th--3"
                           role="columnheader"
@@ -6900,7 +6900,7 @@ exports[`SearchWallet uses fiat value = true > should render with the default ex
                                   class="group"
                                 >
                                   <button
-                                    class="ring-focus css-15d5iox"
+                                    class="ring-focus css-46sfhd"
                                     type="button"
                                   >
                                     <div
@@ -6972,14 +6972,14 @@ exports[`SearchWallet uses fiat value = true > should render with the default ex
                       role="rowgroup"
                     >
                       <tr
-                        class="relative css-1x4z4cy"
+                        class="group relative css-16ynu5g"
                         data-testid="TableRow"
                       >
                         <td
                           class="w-full max-w-28"
                         >
                           <div
-                            class="flex px-3 items-center transition-colors duration-100 min-h-11 pl-6 rounded-l space-x-4 my-0.5"
+                            class="flex px-3 items-center transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 space-x-4 my-0.5"
                           >
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -7006,7 +7006,7 @@ exports[`SearchWallet uses fiat value = true > should render with the default ex
                         </td>
                         <td>
                           <div
-                            class="flex px-3 items-center transition-colors duration-100 min-h-11 font-semibold justify-end my-0.5"
+                            class="flex px-3 items-center transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 font-semibold justify-end my-0.5"
                           >
                             <span
                               class="whitespace-nowrap text-sm leading-[17px]"
@@ -7020,7 +7020,7 @@ exports[`SearchWallet uses fiat value = true > should render with the default ex
                           class="hidden xl:table-cell"
                         >
                           <div
-                            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 text-theme-secondary-text justify-end"
+                            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-theme-secondary-text justify-end"
                           >
                             <span
                               class="whitespace-nowrap text-sm leading-[17px]"
@@ -7032,7 +7032,7 @@ exports[`SearchWallet uses fiat value = true > should render with the default ex
                         </td>
                         <td>
                           <div
-                            class="flex px-3 items-center transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end my-0.5"
+                            class="flex px-3 items-center transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end my-0.5"
                           >
                             <div>
                               <button
@@ -7051,14 +7051,14 @@ exports[`SearchWallet uses fiat value = true > should render with the default ex
                         </td>
                       </tr>
                       <tr
-                        class="relative css-1x4z4cy"
+                        class="group relative css-16ynu5g"
                         data-testid="TableRow"
                       >
                         <td
                           class="w-full max-w-28"
                         >
                           <div
-                            class="flex px-3 items-center transition-colors duration-100 min-h-11 pl-6 rounded-l space-x-4 my-0.5"
+                            class="flex px-3 items-center transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 space-x-4 my-0.5"
                           >
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -7085,7 +7085,7 @@ exports[`SearchWallet uses fiat value = true > should render with the default ex
                         </td>
                         <td>
                           <div
-                            class="flex px-3 items-center transition-colors duration-100 min-h-11 font-semibold justify-end my-0.5"
+                            class="flex px-3 items-center transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 font-semibold justify-end my-0.5"
                           >
                             <span
                               class="whitespace-nowrap text-sm leading-[17px]"
@@ -7099,7 +7099,7 @@ exports[`SearchWallet uses fiat value = true > should render with the default ex
                           class="hidden xl:table-cell"
                         >
                           <div
-                            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 text-theme-secondary-text justify-end"
+                            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-theme-secondary-text justify-end"
                           >
                             <span
                               class="whitespace-nowrap text-sm leading-[17px]"
@@ -7111,7 +7111,7 @@ exports[`SearchWallet uses fiat value = true > should render with the default ex
                         </td>
                         <td>
                           <div
-                            class="flex px-3 items-center transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end my-0.5"
+                            class="flex px-3 items-center transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end my-0.5"
                           >
                             <div>
                               <button

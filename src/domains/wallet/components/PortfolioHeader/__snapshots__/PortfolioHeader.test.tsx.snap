@@ -31,7 +31,7 @@ exports[`Portfolio grouped networks > should apply ledger import 1`] = `
                 class="group"
               >
                 <button
-                  class="ring-focus css-14zm422"
+                  class="ring-focus css-1mj8916"
                 >
                   <div
                     class="flex h-5 w-5 items-center justify-center"
@@ -81,7 +81,7 @@ exports[`Portfolio grouped networks > should apply ledger import 1`] = `
         >
           <div>
             <button
-              class="px-5 py-3 space-x-3 text-base relative items-center justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-700 hidden md:inline-flex"
+              class="px-5 py-3 space-x-3 text-base relative items-center justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 green:hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-500 hidden md:inline-flex"
               data-testid="WalletControls__import-ledger"
               type="button"
             >
@@ -120,7 +120,7 @@ exports[`Portfolio grouped networks > should apply ledger import 1`] = `
             </button>
           </div>
           <button
-            class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-700"
+            class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 green:hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-500"
             data-testid="WalletControls__import-wallet"
             type="button"
           >
@@ -166,7 +166,7 @@ exports[`Portfolio grouped networks > should apply ledger import 1`] = `
             </div>
           </button>
           <button
-            class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 hover:bg-theme-primary-700"
+            class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 green:hover:bg-theme-primary-700 navy:hover:bg-theme-primary-800 dark:hover:bg-theme-primary-500"
             data-testid="WalletControls__create-wallet"
             type="button"
           >
@@ -267,11 +267,11 @@ exports[`Portfolio grouped networks > should apply ledger import 1`] = `
           class="flex flex-grow flex-row items-center"
         >
           <div
-            class="css-7dz1f2"
+            class="css-ziskls"
           >
             <div
               aria-label="ARK"
-              class="inline-flex h-5 w-5 items-center justify-center text-theme-navy-600"
+              class="inline-flex h-5 w-5 items-center justify-center text-theme-primary-600"
               data-testid="NetworkIcon-ARK-ark.mainnet"
             >
               <div
@@ -457,7 +457,7 @@ exports[`Portfolio grouped networks > should apply ledger import 1`] = `
           class="ml-4 flex flex-shrink-0 items-center self-stretch transition-all duration-100 css-o6tyc"
         >
           <div
-            class="css-cp3doq"
+            class="css-tz6w2"
             data-testid="Accordion__toggle"
           >
             <div
@@ -499,11 +499,11 @@ exports[`Portfolio grouped networks > should apply ledger import 1`] = `
           class="flex flex-grow flex-row items-center"
         >
           <div
-            class="css-7dz1f2"
+            class="css-ziskls"
           >
             <div
               aria-label="ARK Devnet"
-              class="inline-flex h-5 w-5 items-center justify-center text-theme-navy-600"
+              class="inline-flex h-5 w-5 items-center justify-center text-theme-primary-600"
               data-testid="NetworkIcon-ARK-ark.devnet"
             >
               <div
@@ -531,7 +531,7 @@ exports[`Portfolio grouped networks > should apply ledger import 1`] = `
               class="absolute -bottom-2 -right-2 h-6 w-6 rounded-full bg-theme-background sm:hidden"
             >
               <div
-                class="inline-block p-1 text-theme-secondary-700"
+                class="inline-block p-1 text-theme-secondary-700 dark:text-theme-secondary-600"
                 data-testid="WalletIcon__TestNetwork"
               >
                 <div
@@ -573,7 +573,7 @@ exports[`Portfolio grouped networks > should apply ledger import 1`] = `
               class="hidden sm:inline-flex"
             >
               <div
-                class="inline-block p-1 text-theme-secondary-700"
+                class="inline-block p-1 text-theme-secondary-700 dark:text-theme-secondary-600"
                 data-testid="WalletIcon__TestNetwork"
               >
                 <div
@@ -729,7 +729,7 @@ exports[`Portfolio grouped networks > should apply ledger import 1`] = `
           class="ml-4 flex flex-shrink-0 items-center self-stretch transition-all duration-100 css-o6tyc"
         >
           <div
-            class="css-cp3doq"
+            class="css-tz6w2"
             data-testid="Accordion__toggle"
           >
             <div
@@ -794,7 +794,7 @@ exports[`Portfolio grouped networks > should render list 1`] = `
                 class="group"
               >
                 <button
-                  class="ring-focus css-14zm422"
+                  class="ring-focus css-1mj8916"
                 >
                   <div
                     class="flex h-5 w-5 items-center justify-center"
@@ -844,7 +844,7 @@ exports[`Portfolio grouped networks > should render list 1`] = `
         >
           <div>
             <button
-              class="px-5 py-3 space-x-3 text-base relative items-center justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-700 hidden md:inline-flex"
+              class="px-5 py-3 space-x-3 text-base relative items-center justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 green:hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-500 hidden md:inline-flex"
               data-testid="WalletControls__import-ledger"
               type="button"
             >
@@ -883,7 +883,7 @@ exports[`Portfolio grouped networks > should render list 1`] = `
             </button>
           </div>
           <button
-            class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-700"
+            class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 green:hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-500"
             data-testid="WalletControls__import-wallet"
             type="button"
           >
@@ -929,7 +929,7 @@ exports[`Portfolio grouped networks > should render list 1`] = `
             </div>
           </button>
           <button
-            class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 hover:bg-theme-primary-700"
+            class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 green:hover:bg-theme-primary-700 navy:hover:bg-theme-primary-800 dark:hover:bg-theme-primary-500"
             data-testid="WalletControls__create-wallet"
             type="button"
           >
@@ -1030,11 +1030,11 @@ exports[`Portfolio grouped networks > should render list 1`] = `
           class="flex flex-grow flex-row items-center"
         >
           <div
-            class="css-7dz1f2"
+            class="css-ziskls"
           >
             <div
               aria-label="ARK"
-              class="inline-flex h-5 w-5 items-center justify-center text-theme-navy-600"
+              class="inline-flex h-5 w-5 items-center justify-center text-theme-primary-600"
               data-testid="NetworkIcon-ARK-ark.mainnet"
             >
               <div
@@ -1220,7 +1220,7 @@ exports[`Portfolio grouped networks > should render list 1`] = `
           class="ml-4 flex flex-shrink-0 items-center self-stretch transition-all duration-100 css-o6tyc"
         >
           <div
-            class="css-cp3doq"
+            class="css-tz6w2"
             data-testid="Accordion__toggle"
           >
             <div
@@ -1262,11 +1262,11 @@ exports[`Portfolio grouped networks > should render list 1`] = `
           class="flex flex-grow flex-row items-center"
         >
           <div
-            class="css-7dz1f2"
+            class="css-ziskls"
           >
             <div
               aria-label="ARK Devnet"
-              class="inline-flex h-5 w-5 items-center justify-center text-theme-navy-600"
+              class="inline-flex h-5 w-5 items-center justify-center text-theme-primary-600"
               data-testid="NetworkIcon-ARK-ark.devnet"
             >
               <div
@@ -1294,7 +1294,7 @@ exports[`Portfolio grouped networks > should render list 1`] = `
               class="absolute -bottom-2 -right-2 h-6 w-6 rounded-full bg-theme-background sm:hidden"
             >
               <div
-                class="inline-block p-1 text-theme-secondary-700"
+                class="inline-block p-1 text-theme-secondary-700 dark:text-theme-secondary-600"
                 data-testid="WalletIcon__TestNetwork"
               >
                 <div
@@ -1336,7 +1336,7 @@ exports[`Portfolio grouped networks > should render list 1`] = `
               class="hidden sm:inline-flex"
             >
               <div
-                class="inline-block p-1 text-theme-secondary-700"
+                class="inline-block p-1 text-theme-secondary-700 dark:text-theme-secondary-600"
                 data-testid="WalletIcon__TestNetwork"
               >
                 <div
@@ -1492,7 +1492,7 @@ exports[`Portfolio grouped networks > should render list 1`] = `
           class="ml-4 flex flex-shrink-0 items-center self-stretch transition-all duration-100 css-o6tyc"
         >
           <div
-            class="css-cp3doq"
+            class="css-tz6w2"
             data-testid="Accordion__toggle"
           >
             <div
@@ -1557,7 +1557,7 @@ exports[`Portfolio grouped networks > should render without testnet wallets 1`] 
                 class="group"
               >
                 <button
-                  class="ring-focus css-14zm422"
+                  class="ring-focus css-1mj8916"
                 >
                   <div
                     class="flex h-5 w-5 items-center justify-center"
@@ -1607,7 +1607,7 @@ exports[`Portfolio grouped networks > should render without testnet wallets 1`] 
         >
           <div>
             <button
-              class="px-5 py-3 space-x-3 text-base relative items-center justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-700 hidden md:inline-flex"
+              class="px-5 py-3 space-x-3 text-base relative items-center justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 green:hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-500 hidden md:inline-flex"
               data-testid="WalletControls__import-ledger"
               type="button"
             >
@@ -1646,7 +1646,7 @@ exports[`Portfolio grouped networks > should render without testnet wallets 1`] 
             </button>
           </div>
           <button
-            class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-700"
+            class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 green:hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-500"
             data-testid="WalletControls__import-wallet"
             type="button"
           >
@@ -1692,7 +1692,7 @@ exports[`Portfolio grouped networks > should render without testnet wallets 1`] 
             </div>
           </button>
           <button
-            class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 hover:bg-theme-primary-700"
+            class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 green:hover:bg-theme-primary-700 navy:hover:bg-theme-primary-800 dark:hover:bg-theme-primary-500"
             data-testid="WalletControls__create-wallet"
             type="button"
           >
@@ -1793,11 +1793,11 @@ exports[`Portfolio grouped networks > should render without testnet wallets 1`] 
           class="flex flex-grow flex-row items-center"
         >
           <div
-            class="css-7dz1f2"
+            class="css-ziskls"
           >
             <div
               aria-label="ARK"
-              class="inline-flex h-5 w-5 items-center justify-center text-theme-navy-600"
+              class="inline-flex h-5 w-5 items-center justify-center text-theme-primary-600"
               data-testid="NetworkIcon-ARK-ark.mainnet"
             >
               <div
@@ -1983,7 +1983,7 @@ exports[`Portfolio grouped networks > should render without testnet wallets 1`] 
           class="ml-4 flex flex-shrink-0 items-center self-stretch transition-all duration-100 css-o6tyc"
         >
           <div
-            class="css-cp3doq"
+            class="css-tz6w2"
             data-testid="Accordion__toggle"
           >
             <div
