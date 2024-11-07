@@ -88,6 +88,53 @@ describe("Transactions", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
+	it("should filter by type and see empty results text", async () => {
+		const emptyProfile = await env.profiles().create("test2");
+
+		const wallet = await emptyProfile.walletFactory().fromMnemonicWithBIP39({
+			coin: "ARK",
+			mnemonic: MNEMONICS[2],
+			network: "ark.devnet",
+		});
+
+		emptyProfile.wallets().push(wallet);
+
+		render(
+			<Route path="/profiles/:profileId/dashboard">
+				<Transactions profile={profile} wallets={profile.wallets().values()} />
+			</Route>,
+			{
+				history,
+				route: dashboardURL,
+			},
+		);
+
+		await waitFor(() =>
+			expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(30),
+		);
+
+		const button = screen.getAllByRole("button", { name: /Type/ })[0];
+
+		expect(button).toBeInTheDocument();
+
+		expect(button).not.toBeDisabled();
+
+		server.use(
+			requestMock("https://ark-test.arkvault.io/api/transactions", {
+				data: [],
+				meta: transactionsFixture.meta,
+			}),
+		);
+
+		await userEvent.click(button);
+
+		const options = screen.getAllByTestId("FilterOption__checkbox");
+
+		await userEvent.click(options.at(0));
+
+		await expect(screen.findByTestId("EmptyBlock")).resolves.toBeVisible();
+	});
+
 	it("should filter by type", async () => {
 		render(
 			<Route path="/profiles/:profileId/dashboard">
@@ -151,53 +198,6 @@ describe("Transactions", () => {
 		await waitFor(() =>
 			expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(30),
 		);
-	});
-
-	it("should filter by type and see empty results text", async () => {
-		const emptyProfile = await env.profiles().create("test2");
-
-		const wallet = await emptyProfile.walletFactory().fromMnemonicWithBIP39({
-			coin: "ARK",
-			mnemonic: MNEMONICS[2],
-			network: "ark.devnet",
-		});
-
-		emptyProfile.wallets().push(wallet);
-
-		render(
-			<Route path="/profiles/:profileId/dashboard">
-				<Transactions profile={profile} wallets={profile.wallets().values()} />
-			</Route>,
-			{
-				history,
-				route: dashboardURL,
-			},
-		);
-
-		await waitFor(() =>
-			expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(30),
-		);
-
-		const button = screen.getAllByRole("button", { name: /Type/ })[0];
-
-		expect(button).toBeInTheDocument();
-
-		expect(button).not.toBeDisabled();
-
-		server.use(
-			requestMock("https://ark-test.arkvault.io/api/transactions", {
-				data: [],
-				meta: transactionsFixture.meta,
-			}),
-		);
-
-		await userEvent.click(button);
-
-		const options = screen.getAllByTestId("FilterOption__checkbox");
-
-		await userEvent.click(options.at(-1));
-
-		await expect(screen.findByTestId("EmptyBlock")).resolves.toBeVisible();
 	});
 
 	it("should filter by type and see empty screen", async () => {
