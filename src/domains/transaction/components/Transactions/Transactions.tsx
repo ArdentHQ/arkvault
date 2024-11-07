@@ -200,7 +200,6 @@ export const Transactions = memo(function Transactions({
 								data-testid="FilterTransactions--Mobile"
 								wallets={wallets}
 								onSelect={filterChangeHandler}
-								isDisabled={wallets.length === 0 || isLoadingTransactions}
 								selectedTransactionTypes={selectedTransactionTypes}
 							/>
 						</div>
@@ -217,7 +216,6 @@ export const Transactions = memo(function Transactions({
 						className="w-full sm:w-fit md:my-auto"
 						wallets={wallets}
 						onSelect={filterChangeHandler}
-						isDisabled={wallets.length === 0 || isLoadingTransactions}
 						selectedTransactionTypes={selectedTransactionTypes}
 					/>
 				</div>
