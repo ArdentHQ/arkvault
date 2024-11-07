@@ -20728,11 +20728,87 @@ exports[`Transactions > should render hidden 1`] = `<DocumentFragment />`;
 exports[`Transactions > should update wallet filters 1`] = `
 <DocumentFragment>
   <div
-    class="rounded-lg border-solid border-theme-secondary-300 text-center leading-5 text-theme-secondary-text dark:border-theme-secondary-800 sm:border sm:p-6 sm:text-left"
-    data-testid="EmptyBlock"
+    class="rounded-xl border-transparent pb-2 outline outline-1 outline-transparent md:border-b-[5px] md:border-b-theme-secondary-200 md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800"
+    data-testid="TableWrapper"
   >
-    <div>
-      You don't have any transactions yet. Once transactions have been made they will show up in your history.
+    <div
+      class="flex w-full flex-col items-start justify-between gap-3 border-b-0 border-b-theme-secondary-300 pb-4 pt-3 dark:border-b-theme-secondary-800 sm:flex-row md:items-center md:border-b md:px-6 md:py-4"
+    >
+      <span
+        class="text-base font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500"
+      >
+        Showing 0 results
+      </span>
+      <div
+        class="w-full sm:w-fit md:my-auto"
+        data-testid="FilterTransactions"
+      >
+        <div
+          aria-expanded="false"
+          aria-haspopup="dialog"
+          data-testid="dropdown__toggle"
+        >
+          <button
+            class="space-x-2 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-700 w-full px-4 py-1.5 text-base sm:w-fit"
+            data-testid="CollapseToggleButton"
+            type="button"
+          >
+            <div
+              class="flex items-center space-x-2"
+            >
+              <div
+                class="css-v0ob3f"
+                height="16"
+                width="16"
+              >
+                <svg
+                  fill="none"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  width="16"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g
+                    clip-path="url(#clip0_13768_41214)"
+                  >
+                    <path
+                      d="M9.75946 11.5209V8.00094L14.6395 3.12094C14.9595 2.80094 15.1195 2.24094 14.8795 1.76094C14.7195 1.28094 14.2395 0.960938 13.7595 0.960938H2.23946C1.75946 0.960938 1.27946 1.28094 1.11946 1.76094C0.879462 2.24094 1.03946 2.72094 1.35946 3.12094L6.23946 8.00094V15.0409L9.75946 11.5209Z"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="1.6"
+                    />
+                  </g>
+                  <defs>
+                    <clippath
+                      id="clip0_13768_41214"
+                    >
+                      <rect
+                        fill="white"
+                        height="16"
+                        width="16"
+                      />
+                    </clippath>
+                  </defs>
+                </svg>
+              </div>
+              <span>
+                Type
+              </span>
+            </div>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div
+      class="rounded-lg border-solid border-theme-secondary-300 text-center leading-5 text-theme-secondary-text dark:border-theme-secondary-800 sm:border sm:p-6 border-none sm:text-left"
+      data-testid="EmptyBlock"
+    >
+      <div>
+        No 
+        <strong />
+         transactions could be found.
+      </div>
     </div>
   </div>
 </DocumentFragment>

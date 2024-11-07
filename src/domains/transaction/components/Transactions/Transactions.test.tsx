@@ -111,9 +111,9 @@ describe("Transactions", () => {
 
 		await userEvent.click(button);
 
-		await expect(screen.findByTestId("dropdown__option--core-0")).resolves.toBeVisible();
+		const options = screen.getAllByTestId("FilterOption__checkbox");
 
-		await userEvent.click(screen.getByTestId("dropdown__option--core-0"));
+		await userEvent.click(options.at(1));
 
 		await waitFor(() =>
 			expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(30),
@@ -144,9 +144,9 @@ describe("Transactions", () => {
 
 		await userEvent.click(button);
 
-		await expect(screen.findByTestId("dropdown__option--core-0")).resolves.toBeVisible();
+		const options = screen.getAllByTestId("FilterOption__checkbox");
 
-		await userEvent.click(screen.getByTestId("dropdown__option--core-0"));
+		await userEvent.click(options.at(1));
 
 		await waitFor(() =>
 			expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(30),
@@ -193,9 +193,9 @@ describe("Transactions", () => {
 
 		await userEvent.click(button);
 
-		await expect(screen.findByTestId("dropdown__option--core-7")).resolves.toBeVisible();
+		const options = screen.getAllByTestId("FilterOption__checkbox");
 
-		await userEvent.click(screen.getByTestId("dropdown__option--core-7"));
+		await userEvent.click(options.at(-1));
 
 		await expect(screen.findByTestId("EmptyBlock")).resolves.toBeVisible();
 	});
@@ -230,9 +230,9 @@ describe("Transactions", () => {
 
 		await userEvent.click(button);
 
-		await expect(screen.findByTestId("dropdown__option--magistrate-0")).resolves.toBeVisible();
+		const options = screen.getAllByTestId("FilterOption__checkbox");
 
-		await userEvent.click(screen.getByTestId("dropdown__option--magistrate-0"));
+		await userEvent.click(options.at(-1));
 
 		await expect(screen.findByTestId("EmptyBlock")).resolves.toBeVisible();
 	});
