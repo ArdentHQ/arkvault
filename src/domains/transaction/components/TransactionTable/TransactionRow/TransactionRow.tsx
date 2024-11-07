@@ -51,7 +51,10 @@ export const TransactionRow = memo(
 
 		return (
 			<TableRow onClick={onClick} className={twMerge("relative", className)} {...properties}>
-				<TableCell variant="start" innerClassName="items-start py-1 my-1 pr-0 lg:pr-3 min-h-14 xl:min-h-9 xl:max-h-9 xl:py-1.5">
+				<TableCell
+					variant="start"
+					innerClassName="items-start py-1 my-1 pr-0 lg:pr-3 min-h-14 xl:min-h-9 xl:max-h-9 xl:py-1.5"
+				>
 					<div className="flex flex-col gap-1 font-semibold">
 						<Link to={transaction.explorerLink()} showExternalIcon={false} isExternal>
 							<span className="text-sm">
@@ -101,7 +104,10 @@ export const TransactionRow = memo(
 					<TransactionRowAddressing transaction={transaction} profile={profile} />
 				</TableCell>
 
-				<TableCell className="hidden lg:table-cell" innerClassName="justify-end items-start my-1 min-h-14 pt-2 xl:min-h-9 xl:my-0">
+				<TableCell
+					className="hidden lg:table-cell"
+					innerClassName="justify-end items-start my-1 min-h-14 pt-2 xl:min-h-9 xl:my-0"
+				>
 					<div className="flex flex-col items-end gap-1">
 						<TransactionAmountLabel transaction={transaction} />
 						<span
@@ -117,22 +123,19 @@ export const TransactionRow = memo(
 					variant="end"
 					innerClassName="justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold min-h-14 pt-2 xl:min-h-9 xl:my-0"
 				>
-					{
-						isLgAndAbove ? (
-							<Amount value={transaction.convertedTotal()} ticker={exchangeCurrency || ""} />
-						) : (
-<div className="flex flex-col items-end gap-1">
-						<TransactionAmountLabel transaction={transaction} />
-						<span
-							className="text-xs font-semibold text-theme-secondary-700 lg:hidden"
-							data-testid="TransactionRow__exchange-currency"
-						>
-							<TransactionFiatAmount transaction={transaction} exchangeCurrency={exchangeCurrency} />
-						</span>
-					</div>
-						)
-					}
-					
+					{isLgAndAbove ? (
+						<Amount value={transaction.convertedTotal()} ticker={exchangeCurrency || ""} />
+					) : (
+						<div className="flex flex-col items-end gap-1">
+							<TransactionAmountLabel transaction={transaction} />
+							<span
+								className="text-xs font-semibold text-theme-secondary-700 lg:hidden"
+								data-testid="TransactionRow__exchange-currency"
+							>
+								<TransactionFiatAmount transaction={transaction} exchangeCurrency={exchangeCurrency} />
+							</span>
+						</div>
+					)}
 				</TableCell>
 			</TableRow>
 		);
