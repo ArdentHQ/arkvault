@@ -6,6 +6,7 @@ import { Dropdown, DropdownOption, DropdownOptionGroup } from "@/app/components/
 import { Button } from "@/app/components/Button";
 import { Checkbox } from "@/app/components/Checkbox";
 import { useTransactionTypeFilters } from "./use-transaction-type-filters";
+import classNames from "classnames";
 
 interface FilterTransactionsProperties extends JSX.IntrinsicAttributes {
 	className?: string;
@@ -20,12 +21,18 @@ const FilterOption = ({
 	label,
 	isChecked,
 	onChange,
+	hasDivider,
 }: {
 	label: string;
 	isChecked: boolean;
 	onChange?: (isChecked: boolean) => void;
+	hasDivider?: boolean,
 }) => (
-	<span className="flex items-center space-x-2" onClick={() => onChange?.(!isChecked)}>
+	<span
+		className={classNames("flex items-center space-x-2 -ml-9 -mr-8 -my-4 px-4 py-3 min-w-56", {
+			"border-b border-theme-secondary-300 dark:border-theme-secondary-600": hasDivider
+		})}
+		onClick={() => onChange?.(!isChecked)}>
 		<Checkbox checked={isChecked} onChange={() => onChange?.(!isChecked)} />
 		<span>{label}</span>
 	</span>
@@ -61,6 +68,7 @@ export const FilterTransactions = memo(
 								label={t("COMMON.SELECT_ALL")}
 								isChecked={isAllSelected}
 								onChange={() => onToggleAll(!isAllSelected)}
+								hasDivider
 							/>
 						),
 						label: "",
@@ -69,7 +77,6 @@ export const FilterTransactions = memo(
 				],
 			},
 			{
-				hasDivider: true,
 				key: "others",
 				options: [
 					{
@@ -124,7 +131,7 @@ export const FilterTransactions = memo(
 			<div className={className} data-testid="FilterTransactions" {...properties}>
 				<Dropdown
 					placement="bottom-end"
-					wrapperClass="[&>.dropdown-body]:md:max-h-128 [&>.dropdown-body]:md:overflow-y-auto"
+					wrapperClass="sm:min-w-56 [&>.dropdown-body]:md:max-h-128 [&>.dropdown-body]:md:overflow-y-auto"
 					options={options}
 					disableToggle={isDisabled}
 					closeOnSelect={false}

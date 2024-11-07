@@ -36,15 +36,6 @@ export const useTransactionTypeFilters = ({ wallets, selectedTransactionTypes, o
 
 	const isTypeSelected = (type: string) => selectedTransactionTypes.includes(type);
 
-	console.log({
-		allTypes,
-		isAllSelected,
-		isOtherSelected,
-		isTypeSelected,
-		otherTypes,
-		types,
-	});
-
 	return {
 		allTypes,
 		isAllSelected,
