@@ -117,7 +117,13 @@ describe("FilterTransactions", () => {
 
 	it("should deselect vote type", async () => {
 		const onSelect = vi.fn();
-		render(<FilterTransactions wallets={profile.wallets().values()} onSelect={onSelect} selectedTransactionTypes={["vote"]} />);
+		render(
+			<FilterTransactions
+				wallets={profile.wallets().values()}
+				onSelect={onSelect}
+				selectedTransactionTypes={["vote"]}
+			/>,
+		);
 
 		expect(screen.getByRole("button", { name: /Type/ })).toBeInTheDocument();
 
@@ -165,7 +171,13 @@ describe("FilterTransactions", () => {
 
 	it("should deselect multiPayment type", async () => {
 		const onSelect = vi.fn();
-		render(<FilterTransactions wallets={profile.wallets().values()} onSelect={onSelect} selectedTransactionTypes={["multiPayment"]} />);
+		render(
+			<FilterTransactions
+				wallets={profile.wallets().values()}
+				onSelect={onSelect}
+				selectedTransactionTypes={["multiPayment"]}
+			/>,
+		);
 
 		expect(screen.getByRole("button", { name: /Type/ })).toBeInTheDocument();
 
