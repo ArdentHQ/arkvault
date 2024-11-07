@@ -32,7 +32,7 @@ const calculateReturnedAmount = function (transaction: ExtendedTransactionData):
 	}
 
 	for (const recipient of transaction.recipients().values()) {
-		if (transaction.sender() === recipient.address) {
+		if (transaction.isSent() && transaction.sender() === recipient.address) {
 			returnedAmount += recipient.amount;
 		}
 	}
