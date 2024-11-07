@@ -179,7 +179,7 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 	const fetchTransactions = useCallback(
 		({ flush = false, mode = "all", wallets = [], transactionTypes = [] }: FetchTransactionProperties) => {
 			if (transactionTypes.length === 0) {
-				return
+				return;
 			}
 
 			if (wallets.length === 0) {
@@ -265,16 +265,13 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 		}));
 	};
 
-	const hasEmptyResults = useMemo(
-		() => {
-			if (selectedTransactionTypes?.length === 0) {
-				return true
-			}
+	const hasEmptyResults = useMemo(() => {
+		if (selectedTransactionTypes?.length === 0) {
+			return true;
+		}
 
-			return transactions.length === 0 && !isLoadingTransactions
-		},
-		[isLoadingTransactions, transactions.length],
-	);
+		return transactions.length === 0 && !isLoadingTransactions;
+	}, [isLoadingTransactions, transactions.length]);
 
 	const { start, stop } = useSynchronizer([
 		{

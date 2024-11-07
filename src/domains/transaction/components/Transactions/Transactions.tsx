@@ -233,7 +233,7 @@ export const Transactions = memo(function Transactions({
 								/>
 							</EmptyBlock>
 						) : (
-							<EmptyBlock className="sm:text-left border-none">
+							<EmptyBlock className="border-none sm:text-left">
 								{emptyText || t("TRANSACTION.NO_FILTERS_SELECTED")}
 							</EmptyBlock>
 						)}
