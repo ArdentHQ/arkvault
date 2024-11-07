@@ -116,7 +116,7 @@ exports[`SuccessStep > should render (lg) 1`] = `
                 type="button"
               >
                 <div
-                  class="text-theme-primary-400 dark:text-theme-secondary-700 dark:hover:text-theme-secondary-500 css-v0ob3f"
+                  class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white css-v0ob3f"
                   height="16"
                   width="16"
                 >
@@ -353,7 +353,7 @@ exports[`SuccessStep > should render (xs) 1`] = `
                 type="button"
               >
                 <div
-                  class="text-theme-primary-400 dark:text-theme-secondary-700 dark:hover:text-theme-secondary-500 css-v0ob3f"
+                  class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white css-v0ob3f"
                   height="16"
                   width="16"
                 >

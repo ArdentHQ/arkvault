@@ -1,4 +1,5 @@
 const defaultTheme = require("tailwindcss/defaultTheme");
+const plugin = require("tailwindcss/plugin");
 
 module.exports = {
 	content: ["./dist/index.html", "./src/**/*.{js,ts,jsx,tsx}"],
@@ -302,5 +303,18 @@ module.exports = {
 			},
 		},
 	},
-	plugins: [require("@tailwindcss/forms")],
+	variants: {
+		extend: {
+			backgroundColor: ["navy", "green"],
+			textColor: ["navy", "green"],
+			borderColor: ["navy", "green"],
+		},
+	},
+	plugins: [
+		require("@tailwindcss/forms"),
+		plugin(function ({ addVariant }) {
+			addVariant("navy", ".accent-navy &");
+			addVariant("green", ".accent-green &");
+		}),
+	],
 };

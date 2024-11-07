@@ -206,7 +206,7 @@ exports[`SelectRecipient > should render empty 1`] = `
                     class=""
                   >
                     <div
-                      class="flex items-center cursor-pointer"
+                      class="flex items-center cursor-pointer rounded bg-transparent p-1 text-theme-secondary-700 transition-colors hover:bg-theme-primary-100 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-white"
                       data-testid="SelectRecipient__select-recipient"
                     >
                       <div
@@ -423,7 +423,7 @@ exports[`SelectRecipient > should render invalid 1`] = `
                     class="pl-3"
                   >
                     <div
-                      class="flex items-center cursor-pointer"
+                      class="flex items-center cursor-pointer rounded bg-transparent p-1 text-theme-secondary-700 transition-colors hover:bg-theme-primary-100 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-white"
                       data-testid="SelectRecipient__select-recipient"
                     >
                       <div
@@ -562,7 +562,7 @@ exports[`SelectRecipient > should update internal state when prop changes 1`] = 
                     class=""
                   >
                     <div
-                      class="flex items-center cursor-pointer"
+                      class="flex items-center cursor-pointer rounded bg-transparent p-1 text-theme-secondary-700 transition-colors hover:bg-theme-primary-100 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-white"
                       data-testid="SelectRecipient__select-recipient"
                     >
                       <div

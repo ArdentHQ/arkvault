@@ -58,19 +58,20 @@ const TransferType = ({ isSingle, disableMultiple, onChange, maxRecipients }: To
 };
 
 const InputButtonStyled = styled.button(() => [
-	tw`flex items-center h-full px-5 font-semibold text-theme-navy-600`,
+	tw`flex items-center h-full px-5 font-semibold text-theme-secondary-700`,
 	tw`border-2 rounded border-theme-primary-100`,
 	tw`transition-colors duration-300`,
-	tw`dark:(border-theme-secondary-800 text-theme-secondary-200)`,
+	tw`dark:(border-theme-secondary-800 text-theme-secondary-500)`,
 	tw`focus:(outline-none ring-2 ring-theme-primary-400)`,
-	tw`hover:(border-theme-primary-400)`,
+	tw`hover:(border-theme-primary-100 bg-theme-primary-100 text-theme-primary-700)`,
+	tw`dark:hover:(border-theme-secondary-800 bg-theme-secondary-800 text-white)`,
 	tw`disabled:(
 		border border-theme-secondary-300 text-theme-secondary-500 cursor-not-allowed
 		dark:(border-theme-secondary-700 text-theme-secondary-700)
 	)`,
 	css`
 		&.active {
-			${tw`border-theme-primary-600 bg-theme-primary-50 dark:bg-theme-primary-900`}
+			${tw`border-theme-primary-600 bg-theme-primary-50 dark:bg-theme-primary-900 dark:text-white`}
 		}
 	`,
 ]);
@@ -408,7 +409,7 @@ export const AddRecipient: VFC<AddRecipientProperties> = ({
 									<InputButtonStyled
 										type="button"
 										disabled={!isSenderFilled}
-										className={cn("text-theme-navy-600 dark:text-theme-secondary-700", {
+										className={cn({
 											active: getValues("isSendAllSelected"),
 										})}
 										onClick={() => {

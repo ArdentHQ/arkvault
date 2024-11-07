@@ -10,7 +10,7 @@ exports[`AppearanceAccentColor > should render 1`] = `
     <button
       aria-checked="false"
       aria-label="Navy"
-      class="css-1oqtqef"
+      class="css-1byvqk4"
       data-testid="ButtonGroupOption"
       role="radio"
       type="button"
@@ -22,7 +22,7 @@ exports[`AppearanceAccentColor > should render 1`] = `
     <button
       aria-checked="false"
       aria-label="Green"
-      class="css-1oqtqef"
+      class="css-1byvqk4"
       data-testid="ButtonGroupOption"
       role="radio"
       type="button"

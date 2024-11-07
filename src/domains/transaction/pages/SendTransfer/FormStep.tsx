@@ -22,8 +22,9 @@ import { Button } from "@/app/components/Button";
 const QRCodeButton = styled.button`
 	${tw`mt-auto flex w-full items-center space-x-2 rounded py-3 px-5 transition-colors duration-300 sm:w-auto sm:py-5`}
 	${tw`border-2 border-theme-primary-100 dark:border-theme-secondary-800`}
-	${tw`hover:(bg-theme-primary-700 border-theme-primary-700)`}
+	${tw`hover:(bg-theme-primary-100 border-theme-primary-100) dark:hover:(bg-theme-secondary-800 border-theme-secondary-800)`}
 	${tw`focus:(outline-none ring-2 ring-theme-primary-400)`}
+	${tw`text-theme-secondary-700 hover:text-theme-primary-600 dark:text-theme-secondary-500 dark:hover:text-white transition-colors`}
 `;
 
 export const FormStep = ({
@@ -141,12 +142,8 @@ export const FormStep = ({
 								onClick={onScan}
 								data-testid="QRCodeModalButton"
 							>
-								<Icon
-									size="lg"
-									name="QRCode"
-									className="text-theme-navy-600 transition-colors group-hover:text-white dark:text-theme-secondary-600"
-								/>
-								<span className="text-base font-semibold leading-5 text-theme-navy-600 transition-colors group-hover:text-white dark:text-theme-secondary-200">
+								<Icon size="lg" name="QRCode" />
+								<span className="text-base font-semibold leading-5">
 									{t("TRANSACTION.PAGE_TRANSACTION_SEND.FORM_STEP.SCAN")}
 								</span>
 							</QRCodeButton>

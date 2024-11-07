@@ -43,7 +43,7 @@ exports[`Button > should render 1`] = `
         class="ml-4 flex flex-shrink-0 items-center self-stretch transition-all duration-100 css-o6tyc"
       >
         <div
-          class="css-cp3doq"
+          class="css-tz6w2"
           data-testid="Accordion__toggle"
         >
           <div
@@ -100,7 +100,7 @@ exports[`Button > should render collapsed 1`] = `
         class="ml-4 flex flex-shrink-0 items-center self-stretch transition-all duration-100 css-o6tyc"
       >
         <div
-          class="css-cp3doq"
+          class="css-tz6w2"
           data-testid="Accordion__toggle"
         >
           <div
@@ -157,7 +157,7 @@ exports[`Button > should render expanded 1`] = `
         class="ml-4 flex flex-shrink-0 items-center self-stretch css-o6tyc"
       >
         <div
-          class="css-cp3doq"
+          class="css-tz6w2"
           data-testid="Accordion__toggle"
         >
           <div
@@ -214,7 +214,7 @@ exports[`Button > should render inactive 1`] = `
         class="ml-4 flex flex-shrink-0 items-center self-stretch transition-all duration-100 css-o6tyc"
       >
         <div
-          class="css-cp3doq"
+          class="css-tz6w2"
           data-testid="Accordion__toggle"
         >
           <div
@@ -313,7 +313,7 @@ exports[`Button > should toggle the accordion on click 1`] = `
         class="ml-4 flex flex-shrink-0 items-center self-stretch css-o6tyc"
       >
         <div
-          class="css-cp3doq"
+          class="css-tz6w2"
           data-testid="Accordion__toggle"
         >
           <div

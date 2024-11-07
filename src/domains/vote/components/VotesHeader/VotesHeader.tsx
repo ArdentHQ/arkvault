@@ -57,10 +57,11 @@ export const VotesHeader = ({
 						placeholder={renderPlaceholder()}
 						onSearch={setSearchQuery}
 						onReset={() => setSearchQuery("")}
+						noToggleBorder
 					/>
 
 					<span className="mx-0.5 flex md:mx-3.5">
-						<Divider type="vertical" size={isMdAndAbove ? "xl" : "md"} />
+						<Divider type="vertical" size="md" />
 					</span>
 
 					{selectedAddress && (
@@ -79,9 +80,9 @@ export const VotesHeader = ({
 									<ControlButton
 										className={cn({ "-mr-2.5 px-2.5": !isMdAndAbove })}
 										isChanged={isFilterChanged}
-										noBorder={!isMdAndAbove}
+										noBorder
 									>
-										<Icon name="SlidersVertical" size="lg" />
+										<Icon name="Funnel" size="lg" />
 									</ControlButton>
 								}
 							>

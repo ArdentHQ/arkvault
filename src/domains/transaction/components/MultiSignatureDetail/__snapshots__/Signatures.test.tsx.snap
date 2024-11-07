@@ -19,7 +19,7 @@ exports[`Signatures > should have all marked as signed if awaiting broadcast on 
             role="row"
           >
             <th
-              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 max-sm:hidden first:rounded-tl-xl last:rounded-tr-xl"
+              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black max-sm:hidden first:rounded-tl-xl last:rounded-tr-xl"
               colspan="1"
               data-testid="table__th--0"
               role="columnheader"
@@ -35,7 +35,7 @@ exports[`Signatures > should have all marked as signed if awaiting broadcast on 
               </div>
             </th>
             <th
-              class="group relative text-sm select-none text-theme-secondary-700 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 max-sm:hidden text-right w-8 border-theme-secondary-100 first:rounded-tl-xl last:rounded-tr-xl"
+              class="group relative text-sm select-none text-theme-secondary-700 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black max-sm:hidden text-right w-8 border-theme-secondary-100 first:rounded-tl-xl last:rounded-tr-xl"
               colspan="1"
               data-testid="table__th--1"
               role="columnheader"
@@ -56,12 +56,12 @@ exports[`Signatures > should have all marked as signed if awaiting broadcast on 
           role="rowgroup"
         >
           <tr
-            class="group relative max-md:!border-transparent css-1x4z4cy"
+            class="group group relative max-md:!border-transparent css-16ynu5g"
             data-testid="TableRow"
           >
             <td>
               <div
-                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l text-sm font-semibold justify-between sm:justify-start max-sm:bg-theme-secondary-100 max-sm:dark:bg-black max-sm:m-3 max-sm:mb-0 max-sm:px-4 max-sm:py-3 max-sm:border max-sm:rounded-md max-sm:border-theme-secondary-300 max-sm:dark:border-theme-secondary-800"
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-sm font-semibold justify-between sm:justify-start max-sm:bg-theme-secondary-100 max-sm:dark:bg-black max-sm:m-3 max-sm:mb-0 max-sm:px-4 max-sm:py-3 max-sm:border max-sm:rounded-md max-sm:border-theme-secondary-300 max-sm:dark:border-theme-secondary-800"
               >
                 <div
                   class="flex w-full space-x-2"
@@ -160,7 +160,7 @@ exports[`Signatures > should have all marked as signed if awaiting broadcast on 
             </td>
             <td>
               <div
-                class="px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r flex justify-end max-sm:hidden"
+                class="px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 flex justify-end max-sm:hidden"
               >
                 <div
                   class="relative"
@@ -206,12 +206,12 @@ exports[`Signatures > should have all marked as signed if awaiting broadcast on 
             </td>
           </tr>
           <tr
-            class="group relative max-md:!border-transparent css-1x4z4cy"
+            class="group group relative max-md:!border-transparent css-16ynu5g"
             data-testid="TableRow"
           >
             <td>
               <div
-                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l text-sm font-semibold justify-between sm:justify-start max-sm:bg-theme-secondary-100 max-sm:dark:bg-black max-sm:m-3 max-sm:mb-0 max-sm:px-4 max-sm:py-3 max-sm:border max-sm:rounded-md max-sm:border-theme-secondary-300 max-sm:dark:border-theme-secondary-800"
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-sm font-semibold justify-between sm:justify-start max-sm:bg-theme-secondary-100 max-sm:dark:bg-black max-sm:m-3 max-sm:mb-0 max-sm:px-4 max-sm:py-3 max-sm:border max-sm:rounded-md max-sm:border-theme-secondary-300 max-sm:dark:border-theme-secondary-800"
               >
                 <div
                   class="flex w-full space-x-2"
@@ -310,7 +310,7 @@ exports[`Signatures > should have all marked as signed if awaiting broadcast on 
             </td>
             <td>
               <div
-                class="px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r flex justify-end max-sm:hidden"
+                class="px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 flex justify-end max-sm:hidden"
               >
                 <div
                   class="relative"
@@ -381,7 +381,7 @@ exports[`Signatures > should not require signature if waiting for final signatur
             role="row"
           >
             <th
-              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 max-sm:hidden first:rounded-tl-xl last:rounded-tr-xl"
+              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black max-sm:hidden first:rounded-tl-xl last:rounded-tr-xl"
               colspan="1"
               data-testid="table__th--0"
               role="columnheader"
@@ -397,7 +397,7 @@ exports[`Signatures > should not require signature if waiting for final signatur
               </div>
             </th>
             <th
-              class="group relative text-sm select-none text-theme-secondary-700 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 max-sm:hidden text-right w-8 border-theme-secondary-100 first:rounded-tl-xl last:rounded-tr-xl"
+              class="group relative text-sm select-none text-theme-secondary-700 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black max-sm:hidden text-right w-8 border-theme-secondary-100 first:rounded-tl-xl last:rounded-tr-xl"
               colspan="1"
               data-testid="table__th--1"
               role="columnheader"
@@ -418,12 +418,12 @@ exports[`Signatures > should not require signature if waiting for final signatur
           role="rowgroup"
         >
           <tr
-            class="group relative max-md:!border-transparent css-1x4z4cy"
+            class="group group relative max-md:!border-transparent css-16ynu5g"
             data-testid="TableRow"
           >
             <td>
               <div
-                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l text-sm font-semibold justify-between sm:justify-start max-sm:bg-theme-secondary-100 max-sm:dark:bg-black max-sm:m-3 max-sm:mb-0 max-sm:px-4 max-sm:py-3 max-sm:border max-sm:rounded-md max-sm:border-theme-secondary-300 max-sm:dark:border-theme-secondary-800"
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-sm font-semibold justify-between sm:justify-start max-sm:bg-theme-secondary-100 max-sm:dark:bg-black max-sm:m-3 max-sm:mb-0 max-sm:px-4 max-sm:py-3 max-sm:border max-sm:rounded-md max-sm:border-theme-secondary-300 max-sm:dark:border-theme-secondary-800"
               >
                 <div
                   class="flex w-full space-x-2"
@@ -522,7 +522,7 @@ exports[`Signatures > should not require signature if waiting for final signatur
             </td>
             <td>
               <div
-                class="px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r flex justify-end max-sm:hidden"
+                class="px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 flex justify-end max-sm:hidden"
               >
                 <div
                   class="relative"
@@ -568,12 +568,12 @@ exports[`Signatures > should not require signature if waiting for final signatur
             </td>
           </tr>
           <tr
-            class="group relative max-md:!border-transparent css-1x4z4cy"
+            class="group group relative max-md:!border-transparent css-16ynu5g"
             data-testid="TableRow"
           >
             <td>
               <div
-                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l text-sm font-semibold justify-between sm:justify-start max-sm:bg-theme-secondary-100 max-sm:dark:bg-black max-sm:m-3 max-sm:mb-0 max-sm:px-4 max-sm:py-3 max-sm:border max-sm:rounded-md max-sm:border-theme-secondary-300 max-sm:dark:border-theme-secondary-800"
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-sm font-semibold justify-between sm:justify-start max-sm:bg-theme-secondary-100 max-sm:dark:bg-black max-sm:m-3 max-sm:mb-0 max-sm:px-4 max-sm:py-3 max-sm:border max-sm:rounded-md max-sm:border-theme-secondary-300 max-sm:dark:border-theme-secondary-800"
               >
                 <div
                   class="flex w-full space-x-2"
@@ -672,7 +672,7 @@ exports[`Signatures > should not require signature if waiting for final signatur
             </td>
             <td>
               <div
-                class="px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r flex justify-end max-sm:hidden"
+                class="px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 flex justify-end max-sm:hidden"
               >
                 <div
                   class="relative"
@@ -743,7 +743,7 @@ exports[`Signatures > should not require signature if waiting for final signatur
             role="row"
           >
             <th
-              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 max-sm:hidden first:rounded-tl-xl last:rounded-tr-xl"
+              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black max-sm:hidden first:rounded-tl-xl last:rounded-tr-xl"
               colspan="1"
               data-testid="table__th--0"
               role="columnheader"
@@ -759,7 +759,7 @@ exports[`Signatures > should not require signature if waiting for final signatur
               </div>
             </th>
             <th
-              class="group relative text-sm select-none text-theme-secondary-700 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 max-sm:hidden text-right w-8 border-theme-secondary-100 first:rounded-tl-xl last:rounded-tr-xl"
+              class="group relative text-sm select-none text-theme-secondary-700 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black max-sm:hidden text-right w-8 border-theme-secondary-100 first:rounded-tl-xl last:rounded-tr-xl"
               colspan="1"
               data-testid="table__th--1"
               role="columnheader"
@@ -780,12 +780,12 @@ exports[`Signatures > should not require signature if waiting for final signatur
           role="rowgroup"
         >
           <tr
-            class="group relative max-md:!border-transparent css-1x4z4cy"
+            class="group group relative max-md:!border-transparent css-16ynu5g"
             data-testid="TableRow"
           >
             <td>
               <div
-                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l text-sm font-semibold justify-between sm:justify-start max-sm:bg-theme-secondary-100 max-sm:dark:bg-black max-sm:m-3 max-sm:mb-0 max-sm:px-4 max-sm:py-3 max-sm:border max-sm:rounded-md max-sm:border-theme-secondary-300 max-sm:dark:border-theme-secondary-800"
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-sm font-semibold justify-between sm:justify-start max-sm:bg-theme-secondary-100 max-sm:dark:bg-black max-sm:m-3 max-sm:mb-0 max-sm:px-4 max-sm:py-3 max-sm:border max-sm:rounded-md max-sm:border-theme-secondary-300 max-sm:dark:border-theme-secondary-800"
               >
                 <div
                   class="flex w-full space-x-2"
@@ -885,7 +885,7 @@ exports[`Signatures > should not require signature if waiting for final signatur
             </td>
             <td>
               <div
-                class="px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r flex justify-end max-sm:hidden"
+                class="px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 flex justify-end max-sm:hidden"
               >
                 <div
                   class="relative"
@@ -932,12 +932,12 @@ exports[`Signatures > should not require signature if waiting for final signatur
             </td>
           </tr>
           <tr
-            class="group relative max-md:!border-transparent css-1x4z4cy"
+            class="group group relative max-md:!border-transparent css-16ynu5g"
             data-testid="TableRow"
           >
             <td>
               <div
-                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l text-sm font-semibold justify-between sm:justify-start max-sm:bg-theme-secondary-100 max-sm:dark:bg-black max-sm:m-3 max-sm:mb-0 max-sm:px-4 max-sm:py-3 max-sm:border max-sm:rounded-md max-sm:border-theme-secondary-300 max-sm:dark:border-theme-secondary-800"
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-sm font-semibold justify-between sm:justify-start max-sm:bg-theme-secondary-100 max-sm:dark:bg-black max-sm:m-3 max-sm:mb-0 max-sm:px-4 max-sm:py-3 max-sm:border max-sm:rounded-md max-sm:border-theme-secondary-300 max-sm:dark:border-theme-secondary-800"
               >
                 <div
                   class="flex w-full space-x-2"
@@ -1036,7 +1036,7 @@ exports[`Signatures > should not require signature if waiting for final signatur
             </td>
             <td>
               <div
-                class="px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r flex justify-end max-sm:hidden"
+                class="px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 flex justify-end max-sm:hidden"
               >
                 <div
                   class="relative"
@@ -1107,7 +1107,7 @@ exports[`Signatures > should render 1`] = `
             role="row"
           >
             <th
-              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 max-sm:hidden first:rounded-tl-xl last:rounded-tr-xl"
+              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black max-sm:hidden first:rounded-tl-xl last:rounded-tr-xl"
               colspan="1"
               data-testid="table__th--0"
               role="columnheader"
@@ -1123,7 +1123,7 @@ exports[`Signatures > should render 1`] = `
               </div>
             </th>
             <th
-              class="group relative text-sm select-none text-theme-secondary-700 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 max-sm:hidden text-right w-8 border-theme-secondary-100 first:rounded-tl-xl last:rounded-tr-xl"
+              class="group relative text-sm select-none text-theme-secondary-700 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black max-sm:hidden text-right w-8 border-theme-secondary-100 first:rounded-tl-xl last:rounded-tr-xl"
               colspan="1"
               data-testid="table__th--1"
               role="columnheader"
@@ -1144,12 +1144,12 @@ exports[`Signatures > should render 1`] = `
           role="rowgroup"
         >
           <tr
-            class="group relative max-md:!border-transparent css-1x4z4cy"
+            class="group group relative max-md:!border-transparent css-16ynu5g"
             data-testid="TableRow"
           >
             <td>
               <div
-                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l text-sm font-semibold justify-between sm:justify-start max-sm:bg-theme-secondary-100 max-sm:dark:bg-black max-sm:m-3 max-sm:mb-0 max-sm:px-4 max-sm:py-3 max-sm:border max-sm:rounded-md max-sm:border-theme-secondary-300 max-sm:dark:border-theme-secondary-800"
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-sm font-semibold justify-between sm:justify-start max-sm:bg-theme-secondary-100 max-sm:dark:bg-black max-sm:m-3 max-sm:mb-0 max-sm:px-4 max-sm:py-3 max-sm:border max-sm:rounded-md max-sm:border-theme-secondary-300 max-sm:dark:border-theme-secondary-800"
               >
                 <div
                   class="flex w-full space-x-2"
@@ -1249,7 +1249,7 @@ exports[`Signatures > should render 1`] = `
             </td>
             <td>
               <div
-                class="px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r flex justify-end max-sm:hidden"
+                class="px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 flex justify-end max-sm:hidden"
               >
                 <div
                   class="relative"
@@ -1296,12 +1296,12 @@ exports[`Signatures > should render 1`] = `
             </td>
           </tr>
           <tr
-            class="group relative max-md:!border-transparent css-1x4z4cy"
+            class="group group relative max-md:!border-transparent css-16ynu5g"
             data-testid="TableRow"
           >
             <td>
               <div
-                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l text-sm font-semibold justify-between sm:justify-start max-sm:bg-theme-secondary-100 max-sm:dark:bg-black max-sm:m-3 max-sm:mb-0 max-sm:px-4 max-sm:py-3 max-sm:border max-sm:rounded-md max-sm:border-theme-secondary-300 max-sm:dark:border-theme-secondary-800"
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-sm font-semibold justify-between sm:justify-start max-sm:bg-theme-secondary-100 max-sm:dark:bg-black max-sm:m-3 max-sm:mb-0 max-sm:px-4 max-sm:py-3 max-sm:border max-sm:rounded-md max-sm:border-theme-secondary-300 max-sm:dark:border-theme-secondary-800"
               >
                 <div
                   class="flex w-full space-x-2"
@@ -1400,7 +1400,7 @@ exports[`Signatures > should render 1`] = `
             </td>
             <td>
               <div
-                class="px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r flex justify-end max-sm:hidden"
+                class="px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 flex justify-end max-sm:hidden"
               >
                 <div
                   class="relative"
@@ -1471,7 +1471,7 @@ exports[`Signatures > should show all participants as signed when all signatures
             role="row"
           >
             <th
-              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 max-sm:hidden first:rounded-tl-xl last:rounded-tr-xl"
+              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black max-sm:hidden first:rounded-tl-xl last:rounded-tr-xl"
               colspan="1"
               data-testid="table__th--0"
               role="columnheader"
@@ -1487,7 +1487,7 @@ exports[`Signatures > should show all participants as signed when all signatures
               </div>
             </th>
             <th
-              class="group relative text-sm select-none text-theme-secondary-700 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 max-sm:hidden text-right w-8 border-theme-secondary-100 first:rounded-tl-xl last:rounded-tr-xl"
+              class="group relative text-sm select-none text-theme-secondary-700 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black max-sm:hidden text-right w-8 border-theme-secondary-100 first:rounded-tl-xl last:rounded-tr-xl"
               colspan="1"
               data-testid="table__th--1"
               role="columnheader"
@@ -1508,12 +1508,12 @@ exports[`Signatures > should show all participants as signed when all signatures
           role="rowgroup"
         >
           <tr
-            class="group relative max-md:!border-transparent css-1x4z4cy"
+            class="group group relative max-md:!border-transparent css-16ynu5g"
             data-testid="TableRow"
           >
             <td>
               <div
-                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l text-sm font-semibold justify-between sm:justify-start max-sm:bg-theme-secondary-100 max-sm:dark:bg-black max-sm:m-3 max-sm:mb-0 max-sm:px-4 max-sm:py-3 max-sm:border max-sm:rounded-md max-sm:border-theme-secondary-300 max-sm:dark:border-theme-secondary-800"
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-sm font-semibold justify-between sm:justify-start max-sm:bg-theme-secondary-100 max-sm:dark:bg-black max-sm:m-3 max-sm:mb-0 max-sm:px-4 max-sm:py-3 max-sm:border max-sm:rounded-md max-sm:border-theme-secondary-300 max-sm:dark:border-theme-secondary-800"
               >
                 <div
                   class="flex w-full space-x-2"
@@ -1612,7 +1612,7 @@ exports[`Signatures > should show all participants as signed when all signatures
             </td>
             <td>
               <div
-                class="px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r flex justify-end max-sm:hidden"
+                class="px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 flex justify-end max-sm:hidden"
               >
                 <div
                   class="relative"
@@ -1658,12 +1658,12 @@ exports[`Signatures > should show all participants as signed when all signatures
             </td>
           </tr>
           <tr
-            class="group relative max-md:!border-transparent css-1x4z4cy"
+            class="group group relative max-md:!border-transparent css-16ynu5g"
             data-testid="TableRow"
           >
             <td>
               <div
-                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l text-sm font-semibold justify-between sm:justify-start max-sm:bg-theme-secondary-100 max-sm:dark:bg-black max-sm:m-3 max-sm:mb-0 max-sm:px-4 max-sm:py-3 max-sm:border max-sm:rounded-md max-sm:border-theme-secondary-300 max-sm:dark:border-theme-secondary-800"
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-sm font-semibold justify-between sm:justify-start max-sm:bg-theme-secondary-100 max-sm:dark:bg-black max-sm:m-3 max-sm:mb-0 max-sm:px-4 max-sm:py-3 max-sm:border max-sm:rounded-md max-sm:border-theme-secondary-300 max-sm:dark:border-theme-secondary-800"
               >
                 <div
                   class="flex w-full space-x-2"
@@ -1762,7 +1762,7 @@ exports[`Signatures > should show all participants as signed when all signatures
             </td>
             <td>
               <div
-                class="px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r flex justify-end max-sm:hidden"
+                class="px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 flex justify-end max-sm:hidden"
               >
                 <div
                   class="relative"

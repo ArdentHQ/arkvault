@@ -168,7 +168,7 @@ exports[`LedgerImportStep > should render with multiple import 1`] = `
                     type="button"
                   >
                     <div
-                      class="text-theme-primary-400 dark:text-theme-secondary-700 dark:hover:text-theme-secondary-500 css-v0ob3f"
+                      class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white css-v0ob3f"
                       height="16"
                       width="16"
                     >
@@ -303,7 +303,7 @@ exports[`LedgerImportStep > should render with multiple import 1`] = `
                     type="button"
                   >
                     <div
-                      class="text-theme-primary-400 dark:text-theme-secondary-700 dark:hover:text-theme-secondary-500 css-v0ob3f"
+                      class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white css-v0ob3f"
                       height="16"
                       width="16"
                     >
@@ -468,7 +468,7 @@ exports[`LedgerImportStep > should render with multiple import 2`] = `
                 role="row"
               >
                 <th
-                  class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 no-border first:rounded-tl-xl last:rounded-tr-xl"
+                  class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border first:rounded-tl-xl last:rounded-tr-xl"
                   colspan="1"
                   data-testid="table__th--0"
                   role="columnheader"
@@ -514,7 +514,7 @@ exports[`LedgerImportStep > should render with multiple import 2`] = `
                   </div>
                 </th>
                 <th
-                  class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 no-border first:rounded-tl-xl last:rounded-tr-xl"
+                  class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border first:rounded-tl-xl last:rounded-tr-xl"
                   colspan="1"
                   data-testid="table__th--1"
                   role="columnheader"
@@ -565,12 +565,12 @@ exports[`LedgerImportStep > should render with multiple import 2`] = `
               role="rowgroup"
             >
               <tr
-                class="relative css-1x4z4cy"
+                class="group relative css-16ynu5g"
                 data-testid="TableRow"
               >
                 <td>
                   <div
-                    class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l justify-center"
+                    class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center"
                   >
                     <div
                       class="flex flex-1 flex-col py-2"
@@ -609,7 +609,7 @@ exports[`LedgerImportStep > should render with multiple import 2`] = `
                           type="button"
                         >
                           <div
-                            class="text-theme-primary-400 dark:text-theme-secondary-700 dark:hover:text-theme-secondary-500 css-v0ob3f"
+                            class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white css-v0ob3f"
                             height="16"
                             width="16"
                           >
@@ -652,10 +652,10 @@ exports[`LedgerImportStep > should render with multiple import 2`] = `
                 </td>
                 <td>
                   <div
-                    class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end font-semibold"
+                    class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end font-semibold"
                   >
                     <button
-                      class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-700"
+                      class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 green:hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-500"
                       data-testid="LedgerImportStep__edit-alias"
                       type="button"
                     >
@@ -691,12 +691,12 @@ exports[`LedgerImportStep > should render with multiple import 2`] = `
                 </td>
               </tr>
               <tr
-                class="relative css-1x4z4cy"
+                class="group relative css-16ynu5g"
                 data-testid="TableRow"
               >
                 <td>
                   <div
-                    class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l justify-center"
+                    class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center"
                   >
                     <div
                       class="flex flex-1 flex-col py-2"
@@ -735,7 +735,7 @@ exports[`LedgerImportStep > should render with multiple import 2`] = `
                           type="button"
                         >
                           <div
-                            class="text-theme-primary-400 dark:text-theme-secondary-700 dark:hover:text-theme-secondary-500 css-v0ob3f"
+                            class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white css-v0ob3f"
                             height="16"
                             width="16"
                           >
@@ -778,10 +778,10 @@ exports[`LedgerImportStep > should render with multiple import 2`] = `
                 </td>
                 <td>
                   <div
-                    class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end font-semibold"
+                    class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end font-semibold"
                   >
                     <button
-                      class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-700"
+                      class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 green:hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-500"
                       data-testid="LedgerImportStep__edit-alias"
                       type="button"
                     >
@@ -942,7 +942,7 @@ exports[`LedgerImportStep > should render with single import (lg) 1`] = `
                     type="button"
                   >
                     <div
-                      class="text-theme-primary-400 dark:text-theme-secondary-700 dark:hover:text-theme-secondary-500 css-v0ob3f"
+                      class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white css-v0ob3f"
                       height="16"
                       width="16"
                     >
@@ -1200,7 +1200,7 @@ exports[`LedgerImportStep > should render with single import (xs) 1`] = `
                     type="button"
                   >
                     <div
-                      class="text-theme-primary-400 dark:text-theme-secondary-700 dark:hover:text-theme-secondary-500 css-v0ob3f"
+                      class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white css-v0ob3f"
                       height="16"
                       width="16"
                     >

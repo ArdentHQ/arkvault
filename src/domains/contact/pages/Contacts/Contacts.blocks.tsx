@@ -32,9 +32,9 @@ const ContactsHeaderExtra: VFC<ContactsHeaderExtraProperties> = ({ showSearchBar
 		<div className="items-top flex justify-end">
 			{showSearchBar && (
 				<div className="flex items-center text-theme-primary-200">
-					<HeaderSearchBar onSearch={onSearch} />
+					<HeaderSearchBar onSearch={onSearch} noToggleBorder />
 					<span className="mx-0.5 flex md:ml-3.5">
-						<Divider type="vertical" size={isMdAndAbove ? "xl" : "md"} />
+						<Divider type="vertical" size="md" />
 					</span>
 				</div>
 			)}

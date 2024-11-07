@@ -130,7 +130,10 @@ export const ExchangeTransactionsRow = ({
 
 	return (
 		<TableRow className="relative">
-			<TableCell innerClassName="items-start my-0 py-3 xl:py-4 xl:min-h-0 flex-col gap-1" variant="start">
+			<TableCell
+				innerClassName="items-start my-0 flex-col gap-1 min-h-[66px] py-3 lg:my-1 lg:min-h-11 lg:py-0 xl:pt-3"
+				variant="start"
+			>
 				<Tooltip content={exchangeTransaction.orderId()}>
 					<button
 						type="button"
@@ -163,11 +166,11 @@ export const ExchangeTransactionsRow = ({
 				<TimeAgo date={DateTime.fromUnix(exchangeTransaction.createdAt() / 1000).toISOString()} />
 			</TableCell>
 
-			<TableCell innerClassName="font-semibold text-sm items-start xl:items-center mt-2 xl:mt-1">
+			<TableCell innerClassName="font-semibold text-sm items-start my-0 min-h-[66px] py-3 lg:min-h-11 xl:items-center">
 				<ExchangeTransactionProvider slug={exchangeTransaction.provider()} />
 			</TableCell>
 
-			<TableCell className="lg:hidden" innerClassName="items-end flex flex-col gap-1.5 my-3 xl:my-0">
+			<TableCell className="lg:hidden" innerClassName="items-end flex flex-col gap-1.5 my-1 py-2 xl:my-0">
 				<ExchangeTransactionRowAmount type="sent" data={exchangeTransaction.input()} />
 				<ExchangeTransactionRowAmount
 					type="received"
@@ -178,14 +181,14 @@ export const ExchangeTransactionsRow = ({
 
 			<TableCell
 				className="hidden lg:table-cell"
-				innerClassName="gap-3 justify-end items-start xl:items-center my-3 xl:my-0"
+				innerClassName="gap-3 justify-end items-start xl:items-center my-1 py-2 xl:my-0"
 			>
 				<ExchangeTransactionRowAmount type="sent" data={exchangeTransaction.input()} />
 			</TableCell>
 
 			<TableCell
 				className="hidden lg:table-cell"
-				innerClassName="gap-3 justify-end items-start xl:items-center my-3 xl:my-0"
+				innerClassName="gap-3 justify-end items-start xl:items-center my-1 py-2 xl:my-0"
 			>
 				<ExchangeTransactionRowAmount
 					type="received"
@@ -194,15 +197,15 @@ export const ExchangeTransactionsRow = ({
 				/>
 			</TableCell>
 
-			<TableCell innerClassName="justify-center items-start xl:items-center my-3 xl:my-0">
+			<TableCell innerClassName="justify-center items-start xl:items-center my-0 py-3 min-h-[66px] lg:min-h-11">
 				<ExchangeTransactionsRowStatus status={exchangeTransaction.status()} />
 			</TableCell>
 
 			<TableCell
 				variant="end"
-				innerClassName="items-start xl:items-center justify-end text-theme-secondary-text my-3 xl:my-0"
+				innerClassName="items-start xl:items-center justify-end text-theme-secondary-text my-0 py-3 min-h-[66px] lg:min-h-11 lg:py-0 lg:pt-2.5 xl:pt-0"
 			>
-				<TableRemoveButton onClick={handleRemove} css={tw`pt-0 xl:pt-3`} />
+				<TableRemoveButton onClick={handleRemove} css={tw`mt-0 p-1`} />
 			</TableCell>
 		</TableRow>
 	);
