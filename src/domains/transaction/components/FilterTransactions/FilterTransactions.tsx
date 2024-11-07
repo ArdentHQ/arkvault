@@ -29,7 +29,7 @@ const FilterOption = ({
 	hasDivider?: boolean;
 }) => (
 	<span
-		className={classNames("-my-4 -ml-9 -mr-8 flex min-w-56 items-center space-x-2 px-4 py-3 font-normal", {
+		className={classNames("-my-4 -ml-9 -mr-8 flex w-screen items-center space-x-2 px-4 py-3 font-normal", {
 			"border-b border-theme-secondary-300 dark:border-theme-secondary-600": hasDivider,
 		})}
 		onClick={() => onChange?.(!isChecked)}
@@ -132,7 +132,7 @@ export const FilterTransactions = memo(
 			<div className={className} data-testid="FilterTransactions" {...properties}>
 				<Dropdown
 					placement="bottom-end"
-					wrapperClass="sm:min-w-56 [&>.dropdown-body]:md:max-h-128 [&>.dropdown-body]:md:overflow-y-auto"
+					wrapperClass="sm:max-w-56 overflow-hidden"
 					options={options}
 					disableToggle={isDisabled}
 					closeOnSelect={false}
