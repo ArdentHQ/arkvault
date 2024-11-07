@@ -96,10 +96,36 @@ export const TransactionRowAddressing = ({
 			<div className="flex flex-row gap-2" data-testid="TransactionRowAddressing__multipayment">
 				<TransactionRowLabel direction={direction} />
 				<span className="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200">
-					{t("COMMON.MULTIPLE")}{" "}
-					<span className="text-theme-secondary-700 dark:text-theme-secondary-500">
-						({transaction.recipients().length})
-					</span>
+					{(direction === "return" || direction === "sent") && (
+						<>
+							{t("COMMON.MULTIPLE")}{" "}
+							<span className="text-theme-secondary-700 dark:text-theme-secondary-500">
+								({transaction.recipients().length})
+							</span>
+						</>)
+					}
+
+					{direction === "received" && (
+						<div
+							className={cn({
+								"w-40 sm:w-40 md:w-32 lg:w-50": alias,
+								"w-50 sm:w-30": !alias,
+							})}
+							data-testid="TransactionRowAddressing__address-container"
+						>
+							<Address
+								walletName={alias}
+								address={transaction.sender()}
+								truncateOnTable
+								addressClass={cn({
+									"text-theme-secondary-700 dark:text-theme-secondary-500": alias,
+									"text-theme-text": !alias,
+								})}
+								size="sm"
+							/>
+						</div>
+						)
+					}
 				</span>
 			</div>
 		);
