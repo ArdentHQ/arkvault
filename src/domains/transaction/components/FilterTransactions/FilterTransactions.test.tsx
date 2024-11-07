@@ -91,6 +91,102 @@ describe("FilterTransactions", () => {
 		);
 	});
 
+	it("should select vote type", async () => {
+		const onSelect = vi.fn();
+		render(<FilterTransactions wallets={profile.wallets().values()} onSelect={onSelect} />);
+
+		expect(screen.getByRole("button", { name: /Type/ })).toBeInTheDocument();
+
+		await userEvent.click(screen.getByRole("button", { name: /Type/ }));
+
+		await expect(screen.findAllByTestId("FilterOption")).resolves.toHaveLength(5);
+
+		const options = screen.getAllByTestId("FilterOption__checkbox");
+
+		await userEvent.click(options.at(2));
+
+		expect(onSelect).toHaveBeenCalledWith(
+			{
+				label: expect.any(String),
+				value: expect.any(String),
+			},
+			undefined,
+			["vote"],
+		);
+	});
+
+	it("should deselect vote type", async () => {
+		const onSelect = vi.fn();
+		render(<FilterTransactions wallets={profile.wallets().values()} onSelect={onSelect} selectedTransactionTypes={["vote"]} />);
+
+		expect(screen.getByRole("button", { name: /Type/ })).toBeInTheDocument();
+
+		await userEvent.click(screen.getByRole("button", { name: /Type/ }));
+
+		await expect(screen.findAllByTestId("FilterOption")).resolves.toHaveLength(5);
+
+		const options = screen.getAllByTestId("FilterOption__checkbox");
+
+		await userEvent.click(options.at(2));
+
+		expect(onSelect).toHaveBeenCalledWith(
+			{
+				label: expect.any(String),
+				value: expect.any(String),
+			},
+			undefined,
+			[],
+		);
+	});
+
+	it("should select multiPayment type", async () => {
+		const onSelect = vi.fn();
+		render(<FilterTransactions wallets={profile.wallets().values()} onSelect={onSelect} />);
+
+		expect(screen.getByRole("button", { name: /Type/ })).toBeInTheDocument();
+
+		await userEvent.click(screen.getByRole("button", { name: /Type/ }));
+
+		await expect(screen.findAllByTestId("FilterOption")).resolves.toHaveLength(5);
+
+		const options = screen.getAllByTestId("FilterOption__checkbox");
+
+		await userEvent.click(options.at(3));
+
+		expect(onSelect).toHaveBeenCalledWith(
+			{
+				label: expect.any(String),
+				value: expect.any(String),
+			},
+			undefined,
+			["multiPayment"],
+		);
+	});
+
+	it("should deselect multiPayment type", async () => {
+		const onSelect = vi.fn();
+		render(<FilterTransactions wallets={profile.wallets().values()} onSelect={onSelect} selectedTransactionTypes={["multiPayment"]} />);
+
+		expect(screen.getByRole("button", { name: /Type/ })).toBeInTheDocument();
+
+		await userEvent.click(screen.getByRole("button", { name: /Type/ }));
+
+		await expect(screen.findAllByTestId("FilterOption")).resolves.toHaveLength(5);
+
+		const options = screen.getAllByTestId("FilterOption__checkbox");
+
+		await userEvent.click(options.at(3));
+
+		expect(onSelect).toHaveBeenCalledWith(
+			{
+				label: expect.any(String),
+				value: expect.any(String),
+			},
+			undefined,
+			[],
+		);
+	});
+
 	it("should deselect all type", async () => {
 		const onSelect = vi.fn();
 		render(
