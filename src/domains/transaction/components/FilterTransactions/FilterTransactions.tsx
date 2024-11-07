@@ -35,8 +35,8 @@ const FilterOption = ({
 		})}
 		onClick={() => onChange?.(!isChecked)}
 	>
-		<Checkbox checked={isChecked} onChange={() => onChange?.(!isChecked)} />
-		<span data-testid={`FilterOption--${label}`}>{label}</span>
+		<Checkbox checked={isChecked} onChange={() => onChange?.(!isChecked)} data-testid={`FilterOption__checkbox`} />
+		<span data-testid={`FilterOption__${label}`}>{label}</span>
 	</span>
 );
 

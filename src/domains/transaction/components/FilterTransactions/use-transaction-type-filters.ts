@@ -24,6 +24,7 @@ export const useTransactionTypeFilters = ({ wallets, selectedTransactionTypes, o
 		const types = isChecked
 			? uniq([...selectedTransactionTypes, ...otherTypes])
 			: selectedTransactionTypes.filter((type) => !otherTypes.includes(type));
+
 		onSelect?.(types);
 	};
 

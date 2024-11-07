@@ -8,6 +8,18 @@ import { env, getDefaultProfileId, render, screen } from "@/utils/testing-librar
 let profile: Contracts.IProfile;
 
 describe("FilterTransactions", () => {
+	const allTypes = [
+		"delegateRegistration",
+		"delegateResignation",
+		"ipfs",
+		"multiPayment",
+		"multiSignature",
+		"secondSignature",
+		"transfer",
+		"vote",
+		"magistrate",
+	];
+
 	beforeAll(async () => {
 		profile = env.profiles().findById(getDefaultProfileId());
 		await profile.sync();
@@ -53,5 +65,184 @@ describe("FilterTransactions", () => {
 		await userEvent.click(screen.getAllByTestId("FilterOption")[0]);
 
 		expect(onSelect).toHaveBeenCalled();
+	});
+
+	it("should select all type", async () => {
+		const onSelect = vi.fn();
+		render(<FilterTransactions wallets={profile.wallets().values()} onSelect={onSelect} />);
+
+		expect(screen.getByRole("button", { name: /Type/ })).toBeInTheDocument();
+
+		await userEvent.click(screen.getByRole("button", { name: /Type/ }));
+
+		await expect(screen.findAllByTestId("FilterOption")).resolves.toHaveLength(5);
+
+		const options = screen.getAllByTestId("FilterOption__checkbox");
+
+		await userEvent.click(options.at(0));
+
+		expect(onSelect).toHaveBeenCalledWith(
+			{
+				label: expect.any(String),
+				value: expect.any(String),
+			},
+			undefined,
+			allTypes,
+		);
+	});
+
+	it("should deselect all type", async () => {
+		const onSelect = vi.fn();
+		render(
+			<FilterTransactions
+				wallets={profile.wallets().values()}
+				onSelect={onSelect}
+				selectedTransactionTypes={allTypes}
+			/>,
+		);
+
+		expect(screen.getByRole("button", { name: /Type/ })).toBeInTheDocument();
+
+		await userEvent.click(screen.getByRole("button", { name: /Type/ }));
+
+		await expect(screen.findAllByTestId("FilterOption")).resolves.toHaveLength(5);
+
+		const options = screen.getAllByTestId("FilterOption__checkbox");
+
+		await userEvent.click(options.at(0));
+
+		expect(onSelect).toHaveBeenCalledWith(
+			{
+				label: expect.any(String),
+				value: expect.any(String),
+			},
+			undefined,
+			[],
+		);
+	});
+
+	it("should select others type", async () => {
+		const onSelect = vi.fn();
+
+		render(<FilterTransactions wallets={profile.wallets().values()} onSelect={onSelect} />);
+
+		expect(screen.getByRole("button", { name: /Type/ })).toBeInTheDocument();
+
+		await userEvent.click(screen.getByRole("button", { name: /Type/ }));
+
+		await expect(screen.findAllByTestId("FilterOption")).resolves.toHaveLength(5);
+
+		const options = screen.getAllByTestId("FilterOption__checkbox");
+
+		await userEvent.click(options.at(-1));
+
+		expect(onSelect).toHaveBeenCalledWith(
+			{
+				label: expect.any(String),
+				value: expect.any(String),
+			},
+			undefined,
+			["delegateRegistration", "delegateResignation", "ipfs", "multiSignature", "secondSignature", "magistrate"],
+		);
+	});
+
+	it("should deselect others type", async () => {
+		const onSelect = vi.fn();
+
+		render(
+			<FilterTransactions
+				wallets={profile.wallets().values()}
+				onSelect={onSelect}
+				selectedTransactionTypes={[
+					"delegateRegistration",
+					"delegateResignation",
+					"ipfs",
+					"multiSignature",
+					"secondSignature",
+					"magistrate",
+				]}
+			/>,
+		);
+
+		expect(screen.getByRole("button", { name: /Type/ })).toBeInTheDocument();
+
+		await userEvent.click(screen.getByRole("button", { name: /Type/ }));
+
+		await expect(screen.findAllByTestId("FilterOption")).resolves.toHaveLength(5);
+
+		const options = screen.getAllByTestId("FilterOption__checkbox");
+
+		await userEvent.click(options.at(-1));
+
+		expect(onSelect).toHaveBeenCalledWith(
+			{
+				label: expect.any(String),
+				value: expect.any(String),
+			},
+			undefined,
+			[],
+		);
+	});
+
+	it("should select transfer type", async () => {
+		const onSelect = vi.fn();
+
+		render(
+			<FilterTransactions
+				wallets={profile.wallets().values()}
+				onSelect={onSelect}
+				selectedTransactionTypes={[]}
+			/>,
+		);
+
+		expect(screen.getByRole("button", { name: /Type/ })).toBeInTheDocument();
+
+		await userEvent.click(screen.getByRole("button", { name: /Type/ }));
+
+		await expect(screen.findAllByTestId("FilterOption")).resolves.toHaveLength(5);
+
+		const options = screen.getAllByTestId("FilterOption__checkbox");
+
+		await userEvent.click(options.at(1));
+
+		expect(onSelect).toHaveBeenCalledWith(
+			{
+				label: expect.any(String),
+				value: expect.any(String),
+			},
+			undefined,
+			["transfer"],
+		);
+	});
+
+	it("should deselect transfer type", async () => {
+		const onSelect = vi.fn();
+
+		render(
+			<FilterTransactions
+				wallets={profile.wallets().values()}
+				onSelect={onSelect}
+				selectedTransactionTypes={["transfer"]}
+			/>,
+		);
+
+		expect(screen.getByRole("button", { name: /Type/ })).toBeInTheDocument();
+
+		await userEvent.click(screen.getByRole("button", { name: /Type/ }));
+
+		await expect(screen.findAllByTestId("FilterOption")).resolves.toHaveLength(5);
+
+		const options = screen.getAllByTestId("FilterOption__checkbox");
+
+		await userEvent.click(options.at(1));
+
+		expect(onSelect).toHaveBeenCalledWith(
+			{
+				label: expect.any(String),
+				value: expect.any(String),
+			},
+			undefined,
+			[],
+		);
 	});
 });
