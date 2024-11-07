@@ -44,7 +44,8 @@ export const TransactionRowAddressing = ({
 }: {
 	transaction: DTO.RawTransactionData;
 	profile: Contracts.IProfile;
-}) => {
+// eslint-disable-next-line sonarjs/cognitive-complexity
+}): JSX.Element => {
 	const isMusigTransfer = [
 		!!transaction.usesMultiSignature?.(),
 		!transaction.isConfirmed(),
