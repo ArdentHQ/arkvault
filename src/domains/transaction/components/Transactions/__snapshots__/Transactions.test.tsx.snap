@@ -20749,7 +20749,7 @@ exports[`Transactions > should update wallet filters 1`] = `
           data-testid="dropdown__toggle"
         >
           <button
-            class="space-x-2 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-700 w-full px-4 py-1.5 text-base sm:w-fit"
+            class="space-x-2 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 green:hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-500 w-full px-4 py-1.5 text-base sm:w-fit"
             data-testid="CollapseToggleButton"
             type="button"
           >
