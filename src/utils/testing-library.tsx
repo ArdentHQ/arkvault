@@ -390,5 +390,7 @@ export const createTransactionMock = (
 		type: () => "transfer",
 		usesMultiSignature: () => false,
 		wallet: () => wallet,
+		total: () => +transactionFixture.data.amount / 1e8 + +transactionFixture.data.fee / 1e8,
+		isReturn: () => false,
 		...overrides,
 	} as any);
