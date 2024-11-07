@@ -35,13 +35,17 @@ export const Dropdown: FC<DropdownProperties> = ({
 	toggleSize,
 	toggleContent,
 	disableToggle = false,
+	closeOnSelect,
 	...properties
 }) => {
 	const [isOpen, setIsOpen] = useState(false);
 
 	const onSelectOption = useCallback(
 		(option: DropdownOption) => {
-			setIsOpen(false);
+			if (closeOnSelect !== false) {
+				setIsOpen(false);
+			}
+
 			if (typeof onSelect === "function") {
 				onSelect(option);
 			}
