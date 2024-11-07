@@ -26,13 +26,14 @@ const FilterOption = ({
 	label: string;
 	isChecked: boolean;
 	onChange?: (isChecked: boolean) => void;
-	hasDivider?: boolean,
+	hasDivider?: boolean;
 }) => (
 	<span
-		className={classNames("flex items-center space-x-2 -ml-9 -mr-8 -my-4 px-4 py-3 min-w-56 font-normal", {
-			"border-b border-theme-secondary-300 dark:border-theme-secondary-600": hasDivider
+		className={classNames("-my-4 -ml-9 -mr-8 flex min-w-56 items-center space-x-2 px-4 py-3 font-normal", {
+			"border-b border-theme-secondary-300 dark:border-theme-secondary-600": hasDivider,
 		})}
-		onClick={() => onChange?.(!isChecked)}>
+		onClick={() => onChange?.(!isChecked)}
+	>
 		<Checkbox checked={isChecked} onChange={() => onChange?.(!isChecked)} />
 		<span>{label}</span>
 	</span>
