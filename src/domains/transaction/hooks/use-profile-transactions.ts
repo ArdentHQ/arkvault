@@ -214,7 +214,6 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 			cursor: cursor.current,
 			flush: false,
 			mode: activeMode,
-			transactionType: activeTransactionType,
 			transactionTypes: selectedTransactionTypes,
 			wallets,
 		});
@@ -227,7 +226,7 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 			isLoadingMore: false,
 			transactions: [...state.transactions, ...items],
 		}));
-	}, [activeMode, activeTransactionType, wallets.length]); // eslint-disable-line react-hooks/exhaustive-deps
+	}, [activeMode, activeTransactionType, wallets.length, selectedTransactionTypes]); // eslint-disable-line react-hooks/exhaustive-deps
 
 	/**
 	 * Run periodically every 30 seconds to check for new transactions
