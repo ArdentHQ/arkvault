@@ -1,4 +1,3 @@
-// eslint-disable sonarjs/cognitive-complexity
 import { Address } from "@/app/components/Address";
 import { Label } from "@/app/components/Label";
 import { useEnvironmentContext } from "@/app/contexts";
