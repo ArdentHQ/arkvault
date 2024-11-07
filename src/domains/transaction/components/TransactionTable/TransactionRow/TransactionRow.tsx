@@ -28,7 +28,7 @@ export const TransactionRow = memo(
 		...properties
 	}: TransactionRowProperties) => {
 		const { getLabel } = useTransactionTypes();
-		const { isXs, isSm } = useBreakpoint();
+		const { isXs, isSm, isLgAndAbove } = useBreakpoint();
 		const { t } = useTranslation();
 
 		if (isXs || isSm) {
@@ -51,14 +51,17 @@ export const TransactionRow = memo(
 
 		return (
 			<TableRow onClick={onClick} className={twMerge("relative", className)} {...properties}>
-				<TableCell variant="start" innerClassName="items-start my-0 py-3 xl:min-h-0 max-h-11">
+				<TableCell
+					variant="start"
+					innerClassName="items-start py-1 my-1 pr-0 lg:pr-3 min-h-14 xl:min-h-11 xl:max-h-11 xl:py-1.5"
+				>
 					<div className="flex flex-col gap-1 font-semibold">
 						<Link to={transaction.explorerLink()} showExternalIcon={false} isExternal>
 							<span className="text-sm">
 								<TruncateMiddle
 									className="cursor-pointer text-theme-primary-600"
 									text={transaction.id()}
-									maxChars={14}
+									maxChars={isLgAndAbove ? 14 : 12}
 									data-testid="TransactionRow__id"
 								/>
 							</span>
@@ -75,7 +78,7 @@ export const TransactionRow = memo(
 
 				<TableCell
 					className="hidden xl:table-cell"
-					innerClassName="text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold items-start xl:min-h-0 my-0 py-3"
+					innerClassName="text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold items-start my-1 min-h-11 xl:max-h-11 xl:pt-2"
 					data-testid="TransactionRow__timestamp"
 				>
 					{timeStamp ? (
@@ -85,23 +88,26 @@ export const TransactionRow = memo(
 					)}
 				</TableCell>
 
-				<TableCell innerClassName="items-start xl:min-h-11 my-0 py-3">
+				<TableCell innerClassName="items-start my-1 pt-2 min-h-14 xl:min-h-11">
 					<Label
 						color="secondary"
 						size="xs"
 						noBorder
-						className="rounded px-1 dark:border"
+						className="rounded px-1 py-[3px] dark:border"
 						data-testid="TransactionRow__type"
 					>
 						{getLabel(transaction.type())}
 					</Label>
 				</TableCell>
 
-				<TableCell innerClassName="space-x-4">
+				<TableCell innerClassName="space-x-4 items-start min-h-14 my-1 pt-2 px-0 lg:px-3 xl:pt-0 xl:min-h-11 xl:items-center">
 					<TransactionRowAddressing transaction={transaction} profile={profile} />
 				</TableCell>
 
-				<TableCell innerClassName="justify-end items-start md:max-h-11 my-0 py-3">
+				<TableCell
+					className="hidden lg:table-cell"
+					innerClassName="justify-end items-start my-1 min-h-14 pt-2 xl:min-h-11 xl:my-0"
+				>
 					<div className="flex flex-col items-end gap-1">
 						<TransactionAmountLabel transaction={transaction} />
 						<span
@@ -114,11 +120,22 @@ export const TransactionRow = memo(
 				</TableCell>
 
 				<TableCell
-					className="hidden lg:table-cell"
 					variant="end"
-					innerClassName="justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+					innerClassName="justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold min-h-14 pt-2 xl:min-h-11 xl:my-0"
 				>
-					<Amount value={transaction.convertedTotal()} ticker={exchangeCurrency || ""} />
+					{isLgAndAbove ? (
+						<Amount value={transaction.convertedTotal()} ticker={exchangeCurrency || ""} />
+					) : (
+						<div className="flex flex-col items-end gap-1">
+							<TransactionAmountLabel transaction={transaction} />
+							<span
+								className="text-xs font-semibold text-theme-secondary-700 lg:hidden"
+								data-testid="TransactionRow__exchange-currency"
+							>
+								<TransactionFiatAmount transaction={transaction} exchangeCurrency={exchangeCurrency} />
+							</span>
+						</div>
+					)}
 				</TableCell>
 			</TableRow>
 		);

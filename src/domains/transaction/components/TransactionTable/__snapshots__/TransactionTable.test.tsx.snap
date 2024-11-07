@@ -19,7 +19,7 @@ exports[`TransactionTable > loading state > should render 1`] = `
             role="row"
           >
             <th
-              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border w-36 min-w-36 xl:w-48"
+              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border w-28 min-w-28 lg:w-36 xl:w-48"
               colspan="1"
               data-testid="table__th--0"
               role="columnheader"
@@ -81,7 +81,7 @@ exports[`TransactionTable > loading state > should render 1`] = `
               </div>
             </th>
             <th
-              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border first:rounded-tl-xl last:rounded-tr-xl w-32 min-w-32"
+              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border first:rounded-tl-xl last:rounded-tr-xl"
               colspan="1"
               data-testid="table__th--2"
               role="columnheader"
@@ -1405,7 +1405,7 @@ exports[`TransactionTable > loading state > should render with currency column 1
             role="row"
           >
             <th
-              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border w-36 min-w-36 xl:w-48"
+              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border w-28 min-w-28 lg:w-36 xl:w-48"
               colspan="1"
               data-testid="table__th--0"
               role="columnheader"
@@ -1467,7 +1467,7 @@ exports[`TransactionTable > loading state > should render with currency column 1
               </div>
             </th>
             <th
-              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border first:rounded-tl-xl last:rounded-tr-xl w-32 min-w-32"
+              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border first:rounded-tl-xl last:rounded-tr-xl"
               colspan="1"
               data-testid="table__th--2"
               role="columnheader"
@@ -5863,7 +5863,7 @@ exports[`TransactionTable > should render responsive 3`] = `
             role="row"
           >
             <th
-              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border w-36 min-w-36 xl:w-48"
+              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border w-28 min-w-28 lg:w-36 xl:w-48"
               colspan="1"
               data-testid="table__th--0"
               role="columnheader"
@@ -5925,7 +5925,7 @@ exports[`TransactionTable > should render responsive 3`] = `
               </div>
             </th>
             <th
-              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border first:rounded-tl-xl last:rounded-tr-xl w-32 min-w-32"
+              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border first:rounded-tl-xl last:rounded-tr-xl"
               colspan="1"
               data-testid="table__th--2"
               role="columnheader"
@@ -6059,7 +6059,7 @@ exports[`TransactionTable > should render responsive 3`] = `
           >
             <td>
               <div
-                class="flex px-3 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start my-0 py-3 xl:min-h-0 max-h-11"
+                class="flex px-3 transition-colors duration-100 pl-3 ml-3 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start py-1 my-1 pr-0 lg:pr-3 min-h-14 xl:min-h-11 xl:max-h-11 xl:py-1.5"
               >
                 <div
                   class="flex flex-col gap-1 font-semibold"
@@ -6081,7 +6081,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                           class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
                           data-testid="TransactionRow__id"
                         >
-                          ea63b…5c79b
+                          ea63…c79b
                         </span>
                       </span>
                     </span>
@@ -6103,7 +6103,7 @@ exports[`TransactionTable > should render responsive 3`] = `
               data-testid="TransactionRow__timestamp"
             >
               <div
-                class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold items-start xl:min-h-0 my-0 py-3"
+                class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold items-start my-1 min-h-11 xl:max-h-11 xl:pt-2"
               >
                 <span
                   data-testid="TimeAgo"
@@ -6114,10 +6114,10 @@ exports[`TransactionTable > should render responsive 3`] = `
             </td>
             <td>
               <div
-                class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start xl:min-h-11 my-0 py-3"
+                class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start my-1 pt-2 min-h-14 xl:min-h-11"
               >
                 <div
-                  class="rounded px-1 dark:border css-1kocbuc"
+                  class="rounded px-1 py-[3px] dark:border css-1kocbuc"
                   color="secondary"
                   data-testid="TransactionRow__type"
                 >
@@ -6127,7 +6127,7 @@ exports[`TransactionTable > should render responsive 3`] = `
             </td>
             <td>
               <div
-                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 space-x-4"
+                class="flex transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 space-x-4 items-start min-h-14 my-1 pt-2 px-0 lg:px-3 xl:pt-0 xl:min-h-11 xl:items-center"
               >
                 <div
                   class="flex flex-row gap-2"
@@ -6165,9 +6165,11 @@ exports[`TransactionTable > should render responsive 3`] = `
                 </div>
               </div>
             </td>
-            <td>
+            <td
+              class="hidden lg:table-cell"
+            >
               <div
-                class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end items-start md:max-h-11 my-0 py-3"
+                class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end items-start my-1 min-h-14 pt-2 xl:min-h-11 xl:my-0"
               >
                 <div
                   class="flex flex-col items-end gap-1"
@@ -6202,18 +6204,41 @@ exports[`TransactionTable > should render responsive 3`] = `
                 </div>
               </div>
             </td>
-            <td
-              class="hidden lg:table-cell"
-            >
+            <td>
               <div
-                class="flex px-3 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+                class="flex px-3 my-1 transition-colors duration-100 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold min-h-14 pt-2 xl:min-h-11 xl:my-0"
               >
-                <span
-                  class="whitespace-nowrap"
-                  data-testid="Amount"
+                <div
+                  class="flex flex-col items-end gap-1"
                 >
-                  0
-                </span>
+                  <div
+                    class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-1jspzfx"
+                    color="success-bg"
+                    data-testid="AmountLabel__wrapper"
+                  >
+                    <div
+                      class="flex h-full items-center space-x-1"
+                    >
+                      <span
+                        class="whitespace-nowrap text-sm"
+                        data-testid="Amount"
+                      >
+                        + 20 DARK
+                      </span>
+                    </div>
+                  </div>
+                  <span
+                    class="text-xs font-semibold text-theme-secondary-700 lg:hidden"
+                    data-testid="TransactionRow__exchange-currency"
+                  >
+                    <span
+                      class="whitespace-nowrap"
+                      data-testid="Amount"
+                    >
+                      0
+                    </span>
+                  </span>
+                </div>
               </div>
             </td>
           </tr>
@@ -6223,7 +6248,7 @@ exports[`TransactionTable > should render responsive 3`] = `
           >
             <td>
               <div
-                class="flex px-3 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start my-0 py-3 xl:min-h-0 max-h-11"
+                class="flex px-3 transition-colors duration-100 pl-3 ml-3 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start py-1 my-1 pr-0 lg:pr-3 min-h-14 xl:min-h-11 xl:max-h-11 xl:py-1.5"
               >
                 <div
                   class="flex flex-col gap-1 font-semibold"
@@ -6245,7 +6270,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                           class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
                           data-testid="TransactionRow__id"
                         >
-                          4425c…cd09d
+                          4425…d09d
                         </span>
                       </span>
                     </span>
@@ -6267,7 +6292,7 @@ exports[`TransactionTable > should render responsive 3`] = `
               data-testid="TransactionRow__timestamp"
             >
               <div
-                class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold items-start xl:min-h-0 my-0 py-3"
+                class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold items-start my-1 min-h-11 xl:max-h-11 xl:pt-2"
               >
                 <span
                   data-testid="TimeAgo"
@@ -6278,10 +6303,10 @@ exports[`TransactionTable > should render responsive 3`] = `
             </td>
             <td>
               <div
-                class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start xl:min-h-11 my-0 py-3"
+                class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start my-1 pt-2 min-h-14 xl:min-h-11"
               >
                 <div
-                  class="rounded px-1 dark:border css-1kocbuc"
+                  class="rounded px-1 py-[3px] dark:border css-1kocbuc"
                   color="secondary"
                   data-testid="TransactionRow__type"
                 >
@@ -6291,7 +6316,7 @@ exports[`TransactionTable > should render responsive 3`] = `
             </td>
             <td>
               <div
-                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 space-x-4"
+                class="flex transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 space-x-4 items-start min-h-14 my-1 pt-2 px-0 lg:px-3 xl:pt-0 xl:min-h-11 xl:items-center"
               >
                 <div
                   class="flex flex-row gap-2"
@@ -6340,9 +6365,11 @@ exports[`TransactionTable > should render responsive 3`] = `
                 </div>
               </div>
             </td>
-            <td>
+            <td
+              class="hidden lg:table-cell"
+            >
               <div
-                class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end items-start md:max-h-11 my-0 py-3"
+                class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end items-start my-1 min-h-14 pt-2 xl:min-h-11 xl:my-0"
               >
                 <div
                   class="flex flex-col items-end gap-1"
@@ -6377,18 +6404,41 @@ exports[`TransactionTable > should render responsive 3`] = `
                 </div>
               </div>
             </td>
-            <td
-              class="hidden lg:table-cell"
-            >
+            <td>
               <div
-                class="flex px-3 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+                class="flex px-3 my-1 transition-colors duration-100 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold min-h-14 pt-2 xl:min-h-11 xl:my-0"
               >
-                <span
-                  class="whitespace-nowrap"
-                  data-testid="Amount"
+                <div
+                  class="flex flex-col items-end gap-1"
                 >
-                  0
-                </span>
+                  <div
+                    class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-xqt0aw"
+                    color="danger-bg"
+                    data-testid="AmountLabel__wrapper"
+                  >
+                    <div
+                      class="flex h-full items-center space-x-1"
+                    >
+                      <span
+                        class="whitespace-nowrap text-sm"
+                        data-testid="Amount"
+                      >
+                        - 20.03499657 DARK
+                      </span>
+                    </div>
+                  </div>
+                  <span
+                    class="text-xs font-semibold text-theme-secondary-700 lg:hidden"
+                    data-testid="TransactionRow__exchange-currency"
+                  >
+                    <span
+                      class="whitespace-nowrap"
+                      data-testid="Amount"
+                    >
+                      0
+                    </span>
+                  </span>
+                </div>
               </div>
             </td>
           </tr>
@@ -6398,7 +6448,7 @@ exports[`TransactionTable > should render responsive 3`] = `
           >
             <td>
               <div
-                class="flex px-3 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start my-0 py-3 xl:min-h-0 max-h-11"
+                class="flex px-3 transition-colors duration-100 pl-3 ml-3 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start py-1 my-1 pr-0 lg:pr-3 min-h-14 xl:min-h-11 xl:max-h-11 xl:py-1.5"
               >
                 <div
                   class="flex flex-col gap-1 font-semibold"
@@ -6420,7 +6470,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                           class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
                           data-testid="TransactionRow__id"
                         >
-                          ee373…8f0dd
+                          ee37…f0dd
                         </span>
                       </span>
                     </span>
@@ -6442,7 +6492,7 @@ exports[`TransactionTable > should render responsive 3`] = `
               data-testid="TransactionRow__timestamp"
             >
               <div
-                class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold items-start xl:min-h-0 my-0 py-3"
+                class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold items-start my-1 min-h-11 xl:max-h-11 xl:pt-2"
               >
                 <span
                   data-testid="TimeAgo"
@@ -6453,10 +6503,10 @@ exports[`TransactionTable > should render responsive 3`] = `
             </td>
             <td>
               <div
-                class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start xl:min-h-11 my-0 py-3"
+                class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start my-1 pt-2 min-h-14 xl:min-h-11"
               >
                 <div
-                  class="rounded px-1 dark:border css-1kocbuc"
+                  class="rounded px-1 py-[3px] dark:border css-1kocbuc"
                   color="secondary"
                   data-testid="TransactionRow__type"
                 >
@@ -6466,7 +6516,7 @@ exports[`TransactionTable > should render responsive 3`] = `
             </td>
             <td>
               <div
-                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 space-x-4"
+                class="flex transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 space-x-4 items-start min-h-14 my-1 pt-2 px-0 lg:px-3 xl:pt-0 xl:min-h-11 xl:items-center"
               >
                 <div
                   class="flex flex-row gap-2"
@@ -6504,9 +6554,11 @@ exports[`TransactionTable > should render responsive 3`] = `
                 </div>
               </div>
             </td>
-            <td>
+            <td
+              class="hidden lg:table-cell"
+            >
               <div
-                class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end items-start md:max-h-11 my-0 py-3"
+                class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end items-start my-1 min-h-14 pt-2 xl:min-h-11 xl:my-0"
               >
                 <div
                   class="flex flex-col items-end gap-1"
@@ -6541,18 +6593,41 @@ exports[`TransactionTable > should render responsive 3`] = `
                 </div>
               </div>
             </td>
-            <td
-              class="hidden lg:table-cell"
-            >
+            <td>
               <div
-                class="flex px-3 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+                class="flex px-3 my-1 transition-colors duration-100 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold min-h-14 pt-2 xl:min-h-11 xl:my-0"
               >
-                <span
-                  class="whitespace-nowrap"
-                  data-testid="Amount"
+                <div
+                  class="flex flex-col items-end gap-1"
                 >
-                  0
-                </span>
+                  <div
+                    class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-1jspzfx"
+                    color="success-bg"
+                    data-testid="AmountLabel__wrapper"
+                  >
+                    <div
+                      class="flex h-full items-center space-x-1"
+                    >
+                      <span
+                        class="whitespace-nowrap text-sm"
+                        data-testid="Amount"
+                      >
+                        + 0.0000001 DARK
+                      </span>
+                    </div>
+                  </div>
+                  <span
+                    class="text-xs font-semibold text-theme-secondary-700 lg:hidden"
+                    data-testid="TransactionRow__exchange-currency"
+                  >
+                    <span
+                      class="whitespace-nowrap"
+                      data-testid="Amount"
+                    >
+                      0
+                    </span>
+                  </span>
+                </div>
               </div>
             </td>
           </tr>
@@ -6562,7 +6637,7 @@ exports[`TransactionTable > should render responsive 3`] = `
           >
             <td>
               <div
-                class="flex px-3 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start my-0 py-3 xl:min-h-0 max-h-11"
+                class="flex px-3 transition-colors duration-100 pl-3 ml-3 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start py-1 my-1 pr-0 lg:pr-3 min-h-14 xl:min-h-11 xl:max-h-11 xl:py-1.5"
               >
                 <div
                   class="flex flex-col gap-1 font-semibold"
@@ -6584,7 +6659,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                           class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
                           data-testid="TransactionRow__id"
                         >
-                          b0b40…b5320
+                          b0b4…5320
                         </span>
                       </span>
                     </span>
@@ -6606,7 +6681,7 @@ exports[`TransactionTable > should render responsive 3`] = `
               data-testid="TransactionRow__timestamp"
             >
               <div
-                class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold items-start xl:min-h-0 my-0 py-3"
+                class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold items-start my-1 min-h-11 xl:max-h-11 xl:pt-2"
               >
                 <span
                   data-testid="TimeAgo"
@@ -6617,10 +6692,10 @@ exports[`TransactionTable > should render responsive 3`] = `
             </td>
             <td>
               <div
-                class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start xl:min-h-11 my-0 py-3"
+                class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start my-1 pt-2 min-h-14 xl:min-h-11"
               >
                 <div
-                  class="rounded px-1 dark:border css-1kocbuc"
+                  class="rounded px-1 py-[3px] dark:border css-1kocbuc"
                   color="secondary"
                   data-testid="TransactionRow__type"
                 >
@@ -6630,7 +6705,7 @@ exports[`TransactionTable > should render responsive 3`] = `
             </td>
             <td>
               <div
-                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 space-x-4"
+                class="flex transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 space-x-4 items-start min-h-14 my-1 pt-2 px-0 lg:px-3 xl:pt-0 xl:min-h-11 xl:items-center"
               >
                 <div
                   class="flex flex-row gap-2"
@@ -6668,9 +6743,11 @@ exports[`TransactionTable > should render responsive 3`] = `
                 </div>
               </div>
             </td>
-            <td>
+            <td
+              class="hidden lg:table-cell"
+            >
               <div
-                class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end items-start md:max-h-11 my-0 py-3"
+                class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end items-start my-1 min-h-14 pt-2 xl:min-h-11 xl:my-0"
               >
                 <div
                   class="flex flex-col items-end gap-1"
@@ -6705,18 +6782,41 @@ exports[`TransactionTable > should render responsive 3`] = `
                 </div>
               </div>
             </td>
-            <td
-              class="hidden lg:table-cell"
-            >
+            <td>
               <div
-                class="flex px-3 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+                class="flex px-3 my-1 transition-colors duration-100 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold min-h-14 pt-2 xl:min-h-11 xl:my-0"
               >
-                <span
-                  class="whitespace-nowrap"
-                  data-testid="Amount"
+                <div
+                  class="flex flex-col items-end gap-1"
                 >
-                  0
-                </span>
+                  <div
+                    class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-1jspzfx"
+                    color="success-bg"
+                    data-testid="AmountLabel__wrapper"
+                  >
+                    <div
+                      class="flex h-full items-center space-x-1"
+                    >
+                      <span
+                        class="whitespace-nowrap text-sm"
+                        data-testid="Amount"
+                      >
+                        + 0.0000001 DARK
+                      </span>
+                    </div>
+                  </div>
+                  <span
+                    class="text-xs font-semibold text-theme-secondary-700 lg:hidden"
+                    data-testid="TransactionRow__exchange-currency"
+                  >
+                    <span
+                      class="whitespace-nowrap"
+                      data-testid="Amount"
+                    >
+                      0
+                    </span>
+                  </span>
+                </div>
               </div>
             </td>
           </tr>
@@ -6726,7 +6826,7 @@ exports[`TransactionTable > should render responsive 3`] = `
           >
             <td>
               <div
-                class="flex px-3 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start my-0 py-3 xl:min-h-0 max-h-11"
+                class="flex px-3 transition-colors duration-100 pl-3 ml-3 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start py-1 my-1 pr-0 lg:pr-3 min-h-14 xl:min-h-11 xl:max-h-11 xl:py-1.5"
               >
                 <div
                   class="flex flex-col gap-1 font-semibold"
@@ -6748,7 +6848,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                           class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
                           data-testid="TransactionRow__id"
                         >
-                          91097…c6599
+                          9109…6599
                         </span>
                       </span>
                     </span>
@@ -6770,7 +6870,7 @@ exports[`TransactionTable > should render responsive 3`] = `
               data-testid="TransactionRow__timestamp"
             >
               <div
-                class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold items-start xl:min-h-0 my-0 py-3"
+                class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold items-start my-1 min-h-11 xl:max-h-11 xl:pt-2"
               >
                 <span
                   data-testid="TimeAgo"
@@ -6781,10 +6881,10 @@ exports[`TransactionTable > should render responsive 3`] = `
             </td>
             <td>
               <div
-                class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start xl:min-h-11 my-0 py-3"
+                class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start my-1 pt-2 min-h-14 xl:min-h-11"
               >
                 <div
-                  class="rounded px-1 dark:border css-1kocbuc"
+                  class="rounded px-1 py-[3px] dark:border css-1kocbuc"
                   color="secondary"
                   data-testid="TransactionRow__type"
                 >
@@ -6794,7 +6894,7 @@ exports[`TransactionTable > should render responsive 3`] = `
             </td>
             <td>
               <div
-                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 space-x-4"
+                class="flex transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 space-x-4 items-start min-h-14 my-1 pt-2 px-0 lg:px-3 xl:pt-0 xl:min-h-11 xl:items-center"
               >
                 <div
                   class="flex flex-row gap-2"
@@ -6832,9 +6932,11 @@ exports[`TransactionTable > should render responsive 3`] = `
                 </div>
               </div>
             </td>
-            <td>
+            <td
+              class="hidden lg:table-cell"
+            >
               <div
-                class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end items-start md:max-h-11 my-0 py-3"
+                class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end items-start my-1 min-h-14 pt-2 xl:min-h-11 xl:my-0"
               >
                 <div
                   class="flex flex-col items-end gap-1"
@@ -6869,18 +6971,41 @@ exports[`TransactionTable > should render responsive 3`] = `
                 </div>
               </div>
             </td>
-            <td
-              class="hidden lg:table-cell"
-            >
+            <td>
               <div
-                class="flex px-3 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+                class="flex px-3 my-1 transition-colors duration-100 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold min-h-14 pt-2 xl:min-h-11 xl:my-0"
               >
-                <span
-                  class="whitespace-nowrap"
-                  data-testid="Amount"
+                <div
+                  class="flex flex-col items-end gap-1"
                 >
-                  0
-                </span>
+                  <div
+                    class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-1jspzfx"
+                    color="success-bg"
+                    data-testid="AmountLabel__wrapper"
+                  >
+                    <div
+                      class="flex h-full items-center space-x-1"
+                    >
+                      <span
+                        class="whitespace-nowrap text-sm"
+                        data-testid="Amount"
+                      >
+                        + 0.0000001 DARK
+                      </span>
+                    </div>
+                  </div>
+                  <span
+                    class="text-xs font-semibold text-theme-secondary-700 lg:hidden"
+                    data-testid="TransactionRow__exchange-currency"
+                  >
+                    <span
+                      class="whitespace-nowrap"
+                      data-testid="Amount"
+                    >
+                      0
+                    </span>
+                  </span>
+                </div>
               </div>
             </td>
           </tr>
@@ -6890,7 +7015,7 @@ exports[`TransactionTable > should render responsive 3`] = `
           >
             <td>
               <div
-                class="flex px-3 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start my-0 py-3 xl:min-h-0 max-h-11"
+                class="flex px-3 transition-colors duration-100 pl-3 ml-3 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start py-1 my-1 pr-0 lg:pr-3 min-h-14 xl:min-h-11 xl:max-h-11 xl:py-1.5"
               >
                 <div
                   class="flex flex-col gap-1 font-semibold"
@@ -6912,7 +7037,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                           class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
                           data-testid="TransactionRow__id"
                         >
-                          e6fcd…32d4b
+                          e6fc…2d4b
                         </span>
                       </span>
                     </span>
@@ -6934,7 +7059,7 @@ exports[`TransactionTable > should render responsive 3`] = `
               data-testid="TransactionRow__timestamp"
             >
               <div
-                class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold items-start xl:min-h-0 my-0 py-3"
+                class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold items-start my-1 min-h-11 xl:max-h-11 xl:pt-2"
               >
                 <span
                   data-testid="TimeAgo"
@@ -6945,10 +7070,10 @@ exports[`TransactionTable > should render responsive 3`] = `
             </td>
             <td>
               <div
-                class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start xl:min-h-11 my-0 py-3"
+                class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start my-1 pt-2 min-h-14 xl:min-h-11"
               >
                 <div
-                  class="rounded px-1 dark:border css-1kocbuc"
+                  class="rounded px-1 py-[3px] dark:border css-1kocbuc"
                   color="secondary"
                   data-testid="TransactionRow__type"
                 >
@@ -6958,7 +7083,7 @@ exports[`TransactionTable > should render responsive 3`] = `
             </td>
             <td>
               <div
-                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 space-x-4"
+                class="flex transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 space-x-4 items-start min-h-14 my-1 pt-2 px-0 lg:px-3 xl:pt-0 xl:min-h-11 xl:items-center"
               >
                 <div
                   class="flex flex-row gap-2"
@@ -6996,9 +7121,11 @@ exports[`TransactionTable > should render responsive 3`] = `
                 </div>
               </div>
             </td>
-            <td>
+            <td
+              class="hidden lg:table-cell"
+            >
               <div
-                class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end items-start md:max-h-11 my-0 py-3"
+                class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end items-start my-1 min-h-14 pt-2 xl:min-h-11 xl:my-0"
               >
                 <div
                   class="flex flex-col items-end gap-1"
@@ -7033,18 +7160,41 @@ exports[`TransactionTable > should render responsive 3`] = `
                 </div>
               </div>
             </td>
-            <td
-              class="hidden lg:table-cell"
-            >
+            <td>
               <div
-                class="flex px-3 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+                class="flex px-3 my-1 transition-colors duration-100 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold min-h-14 pt-2 xl:min-h-11 xl:my-0"
               >
-                <span
-                  class="whitespace-nowrap"
-                  data-testid="Amount"
+                <div
+                  class="flex flex-col items-end gap-1"
                 >
-                  0
-                </span>
+                  <div
+                    class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-1jspzfx"
+                    color="success-bg"
+                    data-testid="AmountLabel__wrapper"
+                  >
+                    <div
+                      class="flex h-full items-center space-x-1"
+                    >
+                      <span
+                        class="whitespace-nowrap text-sm"
+                        data-testid="Amount"
+                      >
+                        + 0.0000001 DARK
+                      </span>
+                    </div>
+                  </div>
+                  <span
+                    class="text-xs font-semibold text-theme-secondary-700 lg:hidden"
+                    data-testid="TransactionRow__exchange-currency"
+                  >
+                    <span
+                      class="whitespace-nowrap"
+                      data-testid="Amount"
+                    >
+                      0
+                    </span>
+                  </span>
+                </div>
               </div>
             </td>
           </tr>
@@ -7054,7 +7204,7 @@ exports[`TransactionTable > should render responsive 3`] = `
           >
             <td>
               <div
-                class="flex px-3 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start my-0 py-3 xl:min-h-0 max-h-11"
+                class="flex px-3 transition-colors duration-100 pl-3 ml-3 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start py-1 my-1 pr-0 lg:pr-3 min-h-14 xl:min-h-11 xl:max-h-11 xl:py-1.5"
               >
                 <div
                   class="flex flex-col gap-1 font-semibold"
@@ -7076,7 +7226,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                           class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
                           data-testid="TransactionRow__id"
                         >
-                          59c88…18520
+                          59c8…8520
                         </span>
                       </span>
                     </span>
@@ -7098,7 +7248,7 @@ exports[`TransactionTable > should render responsive 3`] = `
               data-testid="TransactionRow__timestamp"
             >
               <div
-                class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold items-start xl:min-h-0 my-0 py-3"
+                class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold items-start my-1 min-h-11 xl:max-h-11 xl:pt-2"
               >
                 <span
                   data-testid="TimeAgo"
@@ -7109,10 +7259,10 @@ exports[`TransactionTable > should render responsive 3`] = `
             </td>
             <td>
               <div
-                class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start xl:min-h-11 my-0 py-3"
+                class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start my-1 pt-2 min-h-14 xl:min-h-11"
               >
                 <div
-                  class="rounded px-1 dark:border css-1kocbuc"
+                  class="rounded px-1 py-[3px] dark:border css-1kocbuc"
                   color="secondary"
                   data-testid="TransactionRow__type"
                 >
@@ -7122,7 +7272,7 @@ exports[`TransactionTable > should render responsive 3`] = `
             </td>
             <td>
               <div
-                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 space-x-4"
+                class="flex transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 space-x-4 items-start min-h-14 my-1 pt-2 px-0 lg:px-3 xl:pt-0 xl:min-h-11 xl:items-center"
               >
                 <div
                   class="flex flex-row gap-2"
@@ -7160,9 +7310,11 @@ exports[`TransactionTable > should render responsive 3`] = `
                 </div>
               </div>
             </td>
-            <td>
+            <td
+              class="hidden lg:table-cell"
+            >
               <div
-                class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end items-start md:max-h-11 my-0 py-3"
+                class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end items-start my-1 min-h-14 pt-2 xl:min-h-11 xl:my-0"
               >
                 <div
                   class="flex flex-col items-end gap-1"
@@ -7197,18 +7349,41 @@ exports[`TransactionTable > should render responsive 3`] = `
                 </div>
               </div>
             </td>
-            <td
-              class="hidden lg:table-cell"
-            >
+            <td>
               <div
-                class="flex px-3 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+                class="flex px-3 my-1 transition-colors duration-100 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold min-h-14 pt-2 xl:min-h-11 xl:my-0"
               >
-                <span
-                  class="whitespace-nowrap"
-                  data-testid="Amount"
+                <div
+                  class="flex flex-col items-end gap-1"
                 >
-                  0
-                </span>
+                  <div
+                    class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-1jspzfx"
+                    color="success-bg"
+                    data-testid="AmountLabel__wrapper"
+                  >
+                    <div
+                      class="flex h-full items-center space-x-1"
+                    >
+                      <span
+                        class="whitespace-nowrap text-sm"
+                        data-testid="Amount"
+                      >
+                        + 0.0000001 DARK
+                      </span>
+                    </div>
+                  </div>
+                  <span
+                    class="text-xs font-semibold text-theme-secondary-700 lg:hidden"
+                    data-testid="TransactionRow__exchange-currency"
+                  >
+                    <span
+                      class="whitespace-nowrap"
+                      data-testid="Amount"
+                    >
+                      0
+                    </span>
+                  </span>
+                </div>
               </div>
             </td>
           </tr>
@@ -7218,7 +7393,7 @@ exports[`TransactionTable > should render responsive 3`] = `
           >
             <td>
               <div
-                class="flex px-3 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start my-0 py-3 xl:min-h-0 max-h-11"
+                class="flex px-3 transition-colors duration-100 pl-3 ml-3 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start py-1 my-1 pr-0 lg:pr-3 min-h-14 xl:min-h-11 xl:max-h-11 xl:py-1.5"
               >
                 <div
                   class="flex flex-col gap-1 font-semibold"
@@ -7240,7 +7415,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                           class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
                           data-testid="TransactionRow__id"
                         >
-                          8c7b5…63ded
+                          8c7b…3ded
                         </span>
                       </span>
                     </span>
@@ -7262,7 +7437,7 @@ exports[`TransactionTable > should render responsive 3`] = `
               data-testid="TransactionRow__timestamp"
             >
               <div
-                class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold items-start xl:min-h-0 my-0 py-3"
+                class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold items-start my-1 min-h-11 xl:max-h-11 xl:pt-2"
               >
                 <span
                   data-testid="TimeAgo"
@@ -7273,10 +7448,10 @@ exports[`TransactionTable > should render responsive 3`] = `
             </td>
             <td>
               <div
-                class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start xl:min-h-11 my-0 py-3"
+                class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start my-1 pt-2 min-h-14 xl:min-h-11"
               >
                 <div
-                  class="rounded px-1 dark:border css-1kocbuc"
+                  class="rounded px-1 py-[3px] dark:border css-1kocbuc"
                   color="secondary"
                   data-testid="TransactionRow__type"
                 >
@@ -7286,7 +7461,7 @@ exports[`TransactionTable > should render responsive 3`] = `
             </td>
             <td>
               <div
-                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 space-x-4"
+                class="flex transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 space-x-4 items-start min-h-14 my-1 pt-2 px-0 lg:px-3 xl:pt-0 xl:min-h-11 xl:items-center"
               >
                 <div
                   class="flex flex-row gap-2"
@@ -7324,9 +7499,11 @@ exports[`TransactionTable > should render responsive 3`] = `
                 </div>
               </div>
             </td>
-            <td>
+            <td
+              class="hidden lg:table-cell"
+            >
               <div
-                class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end items-start md:max-h-11 my-0 py-3"
+                class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end items-start my-1 min-h-14 pt-2 xl:min-h-11 xl:my-0"
               >
                 <div
                   class="flex flex-col items-end gap-1"
@@ -7361,18 +7538,41 @@ exports[`TransactionTable > should render responsive 3`] = `
                 </div>
               </div>
             </td>
-            <td
-              class="hidden lg:table-cell"
-            >
+            <td>
               <div
-                class="flex px-3 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+                class="flex px-3 my-1 transition-colors duration-100 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold min-h-14 pt-2 xl:min-h-11 xl:my-0"
               >
-                <span
-                  class="whitespace-nowrap"
-                  data-testid="Amount"
+                <div
+                  class="flex flex-col items-end gap-1"
                 >
-                  0
-                </span>
+                  <div
+                    class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-1jspzfx"
+                    color="success-bg"
+                    data-testid="AmountLabel__wrapper"
+                  >
+                    <div
+                      class="flex h-full items-center space-x-1"
+                    >
+                      <span
+                        class="whitespace-nowrap text-sm"
+                        data-testid="Amount"
+                      >
+                        + 0.0000001 DARK
+                      </span>
+                    </div>
+                  </div>
+                  <span
+                    class="text-xs font-semibold text-theme-secondary-700 lg:hidden"
+                    data-testid="TransactionRow__exchange-currency"
+                  >
+                    <span
+                      class="whitespace-nowrap"
+                      data-testid="Amount"
+                    >
+                      0
+                    </span>
+                  </span>
+                </div>
               </div>
             </td>
           </tr>
@@ -7382,7 +7582,7 @@ exports[`TransactionTable > should render responsive 3`] = `
           >
             <td>
               <div
-                class="flex px-3 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start my-0 py-3 xl:min-h-0 max-h-11"
+                class="flex px-3 transition-colors duration-100 pl-3 ml-3 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start py-1 my-1 pr-0 lg:pr-3 min-h-14 xl:min-h-11 xl:max-h-11 xl:py-1.5"
               >
                 <div
                   class="flex flex-col gap-1 font-semibold"
@@ -7404,7 +7604,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                           class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
                           data-testid="TransactionRow__id"
                         >
-                          1a767…389f6
+                          1a76…89f6
                         </span>
                       </span>
                     </span>
@@ -7426,7 +7626,7 @@ exports[`TransactionTable > should render responsive 3`] = `
               data-testid="TransactionRow__timestamp"
             >
               <div
-                class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold items-start xl:min-h-0 my-0 py-3"
+                class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold items-start my-1 min-h-11 xl:max-h-11 xl:pt-2"
               >
                 <span
                   data-testid="TimeAgo"
@@ -7437,10 +7637,10 @@ exports[`TransactionTable > should render responsive 3`] = `
             </td>
             <td>
               <div
-                class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start xl:min-h-11 my-0 py-3"
+                class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start my-1 pt-2 min-h-14 xl:min-h-11"
               >
                 <div
-                  class="rounded px-1 dark:border css-1kocbuc"
+                  class="rounded px-1 py-[3px] dark:border css-1kocbuc"
                   color="secondary"
                   data-testid="TransactionRow__type"
                 >
@@ -7450,7 +7650,7 @@ exports[`TransactionTable > should render responsive 3`] = `
             </td>
             <td>
               <div
-                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 space-x-4"
+                class="flex transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 space-x-4 items-start min-h-14 my-1 pt-2 px-0 lg:px-3 xl:pt-0 xl:min-h-11 xl:items-center"
               >
                 <div
                   class="flex flex-row gap-2"
@@ -7488,9 +7688,11 @@ exports[`TransactionTable > should render responsive 3`] = `
                 </div>
               </div>
             </td>
-            <td>
+            <td
+              class="hidden lg:table-cell"
+            >
               <div
-                class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end items-start md:max-h-11 my-0 py-3"
+                class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end items-start my-1 min-h-14 pt-2 xl:min-h-11 xl:my-0"
               >
                 <div
                   class="flex flex-col items-end gap-1"
@@ -7525,18 +7727,41 @@ exports[`TransactionTable > should render responsive 3`] = `
                 </div>
               </div>
             </td>
-            <td
-              class="hidden lg:table-cell"
-            >
+            <td>
               <div
-                class="flex px-3 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+                class="flex px-3 my-1 transition-colors duration-100 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold min-h-14 pt-2 xl:min-h-11 xl:my-0"
               >
-                <span
-                  class="whitespace-nowrap"
-                  data-testid="Amount"
+                <div
+                  class="flex flex-col items-end gap-1"
                 >
-                  0
-                </span>
+                  <div
+                    class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-1jspzfx"
+                    color="success-bg"
+                    data-testid="AmountLabel__wrapper"
+                  >
+                    <div
+                      class="flex h-full items-center space-x-1"
+                    >
+                      <span
+                        class="whitespace-nowrap text-sm"
+                        data-testid="Amount"
+                      >
+                        + 0.0000001 DARK
+                      </span>
+                    </div>
+                  </div>
+                  <span
+                    class="text-xs font-semibold text-theme-secondary-700 lg:hidden"
+                    data-testid="TransactionRow__exchange-currency"
+                  >
+                    <span
+                      class="whitespace-nowrap"
+                      data-testid="Amount"
+                    >
+                      0
+                    </span>
+                  </span>
+                </div>
               </div>
             </td>
           </tr>
@@ -7546,7 +7771,7 @@ exports[`TransactionTable > should render responsive 3`] = `
           >
             <td>
               <div
-                class="flex px-3 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start my-0 py-3 xl:min-h-0 max-h-11"
+                class="flex px-3 transition-colors duration-100 pl-3 ml-3 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start py-1 my-1 pr-0 lg:pr-3 min-h-14 xl:min-h-11 xl:max-h-11 xl:py-1.5"
               >
                 <div
                   class="flex flex-col gap-1 font-semibold"
@@ -7568,7 +7793,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                           class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
                           data-testid="TransactionRow__id"
                         >
-                          b233e…58428
+                          b233…8428
                         </span>
                       </span>
                     </span>
@@ -7590,7 +7815,7 @@ exports[`TransactionTable > should render responsive 3`] = `
               data-testid="TransactionRow__timestamp"
             >
               <div
-                class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold items-start xl:min-h-0 my-0 py-3"
+                class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold items-start my-1 min-h-11 xl:max-h-11 xl:pt-2"
               >
                 <span
                   data-testid="TimeAgo"
@@ -7601,10 +7826,10 @@ exports[`TransactionTable > should render responsive 3`] = `
             </td>
             <td>
               <div
-                class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start xl:min-h-11 my-0 py-3"
+                class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start my-1 pt-2 min-h-14 xl:min-h-11"
               >
                 <div
-                  class="rounded px-1 dark:border css-1kocbuc"
+                  class="rounded px-1 py-[3px] dark:border css-1kocbuc"
                   color="secondary"
                   data-testid="TransactionRow__type"
                 >
@@ -7614,7 +7839,7 @@ exports[`TransactionTable > should render responsive 3`] = `
             </td>
             <td>
               <div
-                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 space-x-4"
+                class="flex transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 space-x-4 items-start min-h-14 my-1 pt-2 px-0 lg:px-3 xl:pt-0 xl:min-h-11 xl:items-center"
               >
                 <div
                   class="flex flex-row gap-2"
@@ -7663,9 +7888,11 @@ exports[`TransactionTable > should render responsive 3`] = `
                 </div>
               </div>
             </td>
-            <td>
+            <td
+              class="hidden lg:table-cell"
+            >
               <div
-                class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end items-start md:max-h-11 my-0 py-3"
+                class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end items-start my-1 min-h-14 pt-2 xl:min-h-11 xl:my-0"
               >
                 <div
                   class="flex flex-col items-end gap-1"
@@ -7700,18 +7927,41 @@ exports[`TransactionTable > should render responsive 3`] = `
                 </div>
               </div>
             </td>
-            <td
-              class="hidden lg:table-cell"
-            >
+            <td>
               <div
-                class="flex px-3 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+                class="flex px-3 my-1 transition-colors duration-100 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold min-h-14 pt-2 xl:min-h-11 xl:my-0"
               >
-                <span
-                  class="whitespace-nowrap"
-                  data-testid="Amount"
+                <div
+                  class="flex flex-col items-end gap-1"
                 >
-                  0
-                </span>
+                  <div
+                    class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-xqt0aw"
+                    color="danger-bg"
+                    data-testid="AmountLabel__wrapper"
+                  >
+                    <div
+                      class="flex h-full items-center space-x-1"
+                    >
+                      <span
+                        class="whitespace-nowrap text-sm"
+                        data-testid="Amount"
+                      >
+                        - 0.100001 DARK
+                      </span>
+                    </div>
+                  </div>
+                  <span
+                    class="text-xs font-semibold text-theme-secondary-700 lg:hidden"
+                    data-testid="TransactionRow__exchange-currency"
+                  >
+                    <span
+                      class="whitespace-nowrap"
+                      data-testid="Amount"
+                    >
+                      0
+                    </span>
+                  </span>
+                </div>
               </div>
             </td>
           </tr>
@@ -7741,7 +7991,7 @@ exports[`TransactionTable > should render responsive 4`] = `
             role="row"
           >
             <th
-              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border w-36 min-w-36 xl:w-48"
+              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border w-28 min-w-28 lg:w-36 xl:w-48"
               colspan="1"
               data-testid="table__th--0"
               role="columnheader"
@@ -7803,7 +8053,7 @@ exports[`TransactionTable > should render responsive 4`] = `
               </div>
             </th>
             <th
-              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border first:rounded-tl-xl last:rounded-tr-xl w-32 min-w-32"
+              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border first:rounded-tl-xl last:rounded-tr-xl"
               colspan="1"
               data-testid="table__th--2"
               role="columnheader"
@@ -7937,7 +8187,7 @@ exports[`TransactionTable > should render responsive 4`] = `
           >
             <td>
               <div
-                class="flex px-3 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start my-0 py-3 xl:min-h-0 max-h-11"
+                class="flex px-3 transition-colors duration-100 pl-3 ml-3 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start py-1 my-1 pr-0 lg:pr-3 min-h-14 xl:min-h-11 xl:max-h-11 xl:py-1.5"
               >
                 <div
                   class="flex flex-col gap-1 font-semibold"
@@ -7981,7 +8231,7 @@ exports[`TransactionTable > should render responsive 4`] = `
               data-testid="TransactionRow__timestamp"
             >
               <div
-                class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold items-start xl:min-h-0 my-0 py-3"
+                class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold items-start my-1 min-h-11 xl:max-h-11 xl:pt-2"
               >
                 <span
                   data-testid="TimeAgo"
@@ -7992,10 +8242,10 @@ exports[`TransactionTable > should render responsive 4`] = `
             </td>
             <td>
               <div
-                class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start xl:min-h-11 my-0 py-3"
+                class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start my-1 pt-2 min-h-14 xl:min-h-11"
               >
                 <div
-                  class="rounded px-1 dark:border css-1kocbuc"
+                  class="rounded px-1 py-[3px] dark:border css-1kocbuc"
                   color="secondary"
                   data-testid="TransactionRow__type"
                 >
@@ -8005,7 +8255,7 @@ exports[`TransactionTable > should render responsive 4`] = `
             </td>
             <td>
               <div
-                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 space-x-4"
+                class="flex transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 space-x-4 items-start min-h-14 my-1 pt-2 px-0 lg:px-3 xl:pt-0 xl:min-h-11 xl:items-center"
               >
                 <div
                   class="flex flex-row gap-2"
@@ -8043,9 +8293,11 @@ exports[`TransactionTable > should render responsive 4`] = `
                 </div>
               </div>
             </td>
-            <td>
+            <td
+              class="hidden lg:table-cell"
+            >
               <div
-                class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end items-start md:max-h-11 my-0 py-3"
+                class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end items-start my-1 min-h-14 pt-2 xl:min-h-11 xl:my-0"
               >
                 <div
                   class="flex flex-col items-end gap-1"
@@ -8080,11 +8332,9 @@ exports[`TransactionTable > should render responsive 4`] = `
                 </div>
               </div>
             </td>
-            <td
-              class="hidden lg:table-cell"
-            >
+            <td>
               <div
-                class="flex px-3 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+                class="flex px-3 my-1 transition-colors duration-100 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold min-h-14 pt-2 xl:min-h-11 xl:my-0"
               >
                 <span
                   class="whitespace-nowrap"
@@ -8101,7 +8351,7 @@ exports[`TransactionTable > should render responsive 4`] = `
           >
             <td>
               <div
-                class="flex px-3 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start my-0 py-3 xl:min-h-0 max-h-11"
+                class="flex px-3 transition-colors duration-100 pl-3 ml-3 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start py-1 my-1 pr-0 lg:pr-3 min-h-14 xl:min-h-11 xl:max-h-11 xl:py-1.5"
               >
                 <div
                   class="flex flex-col gap-1 font-semibold"
@@ -8145,7 +8395,7 @@ exports[`TransactionTable > should render responsive 4`] = `
               data-testid="TransactionRow__timestamp"
             >
               <div
-                class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold items-start xl:min-h-0 my-0 py-3"
+                class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold items-start my-1 min-h-11 xl:max-h-11 xl:pt-2"
               >
                 <span
                   data-testid="TimeAgo"
@@ -8156,10 +8406,10 @@ exports[`TransactionTable > should render responsive 4`] = `
             </td>
             <td>
               <div
-                class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start xl:min-h-11 my-0 py-3"
+                class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start my-1 pt-2 min-h-14 xl:min-h-11"
               >
                 <div
-                  class="rounded px-1 dark:border css-1kocbuc"
+                  class="rounded px-1 py-[3px] dark:border css-1kocbuc"
                   color="secondary"
                   data-testid="TransactionRow__type"
                 >
@@ -8169,7 +8419,7 @@ exports[`TransactionTable > should render responsive 4`] = `
             </td>
             <td>
               <div
-                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 space-x-4"
+                class="flex transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 space-x-4 items-start min-h-14 my-1 pt-2 px-0 lg:px-3 xl:pt-0 xl:min-h-11 xl:items-center"
               >
                 <div
                   class="flex flex-row gap-2"
@@ -8218,9 +8468,11 @@ exports[`TransactionTable > should render responsive 4`] = `
                 </div>
               </div>
             </td>
-            <td>
+            <td
+              class="hidden lg:table-cell"
+            >
               <div
-                class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end items-start md:max-h-11 my-0 py-3"
+                class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end items-start my-1 min-h-14 pt-2 xl:min-h-11 xl:my-0"
               >
                 <div
                   class="flex flex-col items-end gap-1"
@@ -8255,11 +8507,9 @@ exports[`TransactionTable > should render responsive 4`] = `
                 </div>
               </div>
             </td>
-            <td
-              class="hidden lg:table-cell"
-            >
+            <td>
               <div
-                class="flex px-3 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+                class="flex px-3 my-1 transition-colors duration-100 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold min-h-14 pt-2 xl:min-h-11 xl:my-0"
               >
                 <span
                   class="whitespace-nowrap"
@@ -8276,7 +8526,7 @@ exports[`TransactionTable > should render responsive 4`] = `
           >
             <td>
               <div
-                class="flex px-3 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start my-0 py-3 xl:min-h-0 max-h-11"
+                class="flex px-3 transition-colors duration-100 pl-3 ml-3 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start py-1 my-1 pr-0 lg:pr-3 min-h-14 xl:min-h-11 xl:max-h-11 xl:py-1.5"
               >
                 <div
                   class="flex flex-col gap-1 font-semibold"
@@ -8320,7 +8570,7 @@ exports[`TransactionTable > should render responsive 4`] = `
               data-testid="TransactionRow__timestamp"
             >
               <div
-                class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold items-start xl:min-h-0 my-0 py-3"
+                class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold items-start my-1 min-h-11 xl:max-h-11 xl:pt-2"
               >
                 <span
                   data-testid="TimeAgo"
@@ -8331,10 +8581,10 @@ exports[`TransactionTable > should render responsive 4`] = `
             </td>
             <td>
               <div
-                class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start xl:min-h-11 my-0 py-3"
+                class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start my-1 pt-2 min-h-14 xl:min-h-11"
               >
                 <div
-                  class="rounded px-1 dark:border css-1kocbuc"
+                  class="rounded px-1 py-[3px] dark:border css-1kocbuc"
                   color="secondary"
                   data-testid="TransactionRow__type"
                 >
@@ -8344,7 +8594,7 @@ exports[`TransactionTable > should render responsive 4`] = `
             </td>
             <td>
               <div
-                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 space-x-4"
+                class="flex transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 space-x-4 items-start min-h-14 my-1 pt-2 px-0 lg:px-3 xl:pt-0 xl:min-h-11 xl:items-center"
               >
                 <div
                   class="flex flex-row gap-2"
@@ -8382,9 +8632,11 @@ exports[`TransactionTable > should render responsive 4`] = `
                 </div>
               </div>
             </td>
-            <td>
+            <td
+              class="hidden lg:table-cell"
+            >
               <div
-                class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end items-start md:max-h-11 my-0 py-3"
+                class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end items-start my-1 min-h-14 pt-2 xl:min-h-11 xl:my-0"
               >
                 <div
                   class="flex flex-col items-end gap-1"
@@ -8419,11 +8671,9 @@ exports[`TransactionTable > should render responsive 4`] = `
                 </div>
               </div>
             </td>
-            <td
-              class="hidden lg:table-cell"
-            >
+            <td>
               <div
-                class="flex px-3 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+                class="flex px-3 my-1 transition-colors duration-100 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold min-h-14 pt-2 xl:min-h-11 xl:my-0"
               >
                 <span
                   class="whitespace-nowrap"
@@ -8440,7 +8690,7 @@ exports[`TransactionTable > should render responsive 4`] = `
           >
             <td>
               <div
-                class="flex px-3 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start my-0 py-3 xl:min-h-0 max-h-11"
+                class="flex px-3 transition-colors duration-100 pl-3 ml-3 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start py-1 my-1 pr-0 lg:pr-3 min-h-14 xl:min-h-11 xl:max-h-11 xl:py-1.5"
               >
                 <div
                   class="flex flex-col gap-1 font-semibold"
@@ -8484,7 +8734,7 @@ exports[`TransactionTable > should render responsive 4`] = `
               data-testid="TransactionRow__timestamp"
             >
               <div
-                class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold items-start xl:min-h-0 my-0 py-3"
+                class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold items-start my-1 min-h-11 xl:max-h-11 xl:pt-2"
               >
                 <span
                   data-testid="TimeAgo"
@@ -8495,10 +8745,10 @@ exports[`TransactionTable > should render responsive 4`] = `
             </td>
             <td>
               <div
-                class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start xl:min-h-11 my-0 py-3"
+                class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start my-1 pt-2 min-h-14 xl:min-h-11"
               >
                 <div
-                  class="rounded px-1 dark:border css-1kocbuc"
+                  class="rounded px-1 py-[3px] dark:border css-1kocbuc"
                   color="secondary"
                   data-testid="TransactionRow__type"
                 >
@@ -8508,7 +8758,7 @@ exports[`TransactionTable > should render responsive 4`] = `
             </td>
             <td>
               <div
-                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 space-x-4"
+                class="flex transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 space-x-4 items-start min-h-14 my-1 pt-2 px-0 lg:px-3 xl:pt-0 xl:min-h-11 xl:items-center"
               >
                 <div
                   class="flex flex-row gap-2"
@@ -8546,9 +8796,11 @@ exports[`TransactionTable > should render responsive 4`] = `
                 </div>
               </div>
             </td>
-            <td>
+            <td
+              class="hidden lg:table-cell"
+            >
               <div
-                class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end items-start md:max-h-11 my-0 py-3"
+                class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end items-start my-1 min-h-14 pt-2 xl:min-h-11 xl:my-0"
               >
                 <div
                   class="flex flex-col items-end gap-1"
@@ -8583,11 +8835,9 @@ exports[`TransactionTable > should render responsive 4`] = `
                 </div>
               </div>
             </td>
-            <td
-              class="hidden lg:table-cell"
-            >
+            <td>
               <div
-                class="flex px-3 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+                class="flex px-3 my-1 transition-colors duration-100 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold min-h-14 pt-2 xl:min-h-11 xl:my-0"
               >
                 <span
                   class="whitespace-nowrap"
@@ -8604,7 +8854,7 @@ exports[`TransactionTable > should render responsive 4`] = `
           >
             <td>
               <div
-                class="flex px-3 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start my-0 py-3 xl:min-h-0 max-h-11"
+                class="flex px-3 transition-colors duration-100 pl-3 ml-3 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start py-1 my-1 pr-0 lg:pr-3 min-h-14 xl:min-h-11 xl:max-h-11 xl:py-1.5"
               >
                 <div
                   class="flex flex-col gap-1 font-semibold"
@@ -8648,7 +8898,7 @@ exports[`TransactionTable > should render responsive 4`] = `
               data-testid="TransactionRow__timestamp"
             >
               <div
-                class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold items-start xl:min-h-0 my-0 py-3"
+                class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold items-start my-1 min-h-11 xl:max-h-11 xl:pt-2"
               >
                 <span
                   data-testid="TimeAgo"
@@ -8659,10 +8909,10 @@ exports[`TransactionTable > should render responsive 4`] = `
             </td>
             <td>
               <div
-                class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start xl:min-h-11 my-0 py-3"
+                class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start my-1 pt-2 min-h-14 xl:min-h-11"
               >
                 <div
-                  class="rounded px-1 dark:border css-1kocbuc"
+                  class="rounded px-1 py-[3px] dark:border css-1kocbuc"
                   color="secondary"
                   data-testid="TransactionRow__type"
                 >
@@ -8672,7 +8922,7 @@ exports[`TransactionTable > should render responsive 4`] = `
             </td>
             <td>
               <div
-                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 space-x-4"
+                class="flex transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 space-x-4 items-start min-h-14 my-1 pt-2 px-0 lg:px-3 xl:pt-0 xl:min-h-11 xl:items-center"
               >
                 <div
                   class="flex flex-row gap-2"
@@ -8710,9 +8960,11 @@ exports[`TransactionTable > should render responsive 4`] = `
                 </div>
               </div>
             </td>
-            <td>
+            <td
+              class="hidden lg:table-cell"
+            >
               <div
-                class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end items-start md:max-h-11 my-0 py-3"
+                class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end items-start my-1 min-h-14 pt-2 xl:min-h-11 xl:my-0"
               >
                 <div
                   class="flex flex-col items-end gap-1"
@@ -8747,11 +8999,9 @@ exports[`TransactionTable > should render responsive 4`] = `
                 </div>
               </div>
             </td>
-            <td
-              class="hidden lg:table-cell"
-            >
+            <td>
               <div
-                class="flex px-3 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+                class="flex px-3 my-1 transition-colors duration-100 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold min-h-14 pt-2 xl:min-h-11 xl:my-0"
               >
                 <span
                   class="whitespace-nowrap"
@@ -8768,7 +9018,7 @@ exports[`TransactionTable > should render responsive 4`] = `
           >
             <td>
               <div
-                class="flex px-3 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start my-0 py-3 xl:min-h-0 max-h-11"
+                class="flex px-3 transition-colors duration-100 pl-3 ml-3 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start py-1 my-1 pr-0 lg:pr-3 min-h-14 xl:min-h-11 xl:max-h-11 xl:py-1.5"
               >
                 <div
                   class="flex flex-col gap-1 font-semibold"
@@ -8812,7 +9062,7 @@ exports[`TransactionTable > should render responsive 4`] = `
               data-testid="TransactionRow__timestamp"
             >
               <div
-                class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold items-start xl:min-h-0 my-0 py-3"
+                class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold items-start my-1 min-h-11 xl:max-h-11 xl:pt-2"
               >
                 <span
                   data-testid="TimeAgo"
@@ -8823,10 +9073,10 @@ exports[`TransactionTable > should render responsive 4`] = `
             </td>
             <td>
               <div
-                class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start xl:min-h-11 my-0 py-3"
+                class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start my-1 pt-2 min-h-14 xl:min-h-11"
               >
                 <div
-                  class="rounded px-1 dark:border css-1kocbuc"
+                  class="rounded px-1 py-[3px] dark:border css-1kocbuc"
                   color="secondary"
                   data-testid="TransactionRow__type"
                 >
@@ -8836,7 +9086,7 @@ exports[`TransactionTable > should render responsive 4`] = `
             </td>
             <td>
               <div
-                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 space-x-4"
+                class="flex transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 space-x-4 items-start min-h-14 my-1 pt-2 px-0 lg:px-3 xl:pt-0 xl:min-h-11 xl:items-center"
               >
                 <div
                   class="flex flex-row gap-2"
@@ -8874,9 +9124,11 @@ exports[`TransactionTable > should render responsive 4`] = `
                 </div>
               </div>
             </td>
-            <td>
+            <td
+              class="hidden lg:table-cell"
+            >
               <div
-                class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end items-start md:max-h-11 my-0 py-3"
+                class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end items-start my-1 min-h-14 pt-2 xl:min-h-11 xl:my-0"
               >
                 <div
                   class="flex flex-col items-end gap-1"
@@ -8911,11 +9163,9 @@ exports[`TransactionTable > should render responsive 4`] = `
                 </div>
               </div>
             </td>
-            <td
-              class="hidden lg:table-cell"
-            >
+            <td>
               <div
-                class="flex px-3 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+                class="flex px-3 my-1 transition-colors duration-100 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold min-h-14 pt-2 xl:min-h-11 xl:my-0"
               >
                 <span
                   class="whitespace-nowrap"
@@ -8932,7 +9182,7 @@ exports[`TransactionTable > should render responsive 4`] = `
           >
             <td>
               <div
-                class="flex px-3 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start my-0 py-3 xl:min-h-0 max-h-11"
+                class="flex px-3 transition-colors duration-100 pl-3 ml-3 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start py-1 my-1 pr-0 lg:pr-3 min-h-14 xl:min-h-11 xl:max-h-11 xl:py-1.5"
               >
                 <div
                   class="flex flex-col gap-1 font-semibold"
@@ -8976,7 +9226,7 @@ exports[`TransactionTable > should render responsive 4`] = `
               data-testid="TransactionRow__timestamp"
             >
               <div
-                class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold items-start xl:min-h-0 my-0 py-3"
+                class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold items-start my-1 min-h-11 xl:max-h-11 xl:pt-2"
               >
                 <span
                   data-testid="TimeAgo"
@@ -8987,10 +9237,10 @@ exports[`TransactionTable > should render responsive 4`] = `
             </td>
             <td>
               <div
-                class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start xl:min-h-11 my-0 py-3"
+                class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start my-1 pt-2 min-h-14 xl:min-h-11"
               >
                 <div
-                  class="rounded px-1 dark:border css-1kocbuc"
+                  class="rounded px-1 py-[3px] dark:border css-1kocbuc"
                   color="secondary"
                   data-testid="TransactionRow__type"
                 >
@@ -9000,7 +9250,7 @@ exports[`TransactionTable > should render responsive 4`] = `
             </td>
             <td>
               <div
-                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 space-x-4"
+                class="flex transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 space-x-4 items-start min-h-14 my-1 pt-2 px-0 lg:px-3 xl:pt-0 xl:min-h-11 xl:items-center"
               >
                 <div
                   class="flex flex-row gap-2"
@@ -9038,9 +9288,11 @@ exports[`TransactionTable > should render responsive 4`] = `
                 </div>
               </div>
             </td>
-            <td>
+            <td
+              class="hidden lg:table-cell"
+            >
               <div
-                class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end items-start md:max-h-11 my-0 py-3"
+                class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end items-start my-1 min-h-14 pt-2 xl:min-h-11 xl:my-0"
               >
                 <div
                   class="flex flex-col items-end gap-1"
@@ -9075,11 +9327,9 @@ exports[`TransactionTable > should render responsive 4`] = `
                 </div>
               </div>
             </td>
-            <td
-              class="hidden lg:table-cell"
-            >
+            <td>
               <div
-                class="flex px-3 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+                class="flex px-3 my-1 transition-colors duration-100 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold min-h-14 pt-2 xl:min-h-11 xl:my-0"
               >
                 <span
                   class="whitespace-nowrap"
@@ -9096,7 +9346,7 @@ exports[`TransactionTable > should render responsive 4`] = `
           >
             <td>
               <div
-                class="flex px-3 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start my-0 py-3 xl:min-h-0 max-h-11"
+                class="flex px-3 transition-colors duration-100 pl-3 ml-3 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start py-1 my-1 pr-0 lg:pr-3 min-h-14 xl:min-h-11 xl:max-h-11 xl:py-1.5"
               >
                 <div
                   class="flex flex-col gap-1 font-semibold"
@@ -9140,7 +9390,7 @@ exports[`TransactionTable > should render responsive 4`] = `
               data-testid="TransactionRow__timestamp"
             >
               <div
-                class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold items-start xl:min-h-0 my-0 py-3"
+                class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold items-start my-1 min-h-11 xl:max-h-11 xl:pt-2"
               >
                 <span
                   data-testid="TimeAgo"
@@ -9151,10 +9401,10 @@ exports[`TransactionTable > should render responsive 4`] = `
             </td>
             <td>
               <div
-                class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start xl:min-h-11 my-0 py-3"
+                class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start my-1 pt-2 min-h-14 xl:min-h-11"
               >
                 <div
-                  class="rounded px-1 dark:border css-1kocbuc"
+                  class="rounded px-1 py-[3px] dark:border css-1kocbuc"
                   color="secondary"
                   data-testid="TransactionRow__type"
                 >
@@ -9164,7 +9414,7 @@ exports[`TransactionTable > should render responsive 4`] = `
             </td>
             <td>
               <div
-                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 space-x-4"
+                class="flex transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 space-x-4 items-start min-h-14 my-1 pt-2 px-0 lg:px-3 xl:pt-0 xl:min-h-11 xl:items-center"
               >
                 <div
                   class="flex flex-row gap-2"
@@ -9202,9 +9452,11 @@ exports[`TransactionTable > should render responsive 4`] = `
                 </div>
               </div>
             </td>
-            <td>
+            <td
+              class="hidden lg:table-cell"
+            >
               <div
-                class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end items-start md:max-h-11 my-0 py-3"
+                class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end items-start my-1 min-h-14 pt-2 xl:min-h-11 xl:my-0"
               >
                 <div
                   class="flex flex-col items-end gap-1"
@@ -9239,11 +9491,9 @@ exports[`TransactionTable > should render responsive 4`] = `
                 </div>
               </div>
             </td>
-            <td
-              class="hidden lg:table-cell"
-            >
+            <td>
               <div
-                class="flex px-3 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+                class="flex px-3 my-1 transition-colors duration-100 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold min-h-14 pt-2 xl:min-h-11 xl:my-0"
               >
                 <span
                   class="whitespace-nowrap"
@@ -9260,7 +9510,7 @@ exports[`TransactionTable > should render responsive 4`] = `
           >
             <td>
               <div
-                class="flex px-3 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start my-0 py-3 xl:min-h-0 max-h-11"
+                class="flex px-3 transition-colors duration-100 pl-3 ml-3 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start py-1 my-1 pr-0 lg:pr-3 min-h-14 xl:min-h-11 xl:max-h-11 xl:py-1.5"
               >
                 <div
                   class="flex flex-col gap-1 font-semibold"
@@ -9304,7 +9554,7 @@ exports[`TransactionTable > should render responsive 4`] = `
               data-testid="TransactionRow__timestamp"
             >
               <div
-                class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold items-start xl:min-h-0 my-0 py-3"
+                class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold items-start my-1 min-h-11 xl:max-h-11 xl:pt-2"
               >
                 <span
                   data-testid="TimeAgo"
@@ -9315,10 +9565,10 @@ exports[`TransactionTable > should render responsive 4`] = `
             </td>
             <td>
               <div
-                class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start xl:min-h-11 my-0 py-3"
+                class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start my-1 pt-2 min-h-14 xl:min-h-11"
               >
                 <div
-                  class="rounded px-1 dark:border css-1kocbuc"
+                  class="rounded px-1 py-[3px] dark:border css-1kocbuc"
                   color="secondary"
                   data-testid="TransactionRow__type"
                 >
@@ -9328,7 +9578,7 @@ exports[`TransactionTable > should render responsive 4`] = `
             </td>
             <td>
               <div
-                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 space-x-4"
+                class="flex transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 space-x-4 items-start min-h-14 my-1 pt-2 px-0 lg:px-3 xl:pt-0 xl:min-h-11 xl:items-center"
               >
                 <div
                   class="flex flex-row gap-2"
@@ -9366,9 +9616,11 @@ exports[`TransactionTable > should render responsive 4`] = `
                 </div>
               </div>
             </td>
-            <td>
+            <td
+              class="hidden lg:table-cell"
+            >
               <div
-                class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end items-start md:max-h-11 my-0 py-3"
+                class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end items-start my-1 min-h-14 pt-2 xl:min-h-11 xl:my-0"
               >
                 <div
                   class="flex flex-col items-end gap-1"
@@ -9403,11 +9655,9 @@ exports[`TransactionTable > should render responsive 4`] = `
                 </div>
               </div>
             </td>
-            <td
-              class="hidden lg:table-cell"
-            >
+            <td>
               <div
-                class="flex px-3 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+                class="flex px-3 my-1 transition-colors duration-100 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold min-h-14 pt-2 xl:min-h-11 xl:my-0"
               >
                 <span
                   class="whitespace-nowrap"
@@ -9424,7 +9674,7 @@ exports[`TransactionTable > should render responsive 4`] = `
           >
             <td>
               <div
-                class="flex px-3 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start my-0 py-3 xl:min-h-0 max-h-11"
+                class="flex px-3 transition-colors duration-100 pl-3 ml-3 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start py-1 my-1 pr-0 lg:pr-3 min-h-14 xl:min-h-11 xl:max-h-11 xl:py-1.5"
               >
                 <div
                   class="flex flex-col gap-1 font-semibold"
@@ -9468,7 +9718,7 @@ exports[`TransactionTable > should render responsive 4`] = `
               data-testid="TransactionRow__timestamp"
             >
               <div
-                class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold items-start xl:min-h-0 my-0 py-3"
+                class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold items-start my-1 min-h-11 xl:max-h-11 xl:pt-2"
               >
                 <span
                   data-testid="TimeAgo"
@@ -9479,10 +9729,10 @@ exports[`TransactionTable > should render responsive 4`] = `
             </td>
             <td>
               <div
-                class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start xl:min-h-11 my-0 py-3"
+                class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start my-1 pt-2 min-h-14 xl:min-h-11"
               >
                 <div
-                  class="rounded px-1 dark:border css-1kocbuc"
+                  class="rounded px-1 py-[3px] dark:border css-1kocbuc"
                   color="secondary"
                   data-testid="TransactionRow__type"
                 >
@@ -9492,7 +9742,7 @@ exports[`TransactionTable > should render responsive 4`] = `
             </td>
             <td>
               <div
-                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 space-x-4"
+                class="flex transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 space-x-4 items-start min-h-14 my-1 pt-2 px-0 lg:px-3 xl:pt-0 xl:min-h-11 xl:items-center"
               >
                 <div
                   class="flex flex-row gap-2"
@@ -9541,9 +9791,11 @@ exports[`TransactionTable > should render responsive 4`] = `
                 </div>
               </div>
             </td>
-            <td>
+            <td
+              class="hidden lg:table-cell"
+            >
               <div
-                class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end items-start md:max-h-11 my-0 py-3"
+                class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end items-start my-1 min-h-14 pt-2 xl:min-h-11 xl:my-0"
               >
                 <div
                   class="flex flex-col items-end gap-1"
@@ -9578,11 +9830,9 @@ exports[`TransactionTable > should render responsive 4`] = `
                 </div>
               </div>
             </td>
-            <td
-              class="hidden lg:table-cell"
-            >
+            <td>
               <div
-                class="flex px-3 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+                class="flex px-3 my-1 transition-colors duration-100 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold min-h-14 pt-2 xl:min-h-11 xl:my-0"
               >
                 <span
                   class="whitespace-nowrap"
@@ -9619,7 +9869,7 @@ exports[`TransactionTable > should render responsive 5`] = `
             role="row"
           >
             <th
-              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border w-36 min-w-36 xl:w-48"
+              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border w-28 min-w-28 lg:w-36 xl:w-48"
               colspan="1"
               data-testid="table__th--0"
               role="columnheader"
@@ -9681,7 +9931,7 @@ exports[`TransactionTable > should render responsive 5`] = `
               </div>
             </th>
             <th
-              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border first:rounded-tl-xl last:rounded-tr-xl w-32 min-w-32"
+              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border first:rounded-tl-xl last:rounded-tr-xl"
               colspan="1"
               data-testid="table__th--2"
               role="columnheader"
@@ -9815,7 +10065,7 @@ exports[`TransactionTable > should render responsive 5`] = `
           >
             <td>
               <div
-                class="flex px-3 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start my-0 py-3 xl:min-h-0 max-h-11"
+                class="flex px-3 transition-colors duration-100 pl-3 ml-3 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start py-1 my-1 pr-0 lg:pr-3 min-h-14 xl:min-h-11 xl:max-h-11 xl:py-1.5"
               >
                 <div
                   class="flex flex-col gap-1 font-semibold"
@@ -9859,7 +10109,7 @@ exports[`TransactionTable > should render responsive 5`] = `
               data-testid="TransactionRow__timestamp"
             >
               <div
-                class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold items-start xl:min-h-0 my-0 py-3"
+                class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold items-start my-1 min-h-11 xl:max-h-11 xl:pt-2"
               >
                 <span
                   data-testid="TimeAgo"
@@ -9870,10 +10120,10 @@ exports[`TransactionTable > should render responsive 5`] = `
             </td>
             <td>
               <div
-                class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start xl:min-h-11 my-0 py-3"
+                class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start my-1 pt-2 min-h-14 xl:min-h-11"
               >
                 <div
-                  class="rounded px-1 dark:border css-1kocbuc"
+                  class="rounded px-1 py-[3px] dark:border css-1kocbuc"
                   color="secondary"
                   data-testid="TransactionRow__type"
                 >
@@ -9883,7 +10133,7 @@ exports[`TransactionTable > should render responsive 5`] = `
             </td>
             <td>
               <div
-                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 space-x-4"
+                class="flex transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 space-x-4 items-start min-h-14 my-1 pt-2 px-0 lg:px-3 xl:pt-0 xl:min-h-11 xl:items-center"
               >
                 <div
                   class="flex flex-row gap-2"
@@ -9921,9 +10171,11 @@ exports[`TransactionTable > should render responsive 5`] = `
                 </div>
               </div>
             </td>
-            <td>
+            <td
+              class="hidden lg:table-cell"
+            >
               <div
-                class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end items-start md:max-h-11 my-0 py-3"
+                class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end items-start my-1 min-h-14 pt-2 xl:min-h-11 xl:my-0"
               >
                 <div
                   class="flex flex-col items-end gap-1"
@@ -9958,11 +10210,9 @@ exports[`TransactionTable > should render responsive 5`] = `
                 </div>
               </div>
             </td>
-            <td
-              class="hidden lg:table-cell"
-            >
+            <td>
               <div
-                class="flex px-3 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+                class="flex px-3 my-1 transition-colors duration-100 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold min-h-14 pt-2 xl:min-h-11 xl:my-0"
               >
                 <span
                   class="whitespace-nowrap"
@@ -9979,7 +10229,7 @@ exports[`TransactionTable > should render responsive 5`] = `
           >
             <td>
               <div
-                class="flex px-3 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start my-0 py-3 xl:min-h-0 max-h-11"
+                class="flex px-3 transition-colors duration-100 pl-3 ml-3 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start py-1 my-1 pr-0 lg:pr-3 min-h-14 xl:min-h-11 xl:max-h-11 xl:py-1.5"
               >
                 <div
                   class="flex flex-col gap-1 font-semibold"
@@ -10023,7 +10273,7 @@ exports[`TransactionTable > should render responsive 5`] = `
               data-testid="TransactionRow__timestamp"
             >
               <div
-                class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold items-start xl:min-h-0 my-0 py-3"
+                class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold items-start my-1 min-h-11 xl:max-h-11 xl:pt-2"
               >
                 <span
                   data-testid="TimeAgo"
@@ -10034,10 +10284,10 @@ exports[`TransactionTable > should render responsive 5`] = `
             </td>
             <td>
               <div
-                class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start xl:min-h-11 my-0 py-3"
+                class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start my-1 pt-2 min-h-14 xl:min-h-11"
               >
                 <div
-                  class="rounded px-1 dark:border css-1kocbuc"
+                  class="rounded px-1 py-[3px] dark:border css-1kocbuc"
                   color="secondary"
                   data-testid="TransactionRow__type"
                 >
@@ -10047,7 +10297,7 @@ exports[`TransactionTable > should render responsive 5`] = `
             </td>
             <td>
               <div
-                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 space-x-4"
+                class="flex transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 space-x-4 items-start min-h-14 my-1 pt-2 px-0 lg:px-3 xl:pt-0 xl:min-h-11 xl:items-center"
               >
                 <div
                   class="flex flex-row gap-2"
@@ -10096,9 +10346,11 @@ exports[`TransactionTable > should render responsive 5`] = `
                 </div>
               </div>
             </td>
-            <td>
+            <td
+              class="hidden lg:table-cell"
+            >
               <div
-                class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end items-start md:max-h-11 my-0 py-3"
+                class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end items-start my-1 min-h-14 pt-2 xl:min-h-11 xl:my-0"
               >
                 <div
                   class="flex flex-col items-end gap-1"
@@ -10133,11 +10385,9 @@ exports[`TransactionTable > should render responsive 5`] = `
                 </div>
               </div>
             </td>
-            <td
-              class="hidden lg:table-cell"
-            >
+            <td>
               <div
-                class="flex px-3 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+                class="flex px-3 my-1 transition-colors duration-100 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold min-h-14 pt-2 xl:min-h-11 xl:my-0"
               >
                 <span
                   class="whitespace-nowrap"
@@ -10154,7 +10404,7 @@ exports[`TransactionTable > should render responsive 5`] = `
           >
             <td>
               <div
-                class="flex px-3 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start my-0 py-3 xl:min-h-0 max-h-11"
+                class="flex px-3 transition-colors duration-100 pl-3 ml-3 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start py-1 my-1 pr-0 lg:pr-3 min-h-14 xl:min-h-11 xl:max-h-11 xl:py-1.5"
               >
                 <div
                   class="flex flex-col gap-1 font-semibold"
@@ -10198,7 +10448,7 @@ exports[`TransactionTable > should render responsive 5`] = `
               data-testid="TransactionRow__timestamp"
             >
               <div
-                class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold items-start xl:min-h-0 my-0 py-3"
+                class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold items-start my-1 min-h-11 xl:max-h-11 xl:pt-2"
               >
                 <span
                   data-testid="TimeAgo"
@@ -10209,10 +10459,10 @@ exports[`TransactionTable > should render responsive 5`] = `
             </td>
             <td>
               <div
-                class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start xl:min-h-11 my-0 py-3"
+                class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start my-1 pt-2 min-h-14 xl:min-h-11"
               >
                 <div
-                  class="rounded px-1 dark:border css-1kocbuc"
+                  class="rounded px-1 py-[3px] dark:border css-1kocbuc"
                   color="secondary"
                   data-testid="TransactionRow__type"
                 >
@@ -10222,7 +10472,7 @@ exports[`TransactionTable > should render responsive 5`] = `
             </td>
             <td>
               <div
-                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 space-x-4"
+                class="flex transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 space-x-4 items-start min-h-14 my-1 pt-2 px-0 lg:px-3 xl:pt-0 xl:min-h-11 xl:items-center"
               >
                 <div
                   class="flex flex-row gap-2"
@@ -10260,9 +10510,11 @@ exports[`TransactionTable > should render responsive 5`] = `
                 </div>
               </div>
             </td>
-            <td>
+            <td
+              class="hidden lg:table-cell"
+            >
               <div
-                class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end items-start md:max-h-11 my-0 py-3"
+                class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end items-start my-1 min-h-14 pt-2 xl:min-h-11 xl:my-0"
               >
                 <div
                   class="flex flex-col items-end gap-1"
@@ -10297,11 +10549,9 @@ exports[`TransactionTable > should render responsive 5`] = `
                 </div>
               </div>
             </td>
-            <td
-              class="hidden lg:table-cell"
-            >
+            <td>
               <div
-                class="flex px-3 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+                class="flex px-3 my-1 transition-colors duration-100 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold min-h-14 pt-2 xl:min-h-11 xl:my-0"
               >
                 <span
                   class="whitespace-nowrap"
@@ -10318,7 +10568,7 @@ exports[`TransactionTable > should render responsive 5`] = `
           >
             <td>
               <div
-                class="flex px-3 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start my-0 py-3 xl:min-h-0 max-h-11"
+                class="flex px-3 transition-colors duration-100 pl-3 ml-3 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start py-1 my-1 pr-0 lg:pr-3 min-h-14 xl:min-h-11 xl:max-h-11 xl:py-1.5"
               >
                 <div
                   class="flex flex-col gap-1 font-semibold"
@@ -10362,7 +10612,7 @@ exports[`TransactionTable > should render responsive 5`] = `
               data-testid="TransactionRow__timestamp"
             >
               <div
-                class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold items-start xl:min-h-0 my-0 py-3"
+                class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold items-start my-1 min-h-11 xl:max-h-11 xl:pt-2"
               >
                 <span
                   data-testid="TimeAgo"
@@ -10373,10 +10623,10 @@ exports[`TransactionTable > should render responsive 5`] = `
             </td>
             <td>
               <div
-                class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start xl:min-h-11 my-0 py-3"
+                class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start my-1 pt-2 min-h-14 xl:min-h-11"
               >
                 <div
-                  class="rounded px-1 dark:border css-1kocbuc"
+                  class="rounded px-1 py-[3px] dark:border css-1kocbuc"
                   color="secondary"
                   data-testid="TransactionRow__type"
                 >
@@ -10386,7 +10636,7 @@ exports[`TransactionTable > should render responsive 5`] = `
             </td>
             <td>
               <div
-                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 space-x-4"
+                class="flex transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 space-x-4 items-start min-h-14 my-1 pt-2 px-0 lg:px-3 xl:pt-0 xl:min-h-11 xl:items-center"
               >
                 <div
                   class="flex flex-row gap-2"
@@ -10424,9 +10674,11 @@ exports[`TransactionTable > should render responsive 5`] = `
                 </div>
               </div>
             </td>
-            <td>
+            <td
+              class="hidden lg:table-cell"
+            >
               <div
-                class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end items-start md:max-h-11 my-0 py-3"
+                class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end items-start my-1 min-h-14 pt-2 xl:min-h-11 xl:my-0"
               >
                 <div
                   class="flex flex-col items-end gap-1"
@@ -10461,11 +10713,9 @@ exports[`TransactionTable > should render responsive 5`] = `
                 </div>
               </div>
             </td>
-            <td
-              class="hidden lg:table-cell"
-            >
+            <td>
               <div
-                class="flex px-3 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+                class="flex px-3 my-1 transition-colors duration-100 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold min-h-14 pt-2 xl:min-h-11 xl:my-0"
               >
                 <span
                   class="whitespace-nowrap"
@@ -10482,7 +10732,7 @@ exports[`TransactionTable > should render responsive 5`] = `
           >
             <td>
               <div
-                class="flex px-3 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start my-0 py-3 xl:min-h-0 max-h-11"
+                class="flex px-3 transition-colors duration-100 pl-3 ml-3 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start py-1 my-1 pr-0 lg:pr-3 min-h-14 xl:min-h-11 xl:max-h-11 xl:py-1.5"
               >
                 <div
                   class="flex flex-col gap-1 font-semibold"
@@ -10526,7 +10776,7 @@ exports[`TransactionTable > should render responsive 5`] = `
               data-testid="TransactionRow__timestamp"
             >
               <div
-                class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold items-start xl:min-h-0 my-0 py-3"
+                class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold items-start my-1 min-h-11 xl:max-h-11 xl:pt-2"
               >
                 <span
                   data-testid="TimeAgo"
@@ -10537,10 +10787,10 @@ exports[`TransactionTable > should render responsive 5`] = `
             </td>
             <td>
               <div
-                class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start xl:min-h-11 my-0 py-3"
+                class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start my-1 pt-2 min-h-14 xl:min-h-11"
               >
                 <div
-                  class="rounded px-1 dark:border css-1kocbuc"
+                  class="rounded px-1 py-[3px] dark:border css-1kocbuc"
                   color="secondary"
                   data-testid="TransactionRow__type"
                 >
@@ -10550,7 +10800,7 @@ exports[`TransactionTable > should render responsive 5`] = `
             </td>
             <td>
               <div
-                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 space-x-4"
+                class="flex transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 space-x-4 items-start min-h-14 my-1 pt-2 px-0 lg:px-3 xl:pt-0 xl:min-h-11 xl:items-center"
               >
                 <div
                   class="flex flex-row gap-2"
@@ -10588,9 +10838,11 @@ exports[`TransactionTable > should render responsive 5`] = `
                 </div>
               </div>
             </td>
-            <td>
+            <td
+              class="hidden lg:table-cell"
+            >
               <div
-                class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end items-start md:max-h-11 my-0 py-3"
+                class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end items-start my-1 min-h-14 pt-2 xl:min-h-11 xl:my-0"
               >
                 <div
                   class="flex flex-col items-end gap-1"
@@ -10625,11 +10877,9 @@ exports[`TransactionTable > should render responsive 5`] = `
                 </div>
               </div>
             </td>
-            <td
-              class="hidden lg:table-cell"
-            >
+            <td>
               <div
-                class="flex px-3 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+                class="flex px-3 my-1 transition-colors duration-100 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold min-h-14 pt-2 xl:min-h-11 xl:my-0"
               >
                 <span
                   class="whitespace-nowrap"
@@ -10646,7 +10896,7 @@ exports[`TransactionTable > should render responsive 5`] = `
           >
             <td>
               <div
-                class="flex px-3 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start my-0 py-3 xl:min-h-0 max-h-11"
+                class="flex px-3 transition-colors duration-100 pl-3 ml-3 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start py-1 my-1 pr-0 lg:pr-3 min-h-14 xl:min-h-11 xl:max-h-11 xl:py-1.5"
               >
                 <div
                   class="flex flex-col gap-1 font-semibold"
@@ -10690,7 +10940,7 @@ exports[`TransactionTable > should render responsive 5`] = `
               data-testid="TransactionRow__timestamp"
             >
               <div
-                class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold items-start xl:min-h-0 my-0 py-3"
+                class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold items-start my-1 min-h-11 xl:max-h-11 xl:pt-2"
               >
                 <span
                   data-testid="TimeAgo"
@@ -10701,10 +10951,10 @@ exports[`TransactionTable > should render responsive 5`] = `
             </td>
             <td>
               <div
-                class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start xl:min-h-11 my-0 py-3"
+                class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start my-1 pt-2 min-h-14 xl:min-h-11"
               >
                 <div
-                  class="rounded px-1 dark:border css-1kocbuc"
+                  class="rounded px-1 py-[3px] dark:border css-1kocbuc"
                   color="secondary"
                   data-testid="TransactionRow__type"
                 >
@@ -10714,7 +10964,7 @@ exports[`TransactionTable > should render responsive 5`] = `
             </td>
             <td>
               <div
-                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 space-x-4"
+                class="flex transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 space-x-4 items-start min-h-14 my-1 pt-2 px-0 lg:px-3 xl:pt-0 xl:min-h-11 xl:items-center"
               >
                 <div
                   class="flex flex-row gap-2"
@@ -10752,9 +11002,11 @@ exports[`TransactionTable > should render responsive 5`] = `
                 </div>
               </div>
             </td>
-            <td>
+            <td
+              class="hidden lg:table-cell"
+            >
               <div
-                class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end items-start md:max-h-11 my-0 py-3"
+                class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end items-start my-1 min-h-14 pt-2 xl:min-h-11 xl:my-0"
               >
                 <div
                   class="flex flex-col items-end gap-1"
@@ -10789,11 +11041,9 @@ exports[`TransactionTable > should render responsive 5`] = `
                 </div>
               </div>
             </td>
-            <td
-              class="hidden lg:table-cell"
-            >
+            <td>
               <div
-                class="flex px-3 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+                class="flex px-3 my-1 transition-colors duration-100 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold min-h-14 pt-2 xl:min-h-11 xl:my-0"
               >
                 <span
                   class="whitespace-nowrap"
@@ -10810,7 +11060,7 @@ exports[`TransactionTable > should render responsive 5`] = `
           >
             <td>
               <div
-                class="flex px-3 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start my-0 py-3 xl:min-h-0 max-h-11"
+                class="flex px-3 transition-colors duration-100 pl-3 ml-3 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start py-1 my-1 pr-0 lg:pr-3 min-h-14 xl:min-h-11 xl:max-h-11 xl:py-1.5"
               >
                 <div
                   class="flex flex-col gap-1 font-semibold"
@@ -10854,7 +11104,7 @@ exports[`TransactionTable > should render responsive 5`] = `
               data-testid="TransactionRow__timestamp"
             >
               <div
-                class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold items-start xl:min-h-0 my-0 py-3"
+                class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold items-start my-1 min-h-11 xl:max-h-11 xl:pt-2"
               >
                 <span
                   data-testid="TimeAgo"
@@ -10865,10 +11115,10 @@ exports[`TransactionTable > should render responsive 5`] = `
             </td>
             <td>
               <div
-                class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start xl:min-h-11 my-0 py-3"
+                class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start my-1 pt-2 min-h-14 xl:min-h-11"
               >
                 <div
-                  class="rounded px-1 dark:border css-1kocbuc"
+                  class="rounded px-1 py-[3px] dark:border css-1kocbuc"
                   color="secondary"
                   data-testid="TransactionRow__type"
                 >
@@ -10878,7 +11128,7 @@ exports[`TransactionTable > should render responsive 5`] = `
             </td>
             <td>
               <div
-                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 space-x-4"
+                class="flex transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 space-x-4 items-start min-h-14 my-1 pt-2 px-0 lg:px-3 xl:pt-0 xl:min-h-11 xl:items-center"
               >
                 <div
                   class="flex flex-row gap-2"
@@ -10916,9 +11166,11 @@ exports[`TransactionTable > should render responsive 5`] = `
                 </div>
               </div>
             </td>
-            <td>
+            <td
+              class="hidden lg:table-cell"
+            >
               <div
-                class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end items-start md:max-h-11 my-0 py-3"
+                class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end items-start my-1 min-h-14 pt-2 xl:min-h-11 xl:my-0"
               >
                 <div
                   class="flex flex-col items-end gap-1"
@@ -10953,11 +11205,9 @@ exports[`TransactionTable > should render responsive 5`] = `
                 </div>
               </div>
             </td>
-            <td
-              class="hidden lg:table-cell"
-            >
+            <td>
               <div
-                class="flex px-3 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+                class="flex px-3 my-1 transition-colors duration-100 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold min-h-14 pt-2 xl:min-h-11 xl:my-0"
               >
                 <span
                   class="whitespace-nowrap"
@@ -10974,7 +11224,7 @@ exports[`TransactionTable > should render responsive 5`] = `
           >
             <td>
               <div
-                class="flex px-3 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start my-0 py-3 xl:min-h-0 max-h-11"
+                class="flex px-3 transition-colors duration-100 pl-3 ml-3 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start py-1 my-1 pr-0 lg:pr-3 min-h-14 xl:min-h-11 xl:max-h-11 xl:py-1.5"
               >
                 <div
                   class="flex flex-col gap-1 font-semibold"
@@ -11018,7 +11268,7 @@ exports[`TransactionTable > should render responsive 5`] = `
               data-testid="TransactionRow__timestamp"
             >
               <div
-                class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold items-start xl:min-h-0 my-0 py-3"
+                class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold items-start my-1 min-h-11 xl:max-h-11 xl:pt-2"
               >
                 <span
                   data-testid="TimeAgo"
@@ -11029,10 +11279,10 @@ exports[`TransactionTable > should render responsive 5`] = `
             </td>
             <td>
               <div
-                class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start xl:min-h-11 my-0 py-3"
+                class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start my-1 pt-2 min-h-14 xl:min-h-11"
               >
                 <div
-                  class="rounded px-1 dark:border css-1kocbuc"
+                  class="rounded px-1 py-[3px] dark:border css-1kocbuc"
                   color="secondary"
                   data-testid="TransactionRow__type"
                 >
@@ -11042,7 +11292,7 @@ exports[`TransactionTable > should render responsive 5`] = `
             </td>
             <td>
               <div
-                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 space-x-4"
+                class="flex transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 space-x-4 items-start min-h-14 my-1 pt-2 px-0 lg:px-3 xl:pt-0 xl:min-h-11 xl:items-center"
               >
                 <div
                   class="flex flex-row gap-2"
@@ -11080,9 +11330,11 @@ exports[`TransactionTable > should render responsive 5`] = `
                 </div>
               </div>
             </td>
-            <td>
+            <td
+              class="hidden lg:table-cell"
+            >
               <div
-                class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end items-start md:max-h-11 my-0 py-3"
+                class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end items-start my-1 min-h-14 pt-2 xl:min-h-11 xl:my-0"
               >
                 <div
                   class="flex flex-col items-end gap-1"
@@ -11117,11 +11369,9 @@ exports[`TransactionTable > should render responsive 5`] = `
                 </div>
               </div>
             </td>
-            <td
-              class="hidden lg:table-cell"
-            >
+            <td>
               <div
-                class="flex px-3 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+                class="flex px-3 my-1 transition-colors duration-100 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold min-h-14 pt-2 xl:min-h-11 xl:my-0"
               >
                 <span
                   class="whitespace-nowrap"
@@ -11138,7 +11388,7 @@ exports[`TransactionTable > should render responsive 5`] = `
           >
             <td>
               <div
-                class="flex px-3 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start my-0 py-3 xl:min-h-0 max-h-11"
+                class="flex px-3 transition-colors duration-100 pl-3 ml-3 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start py-1 my-1 pr-0 lg:pr-3 min-h-14 xl:min-h-11 xl:max-h-11 xl:py-1.5"
               >
                 <div
                   class="flex flex-col gap-1 font-semibold"
@@ -11182,7 +11432,7 @@ exports[`TransactionTable > should render responsive 5`] = `
               data-testid="TransactionRow__timestamp"
             >
               <div
-                class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold items-start xl:min-h-0 my-0 py-3"
+                class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold items-start my-1 min-h-11 xl:max-h-11 xl:pt-2"
               >
                 <span
                   data-testid="TimeAgo"
@@ -11193,10 +11443,10 @@ exports[`TransactionTable > should render responsive 5`] = `
             </td>
             <td>
               <div
-                class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start xl:min-h-11 my-0 py-3"
+                class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start my-1 pt-2 min-h-14 xl:min-h-11"
               >
                 <div
-                  class="rounded px-1 dark:border css-1kocbuc"
+                  class="rounded px-1 py-[3px] dark:border css-1kocbuc"
                   color="secondary"
                   data-testid="TransactionRow__type"
                 >
@@ -11206,7 +11456,7 @@ exports[`TransactionTable > should render responsive 5`] = `
             </td>
             <td>
               <div
-                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 space-x-4"
+                class="flex transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 space-x-4 items-start min-h-14 my-1 pt-2 px-0 lg:px-3 xl:pt-0 xl:min-h-11 xl:items-center"
               >
                 <div
                   class="flex flex-row gap-2"
@@ -11244,9 +11494,11 @@ exports[`TransactionTable > should render responsive 5`] = `
                 </div>
               </div>
             </td>
-            <td>
+            <td
+              class="hidden lg:table-cell"
+            >
               <div
-                class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end items-start md:max-h-11 my-0 py-3"
+                class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end items-start my-1 min-h-14 pt-2 xl:min-h-11 xl:my-0"
               >
                 <div
                   class="flex flex-col items-end gap-1"
@@ -11281,11 +11533,9 @@ exports[`TransactionTable > should render responsive 5`] = `
                 </div>
               </div>
             </td>
-            <td
-              class="hidden lg:table-cell"
-            >
+            <td>
               <div
-                class="flex px-3 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+                class="flex px-3 my-1 transition-colors duration-100 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold min-h-14 pt-2 xl:min-h-11 xl:my-0"
               >
                 <span
                   class="whitespace-nowrap"
@@ -11302,7 +11552,7 @@ exports[`TransactionTable > should render responsive 5`] = `
           >
             <td>
               <div
-                class="flex px-3 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start my-0 py-3 xl:min-h-0 max-h-11"
+                class="flex px-3 transition-colors duration-100 pl-3 ml-3 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start py-1 my-1 pr-0 lg:pr-3 min-h-14 xl:min-h-11 xl:max-h-11 xl:py-1.5"
               >
                 <div
                   class="flex flex-col gap-1 font-semibold"
@@ -11346,7 +11596,7 @@ exports[`TransactionTable > should render responsive 5`] = `
               data-testid="TransactionRow__timestamp"
             >
               <div
-                class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold items-start xl:min-h-0 my-0 py-3"
+                class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold items-start my-1 min-h-11 xl:max-h-11 xl:pt-2"
               >
                 <span
                   data-testid="TimeAgo"
@@ -11357,10 +11607,10 @@ exports[`TransactionTable > should render responsive 5`] = `
             </td>
             <td>
               <div
-                class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start xl:min-h-11 my-0 py-3"
+                class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start my-1 pt-2 min-h-14 xl:min-h-11"
               >
                 <div
-                  class="rounded px-1 dark:border css-1kocbuc"
+                  class="rounded px-1 py-[3px] dark:border css-1kocbuc"
                   color="secondary"
                   data-testid="TransactionRow__type"
                 >
@@ -11370,7 +11620,7 @@ exports[`TransactionTable > should render responsive 5`] = `
             </td>
             <td>
               <div
-                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 space-x-4"
+                class="flex transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 space-x-4 items-start min-h-14 my-1 pt-2 px-0 lg:px-3 xl:pt-0 xl:min-h-11 xl:items-center"
               >
                 <div
                   class="flex flex-row gap-2"
@@ -11419,9 +11669,11 @@ exports[`TransactionTable > should render responsive 5`] = `
                 </div>
               </div>
             </td>
-            <td>
+            <td
+              class="hidden lg:table-cell"
+            >
               <div
-                class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end items-start md:max-h-11 my-0 py-3"
+                class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end items-start my-1 min-h-14 pt-2 xl:min-h-11 xl:my-0"
               >
                 <div
                   class="flex flex-col items-end gap-1"
@@ -11456,11 +11708,9 @@ exports[`TransactionTable > should render responsive 5`] = `
                 </div>
               </div>
             </td>
-            <td
-              class="hidden lg:table-cell"
-            >
+            <td>
               <div
-                class="flex px-3 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+                class="flex px-3 my-1 transition-colors duration-100 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold min-h-14 pt-2 xl:min-h-11 xl:my-0"
               >
                 <span
                   class="whitespace-nowrap"

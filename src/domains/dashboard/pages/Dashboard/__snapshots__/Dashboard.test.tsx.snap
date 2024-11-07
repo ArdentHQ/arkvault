@@ -1346,7 +1346,7 @@ exports[`Dashboard > should render 1`] = `
                       role="row"
                     >
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border w-36 min-w-36 xl:w-48"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border w-28 min-w-28 lg:w-36 xl:w-48"
                         colspan="1"
                         data-testid="table__th--0"
                         role="columnheader"
@@ -1408,7 +1408,7 @@ exports[`Dashboard > should render 1`] = `
                         </div>
                       </th>
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border first:rounded-tl-xl last:rounded-tr-xl w-32 min-w-32"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black no-border first:rounded-tl-xl last:rounded-tr-xl"
                         colspan="1"
                         data-testid="table__th--2"
                         role="columnheader"
@@ -1542,7 +1542,7 @@ exports[`Dashboard > should render 1`] = `
                     >
                       <td>
                         <div
-                          class="flex px-3 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start my-0 py-3 xl:min-h-0 max-h-11"
+                          class="flex px-3 transition-colors duration-100 pl-3 ml-3 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start py-1 my-1 pr-0 lg:pr-3 min-h-14 xl:min-h-11 xl:max-h-11 xl:py-1.5"
                         >
                           <div
                             class="flex flex-col gap-1 font-semibold"
@@ -1586,7 +1586,7 @@ exports[`Dashboard > should render 1`] = `
                         data-testid="TransactionRow__timestamp"
                       >
                         <div
-                          class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold items-start xl:min-h-0 my-0 py-3"
+                          class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold items-start my-1 min-h-11 xl:max-h-11 xl:pt-2"
                         >
                           <span
                             data-testid="TimeAgo"
@@ -1597,10 +1597,10 @@ exports[`Dashboard > should render 1`] = `
                       </td>
                       <td>
                         <div
-                          class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start xl:min-h-11 my-0 py-3"
+                          class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start my-1 pt-2 min-h-14 xl:min-h-11"
                         >
                           <div
-                            class="rounded px-1 dark:border css-1kocbuc"
+                            class="rounded px-1 py-[3px] dark:border css-1kocbuc"
                             color="secondary"
                             data-testid="TransactionRow__type"
                           >
@@ -1610,7 +1610,7 @@ exports[`Dashboard > should render 1`] = `
                       </td>
                       <td>
                         <div
-                          class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 space-x-4"
+                          class="flex transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 space-x-4 items-start min-h-14 my-1 pt-2 px-0 lg:px-3 xl:pt-0 xl:min-h-11 xl:items-center"
                         >
                           <div
                             class="flex flex-row gap-2"
@@ -1648,9 +1648,11 @@ exports[`Dashboard > should render 1`] = `
                           </div>
                         </div>
                       </td>
-                      <td>
+                      <td
+                        class="hidden lg:table-cell"
+                      >
                         <div
-                          class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end items-start md:max-h-11 my-0 py-3"
+                          class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end items-start my-1 min-h-14 pt-2 xl:min-h-11 xl:my-0"
                         >
                           <div
                             class="flex flex-col items-end gap-1"
@@ -1685,11 +1687,9 @@ exports[`Dashboard > should render 1`] = `
                           </div>
                         </div>
                       </td>
-                      <td
-                        class="hidden lg:table-cell"
-                      >
+                      <td>
                         <div
-                          class="flex px-3 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+                          class="flex px-3 my-1 transition-colors duration-100 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold min-h-14 pt-2 xl:min-h-11 xl:my-0"
                         >
                           <span
                             class="whitespace-nowrap"
@@ -1706,7 +1706,7 @@ exports[`Dashboard > should render 1`] = `
                     >
                       <td>
                         <div
-                          class="flex px-3 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start my-0 py-3 xl:min-h-0 max-h-11"
+                          class="flex px-3 transition-colors duration-100 pl-3 ml-3 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start py-1 my-1 pr-0 lg:pr-3 min-h-14 xl:min-h-11 xl:max-h-11 xl:py-1.5"
                         >
                           <div
                             class="flex flex-col gap-1 font-semibold"
@@ -1750,7 +1750,7 @@ exports[`Dashboard > should render 1`] = `
                         data-testid="TransactionRow__timestamp"
                       >
                         <div
-                          class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold items-start xl:min-h-0 my-0 py-3"
+                          class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold items-start my-1 min-h-11 xl:max-h-11 xl:pt-2"
                         >
                           <span
                             data-testid="TimeAgo"
@@ -1761,10 +1761,10 @@ exports[`Dashboard > should render 1`] = `
                       </td>
                       <td>
                         <div
-                          class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start xl:min-h-11 my-0 py-3"
+                          class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start my-1 pt-2 min-h-14 xl:min-h-11"
                         >
                           <div
-                            class="rounded px-1 dark:border css-1kocbuc"
+                            class="rounded px-1 py-[3px] dark:border css-1kocbuc"
                             color="secondary"
                             data-testid="TransactionRow__type"
                           >
@@ -1774,7 +1774,7 @@ exports[`Dashboard > should render 1`] = `
                       </td>
                       <td>
                         <div
-                          class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 space-x-4"
+                          class="flex transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 space-x-4 items-start min-h-14 my-1 pt-2 px-0 lg:px-3 xl:pt-0 xl:min-h-11 xl:items-center"
                         >
                           <div
                             class="flex flex-row gap-2"
@@ -1812,9 +1812,11 @@ exports[`Dashboard > should render 1`] = `
                           </div>
                         </div>
                       </td>
-                      <td>
+                      <td
+                        class="hidden lg:table-cell"
+                      >
                         <div
-                          class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end items-start md:max-h-11 my-0 py-3"
+                          class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end items-start my-1 min-h-14 pt-2 xl:min-h-11 xl:my-0"
                         >
                           <div
                             class="flex flex-col items-end gap-1"
@@ -1849,11 +1851,9 @@ exports[`Dashboard > should render 1`] = `
                           </div>
                         </div>
                       </td>
-                      <td
-                        class="hidden lg:table-cell"
-                      >
+                      <td>
                         <div
-                          class="flex px-3 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+                          class="flex px-3 my-1 transition-colors duration-100 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold min-h-14 pt-2 xl:min-h-11 xl:my-0"
                         >
                           <span
                             class="whitespace-nowrap"
@@ -1870,7 +1870,7 @@ exports[`Dashboard > should render 1`] = `
                     >
                       <td>
                         <div
-                          class="flex px-3 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start my-0 py-3 xl:min-h-0 max-h-11"
+                          class="flex px-3 transition-colors duration-100 pl-3 ml-3 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start py-1 my-1 pr-0 lg:pr-3 min-h-14 xl:min-h-11 xl:max-h-11 xl:py-1.5"
                         >
                           <div
                             class="flex flex-col gap-1 font-semibold"
@@ -1914,7 +1914,7 @@ exports[`Dashboard > should render 1`] = `
                         data-testid="TransactionRow__timestamp"
                       >
                         <div
-                          class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold items-start xl:min-h-0 my-0 py-3"
+                          class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold items-start my-1 min-h-11 xl:max-h-11 xl:pt-2"
                         >
                           <span
                             data-testid="TimeAgo"
@@ -1925,10 +1925,10 @@ exports[`Dashboard > should render 1`] = `
                       </td>
                       <td>
                         <div
-                          class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start xl:min-h-11 my-0 py-3"
+                          class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start my-1 pt-2 min-h-14 xl:min-h-11"
                         >
                           <div
-                            class="rounded px-1 dark:border css-1kocbuc"
+                            class="rounded px-1 py-[3px] dark:border css-1kocbuc"
                             color="secondary"
                             data-testid="TransactionRow__type"
                           >
@@ -1938,7 +1938,7 @@ exports[`Dashboard > should render 1`] = `
                       </td>
                       <td>
                         <div
-                          class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 space-x-4"
+                          class="flex transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 space-x-4 items-start min-h-14 my-1 pt-2 px-0 lg:px-3 xl:pt-0 xl:min-h-11 xl:items-center"
                         >
                           <div
                             class="flex flex-row gap-2"
@@ -1976,9 +1976,11 @@ exports[`Dashboard > should render 1`] = `
                           </div>
                         </div>
                       </td>
-                      <td>
+                      <td
+                        class="hidden lg:table-cell"
+                      >
                         <div
-                          class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end items-start md:max-h-11 my-0 py-3"
+                          class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end items-start my-1 min-h-14 pt-2 xl:min-h-11 xl:my-0"
                         >
                           <div
                             class="flex flex-col items-end gap-1"
@@ -2013,11 +2015,9 @@ exports[`Dashboard > should render 1`] = `
                           </div>
                         </div>
                       </td>
-                      <td
-                        class="hidden lg:table-cell"
-                      >
+                      <td>
                         <div
-                          class="flex px-3 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+                          class="flex px-3 my-1 transition-colors duration-100 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold min-h-14 pt-2 xl:min-h-11 xl:my-0"
                         >
                           <span
                             class="whitespace-nowrap"
@@ -2034,7 +2034,7 @@ exports[`Dashboard > should render 1`] = `
                     >
                       <td>
                         <div
-                          class="flex px-3 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start my-0 py-3 xl:min-h-0 max-h-11"
+                          class="flex px-3 transition-colors duration-100 pl-3 ml-3 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start py-1 my-1 pr-0 lg:pr-3 min-h-14 xl:min-h-11 xl:max-h-11 xl:py-1.5"
                         >
                           <div
                             class="flex flex-col gap-1 font-semibold"
@@ -2078,7 +2078,7 @@ exports[`Dashboard > should render 1`] = `
                         data-testid="TransactionRow__timestamp"
                       >
                         <div
-                          class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold items-start xl:min-h-0 my-0 py-3"
+                          class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold items-start my-1 min-h-11 xl:max-h-11 xl:pt-2"
                         >
                           <span
                             data-testid="TimeAgo"
@@ -2089,10 +2089,10 @@ exports[`Dashboard > should render 1`] = `
                       </td>
                       <td>
                         <div
-                          class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start xl:min-h-11 my-0 py-3"
+                          class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start my-1 pt-2 min-h-14 xl:min-h-11"
                         >
                           <div
-                            class="rounded px-1 dark:border css-1kocbuc"
+                            class="rounded px-1 py-[3px] dark:border css-1kocbuc"
                             color="secondary"
                             data-testid="TransactionRow__type"
                           >
@@ -2102,7 +2102,7 @@ exports[`Dashboard > should render 1`] = `
                       </td>
                       <td>
                         <div
-                          class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 space-x-4"
+                          class="flex transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 space-x-4 items-start min-h-14 my-1 pt-2 px-0 lg:px-3 xl:pt-0 xl:min-h-11 xl:items-center"
                         >
                           <div
                             class="flex flex-row gap-2"
@@ -2140,9 +2140,11 @@ exports[`Dashboard > should render 1`] = `
                           </div>
                         </div>
                       </td>
-                      <td>
+                      <td
+                        class="hidden lg:table-cell"
+                      >
                         <div
-                          class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end items-start md:max-h-11 my-0 py-3"
+                          class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end items-start my-1 min-h-14 pt-2 xl:min-h-11 xl:my-0"
                         >
                           <div
                             class="flex flex-col items-end gap-1"
@@ -2177,11 +2179,9 @@ exports[`Dashboard > should render 1`] = `
                           </div>
                         </div>
                       </td>
-                      <td
-                        class="hidden lg:table-cell"
-                      >
+                      <td>
                         <div
-                          class="flex px-3 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+                          class="flex px-3 my-1 transition-colors duration-100 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold min-h-14 pt-2 xl:min-h-11 xl:my-0"
                         >
                           <span
                             class="whitespace-nowrap"
