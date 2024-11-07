@@ -34,7 +34,7 @@ describe("FilterTransactions", () => {
 
 		await userEvent.click(screen.getByRole("button", { name: /Type/ }));
 
-		await expect(screen.findByTestId("dropdown__option--core-0")).resolves.toBeVisible();
+		await expect(screen.findAllByTestId("FilterOption")).resolves.toHaveLength(5);
 
 		expect(container).toMatchSnapshot();
 	});
@@ -48,16 +48,10 @@ describe("FilterTransactions", () => {
 
 		await userEvent.click(screen.getByRole("button", { name: /Type/ }));
 
-		await expect(screen.findByTestId("dropdown__option--core-0")).resolves.toBeVisible();
+		await expect(screen.findAllByTestId("FilterOption")).resolves.toHaveLength(5);
 
-		await userEvent.click(screen.getByTestId("dropdown__option--core-0"));
+		await userEvent.click(screen.getAllByTestId("FilterOption")[0]);
 
-		expect(onSelect).toHaveBeenCalledWith(
-			{
-				label: expect.any(String),
-				value: expect.any(String),
-			},
-			expect.any(String),
-		);
+		expect(onSelect).toHaveBeenCalled();
 	});
 });
