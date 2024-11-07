@@ -29,7 +29,7 @@ const FilterOption = ({
 	hasDivider?: boolean,
 }) => (
 	<span
-		className={classNames("flex items-center space-x-2 -ml-9 -mr-8 -my-4 px-4 py-3 min-w-56", {
+		className={classNames("flex items-center space-x-2 -ml-9 -mr-8 -my-4 px-4 py-3 min-w-56 font-normal", {
 			"border-b border-theme-secondary-300 dark:border-theme-secondary-600": hasDivider
 		})}
 		onClick={() => onChange?.(!isChecked)}>
