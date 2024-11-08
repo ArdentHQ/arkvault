@@ -953,7 +953,7 @@ exports[`SendTransfer > should display unconfirmed transactions modal when submi
                                         class="whitespace-nowrap text-sm"
                                         data-testid="Amount"
                                       >
-                                        - 400,000.1 DARK
+                                        - 400,000 DARK
                                       </span>
                                     </div>
                                   </div>
@@ -7376,7 +7376,7 @@ exports[`SendTransfer > should send a single transfer and handle undefined expir
                                         class="whitespace-nowrap text-sm"
                                         data-testid="Amount"
                                       >
-                                        - 400,000.1 DARK
+                                        - 400,000 DARK
                                       </span>
                                     </div>
                                   </div>
@@ -8713,7 +8713,7 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
                                         class="whitespace-nowrap text-sm"
                                         data-testid="Amount"
                                       >
-                                        - 400,000.1 DARK
+                                        - 400,000 DARK
                                       </span>
                                     </div>
                                   </div>
@@ -10604,7 +10604,7 @@ exports[`SendTransfer > should send a single transfer using wallet with encrypti
                                         class="whitespace-nowrap text-sm"
                                         data-testid="Amount"
                                       >
-                                        - 400,000.1 DARK
+                                        - 400,000 DARK
                                       </span>
                                     </div>
                                   </div>
@@ -11941,7 +11941,7 @@ exports[`SendTransfer > should send a single transfer with keyboard 1`] = `
                                         class="whitespace-nowrap text-sm"
                                         data-testid="Amount"
                                       >
-                                        - 400,000.1 DARK
+                                        - 400,000 DARK
                                       </span>
                                     </div>
                                   </div>
@@ -13278,7 +13278,7 @@ exports[`SendTransfer > should send a single transfer without keyboard 1`] = `
                                         class="whitespace-nowrap text-sm"
                                         data-testid="Amount"
                                       >
-                                        - 400,000.1 DARK
+                                        - 400,000 DARK
                                       </span>
                                     </div>
                                   </div>
