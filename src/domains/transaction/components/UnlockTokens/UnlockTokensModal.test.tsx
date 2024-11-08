@@ -83,10 +83,9 @@ describe("UnlockTokensModal", () => {
 			isDelegateResignation: () => false,
 			isIpfs: () => false,
 			isMultiPayment: () => false,
-			isMultiPayment: () => false,
 			isMultiSignatureRegistration: () => false,
+			isReturn: () => false,
 			isSent: () => true,
-			isTransfer: () => true,
 			isTransfer: () => true,
 			isUnlockToken: () => true,
 			isUnvote: () => false,
@@ -96,6 +95,7 @@ describe("UnlockTokensModal", () => {
 			recipient: () => wallet.address(),
 			sender: () => transactionFixture.data.sender.address,
 			timestamp: () => DateTime.make(),
+			total: () => 30,
 			type: () => "unlockToken",
 			usesMultiSignature: () => false,
 			wallet: () => wallet,
@@ -199,7 +199,7 @@ describe("UnlockTokensModal", () => {
 
 		// continue to auth step
 
-		userEvent.click(screen.getByText(translations.COMMON.CONFIRM));
+		await userEvent.click(screen.getByText(translations.COMMON.CONFIRM));
 
 		await expect(screen.findByTestId("AuthenticationStep")).resolves.toBeVisible();
 
