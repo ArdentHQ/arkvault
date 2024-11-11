@@ -170,7 +170,7 @@ export const ExchangeTransactionsRow = ({
 				<ExchangeTransactionProvider slug={exchangeTransaction.provider()} />
 			</TableCell>
 
-			<TableCell className="lg:hidden" innerClassName="items-end flex flex-col gap-1.5 my-1 py-2 xl:my-0">
+			<TableCell className="lg:hidden" innerClassName="items-end flex flex-col gap-1.5 my-1 py-2.5 lg:py-2 xl:my-0">
 				<ExchangeTransactionRowAmount type="sent" data={exchangeTransaction.input()} />
 				<ExchangeTransactionRowAmount
 					type="received"
