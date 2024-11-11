@@ -79,7 +79,7 @@ exports[`DelegateRow > should emit action on select button 1`] = `
             class="flex px-3 items-center my-1 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 !my-0"
           >
             <a
-              class="ring-focus group/inner inline-block group/link w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700 css-167zzsv"
+              class="ring-focus group/inner inline-block w-24 md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700 css-167zzsv"
               data-ring-focus-margin="-m-1"
               data-testid="Link"
               href=""
@@ -88,9 +88,7 @@ exports[`DelegateRow > should emit action on select button 1`] = `
               <span
                 class="css-bxx244"
               >
-                <span
-                  class="group-hover/link:underline"
-                >
+                <span>
                   View
                 </span>
               </span>
@@ -229,7 +227,7 @@ exports[`DelegateRow > should render 1`] = `
             class="flex px-3 items-center my-1 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 !my-0"
           >
             <a
-              class="ring-focus group/inner inline-block group/link w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700 css-167zzsv"
+              class="ring-focus group/inner inline-block w-24 md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700 css-167zzsv"
               data-ring-focus-margin="-m-1"
               data-testid="Link"
               href=""
@@ -238,9 +236,7 @@ exports[`DelegateRow > should render 1`] = `
               <span
                 class="css-bxx244"
               >
-                <span
-                  class="group-hover/link:underline"
-                >
+                <span>
                   View
                 </span>
               </span>
@@ -379,7 +375,7 @@ exports[`DelegateRow > should render changed style when network requires vote am
             class="flex px-3 items-center my-1 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 !my-0 bg-theme-warning-50 dark:bg-theme-background dark:border-theme-warning-600"
           >
             <a
-              class="ring-focus group/inner inline-block group/link w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700 css-167zzsv"
+              class="ring-focus group/inner inline-block w-24 md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700 css-167zzsv"
               data-ring-focus-margin="-m-1"
               data-testid="Link"
               href=""
@@ -388,9 +384,7 @@ exports[`DelegateRow > should render changed style when network requires vote am
               <span
                 class="css-bxx244"
               >
-                <span
-                  class="group-hover/link:underline"
-                >
+                <span>
                   View
                 </span>
               </span>
@@ -574,7 +568,7 @@ exports[`DelegateRow > should render the selected delegate 1`] = `
             class="flex px-3 items-center my-1 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 !my-0 bg-theme-success-100 dark:bg-theme-background dark:border-theme-success-600"
           >
             <a
-              class="ring-focus group/inner inline-block group/link w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700 css-167zzsv"
+              class="ring-focus group/inner inline-block w-24 md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700 css-167zzsv"
               data-ring-focus-margin="-m-1"
               data-testid="Link"
               href=""
@@ -583,9 +577,7 @@ exports[`DelegateRow > should render the selected delegate 1`] = `
               <span
                 class="css-bxx244"
               >
-                <span
-                  class="group-hover/link:underline"
-                >
+                <span>
                   View
                 </span>
               </span>
@@ -724,7 +716,7 @@ exports[`DelegateRow > should render the selected vote 1`] = `
             class="flex px-3 items-center my-1 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 !my-0 bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600"
           >
             <a
-              class="ring-focus group/inner inline-block group/link w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700 css-167zzsv"
+              class="ring-focus group/inner inline-block w-24 md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700 css-167zzsv"
               data-ring-focus-margin="-m-1"
               data-testid="Link"
               href=""
@@ -733,9 +725,7 @@ exports[`DelegateRow > should render the selected vote 1`] = `
               <span
                 class="css-bxx244"
               >
-                <span
-                  class="group-hover/link:underline"
-                >
+                <span>
                   View
                 </span>
               </span>
@@ -865,7 +855,7 @@ exports[`DelegateRow > should render the selected vote 1`] = `
             class="flex px-3 items-center my-1 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 !my-0"
           >
             <a
-              class="ring-focus group/inner inline-block group/link w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700 css-167zzsv"
+              class="ring-focus group/inner inline-block w-24 md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700 css-167zzsv"
               data-ring-focus-margin="-m-1"
               data-testid="Link"
               href=""
@@ -874,9 +864,7 @@ exports[`DelegateRow > should render the selected vote 1`] = `
               <span
                 class="css-bxx244"
               >
-                <span
-                  class="group-hover/link:underline"
-                >
+                <span>
                   View
                 </span>
               </span>
@@ -1006,7 +994,7 @@ exports[`DelegateRow > should render the selected vote 1`] = `
             class="flex px-3 items-center my-1 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 !my-0"
           >
             <a
-              class="ring-focus group/inner inline-block group/link w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700 css-167zzsv"
+              class="ring-focus group/inner inline-block w-24 md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700 css-167zzsv"
               data-ring-focus-margin="-m-1"
               data-testid="Link"
               href=""
@@ -1015,9 +1003,7 @@ exports[`DelegateRow > should render the selected vote 1`] = `
               <span
                 class="css-bxx244"
               >
-                <span
-                  class="group-hover/link:underline"
-                >
+                <span>
                   View
                 </span>
               </span>
@@ -1161,7 +1147,7 @@ exports[`DelegateRow > should render the selected vote 2`] = `
             class="flex px-3 items-center my-1 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 !my-0 bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600"
           >
             <a
-              class="ring-focus group/inner inline-block group/link w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700 css-167zzsv"
+              class="ring-focus group/inner inline-block w-24 md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700 css-167zzsv"
               data-ring-focus-margin="-m-1"
               data-testid="Link"
               href=""
@@ -1170,9 +1156,7 @@ exports[`DelegateRow > should render the selected vote 2`] = `
               <span
                 class="css-bxx244"
               >
-                <span
-                  class="group-hover/link:underline"
-                >
+                <span>
                   View
                 </span>
               </span>
@@ -1302,7 +1286,7 @@ exports[`DelegateRow > should render the selected vote 2`] = `
             class="flex px-3 items-center my-1 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 !my-0"
           >
             <a
-              class="ring-focus group/inner inline-block group/link w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700 css-167zzsv"
+              class="ring-focus group/inner inline-block w-24 md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700 css-167zzsv"
               data-ring-focus-margin="-m-1"
               data-testid="Link"
               href=""
@@ -1311,9 +1295,7 @@ exports[`DelegateRow > should render the selected vote 2`] = `
               <span
                 class="css-bxx244"
               >
-                <span
-                  class="group-hover/link:underline"
-                >
+                <span>
                   View
                 </span>
               </span>
@@ -1443,7 +1425,7 @@ exports[`DelegateRow > should render the selected vote 2`] = `
             class="flex px-3 items-center my-1 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 !my-0"
           >
             <a
-              class="ring-focus group/inner inline-block group/link w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700 css-167zzsv"
+              class="ring-focus group/inner inline-block w-24 md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700 css-167zzsv"
               data-ring-focus-margin="-m-1"
               data-testid="Link"
               href=""
@@ -1452,9 +1434,7 @@ exports[`DelegateRow > should render the selected vote 2`] = `
               <span
                 class="css-bxx244"
               >
-                <span
-                  class="group-hover/link:underline"
-                >
+                <span>
                   View
                 </span>
               </span>
@@ -1598,7 +1578,7 @@ exports[`DelegateRow > should render the unselected vote 1`] = `
             class="flex px-3 items-center my-1 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 !my-0 bg-theme-danger-50 dark:bg-theme-background dark:border-theme-danger-400"
           >
             <a
-              class="ring-focus group/inner inline-block group/link w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700 css-167zzsv"
+              class="ring-focus group/inner inline-block w-24 md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700 css-167zzsv"
               data-ring-focus-margin="-m-1"
               data-testid="Link"
               href=""
@@ -1607,9 +1587,7 @@ exports[`DelegateRow > should render the unselected vote 1`] = `
               <span
                 class="css-bxx244"
               >
-                <span
-                  class="group-hover/link:underline"
-                >
+                <span>
                   View
                 </span>
               </span>
@@ -1748,7 +1726,7 @@ exports[`DelegateRow > should render when network requires vote amount 1`] = `
             class="flex px-3 items-center my-1 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 !my-0"
           >
             <a
-              class="ring-focus group/inner inline-block group/link w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700 css-167zzsv"
+              class="ring-focus group/inner inline-block w-24 md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700 css-167zzsv"
               data-ring-focus-margin="-m-1"
               data-testid="Link"
               href=""
@@ -1757,9 +1735,7 @@ exports[`DelegateRow > should render when network requires vote amount 1`] = `
               <span
                 class="css-bxx244"
               >
-                <span
-                  class="group-hover/link:underline"
-                >
+                <span>
                   View
                 </span>
               </span>
