@@ -1,17 +1,17 @@
-import { Contracts } from "@ardenthq/sdk-profiles";
-import cn from "classnames";
 import React, { useMemo } from "react";
-import { useTranslation } from "react-i18next";
+import { TableCell, TableRow } from "@/app/components/Table";
 
+import { Contracts } from "@ardenthq/sdk-profiles";
 import { DelegateRowSkeleton } from "./DelegateRowSkeleton";
 import { DelegateVoteAmount } from "./DelegateVoteAmount";
 import { DelegateVoteButton } from "./DelegateVoteButton";
 import { Icon } from "@/app/components/Icon";
 import { Link } from "@/app/components/Link";
-import { TableCell, TableRow } from "@/app/components/Table";
-import { VoteDelegateProperties } from "@/domains/vote/components/DelegateTable/DelegateTable.contracts";
-import { delegateExistsInVotes } from "@/domains/vote/components/DelegateTable/DelegateTable.helpers";
 import { Tooltip } from "@/app/components/Tooltip";
+import { VoteDelegateProperties } from "@/domains/vote/components/DelegateTable/DelegateTable.contracts";
+import cn from "classnames";
+import { delegateExistsInVotes } from "@/domains/vote/components/DelegateTable/DelegateTable.helpers";
+import { useTranslation } from "react-i18next";
 
 export interface DelegateRowProperties {
 	index: number;
@@ -308,9 +308,9 @@ export const DelegateRow = ({
 					to={delegate.explorerLink()}
 					tooltip={t("COMMON.OPEN_IN_EXPLORER")}
 					isExternal
-					className="group/link w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700"
+					className="w-24 md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700"
 				>
-					<span className="group-hover/link:underline">{t("COMMON.VIEW")}</span>
+					<span>{t("COMMON.VIEW")}</span>
 				</Link>
 			</TableCell>
 
