@@ -53,7 +53,7 @@ export const TransactionRow = memo(
 			<TableRow onClick={onClick} className={twMerge("relative", className)} {...properties}>
 				<TableCell
 					variant="start"
-					innerClassName="items-start py-1 my-1 pr-0 lg:pr-3 min-h-14 xl:min-h-11 xl:max-h-11 xl:py-1.5"
+					innerClassName="items-start py-1 my-1 pr-0 lg:pr-3 min-h-14 xl:min-h-11 xl:max-h-11 xl:pt-2.5"
 				>
 					<div className="flex flex-col gap-1 font-semibold">
 						<Link to={transaction.explorerLink()} showExternalIcon={false} isExternal>
@@ -78,7 +78,7 @@ export const TransactionRow = memo(
 
 				<TableCell
 					className="hidden xl:table-cell"
-					innerClassName="text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold items-start my-1 min-h-11 xl:max-h-11 xl:pt-2"
+					innerClassName="text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold items-start my-1 min-h-11 xl:max-h-11 xl:pt-3"
 					data-testid="TransactionRow__timestamp"
 				>
 					{timeStamp ? (
@@ -88,7 +88,7 @@ export const TransactionRow = memo(
 					)}
 				</TableCell>
 
-				<TableCell innerClassName="items-start my-1 pt-2 min-h-14 xl:min-h-11">
+				<TableCell innerClassName="items-start my-1 pt-2 min-h-14 xl:min-h-11 xl:pt-3">
 					<Label
 						color="secondary"
 						size="xs"
@@ -100,13 +100,13 @@ export const TransactionRow = memo(
 					</Label>
 				</TableCell>
 
-				<TableCell innerClassName="space-x-4 items-start min-h-14 my-1 pt-2 px-0 lg:px-3 xl:pt-0 xl:min-h-11 xl:items-center">
+				<TableCell innerClassName="space-x-4 items-start min-h-14 my-1 pt-2 px-0 lg:px-3 xl:pt-3 xl:min-h-11">
 					<TransactionRowAddressing transaction={transaction} profile={profile} />
 				</TableCell>
 
 				<TableCell
 					className="hidden lg:table-cell"
-					innerClassName="justify-end items-start my-1 min-h-14 pt-2 xl:min-h-11 xl:my-0"
+					innerClassName="justify-end items-start my-1 min-h-14 pt-2 xl:min-h-11 xl:my-0 xl:pt-3"
 				>
 					<div className="flex flex-col items-end gap-1">
 						<TransactionAmountLabel transaction={transaction} />
@@ -121,7 +121,7 @@ export const TransactionRow = memo(
 
 				<TableCell
 					variant="end"
-					innerClassName="justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold min-h-14 pt-2 xl:min-h-11 xl:my-0"
+					innerClassName="justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold min-h-14 pt-2 xl:min-h-11 xl:my-0 xl:pt-3"
 				>
 					{isLgAndAbove ? (
 						<Amount value={transaction.convertedTotal()} ticker={exchangeCurrency || ""} />

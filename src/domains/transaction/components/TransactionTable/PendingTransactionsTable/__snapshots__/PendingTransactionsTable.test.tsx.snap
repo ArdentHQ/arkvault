@@ -301,7 +301,7 @@ exports[`Signed Transaction Table > should handle the onRowClick function when t
                   class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start my-1 pt-3 min-h-14 xl:min-h-11"
                 >
                   <div
-                    class="rounded px-1 dark:border css-1kocbuc"
+                    class="rounded px-1 dark:border css-a8yjl2"
                     color="secondary"
                     data-testid="TransactionRowRecipientLabel"
                   >
@@ -1035,7 +1035,7 @@ exports[`Signed Transaction Table > should render different status > should show
                   class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start my-1 pt-3 min-h-14 xl:min-h-11"
                 >
                   <div
-                    class="rounded px-1 dark:border css-1kocbuc"
+                    class="rounded px-1 dark:border css-a8yjl2"
                     color="secondary"
                     data-testid="TransactionRowRecipientLabel"
                   >
@@ -1759,7 +1759,7 @@ exports[`Signed Transaction Table > should render different status > should show
                   class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start my-1 pt-3 min-h-14 xl:min-h-11"
                 >
                   <div
-                    class="rounded px-1 dark:border css-1kocbuc"
+                    class="rounded px-1 dark:border css-a8yjl2"
                     color="secondary"
                     data-testid="TransactionRowRecipientLabel"
                   >
@@ -2416,7 +2416,7 @@ exports[`Signed Transaction Table > should render different status > should show
                   class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start my-1 pt-3 min-h-14 xl:min-h-11"
                 >
                   <div
-                    class="rounded px-1 dark:border css-1kocbuc"
+                    class="rounded px-1 dark:border css-a8yjl2"
                     color="secondary"
                   >
                     Unvote
@@ -3035,7 +3035,7 @@ exports[`Signed Transaction Table > should render different status > should show
                   class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start my-1 pt-3 min-h-14 xl:min-h-11"
                 >
                   <div
-                    class="rounded px-1 dark:border css-1kocbuc"
+                    class="rounded px-1 dark:border css-a8yjl2"
                     color="secondary"
                   >
                     Vote
@@ -3703,7 +3703,7 @@ exports[`Signed Transaction Table > should render different status > should show
                   class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start my-1 pt-3 min-h-14 xl:min-h-11"
                 >
                   <div
-                    class="rounded px-1 dark:border css-1kocbuc"
+                    class="rounded px-1 dark:border css-a8yjl2"
                     color="secondary"
                     data-testid="TransactionRowRecipientLabel"
                   >
@@ -4206,7 +4206,7 @@ exports[`Signed Transaction Table > should render ready to broadcast transaction
                   class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start my-1 pt-3 min-h-14 xl:min-h-11"
                 >
                   <div
-                    class="rounded px-1 dark:border css-1kocbuc"
+                    class="rounded px-1 dark:border css-a8yjl2"
                     color="secondary"
                     data-testid="TransactionRowRecipientLabel"
                   >
@@ -4681,7 +4681,7 @@ exports[`Signed Transaction Table > should render signed transactions and handle
                   class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start my-1 pt-3 min-h-14 xl:min-h-11"
                 >
                   <div
-                    class="rounded px-1 dark:border css-1kocbuc"
+                    class="rounded px-1 dark:border css-a8yjl2"
                     color="secondary"
                     data-testid="TransactionRowRecipientLabel"
                   >
@@ -5166,7 +5166,7 @@ exports[`Signed Transaction Table > should show as awaiting confirmations 1`] = 
                   class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start my-1 pt-3 min-h-14 xl:min-h-11"
                 >
                   <div
-                    class="rounded px-1 dark:border css-1kocbuc"
+                    class="rounded px-1 dark:border css-a8yjl2"
                     color="secondary"
                   >
                     Transfer
@@ -5801,7 +5801,7 @@ exports[`Signed Transaction Table > should show the sign button with isCompact =
                   class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start my-1 pt-3 min-h-14 xl:min-h-11"
                 >
                   <div
-                    class="rounded px-1 dark:border css-1kocbuc"
+                    class="rounded px-1 dark:border css-a8yjl2"
                     color="secondary"
                     data-testid="TransactionRowRecipientLabel"
                   >
@@ -6304,7 +6304,7 @@ exports[`Signed Transaction Table > should show the sign button with isCompact =
                   class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start my-1 pt-3 min-h-14 xl:min-h-11"
                 >
                   <div
-                    class="rounded px-1 dark:border css-1kocbuc"
+                    class="rounded px-1 dark:border css-a8yjl2"
                     color="secondary"
                     data-testid="TransactionRowRecipientLabel"
                   >

@@ -79,7 +79,7 @@ export const ProfileRowSkeleton = () => (
 		<div className="h-10 w-10 bg-theme-secondary-100 dark:bg-theme-secondary-800" />
 		<Icon
 			name="EllipsisVerticalFilled"
-			className="mr-1.5 pr-1.5 text-theme-secondary-200 dark:text-theme-secondary-800"
+			className="mr-1.5 pr-1.5 text-theme-secondary-700 transition-colors duration-200 group-hover:text-theme-navy-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200"
 			size="md"
 		/>
 	</div>
