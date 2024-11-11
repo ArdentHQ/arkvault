@@ -18273,7 +18273,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
                   class="whitespace-nowrap"
                   data-testid="Amount"
                 >
-                  33,75089801 DARK
+                  33.75089801 DARK
                 </span>
               </div>
             </div>
@@ -25164,7 +25164,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
                   class="whitespace-nowrap"
                   data-testid="Amount"
                 >
-                  33,75089801 DARK
+                  33.75089801 DARK
                 </span>
               </div>
             </div>
@@ -29166,7 +29166,7 @@ exports[`DelegateTable > should render vote amount column 1`] = `
                   class="whitespace-nowrap"
                   data-testid="Amount"
                 >
-                  33,75089801 DARK
+                  33.75089801 DARK
                 </span>
               </div>
             </div>
@@ -33671,7 +33671,7 @@ exports[`DelegateTable > should select a changed delegate to unvote 1`] = `
                   class="whitespace-nowrap"
                   data-testid="Amount"
                 >
-                  33,75089801 DARK
+                  33.75089801 DARK
                 </span>
               </div>
             </div>
@@ -36920,7 +36920,7 @@ exports[`DelegateTable > should select a delegate with vote amount and make it u
                   class="whitespace-nowrap"
                   data-testid="Amount"
                 >
-                  33,75089801 DARK
+                  33.75089801 DARK
                 </span>
               </div>
             </div>
