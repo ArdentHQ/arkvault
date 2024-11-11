@@ -38,7 +38,7 @@ const getColor = (color?: ColorType, variant?: string) => {
 			tw`text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:text-theme-secondary-500 dark:bg-transparent dark:border-theme-secondary-800`,
 		primary: () => tw`text-theme-primary-500 border-theme-primary-100 dark:border-theme-primary-500`,
 		secondary: () =>
-			tw`text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent`,
+			tw`text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent`,
 		success: () => tw`text-theme-success-600 border-theme-success-200 dark:border-theme-success-600`,
 		"success-bg": () =>
 			tw`bg-theme-success-100 text-theme-success-700 dark:border dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500`,
