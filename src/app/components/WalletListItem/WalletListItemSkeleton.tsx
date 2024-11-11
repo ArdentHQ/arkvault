@@ -50,7 +50,7 @@ export const WalletListItemSkeleton: React.VFC = () => {
 						variant="transparent"
 						size="icon"
 						disabled={true}
-						className="-mr-1.5 text-theme-gray-700 hover:bg-theme-primary-200 hover:text-theme-primary-700 dark:hover:bg-theme-secondary-800 dark:hover:text-white"
+						className="text-theme-gray-700 -mr-1.5 hover:bg-theme-primary-200 hover:text-theme-primary-700 dark:hover:bg-theme-secondary-800 dark:hover:text-white"
 					>
 						<Icon name="EllipsisVertical" size="md" />
 					</Button>
