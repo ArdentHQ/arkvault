@@ -33,9 +33,9 @@ exports[`ContactListItemMobile > should render 1`] = `
                 type="button"
               >
                 <div
-                  class="css-1i4b0eq"
-                  height="20"
-                  width="20"
+                  class="css-v0ob3f"
+                  height="16"
+                  width="16"
                 >
                   <svg
                     fill="none"
@@ -144,9 +144,9 @@ exports[`ContactListItemMobile > should render addresses 1`] = `
                 type="button"
               >
                 <div
-                  class="css-1i4b0eq"
-                  height="20"
-                  width="20"
+                  class="css-v0ob3f"
+                  height="16"
+                  width="16"
                 >
                   <svg
                     fill="none"
