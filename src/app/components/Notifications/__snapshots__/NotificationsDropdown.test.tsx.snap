@@ -533,7 +533,7 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                                 Amount
                               </div>
                               <div
-                                class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-1vn5kd9"
+                                class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-1sycv4s"
                                 color="secondary"
                                 data-testid="AmountLabel__wrapper"
                               >
