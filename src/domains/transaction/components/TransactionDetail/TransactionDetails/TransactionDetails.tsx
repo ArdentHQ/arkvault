@@ -1,4 +1,4 @@
-import React, {ReactElement, useCallback, useEffect, useState} from "react";
+import React, { ReactElement, useCallback, useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { DTO } from "@ardenthq/sdk";
 import { DetailDivider, DetailLabelText, DetailWrapper } from "@/app/components/DetailWrapper";
@@ -9,7 +9,7 @@ import { useBlockHeight } from "@/domains/transaction/hooks/use-block-height";
 export const TransactionDetails = ({
 	transaction: initialTransaction,
 	labelClassName,
-    isConfirmed,
+	isConfirmed,
 }: {
 	transaction: DTO.RawTransactionData;
 	labelClassName?: string;
@@ -34,8 +34,8 @@ export const TransactionDetails = ({
 
 		const refreshTransaction = async () => {
 			const confirmedTransaction = await transactionWallet.coin().client().transaction(transaction.id());
-			setTransaction(confirmedTransaction)
-		}
+			setTransaction(confirmedTransaction);
+		};
 
 		void refreshTransaction();
 	}, [isConfirmed, transaction, transactionWallet]);
