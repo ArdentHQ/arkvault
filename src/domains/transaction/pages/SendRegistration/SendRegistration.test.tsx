@@ -88,6 +88,7 @@ const createDelegateRegistrationMock = (wallet: Contracts.IReadWriteWallet) =>
 		isVote: () => false,
 		isVoteCombination: () => false,
 		memo: () => null,
+		nonce: () => BigNumber.make(1),
 		recipient: () => DelegateRegistrationFixture.data.recipient,
 		sender: () => DelegateRegistrationFixture.data.sender,
 		timestamp: () => DateTime.make(),
