@@ -72,6 +72,7 @@ describe("UnlockTokensModal", () => {
 			amount: () => 30,
 			blockId: () => "1",
 			convertedAmount: () => 0,
+			nonce: () => BigNumber.make(1),
 			convertedFee: () => 0,
 			data: () => ({ data: { nonce: 1 } }),
 			explorerLink: () => `https://test.arkscan.io/transaction/${transactionFixture.data.id}`,
@@ -239,9 +240,7 @@ describe("UnlockTokensModal", () => {
 		await act(() => vi.runOnlyPendingTimers());
 
 		if (expectedOutcome === "success") {
-			await waitFor(() => {
-				expect(screen.findByTestId("TransactionId")).resolves.toBeVisible();
-			});
+			await expect(screen.findByTestId("TransactionId")).resolves.toBeVisible();
 		} else {
 			await waitFor(() => {
 				expect(screen.getByTestId("ErrorStep__errorMessage")).toBeInTheDocument();
