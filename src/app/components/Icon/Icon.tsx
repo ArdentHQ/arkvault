@@ -70,7 +70,7 @@ export const ThemeIcon = ({
 	...properties
 }: ThemeIconProperties): JSX.Element => {
 	const { isDarkMode } = useTheme();
-		
+
 	let icon = isDarkMode ? darkIcon : lightIcon;
 
 	if (greenDarkIcon && greenLightIcon) {
