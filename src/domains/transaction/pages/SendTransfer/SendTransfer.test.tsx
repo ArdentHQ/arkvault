@@ -38,7 +38,7 @@ import {
 } from "@/utils/testing-library";
 import { server, requestMock } from "@/tests/mocks/server";
 import * as useConfirmedTransactionMock from "@/domains/transaction/components/TransactionSuccessful/hooks/useConfirmedTransaction";
-import {BigNumber} from "@ardenthq/sdk-helpers";
+import { BigNumber } from "@ardenthq/sdk-helpers";
 
 const passphrase = getDefaultWalletMnemonic();
 const fixtureProfileId = getDefaultProfileId();
