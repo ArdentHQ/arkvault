@@ -92,7 +92,7 @@ export const TransactionDetailContent = ({
 				</DetailPadded>
 
 				<DetailPadded>
-					<TransactionDetails transaction={transaction} labelClassName={labelClassName} />
+					<TransactionDetails isConfirmed={isConfirmed} transaction={transaction} labelClassName={labelClassName} />
 				</DetailPadded>
 
 				{[!!transaction.memo(), transaction.isMultiPayment(), transaction.isTransfer()].some(Boolean) && (

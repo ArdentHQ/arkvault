@@ -1,4 +1,4 @@
-import React, { ReactElement, useCallback } from "react";
+import React, {ReactElement, useCallback, useEffect, useState} from "react";
 import { useTranslation } from "react-i18next";
 import { DTO } from "@ardenthq/sdk";
 import { DetailDivider, DetailLabelText, DetailWrapper } from "@/app/components/DetailWrapper";
@@ -7,19 +7,44 @@ import { Link } from "@/app/components/Link";
 import { useBlockHeight } from "@/domains/transaction/hooks/use-block-height";
 
 export const TransactionDetails = ({
-	transaction,
+	transaction: initialTransaction,
 	labelClassName,
+    isConfirmed,
 }: {
 	transaction: DTO.RawTransactionData;
 	labelClassName?: string;
+	isConfirmed?: boolean;
 }): ReactElement => {
 	const { t } = useTranslation();
 	const format = useTimeFormat();
 
+	const transactionWallet = initialTransaction.wallet();
+	const [transaction, setTransaction] = useState<DTO.RawTransactionData>(initialTransaction);
+
+	useEffect(() => {
+		// if it is a confirmed transaction, there is no need to refresh it
+		if (transaction.isConfirmed()) {
+			return;
+		}
+
+		// if `isConfirmed` is false, and transaction is not confirmed we probably need to wait
+		if (!isConfirmed) {
+			return;
+		}
+
+		const refreshTransaction = async () => {
+			const confirmedTransaction = await transactionWallet.coin().client().transaction(transaction.id());
+			setTransaction(confirmedTransaction)
+		}
+
+		void refreshTransaction();
+	}, [isConfirmed, transaction, transactionWallet]);
+
 	const timestamp = transaction.timestamp();
+
 	const { blockHeight } = useBlockHeight({
 		blockId: transaction.blockId(),
-		network: transaction.wallet().network(),
+		network: transactionWallet.network(),
 	});
 
 	const nonce = useCallback(() => {
@@ -50,7 +75,7 @@ export const TransactionDetails = ({
 					{transaction.blockId() && (
 						<Link
 							isExternal
-							to={transaction.explorerLinkForBlock() as string}
+							to={transactionWallet.coin().link().block(transaction.blockId()) as string}
 							className="h-5 text-sm leading-[17px] sm:text-base sm:leading-5"
 						>
 							{blockHeight}
