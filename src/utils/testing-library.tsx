@@ -380,6 +380,7 @@ export const createTransactionMock = (
 		isUnvote: () => false,
 		isVote: () => false,
 		isVoteCombination: () => false,
+		nonce: () => BigNumber.make(1),
 		memo: () => null,
 		recipient: () => transactionFixture.data.recipient,
 		recipients: () => [
