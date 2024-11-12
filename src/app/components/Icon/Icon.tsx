@@ -62,7 +62,13 @@ type ThemeIconProperties = {
 	greenLightIcon?: string;
 } & Omit<IconProperties, "name">;
 
-export const ThemeIcon = ({ darkIcon, lightIcon, greenLightIcon, greenDarkIcon, ...properties }: ThemeIconProperties): JSX.Element => {
+export const ThemeIcon = ({
+	darkIcon,
+	lightIcon,
+	greenLightIcon,
+	greenDarkIcon,
+	...properties
+}: ThemeIconProperties): JSX.Element => {
 	const { isDarkMode } = useTheme();
 	const { getCurrentAccentColor } = useAccentColor();
 	let icon = isDarkMode ? darkIcon : lightIcon;
