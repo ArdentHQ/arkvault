@@ -1,17 +1,10 @@
+import { getCurrentAccentColor } from "@/utils/theme";
 import { Contracts } from "@ardenthq/sdk-profiles";
 
 type AccentColorType = "green" | "navy";
 
 const ACCENT_GREEN_CLASS = "accent-green"; // defined in variables.css
 const ACCENT_NAVY_CLASS = "accent-navy"; // defined in variables.css
-
-const getCurrentAccentColor = (): AccentColorType => {
-	if (document.body.classList.contains(ACCENT_NAVY_CLASS)) {
-		return "navy";
-	}
-
-	return "green";
-};
 
 const resetAccentColor = () => {
 	document.body.classList.remove(ACCENT_GREEN_CLASS);
