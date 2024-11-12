@@ -56,7 +56,6 @@ const ipfsTransactionFixture = {
 	isTransfer: () => false,
 	isUnvote: () => false,
 	isVote: () => false,
-	isVote: () => false,
 	isVoteCombination: () => false,
 	memo: () => null,
 	nonce: () => BigNumber.make(1),

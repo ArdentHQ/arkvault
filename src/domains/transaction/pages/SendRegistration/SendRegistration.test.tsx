@@ -122,6 +122,7 @@ const createMultiSignatureRegistrationMock = (wallet: Contracts.IReadWriteWallet
 		isIpfs: () => false,
 		isMultiSignatureRegistration: () => true,
 		isVote: () => false,
+		nonce: () => BigNumber.make(1),
 		recipient: () => MultisignatureRegistrationFixture.data.recipient,
 		sender: () => MultisignatureRegistrationFixture.data.sender,
 		type: () => "multiSignature",
