@@ -7,12 +7,12 @@ exports[`WalletListItemSkeleton > should render wallet list skeleton when isComp
       data-testid="WalletListSkeleton"
     >
       <tr
-        class=" css-1x4z4cy"
+        class="group css-16ynu5g"
         data-testid="TableRow"
       >
         <td>
           <div
-            class="items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-2 -ml-2 rounded-l flex shrink-0"
+            class="px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-0 ml-2 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 flex shrink-0"
           >
             <div
               class="flex h-5 items-center border-r border-theme-secondary-300 pr-3 dark:border-theme-secondary-800"
@@ -35,7 +35,7 @@ exports[`WalletListItemSkeleton > should render wallet list skeleton when isComp
         </td>
         <td>
           <div
-            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 -ml-3 space-x-3"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 -ml-3 space-x-3"
           >
             <span
               aria-busy="true"
@@ -81,12 +81,12 @@ exports[`WalletListItemSkeleton > should render wallet list skeleton when isComp
         </td>
         <td>
           <div
-            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 justify-center"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center"
           />
         </td>
         <td>
           <div
-            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 justify-end"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end"
           >
             <span
               aria-busy="true"
@@ -105,7 +105,7 @@ exports[`WalletListItemSkeleton > should render wallet list skeleton when isComp
         </td>
         <td>
           <div
-            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 justify-end"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end"
           >
             <span
               aria-busy="true"
@@ -124,10 +124,10 @@ exports[`WalletListItemSkeleton > should render wallet list skeleton when isComp
         </td>
         <td>
           <div
-            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-2 -mr-2 rounded-r justify-end text-theme-secondary-text"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-0 mr-2 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end text-theme-secondary-text"
           >
             <button
-              class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 -mr-3 text-theme-primary-600 hover:text-theme-primary-700"
+              class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 -mr-3 text-theme-primary-600 hover:text-theme-primary-700"
               data-testid="WalletHeader__send-button"
               disabled=""
               type="button"
@@ -143,7 +143,7 @@ exports[`WalletListItemSkeleton > should render wallet list skeleton when isComp
               data-testid="WalletHeader__more-button"
             >
               <button
-                class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 -mr-1.5 text-theme-primary-300 hover:text-theme-primary-600"
+                class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 text-theme-gray-700 -mr-1.5 hover:bg-theme-primary-200 hover:text-theme-primary-700 dark:hover:bg-theme-secondary-800 dark:hover:text-white"
                 disabled=""
                 type="button"
               >
@@ -151,9 +151,9 @@ exports[`WalletListItemSkeleton > should render wallet list skeleton when isComp
                   class="flex items-center space-x-2"
                 >
                   <div
-                    class="css-1i4b0eq"
-                    height="20"
-                    width="20"
+                    class="css-v0ob3f"
+                    height="16"
+                    width="16"
                   >
                     <svg
                       id="ellipsis-vertical"
@@ -206,12 +206,12 @@ exports[`WalletListItemSkeleton > should render wallet list skeleton when isComp
       data-testid="WalletListSkeleton"
     >
       <tr
-        class=" css-1x4z4cy"
+        class="group css-16ynu5g"
         data-testid="TableRow"
       >
         <td>
           <div
-            class="items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-2 -ml-2 rounded-l flex shrink-0"
+            class="px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-0 ml-2 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 flex shrink-0"
           >
             <div
               class="flex h-5 items-center border-r border-theme-secondary-300 pr-3 dark:border-theme-secondary-800"
@@ -234,7 +234,7 @@ exports[`WalletListItemSkeleton > should render wallet list skeleton when isComp
         </td>
         <td>
           <div
-            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 -ml-3 space-x-3"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 -ml-3 space-x-3"
           >
             <span
               aria-busy="true"
@@ -280,12 +280,12 @@ exports[`WalletListItemSkeleton > should render wallet list skeleton when isComp
         </td>
         <td>
           <div
-            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 justify-center"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-center"
           />
         </td>
         <td>
           <div
-            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 justify-end"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end"
           >
             <span
               aria-busy="true"
@@ -304,7 +304,7 @@ exports[`WalletListItemSkeleton > should render wallet list skeleton when isComp
         </td>
         <td>
           <div
-            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 justify-end"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end"
           >
             <span
               aria-busy="true"
@@ -323,10 +323,10 @@ exports[`WalletListItemSkeleton > should render wallet list skeleton when isComp
         </td>
         <td>
           <div
-            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-2 -mr-2 rounded-r justify-end text-theme-secondary-text"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-0 mr-2 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end text-theme-secondary-text"
           >
             <button
-              class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 -mr-3 text-theme-primary-600 hover:text-theme-primary-700"
+              class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 -mr-3 text-theme-primary-600 hover:text-theme-primary-700"
               data-testid="WalletHeader__send-button"
               disabled=""
               type="button"
@@ -342,7 +342,7 @@ exports[`WalletListItemSkeleton > should render wallet list skeleton when isComp
               data-testid="WalletHeader__more-button"
             >
               <button
-                class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 -mr-1.5 text-theme-primary-300 hover:text-theme-primary-600"
+                class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 text-theme-gray-700 -mr-1.5 hover:bg-theme-primary-200 hover:text-theme-primary-700 dark:hover:bg-theme-secondary-800 dark:hover:text-white"
                 disabled=""
                 type="button"
               >
@@ -350,9 +350,9 @@ exports[`WalletListItemSkeleton > should render wallet list skeleton when isComp
                   class="flex items-center space-x-2"
                 >
                   <div
-                    class="css-1i4b0eq"
-                    height="20"
-                    width="20"
+                    class="css-v0ob3f"
+                    height="16"
+                    width="16"
                   >
                     <svg
                       id="ellipsis-vertical"

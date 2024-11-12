@@ -5,6 +5,7 @@ import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { useSynchronizer } from "@/app/hooks";
 import { isUnit } from "@/utils/test-helpers";
 import { delay } from "@/utils/delay";
+import { useTransactionTypes } from "./use-transaction-types";
 
 interface TransactionsState {
 	transactions: DTO.ExtendedConfirmedTransactionData[];
@@ -12,6 +13,7 @@ interface TransactionsState {
 	isLoadingMore: boolean;
 	activeMode?: string;
 	activeTransactionType?: any;
+	selectedTransactionTypes?: string[];
 	hasMore?: boolean;
 	timestamp?: number;
 }
@@ -19,6 +21,7 @@ interface TransactionsState {
 interface TransactionFilters {
 	activeMode?: string;
 	activeTransactionType?: any;
+	selectedTransactionTypes?: string[];
 	timestamp?: number;
 }
 
@@ -26,6 +29,7 @@ interface FetchTransactionProperties {
 	flush?: boolean;
 	mode?: string;
 	transactionType?: any;
+	transactionTypes?: string[];
 	wallets: ProfileContracts.IReadWriteWallet[];
 	cursor?: number;
 }
@@ -48,7 +52,7 @@ interface TransactionAggregateIdentifiers {
 interface TransactionAggregateQueryParameters {
 	identifiers: TransactionAggregateIdentifiers[];
 	limit: number;
-	type?: string;
+	types?: string[];
 }
 
 const filterTransactions = ({ transactions }: FilterTransactionProperties) =>
@@ -65,9 +69,20 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 	const isMounted = useRef(true);
 	const cursor = useRef(1);
 	const LIMIT = useMemo(() => (isUnit() ? 0 : limit), [limit]);
+	const { types } = useTransactionTypes({ wallets });
+	const allTransactionTypes = [...types.core, ...types.magistrate];
 
 	const [
-		{ transactions, activeMode, activeTransactionType, isLoadingTransactions, isLoadingMore, hasMore, timestamp },
+		{
+			transactions,
+			activeMode,
+			activeTransactionType,
+			isLoadingTransactions,
+			isLoadingMore,
+			hasMore,
+			timestamp,
+			selectedTransactionTypes,
+		},
 		setState,
 		// @ts-ignore
 	] = useState<TransactionsState>({
@@ -76,6 +91,7 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 		hasMore: true,
 		isLoadingMore: false,
 		isLoadingTransactions: true,
+		selectedTransactionTypes: allTransactionTypes,
 		timestamp: undefined,
 		transactions: [],
 	});
@@ -93,6 +109,7 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 				flush: true,
 				mode: activeMode!,
 				transactionType: activeTransactionType,
+				transactionTypes: selectedTransactionTypes,
 				wallets,
 			});
 
@@ -130,10 +147,10 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 		return () => {
 			isMounted.current = false;
 		};
-	}, [wallets.length, activeMode, activeTransactionType, timestamp]); // eslint-disable-line react-hooks/exhaustive-deps
+	}, [wallets.length, activeMode, activeTransactionType, timestamp, selectedTransactionTypes]); // eslint-disable-line react-hooks/exhaustive-deps
 
 	const updateFilters = useCallback(
-		({ activeMode, activeTransactionType, timestamp }: TransactionFilters) => {
+		({ activeMode, activeTransactionType, timestamp, selectedTransactionTypes }: TransactionFilters) => {
 			lastQuery.current = JSON.stringify({ activeMode, activeTransactionType });
 
 			const hasWallets = wallets.length > 0;
@@ -151,6 +168,7 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 				activeTransactionType,
 				isLoadingMore: false,
 				isLoadingTransactions: hasWallets,
+				selectedTransactionTypes,
 				timestamp,
 				transactions: [],
 			});
@@ -159,7 +177,7 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 	);
 
 	const fetchTransactions = useCallback(
-		({ flush = false, mode = "all", transactionType, wallets = [] }: FetchTransactionProperties) => {
+		({ flush = false, mode = "all", wallets = [], transactionTypes = [] }: FetchTransactionProperties) => {
 			if (wallets.length === 0) {
 				return { hasMorePages: () => false, items: () => [] };
 			}
@@ -176,8 +194,10 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 				limit: LIMIT,
 			};
 
-			if (transactionType && transactionType !== "all") {
-				queryParameters.type = transactionType;
+			const hasAllSelected = transactionTypes.length === allTransactionTypes.length;
+
+			if (transactionTypes.length > 0 && !hasAllSelected) {
+				queryParameters.types = transactionTypes;
 			}
 
 			// @ts-ignore
@@ -194,7 +214,7 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 			cursor: cursor.current,
 			flush: false,
 			mode: activeMode,
-			transactionType: activeTransactionType,
+			transactionTypes: selectedTransactionTypes,
 			wallets,
 		});
 
@@ -206,7 +226,7 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 			isLoadingMore: false,
 			transactions: [...state.transactions, ...items],
 		}));
-	}, [activeMode, activeTransactionType, wallets.length]); // eslint-disable-line react-hooks/exhaustive-deps
+	}, [activeMode, activeTransactionType, wallets.length, selectedTransactionTypes]); // eslint-disable-line react-hooks/exhaustive-deps
 
 	/**
 	 * Run periodically every 30 seconds to check for new transactions
@@ -217,6 +237,7 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 			flush: true,
 			mode: activeMode,
 			transactionType: activeTransactionType,
+			transactionTypes: selectedTransactionTypes,
 			wallets,
 		});
 
@@ -239,10 +260,13 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 		}));
 	};
 
-	const hasEmptyResults = useMemo(
-		() => transactions.length === 0 && !isLoadingTransactions,
-		[isLoadingTransactions, transactions.length],
-	);
+	const hasEmptyResults = useMemo(() => {
+		if (selectedTransactionTypes?.length === 0) {
+			return true;
+		}
+
+		return transactions.length === 0 && !isLoadingTransactions;
+	}, [isLoadingTransactions, transactions.length]);
 
 	const { start, stop } = useSynchronizer([
 		{
@@ -265,6 +289,7 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 		hasMore,
 		isLoadingMore,
 		isLoadingTransactions,
+		selectedTransactionTypes,
 		transactions,
 		updateFilters,
 	};

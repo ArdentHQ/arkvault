@@ -209,7 +209,10 @@ export const SelectRecipient = React.forwardRef<HTMLInputElement, SelectRecipien
 										content: (
 											<div
 												data-testid="SelectRecipient__select-recipient"
-												className={cn("flex items-center", { "cursor-pointer": !disabled })}
+												className={cn("flex items-center", {
+													"cursor-pointer rounded bg-transparent p-1 text-theme-secondary-700 transition-colors hover:bg-theme-primary-100 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-white":
+														!disabled,
+												})}
 												onClick={openRecipients}
 											>
 												<Icon name="User" size="lg" />
@@ -217,22 +220,25 @@ export const SelectRecipient = React.forwardRef<HTMLInputElement, SelectRecipien
 										),
 									}
 								: undefined,
-							start: showWalletAvatar
-								? {
-										content: (
-											<div className="flex items-center">
-												<ProfileAvatar address={selectedAddress} />
-												{!!selectedAddressAlias?.alias && (
-													<TruncateEnd
-														className="ml-2 font-semibold"
-														text={selectedAddressAlias.alias}
-														showTooltip
-													/>
-												)}
-											</div>
-										),
-									}
-								: undefined,
+							start:
+								selectedAddressAlias?.alias || showWalletAvatar
+									? {
+											content: (
+												<div className="flex items-center">
+													{showWalletAvatar && <ProfileAvatar address={selectedAddress} />}
+													{selectedAddressAlias?.alias && (
+														<TruncateEnd
+															className={cn("font-semibold", {
+																"ml-2": showWalletAvatar,
+															})}
+															text={selectedAddressAlias.alias}
+															showTooltip
+														/>
+													)}
+												</div>
+											),
+										}
+									: undefined,
 						}}
 						renderLabel={(option) => <OptionLabel option={option} network={network} profile={profile} />}
 					/>

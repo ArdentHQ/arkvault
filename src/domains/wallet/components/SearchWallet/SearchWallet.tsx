@@ -33,15 +33,17 @@ const SearchWalletListItem = ({
 }: SearchWalletListItemProperties) => {
 	const { t } = useTranslation();
 
+	const isSelected = useMemo(() => selectedAddress === wallet.address(), [selectedAddress, wallet]);
+
 	const renderButton = () => {
-		if (selectedAddress === wallet.address()) {
+		if (isSelected) {
 			return (
 				<Button
 					data-testid={`SearchWalletListItem__selected-${index}`}
 					size="icon"
 					variant="transparent"
 					onClick={() => onAction({ address: wallet.address(), name: alias, network: wallet.network() })}
-					className="-mr-3 text-sm leading-[17px] text-theme-primary-reverse-600"
+					className="-mr-3 py-0 text-sm leading-[17px] text-theme-primary-reverse-600"
 				>
 					{t("COMMON.SELECTED")}
 				</Button>
@@ -68,7 +70,12 @@ const SearchWalletListItem = ({
 
 	return (
 		<TableRow className="relative">
-			<TableCell variant="start" innerClassName="space-x-4" className="w-full">
+			<TableCell
+				variant="start"
+				innerClassName="space-x-4 my-0.5"
+				className="w-full max-w-28"
+				isSelected={isSelected}
+			>
 				<Address
 					walletName={alias}
 					address={wallet.address()}
@@ -77,12 +84,16 @@ const SearchWalletListItem = ({
 				/>
 			</TableCell>
 
-			<TableCell innerClassName="font-semibold justify-end">
+			<TableCell innerClassName="font-semibold justify-end my-0.5" isSelected={isSelected}>
 				<Amount value={wallet.balance()} ticker={wallet.currency()} className="text-sm leading-[17px]" />
 			</TableCell>
 
 			{showConvertedValue && (
-				<TableCell innerClassName="text-theme-secondary-text justify-end" className="hidden xl:table-cell">
+				<TableCell
+					innerClassName="text-theme-secondary-text justify-end"
+					className="hidden xl:table-cell"
+					isSelected={isSelected}
+				>
 					<Amount
 						value={wallet.convertedBalance()}
 						ticker={exchangeCurrency}
@@ -91,7 +102,7 @@ const SearchWalletListItem = ({
 				</TableCell>
 			)}
 
-			<TableCell variant="end" innerClassName="justify-end">
+			<TableCell variant="end" innerClassName="justify-end my-0.5" isSelected={isSelected}>
 				{renderButton()}
 			</TableCell>
 		</TableRow>

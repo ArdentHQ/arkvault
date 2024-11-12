@@ -3,7 +3,7 @@
 exports[`TableRemoveButton > should render 1`] = `
 <div>
   <button
-    class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent"
+    class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent hover:text-theme-primary-700 hover:bg-theme-primary-200 dark:hover:bg-theme-secondary-800 dark:hover:text-white"
     data-testid="TableRemoveButton--compact"
     type="button"
   >
@@ -11,9 +11,9 @@ exports[`TableRemoveButton > should render 1`] = `
       class="flex items-center space-x-2"
     >
       <div
-        class="css-1i4b0eq"
-        height="20"
-        width="20"
+        class="css-v0ob3f"
+        height="16"
+        width="16"
       >
         <svg
           id="trash"

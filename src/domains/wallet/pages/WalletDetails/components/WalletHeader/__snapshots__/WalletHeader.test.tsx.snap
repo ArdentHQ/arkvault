@@ -47,7 +47,7 @@ exports[`WalletHeader > should handle locked balance 1`] = `
               type="button"
             >
               <div
-                class="hover:text-theme-secondary-500 css-v0ob3f"
+                class="hover:text-white css-v0ob3f"
                 height="16"
                 width="16"
               >
@@ -83,7 +83,7 @@ exports[`WalletHeader > should handle locked balance 1`] = `
               type="button"
             >
               <div
-                class="hover:text-theme-secondary-500 css-v0ob3f"
+                class="hover:text-white css-v0ob3f"
                 height="16"
                 width="16"
               >
@@ -188,12 +188,12 @@ exports[`WalletHeader > should handle locked balance 1`] = `
       >
         <button
           aria-busy="false"
-          class="css-1tz7btt"
+          class="css-exkcd5"
           data-testid="WalletHeader__refresh"
           type="button"
         >
           <div
-            class=" css-v0ob3f"
+            class="hover:text-theme-secondary-200 css-v0ob3f"
             height="16"
             style="animation-direction: reverse;"
             width="16"
@@ -214,17 +214,20 @@ exports[`WalletHeader > should handle locked balance 1`] = `
           </div>
         </button>
         <button
-          class="css-1tz7btt"
+          class="css-exkcd5"
           data-testid="WalletHeader__star-button"
           type="button"
         >
           <div
-            class="text-theme-warning-400 css-v0ob3f"
+            class="transition-all duration-300 ease-in-out fill-theme-warning-400 stroke-theme-warning-400 css-v0ob3f"
             height="16"
             width="16"
           >
             <svg
               id="star-filled"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
               viewBox="0 0 20 20"
               x="0"
               xml:space="preserve"
@@ -233,11 +236,6 @@ exports[`WalletHeader > should handle locked balance 1`] = `
             >
               <path
                 d="M10.558 1.411l2.711 5.273 5.12.497c.603.1.804.697.402 1.094l-4.217 4.179 1.607 5.67c.1.498-.402 1.094-1.004.796l-5.221-2.686-5.12 2.587c-.302.198-1.105-.1-.904-.796l1.606-5.77-4.317-3.98c-.3-.397-.401-.994.402-1.094l5.12-.497L9.454 1.41c.301-.597.803-.497 1.104 0h0z"
-                fill="currentColor"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
               />
             </svg>
           </div>
@@ -245,7 +243,7 @@ exports[`WalletHeader > should handle locked balance 1`] = `
       </div>
       <div>
         <button
-          class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded text-white bg-theme-primary-600 hover:bg-theme-primary-700 my-auto ml-3"
+          class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 green:hover:bg-theme-primary-700 navy:hover:bg-theme-primary-800 dark:hover:bg-theme-primary-500 my-auto ml-3 hover:!bg-theme-primary-500"
           data-testid="WalletHeader__send-button"
           type="button"
         >
@@ -257,7 +255,7 @@ exports[`WalletHeader > should handle locked balance 1`] = `
         </button>
       </div>
       <button
-        class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none my-auto ml-3 bg-theme-secondary-800 text-white hover:bg-theme-primary-700"
+        class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none my-auto ml-3 bg-theme-secondary-800 text-white hover:bg-theme-primary-700"
         data-testid="WalletHeader__locked-balance-button"
         type="button"
       >
@@ -302,48 +300,43 @@ exports[`WalletHeader > should handle locked balance 1`] = `
           data-testid="dropdown__toggle"
         >
           <button
-            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none bg-theme-secondary-800 text-white hover:bg-theme-primary-700"
+            class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none bg-theme-secondary-800 p-[14px] text-theme-secondary-200 hover:bg-theme-primary-500 hover:text-white"
             type="button"
           >
             <div
               class="flex items-center space-x-2"
             >
               <div
-                class="css-1i4b0eq"
-                height="20"
-                width="20"
+                class="css-v0ob3f"
+                height="16"
+                width="16"
               >
                 <svg
-                  id="ellipsis-vertical"
+                  fill="none"
                   viewBox="0 0 20 20"
-                  x="0"
-                  xml:space="preserve"
                   xmlns="http://www.w3.org/2000/svg"
-                  y="0"
                 >
-                  <g
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                  >
-                    <circle
-                      cx="10"
-                      cy="16.994"
-                      r="2.006"
-                    />
-                    <circle
-                      cx="10"
-                      cy="3"
-                      r="2"
-                    />
-                    <circle
-                      cx="10"
-                      cy="10"
-                      r="2"
-                    />
-                  </g>
+                  <circle
+                    cx="10.002"
+                    cy="2.99609"
+                    fill="currentColor"
+                    r="2"
+                    transform="rotate(90 10.002 2.99609)"
+                  />
+                  <circle
+                    cx="10.002"
+                    cy="9.99805"
+                    fill="currentColor"
+                    r="2"
+                    transform="rotate(90 10.002 9.99805)"
+                  />
+                  <circle
+                    cx="10.002"
+                    cy="17"
+                    fill="currentColor"
+                    r="2"
+                    transform="rotate(90 10.002 17)"
+                  />
                 </svg>
               </div>
             </div>
@@ -427,7 +420,7 @@ exports[`WalletHeader > should handle locked balance when is ledger 1`] = `
               type="button"
             >
               <div
-                class="hover:text-theme-secondary-500 css-v0ob3f"
+                class="hover:text-white css-v0ob3f"
                 height="16"
                 width="16"
               >
@@ -463,7 +456,7 @@ exports[`WalletHeader > should handle locked balance when is ledger 1`] = `
               type="button"
             >
               <div
-                class="hover:text-theme-secondary-500 css-v0ob3f"
+                class="hover:text-white css-v0ob3f"
                 height="16"
                 width="16"
               >
@@ -568,12 +561,12 @@ exports[`WalletHeader > should handle locked balance when is ledger 1`] = `
       >
         <button
           aria-busy="false"
-          class="css-1tz7btt"
+          class="css-exkcd5"
           data-testid="WalletHeader__refresh"
           type="button"
         >
           <div
-            class=" css-v0ob3f"
+            class="hover:text-theme-secondary-200 css-v0ob3f"
             height="16"
             style="animation-direction: reverse;"
             width="16"
@@ -594,17 +587,20 @@ exports[`WalletHeader > should handle locked balance when is ledger 1`] = `
           </div>
         </button>
         <button
-          class="css-1tz7btt"
+          class="css-exkcd5"
           data-testid="WalletHeader__star-button"
           type="button"
         >
           <div
-            class="text-theme-warning-400 css-v0ob3f"
+            class="transition-all duration-300 ease-in-out fill-theme-warning-400 stroke-theme-warning-400 css-v0ob3f"
             height="16"
             width="16"
           >
             <svg
               id="star-filled"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
               viewBox="0 0 20 20"
               x="0"
               xml:space="preserve"
@@ -613,11 +609,6 @@ exports[`WalletHeader > should handle locked balance when is ledger 1`] = `
             >
               <path
                 d="M10.558 1.411l2.711 5.273 5.12.497c.603.1.804.697.402 1.094l-4.217 4.179 1.607 5.67c.1.498-.402 1.094-1.004.796l-5.221-2.686-5.12 2.587c-.302.198-1.105-.1-.904-.796l1.606-5.77-4.317-3.98c-.3-.397-.401-.994.402-1.094l5.12-.497L9.454 1.41c.301-.597.803-.497 1.104 0h0z"
-                fill="currentColor"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
               />
             </svg>
           </div>
@@ -625,7 +616,7 @@ exports[`WalletHeader > should handle locked balance when is ledger 1`] = `
       </div>
       <div>
         <button
-          class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded text-white bg-theme-primary-600 hover:bg-theme-primary-700 my-auto ml-3"
+          class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 green:hover:bg-theme-primary-700 navy:hover:bg-theme-primary-800 dark:hover:bg-theme-primary-500 my-auto ml-3 hover:!bg-theme-primary-500"
           data-testid="WalletHeader__send-button"
           type="button"
         >
@@ -637,7 +628,7 @@ exports[`WalletHeader > should handle locked balance when is ledger 1`] = `
         </button>
       </div>
       <button
-        class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none my-auto ml-3 bg-theme-secondary-800 text-white hover:bg-theme-primary-700"
+        class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none my-auto ml-3 bg-theme-secondary-800 text-white hover:bg-theme-primary-700"
         data-testid="WalletHeader__locked-balance-button"
         type="button"
       >
@@ -682,48 +673,43 @@ exports[`WalletHeader > should handle locked balance when is ledger 1`] = `
           data-testid="dropdown__toggle"
         >
           <button
-            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none bg-theme-secondary-800 text-white hover:bg-theme-primary-700"
+            class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none bg-theme-secondary-800 p-[14px] text-theme-secondary-200 hover:bg-theme-primary-500 hover:text-white"
             type="button"
           >
             <div
               class="flex items-center space-x-2"
             >
               <div
-                class="css-1i4b0eq"
-                height="20"
-                width="20"
+                class="css-v0ob3f"
+                height="16"
+                width="16"
               >
                 <svg
-                  id="ellipsis-vertical"
+                  fill="none"
                   viewBox="0 0 20 20"
-                  x="0"
-                  xml:space="preserve"
                   xmlns="http://www.w3.org/2000/svg"
-                  y="0"
                 >
-                  <g
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                  >
-                    <circle
-                      cx="10"
-                      cy="16.994"
-                      r="2.006"
-                    />
-                    <circle
-                      cx="10"
-                      cy="3"
-                      r="2"
-                    />
-                    <circle
-                      cx="10"
-                      cy="10"
-                      r="2"
-                    />
-                  </g>
+                  <circle
+                    cx="10.002"
+                    cy="2.99609"
+                    fill="currentColor"
+                    r="2"
+                    transform="rotate(90 10.002 2.99609)"
+                  />
+                  <circle
+                    cx="10.002"
+                    cy="9.99805"
+                    fill="currentColor"
+                    r="2"
+                    transform="rotate(90 10.002 9.99805)"
+                  />
+                  <circle
+                    cx="10.002"
+                    cy="17"
+                    fill="currentColor"
+                    r="2"
+                    transform="rotate(90 10.002 17)"
+                  />
                 </svg>
               </div>
             </div>
@@ -782,7 +768,7 @@ exports[`WalletHeader > should render 1`] = `
               type="button"
             >
               <div
-                class="hover:text-theme-secondary-500 css-v0ob3f"
+                class="hover:text-white css-v0ob3f"
                 height="16"
                 width="16"
               >
@@ -818,7 +804,7 @@ exports[`WalletHeader > should render 1`] = `
               type="button"
             >
               <div
-                class="hover:text-theme-secondary-500 css-v0ob3f"
+                class="hover:text-white css-v0ob3f"
                 height="16"
                 width="16"
               >
@@ -877,12 +863,12 @@ exports[`WalletHeader > should render 1`] = `
       >
         <button
           aria-busy="false"
-          class="css-1tz7btt"
+          class="css-exkcd5"
           data-testid="WalletHeader__refresh"
           type="button"
         >
           <div
-            class=" css-v0ob3f"
+            class="hover:text-theme-secondary-200 css-v0ob3f"
             height="16"
             style="animation-direction: reverse;"
             width="16"
@@ -903,17 +889,20 @@ exports[`WalletHeader > should render 1`] = `
           </div>
         </button>
         <button
-          class="css-1tz7btt"
+          class="css-exkcd5"
           data-testid="WalletHeader__star-button"
           type="button"
         >
           <div
-            class="text-theme-warning-400 css-v0ob3f"
+            class="transition-all duration-300 ease-in-out fill-theme-warning-400 stroke-theme-warning-400 css-v0ob3f"
             height="16"
             width="16"
           >
             <svg
               id="star-filled"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
               viewBox="0 0 20 20"
               x="0"
               xml:space="preserve"
@@ -922,11 +911,6 @@ exports[`WalletHeader > should render 1`] = `
             >
               <path
                 d="M10.558 1.411l2.711 5.273 5.12.497c.603.1.804.697.402 1.094l-4.217 4.179 1.607 5.67c.1.498-.402 1.094-1.004.796l-5.221-2.686-5.12 2.587c-.302.198-1.105-.1-.904-.796l1.606-5.77-4.317-3.98c-.3-.397-.401-.994.402-1.094l5.12-.497L9.454 1.41c.301-.597.803-.497 1.104 0h0z"
-                fill="currentColor"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
               />
             </svg>
           </div>
@@ -934,7 +918,7 @@ exports[`WalletHeader > should render 1`] = `
       </div>
       <div>
         <button
-          class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded text-white bg-theme-primary-600 hover:bg-theme-primary-700 my-auto ml-3"
+          class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 green:hover:bg-theme-primary-700 navy:hover:bg-theme-primary-800 dark:hover:bg-theme-primary-500 my-auto ml-3 hover:!bg-theme-primary-500"
           data-testid="WalletHeader__send-button"
           type="button"
         >
@@ -955,48 +939,43 @@ exports[`WalletHeader > should render 1`] = `
           data-testid="dropdown__toggle"
         >
           <button
-            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none bg-theme-secondary-800 text-white hover:bg-theme-primary-700"
+            class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none bg-theme-secondary-800 p-[14px] text-theme-secondary-200 hover:bg-theme-primary-500 hover:text-white"
             type="button"
           >
             <div
               class="flex items-center space-x-2"
             >
               <div
-                class="css-1i4b0eq"
-                height="20"
-                width="20"
+                class="css-v0ob3f"
+                height="16"
+                width="16"
               >
                 <svg
-                  id="ellipsis-vertical"
+                  fill="none"
                   viewBox="0 0 20 20"
-                  x="0"
-                  xml:space="preserve"
                   xmlns="http://www.w3.org/2000/svg"
-                  y="0"
                 >
-                  <g
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                  >
-                    <circle
-                      cx="10"
-                      cy="16.994"
-                      r="2.006"
-                    />
-                    <circle
-                      cx="10"
-                      cy="3"
-                      r="2"
-                    />
-                    <circle
-                      cx="10"
-                      cy="10"
-                      r="2"
-                    />
-                  </g>
+                  <circle
+                    cx="10.002"
+                    cy="2.99609"
+                    fill="currentColor"
+                    r="2"
+                    transform="rotate(90 10.002 2.99609)"
+                  />
+                  <circle
+                    cx="10.002"
+                    cy="9.99805"
+                    fill="currentColor"
+                    r="2"
+                    transform="rotate(90 10.002 9.99805)"
+                  />
+                  <circle
+                    cx="10.002"
+                    cy="17"
+                    fill="currentColor"
+                    r="2"
+                    transform="rotate(90 10.002 17)"
+                  />
                 </svg>
               </div>
             </div>
@@ -1055,7 +1034,7 @@ exports[`WalletHeader > should render amount for wallet in live network 1`] = `
               type="button"
             >
               <div
-                class="hover:text-theme-secondary-500 css-v0ob3f"
+                class="hover:text-white css-v0ob3f"
                 height="16"
                 width="16"
               >
@@ -1091,7 +1070,7 @@ exports[`WalletHeader > should render amount for wallet in live network 1`] = `
               type="button"
             >
               <div
-                class="hover:text-theme-secondary-500 css-v0ob3f"
+                class="hover:text-white css-v0ob3f"
                 height="16"
                 width="16"
               >
@@ -1156,12 +1135,12 @@ exports[`WalletHeader > should render amount for wallet in live network 1`] = `
       >
         <button
           aria-busy="false"
-          class="css-1tz7btt"
+          class="css-exkcd5"
           data-testid="WalletHeader__refresh"
           type="button"
         >
           <div
-            class=" css-v0ob3f"
+            class="hover:text-theme-secondary-200 css-v0ob3f"
             height="16"
             style="animation-direction: reverse;"
             width="16"
@@ -1182,17 +1161,20 @@ exports[`WalletHeader > should render amount for wallet in live network 1`] = `
           </div>
         </button>
         <button
-          class="css-1tz7btt"
+          class="css-exkcd5"
           data-testid="WalletHeader__star-button"
           type="button"
         >
           <div
-            class="text-theme-warning-400 css-v0ob3f"
+            class="transition-all duration-300 ease-in-out fill-theme-warning-400 stroke-theme-warning-400 css-v0ob3f"
             height="16"
             width="16"
           >
             <svg
               id="star-filled"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
               viewBox="0 0 20 20"
               x="0"
               xml:space="preserve"
@@ -1201,11 +1183,6 @@ exports[`WalletHeader > should render amount for wallet in live network 1`] = `
             >
               <path
                 d="M10.558 1.411l2.711 5.273 5.12.497c.603.1.804.697.402 1.094l-4.217 4.179 1.607 5.67c.1.498-.402 1.094-1.004.796l-5.221-2.686-5.12 2.587c-.302.198-1.105-.1-.904-.796l1.606-5.77-4.317-3.98c-.3-.397-.401-.994.402-1.094l5.12-.497L9.454 1.41c.301-.597.803-.497 1.104 0h0z"
-                fill="currentColor"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
               />
             </svg>
           </div>
@@ -1213,7 +1190,7 @@ exports[`WalletHeader > should render amount for wallet in live network 1`] = `
       </div>
       <div>
         <button
-          class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded text-white bg-theme-primary-600 hover:bg-theme-primary-700 my-auto ml-3"
+          class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 green:hover:bg-theme-primary-700 navy:hover:bg-theme-primary-800 dark:hover:bg-theme-primary-500 my-auto ml-3 hover:!bg-theme-primary-500"
           data-testid="WalletHeader__send-button"
           type="button"
         >
@@ -1234,48 +1211,43 @@ exports[`WalletHeader > should render amount for wallet in live network 1`] = `
           data-testid="dropdown__toggle"
         >
           <button
-            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none bg-theme-secondary-800 text-white hover:bg-theme-primary-700"
+            class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none bg-theme-secondary-800 p-[14px] text-theme-secondary-200 hover:bg-theme-primary-500 hover:text-white"
             type="button"
           >
             <div
               class="flex items-center space-x-2"
             >
               <div
-                class="css-1i4b0eq"
-                height="20"
-                width="20"
+                class="css-v0ob3f"
+                height="16"
+                width="16"
               >
                 <svg
-                  id="ellipsis-vertical"
+                  fill="none"
                   viewBox="0 0 20 20"
-                  x="0"
-                  xml:space="preserve"
                   xmlns="http://www.w3.org/2000/svg"
-                  y="0"
                 >
-                  <g
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                  >
-                    <circle
-                      cx="10"
-                      cy="16.994"
-                      r="2.006"
-                    />
-                    <circle
-                      cx="10"
-                      cy="3"
-                      r="2"
-                    />
-                    <circle
-                      cx="10"
-                      cy="10"
-                      r="2"
-                    />
-                  </g>
+                  <circle
+                    cx="10.002"
+                    cy="2.99609"
+                    fill="currentColor"
+                    r="2"
+                    transform="rotate(90 10.002 2.99609)"
+                  />
+                  <circle
+                    cx="10.002"
+                    cy="9.99805"
+                    fill="currentColor"
+                    r="2"
+                    transform="rotate(90 10.002 9.99805)"
+                  />
+                  <circle
+                    cx="10.002"
+                    cy="17"
+                    fill="currentColor"
+                    r="2"
+                    transform="rotate(90 10.002 17)"
+                  />
                 </svg>
               </div>
             </div>
@@ -1359,7 +1331,7 @@ exports[`WalletHeader > should render with incompatible ledger wallet 1`] = `
               type="button"
             >
               <div
-                class="hover:text-theme-secondary-500 css-v0ob3f"
+                class="hover:text-white css-v0ob3f"
                 height="16"
                 width="16"
               >
@@ -1395,7 +1367,7 @@ exports[`WalletHeader > should render with incompatible ledger wallet 1`] = `
               type="button"
             >
               <div
-                class="hover:text-theme-secondary-500 css-v0ob3f"
+                class="hover:text-white css-v0ob3f"
                 height="16"
                 width="16"
               >
@@ -1454,12 +1426,12 @@ exports[`WalletHeader > should render with incompatible ledger wallet 1`] = `
       >
         <button
           aria-busy="false"
-          class="css-1tz7btt"
+          class="css-exkcd5"
           data-testid="WalletHeader__refresh"
           type="button"
         >
           <div
-            class=" css-v0ob3f"
+            class="hover:text-theme-secondary-200 css-v0ob3f"
             height="16"
             style="animation-direction: reverse;"
             width="16"
@@ -1480,17 +1452,20 @@ exports[`WalletHeader > should render with incompatible ledger wallet 1`] = `
           </div>
         </button>
         <button
-          class="css-1tz7btt"
+          class="css-exkcd5"
           data-testid="WalletHeader__star-button"
           type="button"
         >
           <div
-            class="text-theme-warning-400 css-v0ob3f"
+            class="transition-all duration-300 ease-in-out fill-theme-warning-400 stroke-theme-warning-400 css-v0ob3f"
             height="16"
             width="16"
           >
             <svg
               id="star-filled"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
               viewBox="0 0 20 20"
               x="0"
               xml:space="preserve"
@@ -1499,11 +1474,6 @@ exports[`WalletHeader > should render with incompatible ledger wallet 1`] = `
             >
               <path
                 d="M10.558 1.411l2.711 5.273 5.12.497c.603.1.804.697.402 1.094l-4.217 4.179 1.607 5.67c.1.498-.402 1.094-1.004.796l-5.221-2.686-5.12 2.587c-.302.198-1.105-.1-.904-.796l1.606-5.77-4.317-3.98c-.3-.397-.401-.994.402-1.094l5.12-.497L9.454 1.41c.301-.597.803-.497 1.104 0h0z"
-                fill="currentColor"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
               />
             </svg>
           </div>
@@ -1511,7 +1481,7 @@ exports[`WalletHeader > should render with incompatible ledger wallet 1`] = `
       </div>
       <div>
         <button
-          class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:bg-theme-secondary-800 disabled:text-theme-secondary-700 my-auto ml-3"
+          class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-800 disabled:text-theme-secondary-700 my-auto ml-3 hover:!bg-theme-primary-500"
           data-testid="WalletHeader__send-button"
           disabled=""
           type="button"
@@ -1533,48 +1503,43 @@ exports[`WalletHeader > should render with incompatible ledger wallet 1`] = `
           data-testid="dropdown__toggle"
         >
           <button
-            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none bg-theme-secondary-800 text-white hover:bg-theme-primary-700"
+            class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none bg-theme-secondary-800 p-[14px] text-theme-secondary-200 hover:bg-theme-primary-500 hover:text-white"
             type="button"
           >
             <div
               class="flex items-center space-x-2"
             >
               <div
-                class="css-1i4b0eq"
-                height="20"
-                width="20"
+                class="css-v0ob3f"
+                height="16"
+                width="16"
               >
                 <svg
-                  id="ellipsis-vertical"
+                  fill="none"
                   viewBox="0 0 20 20"
-                  x="0"
-                  xml:space="preserve"
                   xmlns="http://www.w3.org/2000/svg"
-                  y="0"
                 >
-                  <g
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                  >
-                    <circle
-                      cx="10"
-                      cy="16.994"
-                      r="2.006"
-                    />
-                    <circle
-                      cx="10"
-                      cy="3"
-                      r="2"
-                    />
-                    <circle
-                      cx="10"
-                      cy="10"
-                      r="2"
-                    />
-                  </g>
+                  <circle
+                    cx="10.002"
+                    cy="2.99609"
+                    fill="currentColor"
+                    r="2"
+                    transform="rotate(90 10.002 2.99609)"
+                  />
+                  <circle
+                    cx="10.002"
+                    cy="9.99805"
+                    fill="currentColor"
+                    r="2"
+                    transform="rotate(90 10.002 9.99805)"
+                  />
+                  <circle
+                    cx="10.002"
+                    cy="17"
+                    fill="currentColor"
+                    r="2"
+                    transform="rotate(90 10.002 17)"
+                  />
                 </svg>
               </div>
             </div>
@@ -1633,7 +1598,7 @@ exports[`WalletHeader > should show currency delta (-5%) 1`] = `
               type="button"
             >
               <div
-                class="hover:text-theme-secondary-500 css-v0ob3f"
+                class="hover:text-white css-v0ob3f"
                 height="16"
                 width="16"
               >
@@ -1669,7 +1634,7 @@ exports[`WalletHeader > should show currency delta (-5%) 1`] = `
               type="button"
             >
               <div
-                class="hover:text-theme-secondary-500 css-v0ob3f"
+                class="hover:text-white css-v0ob3f"
                 height="16"
                 width="16"
               >
@@ -1760,12 +1725,12 @@ exports[`WalletHeader > should show currency delta (-5%) 1`] = `
       >
         <button
           aria-busy="false"
-          class="css-1tz7btt"
+          class="css-exkcd5"
           data-testid="WalletHeader__refresh"
           type="button"
         >
           <div
-            class=" css-v0ob3f"
+            class="hover:text-theme-secondary-200 css-v0ob3f"
             height="16"
             style="animation-direction: reverse;"
             width="16"
@@ -1786,17 +1751,20 @@ exports[`WalletHeader > should show currency delta (-5%) 1`] = `
           </div>
         </button>
         <button
-          class="css-1tz7btt"
+          class="css-exkcd5"
           data-testid="WalletHeader__star-button"
           type="button"
         >
           <div
-            class="text-theme-warning-400 css-v0ob3f"
+            class="transition-all duration-300 ease-in-out fill-theme-warning-400 stroke-theme-warning-400 css-v0ob3f"
             height="16"
             width="16"
           >
             <svg
               id="star-filled"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
               viewBox="0 0 20 20"
               x="0"
               xml:space="preserve"
@@ -1805,11 +1773,6 @@ exports[`WalletHeader > should show currency delta (-5%) 1`] = `
             >
               <path
                 d="M10.558 1.411l2.711 5.273 5.12.497c.603.1.804.697.402 1.094l-4.217 4.179 1.607 5.67c.1.498-.402 1.094-1.004.796l-5.221-2.686-5.12 2.587c-.302.198-1.105-.1-.904-.796l1.606-5.77-4.317-3.98c-.3-.397-.401-.994.402-1.094l5.12-.497L9.454 1.41c.301-.597.803-.497 1.104 0h0z"
-                fill="currentColor"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
               />
             </svg>
           </div>
@@ -1817,7 +1780,7 @@ exports[`WalletHeader > should show currency delta (-5%) 1`] = `
       </div>
       <div>
         <button
-          class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded text-white bg-theme-primary-600 hover:bg-theme-primary-700 my-auto ml-3"
+          class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 green:hover:bg-theme-primary-700 navy:hover:bg-theme-primary-800 dark:hover:bg-theme-primary-500 my-auto ml-3 hover:!bg-theme-primary-500"
           data-testid="WalletHeader__send-button"
           type="button"
         >
@@ -1838,48 +1801,43 @@ exports[`WalletHeader > should show currency delta (-5%) 1`] = `
           data-testid="dropdown__toggle"
         >
           <button
-            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none bg-theme-secondary-800 text-white hover:bg-theme-primary-700"
+            class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none bg-theme-secondary-800 p-[14px] text-theme-secondary-200 hover:bg-theme-primary-500 hover:text-white"
             type="button"
           >
             <div
               class="flex items-center space-x-2"
             >
               <div
-                class="css-1i4b0eq"
-                height="20"
-                width="20"
+                class="css-v0ob3f"
+                height="16"
+                width="16"
               >
                 <svg
-                  id="ellipsis-vertical"
+                  fill="none"
                   viewBox="0 0 20 20"
-                  x="0"
-                  xml:space="preserve"
                   xmlns="http://www.w3.org/2000/svg"
-                  y="0"
                 >
-                  <g
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                  >
-                    <circle
-                      cx="10"
-                      cy="16.994"
-                      r="2.006"
-                    />
-                    <circle
-                      cx="10"
-                      cy="3"
-                      r="2"
-                    />
-                    <circle
-                      cx="10"
-                      cy="10"
-                      r="2"
-                    />
-                  </g>
+                  <circle
+                    cx="10.002"
+                    cy="2.99609"
+                    fill="currentColor"
+                    r="2"
+                    transform="rotate(90 10.002 2.99609)"
+                  />
+                  <circle
+                    cx="10.002"
+                    cy="9.99805"
+                    fill="currentColor"
+                    r="2"
+                    transform="rotate(90 10.002 9.99805)"
+                  />
+                  <circle
+                    cx="10.002"
+                    cy="17"
+                    fill="currentColor"
+                    r="2"
+                    transform="rotate(90 10.002 17)"
+                  />
                 </svg>
               </div>
             </div>
@@ -1938,7 +1896,7 @@ exports[`WalletHeader > should show currency delta (5%) 1`] = `
               type="button"
             >
               <div
-                class="hover:text-theme-secondary-500 css-v0ob3f"
+                class="hover:text-white css-v0ob3f"
                 height="16"
                 width="16"
               >
@@ -1974,7 +1932,7 @@ exports[`WalletHeader > should show currency delta (5%) 1`] = `
               type="button"
             >
               <div
-                class="hover:text-theme-secondary-500 css-v0ob3f"
+                class="hover:text-white css-v0ob3f"
                 height="16"
                 width="16"
               >
@@ -2065,12 +2023,12 @@ exports[`WalletHeader > should show currency delta (5%) 1`] = `
       >
         <button
           aria-busy="false"
-          class="css-1tz7btt"
+          class="css-exkcd5"
           data-testid="WalletHeader__refresh"
           type="button"
         >
           <div
-            class=" css-v0ob3f"
+            class="hover:text-theme-secondary-200 css-v0ob3f"
             height="16"
             style="animation-direction: reverse;"
             width="16"
@@ -2091,17 +2049,20 @@ exports[`WalletHeader > should show currency delta (5%) 1`] = `
           </div>
         </button>
         <button
-          class="css-1tz7btt"
+          class="css-exkcd5"
           data-testid="WalletHeader__star-button"
           type="button"
         >
           <div
-            class="text-theme-warning-400 css-v0ob3f"
+            class="transition-all duration-300 ease-in-out fill-theme-warning-400 stroke-theme-warning-400 css-v0ob3f"
             height="16"
             width="16"
           >
             <svg
               id="star-filled"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
               viewBox="0 0 20 20"
               x="0"
               xml:space="preserve"
@@ -2110,11 +2071,6 @@ exports[`WalletHeader > should show currency delta (5%) 1`] = `
             >
               <path
                 d="M10.558 1.411l2.711 5.273 5.12.497c.603.1.804.697.402 1.094l-4.217 4.179 1.607 5.67c.1.498-.402 1.094-1.004.796l-5.221-2.686-5.12 2.587c-.302.198-1.105-.1-.904-.796l1.606-5.77-4.317-3.98c-.3-.397-.401-.994.402-1.094l5.12-.497L9.454 1.41c.301-.597.803-.497 1.104 0h0z"
-                fill="currentColor"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
               />
             </svg>
           </div>
@@ -2122,7 +2078,7 @@ exports[`WalletHeader > should show currency delta (5%) 1`] = `
       </div>
       <div>
         <button
-          class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded text-white bg-theme-primary-600 hover:bg-theme-primary-700 my-auto ml-3"
+          class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 green:hover:bg-theme-primary-700 navy:hover:bg-theme-primary-800 dark:hover:bg-theme-primary-500 my-auto ml-3 hover:!bg-theme-primary-500"
           data-testid="WalletHeader__send-button"
           type="button"
         >
@@ -2143,48 +2099,43 @@ exports[`WalletHeader > should show currency delta (5%) 1`] = `
           data-testid="dropdown__toggle"
         >
           <button
-            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none bg-theme-secondary-800 text-white hover:bg-theme-primary-700"
+            class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none bg-theme-secondary-800 p-[14px] text-theme-secondary-200 hover:bg-theme-primary-500 hover:text-white"
             type="button"
           >
             <div
               class="flex items-center space-x-2"
             >
               <div
-                class="css-1i4b0eq"
-                height="20"
-                width="20"
+                class="css-v0ob3f"
+                height="16"
+                width="16"
               >
                 <svg
-                  id="ellipsis-vertical"
+                  fill="none"
                   viewBox="0 0 20 20"
-                  x="0"
-                  xml:space="preserve"
                   xmlns="http://www.w3.org/2000/svg"
-                  y="0"
                 >
-                  <g
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                  >
-                    <circle
-                      cx="10"
-                      cy="16.994"
-                      r="2.006"
-                    />
-                    <circle
-                      cx="10"
-                      cy="3"
-                      r="2"
-                    />
-                    <circle
-                      cx="10"
-                      cy="10"
-                      r="2"
-                    />
-                  </g>
+                  <circle
+                    cx="10.002"
+                    cy="2.99609"
+                    fill="currentColor"
+                    r="2"
+                    transform="rotate(90 10.002 2.99609)"
+                  />
+                  <circle
+                    cx="10.002"
+                    cy="9.99805"
+                    fill="currentColor"
+                    r="2"
+                    transform="rotate(90 10.002 9.99805)"
+                  />
+                  <circle
+                    cx="10.002"
+                    cy="17"
+                    fill="currentColor"
+                    r="2"
+                    transform="rotate(90 10.002 17)"
+                  />
                 </svg>
               </div>
             </div>
@@ -2304,7 +2255,7 @@ exports[`WalletHeader > should show modifiers 1`] = `
               type="button"
             >
               <div
-                class="hover:text-theme-secondary-500 css-v0ob3f"
+                class="hover:text-white css-v0ob3f"
                 height="16"
                 width="16"
               >
@@ -2340,7 +2291,7 @@ exports[`WalletHeader > should show modifiers 1`] = `
               type="button"
             >
               <div
-                class="hover:text-theme-secondary-500 css-v0ob3f"
+                class="hover:text-white css-v0ob3f"
                 height="16"
                 width="16"
               >
@@ -2399,12 +2350,12 @@ exports[`WalletHeader > should show modifiers 1`] = `
       >
         <button
           aria-busy="false"
-          class="css-1tz7btt"
+          class="css-exkcd5"
           data-testid="WalletHeader__refresh"
           type="button"
         >
           <div
-            class=" css-v0ob3f"
+            class="hover:text-theme-secondary-200 css-v0ob3f"
             height="16"
             style="animation-direction: reverse;"
             width="16"
@@ -2425,17 +2376,20 @@ exports[`WalletHeader > should show modifiers 1`] = `
           </div>
         </button>
         <button
-          class="css-1tz7btt"
+          class="css-exkcd5"
           data-testid="WalletHeader__star-button"
           type="button"
         >
           <div
-            class="text-theme-warning-400 css-v0ob3f"
+            class="transition-all duration-300 ease-in-out fill-theme-warning-400 stroke-theme-warning-400 css-v0ob3f"
             height="16"
             width="16"
           >
             <svg
               id="star-filled"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
               viewBox="0 0 20 20"
               x="0"
               xml:space="preserve"
@@ -2444,11 +2398,6 @@ exports[`WalletHeader > should show modifiers 1`] = `
             >
               <path
                 d="M10.558 1.411l2.711 5.273 5.12.497c.603.1.804.697.402 1.094l-4.217 4.179 1.607 5.67c.1.498-.402 1.094-1.004.796l-5.221-2.686-5.12 2.587c-.302.198-1.105-.1-.904-.796l1.606-5.77-4.317-3.98c-.3-.397-.401-.994.402-1.094l5.12-.497L9.454 1.41c.301-.597.803-.497 1.104 0h0z"
-                fill="currentColor"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
               />
             </svg>
           </div>
@@ -2456,7 +2405,7 @@ exports[`WalletHeader > should show modifiers 1`] = `
       </div>
       <div>
         <button
-          class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded text-white bg-theme-primary-600 hover:bg-theme-primary-700 my-auto ml-3"
+          class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 green:hover:bg-theme-primary-700 navy:hover:bg-theme-primary-800 dark:hover:bg-theme-primary-500 my-auto ml-3 hover:!bg-theme-primary-500"
           data-testid="WalletHeader__send-button"
           type="button"
         >
@@ -2477,48 +2426,43 @@ exports[`WalletHeader > should show modifiers 1`] = `
           data-testid="dropdown__toggle"
         >
           <button
-            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none bg-theme-secondary-800 text-white hover:bg-theme-primary-700"
+            class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none bg-theme-secondary-800 p-[14px] text-theme-secondary-200 hover:bg-theme-primary-500 hover:text-white"
             type="button"
           >
             <div
               class="flex items-center space-x-2"
             >
               <div
-                class="css-1i4b0eq"
-                height="20"
-                width="20"
+                class="css-v0ob3f"
+                height="16"
+                width="16"
               >
                 <svg
-                  id="ellipsis-vertical"
+                  fill="none"
                   viewBox="0 0 20 20"
-                  x="0"
-                  xml:space="preserve"
                   xmlns="http://www.w3.org/2000/svg"
-                  y="0"
                 >
-                  <g
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                  >
-                    <circle
-                      cx="10"
-                      cy="16.994"
-                      r="2.006"
-                    />
-                    <circle
-                      cx="10"
-                      cy="3"
-                      r="2"
-                    />
-                    <circle
-                      cx="10"
-                      cy="10"
-                      r="2"
-                    />
-                  </g>
+                  <circle
+                    cx="10.002"
+                    cy="2.99609"
+                    fill="currentColor"
+                    r="2"
+                    transform="rotate(90 10.002 2.99609)"
+                  />
+                  <circle
+                    cx="10.002"
+                    cy="9.99805"
+                    fill="currentColor"
+                    r="2"
+                    transform="rotate(90 10.002 9.99805)"
+                  />
+                  <circle
+                    cx="10.002"
+                    cy="17"
+                    fill="currentColor"
+                    r="2"
+                    transform="rotate(90 10.002 17)"
+                  />
                 </svg>
               </div>
             </div>
@@ -2577,7 +2521,7 @@ exports[`WalletHeader > should use empty string in clipboard copy if publickey i
               type="button"
             >
               <div
-                class="hover:text-theme-secondary-500 css-v0ob3f"
+                class="hover:text-white css-v0ob3f"
                 height="16"
                 width="16"
               >
@@ -2642,12 +2586,12 @@ exports[`WalletHeader > should use empty string in clipboard copy if publickey i
       >
         <button
           aria-busy="false"
-          class="css-1tz7btt"
+          class="css-exkcd5"
           data-testid="WalletHeader__refresh"
           type="button"
         >
           <div
-            class=" css-v0ob3f"
+            class="hover:text-theme-secondary-200 css-v0ob3f"
             height="16"
             style="animation-direction: reverse;"
             width="16"
@@ -2668,17 +2612,20 @@ exports[`WalletHeader > should use empty string in clipboard copy if publickey i
           </div>
         </button>
         <button
-          class="css-1tz7btt"
+          class="css-exkcd5"
           data-testid="WalletHeader__star-button"
           type="button"
         >
           <div
-            class="text-theme-warning-400 css-v0ob3f"
+            class="transition-all duration-300 ease-in-out fill-theme-warning-400 stroke-theme-warning-400 css-v0ob3f"
             height="16"
             width="16"
           >
             <svg
               id="star-filled"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
               viewBox="0 0 20 20"
               x="0"
               xml:space="preserve"
@@ -2687,11 +2634,6 @@ exports[`WalletHeader > should use empty string in clipboard copy if publickey i
             >
               <path
                 d="M10.558 1.411l2.711 5.273 5.12.497c.603.1.804.697.402 1.094l-4.217 4.179 1.607 5.67c.1.498-.402 1.094-1.004.796l-5.221-2.686-5.12 2.587c-.302.198-1.105-.1-.904-.796l1.606-5.77-4.317-3.98c-.3-.397-.401-.994.402-1.094l5.12-.497L9.454 1.41c.301-.597.803-.497 1.104 0h0z"
-                fill="currentColor"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
               />
             </svg>
           </div>
@@ -2699,7 +2641,7 @@ exports[`WalletHeader > should use empty string in clipboard copy if publickey i
       </div>
       <div>
         <button
-          class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded text-white bg-theme-primary-600 hover:bg-theme-primary-700 my-auto ml-3"
+          class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 green:hover:bg-theme-primary-700 navy:hover:bg-theme-primary-800 dark:hover:bg-theme-primary-500 my-auto ml-3 hover:!bg-theme-primary-500"
           data-testid="WalletHeader__send-button"
           type="button"
         >
@@ -2720,48 +2662,43 @@ exports[`WalletHeader > should use empty string in clipboard copy if publickey i
           data-testid="dropdown__toggle"
         >
           <button
-            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none bg-theme-secondary-800 text-white hover:bg-theme-primary-700"
+            class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none bg-theme-secondary-800 p-[14px] text-theme-secondary-200 hover:bg-theme-primary-500 hover:text-white"
             type="button"
           >
             <div
               class="flex items-center space-x-2"
             >
               <div
-                class="css-1i4b0eq"
-                height="20"
-                width="20"
+                class="css-v0ob3f"
+                height="16"
+                width="16"
               >
                 <svg
-                  id="ellipsis-vertical"
+                  fill="none"
                   viewBox="0 0 20 20"
-                  x="0"
-                  xml:space="preserve"
                   xmlns="http://www.w3.org/2000/svg"
-                  y="0"
                 >
-                  <g
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                  >
-                    <circle
-                      cx="10"
-                      cy="16.994"
-                      r="2.006"
-                    />
-                    <circle
-                      cx="10"
-                      cy="3"
-                      r="2"
-                    />
-                    <circle
-                      cx="10"
-                      cy="10"
-                      r="2"
-                    />
-                  </g>
+                  <circle
+                    cx="10.002"
+                    cy="2.99609"
+                    fill="currentColor"
+                    r="2"
+                    transform="rotate(90 10.002 2.99609)"
+                  />
+                  <circle
+                    cx="10.002"
+                    cy="9.99805"
+                    fill="currentColor"
+                    r="2"
+                    transform="rotate(90 10.002 9.99805)"
+                  />
+                  <circle
+                    cx="10.002"
+                    cy="17"
+                    fill="currentColor"
+                    r="2"
+                    transform="rotate(90 10.002 17)"
+                  />
                 </svg>
               </div>
             </div>

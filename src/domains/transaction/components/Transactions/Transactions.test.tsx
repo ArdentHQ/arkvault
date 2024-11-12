@@ -88,71 +88,6 @@ describe("Transactions", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it("should filter by type", async () => {
-		render(
-			<Route path="/profiles/:profileId/dashboard">
-				<Transactions profile={profile} wallets={profile.wallets().values()} />
-			</Route>,
-			{
-				history,
-				route: dashboardURL,
-			},
-		);
-
-		await waitFor(() =>
-			expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(30),
-		);
-
-		const button = screen.getAllByRole("button", { name: /Type/ })[0];
-
-		expect(button).toBeInTheDocument();
-
-		expect(button).not.toBeDisabled();
-
-		await userEvent.click(button);
-
-		await expect(screen.findByTestId("dropdown__option--core-0")).resolves.toBeVisible();
-
-		await userEvent.click(screen.getByTestId("dropdown__option--core-0"));
-
-		await waitFor(() =>
-			expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(30),
-		);
-	});
-
-	it("should filter by type on mobile", async () => {
-		renderResponsiveWithRoute(
-			<Route path="/profiles/:profileId/dashboard">
-				<Transactions profile={profile} wallets={profile.wallets().values()} />
-			</Route>,
-			"xs",
-			{
-				history,
-				route: dashboardURL,
-			},
-		);
-
-		await waitFor(() =>
-			expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(30),
-		);
-
-		const button = within(screen.getByTestId("FilterTransactions--Mobile")).getByTestId("CollapseToggleButton");
-
-		expect(button).toBeInTheDocument();
-
-		expect(button).not.toBeDisabled();
-
-		await userEvent.click(button);
-
-		await expect(screen.findByTestId("dropdown__option--core-0")).resolves.toBeVisible();
-
-		await userEvent.click(screen.getByTestId("dropdown__option--core-0"));
-
-		await waitFor(() =>
-			expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(30),
-		);
-	});
-
 	it("should filter by type and see empty results text", async () => {
 		const emptyProfile = await env.profiles().create("test2");
 
@@ -193,11 +128,76 @@ describe("Transactions", () => {
 
 		await userEvent.click(button);
 
-		await expect(screen.findByTestId("dropdown__option--core-7")).resolves.toBeVisible();
+		const options = screen.getAllByTestId("FilterOption__checkbox");
 
-		await userEvent.click(screen.getByTestId("dropdown__option--core-7"));
+		await userEvent.click(options.at(0));
 
 		await expect(screen.findByTestId("EmptyBlock")).resolves.toBeVisible();
+	});
+
+	it("should filter by type", async () => {
+		render(
+			<Route path="/profiles/:profileId/dashboard">
+				<Transactions profile={profile} wallets={profile.wallets().values()} />
+			</Route>,
+			{
+				history,
+				route: dashboardURL,
+			},
+		);
+
+		await waitFor(() =>
+			expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(30),
+		);
+
+		const button = screen.getAllByRole("button", { name: /Type/ })[0];
+
+		expect(button).toBeInTheDocument();
+
+		expect(button).not.toBeDisabled();
+
+		await userEvent.click(button);
+
+		const options = screen.getAllByTestId("FilterOption__checkbox");
+
+		await userEvent.click(options.at(1));
+
+		await waitFor(() =>
+			expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(30),
+		);
+	});
+
+	it("should filter by type on mobile", async () => {
+		renderResponsiveWithRoute(
+			<Route path="/profiles/:profileId/dashboard">
+				<Transactions profile={profile} wallets={profile.wallets().values()} />
+			</Route>,
+			"xs",
+			{
+				history,
+				route: dashboardURL,
+			},
+		);
+
+		await waitFor(() =>
+			expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(30),
+		);
+
+		const button = within(screen.getByTestId("FilterTransactions--Mobile")).getByTestId("CollapseToggleButton");
+
+		expect(button).toBeInTheDocument();
+
+		expect(button).not.toBeDisabled();
+
+		await userEvent.click(button);
+
+		const options = screen.getAllByTestId("FilterOption__checkbox");
+
+		await userEvent.click(options.at(1));
+
+		await waitFor(() =>
+			expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(30),
+		);
 	});
 
 	it("should filter by type and see empty screen", async () => {
@@ -230,9 +230,9 @@ describe("Transactions", () => {
 
 		await userEvent.click(button);
 
-		await expect(screen.findByTestId("dropdown__option--magistrate-0")).resolves.toBeVisible();
+		const options = screen.getAllByTestId("FilterOption__checkbox");
 
-		await userEvent.click(screen.getByTestId("dropdown__option--magistrate-0"));
+		await userEvent.click(options.at(-1));
 
 		await expect(screen.findByTestId("EmptyBlock")).resolves.toBeVisible();
 	});

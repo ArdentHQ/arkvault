@@ -24,7 +24,7 @@ exports[`Add Participant item > should render 1`] = `
             class="sm:hidden"
           >
             <button
-              class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none p-0 text-theme-secondary-700 dark:text-theme-secondary-500"
+              class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none space-x-0 p-0 text-theme-secondary-700 dark:text-theme-secondary-500"
               data-testid="AddParticipantItem--mobile-deleteButton"
               type="button"
             >
@@ -96,7 +96,7 @@ exports[`Add Participant item > should render 1`] = `
         class="hidden sm:block"
       >
         <button
-          class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 disabled:cursor-not-allowed rounded bg-theme-danger-100 text-theme-danger-400 dark:bg-theme-danger-400 dark:text-white hover:bg-theme-danger-400 hover:text-white dark:hover:bg-theme-danger-500 focus:ring-theme-danger-300 p-3.5"
+          class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 disabled:cursor-not-allowed bg-theme-danger-100 text-theme-danger-400 dark:bg-theme-danger-400 dark:text-white hover:bg-theme-danger-400 hover:text-white dark:hover:bg-theme-danger-300 focus:ring-theme-danger-300 p-3.5"
           data-testid="AddParticipantItem--deleteButton"
           type="button"
         >

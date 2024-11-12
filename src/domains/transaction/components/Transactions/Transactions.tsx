@@ -14,6 +14,7 @@ import { TransactionDetailModal } from "@/domains/transaction/components/Transac
 import { TransactionTable } from "@/domains/transaction/components/TransactionTable";
 import cn from "classnames";
 import { useProfileTransactions } from "@/domains/transaction/hooks/use-profile-transactions";
+import { useWalletTransactionCounts } from "@/domains/wallet/pages/WalletDetails/hooks/use-wallet-transaction-counts";
 
 interface TransactionsProperties {
 	emptyText?: string;
@@ -51,10 +52,13 @@ export const Transactions = memo(function Transactions({
 		transactions,
 		activeMode,
 		activeTransactionType,
+		selectedTransactionTypes,
 		fetchMore,
 		hasEmptyResults,
 		hasMore,
 	} = useProfileTransactions({ limit: 30, profile, wallets });
+
+	const showMore = !!selectedTransactionTypes?.length && hasMore;
 
 	useEffect(() => {
 		if (isLoading) {
@@ -64,6 +68,7 @@ export const Transactions = memo(function Transactions({
 		updateFilters({
 			activeMode: "all",
 			activeTransactionType: undefined,
+			selectedTransactionTypes,
 		});
 	}, [isLoading, wallets.length, updateFilters]);
 
@@ -73,23 +78,28 @@ export const Transactions = memo(function Transactions({
 
 	useEffect(() => {
 		if (isUpdatingWallet) {
-			updateFilters({ activeMode, activeTransactionType, timestamp: Date.now() });
+			updateFilters({ activeMode, activeTransactionType, selectedTransactionTypes, timestamp: Date.now() });
 		}
 	}, [isUpdatingWallet]); // eslint-disable-line react-hooks/exhaustive-deps
+
+	const { sent, received } = useWalletTransactionCounts(wallets[0]);
 
 	const filterOptions = [
 		{
 			active: activeMode === "all",
+			count: undefined,
 			label: t("TRANSACTION.ALL_HISTORY"),
 			value: "all",
 		},
 		{
 			active: activeMode === "received",
+			count: received,
 			label: t("TRANSACTION.INCOMING"),
 			value: "received",
 		},
 		{
 			active: activeMode === "sent",
+			count: sent,
 			label: t("TRANSACTION.OUTGOING"),
 			value: "sent",
 		},
@@ -109,18 +119,20 @@ export const Transactions = memo(function Transactions({
 			updateFilters({
 				activeMode: activeTab as string,
 				activeTransactionType,
+				selectedTransactionTypes,
 			});
 		},
 		[isLoading, activeMode, activeTransactionType],
 	);
 
 	const filterChangeHandler = useCallback(
-		(option, type) => {
+		(option, type, selectedTransactionTypes) => {
 			setActiveTransactionTypeLabel(option.label);
 
 			updateFilters({
 				activeMode,
 				activeTransactionType: type,
+				selectedTransactionTypes,
 			});
 		},
 		[activeMode],
@@ -154,7 +166,14 @@ export const Transactions = memo(function Transactions({
 						<TabList className="h-14 px-6 py-4">
 							{filterOptions.map((option) => (
 								<Tab tabId={option.value} key={option.value} className="pb-9 before:!top-1/3">
-									{option.label}
+									<span className="flex items-center space-x-2">
+										<span>{option.label}</span>
+										{!!option.count && (
+											<span className="rounded bg-theme-navy-100 px-1.5 py-0.5 text-xs leading-[17px] text-theme-secondary-700 dark:border-theme-secondary-800 dark:bg-theme-secondary-900 dark:text-theme-secondary-500">
+												{option.count}
+											</span>
+										)}
+									</span>
 								</Tab>
 							))}
 						</TabList>
@@ -183,44 +202,49 @@ export const Transactions = memo(function Transactions({
 								data-testid="FilterTransactions--Mobile"
 								wallets={wallets}
 								onSelect={filterChangeHandler}
-								isDisabled={wallets.length === 0 || isLoadingTransactions}
+								selectedTransactionTypes={selectedTransactionTypes}
 							/>
 						</div>
 					</div>
 				</>
 			)}
 
-			{hasEmptyResults ? (
-				<>
-					{activeTransactionType ? (
-						<EmptyBlock className="sm:text-left">
-							<Trans
-								i18nKey="DASHBOARD.LATEST_TRANSACTIONS.NO_RESULTS"
-								values={{
-									type: activeTransactionTypeLabel,
-								}}
-								components={{ bold: <strong /> }}
-							/>
-						</EmptyBlock>
-					) : (
-						<EmptyBlock className="sm:text-left">
-							{emptyText || t("DASHBOARD.LATEST_TRANSACTIONS.EMPTY_MESSAGE")}
-						</EmptyBlock>
-					)}
-				</>
-			) : (
-				<TableWrapper className={cn({ "!rounded-b-none border-none": hasMore })}>
-					<div className="flex w-full flex-col items-start justify-between gap-3 border-b-0 border-b-theme-secondary-300 pb-4 pt-3 dark:border-b-theme-secondary-800 sm:flex-row md:items-center md:border-b md:px-6 md:py-4">
-						<span className="text-base font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500">
-							{t("COMMON.SHOWING_RESULTS", { count: transactions.length })}
-						</span>
-						<FilterTransactions
-							className="w-full sm:w-fit md:my-auto"
-							wallets={wallets}
-							onSelect={filterChangeHandler}
-							isDisabled={wallets.length === 0 || isLoadingTransactions}
-						/>
-					</div>
+			<TableWrapper className={cn({ "!rounded-b-none border-none": showMore })}>
+				<div className="flex w-full flex-col items-start justify-between gap-3 border-b-0 border-b-theme-secondary-300 pb-4 pt-3 dark:border-b-theme-secondary-800 sm:flex-row md:items-center md:border-b md:px-6 md:py-4">
+					<span className="text-base font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500">
+						{t("COMMON.SHOWING_RESULTS", {
+							count: selectedTransactionTypes?.length ? transactions.length : 0,
+						})}
+					</span>
+					<FilterTransactions
+						className="w-full sm:w-fit md:my-auto"
+						wallets={wallets}
+						onSelect={filterChangeHandler}
+						selectedTransactionTypes={selectedTransactionTypes}
+					/>
+				</div>
+
+				{hasEmptyResults && (
+					<>
+						{selectedTransactionTypes?.length ? (
+							<EmptyBlock className="border-none sm:text-left">
+								<Trans
+									i18nKey="DASHBOARD.LATEST_TRANSACTIONS.NO_RESULTS"
+									values={{
+										type: activeTransactionTypeLabel,
+									}}
+									components={{ bold: <strong /> }}
+								/>
+							</EmptyBlock>
+						) : (
+							<EmptyBlock className="border-none sm:text-left">
+								{emptyText || t("TRANSACTION.NO_FILTERS_SELECTED")}
+							</EmptyBlock>
+						)}
+					</>
+				)}
+
+				{!hasEmptyResults && (
 					<TransactionTable
 						transactions={transactions}
 						exchangeCurrency={profile.settings().get<string>(Contracts.ProfileSetting.ExchangeCurrency)}
@@ -231,19 +255,19 @@ export const Transactions = memo(function Transactions({
 						profile={profile}
 						coinName={wallets.at(0)?.currency()}
 					/>
+				)}
 
-					{transactionModalItem && (
-						<TransactionDetailModal
-							isOpen={!!transactionModalItem}
-							transactionItem={transactionModalItem}
-							profile={profile}
-							onClose={() => setTransactionModalItem(undefined)}
-						/>
-					)}
-				</TableWrapper>
-			)}
+				{transactionModalItem && (
+					<TransactionDetailModal
+						isOpen={!!transactionModalItem}
+						transactionItem={transactionModalItem}
+						profile={profile}
+						onClose={() => setTransactionModalItem(undefined)}
+					/>
+				)}
+			</TableWrapper>
 
-			{hasMore && (
+			{showMore && (
 				<div className="-mx-6 -mt-1 rounded-b-xl border-t border-theme-secondary-300 px-6 py-4 dark:border-theme-secondary-800 md:-mx-px md:mt-0 md:border md:border-t-0">
 					<Button
 						data-testid="transactions__fetch-more-button"

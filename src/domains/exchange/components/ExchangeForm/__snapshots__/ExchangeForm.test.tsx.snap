@@ -85,11 +85,11 @@ exports[`ConfirmationStep > should render 1`] = `
                 class="flex items-center space-x-2 whitespace-nowrap text-lg font-semibold"
               >
                 <span
-                  class="overflow-hidden"
+                  class="w-full overflow-hidden"
                   data-testid="ExplorerLink"
                 >
                   <a
-                    class="ring-focus group/inner inline-block css-7nwwrh"
+                    class="ring-focus group/inner inline-block css-167zzsv"
                     data-ring-focus-margin="-m-1"
                     data-testid="Link"
                     href="https://blockchair.com/bitcoin/transaction/payinHash"
@@ -105,10 +105,10 @@ exports[`ConfirmationStep > should render 1`] = `
                       </span>
                     </span>
                     <div
-                      class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-v0ob3f"
+                      class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-1fio4bh"
                       data-testid="Link__external"
-                      height="16"
-                      width="16"
+                      height="12"
+                      width="12"
                     >
                       <svg
                         id="arrow-external"
@@ -184,11 +184,11 @@ exports[`ConfirmationStep > should render 1`] = `
                 class="flex items-center space-x-2 whitespace-nowrap text-lg font-semibold"
               >
                 <span
-                  class="overflow-hidden"
+                  class="w-full overflow-hidden"
                   data-testid="ExplorerLink"
                 >
                   <a
-                    class="ring-focus group/inner inline-block css-7nwwrh"
+                    class="ring-focus group/inner inline-block css-167zzsv"
                     data-ring-focus-margin="-m-1"
                     data-testid="Link"
                     href="https://blockchair.com/bitcoin/address/payinAddress"
@@ -204,10 +204,10 @@ exports[`ConfirmationStep > should render 1`] = `
                       </span>
                     </span>
                     <div
-                      class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-v0ob3f"
+                      class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-1fio4bh"
                       data-testid="Link__external"
-                      height="16"
-                      width="16"
+                      height="12"
+                      width="12"
                     >
                       <svg
                         id="arrow-external"
@@ -470,7 +470,7 @@ exports[`ExchangeForm > should render exchange form 1`] = `
                 class="w-2/5"
               >
                 <fieldset
-                  class="flex min-w-0 flex-col css-1bcidjh"
+                  class="flex min-w-0 flex-col css-ea0il3"
                 >
                   <label
                     class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
@@ -602,7 +602,7 @@ exports[`ExchangeForm > should render exchange form 1`] = `
                 class="w-3/5"
               >
                 <fieldset
-                  class="flex min-w-0 flex-col css-1bcidjh"
+                  class="flex min-w-0 flex-col css-ea0il3"
                 >
                   <label
                     class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
@@ -662,7 +662,7 @@ exports[`ExchangeForm > should render exchange form 1`] = `
                   </span>
                 </div>
                 <button
-                  class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 ml-auto"
+                  class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 ml-auto"
                   data-testid="ExchangeForm__swap-button"
                   disabled=""
                   type="button"
@@ -707,7 +707,7 @@ exports[`ExchangeForm > should render exchange form 1`] = `
                   class="w-2/5"
                 >
                   <fieldset
-                    class="flex min-w-0 flex-col css-1bcidjh"
+                    class="flex min-w-0 flex-col css-ea0il3"
                   >
                     <label
                       class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
@@ -839,7 +839,7 @@ exports[`ExchangeForm > should render exchange form 1`] = `
                   class="w-3/5"
                 >
                   <fieldset
-                    class="flex min-w-0 flex-col css-1bcidjh"
+                    class="flex min-w-0 flex-col css-ea0il3"
                   >
                     <label
                       class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
@@ -876,7 +876,7 @@ exports[`ExchangeForm > should render exchange form 1`] = `
                 data-testid="ExchangeForm__recipient-address"
               >
                 <fieldset
-                  class="flex min-w-0 flex-col css-1bcidjh"
+                  class="flex min-w-0 flex-col css-ea0il3"
                 >
                   <label
                     class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
@@ -986,7 +986,7 @@ exports[`ExchangeForm > should render exchange form 1`] = `
             class="css-145pihz"
           >
             <button
-              class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-700"
+              class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 green:hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-500"
               data-testid="ExchangeForm__back-button"
               type="button"
             >
@@ -997,7 +997,7 @@ exports[`ExchangeForm > should render exchange form 1`] = `
               </div>
             </button>
             <button
-              class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700"
+              class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700"
               data-testid="ExchangeForm__continue-button"
               disabled=""
               type="button"
@@ -1133,11 +1133,11 @@ exports[`ExchangeForm > should render exchange form with id of finished order 1`
                         class="flex items-center space-x-2 whitespace-nowrap text-lg font-semibold"
                       >
                         <span
-                          class="overflow-hidden"
+                          class="w-full overflow-hidden"
                           data-testid="ExplorerLink"
                         >
                           <a
-                            class="ring-focus group/inner inline-block css-7nwwrh"
+                            class="ring-focus group/inner inline-block css-167zzsv"
                             data-ring-focus-margin="-m-1"
                             data-testid="Link"
                             href="https://blockchair.com/bitcoin/transaction/payinHash?from=changenow"
@@ -1153,10 +1153,10 @@ exports[`ExchangeForm > should render exchange form with id of finished order 1`
                               </span>
                             </span>
                             <div
-                              class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-v0ob3f"
+                              class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-1fio4bh"
                               data-testid="Link__external"
-                              height="16"
-                              width="16"
+                              height="12"
+                              width="12"
                             >
                               <svg
                                 id="arrow-external"
@@ -1232,11 +1232,11 @@ exports[`ExchangeForm > should render exchange form with id of finished order 1`
                         class="flex items-center space-x-2 whitespace-nowrap text-lg font-semibold"
                       >
                         <span
-                          class="overflow-hidden"
+                          class="w-full overflow-hidden"
                           data-testid="ExplorerLink"
                         >
                           <a
-                            class="ring-focus group/inner inline-block css-7nwwrh"
+                            class="ring-focus group/inner inline-block css-167zzsv"
                             data-ring-focus-margin="-m-1"
                             data-testid="Link"
                             href="https://blockchair.com/bitcoin/address/payinAddress?from=changenow"
@@ -1252,10 +1252,10 @@ exports[`ExchangeForm > should render exchange form with id of finished order 1`
                               </span>
                             </span>
                             <div
-                              class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-v0ob3f"
+                              class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-1fio4bh"
                               data-testid="Link__external"
-                              height="16"
-                              width="16"
+                              height="12"
+                              width="12"
                             >
                               <svg
                                 id="arrow-external"
@@ -1383,11 +1383,11 @@ exports[`ExchangeForm > should render exchange form with id of finished order 1`
                         class="flex items-center space-x-2 whitespace-nowrap text-lg font-semibold"
                       >
                         <span
-                          class="overflow-hidden"
+                          class="w-full overflow-hidden"
                           data-testid="ExplorerLink"
                         >
                           <a
-                            class="ring-focus group/inner inline-block css-7nwwrh"
+                            class="ring-focus group/inner inline-block css-167zzsv"
                             data-ring-focus-margin="-m-1"
                             data-testid="Link"
                             href="https://live.arkscan.io/transaction/payoutHash"
@@ -1403,10 +1403,10 @@ exports[`ExchangeForm > should render exchange form with id of finished order 1`
                               </span>
                             </span>
                             <div
-                              class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-v0ob3f"
+                              class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-1fio4bh"
                               data-testid="Link__external"
-                              height="16"
-                              width="16"
+                              height="12"
+                              width="12"
                             >
                               <svg
                                 id="arrow-external"
@@ -1482,11 +1482,11 @@ exports[`ExchangeForm > should render exchange form with id of finished order 1`
                         class="flex items-center space-x-2 whitespace-nowrap text-lg font-semibold"
                       >
                         <span
-                          class="overflow-hidden"
+                          class="w-full overflow-hidden"
                           data-testid="ExplorerLink"
                         >
                           <a
-                            class="ring-focus group/inner inline-block css-7nwwrh"
+                            class="ring-focus group/inner inline-block css-167zzsv"
                             data-ring-focus-margin="-m-1"
                             data-testid="Link"
                             href="https://live.arkscan.io/wallets/payoutAddress"
@@ -1502,10 +1502,10 @@ exports[`ExchangeForm > should render exchange form with id of finished order 1`
                               </span>
                             </span>
                             <div
-                              class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-v0ob3f"
+                              class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-1fio4bh"
                               data-testid="Link__external"
-                              height="16"
-                              width="16"
+                              height="12"
+                              width="12"
                             >
                               <svg
                                 id="arrow-external"
@@ -1605,7 +1605,7 @@ exports[`ExchangeForm > should render exchange form with id of finished order 1`
               class="flex w-full flex-col gap-3 sm:flex-row-reverse"
             >
               <button
-                class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded text-white bg-theme-primary-600 hover:bg-theme-primary-700"
+                class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 green:hover:bg-theme-primary-700 navy:hover:bg-theme-primary-800 dark:hover:bg-theme-primary-500"
                 data-testid="ExchangeForm__finish-button"
                 type="button"
               >
@@ -1616,7 +1616,7 @@ exports[`ExchangeForm > should render exchange form with id of finished order 1`
                 </div>
               </button>
               <button
-                class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-700"
+                class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 green:hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-500"
                 data-testid="ExchangeForm__new-exchange"
                 type="button"
               >
@@ -1956,7 +1956,7 @@ exports[`ExchangeForm > should render exchange form with id of pending order 1`]
             >
               If you have any question about your exchange, please contact ChangeNOW support team via email at 
               <a
-                class="ring-focus group/inner inline-block css-7nwwrh"
+                class="ring-focus group/inner inline-block css-167zzsv"
                 data-ring-focus-margin="-m-1"
                 data-testid="Link"
                 href="mailto:support@changenow.io"
@@ -1968,10 +1968,10 @@ exports[`ExchangeForm > should render exchange form with id of pending order 1`]
                   support@changenow.io
                 </span>
                 <div
-                  class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-v0ob3f"
+                  class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-1fio4bh"
                   data-testid="Link__external"
-                  height="16"
-                  width="16"
+                  height="12"
+                  width="12"
                 >
                   <svg
                     id="arrow-external"
@@ -2014,7 +2014,7 @@ exports[`FormStep > should render 1`] = `
         class="w-2/5"
       >
         <fieldset
-          class="flex min-w-0 flex-col css-1bcidjh"
+          class="flex min-w-0 flex-col css-ea0il3"
         >
           <label
             class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
@@ -2148,7 +2148,7 @@ exports[`FormStep > should render 1`] = `
         class="w-3/5"
       >
         <fieldset
-          class="flex min-w-0 flex-col css-1bcidjh"
+          class="flex min-w-0 flex-col css-ea0il3"
         >
           <label
             class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
@@ -2208,7 +2208,7 @@ exports[`FormStep > should render 1`] = `
           </span>
         </div>
         <button
-          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 ml-auto"
+          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 ml-auto"
           data-testid="ExchangeForm__swap-button"
           disabled=""
           type="button"
@@ -2253,7 +2253,7 @@ exports[`FormStep > should render 1`] = `
           class="w-2/5"
         >
           <fieldset
-            class="flex min-w-0 flex-col css-1bcidjh"
+            class="flex min-w-0 flex-col css-ea0il3"
           >
             <label
               class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
@@ -2387,7 +2387,7 @@ exports[`FormStep > should render 1`] = `
           class="w-3/5"
         >
           <fieldset
-            class="flex min-w-0 flex-col css-1bcidjh"
+            class="flex min-w-0 flex-col css-ea0il3"
           >
             <label
               class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
@@ -2424,7 +2424,7 @@ exports[`FormStep > should render 1`] = `
         data-testid="ExchangeForm__recipient-address"
       >
         <fieldset
-          class="flex min-w-0 flex-col css-1bcidjh"
+          class="flex min-w-0 flex-col css-ea0il3"
         >
           <label
             class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
@@ -2644,7 +2644,7 @@ exports[`ReviewStep > should render 1`] = `
     </div>
     <div>
       <fieldset
-        class="sm:pt-2 css-1bcidjh"
+        class="sm:pt-2 css-ea0il3"
       >
         <label
           class="flex cursor-pointer items-center space-x-3"
@@ -2660,7 +2660,7 @@ exports[`ReviewStep > should render 1`] = `
           >
             I've read and agree to the ChangeNOW 
             <a
-              class="ring-focus group/inner inline-block css-7nwwrh"
+              class="ring-focus group/inner inline-block css-167zzsv"
               data-ring-focus-margin="-m-1"
               data-testid="Link"
               href="https://changenow.io/terms-of-use"
@@ -2672,10 +2672,10 @@ exports[`ReviewStep > should render 1`] = `
                 Terms of Use
               </span>
               <div
-                class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-v0ob3f"
+                class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-1fio4bh"
                 data-testid="Link__external"
-                height="16"
-                width="16"
+                height="12"
+                width="12"
               >
                 <svg
                   id="arrow-external"
@@ -2698,7 +2698,7 @@ exports[`ReviewStep > should render 1`] = `
             </a>
              and 
             <a
-              class="ring-focus group/inner inline-block css-7nwwrh"
+              class="ring-focus group/inner inline-block css-167zzsv"
               data-ring-focus-margin="-m-1"
               data-testid="Link"
               href="https://changenow.io/privacy-policy"
@@ -2710,10 +2710,10 @@ exports[`ReviewStep > should render 1`] = `
                 Privacy Policy
               </span>
               <div
-                class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-v0ob3f"
+                class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-1fio4bh"
                 data-testid="Link__external"
-                height="16"
-                width="16"
+                height="12"
+                width="12"
               >
                 <svg
                   id="arrow-external"
@@ -3029,7 +3029,7 @@ exports[`StatusStep > should render 1`] = `
     >
       If you have any question about your exchange, please contact ChangeNOW support team via email at 
       <a
-        class="ring-focus group/inner inline-block css-7nwwrh"
+        class="ring-focus group/inner inline-block css-167zzsv"
         data-ring-focus-margin="-m-1"
         data-testid="Link"
         href="mailto:support@changenow.io"
@@ -3041,10 +3041,10 @@ exports[`StatusStep > should render 1`] = `
           support@changenow.io
         </span>
         <div
-          class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-v0ob3f"
+          class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-1fio4bh"
           data-testid="Link__external"
-          height="16"
-          width="16"
+          height="12"
+          width="12"
         >
           <svg
             id="arrow-external"

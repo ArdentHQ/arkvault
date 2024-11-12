@@ -19,7 +19,7 @@ exports[`Unconfirmed transaction table > should not render in lg 1`] = `
             role="row"
           >
             <th
-              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
+              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black first:rounded-tl-xl last:rounded-tr-xl"
               colspan="1"
               data-testid="table__th--0"
               role="columnheader"
@@ -65,7 +65,7 @@ exports[`Unconfirmed transaction table > should not render in lg 1`] = `
               </div>
             </th>
             <th
-              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl w-96 min-w-96"
+              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black first:rounded-tl-xl last:rounded-tr-xl w-96 min-w-96"
               colspan="1"
               data-testid="table__th--1"
               role="columnheader"
@@ -81,7 +81,7 @@ exports[`Unconfirmed transaction table > should not render in lg 1`] = `
               </div>
             </th>
             <th
-              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
+              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black first:rounded-tl-xl last:rounded-tr-xl"
               colspan="1"
               data-testid="table__th--2"
               role="columnheader"
@@ -132,12 +132,12 @@ exports[`Unconfirmed transaction table > should not render in lg 1`] = `
           role="rowgroup"
         >
           <tr
-            class=" css-1x4z4cy"
+            class="group css-16ynu5g"
             data-testid="TableRow"
           >
             <td>
               <div
-                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l space-x-3 text-theme-secondary-500 whitespace-nowrap"
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 space-x-3 text-theme-secondary-500 whitespace-nowrap"
               >
                 <span
                   data-testid="TimeAgo"
@@ -148,7 +148,7 @@ exports[`Unconfirmed transaction table > should not render in lg 1`] = `
             </td>
             <td>
               <div
-                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 space-x-4"
               >
                 <div
                   class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-1i0wxh3"
@@ -193,7 +193,7 @@ exports[`Unconfirmed transaction table > should not render in lg 1`] = `
             </td>
             <td>
               <div
-                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end"
               >
                 <div
                   class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
@@ -215,12 +215,12 @@ exports[`Unconfirmed transaction table > should not render in lg 1`] = `
             </td>
           </tr>
           <tr
-            class=" css-1x4z4cy"
+            class="group css-16ynu5g"
             data-testid="TableRow"
           >
             <td>
               <div
-                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l space-x-3 text-theme-secondary-500 whitespace-nowrap"
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 space-x-3 text-theme-secondary-500 whitespace-nowrap"
               >
                 <span
                   data-testid="TimeAgo"
@@ -231,7 +231,7 @@ exports[`Unconfirmed transaction table > should not render in lg 1`] = `
             </td>
             <td>
               <div
-                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 space-x-4"
               >
                 <span
                   class="flex h-5 w-5 items-center justify-center text-theme-text dark:text-theme-secondary-600"
@@ -309,7 +309,7 @@ exports[`Unconfirmed transaction table > should not render in lg 1`] = `
             </td>
             <td>
               <div
-                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end"
               >
                 <div
                   class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
@@ -356,7 +356,7 @@ exports[`Unconfirmed transaction table > should not render in md 1`] = `
             role="row"
           >
             <th
-              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
+              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black first:rounded-tl-xl last:rounded-tr-xl"
               colspan="1"
               data-testid="table__th--0"
               role="columnheader"
@@ -402,7 +402,7 @@ exports[`Unconfirmed transaction table > should not render in md 1`] = `
               </div>
             </th>
             <th
-              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl w-96 min-w-96"
+              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black first:rounded-tl-xl last:rounded-tr-xl w-96 min-w-96"
               colspan="1"
               data-testid="table__th--1"
               role="columnheader"
@@ -418,7 +418,7 @@ exports[`Unconfirmed transaction table > should not render in md 1`] = `
               </div>
             </th>
             <th
-              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
+              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black first:rounded-tl-xl last:rounded-tr-xl"
               colspan="1"
               data-testid="table__th--2"
               role="columnheader"
@@ -469,12 +469,12 @@ exports[`Unconfirmed transaction table > should not render in md 1`] = `
           role="rowgroup"
         >
           <tr
-            class=" css-1x4z4cy"
+            class="group css-16ynu5g"
             data-testid="TableRow"
           >
             <td>
               <div
-                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l space-x-3 text-theme-secondary-500 whitespace-nowrap"
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 space-x-3 text-theme-secondary-500 whitespace-nowrap"
               >
                 <span
                   data-testid="TimeAgo"
@@ -485,7 +485,7 @@ exports[`Unconfirmed transaction table > should not render in md 1`] = `
             </td>
             <td>
               <div
-                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 space-x-4"
               >
                 <div
                   class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-1i0wxh3"
@@ -530,7 +530,7 @@ exports[`Unconfirmed transaction table > should not render in md 1`] = `
             </td>
             <td>
               <div
-                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end"
               >
                 <div
                   class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
@@ -552,12 +552,12 @@ exports[`Unconfirmed transaction table > should not render in md 1`] = `
             </td>
           </tr>
           <tr
-            class=" css-1x4z4cy"
+            class="group css-16ynu5g"
             data-testid="TableRow"
           >
             <td>
               <div
-                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l space-x-3 text-theme-secondary-500 whitespace-nowrap"
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 space-x-3 text-theme-secondary-500 whitespace-nowrap"
               >
                 <span
                   data-testid="TimeAgo"
@@ -568,7 +568,7 @@ exports[`Unconfirmed transaction table > should not render in md 1`] = `
             </td>
             <td>
               <div
-                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 space-x-4"
               >
                 <span
                   class="flex h-5 w-5 items-center justify-center text-theme-text dark:text-theme-secondary-600"
@@ -646,7 +646,7 @@ exports[`Unconfirmed transaction table > should not render in md 1`] = `
             </td>
             <td>
               <div
-                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end"
               >
                 <div
                   class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
@@ -692,7 +692,7 @@ exports[`Unconfirmed transaction table > should not render in sm 1`] = `
           role="rowgroup"
         >
           <tr
-            class=" css-1x4z4cy"
+            class="group css-16ynu5g"
             data-testid="TableRow"
           >
             <td
@@ -797,7 +797,7 @@ exports[`Unconfirmed transaction table > should not render in sm 1`] = `
             </td>
           </tr>
           <tr
-            class=" css-1x4z4cy"
+            class="group css-16ynu5g"
             data-testid="TableRow"
           >
             <td
@@ -960,7 +960,7 @@ exports[`Unconfirmed transaction table > should not render in xl 1`] = `
             role="row"
           >
             <th
-              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
+              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black first:rounded-tl-xl last:rounded-tr-xl"
               colspan="1"
               data-testid="table__th--0"
               role="columnheader"
@@ -1006,7 +1006,7 @@ exports[`Unconfirmed transaction table > should not render in xl 1`] = `
               </div>
             </th>
             <th
-              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl w-96 min-w-96"
+              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black first:rounded-tl-xl last:rounded-tr-xl w-96 min-w-96"
               colspan="1"
               data-testid="table__th--1"
               role="columnheader"
@@ -1022,7 +1022,7 @@ exports[`Unconfirmed transaction table > should not render in xl 1`] = `
               </div>
             </th>
             <th
-              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
+              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black first:rounded-tl-xl last:rounded-tr-xl"
               colspan="1"
               data-testid="table__th--2"
               role="columnheader"
@@ -1073,12 +1073,12 @@ exports[`Unconfirmed transaction table > should not render in xl 1`] = `
           role="rowgroup"
         >
           <tr
-            class=" css-1x4z4cy"
+            class="group css-16ynu5g"
             data-testid="TableRow"
           >
             <td>
               <div
-                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l space-x-3 text-theme-secondary-500 whitespace-nowrap"
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 space-x-3 text-theme-secondary-500 whitespace-nowrap"
               >
                 <span
                   data-testid="TimeAgo"
@@ -1089,7 +1089,7 @@ exports[`Unconfirmed transaction table > should not render in xl 1`] = `
             </td>
             <td>
               <div
-                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 space-x-4"
               >
                 <div
                   class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-1i0wxh3"
@@ -1134,7 +1134,7 @@ exports[`Unconfirmed transaction table > should not render in xl 1`] = `
             </td>
             <td>
               <div
-                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end"
               >
                 <div
                   class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
@@ -1156,12 +1156,12 @@ exports[`Unconfirmed transaction table > should not render in xl 1`] = `
             </td>
           </tr>
           <tr
-            class=" css-1x4z4cy"
+            class="group css-16ynu5g"
             data-testid="TableRow"
           >
             <td>
               <div
-                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l space-x-3 text-theme-secondary-500 whitespace-nowrap"
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200 space-x-3 text-theme-secondary-500 whitespace-nowrap"
               >
                 <span
                   data-testid="TimeAgo"
@@ -1172,7 +1172,7 @@ exports[`Unconfirmed transaction table > should not render in xl 1`] = `
             </td>
             <td>
               <div
-                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 space-x-4"
               >
                 <span
                   class="flex h-5 w-5 items-center justify-center text-theme-text dark:text-theme-secondary-600"
@@ -1250,7 +1250,7 @@ exports[`Unconfirmed transaction table > should not render in xl 1`] = `
             </td>
             <td>
               <div
-                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end"
               >
                 <div
                   class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
@@ -1296,7 +1296,7 @@ exports[`Unconfirmed transaction table > should not render in xs 1`] = `
           role="rowgroup"
         >
           <tr
-            class=" css-1x4z4cy"
+            class="group css-16ynu5g"
             data-testid="TableRow"
           >
             <td
@@ -1401,7 +1401,7 @@ exports[`Unconfirmed transaction table > should not render in xs 1`] = `
             </td>
           </tr>
           <tr
-            class=" css-1x4z4cy"
+            class="group css-16ynu5g"
             data-testid="TableRow"
           >
             <td

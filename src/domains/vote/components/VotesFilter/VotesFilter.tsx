@@ -24,9 +24,9 @@ export const VotesFilter = ({
 				variant="votesFilter"
 				placement="bottom-end"
 				toggleContent={
-					<ControlButton isChanged={selectedOption !== "all"}>
+					<ControlButton isChanged={selectedOption !== "all"} noBorder>
 						<div className="flex h-5 w-5 items-center justify-center">
-							<Icon name="SlidersVertical" size="lg" />
+							<Icon name="Funnel" size="lg" />
 						</div>
 					</ControlButton>
 				}

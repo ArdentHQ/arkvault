@@ -45,7 +45,7 @@ exports[`UnlockTokensSelect > should render 1`] = `
               role="row"
             >
               <th
-                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
+                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black first:rounded-tl-xl last:rounded-tr-xl"
                 colspan="1"
                 data-testid="table__th--0"
                 role="columnheader"
@@ -91,7 +91,7 @@ exports[`UnlockTokensSelect > should render 1`] = `
                 </div>
               </th>
               <th
-                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
+                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black first:rounded-tl-xl last:rounded-tr-xl"
                 colspan="1"
                 data-testid="table__th--1"
                 role="columnheader"
@@ -137,7 +137,7 @@ exports[`UnlockTokensSelect > should render 1`] = `
                 </div>
               </th>
               <th
-                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
+                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black first:rounded-tl-xl last:rounded-tr-xl"
                 colspan="1"
                 data-testid="table__th--2"
                 role="columnheader"
@@ -167,12 +167,12 @@ exports[`UnlockTokensSelect > should render 1`] = `
             role="rowgroup"
           >
             <tr
-              class=" css-1x4z4cy"
+              class="group css-16ynu5g"
               data-testid="TableRow"
             >
               <td>
                 <div
-                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l"
+                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200"
                 >
                   <span
                     class="whitespace-nowrap font-bold text-theme-secondary-900 dark:text-theme-secondary-200"
@@ -184,7 +184,7 @@ exports[`UnlockTokensSelect > should render 1`] = `
               </td>
               <td>
                 <div
-                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11"
+                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200"
                 >
                   <time
                     class="text-theme-secondary-700"
@@ -196,7 +196,7 @@ exports[`UnlockTokensSelect > should render 1`] = `
               </td>
               <td>
                 <div
-                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
+                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end"
                 >
                   <div
                     class="flex items-center"
@@ -251,12 +251,12 @@ exports[`UnlockTokensSelect > should render 1`] = `
               </td>
             </tr>
             <tr
-              class=" css-1x4z4cy"
+              class="group css-16ynu5g"
               data-testid="TableRow"
             >
               <td>
                 <div
-                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l"
+                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200"
                 >
                   <span
                     class="whitespace-nowrap font-bold text-theme-secondary-900 dark:text-theme-secondary-200"
@@ -268,7 +268,7 @@ exports[`UnlockTokensSelect > should render 1`] = `
               </td>
               <td>
                 <div
-                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11"
+                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200"
                 >
                   <time
                     class="text-theme-secondary-700"
@@ -280,7 +280,7 @@ exports[`UnlockTokensSelect > should render 1`] = `
               </td>
               <td>
                 <div
-                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
+                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end"
                 >
                   <div
                     class="flex items-center"
@@ -335,12 +335,12 @@ exports[`UnlockTokensSelect > should render 1`] = `
               </td>
             </tr>
             <tr
-              class=" css-1x4z4cy"
+              class="group css-16ynu5g"
               data-testid="TableRow"
             >
               <td>
                 <div
-                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l"
+                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200"
                 >
                   <span
                     class="whitespace-nowrap font-bold text-theme-secondary-900 dark:text-theme-secondary-200"
@@ -352,7 +352,7 @@ exports[`UnlockTokensSelect > should render 1`] = `
               </td>
               <td>
                 <div
-                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11"
+                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200"
                 >
                   <time
                     class="text-theme-secondary-700"
@@ -364,7 +364,7 @@ exports[`UnlockTokensSelect > should render 1`] = `
               </td>
               <td>
                 <div
-                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
+                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end"
                 >
                   <div
                     class="flex items-center"
@@ -416,12 +416,12 @@ exports[`UnlockTokensSelect > should render 1`] = `
               </td>
             </tr>
             <tr
-              class=" css-1x4z4cy"
+              class="group css-16ynu5g"
               data-testid="TableRow"
             >
               <td>
                 <div
-                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l"
+                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-black group-hover:bg-theme-secondary-200"
                 >
                   <span
                     class="whitespace-nowrap font-bold text-theme-secondary-900 dark:text-theme-secondary-200"
@@ -433,7 +433,7 @@ exports[`UnlockTokensSelect > should render 1`] = `
               </td>
               <td>
                 <div
-                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11"
+                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200"
                 >
                   <time
                     class="text-theme-secondary-700"
@@ -445,7 +445,7 @@ exports[`UnlockTokensSelect > should render 1`] = `
               </td>
               <td>
                 <div
-                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
+                  class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end"
                 >
                   <div
                     class="flex items-center"
@@ -513,8 +513,8 @@ exports[`UnlockTokensSelect > should render 1`] = `
           Total Amount
         </p>
         <div
-          class="flex h-full items-center justify-center rounded px-1.5 css-1vn5kd9"
-          color="neutral"
+          class="flex h-full items-center justify-center rounded px-1.5 css-1sycv4s"
+          color="secondary"
           data-testid="AmountLabel__wrapper"
         >
           <div
@@ -539,8 +539,8 @@ exports[`UnlockTokensSelect > should render 1`] = `
           Transaction Fee
         </p>
         <div
-          class="flex h-full items-center justify-center rounded px-1.5 css-1vn5kd9"
-          color="neutral"
+          class="flex h-full items-center justify-center rounded px-1.5 css-1sycv4s"
+          color="secondary"
           data-testid="AmountLabel__wrapper"
         >
           <div
@@ -561,7 +561,7 @@ exports[`UnlockTokensSelect > should render 1`] = `
     class="flex justify-end space-x-3"
   >
     <button
-      class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-700"
+      class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 green:hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-500"
       type="button"
     >
       <div
@@ -571,7 +571,7 @@ exports[`UnlockTokensSelect > should render 1`] = `
       </div>
     </button>
     <button
-      class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700"
+      class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700"
       disabled=""
       type="button"
     >
@@ -627,7 +627,7 @@ exports[`UnlockTokensSelect > should render empty 1`] = `
     class="flex justify-end space-x-3"
   >
     <button
-      class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-700"
+      class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 green:hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-500"
       type="button"
     >
       <div
@@ -637,7 +637,7 @@ exports[`UnlockTokensSelect > should render empty 1`] = `
       </div>
     </button>
     <button
-      class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700"
+      class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700"
       disabled=""
       type="button"
     >

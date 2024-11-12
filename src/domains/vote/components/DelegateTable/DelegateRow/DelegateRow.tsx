@@ -1,17 +1,17 @@
-import { Contracts } from "@ardenthq/sdk-profiles";
-import cn from "classnames";
 import React, { useMemo } from "react";
-import { useTranslation } from "react-i18next";
+import { TableCell, TableRow } from "@/app/components/Table";
 
+import { Contracts } from "@ardenthq/sdk-profiles";
 import { DelegateRowSkeleton } from "./DelegateRowSkeleton";
 import { DelegateVoteAmount } from "./DelegateVoteAmount";
 import { DelegateVoteButton } from "./DelegateVoteButton";
 import { Icon } from "@/app/components/Icon";
 import { Link } from "@/app/components/Link";
-import { TableCell, TableRow } from "@/app/components/Table";
-import { VoteDelegateProperties } from "@/domains/vote/components/DelegateTable/DelegateTable.contracts";
-import { delegateExistsInVotes } from "@/domains/vote/components/DelegateTable/DelegateTable.helpers";
 import { Tooltip } from "@/app/components/Tooltip";
+import { VoteDelegateProperties } from "@/domains/vote/components/DelegateTable/DelegateTable.contracts";
+import cn from "classnames";
+import { delegateExistsInVotes } from "@/domains/vote/components/DelegateTable/DelegateTable.helpers";
+import { useTranslation } from "react-i18next";
 
 export interface DelegateRowProperties {
 	index: number;
@@ -255,7 +255,7 @@ export const DelegateRow = ({
 			<TableCell
 				variant="start"
 				innerClassName={cn(
-					"ml-3 pl-3 text-sm leading-[17px] font-semibold border-2 border-r-0 border-transparent h-11",
+					"ml-3 pl-3 text-sm leading-[17px] font-semibold border-2 border-r-0 border-transparent h-9 min-h-9 my-0",
 					rowColor,
 				)}
 			>
@@ -264,7 +264,7 @@ export const DelegateRow = ({
 
 			<TableCell
 				innerClassName={cn(
-					"font-semibold border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-11 space-x-3",
+					"font-semibold border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 my-0 space-x-3",
 					rowColor,
 				)}
 			>
@@ -277,7 +277,10 @@ export const DelegateRow = ({
 
 			<TableCell
 				className="hidden sm:table-cell"
-				innerClassName={cn("justify-center border-t-2 border-b-2 border-transparent h-11", rowColor)}
+				innerClassName={cn(
+					"justify-center border-t-2 border-b-2 border-transparent h-9 min-h-9 my-0",
+					rowColor,
+				)}
 			>
 				{isActive ? (
 					<Tooltip content={t("VOTE.DELEGATE_TABLE.TOOLTIP.DELEGATE_IN_FORGING_POSITION")}>
@@ -297,7 +300,7 @@ export const DelegateRow = ({
 			<TableCell
 				className="hidden sm:table-cell"
 				innerClassName={cn(
-					"justify-center border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-11",
+					"justify-center border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-9 min-h-9 !my-0",
 					rowColor,
 				)}
 			>
@@ -305,9 +308,9 @@ export const DelegateRow = ({
 					to={delegate.explorerLink()}
 					tooltip={t("COMMON.OPEN_IN_EXPLORER")}
 					isExternal
-					className="w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700"
+					className="w-24 md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700"
 				>
-					<span className="pr-2">{t("COMMON.VIEW")}</span>
+					<span>{t("COMMON.VIEW")}</span>
 				</Link>
 			</TableCell>
 
@@ -331,7 +334,10 @@ export const DelegateRow = ({
 			<TableCell
 				variant="end"
 				className="w-30 min-w-32"
-				innerClassName={cn("justify-end pr-3 mr-3 border-2 border-l-0 border-transparent", rowColor)}
+				innerClassName={cn(
+					"justify-end pr-3 mr-3 border-2 border-l-0 border-transparent h-9 min-h-9",
+					rowColor,
+				)}
 			>
 				<div className="-mr-0.5 leading-[17px]">{renderButton()}</div>
 			</TableCell>

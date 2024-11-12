@@ -25,7 +25,7 @@ exports[`TransactionExplorerLink > should render a transaction link 1`] = `
             class="overflow-hidden"
           >
             <a
-              class="ring-focus group/inner inline-block flex items-center css-7nwwrh"
+              class="ring-focus group/inner inline-block flex items-center css-167zzsv"
               data-ring-focus-margin="-m-1"
               data-testid="Link"
               href="transaction-link"
@@ -42,10 +42,10 @@ exports[`TransactionExplorerLink > should render a transaction link 1`] = `
                 </span>
               </span>
               <div
-                class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-v0ob3f"
+                class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-1fio4bh"
                 data-testid="Link__external"
-                height="16"
-                width="16"
+                height="12"
+                width="12"
               >
                 <svg
                   id="arrow-external"
@@ -139,7 +139,7 @@ exports[`TransactionExplorerLink > should render a transaction link responsive a
             class="overflow-hidden"
           >
             <a
-              class="ring-focus group/inner inline-block flex items-center css-7nwwrh"
+              class="ring-focus group/inner inline-block flex items-center css-167zzsv"
               data-ring-focus-margin="-m-1"
               data-testid="Link"
               href="transaction-link"
@@ -156,10 +156,10 @@ exports[`TransactionExplorerLink > should render a transaction link responsive a
                 </span>
               </span>
               <div
-                class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-v0ob3f"
+                class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-1fio4bh"
                 data-testid="Link__external"
-                height="16"
-                width="16"
+                height="12"
+                width="12"
               >
                 <svg
                   id="arrow-external"

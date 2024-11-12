@@ -17,7 +17,7 @@ exports[`Appearance Settings > should render appearance settings 1`] = `
         class="flex h-14 items-center justify-center space-x-4"
       >
         <button
-          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 cursor-not-allowed text-theme-secondary-500"
+          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 cursor-not-allowed text-theme-secondary-500"
           data-testid="NavigationBar__buttons__mobile--receive"
           disabled=""
           type="button"
@@ -58,7 +58,7 @@ exports[`Appearance Settings > should render appearance settings 1`] = `
           type="vertical"
         />
         <button
-          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-theme-secondary-700 dark:text-theme-secondary-600"
+          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600"
           data-testid="NavigationBar__buttons__mobile--home"
           type="button"
         >
@@ -95,7 +95,7 @@ exports[`Appearance Settings > should render appearance settings 1`] = `
           type="vertical"
         />
         <button
-          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 cursor-not-allowed text-theme-secondary-500"
+          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 cursor-not-allowed text-theme-secondary-500"
           data-testid="NavigationBar__buttons__mobile--send"
           disabled=""
           type="button"
@@ -302,7 +302,7 @@ exports[`Appearance Settings > should render appearance settings 1`] = `
                   class="group css-c93wvv"
                 >
                   <button
-                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none"
+                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none"
                     data-testid="NavigationBar__buttons--server-status"
                     type="button"
                   >
@@ -353,7 +353,7 @@ exports[`Appearance Settings > should render appearance settings 1`] = `
                   class="group css-c93wvv"
                 >
                   <button
-                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none"
+                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none"
                     data-testid="NavigationBar__buttons--notifications"
                     type="button"
                   >
@@ -411,7 +411,7 @@ exports[`Appearance Settings > should render appearance settings 1`] = `
                   class="css-c93wvv"
                 >
                   <button
-                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700"
+                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700"
                     data-testid="NavigationBar__buttons--receive"
                     disabled=""
                     type="button"
@@ -459,7 +459,7 @@ exports[`Appearance Settings > should render appearance settings 1`] = `
                   class="css-c93wvv"
                 >
                   <button
-                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700"
+                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700"
                     data-testid="NavigationBar__buttons--send"
                     disabled=""
                     type="button"
@@ -992,7 +992,7 @@ exports[`Appearance Settings > should render appearance settings 1`] = `
                               <button
                                 aria-checked="false"
                                 aria-label="Navy"
-                                class="css-1oqtqef"
+                                class="css-1byvqk4"
                                 data-testid="ButtonGroupOption"
                                 role="radio"
                                 type="button"
@@ -1004,7 +1004,7 @@ exports[`Appearance Settings > should render appearance settings 1`] = `
                               <button
                                 aria-checked="true"
                                 aria-label="Green"
-                                class="css-1oqtqef"
+                                class="css-1byvqk4"
                                 data-testid="ButtonGroupOption"
                                 role="radio"
                                 type="button"
@@ -1060,7 +1060,7 @@ exports[`Appearance Settings > should render appearance settings 1`] = `
                               <button
                                 aria-checked="true"
                                 aria-label="light"
-                                class="css-1oqtqef"
+                                class="css-1byvqk4"
                                 data-testid="ButtonGroupOption"
                                 role="radio"
                                 type="button"
@@ -1069,7 +1069,7 @@ exports[`Appearance Settings > should render appearance settings 1`] = `
                                   class="flex items-center px-2"
                                 >
                                   <div
-                                    class="dark:text-theme-secondary-600 css-1i4b0eq"
+                                    class="css-1i4b0eq"
                                     height="20"
                                     width="20"
                                   >
@@ -1104,7 +1104,7 @@ exports[`Appearance Settings > should render appearance settings 1`] = `
                               <button
                                 aria-checked="false"
                                 aria-label="dark"
-                                class="css-1oqtqef"
+                                class="css-1byvqk4"
                                 data-testid="ButtonGroupOption"
                                 role="radio"
                                 type="button"
@@ -1113,7 +1113,7 @@ exports[`Appearance Settings > should render appearance settings 1`] = `
                                   class="flex items-center px-2"
                                 >
                                   <div
-                                    class="dark:text-theme-secondary-600 css-1i4b0eq"
+                                    class="css-1i4b0eq"
                                     height="20"
                                     width="20"
                                   >
@@ -1254,7 +1254,7 @@ exports[`Appearance Settings > should render appearance settings 1`] = `
                     class="css-145pihz"
                   >
                     <button
-                      class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700"
+                      class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700"
                       data-testid="AppearanceFooterButtons__save"
                       disabled=""
                       type="submit"

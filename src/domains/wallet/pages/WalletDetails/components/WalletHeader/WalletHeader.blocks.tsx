@@ -20,7 +20,7 @@ import { Clipboard } from "@/app/components/Clipboard";
 import { isLedgerWalletCompatible } from "@/utils/wallet-utils";
 
 const WalletHeaderButton = styled.button`
-	${tw`inline-flex items-center justify-center w-4 h-4 transition-all duration-100 ease-linear rounded outline-none focus:(outline-none ring-2 ring-theme-primary-400) text-theme-secondary-text hover:text-theme-secondary-500 disabled:(cursor-not-allowed text-theme-secondary-800) p-0`}
+	${tw`inline-flex items-center justify-center w-4 h-4 transition-all duration-100 ease-linear rounded outline-none focus:(outline-none ring-2 ring-theme-primary-400) text-theme-secondary-700 dark:text-theme-secondary-600 hover:text-theme-secondary-200 disabled:(cursor-not-allowed text-theme-secondary-800) p-0`}
 `;
 
 const isUnlockBalanceButtonVisible = (wallet: Contracts.IReadWriteWallet) => {
@@ -86,7 +86,7 @@ export const WalletAddress: VFC<WalletAddressProperties> = ({ profile, wallet })
 							tooltip={t("WALLETS.PAGE_WALLET_DETAILS.COPY_ADDRESS")}
 							tooltipDarkTheme
 						>
-							<Icon name="Copy" size="md" className="hover:text-theme-secondary-500" />
+							<Icon name="Copy" size="md" className="hover:text-white" />
 						</Clipboard>
 
 						{!!wallet.publicKey() && (
@@ -96,7 +96,7 @@ export const WalletAddress: VFC<WalletAddressProperties> = ({ profile, wallet })
 								tooltip={t("WALLETS.PAGE_WALLET_DETAILS.COPY_PUBLIC_KEY")}
 								tooltipDarkTheme
 							>
-								<Icon name="CopyKey" size="md" className="hover:text-theme-secondary-500" />
+								<Icon name="CopyKey" size="md" className="hover:text-white" />
 							</Clipboard>
 						)}
 					</div>
@@ -244,7 +244,7 @@ export const WalletActions: VFC<WalletActionsProperties> = ({
 					>
 						<Icon
 							name="ArrowRotateLeft"
-							className={cn({ "animate-spin": isSyncing })}
+							className={cn("hover:text-theme-secondary-200", { "animate-spin": isSyncing })}
 							style={{ animationDirection: "reverse" }}
 						/>
 					</WalletHeaderButton>
@@ -264,8 +264,12 @@ export const WalletActions: VFC<WalletActionsProperties> = ({
 						onClick={handleToggleStar}
 					>
 						<Icon
-							className={cn({ "text-theme-warning-400": wallet.isStarred() })}
-							name={wallet.isStarred() ? "StarFilled" : "Star"}
+							className={cn("transition-all duration-300 ease-in-out", {
+								"fill-theme-warning-400 stroke-theme-warning-400": wallet.isStarred(),
+								"fill-transparent stroke-theme-secondary-700 hover:fill-theme-warning-200 hover:stroke-theme-warning-400 dark:stroke-theme-secondary-600 dark:hover:stroke-theme-warning-400":
+									!wallet.isStarred(),
+							})}
+							name={"StarFilled"}
 						/>
 					</WalletHeaderButton>
 				</Tooltip>
@@ -280,7 +284,7 @@ export const WalletActions: VFC<WalletActionsProperties> = ({
 							!wallet.hasSyncedWithNetwork() ||
 							!isLedgerWalletCompatible(wallet)
 						}
-						className="my-auto ml-3"
+						className="my-auto ml-3 hover:!bg-theme-primary-500"
 						theme="dark"
 						onClick={handleSend}
 					>

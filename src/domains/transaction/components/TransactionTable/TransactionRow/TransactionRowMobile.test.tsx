@@ -106,7 +106,7 @@ describe.each(["xs", "sm"])("TransactionRowMobile", (breakpoint) => {
 		render(
 			<table>
 				<tbody>
-					<TransactionRowMobile transaction={{ ...fixture, timestamp: undefined } as any} profile={profile} />
+					<TransactionRowMobile transaction={{ ...fixture, timestamp: () => {} } as any} profile={profile} />
 				</tbody>
 			</table>,
 		);

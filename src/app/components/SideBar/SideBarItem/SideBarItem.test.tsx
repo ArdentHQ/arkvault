@@ -27,13 +27,13 @@ describe("SideBarItem", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it("should fire click event", () => {
+	it("should fire click event", async () => {
 		const handleActiveItem = vi.fn();
 
 		render(<SideBarItem {...item} handleActiveItem={handleActiveItem} />);
 		const menuItem = screen.getByTestId("side-menu__item--plugin");
 
-		userEvent.click(menuItem);
+		await userEvent.click(menuItem);
 
 		expect(handleActiveItem).toHaveBeenCalledWith("plugin");
 	});

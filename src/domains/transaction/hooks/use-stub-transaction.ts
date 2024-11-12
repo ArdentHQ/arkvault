@@ -39,3 +39,52 @@ export const useIpfsStubTransaction = ({
 		ipfsStubTransaction,
 	};
 };
+
+export const useMusigRegistrationStubTransaction = ({
+	fee,
+	wallet,
+	min,
+	publicKeys = [],
+}: {
+	fee: number;
+	min: number;
+	publicKeys: string[];
+	wallet: Contracts.IReadWriteWallet;
+}) => {
+	const [musigRegistrationStubTransaction, setMusigRegistrationStubTransaction] = useState<DTO.RawTransactionData>();
+
+	useEffect(() => {
+		const createStub = async ({ wallet }: { wallet: Contracts.IReadWriteWallet }) => {
+			try {
+				const stub = await wallet
+					.coin()
+					.transaction()
+					.multiSignature({
+						data: {
+							min,
+							publicKeys,
+							senderPublicKey: wallet.publicKey(),
+						},
+						fee,
+						nonce: "1",
+						signatory: await wallet.coin().signatory().multiSignature({
+							min,
+							publicKeys,
+						}),
+					});
+
+				setMusigRegistrationStubTransaction(stub);
+			} catch {
+				//
+			}
+		};
+
+		if (!musigRegistrationStubTransaction) {
+			createStub({ wallet });
+		}
+	}, [fee, wallet, publicKeys, min]);
+
+	return {
+		musigRegistrationStubTransaction,
+	};
+};

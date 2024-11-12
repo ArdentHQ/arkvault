@@ -37,7 +37,7 @@ exports[`MultiSignature Registration Form > should render form step 1`] = `
           class="space-y-4 pt-5"
         >
           <fieldset
-            class="flex min-w-0 flex-col css-1bcidjh"
+            class="flex min-w-0 flex-col css-ea0il3"
           >
             <div
               data-testid="DetailWrapper"
@@ -98,7 +98,7 @@ exports[`MultiSignature Registration Form > should render form step 1`] = `
                       type="button"
                     >
                       <div
-                        class="text-theme-primary-400 dark:text-theme-secondary-700 dark:hover:text-theme-secondary-500 css-v0ob3f"
+                        class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white css-v0ob3f"
                         height="16"
                         width="16"
                       >
@@ -140,7 +140,7 @@ exports[`MultiSignature Registration Form > should render form step 1`] = `
                 class="css-1mwq138"
               >
                 <fieldset
-                  class="flex min-w-0 flex-col css-1bcidjh"
+                  class="flex min-w-0 flex-col css-ea0il3"
                 >
                   <label
                     class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
@@ -220,7 +220,7 @@ exports[`MultiSignature Registration Form > should render form step 1`] = `
                                     class=""
                                   >
                                     <div
-                                      class="flex items-center cursor-pointer"
+                                      class="flex items-center cursor-pointer rounded bg-transparent p-1 text-theme-secondary-700 transition-colors hover:bg-theme-primary-100 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-white"
                                       data-testid="SelectRecipient__select-recipient"
                                     >
                                       <div
@@ -271,7 +271,7 @@ exports[`MultiSignature Registration Form > should render form step 1`] = `
                   </div>
                 </fieldset>
                 <button
-                  class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 my-4 w-full"
+                  class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 my-4 w-full"
                   disabled=""
                   type="button"
                 >
@@ -304,7 +304,7 @@ exports[`MultiSignature Registration Form > should render form step 1`] = `
                             class="sm:hidden"
                           >
                             <button
-                              class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 p-0 text-theme-secondary-700 dark:text-theme-secondary-500"
+                              class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 space-x-0 p-0 text-theme-secondary-700 dark:text-theme-secondary-500"
                               data-testid="AddParticipantItem--mobile-deleteButton"
                               disabled=""
                               type="button"
@@ -377,7 +377,7 @@ exports[`MultiSignature Registration Form > should render form step 1`] = `
                         class="hidden sm:block"
                       >
                         <button
-                          class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 p-3.5"
+                          class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 p-3.5"
                           data-testid="AddParticipantItem--deleteButton"
                           disabled=""
                           type="button"
@@ -421,7 +421,7 @@ exports[`MultiSignature Registration Form > should render form step 1`] = `
             </div>
           </div>
           <fieldset
-            class="flex min-w-0 flex-col css-1bcidjh"
+            class="flex min-w-0 flex-col css-ea0il3"
           >
             <label
               class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
@@ -464,7 +464,7 @@ exports[`MultiSignature Registration Form > should render form step 1`] = `
             </div>
           </fieldset>
           <fieldset
-            class="flex min-w-0 flex-col css-1bcidjh"
+            class="flex min-w-0 flex-col css-ea0il3"
           >
             <label
               class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
@@ -617,7 +617,7 @@ exports[`MultiSignature Registration Form > should render review step 1`] = `
           class="-mx-3 space-y-4 pt-5 sm:mx-0"
         >
           <fieldset
-            class="flex min-w-0 flex-col css-1bcidjh"
+            class="flex min-w-0 flex-col css-ea0il3"
           >
             <div
               data-testid="DetailWrapper"
@@ -678,7 +678,7 @@ exports[`MultiSignature Registration Form > should render review step 1`] = `
                       type="button"
                     >
                       <div
-                        class="text-theme-primary-400 dark:text-theme-secondary-700 dark:hover:text-theme-secondary-500 css-v0ob3f"
+                        class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white css-v0ob3f"
                         height="16"
                         width="16"
                       >
@@ -712,202 +712,6 @@ exports[`MultiSignature Registration Form > should render review step 1`] = `
               </div>
             </div>
           </fieldset>
-          <div
-            data-testid="DetailWrapper"
-          >
-            <div
-              class="border-l-2 border-x-theme-primary-400 bg-theme-secondary-100 px-3 py-2 dark:bg-black sm:border-none sm:bg-transparent sm:p-0 dark:sm:bg-transparent"
-              data-testid="DetailLabel"
-            >
-              <div
-                class="no-ligatures min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-md leading-5"
-                data-testid="DetailLabelText"
-              >
-                Transaction Type
-              </div>
-            </div>
-            <div
-              class="w-full break-words rounded-lg border-theme-secondary-300 p-3 dark:border-theme-secondary-800 sm:border sm:px-6 sm:py-5 [.condensed_&]:sm:py-4 mt-0 sm:mt-2"
-            >
-              <div
-                class="space-y-3 sm:space-y-0"
-                data-testid="MultisignatureDetail"
-              >
-                <div
-                  class="flex w-full items-center justify-between sm:justify-start"
-                >
-                  <div
-                    class="no-ligatures flex-shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:text-base sm:leading-5 w-auto sm:min-w-24"
-                  >
-                    Category
-                  </div>
-                  <div
-                    class="flex items-center rounded bg-theme-secondary-200 px-1 py-[3px] dark:border dark:border-theme-secondary-800 dark:bg-transparent"
-                  >
-                    <span
-                      class="text-[12px] font-semibold leading-[15px] text-theme-secondary-700 dark:text-theme-secondary-500"
-                    >
-                      Multisignature
-                    </span>
-                  </div>
-                </div>
-                <div
-                  class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3 [.condensed_&]:leading-3"
-                >
-                  <div
-                    class="w-full [.condensed_&]:hidden"
-                  >
-                    <div
-                      class="border-theme-secondary-300 dark:border-theme-secondary-800 css-ppmbkz"
-                      type="horizontal"
-                    />
-                  </div>
-                </div>
-                <div
-                  class="flex w-full items-center justify-between sm:justify-start"
-                >
-                  <div
-                    class="no-ligatures flex-shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:text-base sm:leading-5 w-auto sm:min-w-24"
-                  >
-                    Signatures
-                  </div>
-                  <div
-                    class="no-ligatures truncate text-sm font-semibold leading-[17px] text-theme-secondary-900 dark:text-theme-secondary-200 sm:text-base sm:leading-5"
-                  >
-                    2 of 2
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div
-            data-testid="DetailWrapper"
-          >
-            <div
-              class="border-l-2 border-x-theme-primary-400 bg-theme-secondary-100 px-3 py-2 dark:bg-black sm:border-none sm:bg-transparent sm:p-0 dark:sm:bg-transparent"
-              data-testid="DetailLabel"
-            >
-              <div
-                class="no-ligatures min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-md leading-5"
-                data-testid="DetailLabelText"
-              >
-                Participants
-              </div>
-            </div>
-            <div
-              class="mt-0 overflow-hidden rounded-lg border-theme-secondary-300 dark:border-theme-secondary-800 sm:mt-2 sm:border"
-            >
-              <div
-                class="hidden bg-theme-secondary-100 px-6 py-3 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:bg-theme-secondary-800 dark:text-theme-secondary-500 sm:block"
-              >
-                Address
-              </div>
-              <div
-                class="mb-2 mt-3 px-3 sm:px-6"
-              >
-                <div
-                  class="mb-3 overflow-hidden rounded border border-theme-secondary-300 bg-theme-secondary-100 px-4 py-3 last:mb-0 dark:border-theme-secondary-800 dark:bg-black sm:mb-0 sm:rounded-none sm:border-x-0 sm:border-t-0 sm:border-dashed sm:bg-transparent sm:px-0 sm:last:border-none dark:sm:bg-transparent"
-                >
-                  <div
-                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
-                  >
-                    <span
-                      class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-900 dark:text-theme-secondary-200 text-sm leading-[17px] font-semibold text-base"
-                      data-testid="Address__address"
-                    >
-                      D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                    </span>
-                    <button
-                      class="ring-focus relative focus:outline-none"
-                      data-ring-focus-margin="-m-1"
-                      data-testid="clipboard-icon__wrapper"
-                      type="button"
-                    >
-                      <div
-                        class="text-theme-primary-400 dark:text-theme-secondary-700 dark:hover:text-theme-secondary-500 css-v0ob3f"
-                        height="16"
-                        width="16"
-                      >
-                        <svg
-                          id="copy"
-                          viewBox="0 0 20 20"
-                          x="0"
-                          xml:space="preserve"
-                          xmlns="http://www.w3.org/2000/svg"
-                          y="0"
-                        >
-                          <g
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                          >
-                            <path
-                              d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
-                            />
-                            <path
-                              d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                            />
-                          </g>
-                        </svg>
-                      </div>
-                    </button>
-                  </div>
-                </div>
-                <div
-                  class="mb-3 overflow-hidden rounded border border-theme-secondary-300 bg-theme-secondary-100 px-4 py-3 last:mb-0 dark:border-theme-secondary-800 dark:bg-black sm:mb-0 sm:rounded-none sm:border-x-0 sm:border-t-0 sm:border-dashed sm:bg-transparent sm:px-0 sm:last:border-none dark:sm:bg-transparent"
-                >
-                  <div
-                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
-                  >
-                    <span
-                      class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-900 dark:text-theme-secondary-200 text-sm leading-[17px] font-semibold text-base"
-                      data-testid="Address__address"
-                    >
-                      D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
-                    </span>
-                    <button
-                      class="ring-focus relative focus:outline-none"
-                      data-ring-focus-margin="-m-1"
-                      data-testid="clipboard-icon__wrapper"
-                      type="button"
-                    >
-                      <div
-                        class="text-theme-primary-400 dark:text-theme-secondary-700 dark:hover:text-theme-secondary-500 css-v0ob3f"
-                        height="16"
-                        width="16"
-                      >
-                        <svg
-                          id="copy"
-                          viewBox="0 0 20 20"
-                          x="0"
-                          xml:space="preserve"
-                          xmlns="http://www.w3.org/2000/svg"
-                          y="0"
-                        >
-                          <g
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                          >
-                            <path
-                              d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
-                            />
-                            <path
-                              d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                            />
-                          </g>
-                        </svg>
-                      </div>
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
           <div
             data-testid="DetailWrapper"
           >

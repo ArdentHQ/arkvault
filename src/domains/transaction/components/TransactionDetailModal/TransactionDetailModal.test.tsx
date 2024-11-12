@@ -289,7 +289,7 @@ describe("TransactionDetailModal", () => {
 						isVoteCombination: () => true,
 						type: () => "swap",
 						unvotes: () => TransactionFixture.unvotes(),
-						votes: () => [],
+						votes: () => TransactionFixture.votes(),
 						wallet: () => wallet,
 					}}
 				/>

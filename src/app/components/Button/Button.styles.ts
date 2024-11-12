@@ -1,15 +1,11 @@
 import { ButtonVariant, Size, Theme } from "@/types";
 
-const getBaseStyle = (roundedClassName?: string) => {
+const getBaseStyle = () => {
 	const baseStyle: string[] = [
-		`relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none`,
+		`relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded`,
 		`focus:outline-none focus:ring-2 focus:ring-theme-primary-400`,
 		`disabled:cursor-not-allowed`,
 	];
-
-	if (!roundedClassName) {
-		baseStyle.push(`rounded`);
-	}
 
 	return baseStyle;
 };
@@ -52,7 +48,7 @@ const getVariant = (variant?: ButtonVariant, theme?: Theme, disabled?: boolean, 
 		danger: () => `
 			bg-theme-danger-100 text-theme-danger-400
 			dark:bg-theme-danger-400 dark:text-white
-			hover:bg-theme-danger-400 hover:text-white dark:hover:bg-theme-danger-500
+			hover:bg-theme-danger-400 hover:text-white dark:hover:bg-theme-danger-300
 			focus:ring-theme-danger-300
 		`,
 		default: () => `border-none`,
@@ -62,7 +58,8 @@ const getVariant = (variant?: ButtonVariant, theme?: Theme, disabled?: boolean, 
 			hover:bg-theme-info-700 hover:text-white
 			focus:ring-theme-info-300
 		`,
-		primary: () => `text-white bg-theme-primary-600 hover:bg-theme-primary-700`,
+		primary: () =>
+			`text-white bg-theme-primary-600 green:hover:bg-theme-primary-700 navy:hover:bg-theme-primary-800 dark:hover:bg-theme-primary-500`,
 		reverse: () => `
 					bg-theme-primary-reverse-100 text-theme-primary-reverse-600
 					dark:bg-theme-primary-reverse-600 dark:text-white
@@ -71,11 +68,11 @@ const getVariant = (variant?: ButtonVariant, theme?: Theme, disabled?: boolean, 
 				`,
 		secondary: () => `dark:bg-theme-secondary-800 dark:text-theme-secondary-200
 					bg-theme-primary-100 text-theme-primary-600
-					hover:bg-theme-primary-700 hover:text-white
-					dark:hover:bg-theme-primary-700
+					hover:bg-theme-primary-800 green:hover:bg-theme-primary-700 hover:text-white
+					dark:hover:bg-theme-primary-500
 				`,
 		"secondary-icon": () => `text-theme-secondary-700 bg-transparent
-		dark:text-theme-secondary-600 dark:bg-transparent`,
+		dark:text-theme-secondary-600 dark:bg-transparent hover:text-theme-primary-700 hover:bg-theme-primary-200 dark:hover:bg-theme-secondary-800 dark:hover:text-white`,
 		warning: () => `
 			bg-theme-warning-100 text-theme-warning-700
 			dark:bg-theme-warning-600 dark:text-white
@@ -88,11 +85,7 @@ const getVariant = (variant?: ButtonVariant, theme?: Theme, disabled?: boolean, 
 	return [(variants[variant as keyof typeof variants] || variants.default)()];
 };
 
-const getSize = (size?: Size, sizeClassName?: string) => {
-	if (sizeClassName) {
-		return;
-	}
-
+const getSize = (size?: Size) => {
 	const sizes = {
 		default: () => `px-5 py-3 space-x-3 text-base`,
 		icon: () => `p-3`,
@@ -109,15 +102,11 @@ export const getStyles = ({
 	theme,
 	size,
 	disabled,
-	roundedClassName,
-	sizeClassName,
 	isCompact,
 }: {
 	variant?: ButtonVariant;
 	theme?: Theme;
 	size?: Size;
-	sizeClassName?: string;
 	disabled?: boolean;
-	roundedClassName?: string;
 	isCompact?: boolean;
-}) => [getSize(size, sizeClassName), getBaseStyle(roundedClassName), getVariant(variant, theme, disabled, isCompact)];
+}) => [getSize(size), getBaseStyle(), getVariant(variant, theme, disabled, isCompact)];

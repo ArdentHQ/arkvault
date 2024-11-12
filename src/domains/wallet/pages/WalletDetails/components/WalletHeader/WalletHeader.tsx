@@ -46,9 +46,9 @@ export const WalletHeader: React.VFC<WalletHeaderProperties> = ({
 								<Button
 									variant="transparent"
 									size="icon"
-									className="bg-theme-secondary-800 text-white hover:bg-theme-primary-700"
+									className="bg-theme-secondary-800 p-[14px] text-theme-secondary-200 hover:bg-theme-primary-500 hover:text-white"
 								>
-									<Icon name="EllipsisVertical" size="lg" />
+									<Icon name="EllipsisVerticalFilled" size="md" />
 								</Button>
 							}
 							onSelect={handleSelectOption}
