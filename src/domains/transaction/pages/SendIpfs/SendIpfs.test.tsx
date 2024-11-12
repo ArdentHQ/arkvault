@@ -59,6 +59,7 @@ const ipfsTransactionFixture = {
 	isVote: () => false,
 	isVoteCombination: () => false,
 	memo: () => null,
+	nonce: () => BigNumber.make(1),
 	recipient: () => ipfsFixture.data.recipient,
 	sender: () => ipfsFixture.data.sender,
 	timestamp: () => DateTime.make(),

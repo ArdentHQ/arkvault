@@ -89,6 +89,7 @@ const createUnvoteTransactionMock = (wallet: Contracts.IReadWriteWallet) =>
 		isVote: () => false,
 		isVoteCombination: () => false,
 		memo: () => null,
+		nonce: () => BigNumber.make(1),
 		recipient: () => unvoteFixture.data.recipient,
 		sender: () => unvoteFixture.data.sender,
 		timestamp: () => DateTime.make(),
