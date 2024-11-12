@@ -67,7 +67,7 @@ exports[`ExchangeTransactionsRow > should render (Expired) 1`] = `
           class="lg:hidden"
         >
           <div
-            class="px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-end flex flex-col gap-1.5 my-1 py-2 xl:my-0"
+            class="px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-end flex flex-col gap-1.5 my-1 py-2.5 lg:py-2 xl:my-0"
           >
             <div
               class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
@@ -315,7 +315,7 @@ exports[`ExchangeTransactionsRow > should render (Failed) 1`] = `
           class="lg:hidden"
         >
           <div
-            class="px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-end flex flex-col gap-1.5 my-1 py-2 xl:my-0"
+            class="px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-end flex flex-col gap-1.5 my-1 py-2.5 lg:py-2 xl:my-0"
           >
             <div
               class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
@@ -554,7 +554,7 @@ exports[`ExchangeTransactionsRow > should render (Finished) 1`] = `
           class="lg:hidden"
         >
           <div
-            class="px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-end flex flex-col gap-1.5 my-1 py-2 xl:my-0"
+            class="px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-end flex flex-col gap-1.5 my-1 py-2.5 lg:py-2 xl:my-0"
           >
             <div
               class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
@@ -793,7 +793,7 @@ exports[`ExchangeTransactionsRow > should render (New) 1`] = `
           class="lg:hidden"
         >
           <div
-            class="px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-end flex flex-col gap-1.5 my-1 py-2 xl:my-0"
+            class="px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-end flex flex-col gap-1.5 my-1 py-2.5 lg:py-2 xl:my-0"
           >
             <div
               class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
@@ -1101,7 +1101,7 @@ exports[`ExchangeTransactionsRow > should render (Refunded) 1`] = `
           class="lg:hidden"
         >
           <div
-            class="px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-end flex flex-col gap-1.5 my-1 py-2 xl:my-0"
+            class="px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-end flex flex-col gap-1.5 my-1 py-2.5 lg:py-2 xl:my-0"
           >
             <div
               class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
@@ -1345,7 +1345,7 @@ exports[`ExchangeTransactionsRow > should render (Verifying) 1`] = `
           class="lg:hidden"
         >
           <div
-            class="px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-end flex flex-col gap-1.5 my-1 py-2 xl:my-0"
+            class="px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-end flex flex-col gap-1.5 my-1 py-2.5 lg:py-2 xl:my-0"
           >
             <div
               class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
@@ -1589,7 +1589,7 @@ exports[`ExchangeTransactionsRow > should render compact 1`] = `
           class="lg:hidden"
         >
           <div
-            class="px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-end flex flex-col gap-1.5 my-1 py-2 xl:my-0"
+            class="px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-end flex flex-col gap-1.5 my-1 py-2.5 lg:py-2 xl:my-0"
           >
             <div
               class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
