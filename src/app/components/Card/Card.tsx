@@ -41,7 +41,7 @@ export const Card = ({ variant, children, addonIcons, actions, onClick, onSelect
 								<Icon
 									name="EllipsisVertical"
 									className="cursor-pointer p-1 text-theme-primary-300 transition-colors duration-200 hover:text-theme-primary-400 dark:text-theme-secondary-600 dark:hover:text-theme-secondary-200"
-									size="lg"
+									size="md"
 								/>
 							</div>
 						}

@@ -694,7 +694,7 @@ exports[`SendTransfer Fee Handling > should send a single transfer with a high f
                           class="mt-4 flex items-center space-x-2 sm:mr-4 sm:mt-0"
                         >
                           <button
-                            class="ring-focus relative focus:outline-none text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-700 space-x-0 p-2"
+                            class="ring-focus relative focus:outline-none text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 green:hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-500 space-x-0 p-2"
                             data-ring-focus-margin="-m-1"
                             data-testid="clipboard-icon__wrapper"
                             type="button"
@@ -735,7 +735,7 @@ exports[`SendTransfer Fee Handling > should send a single transfer with a high f
                             </span>
                           </button>
                           <button
-                            class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:text-theme-secondary-200 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-700 border border-theme-secondary-300 bg-transparent p-2 hover:border-transparent dark:border-transparent dark:bg-theme-secondary-800"
+                            class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:text-theme-secondary-200 text-theme-primary-600 hover:bg-theme-primary-800 green:hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-500 h-8 w-8 border border-theme-secondary-300 bg-transparent p-2 hover:border-transparent dark:border-theme-secondary-800 dark:bg-transparent dark:hover:border-theme-primary-500"
                             data-testid="explorer-link"
                             type="button"
                           >
@@ -841,7 +841,7 @@ exports[`SendTransfer Fee Handling > should send a single transfer with a high f
                                     type="button"
                                   >
                                     <div
-                                      class="text-theme-primary-400 dark:text-theme-secondary-700 dark:hover:text-theme-secondary-500 css-v0ob3f"
+                                      class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white css-v0ob3f"
                                       height="16"
                                       width="16"
                                     >
@@ -915,7 +915,7 @@ exports[`SendTransfer Fee Handling > should send a single transfer with a high f
                                     type="button"
                                   >
                                     <div
-                                      class="text-theme-primary-400 dark:text-theme-secondary-700 dark:hover:text-theme-secondary-500 css-v0ob3f"
+                                      class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white css-v0ob3f"
                                       height="16"
                                       width="16"
                                     >
@@ -1219,7 +1219,7 @@ exports[`SendTransfer Fee Handling > should send a single transfer with a high f
                                     Block
                                   </div>
                                   <a
-                                    class="ring-focus group/inner inline-block h-5 text-sm leading-[17px] sm:text-base sm:leading-5 css-7nwwrh"
+                                    class="ring-focus group/inner inline-block h-5 text-sm leading-[17px] sm:text-base sm:leading-5 css-167zzsv"
                                     data-ring-focus-margin="-m-1"
                                     data-testid="Link"
                                     href="https://test.arkscan.io/block/8f913b6b719e7767d49861c0aec79ced212767645cb793d75d2f1b89abb49877"
@@ -1229,10 +1229,10 @@ exports[`SendTransfer Fee Handling > should send a single transfer with a high f
                                       class="css-bxx244"
                                     />
                                     <div
-                                      class="mb-[3px] shrink-0 align-middle duration-200 css-v0ob3f"
+                                      class="mb-[3px] shrink-0 align-middle duration-200 css-1fio4bh"
                                       data-testid="Link__external"
-                                      height="16"
-                                      width="16"
+                                      height="12"
+                                      width="12"
                                     >
                                       <svg
                                         id="arrow-external"
@@ -1440,7 +1440,7 @@ exports[`SendTransfer Fee Handling > should send a single transfer with a high f
                 class="css-145pihz"
               >
                 <button
-                  class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-700"
+                  class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 green:hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-500"
                   data-testid="StepNavigation__back-to-wallet-button"
                   type="button"
                 >
@@ -2154,7 +2154,7 @@ exports[`SendTransfer Fee Handling > should send a single transfer with a low fe
                           class="mt-4 flex items-center space-x-2 sm:mr-4 sm:mt-0"
                         >
                           <button
-                            class="ring-focus relative focus:outline-none text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-700 space-x-0 p-2"
+                            class="ring-focus relative focus:outline-none text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 green:hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-500 space-x-0 p-2"
                             data-ring-focus-margin="-m-1"
                             data-testid="clipboard-icon__wrapper"
                             type="button"
@@ -2195,7 +2195,7 @@ exports[`SendTransfer Fee Handling > should send a single transfer with a low fe
                             </span>
                           </button>
                           <button
-                            class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:text-theme-secondary-200 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-700 border border-theme-secondary-300 bg-transparent p-2 hover:border-transparent dark:border-transparent dark:bg-theme-secondary-800"
+                            class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:text-theme-secondary-200 text-theme-primary-600 hover:bg-theme-primary-800 green:hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-500 h-8 w-8 border border-theme-secondary-300 bg-transparent p-2 hover:border-transparent dark:border-theme-secondary-800 dark:bg-transparent dark:hover:border-theme-primary-500"
                             data-testid="explorer-link"
                             type="button"
                           >
@@ -2301,7 +2301,7 @@ exports[`SendTransfer Fee Handling > should send a single transfer with a low fe
                                     type="button"
                                   >
                                     <div
-                                      class="text-theme-primary-400 dark:text-theme-secondary-700 dark:hover:text-theme-secondary-500 css-v0ob3f"
+                                      class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white css-v0ob3f"
                                       height="16"
                                       width="16"
                                     >
@@ -2375,7 +2375,7 @@ exports[`SendTransfer Fee Handling > should send a single transfer with a low fe
                                     type="button"
                                   >
                                     <div
-                                      class="text-theme-primary-400 dark:text-theme-secondary-700 dark:hover:text-theme-secondary-500 css-v0ob3f"
+                                      class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white css-v0ob3f"
                                       height="16"
                                       width="16"
                                     >
@@ -2679,7 +2679,7 @@ exports[`SendTransfer Fee Handling > should send a single transfer with a low fe
                                     Block
                                   </div>
                                   <a
-                                    class="ring-focus group/inner inline-block h-5 text-sm leading-[17px] sm:text-base sm:leading-5 css-7nwwrh"
+                                    class="ring-focus group/inner inline-block h-5 text-sm leading-[17px] sm:text-base sm:leading-5 css-167zzsv"
                                     data-ring-focus-margin="-m-1"
                                     data-testid="Link"
                                     href="https://test.arkscan.io/block/8f913b6b719e7767d49861c0aec79ced212767645cb793d75d2f1b89abb49877"
@@ -2689,10 +2689,10 @@ exports[`SendTransfer Fee Handling > should send a single transfer with a low fe
                                       class="css-bxx244"
                                     />
                                     <div
-                                      class="mb-[3px] shrink-0 align-middle duration-200 css-v0ob3f"
+                                      class="mb-[3px] shrink-0 align-middle duration-200 css-1fio4bh"
                                       data-testid="Link__external"
-                                      height="16"
-                                      width="16"
+                                      height="12"
+                                      width="12"
                                     >
                                       <svg
                                         id="arrow-external"
@@ -2900,7 +2900,7 @@ exports[`SendTransfer Fee Handling > should send a single transfer with a low fe
                 class="css-145pihz"
               >
                 <button
-                  class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-700"
+                  class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 green:hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-500"
                   data-testid="StepNavigation__back-to-wallet-button"
                   type="button"
                 >

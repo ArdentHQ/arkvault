@@ -16,13 +16,12 @@ main {
 	@apply bg-theme-background text-theme-text flex-1;
 }
 
-
 .link {
-	@apply cursor-pointer transition-colors duration-100 ease-linear text-theme-primary-600;
+	@apply cursor-pointer transition-colors duration-100 ease-linear text-theme-primary-400 dark:text-theme-secondary-600 ;
 }
 
 .link:hover {
-	@apply text-theme-primary-500;
+	@apply text-theme-primary-700 dark:text-white;
 }
 
 .important\:bottom-8 {
@@ -69,9 +68,9 @@ main {
 }
 
 .with-x-padding > table > tbody > tr:not(:last-child):hover td:first-child::after {
-	@apply content-[''] w-6 block bg-theme-background h-[5px] absolute left-0 -bottom-[5px]
+	@apply content-[''] w-6 block bg-theme-background h-[5px] absolute left-0 -bottom-[4px]
 }
 
 .with-x-padding > table > tbody > tr:not(:last-child):hover td:last-child::after {
-	@apply content-[''] w-6 block bg-theme-background h-[5px] absolute right-0 -bottom-[5px]
+	@apply content-[''] w-6 block bg-theme-background h-[5px] absolute right-0 -bottom-[4px]
 }

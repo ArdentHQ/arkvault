@@ -44,8 +44,11 @@ export const Starred: React.VFC<StarredProperties> = ({ wallet, onToggleStar, is
 				className="flex shrink-0 items-center justify-center"
 			>
 				<Icon
-					className="text-theme-warning-400"
-					name={wallet.isStarred() ? "StarFilled" : "Star"}
+					className={cn("transition-all duration-300 ease-in-out", {
+						"fill-theme-warning-400 stroke-theme-warning-400": wallet.isStarred(),
+						"fill-transparent stroke-theme-warning-400 hover:fill-theme-warning-200": !wallet.isStarred(),
+					})}
+					name={"StarFilled"}
 					dimensions={starIconDimensions}
 				/>
 			</div>
@@ -53,7 +56,7 @@ export const Starred: React.VFC<StarredProperties> = ({ wallet, onToggleStar, is
 	}
 
 	return (
-		<TableCell variant="start" size="sm" innerClassName="space-x-3 pl-6 ml-0" data-testid="TableCell_Starred">
+		<TableCell variant="start" size="sm" innerClassName="space-x-3 pl-4 ml-2" data-testid="TableCell_Starred">
 			<div className="flex h-5 items-center pr-3 dark:border-theme-secondary-800">
 				<Tooltip
 					content={
@@ -68,8 +71,12 @@ export const Starred: React.VFC<StarredProperties> = ({ wallet, onToggleStar, is
 						className="flex shrink-0 items-center justify-center"
 					>
 						<Icon
-							className="text-theme-warning-400"
-							name={wallet.isStarred() ? "StarFilled" : "Star"}
+							className={cn("transition-all duration-300 ease-in-out", {
+								"fill-theme-warning-400 stroke-theme-warning-400": wallet.isStarred(),
+								"fill-transparent stroke-theme-warning-400 hover:fill-theme-warning-200":
+									!wallet.isStarred(),
+							})}
+							name={"StarFilled"}
 							dimensions={starIconDimensions}
 						/>
 					</div>
@@ -437,7 +444,7 @@ export const ButtonsCell: React.VFC<ButtonsCellProperties> = ({ wallet, onSend, 
 	}, []);
 
 	return (
-		<TableCell variant="end" size="sm" innerClassName="justify-end text-theme-secondary-text pr-6">
+		<TableCell variant="end" size="sm" innerClassName="justify-end text-theme-secondary-text pr-6 items-center">
 			<Tooltip content={isLedgerWalletCompatible(wallet) ? "" : t("COMMON.LEDGER_COMPATIBILITY_ERROR")}>
 				<div onClick={handleStopPropagation}>
 					<Button
@@ -445,15 +452,14 @@ export const ButtonsCell: React.VFC<ButtonsCellProperties> = ({ wallet, onSend, 
 						size="icon"
 						disabled={isButtonDisabled}
 						variant="transparent"
-						className="pr-0 text-sm text-theme-primary-600 hover:text-theme-primary-700"
+						className="pr-0 text-sm text-theme-primary-600 hover:text-theme-primary-700 hover:underline dark:hover:text-theme-primary-500"
 						onClick={onSend}
 					>
-						<div className="border-r border-theme-secondary-300 pr-3 dark:border-theme-secondary-800">
-							{t("COMMON.SEND")}
-						</div>
+						<div className="pr-3">{t("COMMON.SEND")}</div>
 					</Button>
 				</div>
 			</Tooltip>
+			<div className="h-4 w-px bg-theme-secondary-300 dark:bg-theme-secondary-800" />
 			<div data-testid="WalletListItem__more-button">
 				<Dropdown
 					placement="bottom-end"
@@ -462,9 +468,9 @@ export const ButtonsCell: React.VFC<ButtonsCellProperties> = ({ wallet, onSend, 
 							variant="transparent"
 							size="icon"
 							disabled={isRestoring}
-							className="text-theme-gray-700 -mr-1.5 hover:text-theme-primary-600"
+							className="text-theme-gray-700 ml-3 h-6 w-6 rounded bg-transparent hover:bg-theme-primary-200 hover:text-theme-primary-700 dark:hover:bg-theme-secondary-800 dark:hover:text-white"
 						>
-							<Icon name="EllipsisVerticalFilled" size="lg" />
+							<Icon name="EllipsisVerticalFilled" size="md" />
 						</Button>
 					}
 					onSelect={onSelectOption}

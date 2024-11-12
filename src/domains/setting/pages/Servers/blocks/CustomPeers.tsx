@@ -164,7 +164,7 @@ const PeerRow = ({
 								size="icon"
 								className="text-theme-primary-300 hover:text-theme-primary-600"
 							>
-								<Icon name="EllipsisVertical" size="lg" />
+								<Icon name="EllipsisVertical" size="md" />
 							</Button>
 						}
 						onSelect={onSelectOption}

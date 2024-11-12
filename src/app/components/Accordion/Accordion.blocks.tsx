@@ -105,13 +105,13 @@ export const AccordionContent: React.VFC<AccordionContentProperties> = ({ childr
 const AccordionToggleWrapper = styled.div`
 	flex-basis: 2rem;
 
-	${tw`flex h-full w-8 min-h-8 content-center items-center justify-center rounded-lg text-theme-secondary-text ring-2 transition-all sm:h-8`}
+	${tw`flex h-full w-8 min-h-8 content-center items-center justify-center rounded-lg text-theme-secondary-700 dark:text-theme-secondary-500 ring-2 transition-all sm:h-8`}
 
 	${tw`ring-theme-primary-100 dark:ring-theme-secondary-700`}
 
 	${css`
 		@media not all and (hover: none) {
-			${tw`hover:ring-theme-primary-600 hover:bg-theme-primary-600 hover:text-white transition-colors duration-100 ease-linear`}}
+			${tw`hover:ring-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 transition-colors duration-100 ease-linear dark:hover:bg-theme-secondary-800 dark:hover:ring-theme-secondary-800 dark:hover:text-white`}}
 		}
 	`}
 `;

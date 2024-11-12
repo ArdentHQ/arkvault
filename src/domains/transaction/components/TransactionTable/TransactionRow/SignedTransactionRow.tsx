@@ -71,7 +71,7 @@ export const SignButton = ({
 			size="sm"
 			data-testid="TransactionRow__sign"
 			variant="transparent"
-			className={`p-0 text-theme-primary-600 hover:text-theme-primary-700 ${className}`}
+			className={`p-0 text-theme-primary-600 hover:text-theme-primary-500 hover:underline ${className}`}
 			onClick={onClick}
 		>
 			<ButtonContent />
@@ -110,7 +110,7 @@ export const SignedTransactionRow = ({
 
 	return (
 		<TableRow className="relative">
-			<TableCell variant="start" innerClassName="items-start my-0 py-3 xl:min-h-0">
+			<TableCell variant="start" innerClassName="items-start my-1 py-2 xl:py-3 xl:min-h-11">
 				<div className="flex flex-col gap-1 font-semibold">
 					<span className="text-sm">
 						<TruncateMiddle
@@ -129,12 +129,12 @@ export const SignedTransactionRow = ({
 
 			<TableCell
 				className="hidden xl:table-cell"
-				innerClassName="text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold items-start pt-3 xl:pt-0 xl:min-h-0"
+				innerClassName="text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold items-start my-1 pt-3 min-h-14 xl:min-h-11"
 			>
 				<TimeAgo date={DateTime.fromUnix(transaction.timestamp().toUNIX()).toISOString()} />
 			</TableCell>
 
-			<TableCell innerClassName="items-start xl:min-h-0">
+			<TableCell innerClassName="items-start my-1 pt-3 min-h-14 xl:min-h-11">
 				<Label
 					color="secondary"
 					size="xs"
@@ -146,13 +146,13 @@ export const SignedTransactionRow = ({
 				</Label>
 			</TableCell>
 
-			<TableCell innerClassName="space-x-2 items-start xl:min-h-0">
+			<TableCell innerClassName="space-x-2 items-start my-1 pt-3 min-h-14 xl:min-h-11">
 				<TransactionRowAddressing transaction={transaction} profile={transaction.wallet().profile()} />
 			</TableCell>
 
 			<TableCell
 				className="hidden w-16 lg:table-cell"
-				innerClassName="items-start justify-center truncate hidden lg:flex xl:min-h-0"
+				innerClassName="items-start justify-center truncate hidden lg:flex my-1 pt-3 min-h-14 xl:min-h-11"
 			>
 				<Tooltip content={status.label}>
 					<span className="text-theme-secondary-700">
@@ -161,7 +161,7 @@ export const SignedTransactionRow = ({
 				</Tooltip>
 			</TableCell>
 
-			<TableCell innerClassName="justify-end items-start xl:min-h-0">
+			<TableCell innerClassName="justify-end items-start my-1 pt-3 min-h-14 xl:min-h-11">
 				<div className="flex flex-col items-end gap-1">
 					<TransactionAmountLabel transaction={transaction} />
 					<span className="text-xs font-semibold text-theme-secondary-700 lg:hidden">
@@ -172,12 +172,12 @@ export const SignedTransactionRow = ({
 
 			<TableCell
 				className="hidden lg:table-cell"
-				innerClassName="justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0"
+				innerClassName="justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold my-1 pt-3 min-h-14 xl:min-h-11"
 			>
 				<TransactionFiatAmount transaction={transaction} exchangeCurrency={wallet.exchangeCurrency()} />
 			</TableCell>
 
-			<TableCell variant="end" innerClassName="justify-end items-start text-sm xl:min-h-0">
+			<TableCell variant="end" innerClassName="justify-end items-start text-sm my-1 pt-2 min-h-14 xl:min-h-11">
 				<div className="flex flex-row items-center">
 					<SignButton
 						canBeSigned={canBeSigned}
@@ -197,7 +197,7 @@ export const SignedTransactionRow = ({
 						}
 					>
 						<div className="flex items-center">
-							<TableRemoveButton isDisabled={!canBeDeleted} onClick={handleRemove} className="m-0 p-0" />
+							<TableRemoveButton isDisabled={!canBeDeleted} onClick={handleRemove} className="m-0 p-1" />
 						</div>
 					</Tooltip>
 				</div>

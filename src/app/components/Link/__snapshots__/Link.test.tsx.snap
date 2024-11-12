@@ -15,10 +15,10 @@ exports[`Link > should do nothing on click when disabled 1`] = `
       app.arkvault.io
     </span>
     <div
-      class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-v0ob3f"
+      class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-1fio4bh"
       data-testid="Link__external"
-      height="16"
-      width="16"
+      height="12"
+      width="12"
     >
       <svg
         id="arrow-external"
@@ -45,7 +45,7 @@ exports[`Link > should do nothing on click when disabled 1`] = `
 exports[`Link > should open an external link 1`] = `
 <DocumentFragment>
   <a
-    class="ring-focus group/inner inline-block css-7nwwrh"
+    class="ring-focus group/inner inline-block css-167zzsv"
     data-ring-focus-margin="-m-1"
     data-testid="Link"
     href="https://app.arkvault.io/"
@@ -55,10 +55,10 @@ exports[`Link > should open an external link 1`] = `
       class="css-bxx244"
     />
     <div
-      class="mb-[3px] shrink-0 align-middle duration-200 css-v0ob3f"
+      class="mb-[3px] shrink-0 align-middle duration-200 css-1fio4bh"
       data-testid="Link__external"
-      height="16"
-      width="16"
+      height="12"
+      width="12"
     >
       <svg
         id="arrow-external"
@@ -85,7 +85,7 @@ exports[`Link > should open an external link 1`] = `
 exports[`Link > should render 1`] = `
 <DocumentFragment>
   <a
-    class="ring-focus group/inner inline-block css-7nwwrh"
+    class="ring-focus group/inner inline-block css-167zzsv"
     data-ring-focus-margin="-m-1"
     data-testid="Link"
     href="#/test"
@@ -102,7 +102,7 @@ exports[`Link > should render 1`] = `
 exports[`Link > should render external without children 1`] = `
 <DocumentFragment>
   <a
-    class="ring-focus group/inner inline-block css-7nwwrh"
+    class="ring-focus group/inner inline-block css-167zzsv"
     data-ring-focus-margin="-m-1"
     data-testid="Link"
     href="https://app.arkvault.io"
@@ -112,10 +112,10 @@ exports[`Link > should render external without children 1`] = `
       class="css-bxx244"
     />
     <div
-      class="mb-[3px] shrink-0 align-middle duration-200 css-v0ob3f"
+      class="mb-[3px] shrink-0 align-middle duration-200 css-1fio4bh"
       data-testid="Link__external"
-      height="16"
-      width="16"
+      height="12"
+      width="12"
     >
       <svg
         id="arrow-external"
@@ -142,7 +142,7 @@ exports[`Link > should render external without children 1`] = `
 exports[`Link > should render with tooltip 1`] = `
 <DocumentFragment>
   <a
-    class="ring-focus group/inner inline-block css-7nwwrh"
+    class="ring-focus group/inner inline-block css-167zzsv"
     data-ring-focus-margin="-m-1"
     data-testid="Link"
     href="#/test"
@@ -159,7 +159,7 @@ exports[`Link > should render with tooltip 1`] = `
 exports[`Link > should show a toast when trying to open an invalid external link 1`] = `
 <DocumentFragment>
   <a
-    class="ring-focus group/inner inline-block css-7nwwrh"
+    class="ring-focus group/inner inline-block css-167zzsv"
     data-ring-focus-margin="-m-1"
     data-testid="Link"
     href="invalid-url"
@@ -169,10 +169,10 @@ exports[`Link > should show a toast when trying to open an invalid external link
       class="css-bxx244"
     />
     <div
-      class="mb-[3px] shrink-0 align-middle duration-200 css-v0ob3f"
+      class="mb-[3px] shrink-0 align-middle duration-200 css-1fio4bh"
       data-testid="Link__external"
-      height="16"
-      width="16"
+      height="12"
+      width="12"
     >
       <svg
         id="arrow-external"

@@ -58,7 +58,7 @@ export const ContactListItemMobile: React.VFC<Properties> = ({
 						<Dropdown
 							toggleContent={
 								<button type="button" className="flex text-theme-secondary-700">
-									<Icon name="EllipsisVerticalFilled" size="lg" />
+									<Icon name="EllipsisVerticalFilled" size="md" />
 								</button>
 							}
 							options={options}

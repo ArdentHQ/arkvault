@@ -29,8 +29,11 @@ const StarredHeader = ({ active, onClick }: { active: boolean; onClick: () => vo
 					onClick={onClick}
 				>
 					<Icon
-						className="text-theme-warning-400"
-						name={active ? "StarFilled" : "Star"}
+						className={cn("transition-all duration-300 ease-in-out", {
+							"fill-theme-warning-400 stroke-theme-warning-400 text-theme-warning-400": active,
+							"fill-transparent stroke-theme-warning-400 hover:fill-theme-warning-200": !active,
+						})}
+						name={"StarFilled"}
 						dimensions={[18, 18]}
 					/>
 				</button>

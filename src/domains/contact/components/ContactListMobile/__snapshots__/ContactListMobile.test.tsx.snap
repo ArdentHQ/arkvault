@@ -37,9 +37,9 @@ exports[`ContactListMobile > should render 1`] = `
                   type="button"
                 >
                   <div
-                    class="css-1i4b0eq"
-                    height="20"
-                    width="20"
+                    class="css-v0ob3f"
+                    height="16"
+                    width="16"
                   >
                     <svg
                       fill="none"
@@ -82,7 +82,7 @@ exports[`ContactListMobile > should render 1`] = `
           class="ml-4 flex flex-shrink-0 items-center self-stretch transition-all duration-100 css-o6tyc"
         >
           <div
-            class="css-cp3doq"
+            class="css-tz6w2"
             data-testid="Accordion__toggle"
           >
             <div

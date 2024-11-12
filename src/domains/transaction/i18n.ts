@@ -251,6 +251,8 @@ export const translations = {
 	NETWORK: "Network",
 	NOT_FOUND: "Unable to find transaction for [{{transactionId}}]",
 	NOT_YET_CONFIRMED: "Not yet confirmed",
+	NO_FILTERS_SELECTED:
+		"All filtering options have been deselected. Please select one or more options to display transactions.",
 	OUTGOING: "Outgoing",
 	PAGE_DELEGATE_REGISTRATION: {
 		FORM_STEP: {
