@@ -5,7 +5,7 @@ import { styled } from "twin.macro";
 import { SvgCollection } from "@/app/assets/svg";
 import { Size } from "@/types";
 import { useTheme } from "@/app/hooks/use-theme";
-import { getCurrentAccentColor } from "@/utils/theme";
+import { useAccentColor } from "@/app/hooks/use-accent-color";
 
 type IconProperties = {
 	name: string;
@@ -70,7 +70,7 @@ export const ThemeIcon = ({
 	...properties
 }: ThemeIconProperties): JSX.Element => {
 	const { isDarkMode } = useTheme();
-
+	const { getCurrentAccentColor } = useAccentColor();
 	let icon = isDarkMode ? darkIcon : lightIcon;
 
 	if (greenDarkIcon && greenLightIcon) {
