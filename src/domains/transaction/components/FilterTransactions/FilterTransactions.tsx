@@ -1,12 +1,12 @@
-import { Contracts } from "@ardenthq/sdk-profiles";
-import React, { memo } from "react";
-import { useTranslation } from "react-i18next";
-
 import { Dropdown, DropdownOption, DropdownOptionGroup } from "@/app/components/Dropdown";
+import React, { memo } from "react";
+
 import { Button } from "@/app/components/Button";
 import { Checkbox } from "@/app/components/Checkbox";
-import { useTransactionTypeFilters } from "./use-transaction-type-filters";
+import { Contracts } from "@ardenthq/sdk-profiles";
 import classNames from "classnames";
+import { useTransactionTypeFilters } from "./use-transaction-type-filters";
+import { useTranslation } from "react-i18next";
 
 interface FilterTransactionsProperties extends JSX.IntrinsicAttributes {
 	className?: string;
@@ -133,7 +133,7 @@ export const FilterTransactions = memo(
 			<div className={className} data-testid="FilterTransactions" {...properties}>
 				<Dropdown
 					placement="bottom-end"
-					wrapperClass="sm:max-w-56 overflow-hidden"
+					wrapperClass="sm:max-w-56"
 					options={options}
 					disableToggle={isDisabled}
 					closeOnSelect={false}
