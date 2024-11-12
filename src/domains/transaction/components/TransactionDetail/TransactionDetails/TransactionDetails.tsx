@@ -57,7 +57,9 @@ export const TransactionDetails = ({
 
 				<div className="flex w-full justify-between sm:justify-start">
 					<DetailLabelText className={labelClassName}>{t("COMMON.NONCE")}</DetailLabelText>
-					<div className="text-sm font-semibold leading-[17px] sm:text-base sm:leading-5">{transaction.nonce()}</div>
+					<div className="text-sm font-semibold leading-[17px] sm:text-base sm:leading-5">
+						{transaction.nonce()}
+					</div>
 				</div>
 			</div>
 		</DetailWrapper>
