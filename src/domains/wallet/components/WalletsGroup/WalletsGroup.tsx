@@ -8,7 +8,7 @@ import { useAccordion } from "@/app/hooks";
 const MAX_WALLETS_ON_DASHBOARD_LIST = 10;
 
 export const WalletsGroup: React.VFC<WalletsGroupProperties> = ({ network, wallets, maxWidthReferences }) => {
-	const { isExpanded, handleHeaderClick } = useAccordion();
+	const { isExpanded, handleHeaderClick } = useAccordion(`wallets_group_${network.id()}`);
 
 	return (
 		<AccordionWrapper data-testid="WalletsGroup" isCollapsed={!isExpanded} className="md:!mb-3">
