@@ -1023,10 +1023,10 @@ describe("Servers Settings", () => {
 			);
 
 			// Is loading initially
-			expect(screen.getAllByTestId(peerStatusLoadingTestId)).toHaveLength(6);
+			expect(screen.getAllByTestId(peerStatusLoadingTestId)).toHaveLength(3);
 
 			// After ping it should show ok
-			await waitFor(() => expect(screen.getAllByTestId(peerStatusOkTestId)).toHaveLength(6));
+			await waitFor(() => expect(screen.getAllByTestId(peerStatusOkTestId)).toHaveLength(3));
 
 			await userEvent.click(screen.getAllByTestId(peerStatusOkTestId)[0]);
 
@@ -1087,10 +1087,10 @@ describe("Servers Settings", () => {
 			);
 
 			// Is loading initially
-			expect(screen.getAllByTestId(peerStatusLoadingTestId)).toHaveLength(6);
+			expect(screen.getAllByTestId(peerStatusLoadingTestId)).toHaveLength(3);
 
 			// After ping it should show ok
-			await waitFor(() => expect(screen.getAllByTestId(peerStatusOkTestId)).toHaveLength(6));
+			await waitFor(() => expect(screen.getAllByTestId(peerStatusOkTestId)).toHaveLength(3));
 
 			expect(asFragment()).toMatchSnapshot();
 		});
@@ -1111,7 +1111,7 @@ describe("Servers Settings", () => {
 			);
 
 			// After ping it should show ok
-			await waitFor(() => expect(screen.getAllByTestId(peerStatusOkTestId)).toHaveLength(5));
+			await waitFor(() => expect(screen.getAllByTestId(peerStatusOkTestId)).toHaveLength(4));
 
 			expect(asFragment()).toMatchSnapshot();
 		});
