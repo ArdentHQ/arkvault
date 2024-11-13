@@ -346,8 +346,8 @@ describe("WalletsGroup", () => {
 		const currencyCell = screen.getAllByTestId("CurrencyCell")[0];
 		expect(currencyCell).toBeInTheDocument();
 
-		const { getAllByClassName } = within(currencyCell);
-		const skeletons = getAllByClassName("react-loading-skeleton");
+		// Use querySelectorAll on the currencyCell to find elements with the class name
+		const skeletons = currencyCell.querySelectorAll(".react-loading-skeleton");
 		expect(skeletons.length).toBeGreaterThan(0);
 		expect(skeletons[0]).toBeInTheDocument();
 
