@@ -1033,7 +1033,7 @@ describe("Servers Settings", () => {
 			await waitFor(() =>
 				expect(screen.getAllByTestId("CustomPeers-network-item--mobile--expanded")[0]).toBeInTheDocument(),
 			);
-		}); 
+		});
 
 		it("should show status ok after ping the servers", async () => {
 			const { asFragment } = render(
