@@ -1099,7 +1099,7 @@ exports[`SendTransfer > should display unconfirmed transactions modal when submi
                                     class="ring-focus group/inner inline-block h-5 text-sm leading-[17px] sm:text-base sm:leading-5 css-167zzsv"
                                     data-ring-focus-margin="-m-1"
                                     data-testid="Link"
-                                    href="https://test.arkscan.io/block/8f913b6b719e7767d49861c0aec79ced212767645cb793d75d2f1b89abb49877"
+                                    href="https://test.arkscan.io/blocks/2a690f25cb1603275936665162e26415cad14199dda141d33666597c8bca8c5c"
                                     rel="noopener noreferrer"
                                   >
                                     <span
@@ -7522,7 +7522,7 @@ exports[`SendTransfer > should send a single transfer and handle undefined expir
                                     class="ring-focus group/inner inline-block h-5 text-sm leading-[17px] sm:text-base sm:leading-5 css-167zzsv"
                                     data-ring-focus-margin="-m-1"
                                     data-testid="Link"
-                                    href="https://test.arkscan.io/block/8f913b6b719e7767d49861c0aec79ced212767645cb793d75d2f1b89abb49877"
+                                    href="https://test.arkscan.io/blocks/2a690f25cb1603275936665162e26415cad14199dda141d33666597c8bca8c5c"
                                     rel="noopener noreferrer"
                                   >
                                     <span
@@ -8859,7 +8859,7 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
                                     class="ring-focus group/inner inline-block h-5 text-sm leading-[17px] sm:text-base sm:leading-5 css-167zzsv"
                                     data-ring-focus-margin="-m-1"
                                     data-testid="Link"
-                                    href="https://test.arkscan.io/block/8f913b6b719e7767d49861c0aec79ced212767645cb793d75d2f1b89abb49877"
+                                    href="https://test.arkscan.io/blocks/2a690f25cb1603275936665162e26415cad14199dda141d33666597c8bca8c5c"
                                     rel="noopener noreferrer"
                                   >
                                     <span
@@ -10750,7 +10750,7 @@ exports[`SendTransfer > should send a single transfer using wallet with encrypti
                                     class="ring-focus group/inner inline-block h-5 text-sm leading-[17px] sm:text-base sm:leading-5 css-167zzsv"
                                     data-ring-focus-margin="-m-1"
                                     data-testid="Link"
-                                    href="https://test.arkscan.io/block/8f913b6b719e7767d49861c0aec79ced212767645cb793d75d2f1b89abb49877"
+                                    href="https://test.arkscan.io/blocks/2a690f25cb1603275936665162e26415cad14199dda141d33666597c8bca8c5c"
                                     rel="noopener noreferrer"
                                   >
                                     <span
@@ -12087,7 +12087,7 @@ exports[`SendTransfer > should send a single transfer with keyboard 1`] = `
                                     class="ring-focus group/inner inline-block h-5 text-sm leading-[17px] sm:text-base sm:leading-5 css-167zzsv"
                                     data-ring-focus-margin="-m-1"
                                     data-testid="Link"
-                                    href="https://test.arkscan.io/block/8f913b6b719e7767d49861c0aec79ced212767645cb793d75d2f1b89abb49877"
+                                    href="https://test.arkscan.io/blocks/2a690f25cb1603275936665162e26415cad14199dda141d33666597c8bca8c5c"
                                     rel="noopener noreferrer"
                                   >
                                     <span
@@ -13424,7 +13424,7 @@ exports[`SendTransfer > should send a single transfer without keyboard 1`] = `
                                     class="ring-focus group/inner inline-block h-5 text-sm leading-[17px] sm:text-base sm:leading-5 css-167zzsv"
                                     data-ring-focus-margin="-m-1"
                                     data-testid="Link"
-                                    href="https://test.arkscan.io/block/8f913b6b719e7767d49861c0aec79ced212767645cb793d75d2f1b89abb49877"
+                                    href="https://test.arkscan.io/blocks/2a690f25cb1603275936665162e26415cad14199dda141d33666597c8bca8c5c"
                                     rel="noopener noreferrer"
                                   >
                                     <span

@@ -2153,7 +2153,7 @@ exports[`SendIpfs > should render summary step 1`] = `
                     <div
                       class="text-sm font-semibold leading-[17px] sm:text-base sm:leading-5"
                     >
-                      01.07.2020 12:00 AM
+                      07.08.2020 9:30 AM
                     </div>
                   </div>
                   <div
@@ -2177,11 +2177,41 @@ exports[`SendIpfs > should render summary step 1`] = `
                     >
                       Block
                     </div>
-                    <p
-                      class="text-sm leading-[17px] text-theme-secondary-500 sm:text-base sm:leading-5"
+                    <a
+                      class="ring-focus group/inner inline-block h-5 text-sm leading-[17px] sm:text-base sm:leading-5 css-167zzsv"
+                      data-ring-focus-margin="-m-1"
+                      data-testid="Link"
+                      href="https://test.arkscan.io/blocks/f5c458844691ec85bc394b447c86583df52e74cd76f9773cb44457bff2492365"
+                      rel="noopener noreferrer"
                     >
-                      N/A
-                    </p>
+                      <span
+                        class="css-bxx244"
+                      />
+                      <div
+                        class="mb-[3px] shrink-0 align-middle duration-200 css-1fio4bh"
+                        data-testid="Link__external"
+                        height="12"
+                        width="12"
+                      >
+                        <svg
+                          id="arrow-external"
+                          viewBox="0 0 20 20"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
+                        >
+                          <path
+                            d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          />
+                        </svg>
+                      </div>
+                    </a>
                   </div>
                   <div
                     class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3 [.condensed_&]:leading-3"
@@ -3610,7 +3640,7 @@ exports[`SendIpfs > should send a ipfs transfer with a ledger wallet 1`] = `
                                     class="ring-focus group/inner inline-block h-5 text-sm leading-[17px] sm:text-base sm:leading-5 css-167zzsv"
                                     data-ring-focus-margin="-m-1"
                                     data-testid="Link"
-                                    href="https://test.arkscan.io/block/1e9b975eff66a731095876c3b6cbff14fd4dec3bb37a4127c46db3d69131067e"
+                                    href="https://test.arkscan.io/blocks/f5c458844691ec85bc394b447c86583df52e74cd76f9773cb44457bff2492365"
                                     rel="noopener noreferrer"
                                   >
                                     <span
@@ -4997,7 +5027,7 @@ exports[`SendIpfs > should send an IPFS transaction and go back to wallet page 1
                                     class="ring-focus group/inner inline-block h-5 text-sm leading-[17px] sm:text-base sm:leading-5 css-167zzsv"
                                     data-ring-focus-margin="-m-1"
                                     data-testid="Link"
-                                    href="https://test.arkscan.io/block/1e9b975eff66a731095876c3b6cbff14fd4dec3bb37a4127c46db3d69131067e"
+                                    href="https://test.arkscan.io/blocks/f5c458844691ec85bc394b447c86583df52e74cd76f9773cb44457bff2492365"
                                     rel="noopener noreferrer"
                                   >
                                     <span
@@ -6386,7 +6416,7 @@ exports[`SendIpfs > should send an ipfs transaction with a multisig wallet 1`] =
                                     class="ring-focus group/inner inline-block h-5 text-sm leading-[17px] sm:text-base sm:leading-5 css-167zzsv"
                                     data-ring-focus-margin="-m-1"
                                     data-testid="Link"
-                                    href="https://test.arkscan.io/block/1e9b975eff66a731095876c3b6cbff14fd4dec3bb37a4127c46db3d69131067e"
+                                    href="https://test.arkscan.io/blocks/f5c458844691ec85bc394b447c86583df52e74cd76f9773cb44457bff2492365"
                                     rel="noopener noreferrer"
                                   >
                                     <span
