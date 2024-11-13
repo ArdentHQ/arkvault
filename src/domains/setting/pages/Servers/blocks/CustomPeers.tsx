@@ -263,7 +263,7 @@ const CustomPeersPeer: React.VFC<{
 
 	const { isXs } = useBreakpoint();
 
-	const { isExpanded, handleHeaderClick } = useAccordion('custom_peers');
+	const { isExpanded, handleHeaderClick } = useAccordion("custom_peers");
 
 	if (isXs) {
 		return (
