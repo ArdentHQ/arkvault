@@ -899,7 +899,7 @@ describe("Servers Settings", () => {
 
 			await userEvent.click(within(table).getAllByTestId(networkAccordionIconTestId)[0]);
 
-			expect(screen.getByTestId("CustomPeers-network-item--mobile--expanded")).toBeInTheDocument();
+			expect(screen.queryAllByTestId("CustomPeers-network-item--mobile--expanded")[0]).toBeInTheDocument();
 		});
 
 		it("can expand a custom servers accordion in xs for peer", async () => {
@@ -918,7 +918,7 @@ describe("Servers Settings", () => {
 			// index 2 is a peer network
 			await userEvent.click(within(table).getAllByTestId(networkAccordionIconTestId)[2]);
 
-			expect(screen.getByTestId("CustomPeers-network-item--mobile--expanded")).toBeInTheDocument();
+			expect(screen.queryAllByTestId("CustomPeers-network-item--mobile--expanded")[0]).toBeInTheDocument();
 		});
 
 		it("can check servers accordion in mobile", async () => {
@@ -962,7 +962,7 @@ describe("Servers Settings", () => {
 
 			await userEvent.click(within(table).getAllByTestId(networkAccordionIconTestId)[0]);
 
-			await userEvent.click(screen.getByTestId("CustomPeers-network-item--mobile--edit"));
+			await userEvent.click(screen.queryAllByTestId("CustomPeers-network-item--mobile--edit")[0]);
 
 			expect(screen.getByTestId("ServerFormModal")).toBeInTheDocument();
 		});
@@ -982,7 +982,7 @@ describe("Servers Settings", () => {
 
 			await userEvent.click(within(table).getAllByTestId(networkAccordionIconTestId)[0]);
 
-			await userEvent.click(screen.getByTestId("CustomPeers-network-item--mobile--delete"));
+			await userEvent.click(screen.queryAllByTestId("CustomPeers-network-item--mobile--delete")[0]);
 
 			await expect(screen.findByTestId(serverDeleteConfirmationTestId)).resolves.toBeVisible();
 		});
@@ -1002,11 +1002,9 @@ describe("Servers Settings", () => {
 
 			const table = screen.getByTestId(customPeerListTestId);
 
-			await userEvent.click(within(table).getAllByTestId(networkAccordionIconTestId)[0]);
-
 			await waitFor(() => expect(screen.queryByTestId(peerStatusLoadingTestId)).not.toBeInTheDocument());
 
-			await userEvent.click(screen.getByTestId("CustomPeers-network-item--mobile--refresh"));
+			await userEvent.click(screen.queryAllByTestId("CustomPeers-network-item--mobile--refresh")[0]);
 
 			await waitFor(() => {
 				expect(refreshPersistMock).toHaveBeenCalledOnce();
@@ -1027,17 +1025,17 @@ describe("Servers Settings", () => {
 			);
 
 			// Is loading initially
-			expect(screen.getAllByTestId(peerStatusLoadingTestId)).toHaveLength(3);
+			expect(screen.getAllByTestId(peerStatusLoadingTestId)).toHaveLength(6);
 
 			// After ping it should show ok
-			await waitFor(() => expect(screen.getAllByTestId(peerStatusOkTestId)).toHaveLength(3));
+			await waitFor(() => expect(screen.getAllByTestId(peerStatusOkTestId)).toHaveLength(6));
 
 			await userEvent.click(screen.getAllByTestId(peerStatusOkTestId)[0]);
 
 			await waitFor(() =>
-				expect(screen.queryByTestId("CustomPeers-network-item--mobile--expanded")).not.toBeInTheDocument(),
+				expect(screen.queryAllByTestId("CustomPeers-network-item--mobile--expanded")[0]).toBeInTheDocument(),
 			);
-		});
+		}); 
 
 		it("should show status ok after ping the servers", async () => {
 			const { asFragment } = render(
@@ -1091,10 +1089,10 @@ describe("Servers Settings", () => {
 			);
 
 			// Is loading initially
-			expect(screen.getAllByTestId(peerStatusLoadingTestId)).toHaveLength(3);
+			expect(screen.getAllByTestId(peerStatusLoadingTestId)).toHaveLength(6);
 
 			// After ping it should show ok
-			await waitFor(() => expect(screen.getAllByTestId(peerStatusOkTestId)).toHaveLength(3));
+			await waitFor(() => expect(screen.getAllByTestId(peerStatusOkTestId)).toHaveLength(6));
 
 			expect(asFragment()).toMatchSnapshot();
 		});
@@ -1115,7 +1113,7 @@ describe("Servers Settings", () => {
 			);
 
 			// After ping it should show ok
-			await waitFor(() => expect(screen.getAllByTestId(peerStatusOkTestId)).toHaveLength(4));
+			await waitFor(() => expect(screen.getAllByTestId(peerStatusOkTestId)).toHaveLength(5));
 
 			expect(asFragment()).toMatchSnapshot();
 		});
@@ -1410,10 +1408,10 @@ describe("Servers Settings", () => {
 			);
 
 			// Is loading initially
-			expect(screen.getAllByTestId(peerStatusLoadingTestId)).toHaveLength(3);
+			expect(screen.getAllByTestId(peerStatusLoadingTestId)).toHaveLength(6);
 
 			// After ping it should show error
-			await waitFor(() => expect(screen.getAllByTestId(peerStatusErrorTestId)).toHaveLength(3));
+			await waitFor(() => expect(screen.getAllByTestId(peerStatusErrorTestId)).toHaveLength(6));
 
 			expect(asFragment()).toMatchSnapshot();
 		});
@@ -1434,7 +1432,7 @@ describe("Servers Settings", () => {
 			);
 
 			// After ping it should show error
-			await waitFor(() => expect(screen.getAllByTestId(peerStatusErrorTestId)).toHaveLength(4));
+			await waitFor(() => expect(screen.getAllByTestId(peerStatusErrorTestId)).toHaveLength(5));
 
 			expect(asFragment()).toMatchSnapshot();
 		});

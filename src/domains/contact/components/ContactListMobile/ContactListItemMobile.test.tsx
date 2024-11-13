@@ -61,8 +61,6 @@ describe("ContactListItemMobile", () => {
 			/>,
 		);
 
-		await userEvent.click(screen.getByTestId("AccordionHeader"));
-
 		await waitFor(() => {
 			expect(screen.getByTestId("ContactListItemMobile__addresses")).toBeInTheDocument();
 		});
@@ -83,8 +81,6 @@ describe("ContactListItemMobile", () => {
 				onAction={vi.fn()}
 			/>,
 		);
-
-		await userEvent.click(screen.getByTestId("AccordionHeader"));
 
 		await waitFor(() => {
 			expect(screen.getByTestId("ContactListItemMobile__addresses")).toBeInTheDocument();
@@ -112,8 +108,6 @@ describe("ContactListItemMobile", () => {
 				onAction={vi.fn()}
 			/>,
 		);
-
-		await userEvent.click(screen.getByTestId("AccordionHeader"));
 
 		await waitFor(() => {
 			expect(screen.getByTestId("ContactListItemMobile__addresses")).toBeInTheDocument();
