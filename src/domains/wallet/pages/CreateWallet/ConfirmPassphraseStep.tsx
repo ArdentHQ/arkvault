@@ -35,7 +35,7 @@ export const ConfirmPassphraseStep = () => {
 		<section data-testid="CreateWallet__ConfirmPassphraseStep">
 			<Header
 				title={t("WALLETS.PAGE_CREATE_WALLET.PASSPHRASE_CONFIRMATION_STEP.TITLE")}
-				titleIcon={<Icon name="ConfirmYourPassphrase" dimensions={[24, 24]} className="text-theme-navy-600" />}
+				titleIcon={<Icon name="ConfirmYourPassphrase" dimensions={[24, 24]} className="text-theme-primary-600" />}
 				subtitle={t("WALLETS.PAGE_CREATE_WALLET.PASSPHRASE_CONFIRMATION_STEP.SUBTITLE")}
 				className="hidden sm:block"
 			/>
