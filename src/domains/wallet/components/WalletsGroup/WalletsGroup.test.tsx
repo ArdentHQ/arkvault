@@ -120,10 +120,6 @@ describe("WalletsGroup", () => {
 
 		expect(asFragment()).toMatchSnapshot();
 
-		const toggleArkMainnet = screen.getAllByTestId("Accordion__toggle")[0];
-		const toggleArkDevnet = screen.getAllByTestId("Accordion__toggle")[1];
-
-		
 		expect(screen.getAllByText(wallets[2].address())[0]).toBeInTheDocument();
 
 		expect(screen.getAllByTestId("WalletsGroupHeader")[0].classList.contains("md:border-b")).toBeTruthy();
@@ -326,7 +322,7 @@ describe("WalletsGroup", () => {
 		useDisplayWalletsSpy.mockRestore();
 	});
 
-	it("should show skeleton when syncing exchange rates", async () => {
+	it("should show skeleton when syncing exchange rates", () => {
 		const useConfigurationSpy = vi
 			.spyOn(configurationModule, "useConfiguration")
 			.mockReturnValue({ profileIsSyncingExchangeRates: true });
@@ -348,11 +344,12 @@ describe("WalletsGroup", () => {
 
 		// eslint-disable-next-line testing-library/no-node-access
 		const currencyCell = screen.getAllByTestId("CurrencyCell")[0];
-        expect(currencyCell).toBeInTheDocument();
+		expect(currencyCell).toBeInTheDocument();
 
-        const skeletons = currencyCell.querySelectorAll(".react-loading-skeleton");
-        expect(skeletons.length).toBeGreaterThan(0);
-        expect(skeletons[0]).toBeInTheDocument();
+		const { getAllByClassName } = within(currencyCell);
+		const skeletons = getAllByClassName("react-loading-skeleton");
+		expect(skeletons.length).toBeGreaterThan(0);
+		expect(skeletons[0]).toBeInTheDocument();
 
 		expect(asFragment()).toMatchSnapshot();
 
