@@ -1,6 +1,7 @@
 import React, { ReactElement, useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { DTO } from "@ardenthq/sdk";
+import { Contracts } from "@ardenthq/sdk-profiles";
 import { DetailDivider, DetailLabelText, DetailWrapper } from "@/app/components/DetailWrapper";
 import { useTimeFormat } from "@/app/hooks/use-time-format";
 import { Link } from "@/app/components/Link";
@@ -18,7 +19,7 @@ export const TransactionDetails = ({
 	const { t } = useTranslation();
 	const format = useTimeFormat();
 
-	const transactionWallet = initialTransaction.wallet();
+	const transactionWallet: Contracts.IReadWriteWallet = initialTransaction.wallet();
 	const [transaction, setTransaction] = useState<DTO.RawTransactionData>(initialTransaction);
 
 	useEffect(() => {
