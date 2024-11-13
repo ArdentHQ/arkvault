@@ -39,7 +39,9 @@ export const VerificationStep = () => {
 		<section data-testid="SecondSignatureRegistrationForm__verification-step">
 			<StepHeader
 				title={t("TRANSACTION.PAGE_SECOND_SIGNATURE.PASSPHRASE_CONFIRMATION_STEP.TITLE")}
-				titleIcon={<Icon name="ConfirmYourPassphrase" dimensions={[24, 24]} className="text-theme-primary-600" />}
+				titleIcon={
+					<Icon name="ConfirmYourPassphrase" dimensions={[24, 24]} className="text-theme-primary-600" />
+				}
 				subtitle={t("TRANSACTION.PAGE_SECOND_SIGNATURE.PASSPHRASE_CONFIRMATION_STEP.SUBTITLE")}
 			/>
 
