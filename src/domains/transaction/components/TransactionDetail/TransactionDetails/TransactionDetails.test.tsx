@@ -7,7 +7,7 @@ import { Contracts } from "@ardenthq/sdk-profiles";
 describe("TransactionDetails", () => {
 	let wallet: Contracts.IReadWriteWallet;
 
-	beforeEach(async () => {
+	beforeEach(() => {
 		const profile = env.profiles().findById(getDefaultProfileId());
 		wallet = profile.wallets().first();
 	});
