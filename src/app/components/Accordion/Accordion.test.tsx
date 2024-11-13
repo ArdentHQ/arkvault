@@ -98,9 +98,9 @@ describe("Button", () => {
 
 	it("should toggle the accordion on click", async () => {
 		const Accordion = () => {
-			useAccordion('accordion');
+			useAccordion("accordion");
 
-			const { isExpanded, handleHeaderClick } = useAccordion('accordion');
+			const { isExpanded, handleHeaderClick } = useAccordion("accordion");
 
 			return (
 				<AccordionWrapper>
