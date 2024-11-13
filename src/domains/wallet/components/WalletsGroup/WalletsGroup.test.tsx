@@ -342,11 +342,10 @@ describe("WalletsGroup", () => {
 			},
 		);
 
-		// eslint-disable-next-line testing-library/no-node-access
 		const currencyCell = screen.getAllByTestId("CurrencyCell")[0];
 		expect(currencyCell).toBeInTheDocument();
 
-		// Use querySelectorAll on the currencyCell to find elements with the class name
+		// eslint-disable-next-line testing-library/no-node-access
 		const skeletons = currencyCell.querySelectorAll(".react-loading-skeleton");
 		expect(skeletons.length).toBeGreaterThan(0);
 		expect(skeletons[0]).toBeInTheDocument();
