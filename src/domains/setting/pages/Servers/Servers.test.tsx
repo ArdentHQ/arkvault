@@ -899,7 +899,7 @@ describe("Servers Settings", () => {
 
 			await userEvent.click(within(table).getAllByTestId(networkAccordionIconTestId)[0]);
 
-			expect(screen.queryAllByTestId("CustomPeers-network-item--mobile--expanded")[0]).toBeInTheDocument();
+			expect(screen.getAllByTestId("CustomPeers-network-item--mobile--expanded")[0]).toBeInTheDocument();
 		});
 
 		it("can expand a custom servers accordion in xs for peer", async () => {
@@ -918,7 +918,7 @@ describe("Servers Settings", () => {
 			// index 2 is a peer network
 			await userEvent.click(within(table).getAllByTestId(networkAccordionIconTestId)[2]);
 
-			expect(screen.queryAllByTestId("CustomPeers-network-item--mobile--expanded")[0]).toBeInTheDocument();
+			expect(screen.getAllByTestId("CustomPeers-network-item--mobile--expanded")[0]).toBeInTheDocument();
 		});
 
 		it("can check servers accordion in mobile", async () => {
@@ -1000,8 +1000,6 @@ describe("Servers Settings", () => {
 				},
 			);
 
-			const table = screen.getByTestId(customPeerListTestId);
-
 			await waitFor(() => expect(screen.queryByTestId(peerStatusLoadingTestId)).not.toBeInTheDocument());
 
 			await userEvent.click(screen.queryAllByTestId("CustomPeers-network-item--mobile--refresh")[0]);
@@ -1033,9 +1031,9 @@ describe("Servers Settings", () => {
 			await userEvent.click(screen.getAllByTestId(peerStatusOkTestId)[0]);
 
 			await waitFor(() =>
-				expect(screen.queryAllByTestId("CustomPeers-network-item--mobile--expanded")[0]).toBeInTheDocument(),
+				expect(screen.getAllByTestId("CustomPeers-network-item--mobile--expanded")[0]).toBeInTheDocument(),
 			);
-		}); 
+		});
 
 		it("should show status ok after ping the servers", async () => {
 			const { asFragment } = render(
