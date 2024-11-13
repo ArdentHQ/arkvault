@@ -677,11 +677,11 @@ exports[`TransactionDetailModal > should render a ipfs modal 1`] = `
                             >
                               Nonce
                             </div>
-                            <p
-                              class="text-sm leading-[17px] text-theme-secondary-500 sm:text-base sm:leading-5"
+                            <div
+                              class="text-sm font-semibold leading-[17px] sm:text-base sm:leading-5"
                             >
-                              N/A
-                            </p>
+                              1
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -1405,11 +1405,11 @@ exports[`TransactionDetailModal > should render a magistrate modal 1`] = `
                             >
                               Nonce
                             </div>
-                            <p
-                              class="text-sm leading-[17px] text-theme-secondary-500 sm:text-base sm:leading-5"
+                            <div
+                              class="text-sm font-semibold leading-[17px] sm:text-base sm:leading-5"
                             >
-                              N/A
-                            </p>
+                              1
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -2215,11 +2215,11 @@ exports[`TransactionDetailModal > should render a multi payment modal 1`] = `
                             >
                               Nonce
                             </div>
-                            <p
-                              class="text-sm leading-[17px] text-theme-secondary-500 sm:text-base sm:leading-5"
+                            <div
+                              class="text-sm font-semibold leading-[17px] sm:text-base sm:leading-5"
                             >
-                              N/A
-                            </p>
+                              1
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -3138,11 +3138,11 @@ exports[`TransactionDetailModal > should render a multi signature modal 1`] = `
                             >
                               Nonce
                             </div>
-                            <p
-                              class="text-sm leading-[17px] text-theme-secondary-500 sm:text-base sm:leading-5"
+                            <div
+                              class="text-sm font-semibold leading-[17px] sm:text-base sm:leading-5"
                             >
-                              N/A
-                            </p>
+                              1
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -4146,11 +4146,11 @@ exports[`TransactionDetailModal > should render a transfer modal 1`] = `
                             >
                               Nonce
                             </div>
-                            <p
-                              class="text-sm leading-[17px] text-theme-secondary-500 sm:text-base sm:leading-5"
+                            <div
+                              class="text-sm font-semibold leading-[17px] sm:text-base sm:leading-5"
                             >
-                              N/A
-                            </p>
+                              1
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -4948,11 +4948,11 @@ exports[`TransactionDetailModal > should render a transfer modal with memo 1`] =
                             >
                               Nonce
                             </div>
-                            <p
-                              class="text-sm leading-[17px] text-theme-secondary-500 sm:text-base sm:leading-5"
+                            <div
+                              class="text-sm font-semibold leading-[17px] sm:text-base sm:leading-5"
                             >
-                              N/A
-                            </p>
+                              1
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -5676,11 +5676,11 @@ exports[`TransactionDetailModal > should render an unlock tokens modal 1`] = `
                             >
                               Nonce
                             </div>
-                            <p
-                              class="text-sm leading-[17px] text-theme-secondary-500 sm:text-base sm:leading-5"
+                            <div
+                              class="text-sm font-semibold leading-[17px] sm:text-base sm:leading-5"
                             >
-                              N/A
-                            </p>
+                              1
+                            </div>
                           </div>
                         </div>
                       </div>
