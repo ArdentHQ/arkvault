@@ -65,7 +65,7 @@ export const TransactionDetails = ({
 					{transaction.blockId() && (
 						<Link
 							isExternal
-							to={transactionWallet.coin().link().block(transaction.blockId()) as string}
+							to={transactionWallet.coin().link().block(transaction.blockId())}
 							className="h-5 text-sm leading-[17px] sm:text-base sm:leading-5"
 						>
 							{blockHeight}

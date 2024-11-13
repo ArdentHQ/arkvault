@@ -13,7 +13,10 @@ describe("TransactionDetails", () => {
 	});
 
 	it.each(["sm", "md", "lg"])("should render in %s", (breakpoint: string) => {
-		renderResponsive(<TransactionDetails transaction={{ ...TransactionFixture, wallet: () => wallet }} />, breakpoint);
+		renderResponsive(
+			<TransactionDetails transaction={{ ...TransactionFixture, wallet: () => wallet }} />,
+			breakpoint,
+		);
 
 		expect(screen.getAllByTestId("DetailLabelText")).toHaveLength(4);
 	});
