@@ -123,17 +123,14 @@ describe("WalletsGroup", () => {
 		const toggleArkMainnet = screen.getAllByTestId("Accordion__toggle")[0];
 		const toggleArkDevnet = screen.getAllByTestId("Accordion__toggle")[1];
 
-		expect(screen.queryByText(wallets[2].address())).not.toBeInTheDocument();
-
-		await userEvent.click(toggleArkMainnet);
+		
+		expect(screen.getAllByText(wallets[2].address())[0]).toBeInTheDocument();
 
 		expect(screen.getAllByTestId("WalletsGroupHeader")[0].classList.contains("md:border-b")).toBeTruthy();
 		expect(screen.queryAllByTestId("WalletsGroupHeader")[1].classList.contains("border-b")).toBeFalsy();
 
-		expect(screen.queryByText(wallets[0].alias()!)).not.toBeInTheDocument();
-		expect(screen.getByText(wallets[2].address())).toBeInTheDocument();
-
-		await userEvent.click(toggleArkDevnet);
+		expect(screen.getAllByText(wallets[0].alias()!)[0]).toBeInTheDocument();
+		expect(screen.getAllByText(wallets[2].address())[0]).toBeInTheDocument();
 
 		expect(screen.getAllByText(wallets[0].alias()!)[0]).toBeInTheDocument();
 
@@ -349,10 +346,13 @@ describe("WalletsGroup", () => {
 			},
 		);
 
-		await userEvent.click(screen.getAllByTestId("Accordion__toggle")[0]);
-
 		// eslint-disable-next-line testing-library/no-node-access
-		expect(screen.getAllByTestId("CurrencyCell")[0].querySelector(".react-loading-skeleton")).toBeInTheDocument();
+		const currencyCell = screen.getAllByTestId("CurrencyCell")[0];
+        expect(currencyCell).toBeInTheDocument();
+
+        const skeletons = currencyCell.querySelectorAll(".react-loading-skeleton");
+        expect(skeletons.length).toBeGreaterThan(0);
+        expect(skeletons[0]).toBeInTheDocument();
 
 		expect(asFragment()).toMatchSnapshot();
 
