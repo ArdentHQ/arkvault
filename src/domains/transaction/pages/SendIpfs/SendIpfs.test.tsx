@@ -39,7 +39,7 @@ const fixtureProfileId = getDefaultProfileId();
 
 const ipfsTransactionFixture = {
 	amount: () => BigNumber.make(+ipfsFixture.data.amount / 1e8),
-	blockId: () => "1",
+	blockId: () => ipfsFixture.data.blockId,
 	convertedAmount: () => BigNumber.make(10),
 	data: () => ({ data: () => ipfsFixture.data }),
 	explorerLink: () => `https://test.arkscan.io/transaction/${ipfsFixture.data.id}`,

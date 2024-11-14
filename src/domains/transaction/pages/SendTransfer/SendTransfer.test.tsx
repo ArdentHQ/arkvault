@@ -51,7 +51,7 @@ vi.mock("@/utils/delay", () => ({
 const createTransactionMock = (wallet: Contracts.IReadWriteWallet) =>
 	vi.spyOn(wallet.transaction(), "transaction").mockReturnValue({
 		amount: () => +transactionFixture.data.amount / 1e8,
-		blockId: () => "1",
+		blockId: () => transactionFixture.data.blockId,
 		confirmations: () => 10,
 		convertedAmount: () => +transactionFixture.data.amount / 1e8,
 		data: () => ({ data: () => transactionFixture.data }),
