@@ -195,7 +195,7 @@ describe("CreateProfile", () => {
 
 		render(<CreateProfile />, { history });
 
-		await userEvent.type(nameInput(), "test profile 1");
+		await userEvent.type(nameInput(), "test profile 2");
 
 		await userEvent.click(screen.getByRole("checkbox"));
 
