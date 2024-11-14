@@ -1,5 +1,6 @@
 import { Networks } from "@ardenthq/sdk";
 import { Contracts } from "@ardenthq/sdk-profiles";
+import { IProfile } from "@ardenthq/sdk-profiles/distribution/esm/profile.contract";
 import React from "react";
 
 export interface MaxWidthReferences {
@@ -11,6 +12,7 @@ export interface WalletsGroupProperties {
 	network: Networks.Network;
 	wallets: Contracts.IReadWriteWallet[];
 	maxWidthReferences: MaxWidthReferences;
+	profileId: string;
 }
 
 export interface WalletsGroupHeaderProperties {

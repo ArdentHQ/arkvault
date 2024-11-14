@@ -246,6 +246,7 @@ describe("WalletsGroup", () => {
 					balance: balanceWidthReference.current,
 					currency: currencyWidthReference.current,
 				}}
+				profileId={"1"}
 			/>,
 		);
 
