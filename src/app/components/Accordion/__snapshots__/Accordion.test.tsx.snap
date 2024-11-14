@@ -301,7 +301,7 @@ exports[`Button > should toggle the accordion on click 1`] = `
     class="css-fvpuky"
   >
     <div
-      class="select-none cursor-pointer md:h-20 py-6 px-8 md:p-4 flex flex-row items-center border-theme-secondary-300 dark:border-theme-secondary-800 md:border-b"
+      class="select-none cursor-pointer group md:h-20 py-6 px-8 md:p-4 flex flex-row items-center border-theme-secondary-300 dark:border-theme-secondary-800"
       data-testid="AccordionHeader"
     >
       <div
@@ -310,14 +310,14 @@ exports[`Button > should toggle the accordion on click 1`] = `
         Header
       </div>
       <div
-        class="ml-4 flex flex-shrink-0 items-center self-stretch css-o6tyc"
+        class="ml-4 flex flex-shrink-0 items-center self-stretch transition-all duration-100 css-o6tyc"
       >
         <div
           class="css-tz6w2"
           data-testid="Accordion__toggle"
         >
           <div
-            class="transition-transform rotate-180 css-15txs7d"
+            class="transition-transform css-15txs7d"
             height="10"
             width="10"
           >
@@ -341,12 +341,6 @@ exports[`Button > should toggle the accordion on click 1`] = `
           </div>
         </div>
       </div>
-    </div>
-    <div
-      class="px-8 pb-6 md:px-4 md:pb-0 md:pt-6"
-      data-testid="AccordionContent"
-    >
-      Content
     </div>
   </div>
 </div>
