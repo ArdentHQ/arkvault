@@ -32,7 +32,7 @@ import { DateTime } from "@ardenthq/sdk-intl";
 const createTransactionMock = (wallet: Contracts.IReadWriteWallet) =>
 	vi.spyOn(wallet.transaction(), "transaction").mockReturnValue({
 		amount: () => +transactionFixture.data.amount / 1e8,
-		blockId: () => "1",
+		blockId: () => transactionFixture.data.blockId,
 		convertedAmount: () => +transactionFixture.data.amount / 1e8,
 		convertedAmount: () => BigNumber.make(10),
 		data: () => ({ data: () => transactionFixture.data }),
@@ -53,6 +53,7 @@ const createTransactionMock = (wallet: Contracts.IReadWriteWallet) =>
 		isVote: () => false,
 		isVoteCombination: () => false,
 		memo: () => null,
+		nonce: () => BigNumber.make(276),
 		recipient: () => transactionFixture.data.recipient,
 		recipients: () => [
 			{ address: transactionFixture.data.recipient, amount: +transactionFixture.data.amount / 1e8 },

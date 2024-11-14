@@ -39,7 +39,7 @@ const fixtureProfileId = getDefaultProfileId();
 
 const ipfsTransactionFixture = {
 	amount: () => BigNumber.make(+ipfsFixture.data.amount / 1e8),
-	blockId: () => "1",
+	blockId: () => ipfsFixture.data.blockId,
 	convertedAmount: () => BigNumber.make(10),
 	data: () => ({ data: () => ipfsFixture.data }),
 	explorerLink: () => `https://test.arkscan.io/transaction/${ipfsFixture.data.id}`,
@@ -56,9 +56,9 @@ const ipfsTransactionFixture = {
 	isTransfer: () => false,
 	isUnvote: () => false,
 	isVote: () => false,
-	isVote: () => false,
 	isVoteCombination: () => false,
 	memo: () => null,
+	nonce: () => BigNumber.make(6),
 	recipient: () => ipfsFixture.data.recipient,
 	sender: () => ipfsFixture.data.sender,
 	timestamp: () => DateTime.make(),

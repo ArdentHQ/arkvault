@@ -33,6 +33,12 @@ describe("Send transfer validations", () => {
 		await expect(noAddressWithoutRecipients.validate.valid("")).resolves.toBe("COMMON.VALIDATION.FIELD_REQUIRED");
 	});
 
+	it("recipientAddres - invalid", async () => {
+		const invalidAddress = sendTransfer(translationMock).recipientAddress(profile, network, [], false);
+
+		await expect(invalidAddress.validate.valid("invalid")).resolves.toBe("COMMON.VALIDATION.RECIPIENT_INVALID");
+	});
+
 	it("amount", () => {
 		const noBalance = sendTransfer(translationMock).amount(network, BigNumber.ZERO, [], false);
 
@@ -45,5 +51,11 @@ describe("Send transfer validations", () => {
 		const amountTooSmall = sendTransfer(translationMock).amount(network, BigNumber.ONE, [], false);
 
 		expect(amountTooSmall.validate.valid(0)).toBe("TRANSACTION.VALIDATION.AMOUNT_BELOW_MINIMUM");
+	});
+	it("memo", () => {
+		const memo = sendTransfer(translationMock).memo();
+
+		expect(memo.maxLength.value).toBe(255);
+		expect(memo.maxLength.message).toBe("COMMON.VALIDATION.MAX_LENGTH");
 	});
 });

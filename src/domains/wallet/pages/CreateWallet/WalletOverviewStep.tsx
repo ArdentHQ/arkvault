@@ -48,7 +48,13 @@ export const WalletOverviewStep = ({ isGeneratingWallet }: { isGeneratingWallet:
 			<Header
 				title={t("WALLETS.PAGE_CREATE_WALLET.PASSPHRASE_STEP.TITLE")}
 				titleIcon={
-					<ThemeIcon darkIcon="YourPassphraseDark" lightIcon="YourPassphraseLight" dimensions={[24, 24]} />
+					<ThemeIcon
+						darkIcon="YourPassphraseDark"
+						lightIcon="YourPassphraseLight"
+						greenDarkIcon="YourPassphraseDarkGreen"
+						greenLightIcon="YourPassphraseLightGreen"
+						dimensions={[24, 24]}
+					/>
 				}
 				className="hidden sm:block"
 			/>

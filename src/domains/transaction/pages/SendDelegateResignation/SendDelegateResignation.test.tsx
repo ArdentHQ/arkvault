@@ -72,6 +72,7 @@ const transactionResponse = {
 	isVote: () => false,
 	isVoteCombination: () => false,
 	memo: () => null,
+	nonce: () => BigNumber.make(1),
 	recipient: () => transactionFixture.data.recipient,
 	sender: () => transactionFixture.data.sender,
 	timestamp: () => DateTime.make(),

@@ -18,6 +18,7 @@ const createTransactionMock = (wallet: Contracts.IReadWriteWallet) =>
 		explorerLink: () => `https://test.arkscan.io/transaction/${transactionFixture.data.id}`,
 		fee: () => BigNumber.make(transactionFixture.data.fee),
 		id: () => transactionFixture.data.id,
+		nonce: () => BigNumber.make(1),
 		recipient: () => transactionFixture.data.recipient,
 		sender: () => transactionFixture.data.sender,
 	});

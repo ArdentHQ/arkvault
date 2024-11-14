@@ -46,7 +46,13 @@ export const BackupStep = () => {
 			<StepHeader
 				title={t("TRANSACTION.PAGE_SECOND_SIGNATURE.PASSPHRASE_STEP.TITLE")}
 				titleIcon={
-					<ThemeIcon darkIcon="YourPassphraseDark" lightIcon="YourPassphraseLight" dimensions={[24, 24]} />
+					<ThemeIcon
+						darkIcon="YourPassphraseDark"
+						lightIcon="YourPassphraseLight"
+						greenLightIcon="YourPassphraseLightGreen"
+						greenDarkIcon="YourPassphraseDarkGreen"
+						dimensions={[24, 24]}
+					/>
 				}
 			/>
 

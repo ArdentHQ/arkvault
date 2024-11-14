@@ -382,6 +382,7 @@ export const createTransactionMock = (
 		isVote: () => false,
 		isVoteCombination: () => false,
 		memo: () => null,
+		nonce: () => BigNumber.make(1),
 		recipient: () => transactionFixture.data.recipient,
 		recipients: () => [
 			{ address: transactionFixture.data.recipient, amount: +transactionFixture.data.amount / 1e8 },

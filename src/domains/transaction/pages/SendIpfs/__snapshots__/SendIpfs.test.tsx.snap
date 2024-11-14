@@ -805,34 +805,36 @@ exports[`SendIpfs > should render form step 1`] = `
             >
               <div
                 class="css-h1kfx5"
-                data-testid="icon-SendTransactionLight"
+                data-testid="icon-SendTransactionLightGreen"
                 height="24"
                 width="24"
               >
                 <svg
                   fill="none"
+                  height="25"
                   viewBox="0 0 24 25"
+                  width="24"
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <g
-                    clip-path="url(#clip0_13879_104416)"
+                    clip-path="url(#clip0_18982_50179)"
                   >
                     <path
                       clip-rule="evenodd"
                       d="M18.8821 8.94457H13.7264C13.0146 8.94457 12.4375 8.3675 12.4375 7.65565V2.5"
-                      fill="#E6EFF9"
+                      fill="#E2F0E6"
                       fill-rule="evenodd"
                     />
                     <path
                       d="M18.8821 8.94457H13.7264C13.0146 8.94457 12.4375 8.3675 12.4375 7.65565V2.5"
-                      stroke="#235B95"
+                      stroke="#289548"
                       stroke-linecap="round"
                       stroke-linejoin="round"
                       stroke-width="2"
                     />
                     <path
                       d="M7.99174 21.8337H3.41391C2.70207 21.8337 2.125 21.2566 2.125 20.5448V3.78891C2.125 3.07707 2.70207 2.5 3.41391 2.5H12.5472C12.8891 2.49985 13.217 2.63554 13.4588 2.87722L18.5037 7.92289C18.7451 8.16452 18.8808 8.49212 18.8809 8.83372"
-                      stroke="#235B95"
+                      stroke="#289548"
                       stroke-linecap="round"
                       stroke-linejoin="round"
                       stroke-width="2"
@@ -840,9 +842,9 @@ exports[`SendIpfs > should render form step 1`] = `
                     <path
                       clip-rule="evenodd"
                       d="M9.02802 17.1926C8.71518 17.1043 8.49639 16.8225 8.4885 16.4975C8.48061 16.1725 8.68545 15.8804 8.99364 15.7771L18.994 12.5155C19.1276 12.472 19.2743 12.5069 19.3739 12.606C19.4735 12.7051 19.5092 12.8516 19.4664 12.9854L16.2073 22.9907C16.1044 23.2995 15.812 23.5049 15.4867 23.4968C15.1613 23.4888 14.8793 23.2693 14.7918 22.9559L13.6727 18.3067L9.02802 17.1926Z"
-                      fill="#E6EFF9"
+                      fill="#E2F0E6"
                       fill-rule="evenodd"
-                      stroke="#235B95"
+                      stroke="#289548"
                       stroke-linecap="round"
                       stroke-linejoin="round"
                       stroke-width="2"
@@ -850,7 +852,7 @@ exports[`SendIpfs > should render form step 1`] = `
                   </g>
                   <defs>
                     <clippath
-                      id="clip0_13879_104416"
+                      id="clip0_18982_50179"
                     >
                       <rect
                         fill="white"
@@ -2153,7 +2155,7 @@ exports[`SendIpfs > should render summary step 1`] = `
                     <div
                       class="text-sm font-semibold leading-[17px] sm:text-base sm:leading-5"
                     >
-                      01.07.2020 12:00 AM
+                      07.08.2020 9:30 AM
                     </div>
                   </div>
                   <div
@@ -2177,11 +2179,41 @@ exports[`SendIpfs > should render summary step 1`] = `
                     >
                       Block
                     </div>
-                    <p
-                      class="text-sm leading-[17px] text-theme-secondary-500 sm:text-base sm:leading-5"
+                    <a
+                      class="ring-focus group/inner inline-block h-5 text-sm leading-[17px] sm:text-base sm:leading-5 css-167zzsv"
+                      data-ring-focus-margin="-m-1"
+                      data-testid="Link"
+                      href="https://test.arkscan.io/blocks/f5c458844691ec85bc394b447c86583df52e74cd76f9773cb44457bff2492365"
+                      rel="noopener noreferrer"
                     >
-                      N/A
-                    </p>
+                      <span
+                        class="css-bxx244"
+                      />
+                      <div
+                        class="mb-[3px] shrink-0 align-middle duration-200 css-1fio4bh"
+                        data-testid="Link__external"
+                        height="12"
+                        width="12"
+                      >
+                        <svg
+                          id="arrow-external"
+                          viewBox="0 0 20 20"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
+                        >
+                          <path
+                            d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          />
+                        </svg>
+                      </div>
+                    </a>
                   </div>
                   <div
                     class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3 [.condensed_&]:leading-3"
@@ -2204,11 +2236,11 @@ exports[`SendIpfs > should render summary step 1`] = `
                     >
                       Nonce
                     </div>
-                    <p
-                      class="text-sm leading-[17px] text-theme-secondary-500 sm:text-base sm:leading-5"
+                    <div
+                      class="text-sm font-semibold leading-[17px] sm:text-base sm:leading-5"
                     >
-                      N/A
-                    </p>
+                      6
+                    </div>
                   </div>
                 </div>
               </div>
@@ -3610,7 +3642,7 @@ exports[`SendIpfs > should send a ipfs transfer with a ledger wallet 1`] = `
                                     class="ring-focus group/inner inline-block h-5 text-sm leading-[17px] sm:text-base sm:leading-5 css-167zzsv"
                                     data-ring-focus-margin="-m-1"
                                     data-testid="Link"
-                                    href="https://test.arkscan.io/block/1e9b975eff66a731095876c3b6cbff14fd4dec3bb37a4127c46db3d69131067e"
+                                    href="https://test.arkscan.io/blocks/f5c458844691ec85bc394b447c86583df52e74cd76f9773cb44457bff2492365"
                                     rel="noopener noreferrer"
                                   >
                                     <span
@@ -4997,7 +5029,7 @@ exports[`SendIpfs > should send an IPFS transaction and go back to wallet page 1
                                     class="ring-focus group/inner inline-block h-5 text-sm leading-[17px] sm:text-base sm:leading-5 css-167zzsv"
                                     data-ring-focus-margin="-m-1"
                                     data-testid="Link"
-                                    href="https://test.arkscan.io/block/1e9b975eff66a731095876c3b6cbff14fd4dec3bb37a4127c46db3d69131067e"
+                                    href="https://test.arkscan.io/blocks/f5c458844691ec85bc394b447c86583df52e74cd76f9773cb44457bff2492365"
                                     rel="noopener noreferrer"
                                   >
                                     <span
@@ -6386,7 +6418,7 @@ exports[`SendIpfs > should send an ipfs transaction with a multisig wallet 1`] =
                                     class="ring-focus group/inner inline-block h-5 text-sm leading-[17px] sm:text-base sm:leading-5 css-167zzsv"
                                     data-ring-focus-margin="-m-1"
                                     data-testid="Link"
-                                    href="https://test.arkscan.io/block/1e9b975eff66a731095876c3b6cbff14fd4dec3bb37a4127c46db3d69131067e"
+                                    href="https://test.arkscan.io/blocks/f5c458844691ec85bc394b447c86583df52e74cd76f9773cb44457bff2492365"
                                     rel="noopener noreferrer"
                                   >
                                     <span
@@ -7068,34 +7100,36 @@ exports[`SendIpfs > should show an error if an invalid IPFS hash is entered 1`] 
                           >
                             <div
                               class="css-h1kfx5"
-                              data-testid="icon-SendTransactionLight"
+                              data-testid="icon-SendTransactionLightGreen"
                               height="24"
                               width="24"
                             >
                               <svg
                                 fill="none"
+                                height="25"
                                 viewBox="0 0 24 25"
+                                width="24"
                                 xmlns="http://www.w3.org/2000/svg"
                               >
                                 <g
-                                  clip-path="url(#clip0_13879_104416)"
+                                  clip-path="url(#clip0_18982_50179)"
                                 >
                                   <path
                                     clip-rule="evenodd"
                                     d="M18.8821 8.94457H13.7264C13.0146 8.94457 12.4375 8.3675 12.4375 7.65565V2.5"
-                                    fill="#E6EFF9"
+                                    fill="#E2F0E6"
                                     fill-rule="evenodd"
                                   />
                                   <path
                                     d="M18.8821 8.94457H13.7264C13.0146 8.94457 12.4375 8.3675 12.4375 7.65565V2.5"
-                                    stroke="#235B95"
+                                    stroke="#289548"
                                     stroke-linecap="round"
                                     stroke-linejoin="round"
                                     stroke-width="2"
                                   />
                                   <path
                                     d="M7.99174 21.8337H3.41391C2.70207 21.8337 2.125 21.2566 2.125 20.5448V3.78891C2.125 3.07707 2.70207 2.5 3.41391 2.5H12.5472C12.8891 2.49985 13.217 2.63554 13.4588 2.87722L18.5037 7.92289C18.7451 8.16452 18.8808 8.49212 18.8809 8.83372"
-                                    stroke="#235B95"
+                                    stroke="#289548"
                                     stroke-linecap="round"
                                     stroke-linejoin="round"
                                     stroke-width="2"
@@ -7103,9 +7137,9 @@ exports[`SendIpfs > should show an error if an invalid IPFS hash is entered 1`] 
                                   <path
                                     clip-rule="evenodd"
                                     d="M9.02802 17.1926C8.71518 17.1043 8.49639 16.8225 8.4885 16.4975C8.48061 16.1725 8.68545 15.8804 8.99364 15.7771L18.994 12.5155C19.1276 12.472 19.2743 12.5069 19.3739 12.606C19.4735 12.7051 19.5092 12.8516 19.4664 12.9854L16.2073 22.9907C16.1044 23.2995 15.812 23.5049 15.4867 23.4968C15.1613 23.4888 14.8793 23.2693 14.7918 22.9559L13.6727 18.3067L9.02802 17.1926Z"
-                                    fill="#E6EFF9"
+                                    fill="#E2F0E6"
                                     fill-rule="evenodd"
-                                    stroke="#235B95"
+                                    stroke="#289548"
                                     stroke-linecap="round"
                                     stroke-linejoin="round"
                                     stroke-width="2"
@@ -7113,7 +7147,7 @@ exports[`SendIpfs > should show an error if an invalid IPFS hash is entered 1`] 
                                 </g>
                                 <defs>
                                   <clippath
-                                    id="clip0_13879_104416"
+                                    id="clip0_18982_50179"
                                   >
                                     <rect
                                       fill="white"
