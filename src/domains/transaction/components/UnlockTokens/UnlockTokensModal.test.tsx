@@ -83,16 +83,15 @@ describe("UnlockTokensModal", () => {
 			isDelegateResignation: () => false,
 			isIpfs: () => false,
 			isMultiPayment: () => false,
-			isMultiPayment: () => false,
 			isMultiSignatureRegistration: () => false,
 			isSent: () => true,
-			isTransfer: () => true,
 			isTransfer: () => true,
 			isUnlockToken: () => true,
 			isUnvote: () => false,
 			isVote: () => true,
 			isVoteCombination: () => false,
 			memo: () => {},
+			nonce: () => BigNumber.make(1),
 			recipient: () => wallet.address(),
 			sender: () => transactionFixture.data.sender.address,
 			timestamp: () => DateTime.make(),
@@ -239,9 +238,7 @@ describe("UnlockTokensModal", () => {
 		await act(() => vi.runOnlyPendingTimers());
 
 		if (expectedOutcome === "success") {
-			await waitFor(() => {
-				expect(screen.findByTestId("TransactionId")).resolves.toBeVisible();
-			});
+			await expect(screen.findByTestId("TransactionId")).resolves.toBeVisible();
 		} else {
 			await waitFor(() => {
 				expect(screen.getByTestId("ErrorStep__errorMessage")).toBeInTheDocument();

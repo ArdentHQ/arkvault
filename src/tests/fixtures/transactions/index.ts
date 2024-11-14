@@ -31,6 +31,7 @@ export const TransactionFixture = {
 	recipient: () => "D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD",
 	recipients: () => [],
 	amount: () => 100,
+	nonce: () => BigNumber.make(1),
 	convertedAmount: () => 0,
 	fee: () => 21,
 	convertedFee: () => 0,
