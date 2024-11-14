@@ -38,6 +38,7 @@ import {
 } from "@/utils/testing-library";
 import { server, requestMock } from "@/tests/mocks/server";
 import * as useConfirmedTransactionMock from "@/domains/transaction/components/TransactionSuccessful/hooks/useConfirmedTransaction";
+import { BigNumber } from "@ardenthq/sdk-helpers";
 
 const passphrase = getDefaultWalletMnemonic();
 const fixtureProfileId = getDefaultProfileId();
@@ -50,7 +51,7 @@ vi.mock("@/utils/delay", () => ({
 const createTransactionMock = (wallet: Contracts.IReadWriteWallet) =>
 	vi.spyOn(wallet.transaction(), "transaction").mockReturnValue({
 		amount: () => +transactionFixture.data.amount / 1e8,
-		blockId: () => "1",
+		blockId: () => transactionFixture.data.blockId,
 		confirmations: () => 10,
 		convertedAmount: () => +transactionFixture.data.amount / 1e8,
 		data: () => ({ data: () => transactionFixture.data }),
@@ -70,6 +71,7 @@ const createTransactionMock = (wallet: Contracts.IReadWriteWallet) =>
 		isVote: () => false,
 		isVoteCombination: () => false,
 		memo: () => null,
+		nonce: () => BigNumber.make(276),
 		recipient: () => transactionFixture.data.recipient,
 		recipients: () => [
 			{ address: transactionFixture.data.recipient, amount: +transactionFixture.data.amount / 1e8 },

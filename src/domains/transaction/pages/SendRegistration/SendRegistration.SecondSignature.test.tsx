@@ -86,6 +86,7 @@ const createSecondSignatureRegistrationMock = (wallet: Contracts.IReadWriteWalle
 		isVote: () => false,
 		isVoteCombination: () => false,
 		memo: () => null,
+		nonce: () => BigNumber.make(1),
 		recipient: () => SecondSignatureRegistrationFixture.data.recipient,
 		sender: () => SecondSignatureRegistrationFixture.data.sender,
 		timestamp: () => DateTime.make(),

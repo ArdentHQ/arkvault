@@ -18,7 +18,9 @@ import CircleExclamationMark from "./circle-exclamation-mark.svg?react";
 import CircleInfo from "./circle-info.svg?react";
 import CircleQuestionMark from "./circle-question-mark.svg?react";
 import CircleCompletedLight from "./circle-completed-light.svg?react";
+import CircleCompletedLightGreen from "./circle-completed-light-green.svg?react";
 import CircleCompletedDark from "./circle-completed-dark.svg?react";
+import CircleCompletedDarkGreen from "./circle-completed-dark-green.svg?react";
 import Clock from "./clock.svg?react";
 import ClockError from "./clock-error.svg?react";
 import ClockPencil from "./clock-pencil.svg?react";
@@ -89,16 +91,26 @@ import UserCheckMark from "./user-check-mark.svg?react";
 import Dashboard from "./dashboard.svg?react";
 import DocumentView from "./document-view.svg?react";
 import ImportWalletLight from "./import-wallet-light.svg?react";
+import ImportWalletLightGreen from "./import-wallet-light-green.svg?react";
 import ImportWalletDark from "./import-wallet-dark.svg?react";
+import ImportWalletDarkGreen from "./import-wallet-dark-green.svg?react";
 import ImportProfileLight from "./import-profile-light.svg?react";
+import ImportProfileLightGreen from "./import-profile-light-green.svg?react";
 import ImportProfileDark from "./import-profile-dark.svg?react";
+import ImportProfileDarkGreen from "./import-profile-dark-green.svg?react";
+import SelectNetworkLightGreen from "./select-network-light-green.svg?react";
 import SelectNetworkLight from "./select-network-light.svg?react";
+import SelectNetworkDarkGreen from "./select-network-dark-green.svg?react";
 import SelectNetworkDark from "./select-network-dark.svg?react";
 import WalletEncryptionDark from "./wallet-encryption-dark.svg?react";
+import WalletEncryptionDarkGreen from "./wallet-encryption-dark-green.svg?react";
 import WalletEncryptionLight from "./wallet-encryption-light.svg?react";
+import WalletEncryptionLightGreen from "./wallet-encryption-light-green.svg?react";
 import Completed from "./completed.svg?react";
 import YourPassphraseLight from "./your-passphrase-light.svg?react";
+import YourPassphraseLightGreen from "./your-passphrase-light-green.svg?react";
 import YourPassphraseDark from "./your-passphrase-dark.svg?react";
+import YourPassphraseDarkGreen from "./your-passphrase-dark-green.svg?react";
 import ConfirmYourPassphrase from "./confirm-your-passphrase.svg?react";
 import PersonLight from "./person-light.svg?react";
 import PersonDark from "./person-dark.svg?react";
@@ -120,7 +132,9 @@ export const SvgCollection: Record<string, FC<SVGProps<SVGSVGElement>>> = {
 	CircleCheckMark,
 	CircleCheckMarkPencil,
 	CircleCompletedDark,
+	CircleCompletedDarkGreen,
 	CircleCompletedLight,
+	CircleCompletedLightGreen,
 	CircleCross,
 	CircleExclamationMark,
 	CircleInfo,
@@ -163,9 +177,13 @@ export const SvgCollection: Record<string, FC<SVGProps<SVGSVGElement>>> = {
 	Grid,
 	HintSmall,
 	ImportProfileDark,
+	ImportProfileDarkGreen,
 	ImportProfileLight,
+	ImportProfileLightGreen,
 	ImportWalletDark,
+	ImportWalletDarkGreen,
 	ImportWalletLight,
+	ImportWalletLightGreen,
 	Ledger,
 	LedgerAlt,
 	List,
@@ -189,7 +207,9 @@ export const SvgCollection: Record<string, FC<SVGProps<SVGSVGElement>>> = {
 	QRCode,
 	QuestionMarkSmall,
 	SelectNetworkDark,
+	SelectNetworkDarkGreen,
 	SelectNetworkLight,
+	SelectNetworkLightGreen,
 	Server,
 	ServerMultisign,
 	ServerPeer,
@@ -207,7 +227,11 @@ export const SvgCollection: Record<string, FC<SVGProps<SVGSVGElement>>> = {
 	User,
 	UserCheckMark,
 	WalletEncryptionDark,
+	WalletEncryptionDarkGreen,
 	WalletEncryptionLight,
+	WalletEncryptionLightGreen,
 	YourPassphraseDark,
+	YourPassphraseDarkGreen,
 	YourPassphraseLight,
+	YourPassphraseLightGreen,
 };

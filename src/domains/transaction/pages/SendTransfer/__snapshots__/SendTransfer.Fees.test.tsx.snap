@@ -1222,7 +1222,7 @@ exports[`SendTransfer Fee Handling > should send a single transfer with a high f
                                     class="ring-focus group/inner inline-block h-5 text-sm leading-[17px] sm:text-base sm:leading-5 css-167zzsv"
                                     data-ring-focus-margin="-m-1"
                                     data-testid="Link"
-                                    href="https://test.arkscan.io/block/8f913b6b719e7767d49861c0aec79ced212767645cb793d75d2f1b89abb49877"
+                                    href="https://test.arkscan.io/blocks/2a690f25cb1603275936665162e26415cad14199dda141d33666597c8bca8c5c"
                                     rel="noopener noreferrer"
                                   >
                                     <span
@@ -2682,7 +2682,7 @@ exports[`SendTransfer Fee Handling > should send a single transfer with a low fe
                                     class="ring-focus group/inner inline-block h-5 text-sm leading-[17px] sm:text-base sm:leading-5 css-167zzsv"
                                     data-ring-focus-margin="-m-1"
                                     data-testid="Link"
-                                    href="https://test.arkscan.io/block/8f913b6b719e7767d49861c0aec79ced212767645cb793d75d2f1b89abb49877"
+                                    href="https://test.arkscan.io/blocks/2a690f25cb1603275936665162e26415cad14199dda141d33666597c8bca8c5c"
                                     rel="noopener noreferrer"
                                   >
                                     <span

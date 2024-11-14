@@ -40,7 +40,7 @@ const createVoteTransactionMock = (wallet: Contracts.IReadWriteWallet) =>
 	// @ts-ignore
 	vi.spyOn(wallet.transaction(), "transaction").mockReturnValue({
 		amount: () => voteFixture.data.amount / 1e8,
-		blockId: () => "1",
+		blockId: () => voteFixture.data.blockId,
 		convertedAmount: () => BigNumber.make(10),
 		data: () => ({ data: () => voteFixture.data }),
 		explorerLink: () => `https://test.arkscan.io/transaction/${voteFixture.data.id}`,
@@ -58,6 +58,7 @@ const createVoteTransactionMock = (wallet: Contracts.IReadWriteWallet) =>
 		isVote: () => true,
 		isVoteCombination: () => false,
 		memo: () => null,
+		nonce: () => BigNumber.make(158),
 		recipient: () => voteFixture.data.recipient,
 		sender: () => voteFixture.data.sender,
 		timestamp: () => DateTime.make(),
@@ -70,7 +71,7 @@ const createUnvoteTransactionMock = (wallet: Contracts.IReadWriteWallet) =>
 	// @ts-ignore
 	vi.spyOn(wallet.transaction(), "transaction").mockReturnValue({
 		amount: () => unvoteFixture.data.amount / 1e8,
-		blockId: () => "1",
+		blockId: () => unvoteFixture.data.blockId,
 		convertedAmount: () => BigNumber.make(10),
 		data: () => ({ data: () => voteFixture.data }),
 		explorerLink: () => `https://test.arkscan.io/transaction/${unvoteFixture.data.id}`,
@@ -88,6 +89,7 @@ const createUnvoteTransactionMock = (wallet: Contracts.IReadWriteWallet) =>
 		isVote: () => false,
 		isVoteCombination: () => false,
 		memo: () => null,
+		nonce: () => BigNumber.make(158),
 		recipient: () => unvoteFixture.data.recipient,
 		sender: () => unvoteFixture.data.sender,
 		timestamp: () => DateTime.make(),

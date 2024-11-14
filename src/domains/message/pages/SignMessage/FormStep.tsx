@@ -59,7 +59,13 @@ export const FormStep = ({
 				title={t("MESSAGE.PAGE_SIGN_MESSAGE.FORM_STEP.TITLE")}
 				subtitle={getSubtitle()}
 				titleIcon={
-					<ThemeIcon dimensions={[24, 24]} lightIcon="SendTransactionLight" darkIcon="SendTransactionDark" />
+					<ThemeIcon
+						dimensions={[24, 24]}
+						lightIcon="SendTransactionLight"
+						darkIcon="SendTransactionDark"
+						greenDarkIcon="SendTransactionDarkGreen"
+						greenLightIcon="SendTransactionLightGreen"
+					/>
 				}
 			/>
 
