@@ -10,6 +10,8 @@ import { useLocaleCurrency, useProfileRestore, useTheme } from "@/app/hooks";
 
 import { ProfileForm, ProfileFormState } from "@/domains/profile/components/ProfileForm";
 import { ThemeIcon } from "@/app/components/Icon";
+import { generatePath } from "react-router-dom";
+import { ProfilePaths } from "@/router/paths";
 
 export const CreateProfile = () => {
 	const { env, persist } = useEnvironmentContext();
@@ -42,7 +44,7 @@ export const CreateProfile = () => {
 		restoreProfileConfig(profile);
 		await persist();
 
-		history.push("/");
+		history.push(generatePath(ProfilePaths.Dashboard, { profileId: profile.id() }))
 	};
 
 	return (
