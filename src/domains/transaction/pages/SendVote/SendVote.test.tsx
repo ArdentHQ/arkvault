@@ -40,7 +40,7 @@ const createVoteTransactionMock = (wallet: Contracts.IReadWriteWallet) =>
 	// @ts-ignore
 	vi.spyOn(wallet.transaction(), "transaction").mockReturnValue({
 		amount: () => voteFixture.data.amount / 1e8,
-		blockId: () => "1",
+		blockId: () => voteFixture.data.blockId,
 		convertedAmount: () => BigNumber.make(10),
 		data: () => ({ data: () => voteFixture.data }),
 		explorerLink: () => `https://test.arkscan.io/transaction/${voteFixture.data.id}`,
@@ -71,7 +71,7 @@ const createUnvoteTransactionMock = (wallet: Contracts.IReadWriteWallet) =>
 	// @ts-ignore
 	vi.spyOn(wallet.transaction(), "transaction").mockReturnValue({
 		amount: () => unvoteFixture.data.amount / 1e8,
-		blockId: () => "1",
+		blockId: () => unvoteFixture.data.blockId,
 		convertedAmount: () => BigNumber.make(10),
 		data: () => ({ data: () => voteFixture.data }),
 		explorerLink: () => `https://test.arkscan.io/transaction/${unvoteFixture.data.id}`,
