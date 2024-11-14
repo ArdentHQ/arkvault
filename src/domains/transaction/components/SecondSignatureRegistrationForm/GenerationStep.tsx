@@ -52,7 +52,13 @@ export const GenerationStep = ({ wallet, profile }: FormStepProperties) => {
 				title={t("TRANSACTION.PAGE_SECOND_SIGNATURE.GENERATION_STEP.TITLE")}
 				subtitle={t("TRANSACTION.PAGE_SECOND_SIGNATURE.GENERATION_STEP.DESCRIPTION")}
 				titleIcon={
-					<ThemeIcon dimensions={[24, 24]} lightIcon="SendTransactionLight" darkIcon="SendTransactionDark" />
+					<ThemeIcon
+						dimensions={[24, 24]}
+						lightIcon="SendTransactionLight"
+						darkIcon="SendTransactionDark"
+						greenDarkIcon="SendTransactionDarkGreen"
+						greenLightIcon="SendTransactionLightGreen"
+					/>
 				}
 			/>
 
