@@ -999,7 +999,7 @@ describe("Servers Settings", () => {
 					route: `/profiles/${profile.id()}/settings/servers`,
 				},
 			);
-			
+
 			const table = screen.getByTestId(customPeerListTestId);
 
 			await userEvent.click(within(table).getAllByTestId(networkAccordionIconTestId)[0]);
