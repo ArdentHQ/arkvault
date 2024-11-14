@@ -190,6 +190,28 @@ describe("CreateProfile", () => {
 		expect(profile.usesPassword()).toBe(false);
 	});
 
+	it("should navigate to dashboard after creating profile", async () => {
+		const history = createHashHistory();
+
+		render(<CreateProfile />, { history });
+
+		await userEvent.type(nameInput(), "test profile 2");
+
+		await userEvent.click(screen.getByRole("checkbox"));
+
+		await waitFor(() => expect(submitButton()).toBeEnabled());
+
+		const historySpy = vi.spyOn(history, "push");
+
+		await userEvent.click(submitButton());
+
+		const profile = env.profiles().last();
+
+		expect(historySpy).toHaveBeenCalledWith(`/profiles/${profile.id()}/dashboard`);
+
+		historySpy.mockRestore();
+	});
+
 	it("should not be able to create new profile if name already exists", async () => {
 		const profile = await env.profiles().create(profileName);
 
