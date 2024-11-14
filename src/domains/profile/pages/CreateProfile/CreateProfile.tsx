@@ -24,10 +24,6 @@ export const CreateProfile = () => {
 
 	useLayoutEffect(() => {
 		resetTheme();
-
-		return () => {
-			resetTheme();
-		};
 	}, [resetTheme]);
 
 	const { setProfileTheme } = useTheme();
