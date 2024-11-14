@@ -42,6 +42,10 @@ describe("TransactionSuccessful", () => {
 		const transaction = {
 			...TransactionFixture,
 			wallet: () => wallet,
+			timestamp: () => ({
+				unix: () => 1630497600,
+				format: () => "2021-09-01 12:00",
+			}),
 		};
 
 		vi.spyOn(transaction, "get").mockImplementation((attribute) =>
