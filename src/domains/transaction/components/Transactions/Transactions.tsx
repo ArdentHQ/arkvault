@@ -221,6 +221,7 @@ export const Transactions = memo(function Transactions({
 						wallets={wallets}
 						onSelect={filterChangeHandler}
 						selectedTransactionTypes={selectedTransactionTypes}
+						isDisabled={hasEmptyResults}
 					/>
 				</div>
 
