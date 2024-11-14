@@ -6,7 +6,7 @@ import { useHistory } from "react-router-dom";
 import { Header } from "@/app/components/Header";
 import { Page, Section } from "@/app/components/Layout";
 import { useEnvironmentContext } from "@/app/contexts";
-import { useLocaleCurrency, useProfileRestore, useTheme } from "@/app/hooks";
+import { useAccentColor, useLocaleCurrency, useProfileRestore, useTheme } from "@/app/hooks";
 
 import { ProfileForm, ProfileFormState } from "@/domains/profile/components/ProfileForm";
 import { ThemeIcon } from "@/app/components/Icon";
@@ -30,6 +30,9 @@ export const CreateProfile = () => {
 		};
 	}, [resetTheme]);
 
+	const { setProfileTheme } = useTheme();
+	const { setProfileAccentColor } = useAccentColor();
+
 	const handleSubmit = async ({ name, password, currency, viewingMode }: ProfileFormState) => {
 		const profile = await env.profiles().create(name.trim());
 		await env.profiles().restore(profile);
@@ -43,6 +46,9 @@ export const CreateProfile = () => {
 
 		restoreProfileConfig(profile);
 		await persist();
+
+		setProfileTheme(profile);
+		setProfileAccentColor(profile);
 
 		history.push(generatePath(ProfilePaths.Dashboard, { profileId: profile.id() }));
 	};
