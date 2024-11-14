@@ -44,7 +44,7 @@ export const CreateProfile = () => {
 		restoreProfileConfig(profile);
 		await persist();
 
-		history.push(generatePath(ProfilePaths.Dashboard, { profileId: profile.id() }))
+		history.push(generatePath(ProfilePaths.Dashboard, { profileId: profile.id() }));
 	};
 
 	return (
