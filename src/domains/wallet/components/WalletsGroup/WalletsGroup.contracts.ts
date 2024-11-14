@@ -1,6 +1,5 @@
 import { Networks } from "@ardenthq/sdk";
 import { Contracts } from "@ardenthq/sdk-profiles";
-import { IProfile } from "@ardenthq/sdk-profiles/distribution/esm/profile.contract";
 import React from "react";
 
 export interface MaxWidthReferences {
