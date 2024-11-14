@@ -49,7 +49,13 @@ const FormStep = ({ profile, wallet }: { profile: Contracts.IProfile; wallet: Co
 				title={t("TRANSACTION.PAGE_IPFS.FIRST_STEP.TITLE")}
 				subtitle={t("TRANSACTION.PAGE_IPFS.FIRST_STEP.DESCRIPTION")}
 				titleIcon={
-					<ThemeIcon dimensions={[24, 24]} lightIcon="SendTransactionLight" darkIcon="SendTransactionDark" />
+					<ThemeIcon
+						dimensions={[24, 24]}
+						lightIcon="SendTransactionLight"
+						darkIcon="SendTransactionDark"
+						greenDarkIcon="SendTransactionDarkGreen"
+						greenLightIcon="SendTransactionLightGreen"
+					/>
 				}
 			/>
 

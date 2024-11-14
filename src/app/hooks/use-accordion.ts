@@ -1,7 +1,7 @@
 import { useCallback, useState } from "react";
 
 export const useAccordion = () => {
-	const [isExpanded, setIsExpanded] = useState(false);
+	const [isExpanded, setIsExpanded] = useState(true);
 
 	const handleHeaderClick = useCallback(
 		(event: React.MouseEvent) => {

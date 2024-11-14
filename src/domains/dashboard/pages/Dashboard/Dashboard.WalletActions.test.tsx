@@ -79,7 +79,7 @@ describe("Dashboard", () => {
 			},
 		);
 
-		await waitFor(() => expect(screen.getAllByRole("row")).toHaveLength(9));
+		await waitFor(() => expect(screen.getAllByRole("row")).toHaveLength(12));
 
 		await userEvent.click(screen.getByText(dashboardTranslations.WALLET_CONTROLS.IMPORT_LEDGER));
 
@@ -101,7 +101,7 @@ describe("Dashboard", () => {
 			},
 		);
 
-		await waitFor(() => expect(screen.getAllByRole("row")).toHaveLength(9));
+		await waitFor(() => expect(screen.getAllByRole("row")).toHaveLength(12));
 
 		await userEvent.click(screen.getByText("Create"));
 
@@ -119,7 +119,7 @@ describe("Dashboard", () => {
 			},
 		);
 
-		await waitFor(() => expect(screen.getAllByRole("row")).toHaveLength(9));
+		await waitFor(() => expect(screen.getAllByRole("row")).toHaveLength(12));
 
 		await userEvent.click(screen.getByText("Import"));
 
