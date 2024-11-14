@@ -41,11 +41,11 @@ describe("TransactionSuccessful", () => {
 	it("should render", async () => {
 		const transaction = {
 			...TransactionFixture,
-			wallet: () => wallet,
 			timestamp: () => ({
-				unix: () => 1630497600,
 				format: () => "2021-09-01 12:00",
+				unix: () => 1_630_497_600,
 			}),
+			wallet: () => wallet,
 		};
 
 		vi.spyOn(transaction, "get").mockImplementation((attribute) =>
