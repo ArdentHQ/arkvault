@@ -7,7 +7,12 @@ import { useAccordion } from "@/app/hooks";
 
 const MAX_WALLETS_ON_DASHBOARD_LIST = 10;
 
-export const WalletsGroup: React.VFC<WalletsGroupProperties> = ({ network, wallets, maxWidthReferences, profileId }) => {
+export const WalletsGroup: React.VFC<WalletsGroupProperties> = ({
+	network,
+	wallets,
+	maxWidthReferences,
+	profileId,
+}) => {
 	const { isExpanded, handleHeaderClick } = useAccordion(`${profileId}_wallets_group_${network.id()}`);
 
 	return (
