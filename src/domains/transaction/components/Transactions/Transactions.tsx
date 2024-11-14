@@ -148,6 +148,18 @@ export const Transactions = memo(function Transactions({
 		return !hasEmptyResults || hasFilter || hasMore;
 	}, [activeMode, hasEmptyResults, activeTransactionType, isLoadingTransactions, hasMore]);
 
+	const showFilter = useMemo(() => {
+		if (isLoadingTransactions) {
+			return true;
+		}
+
+		if (selectedTransactionTypes?.length === 0) {
+			return true;
+		}
+
+		return !hasEmptyResults || hasMore;
+	}, [hasEmptyResults, hasMore, isLoadingTransactions, selectedTransactionTypes?.length]);
+
 	if (!isVisible) {
 		return <></>;
 	}
@@ -221,7 +233,7 @@ export const Transactions = memo(function Transactions({
 						wallets={wallets}
 						onSelect={filterChangeHandler}
 						selectedTransactionTypes={selectedTransactionTypes}
-						isDisabled={!showTabs}
+						isDisabled={!showFilter}
 					/>
 				</div>
 
