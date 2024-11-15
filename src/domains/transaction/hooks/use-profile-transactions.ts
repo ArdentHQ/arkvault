@@ -286,6 +286,7 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 		fetchMore,
 		fetchTransactions,
 		hasEmptyResults,
+		hasFilter: (selectedTransactionTypes?.length ?? 0) < allTransactionTypes.length,
 		hasMore,
 		isLoadingMore,
 		isLoadingTransactions,

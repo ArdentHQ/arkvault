@@ -200,6 +200,33 @@ describe("Transactions", () => {
 		);
 	});
 
+	it("should disable type filter when there are no transactions", async () => {
+		const emptyProfile = await env.profiles().create("test9");
+
+		const wallet = await emptyProfile.walletFactory().fromMnemonicWithBIP39({
+			coin: "ARK",
+			mnemonic: MNEMONICS[2],
+			network: "ark.devnet",
+		});
+
+		emptyProfile.wallets().push(wallet);
+
+		render(
+			<Route path="/profiles/:profileId/dashboard">
+				<Transactions profile={emptyProfile} wallets={[wallet]} />
+			</Route>,
+			{
+				history,
+				route: dashboardURL,
+			},
+		);
+
+		await expect(screen.findByTestId("EmptyBlock")).resolves.toBeVisible();
+
+		const button = screen.getAllByRole("button", { name: /Type/ })[0];
+		expect(button).toBeDisabled();
+	});
+
 	it("should filter by type and see empty screen", async () => {
 		render(
 			<Route path="/profiles/:profileId/dashboard">
@@ -215,7 +242,7 @@ describe("Transactions", () => {
 			expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(15),
 		);
 
-		const button = screen.getAllByRole("button", { name: /Type/ })[0];
+		let button = screen.getAllByRole("button", { name: /Type/ })[0];
 
 		expect(button).toBeInTheDocument();
 
@@ -235,6 +262,9 @@ describe("Transactions", () => {
 		await userEvent.click(options.at(-1));
 
 		await expect(screen.findByTestId("EmptyBlock")).resolves.toBeVisible();
+
+		button = screen.getAllByRole("button", { name: /Type/ })[0];
+		expect(button).not.toBeDisabled();
 	});
 
 	it("should open detail modal on transaction row click", async () => {
