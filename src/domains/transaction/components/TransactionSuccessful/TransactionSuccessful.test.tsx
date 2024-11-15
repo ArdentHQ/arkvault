@@ -41,6 +41,10 @@ describe("TransactionSuccessful", () => {
 	it("should render", async () => {
 		const transaction = {
 			...TransactionFixture,
+			timestamp: () => ({
+				format: () => "2021-09-01 12:00",
+				unix: () => 1_630_497_600,
+			}),
 			wallet: () => wallet,
 		};
 
