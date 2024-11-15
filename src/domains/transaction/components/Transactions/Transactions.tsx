@@ -149,7 +149,7 @@ export const Transactions = memo(function Transactions({
 		return !hasEmptyResults || hasFilter || hasMore;
 	}, [activeMode, hasEmptyResults, activeTransactionType, isLoadingTransactions, hasMore]);
 
-	const showFilter = useMemo(() => {
+	const enableFilter = useMemo(() => {
 		if (isLoadingTransactions || hasFilter) {
 			return true;
 		}
@@ -230,7 +230,7 @@ export const Transactions = memo(function Transactions({
 						wallets={wallets}
 						onSelect={filterChangeHandler}
 						selectedTransactionTypes={selectedTransactionTypes}
-						isDisabled={!showFilter}
+						isDisabled={!enableFilter}
 					/>
 				</div>
 
