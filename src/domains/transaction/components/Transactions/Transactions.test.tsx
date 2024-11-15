@@ -215,7 +215,7 @@ describe("Transactions", () => {
 			expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(15),
 		);
 
-		const button = screen.getAllByRole("button", { name: /Type/ })[0];
+		let button = screen.getAllByRole("button", { name: /Type/ })[0];
 
 		expect(button).toBeInTheDocument();
 
@@ -235,6 +235,9 @@ describe("Transactions", () => {
 		await userEvent.click(options.at(-1));
 
 		await expect(screen.findByTestId("EmptyBlock")).resolves.toBeVisible();
+
+		button = screen.getAllByRole("button", { name: /Type/ })[0];
+		expect(button).not.toBeDisabled();
 	});
 
 	it("should open detail modal on transaction row click", async () => {

@@ -55,6 +55,7 @@ export const Transactions = memo(function Transactions({
 		selectedTransactionTypes,
 		fetchMore,
 		hasEmptyResults,
+		hasFilter,
 		hasMore,
 	} = useProfileTransactions({ limit: 30, profile, wallets });
 
@@ -149,16 +150,12 @@ export const Transactions = memo(function Transactions({
 	}, [activeMode, hasEmptyResults, activeTransactionType, isLoadingTransactions, hasMore]);
 
 	const showFilter = useMemo(() => {
-		if (isLoadingTransactions) {
-			return true;
-		}
-
-		if (selectedTransactionTypes?.length === 0) {
+		if (isLoadingTransactions || hasFilter) {
 			return true;
 		}
 
 		return !hasEmptyResults || hasMore;
-	}, [hasEmptyResults, hasMore, isLoadingTransactions, selectedTransactionTypes?.length]);
+	}, [hasEmptyResults, hasMore, isLoadingTransactions, hasFilter]);
 
 	if (!isVisible) {
 		return <></>;
