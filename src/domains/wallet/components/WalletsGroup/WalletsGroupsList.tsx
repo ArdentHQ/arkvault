@@ -86,6 +86,7 @@ export const WalletsGroupsList = () => {
 					}
 					wallets={wallets}
 					maxWidthReferences={{ balance: balanceMaxWidthReference, currency: currencyMaxWidthReference }}
+					profileId={profile.id()}
 				/>
 			));
 		}

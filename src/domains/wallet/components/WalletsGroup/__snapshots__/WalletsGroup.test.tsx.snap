@@ -11940,13 +11940,13 @@ exports[`WalletsGroup > should render with dark mode = false 1`] = `
                 <div
                   aria-expanded="false"
                   aria-haspopup="listbox"
-                  aria-owns="downshift-12-menu"
+                  aria-owns="downshift-14-menu"
                   role="combobox"
                 >
                   <div>
                     <label
-                      for="downshift-12-input"
-                      id="downshift-12-label"
+                      for="downshift-14-input"
+                      id="downshift-14-label"
                     />
                     <div
                       class="invisible fixed w-auto whitespace-nowrap"
@@ -11961,12 +11961,12 @@ exports[`WalletsGroup > should render with dark mode = false 1`] = `
                       >
                         <input
                           aria-autocomplete="list"
-                          aria-controls="downshift-12-menu"
-                          aria-labelledby="downshift-12-label"
+                          aria-controls="downshift-14-menu"
+                          aria-labelledby="downshift-14-label"
                           autocomplete="off"
                           class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
                           data-testid="SelectDropdown__input"
-                          id="downshift-12-input"
+                          id="downshift-14-input"
                           placeholder="Select option"
                           readonly=""
                           type="text"
@@ -12030,8 +12030,8 @@ exports[`WalletsGroup > should render with dark mode = false 1`] = `
                     </div>
                   </div>
                   <div
-                    aria-labelledby="downshift-12-label"
-                    id="downshift-12-menu"
+                    aria-labelledby="downshift-14-label"
+                    id="downshift-14-menu"
                     role="listbox"
                   />
                 </div>
@@ -16226,13 +16226,13 @@ exports[`WalletsGroup > should render with dark mode = true 1`] = `
                 <div
                   aria-expanded="false"
                   aria-haspopup="listbox"
-                  aria-owns="downshift-9-menu"
+                  aria-owns="downshift-11-menu"
                   role="combobox"
                 >
                   <div>
                     <label
-                      for="downshift-9-input"
-                      id="downshift-9-label"
+                      for="downshift-11-input"
+                      id="downshift-11-label"
                     />
                     <div
                       class="invisible fixed w-auto whitespace-nowrap"
@@ -16247,12 +16247,12 @@ exports[`WalletsGroup > should render with dark mode = true 1`] = `
                       >
                         <input
                           aria-autocomplete="list"
-                          aria-controls="downshift-9-menu"
-                          aria-labelledby="downshift-9-label"
+                          aria-controls="downshift-11-menu"
+                          aria-labelledby="downshift-11-label"
                           autocomplete="off"
                           class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
                           data-testid="SelectDropdown__input"
-                          id="downshift-9-input"
+                          id="downshift-11-input"
                           placeholder="Select option"
                           readonly=""
                           type="text"
@@ -16316,8 +16316,8 @@ exports[`WalletsGroup > should render with dark mode = true 1`] = `
                     </div>
                   </div>
                   <div
-                    aria-labelledby="downshift-9-label"
-                    id="downshift-9-menu"
+                    aria-labelledby="downshift-11-label"
+                    id="downshift-11-menu"
                     role="listbox"
                   />
                 </div>
@@ -20443,13 +20443,13 @@ exports[`WalletsGroup > should show skeleton when syncing exchange rates 1`] = `
                 <div
                   aria-expanded="false"
                   aria-haspopup="listbox"
-                  aria-owns="downshift-15-menu"
+                  aria-owns="downshift-17-menu"
                   role="combobox"
                 >
                   <div>
                     <label
-                      for="downshift-15-input"
-                      id="downshift-15-label"
+                      for="downshift-17-input"
+                      id="downshift-17-label"
                     />
                     <div
                       class="invisible fixed w-auto whitespace-nowrap"
@@ -20464,12 +20464,12 @@ exports[`WalletsGroup > should show skeleton when syncing exchange rates 1`] = `
                       >
                         <input
                           aria-autocomplete="list"
-                          aria-controls="downshift-15-menu"
-                          aria-labelledby="downshift-15-label"
+                          aria-controls="downshift-17-menu"
+                          aria-labelledby="downshift-17-label"
                           autocomplete="off"
                           class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
                           data-testid="SelectDropdown__input"
-                          id="downshift-15-input"
+                          id="downshift-17-input"
                           placeholder="Select option"
                           readonly=""
                           type="text"
@@ -20533,8 +20533,8 @@ exports[`WalletsGroup > should show skeleton when syncing exchange rates 1`] = `
                     </div>
                   </div>
                   <div
-                    aria-labelledby="downshift-15-label"
-                    id="downshift-15-menu"
+                    aria-labelledby="downshift-17-label"
+                    id="downshift-17-menu"
                     role="listbox"
                   />
                 </div>
