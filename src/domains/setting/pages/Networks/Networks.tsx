@@ -33,6 +33,7 @@ export const NetworksSettings = () => {
 
 	const getProfileNetworksList = () => {
 		const profileNetworks = profile.networks().all();
+		console.log({ profileNetworks })
 
 		return Object.keys(profileNetworks).flatMap((key) => {
 			const networkGroup = profileNetworks[key];
@@ -57,6 +58,7 @@ export const NetworksSettings = () => {
 	const [networkToUpdate, setNetworkToUpdate] = useState<Networks.NetworkManifest | undefined>(undefined);
 	const [networkToShowDetails, setNetworkToShowDetails] = useState<Networks.NetworkManifest | undefined>(undefined);
 	const { setValue: setWalletConfig } = useWalletConfig({ profile });
+	console.log({ selectedNetworks })
 
 	const defaultNetworks = useMemo(
 		() =>
