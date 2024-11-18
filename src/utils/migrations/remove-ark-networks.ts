@@ -3,5 +3,5 @@ export const removeArkNetworks = ({ data }) => {
 		data.networks = {};
 	}
 
-	delete data.networks.ark
+	delete data.networks.ark;
 };

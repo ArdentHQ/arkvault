@@ -9,6 +9,5 @@ export const initializeMainsailNetworks = ({ data }) => {
 		devnet: Mainsail.manifest.networks["mainsail.devnet"],
 	};
 
-
-	data.networks.mainsail.devnet.meta.enabled = true
+	data.networks.mainsail.devnet.meta.enabled = true;
 };
