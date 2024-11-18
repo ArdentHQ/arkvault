@@ -9,6 +9,7 @@ import { initializeMainsailNetworks } from "./migrations/initialize-mainsail-net
 import { isE2E, isUnit } from "@/utils/test-helpers";
 import { updateArkConstants } from "@/utils/migrations/update-ark-constants";
 import { updateArkNethashes } from "@/utils/migrations/update-ark-nethashes";
+import { removeArkNetworks } from "./migrations/remove-ark-networks";
 
 export const initializeEnvironment = (): Environment => {
 	const storage = isE2E() || isUnit() ? new StubStorage() : "indexeddb";
@@ -29,8 +30,9 @@ export const initializeEnvironment = (): Environment => {
 			"1.1.0": updateArkConstants,
 			"1.2.0": updateArkNethashes,
 			"1.2.1": initializeMainsailNetworks,
+			"1.2.2": removeArkNetworks,
 		},
-		"1.2.1",
+		"1.2.2",
 	);
 
 	return env;

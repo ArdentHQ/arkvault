@@ -33,7 +33,6 @@ export const NetworksSettings = () => {
 
 	const getProfileNetworksList = () => {
 		const profileNetworks = profile.networks().all();
-		console.log({ profileNetworks })
 
 		return Object.keys(profileNetworks).flatMap((key) => {
 			const networkGroup = profileNetworks[key];
@@ -43,7 +42,7 @@ export const NetworksSettings = () => {
 
 	const getSelectedNetworks = () =>
 		getProfileNetworksList()
-			.filter((network) => !isCustomNetwork(network) || network.meta.enabled)
+			.filter((network) => !isCustomNetwork(network) && network.meta.enabled)
 			.map((network) => network.id);
 
 	const getCustomNetworks = () => getProfileNetworksList().filter((network) => isCustomNetwork(network));
@@ -64,7 +63,7 @@ export const NetworksSettings = () => {
 		() =>
 			env
 				.availableNetworks()
-				.filter((item) => ["ark.devnet", "ark.mainnet", "mainsail.devnet"].includes(item.id())),
+				.filter((item) => ["mainsail.devnet"].includes(item.id())),
 		[env, profile],
 	);
 
