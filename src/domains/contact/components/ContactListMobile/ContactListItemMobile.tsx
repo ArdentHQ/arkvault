@@ -40,7 +40,7 @@ export const ContactListItemMobile: React.VFC<Properties> = ({
 		[availableNetworks, onSend],
 	);
 
-	const { isExpanded, handleHeaderClick } = useAccordion();
+	const { isExpanded, handleHeaderClick } = useAccordion(`${profile.id()}_contact_list_mobile_${contact.id()}`);
 
 	return (
 		<AccordionWrapper>

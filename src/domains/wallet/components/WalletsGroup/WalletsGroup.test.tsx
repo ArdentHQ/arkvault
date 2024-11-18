@@ -211,7 +211,7 @@ describe("WalletsGroup", () => {
 		await userEvent.click(screen.getAllByTestId("Accordion__toggle")[1]);
 
 		await waitFor(() => {
-			expect(screen.getByTestId("WalletTable")).toBeInTheDocument();
+			expect(screen.getAllByTestId("WalletTable")[0]).toBeInTheDocument();
 		});
 
 		await userEvent.click(within(screen.getAllByTestId("TableRow")[0]).getByTestId("dropdown__toggle"));
@@ -246,6 +246,7 @@ describe("WalletsGroup", () => {
 					balance: balanceWidthReference.current,
 					currency: currencyWidthReference.current,
 				}}
+				profileId={"1"}
 			/>,
 		);
 
