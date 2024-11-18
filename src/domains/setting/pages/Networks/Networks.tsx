@@ -59,7 +59,10 @@ export const NetworksSettings = () => {
 	const { setValue: setWalletConfig } = useWalletConfig({ profile });
 
 	const defaultNetworks = useMemo(
-		() => env.availableNetworks().filter((item) => ["ark.devnet", "ark.mainnet"].includes(item.id())),
+		() =>
+			env
+				.availableNetworks()
+				.filter((item) => ["ark.devnet", "ark.mainnet", "mainsail.devnet"].includes(item.id())),
 		[env, profile],
 	);
 
