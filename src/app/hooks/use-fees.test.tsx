@@ -25,7 +25,9 @@ describe("useFees", () => {
 
 		await env.fees().sync(profile, "ARK", ARKDevnet);
 
-		await expect(current.calculate({ coin: "ARK", network: ARKDevnet, type: "delegateRegistration" })).resolves.toStrictEqual({
+		await expect(
+			current.calculate({ coin: "ARK", network: ARKDevnet, type: "delegateRegistration" }),
+		).resolves.toStrictEqual({
 			avg: 25,
 			isDynamic: true,
 			max: 25,
@@ -57,7 +59,9 @@ describe("useFees", () => {
 
 		await env.fees().sync(profile, "ARK", ARKDevnet);
 
-		await expect(current.calculate({ coin: "ARK", network: ARKDevnet, type: "delegateRegistration" })).resolves.toStrictEqual({
+		await expect(
+			current.calculate({ coin: "ARK", network: ARKDevnet, type: "delegateRegistration" }),
+		).resolves.toStrictEqual({
 			avg: 25,
 			isDynamic: true,
 			max: 25,
@@ -93,7 +97,9 @@ describe("useFees", () => {
 
 		await env.fees().sync(profile, "ARK", ARKDevnet);
 
-		await expect(current.calculate({ coin: "ARK", network: ARKDevnet, type: "delegateRegistration" })).resolves.toStrictEqual({
+		await expect(
+			current.calculate({ coin: "ARK", network: ARKDevnet, type: "delegateRegistration" }),
+		).resolves.toStrictEqual({
 			avg: 25,
 			isDynamic: true,
 			max: 25,
