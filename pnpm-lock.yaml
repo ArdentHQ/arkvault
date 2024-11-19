@@ -12,29 +12,29 @@ importers:
         specifier: ^1.2.0
         version: 1.2.0
       '@ardenthq/sdk':
-        specifier: 2.0.0-alpha.19
-        version: 2.0.0-alpha.19
+        specifier: 2.0.0-alpha.21
+        version: 2.0.0-alpha.21
       '@ardenthq/sdk-ark':
-        specifier: 2.0.0-alpha.19
-        version: 2.0.0-alpha.19
+        specifier: 2.0.0-alpha.21
+        version: 2.0.0-alpha.21
       '@ardenthq/sdk-cryptography':
-        specifier: 2.0.0-alpha.19
-        version: 2.0.0-alpha.19
+        specifier: 2.0.0-alpha.21
+        version: 2.0.0-alpha.21
       '@ardenthq/sdk-helpers':
-        specifier: 2.0.0-alpha.19
-        version: 2.0.0-alpha.19
+        specifier: 2.0.0-alpha.21
+        version: 2.0.0-alpha.21
       '@ardenthq/sdk-intl':
-        specifier: 2.0.0-alpha.19
-        version: 2.0.0-alpha.19
+        specifier: 2.0.0-alpha.21
+        version: 2.0.0-alpha.21
       '@ardenthq/sdk-ledger':
-        specifier: 2.0.0-alpha.19
-        version: 2.0.0-alpha.19
+        specifier: 2.0.0-alpha.21
+        version: 2.0.0-alpha.21
       '@ardenthq/sdk-mainsail':
-        specifier: 2.0.0-alpha.19
-        version: 2.0.0-alpha.19(encoding@0.1.13)
+        specifier: 2.0.0-alpha.21
+        version: 2.0.0-alpha.21(encoding@0.1.13)
       '@ardenthq/sdk-profiles':
-        specifier: 2.0.0-alpha.19
-        version: 2.0.0-alpha.19
+        specifier: 2.0.0-alpha.21
+        version: 2.0.0-alpha.21
       '@emotion/cache':
         specifier: ^11.11.0
         version: 11.13.0
@@ -197,7 +197,7 @@ importers:
         version: 10.2.0
       '@testing-library/jest-dom':
         specifier: ^6.4.6
-        version: 6.4.6(@jest/globals@29.6.1)(@types/jest@29.5.3)(jest@29.6.1(@types/node@20.14.11))(vitest@1.6.0(@types/node@20.14.11)(jsdom@24.1.1)(terser@5.19.2))
+        version: 6.4.6(@jest/globals@29.6.1)(@types/jest@29.5.3)(jest@29.6.1(@types/node@22.7.5))(vitest@1.6.0(@types/node@22.7.5)(jsdom@24.1.1)(terser@5.19.2))
       '@testing-library/react':
         specifier: ^16.0.0
         version: 16.0.0(@testing-library/dom@10.2.0)(@types/react-dom@18.3.0)(@types/react@18.3.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -236,10 +236,10 @@ importers:
         version: 7.17.0(eslint@9.7.0)(typescript@5.5.4)
       '@vitejs/plugin-react':
         specifier: ^4.3.1
-        version: 4.3.1(vite@5.3.4(@types/node@20.14.11)(terser@5.19.2))
+        version: 4.3.1(vite@5.3.4(@types/node@22.7.5)(terser@5.19.2))
       '@vitest/coverage-istanbul':
         specifier: 1.6.0
-        version: 1.6.0(vitest@1.6.0(@types/node@20.14.11)(jsdom@24.1.1)(terser@5.19.2))
+        version: 1.6.0(vitest@1.6.0(@types/node@22.7.5)(jsdom@24.1.1)(terser@5.19.2))
       autoprefixer:
         specifier: ^10.4.19
         version: 10.4.19(postcss@8.4.39)
@@ -308,13 +308,13 @@ importers:
         version: 3.0.0
       jest-extended:
         specifier: ^4.0.2
-        version: 4.0.2(jest@29.6.1(@types/node@20.14.11))
+        version: 4.0.2(jest@29.6.1(@types/node@22.7.5))
       jest-styled-components:
         specifier: ^7.2.0
         version: 7.2.0(styled-components@6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1))
       jest-when:
         specifier: ^3.6.0
-        version: 3.6.0(jest@29.6.1(@types/node@20.14.11))
+        version: 3.6.0(jest@29.6.1(@types/node@22.7.5))
       jsdom:
         specifier: ^24.1.0
         version: 24.1.1
@@ -356,28 +356,28 @@ importers:
         version: 7.17.0(eslint@9.7.0)(typescript@5.5.4)
       vite:
         specifier: ^5.3.3
-        version: 5.3.4(@types/node@20.14.11)(terser@5.19.2)
+        version: 5.3.4(@types/node@22.7.5)(terser@5.19.2)
       vite-plugin-babel-macros:
         specifier: ^1.0.6
-        version: 1.0.6(vite@5.3.4(@types/node@20.14.11)(terser@5.19.2))
+        version: 1.0.6(vite@5.3.4(@types/node@22.7.5)(terser@5.19.2))
       vite-plugin-optimize-persist:
         specifier: ^0.1.2
-        version: 0.1.2(vite-plugin-package-config@0.1.1(vite@5.3.4(@types/node@20.14.11)(terser@5.19.2)))(vite@5.3.4(@types/node@20.14.11)(terser@5.19.2))
+        version: 0.1.2(vite-plugin-package-config@0.1.1(vite@5.3.4(@types/node@22.7.5)(terser@5.19.2)))(vite@5.3.4(@types/node@22.7.5)(terser@5.19.2))
       vite-plugin-package-config:
         specifier: ^0.1.1
-        version: 0.1.1(vite@5.3.4(@types/node@20.14.11)(terser@5.19.2))
+        version: 0.1.1(vite@5.3.4(@types/node@22.7.5)(terser@5.19.2))
       vite-plugin-pwa:
         specifier: ^0.20.0
-        version: 0.20.0(vite@5.3.4(@types/node@20.14.11)(terser@5.19.2))(workbox-build@7.1.1(@types/babel__core@7.20.5))(workbox-window@7.1.0)
+        version: 0.20.0(vite@5.3.4(@types/node@22.7.5)(terser@5.19.2))(workbox-build@7.1.1(@types/babel__core@7.20.5))(workbox-window@7.1.0)
       vite-plugin-svgr:
         specifier: ^4.2.0
-        version: 4.2.0(rollup@4.19.0)(vite@5.3.4(@types/node@20.14.11)(terser@5.19.2))
+        version: 4.2.0(rollup@4.19.0)(vite@5.3.4(@types/node@22.7.5)(terser@5.19.2))
       vite-tsconfig-paths:
         specifier: ^4.3.2
-        version: 4.3.2(typescript@5.5.4)(vite@5.3.4(@types/node@20.14.11)(terser@5.19.2))
+        version: 4.3.2(typescript@5.5.4)(vite@5.3.4(@types/node@22.7.5)(terser@5.19.2))
       vitest:
         specifier: ^1.6.0
-        version: 1.6.0(@types/node@20.14.11)(jsdom@24.1.1)(terser@5.19.2)
+        version: 1.6.0(@types/node@22.7.5)(jsdom@24.1.1)(terser@5.19.2)
       workbox-window:
         specifier: ^7.1.0
         version: 7.1.0
@@ -412,40 +412,40 @@ packages:
     resolution: {integrity: sha512-0Ld6SSNEzb/TeOZ0YUDAa+vFyk65LprU+wiLjWDwhqpaDtUkJZ9MBM4alagfJ5665SN+DM7Dti2QxqKX+Y8S2w==}
     engines: {node: '>=14.16'}
 
-  '@ardenthq/sdk-ark@2.0.0-alpha.19':
-    resolution: {integrity: sha512-htbopFQn5EhJvo4RTgB7lgZ4Ot+XY5b8XlmuGVb3RZA4W0/wPO1dtlt0f16WDtp1Qkm/zWm+oeqo8YY5BB6b9w==}
+  '@ardenthq/sdk-ark@2.0.0-alpha.21':
+    resolution: {integrity: sha512-bibrz8Jm7dNKsHZXyX04SvQKSiLDHUeTrChh1rMuwTRfl1jO7F6phRaFUxJQhGZ/8QiQ4zxKmKlTg84cqP4k3A==}
     engines: {node: '>=16.0.0'}
 
-  '@ardenthq/sdk-cryptography@2.0.0-alpha.19':
-    resolution: {integrity: sha512-j8raTkEkU0gjH4Uy2TMkPEsuZR48zrw/VxoiTMNEeQ4JomQU2b3FEih2SGOlWCv31xjHXAUlUjJgNlNltFQYqA==}
+  '@ardenthq/sdk-cryptography@2.0.0-alpha.21':
+    resolution: {integrity: sha512-IrPrEBj8S2E2Rjade5MNGtyiyZ7gxEF6nw4QoiSq/cAAGBfA+/T9UEywpL/wiLCkpv8lFfiwcxxEgiu6vqRd4A==}
     engines: {node: '>=16.0.0'}
 
-  '@ardenthq/sdk-helpers@2.0.0-alpha.19':
-    resolution: {integrity: sha512-A7nWAjcdqqD/8/rcRLSOC07/cuspbdN6OgYf4HEBllRWoqE/vRdiXS3q3+k+nQcUEWC3kCshHm0MOI1R+zgMBw==}
+  '@ardenthq/sdk-helpers@2.0.0-alpha.21':
+    resolution: {integrity: sha512-CPWnxhxmGDk3jy6C89k7ojvGYnHqmlfGLw/7bDtI36uD9aAnGS+QtSS5igcAXthjtQkqB95anKemwh2yPhJVHg==}
     engines: {node: '>=16.0.0'}
 
-  '@ardenthq/sdk-intl@2.0.0-alpha.19':
-    resolution: {integrity: sha512-30NRIxs99Qu9m/sg8XuVK6sqPahrLI8I69ssxkFkkA/92+kWnxlOi8VkAF7QDS3kf9H3sLvjauKmH7TN3od9BA==}
+  '@ardenthq/sdk-intl@2.0.0-alpha.21':
+    resolution: {integrity: sha512-3tYIJDf3cXnvdQGEtqhkHZMacVM1ZFbaO/FwoPJHlfI9QsSwnEUT0W7aS94lr5JABI8EaB1d+vG1fqk38Uqiug==}
     engines: {node: '>=16.0.0'}
 
-  '@ardenthq/sdk-ledger@2.0.0-alpha.19':
-    resolution: {integrity: sha512-qc7/dpX/d8B6ZgB7cq5qornPHsWkmehMcZvEpuzBI+pOQ0h8eBu9ImZdnKbxF0IzZxsvCkm3HvZXuyuFDolKdg==}
+  '@ardenthq/sdk-ledger@2.0.0-alpha.21':
+    resolution: {integrity: sha512-+qs94smy1tirFq1Xf3aCUMsP5k8Xf9jo63bt2YxYMYfAAz7jClsgykY0EjOzvGm41xf2EWz7XB1F+KMZVk7oqQ==}
     engines: {node: '>=16.0.0'}
 
-  '@ardenthq/sdk-mainsail@2.0.0-alpha.19':
-    resolution: {integrity: sha512-N2av6xt0xKdCpiM3bxPA2Qqyws+e3oLgcoZY/UEXaCqln9XIaZYWtPoRefUcvsKsD5xsx+KEvgE0TaT4qaApGQ==}
+  '@ardenthq/sdk-mainsail@2.0.0-alpha.21':
+    resolution: {integrity: sha512-DOnwCFYFlioB1A3qfA8DTwzUTTot7oWAVzth0BxaUA9K8Gy3v5cTV2nHF+VWJN0uS9s8Ym+ObZm4AdeYFMldDw==}
     engines: {node: '>=16.0.0'}
 
-  '@ardenthq/sdk-markets@2.0.0-alpha.19':
-    resolution: {integrity: sha512-DEYAD9hNm/Na7CFqgGQBdEpOiSUkHCoajfgz7Lbyloy7zBnN5i2EZvnE1cbV7ca2CfZqwvc6x1SiA3yRcrhLnA==}
+  '@ardenthq/sdk-markets@2.0.0-alpha.21':
+    resolution: {integrity: sha512-5ecbW9LeVv9+c7woenZSlFQr3oJ8wJ23yTWaEHgmjpKDSi3yMk65330RLEEqzKf5obfxWEhKc09nxFxL1bTynA==}
     engines: {node: '>=16.0.0'}
 
-  '@ardenthq/sdk-profiles@2.0.0-alpha.19':
-    resolution: {integrity: sha512-pk4wicd0xIN6+U489OPd/0R5rye2tYVNfJB2YnRTsPXMc2rqparPNoRTTPpGPfwjpYrafuIBNv6AmvgYEM9GKQ==}
+  '@ardenthq/sdk-profiles@2.0.0-alpha.21':
+    resolution: {integrity: sha512-pm2fFyyvQDf3I+pCrkOANvAAztyw1tUriHRM6ze+OGfG5OFP/KUJPvepQS38HcEUK9s04SGyvc/hTyzezlksgA==}
     engines: {node: '>=16.0.0'}
 
-  '@ardenthq/sdk@2.0.0-alpha.19':
-    resolution: {integrity: sha512-NMce+KU3edbpbh5DvCvS0OExV3hF/loMaaRajvemEA+yx6OqmykvNx50PfLILK4TxVBtw7Fus2/F60HjoRSxUw==}
+  '@ardenthq/sdk@2.0.0-alpha.21':
+    resolution: {integrity: sha512-z3PWm6zaLIULSN1lGKdk/7VrE83HVKuwBDBuwyHy+AfnPoUVvo3NJv7/06ujDvBssTgqfRVO+UdIOswE/jWjfw==}
     engines: {node: '>=16.0.0'}
 
   '@arkecosystem/ledger-transport@2.0.0':
@@ -1877,128 +1877,64 @@ packages:
   '@ledgerhq/logs@6.12.0':
     resolution: {integrity: sha512-ExDoj1QV5eC6TEbMdLUMMk9cfvNKhhv5gXol4SmULRVCx/3iyCPhJ74nsb3S0Vb+/f+XujBEj3vQn5+cwS0fNA==}
 
-  '@mainsail/container@0.0.1-evm.2':
-    resolution: {integrity: sha512-HzSqP3JUAdRGkRX6u9HG1hxtPQOOJ9iFJC1RLRSII+C3eMM3ZA/mlvmwJ7QXwjhlnv3yWzZkzrRSpsvA7GRd+w==}
+  '@mainsail/container@0.0.1-evm.8':
+    resolution: {integrity: sha512-KsSgK9hK+OcpLF3AMbcKl40Rq1sQLcmBIcvaTJOF2Vqi+MWhNsP7XSAynvwhY3Ae9hjeFQ/0RfdZ/Lqd1wNHnQ==}
     engines: {node: '>=20.x'}
 
-  '@mainsail/container@0.0.1-evm.6':
-    resolution: {integrity: sha512-8yI1q0rAElyaK1wmvX4itMDHEHjXepfUurEvRLObcR5MqgNP2CW0JE64wy68gpTXyUdMiAqsuNmRHidVXMbKHg==}
+  '@mainsail/contracts@0.0.1-evm.8':
+    resolution: {integrity: sha512-p2YKW4aiqDI0EzDSUboXSFmsKeoS8XTbWWm9cPm7j7Xsc9IiV3DCZldWhmLTDqXNVbqzdabz9GJByuxV3ZBaHw==}
     engines: {node: '>=20.x'}
 
-  '@mainsail/contracts@0.0.1-evm.2':
-    resolution: {integrity: sha512-XKYFU+Z+db+NwpXqD3JoFbXXnDq2588J+GygjwJuKk4Mxm2p1cqFVO+990PSFrv1srCCY4KxH1QtQnr5n7/e7w==}
+  '@mainsail/crypto-address-keccak256@0.0.1-evm.8':
+    resolution: {integrity: sha512-NupuAJEzQA71mN4Yv+M0JToB6brT3b0jy1SKrYz6sB1w0TODDwrY4YsvGmAo0LKf1uyRyM35lUFYpjI6WFG6NQ==}
     engines: {node: '>=20.x'}
 
-  '@mainsail/contracts@0.0.1-evm.6':
-    resolution: {integrity: sha512-gF2o8+PGiDcwGje/u6pB5jn6e5ZqQyvHO2qMJgnix+m2jIiLYDir7We7s36xhQ0VBspEYI5e7XHYJy7zARGm2g==}
+  '@mainsail/crypto-config@0.0.1-evm.8':
+    resolution: {integrity: sha512-RDhyVPi0RC5792SXCijIUYhTRtlWrasEDzL5lQMPlF2j6PRo8Plv3FOVnvjv82BqO7rd999kp56IUbTfNs3Fiw==}
     engines: {node: '>=20.x'}
 
-  '@mainsail/crypto-address-keccak256@0.0.1-evm.6':
-    resolution: {integrity: sha512-rHAc68rYQNbePHfKMozd380FBvjW8DmqGplxMJb8ZNFwSdmRW7hl2UEkwJKIQHyVCN6q7CQzT+TkPxcABPrK3A==}
+  '@mainsail/crypto-consensus-bls12-381@0.0.1-evm.8':
+    resolution: {integrity: sha512-XXDAbKo0/rIACU+lVeRtUOZniO9QK7p3oFvE9vrdza81ZK2c6ZG9j0RvxGlx7tiEd+AVt4zhcUj6vqtR51HiQg==}
     engines: {node: '>=20.x'}
 
-  '@mainsail/crypto-config@0.0.1-evm.6':
-    resolution: {integrity: sha512-yxQGJzfu5j5nIPHDa8wJAmswn5RZWO3dEC8NZ+/LXUzYwGrma8xJfvDA+9FCF0zMZn1pqkByh3eMPJs6v3Jo5w==}
+  '@mainsail/crypto-hash-bcrypto@0.0.1-evm.8':
+    resolution: {integrity: sha512-vVirrfaH8gDo3yahgvzrdg+PnYIh2/2Zxd6doJGw1nNZ4hdDLNtI6GILpYJTJyIEz3BH6XSZzUCHoWvWm6t64g==}
     engines: {node: '>=20.x'}
 
-  '@mainsail/crypto-consensus-bls12-381@0.0.1-evm.6':
-    resolution: {integrity: sha512-lz8kyun0+POWpqdh7N7MpMTfMFBWBNx2KItOS/iJ85AOS/OF6Ep02GzQ1ZuDDeAkxzzYpDYJqzxcuI6XxcS9Kg==}
+  '@mainsail/crypto-key-pair-bls12-381@0.0.1-evm.8':
+    resolution: {integrity: sha512-ieHsbm1hbQ5EJFNbAawPnqAyXgITy/9tL8js8+wZ9EgGAK9EkY1+SMJqUhQTGEXDeMZReH+oyyXEBD1/Mc8WQw==}
     engines: {node: '>=20.x'}
 
-  '@mainsail/crypto-hash-bcrypto@0.0.1-evm.6':
-    resolution: {integrity: sha512-6zSY4F52KX7PS9QGU26FkUHSbNrJGD/FTqhgy78yGNdLMEoTbZ4t9RkGr8RVXk25MU1/G/mVKHLGad598P+i1w==}
+  '@mainsail/crypto-key-pair-ecdsa@0.0.1-evm.8':
+    resolution: {integrity: sha512-wqR8Vs9IMIJ9FRxv0rGXEkOhlSxE+yQ5/OPKzQ+W/EcMeSFtliFy44vYmpst7tAaBhCS8TAnR+OVigZWD2Rxew==}
     engines: {node: '>=20.x'}
 
-  '@mainsail/crypto-key-pair-bls12-381@0.0.1-evm.6':
-    resolution: {integrity: sha512-DdcJ3pLsAYR+ISbVlb9BWXlyTWv4dwtE32t6x9z/nmbB5zLJ4rZB27Qh6wiaFR5rCQ0Se9Y/zQKy+eu5NpB1ow==}
+  '@mainsail/crypto-signature-bls12-381@0.0.1-evm.8':
+    resolution: {integrity: sha512-VqWctcS4rgLTbhAfBadei6Yxjbhc7+BP/ZRia3QN0IAib/X1Op52MHsiq5EXe2TXiL28Mh+NwoFcfRkl7ZbObA==}
     engines: {node: '>=20.x'}
 
-  '@mainsail/crypto-key-pair-ecdsa@0.0.1-evm.6':
-    resolution: {integrity: sha512-ph9ZmdI4pX0KonNzflutcPA30ZlVcfBMAdraTVzSx651FSajAQhNQamFVjRx0uDbZvi+RnKtCdZbjh0clZaQvQ==}
+  '@mainsail/crypto-signature-schnorr@0.0.1-evm.8':
+    resolution: {integrity: sha512-n8n/1gRJNco/Badvf/GQh0H/6rsOIEqlreel3L8PfA01I2t5BPuUOYXn3C7ghg+LVRSmGiHz7EgfV8kDEcqMew==}
     engines: {node: '>=20.x'}
 
-  '@mainsail/crypto-signature-bls12-381@0.0.1-evm.6':
-    resolution: {integrity: sha512-iqx3bcCTwTctfmrNkmW45BpKcTG8a7uPNtQwGB6wRHlZb4IvZ0EfbmtkBGwVvpukFVTftroBFz/NsQQHH7H7Og==}
+  '@mainsail/crypto-transaction@0.0.1-evm.8':
+    resolution: {integrity: sha512-BIUsSCE/8i6F7YwL+F+Z3LOqMwTbKu3oOvOtPwX2QkzDaGwzVt0lQejmN8+lilOVoy8B2edE/u+KUYO+Tw2AOg==}
     engines: {node: '>=20.x'}
 
-  '@mainsail/crypto-signature-schnorr@0.0.1-evm.6':
-    resolution: {integrity: sha512-JHdASjDUt/er5+IA9GAwSJIoftive1Ae2+BrEHH9bvTg0+S6thzo/aqBqpBqrDaP6+Hn+MJnAL9tiqd5BwCgPA==}
+  '@mainsail/crypto-validation@0.0.1-evm.8':
+    resolution: {integrity: sha512-wsN5QTcRRa5CKW5W+jf2UN91gsaZmkH1U/WZCyB8zwjiiVs9IvP14jPhqg0gPuFSti3GlKzyHW2XzuPTpgvqmQ==}
     engines: {node: '>=20.x'}
 
-  '@mainsail/crypto-transaction-multi-payment@0.0.1-evm.2':
-    resolution: {integrity: sha512-Oh4camLsOBBn/eCrALfA36cwPJh8KU5R8DU5e9arYbNwTdZk0DPzBvsNfaHP7pPJIKR+3ic4JjwMmZxGo+URZw==}
+  '@mainsail/kernel@0.0.1-evm.8':
+    resolution: {integrity: sha512-DxJkBNZNM9wBvv6YjSJ/ZpP/0Ozc2B4/jIZv/RZbtfwDYxlr43Gl2kHF9VkokWTYlzATvFCZvX8rl32ziPXXXA==}
     engines: {node: '>=20.x'}
 
-  '@mainsail/crypto-transaction-multi-signature-registration@0.0.1-evm.2':
-    resolution: {integrity: sha512-PB2vislGRmlMr/NV/hR7d92AihLCVyNSAQPYe8VUqzYm+kh0YJQpeMGMImMhsHiA7IPqYeSvGMUKyd8tt82d6g==}
+  '@mainsail/utils@0.0.1-evm.8':
+    resolution: {integrity: sha512-5GeqFt8fmooJ6bkG6Y63WLmX+SukVOSbfcYVB4l0qrVfzXH3lyM4d2gBf4HSi6I8L+/H+z7rNoBaotoSa4Me5w==}
     engines: {node: '>=20.x'}
 
-  '@mainsail/crypto-transaction-transfer@0.0.1-evm.2':
-    resolution: {integrity: sha512-Y3nvie1h2uU1hz6SdgSdKNvYgaHyojtmy1a1dK6escPEP3i8WCuvSkdtBzfe+lO4VZOgGOToMFJG/FPoX+jRcw==}
-    engines: {node: '>=20.x'}
-
-  '@mainsail/crypto-transaction-username-registration@0.0.1-evm.2':
-    resolution: {integrity: sha512-l37450TPPECQj7t6vt27F07EQzZep5PR6CE6Y6FUwNFSlV+c9EhkexHiLQjHB0Hk7CcJ0VpApkAAir70OG36AA==}
-    engines: {node: '>=20.x'}
-
-  '@mainsail/crypto-transaction-username-resignation@0.0.1-evm.2':
-    resolution: {integrity: sha512-25/MtJBTLehuZYc7gIYLzU5eblvXwHcTnCF/OBZ0hDT2h7pc7kLcMbTkc1t/6VBpGi3x8Xn8ZemLyIGd5dIsqg==}
-    engines: {node: '>=20.x'}
-
-  '@mainsail/crypto-transaction-validator-registration@0.0.1-evm.2':
-    resolution: {integrity: sha512-H4CbRng6p/m0CiExcZBVAPWekg4nj2W2GjWKjytmtZeO8YsHKPCTGZFe2rH5q+WNvgdN4cmTgl0+3D+CjEpiKQ==}
-    engines: {node: '>=20.x'}
-
-  '@mainsail/crypto-transaction-validator-resignation@0.0.1-evm.2':
-    resolution: {integrity: sha512-e9MiT303r67ez5krR7+6t+a33chAXN4NjED+dPgCJ1fdXvN3upJyXc10vdHJr5MuGx6NrH3mLCxMH7Pc1rlzLw==}
-    engines: {node: '>=20.x'}
-
-  '@mainsail/crypto-transaction-vote@0.0.1-evm.2':
-    resolution: {integrity: sha512-IvvATMzBJkmE/NKVI1rIl71jB1/JOIMe2fQeSdOJx/6PTzZXjWVlEufZ+QB7wYqtI/OIeEo6FHpU0scfeqPABQ==}
-    engines: {node: '>=20.x'}
-
-  '@mainsail/crypto-transaction@0.0.1-evm.2':
-    resolution: {integrity: sha512-CxjaAlkCcb0E3DuMHoEwFzTjQoVnWGrjXkYHu2vYX3NsabSmsM9LdTyrHSL4uf6+VH5gR3QU9S8ym1fGD0g38Q==}
-    engines: {node: '>=20.x'}
-
-  '@mainsail/crypto-transaction@0.0.1-evm.6':
-    resolution: {integrity: sha512-3v17H/RbV34JDlA0lOoCzBOBFP8I8zOGOTdRJDDsC6FDL3rtg7Tu9koObfISf2ubWMwKD/iuASPrUekTxqE3AA==}
-    engines: {node: '>=20.x'}
-
-  '@mainsail/crypto-validation@0.0.1-evm.6':
-    resolution: {integrity: sha512-JkspUa84dgMhwFvnpVUblqdgv66FhBRCpU/pNFQqBZK5RwvoGPicrMHxa5FcZRav5BX92DUyb+0EsD4lp/dLPg==}
-    engines: {node: '>=20.x'}
-
-  '@mainsail/fees-static@0.0.1-evm.2':
-    resolution: {integrity: sha512-SMA8XXKiYz4gg45pMJyYzGEry+mrbZ0uUjcz/XWJzaEwvtDo3ySe9fyDwe/y7tlH/EUJbQFzu4BOK2o+yeVBfw==}
-    engines: {node: '>=20.x'}
-
-  '@mainsail/fees@0.0.1-evm.2':
-    resolution: {integrity: sha512-KW4mUAeZVh6cuSVr0fkUd4C15JdUB3C2hGfSUco34cAgH0Z/75YnUg5Rdpv3h1KqX4ApcY7fymS/XplrmlytYA==}
-    engines: {node: '>=20.x'}
-
-  '@mainsail/kernel@0.0.1-evm.2':
-    resolution: {integrity: sha512-pvTQdSjqjF3ZZOL18ELI9suNESlFLvJxj1C0qLVz6AkLIBcs/S1ZAn/AfaAIsef66lUIPwQGX7rmPS6XXBJG0g==}
-    engines: {node: '>=20.x'}
-
-  '@mainsail/kernel@0.0.1-evm.6':
-    resolution: {integrity: sha512-mq+mtaXJazPLy0yeYg/I1Jw9Tof3QeIwbil03nSQ/uHtLI+eJJ7MzYHGvgRPXHP4bF9OqujUsoesEWN0yGvoMg==}
-    engines: {node: '>=20.x'}
-
-  '@mainsail/transactions@0.0.1-evm.2':
-    resolution: {integrity: sha512-Dd6NewMqWO1ujaDdnk58OHL13XuOrpfdpfmy3DJTEsRRPmAkwd5neX3fFQWsEZab92YAxq+lPDBgLlfKlgcz7g==}
-    engines: {node: '>=20.x'}
-
-  '@mainsail/utils@0.0.1-evm.2':
-    resolution: {integrity: sha512-/hH3xL3twpOUSIw0qg4MtpYxoPwtGVYzaifyFPIFwlSsRAiKmzNnfNfqnPB6fXaCDM8kAjClpQvfq6npYEA35w==}
-    engines: {node: '>=20.x'}
-
-  '@mainsail/utils@0.0.1-evm.6':
-    resolution: {integrity: sha512-NV8ueioOyaZwZ2vHaD7r4sPj5H5hMDOhweD5KFBslou/x5gCPk6zVamJaMFWEl7ZXrrt7TLuUB6p4NE6dNEkGQ==}
-    engines: {node: '>=20.x'}
-
-  '@mainsail/validation@0.0.1-evm.2':
-    resolution: {integrity: sha512-Unp0DdIkbO90TC17LXq73AUH8qpt3p+/kvhzVmlzXZtkQIYf0SLR8Cz9LAPsaVMtqn5K86jV9koyquabNHzdhQ==}
+  '@mainsail/validation@0.0.1-evm.8':
+    resolution: {integrity: sha512-lP8+J2AkXW75o7P0nc/IjlonlfTTnWupFTmNxsVuAwbLKQZcKLQnUP6NUoAi909XdJjXRTm7wP7BUjXQ6rKbaw==}
     engines: {node: '>=20.x'}
 
   '@miherlosev/esm@3.2.26':
@@ -2445,6 +2381,9 @@ packages:
 
   '@types/node@12.20.55':
     resolution: {integrity: sha512-J8xLz7q2OFulZ2cyGTLE1TbbZcjpno7FaN6zdJNrgAdrJ+DZzh/uFR6YrTb4C+nXakvud8Q4+rbhoIWlYQbUFQ==}
+
+  '@types/node@18.15.13':
+    resolution: {integrity: sha512-N+0kuo9KgrUQ1Sn/ifDXsvg0TTleP7rIy4zOBGECxAljqvqfqpTfzx0Q1NUedOixRMBfe2Whhb056a42cWs26Q==}
 
   '@types/node@20.14.11':
     resolution: {integrity: sha512-kprQpL8MMeszbz6ojB5/tU8PLN4kesnN8Gjzw349rDlNgsSzg90lAVj3llK99Dh7JON+t9AuscPPFW6mPbTnSA==}
@@ -3945,6 +3884,10 @@ packages:
   esutils@2.0.3:
     resolution: {integrity: sha512-kVscqXk4OCp68SZ0dkgEKVi6/8ij300KBWTJq32P/dYeWTSwK41WyTxalN1eRmA5Z9UU/LX9D7FWSmV9SAYx6g==}
     engines: {node: '>=0.10.0'}
+
+  ethers@6.11.0:
+    resolution: {integrity: sha512-kPHNTnhVWiWU6AVo6CAeTjXEK24SpCXyZvwG9ROFjT0Vlux0EOhWKBAeC+45iDj80QNJTYaT1SDEmeunT0vDNw==}
+    engines: {node: '>=14.0.0'}
 
   ethers@6.13.4:
     resolution: {integrity: sha512-21YtnZVg4/zKkCQPjrDj38B1r4nQvTZLopUGMLQ1ePU2zV/joCfDC3t3iKQjWRzjjjbzR+mdAIoikeBRNkdllA==}
@@ -7212,6 +7155,9 @@ packages:
   tslib@1.14.1:
     resolution: {integrity: sha512-Xni35NKzjgMrwevysHTCArtLDpPvye8zV/0E4EyYn43P7/7qvQwPh9BGkHewbMulVntbigmcT7rdX3BNo9wRJg==}
 
+  tslib@2.4.0:
+    resolution: {integrity: sha512-d6xOpEDfsi2CZVlPQzGeux8XMwLT9hssAsaPYExaQMuYskwb+x1x7J371tWlbBdWHroy99KnVB6qIkUbs5X3UQ==}
+
   tslib@2.6.1:
     resolution: {integrity: sha512-t0hLfiEKfMUoqhG+U1oid7Pva4bbDPHYfJNiB7BiIjRkj1pyC++4N3huJfqY6aRH6VTB0rvtzQwjM4K6qpfOig==}
 
@@ -7770,6 +7716,18 @@ packages:
       utf-8-validate:
         optional: true
 
+  ws@8.5.0:
+    resolution: {integrity: sha512-BWX0SWVgLPzYwF8lTzEy1egjhS4S4OEAHfsO8o65WOVsrnSRGaSiUaa9e0ggGlkMTtBlmOpEXiie9RUcBO86qg==}
+    engines: {node: '>=10.0.0'}
+    peerDependencies:
+      bufferutil: ^4.0.1
+      utf-8-validate: ^5.0.2
+    peerDependenciesMeta:
+      bufferutil:
+        optional: true
+      utf-8-validate:
+        optional: true
+
   xml-name-validator@5.0.0:
     resolution: {integrity: sha512-EvGK8EJ3DhaHfbRlETOWAS5pO9MZITeauHKJyb8wyajUfQUenkIg2MvLDTZ4T/TgIcm3HU0TFBgWWboAZ30UHg==}
     engines: {node: '>=18'}
@@ -7860,12 +7818,12 @@ snapshots:
 
   '@ardenthq/arkvault-url@1.2.0': {}
 
-  '@ardenthq/sdk-ark@2.0.0-alpha.19':
+  '@ardenthq/sdk-ark@2.0.0-alpha.21':
     dependencies:
-      '@ardenthq/sdk': 2.0.0-alpha.19
-      '@ardenthq/sdk-cryptography': 2.0.0-alpha.19
-      '@ardenthq/sdk-helpers': 2.0.0-alpha.19
-      '@ardenthq/sdk-intl': 2.0.0-alpha.19
+      '@ardenthq/sdk': 2.0.0-alpha.21
+      '@ardenthq/sdk-cryptography': 2.0.0-alpha.21
+      '@ardenthq/sdk-helpers': 2.0.0-alpha.21
+      '@ardenthq/sdk-intl': 2.0.0-alpha.21
       '@arkecosystem/ledger-transport': 2.0.0
       ajv: 8.12.0
       ajv-formats: 2.1.1(ajv@8.12.0)
@@ -7879,7 +7837,7 @@ snapshots:
       lodash.set: 4.3.2
       node-dotify: 1.1.0
 
-  '@ardenthq/sdk-cryptography@2.0.0-alpha.19':
+  '@ardenthq/sdk-cryptography@2.0.0-alpha.21':
     dependencies:
       '@noble/hashes': 0.5.9
       '@noble/secp256k1': 1.7.1
@@ -7897,7 +7855,7 @@ snapshots:
       typeforce: 1.18.0
       uuid: 8.3.2
 
-  '@ardenthq/sdk-helpers@2.0.0-alpha.19':
+  '@ardenthq/sdk-helpers@2.0.0-alpha.21':
     dependencies:
       '@hapi/bourne': 2.1.0
       bad-words: 3.0.4
@@ -7911,48 +7869,38 @@ snapshots:
       qrcode: 1.5.4
       query-string: 7.1.3
 
-  '@ardenthq/sdk-intl@2.0.0-alpha.19':
+  '@ardenthq/sdk-intl@2.0.0-alpha.21':
     dependencies:
       dayjs: 1.11.13
       dinero.js: 1.9.1
 
-  '@ardenthq/sdk-ledger@2.0.0-alpha.19':
+  '@ardenthq/sdk-ledger@2.0.0-alpha.21':
     dependencies:
-      '@ardenthq/sdk': 2.0.0-alpha.19
+      '@ardenthq/sdk': 2.0.0-alpha.21
       '@ledgerhq/hw-transport-webhid': 6.29.4
       '@ledgerhq/hw-transport-webusb': 6.29.4
       platform: 1.3.6
 
-  '@ardenthq/sdk-mainsail@2.0.0-alpha.19(encoding@0.1.13)':
+  '@ardenthq/sdk-mainsail@2.0.0-alpha.21(encoding@0.1.13)':
     dependencies:
-      '@ardenthq/sdk': 2.0.0-alpha.19
-      '@ardenthq/sdk-cryptography': 2.0.0-alpha.19
-      '@ardenthq/sdk-helpers': 2.0.0-alpha.19
-      '@ardenthq/sdk-intl': 2.0.0-alpha.19
+      '@ardenthq/sdk': 2.0.0-alpha.21
+      '@ardenthq/sdk-cryptography': 2.0.0-alpha.21
+      '@ardenthq/sdk-helpers': 2.0.0-alpha.21
+      '@ardenthq/sdk-intl': 2.0.0-alpha.21
       '@arkecosystem/ledger-transport': 2.0.0
-      '@mainsail/container': 0.0.1-evm.6
-      '@mainsail/contracts': 0.0.1-evm.6
-      '@mainsail/crypto-address-keccak256': 0.0.1-evm.6
-      '@mainsail/crypto-config': 0.0.1-evm.6
-      '@mainsail/crypto-consensus-bls12-381': 0.0.1-evm.6(encoding@0.1.13)
-      '@mainsail/crypto-hash-bcrypto': 0.0.1-evm.6
-      '@mainsail/crypto-key-pair-bls12-381': 0.0.1-evm.6(encoding@0.1.13)
-      '@mainsail/crypto-key-pair-ecdsa': 0.0.1-evm.6
-      '@mainsail/crypto-signature-schnorr': 0.0.1-evm.6
-      '@mainsail/crypto-transaction': 0.0.1-evm.6
-      '@mainsail/crypto-transaction-multi-payment': 0.0.1-evm.2
-      '@mainsail/crypto-transaction-multi-signature-registration': 0.0.1-evm.2
-      '@mainsail/crypto-transaction-transfer': 0.0.1-evm.2
-      '@mainsail/crypto-transaction-username-registration': 0.0.1-evm.2
-      '@mainsail/crypto-transaction-username-resignation': 0.0.1-evm.2
-      '@mainsail/crypto-transaction-validator-registration': 0.0.1-evm.2
-      '@mainsail/crypto-transaction-validator-resignation': 0.0.1-evm.2
-      '@mainsail/crypto-transaction-vote': 0.0.1-evm.2
-      '@mainsail/crypto-validation': 0.0.1-evm.6
-      '@mainsail/fees': 0.0.1-evm.2
-      '@mainsail/fees-static': 0.0.1-evm.2
-      '@mainsail/kernel': 0.0.1-evm.6
-      '@mainsail/validation': 0.0.1-evm.2
+      '@mainsail/container': 0.0.1-evm.8
+      '@mainsail/contracts': 0.0.1-evm.8
+      '@mainsail/crypto-address-keccak256': 0.0.1-evm.8
+      '@mainsail/crypto-config': 0.0.1-evm.8
+      '@mainsail/crypto-consensus-bls12-381': 0.0.1-evm.8(encoding@0.1.13)
+      '@mainsail/crypto-hash-bcrypto': 0.0.1-evm.8
+      '@mainsail/crypto-key-pair-bls12-381': 0.0.1-evm.8(encoding@0.1.13)
+      '@mainsail/crypto-key-pair-ecdsa': 0.0.1-evm.8
+      '@mainsail/crypto-signature-schnorr': 0.0.1-evm.8
+      '@mainsail/crypto-transaction': 0.0.1-evm.8
+      '@mainsail/crypto-validation': 0.0.1-evm.8
+      '@mainsail/kernel': 0.0.1-evm.8
+      '@mainsail/validation': 0.0.1-evm.8
       ajv: 6.12.6
       ajv-keywords: 3.4.1(ajv@6.12.6)
       bip39: 3.0.4
@@ -7970,18 +7918,18 @@ snapshots:
       - supports-color
       - utf-8-validate
 
-  '@ardenthq/sdk-markets@2.0.0-alpha.19':
+  '@ardenthq/sdk-markets@2.0.0-alpha.21':
     dependencies:
-      '@ardenthq/sdk': 2.0.0-alpha.19
-      '@ardenthq/sdk-intl': 2.0.0-alpha.19
+      '@ardenthq/sdk': 2.0.0-alpha.21
+      '@ardenthq/sdk-intl': 2.0.0-alpha.21
 
-  '@ardenthq/sdk-profiles@2.0.0-alpha.19':
+  '@ardenthq/sdk-profiles@2.0.0-alpha.21':
     dependencies:
-      '@ardenthq/sdk': 2.0.0-alpha.19
-      '@ardenthq/sdk-cryptography': 2.0.0-alpha.19
-      '@ardenthq/sdk-helpers': 2.0.0-alpha.19
-      '@ardenthq/sdk-intl': 2.0.0-alpha.19
-      '@ardenthq/sdk-markets': 2.0.0-alpha.19
+      '@ardenthq/sdk': 2.0.0-alpha.21
+      '@ardenthq/sdk-cryptography': 2.0.0-alpha.21
+      '@ardenthq/sdk-helpers': 2.0.0-alpha.21
+      '@ardenthq/sdk-intl': 2.0.0-alpha.21
+      '@ardenthq/sdk-markets': 2.0.0-alpha.21
       '@vechain/picasso': 2.1.1
       joi: 17.13.3
       localforage: 1.10.0
@@ -7991,10 +7939,10 @@ snapshots:
       semver: 7.6.3
       type-fest: 2.19.0
 
-  '@ardenthq/sdk@2.0.0-alpha.19':
+  '@ardenthq/sdk@2.0.0-alpha.21':
     dependencies:
-      '@ardenthq/sdk-helpers': 2.0.0-alpha.19
-      '@ardenthq/sdk-intl': 2.0.0-alpha.19
+      '@ardenthq/sdk-helpers': 2.0.0-alpha.21
+      '@ardenthq/sdk-intl': 2.0.0-alpha.21
       bad-words: 3.0.4
       bent: 7.3.12
       bip39: 3.1.0
@@ -9625,7 +9573,7 @@ snapshots:
   '@jest/console@29.6.1':
     dependencies:
       '@jest/types': 29.6.3
-      '@types/node': 20.14.11
+      '@types/node': 22.7.5
       chalk: 4.1.2
       jest-message-util: 29.6.1
       jest-util: 29.7.0
@@ -9638,14 +9586,14 @@ snapshots:
       '@jest/test-result': 29.6.1
       '@jest/transform': 29.6.1
       '@jest/types': 29.6.3
-      '@types/node': 20.14.11
+      '@types/node': 22.7.5
       ansi-escapes: 4.3.2
       chalk: 4.1.2
       ci-info: 3.8.0
       exit: 0.1.2
       graceful-fs: 4.2.11
       jest-changed-files: 29.5.0
-      jest-config: 29.6.1(@types/node@20.14.11)
+      jest-config: 29.6.1(@types/node@22.7.5)
       jest-haste-map: 29.6.1
       jest-message-util: 29.6.1
       jest-regex-util: 29.4.3
@@ -9669,7 +9617,7 @@ snapshots:
     dependencies:
       '@jest/fake-timers': 29.6.1
       '@jest/types': 29.6.3
-      '@types/node': 20.14.11
+      '@types/node': 22.7.5
       jest-mock: 29.6.1
 
   '@jest/expect-utils@29.6.1':
@@ -9687,7 +9635,7 @@ snapshots:
     dependencies:
       '@jest/types': 29.6.3
       '@sinonjs/fake-timers': 10.3.0
-      '@types/node': 20.14.11
+      '@types/node': 22.7.5
       jest-message-util: 29.6.1
       jest-mock: 29.6.1
       jest-util: 29.7.0
@@ -9709,7 +9657,7 @@ snapshots:
       '@jest/transform': 29.6.1
       '@jest/types': 29.6.3
       '@jridgewell/trace-mapping': 0.3.25
-      '@types/node': 20.14.11
+      '@types/node': 22.7.5
       chalk: 4.1.2
       collect-v8-coverage: 1.0.2
       exit: 0.1.2
@@ -9779,7 +9727,7 @@ snapshots:
       '@jest/schemas': 29.6.3
       '@types/istanbul-lib-coverage': 2.0.4
       '@types/istanbul-reports': 3.0.1
-      '@types/node': 20.14.11
+      '@types/node': 22.7.5
       '@types/yargs': 17.0.24
       chalk: 4.1.2
 
@@ -9897,20 +9845,15 @@ snapshots:
 
   '@ledgerhq/logs@6.12.0': {}
 
-  '@mainsail/container@0.0.1-evm.2':
+  '@mainsail/container@0.0.1-evm.8':
     dependencies:
       inversify: 6.0.2
       reflect-metadata: 0.2.1
 
-  '@mainsail/container@0.0.1-evm.6':
-    dependencies:
-      inversify: 6.0.2
-      reflect-metadata: 0.2.1
-
-  '@mainsail/contracts@0.0.1-evm.2':
+  '@mainsail/contracts@0.0.1-evm.8':
     dependencies:
       '@hapi/hapi': 21.3.6
-      '@mainsail/utils': 0.0.1-evm.2
+      '@mainsail/utils': 0.0.1-evm.8
       ajv: 8.12.0
       dayjs: 1.11.10
       inversify: 6.0.2
@@ -9920,36 +9863,23 @@ snapshots:
       - bufferutil
       - utf-8-validate
 
-  '@mainsail/contracts@0.0.1-evm.6':
+  '@mainsail/crypto-address-keccak256@0.0.1-evm.8':
     dependencies:
-      '@hapi/hapi': 21.3.6
-      '@mainsail/utils': 0.0.1-evm.6
-      ajv: 8.12.0
-      dayjs: 1.11.10
-      inversify: 6.0.2
-      reflect-metadata: 0.2.1
-      type-fest: 4.12.0
-    transitivePeerDependencies:
-      - bufferutil
-      - utf-8-validate
-
-  '@mainsail/crypto-address-keccak256@0.0.1-evm.6':
-    dependencies:
-      '@mainsail/container': 0.0.1-evm.6
-      '@mainsail/contracts': 0.0.1-evm.6
-      '@mainsail/kernel': 0.0.1-evm.6
-      '@mainsail/utils': 0.0.1-evm.6
+      '@mainsail/container': 0.0.1-evm.8
+      '@mainsail/contracts': 0.0.1-evm.8
+      '@mainsail/kernel': 0.0.1-evm.8
+      '@mainsail/utils': 0.0.1-evm.8
       ethers: 6.13.4
     transitivePeerDependencies:
       - bufferutil
       - supports-color
       - utf-8-validate
 
-  '@mainsail/crypto-config@0.0.1-evm.6':
+  '@mainsail/crypto-config@0.0.1-evm.8':
     dependencies:
-      '@mainsail/container': 0.0.1-evm.6
-      '@mainsail/contracts': 0.0.1-evm.6
-      '@mainsail/kernel': 0.0.1-evm.6
+      '@mainsail/container': 0.0.1-evm.8
+      '@mainsail/contracts': 0.0.1-evm.8
+      '@mainsail/kernel': 0.0.1-evm.8
       deepmerge: 4.3.1
       lodash.clone: 4.5.0
       lodash.get: 4.4.2
@@ -9959,13 +9889,13 @@ snapshots:
       - supports-color
       - utf-8-validate
 
-  '@mainsail/crypto-consensus-bls12-381@0.0.1-evm.6(encoding@0.1.13)':
+  '@mainsail/crypto-consensus-bls12-381@0.0.1-evm.8(encoding@0.1.13)':
     dependencies:
-      '@mainsail/container': 0.0.1-evm.6
-      '@mainsail/contracts': 0.0.1-evm.6
-      '@mainsail/crypto-key-pair-bls12-381': 0.0.1-evm.6(encoding@0.1.13)
-      '@mainsail/crypto-signature-bls12-381': 0.0.1-evm.6(encoding@0.1.13)
-      '@mainsail/kernel': 0.0.1-evm.6
+      '@mainsail/container': 0.0.1-evm.8
+      '@mainsail/contracts': 0.0.1-evm.8
+      '@mainsail/crypto-key-pair-bls12-381': 0.0.1-evm.8(encoding@0.1.13)
+      '@mainsail/crypto-signature-bls12-381': 0.0.1-evm.8(encoding@0.1.13)
+      '@mainsail/kernel': 0.0.1-evm.8
     transitivePeerDependencies:
       - bluebird
       - bufferutil
@@ -9973,25 +9903,25 @@ snapshots:
       - supports-color
       - utf-8-validate
 
-  '@mainsail/crypto-hash-bcrypto@0.0.1-evm.6':
+  '@mainsail/crypto-hash-bcrypto@0.0.1-evm.8':
     dependencies:
-      '@mainsail/container': 0.0.1-evm.6
-      '@mainsail/contracts': 0.0.1-evm.6
-      '@mainsail/kernel': 0.0.1-evm.6
+      '@mainsail/container': 0.0.1-evm.8
+      '@mainsail/contracts': 0.0.1-evm.8
+      '@mainsail/kernel': 0.0.1-evm.8
       bcrypto: 5.5.2
     transitivePeerDependencies:
       - bufferutil
       - supports-color
       - utf-8-validate
 
-  '@mainsail/crypto-key-pair-bls12-381@0.0.1-evm.6(encoding@0.1.13)':
+  '@mainsail/crypto-key-pair-bls12-381@0.0.1-evm.8(encoding@0.1.13)':
     dependencies:
       '@chainsafe/bls': 7.1.3(@chainsafe/blst@0.2.11(encoding@0.1.13))
       '@chainsafe/blst': 0.2.11(encoding@0.1.13)
-      '@mainsail/container': 0.0.1-evm.6
-      '@mainsail/contracts': 0.0.1-evm.6
-      '@mainsail/kernel': 0.0.1-evm.6
-      '@mainsail/utils': 0.0.1-evm.6
+      '@mainsail/container': 0.0.1-evm.8
+      '@mainsail/contracts': 0.0.1-evm.8
+      '@mainsail/kernel': 0.0.1-evm.8
+      '@mainsail/utils': 0.0.1-evm.8
       '@scure/bip39': 1.4.0
       bls12-381-keygen: 0.2.4
       wif: 4.0.0
@@ -10002,12 +9932,12 @@ snapshots:
       - supports-color
       - utf-8-validate
 
-  '@mainsail/crypto-key-pair-ecdsa@0.0.1-evm.6':
+  '@mainsail/crypto-key-pair-ecdsa@0.0.1-evm.8':
     dependencies:
-      '@mainsail/container': 0.0.1-evm.6
-      '@mainsail/contracts': 0.0.1-evm.6
-      '@mainsail/kernel': 0.0.1-evm.6
-      '@mainsail/utils': 0.0.1-evm.6
+      '@mainsail/container': 0.0.1-evm.8
+      '@mainsail/contracts': 0.0.1-evm.8
+      '@mainsail/kernel': 0.0.1-evm.8
+      '@mainsail/utils': 0.0.1-evm.8
       bcrypto: 5.5.2
       wif: 4.0.0
     transitivePeerDependencies:
@@ -10015,13 +9945,13 @@ snapshots:
       - supports-color
       - utf-8-validate
 
-  '@mainsail/crypto-signature-bls12-381@0.0.1-evm.6(encoding@0.1.13)':
+  '@mainsail/crypto-signature-bls12-381@0.0.1-evm.8(encoding@0.1.13)':
     dependencies:
-      '@mainsail/container': 0.0.1-evm.6
-      '@mainsail/contracts': 0.0.1-evm.6
-      '@mainsail/crypto-key-pair-bls12-381': 0.0.1-evm.6(encoding@0.1.13)
-      '@mainsail/kernel': 0.0.1-evm.6
-      '@mainsail/utils': 0.0.1-evm.6
+      '@mainsail/container': 0.0.1-evm.8
+      '@mainsail/contracts': 0.0.1-evm.8
+      '@mainsail/crypto-key-pair-bls12-381': 0.0.1-evm.8(encoding@0.1.13)
+      '@mainsail/kernel': 0.0.1-evm.8
+      '@mainsail/utils': 0.0.1-evm.8
     transitivePeerDependencies:
       - bluebird
       - bufferutil
@@ -10029,190 +9959,47 @@ snapshots:
       - supports-color
       - utf-8-validate
 
-  '@mainsail/crypto-signature-schnorr@0.0.1-evm.6':
+  '@mainsail/crypto-signature-schnorr@0.0.1-evm.8':
     dependencies:
-      '@mainsail/container': 0.0.1-evm.6
-      '@mainsail/contracts': 0.0.1-evm.6
-      '@mainsail/kernel': 0.0.1-evm.6
-      '@mainsail/utils': 0.0.1-evm.6
+      '@mainsail/container': 0.0.1-evm.8
+      '@mainsail/contracts': 0.0.1-evm.8
+      '@mainsail/kernel': 0.0.1-evm.8
+      '@mainsail/utils': 0.0.1-evm.8
       bcrypto: 5.5.2
     transitivePeerDependencies:
       - bufferutil
       - supports-color
       - utf-8-validate
 
-  '@mainsail/crypto-transaction-multi-payment@0.0.1-evm.2':
+  '@mainsail/crypto-transaction@0.0.1-evm.8':
     dependencies:
-      '@mainsail/container': 0.0.1-evm.2
-      '@mainsail/contracts': 0.0.1-evm.2
-      '@mainsail/crypto-transaction': 0.0.1-evm.2
-      '@mainsail/kernel': 0.0.1-evm.2
-      '@mainsail/transactions': 0.0.1-evm.2
-      '@mainsail/utils': 0.0.1-evm.2
+      '@mainsail/container': 0.0.1-evm.8
+      '@mainsail/contracts': 0.0.1-evm.8
+      '@mainsail/kernel': 0.0.1-evm.8
+      '@mainsail/utils': 0.0.1-evm.8
+      ajv: 8.12.0
+      ethers: 6.11.0
+    transitivePeerDependencies:
+      - bufferutil
+      - supports-color
+      - utf-8-validate
+
+  '@mainsail/crypto-validation@0.0.1-evm.8':
+    dependencies:
+      '@mainsail/contracts': 0.0.1-evm.8
+      '@mainsail/kernel': 0.0.1-evm.8
+      '@mainsail/utils': 0.0.1-evm.8
       ajv: 8.12.0
     transitivePeerDependencies:
       - bufferutil
       - supports-color
       - utf-8-validate
 
-  '@mainsail/crypto-transaction-multi-signature-registration@0.0.1-evm.2':
+  '@mainsail/kernel@0.0.1-evm.8':
     dependencies:
-      '@mainsail/container': 0.0.1-evm.2
-      '@mainsail/contracts': 0.0.1-evm.2
-      '@mainsail/crypto-transaction': 0.0.1-evm.2
-      '@mainsail/kernel': 0.0.1-evm.2
-      '@mainsail/transactions': 0.0.1-evm.2
-      '@mainsail/utils': 0.0.1-evm.2
-    transitivePeerDependencies:
-      - bufferutil
-      - supports-color
-      - utf-8-validate
-
-  '@mainsail/crypto-transaction-transfer@0.0.1-evm.2':
-    dependencies:
-      '@mainsail/container': 0.0.1-evm.2
-      '@mainsail/contracts': 0.0.1-evm.2
-      '@mainsail/crypto-transaction': 0.0.1-evm.2
-      '@mainsail/kernel': 0.0.1-evm.2
-      '@mainsail/transactions': 0.0.1-evm.2
-      '@mainsail/utils': 0.0.1-evm.2
-    transitivePeerDependencies:
-      - bufferutil
-      - supports-color
-      - utf-8-validate
-
-  '@mainsail/crypto-transaction-username-registration@0.0.1-evm.2':
-    dependencies:
-      '@mainsail/container': 0.0.1-evm.2
-      '@mainsail/contracts': 0.0.1-evm.2
-      '@mainsail/crypto-transaction': 0.0.1-evm.2
-      '@mainsail/kernel': 0.0.1-evm.2
-      '@mainsail/transactions': 0.0.1-evm.2
-      '@mainsail/utils': 0.0.1-evm.2
-    transitivePeerDependencies:
-      - bufferutil
-      - supports-color
-      - utf-8-validate
-
-  '@mainsail/crypto-transaction-username-resignation@0.0.1-evm.2':
-    dependencies:
-      '@mainsail/container': 0.0.1-evm.2
-      '@mainsail/contracts': 0.0.1-evm.2
-      '@mainsail/crypto-transaction': 0.0.1-evm.2
-      '@mainsail/crypto-transaction-username-registration': 0.0.1-evm.2
-      '@mainsail/kernel': 0.0.1-evm.2
-      '@mainsail/transactions': 0.0.1-evm.2
-      '@mainsail/utils': 0.0.1-evm.2
-    transitivePeerDependencies:
-      - bufferutil
-      - supports-color
-      - utf-8-validate
-
-  '@mainsail/crypto-transaction-validator-registration@0.0.1-evm.2':
-    dependencies:
-      '@mainsail/container': 0.0.1-evm.2
-      '@mainsail/contracts': 0.0.1-evm.2
-      '@mainsail/crypto-transaction': 0.0.1-evm.2
-      '@mainsail/kernel': 0.0.1-evm.2
-      '@mainsail/transactions': 0.0.1-evm.2
-      '@mainsail/utils': 0.0.1-evm.2
-    transitivePeerDependencies:
-      - bufferutil
-      - supports-color
-      - utf-8-validate
-
-  '@mainsail/crypto-transaction-validator-resignation@0.0.1-evm.2':
-    dependencies:
-      '@mainsail/container': 0.0.1-evm.2
-      '@mainsail/contracts': 0.0.1-evm.2
-      '@mainsail/crypto-transaction': 0.0.1-evm.2
-      '@mainsail/crypto-transaction-validator-registration': 0.0.1-evm.2
-      '@mainsail/kernel': 0.0.1-evm.2
-      '@mainsail/transactions': 0.0.1-evm.2
-      '@mainsail/utils': 0.0.1-evm.2
-    transitivePeerDependencies:
-      - bufferutil
-      - supports-color
-      - utf-8-validate
-
-  '@mainsail/crypto-transaction-vote@0.0.1-evm.2':
-    dependencies:
-      '@mainsail/container': 0.0.1-evm.2
-      '@mainsail/contracts': 0.0.1-evm.2
-      '@mainsail/crypto-transaction': 0.0.1-evm.2
-      '@mainsail/crypto-transaction-validator-registration': 0.0.1-evm.2
-      '@mainsail/kernel': 0.0.1-evm.2
-      '@mainsail/transactions': 0.0.1-evm.2
-      '@mainsail/utils': 0.0.1-evm.2
-      ajv: 8.12.0
-    transitivePeerDependencies:
-      - bufferutil
-      - supports-color
-      - utf-8-validate
-
-  '@mainsail/crypto-transaction@0.0.1-evm.2':
-    dependencies:
-      '@mainsail/container': 0.0.1-evm.2
-      '@mainsail/contracts': 0.0.1-evm.2
-      '@mainsail/kernel': 0.0.1-evm.2
-      '@mainsail/utils': 0.0.1-evm.2
-      ajv: 8.12.0
-    transitivePeerDependencies:
-      - bufferutil
-      - supports-color
-      - utf-8-validate
-
-  '@mainsail/crypto-transaction@0.0.1-evm.6':
-    dependencies:
-      '@mainsail/container': 0.0.1-evm.6
-      '@mainsail/contracts': 0.0.1-evm.6
-      '@mainsail/kernel': 0.0.1-evm.6
-      '@mainsail/utils': 0.0.1-evm.6
-      ajv: 8.12.0
-    transitivePeerDependencies:
-      - bufferutil
-      - supports-color
-      - utf-8-validate
-
-  '@mainsail/crypto-validation@0.0.1-evm.6':
-    dependencies:
-      '@mainsail/contracts': 0.0.1-evm.6
-      '@mainsail/kernel': 0.0.1-evm.6
-      '@mainsail/utils': 0.0.1-evm.6
-      ajv: 8.12.0
-    transitivePeerDependencies:
-      - bufferutil
-      - supports-color
-      - utf-8-validate
-
-  '@mainsail/fees-static@0.0.1-evm.2':
-    dependencies:
-      '@mainsail/container': 0.0.1-evm.2
-      '@mainsail/contracts': 0.0.1-evm.2
-      '@mainsail/fees': 0.0.1-evm.2
-      '@mainsail/kernel': 0.0.1-evm.2
-      '@mainsail/utils': 0.0.1-evm.2
-    transitivePeerDependencies:
-      - bufferutil
-      - supports-color
-      - utf-8-validate
-
-  '@mainsail/fees@0.0.1-evm.2':
-    dependencies:
-      '@mainsail/container': 0.0.1-evm.2
-      '@mainsail/contracts': 0.0.1-evm.2
-      '@mainsail/kernel': 0.0.1-evm.2
-      '@mainsail/utils': 0.0.1-evm.2
-    transitivePeerDependencies:
-      - bufferutil
-      - supports-color
-      - utf-8-validate
-
-  '@mainsail/kernel@0.0.1-evm.2':
-    dependencies:
-      '@mainsail/container': 0.0.1-evm.2
-      '@mainsail/contracts': 0.0.1-evm.2
-      '@mainsail/utils': 0.0.1-evm.2
+      '@mainsail/container': 0.0.1-evm.8
+      '@mainsail/contracts': 0.0.1-evm.8
+      '@mainsail/utils': 0.0.1-evm.8
       chalk: 5.3.0
       cron: 3.1.6
       date-fns: 3.4.0
@@ -10231,42 +10018,7 @@ snapshots:
       - supports-color
       - utf-8-validate
 
-  '@mainsail/kernel@0.0.1-evm.6':
-    dependencies:
-      '@mainsail/container': 0.0.1-evm.6
-      '@mainsail/contracts': 0.0.1-evm.6
-      '@mainsail/utils': 0.0.1-evm.6
-      chalk: 5.3.0
-      cron: 3.1.6
-      date-fns: 3.4.0
-      deepmerge: 4.3.1
-      env-paths: 3.0.0
-      fs-extra: 11.2.0
-      glob: 10.3.10
-      ipaddr.js: 2.1.0
-      joi: 17.12.2
-      log-process-errors: 12.0.0
-      nanomatch: 1.2.13
-      nsfw: 2.2.4
-      semver: 7.6.0
-    transitivePeerDependencies:
-      - bufferutil
-      - supports-color
-      - utf-8-validate
-
-  '@mainsail/transactions@0.0.1-evm.2':
-    dependencies:
-      '@mainsail/container': 0.0.1-evm.2
-      '@mainsail/contracts': 0.0.1-evm.2
-      '@mainsail/crypto-transaction': 0.0.1-evm.2
-      '@mainsail/kernel': 0.0.1-evm.2
-      '@mainsail/utils': 0.0.1-evm.2
-    transitivePeerDependencies:
-      - bufferutil
-      - supports-color
-      - utf-8-validate
-
-  '@mainsail/utils@0.0.1-evm.2':
+  '@mainsail/utils@0.0.1-evm.8':
     dependencies:
       '@hapi/bourne': 3.0.0
       deepmerge: 4.3.1
@@ -10279,24 +10031,11 @@ snapshots:
       - bufferutil
       - utf-8-validate
 
-  '@mainsail/utils@0.0.1-evm.6':
+  '@mainsail/validation@0.0.1-evm.8':
     dependencies:
-      '@hapi/bourne': 3.0.0
-      deepmerge: 4.3.1
-      ethers: 6.13.4
-      fast-copy: 3.0.2
-      fast-deep-equal: 3.1.3
-      fast-sort: 3.4.1
-      type-fest: 4.12.0
-    transitivePeerDependencies:
-      - bufferutil
-      - utf-8-validate
-
-  '@mainsail/validation@0.0.1-evm.2':
-    dependencies:
-      '@mainsail/container': 0.0.1-evm.2
-      '@mainsail/contracts': 0.0.1-evm.2
-      '@mainsail/kernel': 0.0.1-evm.2
+      '@mainsail/container': 0.0.1-evm.8
+      '@mainsail/contracts': 0.0.1-evm.8
+      '@mainsail/kernel': 0.0.1-evm.8
       ajv: 8.12.0
       ajv-formats: 2.1.1(ajv@8.12.0)
       ajv-keywords: 5.1.0(ajv@8.12.0)
@@ -10598,7 +10337,7 @@ snapshots:
       lz-string: 1.5.0
       pretty-format: 27.5.1
 
-  '@testing-library/jest-dom@6.4.6(@jest/globals@29.6.1)(@types/jest@29.5.3)(jest@29.6.1(@types/node@20.14.11))(vitest@1.6.0(@types/node@20.14.11)(jsdom@24.1.1)(terser@5.19.2))':
+  '@testing-library/jest-dom@6.4.6(@jest/globals@29.6.1)(@types/jest@29.5.3)(jest@29.6.1(@types/node@22.7.5))(vitest@1.6.0(@types/node@22.7.5)(jsdom@24.1.1)(terser@5.19.2))':
     dependencies:
       '@adobe/css-tools': 4.4.0
       '@babel/runtime': 7.24.8
@@ -10611,8 +10350,8 @@ snapshots:
     optionalDependencies:
       '@jest/globals': 29.6.1
       '@types/jest': 29.5.3
-      jest: 29.6.1(@types/node@20.14.11)
-      vitest: 1.6.0(@types/node@20.14.11)(jsdom@24.1.1)(terser@5.19.2)
+      jest: 29.6.1(@types/node@22.7.5)
+      vitest: 1.6.0(@types/node@22.7.5)(jsdom@24.1.1)(terser@5.19.2)
 
   '@testing-library/react@16.0.0(@testing-library/dom@10.2.0)(@types/react-dom@18.3.0)(@types/react@18.3.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
@@ -10682,11 +10421,11 @@ snapshots:
   '@types/glob@7.2.0':
     dependencies:
       '@types/minimatch': 5.1.2
-      '@types/node': 20.14.11
+      '@types/node': 22.7.5
 
   '@types/graceful-fs@4.1.6':
     dependencies:
-      '@types/node': 20.14.11
+      '@types/node': 22.7.5
 
   '@types/history@4.7.11': {}
 
@@ -10721,6 +10460,8 @@ snapshots:
   '@types/node@11.11.6': {}
 
   '@types/node@12.20.55': {}
+
+  '@types/node@18.15.13': {}
 
   '@types/node@20.14.11':
     dependencies:
@@ -10794,7 +10535,7 @@ snapshots:
 
   '@types/tar@6.1.13':
     dependencies:
-      '@types/node': 20.14.11
+      '@types/node': 22.7.5
       minipass: 4.2.8
 
   '@types/trusted-types@2.0.7': {}
@@ -10937,18 +10678,18 @@ snapshots:
     dependencies:
       mersenne-twister: 1.1.0
 
-  '@vitejs/plugin-react@4.3.1(vite@5.3.4(@types/node@20.14.11)(terser@5.19.2))':
+  '@vitejs/plugin-react@4.3.1(vite@5.3.4(@types/node@22.7.5)(terser@5.19.2))':
     dependencies:
       '@babel/core': 7.24.9
       '@babel/plugin-transform-react-jsx-self': 7.24.7(@babel/core@7.24.9)
       '@babel/plugin-transform-react-jsx-source': 7.24.7(@babel/core@7.24.9)
       '@types/babel__core': 7.20.5
       react-refresh: 0.14.2
-      vite: 5.3.4(@types/node@20.14.11)(terser@5.19.2)
+      vite: 5.3.4(@types/node@22.7.5)(terser@5.19.2)
     transitivePeerDependencies:
       - supports-color
 
-  '@vitest/coverage-istanbul@1.6.0(vitest@1.6.0(@types/node@20.14.11)(jsdom@24.1.1)(terser@5.19.2))':
+  '@vitest/coverage-istanbul@1.6.0(vitest@1.6.0(@types/node@22.7.5)(jsdom@24.1.1)(terser@5.19.2))':
     dependencies:
       debug: 4.3.4(supports-color@8.1.1)
       istanbul-lib-coverage: 3.2.2
@@ -10959,7 +10700,7 @@ snapshots:
       magicast: 0.3.4
       picocolors: 1.0.0
       test-exclude: 6.0.0
-      vitest: 1.6.0(@types/node@20.14.11)(jsdom@24.1.1)(terser@5.19.2)
+      vitest: 1.6.0(@types/node@22.7.5)(jsdom@24.1.1)(terser@5.19.2)
     transitivePeerDependencies:
       - supports-color
 
@@ -12513,6 +12254,19 @@ snapshots:
 
   esutils@2.0.3: {}
 
+  ethers@6.11.0:
+    dependencies:
+      '@adraffy/ens-normalize': 1.10.1
+      '@noble/curves': 1.2.0
+      '@noble/hashes': 1.3.2
+      '@types/node': 18.15.13
+      aes-js: 4.0.0-beta.5
+      tslib: 2.4.0
+      ws: 8.5.0
+    transitivePeerDependencies:
+      - bufferutil
+      - utf-8-validate
+
   ethers@6.13.4:
     dependencies:
       '@adraffy/ens-normalize': 1.10.1
@@ -12584,7 +12338,7 @@ snapshots:
   expect@29.6.1:
     dependencies:
       '@jest/expect-utils': 29.6.1
-      '@types/node': 20.14.11
+      '@types/node': 22.7.5
       jest-get-type: 29.4.3
       jest-matcher-utils: 29.6.1
       jest-message-util: 29.6.1
@@ -13578,7 +13332,7 @@ snapshots:
       '@jest/expect': 29.6.1
       '@jest/test-result': 29.6.1
       '@jest/types': 29.6.3
-      '@types/node': 20.14.11
+      '@types/node': 22.7.5
       chalk: 4.1.2
       co: 4.6.0
       dedent: 0.7.0
@@ -13597,7 +13351,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  jest-cli@29.6.1(@types/node@20.14.11):
+  jest-cli@29.6.1(@types/node@22.7.5):
     dependencies:
       '@jest/core': 29.6.1
       '@jest/test-result': 29.6.1
@@ -13606,7 +13360,7 @@ snapshots:
       exit: 0.1.2
       graceful-fs: 4.2.11
       import-local: 3.1.0
-      jest-config: 29.6.1(@types/node@20.14.11)
+      jest-config: 29.6.1(@types/node@22.7.5)
       jest-util: 29.7.0
       jest-validate: 29.6.1
       prompts: 2.4.2
@@ -13616,7 +13370,7 @@ snapshots:
       - supports-color
       - ts-node
 
-  jest-config@29.6.1(@types/node@20.14.11):
+  jest-config@29.6.1(@types/node@22.7.5):
     dependencies:
       '@babel/core': 7.24.9
       '@jest/test-sequencer': 29.6.1
@@ -13641,7 +13395,7 @@ snapshots:
       slash: 3.0.0
       strip-json-comments: 3.1.1
     optionalDependencies:
-      '@types/node': 20.14.11
+      '@types/node': 22.7.5
     transitivePeerDependencies:
       - supports-color
 
@@ -13669,16 +13423,16 @@ snapshots:
       '@jest/environment': 29.6.1
       '@jest/fake-timers': 29.6.1
       '@jest/types': 29.6.3
-      '@types/node': 20.14.11
+      '@types/node': 22.7.5
       jest-mock: 29.6.1
       jest-util: 29.7.0
 
-  jest-extended@4.0.2(jest@29.6.1(@types/node@20.14.11)):
+  jest-extended@4.0.2(jest@29.6.1(@types/node@22.7.5)):
     dependencies:
       jest-diff: 29.6.1
       jest-get-type: 29.4.3
     optionalDependencies:
-      jest: 29.6.1(@types/node@20.14.11)
+      jest: 29.6.1(@types/node@22.7.5)
 
   jest-get-type@29.4.3: {}
 
@@ -13686,7 +13440,7 @@ snapshots:
     dependencies:
       '@jest/types': 29.6.3
       '@types/graceful-fs': 4.1.6
-      '@types/node': 20.14.11
+      '@types/node': 22.7.5
       anymatch: 3.1.3
       fb-watchman: 2.0.2
       graceful-fs: 4.2.11
@@ -13725,7 +13479,7 @@ snapshots:
   jest-mock@29.6.1:
     dependencies:
       '@jest/types': 29.6.3
-      '@types/node': 20.14.11
+      '@types/node': 22.7.5
       jest-util: 29.7.0
 
   jest-pnp-resolver@1.2.3(jest-resolve@29.6.1):
@@ -13760,7 +13514,7 @@ snapshots:
       '@jest/test-result': 29.6.1
       '@jest/transform': 29.6.1
       '@jest/types': 29.6.3
-      '@types/node': 20.14.11
+      '@types/node': 22.7.5
       chalk: 4.1.2
       emittery: 0.13.1
       graceful-fs: 4.2.11
@@ -13788,7 +13542,7 @@ snapshots:
       '@jest/test-result': 29.6.1
       '@jest/transform': 29.6.1
       '@jest/types': 29.6.3
-      '@types/node': 20.14.11
+      '@types/node': 22.7.5
       chalk: 4.1.2
       cjs-module-lexer: 1.2.3
       collect-v8-coverage: 1.0.2
@@ -13840,7 +13594,7 @@ snapshots:
   jest-util@29.7.0:
     dependencies:
       '@jest/types': 29.6.3
-      '@types/node': 20.14.11
+      '@types/node': 22.7.5
       chalk: 4.1.2
       ci-info: 3.8.0
       graceful-fs: 4.2.11
@@ -13859,30 +13613,30 @@ snapshots:
     dependencies:
       '@jest/test-result': 29.6.1
       '@jest/types': 29.6.3
-      '@types/node': 20.14.11
+      '@types/node': 22.7.5
       ansi-escapes: 4.3.2
       chalk: 4.1.2
       emittery: 0.13.1
       jest-util: 29.7.0
       string-length: 4.0.2
 
-  jest-when@3.6.0(jest@29.6.1(@types/node@20.14.11)):
+  jest-when@3.6.0(jest@29.6.1(@types/node@22.7.5)):
     dependencies:
-      jest: 29.6.1(@types/node@20.14.11)
+      jest: 29.6.1(@types/node@22.7.5)
 
   jest-worker@29.6.1:
     dependencies:
-      '@types/node': 20.14.11
+      '@types/node': 22.7.5
       jest-util: 29.7.0
       merge-stream: 2.0.0
       supports-color: 8.1.1
 
-  jest@29.6.1(@types/node@20.14.11):
+  jest@29.6.1(@types/node@22.7.5):
     dependencies:
       '@jest/core': 29.6.1
       '@jest/types': 29.6.3
       import-local: 3.1.0
-      jest-cli: 29.6.1(@types/node@20.14.11)
+      jest-cli: 29.6.1(@types/node@22.7.5)
     transitivePeerDependencies:
       - '@types/node'
       - supports-color
@@ -16219,6 +15973,8 @@ snapshots:
 
   tslib@1.14.1: {}
 
+  tslib@2.4.0: {}
+
   tslib@2.6.1: {}
 
   tslib@2.6.2: {}
@@ -16474,13 +16230,13 @@ snapshots:
 
   value-equal@1.0.1: {}
 
-  vite-node@1.6.0(@types/node@20.14.11)(terser@5.19.2):
+  vite-node@1.6.0(@types/node@22.7.5)(terser@5.19.2):
     dependencies:
       cac: 6.7.14
       debug: 4.3.4(supports-color@8.1.1)
       pathe: 1.1.1
       picocolors: 1.0.0
-      vite: 5.3.4(@types/node@20.14.11)(terser@5.19.2)
+      vite: 5.3.4(@types/node@22.7.5)(terser@5.19.2)
     transitivePeerDependencies:
       - '@types/node'
       - less
@@ -16491,76 +16247,76 @@ snapshots:
       - supports-color
       - terser
 
-  vite-plugin-babel-macros@1.0.6(vite@5.3.4(@types/node@20.14.11)(terser@5.19.2)):
+  vite-plugin-babel-macros@1.0.6(vite@5.3.4(@types/node@22.7.5)(terser@5.19.2)):
     dependencies:
       '@babel/core': 7.22.1
       '@babel/plugin-syntax-jsx': 7.22.5(@babel/core@7.22.1)
       '@babel/plugin-syntax-typescript': 7.22.5(@babel/core@7.22.1)
       '@types/babel__core': 7.20.1
       babel-plugin-macros: 3.1.0
-      vite: 5.3.4(@types/node@20.14.11)(terser@5.19.2)
+      vite: 5.3.4(@types/node@22.7.5)(terser@5.19.2)
     transitivePeerDependencies:
       - supports-color
 
-  vite-plugin-optimize-persist@0.1.2(vite-plugin-package-config@0.1.1(vite@5.3.4(@types/node@20.14.11)(terser@5.19.2)))(vite@5.3.4(@types/node@20.14.11)(terser@5.19.2)):
+  vite-plugin-optimize-persist@0.1.2(vite-plugin-package-config@0.1.1(vite@5.3.4(@types/node@22.7.5)(terser@5.19.2)))(vite@5.3.4(@types/node@22.7.5)(terser@5.19.2)):
     dependencies:
       debug: 4.3.4(supports-color@8.1.1)
       fs-extra: 10.1.0
-      vite: 5.3.4(@types/node@20.14.11)(terser@5.19.2)
-      vite-plugin-package-config: 0.1.1(vite@5.3.4(@types/node@20.14.11)(terser@5.19.2))
+      vite: 5.3.4(@types/node@22.7.5)(terser@5.19.2)
+      vite-plugin-package-config: 0.1.1(vite@5.3.4(@types/node@22.7.5)(terser@5.19.2))
     transitivePeerDependencies:
       - supports-color
 
-  vite-plugin-package-config@0.1.1(vite@5.3.4(@types/node@20.14.11)(terser@5.19.2)):
+  vite-plugin-package-config@0.1.1(vite@5.3.4(@types/node@22.7.5)(terser@5.19.2)):
     dependencies:
       debug: 4.3.4(supports-color@8.1.1)
-      vite: 5.3.4(@types/node@20.14.11)(terser@5.19.2)
+      vite: 5.3.4(@types/node@22.7.5)(terser@5.19.2)
     transitivePeerDependencies:
       - supports-color
 
-  vite-plugin-pwa@0.20.0(vite@5.3.4(@types/node@20.14.11)(terser@5.19.2))(workbox-build@7.1.1(@types/babel__core@7.20.5))(workbox-window@7.1.0):
+  vite-plugin-pwa@0.20.0(vite@5.3.4(@types/node@22.7.5)(terser@5.19.2))(workbox-build@7.1.1(@types/babel__core@7.20.5))(workbox-window@7.1.0):
     dependencies:
       debug: 4.3.4(supports-color@8.1.1)
       fast-glob: 3.3.2
       pretty-bytes: 6.1.1
-      vite: 5.3.4(@types/node@20.14.11)(terser@5.19.2)
+      vite: 5.3.4(@types/node@22.7.5)(terser@5.19.2)
       workbox-build: 7.1.1(@types/babel__core@7.20.5)
       workbox-window: 7.1.0
     transitivePeerDependencies:
       - supports-color
 
-  vite-plugin-svgr@4.2.0(rollup@4.19.0)(vite@5.3.4(@types/node@20.14.11)(terser@5.19.2)):
+  vite-plugin-svgr@4.2.0(rollup@4.19.0)(vite@5.3.4(@types/node@22.7.5)(terser@5.19.2)):
     dependencies:
       '@rollup/pluginutils': 5.1.0(rollup@4.19.0)
       '@svgr/core': 8.1.0
       '@svgr/plugin-jsx': 8.1.0(@svgr/core@8.1.0)
-      vite: 5.3.4(@types/node@20.14.11)(terser@5.19.2)
+      vite: 5.3.4(@types/node@22.7.5)(terser@5.19.2)
     transitivePeerDependencies:
       - rollup
       - supports-color
 
-  vite-tsconfig-paths@4.3.2(typescript@5.5.4)(vite@5.3.4(@types/node@20.14.11)(terser@5.19.2)):
+  vite-tsconfig-paths@4.3.2(typescript@5.5.4)(vite@5.3.4(@types/node@22.7.5)(terser@5.19.2)):
     dependencies:
       debug: 4.3.4(supports-color@8.1.1)
       globrex: 0.1.2
       tsconfck: 3.1.1(typescript@5.5.4)
     optionalDependencies:
-      vite: 5.3.4(@types/node@20.14.11)(terser@5.19.2)
+      vite: 5.3.4(@types/node@22.7.5)(terser@5.19.2)
     transitivePeerDependencies:
       - supports-color
       - typescript
 
-  vite@5.3.4(@types/node@20.14.11)(terser@5.19.2):
+  vite@5.3.4(@types/node@22.7.5)(terser@5.19.2):
     dependencies:
       esbuild: 0.21.5
       postcss: 8.4.39
       rollup: 4.19.0
     optionalDependencies:
-      '@types/node': 20.14.11
+      '@types/node': 22.7.5
       fsevents: 2.3.3
       terser: 5.19.2
 
-  vitest@1.6.0(@types/node@20.14.11)(jsdom@24.1.1)(terser@5.19.2):
+  vitest@1.6.0(@types/node@22.7.5)(jsdom@24.1.1)(terser@5.19.2):
     dependencies:
       '@vitest/expect': 1.6.0
       '@vitest/runner': 1.6.0
@@ -16579,11 +16335,11 @@ snapshots:
       strip-literal: 2.1.0
       tinybench: 2.8.0
       tinypool: 0.8.4
-      vite: 5.3.4(@types/node@20.14.11)(terser@5.19.2)
-      vite-node: 1.6.0(@types/node@20.14.11)(terser@5.19.2)
+      vite: 5.3.4(@types/node@22.7.5)(terser@5.19.2)
+      vite-node: 1.6.0(@types/node@22.7.5)(terser@5.19.2)
       why-is-node-running: 2.2.2
     optionalDependencies:
-      '@types/node': 20.14.11
+      '@types/node': 22.7.5
       jsdom: 24.1.1
     transitivePeerDependencies:
       - less
@@ -16856,6 +16612,8 @@ snapshots:
   ws@8.17.1: {}
 
   ws@8.18.0: {}
+
+  ws@8.5.0: {}
 
   xml-name-validator@5.0.0: {}
 
