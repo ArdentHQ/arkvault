@@ -439,7 +439,7 @@ describe("Registration", () => {
 
 		const mnemonic = screen.getByTestId("AuthenticationStep__mnemonic");
 
-		const wrongPassphrase = "wrong passphrase"
+		const wrongPassphrase = "wrong passphrase";
 
 		await userEvent.type(mnemonic, wrongPassphrase);
 		await waitFor(() => expect(mnemonic).toHaveValue(wrongPassphrase));
