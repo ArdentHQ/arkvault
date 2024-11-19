@@ -25,57 +25,6 @@ exports[`Button > should hide the toggle button if no onClick method 1`] = `
 </div>
 `;
 
-exports[`Button > should not set it expanded if no stored value 1`] = `
-<div>
-  <div
-    class="css-fvpuky"
-  >
-    <div
-      class="select-none cursor-pointer group md:h-20 py-6 px-8 md:p-4 flex flex-row items-center border-theme-secondary-300 dark:border-theme-secondary-800"
-      data-testid="AccordionHeader"
-    >
-      <div
-        class="flex flex-grow flex-row items-center"
-      >
-        Header
-      </div>
-      <div
-        class="ml-4 flex flex-shrink-0 items-center self-stretch transition-all duration-100 css-o6tyc"
-      >
-        <div
-          class="css-tz6w2"
-          data-testid="Accordion__toggle"
-        >
-          <div
-            class="transition-transform css-15txs7d"
-            height="10"
-            width="10"
-          >
-            <svg
-              id="chevron-down-small"
-              viewBox="0 0 10 10"
-              x="0"
-              xml:space="preserve"
-              xmlns="http://www.w3.org/2000/svg"
-              y="0"
-            >
-              <path
-                d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
-                fill="none"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-              />
-            </svg>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
 exports[`Button > should render 1`] = `
 <div>
   <div

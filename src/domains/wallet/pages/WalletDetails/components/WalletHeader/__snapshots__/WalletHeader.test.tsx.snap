@@ -23,7 +23,18 @@ exports[`WalletHeader > should handle locked balance 1`] = `
           </span>
           <div
             class="flex items-center space-x-1"
-          />
+          >
+            <div
+              class="inline-block p-1 text-theme-secondary-text"
+              data-testid="WalletIcon__SecondSignature"
+            >
+              <div
+                class="css-v0ob3f"
+                height="16"
+                width="16"
+              />
+            </div>
+          </div>
         </div>
         <div
           class="flex w-full items-center space-x-4"
@@ -372,6 +383,16 @@ exports[`WalletHeader > should handle locked balance when is ledger 1`] = `
           <div
             class="flex items-center space-x-1"
           >
+            <div
+              class="inline-block p-1 text-theme-secondary-text"
+              data-testid="WalletIcon__SecondSignature"
+            >
+              <div
+                class="css-v0ob3f"
+                height="16"
+                width="16"
+              />
+            </div>
             <div
               class="inline-block p-1 text-theme-secondary-text"
               data-testid="WalletIcon__Ledger"
@@ -1285,6 +1306,16 @@ exports[`WalletHeader > should render with incompatible ledger wallet 1`] = `
           >
             <div
               class="inline-block p-1 text-theme-secondary-text"
+              data-testid="WalletIcon__SecondSignature"
+            >
+              <div
+                class="css-v0ob3f"
+                height="16"
+                width="16"
+              />
+            </div>
+            <div
+              class="inline-block p-1 text-theme-secondary-text"
               data-testid="WalletIcon__Ledger"
             >
               <div
@@ -1574,7 +1605,18 @@ exports[`WalletHeader > should show currency delta (-5%) 1`] = `
           </span>
           <div
             class="flex items-center space-x-1"
-          />
+          >
+            <div
+              class="inline-block p-1 text-theme-secondary-text"
+              data-testid="WalletIcon__SecondSignature"
+            >
+              <div
+                class="css-v0ob3f"
+                height="16"
+                width="16"
+              />
+            </div>
+          </div>
         </div>
         <div
           class="flex w-full items-center space-x-4"
@@ -1872,7 +1914,18 @@ exports[`WalletHeader > should show currency delta (5%) 1`] = `
           </span>
           <div
             class="flex items-center space-x-1"
-          />
+          >
+            <div
+              class="inline-block p-1 text-theme-secondary-text"
+              data-testid="WalletIcon__SecondSignature"
+            >
+              <div
+                class="css-v0ob3f"
+                height="16"
+                width="16"
+              />
+            </div>
+          </div>
         </div>
         <div
           class="flex w-full items-center space-x-4"
@@ -2171,6 +2224,16 @@ exports[`WalletHeader > should show modifiers 1`] = `
           <div
             class="flex items-center space-x-1"
           >
+            <div
+              class="inline-block p-1 text-theme-secondary-text"
+              data-testid="WalletIcon__SecondSignature"
+            >
+              <div
+                class="css-v0ob3f"
+                height="16"
+                width="16"
+              />
+            </div>
             <div
               class="inline-block p-1 text-theme-secondary-text"
               data-testid="WalletIcon__Ledger"
