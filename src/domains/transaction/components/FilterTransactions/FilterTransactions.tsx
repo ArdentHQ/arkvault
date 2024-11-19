@@ -33,7 +33,7 @@ const FilterOption = ({
 		className={classNames("group -my-4 -ml-9 -mr-8 flex w-screen items-center space-x-2 px-4 py-3 transition-all", {
 			"border-b border-theme-secondary-300 dark:border-theme-secondary-600": hasDivider,
 			"font-normal hover:text-theme-secondary-900 dark:hover:text-theme-secondary-200": !isChecked,
-			"font-semibold hover:text-theme-navy-600": isChecked,
+			"font-semibold hover:text-theme-primary-600": isChecked,
 		})}
 		onClick={() => onChange?.(!isChecked)}
 	>
@@ -42,8 +42,8 @@ const FilterOption = ({
 			onChange={() => onChange?.(!isChecked)}
 			data-testid={`FilterOption__checkbox`}
 			className={classNames("transition-all", {
-				"group-hover:bg-theme-navy-700": isChecked,
-				"group-hover:border-theme-navy-600 dark:group-hover:border-theme-navy-600": !isChecked,
+				"group-hover:bg-theme-primary-700": isChecked,
+				"group-hover:border-theme-primary-600 dark:group-hover:border-theme-primary-600": !isChecked,
 			})}
 		/>
 		<span data-testid={`FilterOption__${label}`}>{label}</span>
