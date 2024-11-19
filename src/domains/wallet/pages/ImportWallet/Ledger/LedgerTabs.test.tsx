@@ -529,4 +529,17 @@ describe("LedgerTabs", () => {
 		ledgerSpy.mockRestore();
 		ledgerTransportMock.mockRestore();
 	});
+
+	it("should not render a network if it is not enabled in the profile", async () => {
+
+		const networkSpy = vi.spyOn(profile, "availableNetworks").mockReturnValue([]);
+
+		const ledgerTransportMock = mockNanoXTransport();
+		render(<Component activeIndex={2} />, { route: `/profiles/${profile.id()}` });
+
+		await expect(screen.findByTestId("NetworkOption")).rejects.toThrow(/Unable to find/);
+
+		networkSpy.mockRestore();
+		ledgerTransportMock.mockRestore();
+	})
 });
