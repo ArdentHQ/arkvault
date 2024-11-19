@@ -141,9 +141,7 @@ describe("Wallet Options Hook", () => {
 
 		expect(result.current.registrationOptions).toStrictEqual({
 			key: "registrations",
-			options: [
-				{ label: "Delegate", value: "delegate-registration" },
-			],
+			options: [{ label: "Delegate", value: "delegate-registration" }],
 			title: "Register",
 		});
 
