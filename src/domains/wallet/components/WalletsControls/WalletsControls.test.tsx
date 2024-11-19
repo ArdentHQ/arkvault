@@ -179,4 +179,24 @@ describe("WalletsControls", () => {
 
 		expect(container).toMatchSnapshot();
 	});
+
+	it("should render tooltip with no content if the Ledger is supported and has at least one network", async () => {
+		render(
+			<Route path="/profiles/:profileId/dashboard">
+				<WalletsControls
+					onCreateWallet={vi.fn()}
+					onImportWallet={vi.fn()}
+					filterProperties={filterProperties as any}
+				/>
+			</Route>,
+			{
+				route: dashboardURL,
+			}
+		);
+
+		await userEvent.hover(screen.getByTestId("WalletControls__import-wallet"));
+
+		expect(screen.queryByText("ARK Vault requires the use of a chromium based browser when using a Ledger.")).not.toBeInTheDocument();
+		expect(screen.queryByText("Your portfolio contains 1 or more Ledger wallets. ARK Vault requires the use of a chromium based browser such as Chrome, Brave or Edge when using a Ledger device.")).not.toBeInTheDocument();
+	});
 });
