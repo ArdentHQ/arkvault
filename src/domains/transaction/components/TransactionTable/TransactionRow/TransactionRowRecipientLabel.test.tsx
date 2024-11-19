@@ -14,7 +14,11 @@ describe("TransactionRowRecipientLabel", () => {
 	});
 
 	it("should show label", () => {
-		render(<TransactionRowRecipientLabel transaction={{ ...TransactionFixture, type: () => "delegateRegistration" }} />);
+		render(
+			<TransactionRowRecipientLabel
+				transaction={{ ...TransactionFixture, type: () => "delegateRegistration" }}
+			/>,
+		);
 
 		expect(screen.getByText(translations.TRANSACTION_TYPES.DELEGATE_REGISTRATION)).toBeInTheDocument();
 	});
