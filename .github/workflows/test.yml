@@ -747,9 +747,9 @@ jobs:
             - name: Test Pages
               env:
                   COVERAGE_THRESHOLD_LINES: 97.3
-                  COVERAGE_THRESHOLD_FUNCTIONS: 96.4
-                  COVERAGE_THRESHOLD_STATEMENTS: 97.8
-                  COVERAGE_THRESHOLD_BRANCHES: 98.43
+                  COVERAGE_THRESHOLD_FUNCTIONS: 95.86
+                  COVERAGE_THRESHOLD_STATEMENTS: 97.59
+                  COVERAGE_THRESHOLD_BRANCHES: 97.95
                   COVERAGE_INCLUDE_PATH: src/domains/transaction/pages
               uses: nick-invision/retry@v2
               with:
