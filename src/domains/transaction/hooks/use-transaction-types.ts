@@ -83,9 +83,9 @@ export const useTransactionTypes = ({ wallets = [] }: TransactionTypeProperties 
 
 				for (const wallet of wallets) {
 					allSupportedTypes.push(
-						...(wallet.transactionTypes() as string[]).filter((type) => {
-							return ![MagistrateTransactionType, "ipfs", "secondSignature"].includes(type)
-						}),
+						...(wallet.transactionTypes() as string[]).filter(
+							(type) => ![MagistrateTransactionType, "ipfs", "secondSignature"].includes(type),
+						),
 					);
 				}
 
