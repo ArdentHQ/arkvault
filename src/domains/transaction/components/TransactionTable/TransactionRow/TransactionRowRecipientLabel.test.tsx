@@ -14,9 +14,9 @@ describe("TransactionRowRecipientLabel", () => {
 	});
 
 	it("should show label", () => {
-		render(<TransactionRowRecipientLabel transaction={{ ...TransactionFixture, type: () => "secondSignature" }} />);
+		render(<TransactionRowRecipientLabel transaction={{ ...TransactionFixture, type: () => "delegateRegistration" }} />);
 
-		expect(screen.getByText(translations.TRANSACTION_TYPES.SECOND_SIGNATURE)).toBeInTheDocument();
+		expect(screen.getByText(translations.TRANSACTION_TYPES.DELEGATE_REGISTRATION)).toBeInTheDocument();
 	});
 
 	it("should show a multipayment label", () => {

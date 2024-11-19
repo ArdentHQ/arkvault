@@ -1749,9 +1749,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="rounded px-1 py-[3px] dark:border css-a8yjl2"
                     color="secondary"
                     data-testid="TransactionRow__type"
-                  >
-                    IPFS
-                  </div>
+                  />
                 </div>
               </td>
               <td>
@@ -1896,9 +1894,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="rounded px-1 py-[3px] dark:border css-a8yjl2"
                     color="secondary"
                     data-testid="TransactionRow__type"
-                  >
-                    IPFS
-                  </div>
+                  />
                 </div>
               </td>
               <td>
@@ -2043,9 +2039,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="rounded px-1 py-[3px] dark:border css-a8yjl2"
                     color="secondary"
                     data-testid="TransactionRow__type"
-                  >
-                    IPFS
-                  </div>
+                  />
                 </div>
               </td>
               <td>
@@ -2190,9 +2184,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="rounded px-1 py-[3px] dark:border css-a8yjl2"
                     color="secondary"
                     data-testid="TransactionRow__type"
-                  >
-                    IPFS
-                  </div>
+                  />
                 </div>
               </td>
               <td>
@@ -7585,9 +7577,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="rounded px-1 py-[3px] dark:border css-a8yjl2"
                     color="secondary"
                     data-testid="TransactionRow__type"
-                  >
-                    2nd Signature
-                  </div>
+                  />
                 </div>
               </td>
               <td>
@@ -7749,9 +7739,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="rounded px-1 py-[3px] dark:border css-a8yjl2"
                     color="secondary"
                     data-testid="TransactionRow__type"
-                  >
-                    2nd Signature
-                  </div>
+                  />
                 </div>
               </td>
               <td>
@@ -7913,9 +7901,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="rounded px-1 py-[3px] dark:border css-a8yjl2"
                     color="secondary"
                     data-testid="TransactionRow__type"
-                  >
-                    2nd Signature
-                  </div>
+                  />
                 </div>
               </td>
               <td>
@@ -8077,9 +8063,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="rounded px-1 py-[3px] dark:border css-a8yjl2"
                     color="secondary"
                     data-testid="TransactionRow__type"
-                  >
-                    2nd Signature
-                  </div>
+                  />
                 </div>
               </td>
               <td>
@@ -11322,9 +11306,7 @@ exports[`Transactions > should hide view more button when there are no next page
                     class="rounded px-1 py-[3px] dark:border css-a8yjl2"
                     color="secondary"
                     data-testid="TransactionRow__type"
-                  >
-                    IPFS
-                  </div>
+                  />
                 </div>
               </td>
               <td>
@@ -11469,9 +11451,7 @@ exports[`Transactions > should hide view more button when there are no next page
                     class="rounded px-1 py-[3px] dark:border css-a8yjl2"
                     color="secondary"
                     data-testid="TransactionRow__type"
-                  >
-                    IPFS
-                  </div>
+                  />
                 </div>
               </td>
               <td>
@@ -14240,9 +14220,7 @@ exports[`Transactions > should hide view more button when there are no next page
                     class="rounded px-1 py-[3px] dark:border css-a8yjl2"
                     color="secondary"
                     data-testid="TransactionRow__type"
-                  >
-                    2nd Signature
-                  </div>
+                  />
                 </div>
               </td>
               <td>
@@ -14404,9 +14382,7 @@ exports[`Transactions > should hide view more button when there are no next page
                     class="rounded px-1 py-[3px] dark:border css-a8yjl2"
                     color="secondary"
                     data-testid="TransactionRow__type"
-                  >
-                    2nd Signature
-                  </div>
+                  />
                 </div>
               </td>
               <td>
@@ -16657,9 +16633,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                     class="rounded px-1 py-[3px] dark:border css-a8yjl2"
                     color="secondary"
                     data-testid="TransactionRow__type"
-                  >
-                    IPFS
-                  </div>
+                  />
                 </div>
               </td>
               <td>
@@ -16804,9 +16778,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                     class="rounded px-1 py-[3px] dark:border css-a8yjl2"
                     color="secondary"
                     data-testid="TransactionRow__type"
-                  >
-                    IPFS
-                  </div>
+                  />
                 </div>
               </td>
               <td>
@@ -19575,9 +19547,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                     class="rounded px-1 py-[3px] dark:border css-a8yjl2"
                     color="secondary"
                     data-testid="TransactionRow__type"
-                  >
-                    2nd Signature
-                  </div>
+                  />
                 </div>
               </td>
               <td>
@@ -19739,9 +19709,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                     class="rounded px-1 py-[3px] dark:border css-a8yjl2"
                     color="secondary"
                     data-testid="TransactionRow__type"
-                  >
-                    2nd Signature
-                  </div>
+                  />
                 </div>
               </td>
               <td>

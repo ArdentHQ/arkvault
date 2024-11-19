@@ -320,28 +320,6 @@ describe("TransactionDetailModal", () => {
 		expect(screen.getByTestId("Modal__inner")).toHaveTextContent("Resignation");
 	});
 
-	it("should render a second signature modal", () => {
-		render(
-			<Route path="/profiles/:profileId/dashboard">
-				<TransactionDetailModal
-					isOpen={true}
-					transactionItem={{
-						...TransactionFixture,
-						blockId: () => "as32d1as65d1as3d1as32d1asd51as3d21as3d2as165das",
-						type: () => "secondSignature",
-						wallet: () => wallet,
-					}}
-				/>
-			</Route>,
-			{
-				history,
-				route: dashboardURL,
-			},
-		);
-
-		expect(screen.getByTestId("Modal__inner")).toHaveTextContent(translations.TRANSACTION_TYPES.SECOND_SIGNATURE);
-	});
-
 	it("should render a magistrate modal", () => {
 		const { asFragment } = render(
 			<Route path="/profiles/:profileId/dashboard">
