@@ -6,7 +6,6 @@ import { WalletsControls } from "./WalletsControls";
 import { FilterWalletsHookProperties } from "@/domains/dashboard/components/FilterWallets";
 import { env, getDefaultProfileId, render, renderResponsiveWithRoute, screen } from "@/utils/testing-library";
 import { Route } from "react-router-dom";
-import { isUnit } from '@/utils/test-helpers';
 
 const dashboardURL = `/profiles/${getDefaultProfileId()}/dashboard`;
 const history = createHashHistory();
@@ -221,6 +220,12 @@ describe("WalletsControls", () => {
 				"Ledger is not yet supported in Mainsail.",
 			),
 		).not.toBeInTheDocument();
+
+		//expect class tippy-content not to be present
+		expect(screen.queryByTestId("tippy-content")).not.toBeInTheDocument();
+
+		networkSpy.mockRestore();
+		ledgerSpy.mockRestore();
 	});
 
 	it("should render tooltip if it has no Ledger network", async () => {
@@ -252,7 +257,7 @@ describe("WalletsControls", () => {
 		expect(
 			screen.queryByText("ARK Vault requires the use of a chromium based browser when using a Ledger."),
 		).not.toBeInTheDocument();
-		expect(screen.queryByText("Ledger is not yet supported in Mainsail."),
+		expect(screen.getByText("Ledger is not yet supported in Mainsail."),
 		).toBeInTheDocument();
 
 		networkSpy.mockRestore();
