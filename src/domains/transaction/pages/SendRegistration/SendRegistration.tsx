@@ -119,16 +119,8 @@ export const SendRegistration = () => {
 
 	const handleSubmit = async () => {
 		try {
-			const {
-				mnemonic,
-				encryptionPassword,
-				wif,
-				privateKey,
-				secret,
-				participants,
-				minParticipants,
-				fee,
-			} = getValues();
+			const { mnemonic, encryptionPassword, wif, privateKey, secret, participants, minParticipants, fee } =
+				getValues();
 
 			if (activeWallet.isLedger()) {
 				await connect(activeProfile, activeWallet.coinId(), activeWallet.networkId());
