@@ -21,6 +21,7 @@ import {
 import { useLedgerContext } from "@/app/contexts/Ledger/Ledger";
 import { server, requestMock, requestMockOnce } from "@/tests/mocks/server";
 import { getDefaultAlias } from "@/domains/wallet/utils/get-default-alias";
+import { Enums, Networks } from "@ardenthq/sdk";
 
 vi.mock("react-hook-form", async () => ({
 	...(await vi.importActual("react-hook-form")),
@@ -575,4 +576,24 @@ describe("LedgerTabs", () => {
 		networkEnabledMetaSpy.mockRestore();
 		ledgerTransportMock.mockRestore(); 
 	});
+
+	it("should not render network if doesn't allow any ledger", async () => {
+		const availableNetworks = profile
+			.wallets()
+			.values()
+			.map((wallet) => wallet.network());
+
+		const networkSpy = vi.spyOn(profile, "availableNetworks").mockReturnValue(availableNetworks);
+		const networkSupportSpy = vi.spyOn(availableNetworks.at(0), 'allows').mockReturnValue(false);
+
+		const ledgerTransportMock = mockNanoXTransport();
+		render(<Component activeIndex={2} />, { route: `/profiles/${profile.id()}` });
+
+		await expect(screen.findByTestId("NetworkOption")).rejects.toThrow(/Unable to find/);
+
+		networkSpy.mockRestore();
+		networkSupportSpy.mockRestore();
+		ledgerTransportMock.mockRestore();
+	});
+
 });
