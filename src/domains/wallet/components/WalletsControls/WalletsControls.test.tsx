@@ -1,9 +1,14 @@
 import React from "react";
 
 import userEvent from "@testing-library/user-event";
+import { createHashHistory } from "history";
 import { WalletsControls } from "./WalletsControls";
 import { FilterWalletsHookProperties } from "@/domains/dashboard/components/FilterWallets";
-import { render, renderResponsive, screen } from "@/utils/testing-library";
+import { getDefaultProfileId, render, renderResponsiveWithRoute, screen } from "@/utils/testing-library";
+import { Route } from "react-router-dom";
+
+const dashboardURL = `/profiles/${getDefaultProfileId()}/dashboard`;
+const history = createHashHistory();
 
 describe("WalletsControls", () => {
 	const filterProperties: FilterWalletsHookProperties = {
@@ -21,7 +26,9 @@ describe("WalletsControls", () => {
 
 	it("should render", () => {
 		const { container } = render(
-			<WalletsControls onCreateWallet={vi.fn()} onImportWallet={vi.fn()} filterProperties={filterProperties} />,
+			<Route path="/profiles/:profileId/dashboard">
+			<WalletsControls onCreateWallet={vi.fn()} onImportWallet={vi.fn()} filterProperties={filterProperties} />
+			</Route>,
 		);
 
 		expect(container).toMatchSnapshot();
@@ -31,16 +38,27 @@ describe("WalletsControls", () => {
 		process.env.REACT_APP_IS_UNIT = undefined;
 
 		const { container } = render(
-			<WalletsControls onCreateWallet={vi.fn()} onImportWallet={vi.fn()} filterProperties={filterProperties} />,
+			<Route path="/profiles/:profileId/dashboard">
+				<WalletsControls onCreateWallet={vi.fn()} onImportWallet={vi.fn()} filterProperties={filterProperties} />
+			</Route>,
+			{
+				route: dashboardURL,
+			}
 		);
 
 		expect(container).toMatchSnapshot();
 	});
 
 	it.each(["xs", "sm", "md", "lg", "xl"])("should render responsive", (breakpoint) => {
-		const { container } = renderResponsive(
-			<WalletsControls onCreateWallet={vi.fn()} onImportWallet={vi.fn()} filterProperties={filterProperties} />,
+		const { container } = renderResponsiveWithRoute(
+			<Route path="/profiles/:profileId/dashboard">
+				<WalletsControls onCreateWallet={vi.fn()} onImportWallet={vi.fn()} filterProperties={filterProperties} />
+			</Route>,
 			breakpoint,
+			{
+				history,
+				route: dashboardURL,
+			},
 		);
 
 		expect(container).toMatchSnapshot();
@@ -49,7 +67,14 @@ describe("WalletsControls", () => {
 	it("should execute onCreateWallet callback", async () => {
 		const onCreateWallet = vi.fn();
 
-		render(<WalletsControls onCreateWallet={onCreateWallet} onImportWallet={vi.fn()} filterProperties={{}} />);
+		render(
+			<Route path="/profiles/:profileId/dashboard">
+				<WalletsControls onCreateWallet={onCreateWallet} onImportWallet={vi.fn()} filterProperties={{}} />
+			</Route>,
+			{
+				route: dashboardURL,
+			}
+		);
 
 		await userEvent.click(screen.getByTestId("WalletControls__create-wallet"));
 
@@ -59,13 +84,19 @@ describe("WalletsControls", () => {
 	it("should execute onCreateWallet callback when responsive", async () => {
 		const onCreateWallet = vi.fn();
 
-		renderResponsive(
-			<WalletsControls
-				onCreateWallet={onCreateWallet}
-				onImportWallet={vi.fn()}
-				filterProperties={filterProperties}
-			/>,
+		renderResponsiveWithRoute(
+			<Route path="/profiles/:profileId/dashboard">
+				<WalletsControls
+					onCreateWallet={onCreateWallet}
+					onImportWallet={vi.fn()}
+					filterProperties={filterProperties}
+				/>
+			</Route>,
 			"xs",
+			{
+				history,
+				route: dashboardURL,
+			}
 		);
 
 		// Await for multiple dropdown toggles to be available
@@ -86,7 +117,14 @@ describe("WalletsControls", () => {
 	it("should execute onImportWallet callback", async () => {
 		const onImportWallet = vi.fn();
 
-		render(<WalletsControls onCreateWallet={vi.fn()} onImportWallet={onImportWallet} filterProperties={{}} />);
+		render(
+			<Route path="/profiles/:profileId/dashboard">
+				<WalletsControls onCreateWallet={vi.fn()} onImportWallet={onImportWallet} filterProperties={{}} />
+			</Route>,
+			{
+				route: dashboardURL,
+			}
+		);
 
 		await userEvent.click(screen.getByTestId("WalletControls__import-wallet"));
 
@@ -96,9 +134,15 @@ describe("WalletsControls", () => {
 	it("should execute onImportWallet callback when responsive", async () => {
 		const onImportWallet = vi.fn();
 
-		renderResponsive(
-			<WalletsControls onCreateWallet={vi.fn()} onImportWallet={onImportWallet} filterProperties={{}} />,
+		renderResponsiveWithRoute(
+			<Route path="/profiles/:profileId/dashboard">
+				<WalletsControls onCreateWallet={vi.fn()} onImportWallet={onImportWallet} filterProperties={{}} />
+			</Route>,
 			"xs",
+			{
+				history,
+				route: dashboardURL
+			},
 		);
 
 		await userEvent.click(screen.getAllByTestId("dropdown__toggle")[1]);
@@ -112,11 +156,13 @@ describe("WalletsControls", () => {
 
 	it("should render with networks selection", () => {
 		const { container } = render(
-			<WalletsControls
-				onCreateWallet={vi.fn()}
-				onImportWallet={vi.fn()}
-				filterProperties={filterProperties as any}
-			/>,
+			<Route path="/profiles/:profileId/dashboard">
+				<WalletsControls
+					onCreateWallet={vi.fn()}
+					onImportWallet={vi.fn()}
+					filterProperties={filterProperties as any}
+				/>
+			</Route>,
 		);
 
 		expect(container).toMatchSnapshot();
