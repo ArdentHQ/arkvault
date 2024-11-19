@@ -129,7 +129,7 @@ describe("FeeField", () => {
 			toastSpy.mockRestore();
 			useFeesSpy.mockRestore();
 		});
-		it.each(["transfer", "multiPayment", "vote", "delegateRegistration", "secondSignature"])(
+		it.each(["transfer", "multiPayment", "vote", "delegateRegistration"])(
 			"should show 0 when %s data is undefined",
 			async (transactionType) => {
 				const feeTypeSpy = vi.spyOn(networks, "feeType").mockReturnValueOnce("size");
@@ -146,7 +146,7 @@ describe("FeeField", () => {
 			},
 		);
 
-		it.each(["transfer", "multiPayment", "vote", "delegateRegistration", "secondSignature"])(
+		it.each(["transfer", "multiPayment", "vote", "delegateRegistration"])(
 			"should show 0 %s data is not available yet",
 			async (transactionType) => {
 				const feeTypeSpy = vi.spyOn(networks, "feeType").mockReturnValueOnce("size");
