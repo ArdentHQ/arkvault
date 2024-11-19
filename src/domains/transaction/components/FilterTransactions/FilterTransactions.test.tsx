@@ -13,7 +13,6 @@ describe("FilterTransactions", () => {
 		"delegateResignation",
 		"multiPayment",
 		"multiSignature",
-		"secondSignature",
 		"transfer",
 		"vote",
 		"magistrate",
@@ -249,7 +248,7 @@ describe("FilterTransactions", () => {
 				value: expect.any(String),
 			},
 			undefined,
-			["delegateRegistration", "delegateResignation", "multiSignature", "secondSignature", "magistrate"],
+			["delegateRegistration", "delegateResignation", "multiSignature", "magistrate"],
 		);
 	});
 
@@ -264,7 +263,6 @@ describe("FilterTransactions", () => {
 					"delegateRegistration",
 					"delegateResignation",
 					"multiSignature",
-					"secondSignature",
 					"magistrate",
 				]}
 			/>,

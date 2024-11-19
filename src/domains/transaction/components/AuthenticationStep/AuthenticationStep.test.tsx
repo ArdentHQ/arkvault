@@ -259,69 +259,6 @@ describe.each(["transaction", "message"])("AuthenticationStep (%s)", (subject) =
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	itif(subject === "transaction")("should request mnemonic and second mnemonic", async () => {
-		await wallet.synchroniser().identity();
-		const secondSignatureMock = vi.spyOn(wallet, "isSecondSignature").mockReturnValue(true);
-
-		const { form, asFragment } = renderWithForm(<AuthenticationStep subject={subject} wallet={wallet} />, {
-			withProviders: true,
-		});
-
-		await expect(screen.findByTestId("AuthenticationStep__mnemonic")).resolves.toBeVisible();
-		await expect(screen.findByTestId(secondMnemonicID)).resolves.toBeVisible();
-
-		await userEvent.type(screen.getByTestId("AuthenticationStep__mnemonic"), getDefaultWalletMnemonic());
-
-		await waitFor(() => {
-			expect(screen.getByTestId(secondMnemonicID)).toBeEnabled();
-		});
-
-		await userEvent.type(screen.getByTestId(secondMnemonicID), MNEMONICS[1]);
-
-		await waitFor(() =>
-			expect(form()?.getValues()).toStrictEqual({
-				mnemonic: getDefaultWalletMnemonic(),
-				secondMnemonic: MNEMONICS[1],
-			}),
-		);
-
-		expect(asFragment()).toMatchSnapshot();
-
-		secondSignatureMock.mockRestore();
-	});
-
-	itif(subject === "transaction")("should request secret and second secret", async () => {
-		wallet = await profile.walletFactory().fromSecret({
-			coin: "ARK",
-			network: ARKDevnet,
-			secret: "abc",
-		});
-
-		const { form, asFragment } = renderWithForm(<AuthenticationStep subject={subject} wallet={wallet} />, {
-			withProviders: true,
-		});
-
-		await expect(screen.findByTestId("AuthenticationStep__secret")).resolves.toBeVisible();
-		await expect(screen.findByTestId(secondSecretID)).resolves.toBeVisible();
-
-		await userEvent.type(screen.getByTestId("AuthenticationStep__secret"), "abc");
-
-		await waitFor(() => {
-			expect(screen.getByTestId(secondSecretID)).toBeEnabled();
-		});
-
-		await userEvent.type(screen.getByTestId(secondSecretID), "abc");
-
-		await waitFor(() =>
-			expect(form()?.getValues()).toStrictEqual({
-				secondSecret: "abc",
-				secret: "abc",
-			}),
-		);
-
-		expect(asFragment()).toMatchSnapshot();
-	});
-
 	it("should show only ledger confirmation", async () => {
 		mockNanoXTransport();
 		vi.spyOn(wallet, "isLedger").mockReturnValueOnce(true);
