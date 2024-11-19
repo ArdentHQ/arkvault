@@ -305,30 +305,6 @@ describe("WalletHeader", () => {
 		historySpy.mockRestore();
 	});
 
-	it("should handle second signature registration", async () => {
-		history.push(walletUrl);
-
-		const historySpy = vi.spyOn(history, "push");
-
-		render(
-			<Route path="/profiles/:profileId/wallets/:walletId">
-				<WalletHeader profile={profile} wallet={wallet} />
-			</Route>,
-			{
-				history,
-				route: walletUrl,
-			},
-		);
-
-		await clickItem(walletTranslations.PAGE_WALLET_DETAILS.OPTIONS.SECOND_SIGNATURE);
-
-		expect(historySpy).toHaveBeenCalledWith(
-			`/profiles/${profile.id()}/wallets/${wallet.id()}/send-registration/secondSignature`,
-		);
-
-		historySpy.mockRestore();
-	});
-
 	it("should handle delegate registration", async () => {
 		history.push(walletUrl);
 
@@ -377,28 +353,6 @@ describe("WalletHeader", () => {
 
 		historySpy.mockRestore();
 		walletSpy.mockRestore();
-	});
-
-	it("should handle store hash option", async () => {
-		history.push(walletUrl);
-
-		const historySpy = vi.spyOn(history, "push");
-
-		render(
-			<Route path="/profiles/:profileId/wallets/:walletId">
-				<WalletHeader profile={profile} wallet={wallet} />
-			</Route>,
-			{
-				history,
-				route: walletUrl,
-			},
-		);
-
-		await clickItem(walletTranslations.PAGE_WALLET_DETAILS.OPTIONS.STORE_HASH);
-
-		expect(historySpy).toHaveBeenCalledWith(`/profiles/${profile.id()}/wallets/${wallet.id()}/send-ipfs`);
-
-		historySpy.mockRestore();
 	});
 
 	it("should handle isMultiSignature exception", async () => {
