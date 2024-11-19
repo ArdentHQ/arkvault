@@ -33,10 +33,6 @@ export const useTransactionTypes = ({ wallets = [] }: TransactionTypeProperties 
 			icon: "Timelock",
 			label: t("TRANSACTION.TRANSACTION_TYPES.HTLC_REFUND"),
 		},
-		ipfs: {
-			icon: "Ipfs",
-			label: t("TRANSACTION.TRANSACTION_TYPES.IPFS"),
-		},
 		magistrate: {
 			icon: "Magistrate",
 			label: t("TRANSACTION.TRANSACTION_TYPES.MAGISTRATE"),
@@ -48,10 +44,6 @@ export const useTransactionTypes = ({ wallets = [] }: TransactionTypeProperties 
 		multiSignature: {
 			icon: "Multisignature",
 			label: t("TRANSACTION.TRANSACTION_TYPES.MULTI_SIGNATURE"),
-		},
-		secondSignature: {
-			icon: "SecondSignature",
-			label: t("TRANSACTION.TRANSACTION_TYPES.SECOND_SIGNATURE"),
 		},
 		transfer: {
 			icon: "Transfer",
