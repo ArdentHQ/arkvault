@@ -75,8 +75,8 @@ export const useTransactionTypes = ({ wallets = [] }: TransactionTypeProperties 
 				),
 			[wallets],
 		),
-		getIcon: (type: string): string => transactionTypes[type].icon,
-		getLabel: (type: string): string => transactionTypes[type].label,
+		getIcon: (type: string): string => transactionTypes[type]?.icon,
+		getLabel: (type: string): string => transactionTypes[type]?.label,
 		types: {
 			core: useMemo(() => {
 				const allSupportedTypes: string[] = [];
