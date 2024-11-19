@@ -524,7 +524,7 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                             class="space-y-3 sm:space-y-0"
                           >
                             <div
-                              class="flex w-full justify-between sm:justify-start"
+                              class="flex w-full items-center justify-between sm:justify-start"
                             >
                               <div
                                 class="no-ligatures font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-sm leading-[17px] sm:text-base sm:leading-5 min-w-24"
@@ -533,7 +533,7 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                                 Amount
                               </div>
                               <div
-                                class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-1sycv4s"
+                                class="flex items-center justify-center px-1.5 rounded dark:border h-auto css-1sycv4s"
                                 color="secondary"
                                 data-testid="AmountLabel__wrapper"
                               >
@@ -541,7 +541,7 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                                   class="flex h-full items-center space-x-1"
                                 >
                                   <span
-                                    class="whitespace-nowrap text-sm"
+                                    class="whitespace-nowrap text-base"
                                     data-testid="Amount"
                                   >
                                     0.71370675 DARK
