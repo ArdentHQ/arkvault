@@ -21,7 +21,6 @@ import {
 import { useLedgerContext } from "@/app/contexts/Ledger/Ledger";
 import { server, requestMock, requestMockOnce } from "@/tests/mocks/server";
 import { getDefaultAlias } from "@/domains/wallet/utils/get-default-alias";
-import { Enums, Networks } from "@ardenthq/sdk";
 
 vi.mock("react-hook-form", async () => ({
 	...(await vi.importActual("react-hook-form")),

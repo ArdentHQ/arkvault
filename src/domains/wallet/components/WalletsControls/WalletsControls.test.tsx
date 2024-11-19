@@ -1,16 +1,18 @@
 import React from "react";
-
+import { Contracts } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import { createHashHistory } from "history";
 import { WalletsControls } from "./WalletsControls";
 import { FilterWalletsHookProperties } from "@/domains/dashboard/components/FilterWallets";
-import { getDefaultProfileId, render, renderResponsiveWithRoute, screen } from "@/utils/testing-library";
+import { env, getDefaultProfileId, render, renderResponsiveWithRoute, screen } from "@/utils/testing-library";
 import { Route } from "react-router-dom";
+import { isUnit } from '@/utils/test-helpers';
 
 const dashboardURL = `/profiles/${getDefaultProfileId()}/dashboard`;
 const history = createHashHistory();
 
 describe("WalletsControls", () => {
+	let profile: Contracts.IProfile;
 	const filterProperties: FilterWalletsHookProperties = {
 		defaultConfiguration: {
 			selectedNetworkIds: [],
@@ -23,6 +25,13 @@ describe("WalletsControls", () => {
 		update: vi.fn(),
 		walletsDisplayType: "all",
 	};
+
+	beforeAll(async () => {
+		profile = env.profiles().findById(getDefaultProfileId());
+		await env.profiles().restore(profile);
+		await profile.sync();
+
+	});
 
 	it("should render", () => {
 		const { container } = render(
@@ -181,6 +190,14 @@ describe("WalletsControls", () => {
 	});
 
 	it("should render tooltip with no content if the Ledger is supported and has at least one network", async () => {
+		const availableNetworks = profile
+			.wallets()
+			.values()
+			.map((wallet) => wallet.network());
+		process.env.REACT_APP_IS_UNIT = "true";
+		const networkSpy = vi.spyOn(profile, "availableNetworks").mockReturnValue(availableNetworks);
+		const ledgerSpy = vi.spyOn(availableNetworks.at(0), "allows").mockReturnValue(true);
+
 		render(
 			<Route path="/profiles/:profileId/dashboard">
 				<WalletsControls
@@ -194,15 +211,51 @@ describe("WalletsControls", () => {
 			},
 		);
 
-		await userEvent.hover(screen.getByTestId("WalletControls__import-wallet"));
+		await userEvent.hover(screen.getByTestId("WalletControls__import-ledger"));
 
 		expect(
 			screen.queryByText("ARK Vault requires the use of a chromium based browser when using a Ledger."),
 		).not.toBeInTheDocument();
 		expect(
 			screen.queryByText(
-				"Your portfolio contains 1 or more Ledger wallets. ARK Vault requires the use of a chromium based browser such as Chrome, Brave or Edge when using a Ledger device.",
+				"Ledger is not yet supported in Mainsail.",
 			),
 		).not.toBeInTheDocument();
+	});
+
+	it("should render tooltip if it has no Ledger network", async () => {
+		const availableNetworks = profile
+			.wallets()
+			.values()
+			.map((wallet) => wallet.network());
+
+		process.env.REACT_APP_IS_UNIT = "true";
+		const networkSpy = vi.spyOn(profile, "availableNetworks").mockReturnValue(availableNetworks);
+		const ledgerSpy = vi.spyOn(availableNetworks.at(0), "allows").mockReturnValue(false);
+
+		render(
+			<Route path="/profiles/:profileId/dashboard">
+				<WalletsControls
+					onCreateWallet={vi.fn()}
+					onImportWallet={vi.fn()}
+					filterProperties={filterProperties as any}
+				/>
+			</Route>,
+			{
+				route: dashboardURL,
+			},
+		);
+
+		await userEvent.hover(screen.getByTestId("WalletControls__import-ledger"));
+
+
+		expect(
+			screen.queryByText("ARK Vault requires the use of a chromium based browser when using a Ledger."),
+		).not.toBeInTheDocument();
+		expect(screen.queryByText("Ledger is not yet supported in Mainsail."),
+		).toBeInTheDocument();
+
+		networkSpy.mockRestore();
+		ledgerSpy.mockRestore();
 	});
 });
