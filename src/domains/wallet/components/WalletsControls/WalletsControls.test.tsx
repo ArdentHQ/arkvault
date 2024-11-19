@@ -191,12 +191,18 @@ describe("WalletsControls", () => {
 			</Route>,
 			{
 				route: dashboardURL,
-			}
+			},
 		);
 
 		await userEvent.hover(screen.getByTestId("WalletControls__import-wallet"));
 
-		expect(screen.queryByText("ARK Vault requires the use of a chromium based browser when using a Ledger.")).not.toBeInTheDocument();
-		expect(screen.queryByText("Your portfolio contains 1 or more Ledger wallets. ARK Vault requires the use of a chromium based browser such as Chrome, Brave or Edge when using a Ledger device.")).not.toBeInTheDocument();
+		expect(
+			screen.queryByText("ARK Vault requires the use of a chromium based browser when using a Ledger."),
+		).not.toBeInTheDocument();
+		expect(
+			screen.queryByText(
+				"Your portfolio contains 1 or more Ledger wallets. ARK Vault requires the use of a chromium based browser such as Chrome, Brave or Edge when using a Ledger device.",
+			),
+		).not.toBeInTheDocument();
 	});
 });
