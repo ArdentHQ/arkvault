@@ -4,7 +4,7 @@ import { hasNetworksWithLedgerSupport } from "./network-utils";
 
 describe("Network utils", () => {
 	it("should have available networks with ledger support", () => {
-        const profile = env.profiles().findById(getDefaultProfileId());
+		const profile = env.profiles().findById(getDefaultProfileId());
 
 		const networks = profile
 			.wallets()
@@ -22,7 +22,7 @@ describe("Network utils", () => {
 	});
 
 	it("should not have available networks with ledger support", () => {
-        const profile = env.profiles().findById(getDefaultProfileId());
+		const profile = env.profiles().findById(getDefaultProfileId());
 
 		const networks = profile
 			.wallets()

@@ -113,7 +113,7 @@ export const WalletsControls = React.memo(
 				</div>
 
 				<div className="hidden gap-3 sm:flex">
-				<Tooltip content={ledgetSupportTooltip()}>
+					<Tooltip content={ledgetSupportTooltip()}>
 						<div>
 							<Button
 								disabled={!isLedgerTransportSupported() || !hasAnyLedgerNetwork}
