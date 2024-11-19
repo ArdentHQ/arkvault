@@ -278,6 +278,10 @@ export const LedgerTabs = ({
 					<NetworkStep
 						profile={activeProfile}
 						filter={(network) => {
+							if (!network.allows("Ledger")) {
+								return false;
+							}
+
 							if (!profileAllEnabledNetworkIds(activeProfile).includes(network.id())) {
 								return false;
 							}
