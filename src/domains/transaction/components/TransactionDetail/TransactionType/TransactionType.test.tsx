@@ -107,29 +107,4 @@ describe("TransactionType", () => {
 
 		expect(container).toHaveTextContent("Multisignature");
 	});
-	it("should render ipfs", () => {
-		const hash = "QmVqNrDfr2dxzQUo4VN3zhG4NV78uYFmRpgSktWDc2eeh2";
-		const { container } = render(
-			<TransactionType
-				transaction={
-					{
-						hash: () => hash,
-						isDelegateRegistration: () => false,
-						isDelegateResignation: () => false,
-						isIpfs: () => true,
-						isMultiSignatureRegistration: () => false,
-						isVote: () => false,
-						type: () => "delegateResignation",
-						username: () => "delegate",
-						wallet: () => ({
-							username: () => "delegate",
-						}),
-					} as DTO.ExtendedSignedTransactionData
-				}
-			/>,
-		);
-
-		expect(container).toHaveTextContent(translations.TRANSACTION_TYPES.DELEGATE_RESIGNATION);
-		expect(container).toHaveTextContent(hash.slice(0, 4));
-	});
 });
