@@ -9,6 +9,8 @@ import { Tooltip } from "@/app/components/Tooltip";
 import { FilterWallets, FilterWalletsHookProperties } from "@/domains/dashboard/components/FilterWallets";
 import { Divider } from "@/app/components/Divider";
 import { isLedgerTransportSupported } from "@/app/contexts/Ledger/transport";
+import { useActiveProfile } from "@/app/hooks";
+import { hasNetworksWithLedgerSupport } from "@/utils/network-utils";
 
 enum NewWalletOption {
 	Create,
@@ -32,6 +34,21 @@ export const WalletsControls = React.memo(
 		onFilterChange,
 	}: WalletsControlsProperties) => {
 		const { t } = useTranslation();
+		const profile = useActiveProfile();
+
+		const hasAnyLedgerNetwork = hasNetworksWithLedgerSupport(profile);
+
+		const ledgetSupportTooltip = (): string => {
+			if (!isLedgerTransportSupported()) {
+				return t("COMMON.LEDGER_COMPATIBILITY_ERROR");
+			}
+
+			if (!hasAnyLedgerNetwork) {
+				return t("COMMON.LEDGER_MAINSAIL_NOT_SUPPORTED");
+			}
+
+			return "";
+		};
 
 		const newWalletOptions = useMemo<DropdownOption[]>(
 			() => [
@@ -96,10 +113,10 @@ export const WalletsControls = React.memo(
 				</div>
 
 				<div className="hidden gap-3 sm:flex">
-					<Tooltip content={isLedgerTransportSupported() ? "" : t("COMMON.LEDGER_COMPATIBILITY_ERROR")}>
+				<Tooltip content={ledgetSupportTooltip()}>
 						<div>
 							<Button
-								disabled={!isLedgerTransportSupported()}
+								disabled={!isLedgerTransportSupported() || !hasAnyLedgerNetwork}
 								onClick={onImportLedgerWallet}
 								variant="secondary"
 								className="hidden md:inline-flex"
