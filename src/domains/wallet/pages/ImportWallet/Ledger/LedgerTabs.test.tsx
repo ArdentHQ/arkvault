@@ -531,7 +531,6 @@ describe("LedgerTabs", () => {
 	});
 
 	it("should not render a network if it is not enabled in the profile", async () => {
-
 		const networkSpy = vi.spyOn(profile, "availableNetworks").mockReturnValue([]);
 
 		const ledgerTransportMock = mockNanoXTransport();
@@ -541,5 +540,5 @@ describe("LedgerTabs", () => {
 
 		networkSpy.mockRestore();
 		ledgerTransportMock.mockRestore();
-	})
+	});
 });
