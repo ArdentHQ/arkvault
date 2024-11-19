@@ -138,9 +138,6 @@ export const SendRegistration = () => {
 				encryptionPassword,
 				mnemonic,
 				privateKey,
-				/* istanbul ignore next -- @preserve */
-				secondMnemonic: undefined,
-				secondSecret: undefined,
 				secret,
 				wif,
 			});
