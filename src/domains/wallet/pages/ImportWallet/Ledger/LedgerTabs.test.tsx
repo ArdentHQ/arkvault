@@ -587,7 +587,7 @@ describe("LedgerTabs", () => {
 			.map((wallet) => wallet.network());
 
 		const networkSpy = vi.spyOn(profile, "availableNetworks").mockReturnValue(availableNetworks);
-		const networkSupportSpy = vi.spyOn(availableNetworks.at(0), 'allows').mockReturnValue(false);
+		const networkSupportSpy = vi.spyOn(availableNetworks.at(0), "allows").mockReturnValue(false);
 
 		const ledgerTransportMock = mockNanoXTransport();
 		render(<Component activeIndex={2} />, { route: `/profiles/${profile.id()}` });
@@ -598,5 +598,4 @@ describe("LedgerTabs", () => {
 		networkSupportSpy.mockRestore();
 		ledgerTransportMock.mockRestore();
 	});
-
 });

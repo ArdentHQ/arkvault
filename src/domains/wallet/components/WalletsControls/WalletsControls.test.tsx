@@ -29,7 +29,6 @@ describe("WalletsControls", () => {
 		profile = env.profiles().findById(getDefaultProfileId());
 		await env.profiles().restore(profile);
 		await profile.sync();
-
 	});
 
 	it("should render", () => {
@@ -215,11 +214,7 @@ describe("WalletsControls", () => {
 		expect(
 			screen.queryByText("ARK Vault requires the use of a chromium based browser when using a Ledger."),
 		).not.toBeInTheDocument();
-		expect(
-			screen.queryByText(
-				"Ledger is not yet supported in Mainsail.",
-			),
-		).not.toBeInTheDocument();
+		expect(screen.queryByText("Ledger is not yet supported in Mainsail.")).not.toBeInTheDocument();
 
 		//expect class tippy-content not to be present
 		expect(screen.queryByTestId("tippy-content")).not.toBeInTheDocument();
@@ -253,12 +248,10 @@ describe("WalletsControls", () => {
 
 		await userEvent.hover(screen.getByTestId("WalletControls__import-ledger"));
 
-
 		expect(
 			screen.queryByText("ARK Vault requires the use of a chromium based browser when using a Ledger."),
 		).not.toBeInTheDocument();
-		expect(screen.getByText("Ledger is not yet supported in Mainsail."),
-		).toBeInTheDocument();
+		expect(screen.getByText("Ledger is not yet supported in Mainsail.")).toBeInTheDocument();
 
 		networkSpy.mockRestore();
 		ledgerSpy.mockRestore();
