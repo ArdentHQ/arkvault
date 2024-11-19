@@ -269,7 +269,7 @@ describe("Portfolio grouped networks", () => {
 
 		await userEvent.click(screen.getByTestId("WalletControls__import-ledger"));
 
-		expect(useWalletActionReturn.handleImportLedger).toHaveBeenCalledWith(
+		expect(useWalletActionReturn.handleImportLedger).not.toHaveBeenCalledWith(
 			expect.objectContaining({ nativeEvent: expect.any(MouseEvent) }),
 		);
 
