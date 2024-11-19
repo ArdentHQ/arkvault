@@ -30,7 +30,6 @@ describe("useTransactionTypes", () => {
 			"delegateResignation",
 			"multiPayment",
 			"multiSignature",
-			"secondSignature",
 			"transfer",
 			"vote",
 		]);
