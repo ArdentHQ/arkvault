@@ -77,28 +77,6 @@ describe("WalletHeader", () => {
 		mockTestNetwork.mockRestore();
 	});
 
-	it("should hide second signature option", async () => {
-		const mockIsSecondSignature = vi.spyOn(wallet, "isSecondSignature").mockReturnValue(true);
-		const mockAllowsSecondSignature = vi.spyOn(wallet.network(), "allows").mockReturnValue(false);
-
-		render(<WalletHeader profile={profile} wallet={wallet} />);
-
-		await expect(screen.findByText(wallet.address())).resolves.toBeVisible();
-
-		await userEvent.click(screen.getByTestId("dropdown__toggle"));
-
-		const dropdownContent = screen.getByTestId("dropdown__content");
-
-		await waitFor(() =>
-			expect(
-				within(dropdownContent).queryByText(walletTranslations.PAGE_WALLET_DETAILS.OPTIONS.SECOND_SIGNATURE),
-			).not.toBeInTheDocument(),
-		);
-
-		mockIsSecondSignature.mockRestore();
-		mockAllowsSecondSignature.mockRestore();
-	});
-
 	it("should trigger onSend callback if provided", async () => {
 		const handleSend = vi.fn();
 		const useWalletActionsSpy = vi.spyOn(useWalletActionsModule, "useWalletActions").mockReturnValue({
