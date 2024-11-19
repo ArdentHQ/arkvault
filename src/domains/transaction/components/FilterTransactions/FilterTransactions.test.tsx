@@ -11,7 +11,6 @@ describe("FilterTransactions", () => {
 	const allTypes = [
 		"delegateRegistration",
 		"delegateResignation",
-		"ipfs",
 		"multiPayment",
 		"multiSignature",
 		"secondSignature",
@@ -250,7 +249,7 @@ describe("FilterTransactions", () => {
 				value: expect.any(String),
 			},
 			undefined,
-			["delegateRegistration", "delegateResignation", "ipfs", "multiSignature", "secondSignature", "magistrate"],
+			["delegateRegistration", "delegateResignation", "multiSignature", "secondSignature", "magistrate"],
 		);
 	});
 
@@ -264,7 +263,6 @@ describe("FilterTransactions", () => {
 				selectedTransactionTypes={[
 					"delegateRegistration",
 					"delegateResignation",
-					"ipfs",
 					"multiSignature",
 					"secondSignature",
 					"magistrate",
