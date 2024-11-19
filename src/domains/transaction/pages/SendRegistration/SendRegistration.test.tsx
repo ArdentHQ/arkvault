@@ -16,7 +16,6 @@ import {
 	env,
 	getDefaultProfileId,
 	getDefaultWalletMnemonic,
-	MNEMONICS,
 	render,
 	screen,
 	syncDelegates,

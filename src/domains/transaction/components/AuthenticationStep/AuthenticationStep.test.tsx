@@ -16,7 +16,6 @@ import {
 	mockNanoSTransport,
 	mockLedgerTransportError,
 } from "@/utils/testing-library";
-const secondMnemonicID = "AuthenticationStep__second-mnemonic";
 const ARKDevnet = "ark.devnet";
 
 vi.mock("react-router-dom", async () => ({
@@ -81,13 +80,9 @@ describe.each(["transaction", "message"])("AuthenticationStep (%s)", (subject) =
 			network: ARKDevnet,
 		});
 
-		const isSecondSignatureMock = vi.spyOn(wallet, "isSecondSignature").mockReturnValue(false);
-
 		const { form, asFragment } = renderWithForm(<AuthenticationStep subject={subject} wallet={wallet} />, {
 			withProviders: true,
 		});
-
-		await waitFor(() => expect(screen.queryByTestId(secondMnemonicID)).toBeNull());
 
 		expect(screen.getByTestId("AuthenticationStep__mnemonic")).toBeInTheDocument();
 
@@ -96,8 +91,6 @@ describe.each(["transaction", "message"])("AuthenticationStep (%s)", (subject) =
 		await waitFor(() => expect(form()?.getValues()).toStrictEqual({ mnemonic: MNEMONICS[0] }));
 
 		expect(asFragment()).toMatchSnapshot();
-
-		isSecondSignatureMock.mockRestore();
 	});
 
 	it("should request secret if wallet was imported using secret", async () => {
@@ -107,13 +100,9 @@ describe.each(["transaction", "message"])("AuthenticationStep (%s)", (subject) =
 			secret: "secret",
 		});
 
-		const isSecondSignatureMock = vi.spyOn(wallet, "isSecondSignature").mockReturnValue(false);
-
 		const { form, asFragment } = renderWithForm(<AuthenticationStep subject={subject} wallet={wallet} />, {
 			withProviders: true,
 		});
-
-		await waitFor(() => expect(screen.queryByTestId(secondMnemonicID)).toBeNull());
 
 		expect(screen.getByTestId("AuthenticationStep__secret")).toBeInTheDocument();
 
@@ -122,8 +111,6 @@ describe.each(["transaction", "message"])("AuthenticationStep (%s)", (subject) =
 		await waitFor(() => expect(form()?.getValues()).toStrictEqual({ secret: "secret" }));
 
 		expect(asFragment()).toMatchSnapshot();
-
-		isSecondSignatureMock.mockRestore();
 	});
 
 	it("should request mnemonic if wallet was imported using address", async () => {
@@ -133,13 +120,9 @@ describe.each(["transaction", "message"])("AuthenticationStep (%s)", (subject) =
 			network: ARKDevnet,
 		});
 
-		const isSecondSignatureMock = vi.spyOn(wallet, "isSecondSignature").mockReturnValue(false);
-
 		const { form, asFragment } = renderWithForm(<AuthenticationStep subject={subject} wallet={wallet} />, {
 			withProviders: true,
 		});
-
-		await waitFor(() => expect(screen.queryByTestId(secondMnemonicID)).toBeNull());
 
 		expect(screen.getByTestId("AuthenticationStep__mnemonic")).toBeInTheDocument();
 
@@ -148,8 +131,6 @@ describe.each(["transaction", "message"])("AuthenticationStep (%s)", (subject) =
 		await waitFor(() => expect(form()?.getValues()).toStrictEqual({ mnemonic: MNEMONICS[0] }));
 
 		expect(asFragment()).toMatchSnapshot();
-
-		isSecondSignatureMock.mockRestore();
 	});
 
 	it("should request private key if wallet was imported using private key", async () => {
@@ -159,13 +140,9 @@ describe.each(["transaction", "message"])("AuthenticationStep (%s)", (subject) =
 			privateKey: "d8839c2432bfd0a67ef10a804ba991eabba19f154a3d707917681d45822a5712",
 		});
 
-		vi.spyOn(wallet, "isSecondSignature").mockReturnValueOnce(false);
-
 		const { asFragment } = renderWithForm(<AuthenticationStep subject={subject} wallet={wallet} />, {
 			withProviders: true,
 		});
-
-		await waitFor(() => expect(screen.queryByTestId(secondMnemonicID)).toBeNull());
 
 		expect(screen.getByTestId("AuthenticationStep__private-key")).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
@@ -184,8 +161,6 @@ describe.each(["transaction", "message"])("AuthenticationStep (%s)", (subject) =
 			withProviders: true,
 		});
 
-		await waitFor(() => expect(screen.queryByTestId(secondMnemonicID)).toBeNull());
-
 		expect(screen.getByTestId("AuthenticationStep__wif")).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
 	});
@@ -201,7 +176,6 @@ describe.each(["transaction", "message"])("AuthenticationStep (%s)", (subject) =
 		await expect(screen.findByTestId("LedgerConfirmation-description")).resolves.toBeVisible();
 
 		await waitFor(() => expect(screen.queryByTestId("AuthenticationStep__mnemonic")).toBeNull());
-		await waitFor(() => expect(screen.queryByTestId(secondMnemonicID)).toBeNull());
 
 		expect(asFragment()).toMatchSnapshot();
 
@@ -228,7 +202,6 @@ describe.each(["transaction", "message"])("AuthenticationStep (%s)", (subject) =
 
 		await waitFor(() => expect(screen.queryByTestId("AuthenticationStep__mnemonic")).toBeNull());
 
-		expect(screen.queryByTestId(secondMnemonicID)).toBeNull();
 		expect(asFragment()).toMatchSnapshot();
 
 		vi.clearAllMocks();
