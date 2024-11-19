@@ -202,7 +202,6 @@ describe("Registration", () => {
 
 	it.each([
 		["delegateRegistration", "Register Delegate"],
-		["secondSignature", "Register Second Signature"],
 		["multiSignature", multisignatureTitle],
 	])("should handle registrationType param (%s)", async (type, label) => {
 		const registrationPath = `/profiles/${getDefaultProfileId()}/wallets/${secondWallet.id()}/send-registration/${type}`;
@@ -414,62 +413,6 @@ describe("Registration", () => {
 		listenSpy.mockRestore();
 	});
 
-	it("should show mnemonic error", async () => {
-		const nanoXTransportMock = mockNanoXTransport();
-		const { container } = await renderPage(secondWallet);
-
-		const actsWithMnemonicMock = vi.spyOn(secondWallet, "actsWithMnemonic").mockReturnValue(true);
-
-		const { publicKey } = await secondWallet.coin().publicKey().fromMnemonic(MNEMONICS[1]);
-
-		const secondPublicKeyMock = vi.spyOn(secondWallet, "secondPublicKey").mockReturnValue(publicKey);
-
-		await expect(formStep()).resolves.toBeVisible();
-
-		await userEvent.type(screen.getByTestId("Input__username"), "username");
-		await waitFor(() => expect(screen.getByTestId("Input__username")).toHaveValue("username"));
-
-		await waitFor(() => {
-			expect(continueButton()).toBeEnabled();
-		});
-
-		await userEvent.click(continueButton());
-		await expect(screen.findByTestId(reviewStepID)).resolves.toBeVisible();
-
-		await waitFor(() => expect(continueButton()).not.toBeDisabled());
-
-		await userEvent.click(continueButton());
-
-		await expect(screen.findByTestId("AuthenticationStep")).resolves.toBeVisible();
-
-		const mnemonic = screen.getByTestId("AuthenticationStep__mnemonic");
-		const secondMnemonic = screen.getByTestId("AuthenticationStep__second-mnemonic");
-
-		await userEvent.type(mnemonic, MNEMONICS[0]);
-		await waitFor(() => expect(mnemonic).toHaveValue(MNEMONICS[0]));
-
-		await waitFor(() => {
-			expect(secondMnemonic).toBeEnabled();
-		});
-
-		await userEvent.type(secondMnemonic, MNEMONICS[2]);
-		await waitFor(() => expect(secondMnemonic).toHaveValue(MNEMONICS[2]));
-
-		expect(sendButton()).toBeDisabled();
-
-		await waitFor(() => expect(screen.getByTestId("Input__error")).toBeVisible());
-
-		expect(screen.getByTestId("Input__error")).toHaveAttribute(
-			"data-errortext",
-			"This mnemonic does not correspond to your wallet",
-		);
-		expect(container).toMatchSnapshot();
-
-		actsWithMnemonicMock.mockRestore();
-		secondPublicKeyMock.mockRestore();
-		nanoXTransportMock.mockRestore();
-	});
-
 	it("should prevent going to the next step with enter on the success step", async () => {
 		const nanoXTransportMock = mockNanoXTransport();
 		await renderPage(wallet);
@@ -554,81 +497,6 @@ describe("Registration", () => {
 		expect(historySpy).toHaveBeenCalledWith(`/profiles/${profile.id()}/wallets/${wallet.id()}`);
 
 		historySpy.mockRestore();
-		nanoXTransportMock.mockRestore();
-	});
-
-	it("should show error step and go back", async () => {
-		const nanoXTransportMock = mockNanoXTransport();
-		const { asFragment } = await renderPage(secondWallet);
-
-		const actsWithMnemonicMock = vi.spyOn(secondWallet, "actsWithMnemonic").mockReturnValue(true);
-
-		const { publicKey } = await secondWallet.coin().publicKey().fromMnemonic(MNEMONICS[1]);
-
-		const secondPublicKeyMock = vi.spyOn(secondWallet, "secondPublicKey").mockReturnValue(publicKey);
-
-		await expect(formStep()).resolves.toBeVisible();
-
-		await userEvent.type(screen.getByTestId("Input__username"), "delegate");
-		await waitFor(() => expect(screen.getByTestId("Input__username")).toHaveValue("delegate"));
-
-		await waitFor(() => {
-			expect(continueButton()).toBeEnabled();
-		});
-
-		await userEvent.click(continueButton());
-
-		await expect(screen.findByTestId(reviewStepID)).resolves.toBeVisible();
-
-		await waitFor(() => expect(continueButton()).not.toBeDisabled());
-
-		await userEvent.click(continueButton());
-
-		await expect(screen.findByTestId("AuthenticationStep")).resolves.toBeVisible();
-
-		const mnemonic = screen.getByTestId("AuthenticationStep__mnemonic");
-		const secondMnemonic = screen.getByTestId("AuthenticationStep__second-mnemonic");
-
-		await userEvent.type(mnemonic, MNEMONICS[0]);
-		await waitFor(() => expect(mnemonic).toHaveValue(MNEMONICS[0]));
-
-		await waitFor(() => {
-			expect(secondMnemonic).toBeEnabled();
-		});
-
-		await userEvent.type(secondMnemonic, MNEMONICS[1]);
-		await waitFor(() => expect(secondMnemonic).toHaveValue(MNEMONICS[1]));
-
-		await waitFor(() => expect(sendButton()).not.toBeDisabled());
-
-		const signMock = vi
-			.spyOn(secondWallet.transaction(), "signDelegateRegistration")
-			.mockReturnValue(Promise.resolve(DelegateRegistrationFixture.data.id));
-
-		const broadcastMock = vi.spyOn(secondWallet.transaction(), "broadcast").mockImplementation(() => {
-			throw new Error("broadcast error");
-		});
-
-		const historyMock = vi.spyOn(history, "push").mockReturnValue();
-
-		await waitFor(() => expect(sendButton()).toBeEnabled());
-		await userEvent.click(sendButton());
-
-		await expect(screen.findByTestId("ErrorStep")).resolves.toBeVisible();
-
-		expect(screen.getByTestId("ErrorStep__errorMessage")).toHaveTextContent("broadcast error");
-		expect(asFragment()).toMatchSnapshot();
-
-		await userEvent.click(screen.getByTestId("ErrorStep__close-button"));
-
-		const walletDetailPage = `/profiles/${getDefaultProfileId()}/wallets/${secondWallet.id()}`;
-		await waitFor(() => expect(historyMock).toHaveBeenCalledWith(walletDetailPage));
-
-		historyMock.mockRestore();
-		signMock.mockRestore();
-		broadcastMock.mockRestore();
-		actsWithMnemonicMock.mockRestore();
-		secondPublicKeyMock.mockRestore();
 		nanoXTransportMock.mockRestore();
 	});
 });

@@ -85,14 +85,12 @@ const transactionResponse = {
 const createTransactionMock = (wallet: Contracts.IReadWriteWallet) =>
 	vi.spyOn(wallet.transaction(), "transaction").mockReturnValue(transactionResponse as any);
 
-const secondMnemonic = () => screen.getByTestId("AuthenticationStep__second-mnemonic");
 const reviewStep = () => screen.findByTestId("SendDelegateResignation__review-step");
 const continueButton = () => screen.getByTestId("StepNavigation__continue-button");
 const formStep = () => screen.findByTestId("SendDelegateResignation__form-step");
 const sendButton = () => screen.getByTestId("StepNavigation__send-button");
 
 let mnemonicMock;
-let secondMnemonicMock;
 
 describe("SendDelegateResignation", () => {
 	beforeAll(async () => {
@@ -133,10 +131,6 @@ describe("SendDelegateResignation", () => {
 				.spyOn(wallet.coin().address(), "fromMnemonic")
 				.mockResolvedValue({ address: wallet.address() });
 
-			secondMnemonicMock = vi
-				.spyOn(wallet.coin().publicKey(), "fromMnemonic")
-				.mockResolvedValue({ publicKey: wallet.publicKey() });
-
 			server.use(
 				requestMock(
 					"https://ark-test.arkvault.io/api/transactions/8f913b6b719e7767d49861c0aec79ced212767645cb793d75d2f1b89abb49877",
@@ -147,13 +141,8 @@ describe("SendDelegateResignation", () => {
 
 		it("should show mnemonic authentication error", async () => {
 			mnemonicMock.mockRestore();
-			secondMnemonicMock.mockRestore();
 
-			const { publicKey } = await wallet.coin().publicKey().fromMnemonic(MNEMONICS[1]);
-
-			const secondPublicKeyMock = vi.spyOn(wallet, "secondPublicKey").mockReturnValue(publicKey);
-
-			const { asFragment } = renderPage();
+			renderPage();
 
 			await expect(formStep()).resolves.toBeVisible();
 
@@ -166,26 +155,14 @@ describe("SendDelegateResignation", () => {
 			await expect(screen.findByTestId("AuthenticationStep")).resolves.toBeVisible();
 
 			await userEvent.clear(screen.getByTestId("AuthenticationStep__mnemonic"));
-			await userEvent.type(screen.getByTestId("AuthenticationStep__mnemonic"), passphrase);
-			await waitFor(() => expect(screen.getByTestId("AuthenticationStep__mnemonic")).toHaveValue(passphrase));
-
-			await waitFor(() => {
-				expect(secondMnemonic()).toBeEnabled();
-			});
-
-			await userEvent.clear(secondMnemonic());
-			await userEvent.type(secondMnemonic(), MNEMONICS[2]);
-			await waitFor(() => expect(secondMnemonic()).toHaveValue(MNEMONICS[2]));
-
-			await waitFor(() => {
-				expect(secondMnemonic()).toHaveAttribute("aria-invalid");
-			});
+			await userEvent.type(screen.getByTestId("AuthenticationStep__mnemonic"), "wrong passphrase");
+			await waitFor(() => expect(screen.getByTestId("AuthenticationStep__mnemonic")).toHaveValue("wrong passphrase"));
 
 			expect(sendButton()).toBeDisabled();
 
-			expect(asFragment()).toMatchSnapshot();
-
-			secondPublicKeyMock.mockRestore();
+			await waitFor(() => {
+				expect(screen.getByTestId("AuthenticationStep__mnemonic")).toHaveAttribute("aria-invalid");
+			});
 		});
 
 		it("should render 1st step", async () => {
@@ -376,12 +353,6 @@ describe("SendDelegateResignation", () => {
 			await userEvent.type(screen.getByTestId("AuthenticationStep__mnemonic"), passphrase);
 			await waitFor(() => expect(screen.getByTestId("AuthenticationStep__mnemonic")).toHaveValue(passphrase));
 
-			await waitFor(() => expect(secondMnemonic()).toBeEnabled());
-
-			await userEvent.clear(secondMnemonic());
-			await userEvent.type(secondMnemonic(), MNEMONICS[1]);
-			await waitFor(() => expect(secondMnemonic()).toHaveValue(MNEMONICS[1]));
-
 			await waitFor(() => {
 				expect(sendButton()).toBeEnabled();
 			});
@@ -440,14 +411,6 @@ describe("SendDelegateResignation", () => {
 			await waitFor(() => expect(screen.getByTestId("AuthenticationStep__mnemonic")).toHaveValue(passphrase));
 
 			await waitFor(() => {
-				expect(secondMnemonic()).toBeEnabled();
-			});
-
-			await userEvent.clear(secondMnemonic());
-			await userEvent.type(secondMnemonic(), MNEMONICS[1]);
-			await waitFor(() => expect(secondMnemonic()).toHaveValue(MNEMONICS[1]));
-
-			await waitFor(() => {
 				expect(sendButton()).toBeEnabled();
 			});
 
@@ -496,14 +459,6 @@ describe("SendDelegateResignation", () => {
 			await userEvent.type(screen.getByTestId("AuthenticationStep__mnemonic"), passphrase);
 			await waitFor(() => expect(screen.getByTestId("AuthenticationStep__mnemonic")).toHaveValue(passphrase));
 
-			await waitFor(() => {
-				expect(secondMnemonic()).toBeEnabled();
-			});
-
-			await userEvent.clear(secondMnemonic());
-			await userEvent.type(secondMnemonic(), MNEMONICS[1]);
-			await waitFor(() => expect(secondMnemonic()).toHaveValue(MNEMONICS[1]));
-
 			userEvent.keyboard("{enter}");
 			userEvent.click(sendButton());
 
@@ -551,21 +506,6 @@ describe("SendDelegateResignation", () => {
 
 			await waitFor(() => {
 				expect(screen.getByTestId("AuthenticationStep__mnemonic")).toHaveValue(passphrase);
-			});
-
-			await waitFor(() => {
-				expect(secondMnemonic()).toBeInTheDocument();
-			});
-
-			await waitFor(() => {
-				expect(secondMnemonic()).toBeEnabled();
-			});
-
-			await userEvent.clear(secondMnemonic());
-			await userEvent.type(secondMnemonic(), MNEMONICS[1]);
-
-			await waitFor(() => {
-				expect(secondMnemonic()).toHaveValue(MNEMONICS[1]);
 			});
 
 			await waitFor(() => {
