@@ -19,9 +19,13 @@ export const TransactionSummary = ({ transaction, senderWallet, labelClassName }
 			<div className="space-y-3 sm:space-y-0">
 				{!BigNumber.make(transaction.amount()).isZero() && (
 					<>
-						<div className="flex w-full justify-between sm:justify-start">
+						<div className="flex w-full justify-between sm:justify-start items-center">
 							<DetailLabelText className={labelClassName}>{t("COMMON.AMOUNT")}</DetailLabelText>
-							<TransactionAmountLabel transaction={transaction} />
+							<TransactionAmountLabel
+								transaction={transaction}
+								textClassName="text-base"
+								className="h-auto"
+							/>
 						</div>
 
 						<DetailDivider />
