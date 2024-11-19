@@ -27,7 +27,11 @@ describe("WalletsControls", () => {
 	it("should render", () => {
 		const { container } = render(
 			<Route path="/profiles/:profileId/dashboard">
-			<WalletsControls onCreateWallet={vi.fn()} onImportWallet={vi.fn()} filterProperties={filterProperties} />
+				<WalletsControls
+					onCreateWallet={vi.fn()}
+					onImportWallet={vi.fn()}
+					filterProperties={filterProperties}
+				/>
 			</Route>,
 		);
 
@@ -39,11 +43,15 @@ describe("WalletsControls", () => {
 
 		const { container } = render(
 			<Route path="/profiles/:profileId/dashboard">
-				<WalletsControls onCreateWallet={vi.fn()} onImportWallet={vi.fn()} filterProperties={filterProperties} />
+				<WalletsControls
+					onCreateWallet={vi.fn()}
+					onImportWallet={vi.fn()}
+					filterProperties={filterProperties}
+				/>
 			</Route>,
 			{
 				route: dashboardURL,
-			}
+			},
 		);
 
 		expect(container).toMatchSnapshot();
@@ -52,7 +60,11 @@ describe("WalletsControls", () => {
 	it.each(["xs", "sm", "md", "lg", "xl"])("should render responsive", (breakpoint) => {
 		const { container } = renderResponsiveWithRoute(
 			<Route path="/profiles/:profileId/dashboard">
-				<WalletsControls onCreateWallet={vi.fn()} onImportWallet={vi.fn()} filterProperties={filterProperties} />
+				<WalletsControls
+					onCreateWallet={vi.fn()}
+					onImportWallet={vi.fn()}
+					filterProperties={filterProperties}
+				/>
 			</Route>,
 			breakpoint,
 			{
@@ -73,7 +85,7 @@ describe("WalletsControls", () => {
 			</Route>,
 			{
 				route: dashboardURL,
-			}
+			},
 		);
 
 		await userEvent.click(screen.getByTestId("WalletControls__create-wallet"));
@@ -96,7 +108,7 @@ describe("WalletsControls", () => {
 			{
 				history,
 				route: dashboardURL,
-			}
+			},
 		);
 
 		// Await for multiple dropdown toggles to be available
@@ -123,7 +135,7 @@ describe("WalletsControls", () => {
 			</Route>,
 			{
 				route: dashboardURL,
-			}
+			},
 		);
 
 		await userEvent.click(screen.getByTestId("WalletControls__import-wallet"));
@@ -141,7 +153,7 @@ describe("WalletsControls", () => {
 			"xs",
 			{
 				history,
-				route: dashboardURL
+				route: dashboardURL,
 			},
 		);
 
