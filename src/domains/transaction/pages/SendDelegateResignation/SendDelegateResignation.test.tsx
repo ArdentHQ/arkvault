@@ -156,7 +156,9 @@ describe("SendDelegateResignation", () => {
 
 			await userEvent.clear(screen.getByTestId("AuthenticationStep__mnemonic"));
 			await userEvent.type(screen.getByTestId("AuthenticationStep__mnemonic"), "wrong passphrase");
-			await waitFor(() => expect(screen.getByTestId("AuthenticationStep__mnemonic")).toHaveValue("wrong passphrase"));
+			await waitFor(() =>
+				expect(screen.getByTestId("AuthenticationStep__mnemonic")).toHaveValue("wrong passphrase"),
+			);
 
 			expect(sendButton()).toBeDisabled();
 
