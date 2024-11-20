@@ -22,14 +22,14 @@ exports[`DelegateRegistrationForm > should render form step 1`] = `
                 class="mb-0 text-2xl leading-[29px]"
                 data-testid="header__title"
               >
-                Register Delegate
+                Register Validator
               </h1>
             </div>
             <div
               class="flex items-center leading-5 text-theme-secondary-text"
               data-testid="header__subtitle"
             >
-              Register a new Delegate address on the network below.
+              Register a new Validator address on the network below.
             </div>
           </div>
         </div>
@@ -617,14 +617,14 @@ exports[`DelegateRegistrationForm > should set fee 1`] = `
                 class="mb-0 text-2xl leading-[29px]"
                 data-testid="header__title"
               >
-                Register Delegate
+                Register Validator
               </h1>
             </div>
             <div
               class="flex items-center leading-5 text-theme-secondary-text"
               data-testid="header__subtitle"
             >
-              Register a new Delegate address on the network below.
+              Register a new Validator address on the network below.
             </div>
           </div>
         </div>
