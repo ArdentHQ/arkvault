@@ -30,13 +30,12 @@ interface PathProperties {
 }
 
 enum SearchParametersError {
-	AmbiguousDelegate = "AMBIGUOUS_DELEGATE",
+	AmbiguousValidator = "AMBIGUOUS_VALIDATOR",
 	CoinMismatch = "COIN_MISMATCH",
 	CoinNotSupported = "COIN_NOT_SUPPORTED",
-	DelegateNotFound = "DELEGATE_NOT_FOUND",
-	DelegateResigned = "DELEGATE_RESIGNED",
+	InvalidAddress = "INVALID_ADDRESS_OR_NETWORK_MISMATCH",
 	MethodNotSupported = "METHOD_NOT_SUPPORTED",
-	MissingDelegate = "MISSING_DELEGATE",
+	MissingValidator = "MISSING_VALIDATOR",
 	MissingMessage = "MISSING_MESSAGE",
 	MissingMethod = "MISSING_METHOD",
 	MissingNetworkOrNethash = "MISSING_NETWORK_OR_NETHASH",
@@ -48,7 +47,8 @@ enum SearchParametersError {
 	NetworkNotEnabled = "NETWORK_NOT_ENABLED",
 	NetworkNoWallets = "NETWORK_NO_WALLETS",
 	MessageMissing = "MESSAGE_MISSING",
-	InvalidAddress = "INVALID_ADDRESS_OR_NETWORK_MISMATCH",
+	ValidatorNotFound = "VALIDATOR_NOT_FOUND",
+	ValidatorResigned = "VALIDATOR_RESIGNED",
 }
 
 const defaultNetworks = {
@@ -106,11 +106,11 @@ const validateVote = async ({ parameters, profile, network, env }: ValidateParam
 	const publicKey = parameters.get("publicKey");
 
 	if (!delegateName && !publicKey) {
-		return { error: { type: SearchParametersError.MissingDelegate } };
+		return { error: { type: SearchParametersError.MissingValidator } };
 	}
 
 	if (!!publicKey && !!delegateName) {
-		return { error: { type: SearchParametersError.AmbiguousDelegate } };
+		return { error: { type: SearchParametersError.AmbiguousValidator } };
 	}
 
 	const coin: Coins.Coin = profile.coins().set(network.coin(), network.id());
@@ -128,11 +128,11 @@ const validateVote = async ({ parameters, profile, network, env }: ValidateParam
 		});
 
 	if (!delegate) {
-		return { error: { type: SearchParametersError.DelegateNotFound, value: delegateName || delegatePublicKey } };
+		return { error: { type: SearchParametersError.ValidatorNotFound, value: delegateName || delegatePublicKey } };
 	}
 
 	if (delegate.isResignedDelegate()) {
-		return { error: { type: SearchParametersError.DelegateResigned, value: delegateName || delegatePublicKey } };
+		return { error: { type: SearchParametersError.ValidatorResigned, value: delegateName || delegatePublicKey } };
 	}
 };
 
@@ -350,8 +350,8 @@ export const useSearchParametersValidation = () => {
 	) => {
 		const ErrorWrapper = qr ? WrapperQR : WrapperURI;
 
-		if (type === SearchParametersError.AmbiguousDelegate) {
-			return <Trans parent={ErrorWrapper} i18nKey="TRANSACTION.VALIDATION.DELEGATE_OR_PUBLICKEY" />;
+		if (type === SearchParametersError.AmbiguousValidator) {
+			return <Trans parent={ErrorWrapper} i18nKey="TRANSACTION.VALIDATION.VALIDATOR_OR_PUBLICKEY" />;
 		}
 
 		if (type === SearchParametersError.CoinMismatch) {
@@ -368,21 +368,21 @@ export const useSearchParametersValidation = () => {
 			);
 		}
 
-		if (type === SearchParametersError.DelegateNotFound) {
+		if (type === SearchParametersError.ValidatorNotFound) {
 			return (
 				<Trans
 					parent={ErrorWrapper}
-					i18nKey="TRANSACTION.VALIDATION.DELEGATE_NOT_FOUND"
+					i18nKey="TRANSACTION.VALIDATION.VALIDATOR_NOT_FOUND"
 					values={{ delegate: value }}
 				/>
 			);
 		}
 
-		if (type === SearchParametersError.DelegateResigned) {
+		if (type === SearchParametersError.ValidatorResigned) {
 			return (
 				<Trans
 					parent={ErrorWrapper}
-					i18nKey="TRANSACTION.VALIDATION.DELEGATE_RESIGNED"
+					i18nKey="TRANSACTION.VALIDATION.VALIDATOR_RESIGNED"
 					values={{ delegate: value }}
 				/>
 			);
@@ -398,8 +398,8 @@ export const useSearchParametersValidation = () => {
 			);
 		}
 
-		if (type === SearchParametersError.MissingDelegate) {
-			return <Trans parent={ErrorWrapper} i18nKey="TRANSACTION.VALIDATION.DELEGATE_MISSING" />;
+		if (type === SearchParametersError.MissingValidator) {
+			return <Trans parent={ErrorWrapper} i18nKey="TRANSACTION.VALIDATION.VALIDATOR_MISSING" />;
 		}
 
 		if (type === SearchParametersError.MissingMessage) {
