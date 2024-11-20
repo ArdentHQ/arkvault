@@ -109,17 +109,6 @@ describe("DelegateRegistrationForm", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it("should set username", async () => {
-		const { form } = renderComponent();
-
-		await expect(screen.findByTestId(formStepID)).resolves.toBeVisible();
-
-		await userEvent.type(screen.getByTestId("Input__username"), "test_delegate");
-
-		await waitFor(() => expect(screen.getByTestId("Input__username")).toHaveValue("test_delegate"));
-		await waitFor(() => expect(form?.getValues("username")).toBe("test_delegate"));
-	});
-
 	it("should set fee", async () => {
 		const { asFragment } = renderComponent({
 			defaultValues: {
@@ -145,43 +134,29 @@ describe("DelegateRegistrationForm", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it("should show error if username contains illegal characters", async () => {
-		const { asFragment } = renderComponent();
+	it("should error if public key is too long", async () => {
+		renderComponent();
 
-		await waitFor(() => expect(screen.getByTestId(formStepID)));
+		const publicKey = "invalidPublicKey02147bf63839be7abb44707619b012a8b59ad3eda90be1c6e04eb9c630232268dea90be1c6e04eb9c630232268de";
 
-		await userEvent.type(screen.getByTestId("Input__username"), "<invalid>");
+		await userEvent.type(screen.getByTestId("Input__public_key"), publicKey);
 
-		await waitFor(() => expect(screen.getByTestId("Input__username")).toHaveAttribute("aria-invalid"));
+		await waitFor(() => expect(screen.getByTestId("Input__public_key")).toHaveValue(publicKey));
+
+		await waitFor(() => expect(screen.getByTestId("Input__public_key")).toHaveAttribute("aria-invalid"));
 
 		expect(screen.getByTestId("Input__error")).toBeVisible();
-		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it("should error if username is too long", async () => {
-		const { asFragment } = renderComponent();
+	it("should render and set public key for mainsail networks", async () => {
+		const { form } = renderComponent();
 
-		await waitFor(() => expect(screen.getByTestId(formStepID)));
+		const publicKey = "02147bf63839be7abb44707619b012a8b59ad3eda90be1c6e04eb9c630232268de";
 
-		await userEvent.type(screen.getByTestId("Input__username"), "thisisaveryveryverylongdelegatename");
+		await userEvent.type(screen.getByTestId("Input__public_key"), publicKey);
 
-		await waitFor(() => expect(screen.getByTestId("Input__username")).toHaveAttribute("aria-invalid"));
-
-		expect(screen.getByTestId("Input__error")).toBeVisible();
-		expect(asFragment()).toMatchSnapshot();
-	});
-
-	it("should show error if username already exists", async () => {
-		const { asFragment } = renderComponent();
-
-		await waitFor(() => expect(screen.getByTestId(formStepID)));
-
-		await userEvent.type(screen.getByTestId("Input__username"), "arkx");
-
-		await waitFor(() => expect(screen.getByTestId("Input__username")).toHaveAttribute("aria-invalid"));
-
-		expect(screen.getByTestId("Input__error")).toBeVisible();
-		expect(asFragment()).toMatchSnapshot();
+		await waitFor(() => expect(screen.getByTestId("Input__public_key")).toHaveValue(publicKey));
+		await waitFor(() => expect(form?.getValues("publicKey")).toBe(publicKey));
 	});
 
 	it("should sign transaction", async () => {
@@ -191,8 +166,8 @@ describe("DelegateRegistrationForm", () => {
 				fee: "1",
 				mnemonic: MNEMONICS[0],
 				network: wallet.network(),
+				publicKey: "02147bf63839be7abb44707619b012a8b59ad3eda90be1c6e04eb9c630232268de",
 				senderAddress: wallet.address(),
-				username: "test_delegate",
 			}),
 			setError: vi.fn(),
 			setValue: vi.fn(),
@@ -213,7 +188,7 @@ describe("DelegateRegistrationForm", () => {
 			profile,
 		});
 
-		expect(signMock).toHaveBeenCalledWith({ data: { username: "test_delegate" }, fee: 1 });
+		expect(signMock).toHaveBeenCalledWith({ data: { publicKey: "02147bf63839be7abb44707619b012a8b59ad3eda90be1c6e04eb9c630232268de" }, fee: 1 });
 		expect(broadcastMock).toHaveBeenCalledWith(delegateRegistrationFixture.data.id);
 		expect(transactionMock).toHaveBeenCalledWith(delegateRegistrationFixture.data.id);
 
@@ -257,8 +232,8 @@ describe("DelegateRegistrationForm", () => {
 				fee: "1",
 				mnemonic: MNEMONICS[0],
 				network: wallet.network(),
+				publicKey: "02147bf63839be7abb44707619b012a8b59ad3eda90be1c6e04eb9c630232268de",
 				senderAddress: wallet.address(),
-				username: "test_delegate",
 			}),
 			setError: vi.fn(),
 			setValue: vi.fn(),
@@ -279,7 +254,7 @@ describe("DelegateRegistrationForm", () => {
 			profile,
 		});
 
-		expect(signMock).toHaveBeenCalledWith({ data: { username: "test_delegate" }, fee: 1 });
+		expect(signMock).toHaveBeenCalledWith({ data: { publicKey: "02147bf63839be7abb44707619b012a8b59ad3eda90be1c6e04eb9c630232268de" }, fee: 1 });
 		expect(broadcastMock).toHaveBeenCalledWith(delegateRegistrationFixture.data.id);
 		expect(transactionMock).toHaveBeenCalledWith(delegateRegistrationFixture.data.id);
 
