@@ -151,7 +151,7 @@ exports[`DelegateRegistrationForm > should render form step 1`] = `
                 <input
                   autocomplete="off"
                   class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
-                  data-testid="Input__public_key"
+                  data-testid="Input__validator_public_key"
                   name="publicKey"
                   type="text"
                   value=""
@@ -746,7 +746,7 @@ exports[`DelegateRegistrationForm > should set fee 1`] = `
                 <input
                   autocomplete="off"
                   class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
-                  data-testid="Input__public_key"
+                  data-testid="Input__validator_public_key"
                   name="publicKey"
                   type="text"
                   value=""

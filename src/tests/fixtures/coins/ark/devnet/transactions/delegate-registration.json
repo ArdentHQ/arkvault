@@ -12,9 +12,7 @@
 		"recipient": "DR2FTWeYxZZK7GqnUrwCeRVkMv6uXhrGzQ",
 		"signature": "c572494c7fd4ce3fd010187f3573ee28faf80a9f1367e75ec0d444fbc7469a6b8829b5a71d5508f27e1a1cf48ba81739493a131c343ae78ed5315ad417be3ebb",
 		"asset": {
-			"delegate": {
-				"validatorPublicKey": "02147bf63839be7abb44707619b012a8b59ad3eda90be1c6e04eb9c630232268de"
-			}
+			"validatorPublicKey": "02147bf63839be7abb44707619b012a8b59ad3eda90be1c6e04eb9c630232268de"
 		},
 		"confirmations": 13772,
 		"timestamp": {
