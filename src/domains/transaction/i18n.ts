@@ -463,6 +463,7 @@ export const translations = {
 		SIGNATORY_MISSING: "signatory is missing",
 		SIGNATURE_MISSING: "signature is missing",
 	},
+	VALIDATOR_PUBLIC_KEY: "Validator Public Key",
 	VIEW_RECIPIENTS_LIST: "View Full List",
 	VOTER: "Voter",
 	VOTES: "Votes",
