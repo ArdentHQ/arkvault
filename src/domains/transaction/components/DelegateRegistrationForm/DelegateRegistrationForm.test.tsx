@@ -137,7 +137,8 @@ describe("DelegateRegistrationForm", () => {
 	it("should error if public key is too long", async () => {
 		renderComponent();
 
-		const publicKey = "invalidPublicKey02147bf63839be7abb44707619b012a8b59ad3eda90be1c6e04eb9c630232268dea90be1c6e04eb9c630232268de";
+		const publicKey =
+			"invalidPublicKey02147bf63839be7abb44707619b012a8b59ad3eda90be1c6e04eb9c630232268dea90be1c6e04eb9c630232268de";
 
 		await userEvent.type(screen.getByTestId("Input__public_key"), publicKey);
 
@@ -188,7 +189,10 @@ describe("DelegateRegistrationForm", () => {
 			profile,
 		});
 
-		expect(signMock).toHaveBeenCalledWith({ data: { publicKey: "02147bf63839be7abb44707619b012a8b59ad3eda90be1c6e04eb9c630232268de" }, fee: 1 });
+		expect(signMock).toHaveBeenCalledWith({
+			data: { publicKey: "02147bf63839be7abb44707619b012a8b59ad3eda90be1c6e04eb9c630232268de" },
+			fee: 1,
+		});
 		expect(broadcastMock).toHaveBeenCalledWith(delegateRegistrationFixture.data.id);
 		expect(transactionMock).toHaveBeenCalledWith(delegateRegistrationFixture.data.id);
 
@@ -254,7 +258,10 @@ describe("DelegateRegistrationForm", () => {
 			profile,
 		});
 
-		expect(signMock).toHaveBeenCalledWith({ data: { publicKey: "02147bf63839be7abb44707619b012a8b59ad3eda90be1c6e04eb9c630232268de" }, fee: 1 });
+		expect(signMock).toHaveBeenCalledWith({
+			data: { publicKey: "02147bf63839be7abb44707619b012a8b59ad3eda90be1c6e04eb9c630232268de" },
+			fee: 1,
+		});
 		expect(broadcastMock).toHaveBeenCalledWith(delegateRegistrationFixture.data.id);
 		expect(transactionMock).toHaveBeenCalledWith(delegateRegistrationFixture.data.id);
 
