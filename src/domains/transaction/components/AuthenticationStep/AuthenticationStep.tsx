@@ -181,7 +181,7 @@ export const AuthenticationStep = ({
 }: AuthenticationStepProperties) => {
 	const { t } = useTranslation();
 
-	const { errors, getValues, register } = useFormContext();
+	const { register } = useFormContext();
 	const { authentication } = useValidation();
 
 	if (wallet.isLedger()) {
@@ -210,9 +210,6 @@ export const AuthenticationStep = ({
 		wallet.actsWithSecretWithEncryption();
 
 	const isTransaction = subject === "transaction";
-
-	const requireSecondMnemonic = isTransaction && wallet.isSecondSignature() && requireMnemonic;
-	const requireSecondSecret = isTransaction && wallet.isSecondSignature() && wallet.actsWithSecret();
 
 	return (
 		<div data-testid="AuthenticationStep" className="space-y-4">
@@ -361,28 +358,6 @@ export const AuthenticationStep = ({
 						/>
 					</FormField>
 				</>
-			)}
-
-			{requireSecondMnemonic && (
-				<FormField name="secondMnemonic">
-					<FormLabel>{t("TRANSACTION.SECOND_MNEMONIC")}</FormLabel>
-					<InputPassword
-						data-testid="AuthenticationStep__second-mnemonic"
-						disabled={!getValues("mnemonic") || errors.mnemonic}
-						ref={register(authentication.secondMnemonic(wallet.coin(), wallet.secondPublicKey()!))}
-					/>
-				</FormField>
-			)}
-
-			{requireSecondSecret && (
-				<FormField name="secondSecret">
-					<FormLabel>{t("TRANSACTION.SECOND_SECRET")}</FormLabel>
-					<InputPassword
-						data-testid="AuthenticationStep__second-secret"
-						disabled={!getValues("secret") || errors.secret}
-						ref={register(authentication.secondSecret(wallet.coin(), wallet.secondPublicKey()!))}
-					/>
-				</FormField>
 			)}
 		</div>
 	);

@@ -21,10 +21,6 @@ import {
 import { ErrorStep } from "@/domains/transaction/components/ErrorStep";
 import { FeeWarning } from "@/domains/transaction/components/FeeWarning";
 import { MultiSignatureRegistrationForm } from "@/domains/transaction/components/MultiSignatureRegistrationForm";
-import {
-	SecondSignatureRegistrationForm,
-	signSecondSignatureRegistration,
-} from "@/domains/transaction/components/SecondSignatureRegistrationForm";
 import { useFeeConfirmation, useMultiSignatureRegistration } from "@/domains/transaction/hooks";
 import { TransactionSuccessful } from "@/domains/transaction/components/TransactionSuccessful";
 
@@ -94,7 +90,6 @@ export const SendRegistration = () => {
 		const registrations = {
 			default: () => setRegistrationForm(DelegateRegistrationForm),
 			multiSignature: () => setRegistrationForm(MultiSignatureRegistrationForm),
-			secondSignature: () => setRegistrationForm(SecondSignatureRegistrationForm),
 		};
 
 		// eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
@@ -124,18 +119,8 @@ export const SendRegistration = () => {
 
 	const handleSubmit = async () => {
 		try {
-			const {
-				mnemonic,
-				secondMnemonic,
-				encryptionPassword,
-				wif,
-				privateKey,
-				secret,
-				secondSecret,
-				participants,
-				minParticipants,
-				fee,
-			} = getValues();
+			const { mnemonic, encryptionPassword, wif, privateKey, secret, participants, minParticipants, fee } =
+				getValues();
 
 			if (activeWallet.isLedger()) {
 				await connect(activeProfile, activeWallet.coinId(), activeWallet.networkId());
@@ -145,9 +130,6 @@ export const SendRegistration = () => {
 				encryptionPassword,
 				mnemonic,
 				privateKey,
-				/* istanbul ignore next -- @preserve */
-				secondMnemonic: registrationType === "secondSignature" ? undefined : secondMnemonic,
-				secondSecret,
 				secret,
 				wif,
 			});
@@ -165,18 +147,6 @@ export const SendRegistration = () => {
 				setTransaction(transaction);
 				setActiveTab(stepCount);
 				return;
-			}
-
-			if (registrationType === "secondSignature") {
-				const transaction = await signSecondSignatureRegistration({
-					env,
-					form,
-					profile: activeProfile,
-					signatory,
-				});
-
-				setTransaction(transaction);
-				handleNext();
 			}
 
 			if (registrationType === "delegateRegistration") {
@@ -233,7 +203,6 @@ export const SendRegistration = () => {
 		({
 			default: t("TRANSACTION.TRANSACTION_TYPES.DELEGATE_REGISTRATION"),
 			multiSignature: t("TRANSACTION.TRANSACTION_TYPES.MULTI_SIGNATURE"),
-			secondSignature: t("TRANSACTION.TRANSACTION_TYPES.SECOND_SIGNATURE"),
 		})[registrationType];
 
 	return (
