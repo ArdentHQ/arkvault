@@ -84,7 +84,9 @@ describe("Dashboard", () => {
 		await userEvent.click(screen.getByText(dashboardTranslations.WALLET_CONTROLS.IMPORT_LEDGER));
 
 		await waitFor(() =>
-			expect(history.location.pathname).toBe(`/profiles/${fixtureProfileId}/wallets/import/ledger`),
+			// Restore when enabling Ledger buttons again
+			// expect(history.location.pathname).toBe(`/profiles/${fixtureProfileId}/wallets/import/ledger`),
+			expect(history.location.pathname).toBe(`/profiles/${fixtureProfileId}/dashboard`),
 		);
 
 		ledgerTransportMock.mockRestore();

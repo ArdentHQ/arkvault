@@ -510,4 +510,92 @@ describe("LedgerTabs", () => {
 		getPublicKeySpy.mockRestore();
 		ledgerTransportMock.mockRestore();
 	});
+
+	it("should not render networks that don't support ledger", async () => {
+		const availableNetworks = profile
+			.wallets()
+			.values()
+			.map((wallet) => wallet.network());
+
+		const networkSpy = vi.spyOn(profile, "availableNetworks").mockReturnValue(availableNetworks);
+		const ledgerSpy = vi.spyOn(availableNetworks.at(0), "allows").mockReturnValue(false);
+
+		const ledgerTransportMock = mockNanoXTransport();
+		render(<Component activeIndex={2} />, { route: `/profiles/${profile.id()}` });
+
+		await expect(screen.findByTestId("NetworkOption")).rejects.toThrow(/Unable to find/);
+
+		networkSpy.mockRestore();
+		ledgerSpy.mockRestore();
+		ledgerTransportMock.mockRestore();
+	});
+
+	it("should not render a network if it is not enabled in the profile", async () => {
+		const availableNetworks = profile
+			.wallets()
+			.values()
+			.map((wallet) => wallet.network());
+
+		const networkSpy = vi.spyOn(profile, "availableNetworks").mockReturnValue(availableNetworks);
+		const ledgerSpy = vi.spyOn(availableNetworks.at(0), "allows").mockReturnValue(true);
+		const networkNameSpy = vi
+			.spyOn(availableNetworks.at(0), "id")
+			.mockReturnValue(`${availableNetworks.at(0)?.id()}.custom`);
+		const networkEnabledMetaSpy = vi.spyOn(availableNetworks.at(0), "meta").mockReturnValue({ enabled: false });
+
+		const ledgerTransportMock = mockNanoXTransport();
+		render(<Component activeIndex={2} />, { route: `/profiles/${profile.id()}` });
+
+		await expect(screen.findByTestId("NetworkOption")).rejects.toThrow(/Unable to find/);
+
+		networkSpy.mockRestore();
+		ledgerSpy.mockRestore();
+		networkNameSpy.mockRestore();
+		networkEnabledMetaSpy.mockRestore();
+		ledgerTransportMock.mockRestore();
+	});
+
+	it("should render a network if it is custom, enabled and supports Ledger", () => {
+		const availableNetworks = profile
+			.wallets()
+			.values()
+			.map((wallet) => wallet.network());
+
+		const networkSpy = vi.spyOn(profile, "availableNetworks").mockReturnValue(availableNetworks);
+		const ledgerSpy = vi.spyOn(availableNetworks.at(0), "allows").mockReturnValue(true);
+		const networkNameSpy = vi
+			.spyOn(availableNetworks.at(0), "id")
+			.mockReturnValue(`${availableNetworks.at(0)?.id()}.custom`);
+		const networkEnabledMetaSpy = vi.spyOn(availableNetworks.at(0), "meta").mockReturnValue({ enabled: true });
+
+		const ledgerTransportMock = mockNanoXTransport();
+		render(<Component activeIndex={2} />, { route: `/profiles/${profile.id()}` });
+
+		expect(screen.queryAllByTestId("NetworkOption")).toHaveLength(2);
+
+		networkSpy.mockRestore();
+		ledgerSpy.mockRestore();
+		networkNameSpy.mockRestore();
+		networkEnabledMetaSpy.mockRestore();
+		ledgerTransportMock.mockRestore();
+	});
+
+	it("should not render network if doesn't allow any ledger", async () => {
+		const availableNetworks = profile
+			.wallets()
+			.values()
+			.map((wallet) => wallet.network());
+
+		const networkSpy = vi.spyOn(profile, "availableNetworks").mockReturnValue(availableNetworks);
+		const networkSupportSpy = vi.spyOn(availableNetworks.at(0), "allows").mockReturnValue(false);
+
+		const ledgerTransportMock = mockNanoXTransport();
+		render(<Component activeIndex={2} />, { route: `/profiles/${profile.id()}` });
+
+		await expect(screen.findByTestId("NetworkOption")).rejects.toThrow(/Unable to find/);
+
+		networkSpy.mockRestore();
+		networkSupportSpy.mockRestore();
+		ledgerTransportMock.mockRestore();
+	});
 });
