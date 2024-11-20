@@ -189,6 +189,64 @@
 				"ERROR_REPORTING": false,
 				"PASSWORD": "$2a$10$Qy/Mcjg2AAZ.Wqj7MUba4eQtNTC5c4Vh6SCWKezmolrp/58TlCA8u"
 			}
+		},
+		"877b7695-8a55-4e16-a7ff-412113131856": {
+			"id": "877b7695-8a55-4e16-a7ff-412113131856",
+			"wallets": {
+				"ac38fe6d-4b67-4ef1-85be-17c5f6841129": {
+					"id": "ac38fe6d-4b67-4ef1-85be-17c5f6841129",
+					"data": {
+						"COIN": "Mainsail",
+						"NETWORK": "mainsail.devnet",
+						"ADDRESS": "0x8A3117649655714c296cd816691e01C5148922ed",
+						"PUBLIC_KEY": "02326277066ea98884095c41ebb7c74b392f5b95a63382c5c51459673e506881fc",
+						"BALANCE": {
+							"total": "3375089801",
+							"available": "3375089801",
+							"fees": "3375089801"
+						},
+						"BROADCASTED_TRANSACTIONS": {},
+						"EXCHANGE_CURRENCY": "BTC",
+						"EXCHANGE_RATE": 0,
+						"IMPORT_METHOD": "BIP39.MNEMONIC",
+						"SEQUENCE": "245",
+						"SIGNED_TRANSACTIONS": {},
+						"VOTES": [],
+						"VOTES_AVAILABLE": 0,
+						"VOTES_USED": 0
+					},
+					"settings": {
+						"AVATAR": "<svg version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" width=\"100\" height=\"100\" viewBox=\"0 0 100 100\"><style>circle{mix-blend-mode:soft-light;}</style><rect fill=\"rgb(0, 150, 136)\" width=\"100\" height=\"100\"/><circle r=\"50\" cx=\"80\" cy=\"50\" fill=\"rgb(76, 175, 80)\"/><circle r=\"35\" cx=\"100\" cy=\"40\" fill=\"rgb(156, 39, 176)\"/><circle r=\"40\" cx=\"90\" cy=\"70\" fill=\"rgb(3, 169, 244)\"/></svg>",
+						"ALIAS": "Mainsail Wallet 1"
+					}
+				}
+			},
+			"contacts": {},
+			"notifications": {},
+			"exchangeTransactions": {},
+			"peers": {},
+			"plugins": {},
+			"data": {
+				"key": "value",
+				"HAS_COMPLETED_INTRODUCTORY_TUTORIAL": true
+			},
+			"settings": {
+				"ACCENT_COLOR": "green",
+				"ADVANCED_MODE": false,
+				"AUTOMATIC_SIGN_OUT_PERIOD": 15,
+				"BIP39_LOCALE": "english",
+				"EXCHANGE_CURRENCY": "BTC",
+				"LEDGER_UPDATE_METHOD": false,
+				"LOCALE": "en-US",
+				"MARKET_PROVIDER": "cryptocompare",
+				"NAME": "Foo Bar",
+				"THEME": "light",
+				"TIME_FORMAT": "h:mm A",
+				"USE_TEST_NETWORKS": true,
+				"DASHBOARD_TRANSACTION_HISTORY": true,
+				"DO_NOT_SHOW_FEE_WARNING": false,
+				"ERROR_REPORTING": false
+			}
 		}
 	},
 	"data": {
