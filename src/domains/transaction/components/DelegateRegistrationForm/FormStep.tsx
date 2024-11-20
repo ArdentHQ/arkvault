@@ -29,8 +29,8 @@ export const FormStep: React.FC<FormStepProperties> = ({ wallet, profile }: Form
 	return (
 		<section data-testid="DelegateRegistrationForm__form-step">
 			<StepHeader
-				title={t("TRANSACTION.PAGE_DELEGATE_REGISTRATION.FORM_STEP.TITLE")}
-				subtitle={t("TRANSACTION.PAGE_DELEGATE_REGISTRATION.FORM_STEP.DESCRIPTION")}
+				title={t("TRANSACTION.PAGE_VALIDATOR_REGISTRATION.FORM_STEP.TITLE")}
+				subtitle={t("TRANSACTION.PAGE_VALIDATOR_REGISTRATION.FORM_STEP.DESCRIPTION")}
 				titleIcon={
 					<ThemeIcon
 						dimensions={[24, 24]}

@@ -578,7 +578,7 @@ exports[`Votes > should filter current delegates 1`] = `
                   class="mb-0 text-2xl leading-[29px]"
                   data-testid="header__title"
                 >
-                  Select Delegate
+                  Select Validator
                 </h1>
               </div>
             </div>
@@ -824,7 +824,7 @@ exports[`Votes > should filter current delegates 1`] = `
                         <div
                           class=""
                         >
-                          Delegate Name
+                          Validator Name
                         </div>
                         <div
                           class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
@@ -1803,7 +1803,7 @@ exports[`Votes > should render 1`] = `
                   class="mb-0 text-2xl leading-[29px]"
                   data-testid="header__title"
                 >
-                  Select Delegate
+                  Select Validator
                 </h1>
               </div>
             </div>
@@ -2041,7 +2041,7 @@ exports[`Votes > should render 1`] = `
                         <div
                           class=""
                         >
-                          Delegate Name
+                          Validator Name
                         </div>
                         <div
                           class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
@@ -3310,7 +3310,7 @@ exports[`Votes > should render and handle wallet current voting exception 1`] = 
                   class="mb-0 text-2xl leading-[29px]"
                   data-testid="header__title"
                 >
-                  Select Delegate
+                  Select Validator
                 </h1>
               </div>
             </div>
@@ -3548,7 +3548,7 @@ exports[`Votes > should render and handle wallet current voting exception 1`] = 
                         <div
                           class=""
                         >
-                          Delegate Name
+                          Validator Name
                         </div>
                         <div
                           class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
@@ -5530,7 +5530,7 @@ exports[`Votes > should select a delegate 1`] = `
                   class="mb-0 text-2xl leading-[29px]"
                   data-testid="header__title"
                 >
-                  Select Delegate
+                  Select Validator
                 </h1>
               </div>
             </div>
@@ -5768,7 +5768,7 @@ exports[`Votes > should select a delegate 1`] = `
                         <div
                           class=""
                         >
-                          Delegate Name
+                          Validator Name
                         </div>
                         <div
                           class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
@@ -9818,7 +9818,7 @@ exports[`Votes > should toggle network selection from network filters 1`] = `
                           <div
                             class=""
                           >
-                            Delegate
+                            Validator
                           </div>
                           <div
                             class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
@@ -10906,7 +10906,7 @@ exports[`Votes > should trigger network connection warning 1`] = `
                   class="mb-0 text-2xl leading-[29px]"
                   data-testid="header__title"
                 >
-                  Select Delegate
+                  Select Validator
                 </h1>
               </div>
             </div>
@@ -11120,7 +11120,7 @@ exports[`Votes > should trigger network connection warning 1`] = `
                   <strong>
                     arkx
                   </strong>
-                  ", the Delegate you are voting for has resigned. Press continue to unvote or select a new Delegate below.
+                  ", the Validator you are voting for has resigned. Press continue to unvote or select a new Validator below.
                 </div>
               </div>
             </div>
@@ -11205,7 +11205,7 @@ exports[`Votes > should trigger network connection warning 1`] = `
                         <div
                           class=""
                         >
-                          Delegate Name
+                          Validator Name
                         </div>
                         <div
                           class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"

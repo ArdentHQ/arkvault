@@ -59,7 +59,7 @@ export const ReviewStep = ({
 							<DetailTitle className="w-auto sm:min-w-40">{t("COMMON.CATEGORY")}</DetailTitle>
 							<div className="flex items-center rounded bg-theme-secondary-200 px-1 py-[3px] dark:border dark:border-theme-secondary-800 dark:bg-transparent">
 								<span className="text-[12px] font-semibold leading-[15px] text-theme-secondary-700 dark:text-theme-secondary-500">
-									{t("TRANSACTION.TRANSACTION_TYPES.DELEGATE_REGISTRATION")}
+									{t("TRANSACTION.TRANSACTION_TYPES.VALIDATOR_REGISTRATION")}
 								</span>
 							</div>
 						</div>

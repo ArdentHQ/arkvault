@@ -26,9 +26,6 @@ export const translations = {
 	},
 	CORE: "CORE",
 	CRYPTOASSET: "Cryptoasset",
-	DELEGATE: "Delegate",
-	DELEGATE_NAME: "Delegate Name",
-	DELEGATE_PUBLICKEY: "Delegate PublicKey",
 	DESCRIPTION: "Description",
 	DISPLAY_NAME: "Display Name",
 	ENCRYPTION_PASSWORD: "Encryption Password",
@@ -137,12 +134,6 @@ export const translations = {
 			"You have unconfirmed transactions which will affect your balance when confirmed. Are you sure you wish to continue?",
 		TITLE: "Confirm Transaction",
 	},
-	MODAL_DELEGATE_REGISTRATION_DETAIL: {
-		TITLE: "Delegate Registration",
-	},
-	MODAL_DELEGATE_RESIGNATION_DETAIL: {
-		TITLE: "Delegate Resignation",
-	},
 	MODAL_FEE_WARNING: {
 		DESCRIPTION: {
 			TOO_HIGH:
@@ -196,9 +187,6 @@ export const translations = {
 	MODAL_TRANSFER_DETAIL: {
 		TITLE: "Transfer",
 	},
-	MODAL_VOTE_DETAIL: {
-		TITLE: "Delegate Vote",
-	},
 	MULTIPLE: "Multiple",
 	MULTIPLE_COUNT: "Multiple ({{count}})",
 	MULTISIGNATURE: {
@@ -241,20 +229,6 @@ export const translations = {
 	NO_FILTERS_SELECTED:
 		"All filtering options have been deselected. Please select one or more options to display transactions.",
 	OUTGOING: "Outgoing",
-	PAGE_DELEGATE_REGISTRATION: {
-		FORM_STEP: {
-			DESCRIPTION: "Register a new Delegate address on the network below.",
-			TITLE: "Register Delegate",
-			WARNING: "The Delegate name is permanent and cannot be modified later. It is registered on the network.",
-		},
-	},
-	PAGE_DELEGATE_RESIGNATION: {
-		FORM_STEP: {
-			DESCRIPTION: "This transaction type permanently retires a Delegate address.",
-			TITLE: "Resign Delegate",
-			WARNING: "This action is permanent and cannot be undone. It is registered on the network.",
-		},
-	},
 	PAGE_MULTISIGNATURE: {
 		FORM_STEP: {
 			DESCRIPTION: "Register Multisignature details below.",
@@ -273,6 +247,20 @@ export const translations = {
 		NETWORK_STEP: {
 			SUBTITLE: "Select a cryptoasset to send funds from.",
 			TITLE: "Select a Cryptoasset",
+		},
+	},
+	PAGE_VALIDATOR_REGISTRATION: {
+		FORM_STEP: {
+			DESCRIPTION: "Register a new Validator address on the network below.",
+			TITLE: "Register Validator",
+			WARNING: "The Validator name is permanent and cannot be modified later. It is registered on the network.",
+		},
+	},
+	PAGE_VALIDATOR_RESIGNATION: {
+		FORM_STEP: {
+			DESCRIPTION: "This transaction type permanently retires a Validator address.",
+			TITLE: "Resign Validator",
+			WARNING: "This action is permanent and cannot be undone. It is registered on the network.",
 		},
 	},
 	PAGE_VOTE: {
@@ -345,8 +333,6 @@ export const translations = {
 	TRANSACTION_SIGNED: "Transaction Signed",
 	TRANSACTION_TYPE: "Transaction Type",
 	TRANSACTION_TYPES: {
-		DELEGATE_REGISTRATION: "Registration",
-		DELEGATE_RESIGNATION: "Resignation",
 		HTLC_CLAIM: "Timelock Claim",
 		HTLC_LOCK: "Timelock",
 		HTLC_REFUND: "Timelock Refund",
@@ -356,6 +342,8 @@ export const translations = {
 		TRANSFER: "Transfer",
 		UNLOCK_TOKEN: "Unlock Balance",
 		UNVOTE: "Unvote",
+		VALIDATOR_REGISTRATION: "Registration",
+		VALIDATOR_RESIGNATION: "Resignation",
 		VOTE: "Vote",
 		VOTE_COMBINATION: "Vote Swap",
 	},
@@ -387,16 +375,11 @@ export const translations = {
 	UNVOTES_COUNT: "Unvotes ({{count}})",
 	UNVOTES_COUNT_one: "Unvote",
 	VALIDATION: {
-		ALREADY_VOTING: "{{wallet}} is already voting for {{delegate}}.",
+		ALREADY_VOTING: "{{wallet}} is already voting for {{validator}}.",
 		AMOUNT_BELOW_MINIMUM: "The amount is below the minimum ({{min}} {{ coinId }})",
 		COIN_MISMATCH: "data is for another coin.",
 		COIN_MISSING: "coin parameter is missing.",
 		COIN_NOT_SUPPORTED: "coin <strong>{{coin}}</strong> is not supported.",
-		DELEGATE_MISSING: "delegate name or public key parameter is missing.",
-		DELEGATE_NOT_FOUND: "delegate <strong>{{delegate}}</strong> could not be found.",
-		DELEGATE_OR_PUBLICKEY:
-			"both delegate name and public key were provided in url. Please use either one or the other.",
-		DELEGATE_RESIGNED: "delegate <strong>{{delegate}}</strong> is resigned.",
 		FEE_NEGATIVE: "Fee cannot be negative",
 		INVALID_ADDRESS_OR_NETWORK_MISMATCH: "The provided address is invalid or belongs to another network",
 		INVALID_QR: "Invalid QR",
@@ -416,7 +399,14 @@ export const translations = {
 		NETWORK_OR_NETHASH_MISSING: "network or nethash parameter is missing.",
 		SIGNATORY_MISSING: "signatory is missing",
 		SIGNATURE_MISSING: "signature is missing",
+		VALIDATOR_MISSING: "validator name or public key parameter is missing.",
+		VALIDATOR_NOT_FOUND: "validator <strong>{{validator}}</strong> could not be found.",
+		VALIDATOR_OR_PUBLICKEY:
+			"both validator name and public key were provided in url. Please use either one or the other.",
+		VALIDATOR_RESIGNED: "validator <strong>{{validator}}</strong> is resigned.",
 	},
+	VALIDATOR: "Validator",
+	VALIDATOR_NAME: "Validator Name",
 	VALIDATOR_PUBLIC_KEY: "Validator Public Key",
 	VIEW_RECIPIENTS_LIST: "View Full List",
 	VOTER: "Voter",

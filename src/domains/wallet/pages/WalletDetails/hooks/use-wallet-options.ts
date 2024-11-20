@@ -83,7 +83,7 @@ const getRegistrationOptions = (wallet: Contracts.IReadWriteWallet, t: TFunction
 			!wallet.isResignedDelegate()
 		) {
 			registrationOptions.options.push({
-				label: t("WALLETS.PAGE_WALLET_DETAILS.OPTIONS.REGISTER_DELEGATE"),
+				label: t("WALLETS.PAGE_WALLET_DETAILS.OPTIONS.REGISTER_VALIDATOR"),
 				value: "delegate-registration",
 			});
 		}
@@ -94,7 +94,7 @@ const getRegistrationOptions = (wallet: Contracts.IReadWriteWallet, t: TFunction
 			!wallet.isResignedDelegate()
 		) {
 			registrationOptions.options.push({
-				label: t("WALLETS.PAGE_WALLET_DETAILS.OPTIONS.RESIGN_DELEGATE"),
+				label: t("WALLETS.PAGE_WALLET_DETAILS.OPTIONS.RESIGN_VALIDATOR"),
 				value: "delegate-resignation",
 			});
 		}

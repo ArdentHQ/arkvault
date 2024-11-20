@@ -15,11 +15,11 @@ export const useTransactionTypes = ({ wallets = [] }: TransactionTypeProperties 
 	const transactionTypes: Record<string, { icon: string; label: string }> = {
 		delegateRegistration: {
 			icon: "DelegateRegistration",
-			label: t("TRANSACTION.TRANSACTION_TYPES.DELEGATE_REGISTRATION"),
+			label: t("TRANSACTION.TRANSACTION_TYPES.VALIDATOR_REGISTRATION"),
 		},
 		delegateResignation: {
 			icon: "DelegateResignation",
-			label: t("TRANSACTION.TRANSACTION_TYPES.DELEGATE_RESIGNATION"),
+			label: t("TRANSACTION.TRANSACTION_TYPES.VALIDATOR_RESIGNATION"),
 		},
 		htlcClaim: {
 			icon: "Timelock",

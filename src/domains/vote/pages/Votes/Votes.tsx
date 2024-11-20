@@ -129,7 +129,7 @@ export const Votes: FC = () => {
 	const isSelectDelegateStep = !!selectedAddress;
 
 	return (
-		<Page pageTitle={isSelectDelegateStep ? t("VOTE.DELEGATE_TABLE.TITLE") : t("VOTE.VOTES_PAGE.TITLE")}>
+		<Page pageTitle={isSelectDelegateStep ? t("VOTE.VALIDATOR_TABLE.TITLE") : t("VOTE.VOTES_PAGE.TITLE")}>
 			<VotesHeader
 				profile={activeProfile}
 				setSearchQuery={setSearchQuery}
