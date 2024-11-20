@@ -1,4 +1,4 @@
-import React, {ChangeEvent, useEffect, useMemo} from "react";
+import React, { ChangeEvent, useEffect, useMemo } from "react";
 import { useFormContext } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 
@@ -53,7 +53,10 @@ export const FormStep: React.FC<FormStepProperties> = ({ wallet, profile }: Form
 						data-testid="Input__validator_public_key"
 						defaultValue={validatorPublicKey}
 						onChange={(event: ChangeEvent<HTMLInputElement>) =>
-							setValue("validatorPublicKey", event.target.value, { shouldDirty: true, shouldValidate: true })
+							setValue("validatorPublicKey", event.target.value, {
+								shouldDirty: true,
+								shouldValidate: true,
+							})
 						}
 					/>
 				</FormField>
