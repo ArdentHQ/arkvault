@@ -231,7 +231,7 @@ export const SendRegistration = () => {
 
 	const getPageTitle = () =>
 		({
-			default: t("TRANSACTION.TRANSACTION_TYPES.DELEGATE_REGISTRATION"),
+			default: t("TRANSACTION.TRANSACTION_TYPES.VALIDATOR_REGISTRATION"),
 			multiSignature: t("TRANSACTION.TRANSACTION_TYPES.MULTI_SIGNATURE"),
 			secondSignature: t("TRANSACTION.TRANSACTION_TYPES.SECOND_SIGNATURE"),
 		})[registrationType];
