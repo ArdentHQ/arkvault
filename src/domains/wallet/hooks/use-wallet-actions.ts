@@ -107,12 +107,6 @@ export const useWalletActions = (wallet?: Contracts.IReadWriteWallet) => {
 				);
 			}
 
-			if (option.value === "second-signature" && !wallet.usesPassword()) {
-				history.push(
-					generatePath(ProfilePaths.SendSecondSignature, { profileId: profile.id(), walletId: wallet.id() }),
-				);
-			}
-
 			if (option.value === "delegate-registration") {
 				history.push(
 					generatePath(ProfilePaths.SendDelegateRegistration, {
@@ -129,10 +123,6 @@ export const useWalletActions = (wallet?: Contracts.IReadWriteWallet) => {
 						walletId: wallet.id(),
 					}),
 				);
-			}
-
-			if (option.value === "store-hash") {
-				history.push(generatePath(ProfilePaths.SendIpfs, { profileId: profile.id(), walletId: wallet.id() }));
 			}
 
 			if (option.value === "open-explorer") {
@@ -168,22 +158,8 @@ export const useWalletActions = (wallet?: Contracts.IReadWriteWallet) => {
 		[history, profile, stopEventBubbling],
 	);
 
-	const handleConfirmEncryptionWarning = useCallback(
-		(event?: React.MouseEvent<HTMLElement>) => {
-			if (!wallet) {
-				return;
-			}
-			stopEventBubbling(event);
-			history.push(
-				generatePath(ProfilePaths.SendSecondSignature, { profileId: profile.id(), walletId: wallet.id() }),
-			);
-		},
-		[history, profile, wallet, stopEventBubbling],
-	);
-
 	return {
 		activeModal,
-		handleConfirmEncryptionWarning,
 		handleCreate,
 		handleDelete,
 		handleImport,

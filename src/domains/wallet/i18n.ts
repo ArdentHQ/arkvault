@@ -206,7 +206,6 @@ export const translations = {
 			RECEIVE_FUNDS_QR: "QR",
 			REGISTER_DELEGATE: "Delegate",
 			RESIGN_DELEGATE: "Resign Delegate",
-			SECOND_SIGNATURE: "Second Signature",
 			SIGN_MESSAGE: "Sign Message",
 			STORE_HASH: "Store Hash",
 			TRANSACTION_HISTORY: "Transaction History",
