@@ -1516,33 +1516,7 @@ exports[`Dashboard > should render 1`] = `
                                   class="css-1i4b0eq"
                                   height="20"
                                   width="20"
-                                >
-                                  <svg
-                                    id="second-signature"
-                                    viewBox="0 0 20 20"
-                                    x="0"
-                                    xml:space="preserve"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    y="0"
-                                  >
-                                    <g
-                                      fill="none"
-                                      stroke="currentColor"
-                                      stroke-linecap="round"
-                                      stroke-width="2"
-                                      transform="translate(482.484 177)"
-                                    >
-                                      <path
-                                        d="M-473.4-166.7l4.1 3.9-2.2 2.2 2.2 2.1 2.2-2.2 1 1 2.2-2.2-5.4-5.3"
-                                      />
-                                      <circle
-                                        cx="-476.5"
-                                        cy="-170.9"
-                                        r="5"
-                                      />
-                                    </g>
-                                  </svg>
-                                </div>
+                                />
                               </div>
                             </div>
                           </div>
@@ -2612,33 +2586,7 @@ exports[`Dashboard > should render 1`] = `
                                   class="css-1i4b0eq"
                                   height="20"
                                   width="20"
-                                >
-                                  <svg
-                                    id="second-signature"
-                                    viewBox="0 0 20 20"
-                                    x="0"
-                                    xml:space="preserve"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    y="0"
-                                  >
-                                    <g
-                                      fill="none"
-                                      stroke="currentColor"
-                                      stroke-linecap="round"
-                                      stroke-width="2"
-                                      transform="translate(482.484 177)"
-                                    >
-                                      <path
-                                        d="M-473.4-166.7l4.1 3.9-2.2 2.2 2.2 2.1 2.2-2.2 1 1 2.2-2.2-5.4-5.3"
-                                      />
-                                      <circle
-                                        cx="-476.5"
-                                        cy="-170.9"
-                                        r="5"
-                                      />
-                                    </g>
-                                  </svg>
-                                </div>
+                                />
                               </div>
                               <div
                                 class="inline-block p-1 text-theme-secondary-700 dark:text-theme-secondary-600"

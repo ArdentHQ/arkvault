@@ -4,13 +4,9 @@ import { useTranslation } from "react-i18next";
 import { useTransactionTypes } from "@/domains/transaction/hooks/use-transaction-types";
 import { DetailDivider, DetailLabelText, DetailWrapper } from "@/app/components/DetailWrapper";
 import { Label } from "@/app/components/Label";
-import { Clipboard } from "@/app/components/Clipboard";
-import { Icon } from "@/app/components/Icon";
-import { useTheme } from "@/app/hooks";
 import { DTO } from "@ardenthq/sdk-profiles";
 import { MusigGeneratedAddress } from "@/domains/transaction/components/TransactionDetail/MusigGeneratedAddress/MusigGeneratedAddress";
 import { transactionPublicKeys } from "@/domains/transaction/components/MultiSignatureDetail/MultiSignatureDetail.helpers";
-import { AddressLabel } from "@/app/components/Address";
 
 export const TransactionType = ({
 	transaction,
@@ -18,7 +14,6 @@ export const TransactionType = ({
 	transaction: DTO.ExtendedSignedTransactionData | DTO.ExtendedConfirmedTransactionData;
 }) => {
 	const { t } = useTranslation();
-	const { isDarkMode } = useTheme();
 
 	const { getLabel } = useTransactionTypes();
 
@@ -55,32 +50,6 @@ export const TransactionType = ({
 								<div className="font-semibold leading-5"> {transaction.wallet().username()} </div>
 							</div>
 						</>
-					)}
-
-					{transaction.isIpfs() && (
-						<div data-testid="DetailIpfs">
-							<DetailDivider />
-
-							<div className="flex w-full justify-between sm:justify-start">
-								<DetailLabelText>{t("COMMON.HASH")}</DetailLabelText>
-								<div className="flex w-full space-x-2">
-									<div className="text-base font-semibold leading-5">
-										<AddressLabel>{transaction.hash()}</AddressLabel>
-									</div>
-									<Clipboard
-										variant="icon"
-										data={transaction.hash()}
-										tooltip={t("COMMON.COPY_IPFS")}
-										tooltipDarkTheme={isDarkMode}
-									>
-										<Icon
-											name="Copy"
-											className="text-theme-primary-400 dark:text-theme-secondary-700 dark:hover:text-theme-secondary-500"
-										/>
-									</Clipboard>
-								</div>
-							</div>
-						</div>
 					)}
 
 					{transaction.isMultiSignatureRegistration() && (

@@ -130,7 +130,7 @@ export const TransactionRowAddressing = ({
 		);
 	}
 
-	if (transaction.isMultiSignatureRegistration() || transaction.isIpfs()) {
+	if (transaction.isMultiSignatureRegistration()) {
 		return (
 			<div className="flex flex-row gap-2" data-testid="TransactionRowAddressing__musig_registration">
 				<TransactionRowLabel direction={direction} />

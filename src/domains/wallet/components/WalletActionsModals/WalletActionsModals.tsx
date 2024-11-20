@@ -5,7 +5,6 @@ import { DeleteWallet } from "@/domains/wallet/components/DeleteWallet";
 import { ReceiveFunds } from "@/domains/wallet/components/ReceiveFunds";
 import { UpdateWalletName } from "@/domains/wallet/components/UpdateWalletName";
 import { WalletActionsProperties } from "@/domains/wallet/components/WalletActionsModals/WalletActionsModals.contracts";
-import { WalletEncryptionWarning } from "@/domains/wallet/components/WalletEncryptionWarning";
 import { useWalletActions } from "@/domains/wallet/hooks/use-wallet-actions";
 import { TransactionExportModal } from "@/domains/transaction/components/TransactionExportModal";
 
@@ -17,7 +16,7 @@ export const WalletActionsModals: VFC<WalletActionsProperties> = ({
 }) => {
 	const profile = useActiveProfile();
 	const { getWalletAlias } = useWalletAlias();
-	const { handleDelete, handleConfirmEncryptionWarning } = useWalletActions(wallet);
+	const { handleDelete } = useWalletActions(wallet);
 
 	const hideActiveModal = useCallback(
 		(event?: React.MouseEvent<HTMLElement>) => {
@@ -72,14 +71,6 @@ export const WalletActionsModals: VFC<WalletActionsProperties> = ({
 						}
 					}}
 					wallet={wallet}
-				/>
-			)}
-
-			{activeModal === "second-signature" && (
-				<WalletEncryptionWarning
-					importType={wallet.actsWithMnemonicWithEncryption() ? "mnemonic" : "secret"}
-					onCancel={hideActiveModal}
-					onConfirm={handleConfirmEncryptionWarning}
 				/>
 			)}
 

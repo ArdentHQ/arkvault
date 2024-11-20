@@ -28,10 +28,8 @@ describe("useTransactionTypes", () => {
 		expect(result.current.types.core).toStrictEqual([
 			"delegateRegistration",
 			"delegateResignation",
-			"ipfs",
 			"multiPayment",
 			"multiSignature",
-			"secondSignature",
 			"transfer",
 			"vote",
 		]);

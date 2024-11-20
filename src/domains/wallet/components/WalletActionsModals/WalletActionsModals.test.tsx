@@ -95,52 +95,6 @@ describe("WalletActionsModals", () => {
 		expect(asFragment).toMatchSnapshot();
 	});
 
-	it("should render `second-signature` modal", async () => {
-		const { asFragment } = render(
-			<Route path="/profiles/:profileId/dashboard">
-				<WalletActionsModals
-					wallet={mainnetWallet}
-					activeModal={"second-signature"}
-					setActiveModal={setActiveModal}
-				/>
-			</Route>,
-			{
-				history,
-			},
-		);
-
-		expect(screen.getByTestId("WalletEncryptionWarning__submit-button")).toBeInTheDocument();
-		await expect(screen.findByTestId("WalletEncryptionWarning__submit-button")).resolves.toBeInTheDocument();
-
-		expect(asFragment).toMatchSnapshot();
-	});
-
-	it("should render `second-signature` modal with mnemonic encryption wallet", async () => {
-		const walletWithEncryptionMock = vi
-			.spyOn(mainnetWallet, "actsWithMnemonicWithEncryption")
-			.mockReturnValue(true);
-
-		const { asFragment } = render(
-			<Route path="/profiles/:profileId/dashboard">
-				<WalletActionsModals
-					wallet={mainnetWallet}
-					activeModal={"second-signature"}
-					setActiveModal={setActiveModal}
-				/>
-			</Route>,
-			{
-				history,
-			},
-		);
-
-		expect(screen.getByTestId("WalletEncryptionWarning__submit-button")).toBeInTheDocument();
-		await expect(screen.findByTestId("WalletEncryptionWarning__submit-button")).resolves.toBeInTheDocument();
-
-		expect(asFragment).toMatchSnapshot();
-
-		walletWithEncryptionMock.mockRestore();
-	});
-
 	it("should render `unlockable-balances` modal", async () => {
 		const { asFragment } = render(
 			<Route path="/profiles/:profileId/dashboard">

@@ -93,15 +93,8 @@ export const translations = {
 		ADVANCED: "Advanced",
 		SIMPLE: "Simple",
 	},
-	INPUT_IPFS_HASH: {
-		VALIDATION: {
-			NOT_VALID: "The IPFS hash is not valid",
-		},
-	},
 	INVALID_MNEMONIC: "Invalid Mnemonic",
 	INVALID_URL: "Invalid URL",
-	IPFS_HASH: "IPFS Hash",
-	IPFS_NOT_FOUND: "Unable to find ipfs data for transaction [{{transactionId}}]",
 	LEDGER_CONFIRMATION: {
 		DESCRIPTION:
 			"Please review and verify the information on your Ledger device. Choose Accept to complete your transaction.",
@@ -151,9 +144,6 @@ export const translations = {
 		DO_NOT_WARN: "Don’t warn me about fees again",
 		TITLE: "Fee Warning",
 	},
-	MODAL_IPFS_DETAIL: {
-		TITLE: "Transaction IPFS Hash",
-	},
 	MODAL_MULTISIGNATURE_DETAIL: {
 		STEP_1: {
 			TITLE: "Multisignature",
@@ -190,9 +180,6 @@ export const translations = {
 		DESCRIPTION: "Locate and select the recipient address.",
 		SEARCH_PLACEHOLDER: "Enter name or address",
 		TITLE: "Recipient Search",
-	},
-	MODAL_SECOND_SIGNATURE_DETAIL: {
-		TITLE: "Second Signature",
 	},
 	MODAL_TRANSACTION_DETAILS: {
 		TITLE: "Transaction Details",
@@ -242,41 +229,24 @@ export const translations = {
 	NO_FILTERS_SELECTED:
 		"All filtering options have been deselected. Please select one or more options to display transactions.",
 	OUTGOING: "Outgoing",
-	PAGE_IPFS: {
-		FIRST_STEP: {
-			DESCRIPTION: "Store an IPFS hash on the network.",
-			TITLE: "IPFS",
+	PAGE_DELEGATE_REGISTRATION: {
+		FORM_STEP: {
+			DESCRIPTION: "Register a new Delegate address on the network below.",
+			TITLE: "Register Delegate",
+			WARNING: "The Delegate name is permanent and cannot be modified later. It is registered on the network.",
 		},
-		SECOND_STEP: {
-			DESCRIPTION: "Review details below to send your transaction.",
-			TITLE: "Transaction Review",
+	},
+	PAGE_DELEGATE_RESIGNATION: {
+		FORM_STEP: {
+			DESCRIPTION: "This transaction type permanently retires a Delegate address.",
+			TITLE: "Resign Delegate",
+			WARNING: "This action is permanent and cannot be undone. It is registered on the network.",
 		},
 	},
 	PAGE_MULTISIGNATURE: {
 		FORM_STEP: {
 			DESCRIPTION: "Register Multisignature details below.",
 			TITLE: "Multisignature Registration",
-		},
-	},
-	PAGE_SECOND_SIGNATURE: {
-		GENERATION_STEP: {
-			DESCRIPTION: "You can additionaly secure your address with a second mnemonic passphrase.",
-			TITLE: "Register Second Signature",
-			WARNING:
-				"Before creating the second mnemonic, we strongly recommend that you save it, as its loss will lead to a loss of access to your money.",
-		},
-		PASSPHRASE_CONFIRMATION_STEP: {
-			SUBTITLE: "Confirm your mnemonic passphrase to continue.",
-			TITLE: "Confirm Your Passphrase",
-		},
-		PASSPHRASE_STEP: {
-			COPY_OR_DOWNLOAD: {
-				DESCRIPTION: "You can copy or download your mnemonic, but store it safely.",
-				TITLE: "Copy or Download Mnemonic Passphrase",
-			},
-			TITLE: "Your Second Signature",
-			WARNING:
-				"You are responsible for storing and protecting this mnemonic passphrase offline. ARK Vault cannot reveal this to you at a later time. If you lose this mnemonic passphrase, you will lose your funds.",
 		},
 	},
 	PAGE_TRANSACTION_SEND: {
@@ -380,11 +350,9 @@ export const translations = {
 		HTLC_CLAIM: "Timelock Claim",
 		HTLC_LOCK: "Timelock",
 		HTLC_REFUND: "Timelock Refund",
-		IPFS: "IPFS",
 		MAGISTRATE: "Magistrate",
 		MULTI_PAYMENT: "Multipayment",
 		MULTI_SIGNATURE: "Multisignature",
-		SECOND_SIGNATURE: "2nd Signature",
 		TRANSFER: "Transfer",
 		UNLOCK_TOKEN: "Unlock Balance",
 		UNVOTE: "Unvote",
