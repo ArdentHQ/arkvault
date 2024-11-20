@@ -138,7 +138,7 @@ exports[`DelegateRegistrationForm > should render form step 1`] = `
             <label
               class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
               data-testid="FormLabel"
-              for="publicKey"
+              for="validatorPublicKey"
             >
               Validator Public Key
             </label>
@@ -152,7 +152,7 @@ exports[`DelegateRegistrationForm > should render form step 1`] = `
                   autocomplete="off"
                   class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
                   data-testid="Input__validator_public_key"
-                  name="publicKey"
+                  name="validatorPublicKey"
                   type="text"
                   value=""
                 />
@@ -733,7 +733,7 @@ exports[`DelegateRegistrationForm > should set fee 1`] = `
             <label
               class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
               data-testid="FormLabel"
-              for="publicKey"
+              for="validatorPublicKey"
             >
               Validator Public Key
             </label>
@@ -747,7 +747,7 @@ exports[`DelegateRegistrationForm > should set fee 1`] = `
                   autocomplete="off"
                   class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
                   data-testid="Input__validator_public_key"
-                  name="publicKey"
+                  name="validatorPublicKey"
                   type="text"
                   value=""
                 />

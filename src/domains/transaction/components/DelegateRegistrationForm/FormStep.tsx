@@ -47,7 +47,7 @@ export const FormStep: React.FC<FormStepProperties> = ({ wallet, profile }: Form
 			</div>
 
 			<div className="mt-3 space-y-4 sm:mt-4">
-				<FormField name="publicKey">
+				<FormField name="validatorPublicKey">
 					<FormLabel label={t("TRANSACTION.VALIDATOR_PUBLIC_KEY")} />
 					<InputDefault
 						data-testid="Input__validator_public_key"
