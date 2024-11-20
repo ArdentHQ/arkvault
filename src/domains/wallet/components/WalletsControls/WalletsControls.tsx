@@ -38,7 +38,7 @@ export const WalletsControls = React.memo(
 
 		const hasAnyLedgerNetwork = hasNetworksWithLedgerSupport(profile);
 
-		const ledgetSupportTooltip = (): string => {
+		const ledgerSupportTooltip = (): string => {
 			if (!isLedgerTransportSupported()) {
 				return t("COMMON.LEDGER_COMPATIBILITY_ERROR");
 			}
