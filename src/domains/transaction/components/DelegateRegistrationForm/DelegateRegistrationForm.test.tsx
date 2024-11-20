@@ -221,7 +221,9 @@ describe("DelegateRegistrationForm", () => {
 		);
 
 		expect(screen.getByText("TRANSACTION.VALIDATOR_PUBLIC_KEY")).toBeInTheDocument();
-		expect(screen.getByText("02147bf63839be7abb44707619b012a8b59ad3eda90be1c6e04eb9c630232268de")).toBeInTheDocument();
+		expect(
+			screen.getByText("02147bf63839be7abb44707619b012a8b59ad3eda90be1c6e04eb9c630232268de"),
+		).toBeInTheDocument();
 	});
 
 	it("should sign transaction using password encryption", async () => {
