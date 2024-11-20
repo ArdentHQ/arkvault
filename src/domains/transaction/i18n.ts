@@ -229,20 +229,6 @@ export const translations = {
 	NO_FILTERS_SELECTED:
 		"All filtering options have been deselected. Please select one or more options to display transactions.",
 	OUTGOING: "Outgoing",
-	PAGE_DELEGATE_REGISTRATION: {
-		FORM_STEP: {
-			DESCRIPTION: "Register a new Delegate address on the network below.",
-			TITLE: "Register Delegate",
-			WARNING: "The Delegate name is permanent and cannot be modified later. It is registered on the network.",
-		},
-	},
-	PAGE_DELEGATE_RESIGNATION: {
-		FORM_STEP: {
-			DESCRIPTION: "This transaction type permanently retires a Delegate address.",
-			TITLE: "Resign Delegate",
-			WARNING: "This action is permanent and cannot be undone. It is registered on the network.",
-		},
-	},
 	PAGE_MULTISIGNATURE: {
 		FORM_STEP: {
 			DESCRIPTION: "Register Multisignature details below.",
