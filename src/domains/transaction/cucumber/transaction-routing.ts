@@ -64,7 +64,8 @@ cucumber(
 		"Then she is on the delegate resignation page": async (t: TestController) => {
 			await t
 				.expect(
-					Selector("div").withText(translations.TRANSACTION.PAGE_DELEGATE_RESIGNATION.FORM_STEP.TITLE).exists,
+					Selector("div").withText(translations.TRANSACTION.PAGE_VALIDATOR_RESIGNATION.FORM_STEP.TITLE)
+						.exists,
 				)
 				.ok();
 		},
