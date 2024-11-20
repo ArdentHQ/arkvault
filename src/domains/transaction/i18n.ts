@@ -26,9 +26,6 @@ export const translations = {
 	},
 	CORE: "CORE",
 	CRYPTOASSET: "Cryptoasset",
-	DELEGATE: "Delegate",
-	DELEGATE_NAME: "Delegate Name",
-	DELEGATE_PUBLICKEY: "Delegate PublicKey",
 	DESCRIPTION: "Description",
 	DISPLAY_NAME: "Display Name",
 	ENCRYPTION_PASSWORD: "Encryption Password",
@@ -144,12 +141,6 @@ export const translations = {
 			"You have unconfirmed transactions which will affect your balance when confirmed. Are you sure you wish to continue?",
 		TITLE: "Confirm Transaction",
 	},
-	MODAL_DELEGATE_REGISTRATION_DETAIL: {
-		TITLE: "Delegate Registration",
-	},
-	MODAL_DELEGATE_RESIGNATION_DETAIL: {
-		TITLE: "Delegate Resignation",
-	},
 	MODAL_FEE_WARNING: {
 		DESCRIPTION: {
 			TOO_HIGH:
@@ -209,9 +200,6 @@ export const translations = {
 	MODAL_TRANSFER_DETAIL: {
 		TITLE: "Transfer",
 	},
-	MODAL_VOTE_DETAIL: {
-		TITLE: "Delegate Vote",
-	},
 	MULTIPLE: "Multiple",
 	MULTIPLE_COUNT: "Multiple ({{count}})",
 	MULTISIGNATURE: {
@@ -254,20 +242,6 @@ export const translations = {
 	NO_FILTERS_SELECTED:
 		"All filtering options have been deselected. Please select one or more options to display transactions.",
 	OUTGOING: "Outgoing",
-	PAGE_DELEGATE_REGISTRATION: {
-		FORM_STEP: {
-			DESCRIPTION: "Register a new Delegate address on the network below.",
-			TITLE: "Register Delegate",
-			WARNING: "The Delegate name is permanent and cannot be modified later. It is registered on the network.",
-		},
-	},
-	PAGE_DELEGATE_RESIGNATION: {
-		FORM_STEP: {
-			DESCRIPTION: "This transaction type permanently retires a Delegate address.",
-			TITLE: "Resign Delegate",
-			WARNING: "This action is permanent and cannot be undone. It is registered on the network.",
-		},
-	},
 	PAGE_IPFS: {
 		FIRST_STEP: {
 			DESCRIPTION: "Store an IPFS hash on the network.",
@@ -317,6 +291,20 @@ export const translations = {
 		NETWORK_STEP: {
 			SUBTITLE: "Select a cryptoasset to send funds from.",
 			TITLE: "Select a Cryptoasset",
+		},
+	},
+	PAGE_VALIDATOR_REGISTRATION: {
+		FORM_STEP: {
+			DESCRIPTION: "Register a new Validator address on the network below.",
+			TITLE: "Register Validator",
+			WARNING: "The Validator name is permanent and cannot be modified later. It is registered on the network.",
+		},
+	},
+	PAGE_VALIDATOR_RESIGNATION: {
+		FORM_STEP: {
+			DESCRIPTION: "This transaction type permanently retires a Validator address.",
+			TITLE: "Resign Validator",
+			WARNING: "This action is permanent and cannot be undone. It is registered on the network.",
 		},
 	},
 	PAGE_VOTE: {
@@ -389,8 +377,6 @@ export const translations = {
 	TRANSACTION_SIGNED: "Transaction Signed",
 	TRANSACTION_TYPE: "Transaction Type",
 	TRANSACTION_TYPES: {
-		DELEGATE_REGISTRATION: "Registration",
-		DELEGATE_RESIGNATION: "Resignation",
 		HTLC_CLAIM: "Timelock Claim",
 		HTLC_LOCK: "Timelock",
 		HTLC_REFUND: "Timelock Refund",
@@ -402,6 +388,8 @@ export const translations = {
 		TRANSFER: "Transfer",
 		UNLOCK_TOKEN: "Unlock Balance",
 		UNVOTE: "Unvote",
+		VALIDATOR_REGISTRATION: "Registration",
+		VALIDATOR_RESIGNATION: "Resignation",
 		VOTE: "Vote",
 		VOTE_COMBINATION: "Vote Swap",
 	},
@@ -463,6 +451,8 @@ export const translations = {
 			"both validator name and public key were provided in url. Please use either one or the other.",
 		VALIDATOR_RESIGNED: "validator <strong>{{validator}}</strong> is resigned.",
 	},
+	VALIDATOR: "Validator",
+	VALIDATOR_NAME: "Validator Name",
 	VIEW_RECIPIENTS_LIST: "View Full List",
 	VOTER: "Voter",
 	VOTES: "Votes",
