@@ -26,11 +26,11 @@ export const VoteAmount = ({ t, wallet, remainingBalance, amountVoted }: VoteAmo
 			required: t("COMMON.VALIDATION.FIELD_REQUIRED", {
 				field: t("COMMON.AMOUNT"),
 			}),
-			votesAmountMinimum: t("VOTE.DELEGATE_TABLE.VOTE_AMOUNT.VALIDATION.MINIMUM_AMOUNT", {
+			votesAmountMinimum: t("VOTE.VALIDATOR_TABLE.VOTE_AMOUNT.VALIDATION.MINIMUM_AMOUNT", {
 				coinId: wallet.network().coin(),
 				minimumAmount: votesAmountMinimum,
 			}),
-			votesAmountStep: t("VOTE.DELEGATE_TABLE.VOTE_AMOUNT.VALIDATION.AMOUNT_STEP", {
+			votesAmountStep: t("VOTE.VALIDATOR_TABLE.VOTE_AMOUNT.VALIDATION.AMOUNT_STEP", {
 				coinId: wallet.network().coin(),
 				step: votesAmountStep,
 			}),

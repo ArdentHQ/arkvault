@@ -94,7 +94,7 @@ describe("DelegateFooter", () => {
 
 		expect(
 			screen.getByText(
-				translations.VOTE.DELEGATE_TABLE.VOTE_AMOUNT.AVAILABLE_TO_VOTE.replace("{{percent}}", "50"),
+				translations.VOTE.VALIDATOR_TABLE.VOTE_AMOUNT.AVAILABLE_TO_VOTE.replace("{{percent}}", "50"),
 			),
 		).toBeInTheDocument();
 
@@ -126,7 +126,7 @@ describe("DelegateFooter", () => {
 
 		await userEvent.hover(screen.getByTestId("DelegateTable__continue--wrapper"));
 
-		expect(baseElement).toHaveTextContent(voteTranslations.DELEGATE_TABLE.TOOLTIP.SELECTED_DELEGATE);
+		expect(baseElement).toHaveTextContent(voteTranslations.VALIDATOR_TABLE.TOOLTIP.SELECTED_VALIDATOR);
 
 		rerender(
 			<DelegateFooter
@@ -154,7 +154,7 @@ describe("DelegateFooter", () => {
 
 		await userEvent.hover(screen.getByTestId("DelegateTable__continue--wrapper"));
 
-		expect(baseElement).not.toHaveTextContent(voteTranslations.DELEGATE_TABLE.TOOLTIP.SELECTED_DELEGATE);
+		expect(baseElement).not.toHaveTextContent(voteTranslations.VALIDATOR_TABLE.TOOLTIP.SELECTED_VALIDATOR);
 	});
 
 	it("should disable continue button with tooltip if there is at least 1 empty amount field when network requires vote amount", async () => {
@@ -182,7 +182,7 @@ describe("DelegateFooter", () => {
 
 		await userEvent.hover(screen.getByTestId("DelegateTable__continue--wrapper"));
 
-		expect(baseElement).toHaveTextContent(voteTranslations.DELEGATE_TABLE.TOOLTIP.INVALID_AMOUNT);
+		expect(baseElement).toHaveTextContent(voteTranslations.VALIDATOR_TABLE.TOOLTIP.INVALID_AMOUNT);
 
 		rerender(
 			<DelegateFooter
