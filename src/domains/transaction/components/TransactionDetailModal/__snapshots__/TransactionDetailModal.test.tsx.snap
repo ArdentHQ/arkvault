@@ -458,7 +458,7 @@ exports[`TransactionDetailModal > should render a ipfs modal 1`] = `
                           class="space-y-3 sm:space-y-0"
                         >
                           <div
-                            class="flex w-full justify-between sm:justify-start"
+                            class="flex w-full items-center justify-between sm:justify-start"
                           >
                             <div
                               class="no-ligatures font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-sm leading-[17px] sm:text-base sm:leading-5 min-w-24"
@@ -467,7 +467,7 @@ exports[`TransactionDetailModal > should render a ipfs modal 1`] = `
                               Amount
                             </div>
                             <div
-                              class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
+                              class="flex items-center justify-center px-1.5 rounded dark:border h-auto css-xqt0aw"
                               color="danger-bg"
                               data-testid="AmountLabel__wrapper"
                             >
@@ -475,10 +475,10 @@ exports[`TransactionDetailModal > should render a ipfs modal 1`] = `
                                 class="flex h-full items-center space-x-1"
                               >
                                 <span
-                                  class="whitespace-nowrap text-sm leading-[17px] sm:text-base sm:leading-5"
+                                  class="whitespace-nowrap text-base"
                                   data-testid="Amount"
                                 >
-                                  - 100 DARK
+                                  - 121 DARK
                                 </span>
                               </div>
                             </div>
@@ -624,7 +624,7 @@ exports[`TransactionDetailModal > should render a ipfs modal 1`] = `
                               class="ring-focus group/inner inline-block h-5 text-sm leading-[17px] sm:text-base sm:leading-5 css-167zzsv"
                               data-ring-focus-margin="-m-1"
                               data-testid="Link"
-                              href="https://live.arkscan.io/blocks/71fd1a494ded5430586f4dd1c79c3ac77bf38120e868c8f8980972b8075d67e9"
+                              href="https://test.arkscan.io/blocks/71fd1a494ded5430586f4dd1c79c3ac77bf38120e868c8f8980972b8075d67e9"
                               rel="noopener noreferrer"
                             >
                               <span
@@ -677,11 +677,11 @@ exports[`TransactionDetailModal > should render a ipfs modal 1`] = `
                             >
                               Nonce
                             </div>
-                            <p
-                              class="text-sm leading-[17px] text-theme-secondary-500 sm:text-base sm:leading-5"
+                            <div
+                              class="text-sm font-semibold leading-[17px] sm:text-base sm:leading-5"
                             >
-                              N/A
-                            </p>
+                              1
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -1186,7 +1186,7 @@ exports[`TransactionDetailModal > should render a magistrate modal 1`] = `
                           class="space-y-3 sm:space-y-0"
                         >
                           <div
-                            class="flex w-full justify-between sm:justify-start"
+                            class="flex w-full items-center justify-between sm:justify-start"
                           >
                             <div
                               class="no-ligatures font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-sm leading-[17px] sm:text-base sm:leading-5 min-w-24"
@@ -1195,7 +1195,7 @@ exports[`TransactionDetailModal > should render a magistrate modal 1`] = `
                               Amount
                             </div>
                             <div
-                              class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
+                              class="flex items-center justify-center px-1.5 rounded dark:border h-auto css-xqt0aw"
                               color="danger-bg"
                               data-testid="AmountLabel__wrapper"
                             >
@@ -1203,10 +1203,10 @@ exports[`TransactionDetailModal > should render a magistrate modal 1`] = `
                                 class="flex h-full items-center space-x-1"
                               >
                                 <span
-                                  class="whitespace-nowrap text-sm leading-[17px] sm:text-base sm:leading-5"
+                                  class="whitespace-nowrap text-base"
                                   data-testid="Amount"
                                 >
-                                  - 100 DARK
+                                  - 121 DARK
                                 </span>
                               </div>
                             </div>
@@ -1352,7 +1352,7 @@ exports[`TransactionDetailModal > should render a magistrate modal 1`] = `
                               class="ring-focus group/inner inline-block h-5 text-sm leading-[17px] sm:text-base sm:leading-5 css-167zzsv"
                               data-ring-focus-margin="-m-1"
                               data-testid="Link"
-                              href="https://live.arkscan.io/blocks/71fd1a494ded5430586f4dd1c79c3ac77bf38120e868c8f8980972b8075d67e9"
+                              href="https://test.arkscan.io/blocks/as32d1as65d1as3d1as32d1asd51as3d21as3d2as165das"
                               rel="noopener noreferrer"
                             >
                               <span
@@ -1405,11 +1405,11 @@ exports[`TransactionDetailModal > should render a magistrate modal 1`] = `
                             >
                               Nonce
                             </div>
-                            <p
-                              class="text-sm leading-[17px] text-theme-secondary-500 sm:text-base sm:leading-5"
+                            <div
+                              class="text-sm font-semibold leading-[17px] sm:text-base sm:leading-5"
                             >
-                              N/A
-                            </p>
+                              1
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -1996,7 +1996,7 @@ exports[`TransactionDetailModal > should render a multi payment modal 1`] = `
                           class="space-y-3 sm:space-y-0"
                         >
                           <div
-                            class="flex w-full justify-between sm:justify-start"
+                            class="flex w-full items-center justify-between sm:justify-start"
                           >
                             <div
                               class="no-ligatures font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-sm leading-[17px] sm:text-base sm:leading-5 min-w-24"
@@ -2005,18 +2005,52 @@ exports[`TransactionDetailModal > should render a multi payment modal 1`] = `
                               Amount
                             </div>
                             <div
-                              class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
+                              class="flex items-center justify-center pr-1.5 rounded dark:border h-auto css-xqt0aw"
                               color="danger-bg"
                               data-testid="AmountLabel__wrapper"
                             >
                               <div
                                 class="flex h-full items-center space-x-1"
                               >
+                                <div
+                                  class="flex items-center justify-center bg-theme-danger-info-border text-theme-danger-info-text dark:text-white/70 w-5 self-stretch"
+                                  data-testid="AmountLabel__hint"
+                                >
+                                  <div
+                                    class="dark:text-white css-15txs7d"
+                                    height="10"
+                                    width="10"
+                                  >
+                                    <svg
+                                      id="hint-small"
+                                      viewBox="0 0 10 10"
+                                      x="0"
+                                      xml:space="preserve"
+                                      xmlns="http://www.w3.org/2000/svg"
+                                      y="0"
+                                    >
+                                      <path
+                                        d="M7 9H5.503A.503.503 0 0 1 5 8.497V4.503A.503.503 0 0 0 4.497 4H3.5"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="2"
+                                      />
+                                      <circle
+                                        cx="4.5"
+                                        cy="1"
+                                        fill="currentColor"
+                                        r="1"
+                                      />
+                                    </svg>
+                                  </div>
+                                </div>
                                 <span
-                                  class="whitespace-nowrap text-sm leading-[17px] sm:text-base sm:leading-5"
+                                  class="whitespace-nowrap text-base"
                                   data-testid="Amount"
                                 >
-                                  - 100 DARK
+                                  - 119 DARK
                                 </span>
                               </div>
                             </div>
@@ -2162,7 +2196,7 @@ exports[`TransactionDetailModal > should render a multi payment modal 1`] = `
                               class="ring-focus group/inner inline-block h-5 text-sm leading-[17px] sm:text-base sm:leading-5 css-167zzsv"
                               data-ring-focus-margin="-m-1"
                               data-testid="Link"
-                              href="https://live.arkscan.io/blocks/71fd1a494ded5430586f4dd1c79c3ac77bf38120e868c8f8980972b8075d67e9"
+                              href="https://test.arkscan.io/blocks/as32d1as65d1as3d1as32d1asd51as3d21as3d2as165das"
                               rel="noopener noreferrer"
                             >
                               <span
@@ -2215,11 +2249,11 @@ exports[`TransactionDetailModal > should render a multi payment modal 1`] = `
                             >
                               Nonce
                             </div>
-                            <p
-                              class="text-sm leading-[17px] text-theme-secondary-500 sm:text-base sm:leading-5"
+                            <div
+                              class="text-sm font-semibold leading-[17px] sm:text-base sm:leading-5"
                             >
-                              N/A
-                            </p>
+                              1
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -2919,7 +2953,7 @@ exports[`TransactionDetailModal > should render a multi signature modal 1`] = `
                           class="space-y-3 sm:space-y-0"
                         >
                           <div
-                            class="flex w-full justify-between sm:justify-start"
+                            class="flex w-full items-center justify-between sm:justify-start"
                           >
                             <div
                               class="no-ligatures font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-sm leading-[17px] sm:text-base sm:leading-5 min-w-24"
@@ -2928,7 +2962,7 @@ exports[`TransactionDetailModal > should render a multi signature modal 1`] = `
                               Amount
                             </div>
                             <div
-                              class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
+                              class="flex items-center justify-center px-1.5 rounded dark:border h-auto css-xqt0aw"
                               color="danger-bg"
                               data-testid="AmountLabel__wrapper"
                             >
@@ -2936,10 +2970,10 @@ exports[`TransactionDetailModal > should render a multi signature modal 1`] = `
                                 class="flex h-full items-center space-x-1"
                               >
                                 <span
-                                  class="whitespace-nowrap text-sm leading-[17px] sm:text-base sm:leading-5"
+                                  class="whitespace-nowrap text-base"
                                   data-testid="Amount"
                                 >
-                                  - 100 DARK
+                                  - 121 DARK
                                 </span>
                               </div>
                             </div>
@@ -3085,7 +3119,7 @@ exports[`TransactionDetailModal > should render a multi signature modal 1`] = `
                               class="ring-focus group/inner inline-block h-5 text-sm leading-[17px] sm:text-base sm:leading-5 css-167zzsv"
                               data-ring-focus-margin="-m-1"
                               data-testid="Link"
-                              href="https://live.arkscan.io/blocks/71fd1a494ded5430586f4dd1c79c3ac77bf38120e868c8f8980972b8075d67e9"
+                              href="https://test.arkscan.io/blocks/as32d1as65d1as3d1as32d1asd51as3d21as3d2as165das"
                               rel="noopener noreferrer"
                             >
                               <span
@@ -3138,11 +3172,11 @@ exports[`TransactionDetailModal > should render a multi signature modal 1`] = `
                             >
                               Nonce
                             </div>
-                            <p
-                              class="text-sm leading-[17px] text-theme-secondary-500 sm:text-base sm:leading-5"
+                            <div
+                              class="text-sm font-semibold leading-[17px] sm:text-base sm:leading-5"
                             >
-                              N/A
-                            </p>
+                              1
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -3927,7 +3961,7 @@ exports[`TransactionDetailModal > should render a transfer modal 1`] = `
                           class="space-y-3 sm:space-y-0"
                         >
                           <div
-                            class="flex w-full justify-between sm:justify-start"
+                            class="flex w-full items-center justify-between sm:justify-start"
                           >
                             <div
                               class="no-ligatures font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-sm leading-[17px] sm:text-base sm:leading-5 min-w-24"
@@ -3936,7 +3970,7 @@ exports[`TransactionDetailModal > should render a transfer modal 1`] = `
                               Amount
                             </div>
                             <div
-                              class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
+                              class="flex items-center justify-center px-1.5 rounded dark:border h-auto css-xqt0aw"
                               color="danger-bg"
                               data-testid="AmountLabel__wrapper"
                             >
@@ -3944,10 +3978,10 @@ exports[`TransactionDetailModal > should render a transfer modal 1`] = `
                                 class="flex h-full items-center space-x-1"
                               >
                                 <span
-                                  class="whitespace-nowrap text-sm leading-[17px] sm:text-base sm:leading-5"
+                                  class="whitespace-nowrap text-base"
                                   data-testid="Amount"
                                 >
-                                  - 100 DARK
+                                  - 121 DARK
                                 </span>
                               </div>
                             </div>
@@ -4093,7 +4127,7 @@ exports[`TransactionDetailModal > should render a transfer modal 1`] = `
                               class="ring-focus group/inner inline-block h-5 text-sm leading-[17px] sm:text-base sm:leading-5 css-167zzsv"
                               data-ring-focus-margin="-m-1"
                               data-testid="Link"
-                              href="https://live.arkscan.io/blocks/71fd1a494ded5430586f4dd1c79c3ac77bf38120e868c8f8980972b8075d67e9"
+                              href="https://test.arkscan.io/blocks/as32d1as65d1as3d1as32d1asd51as3d21as3d2as165das"
                               rel="noopener noreferrer"
                             >
                               <span
@@ -4146,11 +4180,11 @@ exports[`TransactionDetailModal > should render a transfer modal 1`] = `
                             >
                               Nonce
                             </div>
-                            <p
-                              class="text-sm leading-[17px] text-theme-secondary-500 sm:text-base sm:leading-5"
+                            <div
+                              class="text-sm font-semibold leading-[17px] sm:text-base sm:leading-5"
                             >
-                              N/A
-                            </p>
+                              1
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -4729,7 +4763,7 @@ exports[`TransactionDetailModal > should render a transfer modal with memo 1`] =
                           class="space-y-3 sm:space-y-0"
                         >
                           <div
-                            class="flex w-full justify-between sm:justify-start"
+                            class="flex w-full items-center justify-between sm:justify-start"
                           >
                             <div
                               class="no-ligatures font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-sm leading-[17px] sm:text-base sm:leading-5 min-w-24"
@@ -4738,7 +4772,7 @@ exports[`TransactionDetailModal > should render a transfer modal with memo 1`] =
                               Amount
                             </div>
                             <div
-                              class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
+                              class="flex items-center justify-center px-1.5 rounded dark:border h-auto css-xqt0aw"
                               color="danger-bg"
                               data-testid="AmountLabel__wrapper"
                             >
@@ -4746,10 +4780,10 @@ exports[`TransactionDetailModal > should render a transfer modal with memo 1`] =
                                 class="flex h-full items-center space-x-1"
                               >
                                 <span
-                                  class="whitespace-nowrap text-sm leading-[17px] sm:text-base sm:leading-5"
+                                  class="whitespace-nowrap text-base"
                                   data-testid="Amount"
                                 >
-                                  - 100 DARK
+                                  - 121 DARK
                                 </span>
                               </div>
                             </div>
@@ -4895,7 +4929,7 @@ exports[`TransactionDetailModal > should render a transfer modal with memo 1`] =
                               class="ring-focus group/inner inline-block h-5 text-sm leading-[17px] sm:text-base sm:leading-5 css-167zzsv"
                               data-ring-focus-margin="-m-1"
                               data-testid="Link"
-                              href="https://live.arkscan.io/blocks/71fd1a494ded5430586f4dd1c79c3ac77bf38120e868c8f8980972b8075d67e9"
+                              href="https://test.arkscan.io/blocks/as32d1as65d1as3d1as32d1asd51as3d21as3d2as165das"
                               rel="noopener noreferrer"
                             >
                               <span
@@ -4948,11 +4982,11 @@ exports[`TransactionDetailModal > should render a transfer modal with memo 1`] =
                             >
                               Nonce
                             </div>
-                            <p
-                              class="text-sm leading-[17px] text-theme-secondary-500 sm:text-base sm:leading-5"
+                            <div
+                              class="text-sm font-semibold leading-[17px] sm:text-base sm:leading-5"
                             >
-                              N/A
-                            </p>
+                              1
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -5457,7 +5491,7 @@ exports[`TransactionDetailModal > should render an unlock tokens modal 1`] = `
                           class="space-y-3 sm:space-y-0"
                         >
                           <div
-                            class="flex w-full justify-between sm:justify-start"
+                            class="flex w-full items-center justify-between sm:justify-start"
                           >
                             <div
                               class="no-ligatures font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 text-sm leading-[17px] sm:text-base sm:leading-5 min-w-24"
@@ -5466,7 +5500,7 @@ exports[`TransactionDetailModal > should render an unlock tokens modal 1`] = `
                               Amount
                             </div>
                             <div
-                              class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
+                              class="flex items-center justify-center px-1.5 rounded dark:border h-auto css-xqt0aw"
                               color="danger-bg"
                               data-testid="AmountLabel__wrapper"
                             >
@@ -5474,10 +5508,10 @@ exports[`TransactionDetailModal > should render an unlock tokens modal 1`] = `
                                 class="flex h-full items-center space-x-1"
                               >
                                 <span
-                                  class="whitespace-nowrap text-sm leading-[17px] sm:text-base sm:leading-5"
+                                  class="whitespace-nowrap text-base"
                                   data-testid="Amount"
                                 >
-                                  - 100 DARK
+                                  - 121 DARK
                                 </span>
                               </div>
                             </div>
@@ -5623,7 +5657,7 @@ exports[`TransactionDetailModal > should render an unlock tokens modal 1`] = `
                               class="ring-focus group/inner inline-block h-5 text-sm leading-[17px] sm:text-base sm:leading-5 css-167zzsv"
                               data-ring-focus-margin="-m-1"
                               data-testid="Link"
-                              href="https://live.arkscan.io/blocks/71fd1a494ded5430586f4dd1c79c3ac77bf38120e868c8f8980972b8075d67e9"
+                              href="https://test.arkscan.io/blocks/71fd1a494ded5430586f4dd1c79c3ac77bf38120e868c8f8980972b8075d67e9"
                               rel="noopener noreferrer"
                             >
                               <span
@@ -5676,11 +5710,11 @@ exports[`TransactionDetailModal > should render an unlock tokens modal 1`] = `
                             >
                               Nonce
                             </div>
-                            <p
-                              class="text-sm leading-[17px] text-theme-secondary-500 sm:text-base sm:leading-5"
+                            <div
+                              class="text-sm font-semibold leading-[17px] sm:text-base sm:leading-5"
                             >
-                              N/A
-                            </p>
+                              1
+                            </div>
                           </div>
                         </div>
                       </div>

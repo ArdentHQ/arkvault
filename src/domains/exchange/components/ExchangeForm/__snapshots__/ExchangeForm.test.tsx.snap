@@ -13,7 +13,7 @@ exports[`ConfirmationStep > should render 1`] = `
     >
       <div
         class="css-bogjme"
-        data-testid="icon-CircleCompletedLight"
+        data-testid="icon-CircleCompletedLightGreen"
         height="32"
         width="32"
       >
@@ -26,13 +26,13 @@ exports[`ConfirmationStep > should render 1`] = `
             cx="16"
             cy="16"
             r="15"
-            stroke="#235B95"
+            stroke="#289548"
             stroke-width="2"
           />
           <path
             d="M21.1387 11.8135L15.1388 17.7218L12.339 14.963L10.3389 16.933L15.1388 21.6601L23.1389 13.7844L21.1387 11.8135Z"
-            fill="#E6EFF9"
-            stroke="#235B95"
+            fill="#E2F0E6"
+            stroke="#289548"
             stroke-linejoin="round"
             stroke-width="2"
           />
@@ -1061,7 +1061,7 @@ exports[`ExchangeForm > should render exchange form with id of finished order 1`
             >
               <div
                 class="css-bogjme"
-                data-testid="icon-CircleCompletedLight"
+                data-testid="icon-CircleCompletedLightGreen"
                 height="32"
                 width="32"
               >
@@ -1074,13 +1074,13 @@ exports[`ExchangeForm > should render exchange form with id of finished order 1`
                     cx="16"
                     cy="16"
                     r="15"
-                    stroke="#235B95"
+                    stroke="#289548"
                     stroke-width="2"
                   />
                   <path
                     d="M21.1387 11.8135L15.1388 17.7218L12.339 14.963L10.3389 16.933L15.1388 21.6601L23.1389 13.7844L21.1387 11.8135Z"
-                    fill="#E6EFF9"
-                    stroke="#235B95"
+                    fill="#E2F0E6"
+                    stroke="#289548"
                     stroke-linejoin="round"
                     stroke-width="2"
                   />

@@ -130,7 +130,13 @@ export const FormStep = ({
 			<StepHeader
 				title={t("TRANSACTION.PAGE_TRANSACTION_SEND.FORM_STEP.TITLE", { ticker: network?.ticker() })}
 				titleIcon={
-					<ThemeIcon dimensions={[24, 24]} lightIcon="SendTransactionLight" darkIcon="SendTransactionDark" />
+					<ThemeIcon
+						dimensions={[24, 24]}
+						lightIcon="SendTransactionLight"
+						darkIcon="SendTransactionDark"
+						greenDarkIcon="SendTransactionDarkGreen"
+						greenLightIcon="SendTransactionLightGreen"
+					/>
 				}
 				subtitle={t("TRANSACTION.PAGE_TRANSACTION_SEND.FORM_STEP.DESCRIPTION")}
 				extra={

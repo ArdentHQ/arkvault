@@ -79,7 +79,13 @@ export const FormStep = ({
 				title={t("MESSAGE.PAGE_VERIFY_MESSAGE.FORM_STEP.TITLE")}
 				subtitle={t("MESSAGE.PAGE_VERIFY_MESSAGE.FORM_STEP.DESCRIPTION")}
 				titleIcon={
-					<ThemeIcon dimensions={[24, 24]} lightIcon="SendTransactionLight" darkIcon="SendTransactionDark" />
+					<ThemeIcon
+						dimensions={[24, 24]}
+						lightIcon="SendTransactionLight"
+						darkIcon="SendTransactionDark"
+						greenDarkIcon="SendTransactionDarkGreen"
+						greenLightIcon="SendTransactionLightGreen"
+					/>
 				}
 			/>
 

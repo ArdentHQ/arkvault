@@ -38,6 +38,7 @@ import {
 } from "@/utils/testing-library";
 import { server, requestMock } from "@/tests/mocks/server";
 import * as useConfirmedTransactionMock from "@/domains/transaction/components/TransactionSuccessful/hooks/useConfirmedTransaction";
+import { BigNumber } from "@ardenthq/sdk-helpers";
 
 const passphrase = getDefaultWalletMnemonic();
 const fixtureProfileId = getDefaultProfileId();
@@ -50,7 +51,7 @@ vi.mock("@/utils/delay", () => ({
 const createTransactionMock = (wallet: Contracts.IReadWriteWallet) =>
 	vi.spyOn(wallet.transaction(), "transaction").mockReturnValue({
 		amount: () => +transactionFixture.data.amount / 1e8,
-		blockId: () => "1",
+		blockId: () => transactionFixture.data.blockId,
 		confirmations: () => 10,
 		convertedAmount: () => +transactionFixture.data.amount / 1e8,
 		data: () => ({ data: () => transactionFixture.data }),
@@ -64,18 +65,21 @@ const createTransactionMock = (wallet: Contracts.IReadWriteWallet) =>
 		isIpfs: () => false,
 		isMultiPayment: () => false,
 		isMultiSignatureRegistration: () => false,
+		isReturn: () => false,
 		isSent: () => true,
 		isTransfer: () => true,
 		isUnvote: () => false,
 		isVote: () => false,
 		isVoteCombination: () => false,
 		memo: () => null,
+		nonce: () => BigNumber.make(276),
 		recipient: () => transactionFixture.data.recipient,
 		recipients: () => [
 			{ address: transactionFixture.data.recipient, amount: +transactionFixture.data.amount / 1e8 },
 		],
 		sender: () => transactionFixture.data.sender,
 		timestamp: () => DateTime.make(),
+		total: () => +transactionFixture.data.amount / 1e8,
 		type: () => "transfer",
 		usesMultiSignature: () => false,
 		wallet: () => wallet,
@@ -1342,6 +1346,7 @@ describe("SendTransfer", () => {
 						convertedTotal: () => 0,
 						isConfirmed: () => false,
 						isMultiPayment: () => false,
+						isReturn: () => false,
 						isSent: () => true,
 						isTransfer: () => true,
 						isUnvote: () => false,
@@ -1357,6 +1362,7 @@ describe("SendTransfer", () => {
 						convertedTotal: () => 0,
 						isConfirmed: () => false,
 						isMultiPayment: () => true,
+						isReturn: () => false,
 						isSent: () => true,
 						isTransfer: () => false,
 						isUnvote: () => false,

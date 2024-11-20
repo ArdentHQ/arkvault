@@ -86,7 +86,13 @@ export const ConfirmationStep = ({ exchangeTransaction }: ConfirmationStepProper
 	return (
 		<div data-testid="ExchangeForm__confirmation-step" className="flex flex-col">
 			<div className="mx-auto mb-8 hidden items-center space-x-3 sm:flex">
-				<ThemeIcon lightIcon="CircleCompletedLight" darkIcon="CircleCompletedDark" dimensions={[32, 32]} />
+				<ThemeIcon
+					lightIcon="CircleCompletedLight"
+					darkIcon="CircleCompletedDark"
+					greenLightIcon="CircleCompletedLightGreen"
+					greenDarkIcon="CircleCompletedDarkGreen"
+					dimensions={[32, 32]}
+				/>
 
 				<h2 className="m-0 text-2xl font-bold leading-[29px]">
 					{t("EXCHANGE.EXCHANGE_FORM.EXCHANGE_COMPLETED")}

@@ -107,6 +107,7 @@ const createMultiSignatureRegistrationMock = (wallet: Contracts.IReadWriteWallet
 		isVote: () => false,
 		isVoteCombination: () => false,
 		memo: () => null,
+		nonce: () => BigNumber.make(1),
 		recipient: () => MultisignatureRegistrationFixture.data.recipient,
 		sender: () => MultisignatureRegistrationFixture.data.sender,
 		timestamp: () => DateTime.make(),

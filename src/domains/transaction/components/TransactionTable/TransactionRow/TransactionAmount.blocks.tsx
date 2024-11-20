@@ -3,6 +3,7 @@ import React from "react";
 import { DTO } from "@ardenthq/sdk-profiles";
 import { useTranslation } from "react-i18next";
 import { useExchangeRate } from "@/app/hooks/use-exchange-rate";
+import { twMerge } from "tailwind-merge";
 
 type ExtendedTransactionData = DTO.ExtendedConfirmedTransactionData | DTO.ExtendedSignedTransactionData;
 
@@ -40,7 +41,15 @@ const calculateReturnedAmount = function (transaction: ExtendedTransactionData):
 	return returnedAmount;
 };
 
-export const TransactionAmountLabel = ({ transaction }: { transaction: ExtendedTransactionData }): JSX.Element => {
+export const TransactionAmountLabel = ({
+	transaction,
+	textClassName,
+	className,
+}: {
+	transaction: ExtendedTransactionData;
+	textClassName?: string;
+	className?: string;
+}): JSX.Element => {
 	const { t } = useTranslation();
 
 	const currency = transaction.wallet().currency();
@@ -68,7 +77,8 @@ export const TransactionAmountLabel = ({ transaction }: { transaction: ExtendedT
 					? t("TRANSACTION.HINT_AMOUNT_EXCLUDING", { amount: returnedAmount, currency })
 					: undefined
 			}
-			className="h-[21px] rounded dark:border"
+			className={twMerge("h-[21px] rounded dark:border", className)}
+			textClassName={textClassName}
 		/>
 	);
 };

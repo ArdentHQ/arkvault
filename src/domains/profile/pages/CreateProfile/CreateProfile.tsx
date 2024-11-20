@@ -6,10 +6,12 @@ import { useHistory } from "react-router-dom";
 import { Header } from "@/app/components/Header";
 import { Page, Section } from "@/app/components/Layout";
 import { useEnvironmentContext } from "@/app/contexts";
-import { useLocaleCurrency, useProfileRestore, useTheme } from "@/app/hooks";
+import { useAccentColor, useLocaleCurrency, useProfileRestore, useTheme } from "@/app/hooks";
 
 import { ProfileForm, ProfileFormState } from "@/domains/profile/components/ProfileForm";
 import { ThemeIcon } from "@/app/components/Icon";
+import { generatePath } from "react-router-dom";
+import { ProfilePaths } from "@/router/paths";
 
 export const CreateProfile = () => {
 	const { env, persist } = useEnvironmentContext();
@@ -22,11 +24,10 @@ export const CreateProfile = () => {
 
 	useLayoutEffect(() => {
 		resetTheme();
-
-		return () => {
-			resetTheme();
-		};
 	}, [resetTheme]);
+
+	const { setProfileTheme } = useTheme();
+	const { setProfileAccentColor } = useAccentColor();
 
 	const handleSubmit = async ({ name, password, currency, viewingMode }: ProfileFormState) => {
 		const profile = await env.profiles().create(name.trim());
@@ -42,7 +43,10 @@ export const CreateProfile = () => {
 		restoreProfileConfig(profile);
 		await persist();
 
-		history.push("/");
+		setProfileTheme(profile);
+		setProfileAccentColor(profile);
+
+		history.push(generatePath(ProfilePaths.Dashboard, { profileId: profile.id() }));
 	};
 
 	return (
@@ -56,7 +60,15 @@ export const CreateProfile = () => {
 					<Header
 						title={t("PROFILE.PAGE_CREATE_PROFILE.TITLE")}
 						titleClassName="text-lg leading-[21px] sm:text-2xl sm:leading-[29px]"
-						titleIcon={<ThemeIcon darkIcon="PersonDark" lightIcon="PersonLight" dimensions={[24, 24]} />}
+						titleIcon={
+							<ThemeIcon
+								darkIcon="PersonDark"
+								lightIcon="PersonLight"
+								greenLightIcon="PersonLightGreen"
+								greenDarkIcon="PersonDarkGreen"
+								dimensions={[24, 24]}
+							/>
+						}
 						subtitle={t("PROFILE.PAGE_CREATE_PROFILE.DESCRIPTION")}
 						className="block"
 					/>

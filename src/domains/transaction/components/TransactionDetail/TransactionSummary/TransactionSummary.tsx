@@ -2,8 +2,9 @@ import React, { ReactElement } from "react";
 import { useTranslation } from "react-i18next";
 import { Contracts, DTO } from "@ardenthq/sdk-profiles";
 import { DetailDivider, DetailLabelText, DetailWrapper } from "@/app/components/DetailWrapper";
-import { Amount, AmountLabel } from "@/app/components/Amount";
+import { Amount } from "@/app/components/Amount";
 import { BigNumber } from "@ardenthq/sdk-helpers";
+import { TransactionAmountLabel } from "@/domains/transaction/components/TransactionTable/TransactionRow/TransactionAmount.blocks";
 
 interface Properties {
 	transaction: DTO.ExtendedSignedTransactionData | DTO.ExtendedConfirmedTransactionData;
@@ -18,13 +19,12 @@ export const TransactionSummary = ({ transaction, senderWallet, labelClassName }
 			<div className="space-y-3 sm:space-y-0">
 				{!BigNumber.make(transaction.amount()).isZero() && (
 					<>
-						<div className="flex w-full justify-between sm:justify-start">
+						<div className="flex w-full items-center justify-between sm:justify-start">
 							<DetailLabelText className={labelClassName}>{t("COMMON.AMOUNT")}</DetailLabelText>
-							<AmountLabel
-								isNegative={transaction.isSent()}
-								value={transaction.amount()}
-								ticker={senderWallet.currency()}
-								textClassName="text-sm leading-[17px] sm:text-base sm:leading-5"
+							<TransactionAmountLabel
+								transaction={transaction}
+								textClassName="text-base"
+								className="h-auto"
 							/>
 						</div>
 

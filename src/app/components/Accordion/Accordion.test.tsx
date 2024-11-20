@@ -98,9 +98,9 @@ describe("Button", () => {
 
 	it("should toggle the accordion on click", async () => {
 		const Accordion = () => {
-			useAccordion();
+			useAccordion("accordion");
 
-			const { isExpanded, handleHeaderClick } = useAccordion();
+			const { isExpanded, handleHeaderClick } = useAccordion("accordion");
 
 			return (
 				<AccordionWrapper>
@@ -115,12 +115,12 @@ describe("Button", () => {
 		const { container } = render(<Accordion />);
 
 		expect(screen.getByTestId("AccordionHeader")).toBeInTheDocument();
-		expect(screen.queryByTestId("AccordionContent")).not.toBeInTheDocument();
+		expect(screen.getByTestId("AccordionContent")).toBeInTheDocument();
 		expect(screen.getByTestId("Accordion__toggle")).toBeInTheDocument();
 
 		await userEvent.click(screen.getByTestId("AccordionHeader"));
 
-		expect(screen.getByTestId("AccordionContent")).toBeInTheDocument();
+		expect(screen.queryByTestId("AccordionContent")).not.toBeInTheDocument();
 
 		expect(container).toMatchSnapshot();
 	});

@@ -11,6 +11,7 @@ export interface WalletsGroupProperties {
 	network: Networks.Network;
 	wallets: Contracts.IReadWriteWallet[];
 	maxWidthReferences: MaxWidthReferences;
+	profileId: string;
 }
 
 export interface WalletsGroupHeaderProperties {

@@ -2271,7 +2271,7 @@ exports[`Contacts > should render responsive with contacts 1`] = `
           class="css-fvpuky"
         >
           <div
-            class="select-none cursor-pointer group md:h-20 md:p-4 flex flex-row items-center border-theme-secondary-300 dark:border-theme-secondary-800 px-6 py-4"
+            class="select-none cursor-pointer md:h-20 py-6 md:p-4 flex flex-row items-center border-theme-secondary-300 dark:border-theme-secondary-800 md:border-b px-6 pb-3 pt-4"
             data-testid="AccordionHeader"
           >
             <div
@@ -2340,14 +2340,14 @@ exports[`Contacts > should render responsive with contacts 1`] = `
               </div>
             </div>
             <div
-              class="ml-4 flex flex-shrink-0 items-center self-stretch transition-all duration-100 css-o6tyc"
+              class="ml-4 flex flex-shrink-0 items-center self-stretch css-o6tyc"
             >
               <div
                 class="css-tz6w2"
                 data-testid="Accordion__toggle"
               >
                 <div
-                  class="transition-transform css-15txs7d"
+                  class="transition-transform rotate-180 css-15txs7d"
                   height="10"
                   width="10"
                 >
@@ -2372,12 +2372,118 @@ exports[`Contacts > should render responsive with contacts 1`] = `
               </div>
             </div>
           </div>
+          <div
+            class="md:px-4 md:pb-0 md:pt-6 px-6 pb-4"
+            data-testid="AccordionContent"
+          >
+            <div
+              class="w-full space-y-3"
+              data-testid="ContactListItemMobile__addresses"
+            >
+              <div
+                class="flex h-18 items-center justify-between overflow-hidden rounded-xl dark:border-2 dark:border-theme-secondary-800"
+              >
+                <div
+                  class="flex h-full flex-1 flex-col justify-center overflow-hidden px-6 dark:bg-theme-secondary-900 bg-theme-primary-100"
+                >
+                  <div
+                    class="mb-2 text-xs font-semibold leading-[15px] text-theme-secondary-700 dark:text-theme-secondary-700"
+                  >
+                    ARK Devnet
+                  </div>
+                  <div
+                    class="flex items-center overflow-hidden"
+                  >
+                    <div
+                      class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                    >
+                      <span
+                        class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                        data-testid="Address__address"
+                      >
+                        D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib
+                      </span>
+                      <button
+                        class="ring-focus relative focus:outline-none"
+                        data-ring-focus-margin="-m-1"
+                        data-testid="clipboard-icon__wrapper"
+                        type="button"
+                      >
+                        <div
+                          class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white css-v0ob3f"
+                          height="16"
+                          width="16"
+                        >
+                          <svg
+                            id="copy"
+                            viewBox="0 0 20 20"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
+                          >
+                            <g
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            >
+                              <path
+                                d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                              />
+                              <path
+                                d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                              />
+                            </g>
+                          </svg>
+                        </div>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="flex h-full"
+                >
+                  <button
+                    class="flex h-full items-center justify-center bg-theme-primary-100 px-3 dark:bg-theme-secondary-900 text-theme-navy-600 hover:bg-theme-primary-700 hover:text-white dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200"
+                    data-testid="ContactListItemMobileAddress__send-button"
+                    type="button"
+                  >
+                    <div
+                      class="css-1i4b0eq"
+                      height="20"
+                      width="20"
+                    >
+                      <svg
+                        id="double-arrow-right"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <path
+                          d="M1 7.744h9.013V3.832c0-.4.2-.4.5-.2 2.103 1.504 7.31 5.014 8.111 5.616.501.3.501 1.103 0 1.504-.8.602-6.008 4.212-8.11 5.616-.401.2-.501.2-.501-.2v-3.71H1"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
+                      </svg>
+                    </div>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
         <div
           class="css-fvpuky"
         >
           <div
-            class="select-none cursor-pointer group md:h-20 md:p-4 flex flex-row items-center border-theme-secondary-300 dark:border-theme-secondary-800 px-6 py-4"
+            class="select-none cursor-pointer md:h-20 py-6 md:p-4 flex flex-row items-center border-theme-secondary-300 dark:border-theme-secondary-800 md:border-b px-6 pb-3 pt-4"
             data-testid="AccordionHeader"
           >
             <div
@@ -2446,14 +2552,14 @@ exports[`Contacts > should render responsive with contacts 1`] = `
               </div>
             </div>
             <div
-              class="ml-4 flex flex-shrink-0 items-center self-stretch transition-all duration-100 css-o6tyc"
+              class="ml-4 flex flex-shrink-0 items-center self-stretch css-o6tyc"
             >
               <div
                 class="css-tz6w2"
                 data-testid="Accordion__toggle"
               >
                 <div
-                  class="transition-transform css-15txs7d"
+                  class="transition-transform rotate-180 css-15txs7d"
                   height="10"
                   width="10"
                 >
@@ -2474,6 +2580,304 @@ exports[`Contacts > should render responsive with contacts 1`] = `
                       stroke-width="2"
                     />
                   </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="md:px-4 md:pb-0 md:pt-6 px-6 pb-4"
+            data-testid="AccordionContent"
+          >
+            <div
+              class="w-full space-y-3"
+              data-testid="ContactListItemMobile__addresses"
+            >
+              <div
+                class="flex h-18 items-center justify-between overflow-hidden rounded-xl dark:border-2 dark:border-theme-secondary-800"
+              >
+                <div
+                  class="flex h-full flex-1 flex-col justify-center overflow-hidden px-6 dark:bg-theme-secondary-900 bg-theme-primary-100"
+                >
+                  <div
+                    class="mb-2 text-xs font-semibold leading-[15px] text-theme-secondary-700 dark:text-theme-secondary-700"
+                  >
+                    ARK Devnet
+                  </div>
+                  <div
+                    class="flex items-center overflow-hidden"
+                  >
+                    <div
+                      class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                    >
+                      <span
+                        class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                        data-testid="Address__address"
+                      >
+                        DFJ5Z51F1euNNdRUQJKQVdG4h495LZkc6T
+                      </span>
+                      <button
+                        class="ring-focus relative focus:outline-none"
+                        data-ring-focus-margin="-m-1"
+                        data-testid="clipboard-icon__wrapper"
+                        type="button"
+                      >
+                        <div
+                          class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white css-v0ob3f"
+                          height="16"
+                          width="16"
+                        >
+                          <svg
+                            id="copy"
+                            viewBox="0 0 20 20"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
+                          >
+                            <g
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            >
+                              <path
+                                d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                              />
+                              <path
+                                d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                              />
+                            </g>
+                          </svg>
+                        </div>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="flex h-full"
+                >
+                  <button
+                    class="flex h-full items-center justify-center bg-theme-primary-100 px-3 dark:bg-theme-secondary-900 text-theme-navy-600 hover:bg-theme-primary-700 hover:text-white dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200"
+                    data-testid="ContactListItemMobileAddress__send-button"
+                    type="button"
+                  >
+                    <div
+                      class="css-1i4b0eq"
+                      height="20"
+                      width="20"
+                    >
+                      <svg
+                        id="double-arrow-right"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <path
+                          d="M1 7.744h9.013V3.832c0-.4.2-.4.5-.2 2.103 1.504 7.31 5.014 8.111 5.616.501.3.501 1.103 0 1.504-.8.602-6.008 4.212-8.11 5.616-.401.2-.501.2-.501-.2v-3.71H1"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
+                      </svg>
+                    </div>
+                  </button>
+                </div>
+              </div>
+              <div
+                class="flex h-18 items-center justify-between overflow-hidden rounded-xl dark:border-2 dark:border-theme-secondary-800"
+              >
+                <div
+                  class="flex h-full flex-1 flex-col justify-center overflow-hidden px-6 dark:bg-theme-secondary-900 bg-theme-primary-100"
+                >
+                  <div
+                    class="mb-2 text-xs font-semibold leading-[15px] text-theme-secondary-700 dark:text-theme-secondary-700"
+                  >
+                    ARK Devnet
+                  </div>
+                  <div
+                    class="flex items-center overflow-hidden"
+                  >
+                    <div
+                      class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                    >
+                      <span
+                        class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                        data-testid="Address__address"
+                      >
+                        D9YiyRYMBS2ofzqkufjrkB9nHofWgJLM7f
+                      </span>
+                      <button
+                        class="ring-focus relative focus:outline-none"
+                        data-ring-focus-margin="-m-1"
+                        data-testid="clipboard-icon__wrapper"
+                        type="button"
+                      >
+                        <div
+                          class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white css-v0ob3f"
+                          height="16"
+                          width="16"
+                        >
+                          <svg
+                            id="copy"
+                            viewBox="0 0 20 20"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
+                          >
+                            <g
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            >
+                              <path
+                                d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                              />
+                              <path
+                                d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                              />
+                            </g>
+                          </svg>
+                        </div>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="flex h-full"
+                >
+                  <button
+                    class="flex h-full items-center justify-center bg-theme-primary-100 px-3 dark:bg-theme-secondary-900 text-theme-navy-600 hover:bg-theme-primary-700 hover:text-white dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200"
+                    data-testid="ContactListItemMobileAddress__send-button"
+                    type="button"
+                  >
+                    <div
+                      class="css-1i4b0eq"
+                      height="20"
+                      width="20"
+                    >
+                      <svg
+                        id="double-arrow-right"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <path
+                          d="M1 7.744h9.013V3.832c0-.4.2-.4.5-.2 2.103 1.504 7.31 5.014 8.111 5.616.501.3.501 1.103 0 1.504-.8.602-6.008 4.212-8.11 5.616-.401.2-.501.2-.501-.2v-3.71H1"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
+                      </svg>
+                    </div>
+                  </button>
+                </div>
+              </div>
+              <div
+                class="flex h-18 items-center justify-between overflow-hidden rounded-xl dark:border-2 dark:border-theme-secondary-800"
+              >
+                <div
+                  class="flex h-full flex-1 flex-col justify-center overflow-hidden px-6 dark:bg-theme-secondary-900 bg-theme-primary-100"
+                >
+                  <div
+                    class="mb-2 text-xs font-semibold leading-[15px] text-theme-secondary-700 dark:text-theme-secondary-700"
+                  >
+                    ARK Devnet
+                  </div>
+                  <div
+                    class="flex items-center overflow-hidden"
+                  >
+                    <div
+                      class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                    >
+                      <span
+                        class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                        data-testid="Address__address"
+                      >
+                        DKrACQw7ytoU2gjppy3qKeE2dQhZjfXYqu
+                      </span>
+                      <button
+                        class="ring-focus relative focus:outline-none"
+                        data-ring-focus-margin="-m-1"
+                        data-testid="clipboard-icon__wrapper"
+                        type="button"
+                      >
+                        <div
+                          class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white css-v0ob3f"
+                          height="16"
+                          width="16"
+                        >
+                          <svg
+                            id="copy"
+                            viewBox="0 0 20 20"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
+                          >
+                            <g
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            >
+                              <path
+                                d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                              />
+                              <path
+                                d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                              />
+                            </g>
+                          </svg>
+                        </div>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="flex h-full"
+                >
+                  <button
+                    class="flex h-full items-center justify-center bg-theme-primary-100 px-3 dark:bg-theme-secondary-900 text-theme-navy-600 hover:bg-theme-primary-700 hover:text-white dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200"
+                    data-testid="ContactListItemMobileAddress__send-button"
+                    type="button"
+                  >
+                    <div
+                      class="css-1i4b0eq"
+                      height="20"
+                      width="20"
+                    >
+                      <svg
+                        id="double-arrow-right"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <path
+                          d="M1 7.744h9.013V3.832c0-.4.2-.4.5-.2 2.103 1.504 7.31 5.014 8.111 5.616.501.3.501 1.103 0 1.504-.8.602-6.008 4.212-8.11 5.616-.401.2-.501.2-.501-.2v-3.71H1"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
+                      </svg>
+                    </div>
+                  </button>
                 </div>
               </div>
             </div>
