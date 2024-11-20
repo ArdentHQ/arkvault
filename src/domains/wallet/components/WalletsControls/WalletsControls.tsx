@@ -44,7 +44,7 @@ export const WalletsControls = React.memo(
 			}
 
 			if (!hasAnyLedgerNetwork) {
-				return t("COMMON.LEDGER_MAINSAIL_NOT_SUPPORTED");
+				return t("COMMON.LEDGER_NETWORK_NOT_SUPPORTED");
 			}
 
 			return "";
