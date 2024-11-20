@@ -45,8 +45,8 @@ export const FormStep: React.FC<FormStepProperties> = ({ wallet, profile }: Form
 	return (
 		<section data-testid="DelegateRegistrationForm__form-step">
 			<StepHeader
-				title={t("TRANSACTION.PAGE_DELEGATE_REGISTRATION.FORM_STEP.TITLE")}
-				subtitle={t("TRANSACTION.PAGE_DELEGATE_REGISTRATION.FORM_STEP.DESCRIPTION")}
+				title={t("TRANSACTION.PAGE_VALIDATOR_REGISTRATION.FORM_STEP.TITLE")}
+				subtitle={t("TRANSACTION.PAGE_VALIDATOR_REGISTRATION.FORM_STEP.DESCRIPTION")}
 				titleIcon={
 					<ThemeIcon
 						dimensions={[24, 24]}
@@ -58,7 +58,7 @@ export const FormStep: React.FC<FormStepProperties> = ({ wallet, profile }: Form
 				}
 			/>
 
-			<Alert className="mt-6 sm:mt-4">{t("TRANSACTION.PAGE_DELEGATE_REGISTRATION.FORM_STEP.WARNING")}</Alert>
+			<Alert className="mt-6 sm:mt-4">{t("TRANSACTION.PAGE_VALIDATOR_REGISTRATION.FORM_STEP.WARNING")}</Alert>
 
 			<div className="-mx-3 mt-6 sm:mx-0 sm:mt-4">
 				<TransactionAddresses senderAddress={wallet.address()} profile={profile} network={wallet.network()} />
@@ -66,7 +66,7 @@ export const FormStep: React.FC<FormStepProperties> = ({ wallet, profile }: Form
 
 			<div className="mt-3 space-y-4 sm:mt-4">
 				<FormField name="username">
-					<FormLabel label={t("TRANSACTION.DELEGATE_NAME")} />
+					<FormLabel label={t("TRANSACTION.VALIDATOR_NAME")} />
 					<InputDefault
 						data-testid="Input__username"
 						defaultValue={username}
