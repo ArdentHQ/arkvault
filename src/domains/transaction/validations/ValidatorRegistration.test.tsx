@@ -49,7 +49,7 @@ describe("Register validator validation", () => {
 	it("should fail if public key has used", async () => {
 		const { validate } = validatorRegistration(translationMock).validatorPublicKey(profile.wallets().first());
 
-		// Emulate public key hasn't used
+		// Emulate public key has used
 		server.use(requestMock(`https://dwallets.mainsailhq.com/api/wallets*`, { meta: { count: 1 } }));
 
 		await expect(

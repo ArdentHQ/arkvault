@@ -52,6 +52,6 @@ const publicKeyExists = async (network: Networks.Network, publicKey: string) => 
 	const data = await response.json();
 
 	if (data.meta.count > 0) {
-		throw new Error("Public key has already been used!");
+		throw new Error("Public key has been used already!");
 	}
 };
