@@ -206,7 +206,7 @@ export const translations = {
 		"Your portfolio contains 1 or more Ledger wallets. ARK Vault requires the use of a chromium based browser such as Chrome, Brave or Edge when using a Ledger device.",
 	LEDGER_CONNECTED: "{{device}} connected",
 	LEDGER_DISCONNECTED: "{{device}} disconnected",
-	LEDGER_MAINSAIL_NOT_SUPPORTED: "Ledger is not yet supported in Mainsail.",
+	LEDGER_NETWORK_NOT_SUPPORTED: "Ledger is not yet supported on this network.",
 	LEDGER_WALLET: "This is a Ledger wallet",
 	LINK: "Link",
 	LOAD: "Load",
