@@ -20,7 +20,6 @@ export const ReviewStep = ({
 	const { t } = useTranslation();
 
 	const { getValues, unregister, watch } = useFormContext();
-	const username = getValues("username");
 
 	const [defaultFee] = useState(() => watch("fee"));
 	const fee = getValues("fee") ?? defaultFee;
