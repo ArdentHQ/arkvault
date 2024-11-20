@@ -35,12 +35,12 @@ export const goToDelegateRegistrationPage = async (t: any) => {
 	await t.click(Selector('[data-testid="WalletHeader__more-button"]'));
 	await t.click(
 		Selector('[data-testid="dropdown__options"] li').withText(
-			translations.WALLETS.PAGE_WALLET_DETAILS.OPTIONS.REGISTER_DELEGATE,
+			translations.WALLETS.PAGE_WALLET_DETAILS.OPTIONS.REGISTER_VALIDATOR,
 		),
 	);
 
 	await t
-		.expect(Selector("div").withText(translations.TRANSACTION.PAGE_DELEGATE_REGISTRATION.FORM_STEP.TITLE).exists)
+		.expect(Selector("div").withText(translations.TRANSACTION.PAGE_VALIDATOR_REGISTRATION.FORM_STEP.TITLE).exists)
 		.ok();
 };
 
@@ -48,11 +48,11 @@ export const goToDelegateResignationPage = async (t: any) => {
 	await t.click(Selector('[data-testid="WalletHeader__more-button"]'));
 	await t.click(
 		Selector('[data-testid="dropdown__options"] li').withText(
-			translations.WALLETS.PAGE_WALLET_DETAILS.OPTIONS.RESIGN_DELEGATE,
+			translations.WALLETS.PAGE_WALLET_DETAILS.OPTIONS.RESIGN_VALIDATOR,
 		),
 	);
 
 	await t
-		.expect(Selector("div").withText(translations.TRANSACTION.PAGE_DELEGATE_RESIGNATION.FORM_STEP.TITLE).exists)
+		.expect(Selector("div").withText(translations.TRANSACTION.PAGE_VALIDATOR_RESIGNATION.FORM_STEP.TITLE).exists)
 		.ok();
 };

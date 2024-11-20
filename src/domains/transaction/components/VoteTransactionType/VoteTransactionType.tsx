@@ -52,7 +52,7 @@ export const VoteTransactionType = ({ unvotes, votes }: { unvotes: VoteRegistryI
 				{voteCategory === "swap" && (
 					<>
 						<div className="flex w-full items-center justify-between sm:justify-start">
-							<DetailTitle className="w-auto sm:min-w-32">{t("COMMON.OLD_DELEGATE")}</DetailTitle>
+							<DetailTitle className="w-auto sm:min-w-32">{t("COMMON.OLD_VALIDATOR")}</DetailTitle>
 							<div className="no-ligatures truncate text-sm font-semibold leading-[17px] text-theme-secondary-900 dark:text-theme-secondary-200 sm:text-base sm:leading-5">
 								{unvotes[0].wallet?.username()}
 							</div>
@@ -61,7 +61,7 @@ export const VoteTransactionType = ({ unvotes, votes }: { unvotes: VoteRegistryI
 						<DetailDivider />
 
 						<div className="flex w-full items-center justify-between sm:justify-start">
-							<DetailTitle className="w-auto sm:min-w-32">{t("COMMON.NEW_DELEGATE")}</DetailTitle>
+							<DetailTitle className="w-auto sm:min-w-32">{t("COMMON.NEW_VALIDATOR")}</DetailTitle>
 							<div className="no-ligatures truncate text-sm font-semibold leading-[17px] text-theme-secondary-900 dark:text-theme-secondary-200 sm:text-base sm:leading-5">
 								{votes[0].wallet?.username()}
 							</div>
@@ -71,7 +71,7 @@ export const VoteTransactionType = ({ unvotes, votes }: { unvotes: VoteRegistryI
 
 				{voteCategory !== "swap" && (
 					<div className="flex w-full items-center justify-between sm:justify-start">
-						<DetailTitle className="w-auto sm:min-w-24">{t("COMMON.DELEGATE")}</DetailTitle>
+						<DetailTitle className="w-auto sm:min-w-24">{t("COMMON.VALIDATOR")}</DetailTitle>
 						<div className="no-ligatures truncate text-sm font-semibold leading-[17px] text-theme-secondary-900 dark:text-theme-secondary-200 sm:text-base sm:leading-5">
 							{voteCategory === "vote" ? votes[0]?.wallet?.username() : unvotes[0]?.wallet?.username()}
 						</div>

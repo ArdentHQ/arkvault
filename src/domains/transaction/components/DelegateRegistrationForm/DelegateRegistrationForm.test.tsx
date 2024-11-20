@@ -242,7 +242,7 @@ describe("DelegateRegistrationForm", () => {
 			/>,
 		);
 
-		expect(screen.getByText("TRANSACTION.DELEGATE_NAME")).toBeInTheDocument();
+		expect(screen.getByText("TRANSACTION.VALIDATOR_NAME")).toBeInTheDocument();
 		expect(screen.getByText("test_delegate")).toBeInTheDocument();
 	});
 

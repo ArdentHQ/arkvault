@@ -38,7 +38,7 @@ export const AddressTable: FC<AddressTableProperties> = ({ wallets, onSelect, pr
 				headerClassName: "hidden xl:table-cell no-border",
 			},
 			{
-				Header: t("COMMON.DELEGATE"),
+				Header: t("COMMON.VALIDATOR"),
 				accessor: (wallet) => {
 					let votes: Contracts.VoteRegistryItem[];
 

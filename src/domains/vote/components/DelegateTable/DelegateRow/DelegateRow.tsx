@@ -283,13 +283,13 @@ export const DelegateRow = ({
 				)}
 			>
 				{isActive ? (
-					<Tooltip content={t("VOTE.DELEGATE_TABLE.TOOLTIP.DELEGATE_IN_FORGING_POSITION")}>
+					<Tooltip content={t("VOTE.VALIDATOR_TABLE.TOOLTIP.VALIDATOR_IN_FORGING_POSITION")}>
 						<div>
 							<Icon name="StatusOk" className="text-theme-navy-600" size="md" />
 						</div>
 					</Tooltip>
 				) : (
-					<Tooltip content={t("VOTE.DELEGATE_TABLE.TOOLTIP.DELEGATE_IN_STANDY_POSITION")}>
+					<Tooltip content={t("VOTE.VALIDATOR_TABLE.TOOLTIP.VALIDATOR_IN_STANDY_POSITION")}>
 						<div>
 							<Icon name="StatusStandby" className="text-theme-warning-500" size="md" />
 						</div>

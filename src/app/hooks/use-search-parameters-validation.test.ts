@@ -327,7 +327,7 @@ describe("useSearchParametersValidation", () => {
 		const { result } = renderHook(() => useSearchParametersValidation());
 
 		await expect(result.current.validateSearchParameters(profile, env, parameters)).resolves.toStrictEqual({
-			error: { type: "DELEGATE_NOT_FOUND", value: "1" },
+			error: { type: "VALIDATOR_NOT_FOUND", value: "1" },
 		});
 	});
 
@@ -337,7 +337,7 @@ describe("useSearchParametersValidation", () => {
 		const { result } = renderHook(() => useSearchParametersValidation());
 
 		await expect(result.current.validateSearchParameters(profile, env, parameters)).resolves.toStrictEqual({
-			error: { type: "AMBIGUOUS_DELEGATE" },
+			error: { type: "AMBIGUOUS_VALIDATOR" },
 		});
 	});
 
@@ -347,7 +347,7 @@ describe("useSearchParametersValidation", () => {
 		const { result } = renderHook(() => useSearchParametersValidation());
 
 		await expect(result.current.validateSearchParameters(profile, env, parameters)).resolves.toStrictEqual({
-			error: { type: "DELEGATE_NOT_FOUND", value: "custom" },
+			error: { type: "VALIDATOR_NOT_FOUND", value: "custom" },
 		});
 	});
 
@@ -367,7 +367,7 @@ describe("useSearchParametersValidation", () => {
 		const { result } = renderHook(() => useSearchParametersValidation());
 
 		await expect(result.current.validateSearchParameters(profile, env, parameters)).resolves.toStrictEqual({
-			error: { type: "MISSING_DELEGATE" },
+			error: { type: "MISSING_VALIDATOR" },
 		});
 	});
 
@@ -396,7 +396,7 @@ describe("useSearchParametersValidation", () => {
 
 		await expect(result.current.validateSearchParameters(profile, env, parameters)).resolves.toStrictEqual({
 			error: {
-				type: "DELEGATE_RESIGNED",
+				type: "VALIDATOR_RESIGNED",
 				value: truncate(delegateWallet.publicKey(), { length: 20, omissionPosition: "middle" }),
 			},
 		});
@@ -485,9 +485,9 @@ describe("useSearchParametersValidation", () => {
 	it("should build uri error message", () => {
 		const { result } = renderHook(() => useSearchParametersValidation());
 
-		expect(result.current.buildSearchParametersError({ type: "AMBIGUOUS_DELEGATE" })).toMatchInlineSnapshot(`
+		expect(result.current.buildSearchParametersError({ type: "AMBIGUOUS_VALIDATOR" })).toMatchInlineSnapshot(`
 			<Trans
-			  i18nKey="TRANSACTION.VALIDATION.DELEGATE_OR_PUBLICKEY"
+			  i18nKey="TRANSACTION.VALIDATION.VALIDATOR_OR_PUBLICKEY"
 			  parent={[Function]}
 			/>
 		`);

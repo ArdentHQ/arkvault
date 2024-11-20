@@ -50,7 +50,7 @@ describe("TransactionType", () => {
 			/>,
 		);
 
-		expect(container).toHaveTextContent(translations.TRANSACTION_TYPES.DELEGATE_REGISTRATION);
+		expect(container).toHaveTextContent(translations.TRANSACTION_TYPES.VALIDATOR_REGISTRATION);
 		expect(container).toHaveTextContent("delegate");
 	});
 
@@ -74,7 +74,7 @@ describe("TransactionType", () => {
 			/>,
 		);
 
-		expect(container).toHaveTextContent(translations.TRANSACTION_TYPES.DELEGATE_RESIGNATION);
+		expect(container).toHaveTextContent(translations.TRANSACTION_TYPES.VALIDATOR_RESIGNATION);
 		expect(container).toHaveTextContent("delegate");
 	});
 

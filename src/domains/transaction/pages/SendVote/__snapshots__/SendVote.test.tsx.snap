@@ -965,7 +965,7 @@ exports[`SendVote > should send a unvote transaction 1`] = `
                                   <div
                                     class="no-ligatures flex-shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:text-base sm:leading-5 w-auto sm:min-w-24"
                                   >
-                                    Delegate
+                                    Validator
                                   </div>
                                   <div
                                     class="no-ligatures truncate text-sm font-semibold leading-[17px] text-theme-secondary-900 dark:text-theme-secondary-200 sm:text-base sm:leading-5"

@@ -42,7 +42,7 @@ export const VotesHeader = ({
 
 	const renderPlaceholder = () => {
 		if (selectedAddress) {
-			return t("VOTE.VOTES_PAGE.SEARCH_DELEGATE_PLACEHOLDER");
+			return t("VOTE.VOTES_PAGE.SEARCH_VALIDATOR_PLACEHOLDER");
 		}
 
 		return t("VOTE.VOTES_PAGE.SEARCH_WALLET_PLACEHOLDER");
@@ -99,7 +99,7 @@ export const VotesHeader = ({
 
 	const headerTitle = useMemo(() => {
 		if (isSelectDelegateStep) {
-			return t("VOTE.DELEGATE_TABLE.TITLE");
+			return t("VOTE.VALIDATOR_TABLE.TITLE");
 		}
 
 		return t("VOTE.VOTES_PAGE.TITLE");

@@ -70,7 +70,7 @@ export const DelegateFooter = ({
 
 	useEffect(() => {
 		if (totalVotes < 1) {
-			setTooltipContent(t("VOTE.DELEGATE_TABLE.TOOLTIP.SELECTED_DELEGATE"));
+			setTooltipContent(t("VOTE.VALIDATOR_TABLE.TOOLTIP.SELECTED_VALIDATOR"));
 			setIsContinueDisabled(true);
 			return;
 		}
@@ -79,7 +79,7 @@ export const DelegateFooter = ({
 			selectedVotes.some(({ amount }) => amount === 0) || selectedUnvotes.some(({ amount }) => amount === 0);
 
 		if (requiresStakeAmount && hasZeroAmount) {
-			setTooltipContent(t("VOTE.DELEGATE_TABLE.TOOLTIP.INVALID_AMOUNT"));
+			setTooltipContent(t("VOTE.VALIDATOR_TABLE.TOOLTIP.INVALID_AMOUNT"));
 			setIsContinueDisabled(true);
 			return;
 		}
@@ -131,7 +131,7 @@ export const DelegateFooter = ({
 								data-testid="DelegateTable__available-balance"
 							>
 								<LabelWrapper>
-									{t("VOTE.DELEGATE_TABLE.VOTE_AMOUNT.AVAILABLE_TO_VOTE", {
+									{t("VOTE.VALIDATOR_TABLE.VOTE_AMOUNT.AVAILABLE_TO_VOTE", {
 										percent: Math.ceil((availableBalance / selectedWallet.balance()) * 100),
 									})}
 								</LabelWrapper>
@@ -145,19 +145,19 @@ export const DelegateFooter = ({
 						<div className="-ml-6 flex divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 sm:ml-0">
 							<FooterContent
 								disabled={selectedVotes.length === 0}
-								label={t("VOTE.DELEGATE_TABLE.VOTES")}
+								label={t("VOTE.VALIDATOR_TABLE.VOTES")}
 								value={selectedVotes.length}
 							/>
 
 							<FooterContent
 								disabled={selectedUnvotes.length === 0}
-								label={t("VOTE.DELEGATE_TABLE.UNVOTES")}
+								label={t("VOTE.VALIDATOR_TABLE.UNVOTES")}
 								value={selectedUnvotes.length}
 							/>
 
 							<FooterContent
 								className="hidden md:flex"
-								label={t("VOTE.DELEGATE_TABLE.TOTAL")}
+								label={t("VOTE.VALIDATOR_TABLE.TOTAL")}
 								value={`${totalVotes}/${maxVotes}`}
 							/>
 						</div>

@@ -22,7 +22,7 @@ export const FormStep = ({ senderWallet, profile }: FormStepProperties) => {
 	return (
 		<section data-testid="SendDelegateResignation__form-step" className="space-y-6 sm:space-y-4">
 			<StepHeader
-				title={t("TRANSACTION.PAGE_DELEGATE_RESIGNATION.FORM_STEP.TITLE")}
+				title={t("TRANSACTION.PAGE_VALIDATOR_RESIGNATION.FORM_STEP.TITLE")}
 				titleIcon={
 					<ThemeIcon
 						dimensions={[24, 24]}
@@ -32,10 +32,10 @@ export const FormStep = ({ senderWallet, profile }: FormStepProperties) => {
 						greenLightIcon="SendTransactionLightGreen"
 					/>
 				}
-				subtitle={t("TRANSACTION.PAGE_DELEGATE_RESIGNATION.FORM_STEP.DESCRIPTION")}
+				subtitle={t("TRANSACTION.PAGE_VALIDATOR_RESIGNATION.FORM_STEP.DESCRIPTION")}
 			/>
 
-			<Alert>{t("TRANSACTION.PAGE_DELEGATE_RESIGNATION.FORM_STEP.WARNING")}</Alert>
+			<Alert>{t("TRANSACTION.PAGE_VALIDATOR_RESIGNATION.FORM_STEP.WARNING")}</Alert>
 
 			<div className="space-y-3 sm:space-y-4">
 				<FormField name="senderAddress">
@@ -54,7 +54,7 @@ export const FormStep = ({ senderWallet, profile }: FormStepProperties) => {
 							<DetailTitle className="w-auto sm:min-w-28">{t("COMMON.CATEGORY")}</DetailTitle>
 							<div className="flex items-center rounded bg-theme-secondary-200 px-1 py-[3px] dark:border dark:border-theme-secondary-800 dark:bg-transparent">
 								<span className="text-[12px] font-semibold leading-[15px] text-theme-secondary-700 dark:text-theme-secondary-500">
-									{t("TRANSACTION.TRANSACTION_TYPES.DELEGATE_RESIGNATION")}
+									{t("TRANSACTION.TRANSACTION_TYPES.VALIDATOR_RESIGNATION")}
 								</span>
 							</div>
 						</div>
@@ -64,7 +64,7 @@ export const FormStep = ({ senderWallet, profile }: FormStepProperties) => {
 						</div>
 
 						<div className="flex w-full items-center justify-between gap-4 sm:justify-start">
-							<DetailTitle className="w-auto sm:min-w-28">{t("TRANSACTION.DELEGATE_NAME")}</DetailTitle>
+							<DetailTitle className="w-auto sm:min-w-28">{t("TRANSACTION.VALIDATOR_NAME")}</DetailTitle>
 							<div className="no-ligatures truncate text-sm font-semibold leading-[17px] text-theme-secondary-900 dark:text-theme-secondary-200 sm:text-base sm:leading-5">
 								{senderWallet.username()}
 							</div>

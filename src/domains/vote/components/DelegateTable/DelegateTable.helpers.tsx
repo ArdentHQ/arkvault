@@ -24,7 +24,7 @@ export const useDelegateTableColumns = ({ network, isLoading }: DelegateTableCol
 				minimumWidth: true,
 			},
 			{
-				Header: t("VOTE.DELEGATE_TABLE.NAME"),
+				Header: t("VOTE.VALIDATOR_TABLE.NAME"),
 				accessor: (delegate) => isLoading || delegate.username(),
 				className: "justify-start",
 				headerClassName: "w-3/4 sm:w-auto, no-border",
@@ -51,9 +51,9 @@ export const useDelegateTableColumns = ({ network, isLoading }: DelegateTableCol
 			templateColumns.push({
 				Header: (
 					<div className="flex items-center space-x-3 px-3">
-						<p>{t("VOTE.DELEGATE_TABLE.VOTE_AMOUNT.TITLE")}</p>
+						<p>{t("VOTE.VALIDATOR_TABLE.VOTE_AMOUNT.TITLE")}</p>
 						<Tooltip
-							content={t("VOTE.DELEGATE_TABLE.VOTE_AMOUNT.TOOLTIP", {
+							content={t("VOTE.VALIDATOR_TABLE.VOTE_AMOUNT.TOOLTIP", {
 								coinId: network.coin(),
 							})}
 						>

@@ -179,7 +179,7 @@ describe("DelegateVoteAmount", () => {
 
 			expect(screen.getByTestId("Input__error")).toHaveAttribute(
 				"data-errortext",
-				t("VOTE.DELEGATE_TABLE.VOTE_AMOUNT.VALIDATION.MINIMUM_AMOUNT", {
+				t("VOTE.VALIDATOR_TABLE.VOTE_AMOUNT.VALIDATION.MINIMUM_AMOUNT", {
 					coinId: wallet.network().coin(),
 					minimumAmount: wallet.network().votesAmountMinimum(),
 				}),
@@ -201,7 +201,7 @@ describe("DelegateVoteAmount", () => {
 
 			expect(screen.getByTestId("Input__error")).toHaveAttribute(
 				"data-errortext",
-				t("VOTE.DELEGATE_TABLE.VOTE_AMOUNT.VALIDATION.AMOUNT_STEP", {
+				t("VOTE.VALIDATOR_TABLE.VOTE_AMOUNT.VALIDATION.AMOUNT_STEP", {
 					coinId: wallet.network().coin(),
 					step: wallet.network().votesAmountStep(),
 				}),
@@ -237,7 +237,7 @@ describe("DelegateVoteAmount", () => {
 
 			expect(screen.getByTestId("Input__error")).toHaveAttribute(
 				"data-errortext",
-				t("VOTE.DELEGATE_TABLE.VOTE_AMOUNT.VALIDATION.MINIMUM_AMOUNT", {
+				t("VOTE.VALIDATOR_TABLE.VOTE_AMOUNT.VALIDATION.MINIMUM_AMOUNT", {
 					coinId: wallet.network().coin(),
 					minimumAmount: wallet.network().votesAmountMinimum(),
 				}),

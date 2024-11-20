@@ -43,7 +43,7 @@ describe("VotesHeader", () => {
 			"xs",
 		);
 
-		await expect(screen.findByText(translations.DELEGATE_TABLE.TITLE)).resolves.toBeVisible();
+		await expect(screen.findByText(translations.VALIDATOR_TABLE.TITLE)).resolves.toBeVisible();
 
 		expect(asFragment()).toMatchSnapshot();
 	});

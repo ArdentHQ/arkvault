@@ -143,7 +143,7 @@ export const TransactionRowAddressing = ({
 
 	if (transaction.isDelegateRegistration()) {
 		return (
-			<div className="flex flex-row gap-2" data-testid="TransactionRowAddressing__delegate_registration">
+			<div className="flex flex-row gap-2" data-testid="TransactionRowAddressing__validator_registration">
 				<TransactionRowLabel direction={direction} />
 				<span className="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200">
 					{t("COMMON.CONTRACT")}{" "}
@@ -157,7 +157,7 @@ export const TransactionRowAddressing = ({
 
 	if (transaction.isDelegateResignation()) {
 		return (
-			<div className="flex flex-row gap-2" data-testid="TransactionRowAddressing__delegate_resignation">
+			<div className="flex flex-row gap-2" data-testid="TransactionRowAddressing__validator_resignation">
 				<TransactionRowLabel direction={direction} />
 				<span className="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200">
 					{t("COMMON.CONTRACT")}{" "}
