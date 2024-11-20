@@ -32,14 +32,14 @@ describe("TransactionRowAddressing", () => {
 		expect(screen.queryAllByTestId("TransactionRowAddressing__vote")).toHaveLength(2);
 	});
 
-	it("should render registration variant if transaction is delegate registration", () => {
+	it("should render registration variant if transaction is validator registration", () => {
 		const registrationFixture = { ...fixture, isDelegateRegistration: () => true, username: () => "test" };
 		render(<TransactionRowAddressing transaction={registrationFixture as any} profile={profile} />);
 
-		expect(screen.getByTestId("TransactionRowAddressing__delegate_registration")).toBeInTheDocument();
+		expect(screen.getByTestId("TransactionRowAddressing__validator_registration")).toBeInTheDocument();
 	});
 
-	it("should render resignation variant if transaction is delegate resignation", () => {
+	it("should render resignation variant if transaction is validator resignation", () => {
 		const resignationFixture = {
 			...fixture,
 			isDelegateResignation: () => true,
@@ -47,7 +47,7 @@ describe("TransactionRowAddressing", () => {
 		};
 		render(<TransactionRowAddressing transaction={resignationFixture as any} profile={profile} />);
 
-		expect(screen.getByTestId("TransactionRowAddressing__delegate_resignation")).toBeInTheDocument();
+		expect(screen.getByTestId("TransactionRowAddressing__validator_resignation")).toBeInTheDocument();
 	});
 
 	it("should render as to-contract if transaction is musig registration", () => {
