@@ -42,7 +42,7 @@ export const NetworksSettings = () => {
 
 	const getSelectedNetworks = () =>
 		getProfileNetworksList()
-			.filter((network) => !isCustomNetwork(network) || network.meta.enabled)
+			.filter((network) => !isCustomNetwork(network) && network.meta.enabled)
 			.map((network) => network.id);
 
 	const getCustomNetworks = () => getProfileNetworksList().filter((network) => isCustomNetwork(network));
@@ -57,9 +57,10 @@ export const NetworksSettings = () => {
 	const [networkToUpdate, setNetworkToUpdate] = useState<Networks.NetworkManifest | undefined>(undefined);
 	const [networkToShowDetails, setNetworkToShowDetails] = useState<Networks.NetworkManifest | undefined>(undefined);
 	const { setValue: setWalletConfig } = useWalletConfig({ profile });
+	console.log({ selectedNetworks });
 
 	const defaultNetworks = useMemo(
-		() => env.availableNetworks().filter((item) => ["ark.devnet", "ark.mainnet"].includes(item.id())),
+		() => env.availableNetworks().filter((item) => ["mainsail.devnet"].includes(item.id())),
 		[env, profile],
 	);
 
