@@ -37,7 +37,7 @@ const transactionDetails = ({
 	wallet: Contracts.IReadWriteWallet;
 }) => (
 	<>
-		<TransactionDetail label={translations("TRANSACTION.DELEGATE_NAME")}>
+		<TransactionDetail label={translations("TRANSACTION.VALIDATOR_NAME")}>
 			{transaction.username()}
 		</TransactionDetail>
 
