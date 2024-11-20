@@ -346,7 +346,7 @@ exports[`DelegateRegistrationForm > should render review step 1`] = `
                 class="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0"
               >
                 <div
-                  class="no-ligatures flex-shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:text-base sm:leading-5 w-auto sm:min-w-32"
+                  class="no-ligatures flex-shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:text-base sm:leading-5 w-auto sm:min-w-44"
                 >
                   From
                 </div>
@@ -441,7 +441,7 @@ exports[`DelegateRegistrationForm > should render review step 1`] = `
                   class="flex w-full items-center justify-between gap-4 sm:justify-start"
                 >
                   <div
-                    class="no-ligatures flex-shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:text-base sm:leading-5 w-auto sm:min-w-28"
+                    class="no-ligatures flex-shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:text-base sm:leading-5 w-auto sm:min-w-40"
                   >
                     Category
                   </div>
@@ -467,7 +467,7 @@ exports[`DelegateRegistrationForm > should render review step 1`] = `
                   class="flex w-full items-center justify-between gap-4 sm:justify-start"
                 >
                   <div
-                    class="no-ligatures flex-shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:text-base sm:leading-5 w-auto sm:min-w-28"
+                    class="no-ligatures flex-shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:text-base sm:leading-5 w-auto sm:min-w-40"
                   >
                     Validator Public Key
                   </div>
