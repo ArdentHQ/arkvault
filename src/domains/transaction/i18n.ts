@@ -433,16 +433,16 @@ export const translations = {
 	UNVOTES_COUNT: "Unvotes ({{count}})",
 	UNVOTES_COUNT_one: "Unvote",
 	VALIDATION: {
-		ALREADY_VOTING: "{{wallet}} is already voting for {{delegate}}.",
+		ALREADY_VOTING: "{{wallet}} is already voting for {{validator}}.",
 		AMOUNT_BELOW_MINIMUM: "The amount is below the minimum ({{min}} {{ coinId }})",
 		COIN_MISMATCH: "data is for another coin.",
 		COIN_MISSING: "coin parameter is missing.",
 		COIN_NOT_SUPPORTED: "coin <strong>{{coin}}</strong> is not supported.",
-		DELEGATE_MISSING: "delegate name or public key parameter is missing.",
-		DELEGATE_NOT_FOUND: "delegate <strong>{{delegate}}</strong> could not be found.",
-		DELEGATE_OR_PUBLICKEY:
-			"both delegate name and public key were provided in url. Please use either one or the other.",
-		DELEGATE_RESIGNED: "delegate <strong>{{delegate}}</strong> is resigned.",
+		VALIDATOR_MISSING: "validator name or public key parameter is missing.",
+		VALIDATOR_NOT_FOUND: "validator <strong>{{validator}}</strong> could not be found.",
+		VALIDATOR_OR_PUBLICKEY:
+			"both validator name and public key were provided in url. Please use either one or the other.",
+		VALIDATOR_RESIGNED: "validator <strong>{{validator}}</strong> is resigned.",
 		FEE_NEGATIVE: "Fee cannot be negative",
 		INVALID_ADDRESS_OR_NETWORK_MISMATCH: "The provided address is invalid or belongs to another network",
 		INVALID_QR: "Invalid QR",
