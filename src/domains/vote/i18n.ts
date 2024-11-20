@@ -1,4 +1,9 @@
 export const translations = {
+	FILTERS: {
+		ALL: "All",
+		CURRENT_VOTES: "Current Votes",
+	},
+
 	VALIDATOR_TABLE: {
 		COMMISSION: "Comm.",
 		COMMISSION_BY_PERIOD: "Commission ({{period}})",
@@ -7,11 +12,11 @@ export const translations = {
 		PAYOUT_INTERVAL: "Payout",
 		TITLE: "Select Validator",
 		TOOLTIP: {
-			VALIDATOR_IN_FORGING_POSITION: "Validator in forging position",
-			VALIDATOR_IN_STANDY_POSITION: "Validator in standby position",
 			INVALID_AMOUNT: "Invalid amount specified for at least 1 amount field",
 			MAX_VOTES: "You have selected the maximum number of validators",
 			SELECTED_VALIDATOR: "You have not yet selected a validator",
+			VALIDATOR_IN_FORGING_POSITION: "Validator in forging position",
+			VALIDATOR_IN_STANDY_POSITION: "Validator in standby position",
 		},
 		TOTAL: "Total",
 		UNVOTES: "Unvotes",
@@ -27,11 +32,6 @@ export const translations = {
 				MINIMUM_AMOUNT: "Minimum voting amount must be at least {{minimumAmount}} {{ coinId }}",
 			},
 		},
-	},
-
-	FILTERS: {
-		ALL: "All",
-		CURRENT_VOTES: "Current Votes",
 	},
 
 	VOTES_PAGE: {
