@@ -148,7 +148,7 @@ describe("DelegateRegistrationForm", () => {
 		expect(screen.getByTestId("Input__error")).toBeVisible();
 	});
 
-	it("should render and set public key for mainsail networks", async () => {
+	it("should set public key", async () => {
 		const { form } = renderComponent();
 
 		const publicKey = "02147bf63839be7abb44707619b012a8b59ad3eda90be1c6e04eb9c630232268de";
