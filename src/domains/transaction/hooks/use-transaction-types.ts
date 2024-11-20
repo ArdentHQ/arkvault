@@ -33,10 +33,6 @@ export const useTransactionTypes = ({ wallets = [] }: TransactionTypeProperties 
 			icon: "Timelock",
 			label: t("TRANSACTION.TRANSACTION_TYPES.HTLC_REFUND"),
 		},
-		ipfs: {
-			icon: "Ipfs",
-			label: t("TRANSACTION.TRANSACTION_TYPES.IPFS"),
-		},
 		magistrate: {
 			icon: "Magistrate",
 			label: t("TRANSACTION.TRANSACTION_TYPES.MAGISTRATE"),
@@ -48,10 +44,6 @@ export const useTransactionTypes = ({ wallets = [] }: TransactionTypeProperties 
 		multiSignature: {
 			icon: "Multisignature",
 			label: t("TRANSACTION.TRANSACTION_TYPES.MULTI_SIGNATURE"),
-		},
-		secondSignature: {
-			icon: "SecondSignature",
-			label: t("TRANSACTION.TRANSACTION_TYPES.SECOND_SIGNATURE"),
 		},
 		transfer: {
 			icon: "Transfer",
@@ -83,15 +75,17 @@ export const useTransactionTypes = ({ wallets = [] }: TransactionTypeProperties 
 				),
 			[wallets],
 		),
-		getIcon: (type: string): string => transactionTypes[type].icon,
-		getLabel: (type: string): string => transactionTypes[type].label,
+		getIcon: (type: string): string => transactionTypes[type]?.icon,
+		getLabel: (type: string): string => transactionTypes[type]?.label,
 		types: {
 			core: useMemo(() => {
 				const allSupportedTypes: string[] = [];
 
 				for (const wallet of wallets) {
 					allSupportedTypes.push(
-						...(wallet.transactionTypes() as string[]).filter((type) => type !== MagistrateTransactionType),
+						...(wallet.transactionTypes() as string[]).filter(
+							(type) => ![MagistrateTransactionType, "ipfs", "secondSignature"].includes(type),
+						),
 					);
 				}
 

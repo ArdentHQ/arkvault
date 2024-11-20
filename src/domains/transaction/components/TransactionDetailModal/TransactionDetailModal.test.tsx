@@ -167,34 +167,6 @@ describe("TransactionDetailModal", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it("should render a ipfs modal", () => {
-		const { asFragment } = render(
-			<Route path="/profiles/:profileId/dashboard">
-				<TransactionDetailModal
-					isOpen={true}
-					transactionItem={{
-						...TransactionFixture,
-						data: () => ({
-							data: {
-								asset: { ipfs: "as32d1as65d1as3d1as32d1asd51as3d21as3d2as165das" },
-								blockId: "as32d1as65d1as3d1as32d1asd51as3d21as3d2as165das",
-							},
-						}),
-						type: () => "ipfs",
-						wallet: () => wallet,
-					}}
-				/>
-			</Route>,
-			{
-				history,
-				route: dashboardURL,
-			},
-		);
-
-		expect(screen.getByTestId("Modal__inner")).toHaveTextContent("IPFS");
-		expect(asFragment()).toMatchSnapshot();
-	});
-
 	it.each(["vote", "unvote", "voteCombination"])("should render a %s modal", (transactionType) => {
 		vi.spyOn(env.delegates(), "map").mockImplementation((wallet, votes) =>
 			votes.map(
@@ -346,28 +318,6 @@ describe("TransactionDetailModal", () => {
 		);
 
 		expect(screen.getByTestId("Modal__inner")).toHaveTextContent("Resignation");
-	});
-
-	it("should render a second signature modal", () => {
-		render(
-			<Route path="/profiles/:profileId/dashboard">
-				<TransactionDetailModal
-					isOpen={true}
-					transactionItem={{
-						...TransactionFixture,
-						blockId: () => "as32d1as65d1as3d1as32d1asd51as3d21as3d2as165das",
-						type: () => "secondSignature",
-						wallet: () => wallet,
-					}}
-				/>
-			</Route>,
-			{
-				history,
-				route: dashboardURL,
-			},
-		);
-
-		expect(screen.getByTestId("Modal__inner")).toHaveTextContent(translations.TRANSACTION_TYPES.SECOND_SIGNATURE);
 	});
 
 	it("should render a magistrate modal", () => {

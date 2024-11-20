@@ -21,22 +21,6 @@ const isRestoredAndSynced = (wallet: Contracts.IReadWriteWallet) =>
 	wallet.hasBeenFullyRestored() && wallet.hasSyncedWithNetwork();
 
 const walletSignatures = (wallet: Contracts.IReadWriteWallet, profile?: Contracts.IProfile) => {
-	const allowsSecondSignature = () => {
-		const networkAllowsSecondSig = wallet.network().allows(Enums.FeatureFlag.TransactionSecondSignature);
-		const walletRequiresMnemonic =
-			wallet.actsWithMnemonic() ||
-			wallet.actsWithMnemonicWithEncryption() ||
-			wallet.actsWithAddress() ||
-			wallet.actsWithPublicKey();
-
-		return (
-			networkAllowsSecondSig &&
-			isRestoredAndSynced(wallet) &&
-			walletRequiresMnemonic &&
-			!wallet.isSecondSignature()
-		);
-	};
-
 	const allowsMultiSignature = () => {
 		const networkAllowsMuSig = wallet.network().allows(Enums.FeatureFlag.TransactionMultiSignature);
 		const allowsMusig =
@@ -76,12 +60,11 @@ const walletSignatures = (wallet: Contracts.IReadWriteWallet, profile?: Contract
 
 	return {
 		allowsMultiSignature,
-		allowsSecondSignature,
 	};
 };
 
 const getRegistrationOptions = (wallet: Contracts.IReadWriteWallet, t: TFunction, profile?: Contracts.IProfile) => {
-	const { allowsMultiSignature, allowsSecondSignature } = walletSignatures(wallet, profile);
+	const { allowsMultiSignature } = walletSignatures(wallet, profile);
 
 	const registrationOptions: DropdownOptionGroup = {
 		key: "registrations",
@@ -113,13 +96,6 @@ const getRegistrationOptions = (wallet: Contracts.IReadWriteWallet, t: TFunction
 			registrationOptions.options.push({
 				label: t("WALLETS.PAGE_WALLET_DETAILS.OPTIONS.RESIGN_DELEGATE"),
 				value: "delegate-resignation",
-			});
-		}
-
-		if (allowsSecondSignature()) {
-			registrationOptions.options.push({
-				label: t("WALLETS.PAGE_WALLET_DETAILS.OPTIONS.SECOND_SIGNATURE"),
-				value: "second-signature",
 			});
 		}
 	}
@@ -167,17 +143,6 @@ const getAdditionalOptions = (wallet: Contracts.IReadWriteWallet, t: TFunction) 
 		additionalOptions.options.push({
 			label: t("WALLETS.PAGE_WALLET_DETAILS.OPTIONS.VERIFY_MESSAGE"),
 			value: "verify-message",
-		});
-	}
-
-	if (
-		wallet.balance() > 0 &&
-		wallet.network().allows(Enums.FeatureFlag.TransactionIpfs) &&
-		isRestoredAndSynced(wallet)
-	) {
-		additionalOptions.options.push({
-			label: t("WALLETS.PAGE_WALLET_DETAILS.OPTIONS.STORE_HASH"),
-			value: "store-hash",
 		});
 	}
 

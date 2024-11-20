@@ -12,7 +12,6 @@ import {
 	common,
 	delegateRegistration,
 	multiSignatureRegistration,
-	sendIpfs,
 	sendTransfer,
 	sendVote,
 } from "@/domains/transaction/validations";
@@ -33,7 +32,6 @@ export const useValidation = () => {
 			network: network(t),
 			password: password(t),
 			receiveFunds: receiveFunds(t),
-			sendIpfs: sendIpfs(t),
 			sendTransfer: sendTransfer(t),
 			sendVote: sendVote(t),
 			server: server(t),

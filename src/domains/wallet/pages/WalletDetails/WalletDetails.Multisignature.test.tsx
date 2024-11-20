@@ -42,7 +42,6 @@ const renderPage = () =>
 
 describe("WalletDetails", () => {
 	const fixtures: Record<string, any> = {
-		ipfs: undefined,
 		multiPayment: undefined,
 		multiSignature: undefined,
 		transfer: undefined,

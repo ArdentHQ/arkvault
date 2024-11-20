@@ -16,7 +16,6 @@ describe("Wallet Transactions Hook", () => {
 	let profile: Contracts.IProfile;
 
 	const fixtures: Record<string, any> = {
-		ipfs: undefined,
 		multiPayment: undefined,
 		multiSignature: undefined,
 		transfer: undefined,

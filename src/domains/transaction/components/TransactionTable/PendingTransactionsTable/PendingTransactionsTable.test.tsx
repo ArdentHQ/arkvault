@@ -32,7 +32,6 @@ describe("Signed Transaction Table", () => {
 	let wallet: Contracts.IReadWriteWallet;
 
 	const fixtures: Record<string, any> = {
-		ipfs: undefined,
 		multiPayment: undefined,
 		multiSignature: undefined,
 		transfer: undefined,
@@ -281,27 +280,6 @@ describe("Signed Transaction Table", () => {
 				transaction: fixtures.unvote,
 			},
 		];
-
-		fixtures.ipfs = new DTO.ExtendedSignedTransactionData(
-			await wallet
-				.coin()
-				.transaction()
-				.ipfs({
-					data: {
-						hash: "QmXoypizjW3WknFiJnKLwHCnL72vedxjQkDDP1mXWo6uco",
-					},
-					fee: 0.1,
-					nonce: "1",
-					signatory: await wallet
-						.coin()
-						.signatory()
-						.multiSignature({
-							min: 2,
-							publicKeys: [wallet.publicKey()!, profile.wallets().last().publicKey()!],
-						}),
-				}),
-			wallet,
-		);
 	});
 
 	afterEach(() => {
