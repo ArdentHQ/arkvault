@@ -461,7 +461,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should change fee 1`] 
                       <span
                         class="css-tgbw37"
                       >
-                        Resign Delegate
+                        Resign Validator
                       </span>
                       <ul
                         class="css-xa5o6q"
@@ -557,14 +557,14 @@ exports[`SendDelegateResignation > Delegate Resignation > should change fee 1`] 
                               class="mb-0 text-2xl leading-[29px]"
                               data-testid="header__title"
                             >
-                              Resign Delegate
+                              Resign Validator
                             </h1>
                           </div>
                           <div
                             class="flex items-center leading-5 text-theme-secondary-text"
                             data-testid="header__subtitle"
                           >
-                            This transaction type permanently retires a Delegate address.
+                            This transaction type permanently retires a Validator address.
                           </div>
                         </div>
                       </div>
@@ -774,7 +774,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should change fee 1`] 
                             <div
                               class="no-ligatures flex-shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:text-base sm:leading-5 w-auto sm:min-w-28"
                             >
-                              Delegate Name
+                              Validator Name
                             </div>
                             <div
                               class="no-ligatures truncate text-sm font-semibold leading-[17px] text-theme-secondary-900 dark:text-theme-secondary-200 sm:text-base sm:leading-5"
@@ -1555,7 +1555,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should render 1st step
                       <span
                         class="css-tgbw37"
                       >
-                        Resign Delegate
+                        Resign Validator
                       </span>
                       <ul
                         class="css-xa5o6q"
@@ -1651,14 +1651,14 @@ exports[`SendDelegateResignation > Delegate Resignation > should render 1st step
                               class="mb-0 text-2xl leading-[29px]"
                               data-testid="header__title"
                             >
-                              Resign Delegate
+                              Resign Validator
                             </h1>
                           </div>
                           <div
                             class="flex items-center leading-5 text-theme-secondary-text"
                             data-testid="header__subtitle"
                           >
-                            This transaction type permanently retires a Delegate address.
+                            This transaction type permanently retires a Validator address.
                           </div>
                         </div>
                       </div>
@@ -1868,7 +1868,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should render 1st step
                             <div
                               class="no-ligatures flex-shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:text-base sm:leading-5 w-auto sm:min-w-28"
                             >
-                              Delegate Name
+                              Validator Name
                             </div>
                             <div
                               class="no-ligatures truncate text-sm font-semibold leading-[17px] text-theme-secondary-900 dark:text-theme-secondary-200 sm:text-base sm:leading-5"
@@ -2881,7 +2881,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should render 2nd step
                             <div
                               class="no-ligatures flex-shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:text-base sm:leading-5 w-auto sm:min-w-28"
                             >
-                              Delegate Name
+                              Validator Name
                             </div>
                             <div
                               class="no-ligatures truncate text-sm font-semibold leading-[17px] text-theme-secondary-900 dark:text-theme-secondary-200 sm:text-base sm:leading-5"

@@ -22,14 +22,14 @@ exports[`DelegateRegistrationForm > should error if username is too long 1`] = `
                 class="mb-0 text-2xl leading-[29px]"
                 data-testid="header__title"
               >
-                Register Delegate
+                Register Validator
               </h1>
             </div>
             <div
               class="flex items-center leading-5 text-theme-secondary-text"
               data-testid="header__subtitle"
             >
-              Register a new Delegate address on the network below.
+              Register a new Validator address on the network below.
             </div>
           </div>
         </div>
@@ -83,7 +83,7 @@ exports[`DelegateRegistrationForm > should error if username is too long 1`] = `
           <div
             class="css-trjt6n"
           >
-            The Delegate name is permanent and cannot be modified later. It is registered on the network.
+            The Validator name is permanent and cannot be modified later. It is registered on the network.
           </div>
         </div>
         <div
@@ -193,7 +193,7 @@ exports[`DelegateRegistrationForm > should error if username is too long 1`] = `
               data-testid="FormLabel"
               for="username"
             >
-              Delegate Name
+              Validator Name
             </label>
             <div
               class=" css-1njetft"
@@ -216,7 +216,7 @@ exports[`DelegateRegistrationForm > should error if username is too long 1`] = `
                 data-testid="Input__addon-end"
               >
                 <span
-                  data-errortext="Delegate Name should have at most 20 characters"
+                  data-errortext="Validator Name should have at most 20 characters"
                   data-testid="Input__error"
                 >
                   <div
@@ -412,14 +412,14 @@ exports[`DelegateRegistrationForm > should render form step 1`] = `
                 class="mb-0 text-2xl leading-[29px]"
                 data-testid="header__title"
               >
-                Register Delegate
+                Register Validator
               </h1>
             </div>
             <div
               class="flex items-center leading-5 text-theme-secondary-text"
               data-testid="header__subtitle"
             >
-              Register a new Delegate address on the network below.
+              Register a new Validator address on the network below.
             </div>
           </div>
         </div>
@@ -473,7 +473,7 @@ exports[`DelegateRegistrationForm > should render form step 1`] = `
           <div
             class="css-trjt6n"
           >
-            The Delegate name is permanent and cannot be modified later. It is registered on the network.
+            The Validator name is permanent and cannot be modified later. It is registered on the network.
           </div>
         </div>
         <div
@@ -583,7 +583,7 @@ exports[`DelegateRegistrationForm > should render form step 1`] = `
               data-testid="FormLabel"
               for="username"
             >
-              Delegate Name
+              Validator Name
             </label>
             <div
               class=" css-14zfvme"
@@ -912,7 +912,7 @@ exports[`DelegateRegistrationForm > should render review step 1`] = `
                   <div
                     class="no-ligatures flex-shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:text-base sm:leading-5 w-auto sm:min-w-28"
                   >
-                    Delegate Name
+                    Validator Name
                   </div>
                   <div
                     class="no-ligatures truncate text-sm font-semibold leading-[17px] text-theme-secondary-900 dark:text-theme-secondary-200 sm:text-base sm:leading-5"
@@ -1060,14 +1060,14 @@ exports[`DelegateRegistrationForm > should set fee 1`] = `
                 class="mb-0 text-2xl leading-[29px]"
                 data-testid="header__title"
               >
-                Register Delegate
+                Register Validator
               </h1>
             </div>
             <div
               class="flex items-center leading-5 text-theme-secondary-text"
               data-testid="header__subtitle"
             >
-              Register a new Delegate address on the network below.
+              Register a new Validator address on the network below.
             </div>
           </div>
         </div>
@@ -1121,7 +1121,7 @@ exports[`DelegateRegistrationForm > should set fee 1`] = `
           <div
             class="css-trjt6n"
           >
-            The Delegate name is permanent and cannot be modified later. It is registered on the network.
+            The Validator name is permanent and cannot be modified later. It is registered on the network.
           </div>
         </div>
         <div
@@ -1231,7 +1231,7 @@ exports[`DelegateRegistrationForm > should set fee 1`] = `
               data-testid="FormLabel"
               for="username"
             >
-              Delegate Name
+              Validator Name
             </label>
             <div
               class=" css-14zfvme"
@@ -1425,14 +1425,14 @@ exports[`DelegateRegistrationForm > should show error if username already exists
                 class="mb-0 text-2xl leading-[29px]"
                 data-testid="header__title"
               >
-                Register Delegate
+                Register Validator
               </h1>
             </div>
             <div
               class="flex items-center leading-5 text-theme-secondary-text"
               data-testid="header__subtitle"
             >
-              Register a new Delegate address on the network below.
+              Register a new Validator address on the network below.
             </div>
           </div>
         </div>
@@ -1486,7 +1486,7 @@ exports[`DelegateRegistrationForm > should show error if username already exists
           <div
             class="css-trjt6n"
           >
-            The Delegate name is permanent and cannot be modified later. It is registered on the network.
+            The Validator name is permanent and cannot be modified later. It is registered on the network.
           </div>
         </div>
         <div
@@ -1596,7 +1596,7 @@ exports[`DelegateRegistrationForm > should show error if username already exists
               data-testid="FormLabel"
               for="username"
             >
-              Delegate Name
+              Validator Name
             </label>
             <div
               class=" css-1njetft"
@@ -1619,7 +1619,7 @@ exports[`DelegateRegistrationForm > should show error if username already exists
                 data-testid="Input__addon-end"
               >
                 <span
-                  data-errortext="Delegate Name already exists"
+                  data-errortext="Validator Name already exists"
                   data-testid="Input__error"
                 >
                   <div
@@ -1815,14 +1815,14 @@ exports[`DelegateRegistrationForm > should show error if username contains illeg
                 class="mb-0 text-2xl leading-[29px]"
                 data-testid="header__title"
               >
-                Register Delegate
+                Register Validator
               </h1>
             </div>
             <div
               class="flex items-center leading-5 text-theme-secondary-text"
               data-testid="header__subtitle"
             >
-              Register a new Delegate address on the network below.
+              Register a new Validator address on the network below.
             </div>
           </div>
         </div>
@@ -1876,7 +1876,7 @@ exports[`DelegateRegistrationForm > should show error if username contains illeg
           <div
             class="css-trjt6n"
           >
-            The Delegate name is permanent and cannot be modified later. It is registered on the network.
+            The Validator name is permanent and cannot be modified later. It is registered on the network.
           </div>
         </div>
         <div
@@ -1986,7 +1986,7 @@ exports[`DelegateRegistrationForm > should show error if username contains illeg
               data-testid="FormLabel"
               for="username"
             >
-              Delegate Name
+              Validator Name
             </label>
             <div
               class=" css-1njetft"
