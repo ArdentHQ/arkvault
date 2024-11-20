@@ -39,7 +39,6 @@ describe("useWalletActions", () => {
 		expect(current.handleSend()).toBeUndefined();
 		await expect(current.handleToggleStar()).resolves.toBeUndefined();
 		await expect(current.handleDelete()).resolves.toBeUndefined();
-		expect(current.handleConfirmEncryptionWarning()).toBeUndefined();
 		expect(current.handleSelectOption({} as DropdownOption)).toBeUndefined();
 	});
 
@@ -59,11 +58,5 @@ describe("useWalletActions", () => {
 		current.handleImportLedger();
 
 		expect(history.location.pathname).toBe(`/profiles/${profile.id()}/wallets/import/ledger`);
-
-		current.handleConfirmEncryptionWarning();
-
-		expect(history.location.pathname).toBe(
-			`/profiles/${profile.id()}/wallets/${wallet.id()}/send-registration/secondSignature`,
-		);
 	});
 });

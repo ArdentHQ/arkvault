@@ -84,11 +84,6 @@ export const FeeField: React.FC<Properties> = ({ type, network, profile, ...prop
 			return true;
 		}
 
-		if (type === "secondSignature" && !data.mnemonic) {
-			resetFees();
-			return true;
-		}
-
 		return false;
 	}, [data, resetFees, type, usesSizeBasedFee]);
 

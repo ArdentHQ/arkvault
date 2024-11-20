@@ -16,7 +16,6 @@ import {
 	env,
 	getDefaultProfileId,
 	getDefaultWalletMnemonic,
-	MNEMONICS,
 	render,
 	screen,
 	syncDelegates,
@@ -24,6 +23,7 @@ import {
 	waitFor,
 	within,
 	mockNanoXTransport,
+	MNEMONICS,
 } from "@/utils/testing-library";
 import { server, requestMock } from "@/tests/mocks/server";
 import transactionsFixture from "@/tests/fixtures/coins/ark/devnet/transactions.json";
@@ -202,7 +202,6 @@ describe("Registration", () => {
 
 	it.each([
 		["delegateRegistration", "Register Delegate"],
-		["secondSignature", "Register Second Signature"],
 		["multiSignature", multisignatureTitle],
 	])("should handle registrationType param (%s)", async (type, label) => {
 		const registrationPath = `/profiles/${getDefaultProfileId()}/wallets/${secondWallet.id()}/send-registration/${type}`;
@@ -416,13 +415,9 @@ describe("Registration", () => {
 
 	it("should show mnemonic error", async () => {
 		const nanoXTransportMock = mockNanoXTransport();
-		const { container } = await renderPage(secondWallet);
+		await renderPage(secondWallet);
 
 		const actsWithMnemonicMock = vi.spyOn(secondWallet, "actsWithMnemonic").mockReturnValue(true);
-
-		const { publicKey } = await secondWallet.coin().publicKey().fromMnemonic(MNEMONICS[1]);
-
-		const secondPublicKeyMock = vi.spyOn(secondWallet, "secondPublicKey").mockReturnValue(publicKey);
 
 		await expect(formStep()).resolves.toBeVisible();
 
@@ -443,17 +438,11 @@ describe("Registration", () => {
 		await expect(screen.findByTestId("AuthenticationStep")).resolves.toBeVisible();
 
 		const mnemonic = screen.getByTestId("AuthenticationStep__mnemonic");
-		const secondMnemonic = screen.getByTestId("AuthenticationStep__second-mnemonic");
 
-		await userEvent.type(mnemonic, MNEMONICS[0]);
-		await waitFor(() => expect(mnemonic).toHaveValue(MNEMONICS[0]));
+		const wrongPassphrase = "wrong passphrase";
 
-		await waitFor(() => {
-			expect(secondMnemonic).toBeEnabled();
-		});
-
-		await userEvent.type(secondMnemonic, MNEMONICS[2]);
-		await waitFor(() => expect(secondMnemonic).toHaveValue(MNEMONICS[2]));
+		await userEvent.type(mnemonic, wrongPassphrase);
+		await waitFor(() => expect(mnemonic).toHaveValue(wrongPassphrase));
 
 		expect(sendButton()).toBeDisabled();
 
@@ -463,10 +452,8 @@ describe("Registration", () => {
 			"data-errortext",
 			"This mnemonic does not correspond to your wallet",
 		);
-		expect(container).toMatchSnapshot();
 
 		actsWithMnemonicMock.mockRestore();
-		secondPublicKeyMock.mockRestore();
 		nanoXTransportMock.mockRestore();
 	});
 
@@ -559,13 +546,9 @@ describe("Registration", () => {
 
 	it("should show error step and go back", async () => {
 		const nanoXTransportMock = mockNanoXTransport();
-		const { asFragment } = await renderPage(secondWallet);
+		await renderPage(secondWallet);
 
 		const actsWithMnemonicMock = vi.spyOn(secondWallet, "actsWithMnemonic").mockReturnValue(true);
-
-		const { publicKey } = await secondWallet.coin().publicKey().fromMnemonic(MNEMONICS[1]);
-
-		const secondPublicKeyMock = vi.spyOn(secondWallet, "secondPublicKey").mockReturnValue(publicKey);
 
 		await expect(formStep()).resolves.toBeVisible();
 
@@ -587,17 +570,9 @@ describe("Registration", () => {
 		await expect(screen.findByTestId("AuthenticationStep")).resolves.toBeVisible();
 
 		const mnemonic = screen.getByTestId("AuthenticationStep__mnemonic");
-		const secondMnemonic = screen.getByTestId("AuthenticationStep__second-mnemonic");
 
 		await userEvent.type(mnemonic, MNEMONICS[0]);
 		await waitFor(() => expect(mnemonic).toHaveValue(MNEMONICS[0]));
-
-		await waitFor(() => {
-			expect(secondMnemonic).toBeEnabled();
-		});
-
-		await userEvent.type(secondMnemonic, MNEMONICS[1]);
-		await waitFor(() => expect(secondMnemonic).toHaveValue(MNEMONICS[1]));
 
 		await waitFor(() => expect(sendButton()).not.toBeDisabled());
 
@@ -617,7 +592,6 @@ describe("Registration", () => {
 		await expect(screen.findByTestId("ErrorStep")).resolves.toBeVisible();
 
 		expect(screen.getByTestId("ErrorStep__errorMessage")).toHaveTextContent("broadcast error");
-		expect(asFragment()).toMatchSnapshot();
 
 		await userEvent.click(screen.getByTestId("ErrorStep__close-button"));
 
@@ -628,7 +602,6 @@ describe("Registration", () => {
 		signMock.mockRestore();
 		broadcastMock.mockRestore();
 		actsWithMnemonicMock.mockRestore();
-		secondPublicKeyMock.mockRestore();
 		nanoXTransportMock.mockRestore();
 	});
 });

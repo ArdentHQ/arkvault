@@ -89,37 +89,6 @@ describe("Authentication", () => {
 		);
 	});
 
-	it("should validate second secret", async () => {
-		const secondSecret = authentication(translationMock).secondSecret(
-			wallet.coin(),
-			"0223542d61708e3fc48ba78fbe8fcc983ba94a520bc33f82b8e45e51dbc47af272",
-		);
-
-		await expect(secondSecret.validate.matchSenderPublicKey("abc")).resolves.toBe(true);
-	});
-
-	it("should fail validation for second secret", async () => {
-		const secondSecret = authentication(translationMock).secondSecret(
-			wallet.coin(),
-			"0223542d61708e3fc48ba78fbe8fcc983ba94a520bc33f82b8e45e51dbc47af272",
-		);
-
-		await expect(secondSecret.validate.matchSenderPublicKey("cba")).resolves.toBe(
-			"COMMON.INPUT_PASSPHRASE.VALIDATION.SECRET_NOT_MATCH_WALLET",
-		);
-	});
-
-	it("should fail second secret validation if a mnemonic is used", async () => {
-		const secondSecret = authentication(translationMock).secondSecret(
-			wallet.coin(),
-			"0223542d61708e3fc48ba78fbe8fcc983ba94a520bc33f82b8e45e51dbc47af272",
-		);
-
-		await expect(secondSecret.validate.matchSenderPublicKey(MNEMONICS[0])).resolves.toBe(
-			"COMMON.INPUT_PASSPHRASE.VALIDATION.SECRET_NOT_MATCH_WALLET",
-		);
-	});
-
 	it("should validate encryption password with BIP39", async () => {
 		const fromWifMock = vi
 			.spyOn(walletWithPassword.coin().address(), "fromWIF")
@@ -219,30 +188,5 @@ describe("Authentication", () => {
 
 		fromWifMock.mockRestore();
 		walletWifMock.mockRestore();
-	});
-
-	it("should validate second mnemonic", async () => {
-		const secondMnemonic = authentication(translationMock).secondMnemonic(
-			wallet.coin(),
-			"03312610168770136faee0c97bd252914f7146eb09e0172661f526f32e416f93f4",
-		);
-
-		await expect(secondMnemonic.validate.matchSenderPublicKey(MNEMONICS[1])).resolves.toBe(true);
-	});
-
-	it("should fail validation for second mnemonic", async () => {
-		const secondMnemonic = authentication(translationMock).secondMnemonic(wallet.coin(), wallet.address());
-
-		await expect(secondMnemonic.validate.matchSenderPublicKey(MNEMONICS[0])).resolves.toBe(
-			"COMMON.INPUT_PASSPHRASE.VALIDATION.MNEMONIC_NOT_MATCH_WALLET",
-		);
-	});
-
-	it("should fail second mnemonic validation if a secret is used", async () => {
-		const secondMnemonic = authentication(translationMock).secondMnemonic(wallet.coin(), wallet.address());
-
-		await expect(secondMnemonic.validate.matchSenderPublicKey("secret")).resolves.toBe(
-			"COMMON.INPUT_PASSPHRASE.VALIDATION.MNEMONIC_NOT_MATCH_WALLET",
-		);
 	});
 });

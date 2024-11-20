@@ -28,7 +28,6 @@ let wallet: Contracts.IReadWriteWallet;
 let getVersionSpy: vi.SpyInstance;
 
 const fixtures: Record<string, any> = {
-	ipfs: undefined,
 	multiPayment: undefined,
 	multiSignature: undefined,
 	transfer: undefined,
@@ -194,27 +193,6 @@ describe("MultiSignatureDetail", () => {
 							publicKeys: [wallet.publicKey()!, profile.wallets().last().publicKey()!],
 						}),
 				}),
-		);
-
-		fixtures.ipfs = new DTO.ExtendedSignedTransactionData(
-			await wallet
-				.coin()
-				.transaction()
-				.ipfs({
-					data: {
-						hash: "QmXoypizjW3WknFiJnKLwHCnL72vedxjQkDDP1mXWo6uco",
-					},
-					fee: 1,
-					nonce: "1",
-					signatory: await wallet
-						.coin()
-						.signatory()
-						.multiSignature({
-							min: 2,
-							publicKeys: [wallet.publicKey()!, profile.wallets().last().publicKey()!],
-						}),
-				}),
-			wallet,
 		);
 
 		vi.spyOn(wallet.transaction(), "sync").mockResolvedValue(void 0);
@@ -401,31 +379,6 @@ describe("MultiSignatureDetail", () => {
 		);
 
 		await expect(screen.findByText(translations.TRANSACTION_TYPES.UNVOTE)).resolves.toBeVisible();
-
-		canBeBroadcastedMock.mockRestore();
-		canBeSignedMock.mockRestore();
-		isAwaitingSignatureMock.mockRestore();
-	});
-
-	it("should render summary step for ipfs", async () => {
-		mockPendingTransfers(wallet);
-
-		const canBeBroadcastedMock = vi.spyOn(wallet.transaction(), "canBeBroadcasted").mockReturnValue(false);
-		const canBeSignedMock = vi.spyOn(wallet.transaction(), "canBeSigned").mockReturnValue(false);
-		const isAwaitingSignatureMock = vi
-			.spyOn(wallet.transaction(), "isAwaitingSignatureByPublicKey")
-			.mockReturnValue(false);
-
-		render(
-			<Route path="/profiles/:profileId">
-				<MultiSignatureDetail profile={profile} transaction={fixtures.ipfs} wallet={wallet} isOpen />
-			</Route>,
-			{
-				route: `/profiles/${profile.id()}`,
-			},
-		);
-
-		await expect(screen.findByText(translations.TRANSACTION_TYPES.IPFS)).resolves.toBeVisible();
 
 		canBeBroadcastedMock.mockRestore();
 		canBeSignedMock.mockRestore();
