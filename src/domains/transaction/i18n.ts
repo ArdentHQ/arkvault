@@ -438,11 +438,6 @@ export const translations = {
 		COIN_MISMATCH: "data is for another coin.",
 		COIN_MISSING: "coin parameter is missing.",
 		COIN_NOT_SUPPORTED: "coin <strong>{{coin}}</strong> is not supported.",
-		VALIDATOR_MISSING: "validator name or public key parameter is missing.",
-		VALIDATOR_NOT_FOUND: "validator <strong>{{validator}}</strong> could not be found.",
-		VALIDATOR_OR_PUBLICKEY:
-			"both validator name and public key were provided in url. Please use either one or the other.",
-		VALIDATOR_RESIGNED: "validator <strong>{{validator}}</strong> is resigned.",
 		FEE_NEGATIVE: "Fee cannot be negative",
 		INVALID_ADDRESS_OR_NETWORK_MISMATCH: "The provided address is invalid or belongs to another network",
 		INVALID_QR: "Invalid QR",
@@ -462,6 +457,11 @@ export const translations = {
 		NETWORK_OR_NETHASH_MISSING: "network or nethash parameter is missing.",
 		SIGNATORY_MISSING: "signatory is missing",
 		SIGNATURE_MISSING: "signature is missing",
+		VALIDATOR_MISSING: "validator name or public key parameter is missing.",
+		VALIDATOR_NOT_FOUND: "validator <strong>{{validator}}</strong> could not be found.",
+		VALIDATOR_OR_PUBLICKEY:
+			"both validator name and public key were provided in url. Please use either one or the other.",
+		VALIDATOR_RESIGNED: "validator <strong>{{validator}}</strong> is resigned.",
 	},
 	VIEW_RECIPIENTS_LIST: "View Full List",
 	VOTER: "Voter",
