@@ -137,14 +137,14 @@ describe("DelegateRegistrationForm", () => {
 	it("should error if public key is too long", async () => {
 		renderComponent();
 
-		const publicKey =
+		const validatorPublicKey =
 			"invalidPublicKey02147bf63839be7abb44707619b012a8b59ad3eda90be1c6e04eb9c630232268dea90be1c6e04eb9c630232268de";
 
-		await userEvent.type(screen.getByTestId("Input__public_key"), publicKey);
+		await userEvent.type(screen.getByTestId("Input__validator_public_key"), validatorPublicKey);
 
-		await waitFor(() => expect(screen.getByTestId("Input__public_key")).toHaveValue(publicKey));
+		await waitFor(() => expect(screen.getByTestId("Input__validator_public_key")).toHaveValue(validatorPublicKey));
 
-		await waitFor(() => expect(screen.getByTestId("Input__public_key")).toHaveAttribute("aria-invalid"));
+		await waitFor(() => expect(screen.getByTestId("Input__validator_public_key")).toHaveAttribute("aria-invalid"));
 
 		expect(screen.getByTestId("Input__error")).toBeVisible();
 	});
@@ -152,12 +152,12 @@ describe("DelegateRegistrationForm", () => {
 	it("should set public key", async () => {
 		const { form } = renderComponent();
 
-		const publicKey = "02147bf63839be7abb44707619b012a8b59ad3eda90be1c6e04eb9c630232268de";
+		const validatorPublicKey = "02147bf63839be7abb44707619b012a8b59ad3eda90be1c6e04eb9c630232268de";
 
-		await userEvent.type(screen.getByTestId("Input__public_key"), publicKey);
+		await userEvent.type(screen.getByTestId("Input__validator_public_key"), validatorPublicKey);
 
-		await waitFor(() => expect(screen.getByTestId("Input__public_key")).toHaveValue(publicKey));
-		await waitFor(() => expect(form?.getValues("publicKey")).toBe(publicKey));
+		await waitFor(() => expect(screen.getByTestId("Input__validator_public_key")).toHaveValue(validatorPublicKey));
+		await waitFor(() => expect(form?.getValues("validatorPublicKey")).toBe(validatorPublicKey));
 	});
 
 	it("should sign transaction", async () => {
@@ -167,8 +167,8 @@ describe("DelegateRegistrationForm", () => {
 				fee: "1",
 				mnemonic: MNEMONICS[0],
 				network: wallet.network(),
-				publicKey: "02147bf63839be7abb44707619b012a8b59ad3eda90be1c6e04eb9c630232268de",
 				senderAddress: wallet.address(),
+				validatorPublicKey: "02147bf63839be7abb44707619b012a8b59ad3eda90be1c6e04eb9c630232268de",
 			}),
 			setError: vi.fn(),
 			setValue: vi.fn(),
@@ -190,7 +190,7 @@ describe("DelegateRegistrationForm", () => {
 		});
 
 		expect(signMock).toHaveBeenCalledWith({
-			data: { publicKey: "02147bf63839be7abb44707619b012a8b59ad3eda90be1c6e04eb9c630232268de" },
+			data: { validatorPublicKey: "02147bf63839be7abb44707619b012a8b59ad3eda90be1c6e04eb9c630232268de" },
 			fee: 1,
 		});
 		expect(broadcastMock).toHaveBeenCalledWith(delegateRegistrationFixture.data.id);
@@ -210,7 +210,6 @@ describe("DelegateRegistrationForm", () => {
 			id: () => delegateRegistrationFixture.data.id,
 			recipient: () => delegateRegistrationFixture.data.recipient,
 			sender: () => delegateRegistrationFixture.data.sender,
-			username: () => delegateRegistrationFixture.data.asset.delegate.username,
 		} as Contracts.SignedTransactionData;
 
 		render(
@@ -221,8 +220,8 @@ describe("DelegateRegistrationForm", () => {
 			/>,
 		);
 
-		expect(screen.getByText("TRANSACTION.DELEGATE_NAME")).toBeInTheDocument();
-		expect(screen.getByText("test_delegate")).toBeInTheDocument();
+		expect(screen.getByText("TRANSACTION.VALIDATOR_PUBLIC_KEY")).toBeInTheDocument();
+		expect(screen.getByText("02147bf63839be7abb44707619b012a8b59ad3eda90be1c6e04eb9c630232268de")).toBeInTheDocument();
 	});
 
 	it("should sign transaction using password encryption", async () => {
@@ -236,8 +235,8 @@ describe("DelegateRegistrationForm", () => {
 				fee: "1",
 				mnemonic: MNEMONICS[0],
 				network: wallet.network(),
-				publicKey: "02147bf63839be7abb44707619b012a8b59ad3eda90be1c6e04eb9c630232268de",
 				senderAddress: wallet.address(),
+				validatorPublicKey: "02147bf63839be7abb44707619b012a8b59ad3eda90be1c6e04eb9c630232268de",
 			}),
 			setError: vi.fn(),
 			setValue: vi.fn(),
@@ -259,7 +258,7 @@ describe("DelegateRegistrationForm", () => {
 		});
 
 		expect(signMock).toHaveBeenCalledWith({
-			data: { publicKey: "02147bf63839be7abb44707619b012a8b59ad3eda90be1c6e04eb9c630232268de" },
+			data: { validatorPublicKey: "02147bf63839be7abb44707619b012a8b59ad3eda90be1c6e04eb9c630232268de" },
 			fee: 1,
 		});
 		expect(broadcastMock).toHaveBeenCalledWith(delegateRegistrationFixture.data.id);
