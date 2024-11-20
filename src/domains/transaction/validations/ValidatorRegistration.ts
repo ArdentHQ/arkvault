@@ -1,5 +1,5 @@
 export const validatorRegistration = (t: any) => ({
-	publicKey: () => ({
+	validatorPublicKey: () => ({
 		maxLength: {
 			message: t("COMMON.VALIDATION.MAX_LENGTH", {
 				field: t("TRANSACTION.VALIDATOR_PUBLIC_KEY"),

@@ -1,4 +1,4 @@
-import React, { ChangeEvent, useMemo } from "react";
+import React, {ChangeEvent, useEffect, useMemo} from "react";
 import { useFormContext } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 
@@ -17,10 +17,14 @@ export const FormStep: React.FC<FormStepProperties> = ({ wallet, profile }: Form
 	const { validatorRegistration } = useValidation();
 
 	const { getValues, register, setValue } = useFormContext();
-	const publicKey = getValues("publicKey");
+	const validatorPublicKey = getValues("validatorPublicKey");
 
 	const network = useMemo(() => wallet.network(), [wallet]);
-	const feeTransactionData = useMemo(() => ({ publicKey }), [publicKey]);
+	const feeTransactionData = useMemo(() => ({ validatorPublicKey }), [validatorPublicKey]);
+
+	useEffect(() => {
+		register("validatorPublicKey", validatorRegistration.validatorPublicKey());
+	}, [register, validatorRegistration]);
 
 	return (
 		<section data-testid="DelegateRegistrationForm__form-step">
@@ -46,11 +50,10 @@ export const FormStep: React.FC<FormStepProperties> = ({ wallet, profile }: Form
 				<FormField name="publicKey">
 					<FormLabel label={t("TRANSACTION.VALIDATOR_PUBLIC_KEY")} />
 					<InputDefault
-						ref={register(validatorRegistration.publicKey())}
-						data-testid="Input__public_key"
-						defaultValue={publicKey}
+						data-testid="Input__validator_public_key"
+						defaultValue={validatorPublicKey}
 						onChange={(event: ChangeEvent<HTMLInputElement>) =>
-							setValue("publicKey", event.target.value, { shouldDirty: true, shouldValidate: true })
+							setValue("validatorPublicKey", event.target.value, { shouldDirty: true, shouldValidate: true })
 						}
 					/>
 				</FormField>
