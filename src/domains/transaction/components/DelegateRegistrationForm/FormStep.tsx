@@ -23,7 +23,7 @@ export const FormStep: React.FC<FormStepProperties> = ({ wallet, profile }: Form
 	const feeTransactionData = useMemo(() => ({ validatorPublicKey }), [validatorPublicKey]);
 
 	useEffect(() => {
-		register("validatorPublicKey", validatorRegistration.validatorPublicKey());
+		register("validatorPublicKey", validatorRegistration.validatorPublicKey(wallet));
 	}, [register, validatorRegistration]);
 
 	return (
