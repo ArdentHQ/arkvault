@@ -29,7 +29,7 @@ export const validatorRegistration = (t: any) => ({
 			unique: debounceAsync<ValidateResult>(async (publicKey: string) => {
 				try {
 					await publicKeyExists(wallet.network(), publicKey);
-				} catch(e) {
+				} catch {
 					return t("COMMON.INPUT_PUBLIC_KEY.VALIDATION.PUBLIC_KEY_ALREADY_EXISTS", { publicKey });
 				}
 			}, 300),
