@@ -258,11 +258,7 @@ describe("FilterTransactions", () => {
 			<FilterTransactions
 				wallets={profile.wallets().values()}
 				onSelect={onSelect}
-				selectedTransactionTypes={[
-					"delegateRegistration",
-					"delegateResignation",
-					"multiSignature",
-				]}
+				selectedTransactionTypes={["delegateRegistration", "delegateResignation", "multiSignature"]}
 			/>,
 		);
 

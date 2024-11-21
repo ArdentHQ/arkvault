@@ -37,7 +37,7 @@ describe("TransactionRowRecipientLabel", () => {
 
 		expect(screen.getByText(translations.TRANSACTION_TYPES.MULTI_PAYMENT)).toBeInTheDocument();
 	});
-	
+
 	it.each(["xs", "sm"])("should render with right alignment on mobile view", (breakpoint) => {
 		renderResponsive(
 			<TransactionRowRecipientLabel
