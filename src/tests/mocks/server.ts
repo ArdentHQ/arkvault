@@ -1,7 +1,14 @@
 import { http, HttpResponse } from "msw";
 import { setupServer } from "msw/node";
 
-import { cryptoCompareHandlers, devnetHandlers, exchangeHandlers, mainnetHandlers, mainsailDevnetHandlers, miscHandlers } from "./handlers";
+import {
+	cryptoCompareHandlers,
+	devnetHandlers,
+	exchangeHandlers,
+	mainnetHandlers,
+	mainsailDevnetHandlers,
+	miscHandlers,
+} from "./handlers";
 
 export const requestMock = (path: string, data: undefined | string | object, options = {}) => {
 	const requestOptions = {

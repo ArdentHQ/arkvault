@@ -1,4 +1,4 @@
-import {http, HttpResponse, rest} from "msw";
+import { http, HttpResponse, rest } from "msw";
 
 const endpoints = [
 	{ path: "/blockchain", data: require("../../fixtures/coins/mainsail/devnet/blockchain.json") },
@@ -14,15 +14,13 @@ const endpoints = [
 	// { path: "/transactions/fees", data: require("../../fixtures/coins/mainsail/devnet/transaction-fees.json") },
 ];
 
-const wallets = [
-	"0x8A3117649655714c296cd816691e01C5148922ed",
-];
+const wallets = ["0x8A3117649655714c296cd816691e01C5148922ed"];
 
 export const mainsailDevnetHandlers = [
 	...endpoints.map((endpoint) =>
 		http.get(`https://dwallets-evm.mainsailhq.com/api${endpoint.path}`, () => {
 			return HttpResponse.json(endpoint.data);
-		})
+		}),
 	),
 	http.get("https://dwallets-evm.mainsailhq.com/", () => {
 		return HttpResponse.json({ data: "Hello World!" });
