@@ -715,7 +715,7 @@ describe("Welcome", () => {
 		const { asFragment, container } = render(<Welcome />, { history });
 
 		expect(container).toBeInTheDocument();
-		await expect(screen.findAllByTestId("ProfileRow")).resolves.toHaveLength(2);
+		await expect(screen.findAllByTestId("ProfileRow")).resolves.toHaveLength(3);
 
 		await env.profiles().restore(profile, getDefaultPassword());
 
@@ -802,7 +802,7 @@ describe("Welcome", () => {
 
 		expect(screen.getByText(profileTranslations.PAGE_WELCOME.WITH_PROFILES.TITLE)).toBeInTheDocument();
 
-		await waitFor(() => expect(screen.getAllByTestId("ProfileRow")).toHaveLength(2));
+		await waitFor(() => expect(screen.getAllByTestId("ProfileRow")).toHaveLength(3));
 
 		await userEvent.click(screen.getAllByTestId("dropdown__toggle")[0]);
 
@@ -816,7 +816,7 @@ describe("Welcome", () => {
 
 		await userEvent.click(screen.getByTestId("DeleteResource__submit-button"));
 
-		await waitFor(() => expect(screen.getAllByTestId("ProfileRow")).toHaveLength(1));
+		await waitFor(() => expect(screen.getAllByTestId("ProfileRow")).toHaveLength(2));
 	});
 
 	it("should not select profile on wrong last location", () => {
