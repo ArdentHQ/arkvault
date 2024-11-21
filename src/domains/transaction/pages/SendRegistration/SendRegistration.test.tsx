@@ -198,7 +198,7 @@ describe("Registration", () => {
 				transactionsFixture,
 			),
 			// Emulate public key hasn't used
-			requestMock(`https://dwallets.mainsailhq.com/api/wallets*`, { meta: { count: 0 } }),
+			requestMock(`https://dwallets-evm.mainsailhq.com/api/wallets*`, { meta: { count: 0 } }),
 		);
 	});
 

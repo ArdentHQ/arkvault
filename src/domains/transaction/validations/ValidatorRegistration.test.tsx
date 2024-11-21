@@ -37,7 +37,7 @@ describe("Register validator validation", () => {
 		const { validate } = validatorRegistration(translationMock).validatorPublicKey(profile.wallets().first());
 
 		// Emulate public key hasn't used
-		server.use(requestMock(`https://dwallets.mainsailhq.com/api/wallets*`, { meta: { count: 0 } }));
+		server.use(requestMock(`https://dwallets-evm.mainsailhq.com/api/wallets*`, { meta: { count: 0 } }));
 
 		await expect(
 			validate.unique(
@@ -50,7 +50,7 @@ describe("Register validator validation", () => {
 		const { validate } = validatorRegistration(translationMock).validatorPublicKey(profile.wallets().first());
 
 		// Emulate public key has used
-		server.use(requestMock(`https://dwallets.mainsailhq.com/api/wallets*`, { meta: { count: 1 } }));
+		server.use(requestMock(`https://dwallets-evm.mainsailhq.com/api/wallets*`, { meta: { count: 1 } }));
 
 		await expect(
 			validate.unique(
