@@ -1,6 +1,5 @@
 import { Contracts } from "@ardenthq/sdk-profiles";
 import { Networks } from "@ardenthq/sdk";
-import { ValidateResult } from "react-hook-form";
 import { debounceAsync } from "@/utils/debounce";
 
 export const validatorRegistration = (t: any) => ({
@@ -26,7 +25,7 @@ export const validatorRegistration = (t: any) => ({
 
 				return true;
 			},
-			unique: debounceAsync<ValidateResult>(async (publicKey: string) => {
+			unique: debounceAsync(async (publicKey: string) => {
 				try {
 					await publicKeyExists(wallet.network(), publicKey);
 				} catch {
