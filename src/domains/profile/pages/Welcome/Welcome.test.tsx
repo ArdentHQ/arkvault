@@ -135,7 +135,7 @@ describe("Welcome with deeplink", () => {
 			},
 		);
 
-		await waitFor(() => expect(screen.getAllByTestId("ProfileRow")).toHaveLength(2));
+		await waitFor(() => expect(screen.getAllByTestId("ProfileRow")).toHaveLength(3));
 
 		await waitFor(() =>
 			expect(toastWarningSpy).toHaveBeenCalledWith(commonTranslations.SELECT_A_PROFILE, { delay: 500 }),
@@ -168,7 +168,7 @@ describe("Welcome with deeplink", () => {
 			},
 		);
 
-		await waitFor(() => expect(screen.getAllByTestId("ProfileRow")).toHaveLength(2));
+		await waitFor(() => expect(screen.getAllByTestId("ProfileRow")).toHaveLength(3));
 
 		await waitFor(() =>
 			expect(toastWarningSpy).toHaveBeenCalledWith(commonTranslations.SELECT_A_PROFILE, { delay: 500 }),
@@ -410,7 +410,7 @@ describe("Welcome with deeplink", () => {
 			},
 		);
 
-		await waitFor(() => expect(screen.getAllByTestId("ProfileRow")).toHaveLength(2));
+		await waitFor(() => expect(screen.getAllByTestId("ProfileRow")).toHaveLength(3));
 
 		await waitFor(() =>
 			expect(toastWarningSpy).toHaveBeenCalledWith(commonTranslations.SELECT_A_PROFILE, { delay: 500 }),
@@ -442,7 +442,7 @@ describe("Welcome with deeplink", () => {
 			},
 		);
 
-		await waitFor(() => expect(screen.getAllByTestId("ProfileRow")).toHaveLength(2));
+		await waitFor(() => expect(screen.getAllByTestId("ProfileRow")).toHaveLength(3));
 
 		await waitFor(() =>
 			expect(toastWarningSpy).toHaveBeenCalledWith(commonTranslations.SELECT_A_PROFILE, { delay: 500 }),
@@ -569,7 +569,7 @@ describe("Welcome with deeplink", () => {
 			},
 		);
 
-		await waitFor(() => expect(screen.getAllByTestId("ProfileRow")).toHaveLength(2));
+		await waitFor(() => expect(screen.getAllByTestId("ProfileRow")).toHaveLength(3));
 
 		await waitFor(() =>
 			expect(toastWarningSpy).toHaveBeenCalledWith(commonTranslations.SELECT_A_PROFILE, { delay: 500 }),
