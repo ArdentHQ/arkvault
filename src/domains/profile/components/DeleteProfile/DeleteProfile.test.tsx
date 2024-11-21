@@ -28,6 +28,6 @@ describe("DeleteProfile", () => {
 
 		await userEvent.click(screen.getByTestId("DeleteResource__submit-button"));
 
-		await waitFor(() => expect(env.profiles().values()).toHaveLength(1));
+		await waitFor(() => expect(env.profiles().values()).toHaveLength(2));
 	});
 });

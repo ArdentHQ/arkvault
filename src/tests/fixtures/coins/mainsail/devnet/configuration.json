@@ -1,0 +1,46 @@
+{
+	"data": {
+		"constants": {
+			"gas": {
+				"minimumGasFee": 5,
+				"maximumGasLimit": 2000000,
+				"minimumGasLimit": 21000,
+				"nativeFeeMultiplier": 100
+			},
+			"block": {
+				"version": 1,
+				"maxPayload": 2097152,
+				"maxGasLimit": 10000000,
+				"maxTransactions": 150
+			},
+			"epoch": "2024-11-18T00:00:00.000Z",
+			"height": 1,
+			"reward": "0",
+			"evmSpec": "Shanghai",
+			"satoshi": {
+				"decimals": 18,
+				"denomination": 1000000000000000000
+			},
+			"timeouts": {
+				"blockTime": 8000,
+				"tolerance": 100,
+				"stageTimeout": 2000,
+				"blockPrepareTime": 4000,
+				"stageTimeoutIncrease": 2000
+			},
+			"activeValidators": 53,
+			"vendorFieldLength": 255
+		},
+		"core": {
+			"version": "0.0.1-evm.9"
+		},
+		"explorer": "",
+		"nethash": "c481dea3dcc13708364e576dff94dd499692b56cbc646d5acd22a3902297dd51",
+		"ports": {},
+		"slip44": 1,
+		"symbol": "TѦ",
+		"token": "ARK",
+		"version": 30,
+		"wif": 186
+	}
+}

@@ -551,6 +551,98 @@ exports[`Welcome > should change route to create profile 1`] = `
                           </div>
                         </div>
                       </div>
+                      <div
+                        class="flex cursor-pointer items-center rounded-lg border border-theme-primary-200 leading-tight transition-colors-shadow duration-100 ease-linear hover:border-theme-primary-100 hover:bg-theme-primary-100 dark:border-theme-secondary-800 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800"
+                        data-testid="ProfileRow"
+                      >
+                        <a
+                          class="flex min-w-0 flex-1 py-1 pl-1"
+                          data-testid="ProfileRow__Link"
+                          tabindex="1"
+                        >
+                          <div
+                            class="flex h-full w-full min-w-0 items-center justify-between"
+                          >
+                            <div
+                              class="flex min-w-0 items-center"
+                            >
+                              <div
+                                class="shrink-0 css-2ka7vg"
+                                data-testid="Avatar"
+                              >
+                                <div
+                                  class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
+                                >
+                                  <img
+                                    alt="Foo Bar"
+                                    data-testid="ProfileAvatar__svg"
+                                    src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(76, 175, 80)" width="100" height="100"/><circle r="35" cx="40" cy="60" fill="rgb(0, 150, 136)"/><circle r="60" cx="90" cy="40" fill="rgb(139, 195, 74)"/><circle r="45" cx="30" cy="70" fill="rgb(3, 169, 244)"/></svg>"
+                                    title="Foo Bar"
+                                  />
+                                  <span
+                                    class="absolute font-semibold text-white"
+                                  >
+                                    FO
+                                  </span>
+                                </div>
+                              </div>
+                              <span
+                                class="text-theme-primary-text inline-block truncate pl-3 font-semibold"
+                              >
+                                Foo Bar
+                              </span>
+                            </div>
+                          </div>
+                        </a>
+                        <div
+                          class="relative"
+                        >
+                          <div
+                            aria-expanded="false"
+                            aria-haspopup="dialog"
+                            data-testid="dropdown__toggle"
+                          >
+                            <div
+                              class="group mr-2.5 flex cursor-pointer justify-center rounded-md p-1.5 hover:bg-theme-navy-200 dark:hover:bg-theme-secondary-700"
+                              tabindex="1"
+                            >
+                              <div
+                                class="text-theme-secondary-700 transition-colors duration-200 group-hover:text-theme-navy-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200 css-v0ob3f"
+                                height="16"
+                                width="16"
+                              >
+                                <svg
+                                  fill="none"
+                                  viewBox="0 0 20 20"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                >
+                                  <circle
+                                    cx="10.002"
+                                    cy="2.99609"
+                                    fill="currentColor"
+                                    r="2"
+                                    transform="rotate(90 10.002 2.99609)"
+                                  />
+                                  <circle
+                                    cx="10.002"
+                                    cy="9.99805"
+                                    fill="currentColor"
+                                    r="2"
+                                    transform="rotate(90 10.002 9.99805)"
+                                  />
+                                  <circle
+                                    cx="10.002"
+                                    cy="17"
+                                    fill="currentColor"
+                                    r="2"
+                                    transform="rotate(90 10.002 17)"
+                                  />
+                                </svg>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                     <button
                       class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 green:hover:bg-theme-primary-700 navy:hover:bg-theme-primary-800 dark:hover:bg-theme-primary-500 mt-3"
@@ -1219,6 +1311,98 @@ exports[`Welcome > should navigate to previous page with correct password 1`] = 
                                   />
                                 </g>
                               </svg>
+                            </div>
+                          </div>
+                        </a>
+                        <div
+                          class="relative"
+                        >
+                          <div
+                            aria-expanded="false"
+                            aria-haspopup="dialog"
+                            data-testid="dropdown__toggle"
+                          >
+                            <div
+                              class="group mr-2.5 flex cursor-pointer justify-center rounded-md p-1.5 hover:bg-theme-navy-200 dark:hover:bg-theme-secondary-700"
+                              tabindex="1"
+                            >
+                              <div
+                                class="text-theme-secondary-700 transition-colors duration-200 group-hover:text-theme-navy-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200 css-v0ob3f"
+                                height="16"
+                                width="16"
+                              >
+                                <svg
+                                  fill="none"
+                                  viewBox="0 0 20 20"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                >
+                                  <circle
+                                    cx="10.002"
+                                    cy="2.99609"
+                                    fill="currentColor"
+                                    r="2"
+                                    transform="rotate(90 10.002 2.99609)"
+                                  />
+                                  <circle
+                                    cx="10.002"
+                                    cy="9.99805"
+                                    fill="currentColor"
+                                    r="2"
+                                    transform="rotate(90 10.002 9.99805)"
+                                  />
+                                  <circle
+                                    cx="10.002"
+                                    cy="17"
+                                    fill="currentColor"
+                                    r="2"
+                                    transform="rotate(90 10.002 17)"
+                                  />
+                                </svg>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        class="flex cursor-pointer items-center rounded-lg border border-theme-primary-200 leading-tight transition-colors-shadow duration-100 ease-linear hover:border-theme-primary-100 hover:bg-theme-primary-100 dark:border-theme-secondary-800 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800"
+                        data-testid="ProfileRow"
+                      >
+                        <a
+                          class="flex min-w-0 flex-1 py-1 pl-1"
+                          data-testid="ProfileRow__Link"
+                          tabindex="1"
+                        >
+                          <div
+                            class="flex h-full w-full min-w-0 items-center justify-between"
+                          >
+                            <div
+                              class="flex min-w-0 items-center"
+                            >
+                              <div
+                                class="shrink-0 css-2ka7vg"
+                                data-testid="Avatar"
+                              >
+                                <div
+                                  class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
+                                >
+                                  <img
+                                    alt="Foo Bar"
+                                    data-testid="ProfileAvatar__svg"
+                                    src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(76, 175, 80)" width="100" height="100"/><circle r="35" cx="40" cy="60" fill="rgb(0, 150, 136)"/><circle r="60" cx="90" cy="40" fill="rgb(139, 195, 74)"/><circle r="45" cx="30" cy="70" fill="rgb(3, 169, 244)"/></svg>"
+                                    title="Foo Bar"
+                                  />
+                                  <span
+                                    class="absolute font-semibold text-white"
+                                  >
+                                    FO
+                                  </span>
+                                </div>
+                              </div>
+                              <span
+                                class="text-theme-primary-text inline-block truncate pl-3 font-semibold"
+                              >
+                                Foo Bar
+                              </span>
                             </div>
                           </div>
                         </a>
@@ -1991,6 +2175,98 @@ exports[`Welcome > should navigate to profile dashboard 1`] = `
                           </div>
                         </div>
                       </div>
+                      <div
+                        class="flex cursor-pointer items-center rounded-lg border border-theme-primary-200 leading-tight transition-colors-shadow duration-100 ease-linear hover:border-theme-primary-100 hover:bg-theme-primary-100 dark:border-theme-secondary-800 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800"
+                        data-testid="ProfileRow"
+                      >
+                        <a
+                          class="flex min-w-0 flex-1 py-1 pl-1"
+                          data-testid="ProfileRow__Link"
+                          tabindex="1"
+                        >
+                          <div
+                            class="flex h-full w-full min-w-0 items-center justify-between"
+                          >
+                            <div
+                              class="flex min-w-0 items-center"
+                            >
+                              <div
+                                class="shrink-0 css-2ka7vg"
+                                data-testid="Avatar"
+                              >
+                                <div
+                                  class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
+                                >
+                                  <img
+                                    alt="Foo Bar"
+                                    data-testid="ProfileAvatar__svg"
+                                    src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(76, 175, 80)" width="100" height="100"/><circle r="35" cx="40" cy="60" fill="rgb(0, 150, 136)"/><circle r="60" cx="90" cy="40" fill="rgb(139, 195, 74)"/><circle r="45" cx="30" cy="70" fill="rgb(3, 169, 244)"/></svg>"
+                                    title="Foo Bar"
+                                  />
+                                  <span
+                                    class="absolute font-semibold text-white"
+                                  >
+                                    FO
+                                  </span>
+                                </div>
+                              </div>
+                              <span
+                                class="text-theme-primary-text inline-block truncate pl-3 font-semibold"
+                              >
+                                Foo Bar
+                              </span>
+                            </div>
+                          </div>
+                        </a>
+                        <div
+                          class="relative"
+                        >
+                          <div
+                            aria-expanded="false"
+                            aria-haspopup="dialog"
+                            data-testid="dropdown__toggle"
+                          >
+                            <div
+                              class="group mr-2.5 flex cursor-pointer justify-center rounded-md p-1.5 hover:bg-theme-navy-200 dark:hover:bg-theme-secondary-700"
+                              tabindex="1"
+                            >
+                              <div
+                                class="text-theme-secondary-700 transition-colors duration-200 group-hover:text-theme-navy-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200 css-v0ob3f"
+                                height="16"
+                                width="16"
+                              >
+                                <svg
+                                  fill="none"
+                                  viewBox="0 0 20 20"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                >
+                                  <circle
+                                    cx="10.002"
+                                    cy="2.99609"
+                                    fill="currentColor"
+                                    r="2"
+                                    transform="rotate(90 10.002 2.99609)"
+                                  />
+                                  <circle
+                                    cx="10.002"
+                                    cy="9.99805"
+                                    fill="currentColor"
+                                    r="2"
+                                    transform="rotate(90 10.002 9.99805)"
+                                  />
+                                  <circle
+                                    cx="10.002"
+                                    cy="17"
+                                    fill="currentColor"
+                                    r="2"
+                                    transform="rotate(90 10.002 17)"
+                                  />
+                                </svg>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                     <button
                       class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 green:hover:bg-theme-primary-700 navy:hover:bg-theme-primary-800 dark:hover:bg-theme-primary-500 mt-3"
@@ -2659,6 +2935,98 @@ exports[`Welcome > should navigate to profile dashboard with correct password 1`
                                   />
                                 </g>
                               </svg>
+                            </div>
+                          </div>
+                        </a>
+                        <div
+                          class="relative"
+                        >
+                          <div
+                            aria-expanded="false"
+                            aria-haspopup="dialog"
+                            data-testid="dropdown__toggle"
+                          >
+                            <div
+                              class="group mr-2.5 flex cursor-pointer justify-center rounded-md p-1.5 hover:bg-theme-navy-200 dark:hover:bg-theme-secondary-700"
+                              tabindex="1"
+                            >
+                              <div
+                                class="text-theme-secondary-700 transition-colors duration-200 group-hover:text-theme-navy-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200 css-v0ob3f"
+                                height="16"
+                                width="16"
+                              >
+                                <svg
+                                  fill="none"
+                                  viewBox="0 0 20 20"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                >
+                                  <circle
+                                    cx="10.002"
+                                    cy="2.99609"
+                                    fill="currentColor"
+                                    r="2"
+                                    transform="rotate(90 10.002 2.99609)"
+                                  />
+                                  <circle
+                                    cx="10.002"
+                                    cy="9.99805"
+                                    fill="currentColor"
+                                    r="2"
+                                    transform="rotate(90 10.002 9.99805)"
+                                  />
+                                  <circle
+                                    cx="10.002"
+                                    cy="17"
+                                    fill="currentColor"
+                                    r="2"
+                                    transform="rotate(90 10.002 17)"
+                                  />
+                                </svg>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        class="flex cursor-pointer items-center rounded-lg border border-theme-primary-200 leading-tight transition-colors-shadow duration-100 ease-linear hover:border-theme-primary-100 hover:bg-theme-primary-100 dark:border-theme-secondary-800 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800"
+                        data-testid="ProfileRow"
+                      >
+                        <a
+                          class="flex min-w-0 flex-1 py-1 pl-1"
+                          data-testid="ProfileRow__Link"
+                          tabindex="1"
+                        >
+                          <div
+                            class="flex h-full w-full min-w-0 items-center justify-between"
+                          >
+                            <div
+                              class="flex min-w-0 items-center"
+                            >
+                              <div
+                                class="shrink-0 css-2ka7vg"
+                                data-testid="Avatar"
+                              >
+                                <div
+                                  class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
+                                >
+                                  <img
+                                    alt="Foo Bar"
+                                    data-testid="ProfileAvatar__svg"
+                                    src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(76, 175, 80)" width="100" height="100"/><circle r="35" cx="40" cy="60" fill="rgb(0, 150, 136)"/><circle r="60" cx="90" cy="40" fill="rgb(139, 195, 74)"/><circle r="45" cx="30" cy="70" fill="rgb(3, 169, 244)"/></svg>"
+                                    title="Foo Bar"
+                                  />
+                                  <span
+                                    class="absolute font-semibold text-white"
+                                  >
+                                    FO
+                                  </span>
+                                </div>
+                              </div>
+                              <span
+                                class="text-theme-primary-text inline-block truncate pl-3 font-semibold"
+                              >
+                                Foo Bar
+                              </span>
                             </div>
                           </div>
                         </a>
@@ -3431,6 +3799,98 @@ exports[`Welcome > should navigate to profile settings from profile card menu 1`
                           </div>
                         </div>
                       </div>
+                      <div
+                        class="flex cursor-pointer items-center rounded-lg border border-theme-primary-200 leading-tight transition-colors-shadow duration-100 ease-linear hover:border-theme-primary-100 hover:bg-theme-primary-100 dark:border-theme-secondary-800 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800"
+                        data-testid="ProfileRow"
+                      >
+                        <a
+                          class="flex min-w-0 flex-1 py-1 pl-1"
+                          data-testid="ProfileRow__Link"
+                          tabindex="1"
+                        >
+                          <div
+                            class="flex h-full w-full min-w-0 items-center justify-between"
+                          >
+                            <div
+                              class="flex min-w-0 items-center"
+                            >
+                              <div
+                                class="shrink-0 css-2ka7vg"
+                                data-testid="Avatar"
+                              >
+                                <div
+                                  class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
+                                >
+                                  <img
+                                    alt="Foo Bar"
+                                    data-testid="ProfileAvatar__svg"
+                                    src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(76, 175, 80)" width="100" height="100"/><circle r="35" cx="40" cy="60" fill="rgb(0, 150, 136)"/><circle r="60" cx="90" cy="40" fill="rgb(139, 195, 74)"/><circle r="45" cx="30" cy="70" fill="rgb(3, 169, 244)"/></svg>"
+                                    title="Foo Bar"
+                                  />
+                                  <span
+                                    class="absolute font-semibold text-white"
+                                  >
+                                    FO
+                                  </span>
+                                </div>
+                              </div>
+                              <span
+                                class="text-theme-primary-text inline-block truncate pl-3 font-semibold"
+                              >
+                                Foo Bar
+                              </span>
+                            </div>
+                          </div>
+                        </a>
+                        <div
+                          class="relative"
+                        >
+                          <div
+                            aria-expanded="false"
+                            aria-haspopup="dialog"
+                            data-testid="dropdown__toggle"
+                          >
+                            <div
+                              class="group mr-2.5 flex cursor-pointer justify-center rounded-md p-1.5 hover:bg-theme-navy-200 dark:hover:bg-theme-secondary-700"
+                              tabindex="1"
+                            >
+                              <div
+                                class="text-theme-secondary-700 transition-colors duration-200 group-hover:text-theme-navy-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200 css-v0ob3f"
+                                height="16"
+                                width="16"
+                              >
+                                <svg
+                                  fill="none"
+                                  viewBox="0 0 20 20"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                >
+                                  <circle
+                                    cx="10.002"
+                                    cy="2.99609"
+                                    fill="currentColor"
+                                    r="2"
+                                    transform="rotate(90 10.002 2.99609)"
+                                  />
+                                  <circle
+                                    cx="10.002"
+                                    cy="9.99805"
+                                    fill="currentColor"
+                                    r="2"
+                                    transform="rotate(90 10.002 9.99805)"
+                                  />
+                                  <circle
+                                    cx="10.002"
+                                    cy="17"
+                                    fill="currentColor"
+                                    r="2"
+                                    transform="rotate(90 10.002 17)"
+                                  />
+                                </svg>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                     <button
                       class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 green:hover:bg-theme-primary-700 navy:hover:bg-theme-primary-800 dark:hover:bg-theme-primary-500 mt-3"
@@ -4151,6 +4611,98 @@ exports[`Welcome > should navigate to profile settings with correct password 1`]
                           </div>
                         </div>
                       </div>
+                      <div
+                        class="flex cursor-pointer items-center rounded-lg border border-theme-primary-200 leading-tight transition-colors-shadow duration-100 ease-linear hover:border-theme-primary-100 hover:bg-theme-primary-100 dark:border-theme-secondary-800 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800"
+                        data-testid="ProfileRow"
+                      >
+                        <a
+                          class="flex min-w-0 flex-1 py-1 pl-1"
+                          data-testid="ProfileRow__Link"
+                          tabindex="1"
+                        >
+                          <div
+                            class="flex h-full w-full min-w-0 items-center justify-between"
+                          >
+                            <div
+                              class="flex min-w-0 items-center"
+                            >
+                              <div
+                                class="shrink-0 css-2ka7vg"
+                                data-testid="Avatar"
+                              >
+                                <div
+                                  class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
+                                >
+                                  <img
+                                    alt="Foo Bar"
+                                    data-testid="ProfileAvatar__svg"
+                                    src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(76, 175, 80)" width="100" height="100"/><circle r="35" cx="40" cy="60" fill="rgb(0, 150, 136)"/><circle r="60" cx="90" cy="40" fill="rgb(139, 195, 74)"/><circle r="45" cx="30" cy="70" fill="rgb(3, 169, 244)"/></svg>"
+                                    title="Foo Bar"
+                                  />
+                                  <span
+                                    class="absolute font-semibold text-white"
+                                  >
+                                    FO
+                                  </span>
+                                </div>
+                              </div>
+                              <span
+                                class="text-theme-primary-text inline-block truncate pl-3 font-semibold"
+                              >
+                                Foo Bar
+                              </span>
+                            </div>
+                          </div>
+                        </a>
+                        <div
+                          class="relative"
+                        >
+                          <div
+                            aria-expanded="false"
+                            aria-haspopup="dialog"
+                            data-testid="dropdown__toggle"
+                          >
+                            <div
+                              class="group mr-2.5 flex cursor-pointer justify-center rounded-md p-1.5 hover:bg-theme-navy-200 dark:hover:bg-theme-secondary-700"
+                              tabindex="1"
+                            >
+                              <div
+                                class="text-theme-secondary-700 transition-colors duration-200 group-hover:text-theme-navy-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200 css-v0ob3f"
+                                height="16"
+                                width="16"
+                              >
+                                <svg
+                                  fill="none"
+                                  viewBox="0 0 20 20"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                >
+                                  <circle
+                                    cx="10.002"
+                                    cy="2.99609"
+                                    fill="currentColor"
+                                    r="2"
+                                    transform="rotate(90 10.002 2.99609)"
+                                  />
+                                  <circle
+                                    cx="10.002"
+                                    cy="9.99805"
+                                    fill="currentColor"
+                                    r="2"
+                                    transform="rotate(90 10.002 9.99805)"
+                                  />
+                                  <circle
+                                    cx="10.002"
+                                    cy="17"
+                                    fill="currentColor"
+                                    r="2"
+                                    transform="rotate(90 10.002 17)"
+                                  />
+                                </svg>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                     <button
                       class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 green:hover:bg-theme-primary-700 navy:hover:bg-theme-primary-800 dark:hover:bg-theme-primary-500 mt-3"
@@ -4727,6 +5279,98 @@ exports[`Welcome > should not select profile on wrong last location 1`] = `
                                   />
                                 </g>
                               </svg>
+                            </div>
+                          </div>
+                        </a>
+                        <div
+                          class="relative"
+                        >
+                          <div
+                            aria-expanded="false"
+                            aria-haspopup="dialog"
+                            data-testid="dropdown__toggle"
+                          >
+                            <div
+                              class="group mr-2.5 flex cursor-pointer justify-center rounded-md p-1.5 hover:bg-theme-navy-200 dark:hover:bg-theme-secondary-700"
+                              tabindex="1"
+                            >
+                              <div
+                                class="text-theme-secondary-700 transition-colors duration-200 group-hover:text-theme-navy-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200 css-v0ob3f"
+                                height="16"
+                                width="16"
+                              >
+                                <svg
+                                  fill="none"
+                                  viewBox="0 0 20 20"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                >
+                                  <circle
+                                    cx="10.002"
+                                    cy="2.99609"
+                                    fill="currentColor"
+                                    r="2"
+                                    transform="rotate(90 10.002 2.99609)"
+                                  />
+                                  <circle
+                                    cx="10.002"
+                                    cy="9.99805"
+                                    fill="currentColor"
+                                    r="2"
+                                    transform="rotate(90 10.002 9.99805)"
+                                  />
+                                  <circle
+                                    cx="10.002"
+                                    cy="17"
+                                    fill="currentColor"
+                                    r="2"
+                                    transform="rotate(90 10.002 17)"
+                                  />
+                                </svg>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        class="flex cursor-pointer items-center rounded-lg border border-theme-primary-200 leading-tight transition-colors-shadow duration-100 ease-linear hover:border-theme-primary-100 hover:bg-theme-primary-100 dark:border-theme-secondary-800 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800"
+                        data-testid="ProfileRow"
+                      >
+                        <a
+                          class="flex min-w-0 flex-1 py-1 pl-1"
+                          data-testid="ProfileRow__Link"
+                          tabindex="1"
+                        >
+                          <div
+                            class="flex h-full w-full min-w-0 items-center justify-between"
+                          >
+                            <div
+                              class="flex min-w-0 items-center"
+                            >
+                              <div
+                                class="shrink-0 css-2ka7vg"
+                                data-testid="Avatar"
+                              >
+                                <div
+                                  class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
+                                >
+                                  <img
+                                    alt="Foo Bar"
+                                    data-testid="ProfileAvatar__svg"
+                                    src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(76, 175, 80)" width="100" height="100"/><circle r="35" cx="40" cy="60" fill="rgb(0, 150, 136)"/><circle r="60" cx="90" cy="40" fill="rgb(139, 195, 74)"/><circle r="45" cx="30" cy="70" fill="rgb(3, 169, 244)"/></svg>"
+                                    title="Foo Bar"
+                                  />
+                                  <span
+                                    class="absolute font-semibold text-white"
+                                  >
+                                    FO
+                                  </span>
+                                </div>
+                              </div>
+                              <span
+                                class="text-theme-primary-text inline-block truncate pl-3 font-semibold"
+                              >
+                                Foo Bar
+                              </span>
                             </div>
                           </div>
                         </a>
@@ -5447,6 +6091,98 @@ exports[`Welcome > should render with profiles 1`] = `
                                   />
                                 </g>
                               </svg>
+                            </div>
+                          </div>
+                        </a>
+                        <div
+                          class="relative"
+                        >
+                          <div
+                            aria-expanded="false"
+                            aria-haspopup="dialog"
+                            data-testid="dropdown__toggle"
+                          >
+                            <div
+                              class="group mr-2.5 flex cursor-pointer justify-center rounded-md p-1.5 hover:bg-theme-navy-200 dark:hover:bg-theme-secondary-700"
+                              tabindex="1"
+                            >
+                              <div
+                                class="text-theme-secondary-700 transition-colors duration-200 group-hover:text-theme-navy-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200 css-v0ob3f"
+                                height="16"
+                                width="16"
+                              >
+                                <svg
+                                  fill="none"
+                                  viewBox="0 0 20 20"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                >
+                                  <circle
+                                    cx="10.002"
+                                    cy="2.99609"
+                                    fill="currentColor"
+                                    r="2"
+                                    transform="rotate(90 10.002 2.99609)"
+                                  />
+                                  <circle
+                                    cx="10.002"
+                                    cy="9.99805"
+                                    fill="currentColor"
+                                    r="2"
+                                    transform="rotate(90 10.002 9.99805)"
+                                  />
+                                  <circle
+                                    cx="10.002"
+                                    cy="17"
+                                    fill="currentColor"
+                                    r="2"
+                                    transform="rotate(90 10.002 17)"
+                                  />
+                                </svg>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        class="flex cursor-pointer items-center rounded-lg border border-theme-primary-200 leading-tight transition-colors-shadow duration-100 ease-linear hover:border-theme-primary-100 hover:bg-theme-primary-100 dark:border-theme-secondary-800 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800"
+                        data-testid="ProfileRow"
+                      >
+                        <a
+                          class="flex min-w-0 flex-1 py-1 pl-1"
+                          data-testid="ProfileRow__Link"
+                          tabindex="1"
+                        >
+                          <div
+                            class="flex h-full w-full min-w-0 items-center justify-between"
+                          >
+                            <div
+                              class="flex min-w-0 items-center"
+                            >
+                              <div
+                                class="shrink-0 css-2ka7vg"
+                                data-testid="Avatar"
+                              >
+                                <div
+                                  class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
+                                >
+                                  <img
+                                    alt="Foo Bar"
+                                    data-testid="ProfileAvatar__svg"
+                                    src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(76, 175, 80)" width="100" height="100"/><circle r="35" cx="40" cy="60" fill="rgb(0, 150, 136)"/><circle r="60" cx="90" cy="40" fill="rgb(139, 195, 74)"/><circle r="45" cx="30" cy="70" fill="rgb(3, 169, 244)"/></svg>"
+                                    title="Foo Bar"
+                                  />
+                                  <span
+                                    class="absolute font-semibold text-white"
+                                  >
+                                    FO
+                                  </span>
+                                </div>
+                              </div>
+                              <span
+                                class="text-theme-primary-text inline-block truncate pl-3 font-semibold"
+                              >
+                                Foo Bar
+                              </span>
                             </div>
                           </div>
                         </a>

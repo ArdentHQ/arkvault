@@ -180,7 +180,13 @@ export const translations = {
 	},
 	INPUT_PUBLIC_KEY: {
 		VALIDATION: {
+			INVALID_BLS_PUBLIC_KEY: "Invalid BLS Public Key",
 			PUBLIC_KEY_ALREADY_EXISTS: "Public Key {{publicKey}} already exists",
+		},
+	},
+	INPUT_VALIDATOR_PUBLIC_KEY: {
+		VALIDATION: {
+			INVALID_PUBLIC_KEY: "Invalid Validator Public Key",
 		},
 	},
 	INSTALL: "Install",

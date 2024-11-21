@@ -102,6 +102,86 @@ exports[`FilterNetwork > should render public networks 1`] = `
           </span>
         </div>
       </li>
+      <li
+        class="inline-block cursor-pointer pb-4 pr-4"
+        data-testid="NetworkOption__mainsail.mainnet"
+      >
+        <div
+          class="relative border-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100 css-1nqcsx"
+        >
+          <div
+            aria-label="Mainsail"
+            class="inline-flex h-5 w-5 items-center justify-center text-theme-primary-600 border-theme-primary-100 dark:border-theme-primary-600"
+            data-testid="NetworkIcon-Mainsail-mainsail.mainnet"
+          >
+            <div
+              class="text-theme-secondary-300 css-1i4b0eq"
+              data-testid="NetworkIcon__icon"
+              height="20"
+              width="20"
+            >
+              <svg
+                id="ark"
+                viewBox="0 0 36.3 30.6"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <path
+                  d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
+                  fill="currentColor"
+                />
+              </svg>
+            </div>
+          </div>
+          <span
+            class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-theme-secondary-300 dark:border-theme-secondary-800 css-1jo8u8k"
+          >
+            <span />
+          </span>
+        </div>
+      </li>
+      <li
+        class="inline-block cursor-pointer pb-4 pr-4"
+        data-testid="NetworkOption__mainsail.devnet"
+      >
+        <div
+          class="relative border-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100 css-1nqcsx"
+        >
+          <div
+            aria-label="Mainsail Devnet"
+            class="inline-flex h-5 w-5 items-center justify-center text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700"
+            data-testid="NetworkIcon-Mainsail-mainsail.devnet"
+          >
+            <div
+              class="text-theme-secondary-300 css-1i4b0eq"
+              data-testid="NetworkIcon__icon"
+              height="20"
+              width="20"
+            >
+              <svg
+                id="ark"
+                viewBox="0 0 36.3 30.6"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <path
+                  d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
+                  fill="currentColor"
+                />
+              </svg>
+            </div>
+          </div>
+          <span
+            class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-theme-secondary-300 dark:border-theme-secondary-800 css-1jo8u8k"
+          >
+            <span />
+          </span>
+        </div>
+      </li>
     </ul>
   </div>
 </div>
@@ -172,6 +252,46 @@ exports[`FilterNetworks > should render public and testnet networks 1`] = `
             </span>
           </div>
         </li>
+        <li
+          class="inline-block cursor-pointer pb-4 pr-4"
+          data-testid="NetworkOption__mainsail.mainnet"
+        >
+          <div
+            class="relative border-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100 css-1nqcsx"
+          >
+            <div
+              aria-label="Mainsail"
+              class="inline-flex h-5 w-5 items-center justify-center text-theme-primary-600 border-theme-primary-100 dark:border-theme-primary-600"
+              data-testid="NetworkIcon-Mainsail-mainsail.mainnet"
+            >
+              <div
+                class="text-theme-secondary-300 css-1i4b0eq"
+                data-testid="NetworkIcon__icon"
+                height="20"
+                width="20"
+              >
+                <svg
+                  id="ark"
+                  viewBox="0 0 36.3 30.6"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <path
+                    d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </div>
+            </div>
+            <span
+              class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-theme-secondary-300 dark:border-theme-secondary-800 css-1jo8u8k"
+            >
+              <span />
+            </span>
+          </div>
+        </li>
       </ul>
     </div>
     <div
@@ -197,6 +317,46 @@ exports[`FilterNetworks > should render public and testnet networks 1`] = `
               aria-label="ARK Devnet"
               class="inline-flex h-5 w-5 items-center justify-center text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700"
               data-testid="NetworkIcon-ARK-ark.devnet"
+            >
+              <div
+                class="text-theme-secondary-300 css-1i4b0eq"
+                data-testid="NetworkIcon__icon"
+                height="20"
+                width="20"
+              >
+                <svg
+                  id="ark"
+                  viewBox="0 0 36.3 30.6"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <path
+                    d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </div>
+            </div>
+            <span
+              class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-theme-secondary-300 dark:border-theme-secondary-800 css-1jo8u8k"
+            >
+              <span />
+            </span>
+          </div>
+        </li>
+        <li
+          class="inline-block cursor-pointer pb-4 pr-4"
+          data-testid="NetworkOption__mainsail.devnet"
+        >
+          <div
+            class="relative border-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100 css-1nqcsx"
+          >
+            <div
+              aria-label="Mainsail Devnet"
+              class="inline-flex h-5 w-5 items-center justify-center text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700"
+              data-testid="NetworkIcon-Mainsail-mainsail.devnet"
             >
               <div
                 class="text-theme-secondary-300 css-1i4b0eq"
@@ -312,6 +472,46 @@ exports[`FilterNetworks > should toggle a testnet network option 1`] = `
             </span>
           </div>
         </li>
+        <li
+          class="inline-block cursor-pointer pb-4 pr-4"
+          data-testid="NetworkOption__mainsail.mainnet"
+        >
+          <div
+            class="relative border-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100 css-1nqcsx"
+          >
+            <div
+              aria-label="Mainsail"
+              class="inline-flex h-5 w-5 items-center justify-center text-theme-primary-600 border-theme-primary-100 dark:border-theme-primary-600"
+              data-testid="NetworkIcon-Mainsail-mainsail.mainnet"
+            >
+              <div
+                class="text-theme-secondary-300 css-1i4b0eq"
+                data-testid="NetworkIcon__icon"
+                height="20"
+                width="20"
+              >
+                <svg
+                  id="ark"
+                  viewBox="0 0 36.3 30.6"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <path
+                    d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </div>
+            </div>
+            <span
+              class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-theme-secondary-300 dark:border-theme-secondary-800 css-1jo8u8k"
+            >
+              <span />
+            </span>
+          </div>
+        </li>
       </ul>
     </div>
     <div
@@ -337,6 +537,46 @@ exports[`FilterNetworks > should toggle a testnet network option 1`] = `
               aria-label="ARK Devnet"
               class="inline-flex h-5 w-5 items-center justify-center text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700"
               data-testid="NetworkIcon-ARK-ark.devnet"
+            >
+              <div
+                class="text-theme-secondary-300 css-1i4b0eq"
+                data-testid="NetworkIcon__icon"
+                height="20"
+                width="20"
+              >
+                <svg
+                  id="ark"
+                  viewBox="0 0 36.3 30.6"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <path
+                    d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </div>
+            </div>
+            <span
+              class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-theme-secondary-300 dark:border-theme-secondary-800 css-1jo8u8k"
+            >
+              <span />
+            </span>
+          </div>
+        </li>
+        <li
+          class="inline-block cursor-pointer pb-4 pr-4"
+          data-testid="NetworkOption__mainsail.devnet"
+        >
+          <div
+            class="relative border-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100 css-1nqcsx"
+          >
+            <div
+              aria-label="Mainsail Devnet"
+              class="inline-flex h-5 w-5 items-center justify-center text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700"
+              data-testid="NetworkIcon-Mainsail-mainsail.devnet"
             >
               <div
                 class="text-theme-secondary-300 css-1i4b0eq"
@@ -507,6 +747,46 @@ exports[`FilterNetworks > should toggle view all 1`] = `
             </span>
           </div>
         </li>
+        <li
+          class="inline-block cursor-pointer pb-4 pr-4"
+          data-testid="NetworkOption__mainsail.mainnet"
+        >
+          <div
+            class="relative border-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100 css-1nqcsx"
+          >
+            <div
+              aria-label="Mainsail"
+              class="inline-flex h-5 w-5 items-center justify-center text-theme-primary-600 border-theme-primary-100 dark:border-theme-primary-600"
+              data-testid="NetworkIcon-Mainsail-mainsail.mainnet"
+            >
+              <div
+                class="text-theme-secondary-300 css-1i4b0eq"
+                data-testid="NetworkIcon__icon"
+                height="20"
+                width="20"
+              >
+                <svg
+                  id="ark"
+                  viewBox="0 0 36.3 30.6"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <path
+                    d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </div>
+            </div>
+            <span
+              class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-theme-secondary-300 dark:border-theme-secondary-800 css-1jo8u8k"
+            >
+              <span />
+            </span>
+          </div>
+        </li>
       </ul>
       <label
         class="mt-4 inline-flex cursor-pointer items-center space-x-3 text-theme-secondary-text"
@@ -583,6 +863,46 @@ exports[`FilterNetworks > should toggle view all 1`] = `
               aria-label="ARK Devnet"
               class="inline-flex h-5 w-5 items-center justify-center text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700"
               data-testid="NetworkIcon-ARK-ark.devnet"
+            >
+              <div
+                class="text-theme-secondary-300 css-1i4b0eq"
+                data-testid="NetworkIcon__icon"
+                height="20"
+                width="20"
+              >
+                <svg
+                  id="ark"
+                  viewBox="0 0 36.3 30.6"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <path
+                    d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </div>
+            </div>
+            <span
+              class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-theme-secondary-300 dark:border-theme-secondary-800 css-1jo8u8k"
+            >
+              <span />
+            </span>
+          </div>
+        </li>
+        <li
+          class="inline-block cursor-pointer pb-4 pr-4"
+          data-testid="NetworkOption__mainsail.devnet"
+        >
+          <div
+            class="relative border-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100 css-1nqcsx"
+          >
+            <div
+              aria-label="Mainsail Devnet"
+              class="inline-flex h-5 w-5 items-center justify-center text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700"
+              data-testid="NetworkIcon-Mainsail-mainsail.devnet"
             >
               <div
                 class="text-theme-secondary-300 css-1i4b0eq"
@@ -753,6 +1073,46 @@ exports[`FilterNetworks > should toggle view all 2`] = `
             </span>
           </div>
         </li>
+        <li
+          class="inline-block cursor-pointer pb-4 pr-4"
+          data-testid="NetworkOption__mainsail.mainnet"
+        >
+          <div
+            class="relative border-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100 css-1nqcsx"
+          >
+            <div
+              aria-label="Mainsail"
+              class="inline-flex h-5 w-5 items-center justify-center text-theme-primary-600 border-theme-primary-100 dark:border-theme-primary-600"
+              data-testid="NetworkIcon-Mainsail-mainsail.mainnet"
+            >
+              <div
+                class="text-theme-secondary-300 css-1i4b0eq"
+                data-testid="NetworkIcon__icon"
+                height="20"
+                width="20"
+              >
+                <svg
+                  id="ark"
+                  viewBox="0 0 36.3 30.6"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <path
+                    d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </div>
+            </div>
+            <span
+              class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-theme-secondary-300 dark:border-theme-secondary-800 css-1jo8u8k"
+            >
+              <span />
+            </span>
+          </div>
+        </li>
       </ul>
     </div>
     <div
@@ -845,6 +1205,46 @@ exports[`FilterNetworks > should toggle view all 2`] = `
             </span>
           </div>
         </li>
+        <li
+          class="inline-block cursor-pointer pb-4 pr-4"
+          data-testid="NetworkOption__mainsail.devnet"
+        >
+          <div
+            class="relative border-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100 css-1nqcsx"
+          >
+            <div
+              aria-label="Mainsail Devnet"
+              class="inline-flex h-5 w-5 items-center justify-center text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700"
+              data-testid="NetworkIcon-Mainsail-mainsail.devnet"
+            >
+              <div
+                class="text-theme-secondary-300 css-1i4b0eq"
+                data-testid="NetworkIcon__icon"
+                height="20"
+                width="20"
+              >
+                <svg
+                  id="ark"
+                  viewBox="0 0 36.3 30.6"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <path
+                    d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </div>
+            </div>
+            <span
+              class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-theme-secondary-300 dark:border-theme-secondary-800 css-1jo8u8k"
+            >
+              <span />
+            </span>
+          </div>
+        </li>
       </ul>
     </div>
   </div>
@@ -908,6 +1308,86 @@ exports[`NetworkOptions > should render available networks options 1`] = `
           aria-label="ARK Devnet"
           class="inline-flex h-5 w-5 items-center justify-center text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700"
           data-testid="NetworkIcon-ARK-ark.devnet"
+        >
+          <div
+            class="text-theme-secondary-300 css-1i4b0eq"
+            data-testid="NetworkIcon__icon"
+            height="20"
+            width="20"
+          >
+            <svg
+              id="ark"
+              viewBox="0 0 36.3 30.6"
+              x="0"
+              xml:space="preserve"
+              xmlns="http://www.w3.org/2000/svg"
+              y="0"
+            >
+              <path
+                d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
+                fill="currentColor"
+              />
+            </svg>
+          </div>
+        </div>
+        <span
+          class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-theme-secondary-300 dark:border-theme-secondary-800 css-1jo8u8k"
+        >
+          <span />
+        </span>
+      </div>
+    </li>
+    <li
+      class="inline-block cursor-pointer pb-4 pr-4"
+      data-testid="NetworkOption__mainsail.mainnet"
+    >
+      <div
+        class="relative border-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100 css-1nqcsx"
+      >
+        <div
+          aria-label="Mainsail"
+          class="inline-flex h-5 w-5 items-center justify-center text-theme-primary-600 border-theme-primary-100 dark:border-theme-primary-600"
+          data-testid="NetworkIcon-Mainsail-mainsail.mainnet"
+        >
+          <div
+            class="text-theme-secondary-300 css-1i4b0eq"
+            data-testid="NetworkIcon__icon"
+            height="20"
+            width="20"
+          >
+            <svg
+              id="ark"
+              viewBox="0 0 36.3 30.6"
+              x="0"
+              xml:space="preserve"
+              xmlns="http://www.w3.org/2000/svg"
+              y="0"
+            >
+              <path
+                d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
+                fill="currentColor"
+              />
+            </svg>
+          </div>
+        </div>
+        <span
+          class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-theme-secondary-300 dark:border-theme-secondary-800 css-1jo8u8k"
+        >
+          <span />
+        </span>
+      </div>
+    </li>
+    <li
+      class="inline-block cursor-pointer pb-4 pr-4"
+      data-testid="NetworkOption__mainsail.devnet"
+    >
+      <div
+        class="relative border-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100 css-1nqcsx"
+      >
+        <div
+          aria-label="Mainsail Devnet"
+          class="inline-flex h-5 w-5 items-center justify-center text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700"
+          data-testid="NetworkIcon-Mainsail-mainsail.devnet"
         >
           <div
             class="text-theme-secondary-300 css-1i4b0eq"

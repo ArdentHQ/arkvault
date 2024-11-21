@@ -197,6 +197,8 @@ describe("Registration", () => {
 				"https://ark-test.arkvault.io/api/transactions/a73433448863755929beca76c84a80006c6efb14c905c2c53f3c89e33233d4ac",
 				transactionsFixture,
 			),
+			// Emulate public key hasn't used
+			requestMock(`https://dwallets-evm.mainsailhq.com/api/wallets*`, { meta: { count: 0 } }),
 		);
 	});
 
