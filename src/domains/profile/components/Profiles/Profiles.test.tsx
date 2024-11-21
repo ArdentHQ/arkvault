@@ -17,7 +17,7 @@ describe("Profiles", () => {
 	it("should render a list without a slider if number of profiles are less than given threshold", () => {
 		render(<Profiles profiles={env.profiles().values()} onClick={vi.fn()} onSelect={vi.fn()} actions={[]} />);
 
-		expect(screen.getAllByTestId("ProfileRow").length).toBe(2);
+		expect(screen.getAllByTestId("ProfileRow").length).toBe(3);
 		expect(screen.queryByTestId("ProfileSlider")).not.toBeInTheDocument();
 	});
 
