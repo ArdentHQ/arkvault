@@ -1,6 +1,7 @@
 import { Contracts } from "@ardenthq/sdk-profiles";
 import { Networks } from "@ardenthq/sdk";
 import { debounceAsync } from "@/utils/debounce";
+import {ValidateResult} from "react-hook-form";
 
 export const validatorRegistration = (t: any) => ({
 	validatorPublicKey: (wallet: Contracts.IReadWriteWallet) => ({
@@ -25,13 +26,13 @@ export const validatorRegistration = (t: any) => ({
 
 				return true;
 			},
-			unique: debounceAsync(async (publicKey: string) => {
+			unique: (debounceAsync(async (publicKey: string) => {
 				try {
 					await publicKeyExists(wallet.network(), publicKey);
 				} catch {
 					return t("COMMON.INPUT_PUBLIC_KEY.VALIDATION.PUBLIC_KEY_ALREADY_EXISTS", { publicKey });
 				}
-			}, 300),
+			}, 300)) as () => Promise<ValidateResult>,
 		},
 	}),
 });
