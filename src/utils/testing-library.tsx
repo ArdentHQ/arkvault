@@ -1,5 +1,6 @@
 /* eslint-disable testing-library/no-node-access */
 import { ARK } from "@ardenthq/sdk-ark";
+import { Mainsail } from "@ardenthq/sdk-mainsail";
 import { Contracts, Environment } from "@ardenthq/sdk-profiles";
 import { render, RenderResult } from "@testing-library/react";
 import { createHashHistory, HashHistory, To } from "history";
@@ -169,12 +170,13 @@ export const getDefaultProfileId = () => Object.keys(fixtureData.profiles)[0];
 export const getPasswordProtectedProfileId = () => Object.keys(fixtureData.profiles)[1];
 export const getDefaultWalletId = () => Object.keys(Object.values(fixtureData.profiles)[0].wallets)[0];
 export const getDefaultWalletMnemonic = () => "master dizzy era math peanut crew run manage better flame tree prevent";
+export const getMainsailProfileId = () => Object.keys(fixtureData.profiles)[2];
 
 export const getDefaultPassword = () => TestingPasswords.profiles[getPasswordProtectedProfileId()]?.password;
 
 const environmentWithMocks = () =>
 	new Environment({
-		coins: { ARK },
+		coins: { ARK, Mainsail },
 		httpClient,
 		ledgerTransportFactory,
 		storage: new StubStorage(),

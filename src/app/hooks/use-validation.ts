@@ -14,6 +14,7 @@ import {
 	multiSignatureRegistration,
 	sendTransfer,
 	sendVote,
+	validatorRegistration,
 } from "@/domains/transaction/validations";
 import { receiveFunds } from "@/domains/wallet/validations";
 
@@ -37,6 +38,7 @@ export const useValidation = () => {
 			server: server(t),
 			settings: settings(t, env),
 			signMessage: signMessage(t),
+			validatorRegistration: validatorRegistration(t),
 			verifyMessage: verifyMessage(t),
 		}),
 		[t, env],

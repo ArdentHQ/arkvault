@@ -405,6 +405,7 @@ export const translations = {
 	},
 	VALIDATOR: "Validator",
 	VALIDATOR_NAME: "Validator Name",
+	VALIDATOR_PUBLIC_KEY: "Validator Public Key",
 	VIEW_RECIPIENTS_LIST: "View Full List",
 	VOTER: "Voter",
 	VOTES: "Votes",

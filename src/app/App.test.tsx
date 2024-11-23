@@ -97,8 +97,10 @@ describe("App", () => {
 			expect(passwordInput()).toHaveValue("password");
 		});
 
+		const profile = env.profiles().findById("cba050f1-880f-45f0-9af9-cfe48f406052");
+
 		const verifyPasswordMock = vi.spyOn(Bcrypt, "verify").mockReturnValue(true);
-		const memoryPasswordMock = vi.spyOn(env.profiles().last().password(), "get").mockImplementation(() => {
+		const memoryPasswordMock = vi.spyOn(profile.password(), "get").mockImplementation(() => {
 			throw new Error("password not found");
 		});
 
@@ -298,8 +300,10 @@ describe("App", () => {
 			screen.findByText(profileTranslations.PAGE_WELCOME.WITH_PROFILES.TITLE, undefined, { timeout: 2000 }),
 		).resolves.toBeVisible();
 
-		vi.spyOn(env.profiles().last(), "usesPassword").mockReturnValue(true);
-		vi.spyOn(env.profiles().last().password(), "get").mockImplementation(() => {
+		const profile = env.profiles().findById("cba050f1-880f-45f0-9af9-cfe48f406052");
+
+		vi.spyOn(profile, "usesPassword").mockReturnValue(true);
+		vi.spyOn(profile.password(), "get").mockImplementation(() => {
 			throw new Error("Failed to restore");
 		});
 

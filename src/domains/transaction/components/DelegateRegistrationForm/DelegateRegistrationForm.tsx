@@ -37,8 +37,8 @@ const transactionDetails = ({
 	wallet: Contracts.IReadWriteWallet;
 }) => (
 	<>
-		<TransactionDetail label={translations("TRANSACTION.VALIDATOR_NAME")}>
-			{transaction.username()}
+		<TransactionDetail label={translations("TRANSACTION.VALIDATOR_PUBLIC_KEY")}>
+			{transaction.data().data().asset.validatorPublicKey as string}
 		</TransactionDetail>
 
 		<TransactionFee currency={wallet.currency()} value={transaction.fee()} paddingPosition="top" />
@@ -50,7 +50,7 @@ transactionDetails.displayName = "DelegateRegistrationFormTransactionDetails";
 
 export const DelegateRegistrationForm: SendRegistrationForm = {
 	component,
-	formFields: ["username"],
+	formFields: ["validatorPublicKey"],
 	tabSteps: 2,
 	transactionDetails,
 };
@@ -59,12 +59,12 @@ export const signDelegateRegistration = async ({ env, form, profile, signatory }
 	const { clearErrors, getValues } = form;
 
 	clearErrors("mnemonic");
-	const { fee, network, senderAddress, username } = getValues();
+	const { fee, network, senderAddress, validatorPublicKey } = getValues();
 	const senderWallet = profile.wallets().findByAddressWithNetwork(senderAddress, network.id());
 
 	const transactionId = await senderWallet.transaction().signDelegateRegistration({
 		data: {
-			username,
+			validatorPublicKey,
 		},
 		fee: +fee,
 		signatory,
