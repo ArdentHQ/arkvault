@@ -55,7 +55,6 @@ export const TransactionFixture = {
 	isHtlcLock: () => false,
 	isHtlcClaim: () => false,
 	isHtlcRefund: () => false,
-	isMagistrate: () => false,
 	toObject: () => ({ a: "b" }),
 	hasPassed: () => true,
 	hasFailed: () => false,

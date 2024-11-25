@@ -2,7 +2,6 @@
 
 import DelegateRegistration from "./delegate-registration.svg?react";
 import DelegateResignation from "./delegate-resignation.svg?react";
-import Magistrate from "./magistrate.svg?react";
 import Multipayment from "./multipayment.svg?react";
 import Multisignature from "./multisignature.svg?react";
 import Received from "./received.svg?react";
@@ -26,7 +25,6 @@ export const TransactionIcons: any = {
 	ConfirmTransaction,
 	DelegateRegistration,
 	DelegateResignation,
-	Magistrate,
 	Mnemonic,
 	Multipayment,
 	Multisignature,

@@ -121,7 +121,6 @@ export const translations = {
 		WECHAT: "Wechat",
 		YOUTUBE: "YouTube",
 	},
-	MAGISTRATE: "Magistrate",
 	MEMO: "Memo",
 	MNEMONIC: "Mnemonic",
 	MODAL_CONFIRM_REMOVE_PENDING_TRANSACTION: {
@@ -336,7 +335,6 @@ export const translations = {
 		HTLC_CLAIM: "Timelock Claim",
 		HTLC_LOCK: "Timelock",
 		HTLC_REFUND: "Timelock Refund",
-		MAGISTRATE: "Magistrate",
 		MULTI_PAYMENT: "Multipayment",
 		MULTI_SIGNATURE: "Multisignature",
 		TRANSFER: "Transfer",

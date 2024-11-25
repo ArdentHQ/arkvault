@@ -70,7 +70,7 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 	const cursor = useRef(1);
 	const LIMIT = useMemo(() => (isUnit() ? 0 : limit), [limit]);
 	const { types } = useTransactionTypes({ wallets });
-	const allTransactionTypes = [...types.core, ...types.magistrate];
+	const allTransactionTypes = [...types.core];
 
 	const [
 		{

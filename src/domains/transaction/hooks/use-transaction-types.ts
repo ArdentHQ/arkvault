@@ -7,8 +7,6 @@ interface TransactionTypeProperties {
 	wallets?: Contracts.IReadWriteWallet[];
 }
 
-const MagistrateTransactionType = "magistrate";
-
 export const useTransactionTypes = ({ wallets = [] }: TransactionTypeProperties = {}) => {
 	const { t } = useTranslation();
 
@@ -32,10 +30,6 @@ export const useTransactionTypes = ({ wallets = [] }: TransactionTypeProperties 
 		htlcRefund: {
 			icon: "Timelock",
 			label: t("TRANSACTION.TRANSACTION_TYPES.HTLC_REFUND"),
-		},
-		magistrate: {
-			icon: "Magistrate",
-			label: t("TRANSACTION.TRANSACTION_TYPES.MAGISTRATE"),
 		},
 		multiPayment: {
 			icon: "Multipayment",
@@ -68,13 +62,6 @@ export const useTransactionTypes = ({ wallets = [] }: TransactionTypeProperties 
 	};
 
 	return {
-		canViewMagistrate: useMemo(
-			() =>
-				wallets.some((wallet) =>
-					(wallet.transactionTypes() as string[]).filter((type) => type === MagistrateTransactionType),
-				),
-			[wallets],
-		),
 		getIcon: (type: string): string => transactionTypes[type]?.icon,
 		getLabel: (type: string): string => transactionTypes[type]?.label,
 		types: {
@@ -84,14 +71,13 @@ export const useTransactionTypes = ({ wallets = [] }: TransactionTypeProperties 
 				for (const wallet of wallets) {
 					allSupportedTypes.push(
 						...(wallet.transactionTypes() as string[]).filter(
-							(type) => ![MagistrateTransactionType, "ipfs", "secondSignature"].includes(type),
+							(type) => !["ipfs", "secondSignature"].includes(type),
 						),
 					);
 				}
 
 				return uniq(allSupportedTypes);
 			}, [wallets]),
-			magistrate: [MagistrateTransactionType],
 		},
 	};
 };
