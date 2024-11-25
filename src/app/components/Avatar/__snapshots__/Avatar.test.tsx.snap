@@ -3,7 +3,7 @@
 exports[`Avatar > should render 1`] = `
 <DocumentFragment>
   <div
-    class="shrink-0 css-jfogd3"
+    class="relative inline-flex h-10 w-10 items-center justify-center rounded-full align-middle transition-all duration-100 ring-6 ring-theme-background shrink-0"
     data-testid="Avatar"
   >
     <div
@@ -22,7 +22,7 @@ exports[`Avatar > should render 1`] = `
 exports[`Avatar > should render with custom shadow color 1`] = `
 <DocumentFragment>
   <div
-    class="ring-theme-black shrink-0 css-16qzgxm"
+    class="relative inline-flex h-10 w-10 items-center justify-center rounded-full align-middle transition-all duration-100 ring-6 ring-theme-black shrink-0"
     data-testid="Avatar"
   >
     <div
@@ -41,7 +41,7 @@ exports[`Avatar > should render with custom shadow color 1`] = `
 exports[`Avatar > should render with highlight 1`] = `
 <DocumentFragment>
   <div
-    class="shrink-0 css-jfogd3"
+    class="relative inline-flex h-10 w-10 items-center justify-center rounded-full align-middle transition-all duration-100 ring-6 ring-theme-background shrink-0"
     data-testid="Avatar"
   >
     <div
@@ -60,7 +60,7 @@ exports[`Avatar > should render with highlight 1`] = `
 exports[`Avatar > should render with highlight and custom shadow color 1`] = `
 <DocumentFragment>
   <div
-    class="ring-theme-black shrink-0 css-16qzgxm"
+    class="relative inline-flex h-10 w-10 items-center justify-center rounded-full align-middle transition-all duration-100 ring-6 ring-theme-black shrink-0"
     data-testid="Avatar"
   >
     <div
@@ -79,7 +79,7 @@ exports[`Avatar > should render with highlight and custom shadow color 1`] = `
 exports[`Avatar > should render with size 1`] = `
 <DocumentFragment>
   <div
-    class="shrink-0 css-1yk316i"
+    class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-5 w-5 text-sm ring-6 ring-theme-background shrink-0"
     data-testid="Avatar"
   >
     <div
@@ -98,7 +98,7 @@ exports[`Avatar > should render with size 1`] = `
 exports[`Avatar > should render with size 2`] = `
 <DocumentFragment>
   <div
-    class="shrink-0 css-h8w6w0"
+    class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-8 w-8 text-sm ring-6 ring-theme-background shrink-0"
     data-testid="Avatar"
   >
     <div
@@ -117,7 +117,7 @@ exports[`Avatar > should render with size 2`] = `
 exports[`Avatar > should render with size 3`] = `
 <DocumentFragment>
   <div
-    class="shrink-0 css-1ha4taj"
+    class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-[25px] w-[25px] text-sm ring-6 ring-theme-background shrink-0"
     data-testid="Avatar"
   >
     <div
@@ -136,7 +136,7 @@ exports[`Avatar > should render with size 3`] = `
 exports[`Avatar > should render with size 4`] = `
 <DocumentFragment>
   <div
-    class="shrink-0 css-1n9jllj"
+    class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-11 w-11 text-sm ring-6 ring-theme-background shrink-0"
     data-testid="Avatar"
   >
     <div
@@ -155,7 +155,7 @@ exports[`Avatar > should render with size 4`] = `
 exports[`Avatar > should render with size 5`] = `
 <DocumentFragment>
   <div
-    class="shrink-0 css-e8csh4"
+    class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-16 w-16 text-xl ring-6 ring-theme-background shrink-0"
     data-testid="Avatar"
   >
     <div
@@ -174,7 +174,7 @@ exports[`Avatar > should render with size 5`] = `
 exports[`Avatar > should render without shadow 1`] = `
 <DocumentFragment>
   <div
-    class="shrink-0 css-1px82g5"
+    class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-11 w-11 text-sm shrink-0"
     data-testid="Avatar"
   >
     <div
