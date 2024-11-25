@@ -2319,7 +2319,7 @@ exports[`ImportWallet > should render as ledger import 1`] = `
               data-testid="UserMenu"
             >
               <div
-                class="shrink-0 css-1n9jllj"
+                class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-11 w-11 text-sm ring-6 ring-theme-background shrink-0"
                 data-testid="Avatar"
               >
                 <div
@@ -2913,7 +2913,7 @@ exports[`ImportWallet > should render method step 1`] = `
         class="flex flex-col overflow-hidden rounded-xl"
       >
         <div
-          class="css-gca23p"
+          class="flex items-center space-x-2 px-4 py-2 text-sm font-semibold dark:text-white cursor-pointer bg-theme-info-100 text-theme-info-700 dark:bg-theme-info-700"
         >
           <div
             class="css-v0ob3f"
@@ -2956,7 +2956,7 @@ exports[`ImportWallet > should render method step 1`] = `
             Need help with importing?
           </span>
           <span
-            class="css-1n3l7id"
+            class="!ml-auto transform transition-transform duration-100 rotate-180 text-theme-info-700 dark:text-white"
             data-testid="Alert__chevron"
           >
             <div

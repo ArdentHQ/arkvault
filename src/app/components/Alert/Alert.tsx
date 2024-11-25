@@ -39,14 +39,14 @@ const AlertHeader = ({ variant, collapsible, ...props }: AlertProperties) => (
 		className={twMerge(
 			"flex items-center space-x-2 px-4 py-2 text-sm font-semibold dark:text-white",
 			cn({
-				"cursor-pointer": collapsible === true,
 				"bg-theme-danger-100 text-theme-danger-700 dark:bg-theme-danger-500": variant === "danger",
+				"bg-theme-danger-500 text-white": variant === "danger-dark",
 				"bg-theme-hint-100 text-theme-hint-700 dark:bg-theme-hint-700": variant === "hint",
 				"bg-theme-info-100 text-theme-info-700 dark:bg-theme-info-700": variant === "info",
 				"bg-theme-success-100 text-theme-success-700 dark:bg-theme-success-700": variant === "success",
 				"bg-theme-warning-100 text-theme-warning-700 dark:bg-theme-warning-700":
 					variant === "warning" || !variant,
-				"bg-theme-danger-500 text-white": variant === "danger-dark",
+				"cursor-pointer": collapsible === true,
 			}),
 			props.className,
 		)}
