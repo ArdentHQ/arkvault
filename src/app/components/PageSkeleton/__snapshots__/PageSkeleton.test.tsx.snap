@@ -471,7 +471,7 @@ exports[`PageSkeleton > should render without profile 1`] = `
                             class="h-10 w-10 bg-theme-secondary-100 dark:bg-theme-secondary-800"
                           />
                           <div
-                            class="mr-1.5 pr-1.5 text-theme-secondary-700 transition-colors duration-200 group-hover:text-theme-navy-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200 css-v0ob3f"
+                            class="mr-1.5 pr-1.5 text-theme-secondary-300 transition-colors duration-200 group-hover:text-theme-navy-700 dark:text-theme-secondary-800 dark:group-hover:text-theme-secondary-200 css-v0ob3f"
                             height="16"
                             width="16"
                           >
@@ -512,7 +512,7 @@ exports[`PageSkeleton > should render without profile 1`] = `
                             class="h-10 w-10 bg-theme-secondary-100 dark:bg-theme-secondary-800"
                           />
                           <div
-                            class="mr-1.5 pr-1.5 text-theme-secondary-700 transition-colors duration-200 group-hover:text-theme-navy-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200 css-v0ob3f"
+                            class="mr-1.5 pr-1.5 text-theme-secondary-300 transition-colors duration-200 group-hover:text-theme-navy-700 dark:text-theme-secondary-800 dark:group-hover:text-theme-secondary-200 css-v0ob3f"
                             height="16"
                             width="16"
                           >
