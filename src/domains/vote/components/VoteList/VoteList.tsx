@@ -1,15 +1,16 @@
 import { Contracts } from "@ardenthq/sdk-profiles";
 
 import React from "react";
-import tw, { styled } from "twin.macro";
 
 import { VoteListProperties } from "./VoteList.contracts";
 import { VoteItem } from ".";
 import { assertReadOnlyWallet } from "@/utils/assertions";
 
-const ListWrapper = styled.div`
-	${tw`flex-1 -my-2`}
-`;
+const ListWrapper = ({...props}: React.HTMLAttributes<HTMLDivElement>) => {
+	return (
+		<div className="flex-1 -my-2" {...props} />
+	)
+}
 
 export const VoteList = ({ votes, currency, isNegativeAmount = false }: VoteListProperties) => {
 	if (votes.length === 0) {
