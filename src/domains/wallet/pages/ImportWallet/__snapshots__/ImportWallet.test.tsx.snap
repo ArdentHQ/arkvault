@@ -2913,7 +2913,7 @@ exports[`ImportWallet > should render method step 1`] = `
         class="flex flex-col overflow-hidden rounded-xl"
       >
         <div
-          class="flex items-center space-x-2 px-4 py-2 text-sm font-semibold dark:text-white cursor-pointer bg-theme-info-100 text-theme-info-700 dark:bg-theme-info-700"
+          class="flex items-center space-x-2 px-4 py-2 text-sm font-semibold dark:text-white bg-theme-info-100 text-theme-info-700 dark:bg-theme-info-700 cursor-pointer"
         >
           <div
             class="css-v0ob3f"
