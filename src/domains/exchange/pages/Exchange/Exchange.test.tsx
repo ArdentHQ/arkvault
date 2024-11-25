@@ -206,7 +206,7 @@ describe("Exchange", () => {
 		const historyMock = vi.spyOn(history, "push").mockImplementation(vi.fn());
 
 		await userEvent.click(screen.getByText("ChangeNOW"));
-		screen.debug()
+		
 		await waitFor(() => {
 			expect(historyMock).toHaveBeenCalledWith(expect.stringContaining("exchange/view"));
 		});
