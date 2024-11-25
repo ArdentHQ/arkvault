@@ -2,7 +2,6 @@ import { Contracts } from "@ardenthq/sdk-profiles";
 import cn from "classnames";
 import React, { useLayoutEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
-import tw, { css, styled } from "twin.macro";
 import { BigNumber } from "@ardenthq/sdk-helpers";
 import { Amount } from "@/app/components/Amount";
 import { WalletIcon } from "@/app/components/WalletIcons";
@@ -18,6 +17,7 @@ import {
 import { NetworkIcon } from "@/domains/network/components/NetworkIcon";
 import { Skeleton } from "@/app/components/Skeleton";
 import { networkDisplayName } from "@/utils/network-utils";
+import { twMerge } from "tailwind-merge";
 
 export const LabelledText: React.FC<LabelledTextProperties> = ({ label, children, maxWidthReference, className }) => {
 	const [width, setWidth] = useState<number | undefined>();
@@ -57,28 +57,21 @@ export const LabelledText: React.FC<LabelledTextProperties> = ({ label, children
 	);
 };
 
-const GroupNetworkIconWrapper = styled.div<{ isDarkMode: boolean; isExpanded: boolean }>`
-	flex-basis: 2.75rem;
+interface GroupNetworkIconWrapperProperties extends React.HTMLAttributes<HTMLDivElement> {
+	isDarkMode: boolean;
+	isExpanded: boolean;
+}
 
-	${tw`relative flex h-11 flex-shrink-0 items-center justify-center rounded-xl bg-clip-padding`}
-
-	${({ isDarkMode }) =>
-		isDarkMode
-			? tw`bg-theme-background text-theme-secondary-700 ring-2 ring-theme-secondary-800`
-			: tw`bg-theme-primary-100 text-theme-navy-600`}
-
-	${({ isExpanded }) => !isExpanded && tw`transition-all duration-100`}
-
-	${({ isDarkMode, isExpanded }) => {
-		if (isDarkMode && !isExpanded) {
-			return css`
-				@media not all and (hover: none) {
-					${tw`group-hover:(bg-theme-secondary-800 ring-theme-secondary-700)`};
-				}
-			`;
-		}
-	}}
-`;
+const GroupNetworkIconWrapper = ({isDarkMode, isExpanded,...props}: GroupNetworkIconWrapperProperties) => {
+	return (
+		<div className={twMerge("relative flex h-11 flex-shrink-0 items-center justify-center rounded-xl bg-clip-padding basis-11", cn({
+			"bg-theme-background text-theme-secondary-700 ring-2 ring-theme-secondary-800": isDarkMode,
+			"bg-theme-primary-100 text-theme-navy-600": !isDarkMode,
+			"transition-all duration-100": !isExpanded,
+			"not-all-hover-none:group-hover:bg-theme-secondary-800 not-all-hover-none:group-hover:ring-theme-secondary-700": isDarkMode && !isExpanded,
+		}), props.className)} {...props} />
+	)
+}
 
 export const GroupNetworkIcon: React.VFC<WalletsGroupNetworkIconProperties> = ({ network, isGroupExpanded }) => {
 	const { isDarkMode } = useTheme();
@@ -185,12 +178,7 @@ export const GroupNetworkTotal: React.VFC<WalletsGroupNetworkTotalProperties> = 
 			</div>
 
 			<div
-				className="hidden flex-initial space-x-4 sm:flex"
-				css={css`
-					@media not all and (hover: none) {
-						${tw`dark:group-hover:divide-theme-secondary-700`};
-					}
-				`}
+				className="hidden flex-initial space-x-4 sm:flex not-all-hover-none:dark:group-hover:divide-theme-secondary-700"
 			>
 				{/* needed for the border color on the first LabelledText element */}
 				<span className="hidden" />
