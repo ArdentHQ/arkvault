@@ -95,6 +95,7 @@ const DateRangeOptions = ({ isDisabled }: { isDisabled: boolean }) => {
 	return (
 		<FormField name="dateRange">
 			<Dropdown
+				wrapperClass="z-50"
 				variant="options"
 				data-testid="TransactionExportForm--daterange-options"
 				options={options}
