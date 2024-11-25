@@ -259,7 +259,7 @@ exports[`Portfolio grouped networks > should apply ledger import 1`] = `
     data-testid="NetworkWalletsGroupList"
   >
     <div
-      class="md:!mb-3 css-fvpuky"
+      class="flex flex-col gap-x-3 border-b border-theme-secondary-300 duration-200 dark:border-theme-secondary-800 dark:bg-theme-background md:mb-4 md:rounded-xl md:border-0 ring-theme-primary-100 dark:ring-theme-secondary-800 md:ring-2 transition-shadow not-all-hover-none:hover:shadow-xl not-all-hover-none:hover:ring-0 not-all-hover-none:hover:ring-theme-background not-all-hover-none:dark:hover:bg-theme-secondary-800 not-all-hover-none:dark:hover:shadow-none not-all-hover-none:dark:hover:ring-theme-secondary-800 md:!mb-3"
       data-testid="WalletsGroup"
     >
       <div
@@ -270,7 +270,7 @@ exports[`Portfolio grouped networks > should apply ledger import 1`] = `
           class="flex flex-grow flex-row items-center"
         >
           <div
-            class="css-1u7yknf"
+            class="relative flex h-11 flex-shrink-0 basis-11 items-center justify-center rounded-xl bg-clip-padding bg-theme-primary-100 text-theme-navy-600"
           >
             <div
               aria-label="ARK"
@@ -359,7 +359,7 @@ exports[`Portfolio grouped networks > should apply ledger import 1`] = `
             </span>
           </div>
           <div
-            class="hidden flex-initial space-x-4 sm:flex css-1imdohp"
+            class="hidden flex-initial space-x-4 sm:flex not-all-hover-none:dark:group-hover:divide-theme-secondary-700"
           >
             <span
               class="hidden"
@@ -457,10 +457,10 @@ exports[`Portfolio grouped networks > should apply ledger import 1`] = `
           </div>
         </div>
         <div
-          class="ml-4 flex flex-shrink-0 items-center self-stretch css-o6tyc"
+          class="ml-4 flex flex-shrink-0 items-center self-stretch not-all-hover-none:dark:group-hover:border-theme-secondary-700"
         >
           <div
-            class="css-tz6w2"
+            class="flex h-full min-h-8 w-8 basis-8 content-center items-center justify-center rounded-lg text-theme-secondary-700 ring-2 ring-theme-primary-100 transition-all dark:text-theme-secondary-500 dark:ring-theme-secondary-700 sm:h-8 not-all-hover-none:transition-colors not-all-hover-none:duration-100 not-all-hover-none:ease-linear not-all-hover-none:hover:bg-theme-primary-100 not-all-hover-none:hover:text-theme-primary-700 not-all-hover-none:hover:ring-theme-primary-100 not-all-hover-none:dark:hover:bg-theme-secondary-800 not-all-hover-none:dark:hover:text-white not-all-hover-none:dark:hover:ring-theme-secondary-800"
             data-testid="Accordion__toggle"
           >
             <div
@@ -1046,7 +1046,7 @@ exports[`Portfolio grouped networks > should apply ledger import 1`] = `
       </div>
     </div>
     <div
-      class="md:!mb-3 css-fvpuky"
+      class="flex flex-col gap-x-3 border-b border-theme-secondary-300 duration-200 dark:border-theme-secondary-800 dark:bg-theme-background md:mb-4 md:rounded-xl md:border-0 ring-theme-primary-100 dark:ring-theme-secondary-800 md:ring-2 transition-shadow not-all-hover-none:hover:shadow-xl not-all-hover-none:hover:ring-0 not-all-hover-none:hover:ring-theme-background not-all-hover-none:dark:hover:bg-theme-secondary-800 not-all-hover-none:dark:hover:shadow-none not-all-hover-none:dark:hover:ring-theme-secondary-800 md:!mb-3"
       data-testid="WalletsGroup"
     >
       <div
@@ -1057,7 +1057,7 @@ exports[`Portfolio grouped networks > should apply ledger import 1`] = `
           class="flex flex-grow flex-row items-center"
         >
           <div
-            class="css-1u7yknf"
+            class="relative flex h-11 flex-shrink-0 basis-11 items-center justify-center rounded-xl bg-clip-padding bg-theme-primary-100 text-theme-navy-600"
           >
             <div
               aria-label="ARK Devnet"
@@ -1198,7 +1198,7 @@ exports[`Portfolio grouped networks > should apply ledger import 1`] = `
             </span>
           </div>
           <div
-            class="hidden flex-initial space-x-4 sm:flex css-1imdohp"
+            class="hidden flex-initial space-x-4 sm:flex not-all-hover-none:dark:group-hover:divide-theme-secondary-700"
           >
             <span
               class="hidden"
@@ -1284,10 +1284,10 @@ exports[`Portfolio grouped networks > should apply ledger import 1`] = `
           </div>
         </div>
         <div
-          class="ml-4 flex flex-shrink-0 items-center self-stretch css-o6tyc"
+          class="ml-4 flex flex-shrink-0 items-center self-stretch not-all-hover-none:dark:group-hover:border-theme-secondary-700"
         >
           <div
-            class="css-tz6w2"
+            class="flex h-full min-h-8 w-8 basis-8 content-center items-center justify-center rounded-lg text-theme-secondary-700 ring-2 ring-theme-primary-100 transition-all dark:text-theme-secondary-500 dark:ring-theme-secondary-700 sm:h-8 not-all-hover-none:transition-colors not-all-hover-none:duration-100 not-all-hover-none:ease-linear not-all-hover-none:hover:bg-theme-primary-100 not-all-hover-none:hover:text-theme-primary-700 not-all-hover-none:hover:ring-theme-primary-100 not-all-hover-none:dark:hover:bg-theme-secondary-800 not-all-hover-none:dark:hover:text-white not-all-hover-none:dark:hover:ring-theme-secondary-800"
             data-testid="Accordion__toggle"
           >
             <div
@@ -2441,7 +2441,7 @@ exports[`Portfolio grouped networks > should render list 1`] = `
     data-testid="NetworkWalletsGroupList"
   >
     <div
-      class="md:!mb-3 css-fvpuky"
+      class="flex flex-col gap-x-3 border-b border-theme-secondary-300 duration-200 dark:border-theme-secondary-800 dark:bg-theme-background md:mb-4 md:rounded-xl md:border-0 ring-theme-primary-100 dark:ring-theme-secondary-800 md:ring-2 transition-shadow not-all-hover-none:hover:shadow-xl not-all-hover-none:hover:ring-0 not-all-hover-none:hover:ring-theme-background not-all-hover-none:dark:hover:bg-theme-secondary-800 not-all-hover-none:dark:hover:shadow-none not-all-hover-none:dark:hover:ring-theme-secondary-800 md:!mb-3"
       data-testid="WalletsGroup"
     >
       <div
@@ -2452,7 +2452,7 @@ exports[`Portfolio grouped networks > should render list 1`] = `
           class="flex flex-grow flex-row items-center"
         >
           <div
-            class="css-1u7yknf"
+            class="relative flex h-11 flex-shrink-0 basis-11 items-center justify-center rounded-xl bg-clip-padding bg-theme-primary-100 text-theme-navy-600"
           >
             <div
               aria-label="ARK"
@@ -2541,7 +2541,7 @@ exports[`Portfolio grouped networks > should render list 1`] = `
             </span>
           </div>
           <div
-            class="hidden flex-initial space-x-4 sm:flex css-1imdohp"
+            class="hidden flex-initial space-x-4 sm:flex not-all-hover-none:dark:group-hover:divide-theme-secondary-700"
           >
             <span
               class="hidden"
@@ -2639,10 +2639,10 @@ exports[`Portfolio grouped networks > should render list 1`] = `
           </div>
         </div>
         <div
-          class="ml-4 flex flex-shrink-0 items-center self-stretch css-o6tyc"
+          class="ml-4 flex flex-shrink-0 items-center self-stretch not-all-hover-none:dark:group-hover:border-theme-secondary-700"
         >
           <div
-            class="css-tz6w2"
+            class="flex h-full min-h-8 w-8 basis-8 content-center items-center justify-center rounded-lg text-theme-secondary-700 ring-2 ring-theme-primary-100 transition-all dark:text-theme-secondary-500 dark:ring-theme-secondary-700 sm:h-8 not-all-hover-none:transition-colors not-all-hover-none:duration-100 not-all-hover-none:ease-linear not-all-hover-none:hover:bg-theme-primary-100 not-all-hover-none:hover:text-theme-primary-700 not-all-hover-none:hover:ring-theme-primary-100 not-all-hover-none:dark:hover:bg-theme-secondary-800 not-all-hover-none:dark:hover:text-white not-all-hover-none:dark:hover:ring-theme-secondary-800"
             data-testid="Accordion__toggle"
           >
             <div
@@ -3228,7 +3228,7 @@ exports[`Portfolio grouped networks > should render list 1`] = `
       </div>
     </div>
     <div
-      class="md:!mb-3 css-fvpuky"
+      class="flex flex-col gap-x-3 border-b border-theme-secondary-300 duration-200 dark:border-theme-secondary-800 dark:bg-theme-background md:mb-4 md:rounded-xl md:border-0 ring-theme-primary-100 dark:ring-theme-secondary-800 md:ring-2 transition-shadow not-all-hover-none:hover:shadow-xl not-all-hover-none:hover:ring-0 not-all-hover-none:hover:ring-theme-background not-all-hover-none:dark:hover:bg-theme-secondary-800 not-all-hover-none:dark:hover:shadow-none not-all-hover-none:dark:hover:ring-theme-secondary-800 md:!mb-3"
       data-testid="WalletsGroup"
     >
       <div
@@ -3239,7 +3239,7 @@ exports[`Portfolio grouped networks > should render list 1`] = `
           class="flex flex-grow flex-row items-center"
         >
           <div
-            class="css-1u7yknf"
+            class="relative flex h-11 flex-shrink-0 basis-11 items-center justify-center rounded-xl bg-clip-padding bg-theme-primary-100 text-theme-navy-600"
           >
             <div
               aria-label="ARK Devnet"
@@ -3380,7 +3380,7 @@ exports[`Portfolio grouped networks > should render list 1`] = `
             </span>
           </div>
           <div
-            class="hidden flex-initial space-x-4 sm:flex css-1imdohp"
+            class="hidden flex-initial space-x-4 sm:flex not-all-hover-none:dark:group-hover:divide-theme-secondary-700"
           >
             <span
               class="hidden"
@@ -3466,10 +3466,10 @@ exports[`Portfolio grouped networks > should render list 1`] = `
           </div>
         </div>
         <div
-          class="ml-4 flex flex-shrink-0 items-center self-stretch css-o6tyc"
+          class="ml-4 flex flex-shrink-0 items-center self-stretch not-all-hover-none:dark:group-hover:border-theme-secondary-700"
         >
           <div
-            class="css-tz6w2"
+            class="flex h-full min-h-8 w-8 basis-8 content-center items-center justify-center rounded-lg text-theme-secondary-700 ring-2 ring-theme-primary-100 transition-all dark:text-theme-secondary-500 dark:ring-theme-secondary-700 sm:h-8 not-all-hover-none:transition-colors not-all-hover-none:duration-100 not-all-hover-none:ease-linear not-all-hover-none:hover:bg-theme-primary-100 not-all-hover-none:hover:text-theme-primary-700 not-all-hover-none:hover:ring-theme-primary-100 not-all-hover-none:dark:hover:bg-theme-secondary-800 not-all-hover-none:dark:hover:text-white not-all-hover-none:dark:hover:ring-theme-secondary-800"
             data-testid="Accordion__toggle"
           >
             <div
@@ -4623,7 +4623,7 @@ exports[`Portfolio grouped networks > should render without testnet wallets 1`] 
     data-testid="NetworkWalletsGroupList"
   >
     <div
-      class="md:!mb-3 css-fvpuky"
+      class="flex flex-col gap-x-3 border-b border-theme-secondary-300 duration-200 dark:border-theme-secondary-800 dark:bg-theme-background md:mb-4 md:rounded-xl md:border-0 ring-theme-primary-100 dark:ring-theme-secondary-800 md:ring-2 transition-shadow not-all-hover-none:hover:shadow-xl not-all-hover-none:hover:ring-0 not-all-hover-none:hover:ring-theme-background not-all-hover-none:dark:hover:bg-theme-secondary-800 not-all-hover-none:dark:hover:shadow-none not-all-hover-none:dark:hover:ring-theme-secondary-800 md:!mb-3"
       data-testid="WalletsGroup"
     >
       <div
@@ -4634,7 +4634,7 @@ exports[`Portfolio grouped networks > should render without testnet wallets 1`] 
           class="flex flex-grow flex-row items-center"
         >
           <div
-            class="css-1u7yknf"
+            class="relative flex h-11 flex-shrink-0 basis-11 items-center justify-center rounded-xl bg-clip-padding bg-theme-primary-100 text-theme-navy-600"
           >
             <div
               aria-label="ARK"
@@ -4723,7 +4723,7 @@ exports[`Portfolio grouped networks > should render without testnet wallets 1`] 
             </span>
           </div>
           <div
-            class="hidden flex-initial space-x-4 sm:flex css-1imdohp"
+            class="hidden flex-initial space-x-4 sm:flex not-all-hover-none:dark:group-hover:divide-theme-secondary-700"
           >
             <span
               class="hidden"
@@ -4821,10 +4821,10 @@ exports[`Portfolio grouped networks > should render without testnet wallets 1`] 
           </div>
         </div>
         <div
-          class="ml-4 flex flex-shrink-0 items-center self-stretch css-o6tyc"
+          class="ml-4 flex flex-shrink-0 items-center self-stretch not-all-hover-none:dark:group-hover:border-theme-secondary-700"
         >
           <div
-            class="css-tz6w2"
+            class="flex h-full min-h-8 w-8 basis-8 content-center items-center justify-center rounded-lg text-theme-secondary-700 ring-2 ring-theme-primary-100 transition-all dark:text-theme-secondary-500 dark:ring-theme-secondary-700 sm:h-8 not-all-hover-none:transition-colors not-all-hover-none:duration-100 not-all-hover-none:ease-linear not-all-hover-none:hover:bg-theme-primary-100 not-all-hover-none:hover:text-theme-primary-700 not-all-hover-none:hover:ring-theme-primary-100 not-all-hover-none:dark:hover:bg-theme-secondary-800 not-all-hover-none:dark:hover:text-white not-all-hover-none:dark:hover:ring-theme-secondary-800"
             data-testid="Accordion__toggle"
           >
             <div

@@ -33,45 +33,63 @@ const TypeIcon = ({ variant }: { variant: AlertColor }) => {
 	return <Icon name={iconVariant[variant]} />;
 };
 
-const AlertHeader = ({variant, collapsible, ...props}: AlertProperties) => {
-	return (
-		<div className={twMerge("flex items-center py-2 px-4 space-x-2 text-sm font-semibold dark:text-white", cn({
-			"text-theme-danger-700 bg-theme-danger-100 dark:bg-theme-danger-500": variant === "danger",
-			"text-white bg-theme-danger-500": variant === "danger-dark",
-			"text-theme-hint-700 bg-theme-hint-100 dark:bg-theme-hint-700": variant === "hint",
-			"text-theme-info-700 bg-theme-info-100 dark:bg-theme-info-700": variant === "info",
-			"text-theme-success-700 bg-theme-success-100 dark:bg-theme-success-700": variant === "success",
-			"text-theme-warning-700 bg-theme-warning-100 dark:bg-theme-warning-700": variant === "warning" || !variant,
-			"cursor-pointer": collapsible === true,
-		}) ,props.className)} {...props} />
-	)
-}
+const AlertHeader = ({ variant, collapsible, ...props }: AlertProperties) => (
+	<div
+		{...props}
+		className={twMerge(
+			"flex items-center space-x-2 px-4 py-2 text-sm font-semibold dark:text-white",
+			cn({
+				"bg-theme-danger-100 text-theme-danger-700 dark:bg-theme-danger-500": variant === "danger",
+				"bg-theme-danger-500 text-white": variant === "danger-dark",
+				"bg-theme-hint-100 text-theme-hint-700 dark:bg-theme-hint-700": variant === "hint",
+				"bg-theme-info-100 text-theme-info-700 dark:bg-theme-info-700": variant === "info",
+				"bg-theme-success-100 text-theme-success-700 dark:bg-theme-success-700": variant === "success",
+				"bg-theme-warning-100 text-theme-warning-700 dark:bg-theme-warning-700":
+					variant === "warning" || !variant,
+				"cursor-pointer": collapsible === true,
+			}),
+			props.className,
+		)}
+	/>
+);
 
-const AlertBody = ({variant, ...props}: AlertProperties) => {
-	return (
-		<div className={twMerge("w-full p-4 text-sm leading-relaxed break-words text-left dark:bg-theme-secondary-800", cn({
-			"bg-theme-danger-50": variant === "danger",
-			"bg-theme-secondary-800 text-theme-secondary-200": variant === "danger-dark",
-			"bg-theme-hint-50": variant === "hint",
-			"bg-theme-info-50": variant === "info",
-			"bg-theme-success-50": variant === "success",
-			"bg-theme-warning-50": variant === "warning" || !variant,
-		}), props.className)} {...props} />
-	)
-}
+const AlertBody = ({ variant, ...props }: AlertProperties) => (
+	<div
+		{...props}
+		className={twMerge(
+			"w-full break-words p-4 text-left text-sm leading-relaxed dark:bg-theme-secondary-800",
+			cn({
+				"bg-theme-danger-50": variant === "danger",
+				"bg-theme-hint-50": variant === "hint",
+				"bg-theme-info-50": variant === "info",
+				"bg-theme-secondary-800 text-theme-secondary-200": variant === "danger-dark",
+				"bg-theme-success-50": variant === "success",
+				"bg-theme-warning-50": variant === "warning" || !variant,
+			}),
+			props.className,
+		)}
+	/>
+);
 
-const AlertChevron = ({collapsed, variant, ...props}: AlertChevronProperties) => {
-	return (
-		<span className={twMerge("transform !ml-auto duration-100 transition-transform", cn({
-			"text-theme-danger-700 dark:text-white": variant === "danger",
-			"text-white": variant === "danger-dark",
-			"text-theme-hint-700 dark:text-white": variant === "hint",
-			"text-theme-info-700 dark:text-white": variant === "info",
-			"text-theme-success-700 dark:text-white": variant === "success",
-			"text-theme-warning-700 dark:text-white": variant === "warning" || !variant
-		}), props.className)} {...props} />
-	)
-}
+const AlertChevron = ({ collapsed, variant, ...props }: AlertChevronProperties) => (
+	<span
+		{...props}
+		className={twMerge(
+			"!ml-auto transform transition-transform duration-100",
+			cn({
+				"rotate-0": collapsed,
+				"rotate-180": !collapsed,
+				"text-theme-danger-700 dark:text-white": variant === "danger",
+				"text-theme-hint-700 dark:text-white": variant === "hint",
+				"text-theme-info-700 dark:text-white": variant === "info",
+				"text-theme-success-700 dark:text-white": variant === "success",
+				"text-theme-warning-700 dark:text-white": variant === "warning" || !variant,
+				"text-white": variant === "danger-dark",
+			}),
+			props.className,
+		)}
+	/>
+);
 
 export const Alert = ({
 	variant = "warning",

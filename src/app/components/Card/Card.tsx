@@ -23,6 +23,8 @@ interface StyledButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement
 
 const StyledButton = ({ variant, onClick, ...props }: StyledButtonProps) => (
 	<button
+		{...props}
+		onClick={onClick}
 		className={twMerge(
 			"relative h-full w-full cursor-pointer rounded-lg border-2 border-theme-primary-100 bg-theme-background p-5 text-left outline-none transition-colors-shadow duration-200 focus-visible:border-theme-primary-400 focus-visible:outline-none dark:border-theme-secondary-800",
 			cn({
@@ -33,7 +35,6 @@ const StyledButton = ({ variant, onClick, ...props }: StyledButtonProps) => (
 			}),
 			props.className,
 		)}
-		{...props}
 	/>
 );
 
