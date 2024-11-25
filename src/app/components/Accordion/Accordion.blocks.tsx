@@ -1,6 +1,5 @@
 import cn from "classnames";
 import React from "react";
-import tw, { css, styled } from "twin.macro";
 import { useTheme } from "@/app/hooks";
 import {
 	AccordionHeaderProperties,
@@ -10,31 +9,39 @@ import {
 import { Icon } from "@/app/components/Icon";
 import { twMerge } from "tailwind-merge";
 
-export const AccordionWrapper = styled.div<{ isInactive?: boolean; isCollapsed?: boolean }>`
-	${tw`
-		flex gap-x-3 flex-col duration-200
-		border-b border-theme-secondary-300
-		md:(mb-4 border-0 rounded-xl)
-		dark:(bg-theme-background border-theme-secondary-800)
-	`}
+interface AccordionWrapperProps extends React.HTMLAttributes<HTMLDivElement> {
+	isInactive?: boolean;
+	isCollapsed?: boolean;
+	className?: string;
+}
 
-	${({ isInactive }) =>
-		isInactive
-			? tw`md:ring-1 ring-theme-secondary-300 dark:ring-theme-secondary-800`
-			: tw`md:ring-2 ring-theme-primary-100 dark:ring-theme-secondary-800`}
+export const AccordionWrapper = ({ isInactive, isCollapsed, className, ...props }: AccordionWrapperProps) => (
+	<div
+		className={twMerge(
+			"flex flex-col gap-x-3 border-b border-theme-secondary-300 duration-200 dark:border-theme-secondary-800 dark:bg-theme-background md:mb-4 md:rounded-xl md:border-0",
+			cn({
+				"ring-theme-primary-100 dark:ring-theme-secondary-800 md:ring-2": !isInactive,
+				"ring-theme-secondary-300 dark:ring-theme-secondary-800 md:ring-1": isInactive,
+				"transition-all": isCollapsed,
+				"transition-shadow not-all-hover-none:hover:shadow-xl not-all-hover-none:hover:ring-0 not-all-hover-none:hover:ring-theme-background not-all-hover-none:dark:hover:bg-theme-secondary-800 not-all-hover-none:dark:hover:shadow-none not-all-hover-none:dark:hover:ring-theme-secondary-800":
+					!isCollapsed,
+			}),
+			className,
+		)}
+		{...props}
+	/>
+);
 
-	${({ isCollapsed }) => (isCollapsed ? tw`transition-all` : tw`transition-shadow`)}
+interface AccordionToggleWrapperProps extends React.HTMLAttributes<HTMLDivElement> {}
 
-	${({ isCollapsed }) => {
-		if (isCollapsed) {
-			return css`
-				@media not all and (hover: none) {
-					${tw`hover:(ring-theme-background shadow-xl dark:(ring-theme-secondary-800 bg-theme-secondary-800 shadow-none))`}}
-				}
-			`;
-		}
-	}}
-`;
+const AccordionToggleWrapper = ({ ...props }: AccordionToggleWrapperProps) => (
+	<div
+		className={twMerge(
+			"flex h-full min-h-8 w-8 basis-8 content-center items-center justify-center rounded-lg text-theme-secondary-700 ring-2 ring-theme-primary-100 transition-all dark:text-theme-secondary-500 dark:ring-theme-secondary-700 sm:h-8 not-all-hover-none:transition-colors not-all-hover-none:duration-100 not-all-hover-none:ease-linear not-all-hover-none:hover:bg-theme-primary-100 not-all-hover-none:hover:text-theme-primary-700 not-all-hover-none:hover:ring-theme-primary-100 not-all-hover-none:dark:hover:bg-theme-secondary-800 not-all-hover-none:dark:hover:text-white not-all-hover-none:dark:hover:ring-theme-secondary-800",
+		)}
+		{...props}
+	/>
+);
 
 export const AccordionHeader: React.VFC<AccordionHeaderProperties> = ({
 	onClick,
@@ -70,14 +77,12 @@ export const AccordionHeader: React.VFC<AccordionHeaderProperties> = ({
 
 			{!!onClick && (
 				<div
-					className={cn("ml-4 flex flex-shrink-0 items-center self-stretch", {
-						"transition-all duration-100": !isExpanded,
-					})}
-					css={css`
-						@media not all and (hover: none) {
-							${tw`dark:group-hover:border-theme-secondary-700`};
-						}
-					`}
+					className={cn(
+						"ml-4 flex flex-shrink-0 items-center self-stretch not-all-hover-none:dark:group-hover:border-theme-secondary-700",
+						{
+							"transition-all duration-100": !isExpanded,
+						},
+					)}
 				>
 					<AccordionToggleWrapper data-testid="Accordion__toggle">
 						<Icon
@@ -101,20 +106,6 @@ export const AccordionContent: React.VFC<AccordionContentProperties> = ({ childr
 		{children}
 	</div>
 );
-
-const AccordionToggleWrapper = styled.div`
-	flex-basis: 2rem;
-
-	${tw`flex h-full w-8 min-h-8 content-center items-center justify-center rounded-lg text-theme-secondary-700 dark:text-theme-secondary-500 ring-2 transition-all sm:h-8`}
-
-	${tw`ring-theme-primary-100 dark:ring-theme-secondary-700`}
-
-	${css`
-		@media not all and (hover: none) {
-			${tw`hover:ring-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 transition-colors duration-100 ease-linear dark:hover:bg-theme-secondary-800 dark:hover:ring-theme-secondary-800 dark:hover:text-white`}}
-		}
-	`}
-`;
 
 export const AccordionHeaderSkeletonWrapper: React.VFC<AccordionHeaderSkeletonWrapperProperties> = ({
 	children,
