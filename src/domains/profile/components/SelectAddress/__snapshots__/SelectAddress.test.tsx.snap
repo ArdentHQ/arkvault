@@ -324,7 +324,7 @@ exports[`SelectAddress > should render with preselected address 1`] = `
       class="css-14zfvme"
     >
       <div
-        class="shrink-0 css-1p5jpah"
+        class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-8 w-8 text-sm shrink-0"
         data-testid="Avatar"
       >
         <div
