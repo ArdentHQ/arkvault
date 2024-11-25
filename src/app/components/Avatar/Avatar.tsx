@@ -17,6 +17,7 @@ interface AvatarWrapperProps extends React.HTMLAttributes<HTMLDivElement> {
 
 const AvatarWrapper = ({ size, noShadow, shadowClassName, ...props }: AvatarWrapperProps) => (
 	<div
+		{...props}
 		className={twMerge(
 			"relative inline-flex h-10 w-10 items-center justify-center rounded-full align-middle transition-all duration-100",
 			cn({
@@ -30,7 +31,6 @@ const AvatarWrapper = ({ size, noShadow, shadowClassName, ...props }: AvatarWrap
 			}),
 			props.className,
 		)}
-		{...props}
 	>
 		{props.children}
 	</div>
