@@ -3,8 +3,7 @@
 exports[`Checkbox > should render 1`] = `
 <div>
   <input
-    class="css-kf7z38"
-    color="success"
+    class="w-5 h-5 bg-transparent !rounded cursor-pointer border-2 transition duration-150 ease-in-out focus:ring-offset-0 focus:ring-theme-primary-400 disabled:bg-theme-secondary-200 disabled:border-theme-secondary-300 disabled:cursor-not-allowed disabled:dark:bg-theme-secondary-800 disabled:dark:border-theme-secondary-600 [:not(:checked)]:border-theme-secondary-300 [:not(:checked)]:dark:border-theme-secondary-600 custom-checkbox text-theme-primary-600 hover:border-theme-primary-600 checked:hover:text-theme-primary-700"
     type="checkbox"
   />
 </div>
@@ -13,8 +12,7 @@ exports[`Checkbox > should render 1`] = `
 exports[`Checkbox > should render a danger color 1`] = `
 <div>
   <input
-    class="css-awii4u"
-    color="danger"
+    class="w-5 h-5 bg-transparent !rounded cursor-pointer border-2 transition duration-150 ease-in-out focus:ring-offset-0 focus:ring-theme-primary-400 disabled:bg-theme-secondary-200 disabled:border-theme-secondary-300 disabled:cursor-not-allowed disabled:dark:bg-theme-secondary-800 disabled:dark:border-theme-secondary-600 [:not(:checked)]:border-theme-secondary-300 [:not(:checked)]:dark:border-theme-secondary-600 custom-checkbox text-theme-danger-400 hover:border-theme-danger-400 checked:hover:text-theme-danger-500"
     type="checkbox"
   />
 </div>
@@ -23,8 +21,7 @@ exports[`Checkbox > should render a danger color 1`] = `
 exports[`Checkbox > should render a hint color 1`] = `
 <div>
   <input
-    class="css-1orf451"
-    color="hint"
+    class="w-5 h-5 bg-transparent !rounded cursor-pointer border-2 transition duration-150 ease-in-out focus:ring-offset-0 focus:ring-theme-primary-400 disabled:bg-theme-secondary-200 disabled:border-theme-secondary-300 disabled:cursor-not-allowed disabled:dark:bg-theme-secondary-800 disabled:dark:border-theme-secondary-600 [:not(:checked)]:border-theme-secondary-300 [:not(:checked)]:dark:border-theme-secondary-600 custom-checkbox text-theme-hint-500 hover:border-theme-hint-500"
     type="checkbox"
   />
 </div>
@@ -33,8 +30,7 @@ exports[`Checkbox > should render a hint color 1`] = `
 exports[`Checkbox > should render a info color 1`] = `
 <div>
   <input
-    class="css-pw046m"
-    color="info"
+    class="w-5 h-5 bg-transparent !rounded cursor-pointer border-2 transition duration-150 ease-in-out focus:ring-offset-0 focus:ring-theme-primary-400 disabled:bg-theme-secondary-200 disabled:border-theme-secondary-300 disabled:cursor-not-allowed disabled:dark:bg-theme-secondary-800 disabled:dark:border-theme-secondary-600 [:not(:checked)]:border-theme-secondary-300 [:not(:checked)]:dark:border-theme-secondary-600 custom-checkbox text-theme-primary-600 hover:border-theme-primary-600"
     type="checkbox"
   />
 </div>
@@ -43,8 +39,7 @@ exports[`Checkbox > should render a info color 1`] = `
 exports[`Checkbox > should render a success color 1`] = `
 <div>
   <input
-    class="css-kf7z38"
-    color="success"
+    class="w-5 h-5 bg-transparent !rounded cursor-pointer border-2 transition duration-150 ease-in-out focus:ring-offset-0 focus:ring-theme-primary-400 disabled:bg-theme-secondary-200 disabled:border-theme-secondary-300 disabled:cursor-not-allowed disabled:dark:bg-theme-secondary-800 disabled:dark:border-theme-secondary-600 [:not(:checked)]:border-theme-secondary-300 [:not(:checked)]:dark:border-theme-secondary-600 custom-checkbox text-theme-primary-600 hover:border-theme-primary-600 checked:hover:text-theme-primary-700"
     type="checkbox"
   />
 </div>
@@ -53,8 +48,7 @@ exports[`Checkbox > should render a success color 1`] = `
 exports[`Checkbox > should render a warning color 1`] = `
 <div>
   <input
-    class="css-4fxcy0"
-    color="warning"
+    class="w-5 h-5 bg-transparent !rounded cursor-pointer border-2 transition duration-150 ease-in-out focus:ring-offset-0 focus:ring-theme-primary-400 disabled:bg-theme-secondary-200 disabled:border-theme-secondary-300 disabled:cursor-not-allowed disabled:dark:bg-theme-secondary-800 disabled:dark:border-theme-secondary-600 [:not(:checked)]:border-theme-secondary-300 [:not(:checked)]:dark:border-theme-secondary-600 custom-checkbox text-theme-warning-600 hover:border-theme-warning-600"
     type="checkbox"
   />
 </div>
