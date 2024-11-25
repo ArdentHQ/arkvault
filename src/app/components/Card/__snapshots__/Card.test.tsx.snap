@@ -1,5 +1,22 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
+exports[`Card > should handle click 1`] = `
+<DocumentFragment>
+  <div>
+    <button
+      class="relative h-full w-full cursor-pointer rounded-lg border-2 border-theme-primary-100 bg-theme-background p-5 text-left outline-none transition-colors-shadow duration-200 focus-visible:border-theme-primary-400 focus-visible:outline-none dark:border-theme-secondary-800"
+      data-testid="Card"
+      type="button"
+    >
+      Test
+      <div
+        class="absolute -right-1 -top-1 m-4 flex items-center space-x-1"
+      />
+    </button>
+  </div>
+</DocumentFragment>
+`;
+
 exports[`Card > should render 1`] = `
 <DocumentFragment>
   <div>
