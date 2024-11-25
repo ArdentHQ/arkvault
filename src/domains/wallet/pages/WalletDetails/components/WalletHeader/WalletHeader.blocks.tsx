@@ -19,11 +19,15 @@ import { Clipboard } from "@/app/components/Clipboard";
 import { isLedgerWalletCompatible } from "@/utils/wallet-utils";
 import { twMerge } from "tailwind-merge";
 
-const WalletHeaderButton = ({...props}: React.ButtonHTMLAttributes<HTMLButtonElement>) => {
-	return(
-		<button className={twMerge("inline-flex items-center justify-center w-4 h-4 transition-all duration-100 ease-linear rounded outline-none focus(outline-none focus:ring-2 focus:ring-theme-primary-400 text-theme-secondary-700 dark:text-theme-secondary-600 hover:text-theme-secondary-200 disabled:cursor-not-allowed disabled:text-theme-secondary-800 p-0", props.className)} {...props} />
-	)
-}
+const WalletHeaderButton = ({ ...props }: React.ButtonHTMLAttributes<HTMLButtonElement>) => (
+	<button
+		{...props}
+		className={twMerge(
+			"inline-flex h-4 w-4 items-center justify-center rounded p-0 text-theme-secondary-700 outline-none transition-all duration-100 ease-linear hover:text-theme-secondary-200 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-800 dark:text-theme-secondary-600",
+			props.className,
+		)}
+	/>
+);
 
 const isUnlockBalanceButtonVisible = (wallet: Contracts.IReadWriteWallet) => {
 	const hasLockedBalance = wallet.network().usesLockedBalance() && !!wallet.balance("locked");

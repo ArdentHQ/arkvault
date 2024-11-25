@@ -62,16 +62,22 @@ interface GroupNetworkIconWrapperProperties extends React.HTMLAttributes<HTMLDiv
 	isExpanded: boolean;
 }
 
-const GroupNetworkIconWrapper = ({isDarkMode, isExpanded,...props}: GroupNetworkIconWrapperProperties) => {
-	return (
-		<div className={twMerge("relative flex h-11 flex-shrink-0 items-center justify-center rounded-xl bg-clip-padding basis-11", cn({
-			"bg-theme-background text-theme-secondary-700 ring-2 ring-theme-secondary-800": isDarkMode,
-			"bg-theme-primary-100 text-theme-navy-600": !isDarkMode,
-			"transition-all duration-100": !isExpanded,
-			"not-all-hover-none:group-hover:bg-theme-secondary-800 not-all-hover-none:group-hover:ring-theme-secondary-700": isDarkMode && !isExpanded,
-		}), props.className)} {...props} />
-	)
-}
+const GroupNetworkIconWrapper = ({ isDarkMode, isExpanded, ...props }: GroupNetworkIconWrapperProperties) => (
+	<div
+		{...props}
+		className={twMerge(
+			"relative flex h-11 flex-shrink-0 basis-11 items-center justify-center rounded-xl bg-clip-padding",
+			cn({
+				"bg-theme-background text-theme-secondary-700 ring-2 ring-theme-secondary-800": isDarkMode,
+				"bg-theme-primary-100 text-theme-navy-600": !isDarkMode,
+				"not-all-hover-none:group-hover:bg-theme-secondary-800 not-all-hover-none:group-hover:ring-theme-secondary-700":
+					isDarkMode && !isExpanded,
+				"transition-all duration-100": !isExpanded,
+			}),
+			props.className,
+		)}
+	/>
+);
 
 export const GroupNetworkIcon: React.VFC<WalletsGroupNetworkIconProperties> = ({ network, isGroupExpanded }) => {
 	const { isDarkMode } = useTheme();
@@ -177,9 +183,7 @@ export const GroupNetworkTotal: React.VFC<WalletsGroupNetworkTotalProperties> = 
 				<span className="text-xs text-theme-secondary-500">{renderCurrency()}</span>
 			</div>
 
-			<div
-				className="hidden flex-initial space-x-4 sm:flex not-all-hover-none:dark:group-hover:divide-theme-secondary-700"
-			>
+			<div className="hidden flex-initial space-x-4 sm:flex not-all-hover-none:dark:group-hover:divide-theme-secondary-700">
 				{/* needed for the border color on the first LabelledText element */}
 				<span className="hidden" />
 

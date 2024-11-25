@@ -6,11 +6,7 @@ import { VoteListProperties } from "./VoteList.contracts";
 import { VoteItem } from ".";
 import { assertReadOnlyWallet } from "@/utils/assertions";
 
-const ListWrapper = ({...props}: React.HTMLAttributes<HTMLDivElement>) => {
-	return (
-		<div className="flex-1 -my-2" {...props} />
-	)
-}
+const ListWrapper = ({ ...props }: React.HTMLAttributes<HTMLDivElement>) => <div className="-my-2 flex-1" {...props} />;
 
 export const VoteList = ({ votes, currency, isNegativeAmount = false }: VoteListProperties) => {
 	if (votes.length === 0) {
