@@ -15,30 +15,28 @@ export type CircleProperties = {
 } & React.HTMLAttributes<any>;
 
 const CircleWrapper = forwardRef<HTMLDivElement, CircleProperties>(
-    ({ size, noShadow, children, avatarId, ...props }, ref) => {
-        return (
+    ({ size, noShadow, children, avatarId, ...props }, ref) => (
             <div
                 {...props}
                 ref={ref}
                 className={twMerge(
                     "transition-all inline-flex items-center justify-center align-middle border-2 rounded-full",
                     cn({
-                        "ring-0": noShadow,
-                        "ring-6": !noShadow,
+                        "border-0 bg-theme-info-200": avatarId,
+                        "px-2 py-1 text-lg w-16 h-16": size === "xl",
                         "px-2 py-1 w-11 h-11": size === "lg",
                         "px-2 py-1 w-8 h-8 text-sm": size === "sm",
-                        "px-2 py-1 text-lg w-16 h-16": size === "xl",
+                        "ring-0": noShadow,
+                        "ring-6": !noShadow,
+                        "w-10 h-10 px-4 py-2": !size || !["lg", "sm", "xl", "xs"].includes(size),
                         "w-5 h-5 text-sm": size === "xs",
-                        "w-10 h-10 px-4 py-2": !size || ["lg", "sm", "xl", "xs"].indexOf(size) === -1,
-                        "border-0 bg-theme-info-200": avatarId,
                     }),
                     props.className
                 )}
             >
                 {children}
             </div>
-        );
-    }
+        )
 );
 
 CircleWrapper.displayName = "CircleWrapper";
