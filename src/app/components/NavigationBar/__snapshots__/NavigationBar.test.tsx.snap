@@ -499,7 +499,7 @@ exports[`NavigationBar > should not render with title if variant is full 1`] = `
             data-testid="UserMenu"
           >
             <div
-              class="shrink-0 css-1n9jllj"
+              class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-11 w-11 text-sm ring-6 ring-theme-background shrink-0"
               data-testid="Avatar"
             >
               <div
@@ -1080,7 +1080,7 @@ exports[`NavigationBar > should render full variant when profile restored is fal
             data-testid="UserMenu"
           >
             <div
-              class="shrink-0 css-1n9jllj"
+              class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-11 w-11 text-sm ring-6 ring-theme-background shrink-0"
               data-testid="Avatar"
             >
               <div
@@ -1602,7 +1602,7 @@ exports[`NavigationBar > should render full variant when profile restored is tru
             data-testid="UserMenu"
           >
             <div
-              class="shrink-0 css-1n9jllj"
+              class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-11 w-11 text-sm ring-6 ring-theme-background shrink-0"
               data-testid="Avatar"
             >
               <div
@@ -2126,7 +2126,7 @@ exports[`NavigationBar > should render in lg 1`] = `
             data-testid="UserMenu"
           >
             <div
-              class="shrink-0 css-1n9jllj"
+              class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-11 w-11 text-sm ring-6 ring-theme-background shrink-0"
               data-testid="Avatar"
             >
               <div
@@ -2650,7 +2650,7 @@ exports[`NavigationBar > should render in md 1`] = `
             data-testid="UserMenu"
           >
             <div
-              class="shrink-0 css-1n9jllj"
+              class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-11 w-11 text-sm ring-6 ring-theme-background shrink-0"
               data-testid="Avatar"
             >
               <div
@@ -3174,7 +3174,7 @@ exports[`NavigationBar > should render in sm 1`] = `
             data-testid="UserMenu"
           >
             <div
-              class="shrink-0 css-1n9jllj"
+              class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-11 w-11 text-sm ring-6 ring-theme-background shrink-0"
               data-testid="Avatar"
             >
               <div
@@ -3698,7 +3698,7 @@ exports[`NavigationBar > should render in small screen variant 1`] = `
             data-testid="UserMenu"
           >
             <div
-              class="shrink-0 css-1n9jllj"
+              class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-11 w-11 text-sm ring-6 ring-theme-background shrink-0"
               data-testid="Avatar"
             >
               <div
@@ -4222,7 +4222,7 @@ exports[`NavigationBar > should render in xs 1`] = `
             data-testid="UserMenu"
           >
             <div
-              class="shrink-0 css-1ha4taj"
+              class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-[25px] w-[25px] text-sm ring-6 ring-theme-background shrink-0"
               data-testid="Avatar"
             >
               <div
@@ -4746,7 +4746,7 @@ exports[`NavigationBar > should render with custom menu 1`] = `
             data-testid="UserMenu"
           >
             <div
-              class="shrink-0 css-1n9jllj"
+              class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-11 w-11 text-sm ring-6 ring-theme-background shrink-0"
               data-testid="Avatar"
             >
               <div
@@ -5270,7 +5270,7 @@ exports[`NavigationBar > should render with shadow if there is a scroll 1`] = `
             data-testid="UserMenu"
           >
             <div
-              class="shrink-0 css-1n9jllj"
+              class="relative inline-flex items-center justify-center rounded-full align-middle transition-all duration-100 h-11 w-11 text-sm ring-6 ring-theme-background shrink-0"
               data-testid="Avatar"
             >
               <div
