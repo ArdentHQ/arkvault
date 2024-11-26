@@ -50,7 +50,7 @@ exports[`SelectRecipient > should render disabled 1`] = `
                   class="flex items-center"
                 >
                   <div
-                    class="transition-all inline-flex items-center justify-center align-middle border-2 rounded-full px-2 py-1 w-8 h-8 text-sm ring-0 border-theme-secondary-200 bg-theme-secondary-200 dark:border-theme-secondary-700 dark:bg-theme-secondary-700 ring-theme-background duration-100"
+                    class="inline-flex items-center justify-center rounded-full border-2 align-middle transition-all h-8 w-8 px-2 py-1 text-sm ring-0 border-theme-secondary-200 bg-theme-secondary-200 dark:border-theme-secondary-700 dark:bg-theme-secondary-700 ring-theme-background duration-100"
                   />
                 </div>
                 <div
@@ -180,7 +180,7 @@ exports[`SelectRecipient > should render empty 1`] = `
                   class="flex items-center"
                 >
                   <div
-                    class="transition-all inline-flex items-center justify-center align-middle border-2 rounded-full px-2 py-1 w-8 h-8 text-sm ring-0 border-theme-secondary-200 bg-theme-secondary-200 dark:border-theme-secondary-700 dark:bg-theme-secondary-700 ring-theme-background duration-100"
+                    class="inline-flex items-center justify-center rounded-full border-2 align-middle transition-all h-8 w-8 px-2 py-1 text-sm ring-0 border-theme-secondary-200 bg-theme-secondary-200 dark:border-theme-secondary-700 dark:bg-theme-secondary-700 ring-theme-background duration-100"
                   />
                 </div>
                 <div
@@ -359,7 +359,7 @@ exports[`SelectRecipient > should render invalid 1`] = `
                   class="flex items-center"
                 >
                   <div
-                    class="transition-all inline-flex items-center justify-center align-middle border-2 rounded-full px-2 py-1 w-8 h-8 text-sm ring-0 border-theme-secondary-200 bg-theme-secondary-200 dark:border-theme-secondary-700 dark:bg-theme-secondary-700 ring-theme-background duration-100"
+                    class="inline-flex items-center justify-center rounded-full border-2 align-middle transition-all h-8 w-8 px-2 py-1 text-sm ring-0 border-theme-secondary-200 bg-theme-secondary-200 dark:border-theme-secondary-700 dark:bg-theme-secondary-700 ring-theme-background duration-100"
                   />
                 </div>
                 <div
