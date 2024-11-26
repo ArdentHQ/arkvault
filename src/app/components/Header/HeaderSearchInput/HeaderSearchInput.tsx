@@ -1,16 +1,29 @@
 import cn from "classnames";
-import React, { ChangeEvent, FC, useCallback, useEffect, useRef, useState } from "react";
+import React, { ChangeEvent, FC, forwardRef, useCallback, useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
-import tw, { styled } from "twin.macro";
-
 import { HeaderSearchInputProperties } from "./HeaderSearchInput.contracts";
 import { Icon } from "@/app/components/Icon";
 import { Input } from "@/app/components/Input";
 import { useDebounce } from "@/app/hooks";
 
-const SearchBarInputWrapper = styled.div`
-	${tw`xs:[min-width:300px] sm:[min-width:448px] dark:border dark:border-theme-secondary-800`}
-`;
+
+const SearchBarInputWrapper = forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElement>>(
+    (props, ref) => {
+        return (
+            <div
+                {...props}
+                ref={ref}
+                className={cn(
+                    "xs:[min-width:300px] sm:[min-width:448px] dark:border dark:border-theme-secondary-800",
+                    props.className
+                )}
+            />
+        );
+    }
+);
+
+SearchBarInputWrapper.displayName = "SearchBarInputWrapper";
+
 
 export const HeaderSearchInput: FC<HeaderSearchInputProperties> = ({
 	placeholder,

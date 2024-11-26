@@ -1,17 +1,30 @@
 import cn from "classnames";
-import React, { ChangeEvent, FC, useCallback, useEffect, useRef, useState } from "react";
+import React, { ChangeEvent, FC, forwardRef, useCallback, useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
-import tw, { styled } from "twin.macro";
 
 import { HeaderSearchBarProperties } from "./HeaderSearchBar.contracts";
 import { ControlButton } from "@/app/components/ControlButton";
 import { Icon } from "@/app/components/Icon";
 import { Input } from "@/app/components/Input";
 import { clickOutsideHandler, useDebounce } from "@/app/hooks";
+import { twMerge } from "tailwind-merge";
 
-const SearchBarInputWrapper = styled.div`
-	${tw`xs:[min-width:300px] sm:[min-width:448px] dark:border dark:border-theme-secondary-800`}
-`;
+const SearchBarInputWrapper = forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElement>>(
+    (props, ref) => {
+        return (
+            <div
+                {...props}
+                ref={ref}
+                className={twMerge(
+                    "xs:[min-width:300px] sm:[min-width:448px] dark:border dark:border-theme-secondary-800",
+                    props.className
+                )}
+            />
+        );
+    }
+);
+
+SearchBarInputWrapper.displayName = "SearchBarInputWrapper";
 
 export const HeaderSearchBar: FC<HeaderSearchBarProperties> = ({
 	offsetClassName,
