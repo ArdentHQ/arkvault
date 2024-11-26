@@ -1,7 +1,5 @@
 import { Contracts } from "@ardenthq/sdk-profiles";
 import React from "react";
-
-import tw, { styled } from "twin.macro";
 import { t } from "i18next";
 import { WalletHeaderProperties } from "@/domains/wallet/pages/WalletDetails/components/WalletHeader/WalletHeader.contracts";
 import { NetworkIcon } from "@/domains/network/components/NetworkIcon";
@@ -18,10 +16,14 @@ import { Dropdown } from "@/app/components/Dropdown";
 import { useWalletOptions } from "@/domains/wallet/pages/WalletDetails/hooks/use-wallet-options";
 import { WalletActionsModals } from "@/domains/wallet/components/WalletActionsModals/WalletActionsModals";
 import { Copy } from "@/app/components/Copy";
+import { twMerge } from "tailwind-merge";
 
-const WalletHeaderButtonMobile = styled.button`
-	${tw`inline-flex items-center justify-center w-6 h-6 transition-all duration-100 ease-linear rounded outline-none focus:(outline-none ring-2 ring-theme-primary-400) text-theme-secondary-text disabled:text-theme-secondary-800`}
-`;
+const WalletHeaderButtonMobile = ({...props}: React.ButtonHTMLAttributes<HTMLButtonElement>) => (
+		<button
+			{...props}
+			className={twMerge("inline-flex items-center justify-center w-6 h-6 transition-all duration-100 ease-linear rounded outline-none focus:(outline-none ring-2 ring-theme-primary-400) text-theme-secondary-text disabled:text-theme-secondary-800", props.className)}
+		/>
+	)
 
 export const WalletHeaderMobile: React.FC<WalletHeaderProperties> = ({ profile, wallet, onUpdate }) => {
 	const { activeModal, handleSelectOption, handleToggleStar, handleSend, setActiveModal } = useWalletActions(wallet);
