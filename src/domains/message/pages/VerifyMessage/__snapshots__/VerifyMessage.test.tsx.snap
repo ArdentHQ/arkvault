@@ -24,37 +24,37 @@ exports[`VerifyMessage > should render (lg) 1`] = `
           <div
             class="flex items-center space-x-2"
           >
-            <div
-              class="css-1i4b0eq"
-              height="20"
-              width="20"
-            >
-              <svg
-                id="received"
-                viewBox="0 0 20 20"
-                x="0"
-                xml:space="preserve"
-                xmlns="http://www.w3.org/2000/svg"
-                y="0"
+            <div>
+              <div
+                style="height: 20px; width: 20px;"
               >
-                <g
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
+                <svg
+                  id="received"
+                  style="height: 100%; width: 100%;"
+                  viewBox="0 0 20 20"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
                 >
-                  <path
-                    d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
-                  />
-                </g>
-              </svg>
+                  <g
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
+                    />
+                  </g>
+                </svg>
+              </div>
             </div>
           </div>
         </button>
         <div
-          class="border-theme-secondary-300 dark:border-theme-secondary-800 css-3y8nng"
-          type="vertical"
+          class="h-5 relative inline-block align-middle border-t-0 border-l border-solid mx-2 border-theme-secondary-300 dark:border-theme-secondary-800"
         />
         <button
           class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600"
@@ -64,34 +64,34 @@ exports[`VerifyMessage > should render (lg) 1`] = `
           <div
             class="flex items-center space-x-2"
           >
-            <div
-              class="css-1i4b0eq"
-              height="20"
-              width="20"
-            >
-              <svg
-                fill="none"
-                viewBox="0 0 21 20"
-                x="0"
-                xml:space="preserve"
-                xmlns="http://www.w3.org/2000/svg"
-                y="0"
+            <div>
+              <div
+                style="height: 20px; width: 20px;"
               >
-                <path
-                  clip-rule="evenodd"
-                  d="M5.35 8.153a3.6 3.6 0 1 0 0-7.2 3.6 3.6 0 0 0 0 7.2zm0 10.797a3.6 3.6 0 1 0 0-7.2 3.6 3.6 0 0 0 0 7.2zM16.147 8.153a3.6 3.6 0 1 0 0-7.2 3.6 3.6 0 0 0 0 7.2zm0 10.797a3.6 3.6 0 1 0 0-7.2 3.6 3.6 0 0 0 0 7.2z"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                />
-              </svg>
+                <svg
+                  fill="none"
+                  style="height: 100%; width: 100%;"
+                  viewBox="0 0 21 20"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <path
+                    clip-rule="evenodd"
+                    d="M5.35 8.153a3.6 3.6 0 1 0 0-7.2 3.6 3.6 0 0 0 0 7.2zm0 10.797a3.6 3.6 0 1 0 0-7.2 3.6 3.6 0 0 0 0 7.2zM16.147 8.153a3.6 3.6 0 1 0 0-7.2 3.6 3.6 0 0 0 0 7.2zm0 10.797a3.6 3.6 0 1 0 0-7.2 3.6 3.6 0 0 0 0 7.2z"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  />
+                </svg>
+              </div>
             </div>
           </div>
         </button>
         <div
-          class="border-theme-secondary-300 dark:border-theme-secondary-800 css-3y8nng"
-          type="vertical"
+          class="h-5 relative inline-block align-middle border-t-0 border-l border-solid mx-2 border-theme-secondary-300 dark:border-theme-secondary-800"
         />
         <button
           class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600"
@@ -101,28 +101,29 @@ exports[`VerifyMessage > should render (lg) 1`] = `
           <div
             class="flex items-center space-x-2"
           >
-            <div
-              class="css-1i4b0eq"
-              height="20"
-              width="20"
-            >
-              <svg
-                id="sent"
-                viewBox="0 0 20 20"
-                x="0"
-                xml:space="preserve"
-                xmlns="http://www.w3.org/2000/svg"
-                y="0"
+            <div>
+              <div
+                style="height: 20px; width: 20px;"
               >
-                <path
-                  d="M8 19v-4m0-4V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                />
-              </svg>
+                <svg
+                  id="sent"
+                  style="height: 100%; width: 100%;"
+                  viewBox="0 0 20 20"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <path
+                    d="M8 19v-4m0-4V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  />
+                </svg>
+              </div>
             </div>
           </div>
         </button>
@@ -139,30 +140,33 @@ exports[`VerifyMessage > should render (lg) 1`] = `
           class="hidden w-12 sm:flex"
         >
           <button
-            class="css-1i1c5eg"
+            class="flex items-center w-12 transition-colors duration-200 bg-theme-secondary-100 dark:bg-black text-theme-primary-600 dark:text-theme-secondary-200 hover:bg-theme-primary-100 hover:dark:bg-theme-secondary-800 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-theme-primary-400 focus:rounded"
           >
             <div
-              class="mx-auto css-15txs7d"
-              height="10"
-              width="10"
+              class="mx-auto"
             >
-              <svg
-                id="chevron-left-small"
-                viewBox="0 0 10 10"
-                x="0"
-                xml:space="preserve"
-                xmlns="http://www.w3.org/2000/svg"
-                y="0"
+              <div
+                style="height: 10px; width: 10px;"
               >
-                <path
-                  d="M6.938 9l-3.8-3.8c-.1-.1-.1-.3 0-.4l3.8-3.8"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                />
-              </svg>
+                <svg
+                  id="chevron-left-small"
+                  style="height: 100%; width: 100%;"
+                  viewBox="0 0 10 10"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <path
+                    d="M6.938 9l-3.8-3.8c-.1-.1-.1-.3 0-.4l3.8-3.8"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  />
+                </svg>
+              </div>
             </div>
           </button>
         </div>
@@ -264,25 +268,26 @@ exports[`VerifyMessage > should render (lg) 1`] = `
                 class="cursor-pointer rounded p-2 focus:outline-none focus:ring-2 focus:ring-theme-primary-400"
                 type="button"
               >
-                <div
-                  class="css-1i4b0eq"
-                  height="20"
-                  width="20"
-                >
-                  <svg
-                    viewBox="0 0 20 20"
-                    xml:space="preserve"
-                    xmlns="http://www.w3.org/2000/svg"
+                <div>
+                  <div
+                    style="height: 20px; width: 20px;"
                   >
-                    <path
-                      d="M1 15.5h18M1 10h18M1 4.5h18"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                    />
-                  </svg>
+                    <svg
+                      style="height: 100%; width: 100%;"
+                      viewBox="0 0 20 20"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M1 15.5h18M1 10h18M1 4.5h18"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
+                    </svg>
+                  </div>
                 </div>
               </button>
             </div>
@@ -308,23 +313,26 @@ exports[`VerifyMessage > should render (lg) 1`] = `
                       class="flex items-center space-x-2"
                     >
                       <div
-                        class="p-1 css-1i4b0eq"
-                        height="20"
-                        width="20"
+                        class="p-1"
                       >
-                        <svg
-                          fill="none"
-                          viewBox="0 0 20 15"
-                          xmlns="http://www.w3.org/2000/svg"
+                        <div
+                          style="height: 20px; width: 20px;"
                         >
-                          <path
-                            d="M6.595 6.285c.618-3.372 3.654-5.664 6.932-5.233 3.279.43 5.67 3.435 5.46 6.86-.21 3.426-2.948 6.092-6.252 6.088H4.912c-1.606.003-3.05-1.017-3.64-2.569-.589-1.552-.203-3.32.972-4.457a3.795 3.795 0 0 1 4.35-.69zm0 0C6.5 7 6.6 7.8 7 9"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                          />
-                        </svg>
+                          <svg
+                            fill="none"
+                            style="height: 100%; width: 100%;"
+                            viewBox="0 0 20 15"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M6.595 6.285c.618-3.372 3.654-5.664 6.932-5.233 3.279.43 5.67 3.435 5.46 6.86-.21 3.426-2.948 6.092-6.252 6.088H4.912c-1.606.003-3.05-1.017-3.64-2.569-.589-1.552-.203-3.32.972-4.457a3.795 3.795 0 0 1 4.35-.69zm0 0C6.5 7 6.6 7.8 7 9"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            />
+                          </svg>
+                        </div>
                       </div>
                       <div
                         class="absolute right-1 top-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
@@ -359,30 +367,33 @@ exports[`VerifyMessage > should render (lg) 1`] = `
                       class="flex items-center space-x-2"
                     >
                       <div
-                        class="p-1 css-1i4b0eq"
-                        height="20"
-                        width="20"
+                        class="p-1"
                       >
-                        <svg
-                          id="bell"
-                          viewBox="0 0 20 20"
-                          x="0"
-                          xml:space="preserve"
-                          xmlns="http://www.w3.org/2000/svg"
-                          y="0"
+                        <div
+                          style="height: 20px; width: 20px;"
                         >
-                          <g
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
+                          <svg
+                            id="bell"
+                            style="height: 100%; width: 100%;"
+                            viewBox="0 0 20 20"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
                           >
-                            <path
-                              d="M8.4 17.8c.3.9 1.2 1.4 2.1 1.1.5-.2 1-.6 1.1-1.1M10 2.8V1M10 2.8c3.3 0 6 2.7 6 6h0c0 5.6 1.2 6.6 1.2 6.6H2.8S4 13.9 4 8.8c0-3.3 2.7-6 6-6z"
-                            />
-                          </g>
-                        </svg>
+                            <g
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            >
+                              <path
+                                d="M8.4 17.8c.3.9 1.2 1.4 2.1 1.1.5-.2 1-.6 1.1-1.1M10 2.8V1M10 2.8c3.3 0 6 2.7 6 6h0c0 5.6 1.2 6.6 1.2 6.6H2.8S4 13.9 4 8.8c0-3.3 2.7-6 6-6z"
+                              />
+                            </g>
+                          </svg>
+                        </div>
                       </div>
                       <div
                         class="absolute right-1 top-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
@@ -417,30 +428,33 @@ exports[`VerifyMessage > should render (lg) 1`] = `
                       class="flex items-center space-x-2"
                     >
                       <div
-                        class="p-1 css-1i4b0eq"
-                        height="20"
-                        width="20"
+                        class="p-1"
                       >
-                        <svg
-                          id="received"
-                          viewBox="0 0 20 20"
-                          x="0"
-                          xml:space="preserve"
-                          xmlns="http://www.w3.org/2000/svg"
-                          y="0"
+                        <div
+                          style="height: 20px; width: 20px;"
                         >
-                          <g
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
+                          <svg
+                            id="received"
+                            style="height: 100%; width: 100%;"
+                            viewBox="0 0 20 20"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
                           >
-                            <path
-                              d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
-                            />
-                          </g>
-                        </svg>
+                            <g
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            >
+                              <path
+                                d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
+                              />
+                            </g>
+                          </svg>
+                        </div>
                       </div>
                     </div>
                   </button>
@@ -464,27 +478,30 @@ exports[`VerifyMessage > should render (lg) 1`] = `
                       class="flex items-center space-x-2"
                     >
                       <div
-                        class="p-1 css-1i4b0eq"
-                        height="20"
-                        width="20"
+                        class="p-1"
                       >
-                        <svg
-                          id="sent"
-                          viewBox="0 0 20 20"
-                          x="0"
-                          xml:space="preserve"
-                          xmlns="http://www.w3.org/2000/svg"
-                          y="0"
+                        <div
+                          style="height: 20px; width: 20px;"
                         >
-                          <path
-                            d="M8 19v-4m0-4V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                          />
-                        </svg>
+                          <svg
+                            id="sent"
+                            style="height: 100%; width: 100%;"
+                            viewBox="0 0 20 20"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
+                          >
+                            <path
+                              d="M8 19v-4m0-4V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            />
+                          </svg>
+                        </div>
                       </div>
                     </div>
                   </button>
@@ -605,65 +622,67 @@ exports[`VerifyMessage > should render (lg) 1`] = `
                             class="flex items-center gap-3"
                           >
                             <div
-                              class="css-h1kfx5"
                               data-testid="icon-SendTransactionLightGreen"
-                              height="24"
-                              width="24"
                             >
-                              <svg
-                                fill="none"
-                                height="25"
-                                viewBox="0 0 24 25"
-                                width="24"
-                                xmlns="http://www.w3.org/2000/svg"
+                              <div
+                                style="height: 24px; width: 24px;"
                               >
-                                <g
-                                  clip-path="url(#clip0_18982_50179)"
+                                <svg
+                                  fill="none"
+                                  height="25"
+                                  style="height: 100%; width: 100%;"
+                                  viewBox="0 0 24 25"
+                                  width="24"
+                                  xmlns="http://www.w3.org/2000/svg"
                                 >
-                                  <path
-                                    clip-rule="evenodd"
-                                    d="M18.8821 8.94457H13.7264C13.0146 8.94457 12.4375 8.3675 12.4375 7.65565V2.5"
-                                    fill="#E2F0E6"
-                                    fill-rule="evenodd"
-                                  />
-                                  <path
-                                    d="M18.8821 8.94457H13.7264C13.0146 8.94457 12.4375 8.3675 12.4375 7.65565V2.5"
-                                    stroke="#289548"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-width="2"
-                                  />
-                                  <path
-                                    d="M7.99174 21.8337H3.41391C2.70207 21.8337 2.125 21.2566 2.125 20.5448V3.78891C2.125 3.07707 2.70207 2.5 3.41391 2.5H12.5472C12.8891 2.49985 13.217 2.63554 13.4588 2.87722L18.5037 7.92289C18.7451 8.16452 18.8808 8.49212 18.8809 8.83372"
-                                    stroke="#289548"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-width="2"
-                                  />
-                                  <path
-                                    clip-rule="evenodd"
-                                    d="M9.02802 17.1926C8.71518 17.1043 8.49639 16.8225 8.4885 16.4975C8.48061 16.1725 8.68545 15.8804 8.99364 15.7771L18.994 12.5155C19.1276 12.472 19.2743 12.5069 19.3739 12.606C19.4735 12.7051 19.5092 12.8516 19.4664 12.9854L16.2073 22.9907C16.1044 23.2995 15.812 23.5049 15.4867 23.4968C15.1613 23.4888 14.8793 23.2693 14.7918 22.9559L13.6727 18.3067L9.02802 17.1926Z"
-                                    fill="#E2F0E6"
-                                    fill-rule="evenodd"
-                                    stroke="#289548"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-width="2"
-                                  />
-                                </g>
-                                <defs>
-                                  <clippath
-                                    id="clip0_18982_50179"
+                                  <g
+                                    clip-path="url(#clip0_18982_50179)"
                                   >
-                                    <rect
-                                      fill="white"
-                                      height="24"
-                                      transform="translate(24 24.5) rotate(-180)"
-                                      width="24"
+                                    <path
+                                      clip-rule="evenodd"
+                                      d="M18.8821 8.94457H13.7264C13.0146 8.94457 12.4375 8.3675 12.4375 7.65565V2.5"
+                                      fill="#E2F0E6"
+                                      fill-rule="evenodd"
                                     />
-                                  </clippath>
-                                </defs>
-                              </svg>
+                                    <path
+                                      d="M18.8821 8.94457H13.7264C13.0146 8.94457 12.4375 8.3675 12.4375 7.65565V2.5"
+                                      stroke="#289548"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      stroke-width="2"
+                                    />
+                                    <path
+                                      d="M7.99174 21.8337H3.41391C2.70207 21.8337 2.125 21.2566 2.125 20.5448V3.78891C2.125 3.07707 2.70207 2.5 3.41391 2.5H12.5472C12.8891 2.49985 13.217 2.63554 13.4588 2.87722L18.5037 7.92289C18.7451 8.16452 18.8808 8.49212 18.8809 8.83372"
+                                      stroke="#289548"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      stroke-width="2"
+                                    />
+                                    <path
+                                      clip-rule="evenodd"
+                                      d="M9.02802 17.1926C8.71518 17.1043 8.49639 16.8225 8.4885 16.4975C8.48061 16.1725 8.68545 15.8804 8.99364 15.7771L18.994 12.5155C19.1276 12.472 19.2743 12.5069 19.3739 12.606C19.4735 12.7051 19.5092 12.8516 19.4664 12.9854L16.2073 22.9907C16.1044 23.2995 15.812 23.5049 15.4867 23.4968C15.1613 23.4888 14.8793 23.2693 14.7918 22.9559L13.6727 18.3067L9.02802 17.1926Z"
+                                      fill="#E2F0E6"
+                                      fill-rule="evenodd"
+                                      stroke="#289548"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      stroke-width="2"
+                                    />
+                                  </g>
+                                  <defs>
+                                    <clippath
+                                      id="clip0_18982_50179"
+                                    >
+                                      <rect
+                                        fill="white"
+                                        height="24"
+                                        transform="translate(24 24.5) rotate(-180)"
+                                        width="24"
+                                      />
+                                    </clippath>
+                                  </defs>
+                                </svg>
+                              </div>
                             </div>
                             <h1
                               class="mb-0 text-2xl leading-[29px]"
@@ -729,7 +748,7 @@ exports[`VerifyMessage > should render (lg) 1`] = `
                     data-testid="VerifyMessage__manual"
                   >
                     <fieldset
-                      class="flex min-w-0 flex-col css-ea0il3"
+                      class="[&>.FormLabel]:text-theme-primary-600 focus-within:[&>.FormLabel]:text-theme-primary-600 flex min-w-0 flex-col"
                     >
                       <label
                         class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
@@ -756,7 +775,7 @@ exports[`VerifyMessage > should render (lg) 1`] = `
                       </div>
                     </fieldset>
                     <fieldset
-                      class="flex min-w-0 flex-col css-ea0il3"
+                      class="[&>.FormLabel]:text-theme-primary-600 focus-within:[&>.FormLabel]:text-theme-primary-600 flex min-w-0 flex-col"
                     >
                       <label
                         class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
@@ -783,7 +802,7 @@ exports[`VerifyMessage > should render (lg) 1`] = `
                       </div>
                     </fieldset>
                     <fieldset
-                      class="flex min-w-0 flex-col css-ea0il3"
+                      class="[&>.FormLabel]:text-theme-primary-600 focus-within:[&>.FormLabel]:text-theme-primary-600 flex min-w-0 flex-col"
                     >
                       <label
                         class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
@@ -813,7 +832,7 @@ exports[`VerifyMessage > should render (lg) 1`] = `
                 </section>
               </div>
               <div
-                class="css-145pihz"
+                class="flex fixed bg-theme-background dark:bg-black sm:bg-transparent sm:dark:bg-transparent inset-x-0 bottom-0 px-8 py-3 gap-3 shadow-footer-smooth dark:shadow-footer-smooth-dark sm:relative sm:inset-auto sm:p-0 sm:mt-6 sm:justify-end sm:shadow-none sm:dark:shadow-none [&>button]:flex-1 sm:[&>button]:flex-none sm:mb-0 mb-14"
               >
                 <button
                   class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 green:hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-500"
@@ -872,37 +891,37 @@ exports[`VerifyMessage > should render (xs) 1`] = `
           <div
             class="flex items-center space-x-2"
           >
-            <div
-              class="css-1i4b0eq"
-              height="20"
-              width="20"
-            >
-              <svg
-                id="received"
-                viewBox="0 0 20 20"
-                x="0"
-                xml:space="preserve"
-                xmlns="http://www.w3.org/2000/svg"
-                y="0"
+            <div>
+              <div
+                style="height: 20px; width: 20px;"
               >
-                <g
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
+                <svg
+                  id="received"
+                  style="height: 100%; width: 100%;"
+                  viewBox="0 0 20 20"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
                 >
-                  <path
-                    d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
-                  />
-                </g>
-              </svg>
+                  <g
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
+                    />
+                  </g>
+                </svg>
+              </div>
             </div>
           </div>
         </button>
         <div
-          class="border-theme-secondary-300 dark:border-theme-secondary-800 css-3y8nng"
-          type="vertical"
+          class="h-5 relative inline-block align-middle border-t-0 border-l border-solid mx-2 border-theme-secondary-300 dark:border-theme-secondary-800"
         />
         <button
           class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600"
@@ -912,34 +931,34 @@ exports[`VerifyMessage > should render (xs) 1`] = `
           <div
             class="flex items-center space-x-2"
           >
-            <div
-              class="css-1i4b0eq"
-              height="20"
-              width="20"
-            >
-              <svg
-                fill="none"
-                viewBox="0 0 21 20"
-                x="0"
-                xml:space="preserve"
-                xmlns="http://www.w3.org/2000/svg"
-                y="0"
+            <div>
+              <div
+                style="height: 20px; width: 20px;"
               >
-                <path
-                  clip-rule="evenodd"
-                  d="M5.35 8.153a3.6 3.6 0 1 0 0-7.2 3.6 3.6 0 0 0 0 7.2zm0 10.797a3.6 3.6 0 1 0 0-7.2 3.6 3.6 0 0 0 0 7.2zM16.147 8.153a3.6 3.6 0 1 0 0-7.2 3.6 3.6 0 0 0 0 7.2zm0 10.797a3.6 3.6 0 1 0 0-7.2 3.6 3.6 0 0 0 0 7.2z"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                />
-              </svg>
+                <svg
+                  fill="none"
+                  style="height: 100%; width: 100%;"
+                  viewBox="0 0 21 20"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <path
+                    clip-rule="evenodd"
+                    d="M5.35 8.153a3.6 3.6 0 1 0 0-7.2 3.6 3.6 0 0 0 0 7.2zm0 10.797a3.6 3.6 0 1 0 0-7.2 3.6 3.6 0 0 0 0 7.2zM16.147 8.153a3.6 3.6 0 1 0 0-7.2 3.6 3.6 0 0 0 0 7.2zm0 10.797a3.6 3.6 0 1 0 0-7.2 3.6 3.6 0 0 0 0 7.2z"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  />
+                </svg>
+              </div>
             </div>
           </div>
         </button>
         <div
-          class="border-theme-secondary-300 dark:border-theme-secondary-800 css-3y8nng"
-          type="vertical"
+          class="h-5 relative inline-block align-middle border-t-0 border-l border-solid mx-2 border-theme-secondary-300 dark:border-theme-secondary-800"
         />
         <button
           class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600"
@@ -949,28 +968,29 @@ exports[`VerifyMessage > should render (xs) 1`] = `
           <div
             class="flex items-center space-x-2"
           >
-            <div
-              class="css-1i4b0eq"
-              height="20"
-              width="20"
-            >
-              <svg
-                id="sent"
-                viewBox="0 0 20 20"
-                x="0"
-                xml:space="preserve"
-                xmlns="http://www.w3.org/2000/svg"
-                y="0"
+            <div>
+              <div
+                style="height: 20px; width: 20px;"
               >
-                <path
-                  d="M8 19v-4m0-4V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                />
-              </svg>
+                <svg
+                  id="sent"
+                  style="height: 100%; width: 100%;"
+                  viewBox="0 0 20 20"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <path
+                    d="M8 19v-4m0-4V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  />
+                </svg>
+              </div>
             </div>
           </div>
         </button>
@@ -987,30 +1007,33 @@ exports[`VerifyMessage > should render (xs) 1`] = `
           class="hidden w-12 sm:flex"
         >
           <button
-            class="css-1i1c5eg"
+            class="flex items-center w-12 transition-colors duration-200 bg-theme-secondary-100 dark:bg-black text-theme-primary-600 dark:text-theme-secondary-200 hover:bg-theme-primary-100 hover:dark:bg-theme-secondary-800 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-theme-primary-400 focus:rounded"
           >
             <div
-              class="mx-auto css-15txs7d"
-              height="10"
-              width="10"
+              class="mx-auto"
             >
-              <svg
-                id="chevron-left-small"
-                viewBox="0 0 10 10"
-                x="0"
-                xml:space="preserve"
-                xmlns="http://www.w3.org/2000/svg"
-                y="0"
+              <div
+                style="height: 10px; width: 10px;"
               >
-                <path
-                  d="M6.938 9l-3.8-3.8c-.1-.1-.1-.3 0-.4l3.8-3.8"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                />
-              </svg>
+                <svg
+                  id="chevron-left-small"
+                  style="height: 100%; width: 100%;"
+                  viewBox="0 0 10 10"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <path
+                    d="M6.938 9l-3.8-3.8c-.1-.1-.1-.3 0-.4l3.8-3.8"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  />
+                </svg>
+              </div>
             </div>
           </button>
         </div>
@@ -1112,25 +1135,26 @@ exports[`VerifyMessage > should render (xs) 1`] = `
                 class="cursor-pointer rounded p-2 focus:outline-none focus:ring-2 focus:ring-theme-primary-400"
                 type="button"
               >
-                <div
-                  class="css-1i4b0eq"
-                  height="20"
-                  width="20"
-                >
-                  <svg
-                    viewBox="0 0 20 20"
-                    xml:space="preserve"
-                    xmlns="http://www.w3.org/2000/svg"
+                <div>
+                  <div
+                    style="height: 20px; width: 20px;"
                   >
-                    <path
-                      d="M1 15.5h18M1 10h18M1 4.5h18"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                    />
-                  </svg>
+                    <svg
+                      style="height: 100%; width: 100%;"
+                      viewBox="0 0 20 20"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M1 15.5h18M1 10h18M1 4.5h18"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
+                    </svg>
+                  </div>
                 </div>
               </button>
             </div>
@@ -1156,23 +1180,26 @@ exports[`VerifyMessage > should render (xs) 1`] = `
                       class="flex items-center space-x-2"
                     >
                       <div
-                        class="p-1 css-1i4b0eq"
-                        height="20"
-                        width="20"
+                        class="p-1"
                       >
-                        <svg
-                          fill="none"
-                          viewBox="0 0 20 15"
-                          xmlns="http://www.w3.org/2000/svg"
+                        <div
+                          style="height: 20px; width: 20px;"
                         >
-                          <path
-                            d="M6.595 6.285c.618-3.372 3.654-5.664 6.932-5.233 3.279.43 5.67 3.435 5.46 6.86-.21 3.426-2.948 6.092-6.252 6.088H4.912c-1.606.003-3.05-1.017-3.64-2.569-.589-1.552-.203-3.32.972-4.457a3.795 3.795 0 0 1 4.35-.69zm0 0C6.5 7 6.6 7.8 7 9"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                          />
-                        </svg>
+                          <svg
+                            fill="none"
+                            style="height: 100%; width: 100%;"
+                            viewBox="0 0 20 15"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M6.595 6.285c.618-3.372 3.654-5.664 6.932-5.233 3.279.43 5.67 3.435 5.46 6.86-.21 3.426-2.948 6.092-6.252 6.088H4.912c-1.606.003-3.05-1.017-3.64-2.569-.589-1.552-.203-3.32.972-4.457a3.795 3.795 0 0 1 4.35-.69zm0 0C6.5 7 6.6 7.8 7 9"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            />
+                          </svg>
+                        </div>
                       </div>
                       <div
                         class="absolute right-1 top-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
@@ -1207,30 +1234,33 @@ exports[`VerifyMessage > should render (xs) 1`] = `
                       class="flex items-center space-x-2"
                     >
                       <div
-                        class="p-1 css-1i4b0eq"
-                        height="20"
-                        width="20"
+                        class="p-1"
                       >
-                        <svg
-                          id="bell"
-                          viewBox="0 0 20 20"
-                          x="0"
-                          xml:space="preserve"
-                          xmlns="http://www.w3.org/2000/svg"
-                          y="0"
+                        <div
+                          style="height: 20px; width: 20px;"
                         >
-                          <g
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
+                          <svg
+                            id="bell"
+                            style="height: 100%; width: 100%;"
+                            viewBox="0 0 20 20"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
                           >
-                            <path
-                              d="M8.4 17.8c.3.9 1.2 1.4 2.1 1.1.5-.2 1-.6 1.1-1.1M10 2.8V1M10 2.8c3.3 0 6 2.7 6 6h0c0 5.6 1.2 6.6 1.2 6.6H2.8S4 13.9 4 8.8c0-3.3 2.7-6 6-6z"
-                            />
-                          </g>
-                        </svg>
+                            <g
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            >
+                              <path
+                                d="M8.4 17.8c.3.9 1.2 1.4 2.1 1.1.5-.2 1-.6 1.1-1.1M10 2.8V1M10 2.8c3.3 0 6 2.7 6 6h0c0 5.6 1.2 6.6 1.2 6.6H2.8S4 13.9 4 8.8c0-3.3 2.7-6 6-6z"
+                              />
+                            </g>
+                          </svg>
+                        </div>
                       </div>
                       <div
                         class="absolute right-1 top-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
@@ -1265,30 +1295,33 @@ exports[`VerifyMessage > should render (xs) 1`] = `
                       class="flex items-center space-x-2"
                     >
                       <div
-                        class="p-1 css-1i4b0eq"
-                        height="20"
-                        width="20"
+                        class="p-1"
                       >
-                        <svg
-                          id="received"
-                          viewBox="0 0 20 20"
-                          x="0"
-                          xml:space="preserve"
-                          xmlns="http://www.w3.org/2000/svg"
-                          y="0"
+                        <div
+                          style="height: 20px; width: 20px;"
                         >
-                          <g
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
+                          <svg
+                            id="received"
+                            style="height: 100%; width: 100%;"
+                            viewBox="0 0 20 20"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
                           >
-                            <path
-                              d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
-                            />
-                          </g>
-                        </svg>
+                            <g
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            >
+                              <path
+                                d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
+                              />
+                            </g>
+                          </svg>
+                        </div>
                       </div>
                     </div>
                   </button>
@@ -1312,27 +1345,30 @@ exports[`VerifyMessage > should render (xs) 1`] = `
                       class="flex items-center space-x-2"
                     >
                       <div
-                        class="p-1 css-1i4b0eq"
-                        height="20"
-                        width="20"
+                        class="p-1"
                       >
-                        <svg
-                          id="sent"
-                          viewBox="0 0 20 20"
-                          x="0"
-                          xml:space="preserve"
-                          xmlns="http://www.w3.org/2000/svg"
-                          y="0"
+                        <div
+                          style="height: 20px; width: 20px;"
                         >
-                          <path
-                            d="M8 19v-4m0-4V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                          />
-                        </svg>
+                          <svg
+                            id="sent"
+                            style="height: 100%; width: 100%;"
+                            viewBox="0 0 20 20"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
+                          >
+                            <path
+                              d="M8 19v-4m0-4V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            />
+                          </svg>
+                        </div>
                       </div>
                     </div>
                   </button>
@@ -1453,65 +1489,67 @@ exports[`VerifyMessage > should render (xs) 1`] = `
                             class="flex items-center gap-3"
                           >
                             <div
-                              class="css-h1kfx5"
                               data-testid="icon-SendTransactionLightGreen"
-                              height="24"
-                              width="24"
                             >
-                              <svg
-                                fill="none"
-                                height="25"
-                                viewBox="0 0 24 25"
-                                width="24"
-                                xmlns="http://www.w3.org/2000/svg"
+                              <div
+                                style="height: 24px; width: 24px;"
                               >
-                                <g
-                                  clip-path="url(#clip0_18982_50179)"
+                                <svg
+                                  fill="none"
+                                  height="25"
+                                  style="height: 100%; width: 100%;"
+                                  viewBox="0 0 24 25"
+                                  width="24"
+                                  xmlns="http://www.w3.org/2000/svg"
                                 >
-                                  <path
-                                    clip-rule="evenodd"
-                                    d="M18.8821 8.94457H13.7264C13.0146 8.94457 12.4375 8.3675 12.4375 7.65565V2.5"
-                                    fill="#E2F0E6"
-                                    fill-rule="evenodd"
-                                  />
-                                  <path
-                                    d="M18.8821 8.94457H13.7264C13.0146 8.94457 12.4375 8.3675 12.4375 7.65565V2.5"
-                                    stroke="#289548"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-width="2"
-                                  />
-                                  <path
-                                    d="M7.99174 21.8337H3.41391C2.70207 21.8337 2.125 21.2566 2.125 20.5448V3.78891C2.125 3.07707 2.70207 2.5 3.41391 2.5H12.5472C12.8891 2.49985 13.217 2.63554 13.4588 2.87722L18.5037 7.92289C18.7451 8.16452 18.8808 8.49212 18.8809 8.83372"
-                                    stroke="#289548"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-width="2"
-                                  />
-                                  <path
-                                    clip-rule="evenodd"
-                                    d="M9.02802 17.1926C8.71518 17.1043 8.49639 16.8225 8.4885 16.4975C8.48061 16.1725 8.68545 15.8804 8.99364 15.7771L18.994 12.5155C19.1276 12.472 19.2743 12.5069 19.3739 12.606C19.4735 12.7051 19.5092 12.8516 19.4664 12.9854L16.2073 22.9907C16.1044 23.2995 15.812 23.5049 15.4867 23.4968C15.1613 23.4888 14.8793 23.2693 14.7918 22.9559L13.6727 18.3067L9.02802 17.1926Z"
-                                    fill="#E2F0E6"
-                                    fill-rule="evenodd"
-                                    stroke="#289548"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-width="2"
-                                  />
-                                </g>
-                                <defs>
-                                  <clippath
-                                    id="clip0_18982_50179"
+                                  <g
+                                    clip-path="url(#clip0_18982_50179)"
                                   >
-                                    <rect
-                                      fill="white"
-                                      height="24"
-                                      transform="translate(24 24.5) rotate(-180)"
-                                      width="24"
+                                    <path
+                                      clip-rule="evenodd"
+                                      d="M18.8821 8.94457H13.7264C13.0146 8.94457 12.4375 8.3675 12.4375 7.65565V2.5"
+                                      fill="#E2F0E6"
+                                      fill-rule="evenodd"
                                     />
-                                  </clippath>
-                                </defs>
-                              </svg>
+                                    <path
+                                      d="M18.8821 8.94457H13.7264C13.0146 8.94457 12.4375 8.3675 12.4375 7.65565V2.5"
+                                      stroke="#289548"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      stroke-width="2"
+                                    />
+                                    <path
+                                      d="M7.99174 21.8337H3.41391C2.70207 21.8337 2.125 21.2566 2.125 20.5448V3.78891C2.125 3.07707 2.70207 2.5 3.41391 2.5H12.5472C12.8891 2.49985 13.217 2.63554 13.4588 2.87722L18.5037 7.92289C18.7451 8.16452 18.8808 8.49212 18.8809 8.83372"
+                                      stroke="#289548"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      stroke-width="2"
+                                    />
+                                    <path
+                                      clip-rule="evenodd"
+                                      d="M9.02802 17.1926C8.71518 17.1043 8.49639 16.8225 8.4885 16.4975C8.48061 16.1725 8.68545 15.8804 8.99364 15.7771L18.994 12.5155C19.1276 12.472 19.2743 12.5069 19.3739 12.606C19.4735 12.7051 19.5092 12.8516 19.4664 12.9854L16.2073 22.9907C16.1044 23.2995 15.812 23.5049 15.4867 23.4968C15.1613 23.4888 14.8793 23.2693 14.7918 22.9559L13.6727 18.3067L9.02802 17.1926Z"
+                                      fill="#E2F0E6"
+                                      fill-rule="evenodd"
+                                      stroke="#289548"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      stroke-width="2"
+                                    />
+                                  </g>
+                                  <defs>
+                                    <clippath
+                                      id="clip0_18982_50179"
+                                    >
+                                      <rect
+                                        fill="white"
+                                        height="24"
+                                        transform="translate(24 24.5) rotate(-180)"
+                                        width="24"
+                                      />
+                                    </clippath>
+                                  </defs>
+                                </svg>
+                              </div>
                             </div>
                             <h1
                               class="mb-0 text-2xl leading-[29px]"
@@ -1577,7 +1615,7 @@ exports[`VerifyMessage > should render (xs) 1`] = `
                     data-testid="VerifyMessage__manual"
                   >
                     <fieldset
-                      class="flex min-w-0 flex-col css-ea0il3"
+                      class="[&>.FormLabel]:text-theme-primary-600 focus-within:[&>.FormLabel]:text-theme-primary-600 flex min-w-0 flex-col"
                     >
                       <label
                         class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
@@ -1604,7 +1642,7 @@ exports[`VerifyMessage > should render (xs) 1`] = `
                       </div>
                     </fieldset>
                     <fieldset
-                      class="flex min-w-0 flex-col css-ea0il3"
+                      class="[&>.FormLabel]:text-theme-primary-600 focus-within:[&>.FormLabel]:text-theme-primary-600 flex min-w-0 flex-col"
                     >
                       <label
                         class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
@@ -1631,7 +1669,7 @@ exports[`VerifyMessage > should render (xs) 1`] = `
                       </div>
                     </fieldset>
                     <fieldset
-                      class="flex min-w-0 flex-col css-ea0il3"
+                      class="[&>.FormLabel]:text-theme-primary-600 focus-within:[&>.FormLabel]:text-theme-primary-600 flex min-w-0 flex-col"
                     >
                       <label
                         class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
@@ -1661,7 +1699,7 @@ exports[`VerifyMessage > should render (xs) 1`] = `
                 </section>
               </div>
               <div
-                class="css-145pihz"
+                class="flex fixed bg-theme-background dark:bg-black sm:bg-transparent sm:dark:bg-transparent inset-x-0 bottom-0 px-8 py-3 gap-3 shadow-footer-smooth dark:shadow-footer-smooth-dark sm:relative sm:inset-auto sm:p-0 sm:mt-6 sm:justify-end sm:shadow-none sm:dark:shadow-none [&>button]:flex-1 sm:[&>button]:flex-none sm:mb-0 mb-14"
               >
                 <button
                   class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 green:hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-500"
