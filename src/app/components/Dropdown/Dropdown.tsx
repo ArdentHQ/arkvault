@@ -4,7 +4,6 @@ import React, { cloneElement, FC, useCallback, useState } from "react";
 import { DropdownOption, DropdownProperties, DropdownVariantType } from "./Dropdown.contracts";
 import { renderOptions } from "./Dropdown.helpers";
 import { Icon } from "@/app/components/Icon";
-import { Position } from "@/types";
 import {
 	useFloating,
 	autoUpdate,

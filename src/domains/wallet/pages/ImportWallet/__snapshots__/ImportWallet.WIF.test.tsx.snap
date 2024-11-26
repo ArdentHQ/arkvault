@@ -15,67 +15,69 @@ exports[`ImportWallet WIF > should import with invalid wif 1`] = `
           class="flex items-center gap-3"
         >
           <div
-            class="css-h1kfx5"
             data-testid="icon-ImportWalletLightGreen"
-            height="24"
-            width="24"
           >
-            <svg
-              fill="none"
-              viewBox="0 0 24 25"
-              xmlns="http://www.w3.org/2000/svg"
+            <div
+              style="height: 24px; width: 24px;"
             >
-              <path
-                clip-rule="evenodd"
-                d="M18.5648 5.99235L16.6582 2.1791C16.5126 1.88766 16.2571 1.66604 15.948 1.56302C15.639 1.45999 15.3016 1.48401 15.0103 1.62979L6.28516 5.99235"
-                fill="#E2F0E6"
-                fill-rule="evenodd"
-              />
-              <path
-                d="M18.5648 5.99235L16.6582 2.1791C16.5126 1.88766 16.2571 1.66604 15.948 1.56302C15.639 1.45999 15.3016 1.48401 15.0103 1.62979L6.28516 5.99235"
-                stroke="#289548"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-              />
-              <path
-                d="M21.0216 15.8159V17.0439C21.0216 18.4003 19.9221 19.4998 18.5657 19.4998H12.4258M21.0216 9.67609V8.44812C21.0216 7.09175 19.9221 5.99219 18.5657 5.99219H6.28601C4.92964 5.99219 3.83008 7.09175 3.83008 8.44812V10.746"
-                stroke="#289548"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-              />
-              <path
-                clip-rule="evenodd"
-                d="M21.0226 15.8166C21.7008 15.8166 22.2506 15.2668 22.2506 14.5886V10.9047C22.2506 10.2265 21.7008 9.67676 21.0226 9.67676H17.9527C16.2573 9.67676 14.8828 11.0512 14.8828 12.7467C14.8828 14.4421 16.2573 15.8166 17.9527 15.8166H21.0226Z"
-                fill-rule="evenodd"
-                stroke="#289548"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-              />
-              <path
-                d="M17.9515 12.4395C18.1211 12.4395 18.2585 12.5769 18.2585 12.7464C18.2585 12.916 18.1211 13.0534 17.9515 13.0534C17.782 13.0534 17.6445 12.916 17.6445 12.7464C17.6445 12.5769 17.782 12.4395 17.9515 12.4395"
-                stroke="#289548"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-              />
-              <path
-                d="M1 20L4 23L7 20"
-                stroke="#289548"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-              />
-              <path
-                d="M4 23L4 20C4 16.7345 6.08702 13.9564 9 12.9268"
-                stroke="#289548"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-              />
-            </svg>
+              <svg
+                fill="none"
+                style="height: 100%; width: 100%;"
+                viewBox="0 0 24 25"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M18.5648 5.99235L16.6582 2.1791C16.5126 1.88766 16.2571 1.66604 15.948 1.56302C15.639 1.45999 15.3016 1.48401 15.0103 1.62979L6.28516 5.99235"
+                  fill="#E2F0E6"
+                  fill-rule="evenodd"
+                />
+                <path
+                  d="M18.5648 5.99235L16.6582 2.1791C16.5126 1.88766 16.2571 1.66604 15.948 1.56302C15.639 1.45999 15.3016 1.48401 15.0103 1.62979L6.28516 5.99235"
+                  stroke="#289548"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                />
+                <path
+                  d="M21.0216 15.8159V17.0439C21.0216 18.4003 19.9221 19.4998 18.5657 19.4998H12.4258M21.0216 9.67609V8.44812C21.0216 7.09175 19.9221 5.99219 18.5657 5.99219H6.28601C4.92964 5.99219 3.83008 7.09175 3.83008 8.44812V10.746"
+                  stroke="#289548"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                />
+                <path
+                  clip-rule="evenodd"
+                  d="M21.0226 15.8166C21.7008 15.8166 22.2506 15.2668 22.2506 14.5886V10.9047C22.2506 10.2265 21.7008 9.67676 21.0226 9.67676H17.9527C16.2573 9.67676 14.8828 11.0512 14.8828 12.7467C14.8828 14.4421 16.2573 15.8166 17.9527 15.8166H21.0226Z"
+                  fill-rule="evenodd"
+                  stroke="#289548"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                />
+                <path
+                  d="M17.9515 12.4395C18.1211 12.4395 18.2585 12.5769 18.2585 12.7464C18.2585 12.916 18.1211 13.0534 17.9515 13.0534C17.782 13.0534 17.6445 12.916 17.6445 12.7464C17.6445 12.5769 17.782 12.4395 17.9515 12.4395"
+                  stroke="#289548"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                />
+                <path
+                  d="M1 20L4 23L7 20"
+                  stroke="#289548"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                />
+                <path
+                  d="M4 23L4 20C4 16.7345 6.08702 13.9564 9 12.9268"
+                  stroke="#289548"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                />
+              </svg>
+            </div>
           </div>
           <h1
             class="mb-0 text-2xl leading-[29px]"
@@ -96,7 +98,7 @@ exports[`ImportWallet WIF > should import with invalid wif 1`] = `
       class="mt-4 space-y-4"
     >
       <fieldset
-        class="flex min-w-0 flex-col css-ea0il3"
+        class="[&>.FormLabel]:text-theme-primary-600 focus-within:[&>.FormLabel]:text-theme-primary-600 flex min-w-0 flex-col"
       >
         <label
           class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
@@ -195,27 +197,30 @@ exports[`ImportWallet WIF > should import with invalid wif 1`] = `
                             class="absolute inset-0 block cursor-pointer md:hidden"
                           />
                           <div
-                            class="transition-transform text-theme-secondary-500 css-15txs7d"
-                            height="10"
-                            width="10"
+                            class="transition-transform text-theme-secondary-500"
                           >
-                            <svg
-                              id="chevron-down-small"
-                              viewBox="0 0 10 10"
-                              x="0"
-                              xml:space="preserve"
-                              xmlns="http://www.w3.org/2000/svg"
-                              y="0"
+                            <div
+                              style="height: 10px; width: 10px;"
                             >
-                              <path
-                                d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
-                                fill="none"
-                                stroke="currentColor"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="2"
-                              />
-                            </svg>
+                              <svg
+                                id="chevron-down-small"
+                                style="height: 100%; width: 100%;"
+                                viewBox="0 0 10 10"
+                                x="0"
+                                xml:space="preserve"
+                                xmlns="http://www.w3.org/2000/svg"
+                                y="0"
+                              >
+                                <path
+                                  d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="2"
+                                />
+                              </svg>
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -233,7 +238,7 @@ exports[`ImportWallet WIF > should import with invalid wif 1`] = `
         </div>
       </fieldset>
       <fieldset
-        class="flex min-w-0 flex-col css-ea0il3"
+        class="[&>.FormLabel]:text-theme-primary-600 focus-within:[&>.FormLabel]:text-theme-primary-600 flex min-w-0 flex-col"
       >
         <label
           class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
@@ -270,34 +275,35 @@ exports[`ImportWallet WIF > should import with invalid wif 1`] = `
                 data-testid="InputPassword__toggle"
                 type="button"
               >
-                <div
-                  class="css-1i4b0eq"
-                  height="20"
-                  width="20"
-                >
-                  <svg
-                    id="eye"
-                    viewBox="0 0 20 20"
-                    x="0"
-                    xml:space="preserve"
-                    xmlns="http://www.w3.org/2000/svg"
-                    y="0"
+                <div>
+                  <div
+                    style="height: 20px; width: 20px;"
                   >
-                    <g
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
+                    <svg
+                      id="eye"
+                      style="height: 100%; width: 100%;"
+                      viewBox="0 0 20 20"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
                     >
-                      <path
-                        d="M10 4.6c-3.2-.1-6.5 2.2-8.6 4.5-.5.5-.5 1.3 0 1.8 2 2.3 5.4 4.6 8.6 4.5 3.3-.1 6.5-2.3 8.6-4.5.5-.5.5-1.3 0-1.8-2.1-2.3-5.4-4.6-8.6-4.5z"
-                      />
-                      <path
-                        d="M13 10c0 1.7-1.3 3-3 3s-3-1.3-3-3 1.3-3 3-3c1.2 0 3 .7 3 3z"
-                      />
-                    </g>
-                  </svg>
+                      <g
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      >
+                        <path
+                          d="M10 4.6c-3.2-.1-6.5 2.2-8.6 4.5-.5.5-.5 1.3 0 1.8 2 2.3 5.4 4.6 8.6 4.5 3.3-.1 6.5-2.3 8.6-4.5.5-.5.5-1.3 0-1.8-2.1-2.3-5.4-4.6-8.6-4.5z"
+                        />
+                        <path
+                          d="M13 10c0 1.7-1.3 3-3 3s-3-1.3-3-3 1.3-3 3-3c1.2 0 3 .7 3 3z"
+                        />
+                      </g>
+                    </svg>
+                  </div>
                 </div>
               </button>
             </div>
@@ -305,8 +311,7 @@ exports[`ImportWallet WIF > should import with invalid wif 1`] = `
         </div>
       </fieldset>
       <div
-        class="border-theme-secondary-300 dark:border-theme-secondary-800 css-ppmbkz"
-        type="horizontal"
+        class="h-4 border-t border-dashed [background:none] flex clear-both w-full min-w-full my-4 border-theme-secondary-300 dark:border-theme-secondary-800"
       />
       <div
         class="flex w-full flex-col space-y-2"
@@ -366,67 +371,69 @@ exports[`ImportWallet WIF > should import with valid wif 1`] = `
           class="flex items-center gap-3"
         >
           <div
-            class="css-h1kfx5"
             data-testid="icon-ImportWalletLightGreen"
-            height="24"
-            width="24"
           >
-            <svg
-              fill="none"
-              viewBox="0 0 24 25"
-              xmlns="http://www.w3.org/2000/svg"
+            <div
+              style="height: 24px; width: 24px;"
             >
-              <path
-                clip-rule="evenodd"
-                d="M18.5648 5.99235L16.6582 2.1791C16.5126 1.88766 16.2571 1.66604 15.948 1.56302C15.639 1.45999 15.3016 1.48401 15.0103 1.62979L6.28516 5.99235"
-                fill="#E2F0E6"
-                fill-rule="evenodd"
-              />
-              <path
-                d="M18.5648 5.99235L16.6582 2.1791C16.5126 1.88766 16.2571 1.66604 15.948 1.56302C15.639 1.45999 15.3016 1.48401 15.0103 1.62979L6.28516 5.99235"
-                stroke="#289548"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-              />
-              <path
-                d="M21.0216 15.8159V17.0439C21.0216 18.4003 19.9221 19.4998 18.5657 19.4998H12.4258M21.0216 9.67609V8.44812C21.0216 7.09175 19.9221 5.99219 18.5657 5.99219H6.28601C4.92964 5.99219 3.83008 7.09175 3.83008 8.44812V10.746"
-                stroke="#289548"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-              />
-              <path
-                clip-rule="evenodd"
-                d="M21.0226 15.8166C21.7008 15.8166 22.2506 15.2668 22.2506 14.5886V10.9047C22.2506 10.2265 21.7008 9.67676 21.0226 9.67676H17.9527C16.2573 9.67676 14.8828 11.0512 14.8828 12.7467C14.8828 14.4421 16.2573 15.8166 17.9527 15.8166H21.0226Z"
-                fill-rule="evenodd"
-                stroke="#289548"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-              />
-              <path
-                d="M17.9515 12.4395C18.1211 12.4395 18.2585 12.5769 18.2585 12.7464C18.2585 12.916 18.1211 13.0534 17.9515 13.0534C17.782 13.0534 17.6445 12.916 17.6445 12.7464C17.6445 12.5769 17.782 12.4395 17.9515 12.4395"
-                stroke="#289548"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-              />
-              <path
-                d="M1 20L4 23L7 20"
-                stroke="#289548"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-              />
-              <path
-                d="M4 23L4 20C4 16.7345 6.08702 13.9564 9 12.9268"
-                stroke="#289548"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-              />
-            </svg>
+              <svg
+                fill="none"
+                style="height: 100%; width: 100%;"
+                viewBox="0 0 24 25"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M18.5648 5.99235L16.6582 2.1791C16.5126 1.88766 16.2571 1.66604 15.948 1.56302C15.639 1.45999 15.3016 1.48401 15.0103 1.62979L6.28516 5.99235"
+                  fill="#E2F0E6"
+                  fill-rule="evenodd"
+                />
+                <path
+                  d="M18.5648 5.99235L16.6582 2.1791C16.5126 1.88766 16.2571 1.66604 15.948 1.56302C15.639 1.45999 15.3016 1.48401 15.0103 1.62979L6.28516 5.99235"
+                  stroke="#289548"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                />
+                <path
+                  d="M21.0216 15.8159V17.0439C21.0216 18.4003 19.9221 19.4998 18.5657 19.4998H12.4258M21.0216 9.67609V8.44812C21.0216 7.09175 19.9221 5.99219 18.5657 5.99219H6.28601C4.92964 5.99219 3.83008 7.09175 3.83008 8.44812V10.746"
+                  stroke="#289548"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                />
+                <path
+                  clip-rule="evenodd"
+                  d="M21.0226 15.8166C21.7008 15.8166 22.2506 15.2668 22.2506 14.5886V10.9047C22.2506 10.2265 21.7008 9.67676 21.0226 9.67676H17.9527C16.2573 9.67676 14.8828 11.0512 14.8828 12.7467C14.8828 14.4421 16.2573 15.8166 17.9527 15.8166H21.0226Z"
+                  fill-rule="evenodd"
+                  stroke="#289548"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                />
+                <path
+                  d="M17.9515 12.4395C18.1211 12.4395 18.2585 12.5769 18.2585 12.7464C18.2585 12.916 18.1211 13.0534 17.9515 13.0534C17.782 13.0534 17.6445 12.916 17.6445 12.7464C17.6445 12.5769 17.782 12.4395 17.9515 12.4395"
+                  stroke="#289548"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                />
+                <path
+                  d="M1 20L4 23L7 20"
+                  stroke="#289548"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                />
+                <path
+                  d="M4 23L4 20C4 16.7345 6.08702 13.9564 9 12.9268"
+                  stroke="#289548"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                />
+              </svg>
+            </div>
           </div>
           <h1
             class="mb-0 text-2xl leading-[29px]"
@@ -447,7 +454,7 @@ exports[`ImportWallet WIF > should import with valid wif 1`] = `
       class="mt-4 space-y-4"
     >
       <fieldset
-        class="flex min-w-0 flex-col css-ea0il3"
+        class="[&>.FormLabel]:text-theme-primary-600 focus-within:[&>.FormLabel]:text-theme-primary-600 flex min-w-0 flex-col"
       >
         <label
           class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
@@ -546,27 +553,30 @@ exports[`ImportWallet WIF > should import with valid wif 1`] = `
                             class="absolute inset-0 block cursor-pointer md:hidden"
                           />
                           <div
-                            class="transition-transform text-theme-secondary-500 css-15txs7d"
-                            height="10"
-                            width="10"
+                            class="transition-transform text-theme-secondary-500"
                           >
-                            <svg
-                              id="chevron-down-small"
-                              viewBox="0 0 10 10"
-                              x="0"
-                              xml:space="preserve"
-                              xmlns="http://www.w3.org/2000/svg"
-                              y="0"
+                            <div
+                              style="height: 10px; width: 10px;"
                             >
-                              <path
-                                d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
-                                fill="none"
-                                stroke="currentColor"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="2"
-                              />
-                            </svg>
+                              <svg
+                                id="chevron-down-small"
+                                style="height: 100%; width: 100%;"
+                                viewBox="0 0 10 10"
+                                x="0"
+                                xml:space="preserve"
+                                xmlns="http://www.w3.org/2000/svg"
+                                y="0"
+                              >
+                                <path
+                                  d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="2"
+                                />
+                              </svg>
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -584,7 +594,7 @@ exports[`ImportWallet WIF > should import with valid wif 1`] = `
         </div>
       </fieldset>
       <fieldset
-        class="flex min-w-0 flex-col css-ea0il3"
+        class="[&>.FormLabel]:text-theme-primary-600 focus-within:[&>.FormLabel]:text-theme-primary-600 flex min-w-0 flex-col"
       >
         <label
           class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
@@ -621,34 +631,35 @@ exports[`ImportWallet WIF > should import with valid wif 1`] = `
                 data-testid="InputPassword__toggle"
                 type="button"
               >
-                <div
-                  class="css-1i4b0eq"
-                  height="20"
-                  width="20"
-                >
-                  <svg
-                    id="eye"
-                    viewBox="0 0 20 20"
-                    x="0"
-                    xml:space="preserve"
-                    xmlns="http://www.w3.org/2000/svg"
-                    y="0"
+                <div>
+                  <div
+                    style="height: 20px; width: 20px;"
                   >
-                    <g
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
+                    <svg
+                      id="eye"
+                      style="height: 100%; width: 100%;"
+                      viewBox="0 0 20 20"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
                     >
-                      <path
-                        d="M10 4.6c-3.2-.1-6.5 2.2-8.6 4.5-.5.5-.5 1.3 0 1.8 2 2.3 5.4 4.6 8.6 4.5 3.3-.1 6.5-2.3 8.6-4.5.5-.5.5-1.3 0-1.8-2.1-2.3-5.4-4.6-8.6-4.5z"
-                      />
-                      <path
-                        d="M13 10c0 1.7-1.3 3-3 3s-3-1.3-3-3 1.3-3 3-3c1.2 0 3 .7 3 3z"
-                      />
-                    </g>
-                  </svg>
+                      <g
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      >
+                        <path
+                          d="M10 4.6c-3.2-.1-6.5 2.2-8.6 4.5-.5.5-.5 1.3 0 1.8 2 2.3 5.4 4.6 8.6 4.5 3.3-.1 6.5-2.3 8.6-4.5.5-.5.5-1.3 0-1.8-2.1-2.3-5.4-4.6-8.6-4.5z"
+                        />
+                        <path
+                          d="M13 10c0 1.7-1.3 3-3 3s-3-1.3-3-3 1.3-3 3-3c1.2 0 3 .7 3 3z"
+                        />
+                      </g>
+                    </svg>
+                  </div>
                 </div>
               </button>
             </div>
@@ -656,8 +667,7 @@ exports[`ImportWallet WIF > should import with valid wif 1`] = `
         </div>
       </fieldset>
       <div
-        class="border-theme-secondary-300 dark:border-theme-secondary-800 css-ppmbkz"
-        type="horizontal"
+        class="h-4 border-t border-dashed [background:none] flex clear-both w-full min-w-full my-4 border-theme-secondary-300 dark:border-theme-secondary-800"
       />
       <div
         class="flex w-full flex-col space-y-2"

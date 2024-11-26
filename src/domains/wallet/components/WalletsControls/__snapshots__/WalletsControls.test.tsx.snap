@@ -21,36 +21,37 @@ exports[`WalletsControls > should render for incompatible ledger wallet 1`] = `
             class="group"
           >
             <button
-              class="ring-focus css-1mj8916"
+              class="relative flex items-center justify-center py-2 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 transition-colors duration-200 cursor-pointer focus:outline-none disabled:cursor-not-allowed disabled:text-theme-secondary-400 disabled:dark:text-theme-secondary-700 hover:border-b-theme-primary-400 [&.active]:[&[data-focus-visible-added]]:rounded [&.active]:border-b-theme-primary-600 [&.active]:text-theme-primary-600 hover:text-theme-primary-400 px-2.5 mx-0.5 ring-focus"
             >
               <div
                 class="flex h-5 w-5 items-center justify-center"
               >
-                <div
-                  class="css-1i4b0eq"
-                  height="20"
-                  width="20"
-                >
-                  <svg
-                    id="sliders-vertical"
-                    viewBox="0 0 20 20"
-                    x="0"
-                    xml:space="preserve"
-                    xmlns="http://www.w3.org/2000/svg"
-                    y="0"
+                <div>
+                  <div
+                    style="height: 20px; width: 20px;"
                   >
-                    <g
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
+                    <svg
+                      id="sliders-vertical"
+                      style="height: 100%; width: 100%;"
+                      viewBox="0 0 20 20"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
                     >
-                      <path
-                        d="M15 9V1M15 19v-4M18 12c0 1.7-1.4 3-3 3-1.7 0-3-1.4-3-3s1.2-3 3-3h0c1.7 0 3 1.3 3 3h0zM5 7.1V19M8 4c0-1.7-1.4-3-3-3S2 2.4 2 4c0 1.7 1.4 3 3 3s3-1.3 3-3c0 .1 0 0 0 0z"
-                      />
-                    </g>
-                  </svg>
+                      <g
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      >
+                        <path
+                          d="M15 9V1M15 19v-4M18 12c0 1.7-1.4 3-3 3-1.7 0-3-1.4-3-3s1.2-3 3-3h0c1.7 0 3 1.3 3 3h0zM5 7.1V19M8 4c0-1.7-1.4-3-3-3S2 2.4 2 4c0 1.7 1.4 3 3 3s3-1.3 3-3c0 .1 0 0 0 0z"
+                        />
+                      </g>
+                    </svg>
+                  </div>
                 </div>
               </div>
             </button>
@@ -62,8 +63,7 @@ exports[`WalletsControls > should render for incompatible ledger wallet 1`] = `
       class="flex sm:hidden"
     >
       <div
-        class="border-theme-secondary-300 dark:border-theme-secondary-800 css-3y8nng"
-        type="vertical"
+        class="h-5 relative inline-block align-middle border-t-0 border-l border-solid mx-2 border-theme-secondary-300 dark:border-theme-secondary-800"
       />
     </div>
     <div
@@ -82,24 +82,25 @@ exports[`WalletsControls > should render for incompatible ledger wallet 1`] = `
             <div
               class="flex items-center space-x-2"
             >
-              <div
-                class="css-v0ob3f"
-                height="16"
-                width="16"
-              >
-                <svg
-                  id="ledger"
-                  viewBox="0 0 20 20"
-                  x="0"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
-                  y="0"
+              <div>
+                <div
+                  style="height: 16px; width: 16px;"
                 >
-                  <path
-                    d="M15 20v-5h5v1.25c0 2.125-1.625 3.75-3.75 3.75H15zm-7.5 0v-5h5v5h-5zm-3.75 0C1.625 20 0 18.375 0 16.25V15h5v5H3.75zm3.75-7.5V0h8.75C18.375 0 20 1.625 20 3.75v8.75H7.5zm-7.5 0v-5h5v5H0zM0 5V3.75C0 1.625 1.625 0 3.75 0H5v5H0z"
-                    fill="currentColor"
-                  />
-                </svg>
+                  <svg
+                    id="ledger"
+                    style="height: 100%; width: 100%;"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
+                  >
+                    <path
+                      d="M15 20v-5h5v1.25c0 2.125-1.625 3.75-3.75 3.75H15zm-7.5 0v-5h5v5h-5zm-3.75 0C1.625 20 0 18.375 0 16.25V15h5v5H3.75zm3.75-7.5V0h8.75C18.375 0 20 1.625 20 3.75v8.75H7.5zm-7.5 0v-5h5v5H0zM0 5V3.75C0 1.625 1.625 0 3.75 0H5v5H0z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                </div>
               </div>
               <span
                 class="hidden lg:inline"
@@ -121,34 +122,35 @@ exports[`WalletsControls > should render for incompatible ledger wallet 1`] = `
           <div
             class="flex items-center space-x-2"
           >
-            <div
-              class="css-v0ob3f"
-              height="16"
-              width="16"
-            >
-              <svg
-                id="arrow-turn-down-bracket"
-                viewBox="0 0 20 20"
-                x="0"
-                xml:space="preserve"
-                xmlns="http://www.w3.org/2000/svg"
-                y="0"
+            <div>
+              <div
+                style="height: 16px; width: 16px;"
               >
-                <g
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
+                <svg
+                  id="arrow-turn-down-bracket"
+                  style="height: 100%; width: 100%;"
+                  viewBox="0 0 20 20"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
                 >
-                  <path
-                    d="M16.55 1h-2.9c-2.1 0-3.7 1.7-3.7 3.7v8.4"
-                  />
-                  <path
-                    d="M14.65 8.4l-4.7 4.7-4.6-4.7m13.65 5v1.9c0 2.1-1.7 3.7-3.7 3.7H4.7c-2 0-3.7-1.7-3.7-3.7v-1.9"
-                  />
-                </g>
-              </svg>
+                  <g
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M16.55 1h-2.9c-2.1 0-3.7 1.7-3.7 3.7v8.4"
+                    />
+                    <path
+                      d="M14.65 8.4l-4.7 4.7-4.6-4.7m13.65 5v1.9c0 2.1-1.7 3.7-3.7 3.7H4.7c-2 0-3.7-1.7-3.7-3.7v-1.9"
+                    />
+                  </g>
+                </svg>
+              </div>
             </div>
             <span>
               Import
@@ -167,31 +169,32 @@ exports[`WalletsControls > should render for incompatible ledger wallet 1`] = `
           <div
             class="flex items-center space-x-2"
           >
-            <div
-              class="css-v0ob3f"
-              height="16"
-              width="16"
-            >
-              <svg
-                id="plus"
-                viewBox="0 0 20 20"
-                x="0"
-                xml:space="preserve"
-                xmlns="http://www.w3.org/2000/svg"
-                y="0"
+            <div>
+              <div
+                style="height: 16px; width: 16px;"
               >
-                <g
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
+                <svg
+                  id="plus"
+                  style="height: 100%; width: 100%;"
+                  viewBox="0 0 20 20"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
                 >
-                  <path
-                    d="M1 10h18M10 1v18"
-                  />
-                </g>
-              </svg>
+                  <g
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M1 10h18M10 1v18"
+                    />
+                  </g>
+                </svg>
+              </div>
             </div>
             <span>
               Create
@@ -211,31 +214,32 @@ exports[`WalletsControls > should render for incompatible ledger wallet 1`] = `
         <span
           class="-mx-1 flex items-center px-5 py-3 text-theme-primary-300 dark:text-theme-secondary-600"
         >
-          <div
-            class="css-v0ob3f"
-            height="16"
-            width="16"
-          >
-            <svg
-              id="plus"
-              viewBox="0 0 20 20"
-              x="0"
-              xml:space="preserve"
-              xmlns="http://www.w3.org/2000/svg"
-              y="0"
+          <div>
+            <div
+              style="height: 16px; width: 16px;"
             >
-              <g
-                fill="none"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
+              <svg
+                id="plus"
+                style="height: 100%; width: 100%;"
+                viewBox="0 0 20 20"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
               >
-                <path
-                  d="M1 10h18M10 1v18"
-                />
-              </g>
-            </svg>
+                <g
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M1 10h18M10 1v18"
+                  />
+                </g>
+              </svg>
+            </div>
           </div>
         </span>
       </div>
@@ -263,36 +267,37 @@ exports[`WalletsControls > should render responsive 1`] = `
             class="group"
           >
             <button
-              class="ring-focus css-1mj8916"
+              class="relative flex items-center justify-center py-2 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 transition-colors duration-200 cursor-pointer focus:outline-none disabled:cursor-not-allowed disabled:text-theme-secondary-400 disabled:dark:text-theme-secondary-700 hover:border-b-theme-primary-400 [&.active]:[&[data-focus-visible-added]]:rounded [&.active]:border-b-theme-primary-600 [&.active]:text-theme-primary-600 hover:text-theme-primary-400 px-2.5 mx-0.5 ring-focus"
             >
               <div
                 class="flex h-5 w-5 items-center justify-center"
               >
-                <div
-                  class="css-1i4b0eq"
-                  height="20"
-                  width="20"
-                >
-                  <svg
-                    id="sliders-vertical"
-                    viewBox="0 0 20 20"
-                    x="0"
-                    xml:space="preserve"
-                    xmlns="http://www.w3.org/2000/svg"
-                    y="0"
+                <div>
+                  <div
+                    style="height: 20px; width: 20px;"
                   >
-                    <g
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
+                    <svg
+                      id="sliders-vertical"
+                      style="height: 100%; width: 100%;"
+                      viewBox="0 0 20 20"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
                     >
-                      <path
-                        d="M15 9V1M15 19v-4M18 12c0 1.7-1.4 3-3 3-1.7 0-3-1.4-3-3s1.2-3 3-3h0c1.7 0 3 1.3 3 3h0zM5 7.1V19M8 4c0-1.7-1.4-3-3-3S2 2.4 2 4c0 1.7 1.4 3 3 3s3-1.3 3-3c0 .1 0 0 0 0z"
-                      />
-                    </g>
-                  </svg>
+                      <g
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      >
+                        <path
+                          d="M15 9V1M15 19v-4M18 12c0 1.7-1.4 3-3 3-1.7 0-3-1.4-3-3s1.2-3 3-3h0c1.7 0 3 1.3 3 3h0zM5 7.1V19M8 4c0-1.7-1.4-3-3-3S2 2.4 2 4c0 1.7 1.4 3 3 3s3-1.3 3-3c0 .1 0 0 0 0z"
+                        />
+                      </g>
+                    </svg>
+                  </div>
                 </div>
               </div>
             </button>
@@ -304,8 +309,7 @@ exports[`WalletsControls > should render responsive 1`] = `
       class="flex sm:hidden"
     >
       <div
-        class="border-theme-secondary-300 dark:border-theme-secondary-800 css-3y8nng"
-        type="vertical"
+        class="h-5 relative inline-block align-middle border-t-0 border-l border-solid mx-2 border-theme-secondary-300 dark:border-theme-secondary-800"
       />
     </div>
     <div
@@ -324,24 +328,25 @@ exports[`WalletsControls > should render responsive 1`] = `
             <div
               class="flex items-center space-x-2"
             >
-              <div
-                class="css-v0ob3f"
-                height="16"
-                width="16"
-              >
-                <svg
-                  id="ledger"
-                  viewBox="0 0 20 20"
-                  x="0"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
-                  y="0"
+              <div>
+                <div
+                  style="height: 16px; width: 16px;"
                 >
-                  <path
-                    d="M15 20v-5h5v1.25c0 2.125-1.625 3.75-3.75 3.75H15zm-7.5 0v-5h5v5h-5zm-3.75 0C1.625 20 0 18.375 0 16.25V15h5v5H3.75zm3.75-7.5V0h8.75C18.375 0 20 1.625 20 3.75v8.75H7.5zm-7.5 0v-5h5v5H0zM0 5V3.75C0 1.625 1.625 0 3.75 0H5v5H0z"
-                    fill="currentColor"
-                  />
-                </svg>
+                  <svg
+                    id="ledger"
+                    style="height: 100%; width: 100%;"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
+                  >
+                    <path
+                      d="M15 20v-5h5v1.25c0 2.125-1.625 3.75-3.75 3.75H15zm-7.5 0v-5h5v5h-5zm-3.75 0C1.625 20 0 18.375 0 16.25V15h5v5H3.75zm3.75-7.5V0h8.75C18.375 0 20 1.625 20 3.75v8.75H7.5zm-7.5 0v-5h5v5H0zM0 5V3.75C0 1.625 1.625 0 3.75 0H5v5H0z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                </div>
               </div>
               <span
                 class="hidden lg:inline"
@@ -363,34 +368,35 @@ exports[`WalletsControls > should render responsive 1`] = `
           <div
             class="flex items-center space-x-2"
           >
-            <div
-              class="css-v0ob3f"
-              height="16"
-              width="16"
-            >
-              <svg
-                id="arrow-turn-down-bracket"
-                viewBox="0 0 20 20"
-                x="0"
-                xml:space="preserve"
-                xmlns="http://www.w3.org/2000/svg"
-                y="0"
+            <div>
+              <div
+                style="height: 16px; width: 16px;"
               >
-                <g
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
+                <svg
+                  id="arrow-turn-down-bracket"
+                  style="height: 100%; width: 100%;"
+                  viewBox="0 0 20 20"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
                 >
-                  <path
-                    d="M16.55 1h-2.9c-2.1 0-3.7 1.7-3.7 3.7v8.4"
-                  />
-                  <path
-                    d="M14.65 8.4l-4.7 4.7-4.6-4.7m13.65 5v1.9c0 2.1-1.7 3.7-3.7 3.7H4.7c-2 0-3.7-1.7-3.7-3.7v-1.9"
-                  />
-                </g>
-              </svg>
+                  <g
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M16.55 1h-2.9c-2.1 0-3.7 1.7-3.7 3.7v8.4"
+                    />
+                    <path
+                      d="M14.65 8.4l-4.7 4.7-4.6-4.7m13.65 5v1.9c0 2.1-1.7 3.7-3.7 3.7H4.7c-2 0-3.7-1.7-3.7-3.7v-1.9"
+                    />
+                  </g>
+                </svg>
+              </div>
             </div>
             <span>
               Import
@@ -409,31 +415,32 @@ exports[`WalletsControls > should render responsive 1`] = `
           <div
             class="flex items-center space-x-2"
           >
-            <div
-              class="css-v0ob3f"
-              height="16"
-              width="16"
-            >
-              <svg
-                id="plus"
-                viewBox="0 0 20 20"
-                x="0"
-                xml:space="preserve"
-                xmlns="http://www.w3.org/2000/svg"
-                y="0"
+            <div>
+              <div
+                style="height: 16px; width: 16px;"
               >
-                <g
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
+                <svg
+                  id="plus"
+                  style="height: 100%; width: 100%;"
+                  viewBox="0 0 20 20"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
                 >
-                  <path
-                    d="M1 10h18M10 1v18"
-                  />
-                </g>
-              </svg>
+                  <g
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M1 10h18M10 1v18"
+                    />
+                  </g>
+                </svg>
+              </div>
             </div>
             <span>
               Create
@@ -453,31 +460,32 @@ exports[`WalletsControls > should render responsive 1`] = `
         <span
           class="-mx-1 flex items-center px-5 py-3 text-theme-primary-300 dark:text-theme-secondary-600"
         >
-          <div
-            class="css-v0ob3f"
-            height="16"
-            width="16"
-          >
-            <svg
-              id="plus"
-              viewBox="0 0 20 20"
-              x="0"
-              xml:space="preserve"
-              xmlns="http://www.w3.org/2000/svg"
-              y="0"
+          <div>
+            <div
+              style="height: 16px; width: 16px;"
             >
-              <g
-                fill="none"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
+              <svg
+                id="plus"
+                style="height: 100%; width: 100%;"
+                viewBox="0 0 20 20"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
               >
-                <path
-                  d="M1 10h18M10 1v18"
-                />
-              </g>
-            </svg>
+                <g
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M1 10h18M10 1v18"
+                  />
+                </g>
+              </svg>
+            </div>
           </div>
         </span>
       </div>
@@ -505,36 +513,37 @@ exports[`WalletsControls > should render responsive 2`] = `
             class="group"
           >
             <button
-              class="ring-focus css-1mj8916"
+              class="relative flex items-center justify-center py-2 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 transition-colors duration-200 cursor-pointer focus:outline-none disabled:cursor-not-allowed disabled:text-theme-secondary-400 disabled:dark:text-theme-secondary-700 hover:border-b-theme-primary-400 [&.active]:[&[data-focus-visible-added]]:rounded [&.active]:border-b-theme-primary-600 [&.active]:text-theme-primary-600 hover:text-theme-primary-400 px-2.5 mx-0.5 ring-focus"
             >
               <div
                 class="flex h-5 w-5 items-center justify-center"
               >
-                <div
-                  class="css-1i4b0eq"
-                  height="20"
-                  width="20"
-                >
-                  <svg
-                    id="sliders-vertical"
-                    viewBox="0 0 20 20"
-                    x="0"
-                    xml:space="preserve"
-                    xmlns="http://www.w3.org/2000/svg"
-                    y="0"
+                <div>
+                  <div
+                    style="height: 20px; width: 20px;"
                   >
-                    <g
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
+                    <svg
+                      id="sliders-vertical"
+                      style="height: 100%; width: 100%;"
+                      viewBox="0 0 20 20"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
                     >
-                      <path
-                        d="M15 9V1M15 19v-4M18 12c0 1.7-1.4 3-3 3-1.7 0-3-1.4-3-3s1.2-3 3-3h0c1.7 0 3 1.3 3 3h0zM5 7.1V19M8 4c0-1.7-1.4-3-3-3S2 2.4 2 4c0 1.7 1.4 3 3 3s3-1.3 3-3c0 .1 0 0 0 0z"
-                      />
-                    </g>
-                  </svg>
+                      <g
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      >
+                        <path
+                          d="M15 9V1M15 19v-4M18 12c0 1.7-1.4 3-3 3-1.7 0-3-1.4-3-3s1.2-3 3-3h0c1.7 0 3 1.3 3 3h0zM5 7.1V19M8 4c0-1.7-1.4-3-3-3S2 2.4 2 4c0 1.7 1.4 3 3 3s3-1.3 3-3c0 .1 0 0 0 0z"
+                        />
+                      </g>
+                    </svg>
+                  </div>
                 </div>
               </div>
             </button>
@@ -546,8 +555,7 @@ exports[`WalletsControls > should render responsive 2`] = `
       class="flex sm:hidden"
     >
       <div
-        class="border-theme-secondary-300 dark:border-theme-secondary-800 css-3y8nng"
-        type="vertical"
+        class="h-5 relative inline-block align-middle border-t-0 border-l border-solid mx-2 border-theme-secondary-300 dark:border-theme-secondary-800"
       />
     </div>
     <div
@@ -566,24 +574,25 @@ exports[`WalletsControls > should render responsive 2`] = `
             <div
               class="flex items-center space-x-2"
             >
-              <div
-                class="css-v0ob3f"
-                height="16"
-                width="16"
-              >
-                <svg
-                  id="ledger"
-                  viewBox="0 0 20 20"
-                  x="0"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
-                  y="0"
+              <div>
+                <div
+                  style="height: 16px; width: 16px;"
                 >
-                  <path
-                    d="M15 20v-5h5v1.25c0 2.125-1.625 3.75-3.75 3.75H15zm-7.5 0v-5h5v5h-5zm-3.75 0C1.625 20 0 18.375 0 16.25V15h5v5H3.75zm3.75-7.5V0h8.75C18.375 0 20 1.625 20 3.75v8.75H7.5zm-7.5 0v-5h5v5H0zM0 5V3.75C0 1.625 1.625 0 3.75 0H5v5H0z"
-                    fill="currentColor"
-                  />
-                </svg>
+                  <svg
+                    id="ledger"
+                    style="height: 100%; width: 100%;"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
+                  >
+                    <path
+                      d="M15 20v-5h5v1.25c0 2.125-1.625 3.75-3.75 3.75H15zm-7.5 0v-5h5v5h-5zm-3.75 0C1.625 20 0 18.375 0 16.25V15h5v5H3.75zm3.75-7.5V0h8.75C18.375 0 20 1.625 20 3.75v8.75H7.5zm-7.5 0v-5h5v5H0zM0 5V3.75C0 1.625 1.625 0 3.75 0H5v5H0z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                </div>
               </div>
               <span
                 class="hidden lg:inline"
@@ -605,34 +614,35 @@ exports[`WalletsControls > should render responsive 2`] = `
           <div
             class="flex items-center space-x-2"
           >
-            <div
-              class="css-v0ob3f"
-              height="16"
-              width="16"
-            >
-              <svg
-                id="arrow-turn-down-bracket"
-                viewBox="0 0 20 20"
-                x="0"
-                xml:space="preserve"
-                xmlns="http://www.w3.org/2000/svg"
-                y="0"
+            <div>
+              <div
+                style="height: 16px; width: 16px;"
               >
-                <g
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
+                <svg
+                  id="arrow-turn-down-bracket"
+                  style="height: 100%; width: 100%;"
+                  viewBox="0 0 20 20"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
                 >
-                  <path
-                    d="M16.55 1h-2.9c-2.1 0-3.7 1.7-3.7 3.7v8.4"
-                  />
-                  <path
-                    d="M14.65 8.4l-4.7 4.7-4.6-4.7m13.65 5v1.9c0 2.1-1.7 3.7-3.7 3.7H4.7c-2 0-3.7-1.7-3.7-3.7v-1.9"
-                  />
-                </g>
-              </svg>
+                  <g
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M16.55 1h-2.9c-2.1 0-3.7 1.7-3.7 3.7v8.4"
+                    />
+                    <path
+                      d="M14.65 8.4l-4.7 4.7-4.6-4.7m13.65 5v1.9c0 2.1-1.7 3.7-3.7 3.7H4.7c-2 0-3.7-1.7-3.7-3.7v-1.9"
+                    />
+                  </g>
+                </svg>
+              </div>
             </div>
             <span>
               Import
@@ -651,31 +661,32 @@ exports[`WalletsControls > should render responsive 2`] = `
           <div
             class="flex items-center space-x-2"
           >
-            <div
-              class="css-v0ob3f"
-              height="16"
-              width="16"
-            >
-              <svg
-                id="plus"
-                viewBox="0 0 20 20"
-                x="0"
-                xml:space="preserve"
-                xmlns="http://www.w3.org/2000/svg"
-                y="0"
+            <div>
+              <div
+                style="height: 16px; width: 16px;"
               >
-                <g
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
+                <svg
+                  id="plus"
+                  style="height: 100%; width: 100%;"
+                  viewBox="0 0 20 20"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
                 >
-                  <path
-                    d="M1 10h18M10 1v18"
-                  />
-                </g>
-              </svg>
+                  <g
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M1 10h18M10 1v18"
+                    />
+                  </g>
+                </svg>
+              </div>
             </div>
             <span>
               Create
@@ -695,31 +706,32 @@ exports[`WalletsControls > should render responsive 2`] = `
         <span
           class="-mx-1 flex items-center px-5 py-3 text-theme-primary-300 dark:text-theme-secondary-600"
         >
-          <div
-            class="css-v0ob3f"
-            height="16"
-            width="16"
-          >
-            <svg
-              id="plus"
-              viewBox="0 0 20 20"
-              x="0"
-              xml:space="preserve"
-              xmlns="http://www.w3.org/2000/svg"
-              y="0"
+          <div>
+            <div
+              style="height: 16px; width: 16px;"
             >
-              <g
-                fill="none"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
+              <svg
+                id="plus"
+                style="height: 100%; width: 100%;"
+                viewBox="0 0 20 20"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
               >
-                <path
-                  d="M1 10h18M10 1v18"
-                />
-              </g>
-            </svg>
+                <g
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M1 10h18M10 1v18"
+                  />
+                </g>
+              </svg>
+            </div>
           </div>
         </span>
       </div>
@@ -747,36 +759,37 @@ exports[`WalletsControls > should render responsive 3`] = `
             class="group"
           >
             <button
-              class="ring-focus css-1mj8916"
+              class="relative flex items-center justify-center py-2 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 transition-colors duration-200 cursor-pointer focus:outline-none disabled:cursor-not-allowed disabled:text-theme-secondary-400 disabled:dark:text-theme-secondary-700 hover:border-b-theme-primary-400 [&.active]:[&[data-focus-visible-added]]:rounded [&.active]:border-b-theme-primary-600 [&.active]:text-theme-primary-600 hover:text-theme-primary-400 px-2.5 mx-0.5 ring-focus"
             >
               <div
                 class="flex h-5 w-5 items-center justify-center"
               >
-                <div
-                  class="css-1i4b0eq"
-                  height="20"
-                  width="20"
-                >
-                  <svg
-                    id="sliders-vertical"
-                    viewBox="0 0 20 20"
-                    x="0"
-                    xml:space="preserve"
-                    xmlns="http://www.w3.org/2000/svg"
-                    y="0"
+                <div>
+                  <div
+                    style="height: 20px; width: 20px;"
                   >
-                    <g
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
+                    <svg
+                      id="sliders-vertical"
+                      style="height: 100%; width: 100%;"
+                      viewBox="0 0 20 20"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
                     >
-                      <path
-                        d="M15 9V1M15 19v-4M18 12c0 1.7-1.4 3-3 3-1.7 0-3-1.4-3-3s1.2-3 3-3h0c1.7 0 3 1.3 3 3h0zM5 7.1V19M8 4c0-1.7-1.4-3-3-3S2 2.4 2 4c0 1.7 1.4 3 3 3s3-1.3 3-3c0 .1 0 0 0 0z"
-                      />
-                    </g>
-                  </svg>
+                      <g
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      >
+                        <path
+                          d="M15 9V1M15 19v-4M18 12c0 1.7-1.4 3-3 3-1.7 0-3-1.4-3-3s1.2-3 3-3h0c1.7 0 3 1.3 3 3h0zM5 7.1V19M8 4c0-1.7-1.4-3-3-3S2 2.4 2 4c0 1.7 1.4 3 3 3s3-1.3 3-3c0 .1 0 0 0 0z"
+                        />
+                      </g>
+                    </svg>
+                  </div>
                 </div>
               </div>
             </button>
@@ -788,8 +801,7 @@ exports[`WalletsControls > should render responsive 3`] = `
       class="flex sm:hidden"
     >
       <div
-        class="border-theme-secondary-300 dark:border-theme-secondary-800 css-3y8nng"
-        type="vertical"
+        class="h-5 relative inline-block align-middle border-t-0 border-l border-solid mx-2 border-theme-secondary-300 dark:border-theme-secondary-800"
       />
     </div>
     <div
@@ -808,24 +820,25 @@ exports[`WalletsControls > should render responsive 3`] = `
             <div
               class="flex items-center space-x-2"
             >
-              <div
-                class="css-v0ob3f"
-                height="16"
-                width="16"
-              >
-                <svg
-                  id="ledger"
-                  viewBox="0 0 20 20"
-                  x="0"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
-                  y="0"
+              <div>
+                <div
+                  style="height: 16px; width: 16px;"
                 >
-                  <path
-                    d="M15 20v-5h5v1.25c0 2.125-1.625 3.75-3.75 3.75H15zm-7.5 0v-5h5v5h-5zm-3.75 0C1.625 20 0 18.375 0 16.25V15h5v5H3.75zm3.75-7.5V0h8.75C18.375 0 20 1.625 20 3.75v8.75H7.5zm-7.5 0v-5h5v5H0zM0 5V3.75C0 1.625 1.625 0 3.75 0H5v5H0z"
-                    fill="currentColor"
-                  />
-                </svg>
+                  <svg
+                    id="ledger"
+                    style="height: 100%; width: 100%;"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
+                  >
+                    <path
+                      d="M15 20v-5h5v1.25c0 2.125-1.625 3.75-3.75 3.75H15zm-7.5 0v-5h5v5h-5zm-3.75 0C1.625 20 0 18.375 0 16.25V15h5v5H3.75zm3.75-7.5V0h8.75C18.375 0 20 1.625 20 3.75v8.75H7.5zm-7.5 0v-5h5v5H0zM0 5V3.75C0 1.625 1.625 0 3.75 0H5v5H0z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                </div>
               </div>
               <span
                 class="hidden lg:inline"
@@ -847,34 +860,35 @@ exports[`WalletsControls > should render responsive 3`] = `
           <div
             class="flex items-center space-x-2"
           >
-            <div
-              class="css-v0ob3f"
-              height="16"
-              width="16"
-            >
-              <svg
-                id="arrow-turn-down-bracket"
-                viewBox="0 0 20 20"
-                x="0"
-                xml:space="preserve"
-                xmlns="http://www.w3.org/2000/svg"
-                y="0"
+            <div>
+              <div
+                style="height: 16px; width: 16px;"
               >
-                <g
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
+                <svg
+                  id="arrow-turn-down-bracket"
+                  style="height: 100%; width: 100%;"
+                  viewBox="0 0 20 20"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
                 >
-                  <path
-                    d="M16.55 1h-2.9c-2.1 0-3.7 1.7-3.7 3.7v8.4"
-                  />
-                  <path
-                    d="M14.65 8.4l-4.7 4.7-4.6-4.7m13.65 5v1.9c0 2.1-1.7 3.7-3.7 3.7H4.7c-2 0-3.7-1.7-3.7-3.7v-1.9"
-                  />
-                </g>
-              </svg>
+                  <g
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M16.55 1h-2.9c-2.1 0-3.7 1.7-3.7 3.7v8.4"
+                    />
+                    <path
+                      d="M14.65 8.4l-4.7 4.7-4.6-4.7m13.65 5v1.9c0 2.1-1.7 3.7-3.7 3.7H4.7c-2 0-3.7-1.7-3.7-3.7v-1.9"
+                    />
+                  </g>
+                </svg>
+              </div>
             </div>
             <span>
               Import
@@ -893,31 +907,32 @@ exports[`WalletsControls > should render responsive 3`] = `
           <div
             class="flex items-center space-x-2"
           >
-            <div
-              class="css-v0ob3f"
-              height="16"
-              width="16"
-            >
-              <svg
-                id="plus"
-                viewBox="0 0 20 20"
-                x="0"
-                xml:space="preserve"
-                xmlns="http://www.w3.org/2000/svg"
-                y="0"
+            <div>
+              <div
+                style="height: 16px; width: 16px;"
               >
-                <g
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
+                <svg
+                  id="plus"
+                  style="height: 100%; width: 100%;"
+                  viewBox="0 0 20 20"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
                 >
-                  <path
-                    d="M1 10h18M10 1v18"
-                  />
-                </g>
-              </svg>
+                  <g
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M1 10h18M10 1v18"
+                    />
+                  </g>
+                </svg>
+              </div>
             </div>
             <span>
               Create
@@ -937,31 +952,32 @@ exports[`WalletsControls > should render responsive 3`] = `
         <span
           class="-mx-1 flex items-center px-5 py-3 text-theme-primary-300 dark:text-theme-secondary-600"
         >
-          <div
-            class="css-v0ob3f"
-            height="16"
-            width="16"
-          >
-            <svg
-              id="plus"
-              viewBox="0 0 20 20"
-              x="0"
-              xml:space="preserve"
-              xmlns="http://www.w3.org/2000/svg"
-              y="0"
+          <div>
+            <div
+              style="height: 16px; width: 16px;"
             >
-              <g
-                fill="none"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
+              <svg
+                id="plus"
+                style="height: 100%; width: 100%;"
+                viewBox="0 0 20 20"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
               >
-                <path
-                  d="M1 10h18M10 1v18"
-                />
-              </g>
-            </svg>
+                <g
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M1 10h18M10 1v18"
+                  />
+                </g>
+              </svg>
+            </div>
           </div>
         </span>
       </div>
@@ -989,36 +1005,37 @@ exports[`WalletsControls > should render responsive 4`] = `
             class="group"
           >
             <button
-              class="ring-focus css-1mj8916"
+              class="relative flex items-center justify-center py-2 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 transition-colors duration-200 cursor-pointer focus:outline-none disabled:cursor-not-allowed disabled:text-theme-secondary-400 disabled:dark:text-theme-secondary-700 hover:border-b-theme-primary-400 [&.active]:[&[data-focus-visible-added]]:rounded [&.active]:border-b-theme-primary-600 [&.active]:text-theme-primary-600 hover:text-theme-primary-400 px-2.5 mx-0.5 ring-focus"
             >
               <div
                 class="flex h-5 w-5 items-center justify-center"
               >
-                <div
-                  class="css-1i4b0eq"
-                  height="20"
-                  width="20"
-                >
-                  <svg
-                    id="sliders-vertical"
-                    viewBox="0 0 20 20"
-                    x="0"
-                    xml:space="preserve"
-                    xmlns="http://www.w3.org/2000/svg"
-                    y="0"
+                <div>
+                  <div
+                    style="height: 20px; width: 20px;"
                   >
-                    <g
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
+                    <svg
+                      id="sliders-vertical"
+                      style="height: 100%; width: 100%;"
+                      viewBox="0 0 20 20"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
                     >
-                      <path
-                        d="M15 9V1M15 19v-4M18 12c0 1.7-1.4 3-3 3-1.7 0-3-1.4-3-3s1.2-3 3-3h0c1.7 0 3 1.3 3 3h0zM5 7.1V19M8 4c0-1.7-1.4-3-3-3S2 2.4 2 4c0 1.7 1.4 3 3 3s3-1.3 3-3c0 .1 0 0 0 0z"
-                      />
-                    </g>
-                  </svg>
+                      <g
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      >
+                        <path
+                          d="M15 9V1M15 19v-4M18 12c0 1.7-1.4 3-3 3-1.7 0-3-1.4-3-3s1.2-3 3-3h0c1.7 0 3 1.3 3 3h0zM5 7.1V19M8 4c0-1.7-1.4-3-3-3S2 2.4 2 4c0 1.7 1.4 3 3 3s3-1.3 3-3c0 .1 0 0 0 0z"
+                        />
+                      </g>
+                    </svg>
+                  </div>
                 </div>
               </div>
             </button>
@@ -1030,8 +1047,7 @@ exports[`WalletsControls > should render responsive 4`] = `
       class="flex sm:hidden"
     >
       <div
-        class="border-theme-secondary-300 dark:border-theme-secondary-800 css-3y8nng"
-        type="vertical"
+        class="h-5 relative inline-block align-middle border-t-0 border-l border-solid mx-2 border-theme-secondary-300 dark:border-theme-secondary-800"
       />
     </div>
     <div
@@ -1050,24 +1066,25 @@ exports[`WalletsControls > should render responsive 4`] = `
             <div
               class="flex items-center space-x-2"
             >
-              <div
-                class="css-v0ob3f"
-                height="16"
-                width="16"
-              >
-                <svg
-                  id="ledger"
-                  viewBox="0 0 20 20"
-                  x="0"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
-                  y="0"
+              <div>
+                <div
+                  style="height: 16px; width: 16px;"
                 >
-                  <path
-                    d="M15 20v-5h5v1.25c0 2.125-1.625 3.75-3.75 3.75H15zm-7.5 0v-5h5v5h-5zm-3.75 0C1.625 20 0 18.375 0 16.25V15h5v5H3.75zm3.75-7.5V0h8.75C18.375 0 20 1.625 20 3.75v8.75H7.5zm-7.5 0v-5h5v5H0zM0 5V3.75C0 1.625 1.625 0 3.75 0H5v5H0z"
-                    fill="currentColor"
-                  />
-                </svg>
+                  <svg
+                    id="ledger"
+                    style="height: 100%; width: 100%;"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
+                  >
+                    <path
+                      d="M15 20v-5h5v1.25c0 2.125-1.625 3.75-3.75 3.75H15zm-7.5 0v-5h5v5h-5zm-3.75 0C1.625 20 0 18.375 0 16.25V15h5v5H3.75zm3.75-7.5V0h8.75C18.375 0 20 1.625 20 3.75v8.75H7.5zm-7.5 0v-5h5v5H0zM0 5V3.75C0 1.625 1.625 0 3.75 0H5v5H0z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                </div>
               </div>
               <span
                 class="hidden lg:inline"
@@ -1089,34 +1106,35 @@ exports[`WalletsControls > should render responsive 4`] = `
           <div
             class="flex items-center space-x-2"
           >
-            <div
-              class="css-v0ob3f"
-              height="16"
-              width="16"
-            >
-              <svg
-                id="arrow-turn-down-bracket"
-                viewBox="0 0 20 20"
-                x="0"
-                xml:space="preserve"
-                xmlns="http://www.w3.org/2000/svg"
-                y="0"
+            <div>
+              <div
+                style="height: 16px; width: 16px;"
               >
-                <g
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
+                <svg
+                  id="arrow-turn-down-bracket"
+                  style="height: 100%; width: 100%;"
+                  viewBox="0 0 20 20"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
                 >
-                  <path
-                    d="M16.55 1h-2.9c-2.1 0-3.7 1.7-3.7 3.7v8.4"
-                  />
-                  <path
-                    d="M14.65 8.4l-4.7 4.7-4.6-4.7m13.65 5v1.9c0 2.1-1.7 3.7-3.7 3.7H4.7c-2 0-3.7-1.7-3.7-3.7v-1.9"
-                  />
-                </g>
-              </svg>
+                  <g
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M16.55 1h-2.9c-2.1 0-3.7 1.7-3.7 3.7v8.4"
+                    />
+                    <path
+                      d="M14.65 8.4l-4.7 4.7-4.6-4.7m13.65 5v1.9c0 2.1-1.7 3.7-3.7 3.7H4.7c-2 0-3.7-1.7-3.7-3.7v-1.9"
+                    />
+                  </g>
+                </svg>
+              </div>
             </div>
             <span>
               Import
@@ -1135,31 +1153,32 @@ exports[`WalletsControls > should render responsive 4`] = `
           <div
             class="flex items-center space-x-2"
           >
-            <div
-              class="css-v0ob3f"
-              height="16"
-              width="16"
-            >
-              <svg
-                id="plus"
-                viewBox="0 0 20 20"
-                x="0"
-                xml:space="preserve"
-                xmlns="http://www.w3.org/2000/svg"
-                y="0"
+            <div>
+              <div
+                style="height: 16px; width: 16px;"
               >
-                <g
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
+                <svg
+                  id="plus"
+                  style="height: 100%; width: 100%;"
+                  viewBox="0 0 20 20"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
                 >
-                  <path
-                    d="M1 10h18M10 1v18"
-                  />
-                </g>
-              </svg>
+                  <g
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M1 10h18M10 1v18"
+                    />
+                  </g>
+                </svg>
+              </div>
             </div>
             <span>
               Create
@@ -1179,31 +1198,32 @@ exports[`WalletsControls > should render responsive 4`] = `
         <span
           class="-mx-1 flex items-center px-5 py-3 text-theme-primary-300 dark:text-theme-secondary-600"
         >
-          <div
-            class="css-v0ob3f"
-            height="16"
-            width="16"
-          >
-            <svg
-              id="plus"
-              viewBox="0 0 20 20"
-              x="0"
-              xml:space="preserve"
-              xmlns="http://www.w3.org/2000/svg"
-              y="0"
+          <div>
+            <div
+              style="height: 16px; width: 16px;"
             >
-              <g
-                fill="none"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
+              <svg
+                id="plus"
+                style="height: 100%; width: 100%;"
+                viewBox="0 0 20 20"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
               >
-                <path
-                  d="M1 10h18M10 1v18"
-                />
-              </g>
-            </svg>
+                <g
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M1 10h18M10 1v18"
+                  />
+                </g>
+              </svg>
+            </div>
           </div>
         </span>
       </div>
@@ -1231,36 +1251,37 @@ exports[`WalletsControls > should render responsive 5`] = `
             class="group"
           >
             <button
-              class="ring-focus css-1mj8916"
+              class="relative flex items-center justify-center py-2 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 transition-colors duration-200 cursor-pointer focus:outline-none disabled:cursor-not-allowed disabled:text-theme-secondary-400 disabled:dark:text-theme-secondary-700 hover:border-b-theme-primary-400 [&.active]:[&[data-focus-visible-added]]:rounded [&.active]:border-b-theme-primary-600 [&.active]:text-theme-primary-600 hover:text-theme-primary-400 px-2.5 mx-0.5 ring-focus"
             >
               <div
                 class="flex h-5 w-5 items-center justify-center"
               >
-                <div
-                  class="css-1i4b0eq"
-                  height="20"
-                  width="20"
-                >
-                  <svg
-                    id="sliders-vertical"
-                    viewBox="0 0 20 20"
-                    x="0"
-                    xml:space="preserve"
-                    xmlns="http://www.w3.org/2000/svg"
-                    y="0"
+                <div>
+                  <div
+                    style="height: 20px; width: 20px;"
                   >
-                    <g
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
+                    <svg
+                      id="sliders-vertical"
+                      style="height: 100%; width: 100%;"
+                      viewBox="0 0 20 20"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
                     >
-                      <path
-                        d="M15 9V1M15 19v-4M18 12c0 1.7-1.4 3-3 3-1.7 0-3-1.4-3-3s1.2-3 3-3h0c1.7 0 3 1.3 3 3h0zM5 7.1V19M8 4c0-1.7-1.4-3-3-3S2 2.4 2 4c0 1.7 1.4 3 3 3s3-1.3 3-3c0 .1 0 0 0 0z"
-                      />
-                    </g>
-                  </svg>
+                      <g
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      >
+                        <path
+                          d="M15 9V1M15 19v-4M18 12c0 1.7-1.4 3-3 3-1.7 0-3-1.4-3-3s1.2-3 3-3h0c1.7 0 3 1.3 3 3h0zM5 7.1V19M8 4c0-1.7-1.4-3-3-3S2 2.4 2 4c0 1.7 1.4 3 3 3s3-1.3 3-3c0 .1 0 0 0 0z"
+                        />
+                      </g>
+                    </svg>
+                  </div>
                 </div>
               </div>
             </button>
@@ -1272,8 +1293,7 @@ exports[`WalletsControls > should render responsive 5`] = `
       class="flex sm:hidden"
     >
       <div
-        class="border-theme-secondary-300 dark:border-theme-secondary-800 css-3y8nng"
-        type="vertical"
+        class="h-5 relative inline-block align-middle border-t-0 border-l border-solid mx-2 border-theme-secondary-300 dark:border-theme-secondary-800"
       />
     </div>
     <div
@@ -1292,24 +1312,25 @@ exports[`WalletsControls > should render responsive 5`] = `
             <div
               class="flex items-center space-x-2"
             >
-              <div
-                class="css-v0ob3f"
-                height="16"
-                width="16"
-              >
-                <svg
-                  id="ledger"
-                  viewBox="0 0 20 20"
-                  x="0"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
-                  y="0"
+              <div>
+                <div
+                  style="height: 16px; width: 16px;"
                 >
-                  <path
-                    d="M15 20v-5h5v1.25c0 2.125-1.625 3.75-3.75 3.75H15zm-7.5 0v-5h5v5h-5zm-3.75 0C1.625 20 0 18.375 0 16.25V15h5v5H3.75zm3.75-7.5V0h8.75C18.375 0 20 1.625 20 3.75v8.75H7.5zm-7.5 0v-5h5v5H0zM0 5V3.75C0 1.625 1.625 0 3.75 0H5v5H0z"
-                    fill="currentColor"
-                  />
-                </svg>
+                  <svg
+                    id="ledger"
+                    style="height: 100%; width: 100%;"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
+                  >
+                    <path
+                      d="M15 20v-5h5v1.25c0 2.125-1.625 3.75-3.75 3.75H15zm-7.5 0v-5h5v5h-5zm-3.75 0C1.625 20 0 18.375 0 16.25V15h5v5H3.75zm3.75-7.5V0h8.75C18.375 0 20 1.625 20 3.75v8.75H7.5zm-7.5 0v-5h5v5H0zM0 5V3.75C0 1.625 1.625 0 3.75 0H5v5H0z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                </div>
               </div>
               <span
                 class="hidden lg:inline"
@@ -1331,34 +1352,35 @@ exports[`WalletsControls > should render responsive 5`] = `
           <div
             class="flex items-center space-x-2"
           >
-            <div
-              class="css-v0ob3f"
-              height="16"
-              width="16"
-            >
-              <svg
-                id="arrow-turn-down-bracket"
-                viewBox="0 0 20 20"
-                x="0"
-                xml:space="preserve"
-                xmlns="http://www.w3.org/2000/svg"
-                y="0"
+            <div>
+              <div
+                style="height: 16px; width: 16px;"
               >
-                <g
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
+                <svg
+                  id="arrow-turn-down-bracket"
+                  style="height: 100%; width: 100%;"
+                  viewBox="0 0 20 20"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
                 >
-                  <path
-                    d="M16.55 1h-2.9c-2.1 0-3.7 1.7-3.7 3.7v8.4"
-                  />
-                  <path
-                    d="M14.65 8.4l-4.7 4.7-4.6-4.7m13.65 5v1.9c0 2.1-1.7 3.7-3.7 3.7H4.7c-2 0-3.7-1.7-3.7-3.7v-1.9"
-                  />
-                </g>
-              </svg>
+                  <g
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M16.55 1h-2.9c-2.1 0-3.7 1.7-3.7 3.7v8.4"
+                    />
+                    <path
+                      d="M14.65 8.4l-4.7 4.7-4.6-4.7m13.65 5v1.9c0 2.1-1.7 3.7-3.7 3.7H4.7c-2 0-3.7-1.7-3.7-3.7v-1.9"
+                    />
+                  </g>
+                </svg>
+              </div>
             </div>
             <span>
               Import
@@ -1377,31 +1399,32 @@ exports[`WalletsControls > should render responsive 5`] = `
           <div
             class="flex items-center space-x-2"
           >
-            <div
-              class="css-v0ob3f"
-              height="16"
-              width="16"
-            >
-              <svg
-                id="plus"
-                viewBox="0 0 20 20"
-                x="0"
-                xml:space="preserve"
-                xmlns="http://www.w3.org/2000/svg"
-                y="0"
+            <div>
+              <div
+                style="height: 16px; width: 16px;"
               >
-                <g
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
+                <svg
+                  id="plus"
+                  style="height: 100%; width: 100%;"
+                  viewBox="0 0 20 20"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
                 >
-                  <path
-                    d="M1 10h18M10 1v18"
-                  />
-                </g>
-              </svg>
+                  <g
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M1 10h18M10 1v18"
+                    />
+                  </g>
+                </svg>
+              </div>
             </div>
             <span>
               Create
@@ -1421,31 +1444,32 @@ exports[`WalletsControls > should render responsive 5`] = `
         <span
           class="-mx-1 flex items-center px-5 py-3 text-theme-primary-300 dark:text-theme-secondary-600"
         >
-          <div
-            class="css-v0ob3f"
-            height="16"
-            width="16"
-          >
-            <svg
-              id="plus"
-              viewBox="0 0 20 20"
-              x="0"
-              xml:space="preserve"
-              xmlns="http://www.w3.org/2000/svg"
-              y="0"
+          <div>
+            <div
+              style="height: 16px; width: 16px;"
             >
-              <g
-                fill="none"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
+              <svg
+                id="plus"
+                style="height: 100%; width: 100%;"
+                viewBox="0 0 20 20"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
               >
-                <path
-                  d="M1 10h18M10 1v18"
-                />
-              </g>
-            </svg>
+                <g
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M1 10h18M10 1v18"
+                  />
+                </g>
+              </svg>
+            </div>
           </div>
         </span>
       </div>

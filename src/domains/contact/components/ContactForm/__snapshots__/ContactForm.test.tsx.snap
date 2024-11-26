@@ -314,13 +314,13 @@ exports[`ContactForm > should render responsive 2`] = `
             <div
               aria-expanded="false"
               aria-haspopup="listbox"
-              aria-owns="downshift-4-menu"
+              aria-owns="downshift-3-menu"
               role="combobox"
             >
               <div>
                 <label
-                  for="downshift-4-input"
-                  id="downshift-4-label"
+                  for="downshift-3-input"
+                  id="downshift-3-label"
                 />
                 <div
                   class="css-14zfvme"
@@ -330,12 +330,12 @@ exports[`ContactForm > should render responsive 2`] = `
                   >
                     <input
                       aria-autocomplete="list"
-                      aria-controls="downshift-4-menu"
-                      aria-labelledby="downshift-4-label"
+                      aria-controls="downshift-3-menu"
+                      aria-labelledby="downshift-3-label"
                       autocomplete="off"
                       class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base cursor-default css-1937ogs"
                       data-testid="SelectDropdown__input"
-                      id="downshift-4-input"
+                      id="downshift-3-input"
                       name="network"
                       placeholder="Enter a cryptoasset name"
                       type="text"
@@ -392,8 +392,8 @@ exports[`ContactForm > should render responsive 2`] = `
                 </div>
               </div>
               <div
-                aria-labelledby="downshift-4-label"
-                id="downshift-4-menu"
+                aria-labelledby="downshift-3-label"
+                id="downshift-3-menu"
                 role="listbox"
               />
             </div>

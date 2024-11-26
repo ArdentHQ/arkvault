@@ -42,32 +42,35 @@ exports[`DelegateRow > should emit action on select button 1`] = `
           >
             <div>
               <div
-                class="text-theme-warning-500 css-v0ob3f"
-                height="16"
-                width="16"
+                class="text-theme-warning-500"
               >
-                <svg
-                  viewBox="0 0 20 20"
-                  xmlns="http://www.w3.org/2000/svg"
+                <div
+                  style="height: 16px; width: 16px;"
                 >
-                  <g
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    transform="translate(600 -1329.038)"
+                  <svg
+                    style="height: 100%; width: 100%;"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
                   >
-                    <circle
-                      cx="-590"
-                      cy="1339.038"
-                      r="9"
-                    />
-                    <path
-                      d="M-592 1342.338v-6.5m4 6.5v-6.5"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </g>
-                </svg>
+                    <g
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      transform="translate(600 -1329.038)"
+                    >
+                      <circle
+                        cx="-590"
+                        cy="1339.038"
+                        r="9"
+                      />
+                      <path
+                        d="M-592 1342.338v-6.5m4 6.5v-6.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </g>
+                  </svg>
+                </div>
               </div>
             </div>
           </div>
@@ -93,28 +96,31 @@ exports[`DelegateRow > should emit action on select button 1`] = `
                 </span>
               </span>
               <div
-                class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-1fio4bh"
+                class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm"
                 data-testid="Link__external"
-                height="12"
-                width="12"
               >
-                <svg
-                  id="arrow-external"
-                  viewBox="0 0 20 20"
-                  x="0"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
-                  y="0"
+                <div
+                  style="height: 12px; width: 12px;"
                 >
-                  <path
-                    d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                  />
-                </svg>
+                  <svg
+                    id="arrow-external"
+                    style="height: 100%; width: 100%;"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
+                  >
+                    <path
+                      d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    />
+                  </svg>
+                </div>
               </div>
             </a>
           </div>
@@ -190,32 +196,35 @@ exports[`DelegateRow > should render 1`] = `
           >
             <div>
               <div
-                class="text-theme-warning-500 css-v0ob3f"
-                height="16"
-                width="16"
+                class="text-theme-warning-500"
               >
-                <svg
-                  viewBox="0 0 20 20"
-                  xmlns="http://www.w3.org/2000/svg"
+                <div
+                  style="height: 16px; width: 16px;"
                 >
-                  <g
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    transform="translate(600 -1329.038)"
+                  <svg
+                    style="height: 100%; width: 100%;"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
                   >
-                    <circle
-                      cx="-590"
-                      cy="1339.038"
-                      r="9"
-                    />
-                    <path
-                      d="M-592 1342.338v-6.5m4 6.5v-6.5"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </g>
-                </svg>
+                    <g
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      transform="translate(600 -1329.038)"
+                    >
+                      <circle
+                        cx="-590"
+                        cy="1339.038"
+                        r="9"
+                      />
+                      <path
+                        d="M-592 1342.338v-6.5m4 6.5v-6.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </g>
+                  </svg>
+                </div>
               </div>
             </div>
           </div>
@@ -241,28 +250,31 @@ exports[`DelegateRow > should render 1`] = `
                 </span>
               </span>
               <div
-                class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-1fio4bh"
+                class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm"
                 data-testid="Link__external"
-                height="12"
-                width="12"
               >
-                <svg
-                  id="arrow-external"
-                  viewBox="0 0 20 20"
-                  x="0"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
-                  y="0"
+                <div
+                  style="height: 12px; width: 12px;"
                 >
-                  <path
-                    d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                  />
-                </svg>
+                  <svg
+                    id="arrow-external"
+                    style="height: 100%; width: 100%;"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
+                  >
+                    <path
+                      d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    />
+                  </svg>
+                </div>
               </div>
             </a>
           </div>
@@ -338,32 +350,35 @@ exports[`DelegateRow > should render changed style when network requires vote am
           >
             <div>
               <div
-                class="text-theme-warning-500 css-v0ob3f"
-                height="16"
-                width="16"
+                class="text-theme-warning-500"
               >
-                <svg
-                  viewBox="0 0 20 20"
-                  xmlns="http://www.w3.org/2000/svg"
+                <div
+                  style="height: 16px; width: 16px;"
                 >
-                  <g
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    transform="translate(600 -1329.038)"
+                  <svg
+                    style="height: 100%; width: 100%;"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
                   >
-                    <circle
-                      cx="-590"
-                      cy="1339.038"
-                      r="9"
-                    />
-                    <path
-                      d="M-592 1342.338v-6.5m4 6.5v-6.5"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </g>
-                </svg>
+                    <g
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      transform="translate(600 -1329.038)"
+                    >
+                      <circle
+                        cx="-590"
+                        cy="1339.038"
+                        r="9"
+                      />
+                      <path
+                        d="M-592 1342.338v-6.5m4 6.5v-6.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </g>
+                  </svg>
+                </div>
               </div>
             </div>
           </div>
@@ -389,28 +404,31 @@ exports[`DelegateRow > should render changed style when network requires vote am
                 </span>
               </span>
               <div
-                class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-1fio4bh"
+                class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm"
                 data-testid="Link__external"
-                height="12"
-                width="12"
               >
-                <svg
-                  id="arrow-external"
-                  viewBox="0 0 20 20"
-                  x="0"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
-                  y="0"
+                <div
+                  style="height: 12px; width: 12px;"
                 >
-                  <path
-                    d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                  />
-                </svg>
+                  <svg
+                    id="arrow-external"
+                    style="height: 100%; width: 100%;"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
+                  >
+                    <path
+                      d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    />
+                  </svg>
+                </div>
               </div>
             </a>
           </div>
@@ -531,32 +549,35 @@ exports[`DelegateRow > should render the selected delegate 1`] = `
           >
             <div>
               <div
-                class="text-theme-warning-500 css-v0ob3f"
-                height="16"
-                width="16"
+                class="text-theme-warning-500"
               >
-                <svg
-                  viewBox="0 0 20 20"
-                  xmlns="http://www.w3.org/2000/svg"
+                <div
+                  style="height: 16px; width: 16px;"
                 >
-                  <g
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    transform="translate(600 -1329.038)"
+                  <svg
+                    style="height: 100%; width: 100%;"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
                   >
-                    <circle
-                      cx="-590"
-                      cy="1339.038"
-                      r="9"
-                    />
-                    <path
-                      d="M-592 1342.338v-6.5m4 6.5v-6.5"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </g>
-                </svg>
+                    <g
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      transform="translate(600 -1329.038)"
+                    >
+                      <circle
+                        cx="-590"
+                        cy="1339.038"
+                        r="9"
+                      />
+                      <path
+                        d="M-592 1342.338v-6.5m4 6.5v-6.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </g>
+                  </svg>
+                </div>
               </div>
             </div>
           </div>
@@ -582,28 +603,31 @@ exports[`DelegateRow > should render the selected delegate 1`] = `
                 </span>
               </span>
               <div
-                class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-1fio4bh"
+                class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm"
                 data-testid="Link__external"
-                height="12"
-                width="12"
               >
-                <svg
-                  id="arrow-external"
-                  viewBox="0 0 20 20"
-                  x="0"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
-                  y="0"
+                <div
+                  style="height: 12px; width: 12px;"
                 >
-                  <path
-                    d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                  />
-                </svg>
+                  <svg
+                    id="arrow-external"
+                    style="height: 100%; width: 100%;"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
+                  >
+                    <path
+                      d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    />
+                  </svg>
+                </div>
               </div>
             </a>
           </div>
@@ -679,32 +703,35 @@ exports[`DelegateRow > should render the selected vote 1`] = `
           >
             <div>
               <div
-                class="text-theme-warning-500 css-v0ob3f"
-                height="16"
-                width="16"
+                class="text-theme-warning-500"
               >
-                <svg
-                  viewBox="0 0 20 20"
-                  xmlns="http://www.w3.org/2000/svg"
+                <div
+                  style="height: 16px; width: 16px;"
                 >
-                  <g
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    transform="translate(600 -1329.038)"
+                  <svg
+                    style="height: 100%; width: 100%;"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
                   >
-                    <circle
-                      cx="-590"
-                      cy="1339.038"
-                      r="9"
-                    />
-                    <path
-                      d="M-592 1342.338v-6.5m4 6.5v-6.5"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </g>
-                </svg>
+                    <g
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      transform="translate(600 -1329.038)"
+                    >
+                      <circle
+                        cx="-590"
+                        cy="1339.038"
+                        r="9"
+                      />
+                      <path
+                        d="M-592 1342.338v-6.5m4 6.5v-6.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </g>
+                  </svg>
+                </div>
               </div>
             </div>
           </div>
@@ -730,28 +757,31 @@ exports[`DelegateRow > should render the selected vote 1`] = `
                 </span>
               </span>
               <div
-                class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-1fio4bh"
+                class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm"
                 data-testid="Link__external"
-                height="12"
-                width="12"
               >
-                <svg
-                  id="arrow-external"
-                  viewBox="0 0 20 20"
-                  x="0"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
-                  y="0"
+                <div
+                  style="height: 12px; width: 12px;"
                 >
-                  <path
-                    d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                  />
-                </svg>
+                  <svg
+                    id="arrow-external"
+                    style="height: 100%; width: 100%;"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
+                  >
+                    <path
+                      d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    />
+                  </svg>
+                </div>
               </div>
             </a>
           </div>
@@ -818,32 +848,35 @@ exports[`DelegateRow > should render the selected vote 1`] = `
           >
             <div>
               <div
-                class="text-theme-warning-500 css-v0ob3f"
-                height="16"
-                width="16"
+                class="text-theme-warning-500"
               >
-                <svg
-                  viewBox="0 0 20 20"
-                  xmlns="http://www.w3.org/2000/svg"
+                <div
+                  style="height: 16px; width: 16px;"
                 >
-                  <g
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    transform="translate(600 -1329.038)"
+                  <svg
+                    style="height: 100%; width: 100%;"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
                   >
-                    <circle
-                      cx="-590"
-                      cy="1339.038"
-                      r="9"
-                    />
-                    <path
-                      d="M-592 1342.338v-6.5m4 6.5v-6.5"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </g>
-                </svg>
+                    <g
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      transform="translate(600 -1329.038)"
+                    >
+                      <circle
+                        cx="-590"
+                        cy="1339.038"
+                        r="9"
+                      />
+                      <path
+                        d="M-592 1342.338v-6.5m4 6.5v-6.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </g>
+                  </svg>
+                </div>
               </div>
             </div>
           </div>
@@ -869,28 +902,31 @@ exports[`DelegateRow > should render the selected vote 1`] = `
                 </span>
               </span>
               <div
-                class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-1fio4bh"
+                class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm"
                 data-testid="Link__external"
-                height="12"
-                width="12"
               >
-                <svg
-                  id="arrow-external"
-                  viewBox="0 0 20 20"
-                  x="0"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
-                  y="0"
+                <div
+                  style="height: 12px; width: 12px;"
                 >
-                  <path
-                    d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                  />
-                </svg>
+                  <svg
+                    id="arrow-external"
+                    style="height: 100%; width: 100%;"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
+                  >
+                    <path
+                      d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    />
+                  </svg>
+                </div>
               </div>
             </a>
           </div>
@@ -957,32 +993,35 @@ exports[`DelegateRow > should render the selected vote 1`] = `
           >
             <div>
               <div
-                class="text-theme-warning-500 css-v0ob3f"
-                height="16"
-                width="16"
+                class="text-theme-warning-500"
               >
-                <svg
-                  viewBox="0 0 20 20"
-                  xmlns="http://www.w3.org/2000/svg"
+                <div
+                  style="height: 16px; width: 16px;"
                 >
-                  <g
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    transform="translate(600 -1329.038)"
+                  <svg
+                    style="height: 100%; width: 100%;"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
                   >
-                    <circle
-                      cx="-590"
-                      cy="1339.038"
-                      r="9"
-                    />
-                    <path
-                      d="M-592 1342.338v-6.5m4 6.5v-6.5"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </g>
-                </svg>
+                    <g
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      transform="translate(600 -1329.038)"
+                    >
+                      <circle
+                        cx="-590"
+                        cy="1339.038"
+                        r="9"
+                      />
+                      <path
+                        d="M-592 1342.338v-6.5m4 6.5v-6.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </g>
+                  </svg>
+                </div>
               </div>
             </div>
           </div>
@@ -1008,28 +1047,31 @@ exports[`DelegateRow > should render the selected vote 1`] = `
                 </span>
               </span>
               <div
-                class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-1fio4bh"
+                class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm"
                 data-testid="Link__external"
-                height="12"
-                width="12"
               >
-                <svg
-                  id="arrow-external"
-                  viewBox="0 0 20 20"
-                  x="0"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
-                  y="0"
+                <div
+                  style="height: 12px; width: 12px;"
                 >
-                  <path
-                    d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                  />
-                </svg>
+                  <svg
+                    id="arrow-external"
+                    style="height: 100%; width: 100%;"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
+                  >
+                    <path
+                      d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    />
+                  </svg>
+                </div>
               </div>
             </a>
           </div>
@@ -1110,32 +1152,35 @@ exports[`DelegateRow > should render the selected vote 2`] = `
           >
             <div>
               <div
-                class="text-theme-warning-500 css-v0ob3f"
-                height="16"
-                width="16"
+                class="text-theme-warning-500"
               >
-                <svg
-                  viewBox="0 0 20 20"
-                  xmlns="http://www.w3.org/2000/svg"
+                <div
+                  style="height: 16px; width: 16px;"
                 >
-                  <g
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    transform="translate(600 -1329.038)"
+                  <svg
+                    style="height: 100%; width: 100%;"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
                   >
-                    <circle
-                      cx="-590"
-                      cy="1339.038"
-                      r="9"
-                    />
-                    <path
-                      d="M-592 1342.338v-6.5m4 6.5v-6.5"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </g>
-                </svg>
+                    <g
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      transform="translate(600 -1329.038)"
+                    >
+                      <circle
+                        cx="-590"
+                        cy="1339.038"
+                        r="9"
+                      />
+                      <path
+                        d="M-592 1342.338v-6.5m4 6.5v-6.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </g>
+                  </svg>
+                </div>
               </div>
             </div>
           </div>
@@ -1161,28 +1206,31 @@ exports[`DelegateRow > should render the selected vote 2`] = `
                 </span>
               </span>
               <div
-                class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-1fio4bh"
+                class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm"
                 data-testid="Link__external"
-                height="12"
-                width="12"
               >
-                <svg
-                  id="arrow-external"
-                  viewBox="0 0 20 20"
-                  x="0"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
-                  y="0"
+                <div
+                  style="height: 12px; width: 12px;"
                 >
-                  <path
-                    d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                  />
-                </svg>
+                  <svg
+                    id="arrow-external"
+                    style="height: 100%; width: 100%;"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
+                  >
+                    <path
+                      d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    />
+                  </svg>
+                </div>
               </div>
             </a>
           </div>
@@ -1249,32 +1297,35 @@ exports[`DelegateRow > should render the selected vote 2`] = `
           >
             <div>
               <div
-                class="text-theme-warning-500 css-v0ob3f"
-                height="16"
-                width="16"
+                class="text-theme-warning-500"
               >
-                <svg
-                  viewBox="0 0 20 20"
-                  xmlns="http://www.w3.org/2000/svg"
+                <div
+                  style="height: 16px; width: 16px;"
                 >
-                  <g
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    transform="translate(600 -1329.038)"
+                  <svg
+                    style="height: 100%; width: 100%;"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
                   >
-                    <circle
-                      cx="-590"
-                      cy="1339.038"
-                      r="9"
-                    />
-                    <path
-                      d="M-592 1342.338v-6.5m4 6.5v-6.5"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </g>
-                </svg>
+                    <g
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      transform="translate(600 -1329.038)"
+                    >
+                      <circle
+                        cx="-590"
+                        cy="1339.038"
+                        r="9"
+                      />
+                      <path
+                        d="M-592 1342.338v-6.5m4 6.5v-6.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </g>
+                  </svg>
+                </div>
               </div>
             </div>
           </div>
@@ -1300,28 +1351,31 @@ exports[`DelegateRow > should render the selected vote 2`] = `
                 </span>
               </span>
               <div
-                class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-1fio4bh"
+                class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm"
                 data-testid="Link__external"
-                height="12"
-                width="12"
               >
-                <svg
-                  id="arrow-external"
-                  viewBox="0 0 20 20"
-                  x="0"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
-                  y="0"
+                <div
+                  style="height: 12px; width: 12px;"
                 >
-                  <path
-                    d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                  />
-                </svg>
+                  <svg
+                    id="arrow-external"
+                    style="height: 100%; width: 100%;"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
+                  >
+                    <path
+                      d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    />
+                  </svg>
+                </div>
               </div>
             </a>
           </div>
@@ -1388,32 +1442,35 @@ exports[`DelegateRow > should render the selected vote 2`] = `
           >
             <div>
               <div
-                class="text-theme-warning-500 css-v0ob3f"
-                height="16"
-                width="16"
+                class="text-theme-warning-500"
               >
-                <svg
-                  viewBox="0 0 20 20"
-                  xmlns="http://www.w3.org/2000/svg"
+                <div
+                  style="height: 16px; width: 16px;"
                 >
-                  <g
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    transform="translate(600 -1329.038)"
+                  <svg
+                    style="height: 100%; width: 100%;"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
                   >
-                    <circle
-                      cx="-590"
-                      cy="1339.038"
-                      r="9"
-                    />
-                    <path
-                      d="M-592 1342.338v-6.5m4 6.5v-6.5"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </g>
-                </svg>
+                    <g
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      transform="translate(600 -1329.038)"
+                    >
+                      <circle
+                        cx="-590"
+                        cy="1339.038"
+                        r="9"
+                      />
+                      <path
+                        d="M-592 1342.338v-6.5m4 6.5v-6.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </g>
+                  </svg>
+                </div>
               </div>
             </div>
           </div>
@@ -1439,28 +1496,31 @@ exports[`DelegateRow > should render the selected vote 2`] = `
                 </span>
               </span>
               <div
-                class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-1fio4bh"
+                class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm"
                 data-testid="Link__external"
-                height="12"
-                width="12"
               >
-                <svg
-                  id="arrow-external"
-                  viewBox="0 0 20 20"
-                  x="0"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
-                  y="0"
+                <div
+                  style="height: 12px; width: 12px;"
                 >
-                  <path
-                    d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                  />
-                </svg>
+                  <svg
+                    id="arrow-external"
+                    style="height: 100%; width: 100%;"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
+                  >
+                    <path
+                      d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    />
+                  </svg>
+                </div>
               </div>
             </a>
           </div>
@@ -1541,32 +1601,35 @@ exports[`DelegateRow > should render the unselected vote 1`] = `
           >
             <div>
               <div
-                class="text-theme-warning-500 css-v0ob3f"
-                height="16"
-                width="16"
+                class="text-theme-warning-500"
               >
-                <svg
-                  viewBox="0 0 20 20"
-                  xmlns="http://www.w3.org/2000/svg"
+                <div
+                  style="height: 16px; width: 16px;"
                 >
-                  <g
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    transform="translate(600 -1329.038)"
+                  <svg
+                    style="height: 100%; width: 100%;"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
                   >
-                    <circle
-                      cx="-590"
-                      cy="1339.038"
-                      r="9"
-                    />
-                    <path
-                      d="M-592 1342.338v-6.5m4 6.5v-6.5"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </g>
-                </svg>
+                    <g
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      transform="translate(600 -1329.038)"
+                    >
+                      <circle
+                        cx="-590"
+                        cy="1339.038"
+                        r="9"
+                      />
+                      <path
+                        d="M-592 1342.338v-6.5m4 6.5v-6.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </g>
+                  </svg>
+                </div>
               </div>
             </div>
           </div>
@@ -1592,28 +1655,31 @@ exports[`DelegateRow > should render the unselected vote 1`] = `
                 </span>
               </span>
               <div
-                class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-1fio4bh"
+                class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm"
                 data-testid="Link__external"
-                height="12"
-                width="12"
               >
-                <svg
-                  id="arrow-external"
-                  viewBox="0 0 20 20"
-                  x="0"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
-                  y="0"
+                <div
+                  style="height: 12px; width: 12px;"
                 >
-                  <path
-                    d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                  />
-                </svg>
+                  <svg
+                    id="arrow-external"
+                    style="height: 100%; width: 100%;"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
+                  >
+                    <path
+                      d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    />
+                  </svg>
+                </div>
               </div>
             </a>
           </div>
@@ -1689,32 +1755,35 @@ exports[`DelegateRow > should render when network requires vote amount 1`] = `
           >
             <div>
               <div
-                class="text-theme-warning-500 css-v0ob3f"
-                height="16"
-                width="16"
+                class="text-theme-warning-500"
               >
-                <svg
-                  viewBox="0 0 20 20"
-                  xmlns="http://www.w3.org/2000/svg"
+                <div
+                  style="height: 16px; width: 16px;"
                 >
-                  <g
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    transform="translate(600 -1329.038)"
+                  <svg
+                    style="height: 100%; width: 100%;"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
                   >
-                    <circle
-                      cx="-590"
-                      cy="1339.038"
-                      r="9"
-                    />
-                    <path
-                      d="M-592 1342.338v-6.5m4 6.5v-6.5"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </g>
-                </svg>
+                    <g
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      transform="translate(600 -1329.038)"
+                    >
+                      <circle
+                        cx="-590"
+                        cy="1339.038"
+                        r="9"
+                      />
+                      <path
+                        d="M-592 1342.338v-6.5m4 6.5v-6.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </g>
+                  </svg>
+                </div>
               </div>
             </div>
           </div>
@@ -1740,28 +1809,31 @@ exports[`DelegateRow > should render when network requires vote amount 1`] = `
                 </span>
               </span>
               <div
-                class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-1fio4bh"
+                class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm"
                 data-testid="Link__external"
-                height="12"
-                width="12"
               >
-                <svg
-                  id="arrow-external"
-                  viewBox="0 0 20 20"
-                  x="0"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
-                  y="0"
+                <div
+                  style="height: 12px; width: 12px;"
                 >
-                  <path
-                    d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                  />
-                </svg>
+                  <svg
+                    id="arrow-external"
+                    style="height: 100%; width: 100%;"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
+                  >
+                    <path
+                      d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    />
+                  </svg>
+                </div>
               </div>
             </a>
           </div>
