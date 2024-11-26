@@ -377,45 +377,47 @@ exports[`PageSkeleton > should render without profile 1`] = `
                       class="flex flex-col items-center space-y-2 text-center sm:px-4"
                     >
                       <div
-                        class="css-h1kfx5"
                         data-testid="icon-PersonLightGreen"
-                        height="24"
-                        width="24"
                       >
-                        <svg
-                          fill="none"
-                          height="24"
-                          viewBox="0 0 25 24"
-                          width="25"
-                          xmlns="http://www.w3.org/2000/svg"
+                        <div
+                          style="height: 24px; width: 24px;"
                         >
-                          <path
-                            clip-rule="evenodd"
-                            d="M12.5005 14.9307C15.3356 14.9307 17.6339 12.6325 17.6339 9.7974C17.6339 6.96233 15.3356 4.66406 12.5005 4.66406C9.66546 4.66406 7.36719 6.96233 7.36719 9.7974C7.36719 12.6325 9.66546 14.9307 12.5005 14.9307Z"
-                            fill="#E2F0E6"
-                            fill-rule="evenodd"
-                            stroke="#289548"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                          />
-                          <path
-                            d="M19.2609 20.6794C17.4721 18.8794 15.0393 17.8672 12.5016 17.8672C9.96387 17.8672 7.53099 18.8794 5.74219 20.6794"
-                            stroke="#289548"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                          />
-                          <path
-                            clip-rule="evenodd"
-                            d="M12.5 23C18.5751 23 23.5 18.0751 23.5 12C23.5 5.92487 18.5751 1 12.5 1C6.42487 1 1.5 5.92487 1.5 12C1.5 18.0751 6.42487 23 12.5 23Z"
-                            fill-rule="evenodd"
-                            stroke="#289548"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                          />
-                        </svg>
+                          <svg
+                            fill="none"
+                            height="24"
+                            style="height: 100%; width: 100%;"
+                            viewBox="0 0 25 24"
+                            width="25"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              clip-rule="evenodd"
+                              d="M12.5005 14.9307C15.3356 14.9307 17.6339 12.6325 17.6339 9.7974C17.6339 6.96233 15.3356 4.66406 12.5005 4.66406C9.66546 4.66406 7.36719 6.96233 7.36719 9.7974C7.36719 12.6325 9.66546 14.9307 12.5005 14.9307Z"
+                              fill="#E2F0E6"
+                              fill-rule="evenodd"
+                              stroke="#289548"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            />
+                            <path
+                              d="M19.2609 20.6794C17.4721 18.8794 15.0393 17.8672 12.5016 17.8672C9.96387 17.8672 7.53099 18.8794 5.74219 20.6794"
+                              stroke="#289548"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            />
+                            <path
+                              clip-rule="evenodd"
+                              d="M12.5 23C18.5751 23 23.5 18.0751 23.5 12C23.5 5.92487 18.5751 1 12.5 1C6.42487 1 1.5 5.92487 1.5 12C1.5 18.0751 6.42487 23 12.5 23Z"
+                              fill-rule="evenodd"
+                              stroke="#289548"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            />
+                          </svg>
+                        </div>
                       </div>
                     </div>
                     <div
@@ -471,37 +473,40 @@ exports[`PageSkeleton > should render without profile 1`] = `
                             class="h-10 w-10 bg-theme-secondary-100 dark:bg-theme-secondary-800"
                           />
                           <div
-                            class="mr-1.5 pr-1.5 text-theme-secondary-700 transition-colors duration-200 group-hover:text-theme-navy-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200 css-v0ob3f"
-                            height="16"
-                            width="16"
+                            class="mr-1.5 pr-1.5 text-theme-secondary-700 transition-colors duration-200 group-hover:text-theme-navy-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200"
                           >
-                            <svg
-                              fill="none"
-                              viewBox="0 0 20 20"
-                              xmlns="http://www.w3.org/2000/svg"
+                            <div
+                              style="height: 16px; width: 16px;"
                             >
-                              <circle
-                                cx="10.002"
-                                cy="2.99609"
-                                fill="currentColor"
-                                r="2"
-                                transform="rotate(90 10.002 2.99609)"
-                              />
-                              <circle
-                                cx="10.002"
-                                cy="9.99805"
-                                fill="currentColor"
-                                r="2"
-                                transform="rotate(90 10.002 9.99805)"
-                              />
-                              <circle
-                                cx="10.002"
-                                cy="17"
-                                fill="currentColor"
-                                r="2"
-                                transform="rotate(90 10.002 17)"
-                              />
-                            </svg>
+                              <svg
+                                fill="none"
+                                style="height: 100%; width: 100%;"
+                                viewBox="0 0 20 20"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <circle
+                                  cx="10.002"
+                                  cy="2.99609"
+                                  fill="currentColor"
+                                  r="2"
+                                  transform="rotate(90 10.002 2.99609)"
+                                />
+                                <circle
+                                  cx="10.002"
+                                  cy="9.99805"
+                                  fill="currentColor"
+                                  r="2"
+                                  transform="rotate(90 10.002 9.99805)"
+                                />
+                                <circle
+                                  cx="10.002"
+                                  cy="17"
+                                  fill="currentColor"
+                                  r="2"
+                                  transform="rotate(90 10.002 17)"
+                                />
+                              </svg>
+                            </div>
                           </div>
                         </div>
                         <div
@@ -512,37 +517,40 @@ exports[`PageSkeleton > should render without profile 1`] = `
                             class="h-10 w-10 bg-theme-secondary-100 dark:bg-theme-secondary-800"
                           />
                           <div
-                            class="mr-1.5 pr-1.5 text-theme-secondary-700 transition-colors duration-200 group-hover:text-theme-navy-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200 css-v0ob3f"
-                            height="16"
-                            width="16"
+                            class="mr-1.5 pr-1.5 text-theme-secondary-700 transition-colors duration-200 group-hover:text-theme-navy-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200"
                           >
-                            <svg
-                              fill="none"
-                              viewBox="0 0 20 20"
-                              xmlns="http://www.w3.org/2000/svg"
+                            <div
+                              style="height: 16px; width: 16px;"
                             >
-                              <circle
-                                cx="10.002"
-                                cy="2.99609"
-                                fill="currentColor"
-                                r="2"
-                                transform="rotate(90 10.002 2.99609)"
-                              />
-                              <circle
-                                cx="10.002"
-                                cy="9.99805"
-                                fill="currentColor"
-                                r="2"
-                                transform="rotate(90 10.002 9.99805)"
-                              />
-                              <circle
-                                cx="10.002"
-                                cy="17"
-                                fill="currentColor"
-                                r="2"
-                                transform="rotate(90 10.002 17)"
-                              />
-                            </svg>
+                              <svg
+                                fill="none"
+                                style="height: 100%; width: 100%;"
+                                viewBox="0 0 20 20"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <circle
+                                  cx="10.002"
+                                  cy="2.99609"
+                                  fill="currentColor"
+                                  r="2"
+                                  transform="rotate(90 10.002 2.99609)"
+                                />
+                                <circle
+                                  cx="10.002"
+                                  cy="9.99805"
+                                  fill="currentColor"
+                                  r="2"
+                                  transform="rotate(90 10.002 9.99805)"
+                                />
+                                <circle
+                                  cx="10.002"
+                                  cy="17"
+                                  fill="currentColor"
+                                  r="2"
+                                  transform="rotate(90 10.002 17)"
+                                />
+                              </svg>
+                            </div>
                           </div>
                         </div>
                       </div>

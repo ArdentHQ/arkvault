@@ -27,7 +27,7 @@ exports[`FilterNetwork > should render public networks 1`] = `
         data-testid="NetworkOption__ark.mainnet"
       >
         <div
-          class="relative border-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100 css-1nqcsx"
+          class="inline-flex items-center justify-center rounded-full border-2 align-middle transition-all h-11 w-11 px-2 py-1 ring-6 relative border-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100"
         >
           <div
             aria-label="ARK"
@@ -35,24 +35,27 @@ exports[`FilterNetwork > should render public networks 1`] = `
             data-testid="NetworkIcon-ARK-ark.mainnet"
           >
             <div
-              class="text-theme-secondary-300 css-1i4b0eq"
+              class="text-theme-secondary-300"
               data-testid="NetworkIcon__icon"
-              height="20"
-              width="20"
             >
-              <svg
-                id="ark"
-                viewBox="0 0 36.3 30.6"
-                x="0"
-                xml:space="preserve"
-                xmlns="http://www.w3.org/2000/svg"
-                y="0"
+              <div
+                style="height: 20px; width: 20px;"
               >
-                <path
-                  d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
-                  fill="currentColor"
-                />
-              </svg>
+                <svg
+                  id="ark"
+                  style="height: 100%; width: 100%;"
+                  viewBox="0 0 36.3 30.6"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <path
+                    d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </div>
             </div>
           </div>
           <span
@@ -67,7 +70,7 @@ exports[`FilterNetwork > should render public networks 1`] = `
         data-testid="NetworkOption__ark.devnet"
       >
         <div
-          class="relative border-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100 css-1nqcsx"
+          class="inline-flex items-center justify-center rounded-full border-2 align-middle transition-all h-11 w-11 px-2 py-1 ring-6 relative border-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100"
         >
           <div
             aria-label="ARK Devnet"
@@ -75,24 +78,27 @@ exports[`FilterNetwork > should render public networks 1`] = `
             data-testid="NetworkIcon-ARK-ark.devnet"
           >
             <div
-              class="text-theme-secondary-300 css-1i4b0eq"
+              class="text-theme-secondary-300"
               data-testid="NetworkIcon__icon"
-              height="20"
-              width="20"
             >
-              <svg
-                id="ark"
-                viewBox="0 0 36.3 30.6"
-                x="0"
-                xml:space="preserve"
-                xmlns="http://www.w3.org/2000/svg"
-                y="0"
+              <div
+                style="height: 20px; width: 20px;"
               >
-                <path
-                  d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
-                  fill="currentColor"
-                />
-              </svg>
+                <svg
+                  id="ark"
+                  style="height: 100%; width: 100%;"
+                  viewBox="0 0 36.3 30.6"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <path
+                    d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </div>
             </div>
           </div>
           <span
@@ -107,7 +113,7 @@ exports[`FilterNetwork > should render public networks 1`] = `
         data-testid="NetworkOption__mainsail.mainnet"
       >
         <div
-          class="relative border-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100 css-1nqcsx"
+          class="inline-flex items-center justify-center rounded-full border-2 align-middle transition-all h-11 w-11 px-2 py-1 ring-6 relative border-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100"
         >
           <div
             aria-label="Mainsail"
@@ -115,24 +121,27 @@ exports[`FilterNetwork > should render public networks 1`] = `
             data-testid="NetworkIcon-Mainsail-mainsail.mainnet"
           >
             <div
-              class="text-theme-secondary-300 css-1i4b0eq"
+              class="text-theme-secondary-300"
               data-testid="NetworkIcon__icon"
-              height="20"
-              width="20"
             >
-              <svg
-                id="ark"
-                viewBox="0 0 36.3 30.6"
-                x="0"
-                xml:space="preserve"
-                xmlns="http://www.w3.org/2000/svg"
-                y="0"
+              <div
+                style="height: 20px; width: 20px;"
               >
-                <path
-                  d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
-                  fill="currentColor"
-                />
-              </svg>
+                <svg
+                  id="ark"
+                  style="height: 100%; width: 100%;"
+                  viewBox="0 0 36.3 30.6"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <path
+                    d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </div>
             </div>
           </div>
           <span
@@ -147,7 +156,7 @@ exports[`FilterNetwork > should render public networks 1`] = `
         data-testid="NetworkOption__mainsail.devnet"
       >
         <div
-          class="relative border-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100 css-1nqcsx"
+          class="inline-flex items-center justify-center rounded-full border-2 align-middle transition-all h-11 w-11 px-2 py-1 ring-6 relative border-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100"
         >
           <div
             aria-label="Mainsail Devnet"
@@ -155,24 +164,27 @@ exports[`FilterNetwork > should render public networks 1`] = `
             data-testid="NetworkIcon-Mainsail-mainsail.devnet"
           >
             <div
-              class="text-theme-secondary-300 css-1i4b0eq"
+              class="text-theme-secondary-300"
               data-testid="NetworkIcon__icon"
-              height="20"
-              width="20"
             >
-              <svg
-                id="ark"
-                viewBox="0 0 36.3 30.6"
-                x="0"
-                xml:space="preserve"
-                xmlns="http://www.w3.org/2000/svg"
-                y="0"
+              <div
+                style="height: 20px; width: 20px;"
               >
-                <path
-                  d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
-                  fill="currentColor"
-                />
-              </svg>
+                <svg
+                  id="ark"
+                  style="height: 100%; width: 100%;"
+                  viewBox="0 0 36.3 30.6"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <path
+                    d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </div>
             </div>
           </div>
           <span
@@ -217,7 +229,7 @@ exports[`FilterNetworks > should render public and testnet networks 1`] = `
           data-testid="NetworkOption__ark.mainnet"
         >
           <div
-            class="relative border-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100 css-1nqcsx"
+            class="inline-flex items-center justify-center rounded-full border-2 align-middle transition-all h-11 w-11 px-2 py-1 ring-6 relative border-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100"
           >
             <div
               aria-label="ARK"
@@ -225,24 +237,27 @@ exports[`FilterNetworks > should render public and testnet networks 1`] = `
               data-testid="NetworkIcon-ARK-ark.mainnet"
             >
               <div
-                class="text-theme-secondary-300 css-1i4b0eq"
+                class="text-theme-secondary-300"
                 data-testid="NetworkIcon__icon"
-                height="20"
-                width="20"
               >
-                <svg
-                  id="ark"
-                  viewBox="0 0 36.3 30.6"
-                  x="0"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
-                  y="0"
+                <div
+                  style="height: 20px; width: 20px;"
                 >
-                  <path
-                    d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
-                    fill="currentColor"
-                  />
-                </svg>
+                  <svg
+                    id="ark"
+                    style="height: 100%; width: 100%;"
+                    viewBox="0 0 36.3 30.6"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
+                  >
+                    <path
+                      d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                </div>
               </div>
             </div>
             <span
@@ -257,7 +272,7 @@ exports[`FilterNetworks > should render public and testnet networks 1`] = `
           data-testid="NetworkOption__mainsail.mainnet"
         >
           <div
-            class="relative border-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100 css-1nqcsx"
+            class="inline-flex items-center justify-center rounded-full border-2 align-middle transition-all h-11 w-11 px-2 py-1 ring-6 relative border-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100"
           >
             <div
               aria-label="Mainsail"
@@ -265,24 +280,27 @@ exports[`FilterNetworks > should render public and testnet networks 1`] = `
               data-testid="NetworkIcon-Mainsail-mainsail.mainnet"
             >
               <div
-                class="text-theme-secondary-300 css-1i4b0eq"
+                class="text-theme-secondary-300"
                 data-testid="NetworkIcon__icon"
-                height="20"
-                width="20"
               >
-                <svg
-                  id="ark"
-                  viewBox="0 0 36.3 30.6"
-                  x="0"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
-                  y="0"
+                <div
+                  style="height: 20px; width: 20px;"
                 >
-                  <path
-                    d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
-                    fill="currentColor"
-                  />
-                </svg>
+                  <svg
+                    id="ark"
+                    style="height: 100%; width: 100%;"
+                    viewBox="0 0 36.3 30.6"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
+                  >
+                    <path
+                      d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                </div>
               </div>
             </div>
             <span
@@ -311,7 +329,7 @@ exports[`FilterNetworks > should render public and testnet networks 1`] = `
           data-testid="NetworkOption__ark.devnet"
         >
           <div
-            class="relative border-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100 css-1nqcsx"
+            class="inline-flex items-center justify-center rounded-full border-2 align-middle transition-all h-11 w-11 px-2 py-1 ring-6 relative border-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100"
           >
             <div
               aria-label="ARK Devnet"
@@ -319,24 +337,27 @@ exports[`FilterNetworks > should render public and testnet networks 1`] = `
               data-testid="NetworkIcon-ARK-ark.devnet"
             >
               <div
-                class="text-theme-secondary-300 css-1i4b0eq"
+                class="text-theme-secondary-300"
                 data-testid="NetworkIcon__icon"
-                height="20"
-                width="20"
               >
-                <svg
-                  id="ark"
-                  viewBox="0 0 36.3 30.6"
-                  x="0"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
-                  y="0"
+                <div
+                  style="height: 20px; width: 20px;"
                 >
-                  <path
-                    d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
-                    fill="currentColor"
-                  />
-                </svg>
+                  <svg
+                    id="ark"
+                    style="height: 100%; width: 100%;"
+                    viewBox="0 0 36.3 30.6"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
+                  >
+                    <path
+                      d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                </div>
               </div>
             </div>
             <span
@@ -351,7 +372,7 @@ exports[`FilterNetworks > should render public and testnet networks 1`] = `
           data-testid="NetworkOption__mainsail.devnet"
         >
           <div
-            class="relative border-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100 css-1nqcsx"
+            class="inline-flex items-center justify-center rounded-full border-2 align-middle transition-all h-11 w-11 px-2 py-1 ring-6 relative border-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100"
           >
             <div
               aria-label="Mainsail Devnet"
@@ -359,24 +380,27 @@ exports[`FilterNetworks > should render public and testnet networks 1`] = `
               data-testid="NetworkIcon-Mainsail-mainsail.devnet"
             >
               <div
-                class="text-theme-secondary-300 css-1i4b0eq"
+                class="text-theme-secondary-300"
                 data-testid="NetworkIcon__icon"
-                height="20"
-                width="20"
               >
-                <svg
-                  id="ark"
-                  viewBox="0 0 36.3 30.6"
-                  x="0"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
-                  y="0"
+                <div
+                  style="height: 20px; width: 20px;"
                 >
-                  <path
-                    d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
-                    fill="currentColor"
-                  />
-                </svg>
+                  <svg
+                    id="ark"
+                    style="height: 100%; width: 100%;"
+                    viewBox="0 0 36.3 30.6"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
+                  >
+                    <path
+                      d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                </div>
               </div>
             </div>
             <span
@@ -414,7 +438,7 @@ exports[`FilterNetworks > should toggle a testnet network option 1`] = `
           data-testid="NetworkOption__ark.mainnet"
         >
           <div
-            class="relative border-theme-primary-500 ring-theme-background duration-100 css-1nqcsx"
+            class="inline-flex items-center justify-center rounded-full border-2 align-middle transition-all h-11 w-11 px-2 py-1 ring-6 relative border-theme-primary-500 ring-theme-background duration-100"
           >
             <div
               aria-label="ARK"
@@ -422,51 +446,55 @@ exports[`FilterNetworks > should toggle a testnet network option 1`] = `
               data-testid="NetworkIcon-ARK-ark.mainnet"
             >
               <div
-                class="text-theme-primary-500 css-1i4b0eq"
+                class="text-theme-primary-500"
                 data-testid="NetworkIcon__icon"
-                height="20"
-                width="20"
               >
-                <svg
-                  id="ark"
-                  viewBox="0 0 36.3 30.6"
-                  x="0"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
-                  y="0"
+                <div
+                  style="height: 20px; width: 20px;"
                 >
-                  <path
-                    d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
-                    fill="currentColor"
-                  />
-                </svg>
+                  <svg
+                    id="ark"
+                    style="height: 100%; width: 100%;"
+                    viewBox="0 0 36.3 30.6"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
+                  >
+                    <path
+                      d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                </div>
               </div>
             </div>
             <span
               class="absolute bottom-0 right-0 h-5 w-5 translate-x-1/2 translate-y-1/2 transform shadow-[0_0_0_5px_theme-background] flex items-center justify-center rounded-full border-2 align-middle border-transparent bg-theme-primary-500 text-theme-primary-100"
             >
-              <div
-                class="css-15txs7d"
-                height="10"
-                width="10"
-              >
-                <svg
-                  id="check-mark-small"
-                  viewBox="0 0 10 10"
-                  x="0"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
-                  y="0"
+              <div>
+                <div
+                  style="height: 10px; width: 10px;"
                 >
-                  <path
-                    d="M9 1L3.444 8.658c-.222.337-.666.45-1 .225l-.11-.113L1 7.194"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                  />
-                </svg>
+                  <svg
+                    id="check-mark-small"
+                    style="height: 100%; width: 100%;"
+                    viewBox="0 0 10 10"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
+                  >
+                    <path
+                      d="M9 1L3.444 8.658c-.222.337-.666.45-1 .225l-.11-.113L1 7.194"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    />
+                  </svg>
+                </div>
               </div>
               <span />
             </span>
@@ -477,7 +505,7 @@ exports[`FilterNetworks > should toggle a testnet network option 1`] = `
           data-testid="NetworkOption__mainsail.mainnet"
         >
           <div
-            class="relative border-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100 css-1nqcsx"
+            class="inline-flex items-center justify-center rounded-full border-2 align-middle transition-all h-11 w-11 px-2 py-1 ring-6 relative border-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100"
           >
             <div
               aria-label="Mainsail"
@@ -485,24 +513,27 @@ exports[`FilterNetworks > should toggle a testnet network option 1`] = `
               data-testid="NetworkIcon-Mainsail-mainsail.mainnet"
             >
               <div
-                class="text-theme-secondary-300 css-1i4b0eq"
+                class="text-theme-secondary-300"
                 data-testid="NetworkIcon__icon"
-                height="20"
-                width="20"
               >
-                <svg
-                  id="ark"
-                  viewBox="0 0 36.3 30.6"
-                  x="0"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
-                  y="0"
+                <div
+                  style="height: 20px; width: 20px;"
                 >
-                  <path
-                    d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
-                    fill="currentColor"
-                  />
-                </svg>
+                  <svg
+                    id="ark"
+                    style="height: 100%; width: 100%;"
+                    viewBox="0 0 36.3 30.6"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
+                  >
+                    <path
+                      d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                </div>
               </div>
             </div>
             <span
@@ -531,7 +562,7 @@ exports[`FilterNetworks > should toggle a testnet network option 1`] = `
           data-testid="NetworkOption__ark.devnet"
         >
           <div
-            class="relative border-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100 css-1nqcsx"
+            class="inline-flex items-center justify-center rounded-full border-2 align-middle transition-all h-11 w-11 px-2 py-1 ring-6 relative border-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100"
           >
             <div
               aria-label="ARK Devnet"
@@ -539,24 +570,27 @@ exports[`FilterNetworks > should toggle a testnet network option 1`] = `
               data-testid="NetworkIcon-ARK-ark.devnet"
             >
               <div
-                class="text-theme-secondary-300 css-1i4b0eq"
+                class="text-theme-secondary-300"
                 data-testid="NetworkIcon__icon"
-                height="20"
-                width="20"
               >
-                <svg
-                  id="ark"
-                  viewBox="0 0 36.3 30.6"
-                  x="0"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
-                  y="0"
+                <div
+                  style="height: 20px; width: 20px;"
                 >
-                  <path
-                    d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
-                    fill="currentColor"
-                  />
-                </svg>
+                  <svg
+                    id="ark"
+                    style="height: 100%; width: 100%;"
+                    viewBox="0 0 36.3 30.6"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
+                  >
+                    <path
+                      d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                </div>
               </div>
             </div>
             <span
@@ -571,7 +605,7 @@ exports[`FilterNetworks > should toggle a testnet network option 1`] = `
           data-testid="NetworkOption__mainsail.devnet"
         >
           <div
-            class="relative border-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100 css-1nqcsx"
+            class="inline-flex items-center justify-center rounded-full border-2 align-middle transition-all h-11 w-11 px-2 py-1 ring-6 relative border-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100"
           >
             <div
               aria-label="Mainsail Devnet"
@@ -579,24 +613,27 @@ exports[`FilterNetworks > should toggle a testnet network option 1`] = `
               data-testid="NetworkIcon-Mainsail-mainsail.devnet"
             >
               <div
-                class="text-theme-secondary-300 css-1i4b0eq"
+                class="text-theme-secondary-300"
                 data-testid="NetworkIcon__icon"
-                height="20"
-                width="20"
               >
-                <svg
-                  id="ark"
-                  viewBox="0 0 36.3 30.6"
-                  x="0"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
-                  y="0"
+                <div
+                  style="height: 20px; width: 20px;"
                 >
-                  <path
-                    d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
-                    fill="currentColor"
-                  />
-                </svg>
+                  <svg
+                    id="ark"
+                    style="height: 100%; width: 100%;"
+                    viewBox="0 0 36.3 30.6"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
+                  >
+                    <path
+                      d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                </div>
               </div>
             </div>
             <span
@@ -626,7 +663,7 @@ exports[`FilterNetworks > should toggle view all 1`] = `
         Public Networks
       </div>
       <div
-        class="relative mr-5 cursor-pointer border-theme-primary-100 dark:border-theme-secondary-800 ring-theme-background duration-100 css-1nqcsx"
+        class="inline-flex items-center justify-center rounded-full border-2 align-middle transition-all h-11 w-11 px-2 py-1 ring-6 relative mr-5 cursor-pointer border-theme-primary-100 dark:border-theme-secondary-800 ring-theme-background duration-100"
         data-testid="network__viewall"
       >
         <div
@@ -638,27 +675,30 @@ exports[`FilterNetworks > should toggle view all 1`] = `
           class="absolute bottom-0 right-0 h-5 w-5 translate-x-1/2 translate-y-1/2 transform shadow-[0_0_0_5px_theme-background] flex items-center justify-center rounded-full border-2 align-middle border-theme-primary-700 bg-theme-primary-700 text-white"
         >
           <div
-            class="transition-transform rotate-180 css-15txs7d"
-            height="10"
-            width="10"
+            class="transition-transform rotate-180"
           >
-            <svg
-              id="chevron-down-small"
-              viewBox="0 0 10 10"
-              x="0"
-              xml:space="preserve"
-              xmlns="http://www.w3.org/2000/svg"
-              y="0"
+            <div
+              style="height: 10px; width: 10px;"
             >
-              <path
-                d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
-                fill="none"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-              />
-            </svg>
+              <svg
+                id="chevron-down-small"
+                style="height: 100%; width: 100%;"
+                viewBox="0 0 10 10"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <path
+                  d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                />
+              </svg>
+            </div>
           </div>
           <span />
         </span>
@@ -672,7 +712,7 @@ exports[`FilterNetworks > should toggle view all 1`] = `
           data-testid="NetworkOption__ark.mainnet"
         >
           <div
-            class="relative border-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100 css-1nqcsx"
+            class="inline-flex items-center justify-center rounded-full border-2 align-middle transition-all h-11 w-11 px-2 py-1 ring-6 relative border-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100"
           >
             <div
               aria-label="ARK"
@@ -680,24 +720,27 @@ exports[`FilterNetworks > should toggle view all 1`] = `
               data-testid="NetworkIcon-ARK-ark.mainnet"
             >
               <div
-                class="text-theme-secondary-300 css-1i4b0eq"
+                class="text-theme-secondary-300"
                 data-testid="NetworkIcon__icon"
-                height="20"
-                width="20"
               >
-                <svg
-                  id="ark"
-                  viewBox="0 0 36.3 30.6"
-                  x="0"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
-                  y="0"
+                <div
+                  style="height: 20px; width: 20px;"
                 >
-                  <path
-                    d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
-                    fill="currentColor"
-                  />
-                </svg>
+                  <svg
+                    id="ark"
+                    style="height: 100%; width: 100%;"
+                    viewBox="0 0 36.3 30.6"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
+                  >
+                    <path
+                      d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                </div>
               </div>
             </div>
             <span
@@ -712,7 +755,7 @@ exports[`FilterNetworks > should toggle view all 1`] = `
           data-testid="NetworkOption__ark.mainnet"
         >
           <div
-            class="relative border-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100 css-1nqcsx"
+            class="inline-flex items-center justify-center rounded-full border-2 align-middle transition-all h-11 w-11 px-2 py-1 ring-6 relative border-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100"
           >
             <div
               aria-label="ARK"
@@ -720,24 +763,27 @@ exports[`FilterNetworks > should toggle view all 1`] = `
               data-testid="NetworkIcon-ARK-ark.mainnet"
             >
               <div
-                class="text-theme-secondary-300 css-1i4b0eq"
+                class="text-theme-secondary-300"
                 data-testid="NetworkIcon__icon"
-                height="20"
-                width="20"
               >
-                <svg
-                  id="ark"
-                  viewBox="0 0 36.3 30.6"
-                  x="0"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
-                  y="0"
+                <div
+                  style="height: 20px; width: 20px;"
                 >
-                  <path
-                    d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
-                    fill="currentColor"
-                  />
-                </svg>
+                  <svg
+                    id="ark"
+                    style="height: 100%; width: 100%;"
+                    viewBox="0 0 36.3 30.6"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
+                  >
+                    <path
+                      d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                </div>
               </div>
             </div>
             <span
@@ -752,7 +798,7 @@ exports[`FilterNetworks > should toggle view all 1`] = `
           data-testid="NetworkOption__mainsail.mainnet"
         >
           <div
-            class="relative border-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100 css-1nqcsx"
+            class="inline-flex items-center justify-center rounded-full border-2 align-middle transition-all h-11 w-11 px-2 py-1 ring-6 relative border-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100"
           >
             <div
               aria-label="Mainsail"
@@ -760,24 +806,27 @@ exports[`FilterNetworks > should toggle view all 1`] = `
               data-testid="NetworkIcon-Mainsail-mainsail.mainnet"
             >
               <div
-                class="text-theme-secondary-300 css-1i4b0eq"
+                class="text-theme-secondary-300"
                 data-testid="NetworkIcon__icon"
-                height="20"
-                width="20"
               >
-                <svg
-                  id="ark"
-                  viewBox="0 0 36.3 30.6"
-                  x="0"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
-                  y="0"
+                <div
+                  style="height: 20px; width: 20px;"
                 >
-                  <path
-                    d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
-                    fill="currentColor"
-                  />
-                </svg>
+                  <svg
+                    id="ark"
+                    style="height: 100%; width: 100%;"
+                    viewBox="0 0 36.3 30.6"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
+                  >
+                    <path
+                      d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                </div>
               </div>
             </div>
             <span
@@ -792,8 +841,7 @@ exports[`FilterNetworks > should toggle view all 1`] = `
         class="mt-4 inline-flex cursor-pointer items-center space-x-3 text-theme-secondary-text"
       >
         <input
-          class="css-kf7z38"
-          color="success"
+          class="custom-checkbox !h-5 !w-5 cursor-pointer !rounded !border-2 transition duration-150 ease-in-out focus:!ring-theme-primary-400 focus:!ring-offset-0 disabled:cursor-not-allowed disabled:border-theme-secondary-300 disabled:bg-theme-secondary-200 disabled:dark:border-theme-secondary-600 disabled:dark:bg-theme-secondary-800 [&:not(:checked)]:border-theme-secondary-300 [&:not(:checked)]:!bg-transparent [&:not(:checked)]:dark:border-theme-secondary-600 checked:text-theme-primary-600 checked:hover:text-theme-primary-700 [&:not(:checked)]:hover:border-theme-primary-600"
           data-testid="FilterNetwork__select-all-checkbox"
           type="checkbox"
         />
@@ -811,7 +859,7 @@ exports[`FilterNetworks > should toggle view all 1`] = `
         Development Networks
       </div>
       <div
-        class="relative mr-5 cursor-pointer border-theme-primary-100 dark:border-theme-secondary-800 ring-theme-background duration-100 css-1nqcsx"
+        class="inline-flex items-center justify-center rounded-full border-2 align-middle transition-all h-11 w-11 px-2 py-1 ring-6 relative mr-5 cursor-pointer border-theme-primary-100 dark:border-theme-secondary-800 ring-theme-background duration-100"
         data-testid="network__viewall"
       >
         <div
@@ -823,27 +871,30 @@ exports[`FilterNetworks > should toggle view all 1`] = `
           class="absolute bottom-0 right-0 h-5 w-5 translate-x-1/2 translate-y-1/2 transform shadow-[0_0_0_5px_theme-background] flex items-center justify-center rounded-full border-2 bg-theme-background align-middle border-theme-primary-100 text-theme-primary-700 dark:border-theme-secondary-800"
         >
           <div
-            class="transition-transform css-15txs7d"
-            height="10"
-            width="10"
+            class="transition-transform"
           >
-            <svg
-              id="chevron-down-small"
-              viewBox="0 0 10 10"
-              x="0"
-              xml:space="preserve"
-              xmlns="http://www.w3.org/2000/svg"
-              y="0"
+            <div
+              style="height: 10px; width: 10px;"
             >
-              <path
-                d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
-                fill="none"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-              />
-            </svg>
+              <svg
+                id="chevron-down-small"
+                style="height: 100%; width: 100%;"
+                viewBox="0 0 10 10"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <path
+                  d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                />
+              </svg>
+            </div>
           </div>
           <span />
         </span>
@@ -857,7 +908,7 @@ exports[`FilterNetworks > should toggle view all 1`] = `
           data-testid="NetworkOption__ark.devnet"
         >
           <div
-            class="relative border-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100 css-1nqcsx"
+            class="inline-flex items-center justify-center rounded-full border-2 align-middle transition-all h-11 w-11 px-2 py-1 ring-6 relative border-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100"
           >
             <div
               aria-label="ARK Devnet"
@@ -865,24 +916,27 @@ exports[`FilterNetworks > should toggle view all 1`] = `
               data-testid="NetworkIcon-ARK-ark.devnet"
             >
               <div
-                class="text-theme-secondary-300 css-1i4b0eq"
+                class="text-theme-secondary-300"
                 data-testid="NetworkIcon__icon"
-                height="20"
-                width="20"
               >
-                <svg
-                  id="ark"
-                  viewBox="0 0 36.3 30.6"
-                  x="0"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
-                  y="0"
+                <div
+                  style="height: 20px; width: 20px;"
                 >
-                  <path
-                    d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
-                    fill="currentColor"
-                  />
-                </svg>
+                  <svg
+                    id="ark"
+                    style="height: 100%; width: 100%;"
+                    viewBox="0 0 36.3 30.6"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
+                  >
+                    <path
+                      d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                </div>
               </div>
             </div>
             <span
@@ -897,7 +951,7 @@ exports[`FilterNetworks > should toggle view all 1`] = `
           data-testid="NetworkOption__mainsail.devnet"
         >
           <div
-            class="relative border-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100 css-1nqcsx"
+            class="inline-flex items-center justify-center rounded-full border-2 align-middle transition-all h-11 w-11 px-2 py-1 ring-6 relative border-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100"
           >
             <div
               aria-label="Mainsail Devnet"
@@ -905,24 +959,27 @@ exports[`FilterNetworks > should toggle view all 1`] = `
               data-testid="NetworkIcon-Mainsail-mainsail.devnet"
             >
               <div
-                class="text-theme-secondary-300 css-1i4b0eq"
+                class="text-theme-secondary-300"
                 data-testid="NetworkIcon__icon"
-                height="20"
-                width="20"
               >
-                <svg
-                  id="ark"
-                  viewBox="0 0 36.3 30.6"
-                  x="0"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
-                  y="0"
+                <div
+                  style="height: 20px; width: 20px;"
                 >
-                  <path
-                    d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
-                    fill="currentColor"
-                  />
-                </svg>
+                  <svg
+                    id="ark"
+                    style="height: 100%; width: 100%;"
+                    viewBox="0 0 36.3 30.6"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
+                  >
+                    <path
+                      d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                </div>
               </div>
             </div>
             <span
@@ -952,7 +1009,7 @@ exports[`FilterNetworks > should toggle view all 2`] = `
         Public Networks
       </div>
       <div
-        class="relative mr-5 cursor-pointer border-theme-primary-100 dark:border-theme-secondary-800 ring-theme-background duration-100 css-1nqcsx"
+        class="inline-flex items-center justify-center rounded-full border-2 align-middle transition-all h-11 w-11 px-2 py-1 ring-6 relative mr-5 cursor-pointer border-theme-primary-100 dark:border-theme-secondary-800 ring-theme-background duration-100"
         data-testid="network__viewall"
       >
         <div
@@ -964,27 +1021,30 @@ exports[`FilterNetworks > should toggle view all 2`] = `
           class="absolute bottom-0 right-0 h-5 w-5 translate-x-1/2 translate-y-1/2 transform shadow-[0_0_0_5px_theme-background] flex items-center justify-center rounded-full border-2 bg-theme-background align-middle border-theme-primary-100 text-theme-primary-700 dark:border-theme-secondary-800"
         >
           <div
-            class="transition-transform css-15txs7d"
-            height="10"
-            width="10"
+            class="transition-transform"
           >
-            <svg
-              id="chevron-down-small"
-              viewBox="0 0 10 10"
-              x="0"
-              xml:space="preserve"
-              xmlns="http://www.w3.org/2000/svg"
-              y="0"
+            <div
+              style="height: 10px; width: 10px;"
             >
-              <path
-                d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
-                fill="none"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-              />
-            </svg>
+              <svg
+                id="chevron-down-small"
+                style="height: 100%; width: 100%;"
+                viewBox="0 0 10 10"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <path
+                  d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                />
+              </svg>
+            </div>
           </div>
           <span />
         </span>
@@ -998,7 +1058,7 @@ exports[`FilterNetworks > should toggle view all 2`] = `
           data-testid="NetworkOption__ark.mainnet"
         >
           <div
-            class="relative border-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100 css-1nqcsx"
+            class="inline-flex items-center justify-center rounded-full border-2 align-middle transition-all h-11 w-11 px-2 py-1 ring-6 relative border-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100"
           >
             <div
               aria-label="ARK"
@@ -1006,24 +1066,27 @@ exports[`FilterNetworks > should toggle view all 2`] = `
               data-testid="NetworkIcon-ARK-ark.mainnet"
             >
               <div
-                class="text-theme-secondary-300 css-1i4b0eq"
+                class="text-theme-secondary-300"
                 data-testid="NetworkIcon__icon"
-                height="20"
-                width="20"
               >
-                <svg
-                  id="ark"
-                  viewBox="0 0 36.3 30.6"
-                  x="0"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
-                  y="0"
+                <div
+                  style="height: 20px; width: 20px;"
                 >
-                  <path
-                    d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
-                    fill="currentColor"
-                  />
-                </svg>
+                  <svg
+                    id="ark"
+                    style="height: 100%; width: 100%;"
+                    viewBox="0 0 36.3 30.6"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
+                  >
+                    <path
+                      d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                </div>
               </div>
             </div>
             <span
@@ -1038,7 +1101,7 @@ exports[`FilterNetworks > should toggle view all 2`] = `
           data-testid="NetworkOption__ark.mainnet"
         >
           <div
-            class="relative border-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100 css-1nqcsx"
+            class="inline-flex items-center justify-center rounded-full border-2 align-middle transition-all h-11 w-11 px-2 py-1 ring-6 relative border-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100"
           >
             <div
               aria-label="ARK"
@@ -1046,24 +1109,27 @@ exports[`FilterNetworks > should toggle view all 2`] = `
               data-testid="NetworkIcon-ARK-ark.mainnet"
             >
               <div
-                class="text-theme-secondary-300 css-1i4b0eq"
+                class="text-theme-secondary-300"
                 data-testid="NetworkIcon__icon"
-                height="20"
-                width="20"
               >
-                <svg
-                  id="ark"
-                  viewBox="0 0 36.3 30.6"
-                  x="0"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
-                  y="0"
+                <div
+                  style="height: 20px; width: 20px;"
                 >
-                  <path
-                    d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
-                    fill="currentColor"
-                  />
-                </svg>
+                  <svg
+                    id="ark"
+                    style="height: 100%; width: 100%;"
+                    viewBox="0 0 36.3 30.6"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
+                  >
+                    <path
+                      d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                </div>
               </div>
             </div>
             <span
@@ -1078,7 +1144,7 @@ exports[`FilterNetworks > should toggle view all 2`] = `
           data-testid="NetworkOption__mainsail.mainnet"
         >
           <div
-            class="relative border-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100 css-1nqcsx"
+            class="inline-flex items-center justify-center rounded-full border-2 align-middle transition-all h-11 w-11 px-2 py-1 ring-6 relative border-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100"
           >
             <div
               aria-label="Mainsail"
@@ -1086,24 +1152,27 @@ exports[`FilterNetworks > should toggle view all 2`] = `
               data-testid="NetworkIcon-Mainsail-mainsail.mainnet"
             >
               <div
-                class="text-theme-secondary-300 css-1i4b0eq"
+                class="text-theme-secondary-300"
                 data-testid="NetworkIcon__icon"
-                height="20"
-                width="20"
               >
-                <svg
-                  id="ark"
-                  viewBox="0 0 36.3 30.6"
-                  x="0"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
-                  y="0"
+                <div
+                  style="height: 20px; width: 20px;"
                 >
-                  <path
-                    d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
-                    fill="currentColor"
-                  />
-                </svg>
+                  <svg
+                    id="ark"
+                    style="height: 100%; width: 100%;"
+                    viewBox="0 0 36.3 30.6"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
+                  >
+                    <path
+                      d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                </div>
               </div>
             </div>
             <span
@@ -1124,7 +1193,7 @@ exports[`FilterNetworks > should toggle view all 2`] = `
         Development Networks
       </div>
       <div
-        class="relative mr-5 cursor-pointer border-theme-primary-100 dark:border-theme-secondary-800 ring-theme-background duration-100 css-1nqcsx"
+        class="inline-flex items-center justify-center rounded-full border-2 align-middle transition-all h-11 w-11 px-2 py-1 ring-6 relative mr-5 cursor-pointer border-theme-primary-100 dark:border-theme-secondary-800 ring-theme-background duration-100"
         data-testid="network__viewall"
       >
         <div
@@ -1136,27 +1205,30 @@ exports[`FilterNetworks > should toggle view all 2`] = `
           class="absolute bottom-0 right-0 h-5 w-5 translate-x-1/2 translate-y-1/2 transform shadow-[0_0_0_5px_theme-background] flex items-center justify-center rounded-full border-2 bg-theme-background align-middle border-theme-primary-100 text-theme-primary-700 dark:border-theme-secondary-800"
         >
           <div
-            class="transition-transform css-15txs7d"
-            height="10"
-            width="10"
+            class="transition-transform"
           >
-            <svg
-              id="chevron-down-small"
-              viewBox="0 0 10 10"
-              x="0"
-              xml:space="preserve"
-              xmlns="http://www.w3.org/2000/svg"
-              y="0"
+            <div
+              style="height: 10px; width: 10px;"
             >
-              <path
-                d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
-                fill="none"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-              />
-            </svg>
+              <svg
+                id="chevron-down-small"
+                style="height: 100%; width: 100%;"
+                viewBox="0 0 10 10"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <path
+                  d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                />
+              </svg>
+            </div>
           </div>
           <span />
         </span>
@@ -1170,7 +1242,7 @@ exports[`FilterNetworks > should toggle view all 2`] = `
           data-testid="NetworkOption__ark.devnet"
         >
           <div
-            class="relative border-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100 css-1nqcsx"
+            class="inline-flex items-center justify-center rounded-full border-2 align-middle transition-all h-11 w-11 px-2 py-1 ring-6 relative border-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100"
           >
             <div
               aria-label="ARK Devnet"
@@ -1178,24 +1250,27 @@ exports[`FilterNetworks > should toggle view all 2`] = `
               data-testid="NetworkIcon-ARK-ark.devnet"
             >
               <div
-                class="text-theme-secondary-300 css-1i4b0eq"
+                class="text-theme-secondary-300"
                 data-testid="NetworkIcon__icon"
-                height="20"
-                width="20"
               >
-                <svg
-                  id="ark"
-                  viewBox="0 0 36.3 30.6"
-                  x="0"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
-                  y="0"
+                <div
+                  style="height: 20px; width: 20px;"
                 >
-                  <path
-                    d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
-                    fill="currentColor"
-                  />
-                </svg>
+                  <svg
+                    id="ark"
+                    style="height: 100%; width: 100%;"
+                    viewBox="0 0 36.3 30.6"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
+                  >
+                    <path
+                      d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                </div>
               </div>
             </div>
             <span
@@ -1210,7 +1285,7 @@ exports[`FilterNetworks > should toggle view all 2`] = `
           data-testid="NetworkOption__mainsail.devnet"
         >
           <div
-            class="relative border-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100 css-1nqcsx"
+            class="inline-flex items-center justify-center rounded-full border-2 align-middle transition-all h-11 w-11 px-2 py-1 ring-6 relative border-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100"
           >
             <div
               aria-label="Mainsail Devnet"
@@ -1218,24 +1293,27 @@ exports[`FilterNetworks > should toggle view all 2`] = `
               data-testid="NetworkIcon-Mainsail-mainsail.devnet"
             >
               <div
-                class="text-theme-secondary-300 css-1i4b0eq"
+                class="text-theme-secondary-300"
                 data-testid="NetworkIcon__icon"
-                height="20"
-                width="20"
               >
-                <svg
-                  id="ark"
-                  viewBox="0 0 36.3 30.6"
-                  x="0"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
-                  y="0"
+                <div
+                  style="height: 20px; width: 20px;"
                 >
-                  <path
-                    d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
-                    fill="currentColor"
-                  />
-                </svg>
+                  <svg
+                    id="ark"
+                    style="height: 100%; width: 100%;"
+                    viewBox="0 0 36.3 30.6"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
+                  >
+                    <path
+                      d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                </div>
               </div>
             </div>
             <span
@@ -1262,7 +1340,7 @@ exports[`NetworkOptions > should render available networks options 1`] = `
       data-testid="NetworkOption__ark.mainnet"
     >
       <div
-        class="relative border-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100 css-1nqcsx"
+        class="inline-flex items-center justify-center rounded-full border-2 align-middle transition-all h-11 w-11 px-2 py-1 ring-6 relative border-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100"
       >
         <div
           aria-label="ARK"
@@ -1270,24 +1348,27 @@ exports[`NetworkOptions > should render available networks options 1`] = `
           data-testid="NetworkIcon-ARK-ark.mainnet"
         >
           <div
-            class="text-theme-secondary-300 css-1i4b0eq"
+            class="text-theme-secondary-300"
             data-testid="NetworkIcon__icon"
-            height="20"
-            width="20"
           >
-            <svg
-              id="ark"
-              viewBox="0 0 36.3 30.6"
-              x="0"
-              xml:space="preserve"
-              xmlns="http://www.w3.org/2000/svg"
-              y="0"
+            <div
+              style="height: 20px; width: 20px;"
             >
-              <path
-                d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
-                fill="currentColor"
-              />
-            </svg>
+              <svg
+                id="ark"
+                style="height: 100%; width: 100%;"
+                viewBox="0 0 36.3 30.6"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <path
+                  d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
+                  fill="currentColor"
+                />
+              </svg>
+            </div>
           </div>
         </div>
         <span
@@ -1302,7 +1383,7 @@ exports[`NetworkOptions > should render available networks options 1`] = `
       data-testid="NetworkOption__ark.devnet"
     >
       <div
-        class="relative border-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100 css-1nqcsx"
+        class="inline-flex items-center justify-center rounded-full border-2 align-middle transition-all h-11 w-11 px-2 py-1 ring-6 relative border-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100"
       >
         <div
           aria-label="ARK Devnet"
@@ -1310,24 +1391,27 @@ exports[`NetworkOptions > should render available networks options 1`] = `
           data-testid="NetworkIcon-ARK-ark.devnet"
         >
           <div
-            class="text-theme-secondary-300 css-1i4b0eq"
+            class="text-theme-secondary-300"
             data-testid="NetworkIcon__icon"
-            height="20"
-            width="20"
           >
-            <svg
-              id="ark"
-              viewBox="0 0 36.3 30.6"
-              x="0"
-              xml:space="preserve"
-              xmlns="http://www.w3.org/2000/svg"
-              y="0"
+            <div
+              style="height: 20px; width: 20px;"
             >
-              <path
-                d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
-                fill="currentColor"
-              />
-            </svg>
+              <svg
+                id="ark"
+                style="height: 100%; width: 100%;"
+                viewBox="0 0 36.3 30.6"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <path
+                  d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
+                  fill="currentColor"
+                />
+              </svg>
+            </div>
           </div>
         </div>
         <span
@@ -1342,7 +1426,7 @@ exports[`NetworkOptions > should render available networks options 1`] = `
       data-testid="NetworkOption__mainsail.mainnet"
     >
       <div
-        class="relative border-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100 css-1nqcsx"
+        class="inline-flex items-center justify-center rounded-full border-2 align-middle transition-all h-11 w-11 px-2 py-1 ring-6 relative border-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100"
       >
         <div
           aria-label="Mainsail"
@@ -1350,24 +1434,27 @@ exports[`NetworkOptions > should render available networks options 1`] = `
           data-testid="NetworkIcon-Mainsail-mainsail.mainnet"
         >
           <div
-            class="text-theme-secondary-300 css-1i4b0eq"
+            class="text-theme-secondary-300"
             data-testid="NetworkIcon__icon"
-            height="20"
-            width="20"
           >
-            <svg
-              id="ark"
-              viewBox="0 0 36.3 30.6"
-              x="0"
-              xml:space="preserve"
-              xmlns="http://www.w3.org/2000/svg"
-              y="0"
+            <div
+              style="height: 20px; width: 20px;"
             >
-              <path
-                d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
-                fill="currentColor"
-              />
-            </svg>
+              <svg
+                id="ark"
+                style="height: 100%; width: 100%;"
+                viewBox="0 0 36.3 30.6"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <path
+                  d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
+                  fill="currentColor"
+                />
+              </svg>
+            </div>
           </div>
         </div>
         <span
@@ -1382,7 +1469,7 @@ exports[`NetworkOptions > should render available networks options 1`] = `
       data-testid="NetworkOption__mainsail.devnet"
     >
       <div
-        class="relative border-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100 css-1nqcsx"
+        class="inline-flex items-center justify-center rounded-full border-2 align-middle transition-all h-11 w-11 px-2 py-1 ring-6 relative border-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100"
       >
         <div
           aria-label="Mainsail Devnet"
@@ -1390,24 +1477,27 @@ exports[`NetworkOptions > should render available networks options 1`] = `
           data-testid="NetworkIcon-Mainsail-mainsail.devnet"
         >
           <div
-            class="text-theme-secondary-300 css-1i4b0eq"
+            class="text-theme-secondary-300"
             data-testid="NetworkIcon__icon"
-            height="20"
-            width="20"
           >
-            <svg
-              id="ark"
-              viewBox="0 0 36.3 30.6"
-              x="0"
-              xml:space="preserve"
-              xmlns="http://www.w3.org/2000/svg"
-              y="0"
+            <div
+              style="height: 20px; width: 20px;"
             >
-              <path
-                d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
-                fill="currentColor"
-              />
-            </svg>
+              <svg
+                id="ark"
+                style="height: 100%; width: 100%;"
+                viewBox="0 0 36.3 30.6"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <path
+                  d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
+                  fill="currentColor"
+                />
+              </svg>
+            </div>
           </div>
         </div>
         <span
@@ -1433,7 +1523,7 @@ exports[`NetworkOptions > should render empty 1`] = `
 exports[`ToggleAllOption > should render 1`] = `
 <div>
   <div
-    class="relative mr-5 cursor-pointer border-theme-primary-100 dark:border-theme-secondary-800 ring-theme-background duration-100 css-1nqcsx"
+    class="inline-flex items-center justify-center rounded-full border-2 align-middle transition-all h-11 w-11 px-2 py-1 ring-6 relative mr-5 cursor-pointer border-theme-primary-100 dark:border-theme-secondary-800 ring-theme-background duration-100"
     data-testid="network__viewall"
   >
     <div
@@ -1445,27 +1535,30 @@ exports[`ToggleAllOption > should render 1`] = `
       class="absolute bottom-0 right-0 h-5 w-5 translate-x-1/2 translate-y-1/2 transform shadow-[0_0_0_5px_theme-background] flex items-center justify-center rounded-full border-2 bg-theme-background align-middle border-theme-primary-100 text-theme-primary-700 dark:border-theme-secondary-800"
     >
       <div
-        class="transition-transform css-15txs7d"
-        height="10"
-        width="10"
+        class="transition-transform"
       >
-        <svg
-          id="chevron-down-small"
-          viewBox="0 0 10 10"
-          x="0"
-          xml:space="preserve"
-          xmlns="http://www.w3.org/2000/svg"
-          y="0"
+        <div
+          style="height: 10px; width: 10px;"
         >
-          <path
-            d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
-            fill="none"
-            stroke="currentColor"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-          />
-        </svg>
+          <svg
+            id="chevron-down-small"
+            style="height: 100%; width: 100%;"
+            viewBox="0 0 10 10"
+            x="0"
+            xml:space="preserve"
+            xmlns="http://www.w3.org/2000/svg"
+            y="0"
+          >
+            <path
+              d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+            />
+          </svg>
+        </div>
       </div>
       <span />
     </span>
@@ -1478,7 +1571,7 @@ exports[`ToggleAllOption > should render hidden 1`] = `<div />`;
 exports[`ToggleAllOption > should render selected 1`] = `
 <div>
   <div
-    class="relative mr-5 cursor-pointer border-theme-primary-100 dark:border-theme-secondary-800 ring-theme-background duration-100 css-1nqcsx"
+    class="inline-flex items-center justify-center rounded-full border-2 align-middle transition-all h-11 w-11 px-2 py-1 ring-6 relative mr-5 cursor-pointer border-theme-primary-100 dark:border-theme-secondary-800 ring-theme-background duration-100"
     data-testid="network__viewall"
   >
     <div
@@ -1490,27 +1583,30 @@ exports[`ToggleAllOption > should render selected 1`] = `
       class="absolute bottom-0 right-0 h-5 w-5 translate-x-1/2 translate-y-1/2 transform shadow-[0_0_0_5px_theme-background] flex items-center justify-center rounded-full border-2 align-middle border-theme-primary-700 bg-theme-primary-700 text-white"
     >
       <div
-        class="transition-transform rotate-180 css-15txs7d"
-        height="10"
-        width="10"
+        class="transition-transform rotate-180"
       >
-        <svg
-          id="chevron-down-small"
-          viewBox="0 0 10 10"
-          x="0"
-          xml:space="preserve"
-          xmlns="http://www.w3.org/2000/svg"
-          y="0"
+        <div
+          style="height: 10px; width: 10px;"
         >
-          <path
-            d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
-            fill="none"
-            stroke="currentColor"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-          />
-        </svg>
+          <svg
+            id="chevron-down-small"
+            style="height: 100%; width: 100%;"
+            viewBox="0 0 10 10"
+            x="0"
+            xml:space="preserve"
+            xmlns="http://www.w3.org/2000/svg"
+            y="0"
+          >
+            <path
+              d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+            />
+          </svg>
+        </div>
       </div>
       <span />
     </span>

@@ -1,26 +1,34 @@
 import { get } from "@ardenthq/sdk-helpers";
 import React from "react";
 import { useFormContext } from "react-hook-form";
-import tw, { styled } from "twin.macro";
 
 import { FormFieldProvider } from "./useFormField";
+import { twMerge } from "tailwind-merge";
+import cn from "classnames";
 
 type FormFieldProperties = {
 	name: string;
 	disableHover?: boolean;
 } & React.FieldsetHTMLAttributes<any>;
 
-export const FormFieldStyled = styled.fieldset<{ isInvalid: boolean; disableHover: boolean }>`
-	&:hover .FormLabel {
-		${({ isInvalid, disableHover }) => !isInvalid && !disableHover && tw`text-theme-primary-600`}
-	}
-	.FormLabel {
-		${({ isInvalid }) => isInvalid && tw`text-theme-danger-500`};
-	}
-	&:focus-within .FormLabel {
-		${({ isInvalid }) => (isInvalid ? tw`text-theme-danger-500` : tw`text-theme-primary-600`)}
-	}
-`;
+export const FormFieldStyled = ({
+	isInvalid,
+	disableHover,
+	...props
+}: { isInvalid: boolean; disableHover: boolean } & React.FieldsetHTMLAttributes<HTMLFieldSetElement>) => (
+	<fieldset
+		{...props}
+		className={twMerge(
+			cn({
+				"[&>.FormLabel]:text-theme-danger-500": isInvalid,
+				"[&>.FormLabel]:text-theme-primary-600": !isInvalid && !disableHover,
+				"focus-within:[&>.FormLabel]:text-theme-danger-500": isInvalid,
+				"focus-within:[&>.FormLabel]:text-theme-primary-600": !isInvalid,
+			}),
+			props.className,
+		)}
+	/>
+);
 
 export const FormField: React.FC<FormFieldProperties> = ({ name, disableHover = false, ...properties }) => {
 	const FormProvider = useFormContext();

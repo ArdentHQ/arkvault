@@ -15,47 +15,50 @@ exports[`SuccessStep > should render (lg) 1`] = `
           class="flex items-center gap-3"
         >
           <div
-            class="text-theme-success-100 dark:text-theme-success-900 css-h1kfx5"
+            class="text-theme-success-100 dark:text-theme-success-900"
             data-testid="icon-Completed"
-            height="24"
-            width="24"
           >
-            <svg
-              fill="none"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
+            <div
+              style="height: 24px; width: 24px;"
             >
-              <circle
-                cx="12"
-                cy="12"
-                fill="currentColor"
-                r="11"
-                stroke="#289548"
-                stroke-linejoin="round"
-                stroke-width="2"
-              />
-              <path
-                d="M18.4034 8.26562L12.3234 16.4256C12.1634 16.5856 12.0034 16.7456 11.7634 16.7456C11.5234 16.7456 11.2834 16.6656 11.1234 16.5056L9.52344 14.9056"
-                stroke="#289548"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-              />
-              <path
-                d="M5.59375 14.9766L7.19375 16.5766C7.35375 16.7366 7.51375 16.8166 7.75375 16.8166C7.83375 16.8166 7.99375 16.8166 8.07375 16.7366"
-                stroke="#289548"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-              />
-              <path
-                d="M14.3912 8.26562L11.0312 12.7456"
-                stroke="#289548"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-              />
-            </svg>
+              <svg
+                fill="none"
+                style="height: 100%; width: 100%;"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle
+                  cx="12"
+                  cy="12"
+                  fill="currentColor"
+                  r="11"
+                  stroke="#289548"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                />
+                <path
+                  d="M18.4034 8.26562L12.3234 16.4256C12.1634 16.5856 12.0034 16.7456 11.7634 16.7456C11.5234 16.7456 11.2834 16.6656 11.1234 16.5056L9.52344 14.9056"
+                  stroke="#289548"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                />
+                <path
+                  d="M5.59375 14.9766L7.19375 16.5766C7.35375 16.7366 7.51375 16.8166 7.75375 16.8166C7.83375 16.8166 7.99375 16.8166 8.07375 16.7366"
+                  stroke="#289548"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                />
+                <path
+                  d="M14.3912 8.26562L11.0312 12.7456"
+                  stroke="#289548"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                />
+              </svg>
+            </div>
           </div>
           <h1
             class="mb-0 text-2xl leading-[29px]"
@@ -116,33 +119,36 @@ exports[`SuccessStep > should render (lg) 1`] = `
                 type="button"
               >
                 <div
-                  class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white css-v0ob3f"
-                  height="16"
-                  width="16"
+                  class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white"
                 >
-                  <svg
-                    id="copy"
-                    viewBox="0 0 20 20"
-                    x="0"
-                    xml:space="preserve"
-                    xmlns="http://www.w3.org/2000/svg"
-                    y="0"
+                  <div
+                    style="height: 16px; width: 16px;"
                   >
-                    <g
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
+                    <svg
+                      id="copy"
+                      style="height: 100%; width: 100%;"
+                      viewBox="0 0 20 20"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
                     >
-                      <path
-                        d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
-                      />
-                      <path
-                        d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                      />
-                    </g>
-                  </svg>
+                      <g
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      >
+                        <path
+                          d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                        />
+                        <path
+                          d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                        />
+                      </g>
+                    </svg>
+                  </div>
                 </div>
               </button>
             </div>
@@ -186,8 +192,7 @@ exports[`SuccessStep > should render (lg) 1`] = `
                 class="flex h-5 items-center sm:hidden"
               >
                 <div
-                  class="border-theme-secondary-300 dark:border-theme-secondary-800 css-3y8nng"
-                  type="vertical"
+                  class="h-5 relative mx-2 inline-block border-l border-t-0 border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
                 />
               </div>
               <button
@@ -198,28 +203,29 @@ exports[`SuccessStep > should render (lg) 1`] = `
                 <div
                   class="flex items-center space-x-2"
                 >
-                  <div
-                    class="css-v0ob3f"
-                    height="16"
-                    width="16"
-                  >
-                    <svg
-                      id="pencil"
-                      viewBox="0 0 20 20"
-                      x="0"
-                      xml:space="preserve"
-                      xmlns="http://www.w3.org/2000/svg"
-                      y="0"
+                  <div>
+                    <div
+                      style="height: 16px; width: 16px;"
                     >
-                      <path
-                        d="M5.92 18.297L1 19l.703-4.72L14.054 1.828c1.105-1.104 2.913-1.104 4.118 0 1.104 1.105 1.104 2.913 0 4.118L5.92 18.297z"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                      />
-                    </svg>
+                      <svg
+                        id="pencil"
+                        style="height: 100%; width: 100%;"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <path
+                          d="M5.92 18.297L1 19l.703-4.72L14.054 1.828c1.105-1.104 2.913-1.104 4.118 0 1.104 1.105 1.104 2.913 0 4.118L5.92 18.297z"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
+                      </svg>
+                    </div>
                   </div>
                   <span
                     class="leading-[17px] sm:leading-5"
@@ -252,47 +258,50 @@ exports[`SuccessStep > should render (xs) 1`] = `
           class="flex items-center gap-3"
         >
           <div
-            class="text-theme-success-100 dark:text-theme-success-900 css-h1kfx5"
+            class="text-theme-success-100 dark:text-theme-success-900"
             data-testid="icon-Completed"
-            height="24"
-            width="24"
           >
-            <svg
-              fill="none"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
+            <div
+              style="height: 24px; width: 24px;"
             >
-              <circle
-                cx="12"
-                cy="12"
-                fill="currentColor"
-                r="11"
-                stroke="#289548"
-                stroke-linejoin="round"
-                stroke-width="2"
-              />
-              <path
-                d="M18.4034 8.26562L12.3234 16.4256C12.1634 16.5856 12.0034 16.7456 11.7634 16.7456C11.5234 16.7456 11.2834 16.6656 11.1234 16.5056L9.52344 14.9056"
-                stroke="#289548"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-              />
-              <path
-                d="M5.59375 14.9766L7.19375 16.5766C7.35375 16.7366 7.51375 16.8166 7.75375 16.8166C7.83375 16.8166 7.99375 16.8166 8.07375 16.7366"
-                stroke="#289548"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-              />
-              <path
-                d="M14.3912 8.26562L11.0312 12.7456"
-                stroke="#289548"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-              />
-            </svg>
+              <svg
+                fill="none"
+                style="height: 100%; width: 100%;"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle
+                  cx="12"
+                  cy="12"
+                  fill="currentColor"
+                  r="11"
+                  stroke="#289548"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                />
+                <path
+                  d="M18.4034 8.26562L12.3234 16.4256C12.1634 16.5856 12.0034 16.7456 11.7634 16.7456C11.5234 16.7456 11.2834 16.6656 11.1234 16.5056L9.52344 14.9056"
+                  stroke="#289548"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                />
+                <path
+                  d="M5.59375 14.9766L7.19375 16.5766C7.35375 16.7366 7.51375 16.8166 7.75375 16.8166C7.83375 16.8166 7.99375 16.8166 8.07375 16.7366"
+                  stroke="#289548"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                />
+                <path
+                  d="M14.3912 8.26562L11.0312 12.7456"
+                  stroke="#289548"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                />
+              </svg>
+            </div>
           </div>
           <h1
             class="mb-0 text-2xl leading-[29px]"
@@ -353,33 +362,36 @@ exports[`SuccessStep > should render (xs) 1`] = `
                 type="button"
               >
                 <div
-                  class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white css-v0ob3f"
-                  height="16"
-                  width="16"
+                  class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white"
                 >
-                  <svg
-                    id="copy"
-                    viewBox="0 0 20 20"
-                    x="0"
-                    xml:space="preserve"
-                    xmlns="http://www.w3.org/2000/svg"
-                    y="0"
+                  <div
+                    style="height: 16px; width: 16px;"
                   >
-                    <g
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
+                    <svg
+                      id="copy"
+                      style="height: 100%; width: 100%;"
+                      viewBox="0 0 20 20"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
                     >
-                      <path
-                        d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
-                      />
-                      <path
-                        d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                      />
-                    </g>
-                  </svg>
+                      <g
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      >
+                        <path
+                          d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                        />
+                        <path
+                          d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                        />
+                      </g>
+                    </svg>
+                  </div>
                 </div>
               </button>
             </div>
@@ -423,8 +435,7 @@ exports[`SuccessStep > should render (xs) 1`] = `
                 class="flex h-5 items-center sm:hidden"
               >
                 <div
-                  class="border-theme-secondary-300 dark:border-theme-secondary-800 css-3y8nng"
-                  type="vertical"
+                  class="h-5 relative mx-2 inline-block border-l border-t-0 border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
                 />
               </div>
               <button
@@ -435,28 +446,29 @@ exports[`SuccessStep > should render (xs) 1`] = `
                 <div
                   class="flex items-center space-x-2"
                 >
-                  <div
-                    class="css-v0ob3f"
-                    height="16"
-                    width="16"
-                  >
-                    <svg
-                      id="pencil"
-                      viewBox="0 0 20 20"
-                      x="0"
-                      xml:space="preserve"
-                      xmlns="http://www.w3.org/2000/svg"
-                      y="0"
+                  <div>
+                    <div
+                      style="height: 16px; width: 16px;"
                     >
-                      <path
-                        d="M5.92 18.297L1 19l.703-4.72L14.054 1.828c1.105-1.104 2.913-1.104 4.118 0 1.104 1.105 1.104 2.913 0 4.118L5.92 18.297z"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                      />
-                    </svg>
+                      <svg
+                        id="pencil"
+                        style="height: 100%; width: 100%;"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <path
+                          d="M5.92 18.297L1 19l.703-4.72L14.054 1.828c1.105-1.104 2.913-1.104 4.118 0 1.104 1.105 1.104 2.913 0 4.118L5.92 18.297z"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
+                      </svg>
+                    </div>
                   </div>
                   <span
                     class="leading-[17px] sm:leading-5"

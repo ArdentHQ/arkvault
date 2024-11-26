@@ -1,9 +1,7 @@
 import cn from "classnames";
 import React, { forwardRef } from "react";
-import { styled } from "twin.macro";
-
-import { getStyles } from "./Circle.styles";
 import { Size } from "@/types";
+import { twMerge } from "tailwind-merge";
 
 export type CircleProperties = {
 	as?: React.ElementType;
@@ -16,7 +14,32 @@ export type CircleProperties = {
 	noShadow?: boolean;
 } & React.HTMLAttributes<any>;
 
-const CircleWrapper = styled.div<CircleProperties>(getStyles);
+const CircleWrapper = forwardRef<HTMLDivElement, CircleProperties>(
+	({ size, noShadow, children, avatarId, ...props }, ref) => (
+		<div
+			{...props}
+			ref={ref}
+			className={twMerge(
+				"inline-flex items-center justify-center rounded-full border-2 align-middle transition-all",
+				cn({
+					"border-0 bg-theme-info-200": avatarId,
+					"h-10 w-10 px-4 py-2": !size || !["lg", "sm", "xl", "xs"].includes(size),
+					"h-11 w-11 px-2 py-1": size === "lg",
+					"h-16 w-16 px-2 py-1 text-lg": size === "xl",
+					"h-5 w-5 text-sm": size === "xs",
+					"h-8 w-8 px-2 py-1 text-sm": size === "sm",
+					"ring-0": noShadow,
+					"ring-6": !noShadow,
+				}),
+				props.className,
+			)}
+		>
+			{children}
+		</div>
+	),
+);
+
+CircleWrapper.displayName = "CircleWrapper";
 
 export const Circle = forwardRef<HTMLDivElement, CircleProperties>(
 	(

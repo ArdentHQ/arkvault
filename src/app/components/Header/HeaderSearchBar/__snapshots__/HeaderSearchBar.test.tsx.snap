@@ -10,7 +10,7 @@ exports[`HeaderSearchBar > should render 1`] = `
       class="group"
     >
       <button
-        class="ring-focus css-1mj8916"
+        class="relative flex cursor-pointer items-center justify-center py-2 font-semibold text-theme-secondary-700 transition-colors duration-200 focus:outline-none disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:text-theme-secondary-500 disabled:dark:text-theme-secondary-700 hover:border-b-theme-primary-400 [&.active]:border-b-theme-primary-600 [&.active]:text-theme-primary-600 [&.active]:[&[data-focus-visible-added]]:rounded hover:text-theme-primary-400 mx-0.5 px-2.5 ring-focus"
         type="button"
       >
         <div
@@ -21,53 +21,54 @@ exports[`HeaderSearchBar > should render 1`] = `
           >
             Search
           </span>
-          <div
-            class="css-1i4b0eq"
-            height="20"
-            width="20"
-          >
-            <svg
-              fill="none"
-              viewBox="0 0 16 16"
-              xmlns="http://www.w3.org/2000/svg"
+          <div>
+            <div
+              style="height: 20px; width: 20px;"
             >
-              <g
-                clip-path="url(#clip0_13375_36442)"
-                id="Vertical container"
+              <svg
+                fill="none"
+                style="height: 100%; width: 100%;"
+                viewBox="0 0 16 16"
+                xmlns="http://www.w3.org/2000/svg"
               >
                 <g
-                  id="Vertical container_2"
+                  clip-path="url(#clip0_13375_36442)"
+                  id="Vertical container"
                 >
-                  <path
-                    d="M10.5038 13.9035C13.7838 12.5435 15.3038 8.70355 13.9438 5.50355C12.5838 2.22355 8.74379 0.783547 5.54379 2.06355C2.34379 3.34355 0.743788 7.26355 2.10379 10.4635C3.54379 13.7435 7.22379 15.2635 10.5038 13.9035Z"
-                    id="Vector"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="1.6"
-                  />
-                  <path
-                    d="M12.8281 12.7832L14.4281 14.3832"
-                    id="Vector_2"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="1.6"
-                  />
+                  <g
+                    id="Vertical container_2"
+                  >
+                    <path
+                      d="M10.5038 13.9035C13.7838 12.5435 15.3038 8.70355 13.9438 5.50355C12.5838 2.22355 8.74379 0.783547 5.54379 2.06355C2.34379 3.34355 0.743788 7.26355 2.10379 10.4635C3.54379 13.7435 7.22379 15.2635 10.5038 13.9035Z"
+                      id="Vector"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="1.6"
+                    />
+                    <path
+                      d="M12.8281 12.7832L14.4281 14.3832"
+                      id="Vector_2"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="1.6"
+                    />
+                  </g>
                 </g>
-              </g>
-              <defs>
-                <clippath
-                  id="clip0_13375_36442"
-                >
-                  <rect
-                    fill="transparent"
-                    height="16"
-                    width="16"
-                  />
-                </clippath>
-              </defs>
-            </svg>
+                <defs>
+                  <clippath
+                    id="clip0_13375_36442"
+                  >
+                    <rect
+                      fill="transparent"
+                      height="16"
+                      width="16"
+                    />
+                  </clippath>
+                </defs>
+              </svg>
+            </div>
           </div>
         </div>
       </button>

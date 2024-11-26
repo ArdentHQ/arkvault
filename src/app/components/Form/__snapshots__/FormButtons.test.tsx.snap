@@ -7,7 +7,7 @@ exports[`FormButtons > should adjust offset if input is focused in lg 1`] = `
       data-testid="input"
     />
     <div
-      class="css-145pihz"
+      class="fixed inset-x-0 bottom-0 flex gap-3 bg-theme-background px-8 py-3 shadow-footer-smooth dark:bg-black dark:shadow-footer-smooth-dark sm:relative sm:inset-auto sm:mt-6 sm:justify-end sm:bg-transparent sm:p-0 sm:shadow-none sm:dark:bg-transparent sm:dark:shadow-none [&>button]:flex-1 sm:[&>button]:flex-none mb-14 sm:mb-0"
     >
       buttons
     </div>
@@ -22,7 +22,7 @@ exports[`FormButtons > should adjust offset if input is focused in md 1`] = `
       data-testid="input"
     />
     <div
-      class="css-145pihz"
+      class="fixed inset-x-0 bottom-0 flex gap-3 bg-theme-background px-8 py-3 shadow-footer-smooth dark:bg-black dark:shadow-footer-smooth-dark sm:relative sm:inset-auto sm:mt-6 sm:justify-end sm:bg-transparent sm:p-0 sm:shadow-none sm:dark:bg-transparent sm:dark:shadow-none [&>button]:flex-1 sm:[&>button]:flex-none mb-14 sm:mb-0"
     >
       buttons
     </div>
@@ -37,7 +37,7 @@ exports[`FormButtons > should adjust offset if input is focused in sm 1`] = `
       data-testid="input"
     />
     <div
-      class="css-j6ajdm"
+      class="fixed inset-x-0 bottom-0 flex gap-3 bg-theme-background px-8 py-3 shadow-footer-smooth dark:bg-black dark:shadow-footer-smooth-dark sm:relative sm:inset-auto sm:mt-6 sm:justify-end sm:bg-transparent sm:p-0 sm:shadow-none sm:dark:bg-transparent sm:dark:shadow-none [&>button]:flex-1 sm:[&>button]:flex-none pb-3 sm:pb-0"
     >
       buttons
     </div>
@@ -52,7 +52,7 @@ exports[`FormButtons > should adjust offset if input is focused in xl 1`] = `
       data-testid="input"
     />
     <div
-      class="css-145pihz"
+      class="fixed inset-x-0 bottom-0 flex gap-3 bg-theme-background px-8 py-3 shadow-footer-smooth dark:bg-black dark:shadow-footer-smooth-dark sm:relative sm:inset-auto sm:mt-6 sm:justify-end sm:bg-transparent sm:p-0 sm:shadow-none sm:dark:bg-transparent sm:dark:shadow-none [&>button]:flex-1 sm:[&>button]:flex-none mb-14 sm:mb-0"
     >
       buttons
     </div>
@@ -67,7 +67,7 @@ exports[`FormButtons > should adjust offset if input is focused in xs 1`] = `
       data-testid="input"
     />
     <div
-      class="css-j6ajdm"
+      class="fixed inset-x-0 bottom-0 flex gap-3 bg-theme-background px-8 py-3 shadow-footer-smooth dark:bg-black dark:shadow-footer-smooth-dark sm:relative sm:inset-auto sm:mt-6 sm:justify-end sm:bg-transparent sm:p-0 sm:shadow-none sm:dark:bg-transparent sm:dark:shadow-none [&>button]:flex-1 sm:[&>button]:flex-none pb-3 sm:pb-0"
     >
       buttons
     </div>
@@ -78,7 +78,7 @@ exports[`FormButtons > should adjust offset if input is focused in xs 1`] = `
 exports[`FormButtons > should render in lg 1`] = `
 <DocumentFragment>
   <div
-    class="css-145pihz"
+    class="fixed inset-x-0 bottom-0 flex gap-3 bg-theme-background px-8 py-3 shadow-footer-smooth dark:bg-black dark:shadow-footer-smooth-dark sm:relative sm:inset-auto sm:mt-6 sm:justify-end sm:bg-transparent sm:p-0 sm:shadow-none sm:dark:bg-transparent sm:dark:shadow-none [&>button]:flex-1 sm:[&>button]:flex-none mb-14 sm:mb-0"
   >
     button
   </div>
@@ -88,7 +88,7 @@ exports[`FormButtons > should render in lg 1`] = `
 exports[`FormButtons > should render in md 1`] = `
 <DocumentFragment>
   <div
-    class="css-145pihz"
+    class="fixed inset-x-0 bottom-0 flex gap-3 bg-theme-background px-8 py-3 shadow-footer-smooth dark:bg-black dark:shadow-footer-smooth-dark sm:relative sm:inset-auto sm:mt-6 sm:justify-end sm:bg-transparent sm:p-0 sm:shadow-none sm:dark:bg-transparent sm:dark:shadow-none [&>button]:flex-1 sm:[&>button]:flex-none mb-14 sm:mb-0"
   >
     button
   </div>
@@ -98,7 +98,7 @@ exports[`FormButtons > should render in md 1`] = `
 exports[`FormButtons > should render in sm 1`] = `
 <DocumentFragment>
   <div
-    class="css-145pihz"
+    class="fixed inset-x-0 bottom-0 flex gap-3 bg-theme-background px-8 py-3 shadow-footer-smooth dark:bg-black dark:shadow-footer-smooth-dark sm:relative sm:inset-auto sm:mt-6 sm:justify-end sm:bg-transparent sm:p-0 sm:shadow-none sm:dark:bg-transparent sm:dark:shadow-none [&>button]:flex-1 sm:[&>button]:flex-none mb-14 sm:mb-0"
   >
     button
   </div>
@@ -108,7 +108,7 @@ exports[`FormButtons > should render in sm 1`] = `
 exports[`FormButtons > should render in xl 1`] = `
 <DocumentFragment>
   <div
-    class="css-145pihz"
+    class="fixed inset-x-0 bottom-0 flex gap-3 bg-theme-background px-8 py-3 shadow-footer-smooth dark:bg-black dark:shadow-footer-smooth-dark sm:relative sm:inset-auto sm:mt-6 sm:justify-end sm:bg-transparent sm:p-0 sm:shadow-none sm:dark:bg-transparent sm:dark:shadow-none [&>button]:flex-1 sm:[&>button]:flex-none mb-14 sm:mb-0"
   >
     button
   </div>
@@ -118,7 +118,7 @@ exports[`FormButtons > should render in xl 1`] = `
 exports[`FormButtons > should render in xs 1`] = `
 <DocumentFragment>
   <div
-    class="css-145pihz"
+    class="fixed inset-x-0 bottom-0 flex gap-3 bg-theme-background px-8 py-3 shadow-footer-smooth dark:bg-black dark:shadow-footer-smooth-dark sm:relative sm:inset-auto sm:mt-6 sm:justify-end sm:bg-transparent sm:p-0 sm:shadow-none sm:dark:bg-transparent sm:dark:shadow-none [&>button]:flex-1 sm:[&>button]:flex-none mb-14 sm:mb-0"
   >
     button
   </div>

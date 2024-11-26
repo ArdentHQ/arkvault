@@ -27,31 +27,32 @@ exports[`PaginationSearch > should close search input if clicked outside 1`] = `
         class="invisible absolute bottom-0 left-0 right-0 top-0 flex items-center justify-center group-hover:visible"
         data-testid="PaginationSearchButton__search"
       >
-        <div
-          class="css-v0ob3f"
-          height="16"
-          width="16"
-        >
-          <svg
-            id="magnifying-glass"
-            viewBox="0 0 20 20"
-            x="0"
-            xml:space="preserve"
-            xmlns="http://www.w3.org/2000/svg"
-            y="0"
+        <div>
+          <div
+            style="height: 16px; width: 16px;"
           >
-            <g
-              fill="none"
-              stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
+            <svg
+              id="magnifying-glass"
+              style="height: 100%; width: 100%;"
+              viewBox="0 0 20 20"
+              x="0"
+              xml:space="preserve"
+              xmlns="http://www.w3.org/2000/svg"
+              y="0"
             >
-              <path
-                d="M12.1 16.4c4.1-1.7 6-6.5 4.3-10.5C14.7 1.8 9.9 0 5.9 1.6s-6 6.5-4.3 10.5h0c1.8 4.1 6.4 6 10.5 4.3h0zM14.7 14.7L19 19"
-              />
-            </g>
-          </svg>
+              <g
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              >
+                <path
+                  d="M12.1 16.4c4.1-1.7 6-6.5 4.3-10.5C14.7 1.8 9.9 0 5.9 1.6s-6 6.5-4.3 10.5h0c1.8 4.1 6.4 6 10.5 4.3h0zM14.7 14.7L19 19"
+                />
+              </g>
+            </svg>
+          </div>
         </div>
       </span>
     </button>
@@ -80,31 +81,32 @@ exports[`PaginationSearch > should not allow typing number greater than total pa
       class="invisible absolute bottom-0 left-0 right-0 top-0 flex items-center justify-center group-hover:visible"
       data-testid="PaginationSearchButton__search"
     >
-      <div
-        class="css-v0ob3f"
-        height="16"
-        width="16"
-      >
-        <svg
-          id="magnifying-glass"
-          viewBox="0 0 20 20"
-          x="0"
-          xml:space="preserve"
-          xmlns="http://www.w3.org/2000/svg"
-          y="0"
+      <div>
+        <div
+          style="height: 16px; width: 16px;"
         >
-          <g
-            fill="none"
-            stroke="currentColor"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
+          <svg
+            id="magnifying-glass"
+            style="height: 100%; width: 100%;"
+            viewBox="0 0 20 20"
+            x="0"
+            xml:space="preserve"
+            xmlns="http://www.w3.org/2000/svg"
+            y="0"
           >
-            <path
-              d="M12.1 16.4c4.1-1.7 6-6.5 4.3-10.5C14.7 1.8 9.9 0 5.9 1.6s-6 6.5-4.3 10.5h0c1.8 4.1 6.4 6 10.5 4.3h0zM14.7 14.7L19 19"
-            />
-          </g>
-        </svg>
+            <g
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+            >
+              <path
+                d="M12.1 16.4c4.1-1.7 6-6.5 4.3-10.5C14.7 1.8 9.9 0 5.9 1.6s-6 6.5-4.3 10.5h0c1.8 4.1 6.4 6 10.5 4.3h0zM14.7 14.7L19 19"
+              />
+            </g>
+          </svg>
+        </div>
       </div>
     </span>
   </button>
@@ -131,31 +133,32 @@ exports[`PaginationSearch > should not emit onSelect if nothing is typed 1`] = `
       class="invisible absolute bottom-0 left-0 right-0 top-0 flex items-center justify-center group-hover:visible"
       data-testid="PaginationSearchButton__search"
     >
-      <div
-        class="css-v0ob3f"
-        height="16"
-        width="16"
-      >
-        <svg
-          id="magnifying-glass"
-          viewBox="0 0 20 20"
-          x="0"
-          xml:space="preserve"
-          xmlns="http://www.w3.org/2000/svg"
-          y="0"
+      <div>
+        <div
+          style="height: 16px; width: 16px;"
         >
-          <g
-            fill="none"
-            stroke="currentColor"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
+          <svg
+            id="magnifying-glass"
+            style="height: 100%; width: 100%;"
+            viewBox="0 0 20 20"
+            x="0"
+            xml:space="preserve"
+            xmlns="http://www.w3.org/2000/svg"
+            y="0"
           >
-            <path
-              d="M12.1 16.4c4.1-1.7 6-6.5 4.3-10.5C14.7 1.8 9.9 0 5.9 1.6s-6 6.5-4.3 10.5h0c1.8 4.1 6.4 6 10.5 4.3h0zM14.7 14.7L19 19"
-            />
-          </g>
-        </svg>
+            <g
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+            >
+              <path
+                d="M12.1 16.4c4.1-1.7 6-6.5 4.3-10.5C14.7 1.8 9.9 0 5.9 1.6s-6 6.5-4.3 10.5h0c1.8 4.1 6.4 6 10.5 4.3h0zM14.7 14.7L19 19"
+              />
+            </g>
+          </svg>
+        </div>
       </div>
     </span>
   </button>
@@ -182,31 +185,32 @@ exports[`PaginationSearch > should not emit onSelect if zero is typed 1`] = `
       class="invisible absolute bottom-0 left-0 right-0 top-0 flex items-center justify-center group-hover:visible"
       data-testid="PaginationSearchButton__search"
     >
-      <div
-        class="css-v0ob3f"
-        height="16"
-        width="16"
-      >
-        <svg
-          id="magnifying-glass"
-          viewBox="0 0 20 20"
-          x="0"
-          xml:space="preserve"
-          xmlns="http://www.w3.org/2000/svg"
-          y="0"
+      <div>
+        <div
+          style="height: 16px; width: 16px;"
         >
-          <g
-            fill="none"
-            stroke="currentColor"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
+          <svg
+            id="magnifying-glass"
+            style="height: 100%; width: 100%;"
+            viewBox="0 0 20 20"
+            x="0"
+            xml:space="preserve"
+            xmlns="http://www.w3.org/2000/svg"
+            y="0"
           >
-            <path
-              d="M12.1 16.4c4.1-1.7 6-6.5 4.3-10.5C14.7 1.8 9.9 0 5.9 1.6s-6 6.5-4.3 10.5h0c1.8 4.1 6.4 6 10.5 4.3h0zM14.7 14.7L19 19"
-            />
-          </g>
-        </svg>
+            <g
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+            >
+              <path
+                d="M12.1 16.4c4.1-1.7 6-6.5 4.3-10.5C14.7 1.8 9.9 0 5.9 1.6s-6 6.5-4.3 10.5h0c1.8 4.1 6.4 6 10.5 4.3h0zM14.7 14.7L19 19"
+              />
+            </g>
+          </svg>
+        </div>
       </div>
     </span>
   </button>
@@ -233,31 +237,32 @@ exports[`PaginationSearch > should not limit total page if not provided 1`] = `
       class="invisible absolute bottom-0 left-0 right-0 top-0 flex items-center justify-center group-hover:visible"
       data-testid="PaginationSearchButton__search"
     >
-      <div
-        class="css-v0ob3f"
-        height="16"
-        width="16"
-      >
-        <svg
-          id="magnifying-glass"
-          viewBox="0 0 20 20"
-          x="0"
-          xml:space="preserve"
-          xmlns="http://www.w3.org/2000/svg"
-          y="0"
+      <div>
+        <div
+          style="height: 16px; width: 16px;"
         >
-          <g
-            fill="none"
-            stroke="currentColor"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
+          <svg
+            id="magnifying-glass"
+            style="height: 100%; width: 100%;"
+            viewBox="0 0 20 20"
+            x="0"
+            xml:space="preserve"
+            xmlns="http://www.w3.org/2000/svg"
+            y="0"
           >
-            <path
-              d="M12.1 16.4c4.1-1.7 6-6.5 4.3-10.5C14.7 1.8 9.9 0 5.9 1.6s-6 6.5-4.3 10.5h0c1.8 4.1 6.4 6 10.5 4.3h0zM14.7 14.7L19 19"
-            />
-          </g>
-        </svg>
+            <g
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+            >
+              <path
+                d="M12.1 16.4c4.1-1.7 6-6.5 4.3-10.5C14.7 1.8 9.9 0 5.9 1.6s-6 6.5-4.3 10.5h0c1.8 4.1 6.4 6 10.5 4.3h0zM14.7 14.7L19 19"
+              />
+            </g>
+          </svg>
+        </div>
       </div>
     </span>
   </button>
@@ -284,31 +289,32 @@ exports[`PaginationSearch > should render 1`] = `
       class="invisible absolute bottom-0 left-0 right-0 top-0 flex items-center justify-center group-hover:visible"
       data-testid="PaginationSearchButton__search"
     >
-      <div
-        class="css-v0ob3f"
-        height="16"
-        width="16"
-      >
-        <svg
-          id="magnifying-glass"
-          viewBox="0 0 20 20"
-          x="0"
-          xml:space="preserve"
-          xmlns="http://www.w3.org/2000/svg"
-          y="0"
+      <div>
+        <div
+          style="height: 16px; width: 16px;"
         >
-          <g
-            fill="none"
-            stroke="currentColor"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
+          <svg
+            id="magnifying-glass"
+            style="height: 100%; width: 100%;"
+            viewBox="0 0 20 20"
+            x="0"
+            xml:space="preserve"
+            xmlns="http://www.w3.org/2000/svg"
+            y="0"
           >
-            <path
-              d="M12.1 16.4c4.1-1.7 6-6.5 4.3-10.5C14.7 1.8 9.9 0 5.9 1.6s-6 6.5-4.3 10.5h0c1.8 4.1 6.4 6 10.5 4.3h0zM14.7 14.7L19 19"
-            />
-          </g>
-        </svg>
+            <g
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+            >
+              <path
+                d="M12.1 16.4c4.1-1.7 6-6.5 4.3-10.5C14.7 1.8 9.9 0 5.9 1.6s-6 6.5-4.3 10.5h0c1.8 4.1 6.4 6 10.5 4.3h0zM14.7 14.7L19 19"
+              />
+            </g>
+          </svg>
+        </div>
       </div>
     </span>
   </button>
@@ -335,31 +341,32 @@ exports[`PaginationSearch > should show pagination search input 1`] = `
       class="invisible absolute bottom-0 left-0 right-0 top-0 flex items-center justify-center group-hover:visible"
       data-testid="PaginationSearchButton__search"
     >
-      <div
-        class="css-v0ob3f"
-        height="16"
-        width="16"
-      >
-        <svg
-          id="magnifying-glass"
-          viewBox="0 0 20 20"
-          x="0"
-          xml:space="preserve"
-          xmlns="http://www.w3.org/2000/svg"
-          y="0"
+      <div>
+        <div
+          style="height: 16px; width: 16px;"
         >
-          <g
-            fill="none"
-            stroke="currentColor"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
+          <svg
+            id="magnifying-glass"
+            style="height: 100%; width: 100%;"
+            viewBox="0 0 20 20"
+            x="0"
+            xml:space="preserve"
+            xmlns="http://www.w3.org/2000/svg"
+            y="0"
           >
-            <path
-              d="M12.1 16.4c4.1-1.7 6-6.5 4.3-10.5C14.7 1.8 9.9 0 5.9 1.6s-6 6.5-4.3 10.5h0c1.8 4.1 6.4 6 10.5 4.3h0zM14.7 14.7L19 19"
-            />
-          </g>
-        </svg>
+            <g
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+            >
+              <path
+                d="M12.1 16.4c4.1-1.7 6-6.5 4.3-10.5C14.7 1.8 9.9 0 5.9 1.6s-6 6.5-4.3 10.5h0c1.8 4.1 6.4 6 10.5 4.3h0zM14.7 14.7L19 19"
+              />
+            </g>
+          </svg>
+        </div>
       </div>
     </span>
   </button>
@@ -386,31 +393,32 @@ exports[`PaginationSearch > should show search input and close 1`] = `
       class="invisible absolute bottom-0 left-0 right-0 top-0 flex items-center justify-center group-hover:visible"
       data-testid="PaginationSearchButton__search"
     >
-      <div
-        class="css-v0ob3f"
-        height="16"
-        width="16"
-      >
-        <svg
-          id="magnifying-glass"
-          viewBox="0 0 20 20"
-          x="0"
-          xml:space="preserve"
-          xmlns="http://www.w3.org/2000/svg"
-          y="0"
+      <div>
+        <div
+          style="height: 16px; width: 16px;"
         >
-          <g
-            fill="none"
-            stroke="currentColor"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
+          <svg
+            id="magnifying-glass"
+            style="height: 100%; width: 100%;"
+            viewBox="0 0 20 20"
+            x="0"
+            xml:space="preserve"
+            xmlns="http://www.w3.org/2000/svg"
+            y="0"
           >
-            <path
-              d="M12.1 16.4c4.1-1.7 6-6.5 4.3-10.5C14.7 1.8 9.9 0 5.9 1.6s-6 6.5-4.3 10.5h0c1.8 4.1 6.4 6 10.5 4.3h0zM14.7 14.7L19 19"
-            />
-          </g>
-        </svg>
+            <g
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+            >
+              <path
+                d="M12.1 16.4c4.1-1.7 6-6.5 4.3-10.5C14.7 1.8 9.9 0 5.9 1.6s-6 6.5-4.3 10.5h0c1.8 4.1 6.4 6 10.5 4.3h0zM14.7 14.7L19 19"
+              />
+            </g>
+          </svg>
+        </div>
       </div>
     </span>
   </button>
@@ -437,31 +445,32 @@ exports[`PaginationSearch > should type page and emit onSelectPage event 1`] = `
       class="invisible absolute bottom-0 left-0 right-0 top-0 flex items-center justify-center group-hover:visible"
       data-testid="PaginationSearchButton__search"
     >
-      <div
-        class="css-v0ob3f"
-        height="16"
-        width="16"
-      >
-        <svg
-          id="magnifying-glass"
-          viewBox="0 0 20 20"
-          x="0"
-          xml:space="preserve"
-          xmlns="http://www.w3.org/2000/svg"
-          y="0"
+      <div>
+        <div
+          style="height: 16px; width: 16px;"
         >
-          <g
-            fill="none"
-            stroke="currentColor"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
+          <svg
+            id="magnifying-glass"
+            style="height: 100%; width: 100%;"
+            viewBox="0 0 20 20"
+            x="0"
+            xml:space="preserve"
+            xmlns="http://www.w3.org/2000/svg"
+            y="0"
           >
-            <path
-              d="M12.1 16.4c4.1-1.7 6-6.5 4.3-10.5C14.7 1.8 9.9 0 5.9 1.6s-6 6.5-4.3 10.5h0c1.8 4.1 6.4 6 10.5 4.3h0zM14.7 14.7L19 19"
-            />
-          </g>
-        </svg>
+            <g
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+            >
+              <path
+                d="M12.1 16.4c4.1-1.7 6-6.5 4.3-10.5C14.7 1.8 9.9 0 5.9 1.6s-6 6.5-4.3 10.5h0c1.8 4.1 6.4 6 10.5 4.3h0zM14.7 14.7L19 19"
+              />
+            </g>
+          </svg>
+        </div>
       </div>
     </span>
   </button>

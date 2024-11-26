@@ -11,7 +11,6 @@ import { Tooltip } from "@/app/components/Tooltip";
 import { useExchangeContext } from "@/domains/exchange/contexts/Exchange";
 import { Address } from "@/app/components/Address";
 import { TimeAgo } from "@/app/components/TimeAgo";
-import tw from "twin.macro";
 
 const ExchangeTransactionProvider = ({ slug }: { slug: string }) => {
 	const { exchangeProviders } = useExchangeContext();
@@ -208,7 +207,7 @@ export const ExchangeTransactionsRow = ({
 				variant="end"
 				innerClassName="items-start xl:items-center justify-end text-theme-secondary-text my-0 py-3 min-h-[66px] lg:min-h-11 lg:py-0 lg:pt-2.5 xl:pt-0"
 			>
-				<TableRemoveButton onClick={handleRemove} css={tw`mt-0 p-1`} />
+				<TableRemoveButton onClick={handleRemove} className="mt-0 p-1" />
 			</TableCell>
 		</TableRow>
 	);

@@ -1,6 +1,5 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
-import tw from "twin.macro";
 
 import { Amount } from "@/app/components/Amount";
 import { Icon } from "@/app/components/Icon";
@@ -12,7 +11,9 @@ interface Properties {
 	ticker: string;
 }
 
-const AmountLabel = tw.span`text-sm font-semibold text-theme-secondary-500`;
+const AmountLabel = ({ ...props }: React.HTMLAttributes<HTMLSpanElement>) => (
+	<span {...props} className="text-sm font-semibold text-theme-secondary-500" />
+);
 
 export const TotalAmountBox = ({ ticker, ...properties }: Properties) => {
 	const { t } = useTranslation();

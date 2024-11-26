@@ -47,27 +47,30 @@ exports[`Button > should render 1`] = `
           data-testid="Accordion__toggle"
         >
           <div
-            class="transition-transform css-15txs7d"
-            height="10"
-            width="10"
+            class="transition-transform"
           >
-            <svg
-              id="chevron-down-small"
-              viewBox="0 0 10 10"
-              x="0"
-              xml:space="preserve"
-              xmlns="http://www.w3.org/2000/svg"
-              y="0"
+            <div
+              style="height: 10px; width: 10px;"
             >
-              <path
-                d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
-                fill="none"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-              />
-            </svg>
+              <svg
+                id="chevron-down-small"
+                style="height: 100%; width: 100%;"
+                viewBox="0 0 10 10"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <path
+                  d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                />
+              </svg>
+            </div>
           </div>
         </div>
       </div>
@@ -104,27 +107,30 @@ exports[`Button > should render collapsed 1`] = `
           data-testid="Accordion__toggle"
         >
           <div
-            class="transition-transform css-15txs7d"
-            height="10"
-            width="10"
+            class="transition-transform"
           >
-            <svg
-              id="chevron-down-small"
-              viewBox="0 0 10 10"
-              x="0"
-              xml:space="preserve"
-              xmlns="http://www.w3.org/2000/svg"
-              y="0"
+            <div
+              style="height: 10px; width: 10px;"
             >
-              <path
-                d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
-                fill="none"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-              />
-            </svg>
+              <svg
+                id="chevron-down-small"
+                style="height: 100%; width: 100%;"
+                viewBox="0 0 10 10"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <path
+                  d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                />
+              </svg>
+            </div>
           </div>
         </div>
       </div>
@@ -161,27 +167,30 @@ exports[`Button > should render expanded 1`] = `
           data-testid="Accordion__toggle"
         >
           <div
-            class="transition-transform rotate-180 css-15txs7d"
-            height="10"
-            width="10"
+            class="transition-transform rotate-180"
           >
-            <svg
-              id="chevron-down-small"
-              viewBox="0 0 10 10"
-              x="0"
-              xml:space="preserve"
-              xmlns="http://www.w3.org/2000/svg"
-              y="0"
+            <div
+              style="height: 10px; width: 10px;"
             >
-              <path
-                d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
-                fill="none"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-              />
-            </svg>
+              <svg
+                id="chevron-down-small"
+                style="height: 100%; width: 100%;"
+                viewBox="0 0 10 10"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <path
+                  d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                />
+              </svg>
+            </div>
           </div>
         </div>
       </div>
@@ -218,27 +227,30 @@ exports[`Button > should render inactive 1`] = `
           data-testid="Accordion__toggle"
         >
           <div
-            class="transition-transform css-15txs7d"
-            height="10"
-            width="10"
+            class="transition-transform"
           >
-            <svg
-              id="chevron-down-small"
-              viewBox="0 0 10 10"
-              x="0"
-              xml:space="preserve"
-              xmlns="http://www.w3.org/2000/svg"
-              y="0"
+            <div
+              style="height: 10px; width: 10px;"
             >
-              <path
-                d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
-                fill="none"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-              />
-            </svg>
+              <svg
+                id="chevron-down-small"
+                style="height: 100%; width: 100%;"
+                viewBox="0 0 10 10"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <path
+                  d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                />
+              </svg>
+            </div>
           </div>
         </div>
       </div>
@@ -266,28 +278,29 @@ exports[`Button > should render skeleton wrapper 1`] = `
       <div
         class="flex h-8 w-8 content-center items-center justify-center rounded-lg bg-theme-background text-theme-secondary-500 ring-1 ring-theme-secondary-300 dark:text-theme-secondary-700 dark:ring-theme-secondary-800"
       >
-        <div
-          class="css-15txs7d"
-          height="10"
-          width="10"
-        >
-          <svg
-            id="chevron-down-small"
-            viewBox="0 0 10 10"
-            x="0"
-            xml:space="preserve"
-            xmlns="http://www.w3.org/2000/svg"
-            y="0"
+        <div>
+          <div
+            style="height: 10px; width: 10px;"
           >
-            <path
-              d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
-              fill="none"
-              stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-            />
-          </svg>
+            <svg
+              id="chevron-down-small"
+              style="height: 100%; width: 100%;"
+              viewBox="0 0 10 10"
+              x="0"
+              xml:space="preserve"
+              xmlns="http://www.w3.org/2000/svg"
+              y="0"
+            >
+              <path
+                d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
+            </svg>
+          </div>
         </div>
       </div>
     </div>
@@ -317,27 +330,30 @@ exports[`Button > should toggle the accordion on click 1`] = `
           data-testid="Accordion__toggle"
         >
           <div
-            class="transition-transform css-15txs7d"
-            height="10"
-            width="10"
+            class="transition-transform"
           >
-            <svg
-              id="chevron-down-small"
-              viewBox="0 0 10 10"
-              x="0"
-              xml:space="preserve"
-              xmlns="http://www.w3.org/2000/svg"
-              y="0"
+            <div
+              style="height: 10px; width: 10px;"
             >
-              <path
-                d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
-                fill="none"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-              />
-            </svg>
+              <svg
+                id="chevron-down-small"
+                style="height: 100%; width: 100%;"
+                viewBox="0 0 10 10"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <path
+                  d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                />
+              </svg>
+            </div>
           </div>
         </div>
       </div>

@@ -1,5 +1,6 @@
 import React from "react";
-import tw, { css, styled } from "twin.macro";
+import { twMerge } from "tailwind-merge";
+import cn from "classnames";
 
 interface DotNavigationProperties {
 	activeIndex?: number;
@@ -7,21 +8,23 @@ interface DotNavigationProperties {
 	onClick?: (step: number) => void;
 }
 
-const StepStyled = styled.li<{ isActive: boolean }>`
-	${tw`flex-1 rounded-lg transition-colors duration-300 h-2 w-2 cursor-pointer`}
-	${({ isActive }) =>
-		isActive
-			? css`
-					${tw`bg-theme-primary-600 hover:bg-theme-primary-500`}
-				`
-			: css`
-					${tw`bg-theme-primary-100 dark:bg-theme-secondary-800`}
-				`}
-`;
+const StepStyled = ({ isActive, ...props }: { isActive: boolean } & React.HTMLProps<HTMLLIElement>) => (
+	<li
+		{...props}
+		className={twMerge(
+			"h-2 w-2 flex-1 cursor-pointer rounded-lg transition-colors duration-300",
+			cn({
+				"bg-theme-primary-100 dark:bg-theme-secondary-800": !isActive,
+				"bg-theme-primary-600 hover:bg-theme-primary-500": isActive,
+			}),
+			props.className,
+		)}
+	/>
+);
 
-const DotNavigationWrapper = styled.ul`
-	${tw`flex space-x-3`}
-`;
+const DotNavigationWrapper = ({ ...props }: React.HTMLProps<HTMLUListElement>) => (
+	<ul {...props} className={twMerge("flex space-x-3", props.className)} />
+);
 
 export const DotNavigation: React.FC<DotNavigationProperties> = ({
 	activeIndex = 1,
