@@ -142,7 +142,7 @@ exports[`ContactListItem > should render 1`] = `
                 </button>
               </div>
               <div
-                class="h-4 relative inline-block align-middle border-t-0 border-l border-solid mx-2 height-[17px] !m-0 border-theme-secondary-300 dark:border-theme-secondary-800"
+                class="h-4 relative mx-2 inline-block border-l border-t-0 border-solid align-middle height-[17px] !m-0 border-theme-secondary-300 dark:border-theme-secondary-800"
               />
               <div
                 class="visible"
@@ -350,7 +350,7 @@ exports[`ContactListItem > should render as delegate 1`] = `
                 </button>
               </div>
               <div
-                class="h-4 relative inline-block align-middle border-t-0 border-l border-solid mx-2 height-[17px] !m-0 border-theme-secondary-300 dark:border-theme-secondary-800"
+                class="h-4 relative mx-2 inline-block border-l border-t-0 border-solid align-middle height-[17px] !m-0 border-theme-secondary-300 dark:border-theme-secondary-800"
               />
               <div
                 class="visible"
@@ -558,7 +558,7 @@ exports[`ContactListItem > should render options 1`] = `
                 </button>
               </div>
               <div
-                class="h-4 relative inline-block align-middle border-t-0 border-l border-solid mx-2 height-[17px] !m-0 border-theme-secondary-300 dark:border-theme-secondary-800"
+                class="h-4 relative mx-2 inline-block border-l border-t-0 border-solid align-middle height-[17px] !m-0 border-theme-secondary-300 dark:border-theme-secondary-800"
               />
               <div
                 class="visible"
@@ -1134,7 +1134,7 @@ exports[`ContactListItem > should render with multiple addresses 1`] = `
                 </button>
               </div>
               <div
-                class="h-4 relative inline-block align-middle border-t-0 border-l border-solid mx-2 height-[17px] !m-0 border-theme-secondary-300 dark:border-theme-secondary-800"
+                class="h-4 relative mx-2 inline-block border-l border-t-0 border-solid align-middle height-[17px] !m-0 border-theme-secondary-300 dark:border-theme-secondary-800"
               />
               <div
                 class="visible"

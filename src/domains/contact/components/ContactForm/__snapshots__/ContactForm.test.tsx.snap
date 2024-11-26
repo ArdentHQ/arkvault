@@ -34,7 +34,7 @@ exports[`ContactForm > should render responsive 1`] = `
       </div>
     </fieldset>
     <div
-      class="space-y-4 rounded-lg bg-theme-secondary-background p-4 -mx-4 !-mx-4 !mt-4 !p-4"
+      class="space-y-4 rounded-lg -mx-4 p-4 bg-theme-secondary-background !-mx-4 !mt-4 !p-4"
     >
       <fieldset
         class="[&>.FormLabel]:text-theme-primary-600 focus-within:[&>.FormLabel]:text-theme-primary-600 flex min-w-0 flex-col"
@@ -209,7 +209,7 @@ exports[`ContactForm > should render responsive 1`] = `
       class="flex w-full border-0 border-theme-secondary-300 dark:border-theme-secondary-800 justify-end"
     >
       <div
-        class="flex fixed bg-theme-background dark:bg-black sm:bg-transparent sm:dark:bg-transparent inset-x-0 bottom-0 px-8 py-3 gap-3 shadow-footer-smooth dark:shadow-footer-smooth-dark sm:relative sm:inset-auto sm:p-0 sm:mt-6 sm:justify-end sm:shadow-none sm:dark:shadow-none [&>button]:flex-1 sm:[&>button]:flex-none sm:mb-0 mb-14"
+        class="fixed inset-x-0 bottom-0 flex gap-3 bg-theme-background px-8 py-3 shadow-footer-smooth dark:bg-black dark:shadow-footer-smooth-dark sm:relative sm:inset-auto sm:mt-6 sm:justify-end sm:bg-transparent sm:p-0 sm:shadow-none sm:dark:bg-transparent sm:dark:shadow-none [&>button]:flex-1 sm:[&>button]:flex-none mb-14 sm:mb-0"
       >
         <button
           class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 green:hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-500"
@@ -274,7 +274,7 @@ exports[`ContactForm > should render responsive 2`] = `
       </div>
     </fieldset>
     <div
-      class="space-y-4 rounded-lg bg-theme-secondary-background p-4 -mx-4 !-mx-4 !mt-4 !p-4"
+      class="space-y-4 rounded-lg -mx-4 p-4 bg-theme-secondary-background !-mx-4 !mt-4 !p-4"
     >
       <fieldset
         class="[&>.FormLabel]:text-theme-primary-600 focus-within:[&>.FormLabel]:text-theme-primary-600 flex min-w-0 flex-col"
@@ -314,13 +314,13 @@ exports[`ContactForm > should render responsive 2`] = `
             <div
               aria-expanded="false"
               aria-haspopup="listbox"
-              aria-owns="downshift-3-menu"
+              aria-owns="downshift-4-menu"
               role="combobox"
             >
               <div>
                 <label
-                  for="downshift-3-input"
-                  id="downshift-3-label"
+                  for="downshift-4-input"
+                  id="downshift-4-label"
                 />
                 <div
                   class="css-14zfvme"
@@ -330,12 +330,12 @@ exports[`ContactForm > should render responsive 2`] = `
                   >
                     <input
                       aria-autocomplete="list"
-                      aria-controls="downshift-3-menu"
-                      aria-labelledby="downshift-3-label"
+                      aria-controls="downshift-4-menu"
+                      aria-labelledby="downshift-4-label"
                       autocomplete="off"
                       class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base cursor-default css-1937ogs"
                       data-testid="SelectDropdown__input"
-                      id="downshift-3-input"
+                      id="downshift-4-input"
                       name="network"
                       placeholder="Enter a cryptoasset name"
                       type="text"
@@ -392,8 +392,8 @@ exports[`ContactForm > should render responsive 2`] = `
                 </div>
               </div>
               <div
-                aria-labelledby="downshift-3-label"
-                id="downshift-3-menu"
+                aria-labelledby="downshift-4-label"
+                id="downshift-4-menu"
                 role="listbox"
               />
             </div>
@@ -449,7 +449,7 @@ exports[`ContactForm > should render responsive 2`] = `
       class="flex w-full border-0 border-theme-secondary-300 dark:border-theme-secondary-800 justify-end"
     >
       <div
-        class="flex fixed bg-theme-background dark:bg-black sm:bg-transparent sm:dark:bg-transparent inset-x-0 bottom-0 px-8 py-3 gap-3 shadow-footer-smooth dark:shadow-footer-smooth-dark sm:relative sm:inset-auto sm:p-0 sm:mt-6 sm:justify-end sm:shadow-none sm:dark:shadow-none [&>button]:flex-1 sm:[&>button]:flex-none sm:mb-0 mb-14"
+        class="fixed inset-x-0 bottom-0 flex gap-3 bg-theme-background px-8 py-3 shadow-footer-smooth dark:bg-black dark:shadow-footer-smooth-dark sm:relative sm:inset-auto sm:mt-6 sm:justify-end sm:bg-transparent sm:p-0 sm:shadow-none sm:dark:bg-transparent sm:dark:shadow-none [&>button]:flex-1 sm:[&>button]:flex-none mb-14 sm:mb-0"
       >
         <button
           class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 green:hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-500"
