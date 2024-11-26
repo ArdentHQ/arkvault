@@ -11,16 +11,14 @@ type FormFieldProperties = {
 	disableHover?: boolean;
 } & React.FieldsetHTMLAttributes<any>;
 
-export const FormFieldStyled =({ isInvalid, disableHover, ...props }: { isInvalid: boolean; disableHover: boolean } & React.FieldsetHTMLAttributes<HTMLFieldSetElement>) => {
-	return (
+export const FormFieldStyled =({ isInvalid, disableHover, ...props }: { isInvalid: boolean; disableHover: boolean } & React.FieldsetHTMLAttributes<HTMLFieldSetElement>) => (
 		<fieldset {...props} className={twMerge(cn({
-			"[&>.FormLabel]:text-theme-primary-600": !isInvalid && !disableHover,
-			"focus-within:[&>.FormLabel]:text-theme-primary-600": !isInvalid,
 			"[&>.FormLabel]:text-theme-danger-500": isInvalid,
+			"[&>.FormLabel]:text-theme-primary-600": !isInvalid && !disableHover,
 			"focus-within:[&>.FormLabel]:text-theme-danger-500": isInvalid,
+			"focus-within:[&>.FormLabel]:text-theme-primary-600": !isInvalid,
 		}), props.className)} />
 	)
-}
 
 export const FormField: React.FC<FormFieldProperties> = ({ name, disableHover = false, ...properties }) => {
 	const FormProvider = useFormContext();

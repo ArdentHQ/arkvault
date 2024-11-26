@@ -8,8 +8,7 @@ import { useDebounce } from "@/app/hooks";
 
 
 const SearchBarInputWrapper = forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElement>>(
-    (props, ref) => {
-        return (
+    (props, ref) => (
             <div
                 {...props}
                 ref={ref}
@@ -18,8 +17,7 @@ const SearchBarInputWrapper = forwardRef<HTMLDivElement, React.HTMLAttributes<HT
                     props.className
                 )}
             />
-        );
-    }
+        )
 );
 
 SearchBarInputWrapper.displayName = "SearchBarInputWrapper";

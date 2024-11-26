@@ -18,12 +18,21 @@ interface WrapperProperties {
 	height: number;
 }
  
+
 const Wrapper = ({ width, height, children, ...props }: WrapperProperties & React.HTMLProps<HTMLDivElement>) => (
 	<div {...props}>
-		<div style={{ width, height }} >
-			{React.cloneElement(children as React.ReactElement, {
-				style: { width: "100%", height: "100%" },
-			})}
+		<div style={{ height, width }}>
+			{React.isValidElement(children) ? (
+				React.cloneElement(children as React.ReactElement, {
+					style: {
+						height: "100%",
+						width: "100%",
+						...(children.props?.style || {}),
+					},
+				})
+			) : (
+				children // Render directly if it's not a valid React element
+			)}
 		</div>
 	</div>
 );

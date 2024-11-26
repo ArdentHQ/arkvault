@@ -8,26 +8,22 @@ interface DotNavigationProperties {
 	onClick?: (step: number) => void;
 }
 
-const StepStyled = ({ isActive, ...props}: { isActive: boolean } & React.HTMLProps<HTMLLIElement>) => {
-	return (
+const StepStyled = ({ isActive, ...props}: { isActive: boolean } & React.HTMLProps<HTMLLIElement>) => (
 		<li
 			{...props}
 			className={twMerge("flex-1 rounded-lg transition-colors duration-300 h-2 w-2 cursor-pointer", cn({
-				"bg-theme-primary-600 hover:bg-theme-primary-500": isActive,
 				"bg-theme-primary-100 dark:bg-theme-secondary-800": !isActive,
+				"bg-theme-primary-600 hover:bg-theme-primary-500": isActive,
 			}), props.className)}
 		/>
-	);
-}
+	)
 
-const DotNavigationWrapper = ({ ...props }: React.HTMLProps<HTMLUListElement>) => {
-	return (
+const DotNavigationWrapper = ({ ...props }: React.HTMLProps<HTMLUListElement>) => (
 		<ul
 			{...props}
 			className={twMerge("flex space-x-3", props.className)}
 		/>
-	);
-}
+	)
 
 export const DotNavigation: React.FC<DotNavigationProperties> = ({
 	activeIndex = 1,
