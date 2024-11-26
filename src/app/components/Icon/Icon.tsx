@@ -1,7 +1,5 @@
 // Assets
 import React from "react";
-import { styled } from "twin.macro";
-
 import { SvgCollection } from "@/app/assets/svg";
 import { Size } from "@/types";
 import { useTheme } from "@/app/hooks/use-theme";
@@ -19,13 +17,16 @@ interface WrapperProperties {
 	width: number;
 	height: number;
 }
-
-const Wrapper = styled.div(({ width, height }: WrapperProperties) => ({
-	svg: {
-		height,
-		width,
-	},
-}));
+ 
+const Wrapper = ({ width, height, children, ...props }: WrapperProperties & React.HTMLProps<HTMLDivElement>) => (
+	<div {...props}>
+		<div style={{ width, height }} >
+			{React.cloneElement(children as React.ReactElement, {
+				style: { width: "100%", height: "100%" },
+			})}
+		</div>
+	</div>
+);
 
 const getDimensions = (size?: Size, dimensions?: [number, number]): [number, number] => {
 	if (dimensions) {
