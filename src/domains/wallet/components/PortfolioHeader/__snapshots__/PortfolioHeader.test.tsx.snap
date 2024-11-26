@@ -31,7 +31,7 @@ exports[`Portfolio grouped networks > should apply ledger import 1`] = `
                 class="group"
               >
                 <button
-                  class="relative flex items-center justify-center py-2 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 transition-colors duration-200 cursor-pointer focus:outline-none disabled:cursor-not-allowed disabled:text-theme-secondary-400 disabled:dark:text-theme-secondary-700 hover:border-b-theme-primary-400 [&.active]:[&[data-focus-visible-added]]:rounded [&.active]:border-b-theme-primary-600 [&.active]:text-theme-primary-600 hover:text-theme-primary-400 px-2.5 mx-0.5 ring-focus"
+                  class="relative flex cursor-pointer items-center justify-center py-2 font-semibold text-theme-secondary-700 transition-colors duration-200 focus:outline-none disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:text-theme-secondary-500 disabled:dark:text-theme-secondary-700 hover:border-b-theme-primary-400 [&.active]:border-b-theme-primary-600 [&.active]:text-theme-primary-600 [&.active]:[&[data-focus-visible-added]]:rounded hover:text-theme-primary-400 mx-0.5 px-2.5 ring-focus"
                 >
                   <div
                     class="flex h-5 w-5 items-center justify-center"
@@ -73,7 +73,7 @@ exports[`Portfolio grouped networks > should apply ledger import 1`] = `
           class="flex sm:hidden"
         >
           <div
-            class="h-5 relative inline-block align-middle border-t-0 border-l border-solid mx-2 border-theme-secondary-300 dark:border-theme-secondary-800"
+            class="h-5 relative mx-2 inline-block border-l border-t-0 border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
           />
         </div>
         <div
@@ -2284,7 +2284,7 @@ exports[`Portfolio grouped networks > should render list 1`] = `
                 class="group"
               >
                 <button
-                  class="relative flex items-center justify-center py-2 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 transition-colors duration-200 cursor-pointer focus:outline-none disabled:cursor-not-allowed disabled:text-theme-secondary-400 disabled:dark:text-theme-secondary-700 hover:border-b-theme-primary-400 [&.active]:[&[data-focus-visible-added]]:rounded [&.active]:border-b-theme-primary-600 [&.active]:text-theme-primary-600 hover:text-theme-primary-400 px-2.5 mx-0.5 ring-focus"
+                  class="relative flex cursor-pointer items-center justify-center py-2 font-semibold text-theme-secondary-700 transition-colors duration-200 focus:outline-none disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:text-theme-secondary-500 disabled:dark:text-theme-secondary-700 hover:border-b-theme-primary-400 [&.active]:border-b-theme-primary-600 [&.active]:text-theme-primary-600 [&.active]:[&[data-focus-visible-added]]:rounded hover:text-theme-primary-400 mx-0.5 px-2.5 ring-focus"
                 >
                   <div
                     class="flex h-5 w-5 items-center justify-center"
@@ -2326,7 +2326,7 @@ exports[`Portfolio grouped networks > should render list 1`] = `
           class="flex sm:hidden"
         >
           <div
-            class="h-5 relative inline-block align-middle border-t-0 border-l border-solid mx-2 border-theme-secondary-300 dark:border-theme-secondary-800"
+            class="h-5 relative mx-2 inline-block border-l border-t-0 border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
           />
         </div>
         <div
@@ -4535,7 +4535,7 @@ exports[`Portfolio grouped networks > should render without testnet wallets 1`] 
                 class="group"
               >
                 <button
-                  class="relative flex items-center justify-center py-2 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 transition-colors duration-200 cursor-pointer focus:outline-none disabled:cursor-not-allowed disabled:text-theme-secondary-400 disabled:dark:text-theme-secondary-700 hover:border-b-theme-primary-400 [&.active]:[&[data-focus-visible-added]]:rounded [&.active]:border-b-theme-primary-600 [&.active]:text-theme-primary-600 hover:text-theme-primary-400 px-2.5 mx-0.5 ring-focus"
+                  class="relative flex cursor-pointer items-center justify-center py-2 font-semibold text-theme-secondary-700 transition-colors duration-200 focus:outline-none disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:text-theme-secondary-500 disabled:dark:text-theme-secondary-700 hover:border-b-theme-primary-400 [&.active]:border-b-theme-primary-600 [&.active]:text-theme-primary-600 [&.active]:[&[data-focus-visible-added]]:rounded hover:text-theme-primary-400 mx-0.5 px-2.5 ring-focus"
                 >
                   <div
                     class="flex h-5 w-5 items-center justify-center"
@@ -4577,7 +4577,7 @@ exports[`Portfolio grouped networks > should render without testnet wallets 1`] 
           class="flex sm:hidden"
         >
           <div
-            class="h-5 relative inline-block align-middle border-t-0 border-l border-solid mx-2 border-theme-secondary-300 dark:border-theme-secondary-800"
+            class="h-5 relative mx-2 inline-block border-l border-t-0 border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
           />
         </div>
         <div

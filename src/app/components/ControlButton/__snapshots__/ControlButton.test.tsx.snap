@@ -6,7 +6,7 @@ exports[`ControlButton > should render 1`] = `
     class="group"
   >
     <button
-      class="ring-focus css-1mj8916"
+      class="relative flex cursor-pointer items-center justify-center py-2 font-semibold text-theme-secondary-700 transition-colors duration-200 focus:outline-none disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:text-theme-secondary-500 disabled:dark:text-theme-secondary-700 hover:border-b-theme-primary-400 [&.active]:border-b-theme-primary-600 [&.active]:text-theme-primary-600 [&.active]:[&[data-focus-visible-added]]:rounded hover:text-theme-primary-400 mx-0.5 px-2.5 ring-focus"
     />
   </div>
 </DocumentFragment>
@@ -18,7 +18,7 @@ exports[`ControlButton > should render active 1`] = `
     class="group"
   >
     <button
-      class="ring-focus css-1mj8916"
+      class="relative flex cursor-pointer items-center justify-center py-2 font-semibold text-theme-secondary-700 transition-colors duration-200 focus:outline-none disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:text-theme-secondary-500 disabled:dark:text-theme-secondary-700 hover:border-b-theme-primary-400 [&.active]:border-b-theme-primary-600 [&.active]:text-theme-primary-600 [&.active]:[&[data-focus-visible-added]]:rounded hover:text-theme-primary-400 mx-0.5 px-2.5 ring-focus"
     />
   </div>
 </DocumentFragment>
@@ -30,8 +30,7 @@ exports[`ControlButton > should render disabled 1`] = `
     class="group"
   >
     <button
-      class="ring-focus css-1b09r5h"
-      disabled=""
+      class="relative flex cursor-pointer items-center justify-center py-2 font-semibold text-theme-secondary-700 transition-colors duration-200 focus:outline-none disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:text-theme-secondary-500 disabled:dark:text-theme-secondary-700 hover:bg-theme-primary-100 hover:text-theme-primary-700 hover:dark:text-white mx-0.5 px-2.5 ring-focus"
     />
   </div>
 </DocumentFragment>
@@ -43,7 +42,7 @@ exports[`ControlButton > should render with dot 1`] = `
     class="group"
   >
     <button
-      class="ring-focus css-1mj8916"
+      class="relative flex cursor-pointer items-center justify-center py-2 font-semibold text-theme-secondary-700 transition-colors duration-200 focus:outline-none disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:text-theme-secondary-500 disabled:dark:text-theme-secondary-700 hover:border-b-theme-primary-400 [&.active]:border-b-theme-primary-600 [&.active]:text-theme-primary-600 [&.active]:[&[data-focus-visible-added]]:rounded hover:text-theme-primary-400 mx-0.5 px-2.5 ring-focus"
     >
       <div
         class="absolute right-1 top-0.5 flex h-3 w-3 items-center justify-center rounded-full bg-theme-background transition-all duration-100 ease-linear"
@@ -63,7 +62,7 @@ exports[`ControlButton > should render without border 1`] = `
     class="group"
   >
     <button
-      class="ring-focus css-46sfhd"
+      class="relative flex cursor-pointer items-center justify-center font-semibold text-theme-secondary-700 transition-colors duration-200 focus:outline-none disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:text-theme-secondary-500 disabled:dark:text-theme-secondary-700 hover:bg-theme-primary-100 hover:dark:text-white hover:text-theme-primary-400 rounded px-2 py-1.5 ring-focus"
     />
   </div>
 </DocumentFragment>
@@ -75,7 +74,7 @@ exports[`ControlButton > should render without border and with dot 1`] = `
     class="group"
   >
     <button
-      class="ring-focus css-46sfhd"
+      class="relative flex cursor-pointer items-center justify-center font-semibold text-theme-secondary-700 transition-colors duration-200 focus:outline-none disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:text-theme-secondary-500 disabled:dark:text-theme-secondary-700 hover:bg-theme-primary-100 hover:dark:text-white hover:text-theme-primary-400 rounded px-2 py-1.5 ring-focus"
     >
       <div
         class="absolute right-1 top-0.5 flex h-3 w-3 items-center justify-center rounded-full bg-theme-background transition-all duration-100 ease-linear -mr-2.5"

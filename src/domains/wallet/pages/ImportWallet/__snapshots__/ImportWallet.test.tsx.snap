@@ -311,7 +311,7 @@ exports[`ImportWallet > import with private key > when is not valid 1`] = `
         </div>
       </fieldset>
       <div
-        class="h-4 border-t border-dashed [background:none] flex clear-both w-full min-w-full my-4 border-theme-secondary-300 dark:border-theme-secondary-800"
+        class="h-4 border-t border-dashed [background:none] clear-both my-4 flex w-full min-w-full border-theme-secondary-300 dark:border-theme-secondary-800"
       />
       <div
         class="flex w-full flex-col space-y-2"
@@ -667,7 +667,7 @@ exports[`ImportWallet > import with private key > when is valid 1`] = `
         </div>
       </fieldset>
       <div
-        class="h-4 border-t border-dashed [background:none] flex clear-both w-full min-w-full my-4 border-theme-secondary-300 dark:border-theme-secondary-800"
+        class="h-4 border-t border-dashed [background:none] clear-both my-4 flex w-full min-w-full border-theme-secondary-300 dark:border-theme-secondary-800"
       />
       <div
         class="flex w-full flex-col space-y-2"
@@ -1023,7 +1023,7 @@ exports[`ImportWallet > import with wif > with invalid wif 1`] = `
         </div>
       </fieldset>
       <div
-        class="h-4 border-t border-dashed [background:none] flex clear-both w-full min-w-full my-4 border-theme-secondary-300 dark:border-theme-secondary-800"
+        class="h-4 border-t border-dashed [background:none] clear-both my-4 flex w-full min-w-full border-theme-secondary-300 dark:border-theme-secondary-800"
       />
       <div
         class="flex w-full flex-col space-y-2"
@@ -1379,7 +1379,7 @@ exports[`ImportWallet > import with wif > with valid wif 1`] = `
         </div>
       </fieldset>
       <div
-        class="h-4 border-t border-dashed [background:none] flex clear-both w-full min-w-full my-4 border-theme-secondary-300 dark:border-theme-secondary-800"
+        class="h-4 border-t border-dashed [background:none] clear-both my-4 flex w-full min-w-full border-theme-secondary-300 dark:border-theme-secondary-800"
       />
       <div
         class="flex w-full flex-col space-y-2"
@@ -1766,7 +1766,7 @@ exports[`ImportWallet > should import with encryped wif 1`] = `
         </div>
       </fieldset>
       <div
-        class="h-4 border-t border-dashed [background:none] flex clear-both w-full min-w-full my-4 border-theme-secondary-300 dark:border-theme-secondary-800"
+        class="h-4 border-t border-dashed [background:none] clear-both my-4 flex w-full min-w-full border-theme-secondary-300 dark:border-theme-secondary-800"
       />
       <div
         class="flex w-full flex-col space-y-2"
@@ -1868,7 +1868,7 @@ exports[`ImportWallet > should render as ledger import 1`] = `
           </div>
         </button>
         <div
-          class="h-5 relative inline-block align-middle border-t-0 border-l border-solid mx-2 border-theme-secondary-300 dark:border-theme-secondary-800"
+          class="h-5 relative mx-2 inline-block border-l border-t-0 border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
         />
         <button
           class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600"
@@ -1905,7 +1905,7 @@ exports[`ImportWallet > should render as ledger import 1`] = `
           </div>
         </button>
         <div
-          class="h-5 relative inline-block align-middle border-t-0 border-l border-solid mx-2 border-theme-secondary-300 dark:border-theme-secondary-800"
+          class="h-5 relative mx-2 inline-block border-l border-t-0 border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
         />
         <button
           class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600"
@@ -1954,7 +1954,7 @@ exports[`ImportWallet > should render as ledger import 1`] = `
           class="hidden w-12 sm:flex"
         >
           <button
-            class="flex items-center w-12 transition-colors duration-200 bg-theme-secondary-100 dark:bg-black text-theme-primary-600 dark:text-theme-secondary-200 hover:bg-theme-primary-100 hover:dark:bg-theme-secondary-800 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-theme-primary-400 focus:rounded"
+            class="flex w-12 items-center bg-theme-secondary-100 transition-colors duration-200 dark:bg-black text-theme-primary-600 hover:bg-theme-primary-100 focus:rounded focus:outline-none focus:ring-2 focus:ring-inset focus:ring-theme-primary-400 dark:text-theme-secondary-200 hover:dark:bg-theme-secondary-800"
           >
             <div
               class="mx-auto"
@@ -2613,7 +2613,7 @@ exports[`ImportWallet > should render as ledger import 1`] = `
                 </div>
               </div>
               <div
-                class="flex fixed bg-theme-background dark:bg-black sm:bg-transparent sm:dark:bg-transparent inset-x-0 bottom-0 px-8 py-3 gap-3 shadow-footer-smooth dark:shadow-footer-smooth-dark sm:relative sm:inset-auto sm:p-0 sm:mt-6 sm:justify-end sm:shadow-none sm:dark:shadow-none [&>button]:flex-1 sm:[&>button]:flex-none sm:mb-0 mb-14"
+                class="fixed inset-x-0 bottom-0 flex gap-3 bg-theme-background px-8 py-3 shadow-footer-smooth dark:bg-black dark:shadow-footer-smooth-dark sm:relative sm:inset-auto sm:mt-6 sm:justify-end sm:bg-transparent sm:p-0 sm:shadow-none sm:dark:bg-transparent sm:dark:shadow-none [&>button]:flex-1 sm:[&>button]:flex-none mb-14 sm:mb-0"
               >
                 <button
                   class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 green:hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-500"
@@ -3038,7 +3038,7 @@ exports[`ImportWallet > should render method step 1`] = `
         </div>
       </div>
       <div
-        class="h-4 border-t border-dashed [background:none] flex clear-both w-full min-w-full my-4 border-theme-secondary-300 dark:border-theme-secondary-800"
+        class="h-4 border-t border-dashed [background:none] clear-both my-4 flex w-full min-w-full border-theme-secondary-300 dark:border-theme-secondary-800"
       />
       <div
         class="flex w-full flex-col space-y-2"
@@ -3493,7 +3493,7 @@ exports[`ImportWallet > should render success step (lg) 1`] = `
             class="hidden h-8 w-full items-center sm:flex"
           >
             <div
-              class="h-4 border-t border-dashed [background:none] flex clear-both w-full min-w-full my-4 border-theme-secondary-300 dark:border-theme-secondary-800"
+              class="h-4 border-t border-dashed [background:none] clear-both my-4 flex w-full min-w-full border-theme-secondary-300 dark:border-theme-secondary-800"
             />
           </div>
           <div
@@ -3554,7 +3554,7 @@ exports[`ImportWallet > should render success step (lg) 1`] = `
                 class="flex h-5 items-center sm:hidden"
               >
                 <div
-                  class="h-5 relative inline-block align-middle border-t-0 border-l border-solid mx-2 border-theme-secondary-300 dark:border-theme-secondary-800"
+                  class="h-5 relative mx-2 inline-block border-l border-t-0 border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
                 />
               </div>
               <button
@@ -3762,7 +3762,7 @@ exports[`ImportWallet > should render success step (xs) 1`] = `
             class="hidden h-8 w-full items-center sm:flex"
           >
             <div
-              class="h-4 border-t border-dashed [background:none] flex clear-both w-full min-w-full my-4 border-theme-secondary-300 dark:border-theme-secondary-800"
+              class="h-4 border-t border-dashed [background:none] clear-both my-4 flex w-full min-w-full border-theme-secondary-300 dark:border-theme-secondary-800"
             />
           </div>
           <div
@@ -3823,7 +3823,7 @@ exports[`ImportWallet > should render success step (xs) 1`] = `
                 class="flex h-5 items-center sm:hidden"
               >
                 <div
-                  class="h-5 relative inline-block align-middle border-t-0 border-l border-solid mx-2 border-theme-secondary-300 dark:border-theme-secondary-800"
+                  class="h-5 relative mx-2 inline-block border-l border-t-0 border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
                 />
               </div>
               <button

@@ -13,7 +13,7 @@ exports[`WalletVote > multi vote networks > should render a vote for multiple ac
         class="hidden md:block"
       >
         <div
-          class="transition-all inline-flex items-center justify-center align-middle border-2 rounded-full px-2 py-1 w-11 h-11 ring-6 border-theme-secondary-900 text-theme-secondary-900 dark:border-theme-secondary-700 dark:text-theme-secondary-700 ring-theme-background dark:ring-theme-secondary-background duration-100"
+          class="inline-flex items-center justify-center rounded-full border-2 align-middle transition-all h-11 w-11 px-2 py-1 ring-6 border-theme-secondary-900 text-theme-secondary-900 dark:border-theme-secondary-700 dark:text-theme-secondary-700 ring-theme-background dark:ring-theme-secondary-background duration-100"
         >
           <div>
             <div
@@ -204,7 +204,7 @@ exports[`WalletVote > multi vote networks > should render a vote for multiple ac
         class="hidden md:block"
       >
         <div
-          class="transition-all inline-flex items-center justify-center align-middle border-2 rounded-full px-2 py-1 w-11 h-11 ring-6 border-theme-secondary-900 text-theme-secondary-900 dark:border-theme-secondary-700 dark:text-theme-secondary-700 ring-theme-background dark:ring-theme-secondary-background duration-100"
+          class="inline-flex items-center justify-center rounded-full border-2 align-middle transition-all h-11 w-11 px-2 py-1 ring-6 border-theme-secondary-900 text-theme-secondary-900 dark:border-theme-secondary-700 dark:text-theme-secondary-700 ring-theme-background dark:ring-theme-secondary-background duration-100"
         >
           <div>
             <div
@@ -395,7 +395,7 @@ exports[`WalletVote > multi vote networks > should render a vote for multiple ac
         class="hidden md:block"
       >
         <div
-          class="transition-all inline-flex items-center justify-center align-middle border-2 rounded-full px-2 py-1 w-11 h-11 ring-6 border-theme-secondary-900 text-theme-secondary-900 dark:border-theme-secondary-700 dark:text-theme-secondary-700 ring-theme-background dark:ring-theme-secondary-background duration-100"
+          class="inline-flex items-center justify-center rounded-full border-2 align-middle transition-all h-11 w-11 px-2 py-1 ring-6 border-theme-secondary-900 text-theme-secondary-900 dark:border-theme-secondary-700 dark:text-theme-secondary-700 ring-theme-background dark:ring-theme-secondary-background duration-100"
         >
           <div>
             <div
@@ -591,7 +591,7 @@ exports[`WalletVote > multi vote networks > should render a vote for multiple st
         class="hidden md:block"
       >
         <div
-          class="transition-all inline-flex items-center justify-center align-middle border-2 rounded-full px-2 py-1 w-11 h-11 ring-6 border-theme-secondary-900 text-theme-secondary-900 dark:border-theme-secondary-700 dark:text-theme-secondary-700 ring-theme-background dark:ring-theme-secondary-background duration-100"
+          class="inline-flex items-center justify-center rounded-full border-2 align-middle transition-all h-11 w-11 px-2 py-1 ring-6 border-theme-secondary-900 text-theme-secondary-900 dark:border-theme-secondary-700 dark:text-theme-secondary-700 ring-theme-background dark:ring-theme-secondary-background duration-100"
         >
           <div>
             <div
@@ -786,7 +786,7 @@ exports[`WalletVote > multi vote networks > should render votes when all delegat
         class="hidden md:block"
       >
         <div
-          class="transition-all inline-flex items-center justify-center align-middle border-2 rounded-full px-2 py-1 w-11 h-11 ring-6 border-theme-secondary-900 text-theme-secondary-900 dark:border-theme-secondary-700 dark:text-theme-secondary-700 ring-theme-background dark:ring-theme-secondary-background duration-100"
+          class="inline-flex items-center justify-center rounded-full border-2 align-middle transition-all h-11 w-11 px-2 py-1 ring-6 border-theme-secondary-900 text-theme-secondary-900 dark:border-theme-secondary-700 dark:text-theme-secondary-700 ring-theme-background dark:ring-theme-secondary-background duration-100"
         >
           <div>
             <div
@@ -938,7 +938,7 @@ exports[`WalletVote > multi vote networks > should render votes when all delegat
         class="hidden md:block"
       >
         <div
-          class="transition-all inline-flex items-center justify-center align-middle border-2 rounded-full px-2 py-1 w-11 h-11 ring-6 border-theme-secondary-900 text-theme-secondary-900 dark:border-theme-secondary-700 dark:text-theme-secondary-700 ring-theme-background dark:ring-theme-secondary-background duration-100"
+          class="inline-flex items-center justify-center rounded-full border-2 align-middle transition-all h-11 w-11 px-2 py-1 ring-6 border-theme-secondary-900 text-theme-secondary-900 dark:border-theme-secondary-700 dark:text-theme-secondary-700 ring-theme-background dark:ring-theme-secondary-background duration-100"
         >
           <div>
             <div
@@ -1124,7 +1124,7 @@ exports[`WalletVote > should disable vote button when balance is less than votes
         class="hidden md:block"
       >
         <div
-          class="transition-all inline-flex items-center justify-center align-middle border-2 rounded-full px-2 py-1 w-11 h-11 ring-6 border-theme-secondary-500 text-theme-secondary-500 dark:border-theme-secondary-700 dark:text-theme-secondary-700 ring-theme-background dark:ring-theme-secondary-background duration-100"
+          class="inline-flex items-center justify-center rounded-full border-2 align-middle transition-all h-11 w-11 px-2 py-1 ring-6 border-theme-secondary-500 text-theme-secondary-500 dark:border-theme-secondary-700 dark:text-theme-secondary-700 ring-theme-background dark:ring-theme-secondary-background duration-100"
         >
           <div>
             <div
@@ -1325,7 +1325,7 @@ exports[`WalletVote > should render 1`] = `
         class="hidden md:block"
       >
         <div
-          class="transition-all inline-flex items-center justify-center align-middle border-2 rounded-full px-2 py-1 w-11 h-11 ring-6 border-theme-secondary-500 text-theme-secondary-500 dark:border-theme-secondary-700 dark:text-theme-secondary-700 ring-theme-background dark:ring-theme-secondary-background duration-100"
+          class="inline-flex items-center justify-center rounded-full border-2 align-middle transition-all h-11 w-11 px-2 py-1 ring-6 border-theme-secondary-500 text-theme-secondary-500 dark:border-theme-secondary-700 dark:text-theme-secondary-700 ring-theme-background dark:ring-theme-secondary-background duration-100"
         >
           <div>
             <div
@@ -1491,7 +1491,7 @@ exports[`WalletVote > should render as all resigned 1`] = `
         class="hidden md:block"
       >
         <div
-          class="transition-all inline-flex items-center justify-center align-middle border-2 rounded-full px-2 py-1 w-11 h-11 ring-6 border-theme-secondary-900 text-theme-secondary-900 dark:border-theme-secondary-700 dark:text-theme-secondary-700 ring-theme-background dark:ring-theme-secondary-background duration-100"
+          class="inline-flex items-center justify-center rounded-full border-2 align-middle transition-all h-11 w-11 px-2 py-1 ring-6 border-theme-secondary-900 text-theme-secondary-900 dark:border-theme-secondary-700 dark:text-theme-secondary-700 ring-theme-background dark:ring-theme-secondary-background duration-100"
         >
           <div>
             <div
@@ -1672,7 +1672,7 @@ exports[`WalletVote > should render disabled vote button 1`] = `
         class="hidden md:block"
       >
         <div
-          class="transition-all inline-flex items-center justify-center align-middle border-2 rounded-full px-2 py-1 w-11 h-11 ring-6 border-theme-secondary-500 text-theme-secondary-500 dark:border-theme-secondary-700 dark:text-theme-secondary-700 ring-theme-background dark:ring-theme-secondary-background duration-100"
+          class="inline-flex items-center justify-center rounded-full border-2 align-middle transition-all h-11 w-11 px-2 py-1 ring-6 border-theme-secondary-500 text-theme-secondary-500 dark:border-theme-secondary-700 dark:text-theme-secondary-700 ring-theme-background dark:ring-theme-secondary-background duration-100"
         >
           <div>
             <div
@@ -1839,7 +1839,7 @@ exports[`WalletVote > should render ledger for incompatible ledger wallet 1`] = 
         class="hidden md:block"
       >
         <div
-          class="transition-all inline-flex items-center justify-center align-middle border-2 rounded-full px-2 py-1 w-11 h-11 ring-6 border-theme-secondary-500 text-theme-secondary-500 dark:border-theme-secondary-700 dark:text-theme-secondary-700 ring-theme-background dark:ring-theme-secondary-background duration-100"
+          class="inline-flex items-center justify-center rounded-full border-2 align-middle transition-all h-11 w-11 px-2 py-1 ring-6 border-theme-secondary-500 text-theme-secondary-500 dark:border-theme-secondary-700 dark:text-theme-secondary-700 ring-theme-background dark:ring-theme-secondary-background duration-100"
         >
           <div>
             <div
@@ -2118,7 +2118,7 @@ exports[`WalletVote > should render the maximum votes 1`] = `
         class="hidden md:block"
       >
         <div
-          class="transition-all inline-flex items-center justify-center align-middle border-2 rounded-full px-2 py-1 w-11 h-11 ring-6 border-theme-secondary-500 text-theme-secondary-500 dark:border-theme-secondary-700 dark:text-theme-secondary-700 ring-theme-background dark:ring-theme-secondary-background duration-100"
+          class="inline-flex items-center justify-center rounded-full border-2 align-middle transition-all h-11 w-11 px-2 py-1 ring-6 border-theme-secondary-500 text-theme-secondary-500 dark:border-theme-secondary-700 dark:text-theme-secondary-700 ring-theme-background dark:ring-theme-secondary-background duration-100"
         >
           <div>
             <div
@@ -2284,7 +2284,7 @@ exports[`WalletVote > should render without votes 1`] = `
         class="hidden md:block"
       >
         <div
-          class="transition-all inline-flex items-center justify-center align-middle border-2 rounded-full px-2 py-1 w-11 h-11 ring-6 border-theme-secondary-500 text-theme-secondary-500 dark:border-theme-secondary-700 dark:text-theme-secondary-700 ring-theme-background dark:ring-theme-secondary-background duration-100"
+          class="inline-flex items-center justify-center rounded-full border-2 align-middle transition-all h-11 w-11 px-2 py-1 ring-6 border-theme-secondary-500 text-theme-secondary-500 dark:border-theme-secondary-700 dark:text-theme-secondary-700 ring-theme-background dark:ring-theme-secondary-background duration-100"
         >
           <div>
             <div
@@ -2450,7 +2450,7 @@ exports[`WalletVote > single vote networks > should render a vote for a delegate
         class="hidden md:block"
       >
         <div
-          class="transition-all inline-flex items-center justify-center align-middle border-2 rounded-full px-2 py-1 w-11 h-11 ring-6 border-theme-secondary-900 text-theme-secondary-900 dark:border-theme-secondary-700 dark:text-theme-secondary-700 ring-theme-background dark:ring-theme-secondary-background duration-100"
+          class="inline-flex items-center justify-center rounded-full border-2 align-middle transition-all h-11 w-11 px-2 py-1 ring-6 border-theme-secondary-900 text-theme-secondary-900 dark:border-theme-secondary-700 dark:text-theme-secondary-700 ring-theme-background dark:ring-theme-secondary-background duration-100"
         >
           <div>
             <div
@@ -2629,7 +2629,7 @@ exports[`WalletVote > single vote networks > should render a vote for a standby 
         class="hidden md:block"
       >
         <div
-          class="transition-all inline-flex items-center justify-center align-middle border-2 rounded-full px-2 py-1 w-11 h-11 ring-6 border-theme-secondary-900 text-theme-secondary-900 dark:border-theme-secondary-700 dark:text-theme-secondary-700 ring-theme-background dark:ring-theme-secondary-background duration-100"
+          class="inline-flex items-center justify-center rounded-full border-2 align-middle transition-all h-11 w-11 px-2 py-1 ring-6 border-theme-secondary-900 text-theme-secondary-900 dark:border-theme-secondary-700 dark:text-theme-secondary-700 ring-theme-background dark:ring-theme-secondary-background duration-100"
         >
           <div>
             <div
@@ -2808,7 +2808,7 @@ exports[`WalletVote > single vote networks > should render a vote for an active 
         class="hidden md:block"
       >
         <div
-          class="transition-all inline-flex items-center justify-center align-middle border-2 rounded-full px-2 py-1 w-11 h-11 ring-6 border-theme-secondary-900 text-theme-secondary-900 dark:border-theme-secondary-700 dark:text-theme-secondary-700 ring-theme-background dark:ring-theme-secondary-background duration-100"
+          class="inline-flex items-center justify-center rounded-full border-2 align-middle transition-all h-11 w-11 px-2 py-1 ring-6 border-theme-secondary-900 text-theme-secondary-900 dark:border-theme-secondary-700 dark:text-theme-secondary-700 ring-theme-background dark:ring-theme-secondary-background duration-100"
         >
           <div>
             <div
