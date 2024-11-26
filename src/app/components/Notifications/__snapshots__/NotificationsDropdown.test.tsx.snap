@@ -838,7 +838,7 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                           class="mt-3 sm:mt-2"
                         >
                           <div
-                            class="flex items-center space-x-3 rounded-xl border border-theme-success-200 bg-theme-success-50 px-3 py-2 dark:border-theme-success-600 dark:bg-transparent max-sm:text-sm sm:px-6 sm:py-4 sm:leading-5"
+                            class="max-sm:text-sm flex items-center space-x-3 rounded-xl border border-theme-success-200 bg-theme-success-50 px-3 py-2 dark:border-theme-success-600 dark:bg-transparent sm:px-6 sm:py-4 sm:leading-5"
                             data-testid="TransactionSuccessAlert"
                           >
                             <div
