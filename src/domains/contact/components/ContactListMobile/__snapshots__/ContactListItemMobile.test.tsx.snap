@@ -32,44 +32,44 @@ exports[`ContactListItemMobile > should render 1`] = `
                 class="flex text-theme-secondary-700"
                 type="button"
               >
-                <div
-                  class="css-v0ob3f"
-                  height="16"
-                  width="16"
-                >
-                  <svg
-                    fill="none"
-                    viewBox="0 0 20 20"
-                    xmlns="http://www.w3.org/2000/svg"
+                <div>
+                  <div
+                    style="height: 16px; width: 16px;"
                   >
-                    <circle
-                      cx="10.002"
-                      cy="2.99609"
-                      fill="currentColor"
-                      r="2"
-                      transform="rotate(90 10.002 2.99609)"
-                    />
-                    <circle
-                      cx="10.002"
-                      cy="9.99805"
-                      fill="currentColor"
-                      r="2"
-                      transform="rotate(90 10.002 9.99805)"
-                    />
-                    <circle
-                      cx="10.002"
-                      cy="17"
-                      fill="currentColor"
-                      r="2"
-                      transform="rotate(90 10.002 17)"
-                    />
-                  </svg>
+                    <svg
+                      fill="none"
+                      style="height: 100%; width: 100%;"
+                      viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <circle
+                        cx="10.002"
+                        cy="2.99609"
+                        fill="currentColor"
+                        r="2"
+                        transform="rotate(90 10.002 2.99609)"
+                      />
+                      <circle
+                        cx="10.002"
+                        cy="9.99805"
+                        fill="currentColor"
+                        r="2"
+                        transform="rotate(90 10.002 9.99805)"
+                      />
+                      <circle
+                        cx="10.002"
+                        cy="17"
+                        fill="currentColor"
+                        r="2"
+                        transform="rotate(90 10.002 17)"
+                      />
+                    </svg>
+                  </div>
                 </div>
               </button>
             </div>
             <div
-              class="border-theme-secondary-300 dark:border-theme-secondary-800 css-3y8nng"
-              type="vertical"
+              class="h-5 relative inline-block align-middle border-t-0 border-l border-solid mx-2 border-theme-secondary-300 dark:border-theme-secondary-800"
             />
           </div>
         </div>
@@ -82,27 +82,30 @@ exports[`ContactListItemMobile > should render 1`] = `
           data-testid="Accordion__toggle"
         >
           <div
-            class="transition-transform rotate-180 css-15txs7d"
-            height="10"
-            width="10"
+            class="transition-transform rotate-180"
           >
-            <svg
-              id="chevron-down-small"
-              viewBox="0 0 10 10"
-              x="0"
-              xml:space="preserve"
-              xmlns="http://www.w3.org/2000/svg"
-              y="0"
+            <div
+              style="height: 10px; width: 10px;"
             >
-              <path
-                d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
-                fill="none"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-              />
-            </svg>
+              <svg
+                id="chevron-down-small"
+                style="height: 100%; width: 100%;"
+                viewBox="0 0 10 10"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <path
+                  d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                />
+              </svg>
+            </div>
           </div>
         </div>
       </div>
@@ -145,33 +148,36 @@ exports[`ContactListItemMobile > should render 1`] = `
                   type="button"
                 >
                   <div
-                    class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white css-v0ob3f"
-                    height="16"
-                    width="16"
+                    class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white"
                   >
-                    <svg
-                      id="copy"
-                      viewBox="0 0 20 20"
-                      x="0"
-                      xml:space="preserve"
-                      xmlns="http://www.w3.org/2000/svg"
-                      y="0"
+                    <div
+                      style="height: 16px; width: 16px;"
                     >
-                      <g
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
+                      <svg
+                        id="copy"
+                        style="height: 100%; width: 100%;"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
                       >
-                        <path
-                          d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
-                        />
-                        <path
-                          d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                        />
-                      </g>
-                    </svg>
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                          />
+                          <path
+                            d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                          />
+                        </g>
+                      </svg>
+                    </div>
                   </div>
                 </button>
               </div>
@@ -186,28 +192,29 @@ exports[`ContactListItemMobile > should render 1`] = `
               disabled=""
               type="button"
             >
-              <div
-                class="css-1i4b0eq"
-                height="20"
-                width="20"
-              >
-                <svg
-                  id="double-arrow-right"
-                  viewBox="0 0 20 20"
-                  x="0"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
-                  y="0"
+              <div>
+                <div
+                  style="height: 20px; width: 20px;"
                 >
-                  <path
-                    d="M1 7.744h9.013V3.832c0-.4.2-.4.5-.2 2.103 1.504 7.31 5.014 8.111 5.616.501.3.501 1.103 0 1.504-.8.602-6.008 4.212-8.11 5.616-.401.2-.501.2-.501-.2v-3.71H1"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                  />
-                </svg>
+                  <svg
+                    id="double-arrow-right"
+                    style="height: 100%; width: 100%;"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
+                  >
+                    <path
+                      d="M1 7.744h9.013V3.832c0-.4.2-.4.5-.2 2.103 1.504 7.31 5.014 8.111 5.616.501.3.501 1.103 0 1.504-.8.602-6.008 4.212-8.11 5.616-.401.2-.501.2-.501-.2v-3.71H1"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    />
+                  </svg>
+                </div>
               </div>
             </button>
           </div>
@@ -250,44 +257,44 @@ exports[`ContactListItemMobile > should render addresses 1`] = `
                 class="flex text-theme-secondary-700"
                 type="button"
               >
-                <div
-                  class="css-v0ob3f"
-                  height="16"
-                  width="16"
-                >
-                  <svg
-                    fill="none"
-                    viewBox="0 0 20 20"
-                    xmlns="http://www.w3.org/2000/svg"
+                <div>
+                  <div
+                    style="height: 16px; width: 16px;"
                   >
-                    <circle
-                      cx="10.002"
-                      cy="2.99609"
-                      fill="currentColor"
-                      r="2"
-                      transform="rotate(90 10.002 2.99609)"
-                    />
-                    <circle
-                      cx="10.002"
-                      cy="9.99805"
-                      fill="currentColor"
-                      r="2"
-                      transform="rotate(90 10.002 9.99805)"
-                    />
-                    <circle
-                      cx="10.002"
-                      cy="17"
-                      fill="currentColor"
-                      r="2"
-                      transform="rotate(90 10.002 17)"
-                    />
-                  </svg>
+                    <svg
+                      fill="none"
+                      style="height: 100%; width: 100%;"
+                      viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <circle
+                        cx="10.002"
+                        cy="2.99609"
+                        fill="currentColor"
+                        r="2"
+                        transform="rotate(90 10.002 2.99609)"
+                      />
+                      <circle
+                        cx="10.002"
+                        cy="9.99805"
+                        fill="currentColor"
+                        r="2"
+                        transform="rotate(90 10.002 9.99805)"
+                      />
+                      <circle
+                        cx="10.002"
+                        cy="17"
+                        fill="currentColor"
+                        r="2"
+                        transform="rotate(90 10.002 17)"
+                      />
+                    </svg>
+                  </div>
                 </div>
               </button>
             </div>
             <div
-              class="border-theme-secondary-300 dark:border-theme-secondary-800 css-3y8nng"
-              type="vertical"
+              class="h-5 relative inline-block align-middle border-t-0 border-l border-solid mx-2 border-theme-secondary-300 dark:border-theme-secondary-800"
             />
           </div>
         </div>
@@ -300,27 +307,30 @@ exports[`ContactListItemMobile > should render addresses 1`] = `
           data-testid="Accordion__toggle"
         >
           <div
-            class="transition-transform rotate-180 css-15txs7d"
-            height="10"
-            width="10"
+            class="transition-transform rotate-180"
           >
-            <svg
-              id="chevron-down-small"
-              viewBox="0 0 10 10"
-              x="0"
-              xml:space="preserve"
-              xmlns="http://www.w3.org/2000/svg"
-              y="0"
+            <div
+              style="height: 10px; width: 10px;"
             >
-              <path
-                d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
-                fill="none"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-              />
-            </svg>
+              <svg
+                id="chevron-down-small"
+                style="height: 100%; width: 100%;"
+                viewBox="0 0 10 10"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <path
+                  d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                />
+              </svg>
+            </div>
           </div>
         </div>
       </div>
@@ -363,33 +373,36 @@ exports[`ContactListItemMobile > should render addresses 1`] = `
                   type="button"
                 >
                   <div
-                    class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white css-v0ob3f"
-                    height="16"
-                    width="16"
+                    class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white"
                   >
-                    <svg
-                      id="copy"
-                      viewBox="0 0 20 20"
-                      x="0"
-                      xml:space="preserve"
-                      xmlns="http://www.w3.org/2000/svg"
-                      y="0"
+                    <div
+                      style="height: 16px; width: 16px;"
                     >
-                      <g
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
+                      <svg
+                        id="copy"
+                        style="height: 100%; width: 100%;"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
                       >
-                        <path
-                          d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
-                        />
-                        <path
-                          d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                        />
-                      </g>
-                    </svg>
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                          />
+                          <path
+                            d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                          />
+                        </g>
+                      </svg>
+                    </div>
                   </div>
                 </button>
               </div>
@@ -404,28 +417,29 @@ exports[`ContactListItemMobile > should render addresses 1`] = `
               disabled=""
               type="button"
             >
-              <div
-                class="css-1i4b0eq"
-                height="20"
-                width="20"
-              >
-                <svg
-                  id="double-arrow-right"
-                  viewBox="0 0 20 20"
-                  x="0"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
-                  y="0"
+              <div>
+                <div
+                  style="height: 20px; width: 20px;"
                 >
-                  <path
-                    d="M1 7.744h9.013V3.832c0-.4.2-.4.5-.2 2.103 1.504 7.31 5.014 8.111 5.616.501.3.501 1.103 0 1.504-.8.602-6.008 4.212-8.11 5.616-.401.2-.501.2-.501-.2v-3.71H1"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                  />
-                </svg>
+                  <svg
+                    id="double-arrow-right"
+                    style="height: 100%; width: 100%;"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
+                  >
+                    <path
+                      d="M1 7.744h9.013V3.832c0-.4.2-.4.5-.2 2.103 1.504 7.31 5.014 8.111 5.616.501.3.501 1.103 0 1.504-.8.602-6.008 4.212-8.11 5.616-.401.2-.501.2-.501-.2v-3.71H1"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    />
+                  </svg>
+                </div>
               </div>
             </button>
           </div>

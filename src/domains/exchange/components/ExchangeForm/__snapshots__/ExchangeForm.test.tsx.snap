@@ -12,31 +12,33 @@ exports[`ConfirmationStep > should render 1`] = `
       class="mx-auto mb-8 hidden items-center space-x-3 sm:flex"
     >
       <div
-        class="css-bogjme"
         data-testid="icon-CircleCompletedLightGreen"
-        height="32"
-        width="32"
       >
-        <svg
-          fill="none"
-          viewBox="0 0 32 32"
-          xmlns="http://www.w3.org/2000/svg"
+        <div
+          style="height: 32px; width: 32px;"
         >
-          <circle
-            cx="16"
-            cy="16"
-            r="15"
-            stroke="#289548"
-            stroke-width="2"
-          />
-          <path
-            d="M21.1387 11.8135L15.1388 17.7218L12.339 14.963L10.3389 16.933L15.1388 21.6601L23.1389 13.7844L21.1387 11.8135Z"
-            fill="#E2F0E6"
-            stroke="#289548"
-            stroke-linejoin="round"
-            stroke-width="2"
-          />
-        </svg>
+          <svg
+            fill="none"
+            style="height: 100%; width: 100%;"
+            viewBox="0 0 32 32"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle
+              cx="16"
+              cy="16"
+              r="15"
+              stroke="#289548"
+              stroke-width="2"
+            />
+            <path
+              d="M21.1387 11.8135L15.1388 17.7218L12.339 14.963L10.3389 16.933L15.1388 21.6601L23.1389 13.7844L21.1387 11.8135Z"
+              fill="#E2F0E6"
+              stroke="#289548"
+              stroke-linejoin="round"
+              stroke-width="2"
+            />
+          </svg>
+        </div>
       </div>
       <h2
         class="m-0 text-2xl font-bold leading-[29px]"
@@ -105,28 +107,31 @@ exports[`ConfirmationStep > should render 1`] = `
                       </span>
                     </span>
                     <div
-                      class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-1fio4bh"
+                      class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm"
                       data-testid="Link__external"
-                      height="12"
-                      width="12"
                     >
-                      <svg
-                        id="arrow-external"
-                        viewBox="0 0 20 20"
-                        x="0"
-                        xml:space="preserve"
-                        xmlns="http://www.w3.org/2000/svg"
-                        y="0"
+                      <div
+                        style="height: 12px; width: 12px;"
                       >
-                        <path
-                          d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                        />
-                      </svg>
+                        <svg
+                          id="arrow-external"
+                          style="height: 100%; width: 100%;"
+                          viewBox="0 0 20 20"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
+                        >
+                          <path
+                            d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          />
+                        </svg>
+                      </div>
                     </div>
                   </a>
                 </span>
@@ -139,34 +144,35 @@ exports[`ConfirmationStep > should render 1`] = `
                     data-testid="clipboard-icon__wrapper"
                     type="button"
                   >
-                    <div
-                      class="css-v0ob3f"
-                      height="16"
-                      width="16"
-                    >
-                      <svg
-                        id="copy"
-                        viewBox="0 0 20 20"
-                        x="0"
-                        xml:space="preserve"
-                        xmlns="http://www.w3.org/2000/svg"
-                        y="0"
+                    <div>
+                      <div
+                        style="height: 16px; width: 16px;"
                       >
-                        <g
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
+                        <svg
+                          id="copy"
+                          style="height: 100%; width: 100%;"
+                          viewBox="0 0 20 20"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
                         >
-                          <path
-                            d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
-                          />
-                          <path
-                            d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                          />
-                        </g>
-                      </svg>
+                          <g
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          >
+                            <path
+                              d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                            />
+                            <path
+                              d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                            />
+                          </g>
+                        </svg>
+                      </div>
                     </div>
                   </button>
                 </span>
@@ -204,28 +210,31 @@ exports[`ConfirmationStep > should render 1`] = `
                       </span>
                     </span>
                     <div
-                      class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-1fio4bh"
+                      class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm"
                       data-testid="Link__external"
-                      height="12"
-                      width="12"
                     >
-                      <svg
-                        id="arrow-external"
-                        viewBox="0 0 20 20"
-                        x="0"
-                        xml:space="preserve"
-                        xmlns="http://www.w3.org/2000/svg"
-                        y="0"
+                      <div
+                        style="height: 12px; width: 12px;"
                       >
-                        <path
-                          d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                        />
-                      </svg>
+                        <svg
+                          id="arrow-external"
+                          style="height: 100%; width: 100%;"
+                          viewBox="0 0 20 20"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
+                        >
+                          <path
+                            d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          />
+                        </svg>
+                      </div>
                     </div>
                   </a>
                 </span>
@@ -238,34 +247,35 @@ exports[`ConfirmationStep > should render 1`] = `
                     data-testid="clipboard-icon__wrapper"
                     type="button"
                   >
-                    <div
-                      class="css-v0ob3f"
-                      height="16"
-                      width="16"
-                    >
-                      <svg
-                        id="copy"
-                        viewBox="0 0 20 20"
-                        x="0"
-                        xml:space="preserve"
-                        xmlns="http://www.w3.org/2000/svg"
-                        y="0"
+                    <div>
+                      <div
+                        style="height: 16px; width: 16px;"
                       >
-                        <g
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
+                        <svg
+                          id="copy"
+                          style="height: 100%; width: 100%;"
+                          viewBox="0 0 20 20"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
                         >
-                          <path
-                            d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
-                          />
-                          <path
-                            d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                          />
-                        </g>
-                      </svg>
+                          <g
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          >
+                            <path
+                              d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                            />
+                            <path
+                              d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                            />
+                          </g>
+                        </svg>
+                      </div>
                     </div>
                   </button>
                 </span>
@@ -362,34 +372,35 @@ exports[`ConfirmationStep > should render 1`] = `
                     data-testid="clipboard-icon__wrapper"
                     type="button"
                   >
-                    <div
-                      class="css-v0ob3f"
-                      height="16"
-                      width="16"
-                    >
-                      <svg
-                        id="copy"
-                        viewBox="0 0 20 20"
-                        x="0"
-                        xml:space="preserve"
-                        xmlns="http://www.w3.org/2000/svg"
-                        y="0"
+                    <div>
+                      <div
+                        style="height: 16px; width: 16px;"
                       >
-                        <g
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
+                        <svg
+                          id="copy"
+                          style="height: 100%; width: 100%;"
+                          viewBox="0 0 20 20"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
                         >
-                          <path
-                            d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
-                          />
-                          <path
-                            d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                          />
-                        </g>
-                      </svg>
+                          <g
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          >
+                            <path
+                              d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                            />
+                            <path
+                              d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                            />
+                          </g>
+                        </svg>
+                      </div>
                     </div>
                   </button>
                 </span>
@@ -470,7 +481,7 @@ exports[`ExchangeForm > should render exchange form 1`] = `
                 class="w-2/5"
               >
                 <fieldset
-                  class="flex min-w-0 flex-col css-ea0il3"
+                  class="[&>.FormLabel]:text-theme-primary-600 focus-within:[&>.FormLabel]:text-theme-primary-600 flex min-w-0 flex-col"
                 >
                   <label
                     class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
@@ -522,7 +533,7 @@ exports[`ExchangeForm > should render exchange form 1`] = `
                               class="hidden sm:block"
                             >
                               <div
-                                class="border-theme-secondary-200 bg-theme-secondary-200 ring-theme-background dark:border-theme-secondary-700 dark:bg-theme-secondary-700 ring-theme-background duration-100 css-cm9d5u"
+                                class="transition-all inline-flex items-center justify-center align-middle border-2 rounded-full px-2 py-1 w-8 h-8 text-sm ring-0 border-theme-secondary-200 bg-theme-secondary-200 dark:border-theme-secondary-700 dark:bg-theme-secondary-700 ring-theme-background duration-100"
                               />
                             </div>
                             <div
@@ -560,27 +571,30 @@ exports[`ExchangeForm > should render exchange form 1`] = `
                                       class="absolute inset-0 block cursor-pointer md:hidden"
                                     />
                                     <div
-                                      class="transition-transform text-theme-secondary-500 css-15txs7d"
-                                      height="10"
-                                      width="10"
+                                      class="transition-transform text-theme-secondary-500"
                                     >
-                                      <svg
-                                        id="chevron-down-small"
-                                        viewBox="0 0 10 10"
-                                        x="0"
-                                        xml:space="preserve"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        y="0"
+                                      <div
+                                        style="height: 10px; width: 10px;"
                                       >
-                                        <path
-                                          d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
-                                          fill="none"
-                                          stroke="currentColor"
-                                          stroke-linecap="round"
-                                          stroke-linejoin="round"
-                                          stroke-width="2"
-                                        />
-                                      </svg>
+                                        <svg
+                                          id="chevron-down-small"
+                                          style="height: 100%; width: 100%;"
+                                          viewBox="0 0 10 10"
+                                          x="0"
+                                          xml:space="preserve"
+                                          xmlns="http://www.w3.org/2000/svg"
+                                          y="0"
+                                        >
+                                          <path
+                                            d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                                            fill="none"
+                                            stroke="currentColor"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            stroke-width="2"
+                                          />
+                                        </svg>
+                                      </div>
                                     </div>
                                   </div>
                                 </div>
@@ -602,7 +616,7 @@ exports[`ExchangeForm > should render exchange form 1`] = `
                 class="w-3/5"
               >
                 <fieldset
-                  class="flex min-w-0 flex-col css-ea0il3"
+                  class="[&>.FormLabel]:text-theme-primary-600 focus-within:[&>.FormLabel]:text-theme-primary-600 flex min-w-0 flex-col"
                 >
                   <label
                     class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
@@ -670,28 +684,29 @@ exports[`ExchangeForm > should render exchange form 1`] = `
                   <div
                     class="flex items-center space-x-2"
                   >
-                    <div
-                      class="css-v0ob3f"
-                      height="16"
-                      width="16"
-                    >
-                      <svg
-                        id="arrow-down-up"
-                        viewBox="0 0 20 20"
-                        x="0"
-                        xml:space="preserve"
-                        xmlns="http://www.w3.org/2000/svg"
-                        y="0"
+                    <div>
+                      <div
+                        style="height: 16px; width: 16px;"
                       >
-                        <path
-                          d="M5 2v17m4-4l-4 4-4-4m14 3V1m-4 4l4-4 4 4"
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                        />
-                      </svg>
+                        <svg
+                          id="arrow-down-up"
+                          style="height: 100%; width: 100%;"
+                          viewBox="0 0 20 20"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
+                        >
+                          <path
+                            d="M5 2v17m4-4l-4 4-4-4m14 3V1m-4 4l4-4 4 4"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          />
+                        </svg>
+                      </div>
                     </div>
                   </div>
                 </button>
@@ -707,7 +722,7 @@ exports[`ExchangeForm > should render exchange form 1`] = `
                   class="w-2/5"
                 >
                   <fieldset
-                    class="flex min-w-0 flex-col css-ea0il3"
+                    class="[&>.FormLabel]:text-theme-primary-600 focus-within:[&>.FormLabel]:text-theme-primary-600 flex min-w-0 flex-col"
                   >
                     <label
                       class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
@@ -759,7 +774,7 @@ exports[`ExchangeForm > should render exchange form 1`] = `
                                 class="hidden sm:block"
                               >
                                 <div
-                                  class="border-theme-secondary-200 bg-theme-secondary-200 ring-theme-background dark:border-theme-secondary-700 dark:bg-theme-secondary-700 ring-theme-background duration-100 css-cm9d5u"
+                                  class="transition-all inline-flex items-center justify-center align-middle border-2 rounded-full px-2 py-1 w-8 h-8 text-sm ring-0 border-theme-secondary-200 bg-theme-secondary-200 dark:border-theme-secondary-700 dark:bg-theme-secondary-700 ring-theme-background duration-100"
                                 />
                               </div>
                               <div
@@ -797,27 +812,30 @@ exports[`ExchangeForm > should render exchange form 1`] = `
                                         class="absolute inset-0 block cursor-pointer md:hidden"
                                       />
                                       <div
-                                        class="transition-transform text-theme-secondary-500 css-15txs7d"
-                                        height="10"
-                                        width="10"
+                                        class="transition-transform text-theme-secondary-500"
                                       >
-                                        <svg
-                                          id="chevron-down-small"
-                                          viewBox="0 0 10 10"
-                                          x="0"
-                                          xml:space="preserve"
-                                          xmlns="http://www.w3.org/2000/svg"
-                                          y="0"
+                                        <div
+                                          style="height: 10px; width: 10px;"
                                         >
-                                          <path
-                                            d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
-                                            fill="none"
-                                            stroke="currentColor"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
-                                            stroke-width="2"
-                                          />
-                                        </svg>
+                                          <svg
+                                            id="chevron-down-small"
+                                            style="height: 100%; width: 100%;"
+                                            viewBox="0 0 10 10"
+                                            x="0"
+                                            xml:space="preserve"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            y="0"
+                                          >
+                                            <path
+                                              d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                                              fill="none"
+                                              stroke="currentColor"
+                                              stroke-linecap="round"
+                                              stroke-linejoin="round"
+                                              stroke-width="2"
+                                            />
+                                          </svg>
+                                        </div>
                                       </div>
                                     </div>
                                   </div>
@@ -839,7 +857,7 @@ exports[`ExchangeForm > should render exchange form 1`] = `
                   class="w-3/5"
                 >
                   <fieldset
-                    class="flex min-w-0 flex-col css-ea0il3"
+                    class="[&>.FormLabel]:text-theme-primary-600 focus-within:[&>.FormLabel]:text-theme-primary-600 flex min-w-0 flex-col"
                   >
                     <label
                       class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
@@ -876,7 +894,7 @@ exports[`ExchangeForm > should render exchange form 1`] = `
                 data-testid="ExchangeForm__recipient-address"
               >
                 <fieldset
-                  class="flex min-w-0 flex-col css-ea0il3"
+                  class="[&>.FormLabel]:text-theme-primary-600 focus-within:[&>.FormLabel]:text-theme-primary-600 flex min-w-0 flex-col"
                 >
                   <label
                     class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
@@ -983,7 +1001,7 @@ exports[`ExchangeForm > should render exchange form 1`] = `
           class=""
         >
           <div
-            class="css-145pihz"
+            class="flex fixed bg-theme-background dark:bg-black sm:bg-transparent sm:dark:bg-transparent inset-x-0 bottom-0 px-8 py-3 gap-3 shadow-footer-smooth dark:shadow-footer-smooth-dark sm:relative sm:inset-auto sm:p-0 sm:mt-6 sm:justify-end sm:shadow-none sm:dark:shadow-none [&>button]:flex-1 sm:[&>button]:flex-none sm:mb-0 mb-14"
           >
             <button
               class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 green:hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-500"
@@ -1060,31 +1078,33 @@ exports[`ExchangeForm > should render exchange form with id of finished order 1`
               class="mx-auto mb-8 hidden items-center space-x-3 sm:flex"
             >
               <div
-                class="css-bogjme"
                 data-testid="icon-CircleCompletedLightGreen"
-                height="32"
-                width="32"
               >
-                <svg
-                  fill="none"
-                  viewBox="0 0 32 32"
-                  xmlns="http://www.w3.org/2000/svg"
+                <div
+                  style="height: 32px; width: 32px;"
                 >
-                  <circle
-                    cx="16"
-                    cy="16"
-                    r="15"
-                    stroke="#289548"
-                    stroke-width="2"
-                  />
-                  <path
-                    d="M21.1387 11.8135L15.1388 17.7218L12.339 14.963L10.3389 16.933L15.1388 21.6601L23.1389 13.7844L21.1387 11.8135Z"
-                    fill="#E2F0E6"
-                    stroke="#289548"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                  />
-                </svg>
+                  <svg
+                    fill="none"
+                    style="height: 100%; width: 100%;"
+                    viewBox="0 0 32 32"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <circle
+                      cx="16"
+                      cy="16"
+                      r="15"
+                      stroke="#289548"
+                      stroke-width="2"
+                    />
+                    <path
+                      d="M21.1387 11.8135L15.1388 17.7218L12.339 14.963L10.3389 16.933L15.1388 21.6601L23.1389 13.7844L21.1387 11.8135Z"
+                      fill="#E2F0E6"
+                      stroke="#289548"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    />
+                  </svg>
+                </div>
               </div>
               <h2
                 class="m-0 text-2xl font-bold leading-[29px]"
@@ -1153,28 +1173,31 @@ exports[`ExchangeForm > should render exchange form with id of finished order 1`
                               </span>
                             </span>
                             <div
-                              class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-1fio4bh"
+                              class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm"
                               data-testid="Link__external"
-                              height="12"
-                              width="12"
                             >
-                              <svg
-                                id="arrow-external"
-                                viewBox="0 0 20 20"
-                                x="0"
-                                xml:space="preserve"
-                                xmlns="http://www.w3.org/2000/svg"
-                                y="0"
+                              <div
+                                style="height: 12px; width: 12px;"
                               >
-                                <path
-                                  d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
-                                  fill="none"
-                                  stroke="currentColor"
-                                  stroke-linecap="round"
-                                  stroke-linejoin="round"
-                                  stroke-width="2"
-                                />
-                              </svg>
+                                <svg
+                                  id="arrow-external"
+                                  style="height: 100%; width: 100%;"
+                                  viewBox="0 0 20 20"
+                                  x="0"
+                                  xml:space="preserve"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  y="0"
+                                >
+                                  <path
+                                    d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                  />
+                                </svg>
+                              </div>
                             </div>
                           </a>
                         </span>
@@ -1187,34 +1210,35 @@ exports[`ExchangeForm > should render exchange form with id of finished order 1`
                             data-testid="clipboard-icon__wrapper"
                             type="button"
                           >
-                            <div
-                              class="css-v0ob3f"
-                              height="16"
-                              width="16"
-                            >
-                              <svg
-                                id="copy"
-                                viewBox="0 0 20 20"
-                                x="0"
-                                xml:space="preserve"
-                                xmlns="http://www.w3.org/2000/svg"
-                                y="0"
+                            <div>
+                              <div
+                                style="height: 16px; width: 16px;"
                               >
-                                <g
-                                  fill="none"
-                                  stroke="currentColor"
-                                  stroke-linecap="round"
-                                  stroke-linejoin="round"
-                                  stroke-width="2"
+                                <svg
+                                  id="copy"
+                                  style="height: 100%; width: 100%;"
+                                  viewBox="0 0 20 20"
+                                  x="0"
+                                  xml:space="preserve"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  y="0"
                                 >
-                                  <path
-                                    d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
-                                  />
-                                  <path
-                                    d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                                  />
-                                </g>
-                              </svg>
+                                  <g
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                  >
+                                    <path
+                                      d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                                    />
+                                    <path
+                                      d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                                    />
+                                  </g>
+                                </svg>
+                              </div>
                             </div>
                           </button>
                         </span>
@@ -1252,28 +1276,31 @@ exports[`ExchangeForm > should render exchange form with id of finished order 1`
                               </span>
                             </span>
                             <div
-                              class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-1fio4bh"
+                              class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm"
                               data-testid="Link__external"
-                              height="12"
-                              width="12"
                             >
-                              <svg
-                                id="arrow-external"
-                                viewBox="0 0 20 20"
-                                x="0"
-                                xml:space="preserve"
-                                xmlns="http://www.w3.org/2000/svg"
-                                y="0"
+                              <div
+                                style="height: 12px; width: 12px;"
                               >
-                                <path
-                                  d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
-                                  fill="none"
-                                  stroke="currentColor"
-                                  stroke-linecap="round"
-                                  stroke-linejoin="round"
-                                  stroke-width="2"
-                                />
-                              </svg>
+                                <svg
+                                  id="arrow-external"
+                                  style="height: 100%; width: 100%;"
+                                  viewBox="0 0 20 20"
+                                  x="0"
+                                  xml:space="preserve"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  y="0"
+                                >
+                                  <path
+                                    d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                  />
+                                </svg>
+                              </div>
                             </div>
                           </a>
                         </span>
@@ -1286,34 +1313,35 @@ exports[`ExchangeForm > should render exchange form with id of finished order 1`
                             data-testid="clipboard-icon__wrapper"
                             type="button"
                           >
-                            <div
-                              class="css-v0ob3f"
-                              height="16"
-                              width="16"
-                            >
-                              <svg
-                                id="copy"
-                                viewBox="0 0 20 20"
-                                x="0"
-                                xml:space="preserve"
-                                xmlns="http://www.w3.org/2000/svg"
-                                y="0"
+                            <div>
+                              <div
+                                style="height: 16px; width: 16px;"
                               >
-                                <g
-                                  fill="none"
-                                  stroke="currentColor"
-                                  stroke-linecap="round"
-                                  stroke-linejoin="round"
-                                  stroke-width="2"
+                                <svg
+                                  id="copy"
+                                  style="height: 100%; width: 100%;"
+                                  viewBox="0 0 20 20"
+                                  x="0"
+                                  xml:space="preserve"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  y="0"
                                 >
-                                  <path
-                                    d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
-                                  />
-                                  <path
-                                    d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                                  />
-                                </g>
-                              </svg>
+                                  <g
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                  >
+                                    <path
+                                      d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                                    />
+                                    <path
+                                      d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                                    />
+                                  </g>
+                                </svg>
+                              </div>
                             </div>
                           </button>
                         </span>
@@ -1403,28 +1431,31 @@ exports[`ExchangeForm > should render exchange form with id of finished order 1`
                               </span>
                             </span>
                             <div
-                              class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-1fio4bh"
+                              class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm"
                               data-testid="Link__external"
-                              height="12"
-                              width="12"
                             >
-                              <svg
-                                id="arrow-external"
-                                viewBox="0 0 20 20"
-                                x="0"
-                                xml:space="preserve"
-                                xmlns="http://www.w3.org/2000/svg"
-                                y="0"
+                              <div
+                                style="height: 12px; width: 12px;"
                               >
-                                <path
-                                  d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
-                                  fill="none"
-                                  stroke="currentColor"
-                                  stroke-linecap="round"
-                                  stroke-linejoin="round"
-                                  stroke-width="2"
-                                />
-                              </svg>
+                                <svg
+                                  id="arrow-external"
+                                  style="height: 100%; width: 100%;"
+                                  viewBox="0 0 20 20"
+                                  x="0"
+                                  xml:space="preserve"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  y="0"
+                                >
+                                  <path
+                                    d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                  />
+                                </svg>
+                              </div>
                             </div>
                           </a>
                         </span>
@@ -1437,34 +1468,35 @@ exports[`ExchangeForm > should render exchange form with id of finished order 1`
                             data-testid="clipboard-icon__wrapper"
                             type="button"
                           >
-                            <div
-                              class="css-v0ob3f"
-                              height="16"
-                              width="16"
-                            >
-                              <svg
-                                id="copy"
-                                viewBox="0 0 20 20"
-                                x="0"
-                                xml:space="preserve"
-                                xmlns="http://www.w3.org/2000/svg"
-                                y="0"
+                            <div>
+                              <div
+                                style="height: 16px; width: 16px;"
                               >
-                                <g
-                                  fill="none"
-                                  stroke="currentColor"
-                                  stroke-linecap="round"
-                                  stroke-linejoin="round"
-                                  stroke-width="2"
+                                <svg
+                                  id="copy"
+                                  style="height: 100%; width: 100%;"
+                                  viewBox="0 0 20 20"
+                                  x="0"
+                                  xml:space="preserve"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  y="0"
                                 >
-                                  <path
-                                    d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
-                                  />
-                                  <path
-                                    d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                                  />
-                                </g>
-                              </svg>
+                                  <g
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                  >
+                                    <path
+                                      d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                                    />
+                                    <path
+                                      d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                                    />
+                                  </g>
+                                </svg>
+                              </div>
                             </div>
                           </button>
                         </span>
@@ -1502,28 +1534,31 @@ exports[`ExchangeForm > should render exchange form with id of finished order 1`
                               </span>
                             </span>
                             <div
-                              class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-1fio4bh"
+                              class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm"
                               data-testid="Link__external"
-                              height="12"
-                              width="12"
                             >
-                              <svg
-                                id="arrow-external"
-                                viewBox="0 0 20 20"
-                                x="0"
-                                xml:space="preserve"
-                                xmlns="http://www.w3.org/2000/svg"
-                                y="0"
+                              <div
+                                style="height: 12px; width: 12px;"
                               >
-                                <path
-                                  d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
-                                  fill="none"
-                                  stroke="currentColor"
-                                  stroke-linecap="round"
-                                  stroke-linejoin="round"
-                                  stroke-width="2"
-                                />
-                              </svg>
+                                <svg
+                                  id="arrow-external"
+                                  style="height: 100%; width: 100%;"
+                                  viewBox="0 0 20 20"
+                                  x="0"
+                                  xml:space="preserve"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  y="0"
+                                >
+                                  <path
+                                    d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                  />
+                                </svg>
+                              </div>
                             </div>
                           </a>
                         </span>
@@ -1536,34 +1571,35 @@ exports[`ExchangeForm > should render exchange form with id of finished order 1`
                             data-testid="clipboard-icon__wrapper"
                             type="button"
                           >
-                            <div
-                              class="css-v0ob3f"
-                              height="16"
-                              width="16"
-                            >
-                              <svg
-                                id="copy"
-                                viewBox="0 0 20 20"
-                                x="0"
-                                xml:space="preserve"
-                                xmlns="http://www.w3.org/2000/svg"
-                                y="0"
+                            <div>
+                              <div
+                                style="height: 16px; width: 16px;"
                               >
-                                <g
-                                  fill="none"
-                                  stroke="currentColor"
-                                  stroke-linecap="round"
-                                  stroke-linejoin="round"
-                                  stroke-width="2"
+                                <svg
+                                  id="copy"
+                                  style="height: 100%; width: 100%;"
+                                  viewBox="0 0 20 20"
+                                  x="0"
+                                  xml:space="preserve"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  y="0"
                                 >
-                                  <path
-                                    d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
-                                  />
-                                  <path
-                                    d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                                  />
-                                </g>
-                              </svg>
+                                  <g
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                  >
+                                    <path
+                                      d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                                    />
+                                    <path
+                                      d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                                    />
+                                  </g>
+                                </svg>
+                              </div>
                             </div>
                           </button>
                         </span>
@@ -1599,7 +1635,7 @@ exports[`ExchangeForm > should render exchange form with id of finished order 1`
           class=""
         >
           <div
-            class="css-145pihz"
+            class="flex fixed bg-theme-background dark:bg-black sm:bg-transparent sm:dark:bg-transparent inset-x-0 bottom-0 px-8 py-3 gap-3 shadow-footer-smooth dark:shadow-footer-smooth-dark sm:relative sm:inset-auto sm:p-0 sm:mt-6 sm:justify-end sm:shadow-none sm:dark:shadow-none [&>button]:flex-1 sm:[&>button]:flex-none sm:mb-0 mb-14"
           >
             <div
               class="flex w-full flex-col gap-3 sm:flex-row-reverse"
@@ -1696,34 +1732,35 @@ exports[`ExchangeForm > should render exchange form with id of pending order 1`]
                   data-testid="clipboard-icon__wrapper"
                   type="button"
                 >
-                  <div
-                    class="css-v0ob3f"
-                    height="16"
-                    width="16"
-                  >
-                    <svg
-                      id="copy"
-                      viewBox="0 0 20 20"
-                      x="0"
-                      xml:space="preserve"
-                      xmlns="http://www.w3.org/2000/svg"
-                      y="0"
+                  <div>
+                    <div
+                      style="height: 16px; width: 16px;"
                     >
-                      <g
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
+                      <svg
+                        id="copy"
+                        style="height: 100%; width: 100%;"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
                       >
-                        <path
-                          d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
-                        />
-                        <path
-                          d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                        />
-                      </g>
-                    </svg>
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                          />
+                          <path
+                            d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                          />
+                        </g>
+                      </svg>
+                    </div>
                   </div>
                 </button>
               </span>
@@ -1771,34 +1808,35 @@ exports[`ExchangeForm > should render exchange form with id of pending order 1`]
                       data-testid="clipboard-icon__wrapper"
                       type="button"
                     >
-                      <div
-                        class="css-v0ob3f"
-                        height="16"
-                        width="16"
-                      >
-                        <svg
-                          id="copy"
-                          viewBox="0 0 20 20"
-                          x="0"
-                          xml:space="preserve"
-                          xmlns="http://www.w3.org/2000/svg"
-                          y="0"
+                      <div>
+                        <div
+                          style="height: 16px; width: 16px;"
                         >
-                          <g
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
+                          <svg
+                            id="copy"
+                            style="height: 100%; width: 100%;"
+                            viewBox="0 0 20 20"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
                           >
-                            <path
-                              d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
-                            />
-                            <path
-                              d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                            />
-                          </g>
-                        </svg>
+                            <g
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            >
+                              <path
+                                d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                              />
+                              <path
+                                d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                              />
+                            </g>
+                          </svg>
+                        </div>
                       </div>
                     </button>
                   </span>
@@ -1917,34 +1955,35 @@ exports[`ExchangeForm > should render exchange form with id of pending order 1`]
                       data-testid="clipboard-icon__wrapper"
                       type="button"
                     >
-                      <div
-                        class="css-v0ob3f"
-                        height="16"
-                        width="16"
-                      >
-                        <svg
-                          id="copy"
-                          viewBox="0 0 20 20"
-                          x="0"
-                          xml:space="preserve"
-                          xmlns="http://www.w3.org/2000/svg"
-                          y="0"
+                      <div>
+                        <div
+                          style="height: 16px; width: 16px;"
                         >
-                          <g
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
+                          <svg
+                            id="copy"
+                            style="height: 100%; width: 100%;"
+                            viewBox="0 0 20 20"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
                           >
-                            <path
-                              d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
-                            />
-                            <path
-                              d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                            />
-                          </g>
-                        </svg>
+                            <g
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            >
+                              <path
+                                d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                              />
+                              <path
+                                d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                              />
+                            </g>
+                          </svg>
+                        </div>
                       </div>
                     </button>
                   </span>
@@ -1968,28 +2007,31 @@ exports[`ExchangeForm > should render exchange form with id of pending order 1`]
                   support@changenow.io
                 </span>
                 <div
-                  class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-1fio4bh"
+                  class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm"
                   data-testid="Link__external"
-                  height="12"
-                  width="12"
                 >
-                  <svg
-                    id="arrow-external"
-                    viewBox="0 0 20 20"
-                    x="0"
-                    xml:space="preserve"
-                    xmlns="http://www.w3.org/2000/svg"
-                    y="0"
+                  <div
+                    style="height: 12px; width: 12px;"
                   >
-                    <path
-                      d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                    />
-                  </svg>
+                    <svg
+                      id="arrow-external"
+                      style="height: 100%; width: 100%;"
+                      viewBox="0 0 20 20"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <path
+                        d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
+                    </svg>
+                  </div>
                 </div>
               </a>
             </div>
@@ -2014,7 +2056,7 @@ exports[`FormStep > should render 1`] = `
         class="w-2/5"
       >
         <fieldset
-          class="flex min-w-0 flex-col css-ea0il3"
+          class="[&>.FormLabel]:text-theme-primary-600 focus-within:[&>.FormLabel]:text-theme-primary-600 flex min-w-0 flex-col"
         >
           <label
             class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
@@ -2067,7 +2109,7 @@ exports[`FormStep > should render 1`] = `
                       class="hidden sm:block"
                     >
                       <div
-                        class="border-theme-secondary-200 bg-theme-secondary-200 ring-theme-background dark:border-theme-secondary-700 dark:bg-theme-secondary-700 ring-theme-background duration-100 css-cm9d5u"
+                        class="transition-all inline-flex items-center justify-center align-middle border-2 rounded-full px-2 py-1 w-8 h-8 text-sm ring-0 border-theme-secondary-200 bg-theme-secondary-200 dark:border-theme-secondary-700 dark:bg-theme-secondary-700 ring-theme-background duration-100"
                       />
                     </div>
                     <div
@@ -2106,27 +2148,30 @@ exports[`FormStep > should render 1`] = `
                               class="absolute inset-0 block cursor-pointer md:hidden"
                             />
                             <div
-                              class="transition-transform text-theme-secondary-500 css-15txs7d"
-                              height="10"
-                              width="10"
+                              class="transition-transform text-theme-secondary-500"
                             >
-                              <svg
-                                id="chevron-down-small"
-                                viewBox="0 0 10 10"
-                                x="0"
-                                xml:space="preserve"
-                                xmlns="http://www.w3.org/2000/svg"
-                                y="0"
+                              <div
+                                style="height: 10px; width: 10px;"
                               >
-                                <path
-                                  d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
-                                  fill="none"
-                                  stroke="currentColor"
-                                  stroke-linecap="round"
-                                  stroke-linejoin="round"
-                                  stroke-width="2"
-                                />
-                              </svg>
+                                <svg
+                                  id="chevron-down-small"
+                                  style="height: 100%; width: 100%;"
+                                  viewBox="0 0 10 10"
+                                  x="0"
+                                  xml:space="preserve"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  y="0"
+                                >
+                                  <path
+                                    d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                  />
+                                </svg>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -2148,7 +2193,7 @@ exports[`FormStep > should render 1`] = `
         class="w-3/5"
       >
         <fieldset
-          class="flex min-w-0 flex-col css-ea0il3"
+          class="[&>.FormLabel]:text-theme-primary-600 focus-within:[&>.FormLabel]:text-theme-primary-600 flex min-w-0 flex-col"
         >
           <label
             class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
@@ -2216,28 +2261,29 @@ exports[`FormStep > should render 1`] = `
           <div
             class="flex items-center space-x-2"
           >
-            <div
-              class="css-v0ob3f"
-              height="16"
-              width="16"
-            >
-              <svg
-                id="arrow-down-up"
-                viewBox="0 0 20 20"
-                x="0"
-                xml:space="preserve"
-                xmlns="http://www.w3.org/2000/svg"
-                y="0"
+            <div>
+              <div
+                style="height: 16px; width: 16px;"
               >
-                <path
-                  d="M5 2v17m4-4l-4 4-4-4m14 3V1m-4 4l4-4 4 4"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                />
-              </svg>
+                <svg
+                  id="arrow-down-up"
+                  style="height: 100%; width: 100%;"
+                  viewBox="0 0 20 20"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <path
+                    d="M5 2v17m4-4l-4 4-4-4m14 3V1m-4 4l4-4 4 4"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  />
+                </svg>
+              </div>
             </div>
           </div>
         </button>
@@ -2253,7 +2299,7 @@ exports[`FormStep > should render 1`] = `
           class="w-2/5"
         >
           <fieldset
-            class="flex min-w-0 flex-col css-ea0il3"
+            class="[&>.FormLabel]:text-theme-primary-600 focus-within:[&>.FormLabel]:text-theme-primary-600 flex min-w-0 flex-col"
           >
             <label
               class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
@@ -2306,7 +2352,7 @@ exports[`FormStep > should render 1`] = `
                         class="hidden sm:block"
                       >
                         <div
-                          class="border-theme-secondary-200 bg-theme-secondary-200 ring-theme-background dark:border-theme-secondary-700 dark:bg-theme-secondary-700 ring-theme-background duration-100 css-cm9d5u"
+                          class="transition-all inline-flex items-center justify-center align-middle border-2 rounded-full px-2 py-1 w-8 h-8 text-sm ring-0 border-theme-secondary-200 bg-theme-secondary-200 dark:border-theme-secondary-700 dark:bg-theme-secondary-700 ring-theme-background duration-100"
                         />
                       </div>
                       <div
@@ -2345,27 +2391,30 @@ exports[`FormStep > should render 1`] = `
                                 class="absolute inset-0 block cursor-pointer md:hidden"
                               />
                               <div
-                                class="transition-transform text-theme-secondary-500 css-15txs7d"
-                                height="10"
-                                width="10"
+                                class="transition-transform text-theme-secondary-500"
                               >
-                                <svg
-                                  id="chevron-down-small"
-                                  viewBox="0 0 10 10"
-                                  x="0"
-                                  xml:space="preserve"
-                                  xmlns="http://www.w3.org/2000/svg"
-                                  y="0"
+                                <div
+                                  style="height: 10px; width: 10px;"
                                 >
-                                  <path
-                                    d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
-                                    fill="none"
-                                    stroke="currentColor"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-width="2"
-                                  />
-                                </svg>
+                                  <svg
+                                    id="chevron-down-small"
+                                    style="height: 100%; width: 100%;"
+                                    viewBox="0 0 10 10"
+                                    x="0"
+                                    xml:space="preserve"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    y="0"
+                                  >
+                                    <path
+                                      d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                                      fill="none"
+                                      stroke="currentColor"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      stroke-width="2"
+                                    />
+                                  </svg>
+                                </div>
                               </div>
                             </div>
                           </div>
@@ -2387,7 +2436,7 @@ exports[`FormStep > should render 1`] = `
           class="w-3/5"
         >
           <fieldset
-            class="flex min-w-0 flex-col css-ea0il3"
+            class="[&>.FormLabel]:text-theme-primary-600 focus-within:[&>.FormLabel]:text-theme-primary-600 flex min-w-0 flex-col"
           >
             <label
               class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
@@ -2424,7 +2473,7 @@ exports[`FormStep > should render 1`] = `
         data-testid="ExchangeForm__recipient-address"
       >
         <fieldset
-          class="flex min-w-0 flex-col css-ea0il3"
+          class="[&>.FormLabel]:text-theme-primary-600 focus-within:[&>.FormLabel]:text-theme-primary-600 flex min-w-0 flex-col"
         >
           <label
             class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
@@ -2573,46 +2622,49 @@ exports[`ReviewStep > should render 1`] = `
           class="absolute right-6 top-1/2 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border border-theme-secondary-300 bg-theme-background dark:border-theme-secondary-800"
         >
           <div
-            class="text-theme-secondary-900 css-1i4b0eq"
-            height="20"
-            width="20"
+            class="text-theme-secondary-900"
           >
-            <svg
-              fill="none"
-              viewBox="0 0 20 20"
-              xmlns="http://www.w3.org/2000/svg"
+            <div
+              style="height: 20px; width: 20px;"
             >
-              <g
-                clip-path="url(#clip0_12944_131082)"
+              <svg
+                fill="none"
+                style="height: 100%; width: 100%;"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
               >
-                <path
-                  d="M11.8999 3.09961L11.8999 0.999609"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                />
-                <path
-                  d="M8.09986 0.999608L8.09986 3.09961L8.09986 6.89961L8.09986 10.0996L4.29986 10.0996C3.99986 10.0996 3.89986 10.2996 4.09986 10.5996L9.79985 18.8996C9.89985 18.9996 10.0999 18.9996 10.1999 18.8996L15.8999 10.5996C16.0999 10.1996 15.9999 9.99961 15.6999 9.99961L11.8999 9.99961L11.8999 6.89961"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                />
-              </g>
-              <defs>
-                <clippath
-                  id="clip0_12944_131082"
+                <g
+                  clip-path="url(#clip0_12944_131082)"
                 >
-                  <rect
-                    fill="transparent"
-                    height="20"
-                    transform="translate(20 20) rotate(-180)"
-                    width="20"
+                  <path
+                    d="M11.8999 3.09961L11.8999 0.999609"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
                   />
-                </clippath>
-              </defs>
-            </svg>
+                  <path
+                    d="M8.09986 0.999608L8.09986 3.09961L8.09986 6.89961L8.09986 10.0996L4.29986 10.0996C3.99986 10.0996 3.89986 10.2996 4.09986 10.5996L9.79985 18.8996C9.89985 18.9996 10.0999 18.9996 10.1999 18.8996L15.8999 10.5996C16.0999 10.1996 15.9999 9.99961 15.6999 9.99961L11.8999 9.99961L11.8999 6.89961"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  />
+                </g>
+                <defs>
+                  <clippath
+                    id="clip0_12944_131082"
+                  >
+                    <rect
+                      fill="transparent"
+                      height="20"
+                      transform="translate(20 20) rotate(-180)"
+                      width="20"
+                    />
+                  </clippath>
+                </defs>
+              </svg>
+            </div>
           </div>
         </div>
       </div>
@@ -2644,14 +2696,13 @@ exports[`ReviewStep > should render 1`] = `
     </div>
     <div>
       <fieldset
-        class="sm:pt-2 css-ea0il3"
+        class="[&>.FormLabel]:text-theme-primary-600 focus-within:[&>.FormLabel]:text-theme-primary-600 sm:pt-2"
       >
         <label
           class="flex cursor-pointer items-center space-x-3"
         >
           <input
-            class="css-kf7z38"
-            color="success"
+            class="!w-5 !h-5 !rounded cursor-pointer !border-2 transition duration-150 ease-in-out focus:!ring-offset-0 focus:!ring-theme-primary-400 disabled:bg-theme-secondary-200 disabled:border-theme-secondary-300 disabled:cursor-not-allowed disabled:dark:bg-theme-secondary-800 disabled:dark:border-theme-secondary-600 [&:not(:checked)]:!bg-transparent [&:not(:checked)]:border-theme-secondary-300 [&:not(:checked)]:dark:border-theme-secondary-600 custom-checkbox checked:text-theme-primary-600 [&:not(:checked)]:hover:border-theme-primary-600 checked:hover:text-theme-primary-700"
             name="hasAgreedToTerms"
             type="checkbox"
           />
@@ -2672,28 +2723,31 @@ exports[`ReviewStep > should render 1`] = `
                 Terms of Use
               </span>
               <div
-                class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-1fio4bh"
+                class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm"
                 data-testid="Link__external"
-                height="12"
-                width="12"
               >
-                <svg
-                  id="arrow-external"
-                  viewBox="0 0 20 20"
-                  x="0"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
-                  y="0"
+                <div
+                  style="height: 12px; width: 12px;"
                 >
-                  <path
-                    d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                  />
-                </svg>
+                  <svg
+                    id="arrow-external"
+                    style="height: 100%; width: 100%;"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
+                  >
+                    <path
+                      d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    />
+                  </svg>
+                </div>
               </div>
             </a>
              and 
@@ -2710,28 +2764,31 @@ exports[`ReviewStep > should render 1`] = `
                 Privacy Policy
               </span>
               <div
-                class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-1fio4bh"
+                class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm"
                 data-testid="Link__external"
-                height="12"
-                width="12"
               >
-                <svg
-                  id="arrow-external"
-                  viewBox="0 0 20 20"
-                  x="0"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
-                  y="0"
+                <div
+                  style="height: 12px; width: 12px;"
                 >
-                  <path
-                    d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                  />
-                </svg>
+                  <svg
+                    id="arrow-external"
+                    style="height: 100%; width: 100%;"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
+                  >
+                    <path
+                      d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    />
+                  </svg>
+                </div>
               </div>
             </a>
           </span>
@@ -2769,34 +2826,35 @@ exports[`StatusStep > should render 1`] = `
           data-testid="clipboard-icon__wrapper"
           type="button"
         >
-          <div
-            class="css-v0ob3f"
-            height="16"
-            width="16"
-          >
-            <svg
-              id="copy"
-              viewBox="0 0 20 20"
-              x="0"
-              xml:space="preserve"
-              xmlns="http://www.w3.org/2000/svg"
-              y="0"
+          <div>
+            <div
+              style="height: 16px; width: 16px;"
             >
-              <g
-                fill="none"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
+              <svg
+                id="copy"
+                style="height: 100%; width: 100%;"
+                viewBox="0 0 20 20"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
               >
-                <path
-                  d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
-                />
-                <path
-                  d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                />
-              </g>
-            </svg>
+                <g
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                  />
+                  <path
+                    d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                  />
+                </g>
+              </svg>
+            </div>
           </div>
         </button>
       </span>
@@ -2844,34 +2902,35 @@ exports[`StatusStep > should render 1`] = `
               data-testid="clipboard-icon__wrapper"
               type="button"
             >
-              <div
-                class="css-v0ob3f"
-                height="16"
-                width="16"
-              >
-                <svg
-                  id="copy"
-                  viewBox="0 0 20 20"
-                  x="0"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
-                  y="0"
+              <div>
+                <div
+                  style="height: 16px; width: 16px;"
                 >
-                  <g
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
+                  <svg
+                    id="copy"
+                    style="height: 100%; width: 100%;"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
                   >
-                    <path
-                      d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
-                    />
-                    <path
-                      d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                    />
-                  </g>
-                </svg>
+                    <g
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    >
+                      <path
+                        d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                      />
+                      <path
+                        d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                      />
+                    </g>
+                  </svg>
+                </div>
               </div>
             </button>
           </span>
@@ -2990,34 +3049,35 @@ exports[`StatusStep > should render 1`] = `
               data-testid="clipboard-icon__wrapper"
               type="button"
             >
-              <div
-                class="css-v0ob3f"
-                height="16"
-                width="16"
-              >
-                <svg
-                  id="copy"
-                  viewBox="0 0 20 20"
-                  x="0"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
-                  y="0"
+              <div>
+                <div
+                  style="height: 16px; width: 16px;"
                 >
-                  <g
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
+                  <svg
+                    id="copy"
+                    style="height: 100%; width: 100%;"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
                   >
-                    <path
-                      d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
-                    />
-                    <path
-                      d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                    />
-                  </g>
-                </svg>
+                    <g
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    >
+                      <path
+                        d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                      />
+                      <path
+                        d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                      />
+                    </g>
+                  </svg>
+                </div>
               </div>
             </button>
           </span>
@@ -3041,28 +3101,31 @@ exports[`StatusStep > should render 1`] = `
           support@changenow.io
         </span>
         <div
-          class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-1fio4bh"
+          class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm"
           data-testid="Link__external"
-          height="12"
-          width="12"
         >
-          <svg
-            id="arrow-external"
-            viewBox="0 0 20 20"
-            x="0"
-            xml:space="preserve"
-            xmlns="http://www.w3.org/2000/svg"
-            y="0"
+          <div
+            style="height: 12px; width: 12px;"
           >
-            <path
-              d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
-              fill="none"
-              stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-            />
-          </svg>
+            <svg
+              id="arrow-external"
+              style="height: 100%; width: 100%;"
+              viewBox="0 0 20 20"
+              x="0"
+              xml:space="preserve"
+              xmlns="http://www.w3.org/2000/svg"
+              y="0"
+            >
+              <path
+                d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
+            </svg>
+          </div>
         </div>
       </a>
     </div>
