@@ -44,7 +44,7 @@ exports[`WalletHeaderMobile > should render 1`] = `
         class="flex items-center space-x-1 border-r border-theme-secondary-800 pr-3 empty:border-0"
       />
       <button
-        class="inline-flex items-center justify-center w-6 h-6 transition-all duration-100 ease-linear rounded outline-none focus:(outline-none ring-2 ring-theme-primary-400) text-theme-secondary-text disabled:text-theme-secondary-800 p-1"
+        class="focus:(outline-none ring-theme-primary-400) inline-flex h-6 w-6 items-center justify-center rounded text-theme-secondary-text outline-none ring-2 transition-all duration-100 ease-linear disabled:text-theme-secondary-800 p-1"
         type="button"
       >
         <div
