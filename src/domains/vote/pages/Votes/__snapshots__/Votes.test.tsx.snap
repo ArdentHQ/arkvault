@@ -58,7 +58,7 @@ exports[`Votes > should filter current delegates 1`] = `
           </div>
         </button>
         <div
-          class="h-5 relative inline-block align-middle border-t-0 border-l border-solid mx-2 border-theme-secondary-300 dark:border-theme-secondary-800"
+          class="h-5 relative mx-2 inline-block border-l border-t-0 border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
         />
         <button
           class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600"
@@ -95,7 +95,7 @@ exports[`Votes > should filter current delegates 1`] = `
           </div>
         </button>
         <div
-          class="h-5 relative inline-block align-middle border-t-0 border-l border-solid mx-2 border-theme-secondary-300 dark:border-theme-secondary-800"
+          class="h-5 relative mx-2 inline-block border-l border-t-0 border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
         />
         <button
           class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600"
@@ -144,7 +144,7 @@ exports[`Votes > should filter current delegates 1`] = `
           class="hidden w-12 sm:flex"
         >
           <button
-            class="flex items-center w-12 transition-colors duration-200 bg-theme-secondary-100 dark:bg-black text-theme-primary-600 dark:text-theme-secondary-200 hover:bg-theme-primary-100 hover:dark:bg-theme-secondary-800 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-theme-primary-400 focus:rounded"
+            class="flex w-12 items-center bg-theme-secondary-100 transition-colors duration-200 dark:bg-black text-theme-primary-600 hover:bg-theme-primary-100 focus:rounded focus:outline-none focus:ring-2 focus:ring-inset focus:ring-theme-primary-400 dark:text-theme-secondary-200 hover:dark:bg-theme-secondary-800"
           >
             <div
               class="mx-auto"
@@ -611,7 +611,7 @@ exports[`Votes > should filter current delegates 1`] = `
                     class="group"
                   >
                     <button
-                      class="relative flex items-center justify-center font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 transition-colors duration-200 cursor-pointer focus:outline-none disabled:cursor-not-allowed disabled:text-theme-secondary-400 disabled:dark:text-theme-secondary-700 hover:text-theme-primary-700 hover:bg-theme-primary-100 hover:dark:text-theme-secondary-800 px-2 py-1.5 rounded ring-focus"
+                      class="relative flex cursor-pointer items-center justify-center font-semibold text-theme-secondary-700 transition-colors duration-200 focus:outline-none disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:text-theme-secondary-500 disabled:dark:text-theme-secondary-700 hover:bg-theme-primary-100 hover:dark:text-white hover:text-theme-primary-400 rounded px-2 py-1.5 ring-focus"
                       type="button"
                     >
                       <div
@@ -679,7 +679,7 @@ exports[`Votes > should filter current delegates 1`] = `
                   class="mx-0.5 flex md:mx-3.5"
                 >
                   <div
-                    class="h-5 relative inline-block align-middle border-t-0 border-l border-solid mx-2 border-theme-secondary-300 dark:border-theme-secondary-800"
+                    class="h-5 relative mx-2 inline-block border-l border-t-0 border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
                   />
                 </span>
                 <div>
@@ -693,7 +693,7 @@ exports[`Votes > should filter current delegates 1`] = `
                       class="group"
                     >
                       <button
-                        class="relative flex items-center justify-center font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 transition-colors duration-200 cursor-pointer focus:outline-none disabled:cursor-not-allowed disabled:text-theme-secondary-400 disabled:dark:text-theme-secondary-700 hover:text-theme-primary-700 hover:bg-theme-primary-100 hover:dark:text-theme-secondary-800 px-2 py-1.5 rounded ring-focus"
+                        class="relative flex cursor-pointer items-center justify-center font-semibold text-theme-secondary-700 transition-colors duration-200 focus:outline-none disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:text-theme-secondary-500 disabled:dark:text-theme-secondary-700 hover:bg-theme-primary-100 hover:dark:text-white hover:text-theme-primary-400 rounded px-2 py-1.5 ring-focus"
                       >
                         <div
                           class="absolute right-1 top-0.5 flex h-3 w-3 items-center justify-center rounded-full bg-theme-background transition-all duration-100 ease-linear -mr-2.5"
@@ -1313,7 +1313,7 @@ exports[`Votes > should render 1`] = `
           </div>
         </button>
         <div
-          class="h-5 relative inline-block align-middle border-t-0 border-l border-solid mx-2 border-theme-secondary-300 dark:border-theme-secondary-800"
+          class="h-5 relative mx-2 inline-block border-l border-t-0 border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
         />
         <button
           class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600"
@@ -1350,7 +1350,7 @@ exports[`Votes > should render 1`] = `
           </div>
         </button>
         <div
-          class="h-5 relative inline-block align-middle border-t-0 border-l border-solid mx-2 border-theme-secondary-300 dark:border-theme-secondary-800"
+          class="h-5 relative mx-2 inline-block border-l border-t-0 border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
         />
         <button
           class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600"
@@ -1399,7 +1399,7 @@ exports[`Votes > should render 1`] = `
           class="hidden w-12 sm:flex"
         >
           <button
-            class="flex items-center w-12 transition-colors duration-200 bg-theme-secondary-100 dark:bg-black text-theme-primary-600 dark:text-theme-secondary-200 hover:bg-theme-primary-100 hover:dark:bg-theme-secondary-800 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-theme-primary-400 focus:rounded"
+            class="flex w-12 items-center bg-theme-secondary-100 transition-colors duration-200 dark:bg-black text-theme-primary-600 hover:bg-theme-primary-100 focus:rounded focus:outline-none focus:ring-2 focus:ring-inset focus:ring-theme-primary-400 dark:text-theme-secondary-200 hover:dark:bg-theme-secondary-800"
           >
             <div
               class="mx-auto"
@@ -1866,7 +1866,7 @@ exports[`Votes > should render 1`] = `
                     class="group"
                   >
                     <button
-                      class="relative flex items-center justify-center font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 transition-colors duration-200 cursor-pointer focus:outline-none disabled:cursor-not-allowed disabled:text-theme-secondary-400 disabled:dark:text-theme-secondary-700 hover:text-theme-primary-700 hover:bg-theme-primary-100 hover:dark:text-theme-secondary-800 px-2 py-1.5 rounded ring-focus"
+                      class="relative flex cursor-pointer items-center justify-center font-semibold text-theme-secondary-700 transition-colors duration-200 focus:outline-none disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:text-theme-secondary-500 disabled:dark:text-theme-secondary-700 hover:bg-theme-primary-100 hover:dark:text-white hover:text-theme-primary-400 rounded px-2 py-1.5 ring-focus"
                       type="button"
                     >
                       <div
@@ -1934,7 +1934,7 @@ exports[`Votes > should render 1`] = `
                   class="mx-0.5 flex md:mx-3.5"
                 >
                   <div
-                    class="h-5 relative inline-block align-middle border-t-0 border-l border-solid mx-2 border-theme-secondary-300 dark:border-theme-secondary-800"
+                    class="h-5 relative mx-2 inline-block border-l border-t-0 border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
                   />
                 </span>
                 <div>
@@ -1947,7 +1947,7 @@ exports[`Votes > should render 1`] = `
                       class="group"
                     >
                       <button
-                        class="relative flex items-center justify-center font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 transition-colors duration-200 cursor-pointer focus:outline-none disabled:cursor-not-allowed disabled:text-theme-secondary-400 disabled:dark:text-theme-secondary-700 hover:text-theme-primary-700 hover:bg-theme-primary-100 hover:dark:text-theme-secondary-800 px-2 py-1.5 rounded ring-focus"
+                        class="relative flex cursor-pointer items-center justify-center font-semibold text-theme-secondary-700 transition-colors duration-200 focus:outline-none disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:text-theme-secondary-500 disabled:dark:text-theme-secondary-700 hover:bg-theme-primary-100 hover:dark:text-white hover:text-theme-primary-400 rounded px-2 py-1.5 ring-focus"
                       >
                         <div
                           class="flex h-5 w-5 items-center justify-center"
@@ -2862,7 +2862,7 @@ exports[`Votes > should render and handle wallet current voting exception 1`] = 
           </div>
         </button>
         <div
-          class="h-5 relative inline-block align-middle border-t-0 border-l border-solid mx-2 border-theme-secondary-300 dark:border-theme-secondary-800"
+          class="h-5 relative mx-2 inline-block border-l border-t-0 border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
         />
         <button
           class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600"
@@ -2899,7 +2899,7 @@ exports[`Votes > should render and handle wallet current voting exception 1`] = 
           </div>
         </button>
         <div
-          class="h-5 relative inline-block align-middle border-t-0 border-l border-solid mx-2 border-theme-secondary-300 dark:border-theme-secondary-800"
+          class="h-5 relative mx-2 inline-block border-l border-t-0 border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
         />
         <button
           class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600"
@@ -2948,7 +2948,7 @@ exports[`Votes > should render and handle wallet current voting exception 1`] = 
           class="hidden w-12 sm:flex"
         >
           <button
-            class="flex items-center w-12 transition-colors duration-200 bg-theme-secondary-100 dark:bg-black text-theme-primary-600 dark:text-theme-secondary-200 hover:bg-theme-primary-100 hover:dark:bg-theme-secondary-800 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-theme-primary-400 focus:rounded"
+            class="flex w-12 items-center bg-theme-secondary-100 transition-colors duration-200 dark:bg-black text-theme-primary-600 hover:bg-theme-primary-100 focus:rounded focus:outline-none focus:ring-2 focus:ring-inset focus:ring-theme-primary-400 dark:text-theme-secondary-200 hover:dark:bg-theme-secondary-800"
           >
             <div
               class="mx-auto"
@@ -3415,7 +3415,7 @@ exports[`Votes > should render and handle wallet current voting exception 1`] = 
                     class="group"
                   >
                     <button
-                      class="relative flex items-center justify-center font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 transition-colors duration-200 cursor-pointer focus:outline-none disabled:cursor-not-allowed disabled:text-theme-secondary-400 disabled:dark:text-theme-secondary-700 hover:text-theme-primary-700 hover:bg-theme-primary-100 hover:dark:text-theme-secondary-800 px-2 py-1.5 rounded ring-focus"
+                      class="relative flex cursor-pointer items-center justify-center font-semibold text-theme-secondary-700 transition-colors duration-200 focus:outline-none disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:text-theme-secondary-500 disabled:dark:text-theme-secondary-700 hover:bg-theme-primary-100 hover:dark:text-white hover:text-theme-primary-400 rounded px-2 py-1.5 ring-focus"
                       type="button"
                     >
                       <div
@@ -3483,7 +3483,7 @@ exports[`Votes > should render and handle wallet current voting exception 1`] = 
                   class="mx-0.5 flex md:mx-3.5"
                 >
                   <div
-                    class="h-5 relative inline-block align-middle border-t-0 border-l border-solid mx-2 border-theme-secondary-300 dark:border-theme-secondary-800"
+                    class="h-5 relative mx-2 inline-block border-l border-t-0 border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
                   />
                 </span>
                 <div>
@@ -3496,7 +3496,7 @@ exports[`Votes > should render and handle wallet current voting exception 1`] = 
                       class="group"
                     >
                       <button
-                        class="relative flex items-center justify-center font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 transition-colors duration-200 cursor-pointer focus:outline-none disabled:cursor-not-allowed disabled:text-theme-secondary-400 disabled:dark:text-theme-secondary-700 hover:text-theme-primary-700 hover:bg-theme-primary-100 hover:dark:text-theme-secondary-800 px-2 py-1.5 rounded ring-focus"
+                        class="relative flex cursor-pointer items-center justify-center font-semibold text-theme-secondary-700 transition-colors duration-200 focus:outline-none disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:text-theme-secondary-500 disabled:dark:text-theme-secondary-700 hover:bg-theme-primary-100 hover:dark:text-white hover:text-theme-primary-400 rounded px-2 py-1.5 ring-focus"
                       >
                         <div
                           class="flex h-5 w-5 items-center justify-center"
@@ -4408,7 +4408,7 @@ exports[`Votes > should render with no wallets 1`] = `
           </div>
         </button>
         <div
-          class="h-5 relative inline-block align-middle border-t-0 border-l border-solid mx-2 border-theme-secondary-300 dark:border-theme-secondary-800"
+          class="h-5 relative mx-2 inline-block border-l border-t-0 border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
         />
         <button
           class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600"
@@ -4445,7 +4445,7 @@ exports[`Votes > should render with no wallets 1`] = `
           </div>
         </button>
         <div
-          class="h-5 relative inline-block align-middle border-t-0 border-l border-solid mx-2 border-theme-secondary-300 dark:border-theme-secondary-800"
+          class="h-5 relative mx-2 inline-block border-l border-t-0 border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
         />
         <button
           class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 cursor-not-allowed text-theme-secondary-500"
@@ -4495,7 +4495,7 @@ exports[`Votes > should render with no wallets 1`] = `
           class="hidden w-12 sm:flex"
         >
           <button
-            class="flex items-center w-12 transition-colors duration-200 bg-theme-secondary-100 dark:bg-black text-theme-primary-600 dark:text-theme-secondary-200 hover:bg-theme-primary-100 hover:dark:bg-theme-secondary-800 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-theme-primary-400 focus:rounded"
+            class="flex w-12 items-center bg-theme-secondary-100 transition-colors duration-200 dark:bg-black text-theme-primary-600 hover:bg-theme-primary-100 focus:rounded focus:outline-none focus:ring-2 focus:ring-inset focus:ring-theme-primary-400 dark:text-theme-secondary-200 hover:dark:bg-theme-secondary-800"
           >
             <div
               class="mx-auto"
@@ -5143,7 +5143,7 @@ exports[`Votes > should select a delegate 1`] = `
           </div>
         </button>
         <div
-          class="h-5 relative inline-block align-middle border-t-0 border-l border-solid mx-2 border-theme-secondary-300 dark:border-theme-secondary-800"
+          class="h-5 relative mx-2 inline-block border-l border-t-0 border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
         />
         <button
           class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600"
@@ -5180,7 +5180,7 @@ exports[`Votes > should select a delegate 1`] = `
           </div>
         </button>
         <div
-          class="h-5 relative inline-block align-middle border-t-0 border-l border-solid mx-2 border-theme-secondary-300 dark:border-theme-secondary-800"
+          class="h-5 relative mx-2 inline-block border-l border-t-0 border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
         />
         <button
           class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600"
@@ -5229,7 +5229,7 @@ exports[`Votes > should select a delegate 1`] = `
           class="hidden w-12 sm:flex"
         >
           <button
-            class="flex items-center w-12 transition-colors duration-200 bg-theme-secondary-100 dark:bg-black text-theme-primary-600 dark:text-theme-secondary-200 hover:bg-theme-primary-100 hover:dark:bg-theme-secondary-800 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-theme-primary-400 focus:rounded"
+            class="flex w-12 items-center bg-theme-secondary-100 transition-colors duration-200 dark:bg-black text-theme-primary-600 hover:bg-theme-primary-100 focus:rounded focus:outline-none focus:ring-2 focus:ring-inset focus:ring-theme-primary-400 dark:text-theme-secondary-200 hover:dark:bg-theme-secondary-800"
           >
             <div
               class="mx-auto"
@@ -5696,7 +5696,7 @@ exports[`Votes > should select a delegate 1`] = `
                     class="group"
                   >
                     <button
-                      class="relative flex items-center justify-center font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 transition-colors duration-200 cursor-pointer focus:outline-none disabled:cursor-not-allowed disabled:text-theme-secondary-400 disabled:dark:text-theme-secondary-700 hover:text-theme-primary-700 hover:bg-theme-primary-100 hover:dark:text-theme-secondary-800 px-2 py-1.5 rounded ring-focus"
+                      class="relative flex cursor-pointer items-center justify-center font-semibold text-theme-secondary-700 transition-colors duration-200 focus:outline-none disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:text-theme-secondary-500 disabled:dark:text-theme-secondary-700 hover:bg-theme-primary-100 hover:dark:text-white hover:text-theme-primary-400 rounded px-2 py-1.5 ring-focus"
                       type="button"
                     >
                       <div
@@ -5764,7 +5764,7 @@ exports[`Votes > should select a delegate 1`] = `
                   class="mx-0.5 flex md:mx-3.5"
                 >
                   <div
-                    class="h-5 relative inline-block align-middle border-t-0 border-l border-solid mx-2 border-theme-secondary-300 dark:border-theme-secondary-800"
+                    class="h-5 relative mx-2 inline-block border-l border-t-0 border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
                   />
                 </span>
                 <div>
@@ -5777,7 +5777,7 @@ exports[`Votes > should select a delegate 1`] = `
                       class="group"
                     >
                       <button
-                        class="relative flex items-center justify-center font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 transition-colors duration-200 cursor-pointer focus:outline-none disabled:cursor-not-allowed disabled:text-theme-secondary-400 disabled:dark:text-theme-secondary-700 hover:text-theme-primary-700 hover:bg-theme-primary-100 hover:dark:text-theme-secondary-800 px-2 py-1.5 rounded ring-focus"
+                        class="relative flex cursor-pointer items-center justify-center font-semibold text-theme-secondary-700 transition-colors duration-200 focus:outline-none disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:text-theme-secondary-500 disabled:dark:text-theme-secondary-700 hover:bg-theme-primary-100 hover:dark:text-white hover:text-theme-primary-400 rounded px-2 py-1.5 ring-focus"
                       >
                         <div
                           class="flex h-5 w-5 items-center justify-center"
@@ -6688,7 +6688,7 @@ exports[`Votes > should select ledger option in the wallets display type 1`] = `
           </div>
         </button>
         <div
-          class="h-5 relative inline-block align-middle border-t-0 border-l border-solid mx-2 border-theme-secondary-300 dark:border-theme-secondary-800"
+          class="h-5 relative mx-2 inline-block border-l border-t-0 border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
         />
         <button
           class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600"
@@ -6725,7 +6725,7 @@ exports[`Votes > should select ledger option in the wallets display type 1`] = `
           </div>
         </button>
         <div
-          class="h-5 relative inline-block align-middle border-t-0 border-l border-solid mx-2 border-theme-secondary-300 dark:border-theme-secondary-800"
+          class="h-5 relative mx-2 inline-block border-l border-t-0 border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
         />
         <button
           class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600"
@@ -6774,7 +6774,7 @@ exports[`Votes > should select ledger option in the wallets display type 1`] = `
           class="hidden w-12 sm:flex"
         >
           <button
-            class="flex items-center w-12 transition-colors duration-200 bg-theme-secondary-100 dark:bg-black text-theme-primary-600 dark:text-theme-secondary-200 hover:bg-theme-primary-100 hover:dark:bg-theme-secondary-800 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-theme-primary-400 focus:rounded"
+            class="flex w-12 items-center bg-theme-secondary-100 transition-colors duration-200 dark:bg-black text-theme-primary-600 hover:bg-theme-primary-100 focus:rounded focus:outline-none focus:ring-2 focus:ring-inset focus:ring-theme-primary-400 dark:text-theme-secondary-200 hover:dark:bg-theme-secondary-800"
           >
             <div
               class="mx-auto"
@@ -7248,7 +7248,7 @@ exports[`Votes > should select ledger option in the wallets display type 1`] = `
                     class="group"
                   >
                     <button
-                      class="relative flex items-center justify-center font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 transition-colors duration-200 cursor-pointer focus:outline-none disabled:cursor-not-allowed disabled:text-theme-secondary-400 disabled:dark:text-theme-secondary-700 hover:text-theme-primary-700 hover:bg-theme-primary-100 hover:dark:text-theme-secondary-800 px-2 py-1.5 rounded ring-focus"
+                      class="relative flex cursor-pointer items-center justify-center font-semibold text-theme-secondary-700 transition-colors duration-200 focus:outline-none disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:text-theme-secondary-500 disabled:dark:text-theme-secondary-700 hover:bg-theme-primary-100 hover:dark:text-white hover:text-theme-primary-400 rounded px-2 py-1.5 ring-focus"
                       type="button"
                     >
                       <div
@@ -7316,7 +7316,7 @@ exports[`Votes > should select ledger option in the wallets display type 1`] = `
                   class="mx-0.5 flex md:mx-3.5"
                 >
                   <div
-                    class="h-5 relative inline-block align-middle border-t-0 border-l border-solid mx-2 border-theme-secondary-300 dark:border-theme-secondary-800"
+                    class="h-5 relative mx-2 inline-block border-l border-t-0 border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
                   />
                 </span>
                 <div
@@ -7332,7 +7332,7 @@ exports[`Votes > should select ledger option in the wallets display type 1`] = `
                       class="group"
                     >
                       <button
-                        class="relative flex items-center justify-center font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 transition-colors duration-200 cursor-pointer focus:outline-none disabled:cursor-not-allowed disabled:text-theme-secondary-400 disabled:dark:text-theme-secondary-700 hover:text-theme-primary-700 hover:bg-theme-primary-100 hover:dark:text-theme-secondary-800 px-2 py-1.5 rounded ring-focus"
+                        class="relative flex cursor-pointer items-center justify-center font-semibold text-theme-secondary-700 transition-colors duration-200 focus:outline-none disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:text-theme-secondary-500 disabled:dark:text-theme-secondary-700 hover:bg-theme-primary-100 hover:dark:text-white hover:text-theme-primary-400 rounded px-2 py-1.5 ring-focus"
                       >
                         <div
                           class="absolute right-1 top-0.5 flex h-3 w-3 items-center justify-center rounded-full bg-theme-background transition-all duration-100 ease-linear -mr-2.5"
@@ -7943,7 +7943,7 @@ exports[`Votes > should select starred option in the wallets display type 1`] = 
           </div>
         </button>
         <div
-          class="h-5 relative inline-block align-middle border-t-0 border-l border-solid mx-2 border-theme-secondary-300 dark:border-theme-secondary-800"
+          class="h-5 relative mx-2 inline-block border-l border-t-0 border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
         />
         <button
           class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600"
@@ -7980,7 +7980,7 @@ exports[`Votes > should select starred option in the wallets display type 1`] = 
           </div>
         </button>
         <div
-          class="h-5 relative inline-block align-middle border-t-0 border-l border-solid mx-2 border-theme-secondary-300 dark:border-theme-secondary-800"
+          class="h-5 relative mx-2 inline-block border-l border-t-0 border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
         />
         <button
           class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600"
@@ -8029,7 +8029,7 @@ exports[`Votes > should select starred option in the wallets display type 1`] = 
           class="hidden w-12 sm:flex"
         >
           <button
-            class="flex items-center w-12 transition-colors duration-200 bg-theme-secondary-100 dark:bg-black text-theme-primary-600 dark:text-theme-secondary-200 hover:bg-theme-primary-100 hover:dark:bg-theme-secondary-800 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-theme-primary-400 focus:rounded"
+            class="flex w-12 items-center bg-theme-secondary-100 transition-colors duration-200 dark:bg-black text-theme-primary-600 hover:bg-theme-primary-100 focus:rounded focus:outline-none focus:ring-2 focus:ring-inset focus:ring-theme-primary-400 dark:text-theme-secondary-200 hover:dark:bg-theme-secondary-800"
           >
             <div
               class="mx-auto"
@@ -8503,7 +8503,7 @@ exports[`Votes > should select starred option in the wallets display type 1`] = 
                     class="group"
                   >
                     <button
-                      class="relative flex items-center justify-center font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 transition-colors duration-200 cursor-pointer focus:outline-none disabled:cursor-not-allowed disabled:text-theme-secondary-400 disabled:dark:text-theme-secondary-700 hover:text-theme-primary-700 hover:bg-theme-primary-100 hover:dark:text-theme-secondary-800 px-2 py-1.5 rounded ring-focus"
+                      class="relative flex cursor-pointer items-center justify-center font-semibold text-theme-secondary-700 transition-colors duration-200 focus:outline-none disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:text-theme-secondary-500 disabled:dark:text-theme-secondary-700 hover:bg-theme-primary-100 hover:dark:text-white hover:text-theme-primary-400 rounded px-2 py-1.5 ring-focus"
                       type="button"
                     >
                       <div
@@ -8571,7 +8571,7 @@ exports[`Votes > should select starred option in the wallets display type 1`] = 
                   class="mx-0.5 flex md:mx-3.5"
                 >
                   <div
-                    class="h-5 relative inline-block align-middle border-t-0 border-l border-solid mx-2 border-theme-secondary-300 dark:border-theme-secondary-800"
+                    class="h-5 relative mx-2 inline-block border-l border-t-0 border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
                   />
                 </span>
                 <div
@@ -8587,7 +8587,7 @@ exports[`Votes > should select starred option in the wallets display type 1`] = 
                       class="group"
                     >
                       <button
-                        class="relative flex items-center justify-center font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 transition-colors duration-200 cursor-pointer focus:outline-none disabled:cursor-not-allowed disabled:text-theme-secondary-400 disabled:dark:text-theme-secondary-700 hover:text-theme-primary-700 hover:bg-theme-primary-100 hover:dark:text-theme-secondary-800 px-2 py-1.5 rounded ring-focus"
+                        class="relative flex cursor-pointer items-center justify-center font-semibold text-theme-secondary-700 transition-colors duration-200 focus:outline-none disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:text-theme-secondary-500 disabled:dark:text-theme-secondary-700 hover:bg-theme-primary-100 hover:dark:text-white hover:text-theme-primary-400 rounded px-2 py-1.5 ring-focus"
                       >
                         <div
                           class="absolute right-1 top-0.5 flex h-3 w-3 items-center justify-center rounded-full bg-theme-background transition-all duration-100 ease-linear -mr-2.5"
@@ -9198,7 +9198,7 @@ exports[`Votes > should toggle network selection from network filters 1`] = `
           </div>
         </button>
         <div
-          class="h-5 relative inline-block align-middle border-t-0 border-l border-solid mx-2 border-theme-secondary-300 dark:border-theme-secondary-800"
+          class="h-5 relative mx-2 inline-block border-l border-t-0 border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
         />
         <button
           class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600"
@@ -9235,7 +9235,7 @@ exports[`Votes > should toggle network selection from network filters 1`] = `
           </div>
         </button>
         <div
-          class="h-5 relative inline-block align-middle border-t-0 border-l border-solid mx-2 border-theme-secondary-300 dark:border-theme-secondary-800"
+          class="h-5 relative mx-2 inline-block border-l border-t-0 border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
         />
         <button
           class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600"
@@ -9284,7 +9284,7 @@ exports[`Votes > should toggle network selection from network filters 1`] = `
           class="hidden w-12 sm:flex"
         >
           <button
-            class="flex items-center w-12 transition-colors duration-200 bg-theme-secondary-100 dark:bg-black text-theme-primary-600 dark:text-theme-secondary-200 hover:bg-theme-primary-100 hover:dark:bg-theme-secondary-800 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-theme-primary-400 focus:rounded"
+            class="flex w-12 items-center bg-theme-secondary-100 transition-colors duration-200 dark:bg-black text-theme-primary-600 hover:bg-theme-primary-100 focus:rounded focus:outline-none focus:ring-2 focus:ring-inset focus:ring-theme-primary-400 dark:text-theme-secondary-200 hover:dark:bg-theme-secondary-800"
           >
             <div
               class="mx-auto"
@@ -9758,7 +9758,7 @@ exports[`Votes > should toggle network selection from network filters 1`] = `
                     class="group"
                   >
                     <button
-                      class="relative flex items-center justify-center font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 transition-colors duration-200 cursor-pointer focus:outline-none disabled:cursor-not-allowed disabled:text-theme-secondary-400 disabled:dark:text-theme-secondary-700 hover:text-theme-primary-700 hover:bg-theme-primary-100 hover:dark:text-theme-secondary-800 px-2 py-1.5 rounded ring-focus"
+                      class="relative flex cursor-pointer items-center justify-center font-semibold text-theme-secondary-700 transition-colors duration-200 focus:outline-none disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:text-theme-secondary-500 disabled:dark:text-theme-secondary-700 hover:bg-theme-primary-100 hover:dark:text-white hover:text-theme-primary-400 rounded px-2 py-1.5 ring-focus"
                       type="button"
                     >
                       <div
@@ -9826,7 +9826,7 @@ exports[`Votes > should toggle network selection from network filters 1`] = `
                   class="mx-0.5 flex md:mx-3.5"
                 >
                   <div
-                    class="h-5 relative inline-block align-middle border-t-0 border-l border-solid mx-2 border-theme-secondary-300 dark:border-theme-secondary-800"
+                    class="h-5 relative mx-2 inline-block border-l border-t-0 border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
                   />
                 </span>
                 <div
@@ -9842,7 +9842,7 @@ exports[`Votes > should toggle network selection from network filters 1`] = `
                       class="group"
                     >
                       <button
-                        class="relative flex items-center justify-center font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 transition-colors duration-200 cursor-pointer focus:outline-none disabled:cursor-not-allowed disabled:text-theme-secondary-400 disabled:dark:text-theme-secondary-700 hover:text-theme-primary-700 hover:bg-theme-primary-100 hover:dark:text-theme-secondary-800 px-2 py-1.5 rounded ring-focus"
+                        class="relative flex cursor-pointer items-center justify-center font-semibold text-theme-secondary-700 transition-colors duration-200 focus:outline-none disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:text-theme-secondary-500 disabled:dark:text-theme-secondary-700 hover:bg-theme-primary-100 hover:dark:text-white hover:text-theme-primary-400 rounded px-2 py-1.5 ring-focus"
                       >
                         <div>
                           <div
@@ -10636,7 +10636,7 @@ exports[`Votes > should trigger network connection warning 1`] = `
           </div>
         </button>
         <div
-          class="h-5 relative inline-block align-middle border-t-0 border-l border-solid mx-2 border-theme-secondary-300 dark:border-theme-secondary-800"
+          class="h-5 relative mx-2 inline-block border-l border-t-0 border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
         />
         <button
           class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600"
@@ -10673,7 +10673,7 @@ exports[`Votes > should trigger network connection warning 1`] = `
           </div>
         </button>
         <div
-          class="h-5 relative inline-block align-middle border-t-0 border-l border-solid mx-2 border-theme-secondary-300 dark:border-theme-secondary-800"
+          class="h-5 relative mx-2 inline-block border-l border-t-0 border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
         />
         <button
           class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600"
@@ -10722,7 +10722,7 @@ exports[`Votes > should trigger network connection warning 1`] = `
           class="hidden w-12 sm:flex"
         >
           <button
-            class="flex items-center w-12 transition-colors duration-200 bg-theme-secondary-100 dark:bg-black text-theme-primary-600 dark:text-theme-secondary-200 hover:bg-theme-primary-100 hover:dark:bg-theme-secondary-800 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-theme-primary-400 focus:rounded"
+            class="flex w-12 items-center bg-theme-secondary-100 transition-colors duration-200 dark:bg-black text-theme-primary-600 hover:bg-theme-primary-100 focus:rounded focus:outline-none focus:ring-2 focus:ring-inset focus:ring-theme-primary-400 dark:text-theme-secondary-200 hover:dark:bg-theme-secondary-800"
           >
             <div
               class="mx-auto"
@@ -11189,7 +11189,7 @@ exports[`Votes > should trigger network connection warning 1`] = `
                     class="group"
                   >
                     <button
-                      class="relative flex items-center justify-center font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 transition-colors duration-200 cursor-pointer focus:outline-none disabled:cursor-not-allowed disabled:text-theme-secondary-400 disabled:dark:text-theme-secondary-700 hover:text-theme-primary-700 hover:bg-theme-primary-100 hover:dark:text-theme-secondary-800 px-2 py-1.5 rounded ring-focus"
+                      class="relative flex cursor-pointer items-center justify-center font-semibold text-theme-secondary-700 transition-colors duration-200 focus:outline-none disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:text-theme-secondary-500 disabled:dark:text-theme-secondary-700 hover:bg-theme-primary-100 hover:dark:text-white hover:text-theme-primary-400 rounded px-2 py-1.5 ring-focus"
                       type="button"
                     >
                       <div
@@ -11257,7 +11257,7 @@ exports[`Votes > should trigger network connection warning 1`] = `
                   class="mx-0.5 flex md:mx-3.5"
                 >
                   <div
-                    class="h-5 relative inline-block align-middle border-t-0 border-l border-solid mx-2 border-theme-secondary-300 dark:border-theme-secondary-800"
+                    class="h-5 relative mx-2 inline-block border-l border-t-0 border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
                   />
                 </span>
                 <div>
@@ -11270,7 +11270,7 @@ exports[`Votes > should trigger network connection warning 1`] = `
                       class="group"
                     >
                       <button
-                        class="relative flex items-center justify-center font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 transition-colors duration-200 cursor-pointer focus:outline-none disabled:cursor-not-allowed disabled:text-theme-secondary-400 disabled:dark:text-theme-secondary-700 hover:text-theme-primary-700 hover:bg-theme-primary-100 hover:dark:text-theme-secondary-800 px-2 py-1.5 rounded ring-focus"
+                        class="relative flex cursor-pointer items-center justify-center font-semibold text-theme-secondary-700 transition-colors duration-200 focus:outline-none disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:text-theme-secondary-500 disabled:dark:text-theme-secondary-700 hover:bg-theme-primary-100 hover:dark:text-white hover:text-theme-primary-400 rounded px-2 py-1.5 ring-focus"
                       >
                         <div
                           class="flex h-5 w-5 items-center justify-center"

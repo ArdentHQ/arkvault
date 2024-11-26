@@ -157,7 +157,7 @@ exports[`AddressRowMobile > should emit action on select button 1`] = `
                     </div>
                   </div>
                   <div
-                    class="h-4 relative inline-block align-middle border-t-0 border-l border-solid mx-2 border-theme-secondary-300 dark:border-theme-secondary-800"
+                    class="h-4 relative mx-2 inline-block border-l border-t-0 border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
                   />
                   <span>
                     <div
@@ -378,7 +378,7 @@ exports[`AddressRowMobile > should render for a multisignature wallet 1`] = `
                     </div>
                   </div>
                   <div
-                    class="h-4 relative inline-block align-middle border-t-0 border-l border-solid mx-2 border-theme-secondary-300 dark:border-theme-secondary-800"
+                    class="h-4 relative mx-2 inline-block border-l border-t-0 border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
                   />
                   <span>
                     <div
@@ -597,7 +597,7 @@ exports[`AddressRowMobile > should render in 375 screen width 1`] = `
                     </div>
                   </div>
                   <div
-                    class="h-4 relative inline-block align-middle border-t-0 border-l border-solid mx-2 border-theme-secondary-300 dark:border-theme-secondary-800"
+                    class="h-4 relative mx-2 inline-block border-l border-t-0 border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
                   />
                   <span>
                     <div
@@ -817,7 +817,7 @@ exports[`AddressRowMobile > should render in 420 screen width 1`] = `
                     </div>
                   </div>
                   <div
-                    class="h-4 relative inline-block align-middle border-t-0 border-l border-solid mx-2 border-theme-secondary-300 dark:border-theme-secondary-800"
+                    class="h-4 relative mx-2 inline-block border-l border-t-0 border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
                   />
                   <span>
                     <div
@@ -1037,7 +1037,7 @@ exports[`AddressRowMobile > should render when the maximum votes is greater than
                     </div>
                   </div>
                   <div
-                    class="h-4 relative inline-block align-middle border-t-0 border-l border-solid mx-2 border-theme-secondary-300 dark:border-theme-secondary-800"
+                    class="h-4 relative mx-2 inline-block border-l border-t-0 border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
                   />
                   <span>
                     <div
@@ -1256,7 +1256,7 @@ exports[`AddressRowMobile > should render when the wallet has many votes 1`] = `
                     </div>
                   </div>
                   <div
-                    class="h-4 relative inline-block align-middle border-t-0 border-l border-solid mx-2 border-theme-secondary-300 dark:border-theme-secondary-800"
+                    class="h-4 relative mx-2 inline-block border-l border-t-0 border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
                   />
                   <span>
                     <div
@@ -1475,7 +1475,7 @@ exports[`AddressRowMobile > should render when wallet hasn't voted 1`] = `
                     </div>
                   </div>
                   <div
-                    class="h-4 relative inline-block align-middle border-t-0 border-l border-solid mx-2 border-theme-secondary-300 dark:border-theme-secondary-800"
+                    class="h-4 relative mx-2 inline-block border-l border-t-0 border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
                   />
                   <span>
                     <div
@@ -1628,7 +1628,7 @@ exports[`AddressRowMobile > should render when wallet hasn't voted 1`] = `
                   class="mt-2 flex flex-grow items-center space-x-3 overflow-hidden leading-[17px]"
                 >
                   <div
-                    class="transition-all inline-flex items-center justify-center align-middle border-2 rounded-full ring-0 w-5 h-5 text-sm border-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100"
+                    class="inline-flex items-center justify-center rounded-full border-2 align-middle transition-all h-5 w-5 text-sm ring-0 border-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100"
                   />
                   <span
                     class="text-theme-secondary-400"
@@ -1636,10 +1636,10 @@ exports[`AddressRowMobile > should render when wallet hasn't voted 1`] = `
                     N/A
                   </span>
                   <div
-                    class="h-4 relative inline-block align-middle border-t-0 border-l border-solid mx-2 border-theme-secondary-300 dark:border-theme-secondary-800"
+                    class="h-4 relative mx-2 inline-block border-l border-t-0 border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
                   />
                   <div
-                    class="transition-all inline-flex items-center justify-center align-middle border-2 rounded-full ring-0 text-sm h-4 w-4 shrink-0 border-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100"
+                    class="inline-flex items-center justify-center rounded-full border-2 align-middle transition-all text-sm ring-0 h-4 w-4 shrink-0 border-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100"
                   />
                 </div>
               </div>
@@ -1820,7 +1820,7 @@ exports[`AddressRowMobile > should render when wallet not found for votes 1`] = 
                     </div>
                   </div>
                   <div
-                    class="h-4 relative inline-block align-middle border-t-0 border-l border-solid mx-2 border-theme-secondary-300 dark:border-theme-secondary-800"
+                    class="h-4 relative mx-2 inline-block border-l border-t-0 border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
                   />
                   <span>
                     <div
@@ -1962,7 +1962,7 @@ exports[`AddressRowMobile > should render when wallet not found for votes 1`] = 
                   class="mt-2 flex flex-grow items-center space-x-3 overflow-hidden leading-[17px]"
                 >
                   <div
-                    class="transition-all inline-flex items-center justify-center align-middle border-2 rounded-full ring-0 w-5 h-5 text-sm border-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100"
+                    class="inline-flex items-center justify-center rounded-full border-2 align-middle transition-all h-5 w-5 text-sm ring-0 border-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100"
                   />
                   <span
                     class="text-theme-secondary-400"
@@ -1970,10 +1970,10 @@ exports[`AddressRowMobile > should render when wallet not found for votes 1`] = 
                     N/A
                   </span>
                   <div
-                    class="h-4 relative inline-block align-middle border-t-0 border-l border-solid mx-2 border-theme-secondary-300 dark:border-theme-secondary-800"
+                    class="h-4 relative mx-2 inline-block border-l border-t-0 border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
                   />
                   <div
-                    class="transition-all inline-flex items-center justify-center align-middle border-2 rounded-full ring-0 text-sm h-4 w-4 shrink-0 border-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100"
+                    class="inline-flex items-center justify-center rounded-full border-2 align-middle transition-all text-sm ring-0 h-4 w-4 shrink-0 border-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100"
                   />
                 </div>
               </div>
@@ -2098,14 +2098,14 @@ exports[`AddressRowMobile > should render when wallet not loaded 1`] = `
                   class="mt-2 flex flex-grow items-center space-x-3 overflow-hidden leading-[17px]"
                 >
                   <div
-                    class="transition-all inline-flex items-center justify-center align-middle border-2 rounded-full ring-0 w-5 h-5 text-sm border-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100"
+                    class="inline-flex items-center justify-center rounded-full border-2 align-middle transition-all h-5 w-5 text-sm ring-0 border-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100"
                     data-testid="AddressRowMobile--nowallet"
                   />
                   <div
-                    class="h-4 relative inline-block align-middle border-t-0 border-l border-solid mx-2 border-theme-secondary-300 dark:border-theme-secondary-800"
+                    class="h-4 relative mx-2 inline-block border-l border-t-0 border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
                   />
                   <div
-                    class="transition-all inline-flex items-center justify-center align-middle border-2 rounded-full ring-0 text-sm h-4 w-4 shrink-0 border-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100"
+                    class="inline-flex items-center justify-center rounded-full border-2 align-middle transition-all text-sm ring-0 h-4 w-4 shrink-0 border-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100"
                   />
                 </div>
               </div>
@@ -2286,7 +2286,7 @@ exports[`AddressRowMobile > should render with active delegate 1`] = `
                     </div>
                   </div>
                   <div
-                    class="h-4 relative inline-block align-middle border-t-0 border-l border-solid mx-2 border-theme-secondary-300 dark:border-theme-secondary-800"
+                    class="h-4 relative mx-2 inline-block border-l border-t-0 border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
                   />
                   <span>
                     <div
@@ -2505,7 +2505,7 @@ exports[`AddressRowMobile > should render with resigned delegate 1`] = `
                     </div>
                   </div>
                   <div
-                    class="h-4 relative inline-block align-middle border-t-0 border-l border-solid mx-2 border-theme-secondary-300 dark:border-theme-secondary-800"
+                    class="h-4 relative mx-2 inline-block border-l border-t-0 border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
                   />
                   <span>
                     <div
@@ -2724,7 +2724,7 @@ exports[`AddressRowMobile > should render with standby delegate 1`] = `
                     </div>
                   </div>
                   <div
-                    class="h-4 relative inline-block align-middle border-t-0 border-l border-solid mx-2 border-theme-secondary-300 dark:border-theme-secondary-800"
+                    class="h-4 relative mx-2 inline-block border-l border-t-0 border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
                   />
                   <span>
                     <div

@@ -2904,7 +2904,7 @@ exports[`AddressRow > should render with isCompact = false when the wallet has e
               class="flex items-center space-x-3 overflow-hidden"
             >
               <div
-                class="transition-all inline-flex items-center justify-center align-middle border-2 rounded-full px-2 py-1 w-11 h-11 ring-6 relative !h-8 !w-8 border-theme-secondary-300 bg-theme-secondary-200 dark:border-theme-secondary-600 dark:bg-theme-secondary-800 ring-theme-background duration-100"
+                class="inline-flex items-center justify-center rounded-full border-2 align-middle transition-all h-11 w-11 px-2 py-1 ring-6 relative !h-8 !w-8 border-theme-secondary-300 bg-theme-secondary-200 dark:border-theme-secondary-600 dark:bg-theme-secondary-800 ring-theme-background duration-100"
               >
                 <span
                   class="text-sm font-semibold text-theme-primary-700 dark:text-theme-secondary-500"
@@ -3160,7 +3160,7 @@ exports[`AddressRow > should render with isCompact = false when the wallet has m
               class="flex items-center space-x-3 overflow-hidden"
             >
               <div
-                class="transition-all inline-flex items-center justify-center align-middle border-2 rounded-full px-2 py-1 w-11 h-11 ring-6 relative !h-8 !w-8 border-theme-secondary-300 bg-theme-secondary-200 dark:border-theme-secondary-600 dark:bg-theme-secondary-800 ring-theme-background duration-100"
+                class="inline-flex items-center justify-center rounded-full border-2 align-middle transition-all h-11 w-11 px-2 py-1 ring-6 relative !h-8 !w-8 border-theme-secondary-300 bg-theme-secondary-200 dark:border-theme-secondary-600 dark:bg-theme-secondary-800 ring-theme-background duration-100"
               >
                 <span
                   class="text-sm font-semibold text-theme-primary-700 dark:text-theme-secondary-500"
@@ -3624,7 +3624,7 @@ exports[`AddressRow > should render with isCompact = true when the wallet has ex
               class="flex items-center space-x-3 overflow-hidden"
             >
               <div
-                class="transition-all inline-flex items-center justify-center align-middle border-2 rounded-full px-2 py-1 w-11 h-11 ring-6 relative !h-8 !w-8 border-theme-secondary-300 bg-theme-secondary-200 dark:border-theme-secondary-600 dark:bg-theme-secondary-800 ring-theme-background duration-100"
+                class="inline-flex items-center justify-center rounded-full border-2 align-middle transition-all h-11 w-11 px-2 py-1 ring-6 relative !h-8 !w-8 border-theme-secondary-300 bg-theme-secondary-200 dark:border-theme-secondary-600 dark:bg-theme-secondary-800 ring-theme-background duration-100"
               >
                 <span
                   class="text-sm font-semibold text-theme-primary-700 dark:text-theme-secondary-500"
@@ -3880,7 +3880,7 @@ exports[`AddressRow > should render with isCompact = true when the wallet has ma
               class="flex items-center space-x-3 overflow-hidden"
             >
               <div
-                class="transition-all inline-flex items-center justify-center align-middle border-2 rounded-full px-2 py-1 w-11 h-11 ring-6 relative !h-8 !w-8 border-theme-secondary-300 bg-theme-secondary-200 dark:border-theme-secondary-600 dark:bg-theme-secondary-800 ring-theme-background duration-100"
+                class="inline-flex items-center justify-center rounded-full border-2 align-middle transition-all h-11 w-11 px-2 py-1 ring-6 relative !h-8 !w-8 border-theme-secondary-300 bg-theme-secondary-200 dark:border-theme-secondary-600 dark:bg-theme-secondary-800 ring-theme-background duration-100"
               >
                 <span
                   class="text-sm font-semibold text-theme-primary-700 dark:text-theme-secondary-500"

@@ -97,7 +97,7 @@ exports[`DelegateVoteAmount > should render when isCompact = false 1`] = `
                   ARK
                 </span>
                 <div
-                  class="h-5 relative inline-block align-middle border-t-0 border-l border-solid mx-2 border-theme-secondary-300 dark:border-theme-secondary-800"
+                  class="h-5 relative mx-2 inline-block border-l border-t-0 border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
                 />
               </span>
             </div>
@@ -206,7 +206,7 @@ exports[`DelegateVoteAmount > should render when isCompact = true 1`] = `
                   ARK
                 </span>
                 <div
-                  class="h-5 relative inline-block align-middle border-t-0 border-l border-solid mx-2 border-theme-secondary-300 dark:border-theme-secondary-800"
+                  class="h-5 relative mx-2 inline-block border-l border-t-0 border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
                 />
               </span>
             </div>
