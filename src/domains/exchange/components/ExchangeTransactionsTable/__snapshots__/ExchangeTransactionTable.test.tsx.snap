@@ -6328,7 +6328,7 @@ exports[`ExchangeTransactionsTable > should render mobile 1`] = `
                         class="hidden sm:block"
                       >
                         <div
-                          class="h-4 relative inline-block align-middle border-t-0 border-l border-solid mx-2 border-theme-secondary-300 dark:border-theme-secondary-800"
+                          class="h-4 relative mx-2 inline-block border-l border-t-0 border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
                         />
                       </div>
                       <span
@@ -6372,7 +6372,7 @@ exports[`ExchangeTransactionsTable > should render mobile 1`] = `
                         </div>
                       </span>
                       <div
-                        class="h-4 relative inline-block align-middle border-t-0 border-l border-solid mx-2 border-theme-secondary-300 dark:border-theme-secondary-800"
+                        class="h-4 relative mx-2 inline-block border-l border-t-0 border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
                       />
                       <button
                         class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent hover:text-theme-primary-700 hover:bg-theme-primary-200 dark:hover:bg-theme-secondary-800 dark:hover:text-white cursor-pointer !p-0"
@@ -6583,7 +6583,7 @@ exports[`ExchangeTransactionsTable > should render mobile 1`] = `
                         class="hidden sm:block"
                       >
                         <div
-                          class="h-4 relative inline-block align-middle border-t-0 border-l border-solid mx-2 border-theme-secondary-300 dark:border-theme-secondary-800"
+                          class="h-4 relative mx-2 inline-block border-l border-t-0 border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
                         />
                       </div>
                       <span
@@ -6627,7 +6627,7 @@ exports[`ExchangeTransactionsTable > should render mobile 1`] = `
                         </div>
                       </span>
                       <div
-                        class="h-4 relative inline-block align-middle border-t-0 border-l border-solid mx-2 border-theme-secondary-300 dark:border-theme-secondary-800"
+                        class="h-4 relative mx-2 inline-block border-l border-t-0 border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
                       />
                       <button
                         class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent hover:text-theme-primary-700 hover:bg-theme-primary-200 dark:hover:bg-theme-secondary-800 dark:hover:text-white cursor-pointer !p-0"
@@ -6838,7 +6838,7 @@ exports[`ExchangeTransactionsTable > should render mobile 1`] = `
                         class="hidden sm:block"
                       >
                         <div
-                          class="h-4 relative inline-block align-middle border-t-0 border-l border-solid mx-2 border-theme-secondary-300 dark:border-theme-secondary-800"
+                          class="h-4 relative mx-2 inline-block border-l border-t-0 border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
                         />
                       </div>
                       <span
@@ -6882,7 +6882,7 @@ exports[`ExchangeTransactionsTable > should render mobile 1`] = `
                         </div>
                       </span>
                       <div
-                        class="h-4 relative inline-block align-middle border-t-0 border-l border-solid mx-2 border-theme-secondary-300 dark:border-theme-secondary-800"
+                        class="h-4 relative mx-2 inline-block border-l border-t-0 border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
                       />
                       <button
                         class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent hover:text-theme-primary-700 hover:bg-theme-primary-200 dark:hover:bg-theme-secondary-800 dark:hover:text-white cursor-pointer !p-0"
@@ -7121,7 +7121,7 @@ exports[`ExchangeTransactionsTable > should render mobile 2`] = `
                         class="hidden sm:block"
                       >
                         <div
-                          class="h-4 relative inline-block align-middle border-t-0 border-l border-solid mx-2 border-theme-secondary-300 dark:border-theme-secondary-800"
+                          class="h-4 relative mx-2 inline-block border-l border-t-0 border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
                         />
                       </div>
                       <span
@@ -7165,7 +7165,7 @@ exports[`ExchangeTransactionsTable > should render mobile 2`] = `
                         </div>
                       </span>
                       <div
-                        class="h-4 relative inline-block align-middle border-t-0 border-l border-solid mx-2 border-theme-secondary-300 dark:border-theme-secondary-800"
+                        class="h-4 relative mx-2 inline-block border-l border-t-0 border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
                       />
                       <button
                         class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent hover:text-theme-primary-700 hover:bg-theme-primary-200 dark:hover:bg-theme-secondary-800 dark:hover:text-white cursor-pointer !p-0"
@@ -7376,7 +7376,7 @@ exports[`ExchangeTransactionsTable > should render mobile 2`] = `
                         class="hidden sm:block"
                       >
                         <div
-                          class="h-4 relative inline-block align-middle border-t-0 border-l border-solid mx-2 border-theme-secondary-300 dark:border-theme-secondary-800"
+                          class="h-4 relative mx-2 inline-block border-l border-t-0 border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
                         />
                       </div>
                       <span
@@ -7420,7 +7420,7 @@ exports[`ExchangeTransactionsTable > should render mobile 2`] = `
                         </div>
                       </span>
                       <div
-                        class="h-4 relative inline-block align-middle border-t-0 border-l border-solid mx-2 border-theme-secondary-300 dark:border-theme-secondary-800"
+                        class="h-4 relative mx-2 inline-block border-l border-t-0 border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
                       />
                       <button
                         class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent hover:text-theme-primary-700 hover:bg-theme-primary-200 dark:hover:bg-theme-secondary-800 dark:hover:text-white cursor-pointer !p-0"
@@ -7631,7 +7631,7 @@ exports[`ExchangeTransactionsTable > should render mobile 2`] = `
                         class="hidden sm:block"
                       >
                         <div
-                          class="h-4 relative inline-block align-middle border-t-0 border-l border-solid mx-2 border-theme-secondary-300 dark:border-theme-secondary-800"
+                          class="h-4 relative mx-2 inline-block border-l border-t-0 border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
                         />
                       </div>
                       <span
@@ -7675,7 +7675,7 @@ exports[`ExchangeTransactionsTable > should render mobile 2`] = `
                         </div>
                       </span>
                       <div
-                        class="h-4 relative inline-block align-middle border-t-0 border-l border-solid mx-2 border-theme-secondary-300 dark:border-theme-secondary-800"
+                        class="h-4 relative mx-2 inline-block border-l border-t-0 border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800"
                       />
                       <button
                         class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent hover:text-theme-primary-700 hover:bg-theme-primary-200 dark:hover:bg-theme-secondary-800 dark:hover:text-white cursor-pointer !p-0"

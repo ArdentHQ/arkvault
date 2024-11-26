@@ -4,7 +4,7 @@ exports[`NetworkIcon > should render when isCompact = false 1`] = `
 <DocumentFragment>
   <div
     aria-label="ARK"
-    class="transition-all inline-flex items-center justify-center align-middle border-2 rounded-full px-2 py-1 w-11 h-11 ring-6 text-theme-primary-600 border-theme-primary-100 dark:border-theme-primary-600 ring-theme-background duration-100"
+    class="inline-flex items-center justify-center rounded-full border-2 align-middle transition-all h-11 w-11 px-2 py-1 ring-6 text-theme-primary-600 border-theme-primary-100 dark:border-theme-primary-600 ring-theme-background duration-100"
     data-testid="NetworkIcon-ARK-ark.mainnet"
   >
     <div
@@ -69,7 +69,7 @@ exports[`NetworkIcon > should render when isCompact = true 1`] = `
 exports[`NetworkIcon > should render with placeholder 1`] = `
 <DocumentFragment>
   <div
-    class="transition-all inline-flex items-center justify-center align-middle border-2 rounded-full px-2 py-1 w-11 h-11 ring-6 ring-theme-background duration-100"
+    class="inline-flex items-center justify-center rounded-full border-2 align-middle transition-all h-11 w-11 px-2 py-1 ring-6 ring-theme-background duration-100"
     data-testid="NetworkIcon__placeholder"
   />
 </DocumentFragment>
