@@ -18,9 +18,9 @@ const StyledBackButton = ({
 		className={twMerge(
 			"flex w-12 items-center bg-theme-secondary-100 transition-colors duration-200 dark:bg-black",
 			cn({
+				"cursor-not-allowed text-theme-secondary-500 dark:text-theme-secondary-800": disabled,
 				"text-theme-primary-600 hover:bg-theme-primary-100 focus:rounded focus:outline-none focus:ring-2 focus:ring-inset focus:ring-theme-primary-400 dark:text-theme-secondary-200 hover:dark:bg-theme-secondary-800":
 					!disabled,
-				"cursor-not-allowed text-theme-secondary-500 dark:text-theme-secondary-800": disabled,
 			}),
 			props.className,
 		)}

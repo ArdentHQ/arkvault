@@ -12,8 +12,8 @@ const SubFormWrapper = ({
 		className={twMerge(
 			"space-y-4 rounded-lg",
 			cn({
-				"bg-theme-secondary-background": !noBackground,
 				"-mx-4 p-4": !noPadding,
+				"bg-theme-secondary-background": !noBackground,
 			}),
 			props.className,
 		)}

@@ -23,13 +23,13 @@ const CircleWrapper = forwardRef<HTMLDivElement, CircleProperties>(
 				"inline-flex items-center justify-center rounded-full border-2 align-middle transition-all",
 				cn({
 					"border-0 bg-theme-info-200": avatarId,
-					"h-16 w-16 px-2 py-1 text-lg": size === "xl",
+					"h-10 w-10 px-4 py-2": !size || !["lg", "sm", "xl", "xs"].includes(size),
 					"h-11 w-11 px-2 py-1": size === "lg",
+					"h-16 w-16 px-2 py-1 text-lg": size === "xl",
+					"h-5 w-5 text-sm": size === "xs",
 					"h-8 w-8 px-2 py-1 text-sm": size === "sm",
 					"ring-0": noShadow,
 					"ring-6": !noShadow,
-					"h-10 w-10 px-4 py-2": !size || !["lg", "sm", "xl", "xs"].includes(size),
-					"h-5 w-5 text-sm": size === "xs",
 				}),
 				props.className,
 			)}
