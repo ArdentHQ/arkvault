@@ -19,16 +19,14 @@ import {
 } from "@floating-ui/react";
 import { twMerge } from "tailwind-merge";
 
-export const Wrapper = ({position, variant, ...props}: { position?: Position; variant: DropdownVariantType } & React.HTMLProps<HTMLDivElement>) => {
-	return (
+export const Wrapper = ({variant, ...props}: { variant: DropdownVariantType } & React.HTMLProps<HTMLDivElement>) => (
 		<div
 			{...props}
 			className={twMerge(cn({
 				"dark:bg-theme-secondary-800 py-3": variant === "options" || variant === "votesFilter",
 			}), props.className)}
 		/>
-	);
-}
+	)
 
 export const Dropdown: FC<DropdownProperties> = ({
 	children,
