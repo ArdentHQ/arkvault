@@ -18,12 +18,15 @@ import { WalletActionsModals } from "@/domains/wallet/components/WalletActionsMo
 import { Copy } from "@/app/components/Copy";
 import { twMerge } from "tailwind-merge";
 
-const WalletHeaderButtonMobile = ({...props}: React.ButtonHTMLAttributes<HTMLButtonElement>) => (
-		<button
-			{...props}
-			className={twMerge("inline-flex items-center justify-center w-6 h-6 transition-all duration-100 ease-linear rounded outline-none focus:(outline-none ring-2 ring-theme-primary-400) text-theme-secondary-text disabled:text-theme-secondary-800", props.className)}
-		/>
-	)
+const WalletHeaderButtonMobile = ({ ...props }: React.ButtonHTMLAttributes<HTMLButtonElement>) => (
+	<button
+		{...props}
+		className={twMerge(
+			"focus:(outline-none ring-theme-primary-400) inline-flex h-6 w-6 items-center justify-center rounded text-theme-secondary-text outline-none ring-2 transition-all duration-100 ease-linear disabled:text-theme-secondary-800",
+			props.className,
+		)}
+	/>
+);
 
 export const WalletHeaderMobile: React.FC<WalletHeaderProperties> = ({ profile, wallet, onUpdate }) => {
 	const { activeModal, handleSelectOption, handleToggleStar, handleSend, setActiveModal } = useWalletActions(wallet);

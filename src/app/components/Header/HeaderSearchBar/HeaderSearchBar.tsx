@@ -9,18 +9,16 @@ import { Input } from "@/app/components/Input";
 import { clickOutsideHandler, useDebounce } from "@/app/hooks";
 import { twMerge } from "tailwind-merge";
 
-const SearchBarInputWrapper = forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElement>>(
-    (props, ref) => (
-            <div
-                {...props}
-                ref={ref}
-                className={twMerge(
-                    "xs:[min-width:300px] sm:[min-width:448px] dark:border dark:border-theme-secondary-800",
-                    props.className
-                )}
-            />
-        )
-);
+const SearchBarInputWrapper = forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElement>>((props, ref) => (
+	<div
+		{...props}
+		ref={ref}
+		className={twMerge(
+			"dark:border dark:border-theme-secondary-800 xs:[min-width:300px] sm:[min-width:448px]",
+			props.className,
+		)}
+	/>
+));
 
 SearchBarInputWrapper.displayName = "SearchBarInputWrapper";
 

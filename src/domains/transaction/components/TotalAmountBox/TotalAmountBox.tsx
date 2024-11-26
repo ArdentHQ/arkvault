@@ -11,9 +11,9 @@ interface Properties {
 	ticker: string;
 }
 
-const AmountLabel = ({...props}: React.HTMLAttributes<HTMLSpanElement>) => (
-		<span {...props} className="text-sm font-semibold text-theme-secondary-500" />
-	)
+const AmountLabel = ({ ...props }: React.HTMLAttributes<HTMLSpanElement>) => (
+	<span {...props} className="text-sm font-semibold text-theme-secondary-500" />
+);
 
 export const TotalAmountBox = ({ ticker, ...properties }: Properties) => {
 	const { t } = useTranslation();

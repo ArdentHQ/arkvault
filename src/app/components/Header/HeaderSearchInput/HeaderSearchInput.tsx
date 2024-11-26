@@ -6,22 +6,18 @@ import { Icon } from "@/app/components/Icon";
 import { Input } from "@/app/components/Input";
 import { useDebounce } from "@/app/hooks";
 
-
-const SearchBarInputWrapper = forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElement>>(
-    (props, ref) => (
-            <div
-                {...props}
-                ref={ref}
-                className={cn(
-                    "xs:[min-width:300px] sm:[min-width:448px] dark:border dark:border-theme-secondary-800",
-                    props.className
-                )}
-            />
-        )
-);
+const SearchBarInputWrapper = forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElement>>((props, ref) => (
+	<div
+		{...props}
+		ref={ref}
+		className={cn(
+			"dark:border dark:border-theme-secondary-800 xs:[min-width:300px] sm:[min-width:448px]",
+			props.className,
+		)}
+	/>
+));
 
 SearchBarInputWrapper.displayName = "SearchBarInputWrapper";
-
 
 export const HeaderSearchInput: FC<HeaderSearchInputProperties> = ({
 	placeholder,

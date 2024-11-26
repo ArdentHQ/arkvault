@@ -2,18 +2,28 @@ import cn from "classnames";
 import React from "react";
 import { twMerge } from "tailwind-merge";
 
-const ControlButtonStyled = ({ noBorder, disabled,...properties }: React.ButtonHTMLAttributes<HTMLButtonElement> & ControlButtonProperties) => (
-		<button
-			{...properties}
-			className={twMerge("relative flex items-center justify-center py-2 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 transition-colors duration-200 cursor-pointer focus:outline-none disabled:cursor-not-allowed disabled:text-theme-secondary-400 disabled:dark:text-theme-secondary-700", cn({
-				"hover:border-b-theme-primary-400 hover:text-theme-primary-400 [&.active]:[&[data-focus-visible-added]]:rounded [&.active]:border-b-theme-primary-600 [&.active]:text-theme-primary-600": !noBorder && !disabled,
+const ControlButtonStyled = ({
+	noBorder,
+	disabled,
+	...properties
+}: React.ButtonHTMLAttributes<HTMLButtonElement> & ControlButtonProperties) => (
+	<button
+		{...properties}
+		className={twMerge(
+			"relative flex cursor-pointer items-center justify-center py-2 font-semibold text-theme-secondary-700 transition-colors duration-200 focus:outline-none disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:text-theme-secondary-500 disabled:dark:text-theme-secondary-700",
+			cn({
+				"hover:border-b-theme-primary-400 hover:text-theme-primary-400 [&.active]:border-b-theme-primary-600 [&.active]:text-theme-primary-600 [&.active]:[&[data-focus-visible-added]]:rounded":
+					!noBorder && !disabled,
 				"hover:text-theme-primary-400": !disabled,
-				"hover:text-theme-primary-700 hover:bg-theme-primary-100 hover:dark:text-white hover:dark:text-theme-secondary-800": disabled || noBorder,
-				"px-2 py-1.5 rounded": noBorder,
-				"px-2.5 mx-0.5": !noBorder,
-			}),properties.className)}
-		/>
-	)
+				"hover:bg-theme-primary-100 hover:text-theme-primary-700 hover:dark:text-theme-secondary-800 hover:dark:text-white":
+					disabled || noBorder,
+				"rounded px-2 py-1.5": noBorder,
+				"mx-0.5 px-2.5": !noBorder,
+			}),
+			properties.className,
+		)}
+	/>
+);
 
 type ControlButtonProperties = {
 	isChanged?: boolean;

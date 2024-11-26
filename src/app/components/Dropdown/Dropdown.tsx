@@ -18,14 +18,17 @@ import {
 } from "@floating-ui/react";
 import { twMerge } from "tailwind-merge";
 
-export const Wrapper = ({variant, ...props}: { variant: DropdownVariantType } & React.HTMLProps<HTMLDivElement>) => (
-		<div
-			{...props}
-			className={twMerge(cn({
-				"dark:bg-theme-secondary-800 py-3": variant === "options" || variant === "votesFilter",
-			}), props.className)}
-		/>
-	)
+export const Wrapper = ({ variant, ...props }: { variant: DropdownVariantType } & React.HTMLProps<HTMLDivElement>) => (
+	<div
+		{...props}
+		className={twMerge(
+			cn({
+				"py-3 dark:bg-theme-secondary-800": variant === "options" || variant === "votesFilter",
+			}),
+			props.className,
+		)}
+	/>
+);
 
 export const Dropdown: FC<DropdownProperties> = ({
 	children,
@@ -122,7 +125,10 @@ export const Dropdown: FC<DropdownProperties> = ({
 						{...getFloatingProps()}
 						data-testid={"dropdown__content" + testIdSuffix}
 					>
-						<Wrapper variant={variant || options ? "options" : "custom"} className="dropdown-body overflow-hidden bg-theme-background rounded-xl shadow-xl">
+						<Wrapper
+							variant={variant || options ? "options" : "custom"}
+							className="dropdown-body overflow-hidden rounded-xl bg-theme-background shadow-xl"
+						>
 							{top}
 							{options?.length && renderOptions({ onSelect: onSelectOption, options })}
 							{clonedElement && <div>{clonedElement}</div>}
