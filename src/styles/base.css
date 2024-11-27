@@ -86,11 +86,11 @@ main {
 	}
   }
 
-  .navButtonWrapper button {
+  .custom-button-wrapper button {
 	@apply w-10 h-10 sm:w-11 sm:h-11 overflow-hidden rounded text-theme-secondary-700 dark:text-theme-secondary-600 [&:not(:disabled)]:hover:text-theme-primary-600 [&:not(:disabled)]:hover:bg-theme-primary-100 [&:not(:disabled)]:dark:hover:bg-theme-secondary-800 [&:not(:disabled)]:dark:hover:text-theme-secondary-100;
   }
 
-  .navWrapper li a {
+  .custom-nav-wrapper li a {
 	@apply border-t-2 border-t-transparent hover:border-b-theme-primary-600 hover:text-theme-text active:border-b-theme-primary-600 active:text-theme-text
   }
   

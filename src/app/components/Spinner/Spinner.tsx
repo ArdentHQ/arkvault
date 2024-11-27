@@ -3,14 +3,14 @@ import { getStyles } from "./Spinner.styles";
 import { Color, Size, Theme } from "@/types";
 import { twMerge } from "tailwind-merge";
 
-interface SpinnerType {
+interface SpinnerType extends React.HTMLAttributes<HTMLDivElement> {
 	color?: Color | "warning-alt";
 	size?: Size;
 	theme?: Theme;
 	width?: number;
 }
 
-export const Spinner = ({ color, size, theme, width, ...props}: SpinnerType & React.HTMLProps<HTMLDivElement>) => (
+export const Spinner = ({ color, size, theme, width, ...props}: SpinnerType) => (
 		<div
 			{...props}
 			className={twMerge(getStyles({ color, size, theme, }), props.className)}
@@ -18,8 +18,4 @@ export const Spinner = ({ color, size, theme, width, ...props}: SpinnerType & Re
 				borderWidth: `${width}px !important`,
 			}}
 		/>
-	)
-
-Spinner.defaultProps = {
-	color: "info",
-};
+	);
