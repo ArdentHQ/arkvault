@@ -1,5 +1,5 @@
 import cn from "classnames";
-import React from "react";
+import React, { forwardRef } from "react";
 import { DefaultTReturn, TOptions } from "i18next";
 import { Button } from "@/app/components/Button";
 import { Icon } from "@/app/components/Icon";
@@ -19,17 +19,33 @@ interface ModalContentProperties {
 	className?: string;
 }
 
-const ModalContainer = ({ size, ...props }: { size?: Size } & React.HTMLAttributes<HTMLDivElement>) => (
-		<div {...props} className={twMerge("flex-1 max-w-full md:m-auto md:px-10 md:max-w-2xl", cn({
-			"md:max-w-3xl": size === "3xl",
-			"md:max-w-4xl": size === "4xl",
-			"md:max-w-5xl": size === "5xl",
-			"md:max-w-lg": size === "lg",
-			"md:max-w-md": size === "md",
-			"md:max-w-sm": size === "sm",
-			"md:max-w-xl": size === "xl",
-		}), props.className)} />
-	)
+
+interface ModalContainerProps extends React.HTMLAttributes<HTMLDivElement> {
+    size?: Size;
+}
+
+const ModalContainer = forwardRef<HTMLDivElement, ModalContainerProps>(({ size, ...props }, ref) => (
+    <div
+        {...props}
+        ref={ref}
+        className={twMerge(
+            "flex-1 max-w-full md:m-auto md:px-10 md:max-w-2xl",
+            cn({
+                "md:max-w-3xl": size === "3xl",
+                "md:max-w-4xl": size === "4xl",
+                "md:max-w-5xl": size === "5xl",
+                "md:max-w-lg": size === "lg",
+                "md:max-w-md": size === "md",
+                "md:max-w-sm": size === "sm",
+                "md:max-w-xl": size === "xl",
+            }),
+            props.className
+        )}
+    />
+));
+
+ModalContainer.displayName = "ModalContainer";
+
 
 const ModalContent = ({
 	noButtons = false,
