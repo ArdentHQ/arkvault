@@ -4405,14 +4405,13 @@ exports[`WalletsGroup > should handle list wallet click 1`] = `
               data-testid="SelectDropdown"
             >
               <div
-                class="sr-only css-14zfvme"
+                class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
               >
                 <div
                   class="relative flex h-full flex-1"
                 >
                   <input
-                    autocomplete="off"
-                    class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
+                    class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
                     data-testid="select-list__input"
                     readonly=""
                     tabindex="-1"
@@ -4441,7 +4440,7 @@ exports[`WalletsGroup > should handle list wallet click 1`] = `
                       10…
                     </div>
                     <div
-                      class="!h-8 !w-[78px] !px-3 css-14zfvme"
+                      class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14 !h-8 !w-[78px] !px-3"
                     >
                       <div
                         class="relative flex h-full flex-1"
@@ -4450,8 +4449,7 @@ exports[`WalletsGroup > should handle list wallet click 1`] = `
                           aria-autocomplete="list"
                           aria-controls="downshift-0-menu"
                           aria-labelledby="downshift-0-label"
-                          autocomplete="off"
-                          class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
+                          class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
                           data-testid="SelectDropdown__input"
                           id="downshift-0-input"
                           placeholder="Select option"
@@ -12269,14 +12267,13 @@ exports[`WalletsGroup > should render with dark mode = false 1`] = `
               data-testid="SelectDropdown"
             >
               <div
-                class="sr-only css-14zfvme"
+                class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
               >
                 <div
                   class="relative flex h-full flex-1"
                 >
                   <input
-                    autocomplete="off"
-                    class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
+                    class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
                     data-testid="select-list__input"
                     readonly=""
                     tabindex="-1"
@@ -12305,7 +12302,7 @@ exports[`WalletsGroup > should render with dark mode = false 1`] = `
                       10…
                     </div>
                     <div
-                      class="!h-8 !w-[78px] !px-3 css-14zfvme"
+                      class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14 !h-8 !w-[78px] !px-3"
                     >
                       <div
                         class="relative flex h-full flex-1"
@@ -12314,8 +12311,7 @@ exports[`WalletsGroup > should render with dark mode = false 1`] = `
                           aria-autocomplete="list"
                           aria-controls="downshift-14-menu"
                           aria-labelledby="downshift-14-label"
-                          autocomplete="off"
-                          class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
+                          class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
                           data-testid="SelectDropdown__input"
                           id="downshift-14-input"
                           placeholder="Select option"
@@ -16680,14 +16676,13 @@ exports[`WalletsGroup > should render with dark mode = true 1`] = `
               data-testid="SelectDropdown"
             >
               <div
-                class="sr-only css-14zfvme"
+                class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
               >
                 <div
                   class="relative flex h-full flex-1"
                 >
                   <input
-                    autocomplete="off"
-                    class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
+                    class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
                     data-testid="select-list__input"
                     readonly=""
                     tabindex="-1"
@@ -16716,7 +16711,7 @@ exports[`WalletsGroup > should render with dark mode = true 1`] = `
                       10…
                     </div>
                     <div
-                      class="!h-8 !w-[78px] !px-3 css-14zfvme"
+                      class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14 !h-8 !w-[78px] !px-3"
                     >
                       <div
                         class="relative flex h-full flex-1"
@@ -16725,8 +16720,7 @@ exports[`WalletsGroup > should render with dark mode = true 1`] = `
                           aria-autocomplete="list"
                           aria-controls="downshift-11-menu"
                           aria-labelledby="downshift-11-label"
-                          autocomplete="off"
-                          class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
+                          class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
                           data-testid="SelectDropdown__input"
                           id="downshift-11-input"
                           placeholder="Select option"
@@ -21022,14 +21016,13 @@ exports[`WalletsGroup > should show skeleton when syncing exchange rates 1`] = `
               data-testid="SelectDropdown"
             >
               <div
-                class="sr-only css-14zfvme"
+                class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
               >
                 <div
                   class="relative flex h-full flex-1"
                 >
                   <input
-                    autocomplete="off"
-                    class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
+                    class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
                     data-testid="select-list__input"
                     readonly=""
                     tabindex="-1"
@@ -21058,7 +21051,7 @@ exports[`WalletsGroup > should show skeleton when syncing exchange rates 1`] = `
                       10…
                     </div>
                     <div
-                      class="!h-8 !w-[78px] !px-3 css-14zfvme"
+                      class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14 !h-8 !w-[78px] !px-3"
                     >
                       <div
                         class="relative flex h-full flex-1"
@@ -21067,8 +21060,7 @@ exports[`WalletsGroup > should show skeleton when syncing exchange rates 1`] = `
                           aria-autocomplete="list"
                           aria-controls="downshift-17-menu"
                           aria-labelledby="downshift-17-label"
-                          autocomplete="off"
-                          class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
+                          class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
                           data-testid="SelectDropdown__input"
                           id="downshift-17-input"
                           placeholder="Select option"

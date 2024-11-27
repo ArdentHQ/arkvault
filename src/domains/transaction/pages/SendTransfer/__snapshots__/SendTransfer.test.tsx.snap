@@ -8,7 +8,7 @@ exports[`SendTransfer > should display unconfirmed transactions modal when submi
   >
     <div
       aria-labelledby="main menu"
-      class="z-40 sticky inset-x-0 top-0 transition-all duration-200 border-b bg-theme-background custom-nav-wrapper border-theme-secondary-300 dark:border-theme-secondary-800"
+      class="custom-nav-wrapper sticky inset-x-0 top-0 z-40 border-b bg-theme-background transition-all duration-200 border-theme-secondary-300 dark:border-theme-secondary-800"
     >
       <div
         class="relative flex h-14 sm:h-21"
@@ -1118,14 +1118,14 @@ exports[`SendTransfer > should display unconfirmed transactions modal when submi
                                     Block
                                   </div>
                                   <a
-                                    class="relative space-x-1 font-semibold transition-colors cursor-pointer no-underline focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block h-5 text-sm leading-[17px] sm:text-base sm:leading-5"
+                                    class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block h-5 text-sm leading-[17px] sm:text-base sm:leading-5"
                                     data-ring-focus-margin="-m-1"
                                     data-testid="Link"
                                     href="https://test.arkscan.io/blocks/2a690f25cb1603275936665162e26415cad14199dda141d33666597c8bca8c5c"
                                     rel="noopener noreferrer"
                                   >
                                     <span
-                                      class="break-all border-b border-transparent transition-colors duration-200 delay-100 group-hover/inner:border-current"
+                                      class="break-all border-b border-transparent transition-colors delay-100 duration-200 group-hover/inner:border-current"
                                     />
                                     <div
                                       class="mb-[3px] shrink-0 align-middle duration-200"
@@ -1692,7 +1692,7 @@ exports[`SendTransfer > should error if wrong mnemonic 1`] = `
   >
     <div
       aria-labelledby="main menu"
-      class="z-40 sticky inset-x-0 top-0 transition-all duration-200 border-b bg-theme-background custom-nav-wrapper border-theme-secondary-300 dark:border-theme-secondary-800"
+      class="custom-nav-wrapper sticky inset-x-0 top-0 z-40 border-b bg-theme-background transition-all duration-200 border-theme-secondary-300 dark:border-theme-secondary-800"
     >
       <div
         class="relative flex h-14 sm:h-21"
@@ -2295,14 +2295,14 @@ exports[`SendTransfer > should error if wrong mnemonic 1`] = `
                       Mnemonic
                     </label>
                     <div
-                      class="flex items-center w-full px-4 space-x-2 transition-colors duration-200 rounded appearance-none text-theme-text bg-theme-background border-theme-danger-500 focus-within:ring-theme-danger-500 border focus-within:ring-1 h-12 sm:h-14 overflow-hidden"
+                      class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border-theme-danger-500 bg-theme-background focus-within:ring-theme-danger-500 border focus-within:ring-1 h-12 overflow-hidden sm:h-14"
                     >
                       <div
                         class="relative flex h-full flex-1"
                       >
                         <input
                           aria-invalid="true"
-                          class="!bg-transparent !p-0 focus:outline-none focus:shadow-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
+                          class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
                           data-testid="AuthenticationStep__mnemonic"
                           name="mnemonic"
                           type="password"
@@ -2677,13 +2677,13 @@ exports[`SendTransfer > should render form step (lg) 1`] = `
               />
             </span>
             <div
-              class="flex items-center w-full px-4 space-x-2 transition-colors duration-200 rounded appearance-none text-theme-text bg-theme-background border-theme-secondary-400 dark:border-theme-secondary-700 focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 border focus-within:ring-1 h-12 sm:h-14 overflow-hidden"
+              class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 border focus-within:ring-1 h-12 overflow-hidden sm:h-14"
             >
               <div
                 class="relative flex h-full flex-1 invisible"
               >
                 <input
-                  class="!bg-transparent !p-0 focus:outline-none focus:shadow-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
+                  class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
                   data-testid="SelectAddress__input"
                   name="senderAddress"
                   readonly=""
@@ -2842,14 +2842,14 @@ exports[`SendTransfer > should render form step (lg) 1`] = `
                       data-testid="SelectDropdown"
                     >
                       <div
-                        class="flex items-center w-full px-4 space-x-2 transition-colors duration-200 rounded appearance-none text-theme-text bg-theme-background border-theme-secondary-400 dark:border-theme-secondary-700 focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 border focus-within:ring-1 h-12 sm:h-14 overflow-hidden sr-only"
+                        class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 border focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
                       >
                         <div
                           class="relative flex h-full flex-1"
                         >
                           <input
                             aria-invalid="false"
-                            class="!bg-transparent !p-0 focus:outline-none focus:shadow-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
+                            class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
                             data-testid="select-list__input"
                             name="recipientAddress"
                             readonly=""
@@ -2874,7 +2874,7 @@ exports[`SendTransfer > should render form step (lg) 1`] = `
                               id="SelectRecipient__dropdown-label"
                             />
                             <div
-                              class="flex items-center w-full px-4 space-x-2 transition-colors duration-200 rounded appearance-none text-theme-text border border-theme-secondary-300 dark:border-theme-secondary-700 bg-theme-secondary-100 dark:bg-theme-secondary-800 focus-within:ring-1 h-12 sm:h-14 overflow-hidden"
+                              class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-300 bg-theme-secondary-100 dark:border-theme-secondary-700 dark:bg-theme-secondary-800 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
                             >
                               <div
                                 class="relative flex h-full flex-1"
@@ -2884,7 +2884,7 @@ exports[`SendTransfer > should render form step (lg) 1`] = `
                                   aria-controls="SelectRecipient__dropdown-menu"
                                   aria-invalid="false"
                                   aria-labelledby="SelectRecipient__dropdown-label"
-                                  class="!bg-transparent !p-0 focus:outline-none focus:shadow-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base cursor-default text-theme-secondary-text"
+                                  class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base cursor-default text-theme-secondary-text"
                                   data-testid="SelectDropdown__input"
                                   disabled=""
                                   id="SelectRecipient__dropdown-input"
@@ -2997,13 +2997,13 @@ exports[`SendTransfer > should render form step (lg) 1`] = `
                       class="relative"
                     >
                       <div
-                        class="flex items-center w-full px-4 space-x-2 transition-colors duration-200 rounded appearance-none text-theme-text border border-theme-secondary-300 dark:border-theme-secondary-700 bg-theme-secondary-100 dark:bg-theme-secondary-800 focus-within:ring-1 h-12 sm:h-14 overflow-hidden"
+                        class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-300 bg-theme-secondary-100 dark:border-theme-secondary-700 dark:bg-theme-secondary-800 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
                       >
                         <div
                           class="relative flex h-full flex-1"
                         >
                           <input
-                            class="!bg-transparent !p-0 focus:outline-none focus:shadow-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base text-theme-secondary-text"
+                            class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base text-theme-secondary-text"
                             data-testid="AddRecipient__amount"
                             disabled=""
                             name="amount"
@@ -3050,13 +3050,13 @@ exports[`SendTransfer > should render form step (lg) 1`] = `
           </span>
         </label>
         <div
-          class="flex items-center w-full px-4 space-x-2 transition-colors duration-200 rounded appearance-none text-theme-text bg-theme-background border-theme-secondary-400 dark:border-theme-secondary-700 focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 border focus-within:ring-1 h-12 sm:h-14 overflow-hidden"
+          class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 border focus-within:ring-1 h-12 overflow-hidden sm:h-14"
         >
           <div
             class="relative flex h-full flex-1"
           >
             <input
-              class="!bg-transparent !p-0 focus:outline-none focus:shadow-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
+              class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
               data-testid="Input__memo"
               maxlengthlabel="255"
               name="memo"
@@ -3378,13 +3378,13 @@ exports[`SendTransfer > should render form step (xs) 1`] = `
               />
             </span>
             <div
-              class="flex items-center w-full px-4 space-x-2 transition-colors duration-200 rounded appearance-none text-theme-text bg-theme-background border-theme-secondary-400 dark:border-theme-secondary-700 focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 border focus-within:ring-1 h-12 sm:h-14 overflow-hidden"
+              class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 border focus-within:ring-1 h-12 overflow-hidden sm:h-14"
             >
               <div
                 class="relative flex h-full flex-1 invisible"
               >
                 <input
-                  class="!bg-transparent !p-0 focus:outline-none focus:shadow-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
+                  class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
                   data-testid="SelectAddress__input"
                   name="senderAddress"
                   readonly=""
@@ -3543,14 +3543,14 @@ exports[`SendTransfer > should render form step (xs) 1`] = `
                       data-testid="SelectDropdown"
                     >
                       <div
-                        class="flex items-center w-full px-4 space-x-2 transition-colors duration-200 rounded appearance-none text-theme-text bg-theme-background border-theme-secondary-400 dark:border-theme-secondary-700 focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 border focus-within:ring-1 h-12 sm:h-14 overflow-hidden sr-only"
+                        class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 border focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
                       >
                         <div
                           class="relative flex h-full flex-1"
                         >
                           <input
                             aria-invalid="false"
-                            class="!bg-transparent !p-0 focus:outline-none focus:shadow-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
+                            class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
                             data-testid="select-list__input"
                             name="recipientAddress"
                             readonly=""
@@ -3575,7 +3575,7 @@ exports[`SendTransfer > should render form step (xs) 1`] = `
                               id="SelectRecipient__dropdown-label"
                             />
                             <div
-                              class="flex items-center w-full px-4 space-x-2 transition-colors duration-200 rounded appearance-none text-theme-text border border-theme-secondary-300 dark:border-theme-secondary-700 bg-theme-secondary-100 dark:bg-theme-secondary-800 focus-within:ring-1 h-12 sm:h-14 overflow-hidden"
+                              class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-300 bg-theme-secondary-100 dark:border-theme-secondary-700 dark:bg-theme-secondary-800 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
                             >
                               <div
                                 class="relative flex h-full flex-1"
@@ -3585,7 +3585,7 @@ exports[`SendTransfer > should render form step (xs) 1`] = `
                                   aria-controls="SelectRecipient__dropdown-menu"
                                   aria-invalid="false"
                                   aria-labelledby="SelectRecipient__dropdown-label"
-                                  class="!bg-transparent !p-0 focus:outline-none focus:shadow-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base cursor-default text-theme-secondary-text"
+                                  class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base cursor-default text-theme-secondary-text"
                                   data-testid="SelectDropdown__input"
                                   disabled=""
                                   id="SelectRecipient__dropdown-input"
@@ -3698,13 +3698,13 @@ exports[`SendTransfer > should render form step (xs) 1`] = `
                       class="relative"
                     >
                       <div
-                        class="flex items-center w-full px-4 space-x-2 transition-colors duration-200 rounded appearance-none text-theme-text border border-theme-secondary-300 dark:border-theme-secondary-700 bg-theme-secondary-100 dark:bg-theme-secondary-800 focus-within:ring-1 h-12 sm:h-14 overflow-hidden"
+                        class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-300 bg-theme-secondary-100 dark:border-theme-secondary-700 dark:bg-theme-secondary-800 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
                       >
                         <div
                           class="relative flex h-full flex-1"
                         >
                           <input
-                            class="!bg-transparent !p-0 focus:outline-none focus:shadow-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base text-theme-secondary-text"
+                            class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base text-theme-secondary-text"
                             data-testid="AddRecipient__amount"
                             disabled=""
                             name="amount"
@@ -3751,13 +3751,13 @@ exports[`SendTransfer > should render form step (xs) 1`] = `
           </span>
         </label>
         <div
-          class="flex items-center w-full px-4 space-x-2 transition-colors duration-200 rounded appearance-none text-theme-text bg-theme-background border-theme-secondary-400 dark:border-theme-secondary-700 focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 border focus-within:ring-1 h-12 sm:h-14 overflow-hidden"
+          class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 border focus-within:ring-1 h-12 overflow-hidden sm:h-14"
         >
           <div
             class="relative flex h-full flex-1"
           >
             <input
-              class="!bg-transparent !p-0 focus:outline-none focus:shadow-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
+              class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
               data-testid="Input__memo"
               maxlengthlabel="255"
               name="memo"
@@ -3797,13 +3797,13 @@ exports[`SendTransfer > should render form step (xs) 1`] = `
           class="relative"
         >
           <div
-            class="flex items-center w-full px-4 space-x-2 transition-colors duration-200 rounded appearance-none text-theme-text border border-theme-secondary-300 dark:border-theme-secondary-700 bg-theme-secondary-100 dark:bg-theme-secondary-800 focus-within:ring-1 h-12 sm:h-14 overflow-hidden"
+            class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-300 bg-theme-secondary-100 dark:border-theme-secondary-700 dark:bg-theme-secondary-800 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
           >
             <div
               class="relative flex h-full flex-1"
             >
               <input
-                class="!bg-transparent !p-0 focus:outline-none focus:shadow-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base text-theme-secondary-text"
+                class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base text-theme-secondary-text"
                 data-testid="InputCurrency"
                 disabled=""
                 name="fee"
@@ -4030,7 +4030,7 @@ exports[`SendTransfer > should render network selection without selected wallet 
     </div>
     <div
       aria-labelledby="main menu"
-      class="z-40 sticky inset-x-0 top-0 transition-all duration-200 border-b bg-theme-background custom-nav-wrapper border-theme-secondary-300 dark:border-theme-secondary-800"
+      class="custom-nav-wrapper sticky inset-x-0 top-0 z-40 border-b bg-theme-background transition-all duration-200 border-theme-secondary-300 dark:border-theme-secondary-800"
     >
       <div
         class="relative flex h-14 sm:h-21"
@@ -4806,13 +4806,13 @@ exports[`SendTransfer > should render network step with dropdown 1`] = `
           data-testid="SelectDropdown"
         >
           <div
-            class="flex items-center w-full px-4 space-x-2 transition-colors duration-200 rounded appearance-none text-theme-text bg-theme-background border-theme-secondary-400 dark:border-theme-secondary-700 focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 border focus-within:ring-1 h-12 sm:h-14 overflow-hidden sr-only"
+            class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 border focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
           >
             <div
               class="relative flex h-full flex-1"
             >
               <input
-                class="!bg-transparent !p-0 focus:outline-none focus:shadow-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
+                class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
                 data-testid="select-list__input"
                 name="network"
                 readonly=""
@@ -4837,7 +4837,7 @@ exports[`SendTransfer > should render network step with dropdown 1`] = `
                   id="downshift-0-label"
                 />
                 <div
-                  class="flex items-center w-full px-4 space-x-2 transition-colors duration-200 rounded appearance-none text-theme-text bg-theme-background border-theme-secondary-400 dark:border-theme-secondary-700 focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 border focus-within:ring-1 h-12 sm:h-14 overflow-hidden"
+                  class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 border focus-within:ring-1 h-12 overflow-hidden sm:h-14"
                 >
                   <div
                     class="relative flex h-full flex-1"
@@ -4846,7 +4846,7 @@ exports[`SendTransfer > should render network step with dropdown 1`] = `
                       aria-autocomplete="list"
                       aria-controls="downshift-0-menu"
                       aria-labelledby="downshift-0-label"
-                      class="!bg-transparent !p-0 focus:outline-none focus:shadow-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base cursor-default"
+                      class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base cursor-default"
                       data-testid="SelectDropdown__input"
                       id="downshift-0-input"
                       name="network"
@@ -6541,7 +6541,7 @@ exports[`SendTransfer > should send a single transfer and handle undefined expir
     </div>
     <div
       aria-labelledby="main menu"
-      class="z-40 sticky inset-x-0 top-0 transition-all duration-200 border-b bg-theme-background custom-nav-wrapper border-theme-secondary-300 dark:border-theme-secondary-800"
+      class="custom-nav-wrapper sticky inset-x-0 top-0 z-40 border-b bg-theme-background transition-all duration-200 border-theme-secondary-300 dark:border-theme-secondary-800"
     >
       <div
         class="relative flex h-14 sm:h-21"
@@ -7651,14 +7651,14 @@ exports[`SendTransfer > should send a single transfer and handle undefined expir
                                     Block
                                   </div>
                                   <a
-                                    class="relative space-x-1 font-semibold transition-colors cursor-pointer no-underline focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block h-5 text-sm leading-[17px] sm:text-base sm:leading-5"
+                                    class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block h-5 text-sm leading-[17px] sm:text-base sm:leading-5"
                                     data-ring-focus-margin="-m-1"
                                     data-testid="Link"
                                     href="https://test.arkscan.io/blocks/2a690f25cb1603275936665162e26415cad14199dda141d33666597c8bca8c5c"
                                     rel="noopener noreferrer"
                                   >
                                     <span
-                                      class="break-all border-b border-transparent transition-colors duration-200 delay-100 group-hover/inner:border-current"
+                                      class="break-all border-b border-transparent transition-colors delay-100 duration-200 group-hover/inner:border-current"
                                     />
                                     <div
                                       class="mb-[3px] shrink-0 align-middle duration-200"
@@ -7904,7 +7904,7 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
   >
     <div
       aria-labelledby="main menu"
-      class="z-40 sticky inset-x-0 top-0 transition-all duration-200 border-b bg-theme-background custom-nav-wrapper border-theme-secondary-300 dark:border-theme-secondary-800"
+      class="custom-nav-wrapper sticky inset-x-0 top-0 z-40 border-b bg-theme-background transition-all duration-200 border-theme-secondary-300 dark:border-theme-secondary-800"
     >
       <div
         class="relative flex h-14 sm:h-21"
@@ -9014,14 +9014,14 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
                                     Block
                                   </div>
                                   <a
-                                    class="relative space-x-1 font-semibold transition-colors cursor-pointer no-underline focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block h-5 text-sm leading-[17px] sm:text-base sm:leading-5"
+                                    class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block h-5 text-sm leading-[17px] sm:text-base sm:leading-5"
                                     data-ring-focus-margin="-m-1"
                                     data-testid="Link"
                                     href="https://test.arkscan.io/blocks/2a690f25cb1603275936665162e26415cad14199dda141d33666597c8bca8c5c"
                                     rel="noopener noreferrer"
                                   >
                                     <span
-                                      class="break-all border-b border-transparent transition-colors duration-200 delay-100 group-hover/inner:border-current"
+                                      class="break-all border-b border-transparent transition-colors delay-100 duration-200 group-hover/inner:border-current"
                                     />
                                     <div
                                       class="mb-[3px] shrink-0 align-middle duration-200"
@@ -9828,7 +9828,7 @@ exports[`SendTransfer > should send a single transfer using wallet with encrypti
     </div>
     <div
       aria-labelledby="main menu"
-      class="z-40 sticky inset-x-0 top-0 transition-all duration-200 border-b bg-theme-background custom-nav-wrapper border-theme-secondary-300 dark:border-theme-secondary-800"
+      class="custom-nav-wrapper sticky inset-x-0 top-0 z-40 border-b bg-theme-background transition-all duration-200 border-theme-secondary-300 dark:border-theme-secondary-800"
     >
       <div
         class="relative flex h-14 sm:h-21"
@@ -10938,14 +10938,14 @@ exports[`SendTransfer > should send a single transfer using wallet with encrypti
                                     Block
                                   </div>
                                   <a
-                                    class="relative space-x-1 font-semibold transition-colors cursor-pointer no-underline focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block h-5 text-sm leading-[17px] sm:text-base sm:leading-5"
+                                    class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block h-5 text-sm leading-[17px] sm:text-base sm:leading-5"
                                     data-ring-focus-margin="-m-1"
                                     data-testid="Link"
                                     href="https://test.arkscan.io/blocks/2a690f25cb1603275936665162e26415cad14199dda141d33666597c8bca8c5c"
                                     rel="noopener noreferrer"
                                   >
                                     <span
-                                      class="break-all border-b border-transparent transition-colors duration-200 delay-100 group-hover/inner:border-current"
+                                      class="break-all border-b border-transparent transition-colors delay-100 duration-200 group-hover/inner:border-current"
                                     />
                                     <div
                                       class="mb-[3px] shrink-0 align-middle duration-200"
@@ -11191,7 +11191,7 @@ exports[`SendTransfer > should send a single transfer with keyboard 1`] = `
   >
     <div
       aria-labelledby="main menu"
-      class="z-40 sticky inset-x-0 top-0 transition-all duration-200 border-b bg-theme-background custom-nav-wrapper border-theme-secondary-300 dark:border-theme-secondary-800"
+      class="custom-nav-wrapper sticky inset-x-0 top-0 z-40 border-b bg-theme-background transition-all duration-200 border-theme-secondary-300 dark:border-theme-secondary-800"
     >
       <div
         class="relative flex h-14 sm:h-21"
@@ -12301,14 +12301,14 @@ exports[`SendTransfer > should send a single transfer with keyboard 1`] = `
                                     Block
                                   </div>
                                   <a
-                                    class="relative space-x-1 font-semibold transition-colors cursor-pointer no-underline focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block h-5 text-sm leading-[17px] sm:text-base sm:leading-5"
+                                    class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block h-5 text-sm leading-[17px] sm:text-base sm:leading-5"
                                     data-ring-focus-margin="-m-1"
                                     data-testid="Link"
                                     href="https://test.arkscan.io/blocks/2a690f25cb1603275936665162e26415cad14199dda141d33666597c8bca8c5c"
                                     rel="noopener noreferrer"
                                   >
                                     <span
-                                      class="break-all border-b border-transparent transition-colors duration-200 delay-100 group-hover/inner:border-current"
+                                      class="break-all border-b border-transparent transition-colors delay-100 duration-200 group-hover/inner:border-current"
                                     />
                                     <div
                                       class="mb-[3px] shrink-0 align-middle duration-200"
@@ -12554,7 +12554,7 @@ exports[`SendTransfer > should send a single transfer without keyboard 1`] = `
   >
     <div
       aria-labelledby="main menu"
-      class="z-40 sticky inset-x-0 top-0 transition-all duration-200 border-b bg-theme-background custom-nav-wrapper border-theme-secondary-300 dark:border-theme-secondary-800"
+      class="custom-nav-wrapper sticky inset-x-0 top-0 z-40 border-b bg-theme-background transition-all duration-200 border-theme-secondary-300 dark:border-theme-secondary-800"
     >
       <div
         class="relative flex h-14 sm:h-21"
@@ -13664,14 +13664,14 @@ exports[`SendTransfer > should send a single transfer without keyboard 1`] = `
                                     Block
                                   </div>
                                   <a
-                                    class="relative space-x-1 font-semibold transition-colors cursor-pointer no-underline focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block h-5 text-sm leading-[17px] sm:text-base sm:leading-5"
+                                    class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block h-5 text-sm leading-[17px] sm:text-base sm:leading-5"
                                     data-ring-focus-margin="-m-1"
                                     data-testid="Link"
                                     href="https://test.arkscan.io/blocks/2a690f25cb1603275936665162e26415cad14199dda141d33666597c8bca8c5c"
                                     rel="noopener noreferrer"
                                   >
                                     <span
-                                      class="break-all border-b border-transparent transition-colors duration-200 delay-100 group-hover/inner:border-current"
+                                      class="break-all border-b border-transparent transition-colors delay-100 duration-200 group-hover/inner:border-current"
                                     />
                                     <div
                                       class="mb-[3px] shrink-0 align-middle duration-200"

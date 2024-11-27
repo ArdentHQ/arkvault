@@ -134,7 +134,7 @@ exports[`Network Settings > should render networks settings section 1`] = `
     </div>
     <div
       aria-labelledby="main menu"
-      class="z-40 sticky inset-x-0 top-0 transition-all duration-200 border-b bg-theme-background custom-nav-wrapper border-theme-secondary-300 dark:border-theme-secondary-800"
+      class="custom-nav-wrapper sticky inset-x-0 top-0 z-40 border-b bg-theme-background transition-all duration-200 border-theme-secondary-300 dark:border-theme-secondary-800"
     >
       <div
         class="relative flex h-14 sm:h-21"

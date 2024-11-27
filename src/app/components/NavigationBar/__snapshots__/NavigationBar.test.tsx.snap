@@ -3,7 +3,7 @@
 exports[`NavigationBar > should not render with title if variant is full 1`] = `
 <DocumentFragment>
   <div
-    class="css-wwznix"
+    class="fixed bottom-0 left-0 z-10 flex w-full flex-col justify-center bg-white dark:bg-black sm:hidden shadow-footer-smooth dark:shadow-footer-smooth-dark"
     data-testid="NavigationBarMobile"
   >
     <div
@@ -122,9 +122,9 @@ exports[`NavigationBar > should not render with title if variant is full 1`] = `
       </button>
     </div>
   </div>
-  <nav
+  <div
     aria-labelledby="main menu"
-    class="css-1jzy9qi"
+    class="custom-nav-wrapper sticky inset-x-0 top-0 z-40 border-b bg-theme-background transition-all duration-200 border-theme-secondary-300 dark:border-theme-secondary-800"
   >
     <div
       class="relative flex h-14 sm:h-21"
@@ -271,7 +271,7 @@ exports[`NavigationBar > should not render with title if variant is full 1`] = `
               data-testid="dropdown__toggle"
             >
               <div
-                class="group css-c93wvv"
+                class="custom-button-wrapper group"
               >
                 <button
                   class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none"
@@ -325,7 +325,7 @@ exports[`NavigationBar > should not render with title if variant is full 1`] = `
               data-testid="dropdown__toggle"
             >
               <div
-                class="group css-c93wvv"
+                class="custom-button-wrapper group"
               >
                 <button
                   class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none"
@@ -386,7 +386,7 @@ exports[`NavigationBar > should not render with title if variant is full 1`] = `
               class="flex items-center"
             >
               <div
-                class="css-c93wvv"
+                class="custom-button-wrapper"
               >
                 <button
                   class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none"
@@ -436,7 +436,7 @@ exports[`NavigationBar > should not render with title if variant is full 1`] = `
               class="flex items-center"
             >
               <div
-                class="css-c93wvv"
+                class="custom-button-wrapper"
               >
                 <button
                   class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none"
@@ -537,15 +537,15 @@ exports[`NavigationBar > should not render with title if variant is full 1`] = `
         </div>
       </div>
     </div>
-  </nav>
+  </div>
 </DocumentFragment>
 `;
 
 exports[`NavigationBar > should render as logo-only variant 1`] = `
 <DocumentFragment>
-  <nav
+  <div
     aria-labelledby="main menu"
-    class="css-1pyu5ft"
+    class="custom-nav-wrapper sticky inset-x-0 top-0 z-40 border-b border-theme-background bg-theme-background transition-all duration-200"
   >
     <div
       class="relative flex h-14 sm:h-21"
@@ -584,14 +584,14 @@ exports[`NavigationBar > should render as logo-only variant 1`] = `
         </div>
       </div>
     </div>
-  </nav>
+  </div>
 </DocumentFragment>
 `;
 
 exports[`NavigationBar > should render full variant when profile restored is false 1`] = `
 <DocumentFragment>
   <div
-    class="css-wwznix"
+    class="fixed bottom-0 left-0 z-10 flex w-full flex-col justify-center bg-white dark:bg-black sm:hidden shadow-footer-smooth dark:shadow-footer-smooth-dark"
     data-testid="NavigationBarMobile"
   >
     <div
@@ -712,9 +712,9 @@ exports[`NavigationBar > should render full variant when profile restored is fal
       </button>
     </div>
   </div>
-  <nav
+  <div
     aria-labelledby="main menu"
-    class="css-1jzy9qi"
+    class="custom-nav-wrapper sticky inset-x-0 top-0 z-40 border-b bg-theme-background transition-all duration-200 border-theme-secondary-300 dark:border-theme-secondary-800"
   >
     <div
       class="relative flex h-14 sm:h-21"
@@ -861,7 +861,7 @@ exports[`NavigationBar > should render full variant when profile restored is fal
               data-testid="dropdown__toggle"
             >
               <div
-                class="group css-c93wvv"
+                class="custom-button-wrapper group"
               >
                 <button
                   class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none"
@@ -915,7 +915,7 @@ exports[`NavigationBar > should render full variant when profile restored is fal
               data-testid="dropdown__toggle"
             >
               <div
-                class="group css-c93wvv"
+                class="custom-button-wrapper group"
               >
                 <button
                   class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none"
@@ -976,7 +976,7 @@ exports[`NavigationBar > should render full variant when profile restored is fal
               class="flex items-center"
             >
               <div
-                class="css-c93wvv"
+                class="custom-button-wrapper"
               >
                 <button
                   class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700"
@@ -1027,7 +1027,7 @@ exports[`NavigationBar > should render full variant when profile restored is fal
               class="flex items-center"
             >
               <div
-                class="css-c93wvv"
+                class="custom-button-wrapper"
               >
                 <button
                   class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700"
@@ -1133,14 +1133,14 @@ exports[`NavigationBar > should render full variant when profile restored is fal
         </div>
       </div>
     </div>
-  </nav>
+  </div>
 </DocumentFragment>
 `;
 
 exports[`NavigationBar > should render full variant when profile restored is true 1`] = `
 <DocumentFragment>
   <div
-    class="css-wwznix"
+    class="fixed bottom-0 left-0 z-10 flex w-full flex-col justify-center bg-white dark:bg-black sm:hidden shadow-footer-smooth dark:shadow-footer-smooth-dark"
     data-testid="NavigationBarMobile"
   >
     <div
@@ -1259,9 +1259,9 @@ exports[`NavigationBar > should render full variant when profile restored is tru
       </button>
     </div>
   </div>
-  <nav
+  <div
     aria-labelledby="main menu"
-    class="css-1jzy9qi"
+    class="custom-nav-wrapper sticky inset-x-0 top-0 z-40 border-b bg-theme-background transition-all duration-200 border-theme-secondary-300 dark:border-theme-secondary-800"
   >
     <div
       class="relative flex h-14 sm:h-21"
@@ -1408,7 +1408,7 @@ exports[`NavigationBar > should render full variant when profile restored is tru
               data-testid="dropdown__toggle"
             >
               <div
-                class="group css-c93wvv"
+                class="custom-button-wrapper group"
               >
                 <button
                   class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none"
@@ -1462,7 +1462,7 @@ exports[`NavigationBar > should render full variant when profile restored is tru
               data-testid="dropdown__toggle"
             >
               <div
-                class="group css-c93wvv"
+                class="custom-button-wrapper group"
               >
                 <button
                   class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none"
@@ -1523,7 +1523,7 @@ exports[`NavigationBar > should render full variant when profile restored is tru
               class="flex items-center"
             >
               <div
-                class="css-c93wvv"
+                class="custom-button-wrapper"
               >
                 <button
                   class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none"
@@ -1573,7 +1573,7 @@ exports[`NavigationBar > should render full variant when profile restored is tru
               class="flex items-center"
             >
               <div
-                class="css-c93wvv"
+                class="custom-button-wrapper"
               >
                 <button
                   class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none"
@@ -1674,14 +1674,14 @@ exports[`NavigationBar > should render full variant when profile restored is tru
         </div>
       </div>
     </div>
-  </nav>
+  </div>
 </DocumentFragment>
 `;
 
 exports[`NavigationBar > should render in lg 1`] = `
 <DocumentFragment>
   <div
-    class="css-wwznix"
+    class="fixed bottom-0 left-0 z-10 flex w-full flex-col justify-center bg-white dark:bg-black sm:hidden shadow-footer-smooth dark:shadow-footer-smooth-dark"
     data-testid="NavigationBarMobile"
   >
     <div
@@ -1800,9 +1800,9 @@ exports[`NavigationBar > should render in lg 1`] = `
       </button>
     </div>
   </div>
-  <nav
+  <div
     aria-labelledby="main menu"
-    class="css-1jzy9qi"
+    class="custom-nav-wrapper sticky inset-x-0 top-0 z-40 border-b bg-theme-background transition-all duration-200 border-theme-secondary-300 dark:border-theme-secondary-800"
   >
     <div
       class="relative flex h-14 sm:h-21"
@@ -1949,7 +1949,7 @@ exports[`NavigationBar > should render in lg 1`] = `
               data-testid="dropdown__toggle"
             >
               <div
-                class="group css-c93wvv"
+                class="custom-button-wrapper group"
               >
                 <button
                   class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none"
@@ -2003,7 +2003,7 @@ exports[`NavigationBar > should render in lg 1`] = `
               data-testid="dropdown__toggle"
             >
               <div
-                class="group css-c93wvv"
+                class="custom-button-wrapper group"
               >
                 <button
                   class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none"
@@ -2064,7 +2064,7 @@ exports[`NavigationBar > should render in lg 1`] = `
               class="flex items-center"
             >
               <div
-                class="css-c93wvv"
+                class="custom-button-wrapper"
               >
                 <button
                   class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none"
@@ -2114,7 +2114,7 @@ exports[`NavigationBar > should render in lg 1`] = `
               class="flex items-center"
             >
               <div
-                class="css-c93wvv"
+                class="custom-button-wrapper"
               >
                 <button
                   class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none"
@@ -2215,14 +2215,14 @@ exports[`NavigationBar > should render in lg 1`] = `
         </div>
       </div>
     </div>
-  </nav>
+  </div>
 </DocumentFragment>
 `;
 
 exports[`NavigationBar > should render in md 1`] = `
 <DocumentFragment>
   <div
-    class="css-wwznix"
+    class="fixed bottom-0 left-0 z-10 flex w-full flex-col justify-center bg-white dark:bg-black sm:hidden shadow-footer-smooth dark:shadow-footer-smooth-dark"
     data-testid="NavigationBarMobile"
   >
     <div
@@ -2341,9 +2341,9 @@ exports[`NavigationBar > should render in md 1`] = `
       </button>
     </div>
   </div>
-  <nav
+  <div
     aria-labelledby="main menu"
-    class="css-1jzy9qi"
+    class="custom-nav-wrapper sticky inset-x-0 top-0 z-40 border-b bg-theme-background transition-all duration-200 border-theme-secondary-300 dark:border-theme-secondary-800"
   >
     <div
       class="relative flex h-14 sm:h-21"
@@ -2490,7 +2490,7 @@ exports[`NavigationBar > should render in md 1`] = `
               data-testid="dropdown__toggle"
             >
               <div
-                class="group css-c93wvv"
+                class="custom-button-wrapper group"
               >
                 <button
                   class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none"
@@ -2544,7 +2544,7 @@ exports[`NavigationBar > should render in md 1`] = `
               data-testid="dropdown__toggle"
             >
               <div
-                class="group css-c93wvv"
+                class="custom-button-wrapper group"
               >
                 <button
                   class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none"
@@ -2605,7 +2605,7 @@ exports[`NavigationBar > should render in md 1`] = `
               class="flex items-center"
             >
               <div
-                class="css-c93wvv"
+                class="custom-button-wrapper"
               >
                 <button
                   class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none"
@@ -2655,7 +2655,7 @@ exports[`NavigationBar > should render in md 1`] = `
               class="flex items-center"
             >
               <div
-                class="css-c93wvv"
+                class="custom-button-wrapper"
               >
                 <button
                   class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none"
@@ -2756,14 +2756,14 @@ exports[`NavigationBar > should render in md 1`] = `
         </div>
       </div>
     </div>
-  </nav>
+  </div>
 </DocumentFragment>
 `;
 
 exports[`NavigationBar > should render in sm 1`] = `
 <DocumentFragment>
   <div
-    class="css-wwznix"
+    class="fixed bottom-0 left-0 z-10 flex w-full flex-col justify-center bg-white dark:bg-black sm:hidden shadow-footer-smooth dark:shadow-footer-smooth-dark"
     data-testid="NavigationBarMobile"
   >
     <div
@@ -2882,9 +2882,9 @@ exports[`NavigationBar > should render in sm 1`] = `
       </button>
     </div>
   </div>
-  <nav
+  <div
     aria-labelledby="main menu"
-    class="css-1jzy9qi"
+    class="custom-nav-wrapper sticky inset-x-0 top-0 z-40 border-b bg-theme-background transition-all duration-200 border-theme-secondary-300 dark:border-theme-secondary-800"
   >
     <div
       class="relative flex h-14 sm:h-21"
@@ -3031,7 +3031,7 @@ exports[`NavigationBar > should render in sm 1`] = `
               data-testid="dropdown__toggle"
             >
               <div
-                class="group css-c93wvv"
+                class="custom-button-wrapper group"
               >
                 <button
                   class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none"
@@ -3085,7 +3085,7 @@ exports[`NavigationBar > should render in sm 1`] = `
               data-testid="dropdown__toggle"
             >
               <div
-                class="group css-c93wvv"
+                class="custom-button-wrapper group"
               >
                 <button
                   class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none"
@@ -3146,7 +3146,7 @@ exports[`NavigationBar > should render in sm 1`] = `
               class="flex items-center"
             >
               <div
-                class="css-c93wvv"
+                class="custom-button-wrapper"
               >
                 <button
                   class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none"
@@ -3196,7 +3196,7 @@ exports[`NavigationBar > should render in sm 1`] = `
               class="flex items-center"
             >
               <div
-                class="css-c93wvv"
+                class="custom-button-wrapper"
               >
                 <button
                   class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none"
@@ -3297,14 +3297,14 @@ exports[`NavigationBar > should render in sm 1`] = `
         </div>
       </div>
     </div>
-  </nav>
+  </div>
 </DocumentFragment>
 `;
 
 exports[`NavigationBar > should render in small screen variant 1`] = `
 <DocumentFragment>
   <div
-    class="css-wwznix"
+    class="fixed bottom-0 left-0 z-10 flex w-full flex-col justify-center bg-white dark:bg-black sm:hidden shadow-footer-smooth dark:shadow-footer-smooth-dark"
     data-testid="NavigationBarMobile"
   >
     <div
@@ -3423,9 +3423,9 @@ exports[`NavigationBar > should render in small screen variant 1`] = `
       </button>
     </div>
   </div>
-  <nav
+  <div
     aria-labelledby="main menu"
-    class="css-1jzy9qi"
+    class="custom-nav-wrapper sticky inset-x-0 top-0 z-40 border-b bg-theme-background transition-all duration-200 border-theme-secondary-300 dark:border-theme-secondary-800"
   >
     <div
       class="relative flex h-14 sm:h-21"
@@ -3572,7 +3572,7 @@ exports[`NavigationBar > should render in small screen variant 1`] = `
               data-testid="dropdown__toggle"
             >
               <div
-                class="group css-c93wvv"
+                class="custom-button-wrapper group"
               >
                 <button
                   class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none"
@@ -3626,7 +3626,7 @@ exports[`NavigationBar > should render in small screen variant 1`] = `
               data-testid="dropdown__toggle"
             >
               <div
-                class="group css-c93wvv"
+                class="custom-button-wrapper group"
               >
                 <button
                   class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none"
@@ -3687,7 +3687,7 @@ exports[`NavigationBar > should render in small screen variant 1`] = `
               class="flex items-center"
             >
               <div
-                class="css-c93wvv"
+                class="custom-button-wrapper"
               >
                 <button
                   class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none"
@@ -3737,7 +3737,7 @@ exports[`NavigationBar > should render in small screen variant 1`] = `
               class="flex items-center"
             >
               <div
-                class="css-c93wvv"
+                class="custom-button-wrapper"
               >
                 <button
                   class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none"
@@ -3838,14 +3838,14 @@ exports[`NavigationBar > should render in small screen variant 1`] = `
         </div>
       </div>
     </div>
-  </nav>
+  </div>
 </DocumentFragment>
 `;
 
 exports[`NavigationBar > should render in xs 1`] = `
 <DocumentFragment>
   <div
-    class="css-wwznix"
+    class="fixed bottom-0 left-0 z-10 flex w-full flex-col justify-center bg-white dark:bg-black sm:hidden shadow-footer-smooth dark:shadow-footer-smooth-dark"
     data-testid="NavigationBarMobile"
   >
     <div
@@ -3964,9 +3964,9 @@ exports[`NavigationBar > should render in xs 1`] = `
       </button>
     </div>
   </div>
-  <nav
+  <div
     aria-labelledby="main menu"
-    class="css-1jzy9qi"
+    class="custom-nav-wrapper sticky inset-x-0 top-0 z-40 border-b bg-theme-background transition-all duration-200 border-theme-secondary-300 dark:border-theme-secondary-800"
   >
     <div
       class="relative flex h-14 sm:h-21"
@@ -4113,7 +4113,7 @@ exports[`NavigationBar > should render in xs 1`] = `
               data-testid="dropdown__toggle"
             >
               <div
-                class="group css-c93wvv"
+                class="custom-button-wrapper group"
               >
                 <button
                   class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none"
@@ -4167,7 +4167,7 @@ exports[`NavigationBar > should render in xs 1`] = `
               data-testid="dropdown__toggle"
             >
               <div
-                class="group css-c93wvv"
+                class="custom-button-wrapper group"
               >
                 <button
                   class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none"
@@ -4228,7 +4228,7 @@ exports[`NavigationBar > should render in xs 1`] = `
               class="flex items-center"
             >
               <div
-                class="css-c93wvv"
+                class="custom-button-wrapper"
               >
                 <button
                   class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none"
@@ -4278,7 +4278,7 @@ exports[`NavigationBar > should render in xs 1`] = `
               class="flex items-center"
             >
               <div
-                class="css-c93wvv"
+                class="custom-button-wrapper"
               >
                 <button
                   class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none"
@@ -4379,14 +4379,14 @@ exports[`NavigationBar > should render in xs 1`] = `
         </div>
       </div>
     </div>
-  </nav>
+  </div>
 </DocumentFragment>
 `;
 
 exports[`NavigationBar > should render with custom menu 1`] = `
 <DocumentFragment>
   <div
-    class="css-wwznix"
+    class="fixed bottom-0 left-0 z-10 flex w-full flex-col justify-center bg-white dark:bg-black sm:hidden shadow-footer-smooth dark:shadow-footer-smooth-dark"
     data-testid="NavigationBarMobile"
   >
     <div
@@ -4505,9 +4505,9 @@ exports[`NavigationBar > should render with custom menu 1`] = `
       </button>
     </div>
   </div>
-  <nav
+  <div
     aria-labelledby="main menu"
-    class="css-1jzy9qi"
+    class="custom-nav-wrapper sticky inset-x-0 top-0 z-40 border-b bg-theme-background transition-all duration-200 border-theme-secondary-300 dark:border-theme-secondary-800"
   >
     <div
       class="relative flex h-14 sm:h-21"
@@ -4654,7 +4654,7 @@ exports[`NavigationBar > should render with custom menu 1`] = `
               data-testid="dropdown__toggle"
             >
               <div
-                class="group css-c93wvv"
+                class="custom-button-wrapper group"
               >
                 <button
                   class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none"
@@ -4708,7 +4708,7 @@ exports[`NavigationBar > should render with custom menu 1`] = `
               data-testid="dropdown__toggle"
             >
               <div
-                class="group css-c93wvv"
+                class="custom-button-wrapper group"
               >
                 <button
                   class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none"
@@ -4769,7 +4769,7 @@ exports[`NavigationBar > should render with custom menu 1`] = `
               class="flex items-center"
             >
               <div
-                class="css-c93wvv"
+                class="custom-button-wrapper"
               >
                 <button
                   class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none"
@@ -4819,7 +4819,7 @@ exports[`NavigationBar > should render with custom menu 1`] = `
               class="flex items-center"
             >
               <div
-                class="css-c93wvv"
+                class="custom-button-wrapper"
               >
                 <button
                   class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none"
@@ -4920,14 +4920,14 @@ exports[`NavigationBar > should render with custom menu 1`] = `
         </div>
       </div>
     </div>
-  </nav>
+  </div>
 </DocumentFragment>
 `;
 
 exports[`NavigationBar > should render with shadow if there is a scroll 1`] = `
 <DocumentFragment>
   <div
-    class="css-wwznix"
+    class="fixed bottom-0 left-0 z-10 flex w-full flex-col justify-center bg-white dark:bg-black sm:hidden shadow-footer-smooth dark:shadow-footer-smooth-dark"
     data-testid="NavigationBarMobile"
   >
     <div
@@ -5046,9 +5046,9 @@ exports[`NavigationBar > should render with shadow if there is a scroll 1`] = `
       </button>
     </div>
   </div>
-  <nav
+  <div
     aria-labelledby="main menu"
-    class="css-19etq0o"
+    class="custom-nav-wrapper sticky inset-x-0 top-0 z-40 border-b border-theme-background bg-theme-background transition-all duration-200 shadow-header-smooth dark:shadow-header-smooth-dark"
   >
     <div
       class="relative flex h-14 sm:h-21"
@@ -5195,7 +5195,7 @@ exports[`NavigationBar > should render with shadow if there is a scroll 1`] = `
               data-testid="dropdown__toggle"
             >
               <div
-                class="group css-c93wvv"
+                class="custom-button-wrapper group"
               >
                 <button
                   class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none"
@@ -5249,7 +5249,7 @@ exports[`NavigationBar > should render with shadow if there is a scroll 1`] = `
               data-testid="dropdown__toggle"
             >
               <div
-                class="group css-c93wvv"
+                class="custom-button-wrapper group"
               >
                 <button
                   class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none"
@@ -5310,7 +5310,7 @@ exports[`NavigationBar > should render with shadow if there is a scroll 1`] = `
               class="flex items-center"
             >
               <div
-                class="css-c93wvv"
+                class="custom-button-wrapper"
               >
                 <button
                   class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none"
@@ -5360,7 +5360,7 @@ exports[`NavigationBar > should render with shadow if there is a scroll 1`] = `
               class="flex items-center"
             >
               <div
-                class="css-c93wvv"
+                class="custom-button-wrapper"
               >
                 <button
                   class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none"
@@ -5461,15 +5461,15 @@ exports[`NavigationBar > should render with shadow if there is a scroll 1`] = `
         </div>
       </div>
     </div>
-  </nav>
+  </div>
 </DocumentFragment>
 `;
 
 exports[`NavigationBar > should render with title if variant is logo-only 1`] = `
 <DocumentFragment>
-  <nav
+  <div
     aria-labelledby="main menu"
-    class="css-1pyu5ft"
+    class="custom-nav-wrapper sticky inset-x-0 top-0 z-40 border-b border-theme-background bg-theme-background transition-all duration-200"
   >
     <div
       class="relative flex h-14 sm:h-21"
@@ -5513,6 +5513,6 @@ exports[`NavigationBar > should render with title if variant is logo-only 1`] = 
         </div>
       </div>
     </div>
-  </nav>
+  </div>
 </DocumentFragment>
 `;

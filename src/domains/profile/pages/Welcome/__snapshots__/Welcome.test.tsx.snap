@@ -3,11 +3,12 @@
 exports[`Welcome > should change route to create profile 1`] = `
 <DocumentFragment>
   <div
-    class="css-kmmje1"
+    class="relative flex flex-col sm:min-h-screen pb-14 sm:pb-0"
+    style="min-height: -webkit-fill-available;"
   >
-    <nav
+    <div
       aria-labelledby="main menu"
-      class="css-1pyu5ft"
+      class="custom-nav-wrapper sticky inset-x-0 top-0 z-40 border-b border-theme-background bg-theme-background transition-all duration-200"
     >
       <div
         class="relative flex h-14 sm:h-21"
@@ -54,12 +55,12 @@ exports[`Welcome > should change route to create profile 1`] = `
           </div>
         </div>
       </div>
-    </nav>
+    </div>
     <div
       class="flex flex-1 flex-col"
     >
       <div
-        class="w-full py-4 first:pt-8 last:pb-8 -mt-5 flex flex-1 md:mt-0 xl:px-10 css-9mualq"
+        class="w-full py-4 first:pt-8 last:pb-8 -mt-5 flex flex-1 md:mt-0 xl:px-10"
       >
         <div
           class="mx-auto px-6 lg:container md:px-10 w-full lg:max-w-screen-xl"
@@ -709,13 +710,13 @@ exports[`Welcome > should change route to create profile 1`] = `
                       Exported a Profile before? 
                     </span>
                     <a
-                      class="ring-focus group/inner inline-block css-167zzsv"
+                      class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block"
                       data-ring-focus-margin="-m-1"
                       data-testid="Link"
                       href="#/profiles/import"
                     >
                       <span
-                        class="css-1dlnsgk"
+                        class="break-all border-b border-transparent transition-colors delay-100 duration-200 hover:border-current"
                       >
                         Import it here.
                       </span>
@@ -735,11 +736,12 @@ exports[`Welcome > should change route to create profile 1`] = `
 exports[`Welcome > should navigate to previous page with correct password 1`] = `
 <DocumentFragment>
   <div
-    class="css-kmmje1"
+    class="relative flex flex-col sm:min-h-screen pb-14 sm:pb-0"
+    style="min-height: -webkit-fill-available;"
   >
-    <nav
+    <div
       aria-labelledby="main menu"
-      class="css-1pyu5ft"
+      class="custom-nav-wrapper sticky inset-x-0 top-0 z-40 border-b border-theme-background bg-theme-background transition-all duration-200"
     >
       <div
         class="relative flex h-14 sm:h-21"
@@ -786,12 +788,12 @@ exports[`Welcome > should navigate to previous page with correct password 1`] = 
           </div>
         </div>
       </div>
-    </nav>
+    </div>
     <div
       class="flex flex-1 flex-col"
     >
       <div
-        class="w-full py-4 first:pt-8 last:pb-8 -mt-5 flex flex-1 md:mt-0 xl:px-10 css-9mualq"
+        class="w-full py-4 first:pt-8 last:pb-8 -mt-5 flex flex-1 md:mt-0 xl:px-10"
       >
         <div
           class="mx-auto px-6 lg:container md:px-10 w-full lg:max-w-screen-xl"
@@ -1536,13 +1538,13 @@ exports[`Welcome > should navigate to previous page with correct password 1`] = 
                       Exported a Profile before? 
                     </span>
                     <a
-                      class="ring-focus group/inner inline-block css-167zzsv"
+                      class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block"
                       data-ring-focus-margin="-m-1"
                       data-testid="Link"
                       href="#/profiles/import"
                     >
                       <span
-                        class="css-1dlnsgk"
+                        class="break-all border-b border-transparent transition-colors delay-100 duration-200 hover:border-current"
                       >
                         Import it here.
                       </span>
@@ -1562,11 +1564,12 @@ exports[`Welcome > should navigate to previous page with correct password 1`] = 
 exports[`Welcome > should navigate to profile dashboard 1`] = `
 <DocumentFragment>
   <div
-    class="css-kmmje1"
+    class="relative flex flex-col sm:min-h-screen pb-14 sm:pb-0"
+    style="min-height: -webkit-fill-available;"
   >
-    <nav
+    <div
       aria-labelledby="main menu"
-      class="css-1pyu5ft"
+      class="custom-nav-wrapper sticky inset-x-0 top-0 z-40 border-b border-theme-background bg-theme-background transition-all duration-200"
     >
       <div
         class="relative flex h-14 sm:h-21"
@@ -1613,12 +1616,12 @@ exports[`Welcome > should navigate to profile dashboard 1`] = `
           </div>
         </div>
       </div>
-    </nav>
+    </div>
     <div
       class="flex flex-1 flex-col"
     >
       <div
-        class="w-full py-4 first:pt-8 last:pb-8 -mt-5 flex flex-1 md:mt-0 xl:px-10 css-9mualq"
+        class="w-full py-4 first:pt-8 last:pb-8 -mt-5 flex flex-1 md:mt-0 xl:px-10"
       >
         <div
           class="mx-auto px-6 lg:container md:px-10 w-full lg:max-w-screen-xl"
@@ -2363,13 +2366,13 @@ exports[`Welcome > should navigate to profile dashboard 1`] = `
                       Exported a Profile before? 
                     </span>
                     <a
-                      class="ring-focus group/inner inline-block css-167zzsv"
+                      class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block"
                       data-ring-focus-margin="-m-1"
                       data-testid="Link"
                       href="#/profiles/import"
                     >
                       <span
-                        class="css-1dlnsgk"
+                        class="break-all border-b border-transparent transition-colors delay-100 duration-200 hover:border-current"
                       >
                         Import it here.
                       </span>
@@ -2389,11 +2392,12 @@ exports[`Welcome > should navigate to profile dashboard 1`] = `
 exports[`Welcome > should navigate to profile dashboard with correct password 1`] = `
 <DocumentFragment>
   <div
-    class="css-kmmje1"
+    class="relative flex flex-col sm:min-h-screen pb-14 sm:pb-0"
+    style="min-height: -webkit-fill-available;"
   >
-    <nav
+    <div
       aria-labelledby="main menu"
-      class="css-1pyu5ft"
+      class="custom-nav-wrapper sticky inset-x-0 top-0 z-40 border-b border-theme-background bg-theme-background transition-all duration-200"
     >
       <div
         class="relative flex h-14 sm:h-21"
@@ -2440,12 +2444,12 @@ exports[`Welcome > should navigate to profile dashboard with correct password 1`
           </div>
         </div>
       </div>
-    </nav>
+    </div>
     <div
       class="flex flex-1 flex-col"
     >
       <div
-        class="w-full py-4 first:pt-8 last:pb-8 -mt-5 flex flex-1 md:mt-0 xl:px-10 css-9mualq"
+        class="w-full py-4 first:pt-8 last:pb-8 -mt-5 flex flex-1 md:mt-0 xl:px-10"
       >
         <div
           class="mx-auto px-6 lg:container md:px-10 w-full lg:max-w-screen-xl"
@@ -3190,13 +3194,13 @@ exports[`Welcome > should navigate to profile dashboard with correct password 1`
                       Exported a Profile before? 
                     </span>
                     <a
-                      class="ring-focus group/inner inline-block css-167zzsv"
+                      class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block"
                       data-ring-focus-margin="-m-1"
                       data-testid="Link"
                       href="#/profiles/import"
                     >
                       <span
-                        class="css-1dlnsgk"
+                        class="break-all border-b border-transparent transition-colors delay-100 duration-200 hover:border-current"
                       >
                         Import it here.
                       </span>
@@ -3216,11 +3220,12 @@ exports[`Welcome > should navigate to profile dashboard with correct password 1`
 exports[`Welcome > should navigate to profile settings from profile card menu 1`] = `
 <DocumentFragment>
   <div
-    class="css-kmmje1"
+    class="relative flex flex-col sm:min-h-screen pb-14 sm:pb-0"
+    style="min-height: -webkit-fill-available;"
   >
-    <nav
+    <div
       aria-labelledby="main menu"
-      class="css-1pyu5ft"
+      class="custom-nav-wrapper sticky inset-x-0 top-0 z-40 border-b border-theme-background bg-theme-background transition-all duration-200"
     >
       <div
         class="relative flex h-14 sm:h-21"
@@ -3267,12 +3272,12 @@ exports[`Welcome > should navigate to profile settings from profile card menu 1`
           </div>
         </div>
       </div>
-    </nav>
+    </div>
     <div
       class="flex flex-1 flex-col"
     >
       <div
-        class="w-full py-4 first:pt-8 last:pb-8 -mt-5 flex flex-1 md:mt-0 xl:px-10 css-9mualq"
+        class="w-full py-4 first:pt-8 last:pb-8 -mt-5 flex flex-1 md:mt-0 xl:px-10"
       >
         <div
           class="mx-auto px-6 lg:container md:px-10 w-full lg:max-w-screen-xl"
@@ -4017,13 +4022,13 @@ exports[`Welcome > should navigate to profile settings from profile card menu 1`
                       Exported a Profile before? 
                     </span>
                     <a
-                      class="ring-focus group/inner inline-block css-167zzsv"
+                      class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block"
                       data-ring-focus-margin="-m-1"
                       data-testid="Link"
                       href="#/profiles/import"
                     >
                       <span
-                        class="css-1dlnsgk"
+                        class="break-all border-b border-transparent transition-colors delay-100 duration-200 hover:border-current"
                       >
                         Import it here.
                       </span>
@@ -4043,11 +4048,12 @@ exports[`Welcome > should navigate to profile settings from profile card menu 1`
 exports[`Welcome > should navigate to profile settings with correct password 1`] = `
 <DocumentFragment>
   <div
-    class="css-kmmje1"
+    class="relative flex flex-col sm:min-h-screen pb-14 sm:pb-0"
+    style="min-height: -webkit-fill-available;"
   >
-    <nav
+    <div
       aria-labelledby="main menu"
-      class="css-1pyu5ft"
+      class="custom-nav-wrapper sticky inset-x-0 top-0 z-40 border-b border-theme-background bg-theme-background transition-all duration-200"
     >
       <div
         class="relative flex h-14 sm:h-21"
@@ -4094,12 +4100,12 @@ exports[`Welcome > should navigate to profile settings with correct password 1`]
           </div>
         </div>
       </div>
-    </nav>
+    </div>
     <div
       class="flex flex-1 flex-col"
     >
       <div
-        class="w-full py-4 first:pt-8 last:pb-8 -mt-5 flex flex-1 md:mt-0 xl:px-10 css-9mualq"
+        class="w-full py-4 first:pt-8 last:pb-8 -mt-5 flex flex-1 md:mt-0 xl:px-10"
       >
         <div
           class="mx-auto px-6 lg:container md:px-10 w-full lg:max-w-screen-xl"
@@ -4844,13 +4850,13 @@ exports[`Welcome > should navigate to profile settings with correct password 1`]
                       Exported a Profile before? 
                     </span>
                     <a
-                      class="ring-focus group/inner inline-block css-167zzsv"
+                      class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block"
                       data-ring-focus-margin="-m-1"
                       data-testid="Link"
                       href="#/profiles/import"
                     >
                       <span
-                        class="css-1dlnsgk"
+                        class="break-all border-b border-transparent transition-colors delay-100 duration-200 hover:border-current"
                       >
                         Import it here.
                       </span>
@@ -4870,11 +4876,12 @@ exports[`Welcome > should navigate to profile settings with correct password 1`]
 exports[`Welcome > should not select profile on wrong last location 1`] = `
 <DocumentFragment>
   <div
-    class="css-kmmje1"
+    class="relative flex flex-col sm:min-h-screen pb-14 sm:pb-0"
+    style="min-height: -webkit-fill-available;"
   >
-    <nav
+    <div
       aria-labelledby="main menu"
-      class="css-1pyu5ft"
+      class="custom-nav-wrapper sticky inset-x-0 top-0 z-40 border-b border-theme-background bg-theme-background transition-all duration-200"
     >
       <div
         class="relative flex h-14 sm:h-21"
@@ -4921,12 +4928,12 @@ exports[`Welcome > should not select profile on wrong last location 1`] = `
           </div>
         </div>
       </div>
-    </nav>
+    </div>
     <div
       class="flex flex-1 flex-col"
     >
       <div
-        class="w-full py-4 first:pt-8 last:pb-8 -mt-5 flex flex-1 md:mt-0 xl:px-10 css-9mualq"
+        class="w-full py-4 first:pt-8 last:pb-8 -mt-5 flex flex-1 md:mt-0 xl:px-10"
       >
         <div
           class="mx-auto px-6 lg:container md:px-10 w-full lg:max-w-screen-xl"
@@ -5576,13 +5583,13 @@ exports[`Welcome > should not select profile on wrong last location 1`] = `
                       Exported a Profile before? 
                     </span>
                     <a
-                      class="ring-focus group/inner inline-block css-167zzsv"
+                      class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block"
                       data-ring-focus-margin="-m-1"
                       data-testid="Link"
                       href="#/profiles/import"
                     >
                       <span
-                        class="css-1dlnsgk"
+                        class="break-all border-b border-transparent transition-colors delay-100 duration-200 hover:border-current"
                       >
                         Import it here.
                       </span>
@@ -5602,11 +5609,12 @@ exports[`Welcome > should not select profile on wrong last location 1`] = `
 exports[`Welcome > should render with profiles 1`] = `
 <DocumentFragment>
   <div
-    class="css-kmmje1"
+    class="relative flex flex-col sm:min-h-screen pb-14 sm:pb-0"
+    style="min-height: -webkit-fill-available;"
   >
-    <nav
+    <div
       aria-labelledby="main menu"
-      class="css-1pyu5ft"
+      class="custom-nav-wrapper sticky inset-x-0 top-0 z-40 border-b border-theme-background bg-theme-background transition-all duration-200"
     >
       <div
         class="relative flex h-14 sm:h-21"
@@ -5653,12 +5661,12 @@ exports[`Welcome > should render with profiles 1`] = `
           </div>
         </div>
       </div>
-    </nav>
+    </div>
     <div
       class="flex flex-1 flex-col"
     >
       <div
-        class="w-full py-4 first:pt-8 last:pb-8 -mt-5 flex flex-1 md:mt-0 xl:px-10 css-9mualq"
+        class="w-full py-4 first:pt-8 last:pb-8 -mt-5 flex flex-1 md:mt-0 xl:px-10"
       >
         <div
           class="mx-auto px-6 lg:container md:px-10 w-full lg:max-w-screen-xl"
@@ -6403,13 +6411,13 @@ exports[`Welcome > should render with profiles 1`] = `
                       Exported a Profile before? 
                     </span>
                     <a
-                      class="ring-focus group/inner inline-block css-167zzsv"
+                      class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block"
                       data-ring-focus-margin="-m-1"
                       data-testid="Link"
                       href="#/profiles/import"
                     >
                       <span
-                        class="css-1dlnsgk"
+                        class="break-all border-b border-transparent transition-colors delay-100 duration-200 hover:border-current"
                       >
                         Import it here.
                       </span>
@@ -6429,11 +6437,12 @@ exports[`Welcome > should render with profiles 1`] = `
 exports[`Welcome > should render without profiles 1`] = `
 <DocumentFragment>
   <div
-    class="css-kmmje1"
+    class="relative flex flex-col sm:min-h-screen pb-14 sm:pb-0"
+    style="min-height: -webkit-fill-available;"
   >
-    <nav
+    <div
       aria-labelledby="main menu"
-      class="css-1pyu5ft"
+      class="custom-nav-wrapper sticky inset-x-0 top-0 z-40 border-b border-theme-background bg-theme-background transition-all duration-200"
     >
       <div
         class="relative flex h-14 sm:h-21"
@@ -6480,12 +6489,12 @@ exports[`Welcome > should render without profiles 1`] = `
           </div>
         </div>
       </div>
-    </nav>
+    </div>
     <div
       class="flex flex-1 flex-col"
     >
       <div
-        class="w-full py-4 first:pt-8 last:pb-8 -mt-5 flex flex-1 md:mt-0 xl:px-10 css-9mualq"
+        class="w-full py-4 first:pt-8 last:pb-8 -mt-5 flex flex-1 md:mt-0 xl:px-10"
       >
         <div
           class="mx-auto px-6 lg:container md:px-10 w-full lg:max-w-screen-xl"
@@ -6914,13 +6923,13 @@ exports[`Welcome > should render without profiles 1`] = `
                       Exported a Profile before? 
                     </span>
                     <a
-                      class="ring-focus group/inner inline-block css-167zzsv"
+                      class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block"
                       data-ring-focus-margin="-m-1"
                       data-testid="Link"
                       href="#/profiles/import"
                     >
                       <span
-                        class="css-1dlnsgk"
+                        class="break-all border-b border-transparent transition-colors delay-100 duration-200 hover:border-current"
                       >
                         Import it here.
                       </span>

@@ -17,14 +17,13 @@ exports[`ContactForm > should render responsive 1`] = `
         Name
       </label>
       <div
-        class=" css-14zfvme"
+        class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
       >
         <div
           class="relative flex h-full flex-1"
         >
           <input
-            autocomplete="off"
-            class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
+            class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
             data-testid="contact-form__name-input"
             name="name"
             type="text"
@@ -51,14 +50,13 @@ exports[`ContactForm > should render responsive 1`] = `
           data-testid="SelectDropdown"
         >
           <div
-            class="sr-only css-14zfvme"
+            class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
           >
             <div
               class="relative flex h-full flex-1"
             >
               <input
-                autocomplete="off"
-                class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
+                class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
                 data-testid="select-list__input"
                 name="network"
                 readonly=""
@@ -83,7 +81,7 @@ exports[`ContactForm > should render responsive 1`] = `
                   id="downshift-0-label"
                 />
                 <div
-                  class="css-14zfvme"
+                  class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
                 >
                   <div
                     class="relative flex h-full flex-1"
@@ -92,8 +90,7 @@ exports[`ContactForm > should render responsive 1`] = `
                       aria-autocomplete="list"
                       aria-controls="downshift-0-menu"
                       aria-labelledby="downshift-0-label"
-                      autocomplete="off"
-                      class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base cursor-default css-1937ogs"
+                      class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base cursor-default"
                       data-testid="SelectDropdown__input"
                       id="downshift-0-input"
                       name="network"
@@ -172,14 +169,13 @@ exports[`ContactForm > should render responsive 1`] = `
           Address
         </label>
         <div
-          class="css-14zfvme"
+          class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
         >
           <div
             class="relative flex h-full flex-1"
           >
             <input
-              autocomplete="off"
-              class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
+              class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
               data-testid="contact-form__address-input"
               name="address"
               type="text"
@@ -257,14 +253,13 @@ exports[`ContactForm > should render responsive 2`] = `
         Name
       </label>
       <div
-        class=" css-14zfvme"
+        class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
       >
         <div
           class="relative flex h-full flex-1"
         >
           <input
-            autocomplete="off"
-            class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
+            class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
             data-testid="contact-form__name-input"
             name="name"
             type="text"
@@ -291,14 +286,13 @@ exports[`ContactForm > should render responsive 2`] = `
           data-testid="SelectDropdown"
         >
           <div
-            class="sr-only css-14zfvme"
+            class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
           >
             <div
               class="relative flex h-full flex-1"
             >
               <input
-                autocomplete="off"
-                class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
+                class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
                 data-testid="select-list__input"
                 name="network"
                 readonly=""
@@ -314,28 +308,27 @@ exports[`ContactForm > should render responsive 2`] = `
             <div
               aria-expanded="false"
               aria-haspopup="listbox"
-              aria-owns="downshift-3-menu"
+              aria-owns="downshift-4-menu"
               role="combobox"
             >
               <div>
                 <label
-                  for="downshift-3-input"
-                  id="downshift-3-label"
+                  for="downshift-4-input"
+                  id="downshift-4-label"
                 />
                 <div
-                  class="css-14zfvme"
+                  class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
                 >
                   <div
                     class="relative flex h-full flex-1"
                   >
                     <input
                       aria-autocomplete="list"
-                      aria-controls="downshift-3-menu"
-                      aria-labelledby="downshift-3-label"
-                      autocomplete="off"
-                      class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base cursor-default css-1937ogs"
+                      aria-controls="downshift-4-menu"
+                      aria-labelledby="downshift-4-label"
+                      class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base cursor-default"
                       data-testid="SelectDropdown__input"
-                      id="downshift-3-input"
+                      id="downshift-4-input"
                       name="network"
                       placeholder="Enter a cryptoasset name"
                       type="text"
@@ -392,8 +385,8 @@ exports[`ContactForm > should render responsive 2`] = `
                 </div>
               </div>
               <div
-                aria-labelledby="downshift-3-label"
-                id="downshift-3-menu"
+                aria-labelledby="downshift-4-label"
+                id="downshift-4-menu"
                 role="listbox"
               />
             </div>
@@ -412,14 +405,13 @@ exports[`ContactForm > should render responsive 2`] = `
           Address
         </label>
         <div
-          class="css-14zfvme"
+          class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
         >
           <div
             class="relative flex h-full flex-1"
           >
             <input
-              autocomplete="off"
-              class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
+              class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
               data-testid="contact-form__address-input"
               name="address"
               type="text"

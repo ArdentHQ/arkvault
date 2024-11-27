@@ -63,28 +63,31 @@ exports[`Signed Transaction Table > should handle the onRowClick function when t
                     class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
                   >
                     <div
-                      class="transition-transform css-15txs7d"
-                      height="10"
+                      class="transition-transform"
                       role="img"
-                      width="10"
                     >
-                      <svg
-                        id="chevron-down-small"
-                        viewBox="0 0 10 10"
-                        x="0"
-                        xml:space="preserve"
-                        xmlns="http://www.w3.org/2000/svg"
-                        y="0"
+                      <div
+                        style="height: 10px; width: 10px;"
                       >
-                        <path
-                          d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                        />
-                      </svg>
+                        <svg
+                          id="chevron-down-small"
+                          style="height: 100%; width: 100%;"
+                          viewBox="0 0 10 10"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
+                        >
+                          <path
+                            d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          />
+                        </svg>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -157,28 +160,31 @@ exports[`Signed Transaction Table > should handle the onRowClick function when t
                     class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-auto mr-2"
                   >
                     <div
-                      class="transition-transform rotate-180 css-15txs7d"
-                      height="10"
+                      class="transition-transform rotate-180"
                       role="img"
-                      width="10"
                     >
-                      <svg
-                        id="chevron-down-small"
-                        viewBox="0 0 10 10"
-                        x="0"
-                        xml:space="preserve"
-                        xmlns="http://www.w3.org/2000/svg"
-                        y="0"
+                      <div
+                        style="height: 10px; width: 10px;"
                       >
-                        <path
-                          d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                        />
-                      </svg>
+                        <svg
+                          id="chevron-down-small"
+                          style="height: 100%; width: 100%;"
+                          viewBox="0 0 10 10"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
+                        >
+                          <path
+                            d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          />
+                        </svg>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -203,28 +209,31 @@ exports[`Signed Transaction Table > should handle the onRowClick function when t
                     class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-auto mr-2"
                   >
                     <div
-                      class="transition-transform rotate-180 css-15txs7d"
-                      height="10"
+                      class="transition-transform rotate-180"
                       role="img"
-                      width="10"
                     >
-                      <svg
-                        id="chevron-down-small"
-                        viewBox="0 0 10 10"
-                        x="0"
-                        xml:space="preserve"
-                        xmlns="http://www.w3.org/2000/svg"
-                        y="0"
+                      <div
+                        style="height: 10px; width: 10px;"
                       >
-                        <path
-                          d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                        />
-                      </svg>
+                        <svg
+                          id="chevron-down-small"
+                          style="height: 100%; width: 100%;"
+                          viewBox="0 0 10 10"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
+                        >
+                          <path
+                            d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          />
+                        </svg>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -300,13 +309,12 @@ exports[`Signed Transaction Table > should handle the onRowClick function when t
                 <div
                   class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start my-1 pt-3 min-h-14 xl:min-h-11"
                 >
-                  <div
-                    class="rounded px-1 dark:border css-a8yjl2"
-                    color="secondary"
+                  <span
+                    class="inline-block font-semibold overflow-hidden text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] rounded px-1 dark:border"
                     data-testid="TransactionRowRecipientLabel"
                   >
                     Multisignature
-                  </div>
+                  </span>
                 </div>
               </td>
               <td>
@@ -317,13 +325,12 @@ exports[`Signed Transaction Table > should handle the onRowClick function when t
                     class="flex flex-row gap-2"
                     data-testid="TransactionRowAddressing__musig_registration"
                   >
-                    <div
-                      class="!flex h-[21px] w-12 items-center justify-center rounded px-1 py-[3px] dark:border css-1qplu6d"
-                      color="danger-bg"
+                    <span
+                      class="inline-block font-semibold overflow-hidden text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border text-xs leading-[15px] !flex h-[21px] w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
                       data-testid="TransactionRowAddressing__label"
                     >
                       To
-                    </div>
+                    </span>
                     <span
                       class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                     >
@@ -341,38 +348,39 @@ exports[`Signed Transaction Table > should handle the onRowClick function when t
                   <span
                     class="text-theme-secondary-700"
                   >
-                    <div
-                      class="css-v0ob3f"
-                      height="16"
-                      width="16"
-                    >
-                      <svg
-                        id="clock"
-                        viewBox="0 0 20 20"
-                        x="0"
-                        xml:space="preserve"
-                        xmlns="http://www.w3.org/2000/svg"
-                        y="0"
+                    <div>
+                      <div
+                        style="height: 16px; width: 16px;"
                       >
-                        <g
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-miterlimit="10"
-                          stroke-width="2"
-                          transform="translate(1.5 1.5)"
+                        <svg
+                          id="clock"
+                          style="height: 100%; width: 100%;"
+                          viewBox="0 0 20 20"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
                         >
-                          <circle
-                            cx="8.5"
-                            cy="8.5"
-                            r="9"
-                          />
-                          <path
-                            d="M8.5 8.5V5.2M8.5 8.5l3.9 3.9"
-                          />
-                        </g>
-                      </svg>
+                          <g
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-miterlimit="10"
+                            stroke-width="2"
+                            transform="translate(1.5 1.5)"
+                          >
+                            <circle
+                              cx="8.5"
+                              cy="8.5"
+                              r="9"
+                            />
+                            <path
+                              d="M8.5 8.5V5.2M8.5 8.5l3.9 3.9"
+                            />
+                          </g>
+                        </svg>
+                      </div>
                     </div>
                   </span>
                 </div>
@@ -384,9 +392,8 @@ exports[`Signed Transaction Table > should handle the onRowClick function when t
                   <div
                     class="flex flex-col items-end gap-1"
                   >
-                    <div
-                      class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-xqt0aw"
-                      color="danger-bg"
+                    <span
+                      class="font-semibold overflow-hidden text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border text-base flex items-center justify-center px-1.5 h-[21px] rounded dark:border"
                       data-testid="AmountLabel__wrapper"
                     >
                       <div
@@ -399,7 +406,7 @@ exports[`Signed Transaction Table > should handle the onRowClick function when t
                           - 15 DARK
                         </span>
                       </div>
-                    </div>
+                    </span>
                     <span
                       class="text-xs font-semibold text-theme-secondary-700 lg:hidden"
                     >
@@ -448,8 +455,7 @@ exports[`Signed Transaction Table > should handle the onRowClick function when t
                       </div>
                     </button>
                     <div
-                      class="m-0 border-theme-secondary-300 dark:border-theme-secondary-800 css-1aie31u"
-                      type="vertical"
+                      class="h-4 relative inline-block border-l border-t-0 border-solid align-middle m-0 border-theme-secondary-300 dark:border-theme-secondary-800"
                     />
                     <div
                       class="flex items-center"
@@ -462,31 +468,32 @@ exports[`Signed Transaction Table > should handle the onRowClick function when t
                         <div
                           class="flex items-center space-x-2"
                         >
-                          <div
-                            class="css-v0ob3f"
-                            height="16"
-                            width="16"
-                          >
-                            <svg
-                              id="trash"
-                              viewBox="0 0 20 20"
-                              x="0"
-                              xml:space="preserve"
-                              xmlns="http://www.w3.org/2000/svg"
-                              y="0"
+                          <div>
+                            <div
+                              style="height: 16px; width: 16px;"
                             >
-                              <g
-                                fill="none"
-                                stroke="currentColor"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="2"
+                              <svg
+                                id="trash"
+                                style="height: 100%; width: 100%;"
+                                viewBox="0 0 20 20"
+                                x="0"
+                                xml:space="preserve"
+                                xmlns="http://www.w3.org/2000/svg"
+                                y="0"
                               >
-                                <path
-                                  d="M1 3.629h18M11.8 1H8c-.7 0-1.3.607-1.3 1.315h0v1.314H13V2.315C13 1.607 12.5 1 11.8 1h0zM8 14.449v-6.37M11.8 14.449v-6.37M15.7 17.787c-.1.707-.6 1.213-1.3 1.213H5.3c-.7 0-1.2-.506-1.3-1.213L2.9 3.629h14l-1.2 14.158z"
-                                />
-                              </g>
-                            </svg>
+                                <g
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="2"
+                                >
+                                  <path
+                                    d="M1 3.629h18M11.8 1H8c-.7 0-1.3.607-1.3 1.315h0v1.314H13V2.315C13 1.607 12.5 1 11.8 1h0zM8 14.449v-6.37M11.8 14.449v-6.37M15.7 17.787c-.1.707-.6 1.213-1.3 1.213H5.3c-.7 0-1.2-.506-1.3-1.213L2.9 3.629h14l-1.2 14.158z"
+                                  />
+                                </g>
+                              </svg>
+                            </div>
                           </div>
                         </div>
                       </button>
@@ -563,8 +570,7 @@ exports[`Signed Transaction Table > should render different status > should show
                         </span>
                       </span>
                       <div
-                        class="m-0 border-transparent sm:border-theme-secondary-300 sm:dark:border-theme-secondary-800 css-1aie31u"
-                        type="vertical"
+                        class="h-4 relative inline-block border-l border-t-0 border-solid align-middle m-0 border-transparent sm:border-theme-secondary-300 sm:dark:border-theme-secondary-800"
                       />
                       <button
                         class="space-x-2 text-sm relative items-center inline-flex justify-center leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-0 text-theme-primary-600 hover:text-theme-primary-500 hover:underline font-semibold"
@@ -580,8 +586,7 @@ exports[`Signed Transaction Table > should render different status > should show
                         </div>
                       </button>
                       <div
-                        class="m-0 border-theme-secondary-300 dark:border-theme-secondary-800 css-1aie31u"
-                        type="vertical"
+                        class="h-4 relative inline-block border-l border-t-0 border-solid align-middle m-0 border-theme-secondary-300 dark:border-theme-secondary-800"
                       />
                       <div>
                         <button
@@ -592,31 +597,32 @@ exports[`Signed Transaction Table > should render different status > should show
                           <div
                             class="flex items-center space-x-2"
                           >
-                            <div
-                              class="css-v0ob3f"
-                              height="16"
-                              width="16"
-                            >
-                              <svg
-                                id="trash"
-                                viewBox="0 0 20 20"
-                                x="0"
-                                xml:space="preserve"
-                                xmlns="http://www.w3.org/2000/svg"
-                                y="0"
+                            <div>
+                              <div
+                                style="height: 16px; width: 16px;"
                               >
-                                <g
-                                  fill="none"
-                                  stroke="currentColor"
-                                  stroke-linecap="round"
-                                  stroke-linejoin="round"
-                                  stroke-width="2"
+                                <svg
+                                  id="trash"
+                                  style="height: 100%; width: 100%;"
+                                  viewBox="0 0 20 20"
+                                  x="0"
+                                  xml:space="preserve"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  y="0"
                                 >
-                                  <path
-                                    d="M1 3.629h18M11.8 1H8c-.7 0-1.3.607-1.3 1.315h0v1.314H13V2.315C13 1.607 12.5 1 11.8 1h0zM8 14.449v-6.37M11.8 14.449v-6.37M15.7 17.787c-.1.707-.6 1.213-1.3 1.213H5.3c-.7 0-1.2-.506-1.3-1.213L2.9 3.629h14l-1.2 14.158z"
-                                  />
-                                </g>
-                              </svg>
+                                  <g
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                  >
+                                    <path
+                                      d="M1 3.629h18M11.8 1H8c-.7 0-1.3.607-1.3 1.315h0v1.314H13V2.315C13 1.607 12.5 1 11.8 1h0zM8 14.449v-6.37M11.8 14.449v-6.37M15.7 17.787c-.1.707-.6 1.213-1.3 1.213H5.3c-.7 0-1.2-.506-1.3-1.213L2.9 3.629h14l-1.2 14.158z"
+                                    />
+                                  </g>
+                                </svg>
+                              </div>
                             </div>
                           </div>
                         </button>
@@ -641,13 +647,12 @@ exports[`Signed Transaction Table > should render different status > should show
                           class="flex flex-row gap-2"
                           data-testid="TransactionRowAddressing__musig_registration"
                         >
-                          <div
-                            class="!flex h-[21px] w-12 items-center justify-center rounded px-1 py-[3px] dark:border css-1qplu6d"
-                            color="danger-bg"
+                          <span
+                            class="inline-block font-semibold overflow-hidden text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border text-xs leading-[15px] !flex h-[21px] w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
                             data-testid="TransactionRowAddressing__label"
                           >
                             To
-                          </div>
+                          </span>
                           <span
                             class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                           >
@@ -667,9 +672,8 @@ exports[`Signed Transaction Table > should render different status > should show
                       <div
                         class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                       >
-                        <div
-                          class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-xqt0aw"
-                          color="danger-bg"
+                        <span
+                          class="font-semibold overflow-hidden text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border text-base flex items-center justify-center px-1.5 h-[21px] rounded dark:border"
                           data-testid="AmountLabel__wrapper"
                         >
                           <div
@@ -682,7 +686,7 @@ exports[`Signed Transaction Table > should render different status > should show
                               - 15 DARK
                             </span>
                           </div>
-                        </div>
+                        </span>
                       </div>
                     </div>
                     <div
@@ -797,28 +801,31 @@ exports[`Signed Transaction Table > should render different status > should show
                     class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
                   >
                     <div
-                      class="transition-transform css-15txs7d"
-                      height="10"
+                      class="transition-transform"
                       role="img"
-                      width="10"
                     >
-                      <svg
-                        id="chevron-down-small"
-                        viewBox="0 0 10 10"
-                        x="0"
-                        xml:space="preserve"
-                        xmlns="http://www.w3.org/2000/svg"
-                        y="0"
+                      <div
+                        style="height: 10px; width: 10px;"
                       >
-                        <path
-                          d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                        />
-                      </svg>
+                        <svg
+                          id="chevron-down-small"
+                          style="height: 100%; width: 100%;"
+                          viewBox="0 0 10 10"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
+                        >
+                          <path
+                            d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          />
+                        </svg>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -891,28 +898,31 @@ exports[`Signed Transaction Table > should render different status > should show
                     class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-auto mr-2"
                   >
                     <div
-                      class="transition-transform rotate-180 css-15txs7d"
-                      height="10"
+                      class="transition-transform rotate-180"
                       role="img"
-                      width="10"
                     >
-                      <svg
-                        id="chevron-down-small"
-                        viewBox="0 0 10 10"
-                        x="0"
-                        xml:space="preserve"
-                        xmlns="http://www.w3.org/2000/svg"
-                        y="0"
+                      <div
+                        style="height: 10px; width: 10px;"
                       >
-                        <path
-                          d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                        />
-                      </svg>
+                        <svg
+                          id="chevron-down-small"
+                          style="height: 100%; width: 100%;"
+                          viewBox="0 0 10 10"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
+                        >
+                          <path
+                            d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          />
+                        </svg>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -937,28 +947,31 @@ exports[`Signed Transaction Table > should render different status > should show
                     class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-auto mr-2"
                   >
                     <div
-                      class="transition-transform rotate-180 css-15txs7d"
-                      height="10"
+                      class="transition-transform rotate-180"
                       role="img"
-                      width="10"
                     >
-                      <svg
-                        id="chevron-down-small"
-                        viewBox="0 0 10 10"
-                        x="0"
-                        xml:space="preserve"
-                        xmlns="http://www.w3.org/2000/svg"
-                        y="0"
+                      <div
+                        style="height: 10px; width: 10px;"
                       >
-                        <path
-                          d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                        />
-                      </svg>
+                        <svg
+                          id="chevron-down-small"
+                          style="height: 100%; width: 100%;"
+                          viewBox="0 0 10 10"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
+                        >
+                          <path
+                            d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          />
+                        </svg>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -1034,13 +1047,12 @@ exports[`Signed Transaction Table > should render different status > should show
                 <div
                   class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start my-1 pt-3 min-h-14 xl:min-h-11"
                 >
-                  <div
-                    class="rounded px-1 dark:border css-a8yjl2"
-                    color="secondary"
+                  <span
+                    class="inline-block font-semibold overflow-hidden text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] rounded px-1 dark:border"
                     data-testid="TransactionRowRecipientLabel"
                   >
                     Multisignature
-                  </div>
+                  </span>
                 </div>
               </td>
               <td>
@@ -1051,13 +1063,12 @@ exports[`Signed Transaction Table > should render different status > should show
                     class="flex flex-row gap-2"
                     data-testid="TransactionRowAddressing__musig_registration"
                   >
-                    <div
-                      class="!flex h-[21px] w-12 items-center justify-center rounded px-1 py-[3px] dark:border css-1qplu6d"
-                      color="danger-bg"
+                    <span
+                      class="inline-block font-semibold overflow-hidden text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border text-xs leading-[15px] !flex h-[21px] w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
                       data-testid="TransactionRowAddressing__label"
                     >
                       To
-                    </div>
+                    </span>
                     <span
                       class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                     >
@@ -1075,28 +1086,29 @@ exports[`Signed Transaction Table > should render different status > should show
                   <span
                     class="text-theme-secondary-700"
                   >
-                    <div
-                      class="css-v0ob3f"
-                      height="16"
-                      width="16"
-                    >
-                      <svg
-                        id="pencil"
-                        viewBox="0 0 20 20"
-                        x="0"
-                        xml:space="preserve"
-                        xmlns="http://www.w3.org/2000/svg"
-                        y="0"
+                    <div>
+                      <div
+                        style="height: 16px; width: 16px;"
                       >
-                        <path
-                          d="M5.92 18.297L1 19l.703-4.72L14.054 1.828c1.105-1.104 2.913-1.104 4.118 0 1.104 1.105 1.104 2.913 0 4.118L5.92 18.297z"
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                        />
-                      </svg>
+                        <svg
+                          id="pencil"
+                          style="height: 100%; width: 100%;"
+                          viewBox="0 0 20 20"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
+                        >
+                          <path
+                            d="M5.92 18.297L1 19l.703-4.72L14.054 1.828c1.105-1.104 2.913-1.104 4.118 0 1.104 1.105 1.104 2.913 0 4.118L5.92 18.297z"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          />
+                        </svg>
+                      </div>
                     </div>
                   </span>
                 </div>
@@ -1108,9 +1120,8 @@ exports[`Signed Transaction Table > should render different status > should show
                   <div
                     class="flex flex-col items-end gap-1"
                   >
-                    <div
-                      class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-xqt0aw"
-                      color="danger-bg"
+                    <span
+                      class="font-semibold overflow-hidden text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border text-base flex items-center justify-center px-1.5 h-[21px] rounded dark:border"
                       data-testid="AmountLabel__wrapper"
                     >
                       <div
@@ -1123,7 +1134,7 @@ exports[`Signed Transaction Table > should render different status > should show
                           - 15 DARK
                         </span>
                       </div>
-                    </div>
+                    </span>
                     <span
                       class="text-xs font-semibold text-theme-secondary-700 lg:hidden"
                     >
@@ -1172,8 +1183,7 @@ exports[`Signed Transaction Table > should render different status > should show
                       </div>
                     </button>
                     <div
-                      class="m-0 border-theme-secondary-300 dark:border-theme-secondary-800 css-1aie31u"
-                      type="vertical"
+                      class="h-4 relative inline-block border-l border-t-0 border-solid align-middle m-0 border-theme-secondary-300 dark:border-theme-secondary-800"
                     />
                     <div
                       class="flex items-center"
@@ -1186,31 +1196,32 @@ exports[`Signed Transaction Table > should render different status > should show
                         <div
                           class="flex items-center space-x-2"
                         >
-                          <div
-                            class="css-v0ob3f"
-                            height="16"
-                            width="16"
-                          >
-                            <svg
-                              id="trash"
-                              viewBox="0 0 20 20"
-                              x="0"
-                              xml:space="preserve"
-                              xmlns="http://www.w3.org/2000/svg"
-                              y="0"
+                          <div>
+                            <div
+                              style="height: 16px; width: 16px;"
                             >
-                              <g
-                                fill="none"
-                                stroke="currentColor"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="2"
+                              <svg
+                                id="trash"
+                                style="height: 100%; width: 100%;"
+                                viewBox="0 0 20 20"
+                                x="0"
+                                xml:space="preserve"
+                                xmlns="http://www.w3.org/2000/svg"
+                                y="0"
                               >
-                                <path
-                                  d="M1 3.629h18M11.8 1H8c-.7 0-1.3.607-1.3 1.315h0v1.314H13V2.315C13 1.607 12.5 1 11.8 1h0zM8 14.449v-6.37M11.8 14.449v-6.37M15.7 17.787c-.1.707-.6 1.213-1.3 1.213H5.3c-.7 0-1.2-.506-1.3-1.213L2.9 3.629h14l-1.2 14.158z"
-                                />
-                              </g>
-                            </svg>
+                                <g
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="2"
+                                >
+                                  <path
+                                    d="M1 3.629h18M11.8 1H8c-.7 0-1.3.607-1.3 1.315h0v1.314H13V2.315C13 1.607 12.5 1 11.8 1h0zM8 14.449v-6.37M11.8 14.449v-6.37M15.7 17.787c-.1.707-.6 1.213-1.3 1.213H5.3c-.7 0-1.2-.506-1.3-1.213L2.9 3.629h14l-1.2 14.158z"
+                                  />
+                                </g>
+                              </svg>
+                            </div>
                           </div>
                         </div>
                       </button>
@@ -1287,8 +1298,7 @@ exports[`Signed Transaction Table > should render different status > should show
                         </span>
                       </span>
                       <div
-                        class="m-0 border-transparent sm:border-theme-secondary-300 sm:dark:border-theme-secondary-800 css-1aie31u"
-                        type="vertical"
+                        class="h-4 relative inline-block border-l border-t-0 border-solid align-middle m-0 border-transparent sm:border-theme-secondary-300 sm:dark:border-theme-secondary-800"
                       />
                       <button
                         class="space-x-2 text-sm relative items-center inline-flex justify-center leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-0 text-theme-primary-600 hover:text-theme-primary-500 hover:underline font-semibold"
@@ -1304,8 +1314,7 @@ exports[`Signed Transaction Table > should render different status > should show
                         </div>
                       </button>
                       <div
-                        class="m-0 border-theme-secondary-300 dark:border-theme-secondary-800 css-1aie31u"
-                        type="vertical"
+                        class="h-4 relative inline-block border-l border-t-0 border-solid align-middle m-0 border-theme-secondary-300 dark:border-theme-secondary-800"
                       />
                       <div>
                         <button
@@ -1316,31 +1325,32 @@ exports[`Signed Transaction Table > should render different status > should show
                           <div
                             class="flex items-center space-x-2"
                           >
-                            <div
-                              class="css-v0ob3f"
-                              height="16"
-                              width="16"
-                            >
-                              <svg
-                                id="trash"
-                                viewBox="0 0 20 20"
-                                x="0"
-                                xml:space="preserve"
-                                xmlns="http://www.w3.org/2000/svg"
-                                y="0"
+                            <div>
+                              <div
+                                style="height: 16px; width: 16px;"
                               >
-                                <g
-                                  fill="none"
-                                  stroke="currentColor"
-                                  stroke-linecap="round"
-                                  stroke-linejoin="round"
-                                  stroke-width="2"
+                                <svg
+                                  id="trash"
+                                  style="height: 100%; width: 100%;"
+                                  viewBox="0 0 20 20"
+                                  x="0"
+                                  xml:space="preserve"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  y="0"
                                 >
-                                  <path
-                                    d="M1 3.629h18M11.8 1H8c-.7 0-1.3.607-1.3 1.315h0v1.314H13V2.315C13 1.607 12.5 1 11.8 1h0zM8 14.449v-6.37M11.8 14.449v-6.37M15.7 17.787c-.1.707-.6 1.213-1.3 1.213H5.3c-.7 0-1.2-.506-1.3-1.213L2.9 3.629h14l-1.2 14.158z"
-                                  />
-                                </g>
-                              </svg>
+                                  <g
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                  >
+                                    <path
+                                      d="M1 3.629h18M11.8 1H8c-.7 0-1.3.607-1.3 1.315h0v1.314H13V2.315C13 1.607 12.5 1 11.8 1h0zM8 14.449v-6.37M11.8 14.449v-6.37M15.7 17.787c-.1.707-.6 1.213-1.3 1.213H5.3c-.7 0-1.2-.506-1.3-1.213L2.9 3.629h14l-1.2 14.158z"
+                                    />
+                                  </g>
+                                </svg>
+                              </div>
                             </div>
                           </div>
                         </button>
@@ -1365,13 +1375,12 @@ exports[`Signed Transaction Table > should render different status > should show
                           class="flex flex-row gap-2"
                           data-testid="TransactionRowAddressing__musig_registration"
                         >
-                          <div
-                            class="!flex h-[21px] w-12 items-center justify-center rounded px-1 py-[3px] dark:border css-1qplu6d"
-                            color="danger-bg"
+                          <span
+                            class="inline-block font-semibold overflow-hidden text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border text-xs leading-[15px] !flex h-[21px] w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
                             data-testid="TransactionRowAddressing__label"
                           >
                             To
-                          </div>
+                          </span>
                           <span
                             class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                           >
@@ -1391,9 +1400,8 @@ exports[`Signed Transaction Table > should render different status > should show
                       <div
                         class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                       >
-                        <div
-                          class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-xqt0aw"
-                          color="danger-bg"
+                        <span
+                          class="font-semibold overflow-hidden text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border text-base flex items-center justify-center px-1.5 h-[21px] rounded dark:border"
                           data-testid="AmountLabel__wrapper"
                         >
                           <div
@@ -1406,7 +1414,7 @@ exports[`Signed Transaction Table > should render different status > should show
                               - 15 DARK
                             </span>
                           </div>
-                        </div>
+                        </span>
                       </div>
                     </div>
                     <div
@@ -1521,28 +1529,31 @@ exports[`Signed Transaction Table > should render different status > should show
                     class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
                   >
                     <div
-                      class="transition-transform css-15txs7d"
-                      height="10"
+                      class="transition-transform"
                       role="img"
-                      width="10"
                     >
-                      <svg
-                        id="chevron-down-small"
-                        viewBox="0 0 10 10"
-                        x="0"
-                        xml:space="preserve"
-                        xmlns="http://www.w3.org/2000/svg"
-                        y="0"
+                      <div
+                        style="height: 10px; width: 10px;"
                       >
-                        <path
-                          d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                        />
-                      </svg>
+                        <svg
+                          id="chevron-down-small"
+                          style="height: 100%; width: 100%;"
+                          viewBox="0 0 10 10"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
+                        >
+                          <path
+                            d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          />
+                        </svg>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -1615,28 +1626,31 @@ exports[`Signed Transaction Table > should render different status > should show
                     class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-auto mr-2"
                   >
                     <div
-                      class="transition-transform rotate-180 css-15txs7d"
-                      height="10"
+                      class="transition-transform rotate-180"
                       role="img"
-                      width="10"
                     >
-                      <svg
-                        id="chevron-down-small"
-                        viewBox="0 0 10 10"
-                        x="0"
-                        xml:space="preserve"
-                        xmlns="http://www.w3.org/2000/svg"
-                        y="0"
+                      <div
+                        style="height: 10px; width: 10px;"
                       >
-                        <path
-                          d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                        />
-                      </svg>
+                        <svg
+                          id="chevron-down-small"
+                          style="height: 100%; width: 100%;"
+                          viewBox="0 0 10 10"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
+                        >
+                          <path
+                            d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          />
+                        </svg>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -1661,28 +1675,31 @@ exports[`Signed Transaction Table > should render different status > should show
                     class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-auto mr-2"
                   >
                     <div
-                      class="transition-transform rotate-180 css-15txs7d"
-                      height="10"
+                      class="transition-transform rotate-180"
                       role="img"
-                      width="10"
                     >
-                      <svg
-                        id="chevron-down-small"
-                        viewBox="0 0 10 10"
-                        x="0"
-                        xml:space="preserve"
-                        xmlns="http://www.w3.org/2000/svg"
-                        y="0"
+                      <div
+                        style="height: 10px; width: 10px;"
                       >
-                        <path
-                          d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                        />
-                      </svg>
+                        <svg
+                          id="chevron-down-small"
+                          style="height: 100%; width: 100%;"
+                          viewBox="0 0 10 10"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
+                        >
+                          <path
+                            d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          />
+                        </svg>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -1758,13 +1775,12 @@ exports[`Signed Transaction Table > should render different status > should show
                 <div
                   class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start my-1 pt-3 min-h-14 xl:min-h-11"
                 >
-                  <div
-                    class="rounded px-1 dark:border css-a8yjl2"
-                    color="secondary"
+                  <span
+                    class="inline-block font-semibold overflow-hidden text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] rounded px-1 dark:border"
                     data-testid="TransactionRowRecipientLabel"
                   >
                     Multisignature
-                  </div>
+                  </span>
                 </div>
               </td>
               <td>
@@ -1775,13 +1791,12 @@ exports[`Signed Transaction Table > should render different status > should show
                     class="flex flex-row gap-2"
                     data-testid="TransactionRowAddressing__musig_registration"
                   >
-                    <div
-                      class="!flex h-[21px] w-12 items-center justify-center rounded px-1 py-[3px] dark:border css-1qplu6d"
-                      color="danger-bg"
+                    <span
+                      class="inline-block font-semibold overflow-hidden text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border text-xs leading-[15px] !flex h-[21px] w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
                       data-testid="TransactionRowAddressing__label"
                     >
                       To
-                    </div>
+                    </span>
                     <span
                       class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                     >
@@ -1799,11 +1814,11 @@ exports[`Signed Transaction Table > should render different status > should show
                   <span
                     class="text-theme-secondary-700"
                   >
-                    <div
-                      class="css-v0ob3f"
-                      height="16"
-                      width="16"
-                    />
+                    <div>
+                      <div
+                        style="height: 16px; width: 16px;"
+                      />
+                    </div>
                   </span>
                 </div>
               </td>
@@ -1814,9 +1829,8 @@ exports[`Signed Transaction Table > should render different status > should show
                   <div
                     class="flex flex-col items-end gap-1"
                   >
-                    <div
-                      class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-xqt0aw"
-                      color="danger-bg"
+                    <span
+                      class="font-semibold overflow-hidden text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border text-base flex items-center justify-center px-1.5 h-[21px] rounded dark:border"
                       data-testid="AmountLabel__wrapper"
                     >
                       <div
@@ -1829,7 +1843,7 @@ exports[`Signed Transaction Table > should render different status > should show
                           - 15 DARK
                         </span>
                       </div>
-                    </div>
+                    </span>
                     <span
                       class="text-xs font-semibold text-theme-secondary-700 lg:hidden"
                     >
@@ -1878,8 +1892,7 @@ exports[`Signed Transaction Table > should render different status > should show
                       </div>
                     </button>
                     <div
-                      class="m-0 border-theme-secondary-300 dark:border-theme-secondary-800 css-1aie31u"
-                      type="vertical"
+                      class="h-4 relative inline-block border-l border-t-0 border-solid align-middle m-0 border-theme-secondary-300 dark:border-theme-secondary-800"
                     />
                     <div
                       class="flex items-center"
@@ -1892,31 +1905,32 @@ exports[`Signed Transaction Table > should render different status > should show
                         <div
                           class="flex items-center space-x-2"
                         >
-                          <div
-                            class="css-v0ob3f"
-                            height="16"
-                            width="16"
-                          >
-                            <svg
-                              id="trash"
-                              viewBox="0 0 20 20"
-                              x="0"
-                              xml:space="preserve"
-                              xmlns="http://www.w3.org/2000/svg"
-                              y="0"
+                          <div>
+                            <div
+                              style="height: 16px; width: 16px;"
                             >
-                              <g
-                                fill="none"
-                                stroke="currentColor"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="2"
+                              <svg
+                                id="trash"
+                                style="height: 100%; width: 100%;"
+                                viewBox="0 0 20 20"
+                                x="0"
+                                xml:space="preserve"
+                                xmlns="http://www.w3.org/2000/svg"
+                                y="0"
                               >
-                                <path
-                                  d="M1 3.629h18M11.8 1H8c-.7 0-1.3.607-1.3 1.315h0v1.314H13V2.315C13 1.607 12.5 1 11.8 1h0zM8 14.449v-6.37M11.8 14.449v-6.37M15.7 17.787c-.1.707-.6 1.213-1.3 1.213H5.3c-.7 0-1.2-.506-1.3-1.213L2.9 3.629h14l-1.2 14.158z"
-                                />
-                              </g>
-                            </svg>
+                                <g
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="2"
+                                >
+                                  <path
+                                    d="M1 3.629h18M11.8 1H8c-.7 0-1.3.607-1.3 1.315h0v1.314H13V2.315C13 1.607 12.5 1 11.8 1h0zM8 14.449v-6.37M11.8 14.449v-6.37M15.7 17.787c-.1.707-.6 1.213-1.3 1.213H5.3c-.7 0-1.2-.506-1.3-1.213L2.9 3.629h14l-1.2 14.158z"
+                                  />
+                                </g>
+                              </svg>
+                            </div>
                           </div>
                         </div>
                       </button>
@@ -1993,8 +2007,7 @@ exports[`Signed Transaction Table > should render different status > should show
                         </span>
                       </span>
                       <div
-                        class="m-0 border-transparent sm:border-theme-secondary-300 sm:dark:border-theme-secondary-800 css-1aie31u"
-                        type="vertical"
+                        class="h-4 relative inline-block border-l border-t-0 border-solid align-middle m-0 border-transparent sm:border-theme-secondary-300 sm:dark:border-theme-secondary-800"
                       />
                       <span
                         class="flex flex-row items-center text-sm font-semibold text-theme-secondary-500"
@@ -2020,12 +2033,11 @@ exports[`Signed Transaction Table > should render different status > should show
                         <div
                           class="flex flex-row items-center gap-2"
                         >
-                          <div
-                            class="rounded px-[11px] py-[3px] css-1qplu6d"
-                            color="danger-bg"
+                          <span
+                            class="inline-block font-semibold overflow-hidden text-theme-danger-info-text bg-theme-danger-info-background dark:border dark:bg-transparent dark:border-theme-danger-info-border text-xs leading-[15px] rounded px-[11px] py-[3px]"
                           >
                             To
-                          </div>
+                          </span>
                           <span
                             class="text-sm"
                           >
@@ -2048,9 +2060,8 @@ exports[`Signed Transaction Table > should render different status > should show
                       <div
                         class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                       >
-                        <div
-                          class="flex h-full items-center justify-center rounded px-1.5 py-[3px] css-1jspzfx"
-                          color="success-bg"
+                        <span
+                          class="font-semibold overflow-hidden bg-theme-success-100 text-theme-success-700 dark:border dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-base flex h-full items-center justify-center rounded px-1.5 py-[3px]"
                           data-testid="AmountLabel__wrapper"
                         >
                           <div
@@ -2063,7 +2074,7 @@ exports[`Signed Transaction Table > should render different status > should show
                               + 0.1 DARK
                             </span>
                           </div>
-                        </div>
+                        </span>
                       </div>
                     </div>
                     <div
@@ -2178,28 +2189,31 @@ exports[`Signed Transaction Table > should render different status > should show
                     class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
                   >
                     <div
-                      class="transition-transform css-15txs7d"
-                      height="10"
+                      class="transition-transform"
                       role="img"
-                      width="10"
                     >
-                      <svg
-                        id="chevron-down-small"
-                        viewBox="0 0 10 10"
-                        x="0"
-                        xml:space="preserve"
-                        xmlns="http://www.w3.org/2000/svg"
-                        y="0"
+                      <div
+                        style="height: 10px; width: 10px;"
                       >
-                        <path
-                          d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                        />
-                      </svg>
+                        <svg
+                          id="chevron-down-small"
+                          style="height: 100%; width: 100%;"
+                          viewBox="0 0 10 10"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
+                        >
+                          <path
+                            d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          />
+                        </svg>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -2272,28 +2286,31 @@ exports[`Signed Transaction Table > should render different status > should show
                     class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-auto mr-2"
                   >
                     <div
-                      class="transition-transform rotate-180 css-15txs7d"
-                      height="10"
+                      class="transition-transform rotate-180"
                       role="img"
-                      width="10"
                     >
-                      <svg
-                        id="chevron-down-small"
-                        viewBox="0 0 10 10"
-                        x="0"
-                        xml:space="preserve"
-                        xmlns="http://www.w3.org/2000/svg"
-                        y="0"
+                      <div
+                        style="height: 10px; width: 10px;"
                       >
-                        <path
-                          d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                        />
-                      </svg>
+                        <svg
+                          id="chevron-down-small"
+                          style="height: 100%; width: 100%;"
+                          viewBox="0 0 10 10"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
+                        >
+                          <path
+                            d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          />
+                        </svg>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -2318,28 +2335,31 @@ exports[`Signed Transaction Table > should render different status > should show
                     class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-auto mr-2"
                   >
                     <div
-                      class="transition-transform rotate-180 css-15txs7d"
-                      height="10"
+                      class="transition-transform rotate-180"
                       role="img"
-                      width="10"
                     >
-                      <svg
-                        id="chevron-down-small"
-                        viewBox="0 0 10 10"
-                        x="0"
-                        xml:space="preserve"
-                        xmlns="http://www.w3.org/2000/svg"
-                        y="0"
+                      <div
+                        style="height: 10px; width: 10px;"
                       >
-                        <path
-                          d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                        />
-                      </svg>
+                        <svg
+                          id="chevron-down-small"
+                          style="height: 100%; width: 100%;"
+                          viewBox="0 0 10 10"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
+                        >
+                          <path
+                            d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          />
+                        </svg>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -2415,24 +2435,22 @@ exports[`Signed Transaction Table > should render different status > should show
                 <div
                   class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start my-1 pt-3 min-h-14 xl:min-h-11"
                 >
-                  <div
-                    class="rounded px-1 dark:border css-a8yjl2"
-                    color="secondary"
+                  <span
+                    class="inline-block font-semibold overflow-hidden text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] rounded px-1 dark:border"
                   >
                     Unvote
-                  </div>
+                  </span>
                 </div>
               </td>
               <td>
                 <div
                   class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 space-x-2 items-start my-1 pt-3 min-h-14 xl:min-h-11"
                 >
-                  <div
-                    class="rounded px-[11px] py-1 css-1qplu6d"
-                    color="danger-bg"
+                  <span
+                    class="inline-block font-semibold overflow-hidden text-theme-danger-info-text bg-theme-danger-info-background dark:border dark:bg-transparent dark:border-theme-danger-info-border text-xs leading-[15px] rounded px-[11px] py-1"
                   >
                     To
-                  </div>
+                  </span>
                   <span
                     class="text-sm"
                   >
@@ -2452,38 +2470,39 @@ exports[`Signed Transaction Table > should render different status > should show
                   <span
                     class="text-theme-secondary-700"
                   >
-                    <div
-                      class="css-v0ob3f"
-                      height="16"
-                      width="16"
-                    >
-                      <svg
-                        id="clock"
-                        viewBox="0 0 20 20"
-                        x="0"
-                        xml:space="preserve"
-                        xmlns="http://www.w3.org/2000/svg"
-                        y="0"
+                    <div>
+                      <div
+                        style="height: 16px; width: 16px;"
                       >
-                        <g
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-miterlimit="10"
-                          stroke-width="2"
-                          transform="translate(1.5 1.5)"
+                        <svg
+                          id="clock"
+                          style="height: 100%; width: 100%;"
+                          viewBox="0 0 20 20"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
                         >
-                          <circle
-                            cx="8.5"
-                            cy="8.5"
-                            r="9"
-                          />
-                          <path
-                            d="M8.5 8.5V5.2M8.5 8.5l3.9 3.9"
-                          />
-                        </g>
-                      </svg>
+                          <g
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-miterlimit="10"
+                            stroke-width="2"
+                            transform="translate(1.5 1.5)"
+                          >
+                            <circle
+                              cx="8.5"
+                              cy="8.5"
+                              r="9"
+                            />
+                            <path
+                              d="M8.5 8.5V5.2M8.5 8.5l3.9 3.9"
+                            />
+                          </g>
+                        </svg>
+                      </div>
                     </div>
                   </span>
                 </div>
@@ -2496,13 +2515,12 @@ exports[`Signed Transaction Table > should render different status > should show
                     class="flex flex-row gap-2"
                     data-testid="TransactionRowAddressing__vote"
                   >
-                    <div
-                      class="!flex h-[21px] w-12 items-center justify-center rounded px-1 py-[3px] dark:border css-1qplu6d"
-                      color="danger-bg"
+                    <span
+                      class="inline-block font-semibold overflow-hidden text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border text-xs leading-[15px] !flex h-[21px] w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
                       data-testid="TransactionRowAddressing__label"
                     >
                       To
-                    </div>
+                    </span>
                     <span
                       class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                     >
@@ -2612,8 +2630,7 @@ exports[`Signed Transaction Table > should render different status > should show
                         </span>
                       </span>
                       <div
-                        class="m-0 border-transparent sm:border-theme-secondary-300 sm:dark:border-theme-secondary-800 css-1aie31u"
-                        type="vertical"
+                        class="h-4 relative inline-block border-l border-t-0 border-solid align-middle m-0 border-transparent sm:border-theme-secondary-300 sm:dark:border-theme-secondary-800"
                       />
                       <span
                         class="flex flex-row items-center text-sm font-semibold text-theme-secondary-500"
@@ -2639,12 +2656,11 @@ exports[`Signed Transaction Table > should render different status > should show
                         <div
                           class="flex flex-row items-center gap-2"
                         >
-                          <div
-                            class="rounded px-[11px] py-[3px] css-1qplu6d"
-                            color="danger-bg"
+                          <span
+                            class="inline-block font-semibold overflow-hidden text-theme-danger-info-text bg-theme-danger-info-background dark:border dark:bg-transparent dark:border-theme-danger-info-border text-xs leading-[15px] rounded px-[11px] py-[3px]"
                           >
                             To
-                          </div>
+                          </span>
                           <span
                             class="text-sm"
                           >
@@ -2667,9 +2683,8 @@ exports[`Signed Transaction Table > should render different status > should show
                       <div
                         class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                       >
-                        <div
-                          class="flex h-full items-center justify-center rounded px-1.5 py-[3px] css-1jspzfx"
-                          color="success-bg"
+                        <span
+                          class="font-semibold overflow-hidden bg-theme-success-100 text-theme-success-700 dark:border dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-base flex h-full items-center justify-center rounded px-1.5 py-[3px]"
                           data-testid="AmountLabel__wrapper"
                         >
                           <div
@@ -2682,7 +2697,7 @@ exports[`Signed Transaction Table > should render different status > should show
                               + 0.1 DARK
                             </span>
                           </div>
-                        </div>
+                        </span>
                       </div>
                     </div>
                     <div
@@ -2797,28 +2812,31 @@ exports[`Signed Transaction Table > should render different status > should show
                     class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
                   >
                     <div
-                      class="transition-transform css-15txs7d"
-                      height="10"
+                      class="transition-transform"
                       role="img"
-                      width="10"
                     >
-                      <svg
-                        id="chevron-down-small"
-                        viewBox="0 0 10 10"
-                        x="0"
-                        xml:space="preserve"
-                        xmlns="http://www.w3.org/2000/svg"
-                        y="0"
+                      <div
+                        style="height: 10px; width: 10px;"
                       >
-                        <path
-                          d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                        />
-                      </svg>
+                        <svg
+                          id="chevron-down-small"
+                          style="height: 100%; width: 100%;"
+                          viewBox="0 0 10 10"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
+                        >
+                          <path
+                            d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          />
+                        </svg>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -2891,28 +2909,31 @@ exports[`Signed Transaction Table > should render different status > should show
                     class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-auto mr-2"
                   >
                     <div
-                      class="transition-transform rotate-180 css-15txs7d"
-                      height="10"
+                      class="transition-transform rotate-180"
                       role="img"
-                      width="10"
                     >
-                      <svg
-                        id="chevron-down-small"
-                        viewBox="0 0 10 10"
-                        x="0"
-                        xml:space="preserve"
-                        xmlns="http://www.w3.org/2000/svg"
-                        y="0"
+                      <div
+                        style="height: 10px; width: 10px;"
                       >
-                        <path
-                          d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                        />
-                      </svg>
+                        <svg
+                          id="chevron-down-small"
+                          style="height: 100%; width: 100%;"
+                          viewBox="0 0 10 10"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
+                        >
+                          <path
+                            d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          />
+                        </svg>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -2937,28 +2958,31 @@ exports[`Signed Transaction Table > should render different status > should show
                     class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-auto mr-2"
                   >
                     <div
-                      class="transition-transform rotate-180 css-15txs7d"
-                      height="10"
+                      class="transition-transform rotate-180"
                       role="img"
-                      width="10"
                     >
-                      <svg
-                        id="chevron-down-small"
-                        viewBox="0 0 10 10"
-                        x="0"
-                        xml:space="preserve"
-                        xmlns="http://www.w3.org/2000/svg"
-                        y="0"
+                      <div
+                        style="height: 10px; width: 10px;"
                       >
-                        <path
-                          d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                        />
-                      </svg>
+                        <svg
+                          id="chevron-down-small"
+                          style="height: 100%; width: 100%;"
+                          viewBox="0 0 10 10"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
+                        >
+                          <path
+                            d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          />
+                        </svg>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -3034,24 +3058,22 @@ exports[`Signed Transaction Table > should render different status > should show
                 <div
                   class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start my-1 pt-3 min-h-14 xl:min-h-11"
                 >
-                  <div
-                    class="rounded px-1 dark:border css-a8yjl2"
-                    color="secondary"
+                  <span
+                    class="inline-block font-semibold overflow-hidden text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] rounded px-1 dark:border"
                   >
                     Vote
-                  </div>
+                  </span>
                 </div>
               </td>
               <td>
                 <div
                   class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 space-x-2 items-start my-1 pt-3 min-h-14 xl:min-h-11"
                 >
-                  <div
-                    class="rounded px-[11px] py-1 css-1qplu6d"
-                    color="danger-bg"
+                  <span
+                    class="inline-block font-semibold overflow-hidden text-theme-danger-info-text bg-theme-danger-info-background dark:border dark:bg-transparent dark:border-theme-danger-info-border text-xs leading-[15px] rounded px-[11px] py-1"
                   >
                     To
-                  </div>
+                  </span>
                   <span
                     class="text-sm"
                   >
@@ -3071,38 +3093,39 @@ exports[`Signed Transaction Table > should render different status > should show
                   <span
                     class="text-theme-secondary-700"
                   >
-                    <div
-                      class="css-v0ob3f"
-                      height="16"
-                      width="16"
-                    >
-                      <svg
-                        id="clock"
-                        viewBox="0 0 20 20"
-                        x="0"
-                        xml:space="preserve"
-                        xmlns="http://www.w3.org/2000/svg"
-                        y="0"
+                    <div>
+                      <div
+                        style="height: 16px; width: 16px;"
                       >
-                        <g
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-miterlimit="10"
-                          stroke-width="2"
-                          transform="translate(1.5 1.5)"
+                        <svg
+                          id="clock"
+                          style="height: 100%; width: 100%;"
+                          viewBox="0 0 20 20"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
                         >
-                          <circle
-                            cx="8.5"
-                            cy="8.5"
-                            r="9"
-                          />
-                          <path
-                            d="M8.5 8.5V5.2M8.5 8.5l3.9 3.9"
-                          />
-                        </g>
-                      </svg>
+                          <g
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-miterlimit="10"
+                            stroke-width="2"
+                            transform="translate(1.5 1.5)"
+                          >
+                            <circle
+                              cx="8.5"
+                              cy="8.5"
+                              r="9"
+                            />
+                            <path
+                              d="M8.5 8.5V5.2M8.5 8.5l3.9 3.9"
+                            />
+                          </g>
+                        </svg>
+                      </div>
                     </div>
                   </span>
                 </div>
@@ -3115,13 +3138,12 @@ exports[`Signed Transaction Table > should render different status > should show
                     class="flex flex-row gap-2"
                     data-testid="TransactionRowAddressing__vote"
                   >
-                    <div
-                      class="!flex h-[21px] w-12 items-center justify-center rounded px-1 py-[3px] dark:border css-1qplu6d"
-                      color="danger-bg"
+                    <span
+                      class="inline-block font-semibold overflow-hidden text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border text-xs leading-[15px] !flex h-[21px] w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
                       data-testid="TransactionRowAddressing__label"
                     >
                       To
-                    </div>
+                    </span>
                     <span
                       class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                     >
@@ -3231,8 +3253,7 @@ exports[`Signed Transaction Table > should render different status > should show
                         </span>
                       </span>
                       <div
-                        class="m-0 border-transparent sm:border-theme-secondary-300 sm:dark:border-theme-secondary-800 css-1aie31u"
-                        type="vertical"
+                        class="h-4 relative inline-block border-l border-t-0 border-solid align-middle m-0 border-transparent sm:border-theme-secondary-300 sm:dark:border-theme-secondary-800"
                       />
                       <button
                         class="space-x-2 text-sm relative items-center inline-flex justify-center leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-0 text-theme-primary-600 hover:text-theme-primary-500 hover:underline font-semibold"
@@ -3248,8 +3269,7 @@ exports[`Signed Transaction Table > should render different status > should show
                         </div>
                       </button>
                       <div
-                        class="m-0 border-theme-secondary-300 dark:border-theme-secondary-800 css-1aie31u"
-                        type="vertical"
+                        class="h-4 relative inline-block border-l border-t-0 border-solid align-middle m-0 border-theme-secondary-300 dark:border-theme-secondary-800"
                       />
                       <div>
                         <button
@@ -3260,31 +3280,32 @@ exports[`Signed Transaction Table > should render different status > should show
                           <div
                             class="flex items-center space-x-2"
                           >
-                            <div
-                              class="css-v0ob3f"
-                              height="16"
-                              width="16"
-                            >
-                              <svg
-                                id="trash"
-                                viewBox="0 0 20 20"
-                                x="0"
-                                xml:space="preserve"
-                                xmlns="http://www.w3.org/2000/svg"
-                                y="0"
+                            <div>
+                              <div
+                                style="height: 16px; width: 16px;"
                               >
-                                <g
-                                  fill="none"
-                                  stroke="currentColor"
-                                  stroke-linecap="round"
-                                  stroke-linejoin="round"
-                                  stroke-width="2"
+                                <svg
+                                  id="trash"
+                                  style="height: 100%; width: 100%;"
+                                  viewBox="0 0 20 20"
+                                  x="0"
+                                  xml:space="preserve"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  y="0"
                                 >
-                                  <path
-                                    d="M1 3.629h18M11.8 1H8c-.7 0-1.3.607-1.3 1.315h0v1.314H13V2.315C13 1.607 12.5 1 11.8 1h0zM8 14.449v-6.37M11.8 14.449v-6.37M15.7 17.787c-.1.707-.6 1.213-1.3 1.213H5.3c-.7 0-1.2-.506-1.3-1.213L2.9 3.629h14l-1.2 14.158z"
-                                  />
-                                </g>
-                              </svg>
+                                  <g
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                  >
+                                    <path
+                                      d="M1 3.629h18M11.8 1H8c-.7 0-1.3.607-1.3 1.315h0v1.314H13V2.315C13 1.607 12.5 1 11.8 1h0zM8 14.449v-6.37M11.8 14.449v-6.37M15.7 17.787c-.1.707-.6 1.213-1.3 1.213H5.3c-.7 0-1.2-.506-1.3-1.213L2.9 3.629h14l-1.2 14.158z"
+                                    />
+                                  </g>
+                                </svg>
+                              </div>
                             </div>
                           </div>
                         </button>
@@ -3309,13 +3330,12 @@ exports[`Signed Transaction Table > should render different status > should show
                           class="flex flex-row gap-2"
                           data-testid="TransactionRowAddressing__musig_registration"
                         >
-                          <div
-                            class="!flex h-[21px] w-12 items-center justify-center rounded px-1 py-[3px] dark:border css-1qplu6d"
-                            color="danger-bg"
+                          <span
+                            class="inline-block font-semibold overflow-hidden text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border text-xs leading-[15px] !flex h-[21px] w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
                             data-testid="TransactionRowAddressing__label"
                           >
                             To
-                          </div>
+                          </span>
                           <span
                             class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                           >
@@ -3335,9 +3355,8 @@ exports[`Signed Transaction Table > should render different status > should show
                       <div
                         class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                       >
-                        <div
-                          class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-xqt0aw"
-                          color="danger-bg"
+                        <span
+                          class="font-semibold overflow-hidden text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border text-base flex items-center justify-center px-1.5 h-[21px] rounded dark:border"
                           data-testid="AmountLabel__wrapper"
                         >
                           <div
@@ -3350,7 +3369,7 @@ exports[`Signed Transaction Table > should render different status > should show
                               - 15 DARK
                             </span>
                           </div>
-                        </div>
+                        </span>
                       </div>
                     </div>
                     <div
@@ -3465,28 +3484,31 @@ exports[`Signed Transaction Table > should render different status > should show
                     class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
                   >
                     <div
-                      class="transition-transform css-15txs7d"
-                      height="10"
+                      class="transition-transform"
                       role="img"
-                      width="10"
                     >
-                      <svg
-                        id="chevron-down-small"
-                        viewBox="0 0 10 10"
-                        x="0"
-                        xml:space="preserve"
-                        xmlns="http://www.w3.org/2000/svg"
-                        y="0"
+                      <div
+                        style="height: 10px; width: 10px;"
                       >
-                        <path
-                          d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                        />
-                      </svg>
+                        <svg
+                          id="chevron-down-small"
+                          style="height: 100%; width: 100%;"
+                          viewBox="0 0 10 10"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
+                        >
+                          <path
+                            d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          />
+                        </svg>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -3559,28 +3581,31 @@ exports[`Signed Transaction Table > should render different status > should show
                     class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-auto mr-2"
                   >
                     <div
-                      class="transition-transform rotate-180 css-15txs7d"
-                      height="10"
+                      class="transition-transform rotate-180"
                       role="img"
-                      width="10"
                     >
-                      <svg
-                        id="chevron-down-small"
-                        viewBox="0 0 10 10"
-                        x="0"
-                        xml:space="preserve"
-                        xmlns="http://www.w3.org/2000/svg"
-                        y="0"
+                      <div
+                        style="height: 10px; width: 10px;"
                       >
-                        <path
-                          d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                        />
-                      </svg>
+                        <svg
+                          id="chevron-down-small"
+                          style="height: 100%; width: 100%;"
+                          viewBox="0 0 10 10"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
+                        >
+                          <path
+                            d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          />
+                        </svg>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -3605,28 +3630,31 @@ exports[`Signed Transaction Table > should render different status > should show
                     class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-auto mr-2"
                   >
                     <div
-                      class="transition-transform rotate-180 css-15txs7d"
-                      height="10"
+                      class="transition-transform rotate-180"
                       role="img"
-                      width="10"
                     >
-                      <svg
-                        id="chevron-down-small"
-                        viewBox="0 0 10 10"
-                        x="0"
-                        xml:space="preserve"
-                        xmlns="http://www.w3.org/2000/svg"
-                        y="0"
+                      <div
+                        style="height: 10px; width: 10px;"
                       >
-                        <path
-                          d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                        />
-                      </svg>
+                        <svg
+                          id="chevron-down-small"
+                          style="height: 100%; width: 100%;"
+                          viewBox="0 0 10 10"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
+                        >
+                          <path
+                            d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          />
+                        </svg>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -3702,13 +3730,12 @@ exports[`Signed Transaction Table > should render different status > should show
                 <div
                   class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start my-1 pt-3 min-h-14 xl:min-h-11"
                 >
-                  <div
-                    class="rounded px-1 dark:border css-a8yjl2"
-                    color="secondary"
+                  <span
+                    class="inline-block font-semibold overflow-hidden text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] rounded px-1 dark:border"
                     data-testid="TransactionRowRecipientLabel"
                   >
                     Multisignature
-                  </div>
+                  </span>
                 </div>
               </td>
               <td>
@@ -3719,13 +3746,12 @@ exports[`Signed Transaction Table > should render different status > should show
                     class="flex flex-row gap-2"
                     data-testid="TransactionRowAddressing__musig_registration"
                   >
-                    <div
-                      class="!flex h-[21px] w-12 items-center justify-center rounded px-1 py-[3px] dark:border css-1qplu6d"
-                      color="danger-bg"
+                    <span
+                      class="inline-block font-semibold overflow-hidden text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border text-xs leading-[15px] !flex h-[21px] w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
                       data-testid="TransactionRowAddressing__label"
                     >
                       To
-                    </div>
+                    </span>
                     <span
                       class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                     >
@@ -3743,38 +3769,39 @@ exports[`Signed Transaction Table > should render different status > should show
                   <span
                     class="text-theme-secondary-700"
                   >
-                    <div
-                      class="css-v0ob3f"
-                      height="16"
-                      width="16"
-                    >
-                      <svg
-                        id="clock"
-                        viewBox="0 0 20 20"
-                        x="0"
-                        xml:space="preserve"
-                        xmlns="http://www.w3.org/2000/svg"
-                        y="0"
+                    <div>
+                      <div
+                        style="height: 16px; width: 16px;"
                       >
-                        <g
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-miterlimit="10"
-                          stroke-width="2"
-                          transform="translate(1.5 1.5)"
+                        <svg
+                          id="clock"
+                          style="height: 100%; width: 100%;"
+                          viewBox="0 0 20 20"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
                         >
-                          <circle
-                            cx="8.5"
-                            cy="8.5"
-                            r="9"
-                          />
-                          <path
-                            d="M8.5 8.5V5.2M8.5 8.5l3.9 3.9"
-                          />
-                        </g>
-                      </svg>
+                          <g
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-miterlimit="10"
+                            stroke-width="2"
+                            transform="translate(1.5 1.5)"
+                          >
+                            <circle
+                              cx="8.5"
+                              cy="8.5"
+                              r="9"
+                            />
+                            <path
+                              d="M8.5 8.5V5.2M8.5 8.5l3.9 3.9"
+                            />
+                          </g>
+                        </svg>
+                      </div>
                     </div>
                   </span>
                 </div>
@@ -3786,9 +3813,8 @@ exports[`Signed Transaction Table > should render different status > should show
                   <div
                     class="flex flex-col items-end gap-1"
                   >
-                    <div
-                      class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-xqt0aw"
-                      color="danger-bg"
+                    <span
+                      class="font-semibold overflow-hidden text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border text-base flex items-center justify-center px-1.5 h-[21px] rounded dark:border"
                       data-testid="AmountLabel__wrapper"
                     >
                       <div
@@ -3801,7 +3827,7 @@ exports[`Signed Transaction Table > should render different status > should show
                           - 15 DARK
                         </span>
                       </div>
-                    </div>
+                    </span>
                     <span
                       class="text-xs font-semibold text-theme-secondary-700 lg:hidden"
                     >
@@ -3850,8 +3876,7 @@ exports[`Signed Transaction Table > should render different status > should show
                       </div>
                     </button>
                     <div
-                      class="m-0 border-theme-secondary-300 dark:border-theme-secondary-800 css-1aie31u"
-                      type="vertical"
+                      class="h-4 relative inline-block border-l border-t-0 border-solid align-middle m-0 border-theme-secondary-300 dark:border-theme-secondary-800"
                     />
                     <div
                       class="flex items-center"
@@ -3864,31 +3889,32 @@ exports[`Signed Transaction Table > should render different status > should show
                         <div
                           class="flex items-center space-x-2"
                         >
-                          <div
-                            class="css-v0ob3f"
-                            height="16"
-                            width="16"
-                          >
-                            <svg
-                              id="trash"
-                              viewBox="0 0 20 20"
-                              x="0"
-                              xml:space="preserve"
-                              xmlns="http://www.w3.org/2000/svg"
-                              y="0"
+                          <div>
+                            <div
+                              style="height: 16px; width: 16px;"
                             >
-                              <g
-                                fill="none"
-                                stroke="currentColor"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="2"
+                              <svg
+                                id="trash"
+                                style="height: 100%; width: 100%;"
+                                viewBox="0 0 20 20"
+                                x="0"
+                                xml:space="preserve"
+                                xmlns="http://www.w3.org/2000/svg"
+                                y="0"
                               >
-                                <path
-                                  d="M1 3.629h18M11.8 1H8c-.7 0-1.3.607-1.3 1.315h0v1.314H13V2.315C13 1.607 12.5 1 11.8 1h0zM8 14.449v-6.37M11.8 14.449v-6.37M15.7 17.787c-.1.707-.6 1.213-1.3 1.213H5.3c-.7 0-1.2-.506-1.3-1.213L2.9 3.629h14l-1.2 14.158z"
-                                />
-                              </g>
-                            </svg>
+                                <g
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="2"
+                                >
+                                  <path
+                                    d="M1 3.629h18M11.8 1H8c-.7 0-1.3.607-1.3 1.315h0v1.314H13V2.315C13 1.607 12.5 1 11.8 1h0zM8 14.449v-6.37M11.8 14.449v-6.37M15.7 17.787c-.1.707-.6 1.213-1.3 1.213H5.3c-.7 0-1.2-.506-1.3-1.213L2.9 3.629h14l-1.2 14.158z"
+                                  />
+                                </g>
+                              </svg>
+                            </div>
                           </div>
                         </div>
                       </button>
@@ -3968,28 +3994,31 @@ exports[`Signed Transaction Table > should render ready to broadcast transaction
                     class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
                   >
                     <div
-                      class="transition-transform css-15txs7d"
-                      height="10"
+                      class="transition-transform"
                       role="img"
-                      width="10"
                     >
-                      <svg
-                        id="chevron-down-small"
-                        viewBox="0 0 10 10"
-                        x="0"
-                        xml:space="preserve"
-                        xmlns="http://www.w3.org/2000/svg"
-                        y="0"
+                      <div
+                        style="height: 10px; width: 10px;"
                       >
-                        <path
-                          d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                        />
-                      </svg>
+                        <svg
+                          id="chevron-down-small"
+                          style="height: 100%; width: 100%;"
+                          viewBox="0 0 10 10"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
+                        >
+                          <path
+                            d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          />
+                        </svg>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -4062,28 +4091,31 @@ exports[`Signed Transaction Table > should render ready to broadcast transaction
                     class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-auto mr-2"
                   >
                     <div
-                      class="transition-transform rotate-180 css-15txs7d"
-                      height="10"
+                      class="transition-transform rotate-180"
                       role="img"
-                      width="10"
                     >
-                      <svg
-                        id="chevron-down-small"
-                        viewBox="0 0 10 10"
-                        x="0"
-                        xml:space="preserve"
-                        xmlns="http://www.w3.org/2000/svg"
-                        y="0"
+                      <div
+                        style="height: 10px; width: 10px;"
                       >
-                        <path
-                          d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                        />
-                      </svg>
+                        <svg
+                          id="chevron-down-small"
+                          style="height: 100%; width: 100%;"
+                          viewBox="0 0 10 10"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
+                        >
+                          <path
+                            d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          />
+                        </svg>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -4108,28 +4140,31 @@ exports[`Signed Transaction Table > should render ready to broadcast transaction
                     class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-auto mr-2"
                   >
                     <div
-                      class="transition-transform rotate-180 css-15txs7d"
-                      height="10"
+                      class="transition-transform rotate-180"
                       role="img"
-                      width="10"
                     >
-                      <svg
-                        id="chevron-down-small"
-                        viewBox="0 0 10 10"
-                        x="0"
-                        xml:space="preserve"
-                        xmlns="http://www.w3.org/2000/svg"
-                        y="0"
+                      <div
+                        style="height: 10px; width: 10px;"
                       >
-                        <path
-                          d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                        />
-                      </svg>
+                        <svg
+                          id="chevron-down-small"
+                          style="height: 100%; width: 100%;"
+                          viewBox="0 0 10 10"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
+                        >
+                          <path
+                            d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          />
+                        </svg>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -4205,13 +4240,12 @@ exports[`Signed Transaction Table > should render ready to broadcast transaction
                 <div
                   class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start my-1 pt-3 min-h-14 xl:min-h-11"
                 >
-                  <div
-                    class="rounded px-1 dark:border css-a8yjl2"
-                    color="secondary"
+                  <span
+                    class="inline-block font-semibold overflow-hidden text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] rounded px-1 dark:border"
                     data-testid="TransactionRowRecipientLabel"
                   >
                     Multisignature
-                  </div>
+                  </span>
                 </div>
               </td>
               <td>
@@ -4222,13 +4256,12 @@ exports[`Signed Transaction Table > should render ready to broadcast transaction
                     class="flex flex-row gap-2"
                     data-testid="TransactionRowAddressing__musig_registration"
                   >
-                    <div
-                      class="!flex h-[21px] w-12 items-center justify-center rounded px-1 py-[3px] dark:border css-1qplu6d"
-                      color="danger-bg"
+                    <span
+                      class="inline-block font-semibold overflow-hidden text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border text-xs leading-[15px] !flex h-[21px] w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
                       data-testid="TransactionRowAddressing__label"
                     >
                       To
-                    </div>
+                    </span>
                     <span
                       class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                     >
@@ -4246,11 +4279,11 @@ exports[`Signed Transaction Table > should render ready to broadcast transaction
                   <span
                     class="text-theme-secondary-700"
                   >
-                    <div
-                      class="css-v0ob3f"
-                      height="16"
-                      width="16"
-                    />
+                    <div>
+                      <div
+                        style="height: 16px; width: 16px;"
+                      />
+                    </div>
                   </span>
                 </div>
               </td>
@@ -4261,9 +4294,8 @@ exports[`Signed Transaction Table > should render ready to broadcast transaction
                   <div
                     class="flex flex-col items-end gap-1"
                   >
-                    <div
-                      class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-xqt0aw"
-                      color="danger-bg"
+                    <span
+                      class="font-semibold overflow-hidden text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border text-base flex items-center justify-center px-1.5 h-[21px] rounded dark:border"
                       data-testid="AmountLabel__wrapper"
                     >
                       <div
@@ -4276,7 +4308,7 @@ exports[`Signed Transaction Table > should render ready to broadcast transaction
                           - 15 DARK
                         </span>
                       </div>
-                    </div>
+                    </span>
                     <span
                       class="text-xs font-semibold text-theme-secondary-700 lg:hidden"
                     >
@@ -4325,8 +4357,7 @@ exports[`Signed Transaction Table > should render ready to broadcast transaction
                       </div>
                     </button>
                     <div
-                      class="m-0 border-theme-secondary-300 dark:border-theme-secondary-800 css-1aie31u"
-                      type="vertical"
+                      class="h-4 relative inline-block border-l border-t-0 border-solid align-middle m-0 border-theme-secondary-300 dark:border-theme-secondary-800"
                     />
                     <div
                       class="flex items-center"
@@ -4339,31 +4370,32 @@ exports[`Signed Transaction Table > should render ready to broadcast transaction
                         <div
                           class="flex items-center space-x-2"
                         >
-                          <div
-                            class="css-v0ob3f"
-                            height="16"
-                            width="16"
-                          >
-                            <svg
-                              id="trash"
-                              viewBox="0 0 20 20"
-                              x="0"
-                              xml:space="preserve"
-                              xmlns="http://www.w3.org/2000/svg"
-                              y="0"
+                          <div>
+                            <div
+                              style="height: 16px; width: 16px;"
                             >
-                              <g
-                                fill="none"
-                                stroke="currentColor"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="2"
+                              <svg
+                                id="trash"
+                                style="height: 100%; width: 100%;"
+                                viewBox="0 0 20 20"
+                                x="0"
+                                xml:space="preserve"
+                                xmlns="http://www.w3.org/2000/svg"
+                                y="0"
                               >
-                                <path
-                                  d="M1 3.629h18M11.8 1H8c-.7 0-1.3.607-1.3 1.315h0v1.314H13V2.315C13 1.607 12.5 1 11.8 1h0zM8 14.449v-6.37M11.8 14.449v-6.37M15.7 17.787c-.1.707-.6 1.213-1.3 1.213H5.3c-.7 0-1.2-.506-1.3-1.213L2.9 3.629h14l-1.2 14.158z"
-                                />
-                              </g>
-                            </svg>
+                                <g
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="2"
+                                >
+                                  <path
+                                    d="M1 3.629h18M11.8 1H8c-.7 0-1.3.607-1.3 1.315h0v1.314H13V2.315C13 1.607 12.5 1 11.8 1h0zM8 14.449v-6.37M11.8 14.449v-6.37M15.7 17.787c-.1.707-.6 1.213-1.3 1.213H5.3c-.7 0-1.2-.506-1.3-1.213L2.9 3.629h14l-1.2 14.158z"
+                                  />
+                                </g>
+                              </svg>
+                            </div>
                           </div>
                         </div>
                       </button>
@@ -4443,28 +4475,31 @@ exports[`Signed Transaction Table > should render signed transactions and handle
                     class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
                   >
                     <div
-                      class="transition-transform css-15txs7d"
-                      height="10"
+                      class="transition-transform"
                       role="img"
-                      width="10"
                     >
-                      <svg
-                        id="chevron-down-small"
-                        viewBox="0 0 10 10"
-                        x="0"
-                        xml:space="preserve"
-                        xmlns="http://www.w3.org/2000/svg"
-                        y="0"
+                      <div
+                        style="height: 10px; width: 10px;"
                       >
-                        <path
-                          d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                        />
-                      </svg>
+                        <svg
+                          id="chevron-down-small"
+                          style="height: 100%; width: 100%;"
+                          viewBox="0 0 10 10"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
+                        >
+                          <path
+                            d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          />
+                        </svg>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -4537,28 +4572,31 @@ exports[`Signed Transaction Table > should render signed transactions and handle
                     class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-auto mr-2"
                   >
                     <div
-                      class="transition-transform rotate-180 css-15txs7d"
-                      height="10"
+                      class="transition-transform rotate-180"
                       role="img"
-                      width="10"
                     >
-                      <svg
-                        id="chevron-down-small"
-                        viewBox="0 0 10 10"
-                        x="0"
-                        xml:space="preserve"
-                        xmlns="http://www.w3.org/2000/svg"
-                        y="0"
+                      <div
+                        style="height: 10px; width: 10px;"
                       >
-                        <path
-                          d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                        />
-                      </svg>
+                        <svg
+                          id="chevron-down-small"
+                          style="height: 100%; width: 100%;"
+                          viewBox="0 0 10 10"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
+                        >
+                          <path
+                            d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          />
+                        </svg>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -4583,28 +4621,31 @@ exports[`Signed Transaction Table > should render signed transactions and handle
                     class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-auto mr-2"
                   >
                     <div
-                      class="transition-transform rotate-180 css-15txs7d"
-                      height="10"
+                      class="transition-transform rotate-180"
                       role="img"
-                      width="10"
                     >
-                      <svg
-                        id="chevron-down-small"
-                        viewBox="0 0 10 10"
-                        x="0"
-                        xml:space="preserve"
-                        xmlns="http://www.w3.org/2000/svg"
-                        y="0"
+                      <div
+                        style="height: 10px; width: 10px;"
                       >
-                        <path
-                          d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                        />
-                      </svg>
+                        <svg
+                          id="chevron-down-small"
+                          style="height: 100%; width: 100%;"
+                          viewBox="0 0 10 10"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
+                        >
+                          <path
+                            d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          />
+                        </svg>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -4680,13 +4721,12 @@ exports[`Signed Transaction Table > should render signed transactions and handle
                 <div
                   class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start my-1 pt-3 min-h-14 xl:min-h-11"
                 >
-                  <div
-                    class="rounded px-1 dark:border css-a8yjl2"
-                    color="secondary"
+                  <span
+                    class="inline-block font-semibold overflow-hidden text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] rounded px-1 dark:border"
                     data-testid="TransactionRowRecipientLabel"
                   >
                     Multisignature
-                  </div>
+                  </span>
                 </div>
               </td>
               <td>
@@ -4697,13 +4737,12 @@ exports[`Signed Transaction Table > should render signed transactions and handle
                     class="flex flex-row gap-2"
                     data-testid="TransactionRowAddressing__musig_registration"
                   >
-                    <div
-                      class="!flex h-[21px] w-12 items-center justify-center rounded px-1 py-[3px] dark:border css-1qplu6d"
-                      color="danger-bg"
+                    <span
+                      class="inline-block font-semibold overflow-hidden text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border text-xs leading-[15px] !flex h-[21px] w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
                       data-testid="TransactionRowAddressing__label"
                     >
                       To
-                    </div>
+                    </span>
                     <span
                       class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                     >
@@ -4721,28 +4760,29 @@ exports[`Signed Transaction Table > should render signed transactions and handle
                   <span
                     class="text-theme-secondary-700"
                   >
-                    <div
-                      class="css-v0ob3f"
-                      height="16"
-                      width="16"
-                    >
-                      <svg
-                        id="pencil"
-                        viewBox="0 0 20 20"
-                        x="0"
-                        xml:space="preserve"
-                        xmlns="http://www.w3.org/2000/svg"
-                        y="0"
+                    <div>
+                      <div
+                        style="height: 16px; width: 16px;"
                       >
-                        <path
-                          d="M5.92 18.297L1 19l.703-4.72L14.054 1.828c1.105-1.104 2.913-1.104 4.118 0 1.104 1.105 1.104 2.913 0 4.118L5.92 18.297z"
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                        />
-                      </svg>
+                        <svg
+                          id="pencil"
+                          style="height: 100%; width: 100%;"
+                          viewBox="0 0 20 20"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
+                        >
+                          <path
+                            d="M5.92 18.297L1 19l.703-4.72L14.054 1.828c1.105-1.104 2.913-1.104 4.118 0 1.104 1.105 1.104 2.913 0 4.118L5.92 18.297z"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          />
+                        </svg>
+                      </div>
                     </div>
                   </span>
                 </div>
@@ -4754,9 +4794,8 @@ exports[`Signed Transaction Table > should render signed transactions and handle
                   <div
                     class="flex flex-col items-end gap-1"
                   >
-                    <div
-                      class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-xqt0aw"
-                      color="danger-bg"
+                    <span
+                      class="font-semibold overflow-hidden text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border text-base flex items-center justify-center px-1.5 h-[21px] rounded dark:border"
                       data-testid="AmountLabel__wrapper"
                     >
                       <div
@@ -4769,7 +4808,7 @@ exports[`Signed Transaction Table > should render signed transactions and handle
                           - 15 DARK
                         </span>
                       </div>
-                    </div>
+                    </span>
                     <span
                       class="text-xs font-semibold text-theme-secondary-700 lg:hidden"
                     >
@@ -4810,8 +4849,7 @@ exports[`Signed Transaction Table > should render signed transactions and handle
                       Waiting...
                     </span>
                     <div
-                      class="m-0 border-theme-secondary-300 dark:border-theme-secondary-800 css-1aie31u"
-                      type="vertical"
+                      class="h-4 relative inline-block border-l border-t-0 border-solid align-middle m-0 border-theme-secondary-300 dark:border-theme-secondary-800"
                     />
                     <div
                       class="flex items-center"
@@ -4824,31 +4862,32 @@ exports[`Signed Transaction Table > should render signed transactions and handle
                         <div
                           class="flex items-center space-x-2"
                         >
-                          <div
-                            class="css-v0ob3f"
-                            height="16"
-                            width="16"
-                          >
-                            <svg
-                              id="trash"
-                              viewBox="0 0 20 20"
-                              x="0"
-                              xml:space="preserve"
-                              xmlns="http://www.w3.org/2000/svg"
-                              y="0"
+                          <div>
+                            <div
+                              style="height: 16px; width: 16px;"
                             >
-                              <g
-                                fill="none"
-                                stroke="currentColor"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="2"
+                              <svg
+                                id="trash"
+                                style="height: 100%; width: 100%;"
+                                viewBox="0 0 20 20"
+                                x="0"
+                                xml:space="preserve"
+                                xmlns="http://www.w3.org/2000/svg"
+                                y="0"
                               >
-                                <path
-                                  d="M1 3.629h18M11.8 1H8c-.7 0-1.3.607-1.3 1.315h0v1.314H13V2.315C13 1.607 12.5 1 11.8 1h0zM8 14.449v-6.37M11.8 14.449v-6.37M15.7 17.787c-.1.707-.6 1.213-1.3 1.213H5.3c-.7 0-1.2-.506-1.3-1.213L2.9 3.629h14l-1.2 14.158z"
-                                />
-                              </g>
-                            </svg>
+                                <g
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="2"
+                                >
+                                  <path
+                                    d="M1 3.629h18M11.8 1H8c-.7 0-1.3.607-1.3 1.315h0v1.314H13V2.315C13 1.607 12.5 1 11.8 1h0zM8 14.449v-6.37M11.8 14.449v-6.37M15.7 17.787c-.1.707-.6 1.213-1.3 1.213H5.3c-.7 0-1.2-.506-1.3-1.213L2.9 3.629h14l-1.2 14.158z"
+                                  />
+                                </g>
+                              </svg>
+                            </div>
                           </div>
                         </div>
                       </button>
@@ -4928,28 +4967,31 @@ exports[`Signed Transaction Table > should show as awaiting confirmations 1`] = 
                     class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
                   >
                     <div
-                      class="transition-transform css-15txs7d"
-                      height="10"
+                      class="transition-transform"
                       role="img"
-                      width="10"
                     >
-                      <svg
-                        id="chevron-down-small"
-                        viewBox="0 0 10 10"
-                        x="0"
-                        xml:space="preserve"
-                        xmlns="http://www.w3.org/2000/svg"
-                        y="0"
+                      <div
+                        style="height: 10px; width: 10px;"
                       >
-                        <path
-                          d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                        />
-                      </svg>
+                        <svg
+                          id="chevron-down-small"
+                          style="height: 100%; width: 100%;"
+                          viewBox="0 0 10 10"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
+                        >
+                          <path
+                            d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          />
+                        </svg>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -5022,28 +5064,31 @@ exports[`Signed Transaction Table > should show as awaiting confirmations 1`] = 
                     class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-auto mr-2"
                   >
                     <div
-                      class="transition-transform rotate-180 css-15txs7d"
-                      height="10"
+                      class="transition-transform rotate-180"
                       role="img"
-                      width="10"
                     >
-                      <svg
-                        id="chevron-down-small"
-                        viewBox="0 0 10 10"
-                        x="0"
-                        xml:space="preserve"
-                        xmlns="http://www.w3.org/2000/svg"
-                        y="0"
+                      <div
+                        style="height: 10px; width: 10px;"
                       >
-                        <path
-                          d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                        />
-                      </svg>
+                        <svg
+                          id="chevron-down-small"
+                          style="height: 100%; width: 100%;"
+                          viewBox="0 0 10 10"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
+                        >
+                          <path
+                            d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          />
+                        </svg>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -5068,28 +5113,31 @@ exports[`Signed Transaction Table > should show as awaiting confirmations 1`] = 
                     class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-auto mr-2"
                   >
                     <div
-                      class="transition-transform rotate-180 css-15txs7d"
-                      height="10"
+                      class="transition-transform rotate-180"
                       role="img"
-                      width="10"
                     >
-                      <svg
-                        id="chevron-down-small"
-                        viewBox="0 0 10 10"
-                        x="0"
-                        xml:space="preserve"
-                        xmlns="http://www.w3.org/2000/svg"
-                        y="0"
+                      <div
+                        style="height: 10px; width: 10px;"
                       >
-                        <path
-                          d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                        />
-                      </svg>
+                        <svg
+                          id="chevron-down-small"
+                          style="height: 100%; width: 100%;"
+                          viewBox="0 0 10 10"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
+                        >
+                          <path
+                            d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          />
+                        </svg>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -5165,24 +5213,22 @@ exports[`Signed Transaction Table > should show as awaiting confirmations 1`] = 
                 <div
                   class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start my-1 pt-3 min-h-14 xl:min-h-11"
                 >
-                  <div
-                    class="rounded px-1 dark:border css-a8yjl2"
-                    color="secondary"
+                  <span
+                    class="inline-block font-semibold overflow-hidden text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] rounded px-1 dark:border"
                   >
                     Transfer
-                  </div>
+                  </span>
                 </div>
               </td>
               <td>
                 <div
                   class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 space-x-2 items-start my-1 pt-3 min-h-14 xl:min-h-11"
                 >
-                  <div
-                    class="rounded px-[11px] py-1 css-1qplu6d"
-                    color="danger-bg"
+                  <span
+                    class="inline-block font-semibold overflow-hidden text-theme-danger-info-text bg-theme-danger-info-background dark:border dark:bg-transparent dark:border-theme-danger-info-border text-xs leading-[15px] rounded px-[11px] py-1"
                   >
                     To
-                  </div>
+                  </span>
                   <span
                     class="text-sm"
                   >
@@ -5204,38 +5250,39 @@ exports[`Signed Transaction Table > should show as awaiting confirmations 1`] = 
                   <span
                     class="text-theme-secondary-700"
                   >
-                    <div
-                      class="css-v0ob3f"
-                      height="16"
-                      width="16"
-                    >
-                      <svg
-                        id="clock"
-                        viewBox="0 0 20 20"
-                        x="0"
-                        xml:space="preserve"
-                        xmlns="http://www.w3.org/2000/svg"
-                        y="0"
+                    <div>
+                      <div
+                        style="height: 16px; width: 16px;"
                       >
-                        <g
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-miterlimit="10"
-                          stroke-width="2"
-                          transform="translate(1.5 1.5)"
+                        <svg
+                          id="clock"
+                          style="height: 100%; width: 100%;"
+                          viewBox="0 0 20 20"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
                         >
-                          <circle
-                            cx="8.5"
-                            cy="8.5"
-                            r="9"
-                          />
-                          <path
-                            d="M8.5 8.5V5.2M8.5 8.5l3.9 3.9"
-                          />
-                        </g>
-                      </svg>
+                          <g
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-miterlimit="10"
+                            stroke-width="2"
+                            transform="translate(1.5 1.5)"
+                          >
+                            <circle
+                              cx="8.5"
+                              cy="8.5"
+                              r="9"
+                            />
+                            <path
+                              d="M8.5 8.5V5.2M8.5 8.5l3.9 3.9"
+                            />
+                          </g>
+                        </svg>
+                      </div>
                     </div>
                   </span>
                 </div>
@@ -5248,13 +5295,12 @@ exports[`Signed Transaction Table > should show as awaiting confirmations 1`] = 
                     class="flex flex-row gap-2"
                     data-testid="TransactionRowAddressing__container"
                   >
-                    <div
-                      class="!flex h-[21px] w-12 items-center justify-center rounded px-1 py-[3px] dark:border css-1qplu6d"
-                      color="danger-bg"
+                    <span
+                      class="inline-block font-semibold overflow-hidden text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border text-xs leading-[15px] !flex h-[21px] w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
                       data-testid="TransactionRowAddressing__label"
                     >
                       To
-                    </div>
+                    </span>
                     <div
                       class="w-50 sm:w-30"
                       data-testid="TransactionRowAddressing__address-container"
@@ -5376,8 +5422,7 @@ exports[`Signed Transaction Table > should show as awaiting confirmations on mob
                         </span>
                       </span>
                       <div
-                        class="m-0 border-transparent sm:border-theme-secondary-300 sm:dark:border-theme-secondary-800 css-1aie31u"
-                        type="vertical"
+                        class="h-4 relative inline-block border-l border-t-0 border-solid align-middle m-0 border-transparent sm:border-theme-secondary-300 sm:dark:border-theme-secondary-800"
                       />
                       <span
                         class="flex flex-row items-center text-sm font-semibold text-theme-secondary-500"
@@ -5403,12 +5448,11 @@ exports[`Signed Transaction Table > should show as awaiting confirmations on mob
                         <div
                           class="flex flex-row items-center gap-2"
                         >
-                          <div
-                            class="rounded px-[11px] py-[3px] css-1qplu6d"
-                            color="danger-bg"
+                          <span
+                            class="inline-block font-semibold overflow-hidden text-theme-danger-info-text bg-theme-danger-info-background dark:border dark:bg-transparent dark:border-theme-danger-info-border text-xs leading-[15px] rounded px-[11px] py-[3px]"
                           >
                             To
-                          </div>
+                          </span>
                           <span
                             class="text-sm"
                           >
@@ -5433,9 +5477,8 @@ exports[`Signed Transaction Table > should show as awaiting confirmations on mob
                       <div
                         class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                       >
-                        <div
-                          class="flex h-full items-center justify-center rounded px-1.5 py-[3px] css-1jspzfx"
-                          color="success-bg"
+                        <span
+                          class="font-semibold overflow-hidden bg-theme-success-100 text-theme-success-700 dark:border dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-base flex h-full items-center justify-center rounded px-1.5 py-[3px]"
                           data-testid="AmountLabel__wrapper"
                         >
                           <div
@@ -5448,7 +5491,7 @@ exports[`Signed Transaction Table > should show as awaiting confirmations on mob
                               + 1.1 DARK
                             </span>
                           </div>
-                        </div>
+                        </span>
                       </div>
                     </div>
                     <div
@@ -5563,28 +5606,31 @@ exports[`Signed Transaction Table > should show the sign button with isCompact =
                     class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
                   >
                     <div
-                      class="transition-transform css-15txs7d"
-                      height="10"
+                      class="transition-transform"
                       role="img"
-                      width="10"
                     >
-                      <svg
-                        id="chevron-down-small"
-                        viewBox="0 0 10 10"
-                        x="0"
-                        xml:space="preserve"
-                        xmlns="http://www.w3.org/2000/svg"
-                        y="0"
+                      <div
+                        style="height: 10px; width: 10px;"
                       >
-                        <path
-                          d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                        />
-                      </svg>
+                        <svg
+                          id="chevron-down-small"
+                          style="height: 100%; width: 100%;"
+                          viewBox="0 0 10 10"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
+                        >
+                          <path
+                            d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          />
+                        </svg>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -5657,28 +5703,31 @@ exports[`Signed Transaction Table > should show the sign button with isCompact =
                     class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-auto mr-2"
                   >
                     <div
-                      class="transition-transform rotate-180 css-15txs7d"
-                      height="10"
+                      class="transition-transform rotate-180"
                       role="img"
-                      width="10"
                     >
-                      <svg
-                        id="chevron-down-small"
-                        viewBox="0 0 10 10"
-                        x="0"
-                        xml:space="preserve"
-                        xmlns="http://www.w3.org/2000/svg"
-                        y="0"
+                      <div
+                        style="height: 10px; width: 10px;"
                       >
-                        <path
-                          d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                        />
-                      </svg>
+                        <svg
+                          id="chevron-down-small"
+                          style="height: 100%; width: 100%;"
+                          viewBox="0 0 10 10"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
+                        >
+                          <path
+                            d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          />
+                        </svg>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -5703,28 +5752,31 @@ exports[`Signed Transaction Table > should show the sign button with isCompact =
                     class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-auto mr-2"
                   >
                     <div
-                      class="transition-transform rotate-180 css-15txs7d"
-                      height="10"
+                      class="transition-transform rotate-180"
                       role="img"
-                      width="10"
                     >
-                      <svg
-                        id="chevron-down-small"
-                        viewBox="0 0 10 10"
-                        x="0"
-                        xml:space="preserve"
-                        xmlns="http://www.w3.org/2000/svg"
-                        y="0"
+                      <div
+                        style="height: 10px; width: 10px;"
                       >
-                        <path
-                          d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                        />
-                      </svg>
+                        <svg
+                          id="chevron-down-small"
+                          style="height: 100%; width: 100%;"
+                          viewBox="0 0 10 10"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
+                        >
+                          <path
+                            d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          />
+                        </svg>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -5800,13 +5852,12 @@ exports[`Signed Transaction Table > should show the sign button with isCompact =
                 <div
                   class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start my-1 pt-3 min-h-14 xl:min-h-11"
                 >
-                  <div
-                    class="rounded px-1 dark:border css-a8yjl2"
-                    color="secondary"
+                  <span
+                    class="inline-block font-semibold overflow-hidden text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] rounded px-1 dark:border"
                     data-testid="TransactionRowRecipientLabel"
                   >
                     Multisignature
-                  </div>
+                  </span>
                 </div>
               </td>
               <td>
@@ -5817,13 +5868,12 @@ exports[`Signed Transaction Table > should show the sign button with isCompact =
                     class="flex flex-row gap-2"
                     data-testid="TransactionRowAddressing__musig_registration"
                   >
-                    <div
-                      class="!flex h-[21px] w-12 items-center justify-center rounded px-1 py-[3px] dark:border css-1qplu6d"
-                      color="danger-bg"
+                    <span
+                      class="inline-block font-semibold overflow-hidden text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border text-xs leading-[15px] !flex h-[21px] w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
                       data-testid="TransactionRowAddressing__label"
                     >
                       To
-                    </div>
+                    </span>
                     <span
                       class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                     >
@@ -5841,38 +5891,39 @@ exports[`Signed Transaction Table > should show the sign button with isCompact =
                   <span
                     class="text-theme-secondary-700"
                   >
-                    <div
-                      class="css-v0ob3f"
-                      height="16"
-                      width="16"
-                    >
-                      <svg
-                        id="clock"
-                        viewBox="0 0 20 20"
-                        x="0"
-                        xml:space="preserve"
-                        xmlns="http://www.w3.org/2000/svg"
-                        y="0"
+                    <div>
+                      <div
+                        style="height: 16px; width: 16px;"
                       >
-                        <g
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-miterlimit="10"
-                          stroke-width="2"
-                          transform="translate(1.5 1.5)"
+                        <svg
+                          id="clock"
+                          style="height: 100%; width: 100%;"
+                          viewBox="0 0 20 20"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
                         >
-                          <circle
-                            cx="8.5"
-                            cy="8.5"
-                            r="9"
-                          />
-                          <path
-                            d="M8.5 8.5V5.2M8.5 8.5l3.9 3.9"
-                          />
-                        </g>
-                      </svg>
+                          <g
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-miterlimit="10"
+                            stroke-width="2"
+                            transform="translate(1.5 1.5)"
+                          >
+                            <circle
+                              cx="8.5"
+                              cy="8.5"
+                              r="9"
+                            />
+                            <path
+                              d="M8.5 8.5V5.2M8.5 8.5l3.9 3.9"
+                            />
+                          </g>
+                        </svg>
+                      </div>
                     </div>
                   </span>
                 </div>
@@ -5884,9 +5935,8 @@ exports[`Signed Transaction Table > should show the sign button with isCompact =
                   <div
                     class="flex flex-col items-end gap-1"
                   >
-                    <div
-                      class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-xqt0aw"
-                      color="danger-bg"
+                    <span
+                      class="font-semibold overflow-hidden text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border text-base flex items-center justify-center px-1.5 h-[21px] rounded dark:border"
                       data-testid="AmountLabel__wrapper"
                     >
                       <div
@@ -5899,7 +5949,7 @@ exports[`Signed Transaction Table > should show the sign button with isCompact =
                           - 15 DARK
                         </span>
                       </div>
-                    </div>
+                    </span>
                     <span
                       class="text-xs font-semibold text-theme-secondary-700 lg:hidden"
                     >
@@ -5948,8 +5998,7 @@ exports[`Signed Transaction Table > should show the sign button with isCompact =
                       </div>
                     </button>
                     <div
-                      class="m-0 border-theme-secondary-300 dark:border-theme-secondary-800 css-1aie31u"
-                      type="vertical"
+                      class="h-4 relative inline-block border-l border-t-0 border-solid align-middle m-0 border-theme-secondary-300 dark:border-theme-secondary-800"
                     />
                     <div
                       class="flex items-center"
@@ -5962,31 +6011,32 @@ exports[`Signed Transaction Table > should show the sign button with isCompact =
                         <div
                           class="flex items-center space-x-2"
                         >
-                          <div
-                            class="css-v0ob3f"
-                            height="16"
-                            width="16"
-                          >
-                            <svg
-                              id="trash"
-                              viewBox="0 0 20 20"
-                              x="0"
-                              xml:space="preserve"
-                              xmlns="http://www.w3.org/2000/svg"
-                              y="0"
+                          <div>
+                            <div
+                              style="height: 16px; width: 16px;"
                             >
-                              <g
-                                fill="none"
-                                stroke="currentColor"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="2"
+                              <svg
+                                id="trash"
+                                style="height: 100%; width: 100%;"
+                                viewBox="0 0 20 20"
+                                x="0"
+                                xml:space="preserve"
+                                xmlns="http://www.w3.org/2000/svg"
+                                y="0"
                               >
-                                <path
-                                  d="M1 3.629h18M11.8 1H8c-.7 0-1.3.607-1.3 1.315h0v1.314H13V2.315C13 1.607 12.5 1 11.8 1h0zM8 14.449v-6.37M11.8 14.449v-6.37M15.7 17.787c-.1.707-.6 1.213-1.3 1.213H5.3c-.7 0-1.2-.506-1.3-1.213L2.9 3.629h14l-1.2 14.158z"
-                                />
-                              </g>
-                            </svg>
+                                <g
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="2"
+                                >
+                                  <path
+                                    d="M1 3.629h18M11.8 1H8c-.7 0-1.3.607-1.3 1.315h0v1.314H13V2.315C13 1.607 12.5 1 11.8 1h0zM8 14.449v-6.37M11.8 14.449v-6.37M15.7 17.787c-.1.707-.6 1.213-1.3 1.213H5.3c-.7 0-1.2-.506-1.3-1.213L2.9 3.629h14l-1.2 14.158z"
+                                  />
+                                </g>
+                              </svg>
+                            </div>
                           </div>
                         </div>
                       </button>
@@ -6066,28 +6116,31 @@ exports[`Signed Transaction Table > should show the sign button with isCompact =
                     class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
                   >
                     <div
-                      class="transition-transform css-15txs7d"
-                      height="10"
+                      class="transition-transform"
                       role="img"
-                      width="10"
                     >
-                      <svg
-                        id="chevron-down-small"
-                        viewBox="0 0 10 10"
-                        x="0"
-                        xml:space="preserve"
-                        xmlns="http://www.w3.org/2000/svg"
-                        y="0"
+                      <div
+                        style="height: 10px; width: 10px;"
                       >
-                        <path
-                          d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                        />
-                      </svg>
+                        <svg
+                          id="chevron-down-small"
+                          style="height: 100%; width: 100%;"
+                          viewBox="0 0 10 10"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
+                        >
+                          <path
+                            d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          />
+                        </svg>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -6160,28 +6213,31 @@ exports[`Signed Transaction Table > should show the sign button with isCompact =
                     class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-auto mr-2"
                   >
                     <div
-                      class="transition-transform rotate-180 css-15txs7d"
-                      height="10"
+                      class="transition-transform rotate-180"
                       role="img"
-                      width="10"
                     >
-                      <svg
-                        id="chevron-down-small"
-                        viewBox="0 0 10 10"
-                        x="0"
-                        xml:space="preserve"
-                        xmlns="http://www.w3.org/2000/svg"
-                        y="0"
+                      <div
+                        style="height: 10px; width: 10px;"
                       >
-                        <path
-                          d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                        />
-                      </svg>
+                        <svg
+                          id="chevron-down-small"
+                          style="height: 100%; width: 100%;"
+                          viewBox="0 0 10 10"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
+                        >
+                          <path
+                            d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          />
+                        </svg>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -6206,28 +6262,31 @@ exports[`Signed Transaction Table > should show the sign button with isCompact =
                     class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-auto mr-2"
                   >
                     <div
-                      class="transition-transform rotate-180 css-15txs7d"
-                      height="10"
+                      class="transition-transform rotate-180"
                       role="img"
-                      width="10"
                     >
-                      <svg
-                        id="chevron-down-small"
-                        viewBox="0 0 10 10"
-                        x="0"
-                        xml:space="preserve"
-                        xmlns="http://www.w3.org/2000/svg"
-                        y="0"
+                      <div
+                        style="height: 10px; width: 10px;"
                       >
-                        <path
-                          d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                        />
-                      </svg>
+                        <svg
+                          id="chevron-down-small"
+                          style="height: 100%; width: 100%;"
+                          viewBox="0 0 10 10"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
+                        >
+                          <path
+                            d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          />
+                        </svg>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -6303,13 +6362,12 @@ exports[`Signed Transaction Table > should show the sign button with isCompact =
                 <div
                   class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start my-1 pt-3 min-h-14 xl:min-h-11"
                 >
-                  <div
-                    class="rounded px-1 dark:border css-a8yjl2"
-                    color="secondary"
+                  <span
+                    class="inline-block font-semibold overflow-hidden text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] rounded px-1 dark:border"
                     data-testid="TransactionRowRecipientLabel"
                   >
                     Multisignature
-                  </div>
+                  </span>
                 </div>
               </td>
               <td>
@@ -6320,13 +6378,12 @@ exports[`Signed Transaction Table > should show the sign button with isCompact =
                     class="flex flex-row gap-2"
                     data-testid="TransactionRowAddressing__musig_registration"
                   >
-                    <div
-                      class="!flex h-[21px] w-12 items-center justify-center rounded px-1 py-[3px] dark:border css-1qplu6d"
-                      color="danger-bg"
+                    <span
+                      class="inline-block font-semibold overflow-hidden text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border text-xs leading-[15px] !flex h-[21px] w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
                       data-testid="TransactionRowAddressing__label"
                     >
                       To
-                    </div>
+                    </span>
                     <span
                       class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                     >
@@ -6344,38 +6401,39 @@ exports[`Signed Transaction Table > should show the sign button with isCompact =
                   <span
                     class="text-theme-secondary-700"
                   >
-                    <div
-                      class="css-v0ob3f"
-                      height="16"
-                      width="16"
-                    >
-                      <svg
-                        id="clock"
-                        viewBox="0 0 20 20"
-                        x="0"
-                        xml:space="preserve"
-                        xmlns="http://www.w3.org/2000/svg"
-                        y="0"
+                    <div>
+                      <div
+                        style="height: 16px; width: 16px;"
                       >
-                        <g
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-miterlimit="10"
-                          stroke-width="2"
-                          transform="translate(1.5 1.5)"
+                        <svg
+                          id="clock"
+                          style="height: 100%; width: 100%;"
+                          viewBox="0 0 20 20"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
                         >
-                          <circle
-                            cx="8.5"
-                            cy="8.5"
-                            r="9"
-                          />
-                          <path
-                            d="M8.5 8.5V5.2M8.5 8.5l3.9 3.9"
-                          />
-                        </g>
-                      </svg>
+                          <g
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-miterlimit="10"
+                            stroke-width="2"
+                            transform="translate(1.5 1.5)"
+                          >
+                            <circle
+                              cx="8.5"
+                              cy="8.5"
+                              r="9"
+                            />
+                            <path
+                              d="M8.5 8.5V5.2M8.5 8.5l3.9 3.9"
+                            />
+                          </g>
+                        </svg>
+                      </div>
                     </div>
                   </span>
                 </div>
@@ -6387,9 +6445,8 @@ exports[`Signed Transaction Table > should show the sign button with isCompact =
                   <div
                     class="flex flex-col items-end gap-1"
                   >
-                    <div
-                      class="flex items-center justify-center px-1.5 h-[21px] rounded dark:border css-xqt0aw"
-                      color="danger-bg"
+                    <span
+                      class="font-semibold overflow-hidden text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border text-base flex items-center justify-center px-1.5 h-[21px] rounded dark:border"
                       data-testid="AmountLabel__wrapper"
                     >
                       <div
@@ -6402,7 +6459,7 @@ exports[`Signed Transaction Table > should show the sign button with isCompact =
                           - 15 DARK
                         </span>
                       </div>
-                    </div>
+                    </span>
                     <span
                       class="text-xs font-semibold text-theme-secondary-700 lg:hidden"
                     >
@@ -6451,8 +6508,7 @@ exports[`Signed Transaction Table > should show the sign button with isCompact =
                       </div>
                     </button>
                     <div
-                      class="m-0 border-theme-secondary-300 dark:border-theme-secondary-800 css-1aie31u"
-                      type="vertical"
+                      class="h-4 relative inline-block border-l border-t-0 border-solid align-middle m-0 border-theme-secondary-300 dark:border-theme-secondary-800"
                     />
                     <div
                       class="flex items-center"
@@ -6465,31 +6521,32 @@ exports[`Signed Transaction Table > should show the sign button with isCompact =
                         <div
                           class="flex items-center space-x-2"
                         >
-                          <div
-                            class="css-v0ob3f"
-                            height="16"
-                            width="16"
-                          >
-                            <svg
-                              id="trash"
-                              viewBox="0 0 20 20"
-                              x="0"
-                              xml:space="preserve"
-                              xmlns="http://www.w3.org/2000/svg"
-                              y="0"
+                          <div>
+                            <div
+                              style="height: 16px; width: 16px;"
                             >
-                              <g
-                                fill="none"
-                                stroke="currentColor"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="2"
+                              <svg
+                                id="trash"
+                                style="height: 100%; width: 100%;"
+                                viewBox="0 0 20 20"
+                                x="0"
+                                xml:space="preserve"
+                                xmlns="http://www.w3.org/2000/svg"
+                                y="0"
                               >
-                                <path
-                                  d="M1 3.629h18M11.8 1H8c-.7 0-1.3.607-1.3 1.315h0v1.314H13V2.315C13 1.607 12.5 1 11.8 1h0zM8 14.449v-6.37M11.8 14.449v-6.37M15.7 17.787c-.1.707-.6 1.213-1.3 1.213H5.3c-.7 0-1.2-.506-1.3-1.213L2.9 3.629h14l-1.2 14.158z"
-                                />
-                              </g>
-                            </svg>
+                                <g
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="2"
+                                >
+                                  <path
+                                    d="M1 3.629h18M11.8 1H8c-.7 0-1.3.607-1.3 1.315h0v1.314H13V2.315C13 1.607 12.5 1 11.8 1h0zM8 14.449v-6.37M11.8 14.449v-6.37M15.7 17.787c-.1.707-.6 1.213-1.3 1.213H5.3c-.7 0-1.2-.506-1.3-1.213L2.9 3.629h14l-1.2 14.158z"
+                                  />
+                                </g>
+                              </svg>
+                            </div>
                           </div>
                         </div>
                       </button>
