@@ -28802,6 +28802,7 @@ exports[`DelegateTable > should render vote amount column 1`] = `
                       >
                         <input
                           aria-invalid="false"
+                          autocomplete="off"
                           class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base text-right focus:text-left pr-8 text-theme-secondary-text"
                           data-testid="InputCurrency"
                           disabled=""
@@ -28992,6 +28993,7 @@ exports[`DelegateTable > should render vote amount column 1`] = `
                       >
                         <input
                           aria-invalid="false"
+                          autocomplete="off"
                           class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base text-right focus:text-left pr-8 text-theme-secondary-text"
                           data-testid="InputCurrency"
                           disabled=""
@@ -29182,6 +29184,7 @@ exports[`DelegateTable > should render vote amount column 1`] = `
                       >
                         <input
                           aria-invalid="false"
+                          autocomplete="off"
                           class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base text-right focus:text-left pr-8 text-theme-secondary-text"
                           data-testid="InputCurrency"
                           disabled=""
@@ -33417,13 +33420,14 @@ exports[`DelegateTable > should select a changed delegate to unvote 1`] = `
                     class="relative"
                   >
                     <div
-                      class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 border h-[34px] overflow-hidden"
+                      class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 h-[34px] overflow-hidden"
                     >
                       <div
                         class="relative flex h-full flex-1"
                       >
                         <input
                           aria-invalid="false"
+                          autocomplete="off"
                           class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base text-right focus:text-left pr-8"
                           data-testid="InputCurrency"
                           name="amount"
@@ -33613,6 +33617,7 @@ exports[`DelegateTable > should select a changed delegate to unvote 1`] = `
                       >
                         <input
                           aria-invalid="false"
+                          autocomplete="off"
                           class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base text-right focus:text-left pr-8 text-theme-secondary-text"
                           data-testid="InputCurrency"
                           disabled=""
@@ -33803,6 +33808,7 @@ exports[`DelegateTable > should select a changed delegate to unvote 1`] = `
                       >
                         <input
                           aria-invalid="false"
+                          autocomplete="off"
                           class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base text-right focus:text-left pr-8 text-theme-secondary-text"
                           data-testid="InputCurrency"
                           disabled=""
@@ -36758,13 +36764,14 @@ exports[`DelegateTable > should select a delegate with vote amount and make it u
                     class="relative"
                   >
                     <div
-                      class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 border h-[34px] overflow-hidden"
+                      class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 h-[34px] overflow-hidden"
                     >
                       <div
                         class="relative flex h-full flex-1"
                       >
                         <input
                           aria-invalid="false"
+                          autocomplete="off"
                           class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base text-right focus:text-left pr-8"
                           data-testid="InputCurrency"
                           name="amount"
@@ -36954,6 +36961,7 @@ exports[`DelegateTable > should select a delegate with vote amount and make it u
                       >
                         <input
                           aria-invalid="false"
+                          autocomplete="off"
                           class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base text-right focus:text-left pr-8 text-theme-secondary-text"
                           data-testid="InputCurrency"
                           disabled=""
@@ -37144,6 +37152,7 @@ exports[`DelegateTable > should select a delegate with vote amount and make it u
                       >
                         <input
                           aria-invalid="false"
+                          autocomplete="off"
                           class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base text-right focus:text-left pr-8 text-theme-secondary-text"
                           data-testid="InputCurrency"
                           disabled=""

@@ -4411,6 +4411,7 @@ exports[`WalletsGroup > should handle list wallet click 1`] = `
                   class="relative flex h-full flex-1"
                 >
                   <input
+                    autocomplete="off"
                     class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
                     data-testid="select-list__input"
                     readonly=""
@@ -4449,6 +4450,7 @@ exports[`WalletsGroup > should handle list wallet click 1`] = `
                           aria-autocomplete="list"
                           aria-controls="downshift-0-menu"
                           aria-labelledby="downshift-0-label"
+                          autocomplete="off"
                           class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
                           data-testid="SelectDropdown__input"
                           id="downshift-0-input"
@@ -12273,6 +12275,7 @@ exports[`WalletsGroup > should render with dark mode = false 1`] = `
                   class="relative flex h-full flex-1"
                 >
                   <input
+                    autocomplete="off"
                     class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
                     data-testid="select-list__input"
                     readonly=""
@@ -12311,6 +12314,7 @@ exports[`WalletsGroup > should render with dark mode = false 1`] = `
                           aria-autocomplete="list"
                           aria-controls="downshift-14-menu"
                           aria-labelledby="downshift-14-label"
+                          autocomplete="off"
                           class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
                           data-testid="SelectDropdown__input"
                           id="downshift-14-input"
@@ -16682,6 +16686,7 @@ exports[`WalletsGroup > should render with dark mode = true 1`] = `
                   class="relative flex h-full flex-1"
                 >
                   <input
+                    autocomplete="off"
                     class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
                     data-testid="select-list__input"
                     readonly=""
@@ -16720,6 +16725,7 @@ exports[`WalletsGroup > should render with dark mode = true 1`] = `
                           aria-autocomplete="list"
                           aria-controls="downshift-11-menu"
                           aria-labelledby="downshift-11-label"
+                          autocomplete="off"
                           class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
                           data-testid="SelectDropdown__input"
                           id="downshift-11-input"
@@ -21022,6 +21028,7 @@ exports[`WalletsGroup > should show skeleton when syncing exchange rates 1`] = `
                   class="relative flex h-full flex-1"
                 >
                   <input
+                    autocomplete="off"
                     class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
                     data-testid="select-list__input"
                     readonly=""
@@ -21060,6 +21067,7 @@ exports[`WalletsGroup > should show skeleton when syncing exchange rates 1`] = `
                           aria-autocomplete="list"
                           aria-controls="downshift-17-menu"
                           aria-labelledby="downshift-17-label"
+                          autocomplete="off"
                           class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
                           data-testid="SelectDropdown__input"
                           id="downshift-17-input"

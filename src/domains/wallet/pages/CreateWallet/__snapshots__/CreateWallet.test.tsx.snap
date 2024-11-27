@@ -132,7 +132,7 @@ exports[`CreateWallet > should create a wallet 1`] = `
         </button>
       </div>
     </div>
-    <div
+    <nav
       aria-labelledby="main menu"
       class="custom-nav-wrapper sticky inset-x-0 top-0 z-40 border-b bg-theme-background transition-all duration-200 border-theme-secondary-300 dark:border-theme-secondary-800"
     >
@@ -573,7 +573,7 @@ exports[`CreateWallet > should create a wallet 1`] = `
           </div>
         </div>
       </div>
-    </div>
+    </nav>
     <div
       class="flex flex-1 flex-col"
     >
@@ -1044,7 +1044,7 @@ exports[`CreateWallet > should create a wallet 2`] = `
         </button>
       </div>
     </div>
-    <div
+    <nav
       aria-labelledby="main menu"
       class="custom-nav-wrapper sticky inset-x-0 top-0 z-40 border-b bg-theme-background transition-all duration-200 border-theme-secondary-300 dark:border-theme-secondary-800"
     >
@@ -1483,7 +1483,7 @@ exports[`CreateWallet > should create a wallet 2`] = `
           </div>
         </div>
       </div>
-    </div>
+    </nav>
     <div
       class="flex flex-1 flex-col"
     >
@@ -1925,7 +1925,7 @@ exports[`CreateWallet > should create a wallet with encryption 1`] = `
         </button>
       </div>
     </div>
-    <div
+    <nav
       aria-labelledby="main menu"
       class="custom-nav-wrapper sticky inset-x-0 top-0 z-40 border-b bg-theme-background transition-all duration-200 border-theme-secondary-300 dark:border-theme-secondary-800"
     >
@@ -2366,7 +2366,7 @@ exports[`CreateWallet > should create a wallet with encryption 1`] = `
           </div>
         </div>
       </div>
-    </div>
+    </nav>
     <div
       class="flex flex-1 flex-col"
     >
@@ -2841,7 +2841,7 @@ exports[`CreateWallet > should remove pending wallet if not submitted 1`] = `
         </button>
       </div>
     </div>
-    <div
+    <nav
       aria-labelledby="main menu"
       class="custom-nav-wrapper sticky inset-x-0 top-0 z-40 border-b bg-theme-background transition-all duration-200 border-theme-secondary-300 dark:border-theme-secondary-800"
     >
@@ -3282,7 +3282,7 @@ exports[`CreateWallet > should remove pending wallet if not submitted 1`] = `
           </div>
         </div>
       </div>
-    </div>
+    </nav>
     <div
       class="flex flex-1 flex-col"
     >
@@ -3755,7 +3755,7 @@ exports[`CreateWallet > should show an error message for duplicate name 1`] = `
         </button>
       </div>
     </div>
-    <div
+    <nav
       aria-labelledby="main menu"
       class="custom-nav-wrapper sticky inset-x-0 top-0 z-40 border-b bg-theme-background transition-all duration-200 border-theme-secondary-300 dark:border-theme-secondary-800"
     >
@@ -4194,7 +4194,7 @@ exports[`CreateWallet > should show an error message for duplicate name 1`] = `
           </div>
         </div>
       </div>
-    </div>
+    </nav>
     <div
       class="flex flex-1 flex-col"
     >
@@ -4667,7 +4667,7 @@ exports[`CreateWallet > should show an error message if wallet generation failed
         </button>
       </div>
     </div>
-    <div
+    <nav
       aria-labelledby="main menu"
       class="custom-nav-wrapper sticky inset-x-0 top-0 z-40 border-b bg-theme-background transition-all duration-200 border-theme-secondary-300 dark:border-theme-secondary-800"
     >
@@ -5108,7 +5108,7 @@ exports[`CreateWallet > should show an error message if wallet generation failed
           </div>
         </div>
       </div>
-    </div>
+    </nav>
     <div
       class="flex flex-1 flex-col"
     >

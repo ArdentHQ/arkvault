@@ -378,6 +378,7 @@ exports[`WalletListItem > should disable the send button when wallet has no bala
                             >
                               <input
                                 aria-invalid="false"
+                                autocomplete="off"
                                 class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
                                 data-testid="UpdateWalletName__input"
                                 name="name"
@@ -986,6 +987,7 @@ exports[`WalletListItem > should render when isCompact = false 1`] = `
                             >
                               <input
                                 aria-invalid="false"
+                                autocomplete="off"
                                 class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
                                 data-testid="UpdateWalletName__input"
                                 name="name"
@@ -1409,6 +1411,7 @@ exports[`WalletListItem > should render when isCompact = true 1`] = `
                             >
                               <input
                                 aria-invalid="false"
+                                autocomplete="off"
                                 class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
                                 data-testid="UpdateWalletName__input"
                                 name="name"
@@ -2286,6 +2289,7 @@ exports[`WalletListItem > should render when isLargeScreen = true 1`] = `
                             >
                               <input
                                 aria-invalid="false"
+                                autocomplete="off"
                                 class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
                                 data-testid="UpdateWalletName__input"
                                 name="name"
@@ -2759,6 +2763,7 @@ exports[`WalletListItem > should render when isLargeScreen = true and wallet is 
                             >
                               <input
                                 aria-invalid="false"
+                                autocomplete="off"
                                 class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
                                 data-testid="UpdateWalletName__input"
                                 name="name"
@@ -3182,6 +3187,7 @@ exports[`WalletListItem > should render with a N/A for fiat 1`] = `
                             >
                               <input
                                 aria-invalid="false"
+                                autocomplete="off"
                                 class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
                                 data-testid="UpdateWalletName__input"
                                 name="name"
@@ -3605,6 +3611,7 @@ exports[`WalletListItem > should render with default BTC as default exchangeCurr
                             >
                               <input
                                 aria-invalid="false"
+                                autocomplete="off"
                                 class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
                                 data-testid="UpdateWalletName__input"
                                 name="name"

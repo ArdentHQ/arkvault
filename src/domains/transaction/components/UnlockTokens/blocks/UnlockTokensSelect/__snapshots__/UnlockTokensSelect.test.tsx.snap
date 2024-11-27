@@ -525,7 +525,7 @@ exports[`UnlockTokensSelect > should render 1`] = `
         >
           Total Amount
         </p>
-        <span
+        <div
           class="font-semibold overflow-hidden text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-base flex h-full items-center justify-center rounded px-1.5"
           data-testid="AmountLabel__wrapper"
         >
@@ -539,7 +539,7 @@ exports[`UnlockTokensSelect > should render 1`] = `
               0 DARK
             </span>
           </div>
-        </span>
+        </div>
       </div>
       <div
         class="flex flex-col items-end"
@@ -550,7 +550,7 @@ exports[`UnlockTokensSelect > should render 1`] = `
         >
           Transaction Fee
         </p>
-        <span
+        <div
           class="font-semibold overflow-hidden text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-base flex h-full items-center justify-center rounded px-1.5"
           data-testid="AmountLabel__wrapper"
         >
@@ -564,7 +564,7 @@ exports[`UnlockTokensSelect > should render 1`] = `
               0 DARK
             </span>
           </div>
-        </span>
+        </div>
       </div>
     </div>
   </div>

@@ -18,7 +18,7 @@ exports[`TransactionAmount > should render currency amount 1`] = `
       <div
         class="flex items-center font-semibold"
       >
-        <span
+        <div
           class="font-semibold overflow-hidden bg-theme-success-100 text-theme-success-700 dark:border dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-base flex h-full items-center justify-center rounded px-1.5"
           data-testid="AmountLabel__wrapper"
         >
@@ -32,7 +32,7 @@ exports[`TransactionAmount > should render currency amount 1`] = `
               + 1 DARK
             </span>
           </div>
-        </span>
+        </div>
       </div>
     </div>
     <div
@@ -88,7 +88,7 @@ exports[`TransactionAmount > should render in lg 1`] = `
       <div
         class="flex items-center font-semibold"
       >
-        <span
+        <div
           class="font-semibold overflow-hidden bg-theme-success-100 text-theme-success-700 dark:border dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-base flex h-full items-center justify-center rounded px-1.5"
           data-testid="AmountLabel__wrapper"
         >
@@ -102,7 +102,7 @@ exports[`TransactionAmount > should render in lg 1`] = `
               + 1 DARK
             </span>
           </div>
-        </span>
+        </div>
       </div>
     </div>
     <div
@@ -158,7 +158,7 @@ exports[`TransactionAmount > should render in md 1`] = `
       <div
         class="flex items-center font-semibold"
       >
-        <span
+        <div
           class="font-semibold overflow-hidden bg-theme-success-100 text-theme-success-700 dark:border dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-base flex h-full items-center justify-center rounded px-1.5"
           data-testid="AmountLabel__wrapper"
         >
@@ -172,7 +172,7 @@ exports[`TransactionAmount > should render in md 1`] = `
               + 1 DARK
             </span>
           </div>
-        </span>
+        </div>
       </div>
     </div>
     <div
@@ -231,7 +231,7 @@ exports[`TransactionAmount > should render in sm 1`] = `
         <div
           class="md:theme-text flex w-full justify-end text-theme-secondary-700 dark:text-theme-secondary-500"
         >
-          <span
+          <div
             class="font-semibold overflow-hidden bg-theme-success-100 text-theme-success-700 dark:border dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-base flex h-full items-center justify-center rounded px-1.5"
             data-testid="AmountLabel__wrapper"
           >
@@ -245,7 +245,7 @@ exports[`TransactionAmount > should render in sm 1`] = `
                 + 1 DARK
               </span>
             </div>
-          </span>
+          </div>
         </div>
       </div>
     </div>
@@ -271,7 +271,7 @@ exports[`TransactionAmount > should render in xl 1`] = `
       <div
         class="flex items-center font-semibold"
       >
-        <span
+        <div
           class="font-semibold overflow-hidden bg-theme-success-100 text-theme-success-700 dark:border dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-base flex h-full items-center justify-center rounded px-1.5"
           data-testid="AmountLabel__wrapper"
         >
@@ -285,7 +285,7 @@ exports[`TransactionAmount > should render in xl 1`] = `
               + 1 DARK
             </span>
           </div>
-        </span>
+        </div>
       </div>
     </div>
     <div
@@ -344,7 +344,7 @@ exports[`TransactionAmount > should render in xs 1`] = `
         <div
           class="md:theme-text flex w-full justify-end text-theme-secondary-700 dark:text-theme-secondary-500"
         >
-          <span
+          <div
             class="font-semibold overflow-hidden bg-theme-success-100 text-theme-success-700 dark:border dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-base flex h-full items-center justify-center rounded px-1.5"
             data-testid="AmountLabel__wrapper"
           >
@@ -358,7 +358,7 @@ exports[`TransactionAmount > should render in xs 1`] = `
                 + 1 DARK
               </span>
             </div>
-          </span>
+          </div>
         </div>
       </div>
     </div>
@@ -384,7 +384,7 @@ exports[`TransactionAmount > should render label for multiple recipients 1`] = `
       <div
         class="flex items-center font-semibold"
       >
-        <span
+        <div
           class="font-semibold overflow-hidden bg-theme-success-100 text-theme-success-700 dark:border dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-base flex h-full items-center justify-center rounded px-1.5"
           data-testid="AmountLabel__wrapper"
         >
@@ -398,7 +398,7 @@ exports[`TransactionAmount > should render label for multiple recipients 1`] = `
               + 1 DARK
             </span>
           </div>
-        </span>
+        </div>
       </div>
     </div>
     <div
@@ -454,7 +454,7 @@ exports[`TransactionAmount > should render label for multiple recipients 2`] = `
       <div
         class="flex items-center font-semibold"
       >
-        <span
+        <div
           class="font-semibold overflow-hidden bg-theme-success-100 text-theme-success-700 dark:border dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-base flex h-full items-center justify-center rounded px-1.5"
           data-testid="AmountLabel__wrapper"
         >
@@ -468,7 +468,7 @@ exports[`TransactionAmount > should render label for multiple recipients 2`] = `
               + 1 DARK
             </span>
           </div>
-        </span>
+        </div>
       </div>
     </div>
     <div

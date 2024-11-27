@@ -915,6 +915,7 @@ exports[`WalletsList > should group starred wallets at the top 1`] = `
               class="relative flex h-full flex-1"
             >
               <input
+                autocomplete="off"
                 class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
                 data-testid="select-list__input"
                 readonly=""
@@ -953,6 +954,7 @@ exports[`WalletsList > should group starred wallets at the top 1`] = `
                       aria-autocomplete="list"
                       aria-controls="downshift-9-menu"
                       aria-labelledby="downshift-9-label"
+                      autocomplete="off"
                       class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
                       data-testid="SelectDropdown__input"
                       id="downshift-9-input"
@@ -1911,6 +1913,7 @@ exports[`WalletsList > should render 1`] = `
               class="relative flex h-full flex-1"
             >
               <input
+                autocomplete="off"
                 class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
                 data-testid="select-list__input"
                 readonly=""
@@ -1949,6 +1952,7 @@ exports[`WalletsList > should render 1`] = `
                       aria-autocomplete="list"
                       aria-controls="downshift-0-menu"
                       aria-labelledby="downshift-0-label"
+                      autocomplete="off"
                       class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
                       data-testid="SelectDropdown__input"
                       id="downshift-0-input"
@@ -2928,6 +2932,7 @@ exports[`WalletsList > should render empty skeleton block 1`] = `
               class="relative flex h-full flex-1"
             >
               <input
+                autocomplete="off"
                 class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
                 data-testid="select-list__input"
                 readonly=""
@@ -2966,6 +2971,7 @@ exports[`WalletsList > should render empty skeleton block 1`] = `
                       aria-autocomplete="list"
                       aria-controls="downshift-6-menu"
                       aria-labelledby="downshift-6-label"
+                      autocomplete="off"
                       class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
                       data-testid="SelectDropdown__input"
                       id="downshift-6-input"
@@ -3439,6 +3445,7 @@ exports[`WalletsList > should render responsive 1`] = `
               class="relative flex h-full flex-1"
             >
               <input
+                autocomplete="off"
                 class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
                 data-testid="select-list__input"
                 readonly=""
@@ -3477,6 +3484,7 @@ exports[`WalletsList > should render responsive 1`] = `
                       aria-autocomplete="list"
                       aria-controls="downshift-3-menu"
                       aria-labelledby="downshift-3-label"
+                      autocomplete="off"
                       class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
                       data-testid="SelectDropdown__input"
                       id="downshift-3-input"

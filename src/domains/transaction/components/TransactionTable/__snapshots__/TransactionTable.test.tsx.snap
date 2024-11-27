@@ -2872,12 +2872,12 @@ exports[`TransactionTable > should render responsive 1`] = `
                         class="flex flex-row gap-2"
                         data-testid="TransactionRowAddressing__container"
                       >
-                        <span
+                        <div
                           class="inline-block font-semibold overflow-hidden bg-theme-success-100 text-theme-success-700 dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-xs leading-[15px] !flex h-[21px] w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
                           data-testid="TransactionRowAddressing__label"
                         >
                           From
-                        </span>
+                        </div>
                         <div
                           class="w-50 sm:w-30"
                           data-testid="TransactionRowAddressing__address-container"
@@ -2914,7 +2914,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                     <div
                       class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                     >
-                      <span
+                      <div
                         class="font-semibold overflow-hidden bg-theme-success-100 text-theme-success-700 dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-base flex items-center justify-center px-1.5 h-[21px] rounded dark:border"
                         data-testid="AmountLabel__wrapper"
                       >
@@ -2928,7 +2928,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                             + 20 DARK
                           </span>
                         </div>
-                      </span>
+                      </div>
                     </div>
                   </div>
                   <div
@@ -3019,12 +3019,12 @@ exports[`TransactionTable > should render responsive 1`] = `
                         class="flex flex-row gap-2"
                         data-testid="TransactionRowAddressing__container"
                       >
-                        <span
+                        <div
                           class="inline-block font-semibold overflow-hidden text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border text-xs leading-[15px] !flex h-[21px] w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
                           data-testid="TransactionRowAddressing__label"
                         >
                           To
-                        </span>
+                        </div>
                         <div
                           class="w-40 sm:w-40 md:w-32 lg:w-50"
                           data-testid="TransactionRowAddressing__address-container"
@@ -3072,7 +3072,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                     <div
                       class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                     >
-                      <span
+                      <div
                         class="font-semibold overflow-hidden text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border text-base flex items-center justify-center px-1.5 h-[21px] rounded dark:border"
                         data-testid="AmountLabel__wrapper"
                       >
@@ -3086,7 +3086,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                             - 20.03499657 DARK
                           </span>
                         </div>
-                      </span>
+                      </div>
                     </div>
                   </div>
                   <div
@@ -3177,12 +3177,12 @@ exports[`TransactionTable > should render responsive 1`] = `
                         class="flex flex-row gap-2"
                         data-testid="TransactionRowAddressing__container"
                       >
-                        <span
+                        <div
                           class="inline-block font-semibold overflow-hidden bg-theme-success-100 text-theme-success-700 dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-xs leading-[15px] !flex h-[21px] w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
                           data-testid="TransactionRowAddressing__label"
                         >
                           From
-                        </span>
+                        </div>
                         <div
                           class="w-50 sm:w-30"
                           data-testid="TransactionRowAddressing__address-container"
@@ -3219,7 +3219,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                     <div
                       class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                     >
-                      <span
+                      <div
                         class="font-semibold overflow-hidden bg-theme-success-100 text-theme-success-700 dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-base flex items-center justify-center px-1.5 h-[21px] rounded dark:border"
                         data-testid="AmountLabel__wrapper"
                       >
@@ -3233,7 +3233,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                             + 0.0000001 DARK
                           </span>
                         </div>
-                      </span>
+                      </div>
                     </div>
                   </div>
                   <div
@@ -3324,12 +3324,12 @@ exports[`TransactionTable > should render responsive 1`] = `
                         class="flex flex-row gap-2"
                         data-testid="TransactionRowAddressing__container"
                       >
-                        <span
+                        <div
                           class="inline-block font-semibold overflow-hidden bg-theme-success-100 text-theme-success-700 dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-xs leading-[15px] !flex h-[21px] w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
                           data-testid="TransactionRowAddressing__label"
                         >
                           From
-                        </span>
+                        </div>
                         <div
                           class="w-50 sm:w-30"
                           data-testid="TransactionRowAddressing__address-container"
@@ -3366,7 +3366,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                     <div
                       class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                     >
-                      <span
+                      <div
                         class="font-semibold overflow-hidden bg-theme-success-100 text-theme-success-700 dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-base flex items-center justify-center px-1.5 h-[21px] rounded dark:border"
                         data-testid="AmountLabel__wrapper"
                       >
@@ -3380,7 +3380,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                             + 0.0000001 DARK
                           </span>
                         </div>
-                      </span>
+                      </div>
                     </div>
                   </div>
                   <div
@@ -3471,12 +3471,12 @@ exports[`TransactionTable > should render responsive 1`] = `
                         class="flex flex-row gap-2"
                         data-testid="TransactionRowAddressing__container"
                       >
-                        <span
+                        <div
                           class="inline-block font-semibold overflow-hidden bg-theme-success-100 text-theme-success-700 dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-xs leading-[15px] !flex h-[21px] w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
                           data-testid="TransactionRowAddressing__label"
                         >
                           From
-                        </span>
+                        </div>
                         <div
                           class="w-50 sm:w-30"
                           data-testid="TransactionRowAddressing__address-container"
@@ -3513,7 +3513,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                     <div
                       class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                     >
-                      <span
+                      <div
                         class="font-semibold overflow-hidden bg-theme-success-100 text-theme-success-700 dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-base flex items-center justify-center px-1.5 h-[21px] rounded dark:border"
                         data-testid="AmountLabel__wrapper"
                       >
@@ -3527,7 +3527,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                             + 0.0000001 DARK
                           </span>
                         </div>
-                      </span>
+                      </div>
                     </div>
                   </div>
                   <div
@@ -3618,12 +3618,12 @@ exports[`TransactionTable > should render responsive 1`] = `
                         class="flex flex-row gap-2"
                         data-testid="TransactionRowAddressing__container"
                       >
-                        <span
+                        <div
                           class="inline-block font-semibold overflow-hidden bg-theme-success-100 text-theme-success-700 dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-xs leading-[15px] !flex h-[21px] w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
                           data-testid="TransactionRowAddressing__label"
                         >
                           From
-                        </span>
+                        </div>
                         <div
                           class="w-50 sm:w-30"
                           data-testid="TransactionRowAddressing__address-container"
@@ -3660,7 +3660,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                     <div
                       class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                     >
-                      <span
+                      <div
                         class="font-semibold overflow-hidden bg-theme-success-100 text-theme-success-700 dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-base flex items-center justify-center px-1.5 h-[21px] rounded dark:border"
                         data-testid="AmountLabel__wrapper"
                       >
@@ -3674,7 +3674,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                             + 0.0000001 DARK
                           </span>
                         </div>
-                      </span>
+                      </div>
                     </div>
                   </div>
                   <div
@@ -3765,12 +3765,12 @@ exports[`TransactionTable > should render responsive 1`] = `
                         class="flex flex-row gap-2"
                         data-testid="TransactionRowAddressing__container"
                       >
-                        <span
+                        <div
                           class="inline-block font-semibold overflow-hidden bg-theme-success-100 text-theme-success-700 dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-xs leading-[15px] !flex h-[21px] w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
                           data-testid="TransactionRowAddressing__label"
                         >
                           From
-                        </span>
+                        </div>
                         <div
                           class="w-50 sm:w-30"
                           data-testid="TransactionRowAddressing__address-container"
@@ -3807,7 +3807,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                     <div
                       class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                     >
-                      <span
+                      <div
                         class="font-semibold overflow-hidden bg-theme-success-100 text-theme-success-700 dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-base flex items-center justify-center px-1.5 h-[21px] rounded dark:border"
                         data-testid="AmountLabel__wrapper"
                       >
@@ -3821,7 +3821,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                             + 0.0000001 DARK
                           </span>
                         </div>
-                      </span>
+                      </div>
                     </div>
                   </div>
                   <div
@@ -3912,12 +3912,12 @@ exports[`TransactionTable > should render responsive 1`] = `
                         class="flex flex-row gap-2"
                         data-testid="TransactionRowAddressing__container"
                       >
-                        <span
+                        <div
                           class="inline-block font-semibold overflow-hidden bg-theme-success-100 text-theme-success-700 dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-xs leading-[15px] !flex h-[21px] w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
                           data-testid="TransactionRowAddressing__label"
                         >
                           From
-                        </span>
+                        </div>
                         <div
                           class="w-50 sm:w-30"
                           data-testid="TransactionRowAddressing__address-container"
@@ -3954,7 +3954,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                     <div
                       class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                     >
-                      <span
+                      <div
                         class="font-semibold overflow-hidden bg-theme-success-100 text-theme-success-700 dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-base flex items-center justify-center px-1.5 h-[21px] rounded dark:border"
                         data-testid="AmountLabel__wrapper"
                       >
@@ -3968,7 +3968,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                             + 0.0000001 DARK
                           </span>
                         </div>
-                      </span>
+                      </div>
                     </div>
                   </div>
                   <div
@@ -4059,12 +4059,12 @@ exports[`TransactionTable > should render responsive 1`] = `
                         class="flex flex-row gap-2"
                         data-testid="TransactionRowAddressing__container"
                       >
-                        <span
+                        <div
                           class="inline-block font-semibold overflow-hidden bg-theme-success-100 text-theme-success-700 dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-xs leading-[15px] !flex h-[21px] w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
                           data-testid="TransactionRowAddressing__label"
                         >
                           From
-                        </span>
+                        </div>
                         <div
                           class="w-50 sm:w-30"
                           data-testid="TransactionRowAddressing__address-container"
@@ -4101,7 +4101,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                     <div
                       class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                     >
-                      <span
+                      <div
                         class="font-semibold overflow-hidden bg-theme-success-100 text-theme-success-700 dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-base flex items-center justify-center px-1.5 h-[21px] rounded dark:border"
                         data-testid="AmountLabel__wrapper"
                       >
@@ -4115,7 +4115,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                             + 0.0000001 DARK
                           </span>
                         </div>
-                      </span>
+                      </div>
                     </div>
                   </div>
                   <div
@@ -4206,12 +4206,12 @@ exports[`TransactionTable > should render responsive 1`] = `
                         class="flex flex-row gap-2"
                         data-testid="TransactionRowAddressing__container"
                       >
-                        <span
+                        <div
                           class="inline-block font-semibold overflow-hidden text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border text-xs leading-[15px] !flex h-[21px] w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
                           data-testid="TransactionRowAddressing__label"
                         >
                           To
-                        </span>
+                        </div>
                         <div
                           class="w-40 sm:w-40 md:w-32 lg:w-50"
                           data-testid="TransactionRowAddressing__address-container"
@@ -4259,7 +4259,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                     <div
                       class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                     >
-                      <span
+                      <div
                         class="font-semibold overflow-hidden text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border text-base flex items-center justify-center px-1.5 h-[21px] rounded dark:border"
                         data-testid="AmountLabel__wrapper"
                       >
@@ -4273,7 +4273,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                             - 0.100001 DARK
                           </span>
                         </div>
-                      </span>
+                      </div>
                     </div>
                   </div>
                   <div
@@ -4388,12 +4388,12 @@ exports[`TransactionTable > should render responsive 2`] = `
                         class="flex flex-row gap-2"
                         data-testid="TransactionRowAddressing__container"
                       >
-                        <span
+                        <div
                           class="inline-block font-semibold overflow-hidden bg-theme-success-100 text-theme-success-700 dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-xs leading-[15px] !flex h-[21px] w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
                           data-testid="TransactionRowAddressing__label"
                         >
                           From
-                        </span>
+                        </div>
                         <div
                           class="w-50 sm:w-30"
                           data-testid="TransactionRowAddressing__address-container"
@@ -4430,7 +4430,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                     <div
                       class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                     >
-                      <span
+                      <div
                         class="font-semibold overflow-hidden bg-theme-success-100 text-theme-success-700 dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-base flex items-center justify-center px-1.5 h-[21px] rounded dark:border"
                         data-testid="AmountLabel__wrapper"
                       >
@@ -4444,7 +4444,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                             + 20 DARK
                           </span>
                         </div>
-                      </span>
+                      </div>
                     </div>
                   </div>
                   <div
@@ -4535,12 +4535,12 @@ exports[`TransactionTable > should render responsive 2`] = `
                         class="flex flex-row gap-2"
                         data-testid="TransactionRowAddressing__container"
                       >
-                        <span
+                        <div
                           class="inline-block font-semibold overflow-hidden text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border text-xs leading-[15px] !flex h-[21px] w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
                           data-testid="TransactionRowAddressing__label"
                         >
                           To
-                        </span>
+                        </div>
                         <div
                           class="w-40 sm:w-40 md:w-32 lg:w-50"
                           data-testid="TransactionRowAddressing__address-container"
@@ -4588,7 +4588,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                     <div
                       class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                     >
-                      <span
+                      <div
                         class="font-semibold overflow-hidden text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border text-base flex items-center justify-center px-1.5 h-[21px] rounded dark:border"
                         data-testid="AmountLabel__wrapper"
                       >
@@ -4602,7 +4602,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                             - 20.03499657 DARK
                           </span>
                         </div>
-                      </span>
+                      </div>
                     </div>
                   </div>
                   <div
@@ -4693,12 +4693,12 @@ exports[`TransactionTable > should render responsive 2`] = `
                         class="flex flex-row gap-2"
                         data-testid="TransactionRowAddressing__container"
                       >
-                        <span
+                        <div
                           class="inline-block font-semibold overflow-hidden bg-theme-success-100 text-theme-success-700 dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-xs leading-[15px] !flex h-[21px] w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
                           data-testid="TransactionRowAddressing__label"
                         >
                           From
-                        </span>
+                        </div>
                         <div
                           class="w-50 sm:w-30"
                           data-testid="TransactionRowAddressing__address-container"
@@ -4735,7 +4735,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                     <div
                       class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                     >
-                      <span
+                      <div
                         class="font-semibold overflow-hidden bg-theme-success-100 text-theme-success-700 dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-base flex items-center justify-center px-1.5 h-[21px] rounded dark:border"
                         data-testid="AmountLabel__wrapper"
                       >
@@ -4749,7 +4749,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                             + 0.0000001 DARK
                           </span>
                         </div>
-                      </span>
+                      </div>
                     </div>
                   </div>
                   <div
@@ -4840,12 +4840,12 @@ exports[`TransactionTable > should render responsive 2`] = `
                         class="flex flex-row gap-2"
                         data-testid="TransactionRowAddressing__container"
                       >
-                        <span
+                        <div
                           class="inline-block font-semibold overflow-hidden bg-theme-success-100 text-theme-success-700 dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-xs leading-[15px] !flex h-[21px] w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
                           data-testid="TransactionRowAddressing__label"
                         >
                           From
-                        </span>
+                        </div>
                         <div
                           class="w-50 sm:w-30"
                           data-testid="TransactionRowAddressing__address-container"
@@ -4882,7 +4882,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                     <div
                       class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                     >
-                      <span
+                      <div
                         class="font-semibold overflow-hidden bg-theme-success-100 text-theme-success-700 dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-base flex items-center justify-center px-1.5 h-[21px] rounded dark:border"
                         data-testid="AmountLabel__wrapper"
                       >
@@ -4896,7 +4896,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                             + 0.0000001 DARK
                           </span>
                         </div>
-                      </span>
+                      </div>
                     </div>
                   </div>
                   <div
@@ -4987,12 +4987,12 @@ exports[`TransactionTable > should render responsive 2`] = `
                         class="flex flex-row gap-2"
                         data-testid="TransactionRowAddressing__container"
                       >
-                        <span
+                        <div
                           class="inline-block font-semibold overflow-hidden bg-theme-success-100 text-theme-success-700 dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-xs leading-[15px] !flex h-[21px] w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
                           data-testid="TransactionRowAddressing__label"
                         >
                           From
-                        </span>
+                        </div>
                         <div
                           class="w-50 sm:w-30"
                           data-testid="TransactionRowAddressing__address-container"
@@ -5029,7 +5029,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                     <div
                       class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                     >
-                      <span
+                      <div
                         class="font-semibold overflow-hidden bg-theme-success-100 text-theme-success-700 dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-base flex items-center justify-center px-1.5 h-[21px] rounded dark:border"
                         data-testid="AmountLabel__wrapper"
                       >
@@ -5043,7 +5043,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                             + 0.0000001 DARK
                           </span>
                         </div>
-                      </span>
+                      </div>
                     </div>
                   </div>
                   <div
@@ -5134,12 +5134,12 @@ exports[`TransactionTable > should render responsive 2`] = `
                         class="flex flex-row gap-2"
                         data-testid="TransactionRowAddressing__container"
                       >
-                        <span
+                        <div
                           class="inline-block font-semibold overflow-hidden bg-theme-success-100 text-theme-success-700 dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-xs leading-[15px] !flex h-[21px] w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
                           data-testid="TransactionRowAddressing__label"
                         >
                           From
-                        </span>
+                        </div>
                         <div
                           class="w-50 sm:w-30"
                           data-testid="TransactionRowAddressing__address-container"
@@ -5176,7 +5176,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                     <div
                       class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                     >
-                      <span
+                      <div
                         class="font-semibold overflow-hidden bg-theme-success-100 text-theme-success-700 dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-base flex items-center justify-center px-1.5 h-[21px] rounded dark:border"
                         data-testid="AmountLabel__wrapper"
                       >
@@ -5190,7 +5190,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                             + 0.0000001 DARK
                           </span>
                         </div>
-                      </span>
+                      </div>
                     </div>
                   </div>
                   <div
@@ -5281,12 +5281,12 @@ exports[`TransactionTable > should render responsive 2`] = `
                         class="flex flex-row gap-2"
                         data-testid="TransactionRowAddressing__container"
                       >
-                        <span
+                        <div
                           class="inline-block font-semibold overflow-hidden bg-theme-success-100 text-theme-success-700 dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-xs leading-[15px] !flex h-[21px] w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
                           data-testid="TransactionRowAddressing__label"
                         >
                           From
-                        </span>
+                        </div>
                         <div
                           class="w-50 sm:w-30"
                           data-testid="TransactionRowAddressing__address-container"
@@ -5323,7 +5323,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                     <div
                       class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                     >
-                      <span
+                      <div
                         class="font-semibold overflow-hidden bg-theme-success-100 text-theme-success-700 dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-base flex items-center justify-center px-1.5 h-[21px] rounded dark:border"
                         data-testid="AmountLabel__wrapper"
                       >
@@ -5337,7 +5337,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                             + 0.0000001 DARK
                           </span>
                         </div>
-                      </span>
+                      </div>
                     </div>
                   </div>
                   <div
@@ -5428,12 +5428,12 @@ exports[`TransactionTable > should render responsive 2`] = `
                         class="flex flex-row gap-2"
                         data-testid="TransactionRowAddressing__container"
                       >
-                        <span
+                        <div
                           class="inline-block font-semibold overflow-hidden bg-theme-success-100 text-theme-success-700 dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-xs leading-[15px] !flex h-[21px] w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
                           data-testid="TransactionRowAddressing__label"
                         >
                           From
-                        </span>
+                        </div>
                         <div
                           class="w-50 sm:w-30"
                           data-testid="TransactionRowAddressing__address-container"
@@ -5470,7 +5470,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                     <div
                       class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                     >
-                      <span
+                      <div
                         class="font-semibold overflow-hidden bg-theme-success-100 text-theme-success-700 dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-base flex items-center justify-center px-1.5 h-[21px] rounded dark:border"
                         data-testid="AmountLabel__wrapper"
                       >
@@ -5484,7 +5484,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                             + 0.0000001 DARK
                           </span>
                         </div>
-                      </span>
+                      </div>
                     </div>
                   </div>
                   <div
@@ -5575,12 +5575,12 @@ exports[`TransactionTable > should render responsive 2`] = `
                         class="flex flex-row gap-2"
                         data-testid="TransactionRowAddressing__container"
                       >
-                        <span
+                        <div
                           class="inline-block font-semibold overflow-hidden bg-theme-success-100 text-theme-success-700 dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-xs leading-[15px] !flex h-[21px] w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
                           data-testid="TransactionRowAddressing__label"
                         >
                           From
-                        </span>
+                        </div>
                         <div
                           class="w-50 sm:w-30"
                           data-testid="TransactionRowAddressing__address-container"
@@ -5617,7 +5617,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                     <div
                       class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                     >
-                      <span
+                      <div
                         class="font-semibold overflow-hidden bg-theme-success-100 text-theme-success-700 dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-base flex items-center justify-center px-1.5 h-[21px] rounded dark:border"
                         data-testid="AmountLabel__wrapper"
                       >
@@ -5631,7 +5631,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                             + 0.0000001 DARK
                           </span>
                         </div>
-                      </span>
+                      </div>
                     </div>
                   </div>
                   <div
@@ -5722,12 +5722,12 @@ exports[`TransactionTable > should render responsive 2`] = `
                         class="flex flex-row gap-2"
                         data-testid="TransactionRowAddressing__container"
                       >
-                        <span
+                        <div
                           class="inline-block font-semibold overflow-hidden text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border text-xs leading-[15px] !flex h-[21px] w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
                           data-testid="TransactionRowAddressing__label"
                         >
                           To
-                        </span>
+                        </div>
                         <div
                           class="w-40 sm:w-40 md:w-32 lg:w-50"
                           data-testid="TransactionRowAddressing__address-container"
@@ -5775,7 +5775,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                     <div
                       class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                     >
-                      <span
+                      <div
                         class="font-semibold overflow-hidden text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border text-base flex items-center justify-center px-1.5 h-[21px] rounded dark:border"
                         data-testid="AmountLabel__wrapper"
                       >
@@ -5789,7 +5789,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                             - 0.100001 DARK
                           </span>
                         </div>
-                      </span>
+                      </div>
                     </div>
                   </div>
                   <div
@@ -6103,12 +6103,12 @@ exports[`TransactionTable > should render responsive 3`] = `
               <div
                 class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start my-1 pt-2 min-h-14 xl:min-h-11 xl:pt-3"
               >
-                <span
+                <div
                   class="inline-block font-semibold overflow-hidden text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] rounded px-1 py-[3px] dark:border"
                   data-testid="TransactionRow__type"
                 >
                   Transfer
-                </span>
+                </div>
               </div>
             </td>
             <td>
@@ -6119,12 +6119,12 @@ exports[`TransactionTable > should render responsive 3`] = `
                   class="flex flex-row gap-2"
                   data-testid="TransactionRowAddressing__container"
                 >
-                  <span
+                  <div
                     class="inline-block font-semibold overflow-hidden bg-theme-success-100 text-theme-success-700 dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-xs leading-[15px] !flex h-[21px] w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
                     data-testid="TransactionRowAddressing__label"
                   >
                     From
-                  </span>
+                  </div>
                   <div
                     class="w-50 sm:w-30"
                     data-testid="TransactionRowAddressing__address-container"
@@ -6159,7 +6159,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                 <div
                   class="flex flex-col items-end gap-1"
                 >
-                  <span
+                  <div
                     class="font-semibold overflow-hidden bg-theme-success-100 text-theme-success-700 dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-base flex items-center justify-center px-1.5 h-[21px] rounded dark:border"
                     data-testid="AmountLabel__wrapper"
                   >
@@ -6173,7 +6173,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                         + 20 DARK
                       </span>
                     </div>
-                  </span>
+                  </div>
                   <span
                     class="text-xs font-semibold text-theme-secondary-700 lg:hidden"
                     data-testid="TransactionRow__exchange-currency"
@@ -6195,7 +6195,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                 <div
                   class="flex flex-col items-end gap-1"
                 >
-                  <span
+                  <div
                     class="font-semibold overflow-hidden bg-theme-success-100 text-theme-success-700 dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-base flex items-center justify-center px-1.5 h-[21px] rounded dark:border"
                     data-testid="AmountLabel__wrapper"
                   >
@@ -6209,7 +6209,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                         + 20 DARK
                       </span>
                     </div>
-                  </span>
+                  </div>
                   <span
                     class="text-xs font-semibold text-theme-secondary-700 lg:hidden"
                     data-testid="TransactionRow__exchange-currency"
@@ -6288,12 +6288,12 @@ exports[`TransactionTable > should render responsive 3`] = `
               <div
                 class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start my-1 pt-2 min-h-14 xl:min-h-11 xl:pt-3"
               >
-                <span
+                <div
                   class="inline-block font-semibold overflow-hidden text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] rounded px-1 py-[3px] dark:border"
                   data-testid="TransactionRow__type"
                 >
                   Transfer
-                </span>
+                </div>
               </div>
             </td>
             <td>
@@ -6304,12 +6304,12 @@ exports[`TransactionTable > should render responsive 3`] = `
                   class="flex flex-row gap-2"
                   data-testid="TransactionRowAddressing__container"
                 >
-                  <span
+                  <div
                     class="inline-block font-semibold overflow-hidden text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border text-xs leading-[15px] !flex h-[21px] w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
                     data-testid="TransactionRowAddressing__label"
                   >
                     To
-                  </span>
+                  </div>
                   <div
                     class="w-40 sm:w-40 md:w-32 lg:w-50"
                     data-testid="TransactionRowAddressing__address-container"
@@ -6355,7 +6355,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                 <div
                   class="flex flex-col items-end gap-1"
                 >
-                  <span
+                  <div
                     class="font-semibold overflow-hidden text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border text-base flex items-center justify-center px-1.5 h-[21px] rounded dark:border"
                     data-testid="AmountLabel__wrapper"
                   >
@@ -6369,7 +6369,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                         - 20.03499657 DARK
                       </span>
                     </div>
-                  </span>
+                  </div>
                   <span
                     class="text-xs font-semibold text-theme-secondary-700 lg:hidden"
                     data-testid="TransactionRow__exchange-currency"
@@ -6391,7 +6391,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                 <div
                   class="flex flex-col items-end gap-1"
                 >
-                  <span
+                  <div
                     class="font-semibold overflow-hidden text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border text-base flex items-center justify-center px-1.5 h-[21px] rounded dark:border"
                     data-testid="AmountLabel__wrapper"
                   >
@@ -6405,7 +6405,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                         - 20.03499657 DARK
                       </span>
                     </div>
-                  </span>
+                  </div>
                   <span
                     class="text-xs font-semibold text-theme-secondary-700 lg:hidden"
                     data-testid="TransactionRow__exchange-currency"
@@ -6484,12 +6484,12 @@ exports[`TransactionTable > should render responsive 3`] = `
               <div
                 class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start my-1 pt-2 min-h-14 xl:min-h-11 xl:pt-3"
               >
-                <span
+                <div
                   class="inline-block font-semibold overflow-hidden text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] rounded px-1 py-[3px] dark:border"
                   data-testid="TransactionRow__type"
                 >
                   Transfer
-                </span>
+                </div>
               </div>
             </td>
             <td>
@@ -6500,12 +6500,12 @@ exports[`TransactionTable > should render responsive 3`] = `
                   class="flex flex-row gap-2"
                   data-testid="TransactionRowAddressing__container"
                 >
-                  <span
+                  <div
                     class="inline-block font-semibold overflow-hidden bg-theme-success-100 text-theme-success-700 dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-xs leading-[15px] !flex h-[21px] w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
                     data-testid="TransactionRowAddressing__label"
                   >
                     From
-                  </span>
+                  </div>
                   <div
                     class="w-50 sm:w-30"
                     data-testid="TransactionRowAddressing__address-container"
@@ -6540,7 +6540,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                 <div
                   class="flex flex-col items-end gap-1"
                 >
-                  <span
+                  <div
                     class="font-semibold overflow-hidden bg-theme-success-100 text-theme-success-700 dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-base flex items-center justify-center px-1.5 h-[21px] rounded dark:border"
                     data-testid="AmountLabel__wrapper"
                   >
@@ -6554,7 +6554,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                         + 0.0000001 DARK
                       </span>
                     </div>
-                  </span>
+                  </div>
                   <span
                     class="text-xs font-semibold text-theme-secondary-700 lg:hidden"
                     data-testid="TransactionRow__exchange-currency"
@@ -6576,7 +6576,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                 <div
                   class="flex flex-col items-end gap-1"
                 >
-                  <span
+                  <div
                     class="font-semibold overflow-hidden bg-theme-success-100 text-theme-success-700 dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-base flex items-center justify-center px-1.5 h-[21px] rounded dark:border"
                     data-testid="AmountLabel__wrapper"
                   >
@@ -6590,7 +6590,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                         + 0.0000001 DARK
                       </span>
                     </div>
-                  </span>
+                  </div>
                   <span
                     class="text-xs font-semibold text-theme-secondary-700 lg:hidden"
                     data-testid="TransactionRow__exchange-currency"
@@ -6669,12 +6669,12 @@ exports[`TransactionTable > should render responsive 3`] = `
               <div
                 class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start my-1 pt-2 min-h-14 xl:min-h-11 xl:pt-3"
               >
-                <span
+                <div
                   class="inline-block font-semibold overflow-hidden text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] rounded px-1 py-[3px] dark:border"
                   data-testid="TransactionRow__type"
                 >
                   Transfer
-                </span>
+                </div>
               </div>
             </td>
             <td>
@@ -6685,12 +6685,12 @@ exports[`TransactionTable > should render responsive 3`] = `
                   class="flex flex-row gap-2"
                   data-testid="TransactionRowAddressing__container"
                 >
-                  <span
+                  <div
                     class="inline-block font-semibold overflow-hidden bg-theme-success-100 text-theme-success-700 dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-xs leading-[15px] !flex h-[21px] w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
                     data-testid="TransactionRowAddressing__label"
                   >
                     From
-                  </span>
+                  </div>
                   <div
                     class="w-50 sm:w-30"
                     data-testid="TransactionRowAddressing__address-container"
@@ -6725,7 +6725,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                 <div
                   class="flex flex-col items-end gap-1"
                 >
-                  <span
+                  <div
                     class="font-semibold overflow-hidden bg-theme-success-100 text-theme-success-700 dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-base flex items-center justify-center px-1.5 h-[21px] rounded dark:border"
                     data-testid="AmountLabel__wrapper"
                   >
@@ -6739,7 +6739,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                         + 0.0000001 DARK
                       </span>
                     </div>
-                  </span>
+                  </div>
                   <span
                     class="text-xs font-semibold text-theme-secondary-700 lg:hidden"
                     data-testid="TransactionRow__exchange-currency"
@@ -6761,7 +6761,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                 <div
                   class="flex flex-col items-end gap-1"
                 >
-                  <span
+                  <div
                     class="font-semibold overflow-hidden bg-theme-success-100 text-theme-success-700 dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-base flex items-center justify-center px-1.5 h-[21px] rounded dark:border"
                     data-testid="AmountLabel__wrapper"
                   >
@@ -6775,7 +6775,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                         + 0.0000001 DARK
                       </span>
                     </div>
-                  </span>
+                  </div>
                   <span
                     class="text-xs font-semibold text-theme-secondary-700 lg:hidden"
                     data-testid="TransactionRow__exchange-currency"
@@ -6854,12 +6854,12 @@ exports[`TransactionTable > should render responsive 3`] = `
               <div
                 class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start my-1 pt-2 min-h-14 xl:min-h-11 xl:pt-3"
               >
-                <span
+                <div
                   class="inline-block font-semibold overflow-hidden text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] rounded px-1 py-[3px] dark:border"
                   data-testid="TransactionRow__type"
                 >
                   Transfer
-                </span>
+                </div>
               </div>
             </td>
             <td>
@@ -6870,12 +6870,12 @@ exports[`TransactionTable > should render responsive 3`] = `
                   class="flex flex-row gap-2"
                   data-testid="TransactionRowAddressing__container"
                 >
-                  <span
+                  <div
                     class="inline-block font-semibold overflow-hidden bg-theme-success-100 text-theme-success-700 dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-xs leading-[15px] !flex h-[21px] w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
                     data-testid="TransactionRowAddressing__label"
                   >
                     From
-                  </span>
+                  </div>
                   <div
                     class="w-50 sm:w-30"
                     data-testid="TransactionRowAddressing__address-container"
@@ -6910,7 +6910,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                 <div
                   class="flex flex-col items-end gap-1"
                 >
-                  <span
+                  <div
                     class="font-semibold overflow-hidden bg-theme-success-100 text-theme-success-700 dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-base flex items-center justify-center px-1.5 h-[21px] rounded dark:border"
                     data-testid="AmountLabel__wrapper"
                   >
@@ -6924,7 +6924,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                         + 0.0000001 DARK
                       </span>
                     </div>
-                  </span>
+                  </div>
                   <span
                     class="text-xs font-semibold text-theme-secondary-700 lg:hidden"
                     data-testid="TransactionRow__exchange-currency"
@@ -6946,7 +6946,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                 <div
                   class="flex flex-col items-end gap-1"
                 >
-                  <span
+                  <div
                     class="font-semibold overflow-hidden bg-theme-success-100 text-theme-success-700 dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-base flex items-center justify-center px-1.5 h-[21px] rounded dark:border"
                     data-testid="AmountLabel__wrapper"
                   >
@@ -6960,7 +6960,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                         + 0.0000001 DARK
                       </span>
                     </div>
-                  </span>
+                  </div>
                   <span
                     class="text-xs font-semibold text-theme-secondary-700 lg:hidden"
                     data-testid="TransactionRow__exchange-currency"
@@ -7039,12 +7039,12 @@ exports[`TransactionTable > should render responsive 3`] = `
               <div
                 class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start my-1 pt-2 min-h-14 xl:min-h-11 xl:pt-3"
               >
-                <span
+                <div
                   class="inline-block font-semibold overflow-hidden text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] rounded px-1 py-[3px] dark:border"
                   data-testid="TransactionRow__type"
                 >
                   Transfer
-                </span>
+                </div>
               </div>
             </td>
             <td>
@@ -7055,12 +7055,12 @@ exports[`TransactionTable > should render responsive 3`] = `
                   class="flex flex-row gap-2"
                   data-testid="TransactionRowAddressing__container"
                 >
-                  <span
+                  <div
                     class="inline-block font-semibold overflow-hidden bg-theme-success-100 text-theme-success-700 dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-xs leading-[15px] !flex h-[21px] w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
                     data-testid="TransactionRowAddressing__label"
                   >
                     From
-                  </span>
+                  </div>
                   <div
                     class="w-50 sm:w-30"
                     data-testid="TransactionRowAddressing__address-container"
@@ -7095,7 +7095,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                 <div
                   class="flex flex-col items-end gap-1"
                 >
-                  <span
+                  <div
                     class="font-semibold overflow-hidden bg-theme-success-100 text-theme-success-700 dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-base flex items-center justify-center px-1.5 h-[21px] rounded dark:border"
                     data-testid="AmountLabel__wrapper"
                   >
@@ -7109,7 +7109,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                         + 0.0000001 DARK
                       </span>
                     </div>
-                  </span>
+                  </div>
                   <span
                     class="text-xs font-semibold text-theme-secondary-700 lg:hidden"
                     data-testid="TransactionRow__exchange-currency"
@@ -7131,7 +7131,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                 <div
                   class="flex flex-col items-end gap-1"
                 >
-                  <span
+                  <div
                     class="font-semibold overflow-hidden bg-theme-success-100 text-theme-success-700 dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-base flex items-center justify-center px-1.5 h-[21px] rounded dark:border"
                     data-testid="AmountLabel__wrapper"
                   >
@@ -7145,7 +7145,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                         + 0.0000001 DARK
                       </span>
                     </div>
-                  </span>
+                  </div>
                   <span
                     class="text-xs font-semibold text-theme-secondary-700 lg:hidden"
                     data-testid="TransactionRow__exchange-currency"
@@ -7224,12 +7224,12 @@ exports[`TransactionTable > should render responsive 3`] = `
               <div
                 class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start my-1 pt-2 min-h-14 xl:min-h-11 xl:pt-3"
               >
-                <span
+                <div
                   class="inline-block font-semibold overflow-hidden text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] rounded px-1 py-[3px] dark:border"
                   data-testid="TransactionRow__type"
                 >
                   Transfer
-                </span>
+                </div>
               </div>
             </td>
             <td>
@@ -7240,12 +7240,12 @@ exports[`TransactionTable > should render responsive 3`] = `
                   class="flex flex-row gap-2"
                   data-testid="TransactionRowAddressing__container"
                 >
-                  <span
+                  <div
                     class="inline-block font-semibold overflow-hidden bg-theme-success-100 text-theme-success-700 dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-xs leading-[15px] !flex h-[21px] w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
                     data-testid="TransactionRowAddressing__label"
                   >
                     From
-                  </span>
+                  </div>
                   <div
                     class="w-50 sm:w-30"
                     data-testid="TransactionRowAddressing__address-container"
@@ -7280,7 +7280,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                 <div
                   class="flex flex-col items-end gap-1"
                 >
-                  <span
+                  <div
                     class="font-semibold overflow-hidden bg-theme-success-100 text-theme-success-700 dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-base flex items-center justify-center px-1.5 h-[21px] rounded dark:border"
                     data-testid="AmountLabel__wrapper"
                   >
@@ -7294,7 +7294,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                         + 0.0000001 DARK
                       </span>
                     </div>
-                  </span>
+                  </div>
                   <span
                     class="text-xs font-semibold text-theme-secondary-700 lg:hidden"
                     data-testid="TransactionRow__exchange-currency"
@@ -7316,7 +7316,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                 <div
                   class="flex flex-col items-end gap-1"
                 >
-                  <span
+                  <div
                     class="font-semibold overflow-hidden bg-theme-success-100 text-theme-success-700 dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-base flex items-center justify-center px-1.5 h-[21px] rounded dark:border"
                     data-testid="AmountLabel__wrapper"
                   >
@@ -7330,7 +7330,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                         + 0.0000001 DARK
                       </span>
                     </div>
-                  </span>
+                  </div>
                   <span
                     class="text-xs font-semibold text-theme-secondary-700 lg:hidden"
                     data-testid="TransactionRow__exchange-currency"
@@ -7409,12 +7409,12 @@ exports[`TransactionTable > should render responsive 3`] = `
               <div
                 class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start my-1 pt-2 min-h-14 xl:min-h-11 xl:pt-3"
               >
-                <span
+                <div
                   class="inline-block font-semibold overflow-hidden text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] rounded px-1 py-[3px] dark:border"
                   data-testid="TransactionRow__type"
                 >
                   Transfer
-                </span>
+                </div>
               </div>
             </td>
             <td>
@@ -7425,12 +7425,12 @@ exports[`TransactionTable > should render responsive 3`] = `
                   class="flex flex-row gap-2"
                   data-testid="TransactionRowAddressing__container"
                 >
-                  <span
+                  <div
                     class="inline-block font-semibold overflow-hidden bg-theme-success-100 text-theme-success-700 dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-xs leading-[15px] !flex h-[21px] w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
                     data-testid="TransactionRowAddressing__label"
                   >
                     From
-                  </span>
+                  </div>
                   <div
                     class="w-50 sm:w-30"
                     data-testid="TransactionRowAddressing__address-container"
@@ -7465,7 +7465,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                 <div
                   class="flex flex-col items-end gap-1"
                 >
-                  <span
+                  <div
                     class="font-semibold overflow-hidden bg-theme-success-100 text-theme-success-700 dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-base flex items-center justify-center px-1.5 h-[21px] rounded dark:border"
                     data-testid="AmountLabel__wrapper"
                   >
@@ -7479,7 +7479,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                         + 0.0000001 DARK
                       </span>
                     </div>
-                  </span>
+                  </div>
                   <span
                     class="text-xs font-semibold text-theme-secondary-700 lg:hidden"
                     data-testid="TransactionRow__exchange-currency"
@@ -7501,7 +7501,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                 <div
                   class="flex flex-col items-end gap-1"
                 >
-                  <span
+                  <div
                     class="font-semibold overflow-hidden bg-theme-success-100 text-theme-success-700 dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-base flex items-center justify-center px-1.5 h-[21px] rounded dark:border"
                     data-testid="AmountLabel__wrapper"
                   >
@@ -7515,7 +7515,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                         + 0.0000001 DARK
                       </span>
                     </div>
-                  </span>
+                  </div>
                   <span
                     class="text-xs font-semibold text-theme-secondary-700 lg:hidden"
                     data-testid="TransactionRow__exchange-currency"
@@ -7594,12 +7594,12 @@ exports[`TransactionTable > should render responsive 3`] = `
               <div
                 class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start my-1 pt-2 min-h-14 xl:min-h-11 xl:pt-3"
               >
-                <span
+                <div
                   class="inline-block font-semibold overflow-hidden text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] rounded px-1 py-[3px] dark:border"
                   data-testid="TransactionRow__type"
                 >
                   Transfer
-                </span>
+                </div>
               </div>
             </td>
             <td>
@@ -7610,12 +7610,12 @@ exports[`TransactionTable > should render responsive 3`] = `
                   class="flex flex-row gap-2"
                   data-testid="TransactionRowAddressing__container"
                 >
-                  <span
+                  <div
                     class="inline-block font-semibold overflow-hidden bg-theme-success-100 text-theme-success-700 dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-xs leading-[15px] !flex h-[21px] w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
                     data-testid="TransactionRowAddressing__label"
                   >
                     From
-                  </span>
+                  </div>
                   <div
                     class="w-50 sm:w-30"
                     data-testid="TransactionRowAddressing__address-container"
@@ -7650,7 +7650,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                 <div
                   class="flex flex-col items-end gap-1"
                 >
-                  <span
+                  <div
                     class="font-semibold overflow-hidden bg-theme-success-100 text-theme-success-700 dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-base flex items-center justify-center px-1.5 h-[21px] rounded dark:border"
                     data-testid="AmountLabel__wrapper"
                   >
@@ -7664,7 +7664,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                         + 0.0000001 DARK
                       </span>
                     </div>
-                  </span>
+                  </div>
                   <span
                     class="text-xs font-semibold text-theme-secondary-700 lg:hidden"
                     data-testid="TransactionRow__exchange-currency"
@@ -7686,7 +7686,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                 <div
                   class="flex flex-col items-end gap-1"
                 >
-                  <span
+                  <div
                     class="font-semibold overflow-hidden bg-theme-success-100 text-theme-success-700 dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-base flex items-center justify-center px-1.5 h-[21px] rounded dark:border"
                     data-testid="AmountLabel__wrapper"
                   >
@@ -7700,7 +7700,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                         + 0.0000001 DARK
                       </span>
                     </div>
-                  </span>
+                  </div>
                   <span
                     class="text-xs font-semibold text-theme-secondary-700 lg:hidden"
                     data-testid="TransactionRow__exchange-currency"
@@ -7779,12 +7779,12 @@ exports[`TransactionTable > should render responsive 3`] = `
               <div
                 class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start my-1 pt-2 min-h-14 xl:min-h-11 xl:pt-3"
               >
-                <span
+                <div
                   class="inline-block font-semibold overflow-hidden text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] rounded px-1 py-[3px] dark:border"
                   data-testid="TransactionRow__type"
                 >
                   Transfer
-                </span>
+                </div>
               </div>
             </td>
             <td>
@@ -7795,12 +7795,12 @@ exports[`TransactionTable > should render responsive 3`] = `
                   class="flex flex-row gap-2"
                   data-testid="TransactionRowAddressing__container"
                 >
-                  <span
+                  <div
                     class="inline-block font-semibold overflow-hidden text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border text-xs leading-[15px] !flex h-[21px] w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
                     data-testid="TransactionRowAddressing__label"
                   >
                     To
-                  </span>
+                  </div>
                   <div
                     class="w-40 sm:w-40 md:w-32 lg:w-50"
                     data-testid="TransactionRowAddressing__address-container"
@@ -7846,7 +7846,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                 <div
                   class="flex flex-col items-end gap-1"
                 >
-                  <span
+                  <div
                     class="font-semibold overflow-hidden text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border text-base flex items-center justify-center px-1.5 h-[21px] rounded dark:border"
                     data-testid="AmountLabel__wrapper"
                   >
@@ -7860,7 +7860,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                         - 0.100001 DARK
                       </span>
                     </div>
-                  </span>
+                  </div>
                   <span
                     class="text-xs font-semibold text-theme-secondary-700 lg:hidden"
                     data-testid="TransactionRow__exchange-currency"
@@ -7882,7 +7882,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                 <div
                   class="flex flex-col items-end gap-1"
                 >
-                  <span
+                  <div
                     class="font-semibold overflow-hidden text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border text-base flex items-center justify-center px-1.5 h-[21px] rounded dark:border"
                     data-testid="AmountLabel__wrapper"
                   >
@@ -7896,7 +7896,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                         - 0.100001 DARK
                       </span>
                     </div>
-                  </span>
+                  </div>
                   <span
                     class="text-xs font-semibold text-theme-secondary-700 lg:hidden"
                     data-testid="TransactionRow__exchange-currency"
@@ -8200,12 +8200,12 @@ exports[`TransactionTable > should render responsive 4`] = `
               <div
                 class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start my-1 pt-2 min-h-14 xl:min-h-11 xl:pt-3"
               >
-                <span
+                <div
                   class="inline-block font-semibold overflow-hidden text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] rounded px-1 py-[3px] dark:border"
                   data-testid="TransactionRow__type"
                 >
                   Transfer
-                </span>
+                </div>
               </div>
             </td>
             <td>
@@ -8216,12 +8216,12 @@ exports[`TransactionTable > should render responsive 4`] = `
                   class="flex flex-row gap-2"
                   data-testid="TransactionRowAddressing__container"
                 >
-                  <span
+                  <div
                     class="inline-block font-semibold overflow-hidden bg-theme-success-100 text-theme-success-700 dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-xs leading-[15px] !flex h-[21px] w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
                     data-testid="TransactionRowAddressing__label"
                   >
                     From
-                  </span>
+                  </div>
                   <div
                     class="w-50 sm:w-30"
                     data-testid="TransactionRowAddressing__address-container"
@@ -8256,7 +8256,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                 <div
                   class="flex flex-col items-end gap-1"
                 >
-                  <span
+                  <div
                     class="font-semibold overflow-hidden bg-theme-success-100 text-theme-success-700 dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-base flex items-center justify-center px-1.5 h-[21px] rounded dark:border"
                     data-testid="AmountLabel__wrapper"
                   >
@@ -8270,7 +8270,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                         + 20 DARK
                       </span>
                     </div>
-                  </span>
+                  </div>
                   <span
                     class="text-xs font-semibold text-theme-secondary-700 lg:hidden"
                     data-testid="TransactionRow__exchange-currency"
@@ -8361,12 +8361,12 @@ exports[`TransactionTable > should render responsive 4`] = `
               <div
                 class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start my-1 pt-2 min-h-14 xl:min-h-11 xl:pt-3"
               >
-                <span
+                <div
                   class="inline-block font-semibold overflow-hidden text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] rounded px-1 py-[3px] dark:border"
                   data-testid="TransactionRow__type"
                 >
                   Transfer
-                </span>
+                </div>
               </div>
             </td>
             <td>
@@ -8377,12 +8377,12 @@ exports[`TransactionTable > should render responsive 4`] = `
                   class="flex flex-row gap-2"
                   data-testid="TransactionRowAddressing__container"
                 >
-                  <span
+                  <div
                     class="inline-block font-semibold overflow-hidden text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border text-xs leading-[15px] !flex h-[21px] w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
                     data-testid="TransactionRowAddressing__label"
                   >
                     To
-                  </span>
+                  </div>
                   <div
                     class="w-40 sm:w-40 md:w-32 lg:w-50"
                     data-testid="TransactionRowAddressing__address-container"
@@ -8428,7 +8428,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                 <div
                   class="flex flex-col items-end gap-1"
                 >
-                  <span
+                  <div
                     class="font-semibold overflow-hidden text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border text-base flex items-center justify-center px-1.5 h-[21px] rounded dark:border"
                     data-testid="AmountLabel__wrapper"
                   >
@@ -8442,7 +8442,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                         - 20.03499657 DARK
                       </span>
                     </div>
-                  </span>
+                  </div>
                   <span
                     class="text-xs font-semibold text-theme-secondary-700 lg:hidden"
                     data-testid="TransactionRow__exchange-currency"
@@ -8533,12 +8533,12 @@ exports[`TransactionTable > should render responsive 4`] = `
               <div
                 class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start my-1 pt-2 min-h-14 xl:min-h-11 xl:pt-3"
               >
-                <span
+                <div
                   class="inline-block font-semibold overflow-hidden text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] rounded px-1 py-[3px] dark:border"
                   data-testid="TransactionRow__type"
                 >
                   Transfer
-                </span>
+                </div>
               </div>
             </td>
             <td>
@@ -8549,12 +8549,12 @@ exports[`TransactionTable > should render responsive 4`] = `
                   class="flex flex-row gap-2"
                   data-testid="TransactionRowAddressing__container"
                 >
-                  <span
+                  <div
                     class="inline-block font-semibold overflow-hidden bg-theme-success-100 text-theme-success-700 dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-xs leading-[15px] !flex h-[21px] w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
                     data-testid="TransactionRowAddressing__label"
                   >
                     From
-                  </span>
+                  </div>
                   <div
                     class="w-50 sm:w-30"
                     data-testid="TransactionRowAddressing__address-container"
@@ -8589,7 +8589,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                 <div
                   class="flex flex-col items-end gap-1"
                 >
-                  <span
+                  <div
                     class="font-semibold overflow-hidden bg-theme-success-100 text-theme-success-700 dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-base flex items-center justify-center px-1.5 h-[21px] rounded dark:border"
                     data-testid="AmountLabel__wrapper"
                   >
@@ -8603,7 +8603,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                         + 0.0000001 DARK
                       </span>
                     </div>
-                  </span>
+                  </div>
                   <span
                     class="text-xs font-semibold text-theme-secondary-700 lg:hidden"
                     data-testid="TransactionRow__exchange-currency"
@@ -8694,12 +8694,12 @@ exports[`TransactionTable > should render responsive 4`] = `
               <div
                 class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start my-1 pt-2 min-h-14 xl:min-h-11 xl:pt-3"
               >
-                <span
+                <div
                   class="inline-block font-semibold overflow-hidden text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] rounded px-1 py-[3px] dark:border"
                   data-testid="TransactionRow__type"
                 >
                   Transfer
-                </span>
+                </div>
               </div>
             </td>
             <td>
@@ -8710,12 +8710,12 @@ exports[`TransactionTable > should render responsive 4`] = `
                   class="flex flex-row gap-2"
                   data-testid="TransactionRowAddressing__container"
                 >
-                  <span
+                  <div
                     class="inline-block font-semibold overflow-hidden bg-theme-success-100 text-theme-success-700 dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-xs leading-[15px] !flex h-[21px] w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
                     data-testid="TransactionRowAddressing__label"
                   >
                     From
-                  </span>
+                  </div>
                   <div
                     class="w-50 sm:w-30"
                     data-testid="TransactionRowAddressing__address-container"
@@ -8750,7 +8750,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                 <div
                   class="flex flex-col items-end gap-1"
                 >
-                  <span
+                  <div
                     class="font-semibold overflow-hidden bg-theme-success-100 text-theme-success-700 dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-base flex items-center justify-center px-1.5 h-[21px] rounded dark:border"
                     data-testid="AmountLabel__wrapper"
                   >
@@ -8764,7 +8764,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                         + 0.0000001 DARK
                       </span>
                     </div>
-                  </span>
+                  </div>
                   <span
                     class="text-xs font-semibold text-theme-secondary-700 lg:hidden"
                     data-testid="TransactionRow__exchange-currency"
@@ -8855,12 +8855,12 @@ exports[`TransactionTable > should render responsive 4`] = `
               <div
                 class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start my-1 pt-2 min-h-14 xl:min-h-11 xl:pt-3"
               >
-                <span
+                <div
                   class="inline-block font-semibold overflow-hidden text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] rounded px-1 py-[3px] dark:border"
                   data-testid="TransactionRow__type"
                 >
                   Transfer
-                </span>
+                </div>
               </div>
             </td>
             <td>
@@ -8871,12 +8871,12 @@ exports[`TransactionTable > should render responsive 4`] = `
                   class="flex flex-row gap-2"
                   data-testid="TransactionRowAddressing__container"
                 >
-                  <span
+                  <div
                     class="inline-block font-semibold overflow-hidden bg-theme-success-100 text-theme-success-700 dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-xs leading-[15px] !flex h-[21px] w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
                     data-testid="TransactionRowAddressing__label"
                   >
                     From
-                  </span>
+                  </div>
                   <div
                     class="w-50 sm:w-30"
                     data-testid="TransactionRowAddressing__address-container"
@@ -8911,7 +8911,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                 <div
                   class="flex flex-col items-end gap-1"
                 >
-                  <span
+                  <div
                     class="font-semibold overflow-hidden bg-theme-success-100 text-theme-success-700 dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-base flex items-center justify-center px-1.5 h-[21px] rounded dark:border"
                     data-testid="AmountLabel__wrapper"
                   >
@@ -8925,7 +8925,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                         + 0.0000001 DARK
                       </span>
                     </div>
-                  </span>
+                  </div>
                   <span
                     class="text-xs font-semibold text-theme-secondary-700 lg:hidden"
                     data-testid="TransactionRow__exchange-currency"
@@ -9016,12 +9016,12 @@ exports[`TransactionTable > should render responsive 4`] = `
               <div
                 class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start my-1 pt-2 min-h-14 xl:min-h-11 xl:pt-3"
               >
-                <span
+                <div
                   class="inline-block font-semibold overflow-hidden text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] rounded px-1 py-[3px] dark:border"
                   data-testid="TransactionRow__type"
                 >
                   Transfer
-                </span>
+                </div>
               </div>
             </td>
             <td>
@@ -9032,12 +9032,12 @@ exports[`TransactionTable > should render responsive 4`] = `
                   class="flex flex-row gap-2"
                   data-testid="TransactionRowAddressing__container"
                 >
-                  <span
+                  <div
                     class="inline-block font-semibold overflow-hidden bg-theme-success-100 text-theme-success-700 dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-xs leading-[15px] !flex h-[21px] w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
                     data-testid="TransactionRowAddressing__label"
                   >
                     From
-                  </span>
+                  </div>
                   <div
                     class="w-50 sm:w-30"
                     data-testid="TransactionRowAddressing__address-container"
@@ -9072,7 +9072,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                 <div
                   class="flex flex-col items-end gap-1"
                 >
-                  <span
+                  <div
                     class="font-semibold overflow-hidden bg-theme-success-100 text-theme-success-700 dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-base flex items-center justify-center px-1.5 h-[21px] rounded dark:border"
                     data-testid="AmountLabel__wrapper"
                   >
@@ -9086,7 +9086,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                         + 0.0000001 DARK
                       </span>
                     </div>
-                  </span>
+                  </div>
                   <span
                     class="text-xs font-semibold text-theme-secondary-700 lg:hidden"
                     data-testid="TransactionRow__exchange-currency"
@@ -9177,12 +9177,12 @@ exports[`TransactionTable > should render responsive 4`] = `
               <div
                 class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start my-1 pt-2 min-h-14 xl:min-h-11 xl:pt-3"
               >
-                <span
+                <div
                   class="inline-block font-semibold overflow-hidden text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] rounded px-1 py-[3px] dark:border"
                   data-testid="TransactionRow__type"
                 >
                   Transfer
-                </span>
+                </div>
               </div>
             </td>
             <td>
@@ -9193,12 +9193,12 @@ exports[`TransactionTable > should render responsive 4`] = `
                   class="flex flex-row gap-2"
                   data-testid="TransactionRowAddressing__container"
                 >
-                  <span
+                  <div
                     class="inline-block font-semibold overflow-hidden bg-theme-success-100 text-theme-success-700 dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-xs leading-[15px] !flex h-[21px] w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
                     data-testid="TransactionRowAddressing__label"
                   >
                     From
-                  </span>
+                  </div>
                   <div
                     class="w-50 sm:w-30"
                     data-testid="TransactionRowAddressing__address-container"
@@ -9233,7 +9233,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                 <div
                   class="flex flex-col items-end gap-1"
                 >
-                  <span
+                  <div
                     class="font-semibold overflow-hidden bg-theme-success-100 text-theme-success-700 dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-base flex items-center justify-center px-1.5 h-[21px] rounded dark:border"
                     data-testid="AmountLabel__wrapper"
                   >
@@ -9247,7 +9247,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                         + 0.0000001 DARK
                       </span>
                     </div>
-                  </span>
+                  </div>
                   <span
                     class="text-xs font-semibold text-theme-secondary-700 lg:hidden"
                     data-testid="TransactionRow__exchange-currency"
@@ -9338,12 +9338,12 @@ exports[`TransactionTable > should render responsive 4`] = `
               <div
                 class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start my-1 pt-2 min-h-14 xl:min-h-11 xl:pt-3"
               >
-                <span
+                <div
                   class="inline-block font-semibold overflow-hidden text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] rounded px-1 py-[3px] dark:border"
                   data-testid="TransactionRow__type"
                 >
                   Transfer
-                </span>
+                </div>
               </div>
             </td>
             <td>
@@ -9354,12 +9354,12 @@ exports[`TransactionTable > should render responsive 4`] = `
                   class="flex flex-row gap-2"
                   data-testid="TransactionRowAddressing__container"
                 >
-                  <span
+                  <div
                     class="inline-block font-semibold overflow-hidden bg-theme-success-100 text-theme-success-700 dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-xs leading-[15px] !flex h-[21px] w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
                     data-testid="TransactionRowAddressing__label"
                   >
                     From
-                  </span>
+                  </div>
                   <div
                     class="w-50 sm:w-30"
                     data-testid="TransactionRowAddressing__address-container"
@@ -9394,7 +9394,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                 <div
                   class="flex flex-col items-end gap-1"
                 >
-                  <span
+                  <div
                     class="font-semibold overflow-hidden bg-theme-success-100 text-theme-success-700 dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-base flex items-center justify-center px-1.5 h-[21px] rounded dark:border"
                     data-testid="AmountLabel__wrapper"
                   >
@@ -9408,7 +9408,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                         + 0.0000001 DARK
                       </span>
                     </div>
-                  </span>
+                  </div>
                   <span
                     class="text-xs font-semibold text-theme-secondary-700 lg:hidden"
                     data-testid="TransactionRow__exchange-currency"
@@ -9499,12 +9499,12 @@ exports[`TransactionTable > should render responsive 4`] = `
               <div
                 class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start my-1 pt-2 min-h-14 xl:min-h-11 xl:pt-3"
               >
-                <span
+                <div
                   class="inline-block font-semibold overflow-hidden text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] rounded px-1 py-[3px] dark:border"
                   data-testid="TransactionRow__type"
                 >
                   Transfer
-                </span>
+                </div>
               </div>
             </td>
             <td>
@@ -9515,12 +9515,12 @@ exports[`TransactionTable > should render responsive 4`] = `
                   class="flex flex-row gap-2"
                   data-testid="TransactionRowAddressing__container"
                 >
-                  <span
+                  <div
                     class="inline-block font-semibold overflow-hidden bg-theme-success-100 text-theme-success-700 dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-xs leading-[15px] !flex h-[21px] w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
                     data-testid="TransactionRowAddressing__label"
                   >
                     From
-                  </span>
+                  </div>
                   <div
                     class="w-50 sm:w-30"
                     data-testid="TransactionRowAddressing__address-container"
@@ -9555,7 +9555,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                 <div
                   class="flex flex-col items-end gap-1"
                 >
-                  <span
+                  <div
                     class="font-semibold overflow-hidden bg-theme-success-100 text-theme-success-700 dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-base flex items-center justify-center px-1.5 h-[21px] rounded dark:border"
                     data-testid="AmountLabel__wrapper"
                   >
@@ -9569,7 +9569,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                         + 0.0000001 DARK
                       </span>
                     </div>
-                  </span>
+                  </div>
                   <span
                     class="text-xs font-semibold text-theme-secondary-700 lg:hidden"
                     data-testid="TransactionRow__exchange-currency"
@@ -9660,12 +9660,12 @@ exports[`TransactionTable > should render responsive 4`] = `
               <div
                 class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start my-1 pt-2 min-h-14 xl:min-h-11 xl:pt-3"
               >
-                <span
+                <div
                   class="inline-block font-semibold overflow-hidden text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] rounded px-1 py-[3px] dark:border"
                   data-testid="TransactionRow__type"
                 >
                   Transfer
-                </span>
+                </div>
               </div>
             </td>
             <td>
@@ -9676,12 +9676,12 @@ exports[`TransactionTable > should render responsive 4`] = `
                   class="flex flex-row gap-2"
                   data-testid="TransactionRowAddressing__container"
                 >
-                  <span
+                  <div
                     class="inline-block font-semibold overflow-hidden text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border text-xs leading-[15px] !flex h-[21px] w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
                     data-testid="TransactionRowAddressing__label"
                   >
                     To
-                  </span>
+                  </div>
                   <div
                     class="w-40 sm:w-40 md:w-32 lg:w-50"
                     data-testid="TransactionRowAddressing__address-container"
@@ -9727,7 +9727,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                 <div
                   class="flex flex-col items-end gap-1"
                 >
-                  <span
+                  <div
                     class="font-semibold overflow-hidden text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border text-base flex items-center justify-center px-1.5 h-[21px] rounded dark:border"
                     data-testid="AmountLabel__wrapper"
                   >
@@ -9741,7 +9741,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                         - 0.100001 DARK
                       </span>
                     </div>
-                  </span>
+                  </div>
                   <span
                     class="text-xs font-semibold text-theme-secondary-700 lg:hidden"
                     data-testid="TransactionRow__exchange-currency"
@@ -10057,12 +10057,12 @@ exports[`TransactionTable > should render responsive 5`] = `
               <div
                 class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start my-1 pt-2 min-h-14 xl:min-h-11 xl:pt-3"
               >
-                <span
+                <div
                   class="inline-block font-semibold overflow-hidden text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] rounded px-1 py-[3px] dark:border"
                   data-testid="TransactionRow__type"
                 >
                   Transfer
-                </span>
+                </div>
               </div>
             </td>
             <td>
@@ -10073,12 +10073,12 @@ exports[`TransactionTable > should render responsive 5`] = `
                   class="flex flex-row gap-2"
                   data-testid="TransactionRowAddressing__container"
                 >
-                  <span
+                  <div
                     class="inline-block font-semibold overflow-hidden bg-theme-success-100 text-theme-success-700 dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-xs leading-[15px] !flex h-[21px] w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
                     data-testid="TransactionRowAddressing__label"
                   >
                     From
-                  </span>
+                  </div>
                   <div
                     class="w-50 sm:w-30"
                     data-testid="TransactionRowAddressing__address-container"
@@ -10113,7 +10113,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                 <div
                   class="flex flex-col items-end gap-1"
                 >
-                  <span
+                  <div
                     class="font-semibold overflow-hidden bg-theme-success-100 text-theme-success-700 dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-base flex items-center justify-center px-1.5 h-[21px] rounded dark:border"
                     data-testid="AmountLabel__wrapper"
                   >
@@ -10127,7 +10127,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                         + 20 DARK
                       </span>
                     </div>
-                  </span>
+                  </div>
                   <span
                     class="text-xs font-semibold text-theme-secondary-700 lg:hidden"
                     data-testid="TransactionRow__exchange-currency"
@@ -10218,12 +10218,12 @@ exports[`TransactionTable > should render responsive 5`] = `
               <div
                 class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start my-1 pt-2 min-h-14 xl:min-h-11 xl:pt-3"
               >
-                <span
+                <div
                   class="inline-block font-semibold overflow-hidden text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] rounded px-1 py-[3px] dark:border"
                   data-testid="TransactionRow__type"
                 >
                   Transfer
-                </span>
+                </div>
               </div>
             </td>
             <td>
@@ -10234,12 +10234,12 @@ exports[`TransactionTable > should render responsive 5`] = `
                   class="flex flex-row gap-2"
                   data-testid="TransactionRowAddressing__container"
                 >
-                  <span
+                  <div
                     class="inline-block font-semibold overflow-hidden text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border text-xs leading-[15px] !flex h-[21px] w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
                     data-testid="TransactionRowAddressing__label"
                   >
                     To
-                  </span>
+                  </div>
                   <div
                     class="w-40 sm:w-40 md:w-32 lg:w-50"
                     data-testid="TransactionRowAddressing__address-container"
@@ -10285,7 +10285,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                 <div
                   class="flex flex-col items-end gap-1"
                 >
-                  <span
+                  <div
                     class="font-semibold overflow-hidden text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border text-base flex items-center justify-center px-1.5 h-[21px] rounded dark:border"
                     data-testid="AmountLabel__wrapper"
                   >
@@ -10299,7 +10299,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                         - 20.03499657 DARK
                       </span>
                     </div>
-                  </span>
+                  </div>
                   <span
                     class="text-xs font-semibold text-theme-secondary-700 lg:hidden"
                     data-testid="TransactionRow__exchange-currency"
@@ -10390,12 +10390,12 @@ exports[`TransactionTable > should render responsive 5`] = `
               <div
                 class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start my-1 pt-2 min-h-14 xl:min-h-11 xl:pt-3"
               >
-                <span
+                <div
                   class="inline-block font-semibold overflow-hidden text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] rounded px-1 py-[3px] dark:border"
                   data-testid="TransactionRow__type"
                 >
                   Transfer
-                </span>
+                </div>
               </div>
             </td>
             <td>
@@ -10406,12 +10406,12 @@ exports[`TransactionTable > should render responsive 5`] = `
                   class="flex flex-row gap-2"
                   data-testid="TransactionRowAddressing__container"
                 >
-                  <span
+                  <div
                     class="inline-block font-semibold overflow-hidden bg-theme-success-100 text-theme-success-700 dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-xs leading-[15px] !flex h-[21px] w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
                     data-testid="TransactionRowAddressing__label"
                   >
                     From
-                  </span>
+                  </div>
                   <div
                     class="w-50 sm:w-30"
                     data-testid="TransactionRowAddressing__address-container"
@@ -10446,7 +10446,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                 <div
                   class="flex flex-col items-end gap-1"
                 >
-                  <span
+                  <div
                     class="font-semibold overflow-hidden bg-theme-success-100 text-theme-success-700 dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-base flex items-center justify-center px-1.5 h-[21px] rounded dark:border"
                     data-testid="AmountLabel__wrapper"
                   >
@@ -10460,7 +10460,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                         + 0.0000001 DARK
                       </span>
                     </div>
-                  </span>
+                  </div>
                   <span
                     class="text-xs font-semibold text-theme-secondary-700 lg:hidden"
                     data-testid="TransactionRow__exchange-currency"
@@ -10551,12 +10551,12 @@ exports[`TransactionTable > should render responsive 5`] = `
               <div
                 class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start my-1 pt-2 min-h-14 xl:min-h-11 xl:pt-3"
               >
-                <span
+                <div
                   class="inline-block font-semibold overflow-hidden text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] rounded px-1 py-[3px] dark:border"
                   data-testid="TransactionRow__type"
                 >
                   Transfer
-                </span>
+                </div>
               </div>
             </td>
             <td>
@@ -10567,12 +10567,12 @@ exports[`TransactionTable > should render responsive 5`] = `
                   class="flex flex-row gap-2"
                   data-testid="TransactionRowAddressing__container"
                 >
-                  <span
+                  <div
                     class="inline-block font-semibold overflow-hidden bg-theme-success-100 text-theme-success-700 dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-xs leading-[15px] !flex h-[21px] w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
                     data-testid="TransactionRowAddressing__label"
                   >
                     From
-                  </span>
+                  </div>
                   <div
                     class="w-50 sm:w-30"
                     data-testid="TransactionRowAddressing__address-container"
@@ -10607,7 +10607,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                 <div
                   class="flex flex-col items-end gap-1"
                 >
-                  <span
+                  <div
                     class="font-semibold overflow-hidden bg-theme-success-100 text-theme-success-700 dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-base flex items-center justify-center px-1.5 h-[21px] rounded dark:border"
                     data-testid="AmountLabel__wrapper"
                   >
@@ -10621,7 +10621,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                         + 0.0000001 DARK
                       </span>
                     </div>
-                  </span>
+                  </div>
                   <span
                     class="text-xs font-semibold text-theme-secondary-700 lg:hidden"
                     data-testid="TransactionRow__exchange-currency"
@@ -10712,12 +10712,12 @@ exports[`TransactionTable > should render responsive 5`] = `
               <div
                 class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start my-1 pt-2 min-h-14 xl:min-h-11 xl:pt-3"
               >
-                <span
+                <div
                   class="inline-block font-semibold overflow-hidden text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] rounded px-1 py-[3px] dark:border"
                   data-testid="TransactionRow__type"
                 >
                   Transfer
-                </span>
+                </div>
               </div>
             </td>
             <td>
@@ -10728,12 +10728,12 @@ exports[`TransactionTable > should render responsive 5`] = `
                   class="flex flex-row gap-2"
                   data-testid="TransactionRowAddressing__container"
                 >
-                  <span
+                  <div
                     class="inline-block font-semibold overflow-hidden bg-theme-success-100 text-theme-success-700 dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-xs leading-[15px] !flex h-[21px] w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
                     data-testid="TransactionRowAddressing__label"
                   >
                     From
-                  </span>
+                  </div>
                   <div
                     class="w-50 sm:w-30"
                     data-testid="TransactionRowAddressing__address-container"
@@ -10768,7 +10768,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                 <div
                   class="flex flex-col items-end gap-1"
                 >
-                  <span
+                  <div
                     class="font-semibold overflow-hidden bg-theme-success-100 text-theme-success-700 dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-base flex items-center justify-center px-1.5 h-[21px] rounded dark:border"
                     data-testid="AmountLabel__wrapper"
                   >
@@ -10782,7 +10782,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                         + 0.0000001 DARK
                       </span>
                     </div>
-                  </span>
+                  </div>
                   <span
                     class="text-xs font-semibold text-theme-secondary-700 lg:hidden"
                     data-testid="TransactionRow__exchange-currency"
@@ -10873,12 +10873,12 @@ exports[`TransactionTable > should render responsive 5`] = `
               <div
                 class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start my-1 pt-2 min-h-14 xl:min-h-11 xl:pt-3"
               >
-                <span
+                <div
                   class="inline-block font-semibold overflow-hidden text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] rounded px-1 py-[3px] dark:border"
                   data-testid="TransactionRow__type"
                 >
                   Transfer
-                </span>
+                </div>
               </div>
             </td>
             <td>
@@ -10889,12 +10889,12 @@ exports[`TransactionTable > should render responsive 5`] = `
                   class="flex flex-row gap-2"
                   data-testid="TransactionRowAddressing__container"
                 >
-                  <span
+                  <div
                     class="inline-block font-semibold overflow-hidden bg-theme-success-100 text-theme-success-700 dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-xs leading-[15px] !flex h-[21px] w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
                     data-testid="TransactionRowAddressing__label"
                   >
                     From
-                  </span>
+                  </div>
                   <div
                     class="w-50 sm:w-30"
                     data-testid="TransactionRowAddressing__address-container"
@@ -10929,7 +10929,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                 <div
                   class="flex flex-col items-end gap-1"
                 >
-                  <span
+                  <div
                     class="font-semibold overflow-hidden bg-theme-success-100 text-theme-success-700 dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-base flex items-center justify-center px-1.5 h-[21px] rounded dark:border"
                     data-testid="AmountLabel__wrapper"
                   >
@@ -10943,7 +10943,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                         + 0.0000001 DARK
                       </span>
                     </div>
-                  </span>
+                  </div>
                   <span
                     class="text-xs font-semibold text-theme-secondary-700 lg:hidden"
                     data-testid="TransactionRow__exchange-currency"
@@ -11034,12 +11034,12 @@ exports[`TransactionTable > should render responsive 5`] = `
               <div
                 class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start my-1 pt-2 min-h-14 xl:min-h-11 xl:pt-3"
               >
-                <span
+                <div
                   class="inline-block font-semibold overflow-hidden text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] rounded px-1 py-[3px] dark:border"
                   data-testid="TransactionRow__type"
                 >
                   Transfer
-                </span>
+                </div>
               </div>
             </td>
             <td>
@@ -11050,12 +11050,12 @@ exports[`TransactionTable > should render responsive 5`] = `
                   class="flex flex-row gap-2"
                   data-testid="TransactionRowAddressing__container"
                 >
-                  <span
+                  <div
                     class="inline-block font-semibold overflow-hidden bg-theme-success-100 text-theme-success-700 dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-xs leading-[15px] !flex h-[21px] w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
                     data-testid="TransactionRowAddressing__label"
                   >
                     From
-                  </span>
+                  </div>
                   <div
                     class="w-50 sm:w-30"
                     data-testid="TransactionRowAddressing__address-container"
@@ -11090,7 +11090,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                 <div
                   class="flex flex-col items-end gap-1"
                 >
-                  <span
+                  <div
                     class="font-semibold overflow-hidden bg-theme-success-100 text-theme-success-700 dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-base flex items-center justify-center px-1.5 h-[21px] rounded dark:border"
                     data-testid="AmountLabel__wrapper"
                   >
@@ -11104,7 +11104,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                         + 0.0000001 DARK
                       </span>
                     </div>
-                  </span>
+                  </div>
                   <span
                     class="text-xs font-semibold text-theme-secondary-700 lg:hidden"
                     data-testid="TransactionRow__exchange-currency"
@@ -11195,12 +11195,12 @@ exports[`TransactionTable > should render responsive 5`] = `
               <div
                 class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start my-1 pt-2 min-h-14 xl:min-h-11 xl:pt-3"
               >
-                <span
+                <div
                   class="inline-block font-semibold overflow-hidden text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] rounded px-1 py-[3px] dark:border"
                   data-testid="TransactionRow__type"
                 >
                   Transfer
-                </span>
+                </div>
               </div>
             </td>
             <td>
@@ -11211,12 +11211,12 @@ exports[`TransactionTable > should render responsive 5`] = `
                   class="flex flex-row gap-2"
                   data-testid="TransactionRowAddressing__container"
                 >
-                  <span
+                  <div
                     class="inline-block font-semibold overflow-hidden bg-theme-success-100 text-theme-success-700 dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-xs leading-[15px] !flex h-[21px] w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
                     data-testid="TransactionRowAddressing__label"
                   >
                     From
-                  </span>
+                  </div>
                   <div
                     class="w-50 sm:w-30"
                     data-testid="TransactionRowAddressing__address-container"
@@ -11251,7 +11251,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                 <div
                   class="flex flex-col items-end gap-1"
                 >
-                  <span
+                  <div
                     class="font-semibold overflow-hidden bg-theme-success-100 text-theme-success-700 dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-base flex items-center justify-center px-1.5 h-[21px] rounded dark:border"
                     data-testid="AmountLabel__wrapper"
                   >
@@ -11265,7 +11265,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                         + 0.0000001 DARK
                       </span>
                     </div>
-                  </span>
+                  </div>
                   <span
                     class="text-xs font-semibold text-theme-secondary-700 lg:hidden"
                     data-testid="TransactionRow__exchange-currency"
@@ -11356,12 +11356,12 @@ exports[`TransactionTable > should render responsive 5`] = `
               <div
                 class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start my-1 pt-2 min-h-14 xl:min-h-11 xl:pt-3"
               >
-                <span
+                <div
                   class="inline-block font-semibold overflow-hidden text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] rounded px-1 py-[3px] dark:border"
                   data-testid="TransactionRow__type"
                 >
                   Transfer
-                </span>
+                </div>
               </div>
             </td>
             <td>
@@ -11372,12 +11372,12 @@ exports[`TransactionTable > should render responsive 5`] = `
                   class="flex flex-row gap-2"
                   data-testid="TransactionRowAddressing__container"
                 >
-                  <span
+                  <div
                     class="inline-block font-semibold overflow-hidden bg-theme-success-100 text-theme-success-700 dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-xs leading-[15px] !flex h-[21px] w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
                     data-testid="TransactionRowAddressing__label"
                   >
                     From
-                  </span>
+                  </div>
                   <div
                     class="w-50 sm:w-30"
                     data-testid="TransactionRowAddressing__address-container"
@@ -11412,7 +11412,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                 <div
                   class="flex flex-col items-end gap-1"
                 >
-                  <span
+                  <div
                     class="font-semibold overflow-hidden bg-theme-success-100 text-theme-success-700 dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-base flex items-center justify-center px-1.5 h-[21px] rounded dark:border"
                     data-testid="AmountLabel__wrapper"
                   >
@@ -11426,7 +11426,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                         + 0.0000001 DARK
                       </span>
                     </div>
-                  </span>
+                  </div>
                   <span
                     class="text-xs font-semibold text-theme-secondary-700 lg:hidden"
                     data-testid="TransactionRow__exchange-currency"
@@ -11517,12 +11517,12 @@ exports[`TransactionTable > should render responsive 5`] = `
               <div
                 class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start my-1 pt-2 min-h-14 xl:min-h-11 xl:pt-3"
               >
-                <span
+                <div
                   class="inline-block font-semibold overflow-hidden text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] rounded px-1 py-[3px] dark:border"
                   data-testid="TransactionRow__type"
                 >
                   Transfer
-                </span>
+                </div>
               </div>
             </td>
             <td>
@@ -11533,12 +11533,12 @@ exports[`TransactionTable > should render responsive 5`] = `
                   class="flex flex-row gap-2"
                   data-testid="TransactionRowAddressing__container"
                 >
-                  <span
+                  <div
                     class="inline-block font-semibold overflow-hidden text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border text-xs leading-[15px] !flex h-[21px] w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
                     data-testid="TransactionRowAddressing__label"
                   >
                     To
-                  </span>
+                  </div>
                   <div
                     class="w-40 sm:w-40 md:w-32 lg:w-50"
                     data-testid="TransactionRowAddressing__address-container"
@@ -11584,7 +11584,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                 <div
                   class="flex flex-col items-end gap-1"
                 >
-                  <span
+                  <div
                     class="font-semibold overflow-hidden text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border text-base flex items-center justify-center px-1.5 h-[21px] rounded dark:border"
                     data-testid="AmountLabel__wrapper"
                   >
@@ -11598,7 +11598,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                         - 0.100001 DARK
                       </span>
                     </div>
-                  </span>
+                  </div>
                   <span
                     class="text-xs font-semibold text-theme-secondary-700 lg:hidden"
                     data-testid="TransactionRow__exchange-currency"

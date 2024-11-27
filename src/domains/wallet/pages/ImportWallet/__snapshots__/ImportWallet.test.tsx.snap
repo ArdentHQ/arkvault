@@ -112,12 +112,13 @@ exports[`ImportWallet > import with private key > when is not valid 1`] = `
           data-testid="SelectDropdown"
         >
           <div
-            class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 border focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
+            class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
           >
             <div
               class="relative flex h-full flex-1"
             >
               <input
+                autocomplete="off"
                 class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
                 data-testid="select-list__input"
                 name=""
@@ -149,7 +150,7 @@ exports[`ImportWallet > import with private key > when is not valid 1`] = `
                   …
                 </div>
                 <div
-                  class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 border focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+                  class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
                 >
                   <div
                     class="relative flex h-full flex-1"
@@ -158,6 +159,7 @@ exports[`ImportWallet > import with private key > when is not valid 1`] = `
                       aria-autocomplete="list"
                       aria-controls="ImportWallet__select-menu"
                       aria-labelledby="ImportWallet__select-label"
+                      autocomplete="off"
                       class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
                       data-testid="SelectDropdown__input"
                       id="ImportWallet__select-input"
@@ -246,12 +248,13 @@ exports[`ImportWallet > import with private key > when is not valid 1`] = `
           Private Key
         </label>
         <div
-          class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 border focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+          class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
         >
           <div
             class="relative flex h-full flex-1"
           >
             <input
+              autocomplete="off"
               class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
               data-testid="ImportWallet__privatekey-input"
               name="value"
@@ -465,12 +468,13 @@ exports[`ImportWallet > import with private key > when is valid 1`] = `
           data-testid="SelectDropdown"
         >
           <div
-            class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 border focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
+            class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
           >
             <div
               class="relative flex h-full flex-1"
             >
               <input
+                autocomplete="off"
                 class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
                 data-testid="select-list__input"
                 name=""
@@ -502,7 +506,7 @@ exports[`ImportWallet > import with private key > when is valid 1`] = `
                   …
                 </div>
                 <div
-                  class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 border focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+                  class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
                 >
                   <div
                     class="relative flex h-full flex-1"
@@ -511,6 +515,7 @@ exports[`ImportWallet > import with private key > when is valid 1`] = `
                       aria-autocomplete="list"
                       aria-controls="ImportWallet__select-menu"
                       aria-labelledby="ImportWallet__select-label"
+                      autocomplete="off"
                       class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
                       data-testid="SelectDropdown__input"
                       id="ImportWallet__select-input"
@@ -599,12 +604,13 @@ exports[`ImportWallet > import with private key > when is valid 1`] = `
           Private Key
         </label>
         <div
-          class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 border focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+          class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
         >
           <div
             class="relative flex h-full flex-1"
           >
             <input
+              autocomplete="off"
               class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
               data-testid="ImportWallet__privatekey-input"
               name="value"
@@ -818,12 +824,13 @@ exports[`ImportWallet > import with wif > with invalid wif 1`] = `
           data-testid="SelectDropdown"
         >
           <div
-            class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 border focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
+            class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
           >
             <div
               class="relative flex h-full flex-1"
             >
               <input
+                autocomplete="off"
                 class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
                 data-testid="select-list__input"
                 name=""
@@ -855,7 +862,7 @@ exports[`ImportWallet > import with wif > with invalid wif 1`] = `
                   …
                 </div>
                 <div
-                  class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 border focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+                  class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
                 >
                   <div
                     class="relative flex h-full flex-1"
@@ -864,6 +871,7 @@ exports[`ImportWallet > import with wif > with invalid wif 1`] = `
                       aria-autocomplete="list"
                       aria-controls="ImportWallet__select-menu"
                       aria-labelledby="ImportWallet__select-label"
+                      autocomplete="off"
                       class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
                       data-testid="SelectDropdown__input"
                       id="ImportWallet__select-input"
@@ -952,12 +960,13 @@ exports[`ImportWallet > import with wif > with invalid wif 1`] = `
           WIF
         </label>
         <div
-          class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 border focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+          class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
         >
           <div
             class="relative flex h-full flex-1"
           >
             <input
+              autocomplete="off"
               class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
               data-testid="ImportWallet__wif-input"
               name="value"
@@ -1171,12 +1180,13 @@ exports[`ImportWallet > import with wif > with valid wif 1`] = `
           data-testid="SelectDropdown"
         >
           <div
-            class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 border focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
+            class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
           >
             <div
               class="relative flex h-full flex-1"
             >
               <input
+                autocomplete="off"
                 class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
                 data-testid="select-list__input"
                 name=""
@@ -1208,7 +1218,7 @@ exports[`ImportWallet > import with wif > with valid wif 1`] = `
                   …
                 </div>
                 <div
-                  class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 border focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+                  class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
                 >
                   <div
                     class="relative flex h-full flex-1"
@@ -1217,6 +1227,7 @@ exports[`ImportWallet > import with wif > with valid wif 1`] = `
                       aria-autocomplete="list"
                       aria-controls="ImportWallet__select-menu"
                       aria-labelledby="ImportWallet__select-label"
+                      autocomplete="off"
                       class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
                       data-testid="SelectDropdown__input"
                       id="ImportWallet__select-input"
@@ -1305,12 +1316,13 @@ exports[`ImportWallet > import with wif > with valid wif 1`] = `
           WIF
         </label>
         <div
-          class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 border focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+          class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
         >
           <div
             class="relative flex h-full flex-1"
           >
             <input
+              autocomplete="off"
               class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
               data-testid="ImportWallet__wif-input"
               name="value"
@@ -1524,12 +1536,13 @@ exports[`ImportWallet > should import with encryped wif 1`] = `
           data-testid="SelectDropdown"
         >
           <div
-            class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 border focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
+            class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
           >
             <div
               class="relative flex h-full flex-1"
             >
               <input
+                autocomplete="off"
                 class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
                 data-testid="select-list__input"
                 name=""
@@ -1561,7 +1574,7 @@ exports[`ImportWallet > should import with encryped wif 1`] = `
                   …
                 </div>
                 <div
-                  class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 border focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+                  class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
                 >
                   <div
                     class="relative flex h-full flex-1"
@@ -1570,6 +1583,7 @@ exports[`ImportWallet > should import with encryped wif 1`] = `
                       aria-autocomplete="list"
                       aria-controls="ImportWallet__select-menu"
                       aria-labelledby="ImportWallet__select-label"
+                      autocomplete="off"
                       class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
                       data-testid="SelectDropdown__input"
                       id="ImportWallet__select-input"
@@ -1661,12 +1675,13 @@ exports[`ImportWallet > should import with encryped wif 1`] = `
           class="relative"
         >
           <div
-            class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 border focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+            class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
           >
             <div
               class="relative flex h-full flex-1"
             >
               <input
+                autocomplete="off"
                 class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
                 data-testid="ImportWallet__encryptedWif-input"
                 name="encryptedWif"
@@ -1688,12 +1703,13 @@ exports[`ImportWallet > should import with encryped wif 1`] = `
           Password
         </label>
         <div
-          class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 border focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+          class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
         >
           <div
             class="relative flex h-full flex-1"
           >
             <input
+              autocomplete="off"
               class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
               data-testid="ImportWallet__encryptedWif__password-input"
               name="value"
@@ -1928,7 +1944,7 @@ exports[`ImportWallet > should render as ledger import 1`] = `
         </button>
       </div>
     </div>
-    <div
+    <nav
       aria-labelledby="main menu"
       class="custom-nav-wrapper sticky inset-x-0 top-0 z-40 border-b bg-theme-background transition-all duration-200 border-theme-secondary-300 dark:border-theme-secondary-800"
     >
@@ -2367,7 +2383,7 @@ exports[`ImportWallet > should render as ledger import 1`] = `
           </div>
         </div>
       </div>
-    </div>
+    </nav>
     <div
       class="flex flex-1 flex-col"
     >
@@ -2584,7 +2600,7 @@ exports[`ImportWallet > should render as ledger import 1`] = `
                       class="inline-flex w-full items-center justify-center space-x-3"
                     >
                       <div
-                        class="animate-spin rounded-full border [border-width:5px] flex-shrink-0 w-8 h-8 border-theme-secondary-200 dark:border-black"
+                        class="animate-spin rounded-full border-[5px] flex-shrink-0 w-8 h-8 border-theme-secondary-200 dark:border-black"
                       />
                       <span
                         class="animate-pulse font-semibold text-theme-secondary-text"
@@ -2743,12 +2759,13 @@ exports[`ImportWallet > should render method step 1`] = `
           data-testid="SelectDropdown"
         >
           <div
-            class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 border focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
+            class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
           >
             <div
               class="relative flex h-full flex-1"
             >
               <input
+                autocomplete="off"
                 class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
                 data-testid="select-list__input"
                 name=""
@@ -2780,7 +2797,7 @@ exports[`ImportWallet > should render method step 1`] = `
                   …
                 </div>
                 <div
-                  class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 border focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+                  class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
                 >
                   <div
                     class="relative flex h-full flex-1"
@@ -2789,6 +2806,7 @@ exports[`ImportWallet > should render method step 1`] = `
                       aria-autocomplete="list"
                       aria-controls="ImportWallet__select-menu"
                       aria-labelledby="ImportWallet__select-label"
+                      autocomplete="off"
                       class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
                       data-testid="SelectDropdown__input"
                       id="ImportWallet__select-input"
@@ -2877,12 +2895,13 @@ exports[`ImportWallet > should render method step 1`] = `
           Mnemonic
         </label>
         <div
-          class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 border focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+          class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
         >
           <div
             class="relative flex h-full flex-1"
           >
             <input
+              autocomplete="off"
               class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
               data-testid="ImportWallet__mnemonic-input"
               name="value"
@@ -3203,12 +3222,13 @@ exports[`ImportWallet > should render network step 1`] = `
           data-testid="SelectDropdown"
         >
           <div
-            class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 border focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
+            class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
           >
             <div
               class="relative flex h-full flex-1"
             >
               <input
+                autocomplete="off"
                 class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
                 data-testid="select-list__input"
                 name="network"
@@ -3234,7 +3254,7 @@ exports[`ImportWallet > should render network step 1`] = `
                   id="downshift-0-label"
                 />
                 <div
-                  class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 border focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+                  class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
                 >
                   <div
                     class="relative flex h-full flex-1"
@@ -3243,6 +3263,7 @@ exports[`ImportWallet > should render network step 1`] = `
                       aria-autocomplete="list"
                       aria-controls="downshift-0-menu"
                       aria-labelledby="downshift-0-label"
+                      autocomplete="off"
                       class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base cursor-default"
                       data-testid="SelectDropdown__input"
                       id="downshift-0-input"

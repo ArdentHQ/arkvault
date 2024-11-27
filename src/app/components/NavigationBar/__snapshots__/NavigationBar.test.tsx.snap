@@ -122,7 +122,7 @@ exports[`NavigationBar > should not render with title if variant is full 1`] = `
       </button>
     </div>
   </div>
-  <div
+  <nav
     aria-labelledby="main menu"
     class="custom-nav-wrapper sticky inset-x-0 top-0 z-40 border-b bg-theme-background transition-all duration-200 border-theme-secondary-300 dark:border-theme-secondary-800"
   >
@@ -537,13 +537,13 @@ exports[`NavigationBar > should not render with title if variant is full 1`] = `
         </div>
       </div>
     </div>
-  </div>
+  </nav>
 </DocumentFragment>
 `;
 
 exports[`NavigationBar > should render as logo-only variant 1`] = `
 <DocumentFragment>
-  <div
+  <nav
     aria-labelledby="main menu"
     class="custom-nav-wrapper sticky inset-x-0 top-0 z-40 border-b border-theme-background bg-theme-background transition-all duration-200"
   >
@@ -584,7 +584,7 @@ exports[`NavigationBar > should render as logo-only variant 1`] = `
         </div>
       </div>
     </div>
-  </div>
+  </nav>
 </DocumentFragment>
 `;
 
@@ -712,7 +712,7 @@ exports[`NavigationBar > should render full variant when profile restored is fal
       </button>
     </div>
   </div>
-  <div
+  <nav
     aria-labelledby="main menu"
     class="custom-nav-wrapper sticky inset-x-0 top-0 z-40 border-b bg-theme-background transition-all duration-200 border-theme-secondary-300 dark:border-theme-secondary-800"
   >
@@ -1133,7 +1133,7 @@ exports[`NavigationBar > should render full variant when profile restored is fal
         </div>
       </div>
     </div>
-  </div>
+  </nav>
 </DocumentFragment>
 `;
 
@@ -1259,7 +1259,7 @@ exports[`NavigationBar > should render full variant when profile restored is tru
       </button>
     </div>
   </div>
-  <div
+  <nav
     aria-labelledby="main menu"
     class="custom-nav-wrapper sticky inset-x-0 top-0 z-40 border-b bg-theme-background transition-all duration-200 border-theme-secondary-300 dark:border-theme-secondary-800"
   >
@@ -1674,7 +1674,7 @@ exports[`NavigationBar > should render full variant when profile restored is tru
         </div>
       </div>
     </div>
-  </div>
+  </nav>
 </DocumentFragment>
 `;
 
@@ -1800,7 +1800,7 @@ exports[`NavigationBar > should render in lg 1`] = `
       </button>
     </div>
   </div>
-  <div
+  <nav
     aria-labelledby="main menu"
     class="custom-nav-wrapper sticky inset-x-0 top-0 z-40 border-b bg-theme-background transition-all duration-200 border-theme-secondary-300 dark:border-theme-secondary-800"
   >
@@ -2215,7 +2215,7 @@ exports[`NavigationBar > should render in lg 1`] = `
         </div>
       </div>
     </div>
-  </div>
+  </nav>
 </DocumentFragment>
 `;
 
@@ -2341,7 +2341,7 @@ exports[`NavigationBar > should render in md 1`] = `
       </button>
     </div>
   </div>
-  <div
+  <nav
     aria-labelledby="main menu"
     class="custom-nav-wrapper sticky inset-x-0 top-0 z-40 border-b bg-theme-background transition-all duration-200 border-theme-secondary-300 dark:border-theme-secondary-800"
   >
@@ -2756,7 +2756,7 @@ exports[`NavigationBar > should render in md 1`] = `
         </div>
       </div>
     </div>
-  </div>
+  </nav>
 </DocumentFragment>
 `;
 
@@ -2882,7 +2882,7 @@ exports[`NavigationBar > should render in sm 1`] = `
       </button>
     </div>
   </div>
-  <div
+  <nav
     aria-labelledby="main menu"
     class="custom-nav-wrapper sticky inset-x-0 top-0 z-40 border-b bg-theme-background transition-all duration-200 border-theme-secondary-300 dark:border-theme-secondary-800"
   >
@@ -3297,7 +3297,7 @@ exports[`NavigationBar > should render in sm 1`] = `
         </div>
       </div>
     </div>
-  </div>
+  </nav>
 </DocumentFragment>
 `;
 
@@ -3423,7 +3423,7 @@ exports[`NavigationBar > should render in small screen variant 1`] = `
       </button>
     </div>
   </div>
-  <div
+  <nav
     aria-labelledby="main menu"
     class="custom-nav-wrapper sticky inset-x-0 top-0 z-40 border-b bg-theme-background transition-all duration-200 border-theme-secondary-300 dark:border-theme-secondary-800"
   >
@@ -3838,7 +3838,7 @@ exports[`NavigationBar > should render in small screen variant 1`] = `
         </div>
       </div>
     </div>
-  </div>
+  </nav>
 </DocumentFragment>
 `;
 
@@ -3964,7 +3964,7 @@ exports[`NavigationBar > should render in xs 1`] = `
       </button>
     </div>
   </div>
-  <div
+  <nav
     aria-labelledby="main menu"
     class="custom-nav-wrapper sticky inset-x-0 top-0 z-40 border-b bg-theme-background transition-all duration-200 border-theme-secondary-300 dark:border-theme-secondary-800"
   >
@@ -4379,7 +4379,7 @@ exports[`NavigationBar > should render in xs 1`] = `
         </div>
       </div>
     </div>
-  </div>
+  </nav>
 </DocumentFragment>
 `;
 
@@ -4505,7 +4505,7 @@ exports[`NavigationBar > should render with custom menu 1`] = `
       </button>
     </div>
   </div>
-  <div
+  <nav
     aria-labelledby="main menu"
     class="custom-nav-wrapper sticky inset-x-0 top-0 z-40 border-b bg-theme-background transition-all duration-200 border-theme-secondary-300 dark:border-theme-secondary-800"
   >
@@ -4920,7 +4920,7 @@ exports[`NavigationBar > should render with custom menu 1`] = `
         </div>
       </div>
     </div>
-  </div>
+  </nav>
 </DocumentFragment>
 `;
 
@@ -5046,7 +5046,7 @@ exports[`NavigationBar > should render with shadow if there is a scroll 1`] = `
       </button>
     </div>
   </div>
-  <div
+  <nav
     aria-labelledby="main menu"
     class="custom-nav-wrapper sticky inset-x-0 top-0 z-40 border-b border-theme-background bg-theme-background transition-all duration-200 shadow-header-smooth dark:shadow-header-smooth-dark"
   >
@@ -5461,13 +5461,13 @@ exports[`NavigationBar > should render with shadow if there is a scroll 1`] = `
         </div>
       </div>
     </div>
-  </div>
+  </nav>
 </DocumentFragment>
 `;
 
 exports[`NavigationBar > should render with title if variant is logo-only 1`] = `
 <DocumentFragment>
-  <div
+  <nav
     aria-labelledby="main menu"
     class="custom-nav-wrapper sticky inset-x-0 top-0 z-40 border-b border-theme-background bg-theme-background transition-all duration-200"
   >
@@ -5513,6 +5513,6 @@ exports[`NavigationBar > should render with title if variant is logo-only 1`] = 
         </div>
       </div>
     </div>
-  </div>
+  </nav>
 </DocumentFragment>
 `;
