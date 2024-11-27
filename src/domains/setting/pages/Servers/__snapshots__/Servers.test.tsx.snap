@@ -1107,7 +1107,7 @@ exports[`Servers Settings > should render servers settings 1`] = `
                                 data-testid="NodeStatus--statusloading"
                               >
                                 <div
-                                  class="animate-spin rounded-full border [border-width:5px] flex-shrink-0 w-5 h-5 border-theme-secondary-200 dark:border-black"
+                                  class="animate-spin rounded-full border-[5px] flex-shrink-0 w-5 h-5 border-theme-secondary-200 dark:border-black"
                                 />
                               </div>
                             </div>
@@ -1194,7 +1194,7 @@ exports[`Servers Settings > should render servers settings 1`] = `
                                 data-testid="NodeStatus--statusloading"
                               >
                                 <div
-                                  class="animate-spin rounded-full border [border-width:5px] flex-shrink-0 w-5 h-5 border-theme-secondary-200 dark:border-black"
+                                  class="animate-spin rounded-full border-[5px] flex-shrink-0 w-5 h-5 border-theme-secondary-200 dark:border-black"
                                 />
                               </div>
                             </div>
@@ -4801,7 +4801,7 @@ exports[`Servers Settings > with servers > should render custom servers 1`] = `
                                 data-testid="NodeStatus--statusloading"
                               >
                                 <div
-                                  class="animate-spin rounded-full border [border-width:5px] flex-shrink-0 w-5 h-5 border-theme-secondary-200 dark:border-black"
+                                  class="animate-spin rounded-full border-[5px] flex-shrink-0 w-5 h-5 border-theme-secondary-200 dark:border-black"
                                 />
                               </div>
                             </div>
@@ -4888,7 +4888,7 @@ exports[`Servers Settings > with servers > should render custom servers 1`] = `
                                 data-testid="NodeStatus--statusloading"
                               >
                                 <div
-                                  class="animate-spin rounded-full border [border-width:5px] flex-shrink-0 w-5 h-5 border-theme-secondary-200 dark:border-black"
+                                  class="animate-spin rounded-full border-[5px] flex-shrink-0 w-5 h-5 border-theme-secondary-200 dark:border-black"
                                 />
                               </div>
                             </div>
@@ -5196,7 +5196,7 @@ exports[`Servers Settings > with servers > should render custom servers 1`] = `
                                             data-testid="CustomPeersPeer--statusloading"
                                           >
                                             <div
-                                              class="animate-spin rounded-full border [border-width:5px] flex-shrink-0 w-5 h-5 border-theme-secondary-200 dark:border-black"
+                                              class="animate-spin rounded-full border-[5px] flex-shrink-0 w-5 h-5 border-theme-secondary-200 dark:border-black"
                                             />
                                           </div>
                                         </div>
@@ -5470,7 +5470,7 @@ exports[`Servers Settings > with servers > should render custom servers 1`] = `
                                             data-testid="CustomPeersPeer--statusloading"
                                           >
                                             <div
-                                              class="animate-spin rounded-full border [border-width:5px] flex-shrink-0 w-5 h-5 border-theme-secondary-200 dark:border-black"
+                                              class="animate-spin rounded-full border-[5px] flex-shrink-0 w-5 h-5 border-theme-secondary-200 dark:border-black"
                                             />
                                           </div>
                                         </div>
@@ -5714,7 +5714,7 @@ exports[`Servers Settings > with servers > should render custom servers 1`] = `
                                             data-testid="CustomPeersPeer--statusloading"
                                           >
                                             <div
-                                              class="animate-spin rounded-full border [border-width:5px] flex-shrink-0 w-5 h-5 border-theme-secondary-200 dark:border-black"
+                                              class="animate-spin rounded-full border-[5px] flex-shrink-0 w-5 h-5 border-theme-secondary-200 dark:border-black"
                                             />
                                           </div>
                                         </div>
@@ -6986,7 +6986,7 @@ exports[`Servers Settings > with servers > should render customs servers in xs 1
                                 data-testid="NodeStatus--statusloading"
                               >
                                 <div
-                                  class="animate-spin rounded-full border [border-width:5px] flex-shrink-0 w-5 h-5 border-theme-secondary-200 dark:border-black"
+                                  class="animate-spin rounded-full border-[5px] flex-shrink-0 w-5 h-5 border-theme-secondary-200 dark:border-black"
                                 />
                               </div>
                             </div>
@@ -7073,7 +7073,7 @@ exports[`Servers Settings > with servers > should render customs servers in xs 1
                                 data-testid="NodeStatus--statusloading"
                               >
                                 <div
-                                  class="animate-spin rounded-full border [border-width:5px] flex-shrink-0 w-5 h-5 border-theme-secondary-200 dark:border-black"
+                                  class="animate-spin rounded-full border-[5px] flex-shrink-0 w-5 h-5 border-theme-secondary-200 dark:border-black"
                                 />
                               </div>
                             </div>
@@ -7221,7 +7221,7 @@ exports[`Servers Settings > with servers > should render customs servers in xs 1
                                           data-testid="CustomPeersPeer--statusloading"
                                         >
                                           <div
-                                            class="animate-spin rounded-full border [border-width:5px] flex-shrink-0 w-5 h-5 border-theme-secondary-200 dark:border-black"
+                                            class="animate-spin rounded-full border-[5px] flex-shrink-0 w-5 h-5 border-theme-secondary-200 dark:border-black"
                                           />
                                         </div>
                                       </div>
@@ -7393,7 +7393,7 @@ exports[`Servers Settings > with servers > should render customs servers in xs 1
                                               data-testid="CustomPeersPeer--statusloading"
                                             >
                                               <div
-                                                class="animate-spin rounded-full border [border-width:5px] flex-shrink-0 w-5 h-5 border-theme-secondary-200 dark:border-black"
+                                                class="animate-spin rounded-full border-[5px] flex-shrink-0 w-5 h-5 border-theme-secondary-200 dark:border-black"
                                               />
                                             </div>
                                           </div>
@@ -7605,7 +7605,7 @@ exports[`Servers Settings > with servers > should render customs servers in xs 1
                                           data-testid="CustomPeersPeer--statusloading"
                                         >
                                           <div
-                                            class="animate-spin rounded-full border [border-width:5px] flex-shrink-0 w-5 h-5 border-theme-secondary-200 dark:border-black"
+                                            class="animate-spin rounded-full border-[5px] flex-shrink-0 w-5 h-5 border-theme-secondary-200 dark:border-black"
                                           />
                                         </div>
                                       </div>
@@ -7795,7 +7795,7 @@ exports[`Servers Settings > with servers > should render customs servers in xs 1
                                               data-testid="CustomPeersPeer--statusloading"
                                             >
                                               <div
-                                                class="animate-spin rounded-full border [border-width:5px] flex-shrink-0 w-5 h-5 border-theme-secondary-200 dark:border-black"
+                                                class="animate-spin rounded-full border-[5px] flex-shrink-0 w-5 h-5 border-theme-secondary-200 dark:border-black"
                                               />
                                             </div>
                                           </div>
@@ -7979,7 +7979,7 @@ exports[`Servers Settings > with servers > should render customs servers in xs 1
                                           data-testid="CustomPeersPeer--statusloading"
                                         >
                                           <div
-                                            class="animate-spin rounded-full border [border-width:5px] flex-shrink-0 w-5 h-5 border-theme-secondary-200 dark:border-black"
+                                            class="animate-spin rounded-full border-[5px] flex-shrink-0 w-5 h-5 border-theme-secondary-200 dark:border-black"
                                           />
                                         </div>
                                       </div>
@@ -8169,7 +8169,7 @@ exports[`Servers Settings > with servers > should render customs servers in xs 1
                                               data-testid="CustomPeersPeer--statusloading"
                                             >
                                               <div
-                                                class="animate-spin rounded-full border [border-width:5px] flex-shrink-0 w-5 h-5 border-theme-secondary-200 dark:border-black"
+                                                class="animate-spin rounded-full border-[5px] flex-shrink-0 w-5 h-5 border-theme-secondary-200 dark:border-black"
                                               />
                                             </div>
                                           </div>

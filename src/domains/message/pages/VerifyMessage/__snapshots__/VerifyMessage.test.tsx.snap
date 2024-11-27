@@ -130,7 +130,7 @@ exports[`VerifyMessage > should render (lg) 1`] = `
         </button>
       </div>
     </div>
-    <div
+    <nav
       aria-labelledby="main menu"
       class="custom-nav-wrapper sticky inset-x-0 top-0 z-40 border-b bg-theme-background transition-all duration-200 border-theme-secondary-300 dark:border-theme-secondary-800"
     >
@@ -569,7 +569,7 @@ exports[`VerifyMessage > should render (lg) 1`] = `
           </div>
         </div>
       </div>
-    </div>
+    </nav>
     <div
       class="flex flex-1 flex-col"
     >
@@ -765,6 +765,7 @@ exports[`VerifyMessage > should render (lg) 1`] = `
                           class="relative flex h-full flex-1"
                         >
                           <input
+                            autocomplete="off"
                             class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
                             data-testid="VerifyMessage__manual-signatory"
                             name="signatory"
@@ -791,6 +792,7 @@ exports[`VerifyMessage > should render (lg) 1`] = `
                           class="relative flex h-full flex-1"
                         >
                           <input
+                            autocomplete="off"
                             class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
                             data-testid="VerifyMessage__manual-message"
                             name="message"
@@ -817,6 +819,7 @@ exports[`VerifyMessage > should render (lg) 1`] = `
                           class="relative flex h-full flex-1"
                         >
                           <input
+                            autocomplete="off"
                             class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
                             data-testid="VerifyMessage__manual-signature"
                             name="signature"
@@ -995,7 +998,7 @@ exports[`VerifyMessage > should render (xs) 1`] = `
         </button>
       </div>
     </div>
-    <div
+    <nav
       aria-labelledby="main menu"
       class="custom-nav-wrapper sticky inset-x-0 top-0 z-40 border-b bg-theme-background transition-all duration-200 border-theme-secondary-300 dark:border-theme-secondary-800"
     >
@@ -1434,7 +1437,7 @@ exports[`VerifyMessage > should render (xs) 1`] = `
           </div>
         </div>
       </div>
-    </div>
+    </nav>
     <div
       class="flex flex-1 flex-col"
     >
@@ -1630,6 +1633,7 @@ exports[`VerifyMessage > should render (xs) 1`] = `
                           class="relative flex h-full flex-1"
                         >
                           <input
+                            autocomplete="off"
                             class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
                             data-testid="VerifyMessage__manual-signatory"
                             name="signatory"
@@ -1656,6 +1660,7 @@ exports[`VerifyMessage > should render (xs) 1`] = `
                           class="relative flex h-full flex-1"
                         >
                           <input
+                            autocomplete="off"
                             class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
                             data-testid="VerifyMessage__manual-message"
                             name="message"
@@ -1682,6 +1687,7 @@ exports[`VerifyMessage > should render (xs) 1`] = `
                           class="relative flex h-full flex-1"
                         >
                           <input
+                            autocomplete="off"
                             class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
                             data-testid="VerifyMessage__manual-signature"
                             name="signature"
