@@ -21,7 +21,7 @@ export const ExchangeNavigationBar = ({
 	const { t } = useTranslation();
 
 	return (
-		<nav className="sticky mb-4 -mt-0 md:mt-4 dark:bg-black top-21 bg-theme-secondary-100 z-10">
+		<nav className="sticky top-21 z-10 -mt-0 mb-4 bg-theme-secondary-100 dark:bg-black md:mt-4">
 			<div className="mx-auto flex items-center justify-between px-6 lg:container md:px-10">
 				<Tabs activeId={currentView} className="w-full" onChange={onChange}>
 					<TabList className="flex h-[3.25rem] w-full flex-row gap-6" noBackground>

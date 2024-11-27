@@ -10,12 +10,12 @@ interface SpinnerType extends React.HTMLAttributes<HTMLDivElement> {
 	width?: number;
 }
 
-export const Spinner = ({ color, size, theme, width, ...props}: SpinnerType) => (
-		<div
-			{...props}
-			className={twMerge(getStyles({ color, size, theme, }), props.className)}
-			style={{
-				borderWidth: `${width}px !important`,
-			}}
-		/>
-	);
+export const Spinner = ({ color, size, theme, width, ...props }: SpinnerType) => (
+	<div
+		{...props}
+		className={twMerge(getStyles({ color, size, theme }), props.className)}
+		style={{
+			borderWidth: `${width}px !important`,
+		}}
+	/>
+);

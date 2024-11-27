@@ -11,14 +11,24 @@ interface SectionProperties {
 	innerClassName?: string;
 }
 
-const SectionWrapper = ({ backgroundClassName, border, ...props}: {backgroundClassName?: string; border?: boolean;} & React.HTMLAttributes<HTMLDivElement>) => (
-		<div {...props} className={twMerge(cn({
-			"border-b": border,
-			"pb-8": !backgroundClassName && border,
-			"pt-8": border && props.className?.includes("hasBorder"),
-			"py-8": backgroundClassName && !border
-		}), props.className)} />
-	)
+const SectionWrapper = ({
+	backgroundClassName,
+	border,
+	...props
+}: { backgroundClassName?: string; border?: boolean } & React.HTMLAttributes<HTMLDivElement>) => (
+	<div
+		{...props}
+		className={twMerge(
+			cn({
+				"border-b": border,
+				"pb-8": !backgroundClassName && border,
+				"pt-8": border && props.className?.includes("hasBorder"),
+				"py-8": backgroundClassName && !border,
+			}),
+			props.className,
+		)}
+	/>
+);
 
 export const Section = ({
 	children,

@@ -1,7 +1,7 @@
 import { LabelProperties } from "./Label";
 import { Size } from "@/types";
 
-const baseStyle = 'inline-block font-semibold overflow-hidden';
+const baseStyle = "inline-block font-semibold overflow-hidden";
 
 export type ColorType =
 	| "primary"
