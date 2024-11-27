@@ -29,13 +29,13 @@ import { profileAllEnabledNetworkIds } from "@/utils/network-utils";
 import { useZendesk } from "@/app/contexts/Zendesk";
 import { twMerge } from "tailwind-merge";
 
-const NavWrapper = ({ noBorder, noShadow, scroll, ...props }: React.HTMLProps<HTMLDivElement> & { noBorder?: boolean; noShadow?: boolean; scroll?: number }) => <div {...props} className={twMerge("z-40 sticky inset-x-0 top-0 transition-all duration-200 border-b border-theme-background bg-theme-background navWrapper", cn({
+const NavWrapper = ({ noBorder, noShadow, scroll, ...props }: React.HTMLProps<HTMLDivElement> & { noBorder?: boolean; noShadow?: boolean; scroll?: number }) => <div {...props} className={twMerge("z-40 sticky inset-x-0 top-0 transition-all duration-200 border-b border-theme-background bg-theme-background custom-nav-wrapper", cn({
 		"border-theme-secondary-300 dark:border-theme-secondary-800": !noBorder && !scroll,
 		"shadow-header-smooth dark:shadow-header-smooth-dark": !noShadow && scroll,
 	}), props.className)} />
 
 export const NavigationButtonWrapper = ({...props}: React.HTMLProps<HTMLDivElement>) => (
-		<div {...props} className={twMerge("navButtonWrapper", props.className)} />
+		<div {...props} className={twMerge("custom-button-wrapper", props.className)} />
 	)
 
 const NavigationBarLogo: React.FC<NavigationBarLogoOnlyProperties> = ({
