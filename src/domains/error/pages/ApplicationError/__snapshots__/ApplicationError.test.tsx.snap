@@ -10,7 +10,7 @@ exports[`ApplicationError > should render with error message and reload 1`] = `
       class="relative flex flex-col sm:min-h-screen pb-14 sm:pb-0"
       style="min-height: -webkit-fill-available;"
     >
-      <div
+      <nav
         aria-labelledby="main menu"
         class="custom-nav-wrapper sticky inset-x-0 top-0 z-40 border-b border-theme-background bg-theme-background transition-all duration-200"
       >
@@ -59,7 +59,7 @@ exports[`ApplicationError > should render with error message and reload 1`] = `
             </div>
           </div>
         </div>
-      </div>
+      </nav>
       <div
         class="flex flex-1 flex-col"
       >
@@ -277,6 +277,7 @@ exports[`ApplicationError > should render with error message and reload 1`] = `
                   >
                     <input
                       as="textarea"
+                      autocomplete="off"
                       class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base min-h-[8rem] md:min-h-auto md:resize-y resize-none text-theme-secondary-text"
                       data-testid="ErrorStep__errorMessage"
                       disabled=""
@@ -335,7 +336,7 @@ exports[`ApplicationError > should render without error message 1`] = `
       class="relative flex flex-col sm:min-h-screen pb-14 sm:pb-0"
       style="min-height: -webkit-fill-available;"
     >
-      <div
+      <nav
         aria-labelledby="main menu"
         class="custom-nav-wrapper sticky inset-x-0 top-0 z-40 border-b border-theme-background bg-theme-background transition-all duration-200"
       >
@@ -384,7 +385,7 @@ exports[`ApplicationError > should render without error message 1`] = `
             </div>
           </div>
         </div>
-      </div>
+      </nav>
       <div
         class="flex flex-1 flex-col"
       >

@@ -6,7 +6,7 @@ exports[`Offline > should render 1`] = `
     class="relative flex flex-col sm:min-h-screen pb-14 sm:pb-0"
     style="min-height: -webkit-fill-available;"
   >
-    <div
+    <nav
       aria-labelledby="main menu"
       class="custom-nav-wrapper sticky inset-x-0 top-0 z-40 border-b border-theme-background bg-theme-background transition-all duration-200"
     >
@@ -55,7 +55,7 @@ exports[`Offline > should render 1`] = `
           </div>
         </div>
       </div>
-    </div>
+    </nav>
     <div
       class="flex flex-1 flex-col"
     >

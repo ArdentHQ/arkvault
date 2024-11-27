@@ -23,6 +23,7 @@ exports[`ContactForm > should render responsive 1`] = `
           class="relative flex h-full flex-1"
         >
           <input
+            autocomplete="off"
             class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
             data-testid="contact-form__name-input"
             name="name"
@@ -56,6 +57,7 @@ exports[`ContactForm > should render responsive 1`] = `
               class="relative flex h-full flex-1"
             >
               <input
+                autocomplete="off"
                 class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
                 data-testid="select-list__input"
                 name="network"
@@ -90,6 +92,7 @@ exports[`ContactForm > should render responsive 1`] = `
                       aria-autocomplete="list"
                       aria-controls="downshift-0-menu"
                       aria-labelledby="downshift-0-label"
+                      autocomplete="off"
                       class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base cursor-default"
                       data-testid="SelectDropdown__input"
                       id="downshift-0-input"
@@ -175,6 +178,7 @@ exports[`ContactForm > should render responsive 1`] = `
             class="relative flex h-full flex-1"
           >
             <input
+              autocomplete="off"
               class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
               data-testid="contact-form__address-input"
               name="address"
@@ -259,6 +263,7 @@ exports[`ContactForm > should render responsive 2`] = `
           class="relative flex h-full flex-1"
         >
           <input
+            autocomplete="off"
             class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
             data-testid="contact-form__name-input"
             name="name"
@@ -292,6 +297,7 @@ exports[`ContactForm > should render responsive 2`] = `
               class="relative flex h-full flex-1"
             >
               <input
+                autocomplete="off"
                 class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
                 data-testid="select-list__input"
                 name="network"
@@ -326,6 +332,7 @@ exports[`ContactForm > should render responsive 2`] = `
                       aria-autocomplete="list"
                       aria-controls="downshift-4-menu"
                       aria-labelledby="downshift-4-label"
+                      autocomplete="off"
                       class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base cursor-default"
                       data-testid="SelectDropdown__input"
                       id="downshift-4-input"
@@ -411,6 +418,7 @@ exports[`ContactForm > should render responsive 2`] = `
             class="relative flex h-full flex-1"
           >
             <input
+              autocomplete="off"
               class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
               data-testid="contact-form__address-input"
               name="address"

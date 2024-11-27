@@ -74,21 +74,24 @@ export const InputWrapperStyled = ({
 	/>
 );
 
-interface InputStyledProps extends React.InputHTMLAttributes<HTMLInputElement> {
-	autocomplete?: string;
+interface InputStyledProps {
+    autocomplete?: string;
+    as?: React.ElementType;
 }
 
-const InputStyled = forwardRef<HTMLInputElement, InputStyledProps>(({ autocomplete = "off", ...props }, ref) => (
-	<input
-		{...props}
-		ref={ref}
-		autoComplete={autocomplete}
-		className={twMerge(
-			"!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none",
-			props.className,
-		)}
-	/>
-));
+const InputStyled = forwardRef<HTMLInputElement, InputStyledProps & React.ComponentPropsWithRef<'input'>>(
+    ({ autocomplete = "off", as: Component = 'input', ...props }, ref) => (
+        <Component
+            {...props}
+            ref={ref}
+            autoComplete={autocomplete}
+            className={twMerge(
+                "!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none",
+                props.className,
+            )}
+        />
+    )
+);
 
 InputStyled.displayName = "InputStyled";
 
