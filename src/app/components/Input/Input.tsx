@@ -32,29 +32,26 @@ type InputProperties = {
 	suggestion?: string;
 } & React.HTMLProps<any>;
 
-export const InputWrapperStyled = ({noBorder, noShadow, valid, invalid, disabled, isTextArea, isCompact, ...props}: React.HTMLProps<HTMLDivElement> & {disabled?: boolean; invalid?: boolean; valid?: boolean; isTextArea?: boolean; isCompact?: boolean; noBorder?: boolean; noShadow?: boolean;}) => {
-	return (
+export const InputWrapperStyled = ({noBorder, noShadow, valid, invalid, disabled, isTextArea, isCompact, ...props}: React.HTMLProps<HTMLDivElement> & {disabled?: boolean; invalid?: boolean; valid?: boolean; isTextArea?: boolean; isCompact?: boolean; noBorder?: boolean; noShadow?: boolean;}) => (
 		<div {...props} className={twMerge("flex items-center w-full px-4 space-x-2 transition-colors duration-200 rounded appearance-none text-theme-text", cn({
-			"border": !noBorder,
-			"focus-within:ring-1": !noShadow,
-			"border-theme-danger-500 bg-theme-secondary-100 dark:bg-theme-secondary-800": disabled && invalid,
-			"border-theme-secondary-300 dark:border-theme-secondary-700 bg-theme-secondary-100 dark:bg-theme-secondary-800": disabled && !invalid,
 			"bg-theme-background border-theme-danger-500 focus-within:ring-theme-danger-500": invalid && !disabled,
 			"bg-theme-background border-theme-primary-600 focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600": valid && !disabled && !invalid,
 			"bg-theme-background border-theme-secondary-400 dark:border-theme-secondary-700 focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600": !valid && !invalid && !disabled,
-			"relative": isTextArea,
-			"h-[34px] overflow-hidden": !isTextArea && isCompact,
+			"border": !noBorder,
+			"border-theme-danger-500 bg-theme-secondary-100 dark:bg-theme-secondary-800": disabled && invalid,
+			"border-theme-secondary-300 dark:border-theme-secondary-700 bg-theme-secondary-100 dark:bg-theme-secondary-800": disabled && !invalid,
+			"focus-within:ring-1": !noShadow,
 			"h-12 sm:h-14 overflow-hidden": !isTextArea && !isCompact,
+			"h-[34px] overflow-hidden": !isTextArea && isCompact,
+			"relative": isTextArea,
 		}),props.className)} />
 	)
-}
 
 interface InputStyledProps extends React.InputHTMLAttributes<HTMLInputElement> {
     autocomplete?: string;
 }
 
-const InputStyled = forwardRef<HTMLInputElement, InputStyledProps>(({ autocomplete, ...props }, ref) => {
-    return (
+const InputStyled = forwardRef<HTMLInputElement, InputStyledProps>(({ autocomplete, ...props }, ref) => (
         <input
             {...props}
             ref={ref}
@@ -64,8 +61,7 @@ const InputStyled = forwardRef<HTMLInputElement, InputStyledProps>(({ autocomple
                 props.className
             )}
         />
-    );
-});
+    ));
 
 InputStyled.displayName = "InputStyled";
 
