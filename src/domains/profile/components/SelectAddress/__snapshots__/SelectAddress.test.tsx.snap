@@ -25,6 +25,7 @@ exports[`SelectAddress > should render disabled 1`] = `
         class="relative flex h-full flex-1 invisible"
       >
         <input
+          autocomplete="off"
           class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base text-theme-secondary-text"
           data-testid="SelectAddress__input"
           disabled=""
@@ -107,6 +108,7 @@ exports[`SelectAddress > should render empty 1`] = `
         class="relative flex h-full flex-1 invisible"
       >
         <input
+          autocomplete="off"
           class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
           data-testid="SelectAddress__input"
           readonly=""
@@ -189,6 +191,7 @@ exports[`SelectAddress > should render invalid 1`] = `
       >
         <input
           aria-invalid="true"
+          autocomplete="off"
           class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
           data-testid="SelectAddress__input"
           readonly=""
@@ -343,6 +346,7 @@ exports[`SelectAddress > should render with preselected address 1`] = `
         class="relative flex h-full flex-1 invisible"
       >
         <input
+          autocomplete="off"
           class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
           data-testid="SelectAddress__input"
           readonly=""
@@ -424,6 +428,7 @@ exports[`SelectAddress > should render without user icon 1`] = `
         class="relative flex h-full flex-1 invisible"
       >
         <input
+          autocomplete="off"
           class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
           data-testid="SelectAddress__input"
           readonly=""
