@@ -130,7 +130,7 @@ exports[`SendTransfer Fee Handling > should send a single transfer with a high f
         </button>
       </div>
     </div>
-    <div
+    <nav
       aria-labelledby="main menu"
       class="custom-nav-wrapper sticky inset-x-0 top-0 z-40 border-b bg-theme-background transition-all duration-200 border-theme-secondary-300 dark:border-theme-secondary-800"
     >
@@ -569,7 +569,7 @@ exports[`SendTransfer Fee Handling > should send a single transfer with a high f
           </div>
         </div>
       </div>
-    </div>
+    </nav>
     <div
       class="flex flex-1 flex-col"
     >
@@ -1030,11 +1030,11 @@ exports[`SendTransfer Fee Handling > should send a single transfer with a high f
                                     >
                                       Category
                                     </div>
-                                    <span
+                                    <div
                                       class="inline-block font-semibold overflow-hidden px-1 border-2 rounded text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:text-theme-secondary-500 dark:bg-transparent dark:border-theme-secondary-800 text-xs leading-[15px]"
                                     >
                                       Transfer
-                                    </span>
+                                    </div>
                                   </div>
                                 </div>
                               </div>
@@ -1091,7 +1091,7 @@ exports[`SendTransfer Fee Handling > should send a single transfer with a high f
                                   >
                                     Amount
                                   </div>
-                                  <span
+                                  <div
                                     class="font-semibold overflow-hidden text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border text-base flex items-center justify-center px-1.5 h-[21px] rounded dark:border"
                                     data-testid="AmountLabel__wrapper"
                                   >
@@ -1105,7 +1105,7 @@ exports[`SendTransfer Fee Handling > should send a single transfer with a high f
                                         - 400,000 DARK
                                       </span>
                                     </div>
-                                  </span>
+                                  </div>
                                 </div>
                                 <div
                                   class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3 [.condensed_&]:leading-3"
@@ -1617,7 +1617,7 @@ exports[`SendTransfer Fee Handling > should send a single transfer with a low fe
         </button>
       </div>
     </div>
-    <div
+    <nav
       aria-labelledby="main menu"
       class="custom-nav-wrapper sticky inset-x-0 top-0 z-40 border-b bg-theme-background transition-all duration-200 border-theme-secondary-300 dark:border-theme-secondary-800"
     >
@@ -2056,7 +2056,7 @@ exports[`SendTransfer Fee Handling > should send a single transfer with a low fe
           </div>
         </div>
       </div>
-    </div>
+    </nav>
     <div
       class="flex flex-1 flex-col"
     >
@@ -2517,11 +2517,11 @@ exports[`SendTransfer Fee Handling > should send a single transfer with a low fe
                                     >
                                       Category
                                     </div>
-                                    <span
+                                    <div
                                       class="inline-block font-semibold overflow-hidden px-1 border-2 rounded text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:text-theme-secondary-500 dark:bg-transparent dark:border-theme-secondary-800 text-xs leading-[15px]"
                                     >
                                       Transfer
-                                    </span>
+                                    </div>
                                   </div>
                                 </div>
                               </div>
@@ -2578,7 +2578,7 @@ exports[`SendTransfer Fee Handling > should send a single transfer with a low fe
                                   >
                                     Amount
                                   </div>
-                                  <span
+                                  <div
                                     class="font-semibold overflow-hidden text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border text-base flex items-center justify-center px-1.5 h-[21px] rounded dark:border"
                                     data-testid="AmountLabel__wrapper"
                                   >
@@ -2592,7 +2592,7 @@ exports[`SendTransfer Fee Handling > should send a single transfer with a low fe
                                         - 400,000 DARK
                                       </span>
                                     </div>
-                                  </span>
+                                  </div>
                                 </div>
                                 <div
                                   class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3 [.condensed_&]:leading-3"

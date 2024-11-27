@@ -78,7 +78,7 @@ interface InputStyledProps extends React.InputHTMLAttributes<HTMLInputElement> {
 	autocomplete?: string;
 }
 
-const InputStyled = forwardRef<HTMLInputElement, InputStyledProps>(({ autocomplete, ...props }, ref) => (
+const InputStyled = forwardRef<HTMLInputElement, InputStyledProps>(({ autocomplete = "off", ...props }, ref) => (
 	<input
 		{...props}
 		ref={ref}

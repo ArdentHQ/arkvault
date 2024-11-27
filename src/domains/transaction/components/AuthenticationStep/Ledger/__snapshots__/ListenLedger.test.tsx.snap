@@ -167,8 +167,7 @@ exports[`ListenLedger > should emit event on device available 1`] = `
       class="inline-flex w-full items-center justify-center space-x-3"
     >
       <div
-        class="css-1ppx3l2"
-        color="info"
+        class="animate-spin rounded-full border [border-width:5px] flex-shrink-0 w-8 h-8 border-theme-secondary-200 dark:border-black"
       />
       <span
         class="animate-pulse font-semibold text-theme-secondary-text"
@@ -348,8 +347,7 @@ exports[`ListenLedger > should emit event on device not available 1`] = `
       class="inline-flex w-full items-center justify-center space-x-3"
     >
       <div
-        class="css-1ppx3l2"
-        color="info"
+        class="animate-spin rounded-full border [border-width:5px] flex-shrink-0 w-8 h-8 border-theme-secondary-200 dark:border-black"
       />
       <span
         class="animate-pulse font-semibold text-theme-secondary-text"

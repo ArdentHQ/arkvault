@@ -132,7 +132,7 @@ exports[`Network Settings > should render networks settings section 1`] = `
         </button>
       </div>
     </div>
-    <div
+    <nav
       aria-labelledby="main menu"
       class="custom-nav-wrapper sticky inset-x-0 top-0 z-40 border-b bg-theme-background transition-all duration-200 border-theme-secondary-300 dark:border-theme-secondary-800"
     >
@@ -573,7 +573,7 @@ exports[`Network Settings > should render networks settings section 1`] = `
           </div>
         </div>
       </div>
-    </div>
+    </nav>
     <div
       class="flex flex-1 flex-col"
     >

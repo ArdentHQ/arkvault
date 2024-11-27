@@ -126,7 +126,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
         </button>
       </div>
     </div>
-    <div
+    <nav
       aria-labelledby="main menu"
       class="custom-nav-wrapper sticky inset-x-0 top-0 z-40 border-b bg-theme-background transition-all duration-200 border-theme-secondary-300 dark:border-theme-secondary-800"
     >
@@ -566,7 +566,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
           </div>
         </div>
       </div>
-    </div>
+    </nav>
     <div
       class="flex flex-1 flex-col"
     >
@@ -1745,7 +1745,7 @@ exports[`Contacts > should render responsive with contacts 1`] = `
         </button>
       </div>
     </div>
-    <div
+    <nav
       aria-labelledby="main menu"
       class="custom-nav-wrapper sticky inset-x-0 top-0 z-40 border-b bg-theme-background transition-all duration-200 border-theme-secondary-300 dark:border-theme-secondary-800"
     >
@@ -2185,7 +2185,7 @@ exports[`Contacts > should render responsive with contacts 1`] = `
           </div>
         </div>
       </div>
-    </div>
+    </nav>
     <div
       class="flex flex-1 flex-col"
     >
@@ -3093,7 +3093,7 @@ exports[`Contacts > should render with contacts 1`] = `
         </button>
       </div>
     </div>
-    <div
+    <nav
       aria-labelledby="main menu"
       class="custom-nav-wrapper sticky inset-x-0 top-0 z-40 border-b bg-theme-background transition-all duration-200 border-theme-secondary-300 dark:border-theme-secondary-800"
     >
@@ -3533,7 +3533,7 @@ exports[`Contacts > should render with contacts 1`] = `
           </div>
         </div>
       </div>
-    </div>
+    </nav>
     <div
       class="flex flex-1 flex-col"
     >
@@ -4712,7 +4712,7 @@ exports[`Contacts > should render without contacts 1`] = `
         </button>
       </div>
     </div>
-    <div
+    <nav
       aria-labelledby="main menu"
       class="custom-nav-wrapper sticky inset-x-0 top-0 z-40 border-b bg-theme-background transition-all duration-200 border-theme-secondary-300 dark:border-theme-secondary-800"
     >
@@ -5152,7 +5152,7 @@ exports[`Contacts > should render without contacts 1`] = `
           </div>
         </div>
       </div>
-    </div>
+    </nav>
     <div
       class="flex flex-1 flex-col"
     >

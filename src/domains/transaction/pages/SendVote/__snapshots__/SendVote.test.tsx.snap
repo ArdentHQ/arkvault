@@ -134,7 +134,7 @@ exports[`SendVote > should send a unvote transaction 1`] = `
         </button>
       </div>
     </div>
-    <div
+    <nav
       aria-labelledby="main menu"
       class="custom-nav-wrapper sticky inset-x-0 top-0 z-40 border-b bg-theme-background transition-all duration-200 border-theme-secondary-300 dark:border-theme-secondary-800"
     >
@@ -573,7 +573,7 @@ exports[`SendVote > should send a unvote transaction 1`] = `
           </div>
         </div>
       </div>
-    </div>
+    </nav>
     <div
       class="flex flex-1 flex-col"
     >
@@ -966,11 +966,11 @@ exports[`SendVote > should send a unvote transaction 1`] = `
                                   >
                                     Category
                                   </div>
-                                  <span
+                                  <div
                                     class="inline-block font-semibold overflow-hidden px-1 border-2 rounded text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:text-theme-secondary-500 dark:bg-transparent dark:border-theme-secondary-800 text-xs leading-[15px]"
                                   >
                                     Unvote
-                                  </span>
+                                  </div>
                                 </div>
                                 <div
                                   class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3 [.condensed_&]:leading-3"
@@ -1369,7 +1369,7 @@ exports[`SendVote > should show error if wrong mnemonic 1`] = `
     class="relative flex flex-col sm:min-h-screen pb-32 sm:pb-0"
     style="min-height: -webkit-fill-available;"
   >
-    <div
+    <nav
       aria-labelledby="main menu"
       class="custom-nav-wrapper sticky inset-x-0 top-0 z-40 border-b bg-theme-background transition-all duration-200 border-theme-secondary-300 dark:border-theme-secondary-800"
     >
@@ -1808,7 +1808,7 @@ exports[`SendVote > should show error if wrong mnemonic 1`] = `
           </div>
         </div>
       </div>
-    </div>
+    </nav>
     <div
       class="flex flex-1 flex-col"
     >
@@ -1974,13 +1974,14 @@ exports[`SendVote > should show error if wrong mnemonic 1`] = `
                       Mnemonic
                     </label>
                     <div
-                      class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border-theme-danger-500 bg-theme-background focus-within:ring-theme-danger-500 border focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+                      class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-danger-500 bg-theme-background focus-within:ring-theme-danger-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
                     >
                       <div
                         class="relative flex h-full flex-1"
                       >
                         <input
                           aria-invalid="true"
+                          autocomplete="off"
                           class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
                           data-testid="AuthenticationStep__mnemonic"
                           name="mnemonic"

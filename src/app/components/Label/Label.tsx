@@ -17,7 +17,7 @@ export const Label = ({
 	noBorder,
 	...props
 }: LabelProperties & React.HTMLAttributes<HTMLDivElement>) => (
-	<span {...props} className={twMerge(getStyles({ color, noBorder, size, variant }), props.className)} />
+	<div {...props} className={twMerge(getStyles({ color, noBorder, size, variant }), props.className)} />
 );
 
 Label.defaultProps = { color: "primary" };

@@ -6,7 +6,7 @@ exports[`SendTransfer > should display unconfirmed transactions modal when submi
     class="relative flex flex-col sm:min-h-screen"
     style="min-height: -webkit-fill-available;"
   >
-    <div
+    <nav
       aria-labelledby="main menu"
       class="custom-nav-wrapper sticky inset-x-0 top-0 z-40 border-b bg-theme-background transition-all duration-200 border-theme-secondary-300 dark:border-theme-secondary-800"
     >
@@ -445,7 +445,7 @@ exports[`SendTransfer > should display unconfirmed transactions modal when submi
           </div>
         </div>
       </div>
-    </div>
+    </nav>
     <div
       class="flex flex-1 flex-col"
     >
@@ -906,11 +906,11 @@ exports[`SendTransfer > should display unconfirmed transactions modal when submi
                                     >
                                       Category
                                     </div>
-                                    <span
+                                    <div
                                       class="inline-block font-semibold overflow-hidden px-1 border-2 rounded text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:text-theme-secondary-500 dark:bg-transparent dark:border-theme-secondary-800 text-xs leading-[15px]"
                                     >
                                       Transfer
-                                    </span>
+                                    </div>
                                   </div>
                                 </div>
                               </div>
@@ -967,7 +967,7 @@ exports[`SendTransfer > should display unconfirmed transactions modal when submi
                                   >
                                     Amount
                                   </div>
-                                  <span
+                                  <div
                                     class="font-semibold overflow-hidden text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border text-base flex items-center justify-center px-1.5 h-[21px] rounded dark:border"
                                     data-testid="AmountLabel__wrapper"
                                   >
@@ -981,7 +981,7 @@ exports[`SendTransfer > should display unconfirmed transactions modal when submi
                                         - 400,000 DARK
                                       </span>
                                     </div>
-                                  </span>
+                                  </div>
                                 </div>
                                 <div
                                   class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3 [.condensed_&]:leading-3"
@@ -1360,7 +1360,7 @@ exports[`SendTransfer > should display unconfirmed transactions modal when submi
               data-testid="Modal__overlay"
             >
               <div
-                class="flex-1 max-w-full md:m-auto md:px-10 md:max-w-2xl"
+                class="max-w-full flex-1 md:m-auto md:max-w-2xl md:px-10"
                 tabindex="-1"
               >
                 <div
@@ -1623,7 +1623,7 @@ exports[`SendTransfer > should display unconfirmed transactions modal when submi
                                   <div
                                     class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end"
                                   >
-                                    <span
+                                    <div
                                       class="font-semibold overflow-hidden text-theme-danger-info-text bg-theme-danger-info-background dark:border dark:bg-transparent dark:border-theme-danger-info-border text-base flex h-full items-center justify-center rounded px-1.5"
                                       data-testid="AmountLabel__wrapper"
                                     >
@@ -1637,7 +1637,7 @@ exports[`SendTransfer > should display unconfirmed transactions modal when submi
                                           - 1 DARK
                                         </span>
                                       </div>
-                                    </span>
+                                    </div>
                                   </div>
                                 </td>
                               </tr>
@@ -1690,7 +1690,7 @@ exports[`SendTransfer > should error if wrong mnemonic 1`] = `
     class="relative flex flex-col sm:min-h-screen pb-32 sm:pb-0"
     style="min-height: -webkit-fill-available;"
   >
-    <div
+    <nav
       aria-labelledby="main menu"
       class="custom-nav-wrapper sticky inset-x-0 top-0 z-40 border-b bg-theme-background transition-all duration-200 border-theme-secondary-300 dark:border-theme-secondary-800"
     >
@@ -2129,7 +2129,7 @@ exports[`SendTransfer > should error if wrong mnemonic 1`] = `
           </div>
         </div>
       </div>
-    </div>
+    </nav>
     <div
       class="flex flex-1 flex-col"
     >
@@ -2295,13 +2295,14 @@ exports[`SendTransfer > should error if wrong mnemonic 1`] = `
                       Mnemonic
                     </label>
                     <div
-                      class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border-theme-danger-500 bg-theme-background focus-within:ring-theme-danger-500 border focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+                      class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-danger-500 bg-theme-background focus-within:ring-theme-danger-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
                     >
                       <div
                         class="relative flex h-full flex-1"
                       >
                         <input
                           aria-invalid="true"
+                          autocomplete="off"
                           class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
                           data-testid="AuthenticationStep__mnemonic"
                           name="mnemonic"
@@ -2677,12 +2678,13 @@ exports[`SendTransfer > should render form step (lg) 1`] = `
               />
             </span>
             <div
-              class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 border focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+              class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
             >
               <div
                 class="relative flex h-full flex-1 invisible"
               >
                 <input
+                  autocomplete="off"
                   class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
                   data-testid="SelectAddress__input"
                   name="senderAddress"
@@ -2842,13 +2844,14 @@ exports[`SendTransfer > should render form step (lg) 1`] = `
                       data-testid="SelectDropdown"
                     >
                       <div
-                        class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 border focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
+                        class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
                       >
                         <div
                           class="relative flex h-full flex-1"
                         >
                           <input
                             aria-invalid="false"
+                            autocomplete="off"
                             class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
                             data-testid="select-list__input"
                             name="recipientAddress"
@@ -2884,6 +2887,7 @@ exports[`SendTransfer > should render form step (lg) 1`] = `
                                   aria-controls="SelectRecipient__dropdown-menu"
                                   aria-invalid="false"
                                   aria-labelledby="SelectRecipient__dropdown-label"
+                                  autocomplete="off"
                                   class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base cursor-default text-theme-secondary-text"
                                   data-testid="SelectDropdown__input"
                                   disabled=""
@@ -3003,6 +3007,7 @@ exports[`SendTransfer > should render form step (lg) 1`] = `
                           class="relative flex h-full flex-1"
                         >
                           <input
+                            autocomplete="off"
                             class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base text-theme-secondary-text"
                             data-testid="AddRecipient__amount"
                             disabled=""
@@ -3050,12 +3055,13 @@ exports[`SendTransfer > should render form step (lg) 1`] = `
           </span>
         </label>
         <div
-          class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 border focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+          class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
         >
           <div
             class="relative flex h-full flex-1"
           >
             <input
+              autocomplete="off"
               class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
               data-testid="Input__memo"
               maxlengthlabel="255"
@@ -3378,12 +3384,13 @@ exports[`SendTransfer > should render form step (xs) 1`] = `
               />
             </span>
             <div
-              class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 border focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+              class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
             >
               <div
                 class="relative flex h-full flex-1 invisible"
               >
                 <input
+                  autocomplete="off"
                   class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
                   data-testid="SelectAddress__input"
                   name="senderAddress"
@@ -3543,13 +3550,14 @@ exports[`SendTransfer > should render form step (xs) 1`] = `
                       data-testid="SelectDropdown"
                     >
                       <div
-                        class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 border focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
+                        class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
                       >
                         <div
                           class="relative flex h-full flex-1"
                         >
                           <input
                             aria-invalid="false"
+                            autocomplete="off"
                             class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
                             data-testid="select-list__input"
                             name="recipientAddress"
@@ -3585,6 +3593,7 @@ exports[`SendTransfer > should render form step (xs) 1`] = `
                                   aria-controls="SelectRecipient__dropdown-menu"
                                   aria-invalid="false"
                                   aria-labelledby="SelectRecipient__dropdown-label"
+                                  autocomplete="off"
                                   class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base cursor-default text-theme-secondary-text"
                                   data-testid="SelectDropdown__input"
                                   disabled=""
@@ -3704,6 +3713,7 @@ exports[`SendTransfer > should render form step (xs) 1`] = `
                           class="relative flex h-full flex-1"
                         >
                           <input
+                            autocomplete="off"
                             class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base text-theme-secondary-text"
                             data-testid="AddRecipient__amount"
                             disabled=""
@@ -3751,12 +3761,13 @@ exports[`SendTransfer > should render form step (xs) 1`] = `
           </span>
         </label>
         <div
-          class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 border focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+          class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
         >
           <div
             class="relative flex h-full flex-1"
           >
             <input
+              autocomplete="off"
               class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
               data-testid="Input__memo"
               maxlengthlabel="255"
@@ -3803,6 +3814,7 @@ exports[`SendTransfer > should render form step (xs) 1`] = `
               class="relative flex h-full flex-1"
             >
               <input
+                autocomplete="off"
                 class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base text-theme-secondary-text"
                 data-testid="InputCurrency"
                 disabled=""
@@ -4028,7 +4040,7 @@ exports[`SendTransfer > should render network selection without selected wallet 
         </button>
       </div>
     </div>
-    <div
+    <nav
       aria-labelledby="main menu"
       class="custom-nav-wrapper sticky inset-x-0 top-0 z-40 border-b bg-theme-background transition-all duration-200 border-theme-secondary-300 dark:border-theme-secondary-800"
     >
@@ -4467,7 +4479,7 @@ exports[`SendTransfer > should render network selection without selected wallet 
           </div>
         </div>
       </div>
-    </div>
+    </nav>
     <div
       class="flex flex-1 flex-col"
     >
@@ -4806,12 +4818,13 @@ exports[`SendTransfer > should render network step with dropdown 1`] = `
           data-testid="SelectDropdown"
         >
           <div
-            class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 border focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
+            class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
           >
             <div
               class="relative flex h-full flex-1"
             >
               <input
+                autocomplete="off"
                 class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
                 data-testid="select-list__input"
                 name="network"
@@ -4837,7 +4850,7 @@ exports[`SendTransfer > should render network step with dropdown 1`] = `
                   id="downshift-0-label"
                 />
                 <div
-                  class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 border focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+                  class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
                 >
                   <div
                     class="relative flex h-full flex-1"
@@ -4846,6 +4859,7 @@ exports[`SendTransfer > should render network step with dropdown 1`] = `
                       aria-autocomplete="list"
                       aria-controls="downshift-0-menu"
                       aria-labelledby="downshift-0-label"
+                      autocomplete="off"
                       class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base cursor-default"
                       data-testid="SelectDropdown__input"
                       id="downshift-0-input"
@@ -6539,7 +6553,7 @@ exports[`SendTransfer > should send a single transfer and handle undefined expir
         </button>
       </div>
     </div>
-    <div
+    <nav
       aria-labelledby="main menu"
       class="custom-nav-wrapper sticky inset-x-0 top-0 z-40 border-b bg-theme-background transition-all duration-200 border-theme-secondary-300 dark:border-theme-secondary-800"
     >
@@ -6978,7 +6992,7 @@ exports[`SendTransfer > should send a single transfer and handle undefined expir
           </div>
         </div>
       </div>
-    </div>
+    </nav>
     <div
       class="flex flex-1 flex-col"
     >
@@ -7439,11 +7453,11 @@ exports[`SendTransfer > should send a single transfer and handle undefined expir
                                     >
                                       Category
                                     </div>
-                                    <span
+                                    <div
                                       class="inline-block font-semibold overflow-hidden px-1 border-2 rounded text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:text-theme-secondary-500 dark:bg-transparent dark:border-theme-secondary-800 text-xs leading-[15px]"
                                     >
                                       Transfer
-                                    </span>
+                                    </div>
                                   </div>
                                 </div>
                               </div>
@@ -7500,7 +7514,7 @@ exports[`SendTransfer > should send a single transfer and handle undefined expir
                                   >
                                     Amount
                                   </div>
-                                  <span
+                                  <div
                                     class="font-semibold overflow-hidden text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border text-base flex items-center justify-center px-1.5 h-[21px] rounded dark:border"
                                     data-testid="AmountLabel__wrapper"
                                   >
@@ -7514,7 +7528,7 @@ exports[`SendTransfer > should send a single transfer and handle undefined expir
                                         - 400,000 DARK
                                       </span>
                                     </div>
-                                  </span>
+                                  </div>
                                 </div>
                                 <div
                                   class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3 [.condensed_&]:leading-3"
@@ -7902,7 +7916,7 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
     class="relative flex flex-col sm:min-h-screen"
     style="min-height: -webkit-fill-available;"
   >
-    <div
+    <nav
       aria-labelledby="main menu"
       class="custom-nav-wrapper sticky inset-x-0 top-0 z-40 border-b bg-theme-background transition-all duration-200 border-theme-secondary-300 dark:border-theme-secondary-800"
     >
@@ -8341,7 +8355,7 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
           </div>
         </div>
       </div>
-    </div>
+    </nav>
     <div
       class="flex flex-1 flex-col"
     >
@@ -8802,11 +8816,11 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
                                     >
                                       Category
                                     </div>
-                                    <span
+                                    <div
                                       class="inline-block font-semibold overflow-hidden px-1 border-2 rounded text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:text-theme-secondary-500 dark:bg-transparent dark:border-theme-secondary-800 text-xs leading-[15px]"
                                     >
                                       Transfer
-                                    </span>
+                                    </div>
                                   </div>
                                 </div>
                               </div>
@@ -8863,7 +8877,7 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
                                   >
                                     Amount
                                   </div>
-                                  <span
+                                  <div
                                     class="font-semibold overflow-hidden text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border text-base flex items-center justify-center px-1.5 h-[21px] rounded dark:border"
                                     data-testid="AmountLabel__wrapper"
                                   >
@@ -8877,7 +8891,7 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
                                         - 400,000 DARK
                                       </span>
                                     </div>
-                                  </span>
+                                  </div>
                                 </div>
                                 <div
                                   class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3 [.condensed_&]:leading-3"
@@ -9256,7 +9270,7 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
               data-testid="Modal__overlay"
             >
               <div
-                class="flex-1 max-w-full md:m-auto md:px-10 md:max-w-2xl"
+                class="max-w-full flex-1 md:m-auto md:max-w-2xl md:px-10"
                 tabindex="-1"
               >
                 <div
@@ -9519,7 +9533,7 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
                                   <div
                                     class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end"
                                   >
-                                    <span
+                                    <div
                                       class="font-semibold overflow-hidden text-theme-danger-info-text bg-theme-danger-info-background dark:border dark:bg-transparent dark:border-theme-danger-info-border text-base flex h-full items-center justify-center rounded px-1.5"
                                       data-testid="AmountLabel__wrapper"
                                     >
@@ -9533,7 +9547,7 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
                                           - 1 DARK
                                         </span>
                                       </div>
-                                    </span>
+                                    </div>
                                   </div>
                                 </td>
                               </tr>
@@ -9635,7 +9649,7 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
                                   <div
                                     class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-black group-hover:bg-theme-secondary-200 justify-end"
                                   >
-                                    <span
+                                    <div
                                       class="font-semibold overflow-hidden text-theme-danger-info-text bg-theme-danger-info-background dark:border dark:bg-transparent dark:border-theme-danger-info-border text-base flex h-full items-center justify-center rounded px-1.5"
                                       data-testid="AmountLabel__wrapper"
                                     >
@@ -9649,7 +9663,7 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
                                           - 1 DARK
                                         </span>
                                       </div>
-                                    </span>
+                                    </div>
                                   </div>
                                 </td>
                               </tr>
@@ -9826,7 +9840,7 @@ exports[`SendTransfer > should send a single transfer using wallet with encrypti
         </button>
       </div>
     </div>
-    <div
+    <nav
       aria-labelledby="main menu"
       class="custom-nav-wrapper sticky inset-x-0 top-0 z-40 border-b bg-theme-background transition-all duration-200 border-theme-secondary-300 dark:border-theme-secondary-800"
     >
@@ -10265,7 +10279,7 @@ exports[`SendTransfer > should send a single transfer using wallet with encrypti
           </div>
         </div>
       </div>
-    </div>
+    </nav>
     <div
       class="flex flex-1 flex-col"
     >
@@ -10726,11 +10740,11 @@ exports[`SendTransfer > should send a single transfer using wallet with encrypti
                                     >
                                       Category
                                     </div>
-                                    <span
+                                    <div
                                       class="inline-block font-semibold overflow-hidden px-1 border-2 rounded text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:text-theme-secondary-500 dark:bg-transparent dark:border-theme-secondary-800 text-xs leading-[15px]"
                                     >
                                       Transfer
-                                    </span>
+                                    </div>
                                   </div>
                                 </div>
                               </div>
@@ -10787,7 +10801,7 @@ exports[`SendTransfer > should send a single transfer using wallet with encrypti
                                   >
                                     Amount
                                   </div>
-                                  <span
+                                  <div
                                     class="font-semibold overflow-hidden text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border text-base flex items-center justify-center px-1.5 h-[21px] rounded dark:border"
                                     data-testid="AmountLabel__wrapper"
                                   >
@@ -10801,7 +10815,7 @@ exports[`SendTransfer > should send a single transfer using wallet with encrypti
                                         - 400,000 DARK
                                       </span>
                                     </div>
-                                  </span>
+                                  </div>
                                 </div>
                                 <div
                                   class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3 [.condensed_&]:leading-3"
@@ -11189,7 +11203,7 @@ exports[`SendTransfer > should send a single transfer with keyboard 1`] = `
     class="relative flex flex-col sm:min-h-screen pb-32 sm:pb-0"
     style="min-height: -webkit-fill-available;"
   >
-    <div
+    <nav
       aria-labelledby="main menu"
       class="custom-nav-wrapper sticky inset-x-0 top-0 z-40 border-b bg-theme-background transition-all duration-200 border-theme-secondary-300 dark:border-theme-secondary-800"
     >
@@ -11628,7 +11642,7 @@ exports[`SendTransfer > should send a single transfer with keyboard 1`] = `
           </div>
         </div>
       </div>
-    </div>
+    </nav>
     <div
       class="flex flex-1 flex-col"
     >
@@ -12089,11 +12103,11 @@ exports[`SendTransfer > should send a single transfer with keyboard 1`] = `
                                     >
                                       Category
                                     </div>
-                                    <span
+                                    <div
                                       class="inline-block font-semibold overflow-hidden px-1 border-2 rounded text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:text-theme-secondary-500 dark:bg-transparent dark:border-theme-secondary-800 text-xs leading-[15px]"
                                     >
                                       Transfer
-                                    </span>
+                                    </div>
                                   </div>
                                 </div>
                               </div>
@@ -12150,7 +12164,7 @@ exports[`SendTransfer > should send a single transfer with keyboard 1`] = `
                                   >
                                     Amount
                                   </div>
-                                  <span
+                                  <div
                                     class="font-semibold overflow-hidden text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border text-base flex items-center justify-center px-1.5 h-[21px] rounded dark:border"
                                     data-testid="AmountLabel__wrapper"
                                   >
@@ -12164,7 +12178,7 @@ exports[`SendTransfer > should send a single transfer with keyboard 1`] = `
                                         - 400,000 DARK
                                       </span>
                                     </div>
-                                  </span>
+                                  </div>
                                 </div>
                                 <div
                                   class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3 [.condensed_&]:leading-3"
@@ -12552,7 +12566,7 @@ exports[`SendTransfer > should send a single transfer without keyboard 1`] = `
     class="relative flex flex-col sm:min-h-screen pb-32 sm:pb-0"
     style="min-height: -webkit-fill-available;"
   >
-    <div
+    <nav
       aria-labelledby="main menu"
       class="custom-nav-wrapper sticky inset-x-0 top-0 z-40 border-b bg-theme-background transition-all duration-200 border-theme-secondary-300 dark:border-theme-secondary-800"
     >
@@ -12991,7 +13005,7 @@ exports[`SendTransfer > should send a single transfer without keyboard 1`] = `
           </div>
         </div>
       </div>
-    </div>
+    </nav>
     <div
       class="flex flex-1 flex-col"
     >
@@ -13452,11 +13466,11 @@ exports[`SendTransfer > should send a single transfer without keyboard 1`] = `
                                     >
                                       Category
                                     </div>
-                                    <span
+                                    <div
                                       class="inline-block font-semibold overflow-hidden px-1 border-2 rounded text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:text-theme-secondary-500 dark:bg-transparent dark:border-theme-secondary-800 text-xs leading-[15px]"
                                     >
                                       Transfer
-                                    </span>
+                                    </div>
                                   </div>
                                 </div>
                               </div>
@@ -13513,7 +13527,7 @@ exports[`SendTransfer > should send a single transfer without keyboard 1`] = `
                                   >
                                     Amount
                                   </div>
-                                  <span
+                                  <div
                                     class="font-semibold overflow-hidden text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border text-base flex items-center justify-center px-1.5 h-[21px] rounded dark:border"
                                     data-testid="AmountLabel__wrapper"
                                   >
@@ -13527,7 +13541,7 @@ exports[`SendTransfer > should send a single transfer without keyboard 1`] = `
                                         - 400,000 DARK
                                       </span>
                                     </div>
-                                  </span>
+                                  </div>
                                 </div>
                                 <div
                                   class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3 [.condensed_&]:leading-3"

@@ -7,7 +7,7 @@ exports[`SearchWallet uses fiat value = false > should render 1`] = `
     data-testid="Modal__overlay"
   >
     <div
-      class="flex-1 max-w-full md:m-auto md:px-10 md:max-w-5xl"
+      class="max-w-full flex-1 md:m-auto md:px-10 md:max-w-5xl"
       tabindex="-1"
     >
       <div
@@ -430,7 +430,7 @@ exports[`SearchWallet uses fiat value = false > should render compact on md scre
     data-testid="Modal__overlay"
   >
     <div
-      class="flex-1 max-w-full md:m-auto md:px-10 md:max-w-5xl"
+      class="max-w-full flex-1 md:m-auto md:px-10 md:max-w-5xl"
       tabindex="-1"
     >
       <div
@@ -853,7 +853,7 @@ exports[`SearchWallet uses fiat value = false > should render compact with selec
     data-testid="Modal__overlay"
   >
     <div
-      class="flex-1 max-w-full md:m-auto md:px-10 md:max-w-5xl"
+      class="max-w-full flex-1 md:m-auto md:px-10 md:max-w-5xl"
       tabindex="-1"
     >
       <div
@@ -1274,7 +1274,7 @@ exports[`SearchWallet uses fiat value = false > should render responsive item 1`
     data-testid="Modal__overlay"
   >
     <div
-      class="flex-1 max-w-full md:m-auto md:px-10 md:max-w-5xl"
+      class="max-w-full flex-1 md:m-auto md:px-10 md:max-w-5xl"
       tabindex="-1"
     >
       <div
@@ -1394,6 +1394,7 @@ exports[`SearchWallet uses fiat value = false > should render responsive item 1`
                         class="relative flex h-full flex-1"
                       >
                         <input
+                          autocomplete="off"
                           class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
                           data-testid="HeaderSearchInput__input__input"
                           placeholder="Search..."
@@ -1595,7 +1596,7 @@ exports[`SearchWallet uses fiat value = false > should render responsive item 2`
     data-testid="Modal__overlay"
   >
     <div
-      class="flex-1 max-w-full md:m-auto md:px-10 md:max-w-5xl"
+      class="max-w-full flex-1 md:m-auto md:px-10 md:max-w-5xl"
       tabindex="-1"
     >
       <div
@@ -1715,6 +1716,7 @@ exports[`SearchWallet uses fiat value = false > should render responsive item 2`
                         class="relative flex h-full flex-1"
                       >
                         <input
+                          autocomplete="off"
                           class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
                           data-testid="HeaderSearchInput__input__input"
                           placeholder="Search..."
@@ -1916,7 +1918,7 @@ exports[`SearchWallet uses fiat value = false > should render responsive with se
     data-testid="Modal__overlay"
   >
     <div
-      class="flex-1 max-w-full md:m-auto md:px-10 md:max-w-5xl"
+      class="max-w-full flex-1 md:m-auto md:px-10 md:max-w-5xl"
       tabindex="-1"
     >
       <div
@@ -2036,6 +2038,7 @@ exports[`SearchWallet uses fiat value = false > should render responsive with se
                         class="relative flex h-full flex-1"
                       >
                         <input
+                          autocomplete="off"
                           class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
                           data-testid="HeaderSearchInput__input__input"
                           placeholder="Search..."
@@ -2237,7 +2240,7 @@ exports[`SearchWallet uses fiat value = false > should render with incompatible 
     data-testid="Modal__overlay"
   >
     <div
-      class="flex-1 max-w-full md:m-auto md:px-10 md:max-w-5xl"
+      class="max-w-full flex-1 md:m-auto md:px-10 md:max-w-5xl"
       tabindex="-1"
     >
       <div
@@ -2585,7 +2588,7 @@ exports[`SearchWallet uses fiat value = false > should render with selected addr
     data-testid="Modal__overlay"
   >
     <div
-      class="flex-1 max-w-full md:m-auto md:px-10 md:max-w-5xl"
+      class="max-w-full flex-1 md:m-auto md:px-10 md:max-w-5xl"
       tabindex="-1"
     >
       <div
@@ -3006,7 +3009,7 @@ exports[`SearchWallet uses fiat value = false > should render with the default e
     data-testid="Modal__overlay"
   >
     <div
-      class="flex-1 max-w-full md:m-auto md:px-10 md:max-w-5xl"
+      class="max-w-full flex-1 md:m-auto md:px-10 md:max-w-5xl"
       tabindex="-1"
     >
       <div
@@ -3429,7 +3432,7 @@ exports[`SearchWallet uses fiat value = true > should render 1`] = `
     data-testid="Modal__overlay"
   >
     <div
-      class="flex-1 max-w-full md:m-auto md:px-10 md:max-w-5xl"
+      class="max-w-full flex-1 md:m-auto md:px-10 md:max-w-5xl"
       tabindex="-1"
     >
       <div
@@ -3929,7 +3932,7 @@ exports[`SearchWallet uses fiat value = true > should render compact on md scree
     data-testid="Modal__overlay"
   >
     <div
-      class="flex-1 max-w-full md:m-auto md:px-10 md:max-w-5xl"
+      class="max-w-full flex-1 md:m-auto md:px-10 md:max-w-5xl"
       tabindex="-1"
     >
       <div
@@ -4429,7 +4432,7 @@ exports[`SearchWallet uses fiat value = true > should render compact with select
     data-testid="Modal__overlay"
   >
     <div
-      class="flex-1 max-w-full md:m-auto md:px-10 md:max-w-5xl"
+      class="max-w-full flex-1 md:m-auto md:px-10 md:max-w-5xl"
       tabindex="-1"
     >
       <div
@@ -4927,7 +4930,7 @@ exports[`SearchWallet uses fiat value = true > should render responsive item 1`]
     data-testid="Modal__overlay"
   >
     <div
-      class="flex-1 max-w-full md:m-auto md:px-10 md:max-w-5xl"
+      class="max-w-full flex-1 md:m-auto md:px-10 md:max-w-5xl"
       tabindex="-1"
     >
       <div
@@ -5047,6 +5050,7 @@ exports[`SearchWallet uses fiat value = true > should render responsive item 1`]
                         class="relative flex h-full flex-1"
                       >
                         <input
+                          autocomplete="off"
                           class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
                           data-testid="HeaderSearchInput__input__input"
                           placeholder="Search..."
@@ -5248,7 +5252,7 @@ exports[`SearchWallet uses fiat value = true > should render responsive item 2`]
     data-testid="Modal__overlay"
   >
     <div
-      class="flex-1 max-w-full md:m-auto md:px-10 md:max-w-5xl"
+      class="max-w-full flex-1 md:m-auto md:px-10 md:max-w-5xl"
       tabindex="-1"
     >
       <div
@@ -5368,6 +5372,7 @@ exports[`SearchWallet uses fiat value = true > should render responsive item 2`]
                         class="relative flex h-full flex-1"
                       >
                         <input
+                          autocomplete="off"
                           class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
                           data-testid="HeaderSearchInput__input__input"
                           placeholder="Search..."
@@ -5569,7 +5574,7 @@ exports[`SearchWallet uses fiat value = true > should render responsive with sel
     data-testid="Modal__overlay"
   >
     <div
-      class="flex-1 max-w-full md:m-auto md:px-10 md:max-w-5xl"
+      class="max-w-full flex-1 md:m-auto md:px-10 md:max-w-5xl"
       tabindex="-1"
     >
       <div
@@ -5689,6 +5694,7 @@ exports[`SearchWallet uses fiat value = true > should render responsive with sel
                         class="relative flex h-full flex-1"
                       >
                         <input
+                          autocomplete="off"
                           class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
                           data-testid="HeaderSearchInput__input__input"
                           placeholder="Search..."
@@ -5890,7 +5896,7 @@ exports[`SearchWallet uses fiat value = true > should render with incompatible l
     data-testid="Modal__overlay"
   >
     <div
-      class="flex-1 max-w-full md:m-auto md:px-10 md:max-w-5xl"
+      class="max-w-full flex-1 md:m-auto md:px-10 md:max-w-5xl"
       tabindex="-1"
     >
       <div
@@ -6301,7 +6307,7 @@ exports[`SearchWallet uses fiat value = true > should render with selected addre
     data-testid="Modal__overlay"
   >
     <div
-      class="flex-1 max-w-full md:m-auto md:px-10 md:max-w-5xl"
+      class="max-w-full flex-1 md:m-auto md:px-10 md:max-w-5xl"
       tabindex="-1"
     >
       <div
@@ -6799,7 +6805,7 @@ exports[`SearchWallet uses fiat value = true > should render with the default ex
     data-testid="Modal__overlay"
   >
     <div
-      class="flex-1 max-w-full md:m-auto md:px-10 md:max-w-5xl"
+      class="max-w-full flex-1 md:m-auto md:px-10 md:max-w-5xl"
       tabindex="-1"
     >
       <div

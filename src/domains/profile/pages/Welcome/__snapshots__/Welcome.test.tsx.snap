@@ -6,7 +6,7 @@ exports[`Welcome > should change route to create profile 1`] = `
     class="relative flex flex-col sm:min-h-screen pb-14 sm:pb-0"
     style="min-height: -webkit-fill-available;"
   >
-    <div
+    <nav
       aria-labelledby="main menu"
       class="custom-nav-wrapper sticky inset-x-0 top-0 z-40 border-b border-theme-background bg-theme-background transition-all duration-200"
     >
@@ -55,7 +55,7 @@ exports[`Welcome > should change route to create profile 1`] = `
           </div>
         </div>
       </div>
-    </div>
+    </nav>
     <div
       class="flex flex-1 flex-col"
     >
@@ -739,7 +739,7 @@ exports[`Welcome > should navigate to previous page with correct password 1`] = 
     class="relative flex flex-col sm:min-h-screen pb-14 sm:pb-0"
     style="min-height: -webkit-fill-available;"
   >
-    <div
+    <nav
       aria-labelledby="main menu"
       class="custom-nav-wrapper sticky inset-x-0 top-0 z-40 border-b border-theme-background bg-theme-background transition-all duration-200"
     >
@@ -788,7 +788,7 @@ exports[`Welcome > should navigate to previous page with correct password 1`] = 
           </div>
         </div>
       </div>
-    </div>
+    </nav>
     <div
       class="flex flex-1 flex-col"
     >
@@ -1567,7 +1567,7 @@ exports[`Welcome > should navigate to profile dashboard 1`] = `
     class="relative flex flex-col sm:min-h-screen pb-14 sm:pb-0"
     style="min-height: -webkit-fill-available;"
   >
-    <div
+    <nav
       aria-labelledby="main menu"
       class="custom-nav-wrapper sticky inset-x-0 top-0 z-40 border-b border-theme-background bg-theme-background transition-all duration-200"
     >
@@ -1616,7 +1616,7 @@ exports[`Welcome > should navigate to profile dashboard 1`] = `
           </div>
         </div>
       </div>
-    </div>
+    </nav>
     <div
       class="flex flex-1 flex-col"
     >
@@ -2395,7 +2395,7 @@ exports[`Welcome > should navigate to profile dashboard with correct password 1`
     class="relative flex flex-col sm:min-h-screen pb-14 sm:pb-0"
     style="min-height: -webkit-fill-available;"
   >
-    <div
+    <nav
       aria-labelledby="main menu"
       class="custom-nav-wrapper sticky inset-x-0 top-0 z-40 border-b border-theme-background bg-theme-background transition-all duration-200"
     >
@@ -2444,7 +2444,7 @@ exports[`Welcome > should navigate to profile dashboard with correct password 1`
           </div>
         </div>
       </div>
-    </div>
+    </nav>
     <div
       class="flex flex-1 flex-col"
     >
@@ -3223,7 +3223,7 @@ exports[`Welcome > should navigate to profile settings from profile card menu 1`
     class="relative flex flex-col sm:min-h-screen pb-14 sm:pb-0"
     style="min-height: -webkit-fill-available;"
   >
-    <div
+    <nav
       aria-labelledby="main menu"
       class="custom-nav-wrapper sticky inset-x-0 top-0 z-40 border-b border-theme-background bg-theme-background transition-all duration-200"
     >
@@ -3272,7 +3272,7 @@ exports[`Welcome > should navigate to profile settings from profile card menu 1`
           </div>
         </div>
       </div>
-    </div>
+    </nav>
     <div
       class="flex flex-1 flex-col"
     >
@@ -4051,7 +4051,7 @@ exports[`Welcome > should navigate to profile settings with correct password 1`]
     class="relative flex flex-col sm:min-h-screen pb-14 sm:pb-0"
     style="min-height: -webkit-fill-available;"
   >
-    <div
+    <nav
       aria-labelledby="main menu"
       class="custom-nav-wrapper sticky inset-x-0 top-0 z-40 border-b border-theme-background bg-theme-background transition-all duration-200"
     >
@@ -4100,7 +4100,7 @@ exports[`Welcome > should navigate to profile settings with correct password 1`]
           </div>
         </div>
       </div>
-    </div>
+    </nav>
     <div
       class="flex flex-1 flex-col"
     >
@@ -4879,7 +4879,7 @@ exports[`Welcome > should not select profile on wrong last location 1`] = `
     class="relative flex flex-col sm:min-h-screen pb-14 sm:pb-0"
     style="min-height: -webkit-fill-available;"
   >
-    <div
+    <nav
       aria-labelledby="main menu"
       class="custom-nav-wrapper sticky inset-x-0 top-0 z-40 border-b border-theme-background bg-theme-background transition-all duration-200"
     >
@@ -4928,7 +4928,7 @@ exports[`Welcome > should not select profile on wrong last location 1`] = `
           </div>
         </div>
       </div>
-    </div>
+    </nav>
     <div
       class="flex flex-1 flex-col"
     >
@@ -5612,7 +5612,7 @@ exports[`Welcome > should render with profiles 1`] = `
     class="relative flex flex-col sm:min-h-screen pb-14 sm:pb-0"
     style="min-height: -webkit-fill-available;"
   >
-    <div
+    <nav
       aria-labelledby="main menu"
       class="custom-nav-wrapper sticky inset-x-0 top-0 z-40 border-b border-theme-background bg-theme-background transition-all duration-200"
     >
@@ -5661,7 +5661,7 @@ exports[`Welcome > should render with profiles 1`] = `
           </div>
         </div>
       </div>
-    </div>
+    </nav>
     <div
       class="flex flex-1 flex-col"
     >
@@ -6440,7 +6440,7 @@ exports[`Welcome > should render without profiles 1`] = `
     class="relative flex flex-col sm:min-h-screen pb-14 sm:pb-0"
     style="min-height: -webkit-fill-available;"
   >
-    <div
+    <nav
       aria-labelledby="main menu"
       class="custom-nav-wrapper sticky inset-x-0 top-0 z-40 border-b border-theme-background bg-theme-background transition-all duration-200"
     >
@@ -6489,7 +6489,7 @@ exports[`Welcome > should render without profiles 1`] = `
           </div>
         </div>
       </div>
-    </div>
+    </nav>
     <div
       class="flex flex-1 flex-col"
     >

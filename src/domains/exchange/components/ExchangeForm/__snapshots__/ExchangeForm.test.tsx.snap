@@ -289,7 +289,7 @@ exports[`ConfirmationStep > should render 1`] = `
               >
                 Amount Sent
               </span>
-              <span
+              <div
                 class="inline-block font-semibold overflow-hidden px-1 border-2 rounded text-theme-danger-400 border-theme-danger-100 dark:border-theme-danger-400 text-base mr-auto whitespace-nowrap"
               >
                 <span
@@ -298,7 +298,7 @@ exports[`ConfirmationStep > should render 1`] = `
                 >
                   - 1 BTC
                 </span>
-              </span>
+              </div>
             </div>
           </div>
         </div>
@@ -413,7 +413,7 @@ exports[`ConfirmationStep > should render 1`] = `
               >
                 Amount Received
               </span>
-              <span
+              <div
                 class="inline-block font-semibold overflow-hidden px-1 border-2 rounded text-theme-success-600 border-theme-success-200 dark:border-theme-success-600 text-base mr-auto whitespace-nowrap"
               >
                 <span
@@ -422,7 +422,7 @@ exports[`ConfirmationStep > should render 1`] = `
                 >
                   + 100 ARK
                 </span>
-              </span>
+              </div>
             </div>
           </div>
         </div>
@@ -493,12 +493,13 @@ exports[`ExchangeForm > should render exchange form 1`] = `
                     data-testid="SelectDropdown"
                   >
                     <div
-                      class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 border focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
+                      class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
                     >
                       <div
                         class="relative flex h-full flex-1"
                       >
                         <input
+                          autocomplete="off"
                           class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
                           data-testid="select-list__input"
                           name="fromCurrency"
@@ -524,7 +525,7 @@ exports[`ExchangeForm > should render exchange form 1`] = `
                             id="fromCurrency-label"
                           />
                           <div
-                            class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 border focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+                            class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
                           >
                             <div
                               class="hidden sm:block"
@@ -540,6 +541,7 @@ exports[`ExchangeForm > should render exchange form 1`] = `
                                 aria-autocomplete="list"
                                 aria-controls="fromCurrency-menu"
                                 aria-labelledby="fromCurrency-label"
+                                autocomplete="off"
                                 class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base cursor-default"
                                 data-testid="SelectDropdown__input"
                                 id="fromCurrency-input"
@@ -625,12 +627,13 @@ exports[`ExchangeForm > should render exchange form 1`] = `
                     class="relative"
                   >
                     <div
-                      class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 border focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+                      class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
                     >
                       <div
                         class="relative flex h-full flex-1"
                       >
                         <input
+                          autocomplete="off"
                           class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
                           data-testid="InputCurrency"
                           name="payinAmount"
@@ -731,12 +734,13 @@ exports[`ExchangeForm > should render exchange form 1`] = `
                       data-testid="SelectDropdown"
                     >
                       <div
-                        class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 border focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
+                        class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
                       >
                         <div
                           class="relative flex h-full flex-1"
                         >
                           <input
+                            autocomplete="off"
                             class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
                             data-testid="select-list__input"
                             name="toCurrency"
@@ -762,7 +766,7 @@ exports[`ExchangeForm > should render exchange form 1`] = `
                               id="toCurrency-label"
                             />
                             <div
-                              class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 border focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+                              class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
                             >
                               <div
                                 class="hidden sm:block"
@@ -778,6 +782,7 @@ exports[`ExchangeForm > should render exchange form 1`] = `
                                   aria-autocomplete="list"
                                   aria-controls="toCurrency-menu"
                                   aria-labelledby="toCurrency-label"
+                                  autocomplete="off"
                                   class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base cursor-default"
                                   data-testid="SelectDropdown__input"
                                   id="toCurrency-input"
@@ -863,12 +868,13 @@ exports[`ExchangeForm > should render exchange form 1`] = `
                       class="relative"
                     >
                       <div
-                        class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 border focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+                        class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
                       >
                         <div
                           class="relative flex h-full flex-1"
                         >
                           <input
+                            autocomplete="off"
                             class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
                             data-testid="InputCurrency"
                             name="payoutAmount"
@@ -917,13 +923,14 @@ exports[`ExchangeForm > should render exchange form 1`] = `
                         data-testid="SelectDropdown"
                       >
                         <div
-                          class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 border focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
+                          class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
                         >
                           <div
                             class="relative flex h-full flex-1"
                           >
                             <input
                               aria-invalid="false"
+                              autocomplete="off"
                               class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
                               data-testid="select-list__input"
                               name="recipientWallet"
@@ -959,6 +966,7 @@ exports[`ExchangeForm > should render exchange form 1`] = `
                                     aria-controls="SelectRecipient__dropdown-menu"
                                     aria-invalid="false"
                                     aria-labelledby="SelectRecipient__dropdown-label"
+                                    autocomplete="off"
                                     class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base cursor-default text-theme-secondary-text"
                                     data-testid="SelectDropdown__input"
                                     disabled=""
@@ -1344,7 +1352,7 @@ exports[`ExchangeForm > should render exchange form with id of finished order 1`
                       >
                         Amount Sent
                       </span>
-                      <span
+                      <div
                         class="inline-block font-semibold overflow-hidden px-1 border-2 rounded text-theme-danger-400 border-theme-danger-100 dark:border-theme-danger-400 text-base mr-auto whitespace-nowrap"
                       >
                         <span
@@ -1353,7 +1361,7 @@ exports[`ExchangeForm > should render exchange form with id of finished order 1`
                         >
                           - 1 BTC
                         </span>
-                      </span>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -1601,7 +1609,7 @@ exports[`ExchangeForm > should render exchange form with id of finished order 1`
                       >
                         Amount Received
                       </span>
-                      <span
+                      <div
                         class="inline-block font-semibold overflow-hidden px-1 border-2 rounded text-theme-success-600 border-theme-success-200 dark:border-theme-success-600 text-base mr-auto whitespace-nowrap"
                       >
                         <span
@@ -1610,7 +1618,7 @@ exports[`ExchangeForm > should render exchange form with id of finished order 1`
                         >
                           + 100 ARK
                         </span>
-                      </span>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -2056,12 +2064,13 @@ exports[`FormStep > should render 1`] = `
             data-testid="SelectDropdown"
           >
             <div
-              class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 border focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
+              class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
             >
               <div
                 class="relative flex h-full flex-1"
               >
                 <input
+                  autocomplete="off"
                   class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
                   data-testid="select-list__input"
                   name="fromCurrency"
@@ -2103,6 +2112,7 @@ exports[`FormStep > should render 1`] = `
                         aria-autocomplete="list"
                         aria-controls="fromCurrency-menu"
                         aria-labelledby="fromCurrency-label"
+                        autocomplete="off"
                         class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base cursor-default text-theme-secondary-text"
                         data-testid="SelectDropdown__input"
                         disabled=""
@@ -2189,12 +2199,13 @@ exports[`FormStep > should render 1`] = `
             class="relative"
           >
             <div
-              class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 border focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+              class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
             >
               <div
                 class="relative flex h-full flex-1"
               >
                 <input
+                  autocomplete="off"
                   class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
                   data-testid="InputCurrency"
                   name="payinAmount"
@@ -2295,12 +2306,13 @@ exports[`FormStep > should render 1`] = `
               data-testid="SelectDropdown"
             >
               <div
-                class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 border focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
+                class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
               >
                 <div
                   class="relative flex h-full flex-1"
                 >
                   <input
+                    autocomplete="off"
                     class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
                     data-testid="select-list__input"
                     name="toCurrency"
@@ -2342,6 +2354,7 @@ exports[`FormStep > should render 1`] = `
                           aria-autocomplete="list"
                           aria-controls="toCurrency-menu"
                           aria-labelledby="toCurrency-label"
+                          autocomplete="off"
                           class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base cursor-default text-theme-secondary-text"
                           data-testid="SelectDropdown__input"
                           disabled=""
@@ -2428,12 +2441,13 @@ exports[`FormStep > should render 1`] = `
               class="relative"
             >
               <div
-                class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 border focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+                class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
               >
                 <div
                   class="relative flex h-full flex-1"
                 >
                   <input
+                    autocomplete="off"
                     class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
                     data-testid="InputCurrency"
                     name="payoutAmount"
@@ -2482,13 +2496,14 @@ exports[`FormStep > should render 1`] = `
                 data-testid="SelectDropdown"
               >
                 <div
-                  class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 border focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
+                  class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
                 >
                   <div
                     class="relative flex h-full flex-1"
                   >
                     <input
                       aria-invalid="false"
+                      autocomplete="off"
                       class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
                       data-testid="select-list__input"
                       name="recipientWallet"
@@ -2524,6 +2539,7 @@ exports[`FormStep > should render 1`] = `
                             aria-controls="SelectRecipient__dropdown-menu"
                             aria-invalid="false"
                             aria-labelledby="SelectRecipient__dropdown-label"
+                            autocomplete="off"
                             class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base cursor-default text-theme-secondary-text"
                             data-testid="SelectDropdown__input"
                             disabled=""

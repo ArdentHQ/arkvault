@@ -101,13 +101,14 @@ exports[`AddRecipient > should hide available balance if fee > balance 1`] = `
                 data-testid="SelectDropdown"
               >
                 <div
-                  class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 border focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
+                  class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
                 >
                   <div
                     class="relative flex h-full flex-1"
                   >
                     <input
                       aria-invalid="false"
+                      autocomplete="off"
                       class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
                       data-testid="select-list__input"
                       name="recipientAddress"
@@ -133,7 +134,7 @@ exports[`AddRecipient > should hide available balance if fee > balance 1`] = `
                         id="SelectRecipient__dropdown-label"
                       />
                       <div
-                        class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 border focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+                        class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
                       >
                         <div
                           class="relative flex h-full flex-1"
@@ -143,6 +144,7 @@ exports[`AddRecipient > should hide available balance if fee > balance 1`] = `
                             aria-controls="SelectRecipient__dropdown-menu"
                             aria-invalid="false"
                             aria-labelledby="SelectRecipient__dropdown-label"
+                            autocomplete="off"
                             class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base cursor-default"
                             data-testid="SelectDropdown__input"
                             id="SelectRecipient__dropdown-input"
@@ -267,12 +269,13 @@ exports[`AddRecipient > should hide available balance if fee > balance 1`] = `
                 class="relative"
               >
                 <div
-                  class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 border focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+                  class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
                 >
                   <div
                     class="relative flex h-full flex-1"
                   >
                     <input
+                      autocomplete="off"
                       class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
                       data-testid="AddRecipient__amount"
                       name="amount"
@@ -419,13 +422,14 @@ exports[`AddRecipient > should render 1`] = `
                 data-testid="SelectDropdown"
               >
                 <div
-                  class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 border focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
+                  class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
                 >
                   <div
                     class="relative flex h-full flex-1"
                   >
                     <input
                       aria-invalid="false"
+                      autocomplete="off"
                       class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
                       data-testid="select-list__input"
                       name="recipientAddress"
@@ -451,7 +455,7 @@ exports[`AddRecipient > should render 1`] = `
                         id="SelectRecipient__dropdown-label"
                       />
                       <div
-                        class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 border focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+                        class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
                       >
                         <div
                           class="relative flex h-full flex-1"
@@ -461,6 +465,7 @@ exports[`AddRecipient > should render 1`] = `
                             aria-controls="SelectRecipient__dropdown-menu"
                             aria-invalid="false"
                             aria-labelledby="SelectRecipient__dropdown-label"
+                            autocomplete="off"
                             class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base cursor-default"
                             data-testid="SelectDropdown__input"
                             id="SelectRecipient__dropdown-input"
@@ -585,12 +590,13 @@ exports[`AddRecipient > should render 1`] = `
                 class="relative"
               >
                 <div
-                  class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 border focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+                  class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
                 >
                   <div
                     class="relative flex h-full flex-1"
                   >
                     <input
+                      autocomplete="off"
                       class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
                       data-testid="AddRecipient__amount"
                       name="amount"
@@ -722,13 +728,14 @@ exports[`AddRecipient > should render with empty array of recipients as default 
                 data-testid="SelectDropdown"
               >
                 <div
-                  class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 border focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
+                  class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
                 >
                   <div
                     class="relative flex h-full flex-1"
                   >
                     <input
                       aria-invalid="false"
+                      autocomplete="off"
                       class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
                       data-testid="select-list__input"
                       name="recipientAddress"
@@ -754,7 +761,7 @@ exports[`AddRecipient > should render with empty array of recipients as default 
                         id="SelectRecipient__dropdown-label"
                       />
                       <div
-                        class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 border focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+                        class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
                       >
                         <div
                           class="relative flex h-full flex-1"
@@ -764,6 +771,7 @@ exports[`AddRecipient > should render with empty array of recipients as default 
                             aria-controls="SelectRecipient__dropdown-menu"
                             aria-invalid="false"
                             aria-labelledby="SelectRecipient__dropdown-label"
+                            autocomplete="off"
                             class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base cursor-default"
                             data-testid="SelectDropdown__input"
                             id="SelectRecipient__dropdown-input"
@@ -888,12 +896,13 @@ exports[`AddRecipient > should render with empty array of recipients as default 
                 class="relative"
               >
                 <div
-                  class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 border focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+                  class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
                 >
                   <div
                     class="relative flex h-full flex-1"
                   >
                     <input
+                      autocomplete="off"
                       class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
                       data-testid="AddRecipient__amount"
                       name="amount"
@@ -1025,13 +1034,14 @@ exports[`AddRecipient > should render with multiple recipients switch 1`] = `
                 data-testid="SelectDropdown"
               >
                 <div
-                  class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 border focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
+                  class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
                 >
                   <div
                     class="relative flex h-full flex-1"
                   >
                     <input
                       aria-invalid="false"
+                      autocomplete="off"
                       class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
                       data-testid="select-list__input"
                       name="recipientAddress"
@@ -1057,7 +1067,7 @@ exports[`AddRecipient > should render with multiple recipients switch 1`] = `
                         id="SelectRecipient__dropdown-label"
                       />
                       <div
-                        class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 border focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+                        class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
                       >
                         <div
                           class="relative flex h-full flex-1"
@@ -1067,6 +1077,7 @@ exports[`AddRecipient > should render with multiple recipients switch 1`] = `
                             aria-controls="SelectRecipient__dropdown-menu"
                             aria-invalid="false"
                             aria-labelledby="SelectRecipient__dropdown-label"
+                            autocomplete="off"
                             class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base cursor-default"
                             data-testid="SelectDropdown__input"
                             id="SelectRecipient__dropdown-input"
@@ -1191,12 +1202,13 @@ exports[`AddRecipient > should render with multiple recipients switch 1`] = `
                 class="relative"
               >
                 <div
-                  class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 border focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+                  class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
                 >
                   <div
                     class="relative flex h-full flex-1"
                   >
                     <input
+                      autocomplete="off"
                       class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
                       data-testid="AddRecipient__amount"
                       name="amount"
@@ -1328,13 +1340,14 @@ exports[`AddRecipient > should render with single recipient data 1`] = `
                 data-testid="SelectDropdown"
               >
                 <div
-                  class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 border focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
+                  class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
                 >
                   <div
                     class="relative flex h-full flex-1"
                   >
                     <input
                       aria-invalid="false"
+                      autocomplete="off"
                       class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
                       data-testid="select-list__input"
                       name="recipientAddress"
@@ -1360,7 +1373,7 @@ exports[`AddRecipient > should render with single recipient data 1`] = `
                         id="SelectRecipient__dropdown-label"
                       />
                       <div
-                        class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 border focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+                        class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
                       >
                         <div
                           class="relative flex h-full flex-1"
@@ -1370,6 +1383,7 @@ exports[`AddRecipient > should render with single recipient data 1`] = `
                             aria-controls="SelectRecipient__dropdown-menu"
                             aria-invalid="false"
                             aria-labelledby="SelectRecipient__dropdown-label"
+                            autocomplete="off"
                             class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
                             data-testid="SelectDropdown__input"
                             id="SelectRecipient__dropdown-input"
@@ -1494,12 +1508,13 @@ exports[`AddRecipient > should render with single recipient data 1`] = `
                 class="relative"
               >
                 <div
-                  class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 border focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+                  class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
                 >
                   <div
                     class="relative flex h-full flex-1"
                   >
                     <input
+                      autocomplete="off"
                       class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
                       data-testid="AddRecipient__amount"
                       name="amount"
@@ -1563,13 +1578,14 @@ exports[`AddRecipient > should render without the single & multiple switch 1`] =
                 data-testid="SelectDropdown"
               >
                 <div
-                  class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 border focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
+                  class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
                 >
                   <div
                     class="relative flex h-full flex-1"
                   >
                     <input
                       aria-invalid="false"
+                      autocomplete="off"
                       class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
                       data-testid="select-list__input"
                       name="recipientAddress"
@@ -1595,7 +1611,7 @@ exports[`AddRecipient > should render without the single & multiple switch 1`] =
                         id="SelectRecipient__dropdown-label"
                       />
                       <div
-                        class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 border focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+                        class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
                       >
                         <div
                           class="relative flex h-full flex-1"
@@ -1605,6 +1621,7 @@ exports[`AddRecipient > should render without the single & multiple switch 1`] =
                             aria-controls="SelectRecipient__dropdown-menu"
                             aria-invalid="false"
                             aria-labelledby="SelectRecipient__dropdown-label"
+                            autocomplete="off"
                             class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base cursor-default"
                             data-testid="SelectDropdown__input"
                             id="SelectRecipient__dropdown-input"
@@ -1729,12 +1746,13 @@ exports[`AddRecipient > should render without the single & multiple switch 1`] =
                 class="relative"
               >
                 <div
-                  class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 border focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+                  class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
                 >
                   <div
                     class="relative flex h-full flex-1"
                   >
                     <input
+                      autocomplete="off"
                       class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
                       data-testid="AddRecipient__amount"
                       name="amount"
@@ -1866,13 +1884,14 @@ exports[`AddRecipient > should set available amount 1`] = `
                 data-testid="SelectDropdown"
               >
                 <div
-                  class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 border focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
+                  class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
                 >
                   <div
                     class="relative flex h-full flex-1"
                   >
                     <input
                       aria-invalid="false"
+                      autocomplete="off"
                       class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
                       data-testid="select-list__input"
                       name="recipientAddress"
@@ -1898,7 +1917,7 @@ exports[`AddRecipient > should set available amount 1`] = `
                         id="SelectRecipient__dropdown-label"
                       />
                       <div
-                        class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 border focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+                        class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
                       >
                         <div
                           class="relative flex h-full flex-1"
@@ -1908,6 +1927,7 @@ exports[`AddRecipient > should set available amount 1`] = `
                             aria-controls="SelectRecipient__dropdown-menu"
                             aria-invalid="false"
                             aria-labelledby="SelectRecipient__dropdown-label"
+                            autocomplete="off"
                             class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base cursor-default"
                             data-testid="SelectDropdown__input"
                             id="SelectRecipient__dropdown-input"
@@ -2032,12 +2052,13 @@ exports[`AddRecipient > should set available amount 1`] = `
                 class="relative"
               >
                 <div
-                  class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 border focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+                  class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
                 >
                   <div
                     class="relative flex h-full flex-1"
                   >
                     <input
+                      autocomplete="off"
                       class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
                       data-testid="AddRecipient__amount"
                       name="amount"
@@ -2169,13 +2190,14 @@ exports[`AddRecipient > should show available balance after fee 1`] = `
                 data-testid="SelectDropdown"
               >
                 <div
-                  class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 border focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
+                  class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
                 >
                   <div
                     class="relative flex h-full flex-1"
                   >
                     <input
                       aria-invalid="false"
+                      autocomplete="off"
                       class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
                       data-testid="select-list__input"
                       name="recipientAddress"
@@ -2201,7 +2223,7 @@ exports[`AddRecipient > should show available balance after fee 1`] = `
                         id="SelectRecipient__dropdown-label"
                       />
                       <div
-                        class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 border focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+                        class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
                       >
                         <div
                           class="relative flex h-full flex-1"
@@ -2211,6 +2233,7 @@ exports[`AddRecipient > should show available balance after fee 1`] = `
                             aria-controls="SelectRecipient__dropdown-menu"
                             aria-invalid="false"
                             aria-labelledby="SelectRecipient__dropdown-label"
+                            autocomplete="off"
                             class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base cursor-default"
                             data-testid="SelectDropdown__input"
                             id="SelectRecipient__dropdown-input"
@@ -2335,12 +2358,13 @@ exports[`AddRecipient > should show available balance after fee 1`] = `
                 class="relative"
               >
                 <div
-                  class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 border focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+                  class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
                 >
                   <div
                     class="relative flex h-full flex-1"
                   >
                     <input
+                      autocomplete="off"
                       class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
                       data-testid="AddRecipient__amount"
                       name="amount"
@@ -2487,13 +2511,14 @@ exports[`AddRecipient > should show zero amount if wallet has zero or insufficie
                 data-testid="SelectDropdown"
               >
                 <div
-                  class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 border focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
+                  class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
                 >
                   <div
                     class="relative flex h-full flex-1"
                   >
                     <input
                       aria-invalid="false"
+                      autocomplete="off"
                       class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
                       data-testid="select-list__input"
                       name="recipientAddress"
@@ -2519,7 +2544,7 @@ exports[`AddRecipient > should show zero amount if wallet has zero or insufficie
                         id="SelectRecipient__dropdown-label"
                       />
                       <div
-                        class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 border focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+                        class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
                       >
                         <div
                           class="relative flex h-full flex-1"
@@ -2529,6 +2554,7 @@ exports[`AddRecipient > should show zero amount if wallet has zero or insufficie
                             aria-controls="SelectRecipient__dropdown-menu"
                             aria-invalid="false"
                             aria-labelledby="SelectRecipient__dropdown-label"
+                            autocomplete="off"
                             class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base cursor-default"
                             data-testid="SelectDropdown__input"
                             id="SelectRecipient__dropdown-input"
@@ -2653,13 +2679,14 @@ exports[`AddRecipient > should show zero amount if wallet has zero or insufficie
                 class="relative"
               >
                 <div
-                  class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border-theme-danger-500 bg-theme-background focus-within:ring-theme-danger-500 border focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+                  class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-danger-500 bg-theme-background focus-within:ring-theme-danger-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
                 >
                   <div
                     class="relative flex h-full flex-1"
                   >
                     <input
                       aria-invalid="true"
+                      autocomplete="off"
                       class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
                       data-testid="AddRecipient__amount"
                       name="amount"

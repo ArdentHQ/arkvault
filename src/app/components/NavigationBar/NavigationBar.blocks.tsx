@@ -35,7 +35,7 @@ const NavWrapper = ({
 	scroll,
 	...props
 }: React.HTMLProps<HTMLDivElement> & { noBorder?: boolean; noShadow?: boolean; scroll?: number }) => (
-	<div
+	<nav
 		{...props}
 		className={twMerge(
 			"custom-nav-wrapper sticky inset-x-0 top-0 z-40 border-b border-theme-background bg-theme-background transition-all duration-200",

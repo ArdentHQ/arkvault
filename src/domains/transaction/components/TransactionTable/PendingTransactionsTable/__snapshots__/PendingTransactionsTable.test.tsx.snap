@@ -309,12 +309,12 @@ exports[`Signed Transaction Table > should handle the onRowClick function when t
                 <div
                   class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start my-1 pt-3 min-h-14 xl:min-h-11"
                 >
-                  <span
+                  <div
                     class="inline-block font-semibold overflow-hidden text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] rounded px-1 dark:border"
                     data-testid="TransactionRowRecipientLabel"
                   >
                     Multisignature
-                  </span>
+                  </div>
                 </div>
               </td>
               <td>
@@ -325,12 +325,12 @@ exports[`Signed Transaction Table > should handle the onRowClick function when t
                     class="flex flex-row gap-2"
                     data-testid="TransactionRowAddressing__musig_registration"
                   >
-                    <span
+                    <div
                       class="inline-block font-semibold overflow-hidden text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border text-xs leading-[15px] !flex h-[21px] w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
                       data-testid="TransactionRowAddressing__label"
                     >
                       To
-                    </span>
+                    </div>
                     <span
                       class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                     >
@@ -392,7 +392,7 @@ exports[`Signed Transaction Table > should handle the onRowClick function when t
                   <div
                     class="flex flex-col items-end gap-1"
                   >
-                    <span
+                    <div
                       class="font-semibold overflow-hidden text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border text-base flex items-center justify-center px-1.5 h-[21px] rounded dark:border"
                       data-testid="AmountLabel__wrapper"
                     >
@@ -406,7 +406,7 @@ exports[`Signed Transaction Table > should handle the onRowClick function when t
                           - 15 DARK
                         </span>
                       </div>
-                    </span>
+                    </div>
                     <span
                       class="text-xs font-semibold text-theme-secondary-700 lg:hidden"
                     >
@@ -647,12 +647,12 @@ exports[`Signed Transaction Table > should render different status > should show
                           class="flex flex-row gap-2"
                           data-testid="TransactionRowAddressing__musig_registration"
                         >
-                          <span
+                          <div
                             class="inline-block font-semibold overflow-hidden text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border text-xs leading-[15px] !flex h-[21px] w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
                             data-testid="TransactionRowAddressing__label"
                           >
                             To
-                          </span>
+                          </div>
                           <span
                             class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                           >
@@ -672,7 +672,7 @@ exports[`Signed Transaction Table > should render different status > should show
                       <div
                         class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                       >
-                        <span
+                        <div
                           class="font-semibold overflow-hidden text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border text-base flex items-center justify-center px-1.5 h-[21px] rounded dark:border"
                           data-testid="AmountLabel__wrapper"
                         >
@@ -686,7 +686,7 @@ exports[`Signed Transaction Table > should render different status > should show
                               - 15 DARK
                             </span>
                           </div>
-                        </span>
+                        </div>
                       </div>
                     </div>
                     <div
@@ -1047,12 +1047,12 @@ exports[`Signed Transaction Table > should render different status > should show
                 <div
                   class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start my-1 pt-3 min-h-14 xl:min-h-11"
                 >
-                  <span
+                  <div
                     class="inline-block font-semibold overflow-hidden text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] rounded px-1 dark:border"
                     data-testid="TransactionRowRecipientLabel"
                   >
                     Multisignature
-                  </span>
+                  </div>
                 </div>
               </td>
               <td>
@@ -1063,12 +1063,12 @@ exports[`Signed Transaction Table > should render different status > should show
                     class="flex flex-row gap-2"
                     data-testid="TransactionRowAddressing__musig_registration"
                   >
-                    <span
+                    <div
                       class="inline-block font-semibold overflow-hidden text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border text-xs leading-[15px] !flex h-[21px] w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
                       data-testid="TransactionRowAddressing__label"
                     >
                       To
-                    </span>
+                    </div>
                     <span
                       class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                     >
@@ -1120,7 +1120,7 @@ exports[`Signed Transaction Table > should render different status > should show
                   <div
                     class="flex flex-col items-end gap-1"
                   >
-                    <span
+                    <div
                       class="font-semibold overflow-hidden text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border text-base flex items-center justify-center px-1.5 h-[21px] rounded dark:border"
                       data-testid="AmountLabel__wrapper"
                     >
@@ -1134,7 +1134,7 @@ exports[`Signed Transaction Table > should render different status > should show
                           - 15 DARK
                         </span>
                       </div>
-                    </span>
+                    </div>
                     <span
                       class="text-xs font-semibold text-theme-secondary-700 lg:hidden"
                     >
@@ -1375,12 +1375,12 @@ exports[`Signed Transaction Table > should render different status > should show
                           class="flex flex-row gap-2"
                           data-testid="TransactionRowAddressing__musig_registration"
                         >
-                          <span
+                          <div
                             class="inline-block font-semibold overflow-hidden text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border text-xs leading-[15px] !flex h-[21px] w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
                             data-testid="TransactionRowAddressing__label"
                           >
                             To
-                          </span>
+                          </div>
                           <span
                             class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                           >
@@ -1400,7 +1400,7 @@ exports[`Signed Transaction Table > should render different status > should show
                       <div
                         class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                       >
-                        <span
+                        <div
                           class="font-semibold overflow-hidden text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border text-base flex items-center justify-center px-1.5 h-[21px] rounded dark:border"
                           data-testid="AmountLabel__wrapper"
                         >
@@ -1414,7 +1414,7 @@ exports[`Signed Transaction Table > should render different status > should show
                               - 15 DARK
                             </span>
                           </div>
-                        </span>
+                        </div>
                       </div>
                     </div>
                     <div
@@ -1775,12 +1775,12 @@ exports[`Signed Transaction Table > should render different status > should show
                 <div
                   class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start my-1 pt-3 min-h-14 xl:min-h-11"
                 >
-                  <span
+                  <div
                     class="inline-block font-semibold overflow-hidden text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] rounded px-1 dark:border"
                     data-testid="TransactionRowRecipientLabel"
                   >
                     Multisignature
-                  </span>
+                  </div>
                 </div>
               </td>
               <td>
@@ -1791,12 +1791,12 @@ exports[`Signed Transaction Table > should render different status > should show
                     class="flex flex-row gap-2"
                     data-testid="TransactionRowAddressing__musig_registration"
                   >
-                    <span
+                    <div
                       class="inline-block font-semibold overflow-hidden text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border text-xs leading-[15px] !flex h-[21px] w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
                       data-testid="TransactionRowAddressing__label"
                     >
                       To
-                    </span>
+                    </div>
                     <span
                       class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                     >
@@ -1829,7 +1829,7 @@ exports[`Signed Transaction Table > should render different status > should show
                   <div
                     class="flex flex-col items-end gap-1"
                   >
-                    <span
+                    <div
                       class="font-semibold overflow-hidden text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border text-base flex items-center justify-center px-1.5 h-[21px] rounded dark:border"
                       data-testid="AmountLabel__wrapper"
                     >
@@ -1843,7 +1843,7 @@ exports[`Signed Transaction Table > should render different status > should show
                           - 15 DARK
                         </span>
                       </div>
-                    </span>
+                    </div>
                     <span
                       class="text-xs font-semibold text-theme-secondary-700 lg:hidden"
                     >
@@ -2033,11 +2033,11 @@ exports[`Signed Transaction Table > should render different status > should show
                         <div
                           class="flex flex-row items-center gap-2"
                         >
-                          <span
+                          <div
                             class="inline-block font-semibold overflow-hidden text-theme-danger-info-text bg-theme-danger-info-background dark:border dark:bg-transparent dark:border-theme-danger-info-border text-xs leading-[15px] rounded px-[11px] py-[3px]"
                           >
                             To
-                          </span>
+                          </div>
                           <span
                             class="text-sm"
                           >
@@ -2060,7 +2060,7 @@ exports[`Signed Transaction Table > should render different status > should show
                       <div
                         class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                       >
-                        <span
+                        <div
                           class="font-semibold overflow-hidden bg-theme-success-100 text-theme-success-700 dark:border dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-base flex h-full items-center justify-center rounded px-1.5 py-[3px]"
                           data-testid="AmountLabel__wrapper"
                         >
@@ -2074,7 +2074,7 @@ exports[`Signed Transaction Table > should render different status > should show
                               + 0.1 DARK
                             </span>
                           </div>
-                        </span>
+                        </div>
                       </div>
                     </div>
                     <div
@@ -2435,22 +2435,22 @@ exports[`Signed Transaction Table > should render different status > should show
                 <div
                   class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start my-1 pt-3 min-h-14 xl:min-h-11"
                 >
-                  <span
+                  <div
                     class="inline-block font-semibold overflow-hidden text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] rounded px-1 dark:border"
                   >
                     Unvote
-                  </span>
+                  </div>
                 </div>
               </td>
               <td>
                 <div
                   class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 space-x-2 items-start my-1 pt-3 min-h-14 xl:min-h-11"
                 >
-                  <span
+                  <div
                     class="inline-block font-semibold overflow-hidden text-theme-danger-info-text bg-theme-danger-info-background dark:border dark:bg-transparent dark:border-theme-danger-info-border text-xs leading-[15px] rounded px-[11px] py-1"
                   >
                     To
-                  </span>
+                  </div>
                   <span
                     class="text-sm"
                   >
@@ -2515,12 +2515,12 @@ exports[`Signed Transaction Table > should render different status > should show
                     class="flex flex-row gap-2"
                     data-testid="TransactionRowAddressing__vote"
                   >
-                    <span
+                    <div
                       class="inline-block font-semibold overflow-hidden text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border text-xs leading-[15px] !flex h-[21px] w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
                       data-testid="TransactionRowAddressing__label"
                     >
                       To
-                    </span>
+                    </div>
                     <span
                       class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                     >
@@ -2656,11 +2656,11 @@ exports[`Signed Transaction Table > should render different status > should show
                         <div
                           class="flex flex-row items-center gap-2"
                         >
-                          <span
+                          <div
                             class="inline-block font-semibold overflow-hidden text-theme-danger-info-text bg-theme-danger-info-background dark:border dark:bg-transparent dark:border-theme-danger-info-border text-xs leading-[15px] rounded px-[11px] py-[3px]"
                           >
                             To
-                          </span>
+                          </div>
                           <span
                             class="text-sm"
                           >
@@ -2683,7 +2683,7 @@ exports[`Signed Transaction Table > should render different status > should show
                       <div
                         class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                       >
-                        <span
+                        <div
                           class="font-semibold overflow-hidden bg-theme-success-100 text-theme-success-700 dark:border dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-base flex h-full items-center justify-center rounded px-1.5 py-[3px]"
                           data-testid="AmountLabel__wrapper"
                         >
@@ -2697,7 +2697,7 @@ exports[`Signed Transaction Table > should render different status > should show
                               + 0.1 DARK
                             </span>
                           </div>
-                        </span>
+                        </div>
                       </div>
                     </div>
                     <div
@@ -3058,22 +3058,22 @@ exports[`Signed Transaction Table > should render different status > should show
                 <div
                   class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start my-1 pt-3 min-h-14 xl:min-h-11"
                 >
-                  <span
+                  <div
                     class="inline-block font-semibold overflow-hidden text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] rounded px-1 dark:border"
                   >
                     Vote
-                  </span>
+                  </div>
                 </div>
               </td>
               <td>
                 <div
                   class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 space-x-2 items-start my-1 pt-3 min-h-14 xl:min-h-11"
                 >
-                  <span
+                  <div
                     class="inline-block font-semibold overflow-hidden text-theme-danger-info-text bg-theme-danger-info-background dark:border dark:bg-transparent dark:border-theme-danger-info-border text-xs leading-[15px] rounded px-[11px] py-1"
                   >
                     To
-                  </span>
+                  </div>
                   <span
                     class="text-sm"
                   >
@@ -3138,12 +3138,12 @@ exports[`Signed Transaction Table > should render different status > should show
                     class="flex flex-row gap-2"
                     data-testid="TransactionRowAddressing__vote"
                   >
-                    <span
+                    <div
                       class="inline-block font-semibold overflow-hidden text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border text-xs leading-[15px] !flex h-[21px] w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
                       data-testid="TransactionRowAddressing__label"
                     >
                       To
-                    </span>
+                    </div>
                     <span
                       class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                     >
@@ -3330,12 +3330,12 @@ exports[`Signed Transaction Table > should render different status > should show
                           class="flex flex-row gap-2"
                           data-testid="TransactionRowAddressing__musig_registration"
                         >
-                          <span
+                          <div
                             class="inline-block font-semibold overflow-hidden text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border text-xs leading-[15px] !flex h-[21px] w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
                             data-testid="TransactionRowAddressing__label"
                           >
                             To
-                          </span>
+                          </div>
                           <span
                             class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                           >
@@ -3355,7 +3355,7 @@ exports[`Signed Transaction Table > should render different status > should show
                       <div
                         class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                       >
-                        <span
+                        <div
                           class="font-semibold overflow-hidden text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border text-base flex items-center justify-center px-1.5 h-[21px] rounded dark:border"
                           data-testid="AmountLabel__wrapper"
                         >
@@ -3369,7 +3369,7 @@ exports[`Signed Transaction Table > should render different status > should show
                               - 15 DARK
                             </span>
                           </div>
-                        </span>
+                        </div>
                       </div>
                     </div>
                     <div
@@ -3730,12 +3730,12 @@ exports[`Signed Transaction Table > should render different status > should show
                 <div
                   class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start my-1 pt-3 min-h-14 xl:min-h-11"
                 >
-                  <span
+                  <div
                     class="inline-block font-semibold overflow-hidden text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] rounded px-1 dark:border"
                     data-testid="TransactionRowRecipientLabel"
                   >
                     Multisignature
-                  </span>
+                  </div>
                 </div>
               </td>
               <td>
@@ -3746,12 +3746,12 @@ exports[`Signed Transaction Table > should render different status > should show
                     class="flex flex-row gap-2"
                     data-testid="TransactionRowAddressing__musig_registration"
                   >
-                    <span
+                    <div
                       class="inline-block font-semibold overflow-hidden text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border text-xs leading-[15px] !flex h-[21px] w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
                       data-testid="TransactionRowAddressing__label"
                     >
                       To
-                    </span>
+                    </div>
                     <span
                       class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                     >
@@ -3813,7 +3813,7 @@ exports[`Signed Transaction Table > should render different status > should show
                   <div
                     class="flex flex-col items-end gap-1"
                   >
-                    <span
+                    <div
                       class="font-semibold overflow-hidden text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border text-base flex items-center justify-center px-1.5 h-[21px] rounded dark:border"
                       data-testid="AmountLabel__wrapper"
                     >
@@ -3827,7 +3827,7 @@ exports[`Signed Transaction Table > should render different status > should show
                           - 15 DARK
                         </span>
                       </div>
-                    </span>
+                    </div>
                     <span
                       class="text-xs font-semibold text-theme-secondary-700 lg:hidden"
                     >
@@ -4240,12 +4240,12 @@ exports[`Signed Transaction Table > should render ready to broadcast transaction
                 <div
                   class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start my-1 pt-3 min-h-14 xl:min-h-11"
                 >
-                  <span
+                  <div
                     class="inline-block font-semibold overflow-hidden text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] rounded px-1 dark:border"
                     data-testid="TransactionRowRecipientLabel"
                   >
                     Multisignature
-                  </span>
+                  </div>
                 </div>
               </td>
               <td>
@@ -4256,12 +4256,12 @@ exports[`Signed Transaction Table > should render ready to broadcast transaction
                     class="flex flex-row gap-2"
                     data-testid="TransactionRowAddressing__musig_registration"
                   >
-                    <span
+                    <div
                       class="inline-block font-semibold overflow-hidden text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border text-xs leading-[15px] !flex h-[21px] w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
                       data-testid="TransactionRowAddressing__label"
                     >
                       To
-                    </span>
+                    </div>
                     <span
                       class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                     >
@@ -4294,7 +4294,7 @@ exports[`Signed Transaction Table > should render ready to broadcast transaction
                   <div
                     class="flex flex-col items-end gap-1"
                   >
-                    <span
+                    <div
                       class="font-semibold overflow-hidden text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border text-base flex items-center justify-center px-1.5 h-[21px] rounded dark:border"
                       data-testid="AmountLabel__wrapper"
                     >
@@ -4308,7 +4308,7 @@ exports[`Signed Transaction Table > should render ready to broadcast transaction
                           - 15 DARK
                         </span>
                       </div>
-                    </span>
+                    </div>
                     <span
                       class="text-xs font-semibold text-theme-secondary-700 lg:hidden"
                     >
@@ -4721,12 +4721,12 @@ exports[`Signed Transaction Table > should render signed transactions and handle
                 <div
                   class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start my-1 pt-3 min-h-14 xl:min-h-11"
                 >
-                  <span
+                  <div
                     class="inline-block font-semibold overflow-hidden text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] rounded px-1 dark:border"
                     data-testid="TransactionRowRecipientLabel"
                   >
                     Multisignature
-                  </span>
+                  </div>
                 </div>
               </td>
               <td>
@@ -4737,12 +4737,12 @@ exports[`Signed Transaction Table > should render signed transactions and handle
                     class="flex flex-row gap-2"
                     data-testid="TransactionRowAddressing__musig_registration"
                   >
-                    <span
+                    <div
                       class="inline-block font-semibold overflow-hidden text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border text-xs leading-[15px] !flex h-[21px] w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
                       data-testid="TransactionRowAddressing__label"
                     >
                       To
-                    </span>
+                    </div>
                     <span
                       class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                     >
@@ -4794,7 +4794,7 @@ exports[`Signed Transaction Table > should render signed transactions and handle
                   <div
                     class="flex flex-col items-end gap-1"
                   >
-                    <span
+                    <div
                       class="font-semibold overflow-hidden text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border text-base flex items-center justify-center px-1.5 h-[21px] rounded dark:border"
                       data-testid="AmountLabel__wrapper"
                     >
@@ -4808,7 +4808,7 @@ exports[`Signed Transaction Table > should render signed transactions and handle
                           - 15 DARK
                         </span>
                       </div>
-                    </span>
+                    </div>
                     <span
                       class="text-xs font-semibold text-theme-secondary-700 lg:hidden"
                     >
@@ -5213,22 +5213,22 @@ exports[`Signed Transaction Table > should show as awaiting confirmations 1`] = 
                 <div
                   class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start my-1 pt-3 min-h-14 xl:min-h-11"
                 >
-                  <span
+                  <div
                     class="inline-block font-semibold overflow-hidden text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] rounded px-1 dark:border"
                   >
                     Transfer
-                  </span>
+                  </div>
                 </div>
               </td>
               <td>
                 <div
                   class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 space-x-2 items-start my-1 pt-3 min-h-14 xl:min-h-11"
                 >
-                  <span
+                  <div
                     class="inline-block font-semibold overflow-hidden text-theme-danger-info-text bg-theme-danger-info-background dark:border dark:bg-transparent dark:border-theme-danger-info-border text-xs leading-[15px] rounded px-[11px] py-1"
                   >
                     To
-                  </span>
+                  </div>
                   <span
                     class="text-sm"
                   >
@@ -5295,12 +5295,12 @@ exports[`Signed Transaction Table > should show as awaiting confirmations 1`] = 
                     class="flex flex-row gap-2"
                     data-testid="TransactionRowAddressing__container"
                   >
-                    <span
+                    <div
                       class="inline-block font-semibold overflow-hidden text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border text-xs leading-[15px] !flex h-[21px] w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
                       data-testid="TransactionRowAddressing__label"
                     >
                       To
-                    </span>
+                    </div>
                     <div
                       class="w-50 sm:w-30"
                       data-testid="TransactionRowAddressing__address-container"
@@ -5448,11 +5448,11 @@ exports[`Signed Transaction Table > should show as awaiting confirmations on mob
                         <div
                           class="flex flex-row items-center gap-2"
                         >
-                          <span
+                          <div
                             class="inline-block font-semibold overflow-hidden text-theme-danger-info-text bg-theme-danger-info-background dark:border dark:bg-transparent dark:border-theme-danger-info-border text-xs leading-[15px] rounded px-[11px] py-[3px]"
                           >
                             To
-                          </span>
+                          </div>
                           <span
                             class="text-sm"
                           >
@@ -5477,7 +5477,7 @@ exports[`Signed Transaction Table > should show as awaiting confirmations on mob
                       <div
                         class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                       >
-                        <span
+                        <div
                           class="font-semibold overflow-hidden bg-theme-success-100 text-theme-success-700 dark:border dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-base flex h-full items-center justify-center rounded px-1.5 py-[3px]"
                           data-testid="AmountLabel__wrapper"
                         >
@@ -5491,7 +5491,7 @@ exports[`Signed Transaction Table > should show as awaiting confirmations on mob
                               + 1.1 DARK
                             </span>
                           </div>
-                        </span>
+                        </div>
                       </div>
                     </div>
                     <div
@@ -5852,12 +5852,12 @@ exports[`Signed Transaction Table > should show the sign button with isCompact =
                 <div
                   class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start my-1 pt-3 min-h-14 xl:min-h-11"
                 >
-                  <span
+                  <div
                     class="inline-block font-semibold overflow-hidden text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] rounded px-1 dark:border"
                     data-testid="TransactionRowRecipientLabel"
                   >
                     Multisignature
-                  </span>
+                  </div>
                 </div>
               </td>
               <td>
@@ -5868,12 +5868,12 @@ exports[`Signed Transaction Table > should show the sign button with isCompact =
                     class="flex flex-row gap-2"
                     data-testid="TransactionRowAddressing__musig_registration"
                   >
-                    <span
+                    <div
                       class="inline-block font-semibold overflow-hidden text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border text-xs leading-[15px] !flex h-[21px] w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
                       data-testid="TransactionRowAddressing__label"
                     >
                       To
-                    </span>
+                    </div>
                     <span
                       class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                     >
@@ -5935,7 +5935,7 @@ exports[`Signed Transaction Table > should show the sign button with isCompact =
                   <div
                     class="flex flex-col items-end gap-1"
                   >
-                    <span
+                    <div
                       class="font-semibold overflow-hidden text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border text-base flex items-center justify-center px-1.5 h-[21px] rounded dark:border"
                       data-testid="AmountLabel__wrapper"
                     >
@@ -5949,7 +5949,7 @@ exports[`Signed Transaction Table > should show the sign button with isCompact =
                           - 15 DARK
                         </span>
                       </div>
-                    </span>
+                    </div>
                     <span
                       class="text-xs font-semibold text-theme-secondary-700 lg:hidden"
                     >
@@ -6362,12 +6362,12 @@ exports[`Signed Transaction Table > should show the sign button with isCompact =
                 <div
                   class="flex px-3 transition-colors duration-100 dark:group-hover:bg-black group-hover:bg-theme-secondary-200 items-start my-1 pt-3 min-h-14 xl:min-h-11"
                 >
-                  <span
+                  <div
                     class="inline-block font-semibold overflow-hidden text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-xs leading-[15px] rounded px-1 dark:border"
                     data-testid="TransactionRowRecipientLabel"
                   >
                     Multisignature
-                  </span>
+                  </div>
                 </div>
               </td>
               <td>
@@ -6378,12 +6378,12 @@ exports[`Signed Transaction Table > should show the sign button with isCompact =
                     class="flex flex-row gap-2"
                     data-testid="TransactionRowAddressing__musig_registration"
                   >
-                    <span
+                    <div
                       class="inline-block font-semibold overflow-hidden text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border text-xs leading-[15px] !flex h-[21px] w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
                       data-testid="TransactionRowAddressing__label"
                     >
                       To
-                    </span>
+                    </div>
                     <span
                       class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                     >
@@ -6445,7 +6445,7 @@ exports[`Signed Transaction Table > should show the sign button with isCompact =
                   <div
                     class="flex flex-col items-end gap-1"
                   >
-                    <span
+                    <div
                       class="font-semibold overflow-hidden text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border text-base flex items-center justify-center px-1.5 h-[21px] rounded dark:border"
                       data-testid="AmountLabel__wrapper"
                     >
@@ -6459,7 +6459,7 @@ exports[`Signed Transaction Table > should show the sign button with isCompact =
                           - 15 DARK
                         </span>
                       </div>
-                    </span>
+                    </div>
                     <span
                       class="text-xs font-semibold text-theme-secondary-700 lg:hidden"
                     >
