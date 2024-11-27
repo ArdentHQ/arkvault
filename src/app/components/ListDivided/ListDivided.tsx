@@ -1,18 +1,23 @@
 import React from "react";
-import tw, { styled } from "twin.macro";
 import { ListDividedItemProperties } from "./ListDivided.contracts";
 
 import { ListDividedItem } from "./ListDividedItem";
+import { twMerge } from "tailwind-merge";
+import cn from 'classnames';
 
 interface Properties {
 	items?: ListDividedItemProperties[];
 	noBorder?: boolean;
 }
 
-const StyledList = styled.ul<{ noBorder: boolean }>(({ noBorder }) => ({
-	"> li": tw`border-b border-dashed border-theme-secondary-300 dark:border-theme-secondary-800`,
-	"> li:last-child": noBorder ? tw`border-b-0` : undefined,
-}));
+const StyledList = ({noBorder, ...props}: {noBorder: boolean} & React.HTMLAttributes<HTMLUListElement>) => (
+		<ul {...props} className={twMerge(
+			"[&>li]:border-b [&>li]:border-dashed [&>li]:border-theme-secondary-300 dark:[&>li]:border-theme-secondary-800",
+			cn({
+				"[&>li:last-child]:border-b-0": noBorder,
+			}),
+			props.className)} />
+	)
 
 const renderItems = (items: ListDividedItemProperties[], noBorder: boolean) => (
 	<StyledList data-testid="list-divided__items" noBorder={noBorder}>
