@@ -93,7 +93,7 @@ exports[`Notifications > should emit transactionClick event 1`] = `
                         <div
                           class="h-5"
                         >
-                          <span
+                          <div
                             class="font-semibold overflow-hidden text-theme-danger-info-text bg-theme-danger-info-background dark:border dark:bg-transparent dark:border-theme-danger-info-border text-base flex h-full items-center justify-center rounded px-1.5"
                             data-testid="AmountLabel__wrapper"
                           >
@@ -107,7 +107,7 @@ exports[`Notifications > should emit transactionClick event 1`] = `
                                 - 1 DARK
                               </span>
                             </div>
-                          </span>
+                          </div>
                           <div
                             class="absolute -bottom-px right-0 h-px w-8 bg-white dark:bg-theme-secondary-900"
                           />
@@ -175,7 +175,7 @@ exports[`Notifications > should emit transactionClick event 1`] = `
                         <div
                           class="h-5"
                         >
-                          <span
+                          <div
                             class="font-semibold overflow-hidden bg-theme-success-100 text-theme-success-700 dark:border dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-base flex h-full items-center justify-center rounded px-1.5"
                             data-testid="AmountLabel__wrapper"
                           >
@@ -189,7 +189,7 @@ exports[`Notifications > should emit transactionClick event 1`] = `
                                 + 20 DARK
                               </span>
                             </div>
-                          </span>
+                          </div>
                           <div
                             class="absolute -bottom-px right-0 h-px w-8 bg-white dark:bg-theme-secondary-900"
                           />
@@ -257,7 +257,7 @@ exports[`Notifications > should emit transactionClick event 1`] = `
                         <div
                           class="h-5"
                         >
-                          <span
+                          <div
                             class="font-semibold overflow-hidden bg-theme-success-100 text-theme-success-700 dark:border dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-base flex h-full items-center justify-center rounded px-1.5"
                             data-testid="AmountLabel__wrapper"
                           >
@@ -271,7 +271,7 @@ exports[`Notifications > should emit transactionClick event 1`] = `
                                 + 0.0000001 DARK
                               </span>
                             </div>
-                          </span>
+                          </div>
                           <div
                             class="absolute -bottom-px right-0 h-px w-8 bg-white dark:bg-theme-secondary-900"
                           />
@@ -487,7 +487,7 @@ exports[`Notifications > should render with transactions and plugins 1`] = `
                         <div
                           class="h-5"
                         >
-                          <span
+                          <div
                             class="font-semibold overflow-hidden text-theme-danger-info-text bg-theme-danger-info-background dark:border dark:bg-transparent dark:border-theme-danger-info-border text-base flex h-full items-center justify-center rounded px-1.5"
                             data-testid="AmountLabel__wrapper"
                           >
@@ -501,7 +501,7 @@ exports[`Notifications > should render with transactions and plugins 1`] = `
                                 - 1 DARK
                               </span>
                             </div>
-                          </span>
+                          </div>
                           <div
                             class="absolute -bottom-px right-0 h-px w-8 bg-white dark:bg-theme-secondary-900"
                           />
@@ -569,7 +569,7 @@ exports[`Notifications > should render with transactions and plugins 1`] = `
                         <div
                           class="h-5"
                         >
-                          <span
+                          <div
                             class="font-semibold overflow-hidden bg-theme-success-100 text-theme-success-700 dark:border dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-base flex h-full items-center justify-center rounded px-1.5"
                             data-testid="AmountLabel__wrapper"
                           >
@@ -583,7 +583,7 @@ exports[`Notifications > should render with transactions and plugins 1`] = `
                                 + 20 DARK
                               </span>
                             </div>
-                          </span>
+                          </div>
                           <div
                             class="absolute -bottom-px right-0 h-px w-8 bg-white dark:bg-theme-secondary-900"
                           />
@@ -651,7 +651,7 @@ exports[`Notifications > should render with transactions and plugins 1`] = `
                         <div
                           class="h-5"
                         >
-                          <span
+                          <div
                             class="font-semibold overflow-hidden bg-theme-success-100 text-theme-success-700 dark:border dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 text-base flex h-full items-center justify-center rounded px-1.5"
                             data-testid="AmountLabel__wrapper"
                           >
@@ -665,7 +665,7 @@ exports[`Notifications > should render with transactions and plugins 1`] = `
                                 + 0.0000001 DARK
                               </span>
                             </div>
-                          </span>
+                          </div>
                           <div
                             class="absolute -bottom-px right-0 h-px w-8 bg-white dark:bg-theme-secondary-900"
                           />

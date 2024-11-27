@@ -481,11 +481,11 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                                 >
                                   Category
                                 </div>
-                                <span
+                                <div
                                   class="inline-block font-semibold overflow-hidden px-1 border-2 rounded text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:text-theme-secondary-500 dark:bg-transparent dark:border-theme-secondary-800 text-xs leading-[15px]"
                                 >
                                   Transfer
-                                </span>
+                                </div>
                               </div>
                             </div>
                           </div>
@@ -542,7 +542,7 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                               >
                                 Amount
                               </div>
-                              <span
+                              <div
                                 class="font-semibold overflow-hidden text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent group-hover:bg-theme-secondary-300 dark:group-hover:bg-transparent text-base flex items-center justify-center px-1.5 h-[21px] rounded dark:border"
                                 data-testid="AmountLabel__wrapper"
                               >
@@ -556,7 +556,7 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                                     0.71370675 DARK
                                   </span>
                                 </div>
-                              </span>
+                              </div>
                             </div>
                             <div
                               class="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3 [.condensed_&]:leading-3"
