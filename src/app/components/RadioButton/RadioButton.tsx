@@ -7,8 +7,7 @@ type RadioButtonProperties = {
 	color?: Color;
 } & React.InputHTMLAttributes<any>;
 
-export const RadioButton = ({ color = "success", ...props }: RadioButtonProperties & React.InputHTMLAttributes<any>) => {
-	return (
+export const RadioButton = ({ color = "success", ...props }: RadioButtonProperties & React.InputHTMLAttributes<any>) => (
 		<input {...props} type="radio" className={twMerge("w-4 h-4 transition duration-150 ease-in-out cursor-pointer focus:ring-offset-0 border-theme-secondary-300", cn({
 			"text-theme-danger-400": color === "danger",
 			"text-theme-hint-500": color === "hint",
@@ -17,4 +16,3 @@ export const RadioButton = ({ color = "success", ...props }: RadioButtonProperti
 			"text-theme-warning-600": color === "warning",
 		}), props.className)} />
 	)
-}
