@@ -34,6 +34,7 @@ exports[`ReceiveFundsForm > should emit amount onChange event 1`] = `
               class="relative flex h-full flex-1"
             >
               <input
+                autocomplete="off"
                 class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
                 data-testid="ReceiveFundsForm__amount"
                 name="amount"
@@ -68,6 +69,7 @@ exports[`ReceiveFundsForm > should emit amount onChange event 1`] = `
             class="relative flex h-full flex-1"
           >
             <input
+              autocomplete="off"
               class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
               data-testid="ReceiveFundsForm__memo"
               maxlengthlabel="255"
@@ -132,6 +134,7 @@ exports[`ReceiveFundsForm > should emit memo onChange event 1`] = `
               class="relative flex h-full flex-1"
             >
               <input
+                autocomplete="off"
                 class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
                 data-testid="ReceiveFundsForm__amount"
                 name="amount"
@@ -166,6 +169,7 @@ exports[`ReceiveFundsForm > should emit memo onChange event 1`] = `
             class="relative flex h-full flex-1"
           >
             <input
+              autocomplete="off"
               class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
               data-testid="ReceiveFundsForm__memo"
               maxlengthlabel="255"
@@ -230,6 +234,7 @@ exports[`ReceiveFundsForm > should not show memo if is not supported by network 
               class="relative flex h-full flex-1"
             >
               <input
+                autocomplete="off"
                 class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
                 data-testid="ReceiveFundsForm__amount"
                 name="amount"
@@ -280,6 +285,7 @@ exports[`ReceiveFundsForm > should render 1`] = `
               class="relative flex h-full flex-1"
             >
               <input
+                autocomplete="off"
                 class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
                 data-testid="ReceiveFundsForm__amount"
                 name="amount"
@@ -314,6 +320,7 @@ exports[`ReceiveFundsForm > should render 1`] = `
             class="relative flex h-full flex-1"
           >
             <input
+              autocomplete="off"
               class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
               data-testid="ReceiveFundsForm__memo"
               maxlengthlabel="255"

@@ -96,6 +96,7 @@ exports[`UpdateWalletName > should render 1`] = `
                     >
                       <input
                         aria-invalid="false"
+                        autocomplete="off"
                         class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
                         data-testid="UpdateWalletName__input"
                         name="name"
@@ -238,6 +239,7 @@ exports[`UpdateWalletName > should show an error message for duplicate name 1`] 
                     >
                       <input
                         aria-invalid="true"
+                        autocomplete="off"
                         class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
                         data-testid="UpdateWalletName__input"
                         name="name"
@@ -430,6 +432,7 @@ exports[`UpdateWalletName > should show an error message for duplicate name 2`] 
                     >
                       <input
                         aria-invalid="true"
+                        autocomplete="off"
                         class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
                         data-testid="UpdateWalletName__input"
                         name="name"
@@ -622,6 +625,7 @@ exports[`UpdateWalletName > should show an error message for duplicate name 3`] 
                     >
                       <input
                         aria-invalid="true"
+                        autocomplete="off"
                         class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
                         data-testid="UpdateWalletName__input"
                         name="name"
@@ -814,6 +818,7 @@ exports[`UpdateWalletName > should show an error message for duplicate name 4`] 
                     >
                       <input
                         aria-invalid="true"
+                        autocomplete="off"
                         class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
                         data-testid="UpdateWalletName__input"
                         name="name"
@@ -1006,6 +1011,7 @@ exports[`UpdateWalletName > should show error message when name consists only of
                     >
                       <input
                         aria-invalid="true"
+                        autocomplete="off"
                         class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
                         data-testid="UpdateWalletName__input"
                         name="name"
@@ -1198,6 +1204,7 @@ exports[`UpdateWalletName > should show error message when name exceeds 42 chara
                     >
                       <input
                         aria-invalid="true"
+                        autocomplete="off"
                         class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
                         data-testid="UpdateWalletName__input"
                         name="name"
