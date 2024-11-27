@@ -1,6 +1,5 @@
 import cn from "classnames";
-import tw, { styled } from "twin.macro";
-import React from "react";
+import React, { forwardRef } from "react";
 import { DefaultTReturn, TOptions } from "i18next";
 import { Button } from "@/app/components/Button";
 import { Icon } from "@/app/components/Icon";
@@ -20,25 +19,31 @@ interface ModalContentProperties {
 	className?: string;
 }
 
-const ModalContainer = styled.div<{ size?: Size }>`
-	${tw`flex-1 max-w-full md:m-auto md:px-10`}
+interface ModalContainerProps extends React.HTMLAttributes<HTMLDivElement> {
+	size?: Size;
+}
 
-	${({ size }) => {
-		const sizes = {
-			"3xl": () => tw`md:max-w-3xl`,
-			"4xl": () => tw`md:max-w-4xl`,
-			"5xl": () => tw`md:max-w-5xl`,
-			default: () => tw`md:max-w-2xl`,
-			lg: () => tw`md:max-w-lg`,
-			md: () => tw`md:max-w-md`,
-			sm: () => tw`md:max-w-sm`,
-			xl: () => tw`md:max-w-xl`,
-		};
+const ModalContainer = forwardRef<HTMLDivElement, ModalContainerProps>(({ size, ...props }, ref) => (
+	<div
+		{...props}
+		ref={ref}
+		className={twMerge(
+			"max-w-full flex-1 md:m-auto md:max-w-2xl md:px-10",
+			cn({
+				"md:max-w-3xl": size === "3xl",
+				"md:max-w-4xl": size === "4xl",
+				"md:max-w-5xl": size === "5xl",
+				"md:max-w-lg": size === "lg",
+				"md:max-w-md": size === "md",
+				"md:max-w-sm": size === "sm",
+				"md:max-w-xl": size === "xl",
+			}),
+			props.className,
+		)}
+	/>
+));
 
-		// eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
-		return (sizes[size as keyof typeof sizes] || sizes.default)();
-	}}
-`;
+ModalContainer.displayName = "ModalContainer";
 
 const ModalContent = ({
 	noButtons = false,

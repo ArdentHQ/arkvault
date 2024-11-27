@@ -155,7 +155,7 @@ exports[`VotesHeader > should render a different title if on select delegate ste
 exports[`VotesHeader > should render responsive (md) 1`] = `
 <DocumentFragment>
   <div
-    class="w-full py-4 first:pt-8 last:pb-8 border-theme-secondary-300 dark:border-theme-secondary-800 hasBorder css-1wpbo18"
+    class="border-b w-full py-4 first:pt-8 last:pb-8 border-theme-secondary-300 dark:border-theme-secondary-800 hasBorder"
   >
     <div
       class="mx-auto px-6 lg:container md:px-10"

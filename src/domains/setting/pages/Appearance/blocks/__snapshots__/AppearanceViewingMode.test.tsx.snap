@@ -10,7 +10,7 @@ exports[`AppearanceViewingMode > should render 1`] = `
     <button
       aria-checked="false"
       aria-label="light"
-      class="css-1byvqk4"
+      class="flex w-full items-center justify-center border-2 border-theme-primary-100 p-3 font-semibold text-theme-secondary-700 transition-colors duration-300 checked:border-theme-primary-600 checked:bg-theme-primary-50 checked:text-theme-primary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:border disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:checked:cursor-default dark:checked:bg-theme-primary-900 dark:checked:text-theme-primary-50 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700 h-14 rounded-xl"
       data-testid="ButtonGroupOption"
       role="radio"
       type="button"
@@ -18,31 +18,32 @@ exports[`AppearanceViewingMode > should render 1`] = `
       <div
         class="flex items-center px-2"
       >
-        <div
-          class="css-1i4b0eq"
-          height="20"
-          width="20"
-        >
-          <svg
-            id="underline-sun"
-            viewBox="0 0 20 20"
-            x="0"
-            xml:space="preserve"
-            xmlns="http://www.w3.org/2000/svg"
-            y="0"
+        <div>
+          <div
+            style="height: 20px; width: 20px;"
           >
-            <g
-              fill="none"
-              stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
+            <svg
+              id="underline-sun"
+              style="height: 100%; width: 100%;"
+              viewBox="0 0 20 20"
+              x="0"
+              xml:space="preserve"
+              xmlns="http://www.w3.org/2000/svg"
+              y="0"
             >
-              <path
-                d="M1 16.6h18M10 4.6V3.4M15.5 6.9l.8-.8M17.8 12.4H19M2.2 12.4H1M4.5 6.9l-.8-.8M15 14.2c1-2.8-.4-5.9-3.2-6.9s-5.9.4-6.9 3.2c-.4 1.2-.4 2.5 0 3.7"
-              />
-            </g>
-          </svg>
+              <g
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              >
+                <path
+                  d="M1 16.6h18M10 4.6V3.4M15.5 6.9l.8-.8M17.8 12.4H19M2.2 12.4H1M4.5 6.9l-.8-.8M15 14.2c1-2.8-.4-5.9-3.2-6.9s-5.9.4-6.9 3.2c-.4 1.2-.4 2.5 0 3.7"
+                />
+              </g>
+            </svg>
+          </div>
         </div>
         <span
           class="ml-2 hidden sm:inline"
@@ -54,7 +55,7 @@ exports[`AppearanceViewingMode > should render 1`] = `
     <button
       aria-checked="false"
       aria-label="dark"
-      class="css-1byvqk4"
+      class="flex w-full items-center justify-center border-2 border-theme-primary-100 p-3 font-semibold text-theme-secondary-700 transition-colors duration-300 checked:border-theme-primary-600 checked:bg-theme-primary-50 checked:text-theme-primary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:border disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:checked:cursor-default dark:checked:bg-theme-primary-900 dark:checked:text-theme-primary-50 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700 h-14 rounded-xl"
       data-testid="ButtonGroupOption"
       role="radio"
       type="button"
@@ -62,31 +63,32 @@ exports[`AppearanceViewingMode > should render 1`] = `
       <div
         class="flex items-center px-2"
       >
-        <div
-          class="css-1i4b0eq"
-          height="20"
-          width="20"
-        >
-          <svg
-            id="underline-moon"
-            viewBox="0 0 20 20"
-            x="0"
-            xml:space="preserve"
-            xmlns="http://www.w3.org/2000/svg"
-            y="0"
+        <div>
+          <div
+            style="height: 20px; width: 20px;"
           >
-            <g
-              fill="none"
-              stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
+            <svg
+              id="underline-moon"
+              style="height: 100%; width: 100%;"
+              viewBox="0 0 20 20"
+              x="0"
+              xml:space="preserve"
+              xmlns="http://www.w3.org/2000/svg"
+              y="0"
             >
-              <path
-                d="M1 16.6h18M13.4 10.7c-3 0-5.5-2.4-5.6-5.4 0-.6.1-1.3.2-1.9-2.9 1-4.5 4.1-3.5 7s4.1 4.5 7 3.5c1.7-.6 3-1.8 3.5-3.5-.5.2-1 .3-1.6.3z"
-              />
-            </g>
-          </svg>
+              <g
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              >
+                <path
+                  d="M1 16.6h18M13.4 10.7c-3 0-5.5-2.4-5.6-5.4 0-.6.1-1.3.2-1.9-2.9 1-4.5 4.1-3.5 7s4.1 4.5 7 3.5c1.7-.6 3-1.8 3.5-3.5-.5.2-1 .3-1.6.3z"
+                />
+              </g>
+            </svg>
+          </div>
         </div>
         <span
           class="ml-2 hidden sm:inline"

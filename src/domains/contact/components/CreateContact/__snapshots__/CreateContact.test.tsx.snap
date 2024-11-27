@@ -7,7 +7,7 @@ exports[`CreateContact > should render 1`] = `
     data-testid="Modal__overlay"
   >
     <div
-      class="css-nyu9v6"
+      class="max-w-full flex-1 md:m-auto md:px-10 md:max-w-3xl"
       tabindex="-1"
     >
       <div
@@ -89,14 +89,14 @@ exports[`CreateContact > should render 1`] = `
                     Name
                   </label>
                   <div
-                    class=" css-14zfvme"
+                    class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
                   >
                     <div
                       class="relative flex h-full flex-1"
                     >
                       <input
                         autocomplete="off"
-                        class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
+                        class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
                         data-testid="contact-form__name-input"
                         name="name"
                         type="text"
@@ -123,14 +123,14 @@ exports[`CreateContact > should render 1`] = `
                       data-testid="SelectDropdown"
                     >
                       <div
-                        class="sr-only css-14zfvme"
+                        class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
                       >
                         <div
                           class="relative flex h-full flex-1"
                         >
                           <input
                             autocomplete="off"
-                            class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
+                            class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
                             data-testid="select-list__input"
                             name="network"
                             readonly=""
@@ -155,7 +155,7 @@ exports[`CreateContact > should render 1`] = `
                               id="downshift-0-label"
                             />
                             <div
-                              class="css-14zfvme"
+                              class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
                             >
                               <div
                                 class="relative flex h-full flex-1"
@@ -165,7 +165,7 @@ exports[`CreateContact > should render 1`] = `
                                   aria-controls="downshift-0-menu"
                                   aria-labelledby="downshift-0-label"
                                   autocomplete="off"
-                                  class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base cursor-default css-1937ogs"
+                                  class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base cursor-default"
                                   data-testid="SelectDropdown__input"
                                   id="downshift-0-input"
                                   name="network"
@@ -244,14 +244,14 @@ exports[`CreateContact > should render 1`] = `
                       Address
                     </label>
                     <div
-                      class="css-14zfvme"
+                      class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
                     >
                       <div
                         class="relative flex h-full flex-1"
                       >
                         <input
                           autocomplete="off"
-                          class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
+                          class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
                           data-testid="contact-form__address-input"
                           name="address"
                           type="text"

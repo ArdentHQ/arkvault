@@ -42,46 +42,47 @@ exports[`ErrorStep > should display error details 1`] = `
           class="flex flex-col overflow-hidden rounded-xl md:hidden"
         >
           <div
-            class="css-6pjap5"
+            class="flex items-center space-x-2 px-4 py-2 text-sm font-semibold dark:text-white bg-theme-danger-100 text-theme-danger-700 dark:bg-theme-danger-500"
           >
-            <div
-              class="css-v0ob3f"
-              height="16"
-              width="16"
-            >
-              <svg
-                id="circle-cross"
-                viewBox="0 0 20 20"
-                x="0"
-                xml:space="preserve"
-                xmlns="http://www.w3.org/2000/svg"
-                y="0"
+            <div>
+              <div
+                style="height: 16px; width: 16px;"
               >
-                <g
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
+                <svg
+                  id="circle-cross"
+                  style="height: 100%; width: 100%;"
+                  viewBox="0 0 20 20"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
                 >
-                  <circle
-                    cx="10"
-                    cy="10"
-                    r="9"
-                    stroke-miterlimit="10"
-                  />
-                  <path
-                    d="M7 13l6-6M13 13L7 7"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </g>
-              </svg>
+                  <g
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <circle
+                      cx="10"
+                      cy="10"
+                      r="9"
+                      stroke-miterlimit="10"
+                    />
+                    <path
+                      d="M7 13l6-6M13 13L7 7"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </g>
+                </svg>
+              </div>
             </div>
             <span>
               Error
             </span>
           </div>
           <div
-            class="css-1y2ht9o"
+            class="w-full break-words p-4 text-left text-sm leading-relaxed dark:bg-theme-secondary-800 bg-theme-danger-50"
           >
             An error occurred while sending your transaction. Please go 'Back' and try again, or click 'Close' to return to the wallet.
           </div>
@@ -93,29 +94,28 @@ exports[`ErrorStep > should display error details 1`] = `
             class="pointer-events-none absolute bottom-4 right-3 z-10 hidden h-0 w-0 -rotate-45 border-x-8 border-t-8 border-x-transparent border-t-theme-secondary-400 dark:border-t-theme-secondary-700 md:block"
           />
           <div
-            class="py-4 css-1prn1rr"
-            disabled=""
+            class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-300 bg-theme-secondary-100 dark:border-theme-secondary-700 dark:bg-theme-secondary-800 focus-within:ring-1 relative py-4"
           >
             <div
               class="relative flex h-full flex-1"
             >
-              <textarea
+              <input
+                as="textarea"
                 autocomplete="off"
-                class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base resize-none min-h-[8rem] md:min-h-auto md:resize-y resize-none text-theme-secondary-text css-1937ogs"
+                class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base min-h-[8rem] md:min-h-auto md:resize-y resize-none text-theme-secondary-text"
                 data-testid="ErrorStep__errorMessage"
                 disabled=""
                 style="height: 4px;"
                 type="text"
-              >
-                Display error details
-              </textarea>
+                value="Display error details"
+              />
             </div>
           </div>
         </div>
       </div>
     </div>
     <div
-      class="css-145pihz"
+      class="fixed inset-x-0 bottom-0 flex gap-3 bg-theme-background px-8 py-3 shadow-footer-smooth dark:bg-black dark:shadow-footer-smooth-dark sm:relative sm:inset-auto sm:mt-6 sm:justify-end sm:bg-transparent sm:p-0 sm:shadow-none sm:dark:bg-transparent sm:dark:shadow-none [&>button]:flex-1 sm:[&>button]:flex-none mb-14 sm:mb-0"
     >
       <div
         class="mr-auto"
@@ -131,34 +131,35 @@ exports[`ErrorStep > should display error details 1`] = `
             <div
               class="flex items-center space-x-2"
             >
-              <div
-                class="css-1i4b0eq"
-                height="20"
-                width="20"
-              >
-                <svg
-                  id="copy"
-                  viewBox="0 0 20 20"
-                  x="0"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
-                  y="0"
+              <div>
+                <div
+                  style="height: 20px; width: 20px;"
                 >
-                  <g
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
+                  <svg
+                    id="copy"
+                    style="height: 100%; width: 100%;"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
                   >
-                    <path
-                      d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
-                    />
-                    <path
-                      d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                    />
-                  </g>
-                </svg>
+                    <g
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    >
+                      <path
+                        d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                      />
+                      <path
+                        d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                      />
+                    </g>
+                  </svg>
+                </div>
               </div>
               <span
                 class="hidden sm:block"
@@ -216,46 +217,47 @@ exports[`ErrorStep > should emit onBack 1`] = `
           class="flex flex-col overflow-hidden rounded-xl md:hidden"
         >
           <div
-            class="css-6pjap5"
+            class="flex items-center space-x-2 px-4 py-2 text-sm font-semibold dark:text-white bg-theme-danger-100 text-theme-danger-700 dark:bg-theme-danger-500"
           >
-            <div
-              class="css-v0ob3f"
-              height="16"
-              width="16"
-            >
-              <svg
-                id="circle-cross"
-                viewBox="0 0 20 20"
-                x="0"
-                xml:space="preserve"
-                xmlns="http://www.w3.org/2000/svg"
-                y="0"
+            <div>
+              <div
+                style="height: 16px; width: 16px;"
               >
-                <g
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
+                <svg
+                  id="circle-cross"
+                  style="height: 100%; width: 100%;"
+                  viewBox="0 0 20 20"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
                 >
-                  <circle
-                    cx="10"
-                    cy="10"
-                    r="9"
-                    stroke-miterlimit="10"
-                  />
-                  <path
-                    d="M7 13l6-6M13 13L7 7"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </g>
-              </svg>
+                  <g
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <circle
+                      cx="10"
+                      cy="10"
+                      r="9"
+                      stroke-miterlimit="10"
+                    />
+                    <path
+                      d="M7 13l6-6M13 13L7 7"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </g>
+                </svg>
+              </div>
             </div>
             <span>
               Error
             </span>
           </div>
           <div
-            class="css-1y2ht9o"
+            class="w-full break-words p-4 text-left text-sm leading-relaxed dark:bg-theme-secondary-800 bg-theme-danger-50"
           >
             An error occurred while sending your transaction. Please go 'Back' and try again, or click 'Close' to return to the wallet.
           </div>
@@ -392,7 +394,7 @@ exports[`ErrorStep > should emit onBack 1`] = `
       </div>
     </div>
     <div
-      class="css-145pihz"
+      class="fixed inset-x-0 bottom-0 flex gap-3 bg-theme-background px-8 py-3 shadow-footer-smooth dark:bg-black dark:shadow-footer-smooth-dark sm:relative sm:inset-auto sm:mt-6 sm:justify-end sm:bg-transparent sm:p-0 sm:shadow-none sm:dark:bg-transparent sm:dark:shadow-none [&>button]:flex-1 sm:[&>button]:flex-none mb-14 sm:mb-0"
     >
       <button
         class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 green:hover:bg-theme-primary-700 navy:hover:bg-theme-primary-800 dark:hover:bg-theme-primary-500"
@@ -456,46 +458,47 @@ exports[`ErrorStep > should emit onClose 1`] = `
           class="flex flex-col overflow-hidden rounded-xl md:hidden"
         >
           <div
-            class="css-6pjap5"
+            class="flex items-center space-x-2 px-4 py-2 text-sm font-semibold dark:text-white bg-theme-danger-100 text-theme-danger-700 dark:bg-theme-danger-500"
           >
-            <div
-              class="css-v0ob3f"
-              height="16"
-              width="16"
-            >
-              <svg
-                id="circle-cross"
-                viewBox="0 0 20 20"
-                x="0"
-                xml:space="preserve"
-                xmlns="http://www.w3.org/2000/svg"
-                y="0"
+            <div>
+              <div
+                style="height: 16px; width: 16px;"
               >
-                <g
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
+                <svg
+                  id="circle-cross"
+                  style="height: 100%; width: 100%;"
+                  viewBox="0 0 20 20"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
                 >
-                  <circle
-                    cx="10"
-                    cy="10"
-                    r="9"
-                    stroke-miterlimit="10"
-                  />
-                  <path
-                    d="M7 13l6-6M13 13L7 7"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </g>
-              </svg>
+                  <g
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <circle
+                      cx="10"
+                      cy="10"
+                      r="9"
+                      stroke-miterlimit="10"
+                    />
+                    <path
+                      d="M7 13l6-6M13 13L7 7"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </g>
+                </svg>
+              </div>
             </div>
             <span>
               Error
             </span>
           </div>
           <div
-            class="css-1y2ht9o"
+            class="w-full break-words p-4 text-left text-sm leading-relaxed dark:bg-theme-secondary-800 bg-theme-danger-50"
           >
             An error occurred while sending your transaction. Please go 'Back' and try again, or click 'Close' to return to the wallet.
           </div>
@@ -632,7 +635,7 @@ exports[`ErrorStep > should emit onClose 1`] = `
       </div>
     </div>
     <div
-      class="css-145pihz"
+      class="fixed inset-x-0 bottom-0 flex gap-3 bg-theme-background px-8 py-3 shadow-footer-smooth dark:bg-black dark:shadow-footer-smooth-dark sm:relative sm:inset-auto sm:mt-6 sm:justify-end sm:bg-transparent sm:p-0 sm:shadow-none sm:dark:bg-transparent sm:dark:shadow-none [&>button]:flex-1 sm:[&>button]:flex-none mb-14 sm:mb-0"
     >
       <button
         class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 green:hover:bg-theme-primary-700 hover:text-white dark:hover:bg-theme-primary-500"
@@ -696,46 +699,47 @@ exports[`ErrorStep > should render with custom title 1`] = `
           class="flex flex-col overflow-hidden rounded-xl md:hidden"
         >
           <div
-            class="css-6pjap5"
+            class="flex items-center space-x-2 px-4 py-2 text-sm font-semibold dark:text-white bg-theme-danger-100 text-theme-danger-700 dark:bg-theme-danger-500"
           >
-            <div
-              class="css-v0ob3f"
-              height="16"
-              width="16"
-            >
-              <svg
-                id="circle-cross"
-                viewBox="0 0 20 20"
-                x="0"
-                xml:space="preserve"
-                xmlns="http://www.w3.org/2000/svg"
-                y="0"
+            <div>
+              <div
+                style="height: 16px; width: 16px;"
               >
-                <g
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
+                <svg
+                  id="circle-cross"
+                  style="height: 100%; width: 100%;"
+                  viewBox="0 0 20 20"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
                 >
-                  <circle
-                    cx="10"
-                    cy="10"
-                    r="9"
-                    stroke-miterlimit="10"
-                  />
-                  <path
-                    d="M7 13l6-6M13 13L7 7"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </g>
-              </svg>
+                  <g
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <circle
+                      cx="10"
+                      cy="10"
+                      r="9"
+                      stroke-miterlimit="10"
+                    />
+                    <path
+                      d="M7 13l6-6M13 13L7 7"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </g>
+                </svg>
+              </div>
             </div>
             <span>
               Error
             </span>
           </div>
           <div
-            class="css-1y2ht9o"
+            class="w-full break-words p-4 text-left text-sm leading-relaxed dark:bg-theme-secondary-800 bg-theme-danger-50"
           >
             An error occurred while sending your transaction. Please go 'Back' and try again, or click 'Close' to return to the wallet.
           </div>
@@ -872,7 +876,7 @@ exports[`ErrorStep > should render with custom title 1`] = `
       </div>
     </div>
     <div
-      class="css-145pihz"
+      class="fixed inset-x-0 bottom-0 flex gap-3 bg-theme-background px-8 py-3 shadow-footer-smooth dark:bg-black dark:shadow-footer-smooth-dark sm:relative sm:inset-auto sm:mt-6 sm:justify-end sm:bg-transparent sm:p-0 sm:shadow-none sm:dark:bg-transparent sm:dark:shadow-none [&>button]:flex-1 sm:[&>button]:flex-none mb-14 sm:mb-0"
     />
   </div>
 </DocumentFragment>
@@ -920,46 +924,47 @@ exports[`ErrorStep > should render with default texts 1`] = `
           class="flex flex-col overflow-hidden rounded-xl md:hidden"
         >
           <div
-            class="css-6pjap5"
+            class="flex items-center space-x-2 px-4 py-2 text-sm font-semibold dark:text-white bg-theme-danger-100 text-theme-danger-700 dark:bg-theme-danger-500"
           >
-            <div
-              class="css-v0ob3f"
-              height="16"
-              width="16"
-            >
-              <svg
-                id="circle-cross"
-                viewBox="0 0 20 20"
-                x="0"
-                xml:space="preserve"
-                xmlns="http://www.w3.org/2000/svg"
-                y="0"
+            <div>
+              <div
+                style="height: 16px; width: 16px;"
               >
-                <g
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
+                <svg
+                  id="circle-cross"
+                  style="height: 100%; width: 100%;"
+                  viewBox="0 0 20 20"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
                 >
-                  <circle
-                    cx="10"
-                    cy="10"
-                    r="9"
-                    stroke-miterlimit="10"
-                  />
-                  <path
-                    d="M7 13l6-6M13 13L7 7"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </g>
-              </svg>
+                  <g
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <circle
+                      cx="10"
+                      cy="10"
+                      r="9"
+                      stroke-miterlimit="10"
+                    />
+                    <path
+                      d="M7 13l6-6M13 13L7 7"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </g>
+                </svg>
+              </div>
             </div>
             <span>
               Error
             </span>
           </div>
           <div
-            class="css-1y2ht9o"
+            class="w-full break-words p-4 text-left text-sm leading-relaxed dark:bg-theme-secondary-800 bg-theme-danger-50"
           >
             An error occurred while sending your transaction. Please go 'Back' and try again, or click 'Close' to return to the wallet.
           </div>
@@ -1096,7 +1101,7 @@ exports[`ErrorStep > should render with default texts 1`] = `
       </div>
     </div>
     <div
-      class="css-145pihz"
+      class="fixed inset-x-0 bottom-0 flex gap-3 bg-theme-background px-8 py-3 shadow-footer-smooth dark:bg-black dark:shadow-footer-smooth-dark sm:relative sm:inset-auto sm:mt-6 sm:justify-end sm:bg-transparent sm:p-0 sm:shadow-none sm:dark:bg-transparent sm:dark:shadow-none [&>button]:flex-1 sm:[&>button]:flex-none mb-14 sm:mb-0"
     />
   </div>
 </DocumentFragment>

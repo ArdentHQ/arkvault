@@ -3,8 +3,7 @@
 exports[`RadioButton > should render 1`] = `
 <div>
   <input
-    class="css-1bh759f"
-    color="success"
+    class="h-4 w-4 cursor-pointer border-theme-secondary-300 transition duration-150 ease-in-out focus:ring-offset-0 text-theme-success-600"
     type="radio"
   />
 </div>
@@ -13,8 +12,7 @@ exports[`RadioButton > should render 1`] = `
 exports[`RadioButton > should render a danger color 1`] = `
 <div>
   <input
-    class="css-1n4os79"
-    color="danger"
+    class="h-4 w-4 cursor-pointer border-theme-secondary-300 transition duration-150 ease-in-out focus:ring-offset-0 text-theme-danger-400"
     type="radio"
   />
 </div>
@@ -23,8 +21,7 @@ exports[`RadioButton > should render a danger color 1`] = `
 exports[`RadioButton > should render a hint color 1`] = `
 <div>
   <input
-    class="css-180eh5q"
-    color="hint"
+    class="h-4 w-4 cursor-pointer border-theme-secondary-300 transition duration-150 ease-in-out focus:ring-offset-0 text-theme-hint-500"
     type="radio"
   />
 </div>
@@ -33,8 +30,7 @@ exports[`RadioButton > should render a hint color 1`] = `
 exports[`RadioButton > should render a info color 1`] = `
 <div>
   <input
-    class="css-1stwpdq"
-    color="info"
+    class="h-4 w-4 cursor-pointer border-theme-secondary-300 transition duration-150 ease-in-out focus:ring-offset-0 text-theme-primary-600"
     type="radio"
   />
 </div>
@@ -43,8 +39,7 @@ exports[`RadioButton > should render a info color 1`] = `
 exports[`RadioButton > should render a success color 1`] = `
 <div>
   <input
-    class="css-1bh759f"
-    color="success"
+    class="h-4 w-4 cursor-pointer border-theme-secondary-300 transition duration-150 ease-in-out focus:ring-offset-0 text-theme-success-600"
     type="radio"
   />
 </div>
@@ -53,8 +48,7 @@ exports[`RadioButton > should render a success color 1`] = `
 exports[`RadioButton > should render a warning color 1`] = `
 <div>
   <input
-    class="css-b4q9i6"
-    color="warning"
+    class="h-4 w-4 cursor-pointer border-theme-secondary-300 transition duration-150 ease-in-out focus:ring-offset-0 text-theme-warning-600"
     type="radio"
   />
 </div>

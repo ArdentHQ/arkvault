@@ -1,18 +1,11 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
-import { styled } from "twin.macro";
-
-import { defaultStyle } from "./styles";
 import { Tab, TabList, Tabs } from "@/app/components/Tabs";
 
 enum ExchangeView {
 	Exchanges = "EXCHANGES",
 	Transactions = "TRANSACTIONS",
 }
-
-const NavWrapper = styled.nav`
-	${defaultStyle}
-`;
 
 interface ExchangeNavigationBarProperties {
 	currentView: ExchangeView;
@@ -28,7 +21,7 @@ export const ExchangeNavigationBar = ({
 	const { t } = useTranslation();
 
 	return (
-		<NavWrapper>
+		<nav className="sticky top-21 z-10 -mt-0 mb-4 bg-theme-secondary-100 dark:bg-black md:mt-4">
 			<div className="mx-auto flex items-center justify-between px-6 lg:container md:px-10">
 				<Tabs activeId={currentView} className="w-full" onChange={onChange}>
 					<TabList className="flex h-[3.25rem] w-full flex-row gap-6" noBackground>
@@ -42,6 +35,6 @@ export const ExchangeNavigationBar = ({
 					</TabList>
 				</Tabs>
 			</div>
-		</NavWrapper>
+		</nav>
 	);
 };
