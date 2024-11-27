@@ -55,15 +55,15 @@ export const InputWrapperStyled = ({
 		className={twMerge(
 			"flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200",
 			cn({
+				border: !noBorder,
 				"border-theme-danger-500 bg-theme-background focus-within:ring-theme-danger-500": invalid && !disabled,
+				"border-theme-danger-500 bg-theme-secondary-100 dark:bg-theme-secondary-800": disabled && invalid,
 				"border-theme-primary-600 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600":
 					valid && !disabled && !invalid,
-				"border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700":
-					!valid && !invalid && !disabled,
-				border: !noBorder,
-				"border-theme-danger-500 bg-theme-secondary-100 dark:bg-theme-secondary-800": disabled && invalid,
 				"border-theme-secondary-300 bg-theme-secondary-100 dark:border-theme-secondary-700 dark:bg-theme-secondary-800":
 					disabled && !invalid,
+				"border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700":
+					!valid && !invalid && !disabled,
 				"focus-within:ring-1": !noShadow,
 				"h-12 overflow-hidden sm:h-14": !isTextArea && !isCompact,
 				"h-[34px] overflow-hidden": !isTextArea && isCompact,

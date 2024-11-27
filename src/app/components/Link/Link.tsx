@@ -21,9 +21,9 @@ const AnchorStyled = forwardRef<HTMLAnchorElement, AnchorStyledProps>(({ isDisab
 		className={twMerge(
 			"relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-none",
 			cn({
+				"cursor-not-allowed text-theme-secondary-text": isDisabled,
 				"text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500":
 					!isDisabled,
-				"cursor-not-allowed text-theme-secondary-text": isDisabled,
 			}),
 			props.className,
 		)}
