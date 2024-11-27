@@ -20,16 +20,23 @@ interface ModalContentProperties {
 }
 
 const ModalContainer = ({ size, ...props }: { size?: Size } & React.HTMLAttributes<HTMLDivElement>) => (
-		<div {...props} className={twMerge("flex-1 max-w-full md:m-auto md:px-10 md:max-w-2xl", cn({
-			"md:max-w-3xl": size === "3xl",
-			"md:max-w-4xl": size === "4xl",
-			"md:max-w-5xl": size === "5xl",
-			"md:max-w-lg": size === "lg",
-			"md:max-w-md": size === "md",
-			"md:max-w-sm": size === "sm",
-			"md:max-w-xl": size === "xl",
-		}), props.className)} />
-	)
+	<div
+		{...props}
+		className={twMerge(
+			"max-w-full flex-1 md:m-auto md:max-w-2xl md:px-10",
+			cn({
+				"md:max-w-3xl": size === "3xl",
+				"md:max-w-4xl": size === "4xl",
+				"md:max-w-5xl": size === "5xl",
+				"md:max-w-lg": size === "lg",
+				"md:max-w-md": size === "md",
+				"md:max-w-sm": size === "sm",
+				"md:max-w-xl": size === "xl",
+			}),
+			props.className,
+		)}
+	/>
+);
 
 const ModalContent = ({
 	noButtons = false,

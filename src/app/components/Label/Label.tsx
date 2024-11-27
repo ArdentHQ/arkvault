@@ -10,11 +10,14 @@ export interface LabelProperties {
 	noBorder?: boolean;
 }
 
-export const Label = ({ color, size, variant, noBorder, ...props }: LabelProperties & React.HTMLAttributes<HTMLDivElement>) => (
-		<span
-			{...props}
-			className={twMerge(getStyles({ color, noBorder, size, variant }), props.className)}
-		/>
-	)
+export const Label = ({
+	color,
+	size,
+	variant,
+	noBorder,
+	...props
+}: LabelProperties & React.HTMLAttributes<HTMLDivElement>) => (
+	<span {...props} className={twMerge(getStyles({ color, noBorder, size, variant }), props.className)} />
+);
 
 Label.defaultProps = { color: "primary" };

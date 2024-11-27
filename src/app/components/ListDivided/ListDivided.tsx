@@ -3,21 +3,25 @@ import { ListDividedItemProperties } from "./ListDivided.contracts";
 
 import { ListDividedItem } from "./ListDividedItem";
 import { twMerge } from "tailwind-merge";
-import cn from 'classnames';
+import cn from "classnames";
 
 interface Properties {
 	items?: ListDividedItemProperties[];
 	noBorder?: boolean;
 }
 
-const StyledList = ({noBorder, ...props}: {noBorder: boolean} & React.HTMLAttributes<HTMLUListElement>) => (
-		<ul {...props} className={twMerge(
+const StyledList = ({ noBorder, ...props }: { noBorder: boolean } & React.HTMLAttributes<HTMLUListElement>) => (
+	<ul
+		{...props}
+		className={twMerge(
 			"[&>li]:border-b [&>li]:border-dashed [&>li]:border-theme-secondary-300 dark:[&>li]:border-theme-secondary-800",
 			cn({
 				"[&>li:last-child]:border-b-0": noBorder,
 			}),
-			props.className)} />
-	)
+			props.className,
+		)}
+	/>
+);
 
 const renderItems = (items: ListDividedItemProperties[], noBorder: boolean) => (
 	<StyledList data-testid="list-divided__items" noBorder={noBorder}>
