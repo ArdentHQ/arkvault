@@ -14,34 +14,30 @@ interface AnchorStyledProps extends React.AnchorHTMLAttributes<HTMLAnchorElement
     isDisabled?: boolean;
 }
 
-const AnchorStyled = forwardRef<HTMLAnchorElement, AnchorStyledProps>(({ isDisabled, ...props }, ref) => {
-    return (
+const AnchorStyled = forwardRef<HTMLAnchorElement, AnchorStyledProps>(({ isDisabled, ...props }, ref) => (
         <a
             {...props}
             ref={ref}
             className={twMerge(
                 "relative space-x-1 font-semibold transition-colors cursor-pointer no-underline focus:outline-none",
                 cn({
-                    "text-theme-secondary-text cursor-not-allowed": isDisabled,
                     "text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500": !isDisabled,
+                    "text-theme-secondary-text cursor-not-allowed": isDisabled,
                 }),
                 props.className
             )}
         />
-    );
-});
+    ));
 
 AnchorStyled.displayName = "AnchorStyled";
 
 
-const Content = ({ isDisabled, showExternalIcon, ...props}: { isDisabled?: boolean; showExternalIcon?: boolean } & React.HTMLProps<HTMLSpanElement>) => {
-	return (
+const Content = ({ isDisabled, showExternalIcon, ...props}: { isDisabled?: boolean; showExternalIcon?: boolean } & React.HTMLProps<HTMLSpanElement>) => (
 		<span {...props} className={twMerge("break-all border-b border-transparent transition-colors duration-200 delay-100", cn({
 			"group-hover/inner:border-current": !isDisabled && showExternalIcon,
 			"hover:border-current": !isDisabled && !showExternalIcon,
 		}), props.className)} />
 	)
-}
 
 type AnchorProperties = {
 	isDisabled?: boolean;
