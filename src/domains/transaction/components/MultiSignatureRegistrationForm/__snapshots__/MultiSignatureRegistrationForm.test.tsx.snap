@@ -37,7 +37,7 @@ exports[`MultiSignature Registration Form > should render form step 1`] = `
           class="space-y-4 pt-5"
         >
           <fieldset
-            class="flex min-w-0 flex-col css-ea0il3"
+            class="[&>.FormLabel]:text-theme-primary-600 focus-within:[&>.FormLabel]:text-theme-primary-600 flex min-w-0 flex-col"
           >
             <div
               data-testid="DetailWrapper"
@@ -98,33 +98,36 @@ exports[`MultiSignature Registration Form > should render form step 1`] = `
                       type="button"
                     >
                       <div
-                        class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white css-v0ob3f"
-                        height="16"
-                        width="16"
+                        class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white"
                       >
-                        <svg
-                          id="copy"
-                          viewBox="0 0 20 20"
-                          x="0"
-                          xml:space="preserve"
-                          xmlns="http://www.w3.org/2000/svg"
-                          y="0"
+                        <div
+                          style="height: 16px; width: 16px;"
                         >
-                          <g
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
+                          <svg
+                            id="copy"
+                            style="height: 100%; width: 100%;"
+                            viewBox="0 0 20 20"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
                           >
-                            <path
-                              d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
-                            />
-                            <path
-                              d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                            />
-                          </g>
-                        </svg>
+                            <g
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            >
+                              <path
+                                d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                              />
+                              <path
+                                d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                              />
+                            </g>
+                          </svg>
+                        </div>
                       </div>
                     </button>
                   </div>
@@ -137,10 +140,10 @@ exports[`MultiSignature Registration Form > should render form step 1`] = `
               class="-mt-2 sm:mt-0"
             >
               <div
-                class="css-1mwq138"
+                class="space-y-4 rounded-lg -mx-4 p-4 bg-theme-secondary-background"
               >
                 <fieldset
-                  class="flex min-w-0 flex-col css-ea0il3"
+                  class="[&>.FormLabel]:text-theme-primary-600 focus-within:[&>.FormLabel]:text-theme-primary-600 flex min-w-0 flex-col"
                 >
                   <label
                     class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
@@ -159,15 +162,14 @@ exports[`MultiSignature Registration Form > should render form step 1`] = `
                         data-testid="SelectDropdown"
                       >
                         <div
-                          class="sr-only css-14zfvme"
+                          class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
                         >
                           <div
                             class="relative flex h-full flex-1"
                           >
                             <input
                               aria-invalid="false"
-                              autocomplete="off"
-                              class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
+                              class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
                               data-testid="select-list__input"
                               name="address"
                               readonly=""
@@ -192,7 +194,7 @@ exports[`MultiSignature Registration Form > should render form step 1`] = `
                                 id="SelectRecipient__dropdown-label"
                               />
                               <div
-                                class="css-14zfvme"
+                                class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
                               >
                                 <div
                                   class="relative flex h-full flex-1"
@@ -202,8 +204,7 @@ exports[`MultiSignature Registration Form > should render form step 1`] = `
                                     aria-controls="SelectRecipient__dropdown-menu"
                                     aria-invalid="false"
                                     aria-labelledby="SelectRecipient__dropdown-label"
-                                    autocomplete="off"
-                                    class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base cursor-default css-1937ogs"
+                                    class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base cursor-default"
                                     data-testid="SelectDropdown__input"
                                     id="SelectRecipient__dropdown-input"
                                     name="address"
@@ -223,36 +224,37 @@ exports[`MultiSignature Registration Form > should render form step 1`] = `
                                       class="flex items-center cursor-pointer rounded bg-transparent p-1 text-theme-secondary-700 transition-colors hover:bg-theme-primary-100 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-white"
                                       data-testid="SelectRecipient__select-recipient"
                                     >
-                                      <div
-                                        class="css-1i4b0eq"
-                                        height="20"
-                                        width="20"
-                                      >
-                                        <svg
-                                          id="user"
-                                          viewBox="0 0 20 20"
-                                          x="0"
-                                          xml:space="preserve"
-                                          xmlns="http://www.w3.org/2000/svg"
-                                          y="0"
+                                      <div>
+                                        <div
+                                          style="height: 20px; width: 20px;"
                                         >
-                                          <g
-                                            fill="none"
-                                            stroke="currentColor"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
-                                            stroke-width="2"
+                                          <svg
+                                            id="user"
+                                            style="height: 100%; width: 100%;"
+                                            viewBox="0 0 20 20"
+                                            x="0"
+                                            xml:space="preserve"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            y="0"
                                           >
-                                            <circle
-                                              cx="10"
-                                              cy="5"
-                                              r="4"
-                                            />
-                                            <path
-                                              d="M2 19c0-4.899 3.544-9 8-9 4.354 0 8 3.987 8 9"
-                                            />
-                                          </g>
-                                        </svg>
+                                            <g
+                                              fill="none"
+                                              stroke="currentColor"
+                                              stroke-linecap="round"
+                                              stroke-linejoin="round"
+                                              stroke-width="2"
+                                            >
+                                              <circle
+                                                cx="10"
+                                                cy="5"
+                                                r="4"
+                                              />
+                                              <path
+                                                d="M2 19c0-4.899 3.544-9 8-9 4.354 0 8 3.987 8 9"
+                                              />
+                                            </g>
+                                          </svg>
+                                        </div>
                                       </div>
                                     </div>
                                   </div>
@@ -312,31 +314,32 @@ exports[`MultiSignature Registration Form > should render form step 1`] = `
                               <div
                                 class="flex items-center space-x-2"
                               >
-                                <div
-                                  class="css-1i4b0eq"
-                                  height="20"
-                                  width="20"
-                                >
-                                  <svg
-                                    id="trash"
-                                    viewBox="0 0 20 20"
-                                    x="0"
-                                    xml:space="preserve"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    y="0"
+                                <div>
+                                  <div
+                                    style="height: 20px; width: 20px;"
                                   >
-                                    <g
-                                      fill="none"
-                                      stroke="currentColor"
-                                      stroke-linecap="round"
-                                      stroke-linejoin="round"
-                                      stroke-width="2"
+                                    <svg
+                                      id="trash"
+                                      style="height: 100%; width: 100%;"
+                                      viewBox="0 0 20 20"
+                                      x="0"
+                                      xml:space="preserve"
+                                      xmlns="http://www.w3.org/2000/svg"
+                                      y="0"
                                     >
-                                      <path
-                                        d="M1 3.629h18M11.8 1H8c-.7 0-1.3.607-1.3 1.315h0v1.314H13V2.315C13 1.607 12.5 1 11.8 1h0zM8 14.449v-6.37M11.8 14.449v-6.37M15.7 17.787c-.1.707-.6 1.213-1.3 1.213H5.3c-.7 0-1.2-.506-1.3-1.213L2.9 3.629h14l-1.2 14.158z"
-                                      />
-                                    </g>
-                                  </svg>
+                                      <g
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="2"
+                                      >
+                                        <path
+                                          d="M1 3.629h18M11.8 1H8c-.7 0-1.3.607-1.3 1.315h0v1.314H13V2.315C13 1.607 12.5 1 11.8 1h0zM8 14.449v-6.37M11.8 14.449v-6.37M15.7 17.787c-.1.707-.6 1.213-1.3 1.213H5.3c-.7 0-1.2-.506-1.3-1.213L2.9 3.629h14l-1.2 14.158z"
+                                        />
+                                      </g>
+                                    </svg>
+                                  </div>
                                 </div>
                               </div>
                             </button>
@@ -385,31 +388,32 @@ exports[`MultiSignature Registration Form > should render form step 1`] = `
                           <div
                             class="flex items-center space-x-2"
                           >
-                            <div
-                              class="css-v0ob3f"
-                              height="16"
-                              width="16"
-                            >
-                              <svg
-                                id="trash"
-                                viewBox="0 0 20 20"
-                                x="0"
-                                xml:space="preserve"
-                                xmlns="http://www.w3.org/2000/svg"
-                                y="0"
+                            <div>
+                              <div
+                                style="height: 16px; width: 16px;"
                               >
-                                <g
-                                  fill="none"
-                                  stroke="currentColor"
-                                  stroke-linecap="round"
-                                  stroke-linejoin="round"
-                                  stroke-width="2"
+                                <svg
+                                  id="trash"
+                                  style="height: 100%; width: 100%;"
+                                  viewBox="0 0 20 20"
+                                  x="0"
+                                  xml:space="preserve"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  y="0"
                                 >
-                                  <path
-                                    d="M1 3.629h18M11.8 1H8c-.7 0-1.3.607-1.3 1.315h0v1.314H13V2.315C13 1.607 12.5 1 11.8 1h0zM8 14.449v-6.37M11.8 14.449v-6.37M15.7 17.787c-.1.707-.6 1.213-1.3 1.213H5.3c-.7 0-1.2-.506-1.3-1.213L2.9 3.629h14l-1.2 14.158z"
-                                  />
-                                </g>
-                              </svg>
+                                  <g
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                  >
+                                    <path
+                                      d="M1 3.629h18M11.8 1H8c-.7 0-1.3.607-1.3 1.315h0v1.314H13V2.315C13 1.607 12.5 1 11.8 1h0zM8 14.449v-6.37M11.8 14.449v-6.37M15.7 17.787c-.1.707-.6 1.213-1.3 1.213H5.3c-.7 0-1.2-.506-1.3-1.213L2.9 3.629h14l-1.2 14.158z"
+                                    />
+                                  </g>
+                                </svg>
+                              </div>
                             </div>
                           </div>
                         </button>
@@ -421,7 +425,7 @@ exports[`MultiSignature Registration Form > should render form step 1`] = `
             </div>
           </div>
           <fieldset
-            class="flex min-w-0 flex-col css-ea0il3"
+            class="[&>.FormLabel]:text-theme-primary-600 focus-within:[&>.FormLabel]:text-theme-primary-600 flex min-w-0 flex-col"
           >
             <label
               class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
@@ -431,14 +435,13 @@ exports[`MultiSignature Registration Form > should render form step 1`] = `
               Minimum Required Signatures
             </label>
             <div
-              class="css-14zfvme"
+              class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
             >
               <div
                 class="relative flex h-full flex-1"
               >
                 <input
-                  autocomplete="off"
-                  class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base css-1937ogs"
+                  class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
                   data-testid="MultiSignatureRegistrationForm__min-participants"
                   max="2"
                   min="2"
@@ -464,7 +467,7 @@ exports[`MultiSignature Registration Form > should render form step 1`] = `
             </div>
           </fieldset>
           <fieldset
-            class="flex min-w-0 flex-col css-ea0il3"
+            class="[&>.FormLabel]:text-theme-primary-600 focus-within:[&>.FormLabel]:text-theme-primary-600 flex min-w-0 flex-col"
           >
             <label
               class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
@@ -477,15 +480,13 @@ exports[`MultiSignature Registration Form > should render form step 1`] = `
               class="relative"
             >
               <div
-                class="css-4lfin5"
-                disabled=""
+                class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-300 bg-theme-secondary-100 dark:border-theme-secondary-700 dark:bg-theme-secondary-800 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
               >
                 <div
                   class="relative flex h-full flex-1"
                 >
                   <input
-                    autocomplete="off"
-                    class="no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base text-theme-secondary-text css-1937ogs"
+                    class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base text-theme-secondary-text"
                     data-testid="InputCurrency"
                     disabled=""
                     name="fee"
@@ -512,28 +513,29 @@ exports[`MultiSignature Registration Form > should render form step 1`] = `
                           disabled=""
                           type="button"
                         >
-                          <div
-                            class="css-15txs7d"
-                            height="10"
-                            width="10"
-                          >
-                            <svg
-                              id="chevron-up-small"
-                              viewBox="0 0 10 10"
-                              x="0"
-                              xml:space="preserve"
-                              xmlns="http://www.w3.org/2000/svg"
-                              y="0"
+                          <div>
+                            <div
+                              style="height: 10px; width: 10px;"
                             >
-                              <path
-                                d="M1 6.975l3.8-3.8c.1-.1.3-.1.4 0l3.8 3.8"
-                                fill="none"
-                                stroke="currentColor"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="2"
-                              />
-                            </svg>
+                              <svg
+                                id="chevron-up-small"
+                                style="height: 100%; width: 100%;"
+                                viewBox="0 0 10 10"
+                                x="0"
+                                xml:space="preserve"
+                                xmlns="http://www.w3.org/2000/svg"
+                                y="0"
+                              >
+                                <path
+                                  d="M1 6.975l3.8-3.8c.1-.1.3-.1.4 0l3.8 3.8"
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="2"
+                                />
+                              </svg>
+                            </div>
                           </div>
                         </button>
                         <button
@@ -542,28 +544,29 @@ exports[`MultiSignature Registration Form > should render form step 1`] = `
                           disabled=""
                           type="button"
                         >
-                          <div
-                            class="css-15txs7d"
-                            height="10"
-                            width="10"
-                          >
-                            <svg
-                              id="chevron-down-small"
-                              viewBox="0 0 10 10"
-                              x="0"
-                              xml:space="preserve"
-                              xmlns="http://www.w3.org/2000/svg"
-                              y="0"
+                          <div>
+                            <div
+                              style="height: 10px; width: 10px;"
                             >
-                              <path
-                                d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
-                                fill="none"
-                                stroke="currentColor"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="2"
-                              />
-                            </svg>
+                              <svg
+                                id="chevron-down-small"
+                                style="height: 100%; width: 100%;"
+                                viewBox="0 0 10 10"
+                                x="0"
+                                xml:space="preserve"
+                                xmlns="http://www.w3.org/2000/svg"
+                                y="0"
+                              >
+                                <path
+                                  d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="2"
+                                />
+                              </svg>
+                            </div>
                           </div>
                         </button>
                       </div>
@@ -617,7 +620,7 @@ exports[`MultiSignature Registration Form > should render review step 1`] = `
           class="-mx-3 space-y-4 pt-5 sm:mx-0"
         >
           <fieldset
-            class="flex min-w-0 flex-col css-ea0il3"
+            class="[&>.FormLabel]:text-theme-primary-600 focus-within:[&>.FormLabel]:text-theme-primary-600 flex min-w-0 flex-col"
           >
             <div
               data-testid="DetailWrapper"
@@ -678,33 +681,36 @@ exports[`MultiSignature Registration Form > should render review step 1`] = `
                       type="button"
                     >
                       <div
-                        class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white css-v0ob3f"
-                        height="16"
-                        width="16"
+                        class="text-theme-primary-400 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white"
                       >
-                        <svg
-                          id="copy"
-                          viewBox="0 0 20 20"
-                          x="0"
-                          xml:space="preserve"
-                          xmlns="http://www.w3.org/2000/svg"
-                          y="0"
+                        <div
+                          style="height: 16px; width: 16px;"
                         >
-                          <g
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
+                          <svg
+                            id="copy"
+                            style="height: 100%; width: 100%;"
+                            viewBox="0 0 20 20"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
                           >
-                            <path
-                              d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
-                            />
-                            <path
-                              d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                            />
-                          </g>
-                        </svg>
+                            <g
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            >
+                              <path
+                                d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                              />
+                              <path
+                                d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                              />
+                            </g>
+                          </svg>
+                        </div>
                       </div>
                     </button>
                   </div>
@@ -742,7 +748,7 @@ exports[`MultiSignature Registration Form > should render review step 1`] = `
                       class="mb-4 flex flex-col justify-center px-4 text-center sm:mb-0 sm:w-1/2 sm:p-0 sm:text-left"
                     >
                       <span
-                        class="css-1rmjubp"
+                        class="text-sm font-semibold text-theme-secondary-500"
                       >
                         Transaction(s) Amount
                       </span>
@@ -757,7 +763,7 @@ exports[`MultiSignature Registration Form > should render review step 1`] = `
                       class="flex flex-col justify-center p-2 px-4 pt-6 text-center sm:w-1/2 sm:p-0 sm:text-right"
                     >
                       <span
-                        class="css-1rmjubp"
+                        class="text-sm font-semibold text-theme-secondary-500"
                       >
                         Transaction Fee
                       </span>
@@ -775,31 +781,32 @@ exports[`MultiSignature Registration Form > should render review step 1`] = `
                     <div
                       class="ml-px bg-theme-background p-2 text-theme-secondary-900 dark:text-theme-secondary-600"
                     >
-                      <div
-                        class="css-v0ob3f"
-                        height="16"
-                        width="16"
-                      >
-                        <svg
-                          id="plus"
-                          viewBox="0 0 20 20"
-                          x="0"
-                          xml:space="preserve"
-                          xmlns="http://www.w3.org/2000/svg"
-                          y="0"
+                      <div>
+                        <div
+                          style="height: 16px; width: 16px;"
                         >
-                          <g
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
+                          <svg
+                            id="plus"
+                            style="height: 100%; width: 100%;"
+                            viewBox="0 0 20 20"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
                           >
-                            <path
-                              d="M1 10h18M10 1v18"
-                            />
-                          </g>
-                        </svg>
+                            <g
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            >
+                              <path
+                                d="M1 10h18M10 1v18"
+                              />
+                            </g>
+                          </svg>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -808,7 +815,7 @@ exports[`MultiSignature Registration Form > should render review step 1`] = `
                   class="justfiy-center flex flex-col items-center rounded-b-lg border-t border-theme-secondary-300 bg-theme-secondary-100 py-4 dark:border-theme-secondary-800 dark:bg-theme-secondary-800 sm:py-5"
                 >
                   <span
-                    class="css-1rmjubp"
+                    class="text-sm font-semibold text-theme-secondary-500"
                   >
                     Total Amount
                   </span>
