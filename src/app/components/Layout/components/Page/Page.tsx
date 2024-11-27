@@ -1,21 +1,23 @@
 import React, { FC } from "react";
-
-import tw, { styled, css } from "twin.macro";
 import { PageProperties } from "./Page.contracts";
 import { NavigationBar } from "@/app/components/NavigationBar";
 import { useDocumentTitle } from "@/app/hooks/use-document-title";
 import { useNavigationContext } from "@/app/contexts";
+import { twMerge } from "tailwind-merge";
+import cn from 'classnames';
 
-export const PageWrapper = styled.div<{ showMobileNavigation: boolean; hasFixedFormButtons: boolean }>`
-	${css`
-		min-height: -webkit-fill-available;
-	`}
-
-	${tw`relative flex flex-col sm:min-h-screen`}
-
-	${({ showMobileNavigation, hasFixedFormButtons }) => showMobileNavigation && !hasFixedFormButtons && tw`pb-14 sm:pb-0`}
-	${({ showMobileNavigation, hasFixedFormButtons }) => showMobileNavigation && hasFixedFormButtons && tw`pb-32 sm:pb-0`}
-`;
+export const PageWrapper = ({ showMobileNavigation, hasFixedFormButtons, ...props }: { showMobileNavigation: boolean; hasFixedFormButtons: boolean } & React.HTMLAttributes<HTMLDivElement>) => {
+	return (
+		<div
+			{...props}
+			style={{ minHeight: "-webkit-fill-available" }}
+			className={twMerge("relative flex flex-col sm:min-h-screen", cn({
+				"pb-14 sm:pb-0": showMobileNavigation && !hasFixedFormButtons,
+				"pb-32 sm:pb-0": showMobileNavigation && hasFixedFormButtons
+			}), props.className )}
+		/>
+	)
+}
 
 export const Page: FC<PageProperties> = ({
 	navbarVariant = "full",
