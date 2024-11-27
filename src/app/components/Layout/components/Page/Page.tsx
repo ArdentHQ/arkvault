@@ -6,8 +6,7 @@ import { useNavigationContext } from "@/app/contexts";
 import { twMerge } from "tailwind-merge";
 import cn from 'classnames';
 
-export const PageWrapper = ({ showMobileNavigation, hasFixedFormButtons, ...props }: { showMobileNavigation: boolean; hasFixedFormButtons: boolean } & React.HTMLAttributes<HTMLDivElement>) => {
-	return (
+export const PageWrapper = ({ showMobileNavigation, hasFixedFormButtons, ...props }: { showMobileNavigation: boolean; hasFixedFormButtons: boolean } & React.HTMLAttributes<HTMLDivElement>) => (
 		<div
 			{...props}
 			style={{ minHeight: "-webkit-fill-available" }}
@@ -17,7 +16,6 @@ export const PageWrapper = ({ showMobileNavigation, hasFixedFormButtons, ...prop
 			}), props.className )}
 		/>
 	)
-}
 
 export const Page: FC<PageProperties> = ({
 	navbarVariant = "full",
