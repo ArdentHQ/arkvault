@@ -4,7 +4,6 @@ import React, { useCallback, useEffect, useMemo, useRef, useState, VFC } from "r
 import { BigNumber } from "@ardenthq/sdk-helpers";
 import { useFormContext } from "react-hook-form";
 import { useTranslation } from "react-i18next";
-import tw, { css, styled } from "twin.macro";
 
 import { AddRecipientProperties, ToggleButtonProperties } from "./AddRecipient.contracts";
 import { AddRecipientWrapper } from "./AddRecipient.styles";
@@ -20,6 +19,7 @@ import { useValidation, WalletAliasResult } from "@/app/hooks";
 import { useExchangeRate } from "@/app/hooks/use-exchange-rate";
 import { SelectRecipient } from "@/domains/profile/components/SelectRecipient";
 import { RecipientItem } from "@/domains/transaction/components/RecipientList/RecipientList.contracts";
+import { twMerge } from "tailwind-merge";
 
 const TransferType = ({ isSingle, disableMultiple, onChange, maxRecipients }: ToggleButtonProperties) => {
 	const { t } = useTranslation();
@@ -57,24 +57,14 @@ const TransferType = ({ isSingle, disableMultiple, onChange, maxRecipients }: To
 	);
 };
 
-const InputButtonStyled = styled.button(() => [
-	tw`flex items-center h-full px-5 font-semibold text-theme-secondary-700`,
-	tw`border-2 rounded border-theme-primary-100`,
-	tw`transition-colors duration-300`,
-	tw`dark:(border-theme-secondary-800 text-theme-secondary-500)`,
-	tw`focus:(outline-none ring-2 ring-theme-primary-400)`,
-	tw`hover:(border-theme-primary-100 bg-theme-primary-100 text-theme-primary-700)`,
-	tw`dark:hover:(border-theme-secondary-800 bg-theme-secondary-800 text-white)`,
-	tw`disabled:(
-		border border-theme-secondary-300 text-theme-secondary-500 cursor-not-allowed
-		dark:(border-theme-secondary-700 text-theme-secondary-700)
-	)`,
-	css`
-		&.active {
-			${tw`border-theme-primary-600 bg-theme-primary-50 dark:bg-theme-primary-900 dark:text-white`}
-		}
-	`,
-]);
+const InputButtonStyled = ({ ...props }: React.ButtonHTMLAttributes<HTMLButtonElement>) => (
+	<button
+		{...props}
+		className={twMerge(
+			"input-button flex h-full items-center rounded border-2 border-theme-primary-100 px-5 font-semibold text-theme-secondary-700 transition-colors duration-300 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:border disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-white disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700",
+		)}
+	/>
+);
 
 export const AddRecipient: VFC<AddRecipientProperties> = ({
 	disableMultiPaymentOption,
