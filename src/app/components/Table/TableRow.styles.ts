@@ -1,12 +1,10 @@
 import React from "react";
-import tw, { css, TwStyle } from "twin.macro";
-import { SerializedStyles } from "@emotion/react";
 
 type TableRowFunction = (event: React.MouseEvent<HTMLTableRowElement, MouseEvent>) => void;
 
-const baseStyle = tw`transition-colors duration-100`;
+const baseStyle = `transition-colors duration-100`;
 
-const getCursorStyles = (onClick?: TableRowFunction) => onClick && tw`cursor-pointer`;
+const getCursorStyles = (onClick?: TableRowFunction) => onClick && `cursor-pointer`;
 
 const getBorderStyles = (border?: boolean, dotted?: boolean) => {
 	if (!border) {
@@ -14,26 +12,13 @@ const getBorderStyles = (border?: boolean, dotted?: boolean) => {
 	}
 
 	return [
-		tw`border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800`,
-		dotted ? tw`border-dotted` : tw`border-dashed`,
-	];
+		`border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800`,
+		dotted ? `border-dotted` : `border-dashed`,
+	].join(" ");
 };
 
-const getHoverStyles = (isSelected?: boolean): SerializedStyles => css`
-	&:hover td {
-		${isSelected ? tw`bg-theme-success-100 dark:bg-theme-success-900` : ""}
-	}
-
-	&:last-of-type {
-		td:first-child {
-			${tw`rounded-bl-sm`}
-		}
-
-		td:last-child {
-			${tw`rounded-br-sm`}
-		}
-	}
-`;
+const getHoverStyles = (isSelected?: boolean): string =>
+	` table-row ${isSelected ? "table-row-selected" : "table-row-unselected"}`;
 
 export interface TableRowStyleProperties {
 	border?: boolean;
@@ -43,11 +28,7 @@ export interface TableRowStyleProperties {
 }
 
 export const getStyles = ({ onClick, border, dotted, isSelected }: TableRowStyleProperties) => {
-	const styles: Array<SerializedStyles | TwStyle | TwStyle[] | undefined> = [
-		baseStyle,
-		getBorderStyles(border, dotted),
-		getCursorStyles(onClick),
-	];
+	const styles: Array<string | undefined> = [baseStyle, getBorderStyles(border, dotted), getCursorStyles(onClick)];
 
 	if (onClick) {
 		styles.push(getHoverStyles(isSelected));
