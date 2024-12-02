@@ -35,7 +35,7 @@ exports[`TransactionExplorerLink > should render a transaction link 1`] = `
                 class="break-all border-b border-transparent transition-colors delay-100 duration-200 group-hover/inner:border-current"
               >
                 <span
-                  class="no-ligatures css-0"
+                  class="no-ligatures"
                   data-testid="TruncateMiddle"
                 >
                   test-id
@@ -153,7 +153,7 @@ exports[`TransactionExplorerLink > should render a transaction link responsive a
                 class="break-all border-b border-transparent transition-colors delay-100 duration-200 group-hover/inner:border-current"
               >
                 <span
-                  class="no-ligatures css-0"
+                  class="no-ligatures"
                   data-testid="TruncateMiddle"
                 >
                   test-id

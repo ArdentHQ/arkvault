@@ -6,7 +6,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
     data-testid="DelegateTable"
   >
     <div
-      class="with-x-padding -mt-3 overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 sm:mt-0 sm:border css-1m6rt2i"
+      class="table-wrapper with-x-padding -mt-3 overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 sm:mt-0 sm:border"
       role="table"
     >
       <table
@@ -178,7 +178,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
           role="rowgroup"
         >
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -284,7 +284,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -390,7 +390,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -496,7 +496,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -602,7 +602,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -708,7 +708,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -814,7 +814,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -920,7 +920,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -1026,7 +1026,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -1132,7 +1132,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -1238,7 +1238,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -1344,7 +1344,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -1450,7 +1450,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -1556,7 +1556,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -1662,7 +1662,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -1768,7 +1768,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -1874,7 +1874,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -1980,7 +1980,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -2086,7 +2086,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -2192,7 +2192,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -2298,7 +2298,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -2404,7 +2404,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -2510,7 +2510,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -2616,7 +2616,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -2722,7 +2722,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -2828,7 +2828,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -2934,7 +2934,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -3040,7 +3040,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -3146,7 +3146,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -3252,7 +3252,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -3358,7 +3358,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -3464,7 +3464,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -3570,7 +3570,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -3676,7 +3676,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -3782,7 +3782,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -3888,7 +3888,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -3994,7 +3994,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -4100,7 +4100,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -4206,7 +4206,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -4312,7 +4312,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -4418,7 +4418,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -4524,7 +4524,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -4630,7 +4630,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -4736,7 +4736,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -4842,7 +4842,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -4948,7 +4948,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -5054,7 +5054,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -5160,7 +5160,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -5266,7 +5266,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -5372,7 +5372,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -5478,7 +5478,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -5627,7 +5627,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
                         data-testid="Address__alias"
                       >
                         <span
-                          class="no-ligatures css-9nx3be"
+                          class="no-ligatures transition-colors duration-200"
                           data-testid="TruncateEnd"
                         >
                           ARK Wallet 1
@@ -5760,7 +5760,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
     data-testid="DelegateTable"
   >
     <div
-      class="with-x-padding -mt-3 overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 sm:mt-0 sm:border css-1m6rt2i"
+      class="table-wrapper with-x-padding -mt-3 overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 sm:mt-0 sm:border"
       role="table"
     >
       <table
@@ -5932,7 +5932,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
           role="rowgroup"
         >
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -6038,7 +6038,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -6144,7 +6144,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -6250,7 +6250,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -6356,7 +6356,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -6462,7 +6462,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -6568,7 +6568,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -6674,7 +6674,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -6780,7 +6780,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -6886,7 +6886,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -6992,7 +6992,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -7098,7 +7098,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -7204,7 +7204,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -7310,7 +7310,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -7416,7 +7416,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -7522,7 +7522,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -7628,7 +7628,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -7734,7 +7734,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -7840,7 +7840,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -7946,7 +7946,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -8052,7 +8052,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -8158,7 +8158,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -8264,7 +8264,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -8370,7 +8370,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -8476,7 +8476,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -8582,7 +8582,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -8688,7 +8688,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -8794,7 +8794,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -8900,7 +8900,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -9006,7 +9006,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -9112,7 +9112,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -9218,7 +9218,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -9324,7 +9324,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -9430,7 +9430,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -9536,7 +9536,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -9642,7 +9642,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -9748,7 +9748,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -9854,7 +9854,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -9960,7 +9960,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -10066,7 +10066,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -10172,7 +10172,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -10278,7 +10278,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -10384,7 +10384,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -10490,7 +10490,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -10596,7 +10596,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -10702,7 +10702,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -10808,7 +10808,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -10914,7 +10914,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -11020,7 +11020,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -11126,7 +11126,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -11232,7 +11232,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -11381,7 +11381,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
                         data-testid="Address__alias"
                       >
                         <span
-                          class="no-ligatures css-9nx3be"
+                          class="no-ligatures transition-colors duration-200"
                           data-testid="TruncateEnd"
                         >
                           ARK Wallet 1
@@ -11514,7 +11514,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
     data-testid="DelegateTable"
   >
     <div
-      class="with-x-padding -mt-3 overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 sm:mt-0 sm:border css-1m6rt2i"
+      class="table-wrapper with-x-padding -mt-3 overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 sm:mt-0 sm:border"
       role="table"
     >
       <table
@@ -11739,7 +11739,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
           role="rowgroup"
         >
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -11866,7 +11866,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -11993,7 +11993,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -12120,7 +12120,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -12247,7 +12247,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -12374,7 +12374,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -12501,7 +12501,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -12628,7 +12628,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -12755,7 +12755,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -12882,7 +12882,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -13009,7 +13009,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -13136,7 +13136,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -13263,7 +13263,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -13390,7 +13390,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -13517,7 +13517,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -13644,7 +13644,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -13771,7 +13771,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -13898,7 +13898,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -14025,7 +14025,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -14152,7 +14152,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -14279,7 +14279,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -14406,7 +14406,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -14533,7 +14533,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -14660,7 +14660,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -14787,7 +14787,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -14914,7 +14914,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -15041,7 +15041,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -15168,7 +15168,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -15295,7 +15295,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -15422,7 +15422,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -15549,7 +15549,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -15676,7 +15676,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -15803,7 +15803,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -15930,7 +15930,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -16057,7 +16057,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -16184,7 +16184,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -16311,7 +16311,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -16438,7 +16438,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -16565,7 +16565,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -16692,7 +16692,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -16819,7 +16819,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -16946,7 +16946,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -17073,7 +17073,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -17200,7 +17200,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -17327,7 +17327,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -17454,7 +17454,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -17581,7 +17581,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -17708,7 +17708,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -17835,7 +17835,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -17962,7 +17962,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -18089,7 +18089,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -18259,7 +18259,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
                         data-testid="Address__alias"
                       >
                         <span
-                          class="no-ligatures css-9nx3be"
+                          class="no-ligatures transition-colors duration-200"
                           data-testid="TruncateEnd"
                         >
                           ARK Wallet 1
@@ -18412,7 +18412,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
     data-testid="DelegateTable"
   >
     <div
-      class="with-x-padding -mt-3 overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 sm:mt-0 sm:border css-1m6rt2i"
+      class="table-wrapper with-x-padding -mt-3 overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 sm:mt-0 sm:border"
       role="table"
     >
       <table
@@ -18637,7 +18637,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
           role="rowgroup"
         >
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -18764,7 +18764,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -18891,7 +18891,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -19018,7 +19018,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -19145,7 +19145,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -19272,7 +19272,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -19399,7 +19399,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -19526,7 +19526,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -19653,7 +19653,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -19780,7 +19780,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -19907,7 +19907,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -20034,7 +20034,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -20161,7 +20161,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -20288,7 +20288,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -20415,7 +20415,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -20542,7 +20542,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -20669,7 +20669,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -20796,7 +20796,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -20923,7 +20923,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -21050,7 +21050,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -21177,7 +21177,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -21304,7 +21304,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -21431,7 +21431,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -21558,7 +21558,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -21685,7 +21685,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -21812,7 +21812,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -21939,7 +21939,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -22066,7 +22066,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -22193,7 +22193,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -22320,7 +22320,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -22447,7 +22447,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -22574,7 +22574,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -22701,7 +22701,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -22828,7 +22828,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -22955,7 +22955,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -23082,7 +23082,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -23209,7 +23209,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -23336,7 +23336,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -23463,7 +23463,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -23590,7 +23590,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -23717,7 +23717,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -23844,7 +23844,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -23971,7 +23971,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -24098,7 +24098,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -24225,7 +24225,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -24352,7 +24352,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -24479,7 +24479,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -24606,7 +24606,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -24733,7 +24733,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -24860,7 +24860,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -24987,7 +24987,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
             </td>
           </tr>
           <tr
-            class="group css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
             data-testid="DelegateRowSkeleton"
           >
             <td>
@@ -25157,7 +25157,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
                         data-testid="Address__alias"
                       >
                         <span
-                          class="no-ligatures css-9nx3be"
+                          class="no-ligatures transition-colors duration-200"
                           data-testid="TruncateEnd"
                         >
                           ARK Wallet 1
@@ -25310,7 +25310,7 @@ exports[`DelegateTable > should add resigned delegate to the unvote list 1`] = `
     data-testid="DelegateTable"
   >
     <div
-      class="with-x-padding -mt-3 overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 sm:mt-0 sm:border css-1m6rt2i"
+      class="table-wrapper with-x-padding -mt-3 overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 sm:mt-0 sm:border"
       role="table"
     >
       <table
@@ -25482,7 +25482,7 @@ exports[`DelegateTable > should add resigned delegate to the unvote list 1`] = `
           role="rowgroup"
         >
           <tr
-            class="group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800"
             data-testid="TableRow"
           >
             <td>
@@ -25627,7 +25627,7 @@ exports[`DelegateTable > should add resigned delegate to the unvote list 1`] = `
             </td>
           </tr>
           <tr
-            class="group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800"
             data-testid="TableRow"
           >
             <td>
@@ -25772,7 +25772,7 @@ exports[`DelegateTable > should add resigned delegate to the unvote list 1`] = `
             </td>
           </tr>
           <tr
-            class="group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800"
             data-testid="TableRow"
           >
             <td>
@@ -25960,7 +25960,7 @@ exports[`DelegateTable > should add resigned delegate to the unvote list 1`] = `
                         data-testid="Address__alias"
                       >
                         <span
-                          class="no-ligatures css-9nx3be"
+                          class="no-ligatures transition-colors duration-200"
                           data-testid="TruncateEnd"
                         >
                           ARK Wallet 1
@@ -26091,7 +26091,7 @@ exports[`DelegateTable > should emit action on continue button to unvote 1`] = `
     data-testid="DelegateTable"
   >
     <div
-      class="with-x-padding -mt-3 overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 sm:mt-0 sm:border css-1m6rt2i"
+      class="table-wrapper with-x-padding -mt-3 overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 sm:mt-0 sm:border"
       role="table"
     >
       <table
@@ -26263,7 +26263,7 @@ exports[`DelegateTable > should emit action on continue button to unvote 1`] = `
           role="rowgroup"
         >
           <tr
-            class="group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800"
             data-testid="TableRow"
           >
             <td>
@@ -26408,7 +26408,7 @@ exports[`DelegateTable > should emit action on continue button to unvote 1`] = `
             </td>
           </tr>
           <tr
-            class="group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800"
             data-testid="TableRow"
           >
             <td>
@@ -26553,7 +26553,7 @@ exports[`DelegateTable > should emit action on continue button to unvote 1`] = `
             </td>
           </tr>
           <tr
-            class="group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800"
             data-testid="TableRow"
           >
             <td>
@@ -26741,7 +26741,7 @@ exports[`DelegateTable > should emit action on continue button to unvote 1`] = `
                         data-testid="Address__alias"
                       >
                         <span
-                          class="no-ligatures css-9nx3be"
+                          class="no-ligatures transition-colors duration-200"
                           data-testid="TruncateEnd"
                         >
                           ARK Wallet 1
@@ -26872,7 +26872,7 @@ exports[`DelegateTable > should emit action on continue button to vote 1`] = `
     data-testid="DelegateTable"
   >
     <div
-      class="with-x-padding -mt-3 overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 sm:mt-0 sm:border css-1m6rt2i"
+      class="table-wrapper with-x-padding -mt-3 overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 sm:mt-0 sm:border"
       role="table"
     >
       <table
@@ -27044,7 +27044,7 @@ exports[`DelegateTable > should emit action on continue button to vote 1`] = `
           role="rowgroup"
         >
           <tr
-            class="group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800"
             data-testid="TableRow"
           >
             <td>
@@ -27189,7 +27189,7 @@ exports[`DelegateTable > should emit action on continue button to vote 1`] = `
             </td>
           </tr>
           <tr
-            class="group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800"
             data-testid="TableRow"
           >
             <td>
@@ -27334,7 +27334,7 @@ exports[`DelegateTable > should emit action on continue button to vote 1`] = `
             </td>
           </tr>
           <tr
-            class="group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800"
             data-testid="TableRow"
           >
             <td>
@@ -27522,7 +27522,7 @@ exports[`DelegateTable > should emit action on continue button to vote 1`] = `
                         data-testid="Address__alias"
                       >
                         <span
-                          class="no-ligatures css-9nx3be"
+                          class="no-ligatures transition-colors duration-200"
                           data-testid="TruncateEnd"
                         >
                           ARK Wallet 1
@@ -27653,7 +27653,7 @@ exports[`DelegateTable > should render 1`] = `
     data-testid="DelegateTable"
   >
     <div
-      class="with-x-padding -mt-3 overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 sm:mt-0 sm:border css-1m6rt2i"
+      class="table-wrapper with-x-padding -mt-3 overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 sm:mt-0 sm:border"
       role="table"
     >
       <table
@@ -27825,7 +27825,7 @@ exports[`DelegateTable > should render 1`] = `
           role="rowgroup"
         >
           <tr
-            class="group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800"
             data-testid="TableRow"
           >
             <td>
@@ -27970,7 +27970,7 @@ exports[`DelegateTable > should render 1`] = `
             </td>
           </tr>
           <tr
-            class="group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800"
             data-testid="TableRow"
           >
             <td>
@@ -28115,7 +28115,7 @@ exports[`DelegateTable > should render 1`] = `
             </td>
           </tr>
           <tr
-            class="group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800"
             data-testid="TableRow"
           >
             <td>
@@ -28303,7 +28303,7 @@ exports[`DelegateTable > should render 1`] = `
                         data-testid="Address__alias"
                       >
                         <span
-                          class="no-ligatures css-9nx3be"
+                          class="no-ligatures transition-colors duration-200"
                           data-testid="TruncateEnd"
                         >
                           ARK Wallet 1
@@ -28436,7 +28436,7 @@ exports[`DelegateTable > should render vote amount column 1`] = `
     data-testid="DelegateTable"
   >
     <div
-      class="with-x-padding -mt-3 overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 sm:mt-0 sm:border css-1m6rt2i"
+      class="table-wrapper with-x-padding -mt-3 overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 sm:mt-0 sm:border"
       role="table"
     >
       <table
@@ -28661,7 +28661,7 @@ exports[`DelegateTable > should render vote amount column 1`] = `
           role="rowgroup"
         >
           <tr
-            class="group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800"
             data-testid="TableRow"
           >
             <td>
@@ -28852,7 +28852,7 @@ exports[`DelegateTable > should render vote amount column 1`] = `
             </td>
           </tr>
           <tr
-            class="group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800"
             data-testid="TableRow"
           >
             <td>
@@ -29043,7 +29043,7 @@ exports[`DelegateTable > should render vote amount column 1`] = `
             </td>
           </tr>
           <tr
-            class="group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800"
             data-testid="TableRow"
           >
             <td>
@@ -29277,7 +29277,7 @@ exports[`DelegateTable > should render vote amount column 1`] = `
                         data-testid="Address__alias"
                       >
                         <span
-                          class="no-ligatures css-9nx3be"
+                          class="no-ligatures transition-colors duration-200"
                           data-testid="TruncateEnd"
                         >
                           ARK Wallet 1
@@ -29430,7 +29430,7 @@ exports[`DelegateTable > should render with a delegate to unvote 1`] = `
     data-testid="DelegateTable"
   >
     <div
-      class="with-x-padding -mt-3 overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 sm:mt-0 sm:border css-1m6rt2i"
+      class="table-wrapper with-x-padding -mt-3 overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 sm:mt-0 sm:border"
       role="table"
     >
       <table
@@ -29602,7 +29602,7 @@ exports[`DelegateTable > should render with a delegate to unvote 1`] = `
           role="rowgroup"
         >
           <tr
-            class="group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800"
             data-testid="TableRow"
           >
             <td>
@@ -29747,7 +29747,7 @@ exports[`DelegateTable > should render with a delegate to unvote 1`] = `
             </td>
           </tr>
           <tr
-            class="group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800"
             data-testid="TableRow"
           >
             <td>
@@ -29892,7 +29892,7 @@ exports[`DelegateTable > should render with a delegate to unvote 1`] = `
             </td>
           </tr>
           <tr
-            class="group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800"
             data-testid="TableRow"
           >
             <td>
@@ -30080,7 +30080,7 @@ exports[`DelegateTable > should render with a delegate to unvote 1`] = `
                         data-testid="Address__alias"
                       >
                         <span
-                          class="no-ligatures css-9nx3be"
+                          class="no-ligatures transition-colors duration-200"
                           data-testid="TruncateEnd"
                         >
                           ARK Wallet 1
@@ -30211,7 +30211,7 @@ exports[`DelegateTable > should render with a delegate to unvote/vote 1`] = `
     data-testid="DelegateTable"
   >
     <div
-      class="with-x-padding -mt-3 overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 sm:mt-0 sm:border css-1m6rt2i"
+      class="table-wrapper with-x-padding -mt-3 overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 sm:mt-0 sm:border"
       role="table"
     >
       <table
@@ -30383,7 +30383,7 @@ exports[`DelegateTable > should render with a delegate to unvote/vote 1`] = `
           role="rowgroup"
         >
           <tr
-            class="group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800"
             data-testid="TableRow"
           >
             <td>
@@ -30528,7 +30528,7 @@ exports[`DelegateTable > should render with a delegate to unvote/vote 1`] = `
             </td>
           </tr>
           <tr
-            class="group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800"
             data-testid="TableRow"
           >
             <td>
@@ -30673,7 +30673,7 @@ exports[`DelegateTable > should render with a delegate to unvote/vote 1`] = `
             </td>
           </tr>
           <tr
-            class="group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800"
             data-testid="TableRow"
           >
             <td>
@@ -30866,7 +30866,7 @@ exports[`DelegateTable > should render with a delegate to unvote/vote 1`] = `
                         data-testid="Address__alias"
                       >
                         <span
-                          class="no-ligatures css-9nx3be"
+                          class="no-ligatures transition-colors duration-200"
                           data-testid="TruncateEnd"
                         >
                           ARK Wallet 1
@@ -30996,7 +30996,7 @@ exports[`DelegateTable > should render with a delegate to vote 1`] = `
     data-testid="DelegateTable"
   >
     <div
-      class="with-x-padding -mt-3 overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 sm:mt-0 sm:border css-1m6rt2i"
+      class="table-wrapper with-x-padding -mt-3 overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 sm:mt-0 sm:border"
       role="table"
     >
       <table
@@ -31168,7 +31168,7 @@ exports[`DelegateTable > should render with a delegate to vote 1`] = `
           role="rowgroup"
         >
           <tr
-            class="group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800"
             data-testid="TableRow"
           >
             <td>
@@ -31313,7 +31313,7 @@ exports[`DelegateTable > should render with a delegate to vote 1`] = `
             </td>
           </tr>
           <tr
-            class="group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800"
             data-testid="TableRow"
           >
             <td>
@@ -31458,7 +31458,7 @@ exports[`DelegateTable > should render with a delegate to vote 1`] = `
             </td>
           </tr>
           <tr
-            class="group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800"
             data-testid="TableRow"
           >
             <td>
@@ -31646,7 +31646,7 @@ exports[`DelegateTable > should render with a delegate to vote 1`] = `
                         data-testid="Address__alias"
                       >
                         <span
-                          class="no-ligatures css-9nx3be"
+                          class="no-ligatures transition-colors duration-200"
                           data-testid="TruncateEnd"
                         >
                           ARK Wallet 1
@@ -32278,7 +32278,7 @@ exports[`DelegateTable > should render with subtitle 1`] = `
       test
     </p>
     <div
-      class="with-x-padding -mt-3 overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 sm:mt-0 sm:border css-1m6rt2i"
+      class="table-wrapper with-x-padding -mt-3 overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 sm:mt-0 sm:border"
       role="table"
     >
       <table
@@ -32450,7 +32450,7 @@ exports[`DelegateTable > should render with subtitle 1`] = `
           role="rowgroup"
         >
           <tr
-            class="group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800"
             data-testid="TableRow"
           >
             <td>
@@ -32595,7 +32595,7 @@ exports[`DelegateTable > should render with subtitle 1`] = `
             </td>
           </tr>
           <tr
-            class="group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800"
             data-testid="TableRow"
           >
             <td>
@@ -32740,7 +32740,7 @@ exports[`DelegateTable > should render with subtitle 1`] = `
             </td>
           </tr>
           <tr
-            class="group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800"
             data-testid="TableRow"
           >
             <td>
@@ -32928,7 +32928,7 @@ exports[`DelegateTable > should render with subtitle 1`] = `
                         data-testid="Address__alias"
                       >
                         <span
-                          class="no-ligatures css-9nx3be"
+                          class="no-ligatures transition-colors duration-200"
                           data-testid="TruncateEnd"
                         >
                           ARK Wallet 1
@@ -33061,7 +33061,7 @@ exports[`DelegateTable > should select a changed delegate to unvote 1`] = `
     data-testid="DelegateTable"
   >
     <div
-      class="with-x-padding -mt-3 overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 sm:mt-0 sm:border css-1m6rt2i"
+      class="table-wrapper with-x-padding -mt-3 overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 sm:mt-0 sm:border"
       role="table"
     >
       <table
@@ -33286,7 +33286,7 @@ exports[`DelegateTable > should select a changed delegate to unvote 1`] = `
           role="rowgroup"
         >
           <tr
-            class="group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800"
             data-testid="TableRow"
           >
             <td>
@@ -33476,7 +33476,7 @@ exports[`DelegateTable > should select a changed delegate to unvote 1`] = `
             </td>
           </tr>
           <tr
-            class="group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800"
             data-testid="TableRow"
           >
             <td>
@@ -33667,7 +33667,7 @@ exports[`DelegateTable > should select a changed delegate to unvote 1`] = `
             </td>
           </tr>
           <tr
-            class="group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800"
             data-testid="TableRow"
           >
             <td>
@@ -33901,7 +33901,7 @@ exports[`DelegateTable > should select a changed delegate to unvote 1`] = `
                         data-testid="Address__alias"
                       >
                         <span
-                          class="no-ligatures css-9nx3be"
+                          class="no-ligatures transition-colors duration-200"
                           data-testid="TruncateEnd"
                         >
                           ARK Wallet 1
@@ -34054,7 +34054,7 @@ exports[`DelegateTable > should select a delegate to unvote 1`] = `
     data-testid="DelegateTable"
   >
     <div
-      class="with-x-padding -mt-3 overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 sm:mt-0 sm:border css-1m6rt2i"
+      class="table-wrapper with-x-padding -mt-3 overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 sm:mt-0 sm:border"
       role="table"
     >
       <table
@@ -34226,7 +34226,7 @@ exports[`DelegateTable > should select a delegate to unvote 1`] = `
           role="rowgroup"
         >
           <tr
-            class="group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800"
             data-testid="TableRow"
           >
             <td>
@@ -34371,7 +34371,7 @@ exports[`DelegateTable > should select a delegate to unvote 1`] = `
             </td>
           </tr>
           <tr
-            class="group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800"
             data-testid="TableRow"
           >
             <td>
@@ -34516,7 +34516,7 @@ exports[`DelegateTable > should select a delegate to unvote 1`] = `
             </td>
           </tr>
           <tr
-            class="group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800"
             data-testid="TableRow"
           >
             <td>
@@ -34704,7 +34704,7 @@ exports[`DelegateTable > should select a delegate to unvote 1`] = `
                         data-testid="Address__alias"
                       >
                         <span
-                          class="no-ligatures css-9nx3be"
+                          class="no-ligatures transition-colors duration-200"
                           data-testid="TruncateEnd"
                         >
                           ARK Wallet 1
@@ -34837,7 +34837,7 @@ exports[`DelegateTable > should select a delegate to unvote/vote 1`] = `
     data-testid="DelegateTable"
   >
     <div
-      class="with-x-padding -mt-3 overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 sm:mt-0 sm:border css-1m6rt2i"
+      class="table-wrapper with-x-padding -mt-3 overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 sm:mt-0 sm:border"
       role="table"
     >
       <table
@@ -35009,7 +35009,7 @@ exports[`DelegateTable > should select a delegate to unvote/vote 1`] = `
           role="rowgroup"
         >
           <tr
-            class="group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800"
             data-testid="TableRow"
           >
             <td>
@@ -35154,7 +35154,7 @@ exports[`DelegateTable > should select a delegate to unvote/vote 1`] = `
             </td>
           </tr>
           <tr
-            class="group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800"
             data-testid="TableRow"
           >
             <td>
@@ -35299,7 +35299,7 @@ exports[`DelegateTable > should select a delegate to unvote/vote 1`] = `
             </td>
           </tr>
           <tr
-            class="group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800"
             data-testid="TableRow"
           >
             <td>
@@ -35492,7 +35492,7 @@ exports[`DelegateTable > should select a delegate to unvote/vote 1`] = `
                         data-testid="Address__alias"
                       >
                         <span
-                          class="no-ligatures css-9nx3be"
+                          class="no-ligatures transition-colors duration-200"
                           data-testid="TruncateEnd"
                         >
                           ARK Wallet 1
@@ -35622,7 +35622,7 @@ exports[`DelegateTable > should select a delegate to vote 1`] = `
     data-testid="DelegateTable"
   >
     <div
-      class="with-x-padding -mt-3 overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 sm:mt-0 sm:border css-1m6rt2i"
+      class="table-wrapper with-x-padding -mt-3 overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 sm:mt-0 sm:border"
       role="table"
     >
       <table
@@ -35794,7 +35794,7 @@ exports[`DelegateTable > should select a delegate to vote 1`] = `
           role="rowgroup"
         >
           <tr
-            class="group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800"
             data-testid="TableRow"
           >
             <td>
@@ -35939,7 +35939,7 @@ exports[`DelegateTable > should select a delegate to vote 1`] = `
             </td>
           </tr>
           <tr
-            class="group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800"
             data-testid="TableRow"
           >
             <td>
@@ -36084,7 +36084,7 @@ exports[`DelegateTable > should select a delegate to vote 1`] = `
             </td>
           </tr>
           <tr
-            class="group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800"
             data-testid="TableRow"
           >
             <td>
@@ -36272,7 +36272,7 @@ exports[`DelegateTable > should select a delegate to vote 1`] = `
                         data-testid="Address__alias"
                       >
                         <span
-                          class="no-ligatures css-9nx3be"
+                          class="no-ligatures transition-colors duration-200"
                           data-testid="TruncateEnd"
                         >
                           ARK Wallet 1
@@ -36405,7 +36405,7 @@ exports[`DelegateTable > should select a delegate with vote amount and make it u
     data-testid="DelegateTable"
   >
     <div
-      class="with-x-padding -mt-3 overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 sm:mt-0 sm:border css-1m6rt2i"
+      class="table-wrapper with-x-padding -mt-3 overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 sm:mt-0 sm:border"
       role="table"
     >
       <table
@@ -36630,7 +36630,7 @@ exports[`DelegateTable > should select a delegate with vote amount and make it u
           role="rowgroup"
         >
           <tr
-            class="group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800"
             data-testid="TableRow"
           >
             <td>
@@ -36820,7 +36820,7 @@ exports[`DelegateTable > should select a delegate with vote amount and make it u
             </td>
           </tr>
           <tr
-            class="group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800"
             data-testid="TableRow"
           >
             <td>
@@ -37011,7 +37011,7 @@ exports[`DelegateTable > should select a delegate with vote amount and make it u
             </td>
           </tr>
           <tr
-            class="group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800"
             data-testid="TableRow"
           >
             <td>
@@ -37245,7 +37245,7 @@ exports[`DelegateTable > should select a delegate with vote amount and make it u
                         data-testid="Address__alias"
                       >
                         <span
-                          class="no-ligatures css-9nx3be"
+                          class="no-ligatures transition-colors duration-200"
                           data-testid="TruncateEnd"
                         >
                           ARK Wallet 1
@@ -37398,7 +37398,7 @@ exports[`DelegateTable > should select multiple delegates to unvote/vote 1`] = `
     data-testid="DelegateTable"
   >
     <div
-      class="with-x-padding -mt-3 overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 sm:mt-0 sm:border css-1m6rt2i"
+      class="table-wrapper with-x-padding -mt-3 overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 sm:mt-0 sm:border"
       role="table"
     >
       <table
@@ -37570,7 +37570,7 @@ exports[`DelegateTable > should select multiple delegates to unvote/vote 1`] = `
           role="rowgroup"
         >
           <tr
-            class="group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800"
             data-testid="TableRow"
           >
             <td>
@@ -37715,7 +37715,7 @@ exports[`DelegateTable > should select multiple delegates to unvote/vote 1`] = `
             </td>
           </tr>
           <tr
-            class="group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800"
             data-testid="TableRow"
           >
             <td>
@@ -37860,7 +37860,7 @@ exports[`DelegateTable > should select multiple delegates to unvote/vote 1`] = `
             </td>
           </tr>
           <tr
-            class="group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800"
             data-testid="TableRow"
           >
             <td>
@@ -38048,7 +38048,7 @@ exports[`DelegateTable > should select multiple delegates to unvote/vote 1`] = `
                         data-testid="Address__alias"
                       >
                         <span
-                          class="no-ligatures css-9nx3be"
+                          class="no-ligatures transition-colors duration-200"
                           data-testid="TruncateEnd"
                         >
                           ARK Wallet 1
@@ -38178,7 +38178,7 @@ exports[`DelegateTable > should unselect a delegate to unvote 1`] = `
     data-testid="DelegateTable"
   >
     <div
-      class="with-x-padding -mt-3 overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 sm:mt-0 sm:border css-1m6rt2i"
+      class="table-wrapper with-x-padding -mt-3 overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 sm:mt-0 sm:border"
       role="table"
     >
       <table
@@ -38350,7 +38350,7 @@ exports[`DelegateTable > should unselect a delegate to unvote 1`] = `
           role="rowgroup"
         >
           <tr
-            class="group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800"
             data-testid="TableRow"
           >
             <td>
@@ -38495,7 +38495,7 @@ exports[`DelegateTable > should unselect a delegate to unvote 1`] = `
             </td>
           </tr>
           <tr
-            class="group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800"
             data-testid="TableRow"
           >
             <td>
@@ -38640,7 +38640,7 @@ exports[`DelegateTable > should unselect a delegate to unvote 1`] = `
             </td>
           </tr>
           <tr
-            class="group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800"
             data-testid="TableRow"
           >
             <td>
@@ -38828,7 +38828,7 @@ exports[`DelegateTable > should unselect a delegate to unvote 1`] = `
                         data-testid="Address__alias"
                       >
                         <span
-                          class="no-ligatures css-9nx3be"
+                          class="no-ligatures transition-colors duration-200"
                           data-testid="TruncateEnd"
                         >
                           ARK Wallet 1
@@ -38961,7 +38961,7 @@ exports[`DelegateTable > should unselect a delegate to vote 1`] = `
     data-testid="DelegateTable"
   >
     <div
-      class="with-x-padding -mt-3 overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 sm:mt-0 sm:border css-1m6rt2i"
+      class="table-wrapper with-x-padding -mt-3 overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 sm:mt-0 sm:border"
       role="table"
     >
       <table
@@ -39133,7 +39133,7 @@ exports[`DelegateTable > should unselect a delegate to vote 1`] = `
           role="rowgroup"
         >
           <tr
-            class="group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800"
             data-testid="TableRow"
           >
             <td>
@@ -39278,7 +39278,7 @@ exports[`DelegateTable > should unselect a delegate to vote 1`] = `
             </td>
           </tr>
           <tr
-            class="group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800"
             data-testid="TableRow"
           >
             <td>
@@ -39423,7 +39423,7 @@ exports[`DelegateTable > should unselect a delegate to vote 1`] = `
             </td>
           </tr>
           <tr
-            class="group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800"
             data-testid="TableRow"
           >
             <td>
@@ -39611,7 +39611,7 @@ exports[`DelegateTable > should unselect a delegate to vote 1`] = `
                         data-testid="Address__alias"
                       >
                         <span
-                          class="no-ligatures css-9nx3be"
+                          class="no-ligatures transition-colors duration-200"
                           data-testid="TruncateEnd"
                         >
                           ARK Wallet 1
