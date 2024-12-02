@@ -1,6 +1,7 @@
 import { last } from "@ardenthq/sdk-helpers";
 import React, { useMemo } from "react";
-import tw, { css, styled } from "twin.macro";
+import { twMerge } from "tailwind-merge";
+import cn from "classnames";
 
 interface StepIndicatorProperties {
 	activeIndex?: number;
@@ -8,25 +9,19 @@ interface StepIndicatorProperties {
 	activeStepTitle?: string;
 }
 
-const StepStyled = styled.li<{ isActive: boolean }>`
-	${tw`h-0.5 flex-1 rounded-lg transition-colors duration-300`}
-	${({ isActive }) =>
-		isActive
-			? css`
-					${tw`bg-theme-warning-300`}
-				`
-			: css`
-					${tw`bg-theme-primary-100 dark:bg-theme-secondary-800`}
-				`}
-`;
-
-const StepWrapper = styled.ul`
-	${tw`flex space-x-3`}
-`;
-
-const StepTitle = styled.span`
-	${tw`inline-block sm:hidden mx-auto text-theme-secondary-text font-semibold mb-2`}
-`;
+const StepStyled = ({ isActive, ...props }: React.HTMLProps<HTMLLIElement> & { isActive: boolean }) => (
+	<li
+		{...props}
+		className={twMerge(
+			"h-0.5 flex-1 rounded-lg transition-colors duration-300",
+			cn({
+				"bg-theme-primary-100 dark:bg-theme-secondary-800": !isActive,
+				"bg-theme-warning-300": isActive,
+			}),
+			props.className,
+		)}
+	/>
+);
 
 export const StepIndicator: React.FC<StepIndicatorProperties> = ({
 	activeIndex = 1,
@@ -51,12 +46,12 @@ export const StepIndicator: React.FC<StepIndicatorProperties> = ({
 
 	return (
 		<div className="flex flex-col">
-			<StepTitle>{title}</StepTitle>
-			<StepWrapper>
+			<span className="mx-auto mb-2 inline-block font-semibold text-theme-secondary-text sm:hidden">{title}</span>
+			<ul className="flex space-x-3">
 				{steps.map((_, index) => (
 					<StepStyled key={index} isActive={activeIndex >= index + 1} />
 				))}
-			</StepWrapper>
+			</ul>
 		</div>
 	);
 };
