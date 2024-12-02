@@ -267,7 +267,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
       data-testid="TransactionTable"
     >
       <div
-        class="with-x-padding css-1m6rt2i"
+        class="table-wrapper with-x-padding"
         role="table"
       >
         <table
@@ -479,7 +479,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
             role="rowgroup"
           >
             <tr
-              class="group relative css-1tl8buz"
+              class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
               data-testid="TableRow"
             >
               <td>
@@ -503,7 +503,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="text-sm"
                         >
                           <span
-                            class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
+                            class="no-ligatures cursor-pointer text-theme-primary-600"
                             data-testid="TransactionRow__id"
                           >
                             d819c…1e493
@@ -628,7 +628,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
               </td>
             </tr>
             <tr
-              class="group relative css-1tl8buz"
+              class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
               data-testid="TableRow"
             >
               <td>
@@ -652,7 +652,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="text-sm"
                         >
                           <span
-                            class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
+                            class="no-ligatures cursor-pointer text-theme-primary-600"
                             data-testid="TransactionRow__id"
                           >
                             d819c…1e493
@@ -777,7 +777,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
               </td>
             </tr>
             <tr
-              class="group relative css-1tl8buz"
+              class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
               data-testid="TableRow"
             >
               <td>
@@ -801,7 +801,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="text-sm"
                         >
                           <span
-                            class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
+                            class="no-ligatures cursor-pointer text-theme-primary-600"
                             data-testid="TransactionRow__id"
                           >
                             d819c…1e493
@@ -926,7 +926,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
               </td>
             </tr>
             <tr
-              class="group relative css-1tl8buz"
+              class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
               data-testid="TableRow"
             >
               <td>
@@ -950,7 +950,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="text-sm"
                         >
                           <span
-                            class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
+                            class="no-ligatures cursor-pointer text-theme-primary-600"
                             data-testid="TransactionRow__id"
                           >
                             d819c…1e493
@@ -1075,7 +1075,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
               </td>
             </tr>
             <tr
-              class="group relative css-1tl8buz"
+              class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
               data-testid="TableRow"
             >
               <td>
@@ -1099,7 +1099,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="text-sm"
                         >
                           <span
-                            class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
+                            class="no-ligatures cursor-pointer text-theme-primary-600"
                             data-testid="TransactionRow__id"
                           >
                             32e52…e2faf
@@ -1224,7 +1224,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
               </td>
             </tr>
             <tr
-              class="group relative css-1tl8buz"
+              class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
               data-testid="TableRow"
             >
               <td>
@@ -1248,7 +1248,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="text-sm"
                         >
                           <span
-                            class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
+                            class="no-ligatures cursor-pointer text-theme-primary-600"
                             data-testid="TransactionRow__id"
                           >
                             32e52…e2faf
@@ -1373,7 +1373,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
               </td>
             </tr>
             <tr
-              class="group relative css-1tl8buz"
+              class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
               data-testid="TableRow"
             >
               <td>
@@ -1397,7 +1397,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="text-sm"
                         >
                           <span
-                            class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
+                            class="no-ligatures cursor-pointer text-theme-primary-600"
                             data-testid="TransactionRow__id"
                           >
                             32e52…e2faf
@@ -1522,7 +1522,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
               </td>
             </tr>
             <tr
-              class="group relative css-1tl8buz"
+              class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
               data-testid="TableRow"
             >
               <td>
@@ -1546,7 +1546,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="text-sm"
                         >
                           <span
-                            class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
+                            class="no-ligatures cursor-pointer text-theme-primary-600"
                             data-testid="TransactionRow__id"
                           >
                             32e52…e2faf
@@ -1671,7 +1671,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
               </td>
             </tr>
             <tr
-              class="group relative css-1tl8buz"
+              class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
               data-testid="TableRow"
             >
               <td>
@@ -1695,7 +1695,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="text-sm"
                         >
                           <span
-                            class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
+                            class="no-ligatures cursor-pointer text-theme-primary-600"
                             data-testid="TransactionRow__id"
                           >
                             1e9b9…1067e
@@ -1765,7 +1765,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           data-testid="Address__alias"
                         >
                           <span
-                            class="no-ligatures css-9nx3be"
+                            class="no-ligatures transition-colors duration-200"
                             data-testid="TruncateEnd"
                           >
                             ARK Wallet 2
@@ -1841,7 +1841,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
               </td>
             </tr>
             <tr
-              class="group relative css-1tl8buz"
+              class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
               data-testid="TableRow"
             >
               <td>
@@ -1865,7 +1865,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="text-sm"
                         >
                           <span
-                            class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
+                            class="no-ligatures cursor-pointer text-theme-primary-600"
                             data-testid="TransactionRow__id"
                           >
                             1e9b9…1067e
@@ -1935,7 +1935,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           data-testid="Address__alias"
                         >
                           <span
-                            class="no-ligatures css-9nx3be"
+                            class="no-ligatures transition-colors duration-200"
                             data-testid="TruncateEnd"
                           >
                             ARK Wallet 2
@@ -2011,7 +2011,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
               </td>
             </tr>
             <tr
-              class="group relative css-1tl8buz"
+              class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
               data-testid="TableRow"
             >
               <td>
@@ -2035,7 +2035,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="text-sm"
                         >
                           <span
-                            class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
+                            class="no-ligatures cursor-pointer text-theme-primary-600"
                             data-testid="TransactionRow__id"
                           >
                             1e9b9…1067e
@@ -2105,7 +2105,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           data-testid="Address__alias"
                         >
                           <span
-                            class="no-ligatures css-9nx3be"
+                            class="no-ligatures transition-colors duration-200"
                             data-testid="TruncateEnd"
                           >
                             ARK Wallet 2
@@ -2181,7 +2181,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
               </td>
             </tr>
             <tr
-              class="group relative css-1tl8buz"
+              class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
               data-testid="TableRow"
             >
               <td>
@@ -2205,7 +2205,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="text-sm"
                         >
                           <span
-                            class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
+                            class="no-ligatures cursor-pointer text-theme-primary-600"
                             data-testid="TransactionRow__id"
                           >
                             1e9b9…1067e
@@ -2275,7 +2275,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           data-testid="Address__alias"
                         >
                           <span
-                            class="no-ligatures css-9nx3be"
+                            class="no-ligatures transition-colors duration-200"
                             data-testid="TruncateEnd"
                           >
                             ARK Wallet 2
@@ -2351,7 +2351,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
               </td>
             </tr>
             <tr
-              class="group relative css-1tl8buz"
+              class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
               data-testid="TableRow"
             >
               <td>
@@ -2375,7 +2375,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="text-sm"
                         >
                           <span
-                            class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
+                            class="no-ligatures cursor-pointer text-theme-primary-600"
                             data-testid="TransactionRow__id"
                           >
                             8f913…49877
@@ -2512,7 +2512,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
               </td>
             </tr>
             <tr
-              class="group relative css-1tl8buz"
+              class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
               data-testid="TableRow"
             >
               <td>
@@ -2536,7 +2536,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="text-sm"
                         >
                           <span
-                            class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
+                            class="no-ligatures cursor-pointer text-theme-primary-600"
                             data-testid="TransactionRow__id"
                           >
                             8f913…49877
@@ -2673,7 +2673,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
               </td>
             </tr>
             <tr
-              class="group relative css-1tl8buz"
+              class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
               data-testid="TableRow"
             >
               <td>
@@ -2697,7 +2697,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="text-sm"
                         >
                           <span
-                            class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
+                            class="no-ligatures cursor-pointer text-theme-primary-600"
                             data-testid="TransactionRow__id"
                           >
                             8f913…49877
@@ -2834,7 +2834,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
               </td>
             </tr>
             <tr
-              class="group relative css-1tl8buz"
+              class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
               data-testid="TableRow"
             >
               <td>
@@ -2858,7 +2858,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="text-sm"
                         >
                           <span
-                            class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
+                            class="no-ligatures cursor-pointer text-theme-primary-600"
                             data-testid="TransactionRow__id"
                           >
                             8f913…49877
@@ -2995,7 +2995,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
               </td>
             </tr>
             <tr
-              class="group relative css-1tl8buz"
+              class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
               data-testid="TableRow"
             >
               <td>
@@ -3019,7 +3019,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="text-sm"
                         >
                           <span
-                            class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
+                            class="no-ligatures cursor-pointer text-theme-primary-600"
                             data-testid="TransactionRow__id"
                           >
                             0d8d1…8a2cf
@@ -3156,7 +3156,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
               </td>
             </tr>
             <tr
-              class="group relative css-1tl8buz"
+              class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
               data-testid="TableRow"
             >
               <td>
@@ -3180,7 +3180,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="text-sm"
                         >
                           <span
-                            class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
+                            class="no-ligatures cursor-pointer text-theme-primary-600"
                             data-testid="TransactionRow__id"
                           >
                             0d8d1…8a2cf
@@ -3317,7 +3317,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
               </td>
             </tr>
             <tr
-              class="group relative css-1tl8buz"
+              class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
               data-testid="TableRow"
             >
               <td>
@@ -3341,7 +3341,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="text-sm"
                         >
                           <span
-                            class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
+                            class="no-ligatures cursor-pointer text-theme-primary-600"
                             data-testid="TransactionRow__id"
                           >
                             0d8d1…8a2cf
@@ -3478,7 +3478,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
               </td>
             </tr>
             <tr
-              class="group relative css-1tl8buz"
+              class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
               data-testid="TableRow"
             >
               <td>
@@ -3502,7 +3502,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="text-sm"
                         >
                           <span
-                            class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
+                            class="no-ligatures cursor-pointer text-theme-primary-600"
                             data-testid="TransactionRow__id"
                           >
                             0d8d1…8a2cf
@@ -3639,7 +3639,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
               </td>
             </tr>
             <tr
-              class="group relative css-1tl8buz"
+              class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
               data-testid="TableRow"
             >
               <td>
@@ -3663,7 +3663,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="text-sm"
                         >
                           <span
-                            class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
+                            class="no-ligatures cursor-pointer text-theme-primary-600"
                             data-testid="TransactionRow__id"
                           >
                             73b0a…cb33e
@@ -3800,7 +3800,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
               </td>
             </tr>
             <tr
-              class="group relative css-1tl8buz"
+              class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
               data-testid="TableRow"
             >
               <td>
@@ -3824,7 +3824,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="text-sm"
                         >
                           <span
-                            class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
+                            class="no-ligatures cursor-pointer text-theme-primary-600"
                             data-testid="TransactionRow__id"
                           >
                             73b0a…cb33e
@@ -3961,7 +3961,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
               </td>
             </tr>
             <tr
-              class="group relative css-1tl8buz"
+              class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
               data-testid="TableRow"
             >
               <td>
@@ -3985,7 +3985,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="text-sm"
                         >
                           <span
-                            class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
+                            class="no-ligatures cursor-pointer text-theme-primary-600"
                             data-testid="TransactionRow__id"
                           >
                             73b0a…cb33e
@@ -4122,7 +4122,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
               </td>
             </tr>
             <tr
-              class="group relative css-1tl8buz"
+              class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
               data-testid="TableRow"
             >
               <td>
@@ -4146,7 +4146,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="text-sm"
                         >
                           <span
-                            class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
+                            class="no-ligatures cursor-pointer text-theme-primary-600"
                             data-testid="TransactionRow__id"
                           >
                             73b0a…cb33e
@@ -4283,7 +4283,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
               </td>
             </tr>
             <tr
-              class="group relative css-1tl8buz"
+              class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
               data-testid="TableRow"
             >
               <td>
@@ -4307,7 +4307,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="text-sm"
                         >
                           <span
-                            class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
+                            class="no-ligatures cursor-pointer text-theme-primary-600"
                             data-testid="TransactionRow__id"
                           >
                             b32ea…70a37
@@ -4444,7 +4444,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
               </td>
             </tr>
             <tr
-              class="group relative css-1tl8buz"
+              class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
               data-testid="TableRow"
             >
               <td>
@@ -4468,7 +4468,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="text-sm"
                         >
                           <span
-                            class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
+                            class="no-ligatures cursor-pointer text-theme-primary-600"
                             data-testid="TransactionRow__id"
                           >
                             b32ea…70a37
@@ -4605,7 +4605,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
               </td>
             </tr>
             <tr
-              class="group relative css-1tl8buz"
+              class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
               data-testid="TableRow"
             >
               <td>
@@ -4629,7 +4629,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="text-sm"
                         >
                           <span
-                            class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
+                            class="no-ligatures cursor-pointer text-theme-primary-600"
                             data-testid="TransactionRow__id"
                           >
                             b32ea…70a37
@@ -4766,7 +4766,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
               </td>
             </tr>
             <tr
-              class="group relative css-1tl8buz"
+              class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
               data-testid="TableRow"
             >
               <td>
@@ -4790,7 +4790,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="text-sm"
                         >
                           <span
-                            class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
+                            class="no-ligatures cursor-pointer text-theme-primary-600"
                             data-testid="TransactionRow__id"
                           >
                             b32ea…70a37
@@ -4927,7 +4927,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
               </td>
             </tr>
             <tr
-              class="group relative css-1tl8buz"
+              class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
               data-testid="TableRow"
             >
               <td>
@@ -4951,7 +4951,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="text-sm"
                         >
                           <span
-                            class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
+                            class="no-ligatures cursor-pointer text-theme-primary-600"
                             data-testid="TransactionRow__id"
                           >
                             35c3e…53f9e
@@ -5088,7 +5088,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
               </td>
             </tr>
             <tr
-              class="group relative css-1tl8buz"
+              class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
               data-testid="TableRow"
             >
               <td>
@@ -5112,7 +5112,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="text-sm"
                         >
                           <span
-                            class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
+                            class="no-ligatures cursor-pointer text-theme-primary-600"
                             data-testid="TransactionRow__id"
                           >
                             35c3e…53f9e
@@ -5249,7 +5249,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
               </td>
             </tr>
             <tr
-              class="group relative css-1tl8buz"
+              class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
               data-testid="TableRow"
             >
               <td>
@@ -5273,7 +5273,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="text-sm"
                         >
                           <span
-                            class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
+                            class="no-ligatures cursor-pointer text-theme-primary-600"
                             data-testid="TransactionRow__id"
                           >
                             35c3e…53f9e
@@ -5410,7 +5410,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
               </td>
             </tr>
             <tr
-              class="group relative css-1tl8buz"
+              class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
               data-testid="TableRow"
             >
               <td>
@@ -5434,7 +5434,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="text-sm"
                         >
                           <span
-                            class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
+                            class="no-ligatures cursor-pointer text-theme-primary-600"
                             data-testid="TransactionRow__id"
                           >
                             35c3e…53f9e
@@ -5571,7 +5571,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
               </td>
             </tr>
             <tr
-              class="group relative css-1tl8buz"
+              class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
               data-testid="TableRow"
             >
               <td>
@@ -5595,7 +5595,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="text-sm"
                         >
                           <span
-                            class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
+                            class="no-ligatures cursor-pointer text-theme-primary-600"
                             data-testid="TransactionRow__id"
                           >
                             83f09…4d3c5
@@ -5732,7 +5732,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
               </td>
             </tr>
             <tr
-              class="group relative css-1tl8buz"
+              class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
               data-testid="TableRow"
             >
               <td>
@@ -5756,7 +5756,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="text-sm"
                         >
                           <span
-                            class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
+                            class="no-ligatures cursor-pointer text-theme-primary-600"
                             data-testid="TransactionRow__id"
                           >
                             83f09…4d3c5
@@ -5893,7 +5893,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
               </td>
             </tr>
             <tr
-              class="group relative css-1tl8buz"
+              class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
               data-testid="TableRow"
             >
               <td>
@@ -5917,7 +5917,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="text-sm"
                         >
                           <span
-                            class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
+                            class="no-ligatures cursor-pointer text-theme-primary-600"
                             data-testid="TransactionRow__id"
                           >
                             83f09…4d3c5
@@ -6054,7 +6054,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
               </td>
             </tr>
             <tr
-              class="group relative css-1tl8buz"
+              class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
               data-testid="TableRow"
             >
               <td>
@@ -6078,7 +6078,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="text-sm"
                         >
                           <span
-                            class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
+                            class="no-ligatures cursor-pointer text-theme-primary-600"
                             data-testid="TransactionRow__id"
                           >
                             83f09…4d3c5
@@ -6215,7 +6215,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
               </td>
             </tr>
             <tr
-              class="group relative css-1tl8buz"
+              class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
               data-testid="TableRow"
             >
               <td>
@@ -6239,7 +6239,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="text-sm"
                         >
                           <span
-                            class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
+                            class="no-ligatures cursor-pointer text-theme-primary-600"
                             data-testid="TransactionRow__id"
                           >
                             2347c…b212c
@@ -6376,7 +6376,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
               </td>
             </tr>
             <tr
-              class="group relative css-1tl8buz"
+              class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
               data-testid="TableRow"
             >
               <td>
@@ -6400,7 +6400,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="text-sm"
                         >
                           <span
-                            class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
+                            class="no-ligatures cursor-pointer text-theme-primary-600"
                             data-testid="TransactionRow__id"
                           >
                             2347c…b212c
@@ -6537,7 +6537,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
               </td>
             </tr>
             <tr
-              class="group relative css-1tl8buz"
+              class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
               data-testid="TableRow"
             >
               <td>
@@ -6561,7 +6561,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="text-sm"
                         >
                           <span
-                            class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
+                            class="no-ligatures cursor-pointer text-theme-primary-600"
                             data-testid="TransactionRow__id"
                           >
                             2347c…b212c
@@ -6698,7 +6698,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
               </td>
             </tr>
             <tr
-              class="group relative css-1tl8buz"
+              class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
               data-testid="TableRow"
             >
               <td>
@@ -6722,7 +6722,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="text-sm"
                         >
                           <span
-                            class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
+                            class="no-ligatures cursor-pointer text-theme-primary-600"
                             data-testid="TransactionRow__id"
                           >
                             2347c…b212c
@@ -6859,7 +6859,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
               </td>
             </tr>
             <tr
-              class="group relative css-1tl8buz"
+              class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
               data-testid="TableRow"
             >
               <td>
@@ -6883,7 +6883,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="text-sm"
                         >
                           <span
-                            class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
+                            class="no-ligatures cursor-pointer text-theme-primary-600"
                             data-testid="TransactionRow__id"
                           >
                             56e85…16867
@@ -7020,7 +7020,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
               </td>
             </tr>
             <tr
-              class="group relative css-1tl8buz"
+              class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
               data-testid="TableRow"
             >
               <td>
@@ -7044,7 +7044,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="text-sm"
                         >
                           <span
-                            class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
+                            class="no-ligatures cursor-pointer text-theme-primary-600"
                             data-testid="TransactionRow__id"
                           >
                             56e85…16867
@@ -7181,7 +7181,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
               </td>
             </tr>
             <tr
-              class="group relative css-1tl8buz"
+              class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
               data-testid="TableRow"
             >
               <td>
@@ -7205,7 +7205,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="text-sm"
                         >
                           <span
-                            class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
+                            class="no-ligatures cursor-pointer text-theme-primary-600"
                             data-testid="TransactionRow__id"
                           >
                             56e85…16867
@@ -7342,7 +7342,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
               </td>
             </tr>
             <tr
-              class="group relative css-1tl8buz"
+              class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
               data-testid="TableRow"
             >
               <td>
@@ -7366,7 +7366,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="text-sm"
                         >
                           <span
-                            class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
+                            class="no-ligatures cursor-pointer text-theme-primary-600"
                             data-testid="TransactionRow__id"
                           >
                             56e85…16867
@@ -7503,7 +7503,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
               </td>
             </tr>
             <tr
-              class="group relative css-1tl8buz"
+              class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
               data-testid="TableRow"
             >
               <td>
@@ -7527,7 +7527,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="text-sm"
                         >
                           <span
-                            class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
+                            class="no-ligatures cursor-pointer text-theme-primary-600"
                             data-testid="TransactionRow__id"
                           >
                             9295a…e2ef3
@@ -7662,7 +7662,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
               </td>
             </tr>
             <tr
-              class="group relative css-1tl8buz"
+              class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
               data-testid="TableRow"
             >
               <td>
@@ -7686,7 +7686,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="text-sm"
                         >
                           <span
-                            class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
+                            class="no-ligatures cursor-pointer text-theme-primary-600"
                             data-testid="TransactionRow__id"
                           >
                             9295a…e2ef3
@@ -7821,7 +7821,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
               </td>
             </tr>
             <tr
-              class="group relative css-1tl8buz"
+              class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
               data-testid="TableRow"
             >
               <td>
@@ -7845,7 +7845,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="text-sm"
                         >
                           <span
-                            class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
+                            class="no-ligatures cursor-pointer text-theme-primary-600"
                             data-testid="TransactionRow__id"
                           >
                             9295a…e2ef3
@@ -7980,7 +7980,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
               </td>
             </tr>
             <tr
-              class="group relative css-1tl8buz"
+              class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
               data-testid="TableRow"
             >
               <td>
@@ -8004,7 +8004,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="text-sm"
                         >
                           <span
-                            class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
+                            class="no-ligatures cursor-pointer text-theme-primary-600"
                             data-testid="TransactionRow__id"
                           >
                             9295a…e2ef3
@@ -8139,7 +8139,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
               </td>
             </tr>
             <tr
-              class="group relative css-1tl8buz"
+              class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
               data-testid="TableRow"
             >
               <td>
@@ -8163,7 +8163,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="text-sm"
                         >
                           <span
-                            class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
+                            class="no-ligatures cursor-pointer text-theme-primary-600"
                             data-testid="TransactionRow__id"
                           >
                             939e3…5b083
@@ -8300,7 +8300,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
               </td>
             </tr>
             <tr
-              class="group relative css-1tl8buz"
+              class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
               data-testid="TableRow"
             >
               <td>
@@ -8324,7 +8324,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="text-sm"
                         >
                           <span
-                            class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
+                            class="no-ligatures cursor-pointer text-theme-primary-600"
                             data-testid="TransactionRow__id"
                           >
                             939e3…5b083
@@ -8461,7 +8461,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
               </td>
             </tr>
             <tr
-              class="group relative css-1tl8buz"
+              class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
               data-testid="TableRow"
             >
               <td>
@@ -8485,7 +8485,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="text-sm"
                         >
                           <span
-                            class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
+                            class="no-ligatures cursor-pointer text-theme-primary-600"
                             data-testid="TransactionRow__id"
                           >
                             939e3…5b083
@@ -8622,7 +8622,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
               </td>
             </tr>
             <tr
-              class="group relative css-1tl8buz"
+              class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
               data-testid="TableRow"
             >
               <td>
@@ -8646,7 +8646,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="text-sm"
                         >
                           <span
-                            class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
+                            class="no-ligatures cursor-pointer text-theme-primary-600"
                             data-testid="TransactionRow__id"
                           >
                             939e3…5b083
@@ -8783,7 +8783,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
               </td>
             </tr>
             <tr
-              class="group relative css-1tl8buz"
+              class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
               data-testid="TableRow"
             >
               <td>
@@ -8807,7 +8807,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="text-sm"
                         >
                           <span
-                            class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
+                            class="no-ligatures cursor-pointer text-theme-primary-600"
                             data-testid="TransactionRow__id"
                           >
                             34b55…c829c
@@ -8948,7 +8948,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
               </td>
             </tr>
             <tr
-              class="group relative css-1tl8buz"
+              class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
               data-testid="TableRow"
             >
               <td>
@@ -8972,7 +8972,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="text-sm"
                         >
                           <span
-                            class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
+                            class="no-ligatures cursor-pointer text-theme-primary-600"
                             data-testid="TransactionRow__id"
                           >
                             34b55…c829c
@@ -9113,7 +9113,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
               </td>
             </tr>
             <tr
-              class="group relative css-1tl8buz"
+              class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
               data-testid="TableRow"
             >
               <td>
@@ -9137,7 +9137,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="text-sm"
                         >
                           <span
-                            class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
+                            class="no-ligatures cursor-pointer text-theme-primary-600"
                             data-testid="TransactionRow__id"
                           >
                             34b55…c829c
@@ -9278,7 +9278,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
               </td>
             </tr>
             <tr
-              class="group relative css-1tl8buz"
+              class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
               data-testid="TableRow"
             >
               <td>
@@ -9302,7 +9302,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="text-sm"
                         >
                           <span
-                            class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
+                            class="no-ligatures cursor-pointer text-theme-primary-600"
                             data-testid="TransactionRow__id"
                           >
                             34b55…c829c
@@ -9443,7 +9443,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
               </td>
             </tr>
             <tr
-              class="group relative css-1tl8buz"
+              class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
               data-testid="TableRow"
             >
               <td>
@@ -9467,7 +9467,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="text-sm"
                         >
                           <span
-                            class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
+                            class="no-ligatures cursor-pointer text-theme-primary-600"
                             data-testid="TransactionRow__id"
                           >
                             29cc2…13f90
@@ -9604,7 +9604,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
               </td>
             </tr>
             <tr
-              class="group relative css-1tl8buz"
+              class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
               data-testid="TableRow"
             >
               <td>
@@ -9628,7 +9628,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="text-sm"
                         >
                           <span
-                            class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
+                            class="no-ligatures cursor-pointer text-theme-primary-600"
                             data-testid="TransactionRow__id"
                           >
                             29cc2…13f90
@@ -9765,7 +9765,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
               </td>
             </tr>
             <tr
-              class="group relative css-1tl8buz"
+              class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
               data-testid="TableRow"
             >
               <td>
@@ -9789,7 +9789,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="text-sm"
                         >
                           <span
-                            class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
+                            class="no-ligatures cursor-pointer text-theme-primary-600"
                             data-testid="TransactionRow__id"
                           >
                             29cc2…13f90
@@ -9926,7 +9926,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
               </td>
             </tr>
             <tr
-              class="group relative css-1tl8buz"
+              class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
               data-testid="TableRow"
             >
               <td>
@@ -9950,7 +9950,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="text-sm"
                         >
                           <span
-                            class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
+                            class="no-ligatures cursor-pointer text-theme-primary-600"
                             data-testid="TransactionRow__id"
                           >
                             29cc2…13f90
@@ -10376,7 +10376,7 @@ exports[`Transactions > should hide view more button when there are no next page
       data-testid="TransactionTable"
     >
       <div
-        class="with-x-padding css-1m6rt2i"
+        class="table-wrapper with-x-padding"
         role="table"
       >
         <table
@@ -10588,7 +10588,7 @@ exports[`Transactions > should hide view more button when there are no next page
             role="rowgroup"
           >
             <tr
-              class="group relative css-1tl8buz"
+              class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
               data-testid="TableRow"
             >
               <td>
@@ -10612,7 +10612,7 @@ exports[`Transactions > should hide view more button when there are no next page
                           class="text-sm"
                         >
                           <span
-                            class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
+                            class="no-ligatures cursor-pointer text-theme-primary-600"
                             data-testid="TransactionRow__id"
                           >
                             d819c…1e493
@@ -10737,7 +10737,7 @@ exports[`Transactions > should hide view more button when there are no next page
               </td>
             </tr>
             <tr
-              class="group relative css-1tl8buz"
+              class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
               data-testid="TableRow"
             >
               <td>
@@ -10761,7 +10761,7 @@ exports[`Transactions > should hide view more button when there are no next page
                           class="text-sm"
                         >
                           <span
-                            class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
+                            class="no-ligatures cursor-pointer text-theme-primary-600"
                             data-testid="TransactionRow__id"
                           >
                             d819c…1e493
@@ -10886,7 +10886,7 @@ exports[`Transactions > should hide view more button when there are no next page
               </td>
             </tr>
             <tr
-              class="group relative css-1tl8buz"
+              class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
               data-testid="TableRow"
             >
               <td>
@@ -10910,7 +10910,7 @@ exports[`Transactions > should hide view more button when there are no next page
                           class="text-sm"
                         >
                           <span
-                            class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
+                            class="no-ligatures cursor-pointer text-theme-primary-600"
                             data-testid="TransactionRow__id"
                           >
                             32e52…e2faf
@@ -11035,7 +11035,7 @@ exports[`Transactions > should hide view more button when there are no next page
               </td>
             </tr>
             <tr
-              class="group relative css-1tl8buz"
+              class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
               data-testid="TableRow"
             >
               <td>
@@ -11059,7 +11059,7 @@ exports[`Transactions > should hide view more button when there are no next page
                           class="text-sm"
                         >
                           <span
-                            class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
+                            class="no-ligatures cursor-pointer text-theme-primary-600"
                             data-testid="TransactionRow__id"
                           >
                             32e52…e2faf
@@ -11184,7 +11184,7 @@ exports[`Transactions > should hide view more button when there are no next page
               </td>
             </tr>
             <tr
-              class="group relative css-1tl8buz"
+              class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
               data-testid="TableRow"
             >
               <td>
@@ -11208,7 +11208,7 @@ exports[`Transactions > should hide view more button when there are no next page
                           class="text-sm"
                         >
                           <span
-                            class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
+                            class="no-ligatures cursor-pointer text-theme-primary-600"
                             data-testid="TransactionRow__id"
                           >
                             1e9b9…1067e
@@ -11278,7 +11278,7 @@ exports[`Transactions > should hide view more button when there are no next page
                           data-testid="Address__alias"
                         >
                           <span
-                            class="no-ligatures css-9nx3be"
+                            class="no-ligatures transition-colors duration-200"
                             data-testid="TruncateEnd"
                           >
                             ARK Wallet 2
@@ -11354,7 +11354,7 @@ exports[`Transactions > should hide view more button when there are no next page
               </td>
             </tr>
             <tr
-              class="group relative css-1tl8buz"
+              class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
               data-testid="TableRow"
             >
               <td>
@@ -11378,7 +11378,7 @@ exports[`Transactions > should hide view more button when there are no next page
                           class="text-sm"
                         >
                           <span
-                            class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
+                            class="no-ligatures cursor-pointer text-theme-primary-600"
                             data-testid="TransactionRow__id"
                           >
                             1e9b9…1067e
@@ -11448,7 +11448,7 @@ exports[`Transactions > should hide view more button when there are no next page
                           data-testid="Address__alias"
                         >
                           <span
-                            class="no-ligatures css-9nx3be"
+                            class="no-ligatures transition-colors duration-200"
                             data-testid="TruncateEnd"
                           >
                             ARK Wallet 2
@@ -11524,7 +11524,7 @@ exports[`Transactions > should hide view more button when there are no next page
               </td>
             </tr>
             <tr
-              class="group relative css-1tl8buz"
+              class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
               data-testid="TableRow"
             >
               <td>
@@ -11548,7 +11548,7 @@ exports[`Transactions > should hide view more button when there are no next page
                           class="text-sm"
                         >
                           <span
-                            class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
+                            class="no-ligatures cursor-pointer text-theme-primary-600"
                             data-testid="TransactionRow__id"
                           >
                             8f913…49877
@@ -11685,7 +11685,7 @@ exports[`Transactions > should hide view more button when there are no next page
               </td>
             </tr>
             <tr
-              class="group relative css-1tl8buz"
+              class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
               data-testid="TableRow"
             >
               <td>
@@ -11709,7 +11709,7 @@ exports[`Transactions > should hide view more button when there are no next page
                           class="text-sm"
                         >
                           <span
-                            class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
+                            class="no-ligatures cursor-pointer text-theme-primary-600"
                             data-testid="TransactionRow__id"
                           >
                             8f913…49877
@@ -11846,7 +11846,7 @@ exports[`Transactions > should hide view more button when there are no next page
               </td>
             </tr>
             <tr
-              class="group relative css-1tl8buz"
+              class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
               data-testid="TableRow"
             >
               <td>
@@ -11870,7 +11870,7 @@ exports[`Transactions > should hide view more button when there are no next page
                           class="text-sm"
                         >
                           <span
-                            class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
+                            class="no-ligatures cursor-pointer text-theme-primary-600"
                             data-testid="TransactionRow__id"
                           >
                             0d8d1…8a2cf
@@ -12007,7 +12007,7 @@ exports[`Transactions > should hide view more button when there are no next page
               </td>
             </tr>
             <tr
-              class="group relative css-1tl8buz"
+              class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
               data-testid="TableRow"
             >
               <td>
@@ -12031,7 +12031,7 @@ exports[`Transactions > should hide view more button when there are no next page
                           class="text-sm"
                         >
                           <span
-                            class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
+                            class="no-ligatures cursor-pointer text-theme-primary-600"
                             data-testid="TransactionRow__id"
                           >
                             0d8d1…8a2cf
@@ -12168,7 +12168,7 @@ exports[`Transactions > should hide view more button when there are no next page
               </td>
             </tr>
             <tr
-              class="group relative css-1tl8buz"
+              class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
               data-testid="TableRow"
             >
               <td>
@@ -12192,7 +12192,7 @@ exports[`Transactions > should hide view more button when there are no next page
                           class="text-sm"
                         >
                           <span
-                            class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
+                            class="no-ligatures cursor-pointer text-theme-primary-600"
                             data-testid="TransactionRow__id"
                           >
                             73b0a…cb33e
@@ -12329,7 +12329,7 @@ exports[`Transactions > should hide view more button when there are no next page
               </td>
             </tr>
             <tr
-              class="group relative css-1tl8buz"
+              class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
               data-testid="TableRow"
             >
               <td>
@@ -12353,7 +12353,7 @@ exports[`Transactions > should hide view more button when there are no next page
                           class="text-sm"
                         >
                           <span
-                            class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
+                            class="no-ligatures cursor-pointer text-theme-primary-600"
                             data-testid="TransactionRow__id"
                           >
                             73b0a…cb33e
@@ -12490,7 +12490,7 @@ exports[`Transactions > should hide view more button when there are no next page
               </td>
             </tr>
             <tr
-              class="group relative css-1tl8buz"
+              class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
               data-testid="TableRow"
             >
               <td>
@@ -12514,7 +12514,7 @@ exports[`Transactions > should hide view more button when there are no next page
                           class="text-sm"
                         >
                           <span
-                            class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
+                            class="no-ligatures cursor-pointer text-theme-primary-600"
                             data-testid="TransactionRow__id"
                           >
                             b32ea…70a37
@@ -12651,7 +12651,7 @@ exports[`Transactions > should hide view more button when there are no next page
               </td>
             </tr>
             <tr
-              class="group relative css-1tl8buz"
+              class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
               data-testid="TableRow"
             >
               <td>
@@ -12675,7 +12675,7 @@ exports[`Transactions > should hide view more button when there are no next page
                           class="text-sm"
                         >
                           <span
-                            class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
+                            class="no-ligatures cursor-pointer text-theme-primary-600"
                             data-testid="TransactionRow__id"
                           >
                             b32ea…70a37
@@ -12812,7 +12812,7 @@ exports[`Transactions > should hide view more button when there are no next page
               </td>
             </tr>
             <tr
-              class="group relative css-1tl8buz"
+              class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
               data-testid="TableRow"
             >
               <td>
@@ -12836,7 +12836,7 @@ exports[`Transactions > should hide view more button when there are no next page
                           class="text-sm"
                         >
                           <span
-                            class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
+                            class="no-ligatures cursor-pointer text-theme-primary-600"
                             data-testid="TransactionRow__id"
                           >
                             35c3e…53f9e
@@ -12973,7 +12973,7 @@ exports[`Transactions > should hide view more button when there are no next page
               </td>
             </tr>
             <tr
-              class="group relative css-1tl8buz"
+              class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
               data-testid="TableRow"
             >
               <td>
@@ -12997,7 +12997,7 @@ exports[`Transactions > should hide view more button when there are no next page
                           class="text-sm"
                         >
                           <span
-                            class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
+                            class="no-ligatures cursor-pointer text-theme-primary-600"
                             data-testid="TransactionRow__id"
                           >
                             35c3e…53f9e
@@ -13134,7 +13134,7 @@ exports[`Transactions > should hide view more button when there are no next page
               </td>
             </tr>
             <tr
-              class="group relative css-1tl8buz"
+              class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
               data-testid="TableRow"
             >
               <td>
@@ -13158,7 +13158,7 @@ exports[`Transactions > should hide view more button when there are no next page
                           class="text-sm"
                         >
                           <span
-                            class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
+                            class="no-ligatures cursor-pointer text-theme-primary-600"
                             data-testid="TransactionRow__id"
                           >
                             83f09…4d3c5
@@ -13295,7 +13295,7 @@ exports[`Transactions > should hide view more button when there are no next page
               </td>
             </tr>
             <tr
-              class="group relative css-1tl8buz"
+              class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
               data-testid="TableRow"
             >
               <td>
@@ -13319,7 +13319,7 @@ exports[`Transactions > should hide view more button when there are no next page
                           class="text-sm"
                         >
                           <span
-                            class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
+                            class="no-ligatures cursor-pointer text-theme-primary-600"
                             data-testid="TransactionRow__id"
                           >
                             83f09…4d3c5
@@ -13456,7 +13456,7 @@ exports[`Transactions > should hide view more button when there are no next page
               </td>
             </tr>
             <tr
-              class="group relative css-1tl8buz"
+              class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
               data-testid="TableRow"
             >
               <td>
@@ -13480,7 +13480,7 @@ exports[`Transactions > should hide view more button when there are no next page
                           class="text-sm"
                         >
                           <span
-                            class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
+                            class="no-ligatures cursor-pointer text-theme-primary-600"
                             data-testid="TransactionRow__id"
                           >
                             2347c…b212c
@@ -13617,7 +13617,7 @@ exports[`Transactions > should hide view more button when there are no next page
               </td>
             </tr>
             <tr
-              class="group relative css-1tl8buz"
+              class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
               data-testid="TableRow"
             >
               <td>
@@ -13641,7 +13641,7 @@ exports[`Transactions > should hide view more button when there are no next page
                           class="text-sm"
                         >
                           <span
-                            class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
+                            class="no-ligatures cursor-pointer text-theme-primary-600"
                             data-testid="TransactionRow__id"
                           >
                             2347c…b212c
@@ -13778,7 +13778,7 @@ exports[`Transactions > should hide view more button when there are no next page
               </td>
             </tr>
             <tr
-              class="group relative css-1tl8buz"
+              class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
               data-testid="TableRow"
             >
               <td>
@@ -13802,7 +13802,7 @@ exports[`Transactions > should hide view more button when there are no next page
                           class="text-sm"
                         >
                           <span
-                            class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
+                            class="no-ligatures cursor-pointer text-theme-primary-600"
                             data-testid="TransactionRow__id"
                           >
                             56e85…16867
@@ -13939,7 +13939,7 @@ exports[`Transactions > should hide view more button when there are no next page
               </td>
             </tr>
             <tr
-              class="group relative css-1tl8buz"
+              class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
               data-testid="TableRow"
             >
               <td>
@@ -13963,7 +13963,7 @@ exports[`Transactions > should hide view more button when there are no next page
                           class="text-sm"
                         >
                           <span
-                            class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
+                            class="no-ligatures cursor-pointer text-theme-primary-600"
                             data-testid="TransactionRow__id"
                           >
                             56e85…16867
@@ -14100,7 +14100,7 @@ exports[`Transactions > should hide view more button when there are no next page
               </td>
             </tr>
             <tr
-              class="group relative css-1tl8buz"
+              class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
               data-testid="TableRow"
             >
               <td>
@@ -14124,7 +14124,7 @@ exports[`Transactions > should hide view more button when there are no next page
                           class="text-sm"
                         >
                           <span
-                            class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
+                            class="no-ligatures cursor-pointer text-theme-primary-600"
                             data-testid="TransactionRow__id"
                           >
                             9295a…e2ef3
@@ -14259,7 +14259,7 @@ exports[`Transactions > should hide view more button when there are no next page
               </td>
             </tr>
             <tr
-              class="group relative css-1tl8buz"
+              class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
               data-testid="TableRow"
             >
               <td>
@@ -14283,7 +14283,7 @@ exports[`Transactions > should hide view more button when there are no next page
                           class="text-sm"
                         >
                           <span
-                            class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
+                            class="no-ligatures cursor-pointer text-theme-primary-600"
                             data-testid="TransactionRow__id"
                           >
                             9295a…e2ef3
@@ -14418,7 +14418,7 @@ exports[`Transactions > should hide view more button when there are no next page
               </td>
             </tr>
             <tr
-              class="group relative css-1tl8buz"
+              class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
               data-testid="TableRow"
             >
               <td>
@@ -14442,7 +14442,7 @@ exports[`Transactions > should hide view more button when there are no next page
                           class="text-sm"
                         >
                           <span
-                            class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
+                            class="no-ligatures cursor-pointer text-theme-primary-600"
                             data-testid="TransactionRow__id"
                           >
                             939e3…5b083
@@ -14579,7 +14579,7 @@ exports[`Transactions > should hide view more button when there are no next page
               </td>
             </tr>
             <tr
-              class="group relative css-1tl8buz"
+              class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
               data-testid="TableRow"
             >
               <td>
@@ -14603,7 +14603,7 @@ exports[`Transactions > should hide view more button when there are no next page
                           class="text-sm"
                         >
                           <span
-                            class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
+                            class="no-ligatures cursor-pointer text-theme-primary-600"
                             data-testid="TransactionRow__id"
                           >
                             939e3…5b083
@@ -14740,7 +14740,7 @@ exports[`Transactions > should hide view more button when there are no next page
               </td>
             </tr>
             <tr
-              class="group relative css-1tl8buz"
+              class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
               data-testid="TableRow"
             >
               <td>
@@ -14764,7 +14764,7 @@ exports[`Transactions > should hide view more button when there are no next page
                           class="text-sm"
                         >
                           <span
-                            class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
+                            class="no-ligatures cursor-pointer text-theme-primary-600"
                             data-testid="TransactionRow__id"
                           >
                             34b55…c829c
@@ -14905,7 +14905,7 @@ exports[`Transactions > should hide view more button when there are no next page
               </td>
             </tr>
             <tr
-              class="group relative css-1tl8buz"
+              class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
               data-testid="TableRow"
             >
               <td>
@@ -14929,7 +14929,7 @@ exports[`Transactions > should hide view more button when there are no next page
                           class="text-sm"
                         >
                           <span
-                            class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
+                            class="no-ligatures cursor-pointer text-theme-primary-600"
                             data-testid="TransactionRow__id"
                           >
                             34b55…c829c
@@ -15070,7 +15070,7 @@ exports[`Transactions > should hide view more button when there are no next page
               </td>
             </tr>
             <tr
-              class="group relative css-1tl8buz"
+              class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
               data-testid="TableRow"
             >
               <td>
@@ -15094,7 +15094,7 @@ exports[`Transactions > should hide view more button when there are no next page
                           class="text-sm"
                         >
                           <span
-                            class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
+                            class="no-ligatures cursor-pointer text-theme-primary-600"
                             data-testid="TransactionRow__id"
                           >
                             29cc2…13f90
@@ -15231,7 +15231,7 @@ exports[`Transactions > should hide view more button when there are no next page
               </td>
             </tr>
             <tr
-              class="group relative css-1tl8buz"
+              class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
               data-testid="TableRow"
             >
               <td>
@@ -15255,7 +15255,7 @@ exports[`Transactions > should hide view more button when there are no next page
                           class="text-sm"
                         >
                           <span
-                            class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
+                            class="no-ligatures cursor-pointer text-theme-primary-600"
                             data-testid="TransactionRow__id"
                           >
                             29cc2…13f90
@@ -15681,7 +15681,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
       data-testid="TransactionTable"
     >
       <div
-        class="with-x-padding css-1m6rt2i"
+        class="table-wrapper with-x-padding"
         role="table"
       >
         <table
@@ -15893,7 +15893,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
             role="rowgroup"
           >
             <tr
-              class="group relative css-1tl8buz"
+              class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
               data-testid="TableRow"
             >
               <td>
@@ -15917,7 +15917,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                           class="text-sm"
                         >
                           <span
-                            class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
+                            class="no-ligatures cursor-pointer text-theme-primary-600"
                             data-testid="TransactionRow__id"
                           >
                             d819c…1e493
@@ -16042,7 +16042,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
               </td>
             </tr>
             <tr
-              class="group relative css-1tl8buz"
+              class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
               data-testid="TableRow"
             >
               <td>
@@ -16066,7 +16066,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                           class="text-sm"
                         >
                           <span
-                            class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
+                            class="no-ligatures cursor-pointer text-theme-primary-600"
                             data-testid="TransactionRow__id"
                           >
                             d819c…1e493
@@ -16191,7 +16191,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
               </td>
             </tr>
             <tr
-              class="group relative css-1tl8buz"
+              class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
               data-testid="TableRow"
             >
               <td>
@@ -16215,7 +16215,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                           class="text-sm"
                         >
                           <span
-                            class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
+                            class="no-ligatures cursor-pointer text-theme-primary-600"
                             data-testid="TransactionRow__id"
                           >
                             32e52…e2faf
@@ -16340,7 +16340,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
               </td>
             </tr>
             <tr
-              class="group relative css-1tl8buz"
+              class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
               data-testid="TableRow"
             >
               <td>
@@ -16364,7 +16364,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                           class="text-sm"
                         >
                           <span
-                            class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
+                            class="no-ligatures cursor-pointer text-theme-primary-600"
                             data-testid="TransactionRow__id"
                           >
                             32e52…e2faf
@@ -16489,7 +16489,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
               </td>
             </tr>
             <tr
-              class="group relative css-1tl8buz"
+              class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
               data-testid="TableRow"
             >
               <td>
@@ -16513,7 +16513,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                           class="text-sm"
                         >
                           <span
-                            class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
+                            class="no-ligatures cursor-pointer text-theme-primary-600"
                             data-testid="TransactionRow__id"
                           >
                             1e9b9…1067e
@@ -16583,7 +16583,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                           data-testid="Address__alias"
                         >
                           <span
-                            class="no-ligatures css-9nx3be"
+                            class="no-ligatures transition-colors duration-200"
                             data-testid="TruncateEnd"
                           >
                             ARK Wallet 2
@@ -16659,7 +16659,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
               </td>
             </tr>
             <tr
-              class="group relative css-1tl8buz"
+              class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
               data-testid="TableRow"
             >
               <td>
@@ -16683,7 +16683,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                           class="text-sm"
                         >
                           <span
-                            class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
+                            class="no-ligatures cursor-pointer text-theme-primary-600"
                             data-testid="TransactionRow__id"
                           >
                             1e9b9…1067e
@@ -16753,7 +16753,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                           data-testid="Address__alias"
                         >
                           <span
-                            class="no-ligatures css-9nx3be"
+                            class="no-ligatures transition-colors duration-200"
                             data-testid="TruncateEnd"
                           >
                             ARK Wallet 2
@@ -16829,7 +16829,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
               </td>
             </tr>
             <tr
-              class="group relative css-1tl8buz"
+              class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
               data-testid="TableRow"
             >
               <td>
@@ -16853,7 +16853,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                           class="text-sm"
                         >
                           <span
-                            class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
+                            class="no-ligatures cursor-pointer text-theme-primary-600"
                             data-testid="TransactionRow__id"
                           >
                             8f913…49877
@@ -16990,7 +16990,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
               </td>
             </tr>
             <tr
-              class="group relative css-1tl8buz"
+              class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
               data-testid="TableRow"
             >
               <td>
@@ -17014,7 +17014,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                           class="text-sm"
                         >
                           <span
-                            class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
+                            class="no-ligatures cursor-pointer text-theme-primary-600"
                             data-testid="TransactionRow__id"
                           >
                             8f913…49877
@@ -17151,7 +17151,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
               </td>
             </tr>
             <tr
-              class="group relative css-1tl8buz"
+              class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
               data-testid="TableRow"
             >
               <td>
@@ -17175,7 +17175,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                           class="text-sm"
                         >
                           <span
-                            class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
+                            class="no-ligatures cursor-pointer text-theme-primary-600"
                             data-testid="TransactionRow__id"
                           >
                             0d8d1…8a2cf
@@ -17312,7 +17312,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
               </td>
             </tr>
             <tr
-              class="group relative css-1tl8buz"
+              class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
               data-testid="TableRow"
             >
               <td>
@@ -17336,7 +17336,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                           class="text-sm"
                         >
                           <span
-                            class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
+                            class="no-ligatures cursor-pointer text-theme-primary-600"
                             data-testid="TransactionRow__id"
                           >
                             0d8d1…8a2cf
@@ -17473,7 +17473,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
               </td>
             </tr>
             <tr
-              class="group relative css-1tl8buz"
+              class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
               data-testid="TableRow"
             >
               <td>
@@ -17497,7 +17497,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                           class="text-sm"
                         >
                           <span
-                            class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
+                            class="no-ligatures cursor-pointer text-theme-primary-600"
                             data-testid="TransactionRow__id"
                           >
                             73b0a…cb33e
@@ -17634,7 +17634,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
               </td>
             </tr>
             <tr
-              class="group relative css-1tl8buz"
+              class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
               data-testid="TableRow"
             >
               <td>
@@ -17658,7 +17658,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                           class="text-sm"
                         >
                           <span
-                            class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
+                            class="no-ligatures cursor-pointer text-theme-primary-600"
                             data-testid="TransactionRow__id"
                           >
                             73b0a…cb33e
@@ -17795,7 +17795,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
               </td>
             </tr>
             <tr
-              class="group relative css-1tl8buz"
+              class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
               data-testid="TableRow"
             >
               <td>
@@ -17819,7 +17819,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                           class="text-sm"
                         >
                           <span
-                            class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
+                            class="no-ligatures cursor-pointer text-theme-primary-600"
                             data-testid="TransactionRow__id"
                           >
                             b32ea…70a37
@@ -17956,7 +17956,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
               </td>
             </tr>
             <tr
-              class="group relative css-1tl8buz"
+              class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
               data-testid="TableRow"
             >
               <td>
@@ -17980,7 +17980,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                           class="text-sm"
                         >
                           <span
-                            class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
+                            class="no-ligatures cursor-pointer text-theme-primary-600"
                             data-testid="TransactionRow__id"
                           >
                             b32ea…70a37
@@ -18117,7 +18117,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
               </td>
             </tr>
             <tr
-              class="group relative css-1tl8buz"
+              class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
               data-testid="TableRow"
             >
               <td>
@@ -18141,7 +18141,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                           class="text-sm"
                         >
                           <span
-                            class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
+                            class="no-ligatures cursor-pointer text-theme-primary-600"
                             data-testid="TransactionRow__id"
                           >
                             35c3e…53f9e
@@ -18278,7 +18278,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
               </td>
             </tr>
             <tr
-              class="group relative css-1tl8buz"
+              class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
               data-testid="TableRow"
             >
               <td>
@@ -18302,7 +18302,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                           class="text-sm"
                         >
                           <span
-                            class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
+                            class="no-ligatures cursor-pointer text-theme-primary-600"
                             data-testid="TransactionRow__id"
                           >
                             35c3e…53f9e
@@ -18439,7 +18439,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
               </td>
             </tr>
             <tr
-              class="group relative css-1tl8buz"
+              class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
               data-testid="TableRow"
             >
               <td>
@@ -18463,7 +18463,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                           class="text-sm"
                         >
                           <span
-                            class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
+                            class="no-ligatures cursor-pointer text-theme-primary-600"
                             data-testid="TransactionRow__id"
                           >
                             83f09…4d3c5
@@ -18600,7 +18600,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
               </td>
             </tr>
             <tr
-              class="group relative css-1tl8buz"
+              class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
               data-testid="TableRow"
             >
               <td>
@@ -18624,7 +18624,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                           class="text-sm"
                         >
                           <span
-                            class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
+                            class="no-ligatures cursor-pointer text-theme-primary-600"
                             data-testid="TransactionRow__id"
                           >
                             83f09…4d3c5
@@ -18761,7 +18761,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
               </td>
             </tr>
             <tr
-              class="group relative css-1tl8buz"
+              class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
               data-testid="TableRow"
             >
               <td>
@@ -18785,7 +18785,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                           class="text-sm"
                         >
                           <span
-                            class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
+                            class="no-ligatures cursor-pointer text-theme-primary-600"
                             data-testid="TransactionRow__id"
                           >
                             2347c…b212c
@@ -18922,7 +18922,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
               </td>
             </tr>
             <tr
-              class="group relative css-1tl8buz"
+              class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
               data-testid="TableRow"
             >
               <td>
@@ -18946,7 +18946,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                           class="text-sm"
                         >
                           <span
-                            class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
+                            class="no-ligatures cursor-pointer text-theme-primary-600"
                             data-testid="TransactionRow__id"
                           >
                             2347c…b212c
@@ -19083,7 +19083,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
               </td>
             </tr>
             <tr
-              class="group relative css-1tl8buz"
+              class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
               data-testid="TableRow"
             >
               <td>
@@ -19107,7 +19107,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                           class="text-sm"
                         >
                           <span
-                            class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
+                            class="no-ligatures cursor-pointer text-theme-primary-600"
                             data-testid="TransactionRow__id"
                           >
                             56e85…16867
@@ -19244,7 +19244,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
               </td>
             </tr>
             <tr
-              class="group relative css-1tl8buz"
+              class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
               data-testid="TableRow"
             >
               <td>
@@ -19268,7 +19268,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                           class="text-sm"
                         >
                           <span
-                            class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
+                            class="no-ligatures cursor-pointer text-theme-primary-600"
                             data-testid="TransactionRow__id"
                           >
                             56e85…16867
@@ -19405,7 +19405,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
               </td>
             </tr>
             <tr
-              class="group relative css-1tl8buz"
+              class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
               data-testid="TableRow"
             >
               <td>
@@ -19429,7 +19429,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                           class="text-sm"
                         >
                           <span
-                            class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
+                            class="no-ligatures cursor-pointer text-theme-primary-600"
                             data-testid="TransactionRow__id"
                           >
                             9295a…e2ef3
@@ -19564,7 +19564,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
               </td>
             </tr>
             <tr
-              class="group relative css-1tl8buz"
+              class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
               data-testid="TableRow"
             >
               <td>
@@ -19588,7 +19588,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                           class="text-sm"
                         >
                           <span
-                            class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
+                            class="no-ligatures cursor-pointer text-theme-primary-600"
                             data-testid="TransactionRow__id"
                           >
                             9295a…e2ef3
@@ -19723,7 +19723,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
               </td>
             </tr>
             <tr
-              class="group relative css-1tl8buz"
+              class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
               data-testid="TableRow"
             >
               <td>
@@ -19747,7 +19747,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                           class="text-sm"
                         >
                           <span
-                            class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
+                            class="no-ligatures cursor-pointer text-theme-primary-600"
                             data-testid="TransactionRow__id"
                           >
                             939e3…5b083
@@ -19884,7 +19884,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
               </td>
             </tr>
             <tr
-              class="group relative css-1tl8buz"
+              class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
               data-testid="TableRow"
             >
               <td>
@@ -19908,7 +19908,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                           class="text-sm"
                         >
                           <span
-                            class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
+                            class="no-ligatures cursor-pointer text-theme-primary-600"
                             data-testid="TransactionRow__id"
                           >
                             939e3…5b083
@@ -20045,7 +20045,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
               </td>
             </tr>
             <tr
-              class="group relative css-1tl8buz"
+              class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
               data-testid="TableRow"
             >
               <td>
@@ -20069,7 +20069,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                           class="text-sm"
                         >
                           <span
-                            class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
+                            class="no-ligatures cursor-pointer text-theme-primary-600"
                             data-testid="TransactionRow__id"
                           >
                             34b55…c829c
@@ -20210,7 +20210,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
               </td>
             </tr>
             <tr
-              class="group relative css-1tl8buz"
+              class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
               data-testid="TableRow"
             >
               <td>
@@ -20234,7 +20234,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                           class="text-sm"
                         >
                           <span
-                            class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
+                            class="no-ligatures cursor-pointer text-theme-primary-600"
                             data-testid="TransactionRow__id"
                           >
                             34b55…c829c
@@ -20375,7 +20375,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
               </td>
             </tr>
             <tr
-              class="group relative css-1tl8buz"
+              class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
               data-testid="TableRow"
             >
               <td>
@@ -20399,7 +20399,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                           class="text-sm"
                         >
                           <span
-                            class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
+                            class="no-ligatures cursor-pointer text-theme-primary-600"
                             data-testid="TransactionRow__id"
                           >
                             29cc2…13f90
@@ -20536,7 +20536,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
               </td>
             </tr>
             <tr
-              class="group relative css-1tl8buz"
+              class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
               data-testid="TableRow"
             >
               <td>
@@ -20560,7 +20560,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                           class="text-sm"
                         >
                           <span
-                            class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
+                            class="no-ligatures cursor-pointer text-theme-primary-600"
                             data-testid="TransactionRow__id"
                           >
                             29cc2…13f90

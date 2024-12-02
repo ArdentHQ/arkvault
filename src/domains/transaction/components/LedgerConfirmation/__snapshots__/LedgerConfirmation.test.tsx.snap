@@ -16,7 +16,7 @@ exports[`LedgerConfirmation > should render 1`] = `
       data-testid="LedgerConfirmation-loading_message"
     >
       <div
-        class="animate-spin rounded-full border [border-width:5px] flex-shrink-0 w-5 h-5 border-theme-warning-200 dark:border-theme-secondary-800 border-l-theme-warning-900 dark:border-l-theme-warning-600"
+        class="animate-spin rounded-full border-[5px] flex-shrink-0 w-5 h-5 border-theme-warning-200 dark:border-theme-secondary-800 border-l-theme-warning-900 dark:border-l-theme-warning-600"
       />
       <div
         class="h-4 relative mx-2 inline-block border-l border-t-0 border-solid align-middle text-theme-warning-200 dark:text-theme-secondary-800"
@@ -47,7 +47,7 @@ exports[`LedgerConfirmation > should render with children 1`] = `
       data-testid="LedgerConfirmation-loading_message"
     >
       <div
-        class="animate-spin rounded-full border [border-width:5px] flex-shrink-0 w-5 h-5 border-theme-warning-200 dark:border-theme-secondary-800 border-l-theme-warning-900 dark:border-l-theme-warning-600"
+        class="animate-spin rounded-full border-[5px] flex-shrink-0 w-5 h-5 border-theme-warning-200 dark:border-theme-secondary-800 border-l-theme-warning-900 dark:border-l-theme-warning-600"
       />
       <div
         class="h-4 relative mx-2 inline-block border-l border-t-0 border-solid align-middle text-theme-warning-200 dark:text-theme-secondary-800"
@@ -88,7 +88,7 @@ exports[`LedgerConfirmation > should render with children and custom heading 1`]
       data-testid="LedgerConfirmation-loading_message"
     >
       <div
-        class="animate-spin rounded-full border [border-width:5px] flex-shrink-0 w-5 h-5 border-theme-warning-200 dark:border-theme-secondary-800 border-l-theme-warning-900 dark:border-l-theme-warning-600"
+        class="animate-spin rounded-full border-[5px] flex-shrink-0 w-5 h-5 border-theme-warning-200 dark:border-theme-secondary-800 border-l-theme-warning-900 dark:border-l-theme-warning-600"
       />
       <div
         class="h-4 relative mx-2 inline-block border-l border-t-0 border-solid align-middle text-theme-warning-200 dark:text-theme-secondary-800"

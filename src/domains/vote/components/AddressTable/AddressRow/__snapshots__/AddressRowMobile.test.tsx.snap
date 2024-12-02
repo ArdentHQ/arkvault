@@ -30,7 +30,7 @@ exports[`AddressRowMobile > should emit action on select button 1`] = `
                       data-testid="Address__alias"
                     >
                       <span
-                        class="no-ligatures css-9nx3be"
+                        class="no-ligatures transition-colors duration-200"
                         data-testid="TruncateEnd"
                       >
                         ARK Wallet 1
@@ -119,7 +119,7 @@ exports[`AddressRowMobile > should emit action on select button 1`] = `
                             class="flex w-full items-center"
                           >
                             <span
-                              class="no-ligatures css-0"
+                              class="no-ligatures"
                               data-testid="TruncateMiddle"
                             >
                               arkx
@@ -251,7 +251,7 @@ exports[`AddressRowMobile > should render for a multisignature wallet 1`] = `
                       data-testid="Address__alias"
                     >
                       <span
-                        class="no-ligatures css-9nx3be"
+                        class="no-ligatures transition-colors duration-200"
                         data-testid="TruncateEnd"
                       >
                         ARK Wallet 1
@@ -340,7 +340,7 @@ exports[`AddressRowMobile > should render for a multisignature wallet 1`] = `
                             class="flex w-full items-center"
                           >
                             <span
-                              class="no-ligatures css-0"
+                              class="no-ligatures"
                               data-testid="TruncateMiddle"
                             >
                               arkx
@@ -470,7 +470,7 @@ exports[`AddressRowMobile > should render in 375 screen width 1`] = `
                       data-testid="Address__alias"
                     >
                       <span
-                        class="no-ligatures css-9nx3be"
+                        class="no-ligatures transition-colors duration-200"
                         data-testid="TruncateEnd"
                       >
                         ARK Wallet 1
@@ -559,7 +559,7 @@ exports[`AddressRowMobile > should render in 375 screen width 1`] = `
                             class="flex w-full items-center"
                           >
                             <span
-                              class="no-ligatures css-0"
+                              class="no-ligatures"
                               data-testid="TruncateMiddle"
                             >
                               arkx
@@ -690,7 +690,7 @@ exports[`AddressRowMobile > should render in 420 screen width 1`] = `
                       data-testid="Address__alias"
                     >
                       <span
-                        class="no-ligatures css-9nx3be"
+                        class="no-ligatures transition-colors duration-200"
                         data-testid="TruncateEnd"
                       >
                         ARK Wallet 1
@@ -779,7 +779,7 @@ exports[`AddressRowMobile > should render in 420 screen width 1`] = `
                             class="flex w-full items-center"
                           >
                             <span
-                              class="no-ligatures css-0"
+                              class="no-ligatures"
                               data-testid="TruncateMiddle"
                             >
                               arkx
@@ -910,7 +910,7 @@ exports[`AddressRowMobile > should render when the maximum votes is greater than
                       data-testid="Address__alias"
                     >
                       <span
-                        class="no-ligatures css-9nx3be"
+                        class="no-ligatures transition-colors duration-200"
                         data-testid="TruncateEnd"
                       >
                         ARK Wallet 1
@@ -999,7 +999,7 @@ exports[`AddressRowMobile > should render when the maximum votes is greater than
                             class="flex w-full items-center"
                           >
                             <span
-                              class="no-ligatures css-0"
+                              class="no-ligatures"
                               data-testid="TruncateMiddle"
                             >
                               arkx
@@ -1129,7 +1129,7 @@ exports[`AddressRowMobile > should render when the wallet has many votes 1`] = `
                       data-testid="Address__alias"
                     >
                       <span
-                        class="no-ligatures css-9nx3be"
+                        class="no-ligatures transition-colors duration-200"
                         data-testid="TruncateEnd"
                       >
                         ARK Wallet 1
@@ -1218,7 +1218,7 @@ exports[`AddressRowMobile > should render when the wallet has many votes 1`] = `
                             class="flex w-full items-center"
                           >
                             <span
-                              class="no-ligatures css-0"
+                              class="no-ligatures"
                               data-testid="TruncateMiddle"
                             >
                               arkx
@@ -1348,7 +1348,7 @@ exports[`AddressRowMobile > should render when wallet hasn't voted 1`] = `
                       data-testid="Address__alias"
                     >
                       <span
-                        class="no-ligatures css-9nx3be"
+                        class="no-ligatures transition-colors duration-200"
                         data-testid="TruncateEnd"
                       >
                         ARK Wallet 1
@@ -1437,7 +1437,7 @@ exports[`AddressRowMobile > should render when wallet hasn't voted 1`] = `
                             class="flex w-full items-center"
                           >
                             <span
-                              class="no-ligatures css-0"
+                              class="no-ligatures"
                               data-testid="TruncateMiddle"
                             >
                               arkx
@@ -1558,7 +1558,7 @@ exports[`AddressRowMobile > should render when wallet hasn't voted 1`] = `
                       data-testid="Address__alias"
                     >
                       <span
-                        class="no-ligatures css-9nx3be"
+                        class="no-ligatures transition-colors duration-200"
                         data-testid="TruncateEnd"
                       >
                         testwallet2
@@ -1693,7 +1693,7 @@ exports[`AddressRowMobile > should render when wallet not found for votes 1`] = 
                       data-testid="Address__alias"
                     >
                       <span
-                        class="no-ligatures css-9nx3be"
+                        class="no-ligatures transition-colors duration-200"
                         data-testid="TruncateEnd"
                       >
                         ARK Wallet 1
@@ -1782,7 +1782,7 @@ exports[`AddressRowMobile > should render when wallet not found for votes 1`] = 
                             class="flex w-full items-center"
                           >
                             <span
-                              class="no-ligatures css-0"
+                              class="no-ligatures"
                               data-testid="TruncateMiddle"
                             >
                               arkx
@@ -2028,7 +2028,7 @@ exports[`AddressRowMobile > should render when wallet not loaded 1`] = `
                       data-testid="Address__alias"
                     >
                       <span
-                        class="no-ligatures css-9nx3be"
+                        class="no-ligatures transition-colors duration-200"
                         data-testid="TruncateEnd"
                       >
                         ARK Wallet 1
@@ -2159,7 +2159,7 @@ exports[`AddressRowMobile > should render with active delegate 1`] = `
                       data-testid="Address__alias"
                     >
                       <span
-                        class="no-ligatures css-9nx3be"
+                        class="no-ligatures transition-colors duration-200"
                         data-testid="TruncateEnd"
                       >
                         ARK Wallet 1
@@ -2248,7 +2248,7 @@ exports[`AddressRowMobile > should render with active delegate 1`] = `
                             class="flex w-full items-center"
                           >
                             <span
-                              class="no-ligatures css-0"
+                              class="no-ligatures"
                               data-testid="TruncateMiddle"
                             >
                               arkx
@@ -2378,7 +2378,7 @@ exports[`AddressRowMobile > should render with resigned delegate 1`] = `
                       data-testid="Address__alias"
                     >
                       <span
-                        class="no-ligatures css-9nx3be"
+                        class="no-ligatures transition-colors duration-200"
                         data-testid="TruncateEnd"
                       >
                         ARK Wallet 1
@@ -2467,7 +2467,7 @@ exports[`AddressRowMobile > should render with resigned delegate 1`] = `
                             class="flex w-full items-center"
                           >
                             <span
-                              class="no-ligatures css-0"
+                              class="no-ligatures"
                               data-testid="TruncateMiddle"
                             >
                               arkx
@@ -2597,7 +2597,7 @@ exports[`AddressRowMobile > should render with standby delegate 1`] = `
                       data-testid="Address__alias"
                     >
                       <span
-                        class="no-ligatures css-9nx3be"
+                        class="no-ligatures transition-colors duration-200"
                         data-testid="TruncateEnd"
                       >
                         ARK Wallet 1
@@ -2686,7 +2686,7 @@ exports[`AddressRowMobile > should render with standby delegate 1`] = `
                             class="flex w-full items-center"
                           >
                             <span
-                              class="no-ligatures css-0"
+                              class="no-ligatures"
                               data-testid="TruncateMiddle"
                             >
                               arkx

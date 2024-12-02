@@ -306,7 +306,7 @@ exports[`AddRecipient > should hide available balance if fee > balance 1`] = `
               class="hidden sm:inline-flex"
             >
               <button
-                class=" css-15n2mow"
+                class="input-button flex h-full items-center rounded border-2 border-theme-primary-100 px-5 font-semibold text-theme-secondary-700 transition-colors duration-300 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:border disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-white disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700"
                 data-testid="AddRecipient__send-all"
                 type="button"
               >
@@ -612,7 +612,7 @@ exports[`AddRecipient > should render 1`] = `
               class="hidden sm:inline-flex"
             >
               <button
-                class=" css-15n2mow"
+                class="input-button flex h-full items-center rounded border-2 border-theme-primary-100 px-5 font-semibold text-theme-secondary-700 transition-colors duration-300 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:border disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-white disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700"
                 data-testid="AddRecipient__send-all"
                 type="button"
               >
@@ -918,7 +918,7 @@ exports[`AddRecipient > should render with empty array of recipients as default 
               class="hidden sm:inline-flex"
             >
               <button
-                class=" css-15n2mow"
+                class="input-button flex h-full items-center rounded border-2 border-theme-primary-100 px-5 font-semibold text-theme-secondary-700 transition-colors duration-300 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:border disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-white disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700"
                 data-testid="AddRecipient__send-all"
                 type="button"
               >
@@ -1224,7 +1224,7 @@ exports[`AddRecipient > should render with multiple recipients switch 1`] = `
               class="hidden sm:inline-flex"
             >
               <button
-                class=" css-15n2mow"
+                class="input-button flex h-full items-center rounded border-2 border-theme-primary-100 px-5 font-semibold text-theme-secondary-700 transition-colors duration-300 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:border disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-white disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700"
                 data-testid="AddRecipient__send-all"
                 type="button"
               >
@@ -1530,7 +1530,7 @@ exports[`AddRecipient > should render with single recipient data 1`] = `
               class="hidden sm:inline-flex"
             >
               <button
-                class=" css-15n2mow"
+                class="input-button flex h-full items-center rounded border-2 border-theme-primary-100 px-5 font-semibold text-theme-secondary-700 transition-colors duration-300 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:border disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-white disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700"
                 data-testid="AddRecipient__send-all"
                 type="button"
               >
@@ -1768,7 +1768,7 @@ exports[`AddRecipient > should render without the single & multiple switch 1`] =
               class="hidden sm:inline-flex"
             >
               <button
-                class=" css-15n2mow"
+                class="input-button flex h-full items-center rounded border-2 border-theme-primary-100 px-5 font-semibold text-theme-secondary-700 transition-colors duration-300 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:border disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-white disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700"
                 data-testid="AddRecipient__send-all"
                 type="button"
               >
@@ -2074,7 +2074,7 @@ exports[`AddRecipient > should set available amount 1`] = `
               class="hidden sm:inline-flex"
             >
               <button
-                class="active css-15n2mow"
+                class="input-button flex h-full items-center rounded border-2 border-theme-primary-100 px-5 font-semibold text-theme-secondary-700 transition-colors duration-300 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:border disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-white disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700"
                 data-testid="AddRecipient__send-all"
                 type="button"
               >
@@ -2395,7 +2395,7 @@ exports[`AddRecipient > should show available balance after fee 1`] = `
               class="hidden sm:inline-flex"
             >
               <button
-                class=" css-15n2mow"
+                class="input-button flex h-full items-center rounded border-2 border-theme-primary-100 px-5 font-semibold text-theme-secondary-700 transition-colors duration-300 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:border disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-white disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700"
                 data-testid="AddRecipient__send-all"
                 type="button"
               >
@@ -2752,7 +2752,7 @@ exports[`AddRecipient > should show zero amount if wallet has zero or insufficie
               class="hidden sm:inline-flex"
             >
               <button
-                class="active css-15n2mow"
+                class="input-button flex h-full items-center rounded border-2 border-theme-primary-100 px-5 font-semibold text-theme-secondary-700 transition-colors duration-300 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:border disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-white disabled:dark:border-theme-secondary-700 disabled:dark:text-theme-secondary-700"
                 data-testid="AddRecipient__send-all"
                 type="button"
               >

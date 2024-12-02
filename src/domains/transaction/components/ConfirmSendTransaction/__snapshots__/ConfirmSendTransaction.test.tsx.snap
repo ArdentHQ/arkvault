@@ -78,7 +78,7 @@ exports[`ConfirmSendTransaction > should render modal 1`] = `
               data-testid="TransactionTable"
             >
               <div
-                class="css-1m6rt2i"
+                class="table-wrapper"
                 role="table"
               >
                 <table

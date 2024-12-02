@@ -1,15 +1,17 @@
 import cn from "classnames";
 import React from "react";
-import { styled } from "twin.macro";
 
 import { getStyles, TableRowStyleProperties } from "./TableRow.styles";
+import { twMerge } from "tailwind-merge";
 
 type TableRowProperties = {
 	children: React.ReactNode;
 } & TableRowStyleProperties &
 	React.HTMLProps<any>;
 
-const TableRowStyled = styled.tr<TableRowProperties>(getStyles);
+const TableRowStyled = ({ ...props }: React.HTMLProps<HTMLTableRowElement> & TableRowProperties) => (
+	<tr {...props} className={twMerge(getStyles(props), props.className)} />
+);
 
 export const TableRow: React.FC<TableRowProperties> = ({
 	border = true,

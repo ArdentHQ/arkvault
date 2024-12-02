@@ -1,19 +1,12 @@
 import { Contracts } from "@ardenthq/sdk-profiles";
 import React, { useCallback } from "react";
-import tw, { styled } from "twin.macro";
 
 import { RecipientListItem } from "./RecipientList.blocks";
 import { RecipientItem, RecipientListProperties } from "./RecipientList.contracts";
 import { useColumns } from "./RecipientList.helpers";
-import { defaultStyle } from "./RecipientList.styles";
 import { assertString } from "@/utils/assertions";
 import { useActiveProfile } from "@/app/hooks";
 import { Table } from "@/app/components/Table";
-
-const RecipientListWrapper = styled.div`
-	${defaultStyle}
-	${tw`w-full`}
-`;
 
 export const RecipientList: React.VFC<RecipientListProperties> = ({
 	disableButton,
@@ -66,10 +59,10 @@ export const RecipientList: React.VFC<RecipientListProperties> = ({
 	);
 
 	return (
-		<RecipientListWrapper>
+		<div className="recipient-list w-full">
 			<Table columns={columns} data={recipients}>
 				{renderTableRow}
 			</Table>
-		</RecipientListWrapper>
+		</div>
 	);
 };

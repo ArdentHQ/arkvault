@@ -7,7 +7,7 @@ exports[`Signatures > should have all marked as signed if awaiting broadcast on 
     data-testid="TableWrapper"
   >
     <div
-      class="css-1m6rt2i"
+      class="table-wrapper"
       role="table"
     >
       <table
@@ -56,7 +56,7 @@ exports[`Signatures > should have all marked as signed if awaiting broadcast on 
           role="rowgroup"
         >
           <tr
-            class="group max-md:!border-transparent group relative css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group max-md:!border-transparent group relative"
             data-testid="TableRow"
           >
             <td>
@@ -215,7 +215,7 @@ exports[`Signatures > should have all marked as signed if awaiting broadcast on 
             </td>
           </tr>
           <tr
-            class="group max-md:!border-transparent group relative css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group max-md:!border-transparent group relative"
             data-testid="TableRow"
           >
             <td>
@@ -387,7 +387,7 @@ exports[`Signatures > should not require signature if waiting for final signatur
     data-testid="TableWrapper"
   >
     <div
-      class="css-1m6rt2i"
+      class="table-wrapper"
       role="table"
     >
       <table
@@ -436,7 +436,7 @@ exports[`Signatures > should not require signature if waiting for final signatur
           role="rowgroup"
         >
           <tr
-            class="group max-md:!border-transparent group relative css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group max-md:!border-transparent group relative"
             data-testid="TableRow"
           >
             <td>
@@ -595,7 +595,7 @@ exports[`Signatures > should not require signature if waiting for final signatur
             </td>
           </tr>
           <tr
-            class="group max-md:!border-transparent group relative css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group max-md:!border-transparent group relative"
             data-testid="TableRow"
           >
             <td>
@@ -767,7 +767,7 @@ exports[`Signatures > should not require signature if waiting for final signatur
     data-testid="TableWrapper"
   >
     <div
-      class="css-1m6rt2i"
+      class="table-wrapper"
       role="table"
     >
       <table
@@ -816,7 +816,7 @@ exports[`Signatures > should not require signature if waiting for final signatur
           role="rowgroup"
         >
           <tr
-            class="group max-md:!border-transparent group relative css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group max-md:!border-transparent group relative"
             data-testid="TableRow"
           >
             <td>
@@ -977,7 +977,7 @@ exports[`Signatures > should not require signature if waiting for final signatur
             </td>
           </tr>
           <tr
-            class="group max-md:!border-transparent group relative css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group max-md:!border-transparent group relative"
             data-testid="TableRow"
           >
             <td>
@@ -1149,7 +1149,7 @@ exports[`Signatures > should render 1`] = `
     data-testid="TableWrapper"
   >
     <div
-      class="css-1m6rt2i"
+      class="table-wrapper"
       role="table"
     >
       <table
@@ -1198,7 +1198,7 @@ exports[`Signatures > should render 1`] = `
           role="rowgroup"
         >
           <tr
-            class="group max-md:!border-transparent group relative css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group max-md:!border-transparent group relative"
             data-testid="TableRow"
           >
             <td>
@@ -1359,7 +1359,7 @@ exports[`Signatures > should render 1`] = `
             </td>
           </tr>
           <tr
-            class="group max-md:!border-transparent group relative css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group max-md:!border-transparent group relative"
             data-testid="TableRow"
           >
             <td>
@@ -1531,7 +1531,7 @@ exports[`Signatures > should show all participants as signed when all signatures
     data-testid="TableWrapper"
   >
     <div
-      class="css-1m6rt2i"
+      class="table-wrapper"
       role="table"
     >
       <table
@@ -1580,7 +1580,7 @@ exports[`Signatures > should show all participants as signed when all signatures
           role="rowgroup"
         >
           <tr
-            class="group max-md:!border-transparent group relative css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group max-md:!border-transparent group relative"
             data-testid="TableRow"
           >
             <td>
@@ -1739,7 +1739,7 @@ exports[`Signatures > should show all participants as signed when all signatures
             </td>
           </tr>
           <tr
-            class="group max-md:!border-transparent group relative css-16ynu5g"
+            class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group max-md:!border-transparent group relative"
             data-testid="TableRow"
           >
             <td>

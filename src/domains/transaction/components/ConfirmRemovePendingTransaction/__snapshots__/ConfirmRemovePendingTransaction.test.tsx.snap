@@ -197,6 +197,7 @@ exports[`ConfirmRemovePendingTransaction > should render multisignature registra
                         class="relative flex h-full flex-1"
                       >
                         <input
+                          autocomplete="off"
                           class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
                           data-testid="AuthenticationStep__mnemonic"
                           name="mnemonic"
@@ -514,6 +515,7 @@ exports[`ConfirmRemovePendingTransaction > should render multisignature transact
                         class="relative flex h-full flex-1"
                       >
                         <input
+                          autocomplete="off"
                           class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
                           data-testid="AuthenticationStep__mnemonic"
                           name="mnemonic"

@@ -327,7 +327,7 @@ exports[`MultiSignatureDetail > should not broadcast if wallet is not ready to d
                                       data-testid="Address__alias"
                                     >
                                       <span
-                                        class="no-ligatures css-9nx3be"
+                                        class="no-ligatures transition-colors duration-200"
                                         data-testid="TruncateEnd"
                                       >
                                         ARK Wallet 1
@@ -833,7 +833,7 @@ exports[`MultiSignatureDetail > should not broadcast if wallet is not ready to d
                                 data-testid="TableWrapper"
                               >
                                 <div
-                                  class="css-1m6rt2i"
+                                  class="table-wrapper"
                                   role="table"
                                 >
                                   <table
@@ -882,7 +882,7 @@ exports[`MultiSignatureDetail > should not broadcast if wallet is not ready to d
                                       role="rowgroup"
                                     >
                                       <tr
-                                        class="group max-md:!border-transparent group relative css-16ynu5g"
+                                        class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group max-md:!border-transparent group relative"
                                         data-testid="TableRow"
                                       >
                                         <td>
@@ -1041,7 +1041,7 @@ exports[`MultiSignatureDetail > should not broadcast if wallet is not ready to d
                                         </td>
                                       </tr>
                                       <tr
-                                        class="group max-md:!border-transparent group relative css-16ynu5g"
+                                        class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group max-md:!border-transparent group relative"
                                         data-testid="TableRow"
                                       >
                                         <td>
@@ -1684,7 +1684,7 @@ exports[`MultiSignatureDetail > should sign transaction after authentication pag
                           data-testid="TableWrapper"
                         >
                           <div
-                            class="css-1m6rt2i"
+                            class="table-wrapper"
                             role="table"
                           >
                             <table
@@ -1733,7 +1733,7 @@ exports[`MultiSignatureDetail > should sign transaction after authentication pag
                                 role="rowgroup"
                               >
                                 <tr
-                                  class="group max-md:!border-transparent group relative css-16ynu5g"
+                                  class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group max-md:!border-transparent group relative"
                                   data-testid="TableRow"
                                 >
                                   <td>
@@ -1892,7 +1892,7 @@ exports[`MultiSignatureDetail > should sign transaction after authentication pag
                                   </td>
                                 </tr>
                                 <tr
-                                  class="group max-md:!border-transparent group relative css-16ynu5g"
+                                  class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group max-md:!border-transparent group relative"
                                   data-testid="TableRow"
                                 >
                                   <td>
@@ -2183,7 +2183,7 @@ exports[`MultiSignatureDetail > should sign transaction with a ledger wallet 1`]
                           data-testid="TableWrapper"
                         >
                           <div
-                            class="css-1m6rt2i"
+                            class="table-wrapper"
                             role="table"
                           >
                             <table
@@ -2232,7 +2232,7 @@ exports[`MultiSignatureDetail > should sign transaction with a ledger wallet 1`]
                                 role="rowgroup"
                               >
                                 <tr
-                                  class="group max-md:!border-transparent group relative css-16ynu5g"
+                                  class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group max-md:!border-transparent group relative"
                                   data-testid="TableRow"
                                 >
                                   <td>
@@ -2391,7 +2391,7 @@ exports[`MultiSignatureDetail > should sign transaction with a ledger wallet 1`]
                                   </td>
                                 </tr>
                                 <tr
-                                  class="group max-md:!border-transparent group relative css-16ynu5g"
+                                  class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group max-md:!border-transparent group relative"
                                   data-testid="TableRow"
                                 >
                                   <td>

@@ -5,7 +5,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Expired) 1`] = `
   <table>
     <tbody>
       <tr
-        class="group css-1s1pbqq"
+        class="transition-colors duration-100 cursor-pointer table-row table-row-unselected group"
         data-testid="TableRow"
       >
         <td>
@@ -20,7 +20,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Expired) 1`] = `
                 class="text-sm font-semibold"
               >
                 <span
-                  class="no-ligatures text-theme-primary-600 css-0"
+                  class="no-ligatures text-theme-primary-600"
                   data-testid="TruncateMiddle"
                 >
                   id
@@ -238,7 +238,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Failed) 1`] = `
   <table>
     <tbody>
       <tr
-        class="group css-1s1pbqq"
+        class="transition-colors duration-100 cursor-pointer table-row table-row-unselected group"
         data-testid="TableRow"
       >
         <td>
@@ -253,7 +253,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Failed) 1`] = `
                 class="text-sm font-semibold"
               >
                 <span
-                  class="no-ligatures text-theme-primary-600 css-0"
+                  class="no-ligatures text-theme-primary-600"
                   data-testid="TruncateMiddle"
                 >
                   id
@@ -462,7 +462,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Finished) 1`] = `
   <table>
     <tbody>
       <tr
-        class="group css-1s1pbqq"
+        class="transition-colors duration-100 cursor-pointer table-row table-row-unselected group"
         data-testid="TableRow"
       >
         <td>
@@ -477,7 +477,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Finished) 1`] = `
                 class="text-sm font-semibold"
               >
                 <span
-                  class="no-ligatures text-theme-primary-600 css-0"
+                  class="no-ligatures text-theme-primary-600"
                   data-testid="TruncateMiddle"
                 >
                   id
@@ -686,7 +686,7 @@ exports[`ExchangeTransactionsRowMobile > should render (New) 1`] = `
   <table>
     <tbody>
       <tr
-        class="group css-1s1pbqq"
+        class="transition-colors duration-100 cursor-pointer table-row table-row-unselected group"
         data-testid="TableRow"
       >
         <td>
@@ -701,7 +701,7 @@ exports[`ExchangeTransactionsRowMobile > should render (New) 1`] = `
                 class="text-sm font-semibold"
               >
                 <span
-                  class="no-ligatures text-theme-primary-600 css-0"
+                  class="no-ligatures text-theme-primary-600"
                   data-testid="TruncateMiddle"
                 >
                   id
@@ -948,7 +948,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Refunded) 1`] = `
   <table>
     <tbody>
       <tr
-        class="group css-1s1pbqq"
+        class="transition-colors duration-100 cursor-pointer table-row table-row-unselected group"
         data-testid="TableRow"
       >
         <td>
@@ -963,7 +963,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Refunded) 1`] = `
                 class="text-sm font-semibold"
               >
                 <span
-                  class="no-ligatures text-theme-primary-600 css-0"
+                  class="no-ligatures text-theme-primary-600"
                   data-testid="TruncateMiddle"
                 >
                   id
@@ -1177,7 +1177,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Verifying) 1`] = `
   <table>
     <tbody>
       <tr
-        class="group css-1s1pbqq"
+        class="transition-colors duration-100 cursor-pointer table-row table-row-unselected group"
         data-testid="TableRow"
       >
         <td>
@@ -1192,7 +1192,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Verifying) 1`] = `
                 class="text-sm font-semibold"
               >
                 <span
-                  class="no-ligatures text-theme-primary-600 css-0"
+                  class="no-ligatures text-theme-primary-600"
                   data-testid="TruncateMiddle"
                 >
                   id
@@ -1404,7 +1404,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Verifying) 1`] = `
 exports[`ExchangeTransactionsRowMobile > should render N/A if no orderId 1`] = `
 <div>
   <tr
-    class="group css-1s1pbqq"
+    class="transition-colors duration-100 cursor-pointer table-row table-row-unselected group"
     data-testid="TableRow"
   >
     <td>
@@ -1623,7 +1623,7 @@ exports[`ExchangeTransactionsRowMobile > should render N/A if no orderId 1`] = `
 exports[`ExchangeTransactionsRowMobile > should render transaction provider 1`] = `
 <div>
   <tr
-    class="group css-1s1pbqq"
+    class="transition-colors duration-100 cursor-pointer table-row table-row-unselected group"
     data-testid="TableRow"
   >
     <td>
@@ -1638,7 +1638,7 @@ exports[`ExchangeTransactionsRowMobile > should render transaction provider 1`] 
             class="text-sm font-semibold"
           >
             <span
-              class="no-ligatures text-theme-primary-600 css-0"
+              class="no-ligatures text-theme-primary-600"
               data-testid="TruncateMiddle"
             >
               id

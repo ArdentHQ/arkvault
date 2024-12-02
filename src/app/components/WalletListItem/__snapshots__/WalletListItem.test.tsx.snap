@@ -9,7 +9,7 @@ exports[`WalletListItem > should disable the send button when wallet has no bala
   <table>
     <tbody>
       <tr
-        class="group relative css-1tl8buz"
+        class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
         data-testid="TableRow"
       >
         <td
@@ -70,7 +70,7 @@ exports[`WalletListItem > should disable the send button when wallet has no bala
                   data-testid="Address__alias"
                 >
                   <span
-                    class="no-ligatures css-9nx3be"
+                    class="no-ligatures transition-colors duration-200"
                     data-testid="TruncateEnd"
                   >
                     ARK Wallet 1
@@ -97,7 +97,7 @@ exports[`WalletListItem > should disable the send button when wallet has no bala
                   data-testid="Address__alias"
                 >
                   <span
-                    class="no-ligatures css-9nx3be"
+                    class="no-ligatures transition-colors duration-200"
                     data-testid="TruncateEnd"
                   >
                     ARK Wallet 1
@@ -450,7 +450,7 @@ exports[`WalletListItem > should disable the send button when wallet has no bala
             data-testid="Address__alias"
           >
             <span
-              class="no-ligatures css-9nx3be"
+              class="no-ligatures transition-colors duration-200"
               data-testid="TruncateEnd"
             >
               ARK Wallet 1
@@ -619,7 +619,7 @@ exports[`WalletListItem > should render when isCompact = false 1`] = `
   <table>
     <tbody>
       <tr
-        class="group relative css-1tl8buz"
+        class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
         data-testid="TableRow"
       >
         <td
@@ -680,7 +680,7 @@ exports[`WalletListItem > should render when isCompact = false 1`] = `
                   data-testid="Address__alias"
                 >
                   <span
-                    class="no-ligatures css-9nx3be"
+                    class="no-ligatures transition-colors duration-200"
                     data-testid="TruncateEnd"
                   >
                     ARK Wallet 1
@@ -707,7 +707,7 @@ exports[`WalletListItem > should render when isCompact = false 1`] = `
                   data-testid="Address__alias"
                 >
                   <span
-                    class="no-ligatures css-9nx3be"
+                    class="no-ligatures transition-colors duration-200"
                     data-testid="TruncateEnd"
                   >
                     ARK Wallet 1
@@ -1043,7 +1043,7 @@ exports[`WalletListItem > should render when isCompact = true 1`] = `
   <table>
     <tbody>
       <tr
-        class="group relative css-1tl8buz"
+        class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
         data-testid="TableRow"
       >
         <td
@@ -1104,7 +1104,7 @@ exports[`WalletListItem > should render when isCompact = true 1`] = `
                   data-testid="Address__alias"
                 >
                   <span
-                    class="no-ligatures css-9nx3be"
+                    class="no-ligatures transition-colors duration-200"
                     data-testid="TruncateEnd"
                   >
                     ARK Wallet 1
@@ -1131,7 +1131,7 @@ exports[`WalletListItem > should render when isCompact = true 1`] = `
                   data-testid="Address__alias"
                 >
                   <span
-                    class="no-ligatures css-9nx3be"
+                    class="no-ligatures transition-colors duration-200"
                     data-testid="TruncateEnd"
                   >
                     ARK Wallet 1
@@ -1483,7 +1483,7 @@ exports[`WalletListItem > should render when isLargeScreen = false 1`] = `
             data-testid="Address__alias"
           >
             <span
-              class="no-ligatures css-9nx3be"
+              class="no-ligatures transition-colors duration-200"
               data-testid="TruncateEnd"
             >
               ARK Wallet 1
@@ -1706,7 +1706,7 @@ exports[`WalletListItem > should render when isLargeScreen = false and wallet is
             data-testid="Address__alias"
           >
             <span
-              class="no-ligatures css-9nx3be"
+              class="no-ligatures transition-colors duration-200"
               data-testid="TruncateEnd"
             >
               ARK Wallet 1
@@ -1921,7 +1921,7 @@ exports[`WalletListItem > should render when isLargeScreen = true 1`] = `
   <table>
     <tbody>
       <tr
-        class="group relative css-1tl8buz"
+        class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
         data-testid="TableRow"
       >
         <td
@@ -1982,7 +1982,7 @@ exports[`WalletListItem > should render when isLargeScreen = true 1`] = `
                   data-testid="Address__alias"
                 >
                   <span
-                    class="no-ligatures css-9nx3be"
+                    class="no-ligatures transition-colors duration-200"
                     data-testid="TruncateEnd"
                   >
                     ARK Wallet 1
@@ -2009,7 +2009,7 @@ exports[`WalletListItem > should render when isLargeScreen = true 1`] = `
                   data-testid="Address__alias"
                 >
                   <span
-                    class="no-ligatures css-9nx3be"
+                    class="no-ligatures transition-colors duration-200"
                     data-testid="TruncateEnd"
                   >
                     ARK Wallet 1
@@ -2345,7 +2345,7 @@ exports[`WalletListItem > should render when isLargeScreen = true and wallet is 
   <table>
     <tbody>
       <tr
-        class="group relative css-16ynu5g"
+        class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative"
         data-testid="TableRow"
       >
         <td
@@ -2406,7 +2406,7 @@ exports[`WalletListItem > should render when isLargeScreen = true and wallet is 
                   data-testid="Address__alias"
                 >
                   <span
-                    class="no-ligatures css-9nx3be"
+                    class="no-ligatures transition-colors duration-200"
                     data-testid="TruncateEnd"
                   >
                     ARK Wallet 1
@@ -2433,7 +2433,7 @@ exports[`WalletListItem > should render when isLargeScreen = true and wallet is 
                   data-testid="Address__alias"
                 >
                   <span
-                    class="no-ligatures css-9nx3be"
+                    class="no-ligatures transition-colors duration-200"
                     data-testid="TruncateEnd"
                   >
                     ARK Wallet 1
@@ -2819,7 +2819,7 @@ exports[`WalletListItem > should render with a N/A for fiat 1`] = `
   <table>
     <tbody>
       <tr
-        class="group relative css-1tl8buz"
+        class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
         data-testid="TableRow"
       >
         <td
@@ -2880,7 +2880,7 @@ exports[`WalletListItem > should render with a N/A for fiat 1`] = `
                   data-testid="Address__alias"
                 >
                   <span
-                    class="no-ligatures css-9nx3be"
+                    class="no-ligatures transition-colors duration-200"
                     data-testid="TruncateEnd"
                   >
                     ARK Wallet 1
@@ -2907,7 +2907,7 @@ exports[`WalletListItem > should render with a N/A for fiat 1`] = `
                   data-testid="Address__alias"
                 >
                   <span
-                    class="no-ligatures css-9nx3be"
+                    class="no-ligatures transition-colors duration-200"
                     data-testid="TruncateEnd"
                   >
                     ARK Wallet 1
@@ -3243,7 +3243,7 @@ exports[`WalletListItem > should render with default BTC as default exchangeCurr
   <table>
     <tbody>
       <tr
-        class="group relative css-1tl8buz"
+        class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
         data-testid="TableRow"
       >
         <td
@@ -3304,7 +3304,7 @@ exports[`WalletListItem > should render with default BTC as default exchangeCurr
                   data-testid="Address__alias"
                 >
                   <span
-                    class="no-ligatures css-9nx3be"
+                    class="no-ligatures transition-colors duration-200"
                     data-testid="TruncateEnd"
                   >
                     ARK Wallet 1
@@ -3331,7 +3331,7 @@ exports[`WalletListItem > should render with default BTC as default exchangeCurr
                   data-testid="Address__alias"
                 >
                   <span
-                    class="no-ligatures css-9nx3be"
+                    class="no-ligatures transition-colors duration-200"
                     data-testid="TruncateEnd"
                   >
                     ARK Wallet 1

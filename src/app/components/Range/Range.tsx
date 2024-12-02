@@ -1,22 +1,6 @@
 import React, { useLayoutEffect, useState } from "react";
 import { getTrackBackground, Range as ReactRange } from "react-range";
-import tw, { styled } from "twin.macro";
-
-const Track = styled.div`
-	height: 1px;
-	${tw`flex w-full rounded`}
-`;
-
-const TrackFilled = styled.div`
-	${tw`p-0 border-0 h-1 w-full rounded self-center`}
-`;
-
-const Thumb = styled.div`
-	&:active {
-		${tw`bg-theme-primary-600`}
-	}
-	${tw`m-0 transition-colors duration-100 w-4 h-4 rounded-full bg-theme-background border-3 border-theme-primary-600 focus:outline-none focus:shadow-outline`}
-`;
+import { twMerge } from "tailwind-merge";
 
 interface Properties {
 	values: number[];
@@ -49,14 +33,16 @@ export const Range = ({ values, min = 1, max = 100, step = 1, onChange, isInvali
 				max={max}
 				onChange={onChange}
 				renderTrack={({ props: track, children }) => (
-					<Track
+					<div
 						data-testid="Range__track"
 						onMouseDown={track.onMouseDown}
 						onTouchStart={track.onTouchStart}
+						className="flex h-px w-full rounded"
 						style={track.style}
 					>
-						<TrackFilled
+						<div
 							data-testid="Range__track__filled"
+							className="h-1 w-full self-center rounded border-0 p-0"
 							style={{
 								background: getTrackBackground({
 									colors: [color, "transparent"],
@@ -68,11 +54,18 @@ export const Range = ({ values, min = 1, max = 100, step = 1, onChange, isInvali
 							ref={track.ref}
 						>
 							{children}
-						</TrackFilled>
-					</Track>
+						</div>
+					</div>
 				)}
 				renderThumb={({ props: thumb }) => (
-					<Thumb data-testid="Range__thumb" {...thumb} style={{ ...thumb.style, borderColor: color }} />
+					<div
+						data-testid="Range__thumb"
+						{...thumb}
+						className={twMerge(
+							"m-0 h-4 w-4 rounded-full border-3 border-theme-primary-600 bg-theme-background transition-colors duration-100 focus:shadow-outline focus:outline-none active:bg-theme-primary-600",
+						)}
+						style={{ ...thumb.style, borderColor: color }}
+					/>
 				)}
 			/>
 		</div>
