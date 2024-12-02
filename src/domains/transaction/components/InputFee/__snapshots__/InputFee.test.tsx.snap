@@ -52,6 +52,7 @@ exports[`InputFee > advanced view type > should allow to input a value 1`] = `
           class="relative flex h-full flex-1"
         >
           <input
+            autocomplete="off"
             class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
             data-testid="InputCurrency"
             type="text"
@@ -72,7 +73,7 @@ exports[`InputFee > advanced view type > should allow to input a value 1`] = `
                 class="-mr-4 flex h-14 w-22 flex-row justify-between border-l text-theme-secondary-700 dark:border-theme-secondary-700 sm:w-10 sm:flex-col border-theme-secondary-400"
               >
                 <button
-                  class="border-r sm:border-r-0 css-jmpn15"
+                  class="flex flex-1 items-center justify-center hover:bg-theme-primary-100 hover:text-theme-primary-600 active:bg-theme-primary-700 active:text-white disabled:cursor-default disabled:border-theme-secondary-300 disabled:bg-theme-secondary-100 disabled:text-theme-secondary-400 hover:dark:bg-theme-secondary-800 hover:dark:text-theme-primary-200 disabled:dark:border-theme-secondary-700 disabled:dark:bg-theme-secondary-800 disabled:dark:text-theme-secondary-600 border-b border-theme-secondary-400 dark:border-theme-secondary-700 border-r sm:border-r-0"
                   data-testid="InputFeeAdvanced__up"
                   type="button"
                 >
@@ -102,7 +103,7 @@ exports[`InputFee > advanced view type > should allow to input a value 1`] = `
                   </div>
                 </button>
                 <button
-                  class="css-1ddtsjs"
+                  class="flex flex-1 items-center justify-center hover:bg-theme-primary-100 hover:text-theme-primary-600 active:bg-theme-primary-700 active:text-white disabled:cursor-default disabled:border-theme-secondary-300 disabled:bg-theme-secondary-100 disabled:text-theme-secondary-400 hover:dark:bg-theme-secondary-800 hover:dark:text-theme-primary-200 disabled:dark:border-theme-secondary-700 disabled:dark:bg-theme-secondary-800 disabled:dark:text-theme-secondary-600"
                   data-testid="InputFeeAdvanced__down"
                   type="button"
                 >
@@ -193,6 +194,7 @@ exports[`InputFee > advanced view type > should display converted value when on 
           class="relative flex h-full flex-1"
         >
           <input
+            autocomplete="off"
             class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
             data-testid="InputCurrency"
             type="text"
@@ -223,7 +225,7 @@ exports[`InputFee > advanced view type > should display converted value when on 
                 class="-mr-4 flex h-14 w-22 flex-row justify-between border-l text-theme-secondary-700 dark:border-theme-secondary-700 sm:w-10 sm:flex-col border-theme-secondary-400"
               >
                 <button
-                  class="border-r sm:border-r-0 css-jmpn15"
+                  class="flex flex-1 items-center justify-center hover:bg-theme-primary-100 hover:text-theme-primary-600 active:bg-theme-primary-700 active:text-white disabled:cursor-default disabled:border-theme-secondary-300 disabled:bg-theme-secondary-100 disabled:text-theme-secondary-400 hover:dark:bg-theme-secondary-800 hover:dark:text-theme-primary-200 disabled:dark:border-theme-secondary-700 disabled:dark:bg-theme-secondary-800 disabled:dark:text-theme-secondary-600 border-b border-theme-secondary-400 dark:border-theme-secondary-700 border-r sm:border-r-0"
                   data-testid="InputFeeAdvanced__up"
                   type="button"
                 >
@@ -253,7 +255,7 @@ exports[`InputFee > advanced view type > should display converted value when on 
                   </div>
                 </button>
                 <button
-                  class="css-1ddtsjs"
+                  class="flex flex-1 items-center justify-center hover:bg-theme-primary-100 hover:text-theme-primary-600 active:bg-theme-primary-700 active:text-white disabled:cursor-default disabled:border-theme-secondary-300 disabled:bg-theme-secondary-100 disabled:text-theme-secondary-400 hover:dark:bg-theme-secondary-800 hover:dark:text-theme-primary-200 disabled:dark:border-theme-secondary-700 disabled:dark:bg-theme-secondary-800 disabled:dark:text-theme-secondary-600"
                   data-testid="InputFeeAdvanced__down"
                   type="button"
                 >
@@ -304,6 +306,7 @@ exports[`InputFee > advanced view type > should render disabled 1`] = `
         class="relative flex h-full flex-1"
       >
         <input
+          autocomplete="off"
           class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base text-theme-secondary-text"
           data-testid="InputCurrency"
           disabled=""
@@ -325,7 +328,7 @@ exports[`InputFee > advanced view type > should render disabled 1`] = `
               class="-mr-4 flex h-14 w-22 flex-row justify-between border-l text-theme-secondary-700 dark:border-theme-secondary-700 sm:w-10 sm:flex-col border-theme-secondary-300"
             >
               <button
-                class="border-r sm:border-r-0 css-jmpn15"
+                class="flex flex-1 items-center justify-center hover:bg-theme-primary-100 hover:text-theme-primary-600 active:bg-theme-primary-700 active:text-white disabled:cursor-default disabled:border-theme-secondary-300 disabled:bg-theme-secondary-100 disabled:text-theme-secondary-400 hover:dark:bg-theme-secondary-800 hover:dark:text-theme-primary-200 disabled:dark:border-theme-secondary-700 disabled:dark:bg-theme-secondary-800 disabled:dark:text-theme-secondary-600 border-b border-theme-secondary-400 dark:border-theme-secondary-700 border-r sm:border-r-0"
                 data-testid="InputFeeAdvanced__up"
                 disabled=""
                 type="button"
@@ -356,7 +359,7 @@ exports[`InputFee > advanced view type > should render disabled 1`] = `
                 </div>
               </button>
               <button
-                class="css-1ddtsjs"
+                class="flex flex-1 items-center justify-center hover:bg-theme-primary-100 hover:text-theme-primary-600 active:bg-theme-primary-700 active:text-white disabled:cursor-default disabled:border-theme-secondary-300 disabled:bg-theme-secondary-100 disabled:text-theme-secondary-400 hover:dark:bg-theme-secondary-800 hover:dark:text-theme-primary-200 disabled:dark:border-theme-secondary-700 disabled:dark:bg-theme-secondary-800 disabled:dark:text-theme-secondary-600"
                 data-testid="InputFeeAdvanced__down"
                 disabled=""
                 type="button"
@@ -446,6 +449,7 @@ exports[`InputFee > should keep different values for simple and advanced view ty
           class="relative flex h-full flex-1"
         >
           <input
+            autocomplete="off"
             class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
             data-testid="InputCurrency"
             type="text"
@@ -466,7 +470,7 @@ exports[`InputFee > should keep different values for simple and advanced view ty
                 class="-mr-4 flex h-14 w-22 flex-row justify-between border-l text-theme-secondary-700 dark:border-theme-secondary-700 sm:w-10 sm:flex-col border-theme-secondary-400"
               >
                 <button
-                  class="border-r sm:border-r-0 css-jmpn15"
+                  class="flex flex-1 items-center justify-center hover:bg-theme-primary-100 hover:text-theme-primary-600 active:bg-theme-primary-700 active:text-white disabled:cursor-default disabled:border-theme-secondary-300 disabled:bg-theme-secondary-100 disabled:text-theme-secondary-400 hover:dark:bg-theme-secondary-800 hover:dark:text-theme-primary-200 disabled:dark:border-theme-secondary-700 disabled:dark:bg-theme-secondary-800 disabled:dark:text-theme-secondary-600 border-b border-theme-secondary-400 dark:border-theme-secondary-700 border-r sm:border-r-0"
                   data-testid="InputFeeAdvanced__up"
                   type="button"
                 >
@@ -496,7 +500,7 @@ exports[`InputFee > should keep different values for simple and advanced view ty
                   </div>
                 </button>
                 <button
-                  class="css-1ddtsjs"
+                  class="flex flex-1 items-center justify-center hover:bg-theme-primary-100 hover:text-theme-primary-600 active:bg-theme-primary-700 active:text-white disabled:cursor-default disabled:border-theme-secondary-300 disabled:bg-theme-secondary-100 disabled:text-theme-secondary-400 hover:dark:bg-theme-secondary-800 hover:dark:text-theme-primary-200 disabled:dark:border-theme-secondary-700 disabled:dark:bg-theme-secondary-800 disabled:dark:text-theme-secondary-600"
                   data-testid="InputFeeAdvanced__down"
                   type="button"
                 >
@@ -704,6 +708,7 @@ exports[`InputFee > simple view type > should change fee option with converted v
           class="relative flex h-full flex-1"
         >
           <input
+            autocomplete="off"
             class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
             data-testid="select-list__input"
             readonly=""
@@ -747,6 +752,7 @@ exports[`InputFee > simple view type > should change fee option with converted v
                   aria-autocomplete="list"
                   aria-controls="InputFeeSimpleSelect__dropdown-menu"
                   aria-labelledby="InputFeeSimpleSelect__dropdown-label"
+                  autocomplete="off"
                   class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
                   data-testid="SelectDropdown__input"
                   id="InputFeeSimpleSelect__dropdown-input"
@@ -879,6 +885,7 @@ exports[`InputFee > simple view type > should change fee option with converted v
           class="relative flex h-full flex-1"
         >
           <input
+            autocomplete="off"
             class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
             data-testid="select-list__input"
             readonly=""
@@ -922,6 +929,7 @@ exports[`InputFee > simple view type > should change fee option with converted v
                   aria-autocomplete="list"
                   aria-controls="InputFeeSimpleSelect__dropdown-menu"
                   aria-labelledby="InputFeeSimpleSelect__dropdown-label"
+                  autocomplete="off"
                   class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
                   data-testid="SelectDropdown__input"
                   id="InputFeeSimpleSelect__dropdown-input"
@@ -1872,6 +1880,7 @@ exports[`InputFee > simple view type > should render simple view in xs 1`] = `
           class="relative flex h-full flex-1"
         >
           <input
+            autocomplete="off"
             class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
             data-testid="select-list__input"
             readonly=""
@@ -1915,6 +1924,7 @@ exports[`InputFee > simple view type > should render simple view in xs 1`] = `
                   aria-autocomplete="list"
                   aria-controls="InputFeeSimpleSelect__dropdown-menu"
                   aria-labelledby="InputFeeSimpleSelect__dropdown-label"
+                  autocomplete="off"
                   class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
                   data-testid="SelectDropdown__input"
                   id="InputFeeSimpleSelect__dropdown-input"
@@ -2587,6 +2597,7 @@ exports[`InputFee > simple view type > should render simple view with converted 
           class="relative flex h-full flex-1"
         >
           <input
+            autocomplete="off"
             class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
             data-testid="select-list__input"
             readonly=""
@@ -2630,6 +2641,7 @@ exports[`InputFee > simple view type > should render simple view with converted 
                   aria-autocomplete="list"
                   aria-controls="InputFeeSimpleSelect__dropdown-menu"
                   aria-labelledby="InputFeeSimpleSelect__dropdown-label"
+                  autocomplete="off"
                   class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base"
                   data-testid="SelectDropdown__input"
                   id="InputFeeSimpleSelect__dropdown-input"

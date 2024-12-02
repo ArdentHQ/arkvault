@@ -99,16 +99,16 @@ exports[`ErrorStep > should display error details 1`] = `
             <div
               class="relative flex h-full flex-1"
             >
-              <input
-                as="textarea"
+              <textarea
                 autocomplete="off"
                 class="!bg-transparent !p-0 focus:shadow-none focus:outline-none focus:!ring-0 focus:!ring-transparent [&.shadow-none]:shadow-none no-ligatures w-full border-none !text-sm placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 sm:!text-base min-h-[8rem] md:min-h-auto md:resize-y resize-none text-theme-secondary-text"
                 data-testid="ErrorStep__errorMessage"
                 disabled=""
                 style="height: 4px;"
                 type="text"
-                value="Display error details"
-              />
+              >
+                Display error details
+              </textarea>
             </div>
           </div>
         </div>

@@ -470,7 +470,7 @@ exports[`LedgerImportStep > should render with multiple import 2`] = `
         data-testid="TableWrapper"
       >
         <div
-          class="with-x-padding css-1m6rt2i"
+          class="table-wrapper with-x-padding"
           role="table"
         >
           <table
@@ -585,7 +585,7 @@ exports[`LedgerImportStep > should render with multiple import 2`] = `
               role="rowgroup"
             >
               <tr
-                class="group relative css-16ynu5g"
+                class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative"
                 data-testid="TableRow"
               >
                 <td>
@@ -603,7 +603,7 @@ exports[`LedgerImportStep > should render with multiple import 2`] = `
                           data-testid="Address__alias"
                         >
                           <span
-                            class="no-ligatures css-9nx3be"
+                            class="no-ligatures transition-colors duration-200"
                             data-testid="TruncateEnd"
                           >
                             ARK Devnet #3
@@ -715,7 +715,7 @@ exports[`LedgerImportStep > should render with multiple import 2`] = `
                 </td>
               </tr>
               <tr
-                class="group relative css-16ynu5g"
+                class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative"
                 data-testid="TableRow"
               >
                 <td>
@@ -733,7 +733,7 @@ exports[`LedgerImportStep > should render with multiple import 2`] = `
                           data-testid="Address__alias"
                         >
                           <span
-                            class="no-ligatures css-9nx3be"
+                            class="no-ligatures transition-colors duration-200"
                             data-testid="TruncateEnd"
                           >
                             ARK Devnet #4

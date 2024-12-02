@@ -10,7 +10,7 @@ exports[`ExchangeTransactionsTable > should render 1`] = `
       data-testid="TableWrapper"
     >
       <div
-        class="with-x-padding css-1m6rt2i"
+        class="table-wrapper with-x-padding"
         role="table"
       >
         <table
@@ -320,7 +320,7 @@ exports[`ExchangeTransactionsTable > should render 1`] = `
             role="rowgroup"
           >
             <tr
-              class="group relative css-16ynu5g"
+              class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative"
               data-testid="TableRow"
             >
               <td>
@@ -625,7 +625,7 @@ exports[`ExchangeTransactionsTable > should render 1`] = `
               </td>
             </tr>
             <tr
-              class="group relative css-16ynu5g"
+              class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative"
               data-testid="TableRow"
             >
               <td>
@@ -930,7 +930,7 @@ exports[`ExchangeTransactionsTable > should render 1`] = `
               </td>
             </tr>
             <tr
-              class="group relative css-16ynu5g"
+              class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative"
               data-testid="TableRow"
             >
               <td>
@@ -1252,7 +1252,7 @@ exports[`ExchangeTransactionsTable > should render compact 1`] = `
       data-testid="TableWrapper"
     >
       <div
-        class="with-x-padding css-1m6rt2i"
+        class="table-wrapper with-x-padding"
         role="table"
       >
         <table
@@ -1562,7 +1562,7 @@ exports[`ExchangeTransactionsTable > should render compact 1`] = `
             role="rowgroup"
           >
             <tr
-              class="group relative css-16ynu5g"
+              class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative"
               data-testid="TableRow"
             >
               <td>
@@ -1867,7 +1867,7 @@ exports[`ExchangeTransactionsTable > should render compact 1`] = `
               </td>
             </tr>
             <tr
-              class="group relative css-16ynu5g"
+              class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative"
               data-testid="TableRow"
             >
               <td>
@@ -2172,7 +2172,7 @@ exports[`ExchangeTransactionsTable > should render compact 1`] = `
               </td>
             </tr>
             <tr
-              class="group relative css-16ynu5g"
+              class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative"
               data-testid="TableRow"
             >
               <td>
@@ -2494,7 +2494,7 @@ exports[`ExchangeTransactionsTable > should render desktop 1`] = `
       data-testid="TableWrapper"
     >
       <div
-        class="with-x-padding css-1m6rt2i"
+        class="table-wrapper with-x-padding"
         role="table"
       >
         <table
@@ -2804,7 +2804,7 @@ exports[`ExchangeTransactionsTable > should render desktop 1`] = `
             role="rowgroup"
           >
             <tr
-              class="group relative css-16ynu5g"
+              class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative"
               data-testid="TableRow"
             >
               <td>
@@ -3109,7 +3109,7 @@ exports[`ExchangeTransactionsTable > should render desktop 1`] = `
               </td>
             </tr>
             <tr
-              class="group relative css-16ynu5g"
+              class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative"
               data-testid="TableRow"
             >
               <td>
@@ -3414,7 +3414,7 @@ exports[`ExchangeTransactionsTable > should render desktop 1`] = `
               </td>
             </tr>
             <tr
-              class="group relative css-16ynu5g"
+              class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative"
               data-testid="TableRow"
             >
               <td>
@@ -3736,7 +3736,7 @@ exports[`ExchangeTransactionsTable > should render desktop 2`] = `
       data-testid="TableWrapper"
     >
       <div
-        class="with-x-padding css-1m6rt2i"
+        class="table-wrapper with-x-padding"
         role="table"
       >
         <table
@@ -4046,7 +4046,7 @@ exports[`ExchangeTransactionsTable > should render desktop 2`] = `
             role="rowgroup"
           >
             <tr
-              class="group relative css-16ynu5g"
+              class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative"
               data-testid="TableRow"
             >
               <td>
@@ -4351,7 +4351,7 @@ exports[`ExchangeTransactionsTable > should render desktop 2`] = `
               </td>
             </tr>
             <tr
-              class="group relative css-16ynu5g"
+              class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative"
               data-testid="TableRow"
             >
               <td>
@@ -4656,7 +4656,7 @@ exports[`ExchangeTransactionsTable > should render desktop 2`] = `
               </td>
             </tr>
             <tr
-              class="group relative css-16ynu5g"
+              class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative"
               data-testid="TableRow"
             >
               <td>
@@ -4978,7 +4978,7 @@ exports[`ExchangeTransactionsTable > should render desktop 3`] = `
       data-testid="TableWrapper"
     >
       <div
-        class="with-x-padding css-1m6rt2i"
+        class="table-wrapper with-x-padding"
         role="table"
       >
         <table
@@ -5288,7 +5288,7 @@ exports[`ExchangeTransactionsTable > should render desktop 3`] = `
             role="rowgroup"
           >
             <tr
-              class="group relative css-16ynu5g"
+              class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative"
               data-testid="TableRow"
             >
               <td>
@@ -5593,7 +5593,7 @@ exports[`ExchangeTransactionsTable > should render desktop 3`] = `
               </td>
             </tr>
             <tr
-              class="group relative css-16ynu5g"
+              class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative"
               data-testid="TableRow"
             >
               <td>
@@ -5898,7 +5898,7 @@ exports[`ExchangeTransactionsTable > should render desktop 3`] = `
               </td>
             </tr>
             <tr
-              class="group relative css-16ynu5g"
+              class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative"
               data-testid="TableRow"
             >
               <td>
@@ -6220,7 +6220,7 @@ exports[`ExchangeTransactionsTable > should render mobile 1`] = `
       data-testid="TableWrapper"
     >
       <div
-        class="with-x-padding css-1m6rt2i"
+        class="table-wrapper with-x-padding"
         role="table"
       >
         <table
@@ -6231,7 +6231,7 @@ exports[`ExchangeTransactionsTable > should render mobile 1`] = `
             role="rowgroup"
           >
             <tr
-              class="group css-1s1pbqq"
+              class="transition-colors duration-100 cursor-pointer table-row table-row-unselected group"
               data-testid="TableRow"
             >
               <td>
@@ -6246,7 +6246,7 @@ exports[`ExchangeTransactionsTable > should render mobile 1`] = `
                       class="text-sm font-semibold"
                     >
                       <span
-                        class="no-ligatures text-theme-primary-600 css-0"
+                        class="no-ligatures text-theme-primary-600"
                         data-testid="TruncateMiddle"
                       >
                         3
@@ -6484,7 +6484,7 @@ exports[`ExchangeTransactionsTable > should render mobile 1`] = `
               </td>
             </tr>
             <tr
-              class="group css-1s1pbqq"
+              class="transition-colors duration-100 cursor-pointer table-row table-row-unselected group"
               data-testid="TableRow"
             >
               <td>
@@ -6499,7 +6499,7 @@ exports[`ExchangeTransactionsTable > should render mobile 1`] = `
                       class="text-sm font-semibold"
                     >
                       <span
-                        class="no-ligatures text-theme-primary-600 css-0"
+                        class="no-ligatures text-theme-primary-600"
                         data-testid="TruncateMiddle"
                       >
                         2
@@ -6737,7 +6737,7 @@ exports[`ExchangeTransactionsTable > should render mobile 1`] = `
               </td>
             </tr>
             <tr
-              class="group css-1s1pbqq"
+              class="transition-colors duration-100 cursor-pointer table-row table-row-unselected group"
               data-testid="TableRow"
             >
               <td>
@@ -6752,7 +6752,7 @@ exports[`ExchangeTransactionsTable > should render mobile 1`] = `
                       class="text-sm font-semibold"
                     >
                       <span
-                        class="no-ligatures text-theme-primary-600 css-0"
+                        class="no-ligatures text-theme-primary-600"
                         data-testid="TruncateMiddle"
                       >
                         1
@@ -7007,7 +7007,7 @@ exports[`ExchangeTransactionsTable > should render mobile 2`] = `
       data-testid="TableWrapper"
     >
       <div
-        class="with-x-padding css-1m6rt2i"
+        class="table-wrapper with-x-padding"
         role="table"
       >
         <table
@@ -7018,7 +7018,7 @@ exports[`ExchangeTransactionsTable > should render mobile 2`] = `
             role="rowgroup"
           >
             <tr
-              class="group css-1s1pbqq"
+              class="transition-colors duration-100 cursor-pointer table-row table-row-unselected group"
               data-testid="TableRow"
             >
               <td>
@@ -7033,7 +7033,7 @@ exports[`ExchangeTransactionsTable > should render mobile 2`] = `
                       class="text-sm font-semibold"
                     >
                       <span
-                        class="no-ligatures text-theme-primary-600 css-0"
+                        class="no-ligatures text-theme-primary-600"
                         data-testid="TruncateMiddle"
                       >
                         3
@@ -7271,7 +7271,7 @@ exports[`ExchangeTransactionsTable > should render mobile 2`] = `
               </td>
             </tr>
             <tr
-              class="group css-1s1pbqq"
+              class="transition-colors duration-100 cursor-pointer table-row table-row-unselected group"
               data-testid="TableRow"
             >
               <td>
@@ -7286,7 +7286,7 @@ exports[`ExchangeTransactionsTable > should render mobile 2`] = `
                       class="text-sm font-semibold"
                     >
                       <span
-                        class="no-ligatures text-theme-primary-600 css-0"
+                        class="no-ligatures text-theme-primary-600"
                         data-testid="TruncateMiddle"
                       >
                         2
@@ -7524,7 +7524,7 @@ exports[`ExchangeTransactionsTable > should render mobile 2`] = `
               </td>
             </tr>
             <tr
-              class="group css-1s1pbqq"
+              class="transition-colors duration-100 cursor-pointer table-row table-row-unselected group"
               data-testid="TableRow"
             >
               <td>
@@ -7539,7 +7539,7 @@ exports[`ExchangeTransactionsTable > should render mobile 2`] = `
                       class="text-sm font-semibold"
                     >
                       <span
-                        class="no-ligatures text-theme-primary-600 css-0"
+                        class="no-ligatures text-theme-primary-600"
                         data-testid="TruncateMiddle"
                       >
                         1
