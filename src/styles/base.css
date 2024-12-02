@@ -99,3 +99,59 @@ main {
 	  padding-bottom: env(safe-area-inset-bottom);
 	}
   }
+
+  .table-wrapper table {
+	@apply m-0 p-0 w-full border-none;
+  }
+
+  .table-wrapper table thead th:not(:first-of-type)::after {
+	@apply content-[""] h-1/2 absolute left-0 top-1/4 border-l border-[inherit]
+  }
+
+  .table-wrapper table thead th:not(:first-of-type).no-border::after {
+	@apply border-transparent
+  }
+
+  .table-row-selected:hover td {
+	@apply bg-theme-success-100
+  }
+
+  .table-row-unselected:hover td {
+	@apply dark:bg-theme-success-900
+  }
+
+  .table-row:last-of-type td:first-child {
+	@apply rounded-bl-sm
+  }
+
+  .table-row:last-of-type td:last-child {
+	@apply rounded-br-sm
+  }
+
+  .recipient-list thead {
+	@apply hidden
+  }
+
+  .input-button.active {
+	@apply border-theme-primary-600 bg-theme-primary-50 dark:bg-theme-primary-900 dark:text-white
+  }
+
+  .tooltip-wrapper {
+	@apply flex items-center bg-theme-secondary-900 dark:bg-theme-secondary-800 rounded px-3 py-2
+  }
+
+  .tooltip-wrapper::after {
+	@apply content-[""] absolute block w-0 h-0 -bottom-2 border-l-8 border-l-transparent border-r-8 border-r-transparent left-[calc(50%-8px)]
+  }
+
+  .tooltip-wrapper.left::after {
+	@apply right-auto left-5
+  }
+
+  .tooltip-wrapper.right::after {
+	@apply left-auto right-5
+  }
+
+  .tooltip-wrapper::after {
+	@apply border-t-8 border-t-theme-secondary-900 dark:border-t-theme-secondary-800
+  }
