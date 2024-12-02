@@ -443,22 +443,22 @@ exports[`ExchangeForm > should render exchange form 1`] = `
         class="flex flex-col"
       >
         <span
-          class="css-tgbw37"
+          class="inline-block sm:hidden mx-auto text-theme-secondary-text font-semibold mb-2"
         />
         <ul
-          class="css-xa5o6q"
+          class="flex space-x-3"
         >
           <li
-            class="css-11vjikd"
+            class="h-0.5 flex-1 rounded-lg transition-colors duration-300 bg-theme-warning-300"
           />
           <li
-            class="css-1ckw8yn"
+            class="h-0.5 flex-1 rounded-lg transition-colors duration-300 bg-theme-primary-100 dark:bg-theme-secondary-800"
           />
           <li
-            class="css-1ckw8yn"
+            class="h-0.5 flex-1 rounded-lg transition-colors duration-300 bg-theme-primary-100 dark:bg-theme-secondary-800"
           />
           <li
-            class="css-1ckw8yn"
+            class="h-0.5 flex-1 rounded-lg transition-colors duration-300 bg-theme-primary-100 dark:bg-theme-secondary-800"
           />
         </ul>
       </div>
@@ -1042,22 +1042,22 @@ exports[`ExchangeForm > should render exchange form with id of finished order 1`
         class="flex flex-col"
       >
         <span
-          class="css-tgbw37"
+          class="inline-block sm:hidden mx-auto text-theme-secondary-text font-semibold mb-2"
         />
         <ul
-          class="css-xa5o6q"
+          class="flex space-x-3"
         >
           <li
-            class="css-11vjikd"
+            class="h-0.5 flex-1 rounded-lg transition-colors duration-300 bg-theme-warning-300"
           />
           <li
-            class="css-11vjikd"
+            class="h-0.5 flex-1 rounded-lg transition-colors duration-300 bg-theme-warning-300"
           />
           <li
-            class="css-11vjikd"
+            class="h-0.5 flex-1 rounded-lg transition-colors duration-300 bg-theme-warning-300"
           />
           <li
-            class="css-11vjikd"
+            class="h-0.5 flex-1 rounded-lg transition-colors duration-300 bg-theme-warning-300"
           />
         </ul>
       </div>
@@ -1677,22 +1677,22 @@ exports[`ExchangeForm > should render exchange form with id of pending order 1`]
         class="flex flex-col"
       >
         <span
-          class="css-tgbw37"
+          class="inline-block sm:hidden mx-auto text-theme-secondary-text font-semibold mb-2"
         />
         <ul
-          class="css-xa5o6q"
+          class="flex space-x-3"
         >
           <li
-            class="css-11vjikd"
+            class="h-0.5 flex-1 rounded-lg transition-colors duration-300 bg-theme-warning-300"
           />
           <li
-            class="css-11vjikd"
+            class="h-0.5 flex-1 rounded-lg transition-colors duration-300 bg-theme-warning-300"
           />
           <li
-            class="css-11vjikd"
+            class="h-0.5 flex-1 rounded-lg transition-colors duration-300 bg-theme-warning-300"
           />
           <li
-            class="css-1ckw8yn"
+            class="h-0.5 flex-1 rounded-lg transition-colors duration-300 bg-theme-primary-100 dark:bg-theme-secondary-800"
           />
         </ul>
       </div>

@@ -5,7 +5,7 @@ exports[`ExchangeTransactionsRow > should render (Expired) 1`] = `
   <table>
     <tbody>
       <tr
-        class="group relative css-16ynu5g"
+        class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative"
         data-testid="TableRow"
       >
         <td>
@@ -253,7 +253,7 @@ exports[`ExchangeTransactionsRow > should render (Failed) 1`] = `
   <table>
     <tbody>
       <tr
-        class="group relative css-16ynu5g"
+        class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative"
         data-testid="TableRow"
       >
         <td>
@@ -492,7 +492,7 @@ exports[`ExchangeTransactionsRow > should render (Finished) 1`] = `
   <table>
     <tbody>
       <tr
-        class="group relative css-16ynu5g"
+        class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative"
         data-testid="TableRow"
       >
         <td>
@@ -731,7 +731,7 @@ exports[`ExchangeTransactionsRow > should render (New) 1`] = `
   <table>
     <tbody>
       <tr
-        class="group relative css-16ynu5g"
+        class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative"
         data-testid="TableRow"
       >
         <td>
@@ -1045,7 +1045,7 @@ exports[`ExchangeTransactionsRow > should render (Refunded) 1`] = `
   <table>
     <tbody>
       <tr
-        class="group relative css-16ynu5g"
+        class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative"
         data-testid="TableRow"
       >
         <td>
@@ -1289,7 +1289,7 @@ exports[`ExchangeTransactionsRow > should render (Verifying) 1`] = `
   <table>
     <tbody>
       <tr
-        class="group relative css-16ynu5g"
+        class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative"
         data-testid="TableRow"
       >
         <td>
@@ -1533,7 +1533,7 @@ exports[`ExchangeTransactionsRow > should render compact 1`] = `
   <table>
     <tbody>
       <tr
-        class="group relative css-16ynu5g"
+        class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group relative"
         data-testid="TableRow"
       >
         <td>

@@ -602,18 +602,18 @@ exports[`SignMessage > Sign with Wallet > should render (lg) 1`] = `
                         class="flex flex-col"
                       >
                         <span
-                          class="css-tgbw37"
+                          class="mx-auto mb-2 inline-block font-semibold text-theme-secondary-text sm:hidden"
                         >
                           Sign Message
                         </span>
                         <ul
-                          class="css-xa5o6q"
+                          class="flex space-x-3"
                         >
                           <li
-                            class="css-11vjikd"
+                            class="h-0.5 flex-1 rounded-lg transition-colors duration-300 bg-theme-warning-300"
                           />
                           <li
-                            class="css-1ckw8yn"
+                            class="h-0.5 flex-1 rounded-lg transition-colors duration-300 bg-theme-primary-100 dark:bg-theme-secondary-800"
                           />
                         </ul>
                       </div>
@@ -1525,18 +1525,18 @@ exports[`SignMessage > Sign with Wallet > should render (xs) 1`] = `
                         class="flex flex-col"
                       >
                         <span
-                          class="css-tgbw37"
+                          class="mx-auto mb-2 inline-block font-semibold text-theme-secondary-text sm:hidden"
                         >
                           Sign Message
                         </span>
                         <ul
-                          class="css-xa5o6q"
+                          class="flex space-x-3"
                         >
                           <li
-                            class="css-11vjikd"
+                            class="h-0.5 flex-1 rounded-lg transition-colors duration-300 bg-theme-warning-300"
                           />
                           <li
-                            class="css-1ckw8yn"
+                            class="h-0.5 flex-1 rounded-lg transition-colors duration-300 bg-theme-primary-100 dark:bg-theme-secondary-800"
                           />
                         </ul>
                       </div>

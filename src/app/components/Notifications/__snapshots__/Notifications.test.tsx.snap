@@ -24,7 +24,7 @@ exports[`Notifications > should emit transactionClick event 1`] = `
       >
         <div>
           <div
-            class="css-1m6rt2i"
+            class="table-wrapper"
             role="table"
           >
             <table
@@ -36,7 +36,7 @@ exports[`Notifications > should emit transactionClick event 1`] = `
               >
                 <div>
                   <tr
-                    class="group relative css-1tl8buz"
+                    class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
                     data-testid="TableRow"
                   >
                     <td
@@ -59,7 +59,7 @@ exports[`Notifications > should emit transactionClick event 1`] = `
                               data-testid="Address__alias"
                             >
                               <span
-                                class="no-ligatures css-9nx3be"
+                                class="no-ligatures transition-colors duration-200"
                                 data-testid="TruncateEnd"
                               >
                                 ARK Wallet 2
@@ -118,7 +118,7 @@ exports[`Notifications > should emit transactionClick event 1`] = `
                 </div>
                 <div>
                   <tr
-                    class="group relative css-1tl8buz"
+                    class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
                     data-testid="TableRow"
                   >
                     <td
@@ -141,7 +141,7 @@ exports[`Notifications > should emit transactionClick event 1`] = `
                               data-testid="Address__alias"
                             >
                               <span
-                                class="no-ligatures css-9nx3be"
+                                class="no-ligatures transition-colors duration-200"
                                 data-testid="TruncateEnd"
                               >
                                 ARK Wallet 1
@@ -200,7 +200,7 @@ exports[`Notifications > should emit transactionClick event 1`] = `
                 </div>
                 <div>
                   <tr
-                    class="group relative css-1tl8buz"
+                    class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
                     data-testid="TableRow"
                   >
                     <td
@@ -223,7 +223,7 @@ exports[`Notifications > should emit transactionClick event 1`] = `
                               data-testid="Address__alias"
                             >
                               <span
-                                class="no-ligatures css-9nx3be"
+                                class="no-ligatures transition-colors duration-200"
                                 data-testid="TruncateEnd"
                               >
                                 ARK Wallet 1
@@ -418,7 +418,7 @@ exports[`Notifications > should render with transactions and plugins 1`] = `
       >
         <div>
           <div
-            class="css-1m6rt2i"
+            class="table-wrapper"
             role="table"
           >
             <table
@@ -430,7 +430,7 @@ exports[`Notifications > should render with transactions and plugins 1`] = `
               >
                 <div>
                   <tr
-                    class="group relative css-1tl8buz"
+                    class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
                     data-testid="TableRow"
                   >
                     <td
@@ -453,7 +453,7 @@ exports[`Notifications > should render with transactions and plugins 1`] = `
                               data-testid="Address__alias"
                             >
                               <span
-                                class="no-ligatures css-9nx3be"
+                                class="no-ligatures transition-colors duration-200"
                                 data-testid="TruncateEnd"
                               >
                                 ARK Wallet 2
@@ -512,7 +512,7 @@ exports[`Notifications > should render with transactions and plugins 1`] = `
                 </div>
                 <div>
                   <tr
-                    class="group relative css-1tl8buz"
+                    class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
                     data-testid="TableRow"
                   >
                     <td
@@ -535,7 +535,7 @@ exports[`Notifications > should render with transactions and plugins 1`] = `
                               data-testid="Address__alias"
                             >
                               <span
-                                class="no-ligatures css-9nx3be"
+                                class="no-ligatures transition-colors duration-200"
                                 data-testid="TruncateEnd"
                               >
                                 ARK Wallet 1
@@ -594,7 +594,7 @@ exports[`Notifications > should render with transactions and plugins 1`] = `
                 </div>
                 <div>
                   <tr
-                    class="group relative css-1tl8buz"
+                    class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group relative"
                     data-testid="TableRow"
                   >
                     <td
@@ -617,7 +617,7 @@ exports[`Notifications > should render with transactions and plugins 1`] = `
                               data-testid="Address__alias"
                             >
                               <span
-                                class="no-ligatures css-9nx3be"
+                                class="no-ligatures transition-colors duration-200"
                                 data-testid="TruncateEnd"
                               >
                                 ARK Wallet 1

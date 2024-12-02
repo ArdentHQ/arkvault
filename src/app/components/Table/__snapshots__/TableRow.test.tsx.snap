@@ -5,7 +5,7 @@ exports[`TableRow > should render with border 1`] = `
   <table>
     <tbody>
       <tr
-        class="group css-16ynu5g"
+        class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
         data-testid="TableRow"
       />
     </tbody>
@@ -18,7 +18,7 @@ exports[`TableRow > should render with onClick callback 1`] = `
   <table>
     <tbody>
       <tr
-        class="group css-1tl8buz"
+        class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed cursor-pointer table-row table-row-unselected group"
         data-testid="TableRow"
       />
     </tbody>
@@ -31,7 +31,7 @@ exports[`TableRow > should render without border 1`] = `
   <table>
     <tbody>
       <tr
-        class="group css-epvetr"
+        class="transition-colors duration-100 group"
         data-testid="TableRow"
       />
     </tbody>
@@ -44,7 +44,7 @@ exports[`TableRow > should render without onClick callback 1`] = `
   <table>
     <tbody>
       <tr
-        class="group css-16ynu5g"
+        class="transition-colors duration-100 border-b last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800 border-dashed group"
         data-testid="TableRow"
       />
     </tbody>
