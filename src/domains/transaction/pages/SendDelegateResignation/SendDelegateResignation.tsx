@@ -103,7 +103,7 @@ export const SendDelegateResignation = () => {
 				wif,
 			});
 
-			const signedTransactionId = await activeWallet.transaction().signDelegateResignation({
+			const signedTransactionId = await activeWallet.transaction().signValidatorResignation({
 				fee: +fee,
 				signatory,
 			});

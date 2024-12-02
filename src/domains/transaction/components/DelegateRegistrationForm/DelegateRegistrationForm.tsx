@@ -62,7 +62,7 @@ export const signDelegateRegistration = async ({ env, form, profile, signatory }
 	const { fee, network, senderAddress, validatorPublicKey } = getValues();
 	const senderWallet = profile.wallets().findByAddressWithNetwork(senderAddress, network.id());
 
-	const transactionId = await senderWallet.transaction().signDelegateRegistration({
+	const transactionId = await senderWallet.transaction().signValidatorRegistration({
 		data: {
 			validatorPublicKey,
 		},
